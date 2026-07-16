@@ -18,11 +18,11 @@ Migrating enterprise applications from **[WPF (Windows Presentation Foundation)]
 | Runtime | Windows desktop app on .NET Framework or modern .NET | Web app on .NET with interactive server rendering |
 | UI definition | XAML-based UI with code-behind | Razor components with HTML and C# |
 | Code-behind / logic | `.xaml.cs` files or view models | `@code { }` blocks or `.razor.cs` partial classes |
-| Pattern | MVVM is commonly used | Component-based development is the standard approach |
+| Pattern | MVVM is used | Component-based development is the standard approach |
 | Data binding | Uses `DataContext` and view models | Uses component parameters, `@bind`, and cascading values |
 | State management | Uses view model state and `INotifyPropertyChanged` | Uses component state and re-rendering |
 | Navigation | Uses windows, `Frame`, or region-based navigation | Uses `@page` routing and `NavigationManager` |
-| Dependency injection | Often uses external containers | Uses built-in .NET dependency injection |
+| Dependency injection | Uses external containers | Uses built-in .NET dependency injection |
 | Rendering | Uses the native WPF rendering pipeline | Uses interactive rendering in the browser |
 | Communication model | In-process desktop interaction | Server interaction over SignalR for interactivity |
 
@@ -42,7 +42,7 @@ WPF and Blazor follow different application models. The following table maps com
 | `MainWindow.xaml` | `App.razor`, `MainLayout.razor`, and `Routes.razor` | Represents the application shell and routing structure |
 | `Views/*.xaml` | `Pages/*.razor` | Defines route-enabled UI pages |
 | `ViewModels/*.cs` | Services, component state, or `.razor.cs` | Contains UI logic and state |
-| `Models/*.cs` | `Models/*.cs` | Usually reusable without changes |
+| `Models/*.cs` | `Models/*.cs` | Reusable without changes |
 | `Services/*.cs` | `Services/*.cs` | Handles shared application logic through dependency injection |
 | `ResourceDictionary` | CSS, CSS isolation, and static assets | Manages styling and static resources |
 | `UserControl` | Razor component (`.razor`) | Reusable UI component |
@@ -57,13 +57,13 @@ Create a Blazor project using one of the following getting started guides.
 * [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 
-This migration guide focuses on the **Blazor Web App (Interactive Server)** approach, which provides the most direct migration path from WPF by maintaining server-side logic and state management similar to traditional desktop applications. The interactive server rendering mode enables real-time server-client communication through SignalR, making it suitable for enterprise applications that require complex business logic and real-time updates.
+This migration guide focuses on the **Blazor Web App (Interactive Server)** approach, which provides a direct migration path from WPF by maintaining server-side logic and state management similar to traditional desktop applications. The interactive server rendering mode enables real-time server-client communication through SignalR for enterprise applications that require complex business logic and real-time updates.
 
 The following shared setup applies to all components and covers the common configuration required before proceeding to the [component-specific migration steps](#component-specific-migration-steps).
 
 ### Package installation
 
-In WPF applications, controls are typically installed as individual NuGet packages (for example, [Syncfusion.SfGrid.WPF](https://www.nuget.org/packages/Syncfusion.SfGrid.WPF) and [Syncfusion.SfChart.WPF](https://www.nuget.org/packages/Syncfusion.SfChart.WPF)) and referenced directly in XAML and code-behind.
+In WPF applications, controls are installed as individual NuGet packages (for example, [Syncfusion.SfGrid.WPF](https://www.nuget.org/packages/Syncfusion.SfGrid.WPF) and [Syncfusion.SfChart.WPF](https://www.nuget.org/packages/Syncfusion.SfChart.WPF)) and referenced directly in XAML and code-behind.
 
 In Blazor applications, components are also provided as individual NuGet packages (for example, [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) and [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts)). Installing only the required component packages improves performance and reduces application size.
 
@@ -73,7 +73,7 @@ Additionally, install the [Syncfusion.Blazor.Themes](https://www.nuget.org/packa
 
 ### Service registration
 
-In WPF, controls are usually declared in XAML and initialized in code-behind, so you do not need to register them explicitly. Application services are typically configured manually or through an external DI container.
+In WPF, controls are declared in XAML and initialized in code-behind, so you do not need to register them explicitly. Application services are configured manually or through an external DI container.
 
 Blazor uses the built-in .NET dependency injection (DI) system, so required services must be registered in the application's service container to enable component communication and framework functionality. When using **Blazor Web App (Interactive Server)**, ensure that services are registered with the appropriate lifetime scope to support interactive components and server-side state management.
 
@@ -116,7 +116,7 @@ This example includes the namespaces used by the components covered in this guid
 
 **WPF approach**
 
-In WPF, themes are typically applied using [SfSkinManager](https://help.syncfusion.com/wpf/themes/skin-manager), while additional styling can be managed through `ResourceDictionary` and XAML-based styling. Scripts are not required because rendering happens locally in the desktop runtime.
+In WPF, themes are applied using [SfSkinManager](https://help.syncfusion.com/wpf/themes/skin-manager), while additional styling can be managed through `ResourceDictionary` and XAML-based styling. Scripts are not required because rendering happens locally in the desktop runtime.
 
 {% tabs %}
 {% highlight xml tabtitle="MainWindow.xaml" %}
@@ -161,7 +161,7 @@ Data binding is a fundamental concept in both WPF and Blazor, but the implementa
 
 ### WPF DataContext approach
 
-In WPF, the `DataContext` property is a powerful mechanism that enables declarative data binding. You set the `DataContext` to a view model instance that typically implements `INotifyPropertyChanged`, and XAML bindings automatically resolve against this object. This allows UI elements to automatically update when the underlying data changes.
+In WPF, the `DataContext` property enables declarative data binding. You set the `DataContext` to a view model instance that implements `INotifyPropertyChanged`, and XAML bindings automatically resolve against this object. This allows UI elements to automatically update when the underlying data changes.
 
 When the data source implements [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-10.0) (such as [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-10.0)), the [SfDataGrid](https://www.syncfusion.com/wpf-controls/datagrid) control automatically refreshes the UI when items are added, removed, or when the list is cleared. However, when using a standard `List<T>`, the grid will not automatically refresh when the collection is modified.
 
@@ -449,7 +449,7 @@ WPF uses a **device-independent pixel (DIP)** measurement system with fixed posi
 
 **Blazor approach**
 
-Blazor components render as standard **HTML and CSS** in the browser, requiring a shift to **responsive design principles**. Dimensions are typically specified in flexible units (percentages, em, rem) rather than fixed pixels, allowing layouts to adapt seamlessly across different screen sizes and viewports. The browser's rendering engine handles layout calculations, with built-in DPI scaling support through **CSS media queries** and zoom levels.
+Blazor components render as standard **HTML and CSS** in the browser, requiring a shift to **responsive design principles**. Dimensions are specified in flexible units (percentages, em, rem) rather than fixed pixels, allowing layouts to adapt across different screen sizes and viewports. The browser's rendering engine handles layout calculations, with built-in DPI scaling support through **CSS media queries** and zoom levels.
 
 {% tabs %}
 {% highlight html tabtitle="Layout.razor" %}
@@ -485,7 +485,7 @@ Blazor components render as standard **HTML and CSS** in the browser, requiring 
 
 **WPF lifecycle**
 
-WPF controls usually follow a **synchronous lifecycle**. Events like `Loaded` and `Unloaded` are used to start work, clean up resources, and respond to user actions directly on the **UI thread**. This approach is straightforward, but long-running tasks can block the interface if they are not handled carefully.
+WPF controls follow a **synchronous lifecycle**. Events like `Loaded` and `Unloaded` are used to start work, clean up resources, and respond to user actions directly on the **UI thread**. This approach is straightforward, but long-running tasks can block the interface if they are not handled carefully.
 
 {% tabs %}
 {% highlight c# tabtitle="MainWindow.xaml.cs" %}
@@ -650,9 +650,9 @@ dotnet run
 
 ## See also
 
-- [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
-- [Getting started with Blazor TreeGrid](https://blazor.syncfusion.com/documentation/treegrid/getting-started-with-server-app)
-- [Getting started with Blazor Charts](https://blazor.syncfusion.com/documentation/chart/getting-started)
-- [Getting started with Blazor Scheduler](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app)
-- [Getting started with Blazor Diagram](https://blazor.syncfusion.com/documentation/diagram/getting-started)
-- [Getting started with Blazor RichTextEditor](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app)
+- [Data Binding in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/data-binding/data-binding)
+- [Editing in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/editing)
+- [Paging in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/paging)
+- [Columns in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/columns)
+- [Working with Data in Blazor Charts Component](https://blazor.syncfusion.com/documentation/chart/working-with-data)
+- [Chart Dimensions in Blazor Charts Component](https://blazor.syncfusion.com/documentation/chart/chart-dimensions)

@@ -477,9 +477,6 @@
 						<a href="/blazor/datagrid/connecting-to-database/microsoft-sql-server">Blazor with Microsoft SQL Server</a>
 					</li>
 					<li>
-						<a href="/blazor/scheduler/minimalapi">Minimal API</a>
-					</li>
-					<li>
 						<a href="/blazor/datagrid/connecting-to-database/mysql-server">Blazor with MySQL</a>
 					</li>
 					<li>
@@ -521,6 +518,804 @@
 		</ul>
 	</li>
 	<li>Components<ul>
+	<li>DataGrid
+		<ul>
+			<li>Getting Started
+				<ul>
+					<li>
+						<a href="/blazor/datagrid/getting-started-with-web-app">Blazor Web App</a>
+					</li>
+					<li>
+						<a href="/blazor/datagrid/getting-started-with-server-app">Blazor Server App</a>
+					</li>
+					<li>
+						<a href="/blazor/datagrid/getting-started">Blazor WASM App</a>
+					</li>
+					<li>
+						<a href="/blazor/datagrid/getting-started-with-maui-app">Blazor Hybrid MAUI App</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/data-binding/data-binding">Data Binding</a>
+				<ul>
+					<li><a href="/blazor/datagrid/data-binding/local-data">Local Data</a></li>
+					<li><a href="/blazor/datagrid/data-binding/remote-data">Remote Data</a></li>
+				</ul>
+			</li>
+			<li>Connecting to Adaptors
+				<ul>
+					<li><a href="/blazor/datagrid/connecting-to-adaptors/url-adaptor">URL Adaptor</a></li>
+					<li><a href="/blazor/datagrid/connecting-to-adaptors/odatav4-adaptor">ODataV4 Adaptor</a></li>
+					<li><a href="/blazor/datagrid/connecting-to-adaptors/web-api-adaptor">Web API Adaptor</a></li>
+					<li><a href="/blazor/datagrid/connecting-to-adaptors/custom-adaptor">Custom Adaptor</a></li>
+					<li><a href="/blazor/datagrid/connecting-to-adaptors/graphql-adaptor">GraphQL Adaptor</a></li>
+				</ul>
+			</li>
+			<li>Connecting to Database
+				<ul>
+					<li><a href="/blazor/datagrid/connecting-to-database/microsoft-sql-server">Microsoft SQL Server</a></li>
+					<li><a href="/blazor/datagrid/connecting-to-database/mysql-server">MySQL Server</a></li>
+					<li><a href="/blazor/datagrid/connecting-to-database/postgresql-server">PostgreSQL Server</a></li>
+					<li><a href="/blazor/datagrid/connecting-to-database/sqlite-server">SQLite Server</a></li>
+					<li><a href="/blazor/datagrid/connecting-to-database/mongodb-server">MongoDB Server</a></li>
+					<li><a href="/blazor/datagrid/connecting-to-database/firebase-firestore">Firebase (Firestore DB)</a></li>
+					<li><a href="/blazor/datagrid/connecting-to-database/firebase-realtime">Firebase (Realtime DB)</a></li>
+				</ul>
+			</li>
+			<li>Connecting to ORM
+				<ul>
+					<li><a href="/blazor/datagrid/connecting-to-ORM/entityframework">Entity Framework</a></li>
+					<li><a href="/blazor/datagrid/connecting-to-ORM/dapper">Dapper (Micro ORM) </a></li>
+				</ul>
+			</li>
+			<li>Connecting to Backends
+				<ul>
+					<li><a href="/blazor/datagrid/connecting-to-backends/signalr">SignalR</a></li>
+					<li><a href="/blazor/datagrid/connecting-to-backends/elasticsearch">Elasticsearch</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/data-annotation">Data Annotation</a>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/adaptive-layout">Adaptive View</a>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/performance">Performance Best Practices</a>
+			</li>
+			<li> <a href="/blazor/datagrid/columns">Columns</a>
+				<ul>
+					<li><a href="/blazor/datagrid/column-rendering">Column Rendering</a></li>
+					<li><a href="/blazor/datagrid/column-headers">Column Headers</a></li>
+					<li><a href="/blazor/datagrid/column-template">Column Template</a></li>
+					<li><a href="/blazor/datagrid/foreignKey-column">ForeignKey Column</a></li>
+					<li><a href="/blazor/datagrid/column-reorder">Column Reorder</a></li>
+					<li><a href="/blazor/datagrid/column-resizing">Column Resizing</a></li>
+					<li><a href="/blazor/datagrid/frozen-column">Column Pinning (Frozen)</a></li>
+					<li><a href="/blazor/datagrid/column-chooser">Column Chooser</a></li>
+					<li><a href="/blazor/datagrid/column-menu">Column Menu</a></li>
+					<li><a href="/blazor/datagrid/column-spanning">Column Spanning</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/row">Row</a>
+				<ul>
+					<li><a href="/blazor/datagrid/row-template">Row Template</a></li>
+					<li><a href="/blazor/datagrid/detail-template">Detail Template</a></li>
+					<li><a href="/blazor/datagrid/row-drag-and-drop">Row Drag and Drop</a></li>
+					<li><a href="/blazor/datagrid/row-spanning">Row Spanning</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/cell">Cell</a>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/editing">Editing</a>
+				<ul>
+					<li><a href="/blazor/datagrid/edit-types">Edit Types</a></li>
+					<li><a href="/blazor/datagrid/in-line-editing">Inline Editing</a></li>
+					<li><a href="/blazor/datagrid/dialog-editing">Dialog Editing</a></li>
+					<li><a href="/blazor/datagrid/template-editing">Template Editing</a></li>
+					<li><a href="/blazor/datagrid/batch-editing">Batch Editing</a></li>
+					<li><a href="/blazor/datagrid/command-column-editing">Command Column Editing</a></li>
+					<li><a href="/blazor/datagrid/column-validation">Column Validation</a></li>
+					<li><a href="/blazor/datagrid/persisting-data-in-server">Persisting Data in Server</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/grouping">Grouping</a>
+				<ul>
+					<li><a href="/blazor/datagrid/caption-template">Caption Template</a></li>
+					<li><a href="/blazor/datagrid/lazy-load-grouping">Lazy Load Grouping</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/filtering">Filtering</a>
+				<ul>
+					<li><a href="/blazor/datagrid/filter-bar">Filter Bar</a></li>
+					<li><a href="/blazor/datagrid/filter-menu">Filter Menu</a></li>
+					<li><a href="/blazor/datagrid/excel-like-filter">Excel Like Filter</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/sorting">Sorting</a>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/searching">Searching</a>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/paging">Paging</a>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/scrolling">Scrolling</a>
+				<ul>
+					<li><a href="/blazor/datagrid/virtual-scrolling">Virtual Scrolling</a></li>
+					<li><a href="/blazor/datagrid/infinite-scrolling">Infinite Scrolling</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/selection">Selection</a>
+				<ul>
+					<li><a href="/blazor/datagrid/row-selection">Row Selection</a></li>
+					<li><a href="/blazor/datagrid/cell-selection">Cell Selection</a></li>
+					<li><a href="/blazor/datagrid/checkbox-selection">Checkbox Selection</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/aggregates">Aggregates</a>
+				<ul>
+					<li><a href="/blazor/datagrid/footer-aggregate">Footer Aggregate</a></li>
+					<li><a href="/blazor/datagrid/group-and-caption-aggregate">Group and Caption Aggregate</a></li>
+					<li><a href="/blazor/datagrid/custom-aggregate">Custom Aggregate</a></li>
+					<li><a href="/blazor/datagrid/reactive-aggregate">Reactive Aggregate</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/print">Print</a>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/state-management">State Management</a>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/global-local">Globalization</a>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/tool-bar">Toolbar</a>
+				<ul>
+					<li><a href="/blazor/datagrid/toolbar-items">Toolbar Items</a></li>
+					<li><a href="/blazor/datagrid/custom-toolbar">Custom Toolbar</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/pdf-export">PDF Export</a>
+				<ul>
+					<li><a href="/blazor/datagrid/pdf-export-options">PDF export Options</a></li>
+					<li><a href="/blazor/datagrid/adding-header-and-footer">Adding Header and Footer</a></li>
+					<li><a href="/blazor/datagrid/template-pdf-export">PDF Exporting with Templates</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/excel-exporting">Export to Excel</a>
+				<ul>
+					<li><a href="/blazor/datagrid/excel-export-options">Excel Export Options</a></li>
+					<li><a href="/blazor/datagrid/templates-excel-export">Excel Exporting with Templates</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/clipboard">Clipboard</a>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/context-menu">Context Menu</a>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/accessibility">Accessibility</a>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/webassembly-performance">WebAssembly Performance</a>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/events">Events</a>
+			</li>
+			<li>
+				<a href="/blazor/datagrid/style-and-appearance/style-and-appearance">Style and Appearance</a>
+				<ul>
+					<li><a href="/blazor/datagrid/style-and-appearance/aggregate">Aggregate</a></li>
+					<li><a href="/blazor/datagrid/style-and-appearance/editing">Editing</a></li>
+					<li><a href="/blazor/datagrid/style-and-appearance/filtering">Filtering</a></li>
+					<li><a href="/blazor/datagrid/style-and-appearance/grouping">Grouping</a></li>
+					<li><a href="/blazor/datagrid/style-and-appearance/header">Header</a></li>
+					<li><a href="/blazor/datagrid/style-and-appearance/paging">Paging</a></li>
+					<li><a href="/blazor/datagrid/style-and-appearance/selection">Selection</a></li>
+					<li><a href="/blazor/datagrid/style-and-appearance/sorting">Sorting</a></li>
+					<li><a href="/blazor/datagrid/style-and-appearance/toolbar">Toolbar</a></li>
+				</ul>
+			</li>
+			<li>How To
+				<ul>
+					<li>
+						<a href="/blazor/datagrid/how-to/blazor-webassembly-data-grid-using-cli">Getting Started-Client side using CLI</a>
+					</li>
+					<li>
+						<a href="/blazor/datagrid/how-to/server-side-using-cli">Getting Started-Server side using CLI</a>
+					</li>
+          <li>
+						<a href="/blazor/datagrid/how-to/send-context-as-additional-parameters-from-events">Sending context as additional parameters from events in Blazor DataGrid</a>
+					</li>
+					<li>
+						<a href="/blazor/datagrid/how-to/using-dictionary-values-in-grid-datasource">Using dictionary values in Blazor DataGrid datasource</a>
+					</li>
+					<li>
+						<a href="/blazor/datagrid/how-to/upgrade-application-to-latest-version">Upgrade Application To Latest Version</a>
+					</li>
+					<li>
+            <a href="/blazor/datagrid/how-to/render-grid-inside-tab-with-specific-height">Render Blazor DataGrid inside the Tab with specific height</a>					</li>
+					<li>
+						<a href="/blazor/datagrid/how-to/customize-empty-grid-display-message">Customize the empty record template</a>
+					</li>
+					<li>
+						<a href="/blazor/datagrid/how-to/resize-grid-in-various-dimension">Resize the Blazor DataGrid in various dimension</a>
+					</li>
+					<li>
+						<a href="/blazor/datagrid/how-to/custom-helper-function-inside-loop-with-template">Use custom helper inside the loop with templates</a>
+					</li>
+					<li>
+						<a href="/blazor/datagrid/how-to/create-custom-grid-component">Create custom Blazor DataGrid</a>
+					</li>
+					<li>
+						<a href="/blazor/datagrid/how-to/define-events-programmatically">Define the GridEvents programmatically in Blazor DataGrid</a>
+					</li>
+          <li>
+						<a href="/blazor/datagrid/how-to/css-isolation-for-grid">CSS Isolation for Blazor DataGrid</a>
+					</li>
+          <li>
+						<a href="/blazor/datagrid/how-to/use-radio-button-instead-of-checkbox">Use radio button instead of checkbox in single selection mode of Blazor DataGrid</a>
+					</li>
+					<li>
+						<a href="/blazor/datagrid/how-to/enable-or-disable-grid">Enable/Disable Blazor DataGrid and its actions</a>
+					</li>
+					<li>
+						<a href="/blazor/datagrid/how-to/hide-the-built-in-spinner-and-show-a-custom-loading-spinner-in-blazor-datagrid">How to Hide the Built‑in Spinner and Show a Custom Loading Spinner</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html"> API Reference</a>
+			</li>
+		</ul>
+	</li>
+	<li>Charts
+		<ul>
+			<li>Getting Started
+				<ul>
+					<li>
+						<a href="/blazor/chart/getting-started-with-web-app">Blazor Web App</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/getting-started">Blazor Server App</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/getting-started-wasm">Blazor WASM App</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/getting-started-with-maui-app">Blazor Hybrid MAUI App</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="/blazor/chart/working-with-data">Working with Data</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/chart-dimensions">Chart Dimensions</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/category-axis">Category Axis</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/numeric-axis">Numeric Axis</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/date-time-axis">DateTime Axis</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/logarithmic-axis">Logarithmic Axis</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/axis-labels">Axis Labels</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/axis-customization">Axis Customization</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/strip-line">Stripline</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/multiple-panes">Multiple Panes</a>
+			</li>
+			<li>Chart Types
+				<ul>
+					<li>
+						<a href="/blazor/chart/chart-types/line">Line</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/step-line">Step Line</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/stacked-line">Stacked Line</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/stack-line">100% Stacked Line</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/spline">Spline</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/area">Area</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/range-area">Range Area</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/range-step-area">Range Step Area</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/spline-range-area">Spline Range Area</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/stacked-area">Stacked Area</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/stack-area">100% Stacked Area</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/step-area">Step Area</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/spline-area">Spline Area</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/column">Column</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/range-column">Range Column</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/stacked-column">Stacked Column</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/stack-column">100% Stacked Column</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/bar">Bar Charts</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/stacked-bar">Stacked Bar</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/stack-bar">100% Stacked Bar</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/scatter">Scatter</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/bubble">Bubble</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/polar">Polar</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/radar">Radar</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/high-low">Hilo</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/high-low-open-close">High Low Open Close</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/candle">Candle</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/box-whisker">Box and Whisker</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/waterfall">Waterfall</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/histogram">Histogram</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/error-bar">Error Bar</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/vertical-chart">Vertical Chart</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/chart-types/pare-to">Pareto</a>
+					</li>
+				</ul>
+			</li>
+            <li>
+				<a href="/blazor/chart/chart-series">Mixed Chart</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/data-markers">Markers</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/data-labels">Data Labels</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/series-label">Series Labels</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/last-data-label">Last Data Label</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/data-label-template">Data Label Template</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/chart-annotations">Annotation</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/chart-appearance">Appearance</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/legend">Legend</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/tool-tip">Tooltip</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/zooming">Zooming</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/data-editing">Data Editing</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/chart-sorting">Data Sorting</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/cross-hair-and-track-ball">Crosshair and Trackball</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/selection">Selection</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/adaptive-layout">Adaptive Layout</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/chart-print">Print and Export</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/technical-indicators">Technical Indicators</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/trend-lines">Trendlines</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/gradient">Gradient</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/internationalization">Internationalization</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/localization">Localization</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/accessibility">Accessibility</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/advanced-accessibility-configuration">Advanced Accessibility Configuration</a>
+			</li>
+			<li>
+				<a href="/blazor/chart/events">Events</a>
+			</li>
+			<li>How To
+				<ul>
+					<li>
+						<a href="/blazor/chart/how-to/add-remove">Add or Remove Series</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/how-to/dynamic-points">Dynamic Points</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/how-to/synchronized-chart">Synchronized-chart</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/how-to/lazy-loading">Lazy Loading</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/how-to/tool-tip-table">Table in Tooltip</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/how-to/selected-data">Visualize grid data in chart</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/how-to/threshold">Threshold in Chart</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/how-to/live-chart">Live Chart</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/how-to/axis-hide">Hiding Axis</a>
+					</li>
+					<li>
+						<a href="/blazor/chart/how-to/convert-millisecond-to-date-time">Convert millisecond to date time</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html"> API Reference</a>
+			</li>
+		</ul>
+	</li>
+	<li>FileManager
+	    <ul>
+			<li>Getting Started
+				<ul>
+					<li>
+						<a href="/blazor/file-manager/getting-started-with-web-app">Blazor Web App</a>
+					</li>
+					<li>
+						<a href="/blazor/file-manager/getting-started-with-server-app">Blazor Server App</a>
+					</li>
+					<li>
+						<a href="/blazor/file-manager/getting-started-with-wasm-app">Blazor WASM App</a>
+					</li>
+					<li>
+						<a href="/blazor/file-manager/getting-started-with-maui-app">Blazor Hybrid MAUI App</a>
+					</li>
+				</ul>
+			</li>
+			<li> <a href="/blazor/file-manager/data-binding">Data Binding</a></li>
+			<li> <a href="/blazor/file-manager/file-system-provider">File System Providers</a>
+				 <ul>
+					 <li> <a href="/blazor/file-manager/physical-file-system-provider">Physical file system provider</a></li>
+					 <li> <a href="/blazor/file-manager/azure-cloud-file-system-provider">Azure cloud file system Provider</a></li>
+					 <li> <a href="/blazor/file-manager/amazon-S3-cloud-file-provider">Amazon S3 cloud file provider</a></li>
+					 <li> <a href="/blazor/file-manager/sharePoint-file-provider">SharePoint file provider</a></li>
+					 <li> <a href="/blazor/file-manager/File-Transfer-Protocol-file-system-provider">File Transfer Protocol file system provider</a></li>
+					 <li> <a href="/blazor/file-manager/SQL-database-file-system-provider">SQL database file system provider</a></li>
+					 <li> <a href="/blazor/file-manager/Google-Drive-file-system-provider">Google Drive file system provider</a></li>
+					 <li> <a href="/blazor/file-manager/Firebase-Real-time-Database-file-system-provider">Firebase Real time Database file system provider</a></li>
+					 <li> <a href="/blazor/file-manager/custom-file-provider">Custom file provider</a></li>
+				 </ul>
+			</li>
+			<li> <a href="/blazor/file-manager/file-operations">File Operations</a></li>
+			<li> <a href="/blazor/file-manager/end-user-capabilities">End User Capabilities</a></li>
+			<li> <a href="/blazor/file-manager/toolbar">Toolbar</a></li>
+			<li> <a href="/blazor/file-manager/context-menu">Context Menu</a></li>
+			<li> <a href="/blazor/file-manager/views">Views</a></li>
+			<li> <a href="/blazor/file-manager/multiple-file-selection">Multiple File Selection</a></li>
+			<li> <a href="/blazor/file-manager/drag-and-drop">Drag and Drop</a></li>
+			<li> <a href="/blazor/file-manager/virtualization">Virtualization</a></li>
+			<li> <a href="/blazor/file-manager/pagination">Pagination</a></li>
+			<li> <a href="/blazor/file-manager/accessibility">Accessibility</a></li>
+			<li> <a href="/blazor/file-manager/upload">Upload</a></li>
+			<li>How To
+				<ul>
+					<li> <a href="/blazor/file-manager/how-to/adding-custom-item-to-context-menu">Adding Custom Item To Context Menu</a></li>
+					<li> <a href="/blazor/file-manager/how-to/add-custom-tool-bar">Adding Custom Item To Toolbar</a></li>
+					<li> <a href="/blazor/file-manager/how-to/customize-http-handler">Customize HTTP handler</a></li>
+					<li> <a href="/blazor/file-manager/how-to/previewing-files">Previewing Files</a></li>
+					<li> <a href="/blazor/file-manager/how-to/perform-custom-filtering">Perform Custom Filtering</a></li>
+					<li> <a href="/blazor/file-manager/how-to/restrict-drag-and-drop-upload">Restrict drag and drop upload</a></li>
+					<li> <a href="/blazor/file-manager/how-to/upload-large-files">Upload large files</a></li>
+					<li> <a href="/blazor/file-manager/how-to/nested-items">Nested File Manager</a></li>
+					<li> <a href="/blazor/file-manager/how-to/customize-navigation-items">Customize Navigation Items</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/blazor/file-manager/styles">Style and Appearance</a>
+			</li>
+			<li>
+				<a href="/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html"> API Reference</a>
+			</li>
+		</ul>
+	</li>
+	<li>Chat UI
+		<ul>
+      		<li>Getting Started
+				<ul>
+					<li> <a href="/blazor/chat-ui/getting-started-webapp">Blazor Web App</a></li>
+					<li>
+						<a href="/blazor/chat-ui/getting-started-with-server-app">Blazor Server App</a>
+					</li>
+					<li> <a href="/blazor/chat-ui/getting-started">Blazor WASM App</a></li>
+				</ul>
+			</li>
+			<li><a href="/blazor/chat-ui/messages">Messages</a></li>
+			<li>Chat Bot Integrations
+					<ul>
+						<li>
+							<a href="/blazor/chat-ui/bot-integrations/integration-with-bot-dialogflow">Google Dialogflow</a>
+						</li>
+						<li>
+							<a href="/blazor/chat-ui/bot-integrations/integration-with-bot-framework">Microsoft Bot Framework</a>
+						</li>
+					</ul>
+        	</li>
+			<li><a href="/blazor/chat-ui/timebreak">Time break</a></li>
+			<li><a href="/blazor/chat-ui/timestamp">Timestamp</a></li>
+			<li><a href="/blazor/chat-ui/typing-indicator">Typing indicator</a></li>
+			<li><a href="/blazor/chat-ui/load-on-demand">Load on-demand</a></li>
+			<li><a href="/blazor/chat-ui/mention">Mention Integration</a></li>
+			<li><a href="/blazor/chat-ui/header">Header</a></li>
+			<li><a href="/blazor/chat-ui/footer">Footer</a></li>
+			<li><a href="/blazor/chat-ui/file-attachments">File attachments</a></li>
+			<li><a href="/blazor/chat-ui/templates">Templates</a></li>
+			<li><a href="/blazor/chat-ui/speech-to-text">Speech to Text</a></li>
+			<li><a href="/blazor/chat-ui/appearance">Style and Appearance</a></li>
+			<li><a href="/blazor/chat-ui/globalization">Globalization</a></li>
+			<li><a href="/blazor/chat-ui/accessibility">Accessibility</a></li>
+			<li><a href="/blazor/chat-ui/methods">Methods</a></li>
+			<li><a href="/blazor/chat-ui/events">Events</a></li>
+			<li>
+				<a href="/blazor/chat-ui/content-security-policy"> Content Security Policy</a>
+			</li>
+			<li>
+				<a href="/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html"> API Reference</a>
+			</li>
+		</ul>
+	</li>
+	<li>Maps
+		<ul>
+			<li>Getting Started
+				<ul>
+					<li> <a href="/blazor/maps/getting-started-webapp">Blazor Web App</a></li>
+					<li> <a href="/blazor/maps/getting-started-with-server-app">Blazor Server App</a></li>
+					<li> <a href="/blazor/maps/getting-started">Blazor WASM App</a></li>
+					<li> <a href="/blazor/maps/getting-started-with-maui-app">Blazor Hybrid MAUI App</a></li>
+				</ul>
+			</li>
+			<li> <a href="/blazor/maps/populate-data">Populate Data</a></li>
+			<li> <a href="/blazor/maps/shapefile">Shapefile</a></li>
+			<li> <a href="/blazor/maps/layers">Layers</a></li>
+			<li>
+				Providers
+				<ul>
+					<li> <a href="/blazor/maps/providers/openstreetmap">OpenStreetMap</a></li>
+					<li> <a href="/blazor/maps/providers/google-maps">Google Maps</a></li>
+					<li> <a href="/blazor/maps/providers/azure-maps">Azure Maps</a></li>
+					<li> <a href="/blazor/maps/providers/bing-maps">Bing Maps</a></li>
+					<li> <a href="/blazor/maps/providers/other-maps">Other Maps</a></li>
+				</ul>
+			</li>
+			<li> <a href="/blazor/maps/customization">Customization</a></li>
+			<li> <a href="/blazor/maps/color-mapping">Color Mapping</a></li>
+			<li> <a href="/blazor/maps/data-labels">Data Labels</a></li>
+			<li> <a href="/blazor/maps/polygon">Polygon</a></li>
+			<li> <a href="/blazor/maps/markers">Markers</a></li>
+			<li> <a href="/blazor/maps/bubble">Bubble</a></li>
+			<li> <a href="/blazor/maps/legend">Legend</a></li>
+			<li> <a href="/blazor/maps/navigation-line">Navigation Lines</a></li>
+			<li> <a href="/blazor/maps/annotations">Annotations</a></li>
+			<li> <a href="/blazor/maps/user-interactions">User Interactions</a></li>
+			<li> <a href="/blazor/maps/print-and-export">Print and Export</a></li>
+			<li> <a href="/blazor/maps/state-persistence">State Persistence</a></li>
+			<li> <a href="/blazor/maps/accessibility">Accessibility</a></li>
+			<li> <a href="/blazor/maps/internationalization">Globalization</a></li>
+			<li> <a href="/blazor/maps/localization">Localization</a></li>
+			<li> <a href="/blazor/maps/maps-event">Events</a></li>
+			<li> <a href="/blazor/maps/maps-method">Methods</a></li>
+			<li>How To
+				<ul>
+					<li> <a href="/blazor/maps/how-to/place-map-inside-other-components">Place map inside other components</a></li>
+					<li> <a href="/blazor/maps/how-to/creating-routes-between-the-markers">Creating routes between the markers</a></li>
+					<li> <a href="/blazor/maps/how-to/add-different-types-of-markers">Add different types of markers</a></li>
+					<li> <a href="/blazor/maps/how-to/change-center-position-on-zooming">Change center position on zooming</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/blazor/maps/content-security-policy"> Content Security Policy</a>
+			</li>
+			<li>
+				<a href="/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html"> API Reference</a>
+			</li>
+		</ul>
+	</li>
+	<li>Pivot Table
+		<ul>
+			<li>Getting Started
+				<ul>
+					<li> <a href="/blazor/pivot-table/getting-started-webapp">Blazor Web App</a></li>
+					<li> <a href="/blazor/pivot-table/getting-started-with-server-app">Blazor Server App</a></li>
+					<li> <a href="/blazor/pivot-table/getting-started">Blazor WASM App</a></li>
+					<li> <a href="/blazor/pivot-table/getting-started-with-maui-app">Blazor Hybrid MAUI App</a></li>
+				</ul>
+			</li>
+			<li> <a href="/blazor/pivot-table/smart-pivot">Smart Pivot Table</a></li>
+			<li> <a href="/blazor/pivot-table/data-binding">Data Binding</a></li>
+			<li>
+				Connecting to data source
+				<ul>
+					<li><a href="/blazor/pivot-table/connecting-to-data-source/mysql">MySQL</a></li>
+					<li><a href="/blazor/pivot-table/connecting-to-data-source/microsoft-sql-server">Microsoft SQL Server</a></li>
+					<li><a href="/blazor/pivot-table/connecting-to-data-source/postgreSQL">PostgreSQL</a></li>
+					<li><a href="/blazor/pivot-table/connecting-to-data-source/oracledb">Oracle</a></li>
+					<li><a href="/blazor/pivot-table/connecting-to-data-source/mongodb">MongoDB</a></li>
+					<li><a href="/blazor/pivot-table/connecting-to-data-source/elasticsearch">Elasticsearch</a></li>
+					<li><a href="/blazor/pivot-table/connecting-to-data-source/snowflakedb">Snowflake</a></li>
+				</ul>
+			</li>
+			<li> <a href="/blazor/pivot-table/olap">OLAP</a></li>
+			<li> <a href="/blazor/pivot-table/server-side-pivot-engine">Server-side Engine</a></li>
+			<li> <a href="/blazor/pivot-table/pivot-chart">Pivot Chart</a></li>
+			<li> <a href="/blazor/pivot-table/classic-layout">Classic Layout</a></li>
+			<li> <a href="/blazor/pivot-table/drill-down">Drill Down/Up</a></li>
+			<li>
+				Data Shaping
+				<ul>
+					<li> <a href="/blazor/pivot-table/aggregation">Aggregation</a></li>
+					<li> <a href="/blazor/pivot-table/calculated-field">Calculated Field</a></li>
+					<li> <a href="/blazor/pivot-table/grouping">Grouping</a></li>
+					<li> <a href="/blazor/pivot-table/filtering">Filtering</a></li>
+					<li> <a href="/blazor/pivot-table/sorting">Sorting</a></li>
+					<li> <a href="/blazor/pivot-table/drill-through">Drill Through</a></li>
+					<li> <a href="/blazor/pivot-table/editing">Editing</a></li>
+				</ul>
+			</li>
+			<li>
+				Data Formatting
+				<ul>
+					<li> <a href="/blazor/pivot-table/number-formatting">Number Formatting</a></li>
+					<li> <a href="/blazor/pivot-table/conditional-formatting">Conditional Formatting</a></li>
+				</ul>
+			</li>
+			<li>
+				Report Manipulation
+				<ul>
+					<li> <a href="/blazor/pivot-table/grouping-bar">Grouping Bar</a></li>
+					<li> <a href="/blazor/pivot-table/field-list">Field List</a></li>
+					<li> <a href="/blazor/pivot-table/defer-layout-update">Defer Layout Update</a></li>
+				</ul>
+			</li>
+			<li>
+				Performance
+				<ul>
+					<li> <a href="/blazor/pivot-table/virtual-scrolling">Virtual Scrolling</a></li>
+					<li> <a href="/blazor/pivot-table/paging">Paging</a></li>
+					<li> <a href="/blazor/pivot-table/data-compression">Data Compression</a></li>
+					<li> <a href="/blazor/pivot-table/performance-best-practices">Performance Best Practices</a></li>
+				</ul>
+			</li>
+			<li> <a href="/blazor/pivot-table/state-persistence">State Persistence</a></li>
+			<li> <a href="/blazor/pivot-table/row-and-column">Row and Column</a></li>
+			<li> <a href="/blazor/pivot-table/show-hide-totals">Show/Hide Totals</a></li>
+			<li> <a href="/blazor/pivot-table/hyper-link">Hyperlink</a></li>
+			<li> <a href="/blazor/pivot-table/tool-bar">Toolbar</a></li>
+			<li> <a href="/blazor/pivot-table/tool-tip">Tooltip</a></li>
+			<li> <a href="/blazor/pivot-table/css-customization">Style and Appearance</a></li>
+			<li>
+				Exporting
+				<ul>
+					<li> <a href="/blazor/pivot-table/excel-export">Excel Exporting</a></li>
+					<li> <a href="/blazor/pivot-table/pdf-export">PDF Exporting</a></li>
+				</ul>
+			</li>
+			<li> <a href="/blazor/pivot-table/globalization">Globalization</a></li>
+			<li> <a href="/blazor/pivot-table/accessibility">Accessibility</a></li>
+			<li> <a href="/blazor/pivot-table/events">Events</a></li>
+			<li>How To
+				<ul>
+					<li> <a href="/blazor/pivot-table/how-to/switching-older-themes-style">Switching to older themes style</a></li>
+					<li> <a href="/blazor/pivot-table/how-to/customize-number-and-date-format">Customize number and date format</a></li>
+					<li> <a href="/blazor/pivot-table/how-to/customizing-loading-indicator">Customizing loading indicator</a></li>
+					<li> <a href="/blazor/pivot-table/how-to/hide-empty-headers">Hide empty headers</a></li>
+					<li> <a href="/blazor/pivot-table/how-to/apply-custom-styles-to-pivot-cells">Apply custom style to pivot cells</a></li>
+					<li> <a href="/blazor/pivot-table/how-to/display-string-value-to-pivot-table-values">Display string value to pivot table values</a></li>
+					<li> <a href="/blazor/pivot-table/how-to/bind-complex-data-to-the-pivot-table">Convert complex data to flat data and assign it to the pivot table</a></li>
+					<li> <a href="/blazor/pivot-table/how-to/show-custom-tooltip-for-row-and-column-headers">Show tooltip for row and column headers</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/blazor/pivot-table/content-security-policy"> Content Security Policy</a>
+			</li>
+			<li>
+				<a href="/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html"> API Reference</a>
+			</li>
+		</ul>
+	</li>
 	<li>3D Chart
 		<ul>
 			<li>Getting Started
@@ -660,9 +1455,6 @@
 					</li>
 					<li>
 						<a href="/blazor/accordion/how-to/prevent-expand-collapse-accordion-item">Prevent Expand or Collapse Item</a>
-					</li>
-					<li>
-						<a href="/blazor/accordion/how-to/add-nested-accordion">Add Nested Accordion</a>
 					</li>
 					<li>
 						<a href="/blazor/accordion/how-to/create-wizard-using-accordion">Create Wizard</a>
@@ -1072,12 +1864,6 @@
 						<a href="/blazor/button/how-to/create-a-block-button">Create a Block Button</a>
 					</li>
 					<li>
-						<a href="/blazor/button/how-to/customize-button-appearance">Customize Button Appearance</a>
-					</li>
-					<li>
-						<a href="/blazor/button/how-to/html-attribute-support">HTML Attribute Support</a>
-					</li>
-					<li>
 						<a href="/blazor/button/how-to/repeat-button">Repeat Button</a>
 					</li>
 					<li>
@@ -1165,12 +1951,6 @@
 				<a href="/blazor/calendar/accessibility">Accessibility</a>
 			</li>
 			<li>
-				<a href="/blazor/calendar/islamic-calendar">Islamic Calendar</a>
-			</li>
-			<li>
-				<a href="/blazor/calendar/globalization">Globalization</a>
-			</li>
-			<li>
 				<a href="/blazor/calendar/events">Events</a>
 			</li>
 			<li>
@@ -1182,13 +1962,7 @@
 			<li>How To
 				<ul>
 					<li>
-						<a href="/blazor/calendar/how-to/show-dates-of-other-months">Show Dates of Other Months</a>
-					</li>
-					<li>
 						<a href="/blazor/calendar/how-to/render-the-calendar-with-week-numbers">Render the Calendar with Week Numbers</a>
-					</li>
-					<li>
-						<a href="/blazor/calendar/how-to/change-the-first-day-of-week">Change the First Day of Week</a>
 					</li>
 				</ul>
 			</li>
@@ -1262,271 +2036,6 @@
 			<li><a href="/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html">API Reference</a></li>
 		</ul>
 	</li>
-	<li>Charts
-		<ul>
-			<li>Getting Started
-				<ul>
-					<li>
-						<a href="/blazor/chart/getting-started-with-web-app">Blazor Web App</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/getting-started">Blazor Server App</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/getting-started-wasm">Blazor WASM App</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/getting-started-with-maui-app">Blazor Hybrid MAUI App</a>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a href="/blazor/chart/working-with-data">Working with Data</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/chart-dimensions">Chart Dimensions</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/category-axis">Category Axis</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/numeric-axis">Numeric Axis</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/date-time-axis">DateTime Axis</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/logarithmic-axis">Logarithmic Axis</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/axis-labels">Axis Labels</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/axis-customization">Axis Customization</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/strip-line">Stripline</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/multiple-panes">Multiple Panes</a>
-			</li>
-			<li>Chart Types
-				<ul>
-					<li>
-						<a href="/blazor/chart/chart-types/line">Line</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/step-line">Step Line</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/stacked-line">Stacked Line</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/stack-line">100% Stacked Line</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/spline">Spline</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/area">Area</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/range-area">Range Area</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/range-step-area">Range Step Area</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/spline-range-area">Spline Range Area</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/stacked-area">Stacked Area</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/stack-area">100% Stacked Area</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/step-area">Step Area</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/spline-area">Spline Area</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/column">Column</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/range-column">Range Column</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/stacked-column">Stacked Column</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/stack-column">100% Stacked Column</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/bar">Bar Charts</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/stacked-bar">Stacked Bar</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/stack-bar">100% Stacked Bar</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/scatter">Scatter</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/bubble">Bubble</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/polar">Polar</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/radar">Radar</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/high-low">Hilo</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/high-low-open-close">High Low Open Close</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/candle">Candle</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/box-whisker">Box and Whisker</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/waterfall">Waterfall</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/histogram">Histogram</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/error-bar">Error Bar</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/vertical-chart">Vertical Chart</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/chart-types/pare-to">Pareto</a>
-					</li>
-				</ul>
-			</li>
-            <li>
-				<a href="/blazor/chart/chart-series">Mixed Chart</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/data-markers">Markers</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/data-labels">Data Labels</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/series-label">Series Labels</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/last-data-label">Last Data Label</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/data-label-template">Data Label Template</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/chart-annotations">Annotation</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/chart-appearance">Appearance</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/legend">Legend</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/tool-tip">Tooltip</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/zooming">Zooming</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/data-editing">Data Editing</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/chart-sorting">Data Sorting</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/cross-hair-and-track-ball">Crosshair and Trackball</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/selection">Selection</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/adaptive-layout">Adaptive Layout</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/chart-print">Print and Export</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/technical-indicators">Technical Indicators</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/trend-lines">Trendlines</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/gradient">Gradient</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/internationalization">Internationalization</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/localization">Localization</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/accessibility">Accessibility</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/advanced-accessibility-configuration">Advanced Accessibility Configuration</a>
-			</li>
-			<li>
-				<a href="/blazor/chart/events">Events</a>
-			</li>
-			<li>How To
-				<ul>
-					<li>
-						<a href="/blazor/chart/how-to/add-remove">Add or Remove Series</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/how-to/dynamic-points">Dynamic Points</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/how-to/synchronized-chart">Synchronized-chart</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/how-to/lazy-loading">Lazy Loading</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/how-to/tool-tip-table">Table in Tooltip</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/how-to/selected-data">Visualize grid data in chart</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/how-to/threshold">Threshold in Chart</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/how-to/live-chart">Live Chart</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/how-to/axis-hide">Hiding Axis</a>
-					</li>
-					<li>
-						<a href="/blazor/chart/how-to/convert-millisecond-to-date-time">Convert millisecond to date time</a>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a href="/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html"> API Reference</a>
-			</li>
-		</ul>
-	</li>
 	<li>Chart Wizard
 		<ul>
 			<li>Getting Started
@@ -1559,51 +2068,6 @@
 			</li>
 			<li>
 				<a href="/cr/blazor/Syncfusion.Blazor.Charts.SfChartWizard.html">API Reference</a>
-			</li>
-		</ul>
-	</li>
-	<li>Chat UI
-		<ul>
-      		<li>Getting Started
-				<ul>
-					<li> <a href="/blazor/chat-ui/getting-started-webapp">Blazor Web App</a></li>
-					<li>
-						<a href="/blazor/chat-ui/getting-started-with-server-app">Blazor Server App</a>
-					</li>
-					<li> <a href="/blazor/chat-ui/getting-started">Blazor WASM App</a></li>
-				</ul>
-			</li>
-			<li><a href="/blazor/chat-ui/messages">Messages</a></li>
-			<li>Chat Bot Integrations
-					<ul>
-						<li>
-							<a href="/blazor/chat-ui/bot-integrations/integration-with-bot-dialogflow">Google Dialogflow</a>
-						</li>
-						<li>
-							<a href="/blazor/chat-ui/bot-integrations/integration-with-bot-framework">Microsoft Bot Framework</a>
-						</li>
-					</ul>
-        	</li>
-			<li><a href="/blazor/chat-ui/timebreak">Time break</a></li>
-			<li><a href="/blazor/chat-ui/timestamp">Timestamp</a></li>
-			<li><a href="/blazor/chat-ui/typing-indicator">Typing indicator</a></li>
-			<li><a href="/blazor/chat-ui/load-on-demand">Load on-demand</a></li>
-			<li><a href="/blazor/chat-ui/mention">Mention Integration</a></li>
-			<li><a href="/blazor/chat-ui/header">Header</a></li>
-			<li><a href="/blazor/chat-ui/footer">Footer</a></li>
-			<li><a href="/blazor/chat-ui/file-attachments">File attachments</a></li>
-			<li><a href="/blazor/chat-ui/templates">Templates</a></li>
-			<li><a href="/blazor/chat-ui/speech-to-text">Speech to Text</a></li>
-			<li><a href="/blazor/chat-ui/appearance">Style and Appearance</a></li>
-			<li><a href="/blazor/chat-ui/globalization">Globalization</a></li>
-			<li><a href="/blazor/chat-ui/accessibility">Accessibility</a></li>
-			<li><a href="/blazor/chat-ui/methods">Methods</a></li>
-			<li><a href="/blazor/chat-ui/events">Events</a></li>
-			<li>
-				<a href="/blazor/chat-ui/content-security-policy"> Content Security Policy</a>
-			</li>
-			<li>
-				<a href="/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html"> API Reference</a>
 			</li>
 		</ul>
 	</li>
@@ -1762,13 +2226,7 @@
 				<a href="/blazor/color-picker/accessibility">Accessibility</a>
 			</li>
 			<li>
-				<a href="/blazor/color-picker/inline-rendering">Inline Rendering</a>
-			</li>
-			<li>
-				<a href="/blazor/color-picker/mode-and-value">Mode and Value</a>
-			</li>
-			<li>
-				<a href="/blazor/color-picker/localization">Localization and RTL</a>
+				<a href="/blazor/color-picker/property-customizations">Property Customizations</a>
 			</li>
 			<li>
 				<a href="/blazor/color-picker/style-and-appearance">Style and Appearance</a>
@@ -1782,19 +2240,10 @@
 						<a href="/blazor/color-picker/how-to/customize-color-picker">Customize Color Picker</a>
 					</li>
 					<li>
-						<a href="/blazor/color-picker/how-to/disable-color-picker">Disable Color Picker</a>
-					</li>
-					<li>
 						<a href="/blazor/color-picker/how-to/no-color-support">Handle No Color Support</a>
 					</li>
 					<li>
-						<a href="/blazor/color-picker/how-to/hide-control-buttons">Hide control buttons</a>
-					</li>
-					<li>
 						<a href="/blazor/color-picker/how-to/render-palette-alone">Render palette alone</a>
-					</li>
-					<li>
-						<a href="/blazor/color-picker/how-to/show-recent-color">Show Recent Color</a>
 					</li>
 				</ul>
 			</li>
@@ -1864,9 +2313,6 @@
 				<a href="/blazor/combobox/accessibility">Accessibility</a>
 			</li>
 			<li>
-				<a href="/blazor/combobox/customization">Customization</a>
-			</li>
-			<li>
 				<a href="/blazor/combobox/data-source">Data Source</a>
 			</li>
 			<li>
@@ -1927,9 +2373,6 @@
 						<a href="/blazor/context-menu/how-to/bind-menu-events">Bind Context Menu Events</a>
 					</li>
 					<li>
-						<a href="/blazor/context-menu/how-to/change-animation-settings">Change animation settings</a>
-					</li>
-					<li>
 						<a href="/blazor/context-menu/how-to/data-binding">Data Binding</a>
 					</li>
 					<li>
@@ -1937,9 +2380,6 @@
 					</li>
 					<li>
 						<a href="/blazor/context-menu/how-to/open-dialog">Open a dialog on Context Menu item click</a>
-					</li>
-					<li>
-						<a href="/blazor/context-menu/how-to/open-context-menu-click">Open Sub Menu on Context Menu Item Click</a>
 					</li>
 					<li>
 						<a href="/blazor/context-menu/how-to/open-and-close-context-menu">Open and close Context Menu</a>
@@ -2053,272 +2493,6 @@
 			</li>
 			<li>
 				<a href="/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html"> API Reference</a>
-			</li>
-		</ul>
-	</li>
-	<li>DataGrid
-		<ul>
-			<li>Getting Started
-				<ul>
-					<li>
-						<a href="/blazor/datagrid/getting-started-with-web-app">Blazor Web App</a>
-					</li>
-					<li>
-						<a href="/blazor/datagrid/getting-started-with-server-app">Blazor Server App</a>
-					</li>
-					<li>
-						<a href="/blazor/datagrid/getting-started">Blazor WASM App</a>
-					</li>
-					<li>
-						<a href="/blazor/datagrid/getting-started-with-maui-app">Blazor Hybrid MAUI App</a>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/data-binding/data-binding">Data Binding</a>
-				<ul>
-					<li><a href="/blazor/datagrid/data-binding/local-data">Local Data</a></li>
-					<li><a href="/blazor/datagrid/data-binding/remote-data">Remote Data</a></li>
-				</ul>
-			</li>
-			<li>Connecting to Adaptors
-				<ul>
-					<li><a href="/blazor/datagrid/connecting-to-adaptors/url-adaptor">URL Adaptor</a></li>
-					<li><a href="/blazor/datagrid/connecting-to-adaptors/odatav4-adaptor">ODataV4 Adaptor</a></li>
-					<li><a href="/blazor/datagrid/connecting-to-adaptors/web-api-adaptor">Web API Adaptor</a></li>
-					<li><a href="/blazor/datagrid/connecting-to-adaptors/custom-adaptor">Custom Adaptor</a></li>
-					<li><a href="/blazor/datagrid/connecting-to-adaptors/graphql-adaptor">GraphQL Adaptor</a></li>
-				</ul>
-			</li>
-			<li>Connecting to Database
-				<ul>
-					<li><a href="/blazor/datagrid/connecting-to-database/microsoft-sql-server">Microsoft SQL Server</a></li>
-					<li><a href="/blazor/datagrid/connecting-to-database/mysql-server">MySQL Server</a></li>
-					<li><a href="/blazor/datagrid/connecting-to-database/postgresql-server">PostgreSQL Server</a></li>
-					<li><a href="/blazor/datagrid/connecting-to-database/sqlite-server">SQLite Server</a></li>
-					<li><a href="/blazor/datagrid/connecting-to-database/mongodb-server">MongoDB Server</a></li>
-					<li><a href="/blazor/datagrid/connecting-to-database/firebase-firestore">Firebase (Firestore DB)</a></li>
-					<li><a href="/blazor/datagrid/connecting-to-database/firebase-realtime">Firebase (Realtime DB)</a></li>
-				</ul>
-			</li>
-			<li>Connecting to ORM
-				<ul>
-					<li><a href="/blazor/datagrid/connecting-to-ORM/entityframework">Entity Framework</a></li>
-					<li><a href="/blazor/datagrid/connecting-to-ORM/dapper">Dapper (Micro ORM) </a></li>
-				</ul>
-			</li>
-			<li>Connecting to Backends
-				<ul>
-					<li><a href="/blazor/datagrid/connecting-to-backends/signalr">SignalR</a></li>
-					<li><a href="/blazor/datagrid/connecting-to-backends/elasticsearch">Elasticsearch</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/data-annotation">Data Annotation</a>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/adaptive-layout">Adaptive View</a>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/performance">Performance Best Practices</a>
-			</li>
-			<li> <a href="/blazor/datagrid/columns">Columns</a>
-				<ul>
-					<li><a href="/blazor/datagrid/column-rendering">Column Rendering</a></li>
-					<li><a href="/blazor/datagrid/column-headers">Column Headers</a></li>
-					<li><a href="/blazor/datagrid/column-template">Column Template</a></li>
-					<li><a href="/blazor/datagrid/foreignKey-column">ForeignKey Column</a></li>
-					<li><a href="/blazor/datagrid/column-reorder">Column Reorder</a></li>
-					<li><a href="/blazor/datagrid/column-resizing">Column Resizing</a></li>
-					<li><a href="/blazor/datagrid/frozen-column">Column Pinning (Frozen)</a></li>
-					<li><a href="/blazor/datagrid/column-chooser">Column Chooser</a></li>
-					<li><a href="/blazor/datagrid/column-menu">Column Menu</a></li>
-					<li><a href="/blazor/datagrid/column-spanning">Column Spanning</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/row">Row</a>
-				<ul>
-					<li><a href="/blazor/datagrid/row-template">Row Template</a></li>
-					<li><a href="/blazor/datagrid/detail-template">Detail Template</a></li>
-					<li><a href="/blazor/datagrid/row-drag-and-drop">Row Drag and Drop</a></li>
-					<li><a href="/blazor/datagrid/row-spanning">Row Spanning</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/cell">Cell</a>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/editing">Editing</a>
-				<ul>
-					<li><a href="/blazor/datagrid/edit-types">Edit Types</a></li>
-					<li><a href="/blazor/datagrid/in-line-editing">Inline Editing</a></li>
-					<li><a href="/blazor/datagrid/dialog-editing">Dialog Editing</a></li>
-					<li><a href="/blazor/datagrid/template-editing">Template Editing</a></li>
-					<li><a href="/blazor/datagrid/batch-editing">Batch Editing</a></li>
-					<li><a href="/blazor/datagrid/command-column-editing">Command Column Editing</a></li>
-					<li><a href="/blazor/datagrid/column-validation">Column Validation</a></li>
-					<li><a href="/blazor/datagrid/persisting-data-in-server">Persisting Data in Server</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/grouping">Grouping</a>
-				<ul>
-					<li><a href="/blazor/datagrid/caption-template">Caption Template</a></li>
-					<li><a href="/blazor/datagrid/lazy-load-grouping">Lazy Load Grouping</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/filtering">Filtering</a>
-				<ul>
-					<li><a href="/blazor/datagrid/filter-bar">Filter Bar</a></li>
-					<li><a href="/blazor/datagrid/filter-menu">Filter Menu</a></li>
-					<li><a href="/blazor/datagrid/excel-like-filter">Excel Like Filter</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/sorting">Sorting</a>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/searching">Searching</a>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/paging">Paging</a>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/scrolling">Scrolling</a>
-				<ul>
-					<li><a href="/blazor/datagrid/virtual-scrolling">Virtual Scrolling</a></li>
-					<li><a href="/blazor/datagrid/infinite-scrolling">Infinite Scrolling</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/selection">Selection</a>
-				<ul>
-					<li><a href="/blazor/datagrid/row-selection">Row Selection</a></li>
-					<li><a href="/blazor/datagrid/cell-selection">Cell Selection</a></li>
-					<li><a href="/blazor/datagrid/checkbox-selection">Checkbox Selection</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/aggregates">Aggregates</a>
-				<ul>
-					<li><a href="/blazor/datagrid/footer-aggregate">Footer Aggregate</a></li>
-					<li><a href="/blazor/datagrid/group-and-caption-aggregate">Group and Caption Aggregate</a></li>
-					<li><a href="/blazor/datagrid/custom-aggregate">Custom Aggregate</a></li>
-					<li><a href="/blazor/datagrid/reactive-aggregate">Reactive Aggregate</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/print">Print</a>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/state-management">State Management</a>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/global-local">Globalization</a>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/tool-bar">Toolbar</a>
-				<ul>
-					<li><a href="/blazor/datagrid/toolbar-items">Toolbar Items</a></li>
-					<li><a href="/blazor/datagrid/custom-toolbar">Custom Toolbar</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/pdf-export">PDF Export</a>
-				<ul>
-					<li><a href="/blazor/datagrid/pdf-export-options">PDF export Options</a></li>
-					<li><a href="/blazor/datagrid/adding-header-and-footer">Adding Header and Footer</a></li>
-					<li><a href="/blazor/datagrid/template-pdf-export">PDF Exporting with Templates</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/excel-exporting">Export to Excel</a>
-				<ul>
-					<li><a href="/blazor/datagrid/excel-export-options">Excel Export Options</a></li>
-					<li><a href="/blazor/datagrid/templates-excel-export">Excel Exporting with Templates</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/clipboard">Clipboard</a>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/context-menu">Context Menu</a>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/accessibility">Accessibility</a>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/webassembly-performance">WebAssembly Performance</a>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/events">Events</a>
-			</li>
-			<li>
-				<a href="/blazor/datagrid/style-and-appearance/style-and-appearance">Style and Appearance</a>
-				<ul>
-					<li><a href="/blazor/datagrid/style-and-appearance/aggregate">Aggregate</a></li>
-					<li><a href="/blazor/datagrid/style-and-appearance/editing">Editing</a></li>
-					<li><a href="/blazor/datagrid/style-and-appearance/filtering">Filtering</a></li>
-					<li><a href="/blazor/datagrid/style-and-appearance/grouping">Grouping</a></li>
-					<li><a href="/blazor/datagrid/style-and-appearance/header">Header</a></li>
-					<li><a href="/blazor/datagrid/style-and-appearance/paging">Paging</a></li>
-					<li><a href="/blazor/datagrid/style-and-appearance/selection">Selection</a></li>
-					<li><a href="/blazor/datagrid/style-and-appearance/sorting">Sorting</a></li>
-					<li><a href="/blazor/datagrid/style-and-appearance/toolbar">Toolbar</a></li>
-				</ul>
-			</li>
-			<li>How To
-				<ul>
-					<li>
-						<a href="/blazor/datagrid/how-to/blazor-webassembly-data-grid-using-cli">Getting Started-Client side using CLI</a>
-					</li>
-					<li>
-						<a href="/blazor/datagrid/how-to/server-side-using-cli">Getting Started-Server side using CLI</a>
-					</li>
-          <li>
-						<a href="/blazor/datagrid/how-to/send-context-as-additional-parameters-from-events">Sending context as additional parameters from events in Blazor DataGrid</a>
-					</li>
-					<li>
-						<a href="/blazor/datagrid/how-to/using-dictionary-values-in-grid-datasource">Using dictionary values in Blazor DataGrid datasource</a>
-					</li>
-					<li>
-						<a href="/blazor/datagrid/how-to/upgrade-application-to-latest-version">Upgrade Application To Latest Version</a>
-					</li>
-					<li>
-            <a href="/blazor/datagrid/how-to/render-grid-inside-tab-with-specific-height">Render Blazor DataGrid inside the Tab with specific height</a>					</li>
-					<li>
-						<a href="/blazor/datagrid/how-to/customize-empty-grid-display-message">Customize the empty record template</a>
-					</li>
-					<li>
-						<a href="/blazor/datagrid/how-to/resize-grid-in-various-dimension">Resize the Blazor DataGrid in various dimension</a>
-					</li>
-					<li>
-						<a href="/blazor/datagrid/how-to/custom-helper-function-inside-loop-with-template">Use custom helper inside the loop with templates</a>
-					</li>
-					<li>
-						<a href="/blazor/datagrid/how-to/create-custom-grid-component">Create custom Blazor DataGrid</a>
-					</li>
-					<li>
-						<a href="/blazor/datagrid/how-to/define-events-programmatically">Define the GridEvents programmatically in Blazor DataGrid</a>
-					</li>
-          <li>
-						<a href="/blazor/datagrid/how-to/css-isolation-for-grid">CSS Isolation for Blazor DataGrid</a>
-					</li>
-          <li>
-						<a href="/blazor/datagrid/how-to/use-radio-button-instead-of-checkbox">Use radio button instead of checkbox in single selection mode of Blazor DataGrid</a>
-					</li>
-					<li>
-						<a href="/blazor/datagrid/how-to/enable-or-disable-grid">Enable/Disable Blazor DataGrid and its actions</a>
-					</li>
-					<li>
-						<a href="/blazor/datagrid/how-to/hide-the-built-in-spinner-and-show-a-custom-loading-spinner-in-blazor-datagrid">How to Hide the Built‑in Spinner and Show a Custom Loading Spinner</a>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a href="/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html"> API Reference</a>
 			</li>
 		</ul>
 	</li>
@@ -2445,9 +2619,6 @@
 			<li>How To
 				<ul>
 					<li>
-						<a href="/blazor/datepicker/how-to/disabled-the-datepicker-component">Disabled the DatePicker Component</a>
-					</li>
-					<li>
 						<a href="/blazor/datepicker/how-to/set-the-placeholder">Set the Placeholder</a>
 					</li>
 					<li>
@@ -2492,9 +2663,6 @@
 			</li>
 			<li>
 				<a href="/blazor/daterangepicker/native-events">Native Events</a>
-			</li>
-			<li>
-				<a href="/blazor/daterangepicker/customization">Customization</a>
 			</li>
 			<li>
 				<a href="/blazor/daterangepicker/accessibility">Accessibility</a>
@@ -2811,70 +2979,6 @@
 			</li>
 		</ul>
 	</li>
-	<li>FileManager
-	    <ul>
-			<li>Getting Started
-				<ul>
-					<li>
-						<a href="/blazor/file-manager/getting-started-with-web-app">Blazor Web App</a>
-					</li>
-					<li>
-						<a href="/blazor/file-manager/getting-started-with-server-app">Blazor Server App</a>
-					</li>
-					<li>
-						<a href="/blazor/file-manager/getting-started-with-wasm-app">Blazor WASM App</a>
-					</li>
-					<li>
-						<a href="/blazor/file-manager/getting-started-with-maui-app">Blazor Hybrid MAUI App</a>
-					</li>
-				</ul>
-			</li>
-			<li> <a href="/blazor/file-manager/data-binding">Data Binding</a></li>
-			<li> <a href="/blazor/file-manager/file-system-provider">File System Providers</a>
-				 <ul>
-					 <li> <a href="/blazor/file-manager/physical-file-system-provider">Physical file system provider</a></li>
-					 <li> <a href="/blazor/file-manager/azure-cloud-file-system-provider">Azure cloud file system Provider</a></li>
-					 <li> <a href="/blazor/file-manager/amazon-S3-cloud-file-provider">Amazon S3 cloud file provider</a></li>
-					 <li> <a href="/blazor/file-manager/sharePoint-file-provider">SharePoint file provider</a></li>
-					 <li> <a href="/blazor/file-manager/File-Transfer-Protocol-file-system-provider">File Transfer Protocol file system provider</a></li>
-					 <li> <a href="/blazor/file-manager/SQL-database-file-system-provider">SQL database file system provider</a></li>
-					 <li> <a href="/blazor/file-manager/Google-Drive-file-system-provider">Google Drive file system provider</a></li>
-					 <li> <a href="/blazor/file-manager/Firebase-Real-time-Database-file-system-provider">Firebase Real time Database file system provider</a></li>
-					 <li> <a href="/blazor/file-manager/custom-file-provider">Custom file provider</a></li>
-				 </ul>
-			</li>
-			<li> <a href="/blazor/file-manager/file-operations">File Operations</a></li>
-			<li> <a href="/blazor/file-manager/end-user-capabilities">End User Capabilities</a></li>
-			<li> <a href="/blazor/file-manager/toolbar">Toolbar</a></li>
-			<li> <a href="/blazor/file-manager/context-menu">Context Menu</a></li>
-			<li> <a href="/blazor/file-manager/views">Views</a></li>
-			<li> <a href="/blazor/file-manager/multiple-file-selection">Multiple File Selection</a></li>
-			<li> <a href="/blazor/file-manager/drag-and-drop">Drag and Drop</a></li>
-			<li> <a href="/blazor/file-manager/virtualization">Virtualization</a></li>
-			<li> <a href="/blazor/file-manager/pagination">Pagination</a></li>
-			<li> <a href="/blazor/file-manager/accessibility">Accessibility</a></li>
-			<li> <a href="/blazor/file-manager/upload">Upload</a></li>
-			<li>How To
-				<ul>
-					<li> <a href="/blazor/file-manager/how-to/adding-custom-item-to-context-menu">Adding Custom Item To Context Menu</a></li>
-					<li> <a href="/blazor/file-manager/how-to/add-custom-tool-bar">Adding Custom Item To Toolbar</a></li>
-					<li> <a href="/blazor/file-manager/how-to/customize-http-handler">Customize HTTP handler</a></li>
-					<li> <a href="/blazor/file-manager/how-to/previewing-files">Previewing Files</a></li>
-					<li> <a href="/blazor/file-manager/how-to/perform-custom-filtering">Perform Custom Filtering</a></li>
-					<li> <a href="/blazor/file-manager/how-to/restrict-drag-and-drop-upload">Restrict drag and drop upload</a></li>
-					<li> <a href="/blazor/file-manager/how-to/upload-large-files">Upload large files</a></li>
-					<li> <a href="/blazor/file-manager/how-to/nested-items">Nested File Manager</a></li>
-					<li> <a href="/blazor/file-manager/how-to/customize-navigation-items">Customize Navigation Items</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="/blazor/file-manager/styles">Style and Appearance</a>
-			</li>
-			<li>
-				<a href="/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html"> API Reference</a>
-			</li>
-		</ul>
-	</li>
 	<li>File Upload
 		<ul>
 			<li>Getting Started
@@ -2993,13 +3097,13 @@
 					<li><a href="/blazor/inline-ai-assist/ai-integrations/lite-llm-integration">Lite LLM</a></li>
 				</ul>
 			</li>
-			<li> <a href="/blazor/inline-ai-assist/accessibility">Accessibility</a></li>
 			<li> <a href="/blazor/inline-ai-assist/command-settings">Commands Configuration</a></li>
 			<li> <a href="/blazor/inline-ai-assist/response-settings">Response Actions</a></li>
 			<li> <a href="/blazor/inline-ai-assist/inline-toolbar">Inline Toolbar Configuration</a></li>
 			<li> <a href="/blazor/inline-ai-assist/templates">Template Customization</a></li>
 			<li> <a href="/blazor/inline-ai-assist/appearance">Appearance and Styling</a></li>
 			<li> <a href="/blazor/inline-ai-assist/globalization">Globalization</a></li>
+			<li> <a href="/blazor/inline-ai-assist/accessibility">Accessibility</a></li>
 			<li> <a href="/blazor/inline-ai-assist/methods">Methods</a></li>
 			<li> <a href="/blazor/inline-ai-assist/events">Events</a></li>
 			<li>How To
@@ -3044,7 +3148,6 @@
 			<li>How To
 				<ul>
 					<li> <a href="/blazor/in-place-editor/how-to/dynamic-edit-mode">Dynamically move input to edit mode</a></li>
-					<li> <a href="/blazor/in-place-editor/how-to/disable-edit-mode">Disable the edit mode specifically</a></li>
 					<li> <a href="/blazor/in-place-editor/how-to/custom-animation">Set custom Animation for popup mode</a></li>
 				</ul>
 			</li>
@@ -3274,62 +3377,6 @@
 			</li>
 		</ul>
 	</li>
-	<li>Maps
-		<ul>
-			<li>Getting Started
-				<ul>
-					<li> <a href="/blazor/maps/getting-started-webapp">Blazor Web App</a></li>
-					<li> <a href="/blazor/maps/getting-started-with-server-app">Blazor Server App</a></li>
-					<li> <a href="/blazor/maps/getting-started">Blazor WASM App</a></li>
-					<li> <a href="/blazor/maps/getting-started-with-maui-app">Blazor Hybrid MAUI App</a></li>
-				</ul>
-			</li>
-			<li> <a href="/blazor/maps/populate-data">Populate Data</a></li>
-			<li> <a href="/blazor/maps/shapefile">Shapefile</a></li>
-			<li> <a href="/blazor/maps/layers">Layers</a></li>
-			<li>
-				Providers
-				<ul>
-					<li> <a href="/blazor/maps/providers/openstreetmap">OpenStreetMap</a></li>
-					<li> <a href="/blazor/maps/providers/google-maps">Google Maps</a></li>
-					<li> <a href="/blazor/maps/providers/azure-maps">Azure Maps</a></li>
-					<li> <a href="/blazor/maps/providers/bing-maps">Bing Maps</a></li>
-					<li> <a href="/blazor/maps/providers/other-maps">Other Maps</a></li>
-				</ul>
-			</li>
-			<li> <a href="/blazor/maps/customization">Customization</a></li>
-			<li> <a href="/blazor/maps/color-mapping">Color Mapping</a></li>
-			<li> <a href="/blazor/maps/data-labels">Data Labels</a></li>
-			<li> <a href="/blazor/maps/polygon">Polygon</a></li>
-			<li> <a href="/blazor/maps/markers">Markers</a></li>
-			<li> <a href="/blazor/maps/bubble">Bubble</a></li>
-			<li> <a href="/blazor/maps/legend">Legend</a></li>
-			<li> <a href="/blazor/maps/navigation-line">Navigation Lines</a></li>
-			<li> <a href="/blazor/maps/annotations">Annotations</a></li>
-			<li> <a href="/blazor/maps/user-interactions">User Interactions</a></li>
-			<li> <a href="/blazor/maps/print-and-export">Print and Export</a></li>
-			<li> <a href="/blazor/maps/state-persistence">State Persistence</a></li>
-			<li> <a href="/blazor/maps/accessibility">Accessibility</a></li>
-			<li> <a href="/blazor/maps/internationalization">Globalization</a></li>
-			<li> <a href="/blazor/maps/localization">Localization</a></li>
-			<li> <a href="/blazor/maps/maps-event">Events</a></li>
-			<li> <a href="/blazor/maps/maps-method">Methods</a></li>
-			<li>How To
-				<ul>
-					<li> <a href="/blazor/maps/how-to/place-map-inside-other-components">Place map inside other components</a></li>
-					<li> <a href="/blazor/maps/how-to/creating-routes-between-the-markers">Creating routes between the markers</a></li>
-					<li> <a href="/blazor/maps/how-to/add-different-types-of-markers">Add different types of markers</a></li>
-					<li> <a href="/blazor/maps/how-to/change-center-position-on-zooming">Change center position on zooming</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="/blazor/maps/content-security-policy"> Content Security Policy</a>
-			</li>
-			<li>
-				<a href="/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html"> API Reference</a>
-			</li>
-		</ul>
-	</li>
 	<li>Media Query
 		<ul>
 			<li>Getting Started
@@ -3398,7 +3445,6 @@
 					<li> <a href="/blazor/menu-bar/how-to/change-submenu-position">Change Sub Menu Position</a></li>
 					<li> <a href="/blazor/menu-bar/how-to/customize-menu-items">Customize Menu Bar Items</a></li>
 					<li> <a href="/blazor/menu-bar/how-to/menu-with-rounded-corner">Menu Bar with Rounded Corner</a></li>
-					<li> <a href="/blazor/menu-bar/how-to/open-menu-click">Open Sub Menu on Menu Item Click</a></li>
 					<li> <a href="/blazor/menu-bar/how-to/right-left">Right to Left</a></li>
 				</ul>
 			</li>
@@ -3523,7 +3569,6 @@
 			</li>
 			<li> <a href="/blazor/numeric-textbox/data-binding">Data Binding</a></li>
 			<li> <a href="/blazor/numeric-textbox/formats">Number Formats</a></li>
-			<li> <a href="/blazor/numeric-textbox/globalization">Globalization</a></li>
 			<li> <a href="/blazor/numeric-textbox/accessibility">Accessibility</a></li>
 			<li> <a href="/blazor/numeric-textbox/native-events">Native Events</a></li>
 			<li> <a href="/blazor/numeric-textbox/events">Events</a></li>
@@ -3608,108 +3653,6 @@
 			</li>
 			<li>
 				<a href="/blazor/pager/accessibility">Accessibility</a>
-			</li>
-		</ul>
-	</li>
-	<li>Pivot Table
-		<ul>
-			<li>Getting Started
-				<ul>
-					<li> <a href="/blazor/pivot-table/getting-started-webapp">Blazor Web App</a></li>
-					<li> <a href="/blazor/pivot-table/getting-started-with-server-app">Blazor Server App</a></li>
-					<li> <a href="/blazor/pivot-table/getting-started">Blazor WASM App</a></li>
-					<li> <a href="/blazor/pivot-table/getting-started-with-maui-app">Blazor Hybrid MAUI App</a></li>
-				</ul>
-			</li>
-			<li> <a href="/blazor/pivot-table/smart-pivot">Smart Pivot Table</a></li>
-			<li> <a href="/blazor/pivot-table/data-binding">Data Binding</a></li>
-			<li>
-				Connecting to data source
-				<ul>
-					<li><a href="/blazor/pivot-table/connecting-to-data-source/mysql">MySQL</a></li>
-					<li><a href="/blazor/pivot-table/connecting-to-data-source/microsoft-sql-server">Microsoft SQL Server</a></li>
-					<li><a href="/blazor/pivot-table/connecting-to-data-source/postgreSQL">PostgreSQL</a></li>
-					<li><a href="/blazor/pivot-table/connecting-to-data-source/oracledb">Oracle</a></li>
-					<li><a href="/blazor/pivot-table/connecting-to-data-source/mongodb">MongoDB</a></li>
-					<li><a href="/blazor/pivot-table/connecting-to-data-source/elasticsearch">Elasticsearch</a></li>
-					<li><a href="/blazor/pivot-table/connecting-to-data-source/snowflakedb">Snowflake</a></li>
-				</ul>
-			</li>
-			<li> <a href="/blazor/pivot-table/olap">OLAP</a></li>
-			<li> <a href="/blazor/pivot-table/server-side-pivot-engine">Server-side Engine</a></li>
-			<li> <a href="/blazor/pivot-table/pivot-chart">Pivot Chart</a></li>
-			<li> <a href="/blazor/pivot-table/classic-layout">Classic Layout</a></li>
-			<li> <a href="/blazor/pivot-table/drill-down">Drill Down/Up</a></li>
-			<li>
-				Data Shaping
-				<ul>
-					<li> <a href="/blazor/pivot-table/aggregation">Aggregation</a></li>
-					<li> <a href="/blazor/pivot-table/calculated-field">Calculated Field</a></li>
-					<li> <a href="/blazor/pivot-table/grouping">Grouping</a></li>
-					<li> <a href="/blazor/pivot-table/filtering">Filtering</a></li>
-					<li> <a href="/blazor/pivot-table/sorting">Sorting</a></li>
-					<li> <a href="/blazor/pivot-table/drill-through">Drill Through</a></li>
-					<li> <a href="/blazor/pivot-table/editing">Editing</a></li>
-				</ul>
-			</li>
-			<li>
-				Data Formatting
-				<ul>
-					<li> <a href="/blazor/pivot-table/number-formatting">Number Formatting</a></li>
-					<li> <a href="/blazor/pivot-table/conditional-formatting">Conditional Formatting</a></li>
-				</ul>
-			</li>
-			<li>
-				Report Manipulation
-				<ul>
-					<li> <a href="/blazor/pivot-table/grouping-bar">Grouping Bar</a></li>
-					<li> <a href="/blazor/pivot-table/field-list">Field List</a></li>
-					<li> <a href="/blazor/pivot-table/defer-layout-update">Defer Layout Update</a></li>
-				</ul>
-			</li>
-			<li>
-				Performance
-				<ul>
-					<li> <a href="/blazor/pivot-table/virtual-scrolling">Virtual Scrolling</a></li>
-					<li> <a href="/blazor/pivot-table/paging">Paging</a></li>
-					<li> <a href="/blazor/pivot-table/data-compression">Data Compression</a></li>
-					<li> <a href="/blazor/pivot-table/performance-best-practices">Performance Best Practices</a></li>
-				</ul>
-			</li>
-			<li> <a href="/blazor/pivot-table/state-persistence">State Persistence</a></li>
-			<li> <a href="/blazor/pivot-table/row-and-column">Row and Column</a></li>
-			<li> <a href="/blazor/pivot-table/show-hide-totals">Show/Hide Totals</a></li>
-			<li> <a href="/blazor/pivot-table/hyper-link">Hyperlink</a></li>
-			<li> <a href="/blazor/pivot-table/tool-bar">Toolbar</a></li>
-			<li> <a href="/blazor/pivot-table/tool-tip">Tooltip</a></li>
-			<li> <a href="/blazor/pivot-table/css-customization">Style and Appearance</a></li>
-			<li>
-				Exporting
-				<ul>
-					<li> <a href="/blazor/pivot-table/excel-export">Excel Exporting</a></li>
-					<li> <a href="/blazor/pivot-table/pdf-export">PDF Exporting</a></li>
-				</ul>
-			</li>
-			<li> <a href="/blazor/pivot-table/globalization">Globalization</a></li>
-			<li> <a href="/blazor/pivot-table/accessibility">Accessibility</a></li>
-			<li> <a href="/blazor/pivot-table/events">Events</a></li>
-			<li>How To
-				<ul>
-					<li> <a href="/blazor/pivot-table/how-to/switching-older-themes-style">Switching to older themes style</a></li>
-					<li> <a href="/blazor/pivot-table/how-to/customize-number-and-date-format">Customize number and date format</a></li>
-					<li> <a href="/blazor/pivot-table/how-to/customizing-loading-indicator">Customizing loading indicator</a></li>
-					<li> <a href="/blazor/pivot-table/how-to/hide-empty-headers">Hide empty headers</a></li>
-					<li> <a href="/blazor/pivot-table/how-to/apply-custom-styles-to-pivot-cells">Apply custom style to pivot cells</a></li>
-					<li> <a href="/blazor/pivot-table/how-to/display-string-value-to-pivot-table-values">Display string value to pivot table values</a></li>
-					<li> <a href="/blazor/pivot-table/how-to/bind-complex-data-to-the-pivot-table">Convert complex data to flat data and assign it to the pivot table</a></li>
-					<li> <a href="/blazor/pivot-table/how-to/show-custom-tooltip-for-row-and-column-headers">Show tooltip for row and column headers</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="/blazor/pivot-table/content-security-policy"> Content Security Policy</a>
-			</li>
-			<li>
-				<a href="/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html"> API Reference</a>
 			</li>
 		</ul>
 	</li>
@@ -3951,76 +3894,6 @@
             <li> <a href="/blazor/sankey/events">Events</a></li>
 		</ul>
 	</li>
-	<li>Scheduler
-		<ul>
-			<li>Getting Started
-				<ul>
-					<li> <a href="/blazor/scheduler/getting-started-webapp">Blazor Web App</a></li>
-					<li> <a href="/blazor/scheduler/getting-started-with-server-app">Blazor Server App</a></li>
-					<li> <a href="/blazor/scheduler/getting-started">Blazor WASM App</a></li>
-					<li> <a href="/blazor/scheduler/getting-started-with-maui-app">Blazor Hybrid MAUI App</a></li>
-				</ul>
-			</li>
-			<li> <a href="/blazor/scheduler/scheduler-interactions">Scheduler Interactions</a></li>
-			<li>
-				<a href="/blazor/scheduler/appointments">Appointments</a>
-				<ul>
-					<li><a href="/blazor/scheduler/recurring-events">Recurring events</a></li>
-					<li><a href="/blazor/scheduler/appointment-drag-and-drop">Drag and drop</a></li>
-					<li><a href="/blazor/scheduler/appointment-resizing">Resizing</a></li>
-					<li><a href="/blazor/scheduler/appointment-customization">Appointment customization</a></li>
-				</ul>
-			</li>
-			<li> <a href="/blazor/scheduler/data-binding">Data Binding</a></li>
-			<li>Integrations
-			<ul>
-			<li><a href="/blazor/scheduler/graphql-adptor">GraphQL</a></li>
-			<li><a href="/blazor/scheduler/minimalapi">MinimalAPI</a></li>
-			<li><a href="/blazor/scheduler/postgresql">PostgreSQL Server</a></li>
-			</ul>
-			</li>
-			<li> <a href="/blazor/scheduler/crud-actions">CRUD Actions</a></li>
-			<li> <a href="/blazor/scheduler/virtual-scrolling">Virtual Scrolling</a></li>
-			<li> <a href="/blazor/scheduler/editor-template">Editor Window Customization</a></li>
-			<li> <a href="/blazor/scheduler/timezone">Timezone</a></li>
-			<li> <a href="/blazor/scheduler/views">Views</a></li>
-			<li> <a href="/blazor/scheduler/resources">Resources and Grouping</a></li>
-			<li> <a href="/blazor/scheduler/header-rows">Timeline Header Rows</a></li>
-			<li> <a href="/blazor/scheduler/row-auto-height">Row Auto Height</a></li>
-			<li> <a href="/blazor/scheduler/header-bar">Header Customization</a></li>
-			<li> <a href="/blazor/scheduler/timescale">Timescale Customization</a></li>
-			<li> <a href="/blazor/scheduler/working-hours">Working Days and Hours</a></li>
-			<li> <a href="/blazor/scheduler/cell-customization">Cell Customizations</a></li>
-			<li> <a href="/blazor/scheduler/state-persistence">State Persistence</a></li>
-			<li> <a href="/blazor/scheduler/exporting">Exporting</a></li>
-			<li> <a href="/blazor/scheduler/dimensions">Scheduler Dimensions</a></li>
-			<li> <a href="/blazor/scheduler/localization">Globalization</a></li>
-			<li> <a href="/blazor/scheduler/accessibility">Accessibility</a></li>
-			<li> <a href="/blazor/scheduler/webassembly-performance">WebAssembly Performance</a></li>
-			<li> <a href="/blazor/scheduler/events">Events</a></li>
-			<li> <a href="/blazor/scheduler/context-menu">Context Menu</a></li>
-			<li> <a href="/blazor/scheduler/clipboard">Clipboard</a></li>
-			<li> <a href="/blazor/scheduler/scheduler-styling">Style and Appearance</a></li>
-			<li>How To
-				<ul>
-					<li> <a href="/blazor/scheduler/how-to/blazor-web-assembly-scheduler">Blazor WebAssembly Scheduler</a></li>
-					<li> <a href="/blazor/scheduler/how-to/open-editor-window-on-single-click">Open Editor Window on Single Click</a></li>
-					<li> <a href="/blazor/scheduler/how-to/create-multiple-events-dynamically">Create Multiple Events in different time slots through CTRL key</a></li>
-					<li> <a href="/blazor/scheduler/how-to/custom-header">Custom Header</a></li>
-					<li> <a href="/blazor/scheduler/how-to/prevent-appointment-creation-and-deletion">Prevent Appointment Creation and Deletion</a></li>
-					<li> <a href="/blazor/scheduler/how-to/half-yearly-view">Show half-yearly view</a></li>
-					<li> <a href="/blazor/scheduler/how-to/set-min-max-date">Setting Minimum and Maximum Date</a></li>
-					<li> <a href="/blazor/scheduler/how-to/custom-editor-with-validation">Custom Editor With Validation</a></li>
-					<li> <a href="/blazor/scheduler/how-to/expand-collapse-resource-dynamically">Expand and Collapse Resource Dynamically</a></li>
-					<li> <a href="/blazor/scheduler/how-to/enable-scroll-option-on-all-day-section">Enable scroll option on all-day section</a></li>
-					<li> <a href="/blazor/scheduler/how-to/different-work-hours-for-each-days">Setting different Work hours for each day</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html"> API Reference</a>
-			</li>
-		</ul>
-	</li>
 	<li>Sidebar
 		<ul>
 			<li>Getting Started
@@ -4238,7 +4111,6 @@
 			<li> <a href="/blazor/splitter/pane-settings">Pane Settings</a></li>
 			<li> <a href="/blazor/splitter/split-panes">Split Panes</a></li>
 			<li> <a href="/blazor/splitter/expand-and-collapse">Expand and Collapse</a></li>
-			<li> <a href="/blazor/splitter/two-way-binding">Two way Binding</a></li>
 			<li> <a href="/blazor/splitter/resizing">Resize</a></li>
 			<li> <a href="/blazor/splitter/state-management">State Management</a></li>
 			<li> <a href="/blazor/splitter/different-layouts">Different Layouts</a></li>
@@ -4752,7 +4624,6 @@
 					<li> <a href="/blazor/treeview/how-to/check-uncheck-the-checkbox-on-clicking-the-tree-node-text">Check/uncheck the checkbox on clicking the tree node text</a></li>
 					<li> <a href="/blazor/treeview/how-to/validate-the-text-when-renaming-the-tree-node">Validate the text when renaming the tree node</a></li>
 					<li> <a href="/blazor/treeview/how-to/accordion-tree">Customize treeview as accordion</a></li>
-					<li> <a href="/blazor/treeview/how-to/get-dynamic-icon">Get iconCss dynamically in treeview</a></li>
 					<li> <a href="/blazor/treeview/how-to/get-all-child-nodes">Get all child nodes through parentID in treeview</a></li>
 				</ul>
 			</li>
@@ -4925,9 +4796,6 @@
 			</li>
 			<li>
 				<a href="/blazor/common/migration/core-razor-pages-to-blazor">Core Razor Pages to Blazor</a>
-			</li>
-			<li>
-				<a href="blazor/common/migration/winforms-blazor-migration">WinForms to Blazor</a>
 			</li>
 			<li>
 				<a href="/blazor/common/how-to/port-blazor-server-maui">Blazor Web App to MAUI Blazor Hybrid App</a>
