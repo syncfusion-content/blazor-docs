@@ -13,7 +13,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Template Studio crea
 
 N> The Syncfusion® Blazor extensions for Visual Studio require Essential Studio<sup style="font-size:70%">&reg;</sup> versions 31.2.10 or later.
 
-Quick start
+## Quick start
 
 1. Open Visual Studio 2022 or 2026.
 
@@ -27,11 +27,11 @@ Quick start
 
       ![CreateNewWindow](images/createnewwindow.webp)
 
-3. Select **Syncfusion® Blazor Template Studio** and click **Next**.
+3. Select **Syncfusion® Blazor Template Studio**, configure the project name and location, and click **Next**.
 
     ![CreateNewWizard](images/createnewwizard.webp)
 
-4. The Template Studio wizard opens. It guides you through Project Type, Controls, Features, and Configuration.
+4. The Template Studio wizard opens. It guides you through the **Project Type**, **Controls**, **Features**, and **Configuration** tabs.
 
     > **Note:** Refer to the .NET SDK support for Blazor Components [here](https://blazor.syncfusion.com/documentation/system-requirements#net-sdk).
 
@@ -50,13 +50,13 @@ Quick start
 
     ![WASMTemplate](images/wasmtemplate.webp)
 
-5. Click **Next** or open the **Controls** tab to pick the Syncfusion Blazor components to include in the project.
+5. Click **Next** or open the **Controls** tab to pick the Syncfusion Blazor components to include in the project. Use the search box to filter the component list.
 
     ![Controls Section](images/controlssection1.webp)
 
     Select at least one control to enable Features and Configuration options.
 
-6. Use the **Features** tab to choose component features, and the **Configuration** tab to set target .NET, theme, HTTPS, localization, and authentication options.
+6. Use the **Features** tab to choose component features. Use the **Configuration** tab to set the target .NET version, theme, HTTPS, PWA (for WebAssembly), localization, and authentication options.
 
     Supported authentication types depend on the application type:
 
@@ -76,19 +76,19 @@ Quick start
 
     ![Readme](images/readme.webp)
 
-9. The created project contains the selected theme, package versions, authentication settings, and sample render code for the components you chose.
+9. The created project includes the chosen theme, Syncfusion NuGet package versions, authentication settings, and sample render code for the selected components.
 
-10. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion® license key to your application since Syncfusion® introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for understanding the licensing changes introduced in Essential Studio®.
+10. If you installed the trial setup or NuGet packages from nuget.org, register the Syncfusion® license key in your application. Syncfusion® introduced the licensing system in the 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key. Refer to this [blog post](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) for background on the licensing changes introduced in Essential Studio®.
 
 ## Authentication Configuration
 
-We need to register the created application in the Google API Console for Individual Accounts and in Azure Active Directory for the Microsoft Identity Platform. From the Google API Console registration, we can obtain the client ID for Individual Accounts. From the Azure Active Directory registration, we can obtain the tenant ID and application client ID for the Microsoft Identity Platform. We need to configure these ID values in the created applications; only then will the application run correctly with authentication support.
+Register the created application in the Google API Console for Individual Accounts, or in Azure Active Directory for the Microsoft Identity Platform. The Google API Console registration provides the client ID for Individual Accounts, while the Azure Active Directory registration provides the tenant ID and application client ID for the Microsoft Identity Platform. Configure these ID values in the created application so it runs correctly with authentication support.
 
 ### Individual Accounts Authentication
 
 #### Web Application and Progressive Web Application
 
-1. Go to below credentials page for the Google cloud platform API console.
+1. Go to the credentials page in the Google Cloud Platform API Console.
 
     <https://console.cloud.google.com/apis/credentials?project=aerobic-furnace-244104&pli=1>
 
@@ -110,11 +110,11 @@ We need to register the created application in the Google API Console for Indivi
 
     ![ClientIdCreation](images/clientidcreation.webp)
 
-6. Add that Client Id, and RedirectUri in appsettings.json file of your application.
+6. Add the Client Id and RedirectUri in the `appsettings.json` file of your application. Example keys:
 
     ![ClinetIdConfiguration](images/clinetidconfiguration.webp)
 
-7. Change the build configuration bind as google from Local in program.cs file.
+7. Change the build configuration binding from `Local` to `google` in the `Program.cs` file.
 
     ![buildconfigurationbind](images/buildconfigurationbind.webp)
 
@@ -146,7 +146,7 @@ We need to register the created application in the Google API Console for Indivi
 
     ![Clinet tenat id](images/clinettenantid.webp)
 
-7. Configure those client tenant id, application id, and domain in your application appsettings.json file.
+7. Configure the client tenant id, application id, and domain in your application's `appsettings.json` file. Example keys:
 
     ![Project configuration](images/configuration2.webp)
 
@@ -182,7 +182,7 @@ We need to register the created application in the Google API Console for Indivi
 
     ![Clinet tenat id](images/clinettenantid.webp)
 
-8. Configure those client tenant id and application id in your application appsettings.json file.
+8. Configure the client tenant id and application id in your application's `appsettings.json` file.
 
     ![Clinet ID and Tenant ID configuration](images/clinettenantidconfiguration.webp)
 
@@ -264,25 +264,25 @@ We need to register the created application in the Google API Console for Indivi
 
     ![Clinet tenat id](images/clinettenantid.webp)
 
-10. Configure those client tenant id, application id, added scope api id, and domain in your application appsettings.json file.
+10. Configure the client tenant id, application id, added scope api id, and domain in your application's `appsettings.json` file.
 
     ![Project configuration](images/configuration1.webp)
 
-11. Configure the scope API in client application program.cs file below highlighted place.
+11. Configure the scope API in the client application's `Program.cs` file at the highlighted location.
 
     ![Scope API configuration](images/scopeapiconfiguration.webp)
 
-### Run application
+## Run application
 
-You can run the application and see the Syncfusion® components you selected. Select a component to see component output.
+Run the application to see the Syncfusion® components you selected. Select a component to view its output.
 
 ![Blazor Template output page](images/homepage.webp)
 
-You can select a culture language in combo box at top right on the output page to apply the culture in the application.
+You can select a culture from the combo box at the top right of the output page to apply the culture in the application.
 
 ![Blazor Template output page](images/localization.webp)
 
-N> **Note:** Above culture combo box will be enabled in sample output if localization option is selected in configuration window from Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Template Studio wizard.
+N> **Note:** The culture combo box is enabled in the sample output only if the **Enable localization** option is selected in the Configuration window of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Template Studio wizard.
 
 ## Register and Login Application
 
@@ -290,9 +290,9 @@ N> **Note:** Above culture combo box will be enabled in sample output if localiz
 
 #### Blazor Web App
 
-##### Applying Database Migrations and User Registration in the .NET 8.0, .NET 9.0 and .NET 10 Blazor Web App
+##### Apply database migrations and user registration in .NET 8.0, .NET 9.0, and .NET 10 Blazor Web App
 
-##### Applying Database Migrations:
+###### Apply database migrations
 
 In the Blazor Web App, it's essential to apply pending migrations to the database before proceeding with user registration. Choose one of the following options:
 
@@ -310,7 +310,7 @@ Open a command prompt in your project directory and execute the following comman
 
    ```dotnet ef database update```
 
-##### User Registration:
+###### User registration
 
 1.	Launch the application and register by submitting your email address and creating a password.
 
@@ -326,7 +326,7 @@ Open a command prompt in your project directory and execute the following comman
 
 #### Server Application, ASP.NET Core hosted Web Application, and Progressive Web Application with ASP.NET Core hosted
 
-1. For register the application, submit your email address and create a password.
+1. To register the application, submit your email address and create a password.
 
     ![Register the application](images/registerapplication.webp)
 
@@ -348,9 +348,9 @@ Open a command prompt in your project directory and execute the following comman
 
 #### Server Application, Web Application, Progressive Application, ASP.NET Core Hosted Web Application, and ASP.NET Core Hosted with Progressive Web Application
 
-1. Login to your application using your Microsoft account.
+1. Log in to your application using your Microsoft account.
 
-2. Accept permission request of your application.
+2. Accept the permission request for your application.
 
     ![Accept permission](images/microsoftauthentication.webp)
 
