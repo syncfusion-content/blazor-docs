@@ -53,7 +53,7 @@ A detailed demonstration of the process for creating a HiloOpenClose chart using
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBJNlLNJmhnNTVP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor High Low Open Close Chart](../images/chart-types-images/blazor-high-low-open-close-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrHDHWeTigXIISL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor High Low Open Close Chart](../images/chart-types-images/blazor-high-low-open-close-chart.webp)" %}
 
 ## Binding data with series
 
@@ -93,7 +93,7 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBJNlLNJmhnNTVP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVdDdMoTMUJToYf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Series customization
 
@@ -133,7 +133,7 @@ In [HiloOpenClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhfDPhDJGyAaMRW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVnXnieTWURuJPe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Empty points
 
@@ -178,7 +178,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhTNvLjJcGnFLlA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVHtnWIJMgaOUQX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **Fill**
 
@@ -219,7 +219,7 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVJZPVjzwkgtqWL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVnNRWIJizLYwas?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Events
 
@@ -266,7 +266,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVTZvhNzPUybXnQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVRtniofCzoSfTr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Point render
 
@@ -311,7 +311,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhzDlBDpbdSnHLC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhRZHiyfWzwnpEX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
