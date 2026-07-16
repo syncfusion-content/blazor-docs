@@ -37,7 +37,7 @@ N> When `DirectoryUpload` is set to `true`, only folders can be uploaded. When i
 
 The screenshot below shows after successfully selecting a directory it uploads all the file inside it automatically. This demonstrates how the `DirectoryUpload` property works in the Blazor File Manager component.
 
-![Blazor File Manager with DirectoryUpload](images/blazor-filemanager-directoryupload.png)
+![Blazor File Manager with DirectoryUpload](images/blazor-filemanager-directoryupload.webp)
 
 ## Sequential Upload
 
@@ -63,7 +63,7 @@ When set to `true`, the selected files will process sequentially (one after th
 ```
 The screenshot below shows that each file begins uploading only after the previous one completes. This demonstrates how the `SequentialUpload` property works in the Blazor File Manager component.
 
-![Blazor File Manager with SequentialUpload](images/blazor-filemanager-sequentialupload.png)
+![Blazor File Manager with SequentialUpload](images/blazor-filemanager-sequentialupload.webp)
 
 ## Chunk Upload
 
@@ -91,7 +91,7 @@ In the following example, the ChunkSize is set to 5 MB (5,242,880 bytes), and th
 
 With chunk upload, the pause and resume options gives users enhanced control over the file upload process.
 
-![Blazor File Manager with chunkUpload](images/blazor-filemanager-chunkupload.png)
+![Blazor File Manager with chunkUpload](images/blazor-filemanager-chunkupload.webp)
 
 ## Auto Upload
 
@@ -116,7 +116,7 @@ The default value is `true`, the File Manager will automatically upload files as
 
 The screenshot demonstrates the AutoUpload property set to `false`. When disabled, files are added to the queue without being automatically uploaded, and the `Upload` and `Clear` buttons remain visible for manual control.
 
-![Blazor File Manager with AutoUpload](images/blazor-filemanager-autoupload.png)
+![Blazor File Manager with AutoUpload](images/blazor-filemanager-autoupload.webp)
 
 ## Auto Close
 
@@ -163,7 +163,7 @@ If you want to allow only image files like .jpg and .png, you would set the prop
 </SfFileManager>
 
 ```
-![Blazor File Manager with AllowedExtensions](images/blazor-filemanager-allowextension.png)
+![Blazor File Manager with AllowedExtensions](images/blazor-filemanager-allowextension.webp)
 
 ## Upload Mode
 

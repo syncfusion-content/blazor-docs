@@ -32,7 +32,7 @@ Here is a sample demonstrating Virtualization enabled in the **Details** ViewTyp
 
 The below GIF demonstrates the file loading when virtualization is enabled, a sizable collection of files can be found in the folders **Documents** and **Text Documents**..
 
-![Virtualization in Blazor FileManager](images/blazor-filemanager-virtualization.gif)
+![Virtualization in Blazor FileManager](images/blazor-filemanager-virtualization.webp)
 
 ## Limitations
 
