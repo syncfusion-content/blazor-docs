@@ -44,13 +44,13 @@ The following example shows how to invoke the [PrintAsync](https://help.syncfusi
 
     public List<TreeData> TreeGridData { get; set; }
 
-    public void Print()
+public async Task Print()
+{
+    if (TreeGrid != null)
     {
-        if (TreeGrid != null)
-        {
-            this.TreeGrid.PrintAsync();
-        }
+        await TreeGrid.PrintAsync();
     }
+}
 
     protected override void OnInitialized()
     {
