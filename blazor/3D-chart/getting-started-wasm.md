@@ -273,7 +273,7 @@ Now, map the data fields  `Month` and `Sales` to the series `XName` and `YName` 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLJZHCKiVjCNqCE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBdjRtvqQtKlaTl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Add 3D Charts title
 
@@ -294,7 +294,7 @@ Using the `Title` property, you can add a title to the chart and the axes to pro
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLfNRsgCVjHdioT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVdZRNlqwsNPTdn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Enable legend
 
@@ -315,7 +315,7 @@ You can use legend for the 3D Charts by setting the `Visible` property to **true
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhpDRiKMriVAFPn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthnNdZFKQBsJBtI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Add data label
 
@@ -336,7 +336,7 @@ You can add data labels to improve the readability of the 3D Charts. This can be
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrfDxCqCLizaoKV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLRtdjPgGVPYKIZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Enable tooltip
 
@@ -358,7 +358,7 @@ The tooltip is useful when you cannot display information by using the data labe
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLzXHWUiVMwxISt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrdDnNPqGqIbvpP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## See also
 
