@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Virtualization in Blazor MultiSelect Dropdown Component | Syncfusion
-description: Checkout and learn here all about virtualization in Syncfusion Blazor MultiSelect Dropdown component and much more.
+title: Virtualization in Blazor MultiSelect Dropdown Component | Syncfusion®
+description: Checkout and learn here all about virtualization in Blazor MultiSelect Dropdown component and much more details.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
@@ -25,7 +25,7 @@ In the following example, the ID and Text properties from the complex data are m
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVzZnCLLvDOtKfT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrxjcXvUdtoBZBN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Binding remote data
 
@@ -39,7 +39,7 @@ The following sample displays the EmployeeID from the `VirtualDropdownData` Data
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLfXnsVrFhXwhUz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhxXmDbAdXbNoub?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customizing items count in virtualization 
 
@@ -53,7 +53,7 @@ The following example demonstrates customizing the item count in virtualization.
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrTNHMhLFzBMPHF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrdNGDFgHMCBHEW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Grouping with virtualization
 
@@ -67,7 +67,7 @@ The following example demonstrates grouping with virtualization.
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhzZxsVBveNGfJx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhxXQXvAxMehoxo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Filtering with virtualization
 
@@ -81,7 +81,7 @@ The following example demonstrates filtering with virtualization.
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBTjniBrvoGajst?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVRjcjbAxWvtGrE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Checkbox with virtualization
 
@@ -95,7 +95,7 @@ The following example demonstrates checkbox selection with virtualization.
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVftRMBVlGAAHBj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVxjwXvUHrgdEKZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Custom value with virtualization
 
@@ -109,7 +109,7 @@ The following example demonstrates custom values with virtualization.
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBzjxCrVbHQCKrx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrdNGDPAdBeuBvA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Preselect values with virtualization
 
@@ -123,4 +123,4 @@ The following example demonstrates preselect values with virtualization.
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBJNnirVmbkEWqv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthxjcjPqxBbhWgn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

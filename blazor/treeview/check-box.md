@@ -1,7 +1,7 @@
 ---
 layout: post
-title: CheckBox in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about CheckBox in Syncfusion Blazor TreeView component and much more details.
+title: CheckBox in Blazor TreeView Component | Syncfusion®
+description: Checkout and learn here all the features about CheckBox in Blazor TreeView component and much more details.
 platform: Blazor
 control: TreeView
 documentation: ug
@@ -101,7 +101,7 @@ For independent checked states, allowing child nodes to be checked or unchecked 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhSitCBUvmzMcKy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with CheckBox](./images/blazor-treeview-checkbox.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBHZcithchWCBHV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TreeView with CheckBox](./images/blazor-treeview-checkbox.webp)" %}
 
 ## Check Nodes through Data Binding
 
@@ -186,7 +186,7 @@ A specific node is checked by setting the [`IsChecked`](https://help.syncfusion.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZreMtWrAblXlpWM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLxXcMDrmVPWYpE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Check nodes using CheckedNodes property
 
@@ -275,7 +275,7 @@ The Blazor TreeView component enables checking specific nodes upon initial rende
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBSMZsVqvvPrMXI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView](./images/checkednodes.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBHDmiXVmqDyUJA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TreeView](./images/checkednodes.webp)" %}
 
 ## Check and Uncheck All Nodes
 
@@ -380,7 +380,7 @@ The example demonstrates the usage of these methods within the context of a butt
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrICXiVgusUIOKg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView](./images/check-uncheck.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVxjciZLQQZCPrg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TreeView](./images/check-uncheck.webp)" %}
 
 ## Get Checked Nodes
 
@@ -535,7 +535,7 @@ The Blazor TreeView component provides the capability to pre-select specific nod
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVyCtMrKkBdTNdz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Get checked nodes](./images/blazor-treeview-get-checked-nodes.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBdNQiZBclsgJfJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Get checked nodes](./images/blazor-treeview-get-checked-nodes.webp)" %}
 
 ## Single Selection with CheckBox
 
@@ -633,7 +633,7 @@ The Blazor TreeView component facilitates single selection of nodes with checkbo
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthIiNCBAEUoTLhN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrxjwWNrvtzsgPk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Hide CheckBox for Parent Nodes
 
@@ -740,7 +740,7 @@ The Blazor TreeView component can render checkboxes before each node when [`Show
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLosZWBgaTqlQtr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Hide CheckBox for parent nodes](./images/blazor-treeview-remove-parent-checkbox.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrdZmMZBFjGvZPz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Hide CheckBox for parent nodes](./images/blazor-treeview-remove-parent-checkbox.webp)" %}
 
 ## Cancel the Check Action
 

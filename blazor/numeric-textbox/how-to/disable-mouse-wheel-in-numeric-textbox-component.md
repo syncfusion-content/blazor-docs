@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Disable Mouse Wheel in Blazor NumericTextBox | Syncfusion
-description: Learn how to enable or disable mouse wheel scrolling in the Syncfusion Blazor Numeric TextBox component using the AllowMouseWheel property.
+title: Disable Mouse Wheel in Blazor NumericTextBox | Syncfusion®
+description: Learn how to enable or disable mouse wheel scrolling in Blazor Numeric TextBox using the AllowMouseWheel property.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug

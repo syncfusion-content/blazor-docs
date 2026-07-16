@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Download and installation of the Blazor extension | Syncfusion
-description: Learn here about how to download and install the Syncfusion Blazor extension for Visual Studio and manage the Blazor applications. Explore to more details.
+title: Download and installation of the Blazor extension | Syncfusion®
+description: Learn here about how to download and install the Blazor extension for Visual Studio and manage the Blazor applications. Explore to more details.
 platform: Blazor
 control: Common
 documentation: ug
@@ -15,7 +15,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> publishes the Visual Studio ext
 
 ## Prerequisites
 
-The following software is required to install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor extension and to create projects, add snippets, convert, and upgrade Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor applications.
+The following software is required to install the Syncfusion® Blazor extension and to create projects, add snippets, convert, and upgrade Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor applications.
 
 * [Visual Studio 2022 / Visual Studio 2026](https://visualstudio.microsoft.com/downloads/).
 
@@ -27,7 +27,7 @@ The following software is required to install the Syncfusion<sup style="font-siz
 
 ## Install through Visual Studio Manage Extensions
 
-The following steps describe how to install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor extension from **Manage Extensions** in Visual Studio.
+The following steps describe how to install the Syncfusion® Blazor extension from **Manage Extensions** in Visual Studio.
 
 1. Open Visual Studio 2022 or 2026.
 
@@ -53,9 +53,9 @@ The following steps describe how to install the Syncfusion<sup style="font-size:
 
 ## Install from the Visual Studio Marketplace
 
-Follow these steps to download and install the Syncfusion Blazor extension from the Visual Studio Marketplace.
+Follow these steps to download and install the Syncfusion® Blazor extension from the Visual Studio Marketplace.
 
-1. Download the Syncfusion Blazor extension from the Visual Studio Marketplace.
+1. Download the Syncfusion® Blazor extension from the Visual Studio Marketplace.
 
    [Download the Visual Studio 2026 extension](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.BlazorVSExtension)
 
