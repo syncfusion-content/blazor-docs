@@ -9,7 +9,7 @@ documentation: ug
 
 # Bind Change Events in Blazor ListBox Component
 
-Bind the change event in the listbox [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) event is used and the event is triggered when the value in the listbox changes.
+Bind the change event in the listbox [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ListBoxEvents_2_ValueChange) event is used and the event is triggered when the value in the listbox changes.
 
 ```cshtml
 
