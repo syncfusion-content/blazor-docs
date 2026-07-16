@@ -62,5 +62,5 @@ Here is an example demonstrating how to assign unique `Id` values to dynamically
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXryNOLepGKtuKUL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Blazor DashboardLayout](../images/panel-overlap.webp)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrRDmijpvAvkqOf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard Layout](../images/panel-overlap.webp)" %}
