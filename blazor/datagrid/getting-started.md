@@ -257,3 +257,5 @@ dotnet run
 {% endtabcontents %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htrHZdNkKnhrXYsw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+N> Looking for a complete Blazor DataGrid Component overview, including features, and pricing? Explore the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) Component page.

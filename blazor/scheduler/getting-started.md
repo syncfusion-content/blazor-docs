@@ -379,8 +379,7 @@ You can configure only the required views as needed, and include additional view
 {% endhighlight %}
 {% endtabs %}
 
-N> Looking for the full Blazor Scheduler component overview, features, pricing, and documentation? Visit the 
-The [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) page.
+N> Looking for the full Blazor Scheduler component overview, features, and pricing? Visit the [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) page.
 
 ## See also
 
