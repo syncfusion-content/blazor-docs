@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in Blazor Rating Component
 
-The Blazor Rating component supports tooltips that display additional information for rating items by enabling the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ShowTooltip) property. When enabled (default is `false`), a tooltip appears when the user hovers over a rating item.
+The Blazor Rating component provides tooltip support to display additional information for rating items. Set the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ShowTooltip) property to control the visibility of tooltips. By default, this property is set to true, and a tooltip is displayed when the user hovers over a rating item. When set to false, tooltips are disabled and will not be shown for rating items.
 
 ```cshtml
 
@@ -75,11 +75,10 @@ N> For more details on styling options, refer to the [tooltip customization](htt
 
     /* To change the top border color for arrow of the tooltip. */
     .customtooltip .e-tooltip-wrap .e-arrow-tip-outer.e-tip-bottom {
-        border-top: 12.5px solid #969393;
+        border-top: 8px solid #969393;
     }
 
 </style>
 
 ```
-
-![Blazor Rating component with tooltip customization](./images/blazor-rating-custom-tooltip.webp)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhxtmMopsEinSxW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "![Blazor Rating component with tooltip customization](./images/blazor-rating-custom-tooltip.webp)" %}
