@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor File Manager component in Blazor WASM App
 
-This section briefly explains how to include the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+N> To use Syncfusion Blazor components in production, register a license key in your app. See the [Syncfusion license registration documentation](https://blazor.syncfusion.com/documentation/common/licensing/how-to-register) for details.
 
 ## Create a new Blazor WebAssembly (Standalone) App
 
@@ -25,7 +25,7 @@ Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates
 
 {% tabcontent Visual Studio Code %}
 
-Run the following command to create a new Blazor WebAssembly App.
+Use the following command to create a new Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -36,13 +36,13 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-Alternatively, create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+Alternatively, create a **Blazor WebAssembly App** in Visual Studio Code using the [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
 {% endtabcontent %}
 
 {% tabcontent .NET CLI %}
 
-Run the following command to create a new Blazor WebAssembly App.
+Use the following command to create a new Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
@@ -59,7 +59,7 @@ cd BlazorApp
 
 ## Install the required Blazor packages
 
-Install the [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+Install the [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages to use the File Manager in your Blazor WebAssembly App. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 {% tabcontents %}
 
@@ -83,7 +83,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% tabcontent Visual Studio Code %}
 
-Open the terminal and run the following commands.
+In the integrated terminal, execute the following commands.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -98,7 +98,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% tabcontent .NET CLI %}
 
-Open the command prompt and run the following commands.
+Open the command prompt and execute the following commands.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
@@ -115,7 +115,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.FileManager` namespaces.
+After the packages are installed, open the **~/_Imports.razor** file and add the `Syncfusion.Blazor` and `Syncfusion.Blazor.FileManager` namespaces.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -128,7 +128,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in the Blazor WebAssembly App and register the Blazor service.
+Open the **Program.cs** file in the Blazor WebAssembly App and register the Syncfusion Blazor service.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -161,8 +161,12 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component inside the Razor file.
 
+N> The sample URLs below point to a public demo service. For production use, replace them with a local provider (for example, the [Physical File System Provider](https://blazor.syncfusion.com/documentation/file-manager/physical-file-system-provider)).
+
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@page "/"
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
@@ -186,7 +190,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 {% tabcontent Visual Studio Code %}
 
-Open the terminal and run the following command.
+From the project directory, run the following command in the terminal.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -200,7 +204,7 @@ dotnet run
 
 {% tabcontent .NET CLI %}
 
-Open the command prompt and run the following command.
+From the project directory, execute the following command at the command prompt.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
@@ -214,7 +218,7 @@ dotnet run
 
 {% endtabcontents %}
 
-## See also
+## See Also
 
 1. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
