@@ -25,10 +25,10 @@ When set to `true`, this property enables directory upload in the FileManager, a
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerUploadSettings DirectoryUpload  = "true"></FileManagerUploadSettings>
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api//FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/test/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api//FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/test/FileManager/GetImage">
     </FileManagerAjaxSettings>
 </SfFileManager>
 
@@ -53,10 +53,10 @@ When set to `true`, the selected files will process sequentially (one after th
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerUploadSettings SequentialUpload  = "true"></FileManagerUploadSettings>
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api//FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/test/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api//FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/test/FileManager/GetImage">
     </FileManagerAjaxSettings>
 </SfFileManager>
 
@@ -79,10 +79,10 @@ By specifying a `ChunkSize`, the large file is divided into smaller parts, reduc
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerUploadSettings DirectoryUpload="true" ChunkSize="5242880" MaxFileSize="73728000"></FileManagerUploadSettings>
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api//FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/test/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api//FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/test/FileManager/GetImage">
     </FileManagerAjaxSettings>
 </SfFileManager>
 
@@ -105,10 +105,10 @@ The default value is `true`, the File Manager will automatically upload files as
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerUploadSettings AutoUpload = "false"></FileManagerUploadSettings>
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api//FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/test/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api//FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/test/FileManager/GetImage">
     </FileManagerAjaxSettings>
 </SfFileManager>
 
@@ -130,10 +130,10 @@ The default value is set to `false`, the upload dialog remains open even after t
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerUploadSettings  AutoClose="true"></FileManagerUploadSettings>
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api//FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/test/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api//FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/test/FileManager/GetImage">
     </FileManagerAjaxSettings>
 </SfFileManager>
 
@@ -155,10 +155,10 @@ If you want to allow only image files like .jpg and .png, you would set the prop
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerUploadSettings  AllowedExtensions=".jpg,.png"></FileManagerUploadSettings>
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api//FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/test/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api//FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/test/FileManager/GetImage">
     </FileManagerAjaxSettings>
 </SfFileManager>
 
@@ -184,10 +184,10 @@ By default, the `UploadMode` is set to `FormSubmit`, but you can switch to HttpC
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerUploadSettings  UploadMode="UploadMode.HttpClient"></FileManagerUploadSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" OnSend="OnBeforeSend"></FileManagerEvents>
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api//FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/test/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api//FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/test/FileManager/GetImage">
     </FileManagerAjaxSettings>
 </SfFileManager>
 
@@ -270,10 +270,10 @@ The Blazor File Manager component allows you to easily perform drag and drop fil
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerUploadSettings DropArea=".e-layout-content"></FileManagerUploadSettings>
 </SfFileManager>
