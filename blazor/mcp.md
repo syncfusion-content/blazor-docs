@@ -141,7 +141,7 @@ Create a configuration file in your project folder to install the server for you
 
 **For .NET 8 / .NET 9 (using a local tool):**
 
-You can install the Syncfusion Blazor MCP server as a local tool without a global installation. For more details, refer the [documentation](https://learn.microsoft.com/en-us/dotnet/core/tools/local-tools-how-to-use).
+You can install the Syncfusion Blazor MCP server as a local tool without a global installation. For guidance on installing and managing local .NET tools, refer the [documentation](https://learn.microsoft.com/en-us/dotnet/core/tools/local-tools-how-to-use).
 
 1. Install the Syncfusion Blazor MCP tool locally:
 
