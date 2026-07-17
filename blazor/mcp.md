@@ -25,7 +25,7 @@ These tools speed up development and reinforce best practices for Syncfusion com
 
 Before beginning, ensure the following prerequisites are met:
 
-- **Node.js** version 18 or higher
+- Microsoft [.NET SDK 8.0](https://dotnet.microsoft.com/download/dotnet/8.0) or later
 - A **compatible MCP client** (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, JetBrains, etc.)
 - An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://syncfusion.com/account/api-key)
 - A **Blazor application** (existing or new); see [Quick Start](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
@@ -48,7 +48,9 @@ Generate the Syncfusion<sup style="font-size:70%">&reg;</sup> API key from the [
 
 ### Setting Up in MCP Clients
 
-Create a configuration file in your project folder to install the server for your workspace. **Replace `YOUR_API_KEY_FILE_PATH` with the path to your API key file.**
+Create a configuration file in your project folder to install the server for your workspace. **Replace `YOUR_API_KEY_FILE_PATH` with the path to your API key file.** The tabs below show a working configuration for each supported MCP client.
+
+> **.NET version in use:** The examples below target **.NET 10** and use the `dnx` runner, which downloads and runs the `Syncfusion.Blazor.MCP` package on demand — no local install required. If you are on **.NET 8 or .NET 9**, see the [Additional Configuration](#additional-configuration) section at the end for the `dotnet tool` equivalent.
 
 {% tabs %}
 {% highlight bash tabtitle="VS Code" %}
@@ -137,19 +139,48 @@ Create a configuration file in your project folder to install the server for you
 {% endhighlight %}
 {% endtabs %}
 
+#### Additional Configuration
+
+The per-client examples above use **.NET 10's `dnx` runner**. Use this section only if you need an alternative setup.
+
+**.NET 8 / .NET 9 (using a local tool manifest):**
+
+You can install the Syncfusion Blazor MCP server as a local tool without a global installation. For more details, see the [Microsoft docs on installing and using local .NET tools](https://learn.microsoft.com/en-us/dotnet/core/tools/local-tools-how-to-use).
+
+1. Install the Syncfusion Blazor MCP tool locally:
+
+    ````bash
+    dotnet tool install Syncfusion.Blazor.MCP
+    ````
+
+2. In your MCP client config (`.vscode/mcp.json`, `.codestudio/mcp.json`, `.cursor/mcp.json`, or the JetBrains MCP settings), replace the server entry with:
+
+    ````json
+    {
+      "servers": {
+        "syncfusion-blazor-mcp": {
+          "type": "stdio",
+          "command": "dotnet",
+          "args": ["tool", "run", "syncfusion-blazor-mcp"],
+          "env": {
+            "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
+            // or
+            // "Syncfusion_API_Key": "YOUR_API_KEY"
+          }
+        }
+      }
+    }
+    ````
+
+    For Cursor and JetBrains, wrap the snippet above in `"mcpServers"` instead of `"servers"` and drop the `"type": "stdio"` line, matching the patterns shown in the per-client tabs.
+
+> **Switching between versions:** If you previously set up the server with `dnx` and want to move to the `dotnet tool` flow (or vice versa), remove the old server entry from your MCP client config first, then add the new one. Restart the IDE so the new configuration takes effect.
+
 **Verifying Installation** Check your editor's MCP Server list for `sf-blazor-mcp` with a **Connected** status to confirm a successful installation.
-
-## Available Tools
-
-The Syncfusion<sup style="font-size:70%">&reg;</sup> MCP servers exposes a set of specialized tools for retrieving different types of product knowledge and resources. Tools can be called directly for specific information, or an assistant can choose the most relevant tool automatically.
-
-| # | Tool | Description |
-|---|------|-------------|
-| 1 | `search_docs` | Search Syncfusion Blazor documentation for features, examples, and configuration help. |
 
 ## Common use cases
 
-The examples below showcase how the different MCP tools handle real-world Blazor development scenarios. Tools can be invoked directly, as shown in the examples below, for specific needs. Alternatively, an AI assistant can automatically select the most appropriate tool based on the request.
+The examples below showcase how the `search_docs` tool handles real-world Blazor development scenarios. The tool can be invoked directly, as shown in the examples below, for specific needs. Alternatively, an AI assistant can automatically invoke it based on the request.
 
 **Get Started**
 
