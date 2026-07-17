@@ -8,7 +8,7 @@ keywords: adaptors, urladaptor, url adaptor, remotedata
 documentation: ug
 ---
 
-# UrlAdaptor in Syncfusion Blazor Gantt Chart
+# UrlAdaptor in Blazor Gantt Chart
 
 The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) serves as the base adaptor that enables communication between remote data services and a UI component. It supports seamless data binding and interaction with custom API services or any remote endpoint via URLs. The `UrlAdaptor` is particularly useful in scenarios where a custom API service with unique logic for handling data and CRUD operations is in place.
 
