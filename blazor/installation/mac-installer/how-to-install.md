@@ -50,7 +50,7 @@ If this appears, follow these steps:
 
    ![Drag the app to Applications](images/Mac_Installer3.webp)
 
-   > **Note:** An unlock key is not required to install the Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac installer.
+   N> An unlock key is not required to install the Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac installer.
 
 4. Paste the copied file into the **Applications** folder.
 
