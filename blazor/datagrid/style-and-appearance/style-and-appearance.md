@@ -430,21 +430,7 @@ The **Fluent 2** theme leverages modern CSS custom properties to provide a clean
 </SfGrid>
 
 <style>
-    <style>
     :root {
-        /* tailwind 3 */
-        /* font family */
-        /* --e-font-name: 'Verdana'; */
-        /* grid background color */
-        /* --color-sf-content-bg-color: rgba(240, 253, 244); */
-        /* grid row hover background color */
-        /* --color-sf-table-bg-color-hover: rgba(70, 100, 20, 0.05); */
-        /* grid cell focus border, current page background */
-        /* --color-sf-primary: rgba(34, 197, 94); */
-        /* pager icon hover background color */
-        /* --color-sf-content-bg-color-hover: rgba(70, 100, 20, 0.05); */
-        /* grid pager border color */
-        /* --color-sf-border-light: rgba(34, 197, 94); */
         /* material 3 */
         --e-font-name: 'Verdana';
         --color-sf-surface: 240, 253, 244;
@@ -452,24 +438,6 @@ The **Fluent 2** theme leverages modern CSS custom properties to provide a clean
         --color-sf-primary: 34, 197, 94;
         --color-sf-primary-container: 34, 197, 94;
         --color-sf-outline-variant: 34, 197, 94;
-        /* fluent 2 */
-        /* --e-font-name: 'Verdana';
-            --color-sf-content-bg-color-alt1: rgba(240, 253, 244);
-            --color-sf-table-bg-color-hover: rgba(70, 100, 20, 0.05);
-            --color-sf-border-alt: rgba(34, 197, 94);
-            --color-sf-content-bg-color-hover: rgba(70, 100, 20, 0.05);
-            --color-sf-primary: rgba(34, 197, 94);
-            --color-sf-border-light: rgba(34, 197, 94); */
-        /* bootstrap 5.3 */
-        /* --e-font-name: 'Verdana';
-            --color-sf-content-bg-color-alt1: rgb(240, 253, 244);
-            --color-sf-content-bg-color: rgba(240, 253, 244);
-            --color-sf-table-bg-color-hover: rgba(70, 100, 20, 0.05);
-            --color-sf-primary: rgba(34, 197, 94);
-            --color-sf-content-bg-color-hover: rgba(70, 100, 20, 0.05);
-            --color-sf-primary: rgba(34, 197, 94);
-            --color-sf-primary-light: rgba(34, 197, 94);
-            --color-sf-border-light: rgba(34, 197, 94); */
     }
 </style>
 
