@@ -116,8 +116,6 @@ dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
 
 After the package is installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
 
-N> The `~/` notation represents the root directory of your project. This file is typically located in your project's root folder.
-
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
