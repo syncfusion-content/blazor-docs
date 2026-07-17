@@ -124,7 +124,7 @@ When editing is completed by focusing out or by pressing the <kbd>Enter</kbd> ke
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjByiDWqMuupOrPJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Node Editing in Blazor TreeView](./images/blazor-treeview-node-editing.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBHtmitJtnXDNbP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Node Editing in Blazor TreeView](./images/blazor-treeview-node-editing.webp)" %}
 
 ## CRUD Operations
 
@@ -375,7 +375,7 @@ The example provided demonstrates how to use the `ItemSelected` event of the con
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVyMtMKLDjzDfze?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[CRUD operation using list in Blazor TreeView](./images/blazor-treeview-node-with-context-menu.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLRNQiNpNcCbeFC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[CRUD operation using list in Blazor TreeView](./images/blazor-treeview-node-with-context-menu.webp)" %}
 
 ### Add or Remove Node Programmatically
 
@@ -579,7 +579,7 @@ The Blazor TreeView component allows for the dynamic addition or removal of spec
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLeWtCULXCrLgvq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Add or Remove node in Blazor TreeView](./images/add-remove-node.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBHjwWtzZFXXbrM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Add or Remove node in Blazor TreeView](./images/add-remove-node.webp)" %}
 
 ### Add or Remove Node Programmatically with Template
 
@@ -793,7 +793,7 @@ The Blazor TreeView component with template support also allows for the dynamic 
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVyWXCUrtVeSfmL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView](./images/template-add-remove-node.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrdXmCZJNvmDMdT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TreeView](./images/template-add-remove-node.webp)" %}
 
 ### Add Node through Popup
 
@@ -999,7 +999,7 @@ In the Blazor TreeView component, it is possible to add a new tree node using a 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBoijiALtpvzYks?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVdjGCDzZuBJEfg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Edit a Node Programmatically
 
@@ -1183,7 +1183,7 @@ The Blazor TreeView component enables dynamic editing of specific nodes. This ca
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhoCtCgrNyGxtWK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Edit node in Blazor TreeView](./images/edit-node.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhnNcsZzXkoQTAE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Edit node in Blazor TreeView](./images/edit-node.webp)" %}
 
 ### Edit a Node with Template
 
@@ -1377,7 +1377,7 @@ The Blazor TreeView component, when using a `NodeTemplate`, enables dynamic edit
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNryMNCgLXnwolsg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLHNQiNzMNiooQd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Read-Only TreeView
 
@@ -1457,7 +1457,7 @@ A Blazor TreeView component is set to read-only mode by disabling specific featu
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjheMXWgVjmRLeoY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLHZmWDpsZTiUBM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Restrict Node Editing for Specific Node
 
@@ -1670,7 +1670,7 @@ An example of this can be seen in the provided code snippet, where the node edit
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDroiXsUBDlpeMwA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrRjwCjpCXPwNPU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Get Index of Editing Node
 
@@ -1953,7 +1953,7 @@ The default value of `AllowEditing` property is false.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVIMDigVDOtuNue?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBHZcCDzCCiCRsW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Cancel the Edit Action
 
@@ -2161,4 +2161,4 @@ An example of this can be seen in the provided code snippet, where node editing 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLysZCUVjEueZbk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrRtmWjfiiJNUKK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
