@@ -431,13 +431,14 @@ The **Fluent 2** theme leverages modern CSS custom properties to provide a clean
 
 <style>
     :root {
-        /* material 3 */
+        /* fluent 2 */
         --e-font-name: 'Verdana';
-        --color-sf-surface: 240, 253, 244;
-        --color-sf-on-surface: 70, 100, 20;
-        --color-sf-primary: 34, 197, 94;
-        --color-sf-primary-container: 34, 197, 94;
-        --color-sf-outline-variant: 34, 197, 94;
+        --color-sf-content-bg-color-alt1: rgba(240, 253, 244);
+        --color-sf-table-bg-color-hover: rgba(70, 100, 20, 0.05);
+        --color-sf-border-alt: rgba(34, 197, 94);
+        --color-sf-content-bg-color-hover: rgba(70, 100, 20, 0.05);
+        --color-sf-primary: rgba(34, 197, 94);
+        --color-sf-border-light: rgba(34, 197, 94);
     }
 </style>
 
@@ -493,7 +494,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrdZQCxJjWHcUYX?appbar=false&editor=false&result=true&errorlist=false&theme=material3" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVdNGMQfqinyBZn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Using Theme Studio
 
