@@ -260,7 +260,7 @@ Map the data fields `Month` and `SalesValue` to the series [XName](https://help.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjrRZdMVgPGhfPSi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column Charts](images/getting-started/blazor-chart-column.webp)" %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart). Looking for a complete Blazor DataGrid Component overview, including features, and pricing? Explore the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) Component page.
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart).
 
 ## See also
 

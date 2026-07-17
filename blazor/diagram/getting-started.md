@@ -313,5 +313,3 @@ In this example:
 The output will appear as follows:
 
 ![Getting Started in Blazor Diagram](images/blazor-diagram-getting-started.webp)
-
-N> Looking for a complete Blazor DataGrid Component overview, including features, and pricing? Explore the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) Component page.

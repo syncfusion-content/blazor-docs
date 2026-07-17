@@ -225,8 +225,6 @@ dotnet run
 
 {% endtabcontents %}
 
-N> Looking for a complete Blazor DataGrid Component overview, including features, and pricing? Explore the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) Component page.
-
 ## See also
 
 1. [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)

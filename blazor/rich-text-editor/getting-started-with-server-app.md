@@ -233,5 +233,3 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 * [Keyboard support in Rich text editor](https://blazor.syncfusion.com/documentation/rich-text-editor/keyboard-support)
 
 * [Globalization in Rich text editor](https://blazor.syncfusion.com/documentation/rich-text-editor/globalization)
-
-N> Looking for the full Blazor Rich Text Editor component overview, features, and pricing? Visit the [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) page.

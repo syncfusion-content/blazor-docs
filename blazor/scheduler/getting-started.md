@@ -379,8 +379,6 @@ You can configure only the required views as needed, and include additional view
 {% endhighlight %}
 {% endtabs %}
 
-N> Looking for the full Blazor Scheduler component overview, features, and pricing? Visit the [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) page.
-
 ## See also
 
 1. [Getting Started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)

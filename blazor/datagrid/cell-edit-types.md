@@ -1137,5 +1137,3 @@ N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagri
 ## See also
 
 * [Edit one column update the value in another column](https://www.syncfusion.com/forums/151238/edit-one-column-update-the-value-in-another-column)
-
-N> Looking for a complete Blazor DataGrid Component overview, including features, and pricing? Explore the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) Component page.
