@@ -2132,10 +2132,7 @@ dotnet run
 
 ## See also
 
+* [Build a Blazor Product Catalog App](https://blazor.syncfusion.com/documentation/tutorials/product-catalog)
+* [Creating a Shopping Cart with Blazor Components](https://blazor.syncfusion.com/documentation/tutorials/shopping-cart)
 * [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
 * [Getting started with Blazor Charts](https://blazor.syncfusion.com/documentation/chart/getting-started)
-* [Getting started with Blazor Card](https://blazor.syncfusion.com/documentation/card/getting-started-with-server-app)
-* [Getting started with Blazor Button](https://blazor.syncfusion.com/documentation/button/getting-started-with-server-app)
-* [Getting started with Blazor Dropdown List](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-server-app)
-* [Getting started with Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/getting-started-with-server-app)
-* [Getting started with Blazor Dialog](https://blazor.syncfusion.com/documentation/dialog/getting-started-with-server-app)
