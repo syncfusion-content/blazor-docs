@@ -50,7 +50,7 @@ Generate the Syncfusion<sup style="font-size:70%">&reg;</sup> API key from the [
 
 Create a configuration file in your project folder to install the server for your workspace. **Replace `YOUR_API_KEY_FILE_PATH` with the path to your API key file.** The tabs below show a working configuration for each supported MCP client.
 
-> **.NET version in use:** The examples below target **.NET 10** and use the `dnx` runner, which downloads and runs the `Syncfusion.Blazor.MCP` package on demand — no local install required. If you are on **.NET 8 or .NET 9**, see the [Additional Configuration](#additional-configuration) section at the end for the `dotnet tool` equivalent.
+**For .NET 10** :
 
 {% tabs %}
 {% highlight bash tabtitle="VS Code" %}
@@ -139,13 +139,9 @@ Create a configuration file in your project folder to install the server for you
 {% endhighlight %}
 {% endtabs %}
 
-#### Additional Configuration
+**For .NET 8 / .NET 9 (using a local tool):**
 
-The per-client examples above use **.NET 10's `dnx` runner**. Use this section only if you need an alternative setup.
-
-**.NET 8 / .NET 9 (using a local tool manifest):**
-
-You can install the Syncfusion Blazor MCP server as a local tool without a global installation. For more details, see the [Microsoft docs on installing and using local .NET tools](https://learn.microsoft.com/en-us/dotnet/core/tools/local-tools-how-to-use).
+You can install the Syncfusion Blazor MCP server as a local tool without a global installation. For more details, refer the [documentation](https://learn.microsoft.com/en-us/dotnet/core/tools/local-tools-how-to-use).
 
 1. Install the Syncfusion Blazor MCP tool locally:
 
@@ -158,7 +154,7 @@ You can install the Syncfusion Blazor MCP server as a local tool without a globa
     ````json
     {
       "servers": {
-        "syncfusion-blazor-mcp": {
+        "sf-blazor-mcp": {
           "type": "stdio",
           "command": "dotnet",
           "args": ["tool", "run", "syncfusion-blazor-mcp"],
@@ -171,10 +167,6 @@ You can install the Syncfusion Blazor MCP server as a local tool without a globa
       }
     }
     ````
-
-    For Cursor and JetBrains, wrap the snippet above in `"mcpServers"` instead of `"servers"` and drop the `"type": "stdio"` line, matching the patterns shown in the per-client tabs.
-
-> **Switching between versions:** If you previously set up the server with `dnx` and want to move to the `dotnet tool` flow (or vice versa), remove the old server entry from your MCP client config first, then add the new one. Restart the IDE so the new configuration takes effect.
 
 **Verifying Installation** Check your editor's MCP Server list for `sf-blazor-mcp` with a **Connected** status to confirm a successful installation.
 
