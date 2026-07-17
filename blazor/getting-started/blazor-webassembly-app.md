@@ -72,8 +72,8 @@ Run the following command to create a new Blazor WebAssembly App.
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
-dotnet new blazorwasm -o BlazorApp
-cd BlazorApp
+dotnet new blazorwasm -o BlazorWasmApp
+cd BlazorWasmApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -89,8 +89,8 @@ Run the following command to create a new Blazor WebAssembly App.
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
-dotnet new blazorwasm -o BlazorApp
-cd BlazorApp
+dotnet new blazorwasm -o BlazorWasmApp
+cd BlazorWasmApp
 
 {% endhighlight %}
 {% endtabs %}
