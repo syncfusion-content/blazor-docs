@@ -99,13 +99,13 @@ namespace TreeGridComponent.Data
 
 These public methods are frequently used to perform actions directly on the TreeGrid component instance:
 
-- `PrintAsync()` - Prints the current TreeGrid content.
-- `RefreshAsync()` - Refreshes the grid content and updates the UI.
-- `ExpandAllAsync()` - Expands all rows in the TreeGrid.
-- `CollapseAllAsync()` - Collapses all rows in the TreeGrid.
-- `SelectRowAsync(int rowIndex)` - Selects a row by index.
-- `ClearSelectionAsync()` - Clears the current row selection.
-- `OpenDialogAsync()` / `CloseDialogAsync()` - Opens and closes dialogs when editing is enabled.
+- `PrintAsync()` - Prints the current TreeGrid content as displayed in the view.
+- `RefreshAsync()` - Re-renders the TreeGrid to reflect any data or layout changes.
+- `ExpandAllAsync()` - Expands all parent rows in the TreeGrid.
+- `CollapseAllAsync()` - Collapses all expanded rows in the TreeGrid.
+- `SelectRowAsync(int rowIndex)` - Selects a row at the specified zero-based index.
+- `ClearSelectionAsync()` - Clears all currently selected rows in the TreeGrid.
+- `OpenEditDialogAsync()` / `CloseEditDialogAsync()` - Opens or closes the edit dialog for the selected row.
 
 ## Best practices
 
@@ -116,6 +116,10 @@ These public methods are frequently used to perform actions directly on the Tree
 
 ## Additional notes
 
-The TreeGrid public method API is part of the Syncfusion Blazor TreeGrid component and is documented in the API reference. Use the API reference link to explore additional methods, properties, and overloads for the TreeGrid component.
+The TreeGrid public method API is part of the Syncfusion® Blazor TreeGrid component and is documented in the API reference. Use the links below to explore additional methods, properties, and overloads for the TreeGrid component.
 
-N> Similarly all the public methods of the Tree Grid can be invoked. The available public methods can be found in this [link](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html).
+| API member type | Reference link |
+|---|---|
+| Methods | [SfTreeGrid methods](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#methods) |
+| Properties | [SfTreeGrid properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#properties) |
+
