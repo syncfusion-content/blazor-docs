@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Overview of Blazor DataGrid Component | Syncfusion®
+title: Blazor DataGrid Component | Syncfusion®
 description: Learn about Syncfusion Blazor DataGrid component featuring advanced data operations, seamless CRUD operations, virtualization, and extensive customization.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Overview of Syncfusion Blazor DataGrid Component
+# Overview of Syncfusion [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) Component
 
 ## What is Syncfusion Blazor DataGrid?
 
-The Syncfusion Blazor DataGrid is a powerful and feature-rich UI component designed for displaying and manipulating tabular data with high performance and flexibility. It supports a wide range of enterprise-grade features including advanced data operations, seamless integration with multiple data sources, and extensive customization options. Built for scalability, it enables developers to create responsive, data-intensive applications with ease.
+The Blazor DataGrid is a powerful and feature-rich UI component designed for displaying and manipulating tabular data with high performance and flexibility. It supports a wide range of enterprise-grade features including advanced data operations, seamless integration with multiple data sources, and extensive customization options. Built for scalability, it enables developers to create responsive, data-intensive applications with ease.
 
 ## Quick Start
 
@@ -20,7 +20,7 @@ The Syncfusion Blazor DataGrid is a powerful and feature-rich UI component desig
 
 ### Data Binding
 
-The Blazor DataGrid supports multiple data binding approaches to integrate data into its interface, enabling dynamic and interactive Grid views. The DataGrid utilizes the `SfDataManager`, which supports both RESTful JSON data service binding and IEnumerable binding through the DataSource property. This can be assigned to a `SfDataManager` instance or list of business objects for flexible data management.
+The Blazor DataGrid supports multiple data binding approaches to integrate data into its interface, enabling dynamic and interactive Grid views. The DataGrid utilizes the [`SfDataManager`](https://blazor.syncfusion.com/documentation/data/getting-started-with-web-app), which supports both RESTful JSON data service binding and IEnumerable binding through the DataSource property. This can be assigned to a `SfDataManager` instance or list of business objects for flexible data management.
 
 - Supports [LocalData](./data-binding/local-data) and [RemoteData](./data-binding/remote-data) sources
 - [Multiple Data Source Adaptors](./connecting-to-adaptors/url-adaptor)
@@ -45,7 +45,7 @@ The Blazor DataGrid supports all fundamental data operations:
 
 ## Editing & CRUD
 
-The Blazor DataGrid provides powerful options for dynamically inserting, deleting, and updating records, enabling seamless CRUD (Create, Read, Update, and Delete) operations directly within the Grid. To enable editing functionality, configure the AllowEditing, AllowAdding, and AllowDeleting properties within **GridEditSettings** to **true**, and set the primary key column using Columns.IsPrimaryKey to identify records uniquely.
+The Blazor DataGrid provides powerful options for dynamically inserting, deleting, and updating records, enabling seamless CRUD (Create, Read, Update, and Delete) operations directly within the Grid. To enable editing functionality, configure the `AllowEditing`, `AllowAdding`, and `AllowDeleting` properties within **GridEditSettings** to **true**, and set the primary key column using `Columns.IsPrimaryKey` to identify records uniquely.
 
 - [Editing](./editing)
   - [Inline Editing](./in-line-editing)
