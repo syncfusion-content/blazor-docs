@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor File Manager in Blazor Server App
 
-This section briefly explains how to include the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section explains how to add the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component to a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), or the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Server App
 
@@ -19,13 +19,13 @@ This section briefly explains how to include the [Blazor File Manager](https://w
 
 {% tabcontent Visual Studio %}
 
-Create a **Blazor Server App** by using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a **Blazor Server App** in Visual Studio by using the [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Select the **Blazor Server App** template (or the **Blazor Web App** template with the **Server** interactive render mode for .NET 8+).
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-Run the following command to create a new Blazor Server App.
+Use the following command to create a new Blazor Server App.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -36,13 +36,13 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-Alternatively, create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+Alternatively, create a **Blazor Server App** in Visual Studio Code using [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
 {% endtabcontent %}
 
 {% tabcontent .NET CLI %}
 
-Run the following command to create a new Blazor Server App.
+Use the following command to create a new Blazor Server App.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
@@ -61,7 +61,7 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ## Install the required Blazor packages
 
-Install the [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+Install the [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages to use the File Manager component in your Blazor Server App. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 {% tabcontents %}
 
@@ -85,7 +85,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% tabcontent Visual Studio Code %}
 
-Open the terminal and run the following commands.
+In the integrated terminal, execute the following commands.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -100,7 +100,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% tabcontent .NET CLI %}
 
-Open the command prompt and run the following commands.
+Open the command prompt and execute the following commands.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
@@ -117,7 +117,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.FileManager` namespaces.
+After the packages are installed, open the **~/_Imports.razor** file and add the `Syncfusion.Blazor` and `Syncfusion.Blazor.FileManager` namespaces.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -130,7 +130,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in the Blazor Server App and register the Blazor service.
+Open the **Program.cs** file in the Blazor Server App and register the Syncfusion Blazor service.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -187,13 +187,13 @@ N> If the interactivity location is set to `Per page/component`, define a render
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor File Manager component will render in your default web browser.
+Press <kbd>F5</kbd> or <kbd>Ctrl</kbd>+<kbd>F5</kbd> to launch the application in Visual Studio. The Blazor File Manager component will render in your default web browser.
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-Open the terminal and run the following command.
+From the project directory, run the following command in the terminal.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -207,7 +207,7 @@ dotnet run
 
 {% tabcontent .NET CLI %}
 
-Open the command prompt and run the following command.
+From the project directory, execute the following command at the command prompt.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}

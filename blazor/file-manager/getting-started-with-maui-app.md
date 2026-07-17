@@ -11,13 +11,13 @@ documentation: ug
 
 This section explains the step-by-step process of integrating the [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-## Create a new Blazor MAUI App in Visual Studio
+## Create a new .NET MAUI Blazor App
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-Create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
+Create a **.NET MAUI Blazor App** in Visual Studio using the [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 {% endtabcontent %}
 
@@ -57,7 +57,7 @@ cd MauiBlazorApp
 
 ## Install the required Blazor packages
 
-Install the [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+Install the [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages to use the File Manager in your .NET MAUI Blazor App. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 {% tabcontents %}
 
@@ -66,7 +66,7 @@ Install the [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncf
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
 2. Search the required NuGet packages (`Syncfusion.Blazor.FileManager` and `Syncfusion.Blazor.Themes`) and install them.
 
-Alternatively, you can install the same packages using the Package Manager Console with the following command.
+Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager Console" %}
@@ -81,7 +81,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% tabcontent Visual Studio Code %}
 
-Open the terminal and run the following command.
+In the integrated terminal, execute the following commands.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -96,7 +96,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% tabcontent .NET CLI %}
 
-Open the command prompt and run the following command.
+Open the command prompt and execute the following commands.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
@@ -118,7 +118,7 @@ After the packages are installed, open the **~/Components/_Imports.razor** file 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
-@using Syncfusion.Blazor 
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.FileManager
 
 {% endhighlight %}
@@ -163,9 +163,11 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-## Add Blazor FileManager component
+## Add Blazor File Manager component
 
-Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component inside the razor file.
+Open the **Home.razor** file located in the **Pages/** folder of the project and add the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component.
+
+N> The sample URLs below point to a public demo service. For production use, replace them with a local provider (for example, the [Physical File System Provider](https://blazor.syncfusion.com/documentation/file-manager/physical-file-system-provider)).
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -225,7 +227,7 @@ dotnet run
 
 ## Run the application on Android
 
-To run the Blazor FileManager in a Blazor Android MAUI application using the Android emulator, follow these steps:
+To run the Blazor File Manager in a .NET MAUI Blazor application on Android using the Android emulator, follow these steps:
 
 Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to install and launch Android emulator.
 
@@ -233,6 +235,6 @@ N> If you encounter any errors while using the Android Emulator, refer to [Troub
 
 ![Blazor FileManager Component](images/blazor-filemanager-component.webp)
 
-## See also
+## See Also
 
 1. [Getting Started with Blazor FileManager Data Binding](https://blazor.syncfusion.com/documentation/file-manager/data-binding)
