@@ -356,14 +356,19 @@ The following table highlights commonly used color-related variables in the Mate
 
 | Name | Purpose |
 |------|---------|
+| `--e-font-name` | Specifies the default font family applied across the DataGrid |
+| `--color-sf-surface` | Controls base surface styling for UI elements |
+| `--color-sf-on-surface` | Defines text appearance on surface elements |
+| `--color-sf-primary-container` | Applies background styling for active or highlighted row states |
+| `--color-sf-outline-variant` | Defines border and separator styling |
+
+| Name | Purpose |
+|------|---------|
 | `--e-font-name` | Specifies the default font family used across the DataGrid |
-| `--color-sf-content-bg-color-alt1` | Controls the background of the DataGrid header |
-| `--color-sf-content-bg-color` | Controls the background of the DataGrid content |
-| `--color-sf-table-bg-color-hover` | Defines the background styling for selected rows during hover interaction |
-| `--color-sf-content-bg-color-hover` | Defines background behavior when primary elements are hovered |
-| `--color-sf-primary` | Defines the main theme styling used across components |
-| `--color-sf-primary-light` | Provides a softer variation of the primary theme for backgrounds |
-| `--color-sf-border-light` | Specifies styling for light borders and separators |
+| `--color-sf-surface` | Controls the base surface styling for UI elements |
+| `--color-sf-on-surface` | Sets text appearance on surface elements |
+| `--color-sf-primary-container` | Used for background styling of active or highlighted row states |
+| `--color-sf-outline-variant` | Defines border and separator styling |
 
 #### Bootstrap 5.3 theme color variables
 
