@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Overview of Syncfusion [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) Component
+# Overview of Syncfusion Blazor DataGrid Component
 
 ## What is Syncfusion Blazor DataGrid?
 
