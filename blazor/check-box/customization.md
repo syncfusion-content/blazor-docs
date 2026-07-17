@@ -89,7 +89,7 @@ The background and border color of the Checkbox is customized through the custom
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVKshBQrJbnEQzO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Appearance of Blazor CheckBox](./images/blazor-checkbox-appearance-customization.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLHtQMtfnDxdYLB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Appearance of Blazor CheckBox](./images/blazor-checkbox-appearance-customization.webp)" %}
 
 ## Customize width and height
 
@@ -130,7 +130,7 @@ The following section explains about how to customize the height and width of th
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrUWLLGVTFECslm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Height and Width of Blazor CheckBox](./images/blazor-checkbox-height-width-customization.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLdtGiZTnsqcvDo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Height and Width of Blazor CheckBox](./images/blazor-checkbox-height-width-customization.webp)" %}
 
 ## Custom frame
 
@@ -187,7 +187,7 @@ In the following example, to-do list is displayed with round checkbox by changin
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrgirhGhJYCyqDJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Blazor CheckBox Frame](./images/blazor-checkbox-frame-customization.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhnXciDzxBZSKMK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Blazor CheckBox Frame](./images/blazor-checkbox-frame-customization.webp)" %}
 
 ## Custom check icon
 
@@ -212,7 +212,7 @@ In the following example, the check icon can be customized by changing check ico
 
 <style>
     .e-checkicon.e-checkbox-wrapper .e-frame.e-check::before {
-        content: '\e682';
+        content: '\e917';
     }
     .e-checkicon.e-checkbox-wrapper .e-check {
         font-size: 12px;
@@ -235,7 +235,7 @@ In the following example, the check icon can be customized by changing check ico
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBgWrLGrpkSQSUL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Check Icon in Blazor CheckBox](./images/blazor-checkbox-check-icon-customization.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhHDwitzdSGeeZB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Check Icon in Blazor CheckBox](./images/blazor-checkbox-check-icon-customization.webp)" %}
 
 ## Right-To-Left in Blazor CheckBox Component
 
@@ -253,7 +253,7 @@ The following example illustrates how to enable right-to-left support in Checkbo
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVgiLhmVyZvKJzz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Right to Left in Blazor CheckBox](./images/blazor-checkbox-right-to-left.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhdNmWDfdxouMPf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Right to Left in Blazor CheckBox](./images/blazor-checkbox-right-to-left.webp)" %}
 
 ## Model Binding in Blazor CheckBox Component
 
@@ -294,4 +294,4 @@ In this sample, first check the option and click the submit button to post the s
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhKMVrmrJkahhmZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Model Binding in Blazor CheckBox](./images/blazor-checkbox-model-binding.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBHtmiXJHmiLtVc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Model Binding in Blazor CheckBox](./images/blazor-checkbox-model-binding.webp)" %}
