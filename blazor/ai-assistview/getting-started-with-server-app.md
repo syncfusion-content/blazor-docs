@@ -11,7 +11,7 @@ documentation: ug
 
 This section briefly explains how to include the [Blazor AI AssistView](https://www.syncfusion.com/blazor-components/blazor-ai-assistview) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-## Create a new Blazor Server App 
+## Create a new Blazor Server App
 
 {% tabcontents %}
 

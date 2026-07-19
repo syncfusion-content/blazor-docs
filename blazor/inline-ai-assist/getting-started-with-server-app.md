@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Inline AI Assist Component in Blazor Server App
 
-This section briefly explains about how to include Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Inline AI Assist component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Inline AI Assist component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -113,7 +113,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 
 ## Register Blazor service
 
-Register the Blazor service in the **Program.cs** file of your Blazor WebAssembly App.
+Register the Blazor service in the **Program.cs** file of your Blazor Server App.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}

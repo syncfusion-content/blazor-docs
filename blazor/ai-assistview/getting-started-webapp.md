@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with AI AssistView in Blazor Web App | Syncfusion®
+title: Getting Started with AI AssistView in Blazor Web App | Syncfusion®
 description: Check out the documentation for getting started with Blazor AI AssistView Component in Blazor Web App.
 platform: Blazor
 control: AI AssistView
