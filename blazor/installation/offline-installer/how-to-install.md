@@ -29,7 +29,7 @@ The steps below show how to install the Essential Studio<sup style="font-size:70
 
    ![Offline installer setup extracting package](images/webofflineinstaller-1.webp)
 
-   > **Note:** The installer extracts `syncfusionessentialblazor_(version).exe` and displays the extraction progress (the unzip operation).
+   N> The installer extracts `syncfusionessentialblazor_(version).exe` and displays the extraction progress (the unzip operation).
 
 2. To unlock the offline installer, choose one of the following options:
 
@@ -68,7 +68,7 @@ The steps below show how to install the Essential Studio<sup style="font-size:70
 
    ![Offline installer Uninstall previous versions wizard](images/webofflineinstaller-5.webp)
 
-   > **Note:** Starting with the 2021 Volume 1 release, the option to uninstall previous versions from 18.1 has been added while installing the new version. If any version is selected to uninstall, a confirmation screen will appear. If **Continue** is selected, the **Progress** screen displays the uninstall and install progress, respectively. If none of the versions are chosen to be uninstalled, only the installation progress is displayed.
+   N> Starting with the 2021 Volume 1 release, the option to uninstall previous versions from 18.1 has been added while installing the new version. If any version is selected to uninstall, a confirmation screen will appear. If **Continue** is selected, the **Progress** screen displays the uninstall and install progress, respectively. If none of the versions are chosen to be uninstalled, only the installation progress is displayed.
 
    **Confirmation alert**
 
@@ -82,7 +82,7 @@ The steps below show how to install the Essential Studio<sup style="font-size:70
 
    ![Web Offline Installer Progress Wizard](images/webofflineinstaller-8.webp)
 
-   > **Note:** The **Completed** screen appears after installation. If versions were uninstalled, it shows both uninstall and install status.
+   N> The **Completed** screen appears after installation. If versions were uninstalled, it shows both uninstall and install status.
 
    ![Web Offline Installer Summary Wizard](images/webofflineinstaller-9.webp)
 
@@ -110,7 +110,7 @@ To install through the command line in silent mode, follow these steps:
    "installer file path\SyncfusionEssentialStudio(product)_(version).exe" /Install silent /UNLOCKKEY:"(product unlock key)" [/log "{Log file path}"] [/InstallPath:{Location to install}] [/InstallSamples:{true/false}] [/CreateShortcut:{true/false}] [/CreateStartMenuShortcut:{true/false}]
    ```
 
-   > **Note:** Arguments inside square brackets are optional.
+   N> Arguments inside square brackets are optional.
 
    **Example**
 
@@ -120,7 +120,7 @@ To install through the command line in silent mode, follow these steps:
 
 7. Essential Studio<sup style="font-size:70%">&reg;</sup> for Blazor is installed.
 
-   > **Note:** Replace `x.x.x.x` with the Essential Studio<sup style="font-size:70%">&reg;</sup> version, and replace the product unlock key with the unlock key for that version.
+   N> Replace `x.x.x.x` with the Essential Studio<sup style="font-size:70%">&reg;</sup> version, and replace the product unlock key with the unlock key for that version.
 
 ### Command-Line Uninstallation
 
