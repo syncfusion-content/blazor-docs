@@ -72,8 +72,8 @@ Run the following command to create a new Blazor Server App.
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
-dotnet new blazor -o BlazorApp --interactivity Server
-cd BlazorApp
+dotnet new blazor -o BlazorServerApp --interactivity Server
+cd BlazorServerApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -89,8 +89,8 @@ Run the following command to create a new Blazor Server App.
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
-dotnet new blazor -o BlazorApp --interactivity Server
-cd BlazorApp
+dotnet new blazor -o BlazorServerApp --interactivity Server
+cd BlazorServerApp
 
 {% endhighlight %}
 {% endtabs %}
