@@ -274,7 +274,7 @@ The [HighlightCategory](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBIjJjJztIfQRsg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Crosshair in Blazor Line Chart with highlight background](images/crosshair/blazor-line-chart-with-highlight-background-trackball.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrHNxWheMMTwPXL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Crosshair in Blazor Line Chart with highlight background](images/crosshair/blazor-line-chart-with-highlight-background-trackball.webp)" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

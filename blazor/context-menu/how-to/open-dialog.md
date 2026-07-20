@@ -9,9 +9,11 @@ documentation: ug
 
 # Open a Dialog on Item Click in Blazor Context Menu
 
-This section explains about how to open a dialog on Context Menu item click. This can be achieved by handling dialog open in [ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_ItemSelected) event of the Context Menu.
+This section explains how to open a Dialog when a Context Menu item is selected. This can be achieved by handling the [ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_ItemSelected) event of the Context Menu and invoking the Dialog component's methods programmatically.
 
-In the following sample, Dialog will open while clicking `Save As...` item.
+In the following example, the ContextMenu component is rendered for a target element, and the ItemSelected event is used to detect the selected menu item. When the Save As... item is clicked, the event handler calls the Dialog's [ShowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_ShowAsync_System_Nullable_System_Boolean__) method to open the Dialog component. The dialog can then be closed by clicking the Submit button, which invokes the [HideAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_HideAsync_System_String_) method.
+
+The sample demonstrates the integration of the ContextMenu and Dialog components to provide contextual actions and user interaction.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -30,7 +32,7 @@ In the following sample, Dialog will open while clicking `Save As...` item.
     </MenuItems>
     <MenuEvents TValue="MenuItem" ItemSelected="@SelectedHandler"></MenuEvents>
 </SfContextMenu>
-<SfDialog @ref="dialogObj" Content="@content" Visible="false" Target="#target" Width="200px" Height="110px">
+<SfDialog @ref="dialogObj" Content="@content" Visible="false" Target="#target" Width="200px" Height="140px">
     <DialogButtons>
         <DialogButton Content="Submit" IsPrimary="true" OnClick="@Clicked"></DialogButton>
     </DialogButtons>
@@ -43,11 +45,11 @@ In the following sample, Dialog will open while clicking `Save As...` item.
     private async Task SelectedHandler(MenuEventArgs<MenuItem> e)
     {
         if (e.Item.Text == "Save As...")
-            await dialogObj.Show();
+            await dialogObj.ShowAsync();
     }
     private async Task Clicked(object args)
     {
-        await dialogObj.Hide();
+        await dialogObj.HideAsync();
     }
 }
 
@@ -65,4 +67,4 @@ In the following sample, Dialog will open while clicking `Save As...` item.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBRZxiYTYYnyRwc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ContextMenu](./../images/blazor-contextmenu.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrnXQCdVnBegosr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ContextMenu](./../images/blazor-contextmenu.webp)" %}
