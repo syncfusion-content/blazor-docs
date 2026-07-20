@@ -13,10 +13,6 @@ Migrating enterprise applications from [ASP.NET Web Forms](https://learn.microso
 
 ## Why migrate from Web Forms to Blazor?
 
-[ASP.NET Web Forms](https://learn.microsoft.com/en-us/aspnet/web-forms/) follows a **server-side page model** that uses ViewState, postback, and a tightly coupled page lifecycle to process requests and maintain UI state across interactions.
-
-[Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) uses a component based architecture with reusable Razor components and **event driven UI updates**, where user interactions trigger handlers that refresh the UI without full page reloads. This modern approach improves maintainability, scalability, and testability, making Blazor the preferred choice for migrating and modernizing Web Forms applications.
-
 | Aspect | Web Forms | Blazor |
 | --- | --- | --- |
 | Execution model | Server centric (page postback) | Blazor Server (SignalR) or Blazor WebAssembly |
@@ -50,29 +46,31 @@ Migrating enterprise applications from [ASP.NET Web Forms](https://learn.microso
 | Routing (`*.aspx`) | `@page` directive in `.razor` files | Enables route based navigation |
 | Session / Application state | Scoped / Singleton services | Manages shared application state |
 
-## Migrating components from Web Forms to Blazor
+## Common setup and configuration
 
-Create a [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) project using one of the following getting started guides.
+Create a Blazor project using one of the following getting started guides.
 
 * [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 * [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 
+This migration guide focuses on the **Blazor Web App (Interactive Server)** approach, which provides a straightforward migration path from ASP.NET Web Forms applications by keeping business logic and state management on the server. Interactive Server rendering uses SignalR to synchronize UI interactions between the browser and server, making it suitable for enterprise applications that are traditionally built using ASP.NET Web Forms and are being modernized to a component-based web architecture.
+
 The following shared setup applies to all components and covers the common configuration required before proceeding to the [component specific migration steps](#component-specific-migration-steps).
 
 ### Package installation
 
-In [ASP.NET Web Forms](https://learn.microsoft.com/en-us/aspnet/web-forms/) applications, components are typically installed using a single package, [Syncfusion.AspNet](https://www.nuget.org/packages/Syncfusion.AspNet).
+In ASP.NET Web Forms applications, components are typically installed using a single package, [Syncfusion.AspNet](https://www.nuget.org/packages/Syncfusion.AspNet).
 
-In [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) applications, using individual component packages improves performance and reduces application size. For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
+In Blazor applications, using individual component packages improves performance and reduces application size. For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 Additionally, install the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) NuGet package for styling support.
 
 ### Service registration
 
-[ASP.NET Web Forms](https://learn.microsoft.com/en-us/aspnet/web-forms/) initializes controls automatically as part of the page lifecycle, without requiring explicit service registration.
+ASP.NET Web Forms initializes controls automatically as part of the page lifecycle, without requiring explicit service registration.
 
-[Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) uses dependency injection (DI), where components must be registered in the service container to enable required functionality such as rendering and interaction.
+Blazor uses the built-in .NET dependency injection (DI) system, so required services must be registered in the application’s service container to enable component communication and framework functionality. When using **Blazor Web App (Interactive Server)**, ensure that services are registered with the appropriate lifetime scope to support interactive components and server-side state management.
 
 In the `Program.cs` file, add the following namespace and register the required services.
 
@@ -106,7 +104,7 @@ After packages are installed and services are registered, import the required na
 {% endhighlight %}
 {% endtabs %}
 
-The above lists the namespaces for all components covered in this guide. Import only the namespaces required for the components you use.
+This example includes the namespaces used by the components covered in this guide. Import only the namespaces needed for the components used in your application.
 
 ### Theme and script configuration
 
@@ -141,7 +139,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 </head>
 <body>
     ...
-    <!-- Blazor script (required for UI components) -->
+    <!-- Blazor core script (required for UI components) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
     ...
 </body>
@@ -432,6 +430,8 @@ dotnet run
 
 ## See also
 
+* [Migrate WPF to Blazor Components](https://blazor.syncfusion.com/documentation/common/migration/wpf-blazor-migration)
 * [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
 * [Getting started with Blazor Scheduler](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app)
 * [Getting started with Blazor Rich Text Editor](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app)
+* [Data Binding in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/data-binding/data-binding)
