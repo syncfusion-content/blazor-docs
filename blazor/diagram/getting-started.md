@@ -209,6 +209,8 @@ The following example creates a flowchart with four nodes: **Start**, **Process*
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent Width="100%" Height="600px" Nodes="@nodes" Connectors="@connectors" NodeCreating="@NodeCreating" ConnectorCreating="@ConnectorCreating" />
 
 @code {
@@ -271,7 +273,7 @@ The following example creates a flowchart with four nodes: **Start**, **Process*
             },            
             new Connector()
             {
-                ID = "connector2",
+                ID = "connector3",
                 SourceID = "node3",
                 TargetID = "node4",
             },
@@ -294,6 +296,8 @@ The following example creates a flowchart with four nodes: **Start**, **Process*
 
 {% endhighlight %}
 {% endtabs %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/GettingStarted/GettingStarted.razor)
 
 In this example:
 

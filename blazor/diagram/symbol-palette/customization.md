@@ -1520,4 +1520,4 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## See Also
 
-* [How to add the symbol to the diagram](./nodes)
+* [How to add the symbol to the diagram](../nodes/nodes.md)
