@@ -149,7 +149,7 @@ You can install the Syncfusion Blazor MCP server as a local tool without a globa
     dotnet tool install Syncfusion.Blazor.MCP
     ````
 
-2. In your MCP client config (`.vscode/mcp.json`, `.codestudio/mcp.json`, `.cursor/mcp.json`, or the JetBrains MCP settings), replace the server entry with:
+2. In your MCP client config (`.vscode/mcp.json`), replace the server entry with:
 
     ````json
     {
