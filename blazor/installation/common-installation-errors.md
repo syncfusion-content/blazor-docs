@@ -13,9 +13,9 @@ This article describes the most common installation errors, as well as the cause
 
 
 > **Prerequisites:**
-> * The Syncfusion Blazor installer must be run with administrator privileges. Right-click the installer and choose **Run as administrator**.
 > * Verify that your machine meets the supported OS and .NET version requirements for the Syncfusion Blazor version you are installing. See the [system requirements](https://blazor.syncfusion.com/documentation/system-requirements) for details.
-
+> * Close all running Visual Studio instances before starting the installation to avoid conflicts while installing Visual Studio extensions and project templates.
+> * Ensure that Windows is up to date with the latest recommended updates to avoid installation and compatibility issues.
 
 
 * [Unlocking the license installer using the trial key](https://blazor.syncfusion.com/documentation/installation/common-installation-errors#unlocking-the-license-installer-using-the-trial-key)
@@ -105,7 +105,7 @@ After renewing or purchasing a license, re-run the installer and enter the new u
 
 ## Unable to Install Due to Controlled Folder Access
 
-> **Note:** Controlled Folder Access is a feature of Microsoft Defender on Windows 10, Windows 11, and Windows Server. The steps below apply to those operating systems.
+N> Controlled Folder Access is a feature of Microsoft Defender on Windows 10, Windows 11, and Windows Server. The steps below apply to those operating systems.
 
 ***Offline installer***
 
