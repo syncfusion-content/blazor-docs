@@ -160,7 +160,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 * Open a Razor file located in the **~/Components/Pages** (for example, **Home.razor**) and add the Blazor Diagram component inside the razor file.
 * If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
-If your create application uses `Per page/component` interactivity, add this at the top of **Pages/Home.razor**:
+If your application uses `Per page/component` interactivity, add the render mode declaration at the top of **Pages/Home.razor**:
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -197,6 +197,8 @@ The following example creates a flowchart with four nodes: **Start**, **Process*
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Width="100%" Height="600px" Nodes="@nodes" Connectors="@connectors" NodeCreating="@NodeCreating" ConnectorCreating="@ConnectorCreating" />
 
@@ -260,7 +262,7 @@ The following example creates a flowchart with four nodes: **Start**, **Process*
             },            
             new Connector()
             {
-                ID = "connector2",
+                ID = "connector3",
                 SourceID = "node3",
                 TargetID = "node4",
             },
@@ -283,6 +285,8 @@ The following example creates a flowchart with four nodes: **Start**, **Process*
 
 {% endhighlight %}
 {% endtabs %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/GettingStarted/GettingStarted.razor)
 
 In this example:
 

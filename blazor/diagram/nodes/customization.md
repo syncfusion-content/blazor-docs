@@ -865,7 +865,7 @@ The following code illustrates how to set the auto layout property for nodes.
             new Node() { ID="node4", CanAutoLayout = true, Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Jim-CSE"} } },
             new Node() { ID="node5", CanAutoLayout = true, Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Martin-CSE"} } },
             new Node() { ID="node6", CanAutoLayout = true, Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="John-Manager"} } },
-            new Node() { ID="node7", CanAutoLayout = false, Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Mary-CSE"} } },
+            new Node() { ID="node7", CanAutoLayout = true, Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Mary-CSE"} } },
         };
         _connectors = new DiagramObjectCollection<Connector>()
         {
@@ -879,7 +879,7 @@ The following code illustrates how to set the auto layout property for nodes.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVnjdLSqcwlCWRr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrHXwCmKZAiLlYH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/CanAutoLayout.razor)
 
@@ -908,7 +908,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
             Width = 100,
             Height = 100,
             OffsetX = 300,
-            OffsetY = 300,
+            OffsetY = 100,
         };
         _nodes.Add(node1);
         Node node2 = new Node()
@@ -917,7 +917,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
             Width = 100,
             Height = 100,
             OffsetX = 300,
-            OffsetY = 500,
+            OffsetY = 300,
         };
         _nodes.Add(node2);
         Connector connector1 = new Connector()
@@ -939,7 +939,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLxZxrIqGvLIcRa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrRtcMQAXQZSQOC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/InedgesOutedges.razor)
 

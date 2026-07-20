@@ -127,7 +127,6 @@ The following code explains how to add a node with an annotation at runtime by u
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-
 <SfButton Content="AddLabel" OnClick="@AddLabelAsync" />
 <SfDiagramComponent Height="600px" @ref="@_diagram" Nodes="@_nodes">
 </SfDiagramComponent>
@@ -163,8 +162,8 @@ The following code explains how to add a node with an annotation at runtime by u
         {
             ID = "node2",
             // Position of the node.
-            OffsetX = 450,
-            OffsetY = 450,
+            OffsetX = 250,
+            OffsetY = 250,
             // Size of the node.
             Width = 100,
             Height = 100,
@@ -182,7 +181,7 @@ The following code explains how to add a node with an annotation at runtime by u
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLnXdVppOMtdRKl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVdZGCQrYRSHTrq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## How to Add a Node to the Palette
 
