@@ -216,11 +216,11 @@ For more details on SignalR configuration, refer to the [official documentation]
 
 ## Apply lazy loading for improved user experience
 
-Lazy loading defers data retrieval until it is actually required. Instead of loading all data upfront, fetch data only when the user performs a specific action.
+Lazy loading is a technique that loads data only when it is needed instead of retrieving all data during the initial render. 
 
-For example, when a component becomes visible, a node expands, or additional details are requested. Lazy loading improves perceived performance by reducing initial load time.
+In hierarchical components such as **TreeGrid** and **Gantt**, features like [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_LoadChildOnDemand) enable child records to be loaded dynamically when a parent node or task is expanded. By loading only the required data on demand, this approach reduces initial load time, minimizes memory usage and network requests, and improves overall application responsiveness, especially when working with large datasets.
 
-For an example of implementing the [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_LoadChildOnDemand) pattern in hierarchical [Gantt Chart](https://www.syncfusion.com/gantt-sdk/blazor-gantt-chart) components, refer to the [Gantt Chart data binding](https://blazor.syncfusion.com/documentation/gantt-chart/data-binding#load-child-on-demand).
+For more information about implementing lazy loading, refer to the [TreeGrid](https://blazor.syncfusion.com/documentation/treegrid/data-binding#loadchildondemand) and [Gantt](https://blazor.syncfusion.com/documentation/gantt-chart/data-binding#load-child-on-demand) documentation.
 
 ## Choosing the right approach
 
