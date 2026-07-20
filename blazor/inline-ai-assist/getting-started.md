@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Inline AI Assist Component
 
-This section briefly explains about how to include Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Inline AI Assist component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Inline AI Assist component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
