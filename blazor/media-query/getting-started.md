@@ -113,12 +113,12 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
+After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor.Core` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
-@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Core
 
 {% endhighlight %}
 {% endtabs %}
@@ -158,10 +158,12 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Media Query](https://www.syncfusion.com/blazor-components/blazor-media-query) component inside the razor file.
 
+The Media Query component monitors the viewport width and updates the ActiveBreakPoint value as the screen size changes between defined breakpoints such as Small, Medium, and Large. This value can be used to conditionally apply styles or modify the layout. In the following example, the [ActiveBreakPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfMediaQuery.html#Syncfusion_Blazor_SfMediaQuery_ActiveBreakpoint) parameter is used to determine the currently active breakpoint and dynamically update the layout based on the screen size.
+
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Core
 
 <SfMediaQuery @bind-ActiveBreakPoint="activeBreakpoint"></SfMediaQuery>
 <br />
@@ -428,8 +430,11 @@ dotnet run
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjrdtmDhzdYJeDlu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Media Query Component](images/blazor-media-query.webp)" %}
 
+N> You can refer to the [Blazor Media Query](https://www.syncfusion.com/blazor-components/blazor-media-query) feature tour to explore its key features and capabilities. You can also browse the [Blazor Media Query examples](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MediaQuery) to learn how to render and configure the component.
+
 ## See also
 
-1. [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-2. [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-3. [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+1. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+2. [Getting Started with Blazor Server App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor WebAssembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+4. [Breakpoints in Blazor Media Query Component](https://blazor.syncfusion.com/documentation/media-query/break-points)
