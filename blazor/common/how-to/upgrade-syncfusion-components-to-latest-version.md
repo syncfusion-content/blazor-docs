@@ -37,7 +37,7 @@ N> Use a single theme file that matches the chosen look and feel (for example, B
 
 ## Breaking changes
 
-Review breaking changes for each release to understand required code or behavior updates. See the [release notes (breaking changes)](https://blazor.syncfusion.com/documentation/release-notes/index/?type=breaking-changes).
+Review breaking changes for each release to understand required code or behavior updates. See the [release notes (breaking changes)](https://blazor.syncfusion.com/documentation/release-notes/32.1.25?type=all).
 
 ## Cache problem
 

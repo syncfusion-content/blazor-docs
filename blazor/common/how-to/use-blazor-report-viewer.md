@@ -13,4 +13,4 @@ The Blazor Report Viewer is provided through the Bold Reports product. Use the f
 
 * [How to use the Bold Reports Report Viewer in a Blazor WebAssembly App](https://help.boldreports.com/embedded-reporting/javascript-reporting/report-viewer/how-to/use-javascript-reportviewer-in-blazor-web-assembly-application/)
 * [How to use the Bold Reports Report Viewer in a Blazor Server App](https://help.boldreports.com/embedded-reporting/javascript-reporting/report-viewer/how-to/use-javascript-reportviewer-in-blazor-server-application/)
-* [Learn about Blazor reporting components in Bold Reports](https://www.boldreports.com/blog/blazor-reporting-components)
+* [Learn about Blazor reporting components in Bold Reports](https://www.boldreports.com/blog/blazor-reporting-components/)

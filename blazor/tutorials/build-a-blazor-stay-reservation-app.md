@@ -614,7 +614,7 @@ Bind the `OnActionBegin` event of the `SfSchedule` component to a method that ha
 
 The complete code for this example is available in the [GitHub repository](https://github.com/syncfusion/blazor-showcase-stay-reservation).
 
-Try the live demo: [https://blazor.syncfusion.com/showcase/stay-reservation](https://blazor.syncfusion.com/showcase/stay-reservation)
+Try the live demo: [https://showcase.syncfusion.com/blazor/stay-reservation](https://blazor.syncfusion.com/showcase/stay-reservation)
 
 ## Summary
 

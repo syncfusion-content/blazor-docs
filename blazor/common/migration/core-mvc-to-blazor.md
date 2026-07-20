@@ -9,11 +9,11 @@ documentation: ug
 
 # Migrating ASP.NET Core MVC Controls to Blazor
 
-Migrating enterprise applications from [ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview) to [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/) represents a transition from a controller driven, request response framework to a modern, component based web UI model built on .NET. This guide provides a step-by-step migration path for [ASP.NET Core MVC controls](https://www.syncfusion.com/aspnet-mvc-ui-controls) to their [Blazor equivalents](https://www.syncfusion.com/blazor-components).
+Migrating enterprise applications from [ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-10.0) to [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/) represents a transition from a controller driven, request response framework to a modern, component based web UI model built on .NET. This guide provides a step-by-step migration path for [ASP.NET Core MVC controls](https://www.syncfusion.com/aspnet-mvc-ui-controls) to their [Blazor equivalents](https://www.syncfusion.com/blazor-components).
 
 ## Why migrate from ASP.NET Core MVC to Blazor?
 
-[ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview) applications follow a request response model, where user requests are handled by controllers and rendered using views. UI updates often require full page reloads or additional techniques such as partial views or AJAX, which can increase complexity as applications become more interactive.
+[ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-10.0  ) applications follow a request response model, where user requests are handled by controllers and rendered using views. UI updates often require full page reloads or additional techniques such as partial views or AJAX, which can increase complexity as applications become more interactive.
 
 [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/) introduces a component based, event driven UI model, where user interactions trigger updates directly within components rather than full page reloads. It enables reusable UI components and aligns closely with modern .NET development practices.
 
@@ -38,7 +38,7 @@ Migrating enterprise applications from [ASP.NET Core MVC](https://learn.microsof
 
 ## Project structure comparison
 
-The following table maps common [ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview) application artifacts to their [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/) equivalents, highlighting how application structure transitions from a request driven model to a component based architecture.
+The following table maps common [ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-10.0) application artifacts to their [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/) equivalents, highlighting how application structure transitions from a request driven model to a component based architecture.
 
 | Concept  | ASP.NET Core MVC artifact  | Blazor equivalent      |
 | -----| ------ | ----- |
@@ -64,7 +64,7 @@ The following shared setup applies to all components and covers the common confi
 
 ### Package installation
 
-In [ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview), controls are typically installed using a single combined package, such as [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core). 
+In [ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-10.0), controls are typically installed using a single combined package, such as [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core). 
 
 In [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/) applications, using individual component packages improves performance and reduces application size. For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
@@ -479,7 +479,7 @@ N> The `Meeting` class uses the default property names expected by the Scheduler
 
 ### Migrate to Blazor Rich Text Editor component
 
-The [ASP.NET Core MVC Rich Text Editor](https://www.syncfusion.com/aspnet-mvc-ui-controls/wysiwyg-rich-text-editor) is a feature-rich WYSIWYG HTML and Markdown editor, while [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) provides a modern, feature rich component for building interactive and dynamic text editing user interfaces.
+The [ASP.NET Core MVC Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/aspnet-mvc-rich-text-editor) is a feature-rich WYSIWYG HTML and Markdown editor, while [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) provides a modern, feature rich component for building interactive and dynamic text editing user interfaces.
 
 For detailed explanation, refer to the [Blazor Rich Text Editor getting started guide](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app) and [ASP.NET Core MVC Rich Text Editor getting started guide](https://ej2.syncfusion.com/aspnetmvc/documentation/rich-text-editor/getting-started).
 
@@ -498,7 +498,7 @@ For detailed explanation, refer to the [Blazor Rich Text Editor getting started 
 
 **ASP.NET Core MVC approach**
 
-The [ASP.NET Core MVC Rich Text Editor](https://www.syncfusion.com/aspnet-mvc-ui-controls/wysiwyg-rich-text-editor) is initialized with configurable [ToolbarSettings](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.RichTextEditor.RichTextEditor.html#Syncfusion_EJ2_RichTextEditor_RichTextEditor_ToolbarSettings) and supports content formatting through predefined tools and customization options.
+The [ASP.NET Core MVC Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/aspnet-mvc-rich-text-editor) is initialized with configurable [ToolbarSettings](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.RichTextEditor.RichTextEditor.html#Syncfusion_EJ2_RichTextEditor_RichTextEditor_ToolbarSettings) and supports content formatting through predefined tools and customization options.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Index.cshtml" %}

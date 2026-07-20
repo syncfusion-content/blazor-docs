@@ -19,7 +19,7 @@ Refer to [Host and deploy ASP.NET Core Blazor](https://learn.microsoft.com/en-us
 
 * [Enable WebSockets](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/websockets?view=aspnetcore-7.0#enabling-websockets-on-iis) in IIS.
 
-* Now, publish the application for deployment in Release configuration by referring to [this](https://blazor.syncfusion.com/documentation/common/deployment).
+* Now, publish the application for deployment in Release configuration by referring to [this](https://blazor.syncfusion.com/documentation/common/deployment/publish).
 
 * Open Internet Information Services (IIS) Manager and then right-click on "Sites," followed by selecting "Add Website."
 

@@ -9,12 +9,12 @@ documentation: ug
 
 # Generate Syncfusion® Blazor License Key
 
-Generate license keys from the [License & Downloads](https://syncfusion.com/account/downloads) portal or the [Trial & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page of the Syncfusion<sup style="font-size:70%">&reg;</sup> website.
+Generate license keys from the [License & Downloads](https://www.syncfusion.com/account/downloads) portal or the [Trial & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page of the Syncfusion<sup style="font-size:70%">&reg;</sup> website.
 
 ![License and Downloads portal showing the Get Community License Key option](images/get-community-license-key.webp)
 
-N> * Syncfusion<sup style="font-size:70%">&reg;</sup> license keys are **version and platform specific**. See How to generate a license key for [licensed products](https://www.syncfusion.com/kb/8976/how-to-generate-license-key-for-licensed-products).
-* To determine which license key version to use in an application, see [Which version Syncfusion<sup style="font-size:70%">&reg;</sup> license key should I use in my application?](https://www.syncfusion.com/kb/8951/which-version-syncfusion-license-key-should-i-use-in-my-application).
+N> * Syncfusion<sup style="font-size:70%">&reg;</sup> license keys are **version and platform specific**. See How to generate a license key for [licensed products](https://support.syncfusion.com/kb/article/7898/how-to-generate-license-key-for-licensed-products).
+* To determine which license key version to use in an application, see [Which version Syncfusion<sup style="font-size:70%">&reg;</sup> license key should I use in my application?](https://support.syncfusion.com/kb/article/7865/which-version-license-key-should-i-use-in-my-application).
 
 ## Claim License key
 

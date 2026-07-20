@@ -166,7 +166,7 @@ The following section lists the Blazor UI components that support form validatio
 </tr>
 <tr>
 <td>
-<a href="http://nuget.org/packages/Syncfusion.Blazor.Buttons/">Syncfusion.Blazor.Buttons</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons/">Syncfusion.Blazor.Buttons</a>
 </td>
 <td>
 <ul>
@@ -183,7 +183,7 @@ The following section lists the Blazor UI components that support form validatio
 </tr>
 <tr>
 <td rowspan="2">
-<a href="http://nuget.org/packages/Syncfusion.Blazor.Calendars/">Syncfusion.Blazor.Calendars</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/">Syncfusion.Blazor.Calendars</a>
 </td>
 <td>
 <ul>
@@ -214,7 +214,7 @@ The following section lists the Blazor UI components that support form validatio
 </tr>
 <tr>
 <td>
-<a href="http://nuget.org/packages/Syncfusion.Blazor.DropDowns/">Syncfusion.Blazor.DropDowns</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/">Syncfusion.Blazor.DropDowns</a>
 </td>
 <td>
 <ul>
@@ -233,7 +233,7 @@ The following section lists the Blazor UI components that support form validatio
 </tr>
 <tr>
 <td>
-<a href="http://nuget.org/packages/Syncfusion.Blazor.InPlaceEditor/">Syncfusion.Blazor.InPlaceEditor</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.InPlaceEditor/">Syncfusion.Blazor.InPlaceEditor</a>
 </td>
 <td>
 <ul>
@@ -248,7 +248,7 @@ The following section lists the Blazor UI components that support form validatio
 </tr>
 <tr>
 <td>
-<a href="http://nuget.org/packages/Syncfusion.Blazor.Inputs/">Syncfusion.Blazor.Inputs</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/">Syncfusion.Blazor.Inputs</a>
 </td>
 <td>
 <ul>
@@ -267,7 +267,7 @@ The following section lists the Blazor UI components that support form validatio
 </tr>
 <tr>
 <td>
-<a href="http://nuget.org/packages/Syncfusion.Blazor.RichTextEditor/">Syncfusion.Blazor.RichTextEditor</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor/">Syncfusion.Blazor.RichTextEditor</a>
 </td>
 <td>
 <ul>

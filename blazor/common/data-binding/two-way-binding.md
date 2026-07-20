@@ -96,4 +96,4 @@ Blazor render trees can be built manually with `RenderTreeBuilder`, which provid
 
 ![Binding a dynamically generated Blazor DatePicker using RenderFragment](../images/blazor-date-picker.png)
 
-For more information, see the Blazor documentation on [manually building a render tree](https://docs.microsoft.com/en-us/aspnet/core/blazor/advanced-scenarios?#manually-build-a-render-tree-rendertreebuilder).
+For more information, see the Blazor documentation on [manually building a render tree](https://learn.microsoft.com/en-us/aspnet/core/blazor/advanced-scenarios?view=aspnetcore-10.0#manually-build-a-render-tree-rendertreebuilder).

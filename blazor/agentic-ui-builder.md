@@ -24,7 +24,7 @@ Before installing Blazor UI Builder, ensure the following:
 | **Microsoft .NET SDK 8.0 or later** | .NET CLI tools installed |
 | **Node.js version 18 or later** | npm package manager installed |
 | **Agent Package Manager (APM)** | Agent Package Manager installed. [Installation Guidelines](https://microsoft.github.io/apm/quickstart/#1-install-apm) |
-| **Syncfusion License** | [Commercial](https://www.syncfusion.com/sales/unlimitedlicense), [Free Community](https://www.syncfusion.com/products/communitylicense), or [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials) |
+| **Syncfusion License** | [Commercial](https://www.syncfusion.com/sales/pricing?category=ui-components), [Free Community](https://www.syncfusion.com/products/communitylicense), or [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials) |
 | **Supported AI Agent / IDE** | A supported AI agent or IDE that integrates with Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.) 
 
 ## Key Benefits

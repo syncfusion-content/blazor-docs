@@ -9,7 +9,7 @@ documentation: ug
 
 # Input Sanitization in Blazor Components
 
-This documentation explains how to protect [Blazor components](https://www.syncfusion.com/blazor-components) from unsafe or malicious user input using **input sanitization** techniques. It highlights built‑in sanitization support in components such as the [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) and [Blazor Block Editor](https://www.syncfusion.com/blazor-components/blazor-block-editor), along with best practices like HTML encoding to ensure safe rendering of user content.
+This documentation explains how to protect [Blazor components](https://www.syncfusion.com/blazor-components) from unsafe or malicious user input using **input sanitization** techniques. It highlights built‑in sanitization support in components such as the [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) and [Blazor Block Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-block-editor), along with best practices like HTML encoding to ensure safe rendering of user content.
 
 ## What is input sanitization?
 
@@ -37,7 +37,7 @@ Sanitizing user input ensures that only safe and expected values are stored or d
 
 ## Built-in sanitization features
 
-Several [Blazor components](https://www.syncfusion.com/blazor-components) include HTML sanitization capabilities to prevent harmful scripts or unsafe markup from being rendered. Components that accept or display HTML content such as the [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor), [Blazor Block Editor](https://www.syncfusion.com/blazor-components/blazor-block-editor) have built-in `EnableHtmlSanitizer` property to remove unsafe elements before rendering.
+Several [Blazor components](https://www.syncfusion.com/blazor-components) include HTML sanitization capabilities to prevent harmful scripts or unsafe markup from being rendered. Components that accept or display HTML content such as the [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor), [Blazor Block Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-block-editor) have built-in `EnableHtmlSanitizer` property to remove unsafe elements before rendering.
 
 Components such as [Blazor Tooltip](https://www.syncfusion.com/blazor-components/blazor-tooltip), [Blazor Toast](https://www.syncfusion.com/blazor-components/blazor-toast), and [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) apply sanitization when rendering HTML content in templates. For [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), HTML encoding should be applied explicitly when rendering user-provided content. This ensures that any user provided HTML is safe.
 
@@ -76,7 +76,7 @@ When the `EnableHtmlSanitizer` property is enabled, the Blazor Rich Text Editor 
 
 ### Block Editor
 
-The [Blazor Block Editor](https://www.syncfusion.com/blazor-components/blazor-block-editor) allows users to create structured content such as paragraphs, headings, lists, quotes, images, and links. Since user generated content may include HTML like input or potentially unsafe markup, enable the built-in sanitizer using the [EnableHtmlSanitizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_EnableHtmlSanitizer) property to ensure only safe content is rendered.
+The [Blazor Block Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-block-editor) allows users to create structured content such as paragraphs, headings, lists, quotes, images, and links. Since user generated content may include HTML like input or potentially unsafe markup, enable the built-in sanitizer using the [EnableHtmlSanitizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_EnableHtmlSanitizer) property to ensure only safe content is rendered.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

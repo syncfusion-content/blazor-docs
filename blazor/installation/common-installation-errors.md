@@ -49,7 +49,7 @@ This article describes the most common installation errors, as well as the cause
 **Suggested solution:** Choose one of the following options.
 
 1. Renew the subscription [here](https://www.syncfusion.com/account/my-renewals).
-2. Purchase a new license [here](https://www.syncfusion.com/sales/products).
+2. Purchase a new license [here](https://www.syncfusion.com/sales/pricing?category=ui-components).
 3. Contact sales: sales@syncfusion.com.
 4. Contact [Syncfusion support](https://support.syncfusion.com) to request a trial extension, if applicable.
 
@@ -78,7 +78,7 @@ After renewing or purchasing a license, re-run the installer and enter the new u
 
 **Suggested solution:**
 
-1. Purchase a license: https://www.syncfusion.com/sales/products.
+1. Purchase a license: https://www.syncfusion.com/sales/pricing?category=ui-components.
 2. Sign in to the [Syncfusion account portal](https://www.syncfusion.com/account/) to verify the license is registered to your account.
 3. Ask the account administrator to assign a license to your user in the Syncfusion account portal.
 4. Request assistance: clientrelations@syncfusion.com.
@@ -125,7 +125,7 @@ After renewing or purchasing a license, re-run the installer and enter the new u
 
 **Option 1: Disable controlled folder access for the install**
 
-Syncfusion demos are installed to the Public Documents folder by default. With controlled folder access enabled, the demos cannot be installed in that folder. To install the demos to the default location, disable controlled folder access during installation and re-enable it afterward. For steps, see [Allow an app to access controlled folders in Windows Security](https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034).
+Syncfusion demos are installed to the Public Documents folder by default. With controlled folder access enabled, the demos cannot be installed in that folder. To install the demos to the default location, disable controlled folder access during installation and re-enable it afterward. For steps, see [Allow an app to access controlled folders in Windows Security](https://support.microsoft.com/en-US/Windows/Security/Threat-Malware-Protection/virus-and-threat-protection-in-the-windows-security-app).
 
 1. Open **Windows Security** and select **Virus & threat protection**.
 2. Under **Virus & threat protection settings**, click **Manage settings**.

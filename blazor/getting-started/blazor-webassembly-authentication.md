@@ -65,7 +65,7 @@ dotnet run
 
 ## Configure the application with Google OAuth 2.0 (OIDC)
 
-* Set up Google OAuth 2.0 authentication. For more information, see the [Google Cloud documentation](https://support.google.com/cloud/answer/6158849?hl=en).
+* Set up Google OAuth 2.0 authentication. For more information, see the [Google Cloud documentation](https://support.google.com/cloud/answer/15549257?hl=en&visit_id=639200757881843711-2554616926&rd=1).
 
 * Replace the `appsettings.json` file with the following content to configure the application with `Google OAuth 2.0`.
 

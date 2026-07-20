@@ -301,4 +301,4 @@ Your application will be live on GitHub Pages within minutes and can be accessed
 * [Getting started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 * [Getting started with Blazor DataGrid component](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
 * [Blazor WebAssembly Hosting and Deployment](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/webassembly/github-pages?view=aspnetcore-10.0)
-* [GitHub Pages Configuration](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)
+* [GitHub Pages Configuration](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)

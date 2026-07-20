@@ -353,7 +353,7 @@ N> This example uses Bootstrap classes (`d-flex`, `ms-auto`, `gap-3`). If your p
 
     <main>
         <div class="top-row px-4 d-flex align-items-center">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+            <a href="https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-10.0" target="_blank">About</a>
 
             <div class="ms-auto d-flex gap-3">
                 <AuthorizeView>

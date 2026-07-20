@@ -9,11 +9,11 @@ documentation: ug
 
 # Default HTML attributes and DOM events
 
-The Blazor UI components provide the most useful [public API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.html) for component implementation and customization. Apart from this public API, the Blazor UI components can support the use of default [HTML attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes) and [DOM events](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/event-handling?view=aspnetcore-8.0) in the root element of its component.
+The Blazor UI components provide the most useful [public API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.html) for component implementation and customization. Apart from this public API, the Blazor UI components can support the use of default [HTML attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes) and [DOM events](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/event-handling?view=aspnetcore-8.0) in the root element of its component.
 
 ## Use HTML attributes and DOM events on input elements
 
-The following is a list of Blazor UI components that use the standard HTML `input` element. You can apply the [HTML input attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and DOM events directly to the input element used on these Blazor components.
+The following is a list of Blazor UI components that use the standard HTML `input` element. You can apply the [HTML input attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input) and DOM events directly to the input element used on these Blazor components.
 
 * [SfAutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started)
 * [SfCheckBox](https://blazor.syncfusion.com/documentation/check-box/getting-started)
@@ -42,7 +42,7 @@ The following table illustrates the HTML attributes and their equivalent API.
 <td><b>Components</b></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-id">id</a></td>
+<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#attr-id">id</a></td>
 <td>ID</td>
 <td>
 <ul>
@@ -51,7 +51,7 @@ The following table illustrates the HTML attributes and their equivalent API.
 </td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefautocomplete">autocomplete</a></td>
+<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#htmlattrdefautocomplete">autocomplete</a></td>
 <td>Autocomplete</td>
 <td>
 <ul>
@@ -60,7 +60,7 @@ The following table illustrates the HTML attributes and their equivalent API.
 </td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefchecked">checked</a></td>
+<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#htmlattrdefchecked">checked</a></td>
 <td>Checked</td>
 <td>
 <ul>
@@ -70,7 +70,7 @@ The following table illustrates the HTML attributes and their equivalent API.
 </td>
 </tr>
 <tr>
-<td rowspan="2"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefdisabled">disabled</a></td>
+<td rowspan="2"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#htmlattrdefdisabled">disabled</a></td>
 <td>Disabled</td>
 <td>
 <ul>
@@ -88,7 +88,7 @@ The following table illustrates the HTML attributes and their equivalent API.
 </td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefmax">max</a></td>
+<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#htmlattrdefmax">max</a></td>
 <td>Max</td>
 <td>
 <ul>
@@ -114,7 +114,7 @@ The following table illustrates the HTML attributes and their equivalent API.
 </td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefmultiple">multiple</a></td>
+<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#htmlattrdefmultiple">multiple</a></td>
 <td>Multiple</td>
 <td>
 <ul>
@@ -123,7 +123,7 @@ The following table illustrates the HTML attributes and their equivalent API.
 </td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefplaceholder">placeholder</a></td>
+<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#htmlattrdefplaceholder">placeholder</a></td>
 <td>Placeholder</td>
 <td>
 <ul>
@@ -135,7 +135,7 @@ The following table illustrates the HTML attributes and their equivalent API.
 </td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/readonly">readonly</a></td>
+<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/readonly">readonly</a></td>
 <td>ReadOnly</td>
 <td>
 <ul>
@@ -147,7 +147,7 @@ The following table illustrates the HTML attributes and their equivalent API.
 </td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefstep">step</a></td>
+<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#htmlattrdefstep">step</a></td>
 <td>Step</td>
 <td>
 <ul>
@@ -156,7 +156,7 @@ The following table illustrates the HTML attributes and their equivalent API.
 </td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefvalue">value</a></td>
+<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#htmlattrdefvalue">value</a></td>
 <td>Value</td>
 <td>
 <ul>
@@ -166,7 +166,7 @@ The following table illustrates the HTML attributes and their equivalent API.
 </td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefwidth">width</a></td>
+<td><a href="hhttps://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#htmlattrdefwidth">width</a></td>
 <td>Width</td>
 <td>
 <ul>

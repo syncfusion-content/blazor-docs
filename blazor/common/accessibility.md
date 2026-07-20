@@ -27,7 +27,7 @@ The accessibility of the components consists of the following standards and aspe
 
 [Section 508](https://www.section508.gov/) - U.S. federal standards for making electronic and information technology accessible, aligned with WCAG.
 
-[WAI-ARIA](https://www.w3.org/WAI/ARIA/) - Roles, states, and properties that enhance accessibility of dynamic web content and applications for assistive technologies.
+[WAI-ARIA](https://www.w3.org/WAI/about/groups/ariawg/) - Roles, states, and properties that enhance accessibility of dynamic web content and applications for assistive technologies.
 
 [Keyboard navigation](https://www.w3.org/TR/WCAG22/#keyboard-accessible) - The ability to use a keyboard to interact with and navigate a user interface.
 
@@ -43,13 +43,13 @@ The [WAI-ARIA patterns](https://www.w3.org/WAI/ARIA/apg/patterns/) are followed 
 
 Each Blazor component is evaluated with manual screen reader testing and automated tests to ensure required attributes and behaviors are present.
 
-Attributes are assigned and updated correctly during interaction. Each component has an appropriate `role` and ARIA attributes defined by the [WCAG 2.2](https://www.w3.org/TR/WCAG22/) specification.
+Attributes are assigned and updated correctly during interaction. Each component has an appropriate `role` and ARIA attributes defined by the [WCAG 2.2](https://www.w3.org/WAI/about/groups/ariawg/) specification.
 
 In addition to the methodologies mentioned above, Blazor components are constructed to support the following accessibility aspects.
 
 ### Screen reader support
 
-Blazor components follow [WAI-ARIA](https://www.w3.org/WAI/ARIA/) to work properly with screen readers such as [Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) for Windows and [VoiceOver](https://support.apple.com/guide/voiceover/vo2706/mac) for macOS.
+Blazor components follow [WAI-ARIA](https://www.w3.org/WAI/about/groups/ariawg/) to work properly with screen readers such as [Narrator](https://support.microsoft.com/en-US/accessibility/windows/narrator/complete-guide-to-narrator) for Windows and [VoiceOver](https://support.apple.com/en-in/guide/voiceover/vo2706/mac) for macOS.
 
 ### Right-to-left support
 
@@ -73,7 +73,7 @@ Ensuring the accessibility of Blazor components is crucial for making the produc
 
 * **Automated testing**: Accessibility is validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
 
-* **Manual testing**: Manual evaluation using screen readers such as [Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) for Windows and [VoiceOver](https://support.apple.com/guide/voiceover/vo2706/mac) for macOS.
+* **Manual testing**: Manual evaluation using screen readers such as [Narrator](https://support.microsoft.com/en-US/accessibility/windows/narrator/complete-guide-to-narrator) for Windows and [VoiceOver](https://support.apple.com/en-in/guide/voiceover/vo2706/mac) for macOS.
 
 Blazor components continually improve based on standards updates and user feedback to enhance accessibility.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # End-to-End Test Automation for Blazor Components with Playwright
 
-This guide explains how to integrate [Blazor components](https://www.syncfusion.com/blazor-components) into a **Blazor WebAssembly Standalone App** and validate them through end‑to‑end tests using [Playwright](https://playwright.dev/dotnet).
+This guide explains how to integrate [Blazor components](https://www.syncfusion.com/blazor-components) into a **Blazor WebAssembly Standalone App** and validate them through end‑to‑end tests using [Playwright](https://playwright.dev/dotnet/).
 
 Playwright enables automated end‑to‑end (E2E) testing by simulating real user interactions such as clicking, typing, and navigation across the application. These tests can be executed repeatedly to verify complete UI workflows and ensure that Blazor components behave as expected.
 

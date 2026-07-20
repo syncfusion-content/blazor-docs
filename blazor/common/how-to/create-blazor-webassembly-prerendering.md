@@ -17,7 +17,7 @@ Install the [.NET SDK](https://dotnet.microsoft.com/en-us/download) (7.0 or late
 
 ## Create a new project for Blazor WebAssembly ASP.NET Core Hosted application
 
-1. Create a new [Blazor WebAssembly ASP.NET Core Hosted application](https://blazor.syncfusion.com/documentation/getting-started/blazor-core-hosted#create-a-blazor-aspnet-core-hosted-webassembly-app-in-visual-studio).
+1. Create a new [Blazor WebAssembly ASP.NET Core Hosted application](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app#create-a-blazor-aspnet-core-hosted-webassembly-app-in-visual-studio).
 
 2. Delete `~/wwwroot/index.html` file in the Client project.
 
