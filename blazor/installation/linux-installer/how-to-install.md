@@ -31,7 +31,7 @@ Before you begin, confirm the following:
 
    ![Extracted contents of the Blazor Linux offline installer](images/linux_installer2.webp)
 
-   > **Note:** An unlock key is not required to install or use the Blazor Linux offline installer.
+   N> An unlock key is not required to install or use the Blazor Linux offline installer.
 
 3. Open the demo projects from the extracted folder using your preferred editor (for example, Visual Studio Code), and restore the included NuGet packages.
 4. Build and run the sample projects to verify the installation. Use `dotnet restore`, `dotnet build`, and `dotnet run` from the project directory.
