@@ -27,6 +27,13 @@ Both guides include:
 - Sample data binding examples
 - Running and testing the DataGrid
 
+## Blazor Grid Video Tutorial
+
+A step-by-step video walkthrough demonstrating the Syncfusion Blazor DataGrid features, setup process, and common implementation scenarios.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=hjPGxApA5W8" %}
+
 ## Common Use Cases
 
 The Blazor DataGrid is ideal for a wide range of business scenarios:
