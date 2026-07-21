@@ -128,6 +128,8 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLntQBWzzmHwONX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
 ## Theme customization
 
 The Blazor Data Grid provides flexible theme customization options to align control appearance with application design requirements. Built-in themes can be customized by overriding default CSS variables or by creating completely customized themes using Syncfusion Theme Studio.
