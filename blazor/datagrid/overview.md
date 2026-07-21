@@ -36,13 +36,13 @@ The Blazor DataGrid supports multiple data binding approaches, enabling flexible
 
 - **[Remote Data Sources](./data-binding/remote-data)** — Connect to web services, REST APIs, and remote endpoints with automatic request handling and response parsing. Perfect for scalable applications with large or frequently updated datasets.
 
-- **[ORM Integration](./connecting-to-ORM/)** — Seamless integration with popular Object-Relational Mapping frameworks eliminates custom data mapping code and enables LINQ-based queries.
+- **ORM Integration** — Seamless integration with popular Object-Relational Mapping frameworks eliminates custom data mapping code and enables LINQ-based queries.
   - [Entity Framework](./connecting-to-orm/entityframework) — Direct integration with EF Core for simplified database model binding
   - [Dapper](./connecting-to-orm/dapper) — Lightweight ORM support for direct SQL control with minimal overhead
 
 - **[Data Adaptors](./connecting-to-adaptors/url-adaptor)** — Specialized adaptor interfaces for flexible integration with different backend services and data formats
 
-- **[Backend Services & Real-Time Sync](./connecting-to-backends/)** — Enterprise-grade integrations for live data synchronization and advanced operations
+- **Backend Services & Real-Time Sync** — Enterprise-grade integrations for live data synchronization and advanced operations
   - [SignalR](./connecting-to-backends/signalr) — Real-time data updates across multiple users and browser instances
   - [Elasticsearch](./connecting-to-backends/elasticsearch) — Full-text search and powerful aggregation capabilities for large-scale datasets
 
