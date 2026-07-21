@@ -97,8 +97,8 @@ The Blazor DataGrid provides comprehensive data manipulation capabilities that e
 
 #### Sorting & Filtering
 
-| Feature | Purpose | Documentation |
-|---------|---------|---------------|
+| Feature | Purpose | Key Benefit |
+|---------|---------|-------------|
 | **[Sorting](./sorting)** | Arrange records in ascending or descending order to identify trends and patterns | Quick sort by clicking column headers |
 | **[Filter Bar](./filter-bar)** | Quick filtering with inline text inputs in column headers | Immediate results without dialogs |
 | **[Filter Menu](./filter-menu)** | Advanced filtering with complex conditions and multiple criteria | Powerful expression-based filtering |
@@ -107,8 +107,8 @@ The Blazor DataGrid provides comprehensive data manipulation capabilities that e
 
 #### Grouping & Aggregation
 
-| Feature | Purpose | Documentation |
-|---------|---------|---------------|
+| Feature | Purpose | Key Benefit |
+|---------|---------|-------------|
 | **[Grouping](./grouping)** | Organize records into categories for better data comprehension | Multi-level hierarchical grouping |
 | **[Aggregates](./aggregates)** | Calculate summary values (sum, average, min, max) on grouped data | Built-in aggregate functions |
 | **[Footer Aggregate](./footer-aggregate)** | Display summary totals in the grid footer | Overall statistics for all visible records |
@@ -124,12 +124,12 @@ The Blazor DataGrid enables seamless Create, Read, Update, and Delete (CRUD) ope
 
 Multiple editing modes support different workflow scenarios:
 
-| Mode | Description | Best For |
-|------|-------------|----------|
-| **[Inline Editing](./in-line-editing)** | Edit cell content directly in the grid | Quick single-cell edits, power users |
-| **[Dialog Editing](./dialog-editing)** | Open a dedicated form dialog for editing | Comprehensive multi-field edits |
-| **[Batch Editing](./batch-editing)** | Edit multiple records and submit together | Bulk operations, mass updates |
-| **[Template Editing](./template-editing)** | Use custom HTML templates for forms | Complex layouts, specialized controls |
+| Mode | Description | Best For | Key Benefit |
+|------|-------------|----------|-------------|
+| **[Inline Editing](./in-line-editing)** | Edit cell content directly in the grid | Quick single-cell edits, power users | Direct editing without dialog overhead |
+| **[Dialog Editing](./dialog-editing)** | Open a dedicated form dialog for editing | Comprehensive multi-field edits | Organized form-based editing with validation |
+| **[Batch Editing](./batch-editing)** | Edit multiple records and submit together | Bulk operations, mass updates | Efficient mass updates with single submission |
+| **[Template Editing](./template-editing)** | Use custom HTML templates for forms | Complex layouts, specialized controls | Flexible, custom-designed edit forms |
 
 ### Data Validation
 
@@ -141,8 +141,8 @@ The Blazor DataGrid offers extensive column and layout customization options for
 
 ### Column Features
 
-| Feature | Purpose | Documentation |
-|---------|---------|---------------|
+| Feature | Purpose | Key Benefit |
+|---------|---------|-------------|
 | **[Column Formatting](./columns.md)** | Apply predefined or custom formats (currency, dates, percentages, etc.) | Professional number and date display |
 | **[Column Resizing](./column-resizing.md)** | Manually adjust column widths with auto-fit and responsive options | Optimal content visibility |
 | **[Column Reordering](./column-reorder.md)** | Drag column headers to reorder display sequence | User-preferred column arrangement |
@@ -153,8 +153,8 @@ The Blazor DataGrid offers extensive column and layout customization options for
 
 ### Responsive Design
 
-| Feature | Purpose | Documentation |
-|---------|---------|---------------|
+| Feature | Purpose | Key Benefit |
+|---------|---------|-------------|
 | **[Adaptive Layout](./adaptive-layout)** | Automatically adjust column widths and visibility based on screen space | Optimal display across all devices |
 | **[Mobile Responsive](./adaptive-layout)** | Optimized experience for phones and tablets | Touch-friendly interactions |
 | **[Breakpoint-based Adjustments](./adaptive-layout)** | Different layouts for different screen sizes | Tailored mobile and desktop views |
@@ -171,8 +171,8 @@ The Blazor DataGrid provides a comprehensive, accessible user experience with ex
 
 ### Templating & Customization
 
-| Template Type | Purpose | Documentation |
-|---------------|---------|---------------|
+| Template Type | Purpose | Key Benefit |
+|---------------|---------|-------------|
 | **[Header Template](./column-headers#header-template)** | Customize column headers with icons, tooltips, complex formatting | Professional header design |
 | **[Column Template](./column-template)** | Custom cell rendering with conditional styling and components | Rich data visualization |
 | **[Row Template](./row-template)** | Complete row customization for specialized layouts | Unique row presentations |
@@ -181,8 +181,8 @@ The Blazor DataGrid provides a comprehensive, accessible user experience with ex
 
 ### Selection & Interaction
 
-| Feature | Purpose | Documentation |
-|---------|---------|---------------|
+| Feature | Purpose | Key Benefit |
+|---------|---------|-------------|
 | **[Row Selection](./row-selection)** | Single or multiple row selection modes | Flexible selection workflows |
 | **[Checkbox Selection](./checkbox-selection)** | Checkbox-based selection with select-all option | Bulk operation selection |
 | **[Cell Selection](./cell-selection)** | Individual cell or range selection with copy-paste | Spreadsheet-like interaction |
