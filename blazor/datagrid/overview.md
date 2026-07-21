@@ -13,27 +13,6 @@ documentation: ug
 
 The Blazor DataGrid is a powerful and feature-rich UI component designed for displaying and manipulating tabular data with high performance and flexibility. It supports a wide range of enterprise-grade features including advanced data operations, seamless integration with multiple data sources, and extensive customization options. Built for scalability, it enables developers to create responsive, data-intensive applications with ease.
 
-## Quick Start Guides
-
-Available getting started guides for different Blazor hosting models:
-
-- **[Getting Started with Blazor Web App](./getting-started-with-web-app.md)** — Step-by-step guide for integrating the DataGrid into a Blazor Web App project with both interactive server and WebAssembly rendering scenarios
-- **[Getting Started with Blazor WebAssembly App](./getting-started.md)** — Complete instructions for Blazor WebAssembly projects, including package installation, namespace registration, and initial data binding setup
-
-Both guides include:
-- NuGet package installation steps
-- Required namespace imports
-- Basic DataGrid configuration
-- Sample data binding examples
-- Running and testing the DataGrid
-
-## Blazor Grid Video Tutorial
-
-A step-by-step video walkthrough demonstrating the Syncfusion Blazor DataGrid features, setup process, and common implementation scenarios.
-
-{% youtube
-"youtube:https://www.youtube.com/watch?v=hjPGxApA5W8" %}
-
 ## Common Use Cases
 
 The Blazor DataGrid is ideal for a wide range of business scenarios:
@@ -65,13 +44,9 @@ The Blazor DataGrid supports multiple data binding approaches, enabling flexible
 
 - **[Backend Services & Real-Time Sync](./connecting-to-backends/)** — Enterprise-grade integrations for live data synchronization and advanced operations
   - [SignalR](./connecting-to-backends/signalr) — Real-time data updates across multiple users and browser instances
-  - [ElasticSearch](./connecting-to-backends/elasticsearch) — Full-text search and powerful aggregation capabilities for large-scale datasets
+  - [Elasticsearch](./connecting-to-backends/elasticsearch) — Full-text search and powerful aggregation capabilities for large-scale datasets
 
-### Data Manager
-
-The [`SfDataManager`](https://blazor.syncfusion.com/documentation/data/getting-started-with-web-app) provides a unified API for binding grids to various data sources. It handles data fetching, filtering, sorting, and paging at the service level to enable efficient data operations on large datasets.
-
-### Supported Data Sources
+### Database Compatibility
 
 The DataGrid integrates with virtually any data source through native connectors and adaptor patterns:
 
@@ -91,7 +66,7 @@ The DataGrid integrates with virtually any data source through native connectors
 | **[MongoDB](./connecting-to-database/mongodb-server)** | Document-based storage | Flexible schemas, unstructured data |
 | **[Firebase Firestore](./connecting-to-database/firebase-firestore)** | Cloud real-time sync | Mobile apps, real-time applications |
 
-#### Query Languages & API Standards
+#### API & Service Integration
 
 | Technology | Documentation | Use Case |
 |-----------|---------------|----------|
@@ -100,6 +75,21 @@ The DataGrid integrates with virtually any data source through native connectors
 | **[OData V4 Adaptor](./connecting-to-adaptors/odatav4-adaptor)** | Standardized queries | Enterprise services, standardized operations |
 | **[URL Adaptor](./connecting-to-adaptors/url-adaptor)** | Simple HTTP endpoints | Quick integrations, public APIs |
 | **[Custom Adaptor](./connecting-to-adaptors/custom-adaptor)** | Custom implementations | Specialized backends, proprietary systems |
+
+### Large-Scale Rendering Performance
+
+The Blazor DataGrid is engineered for exceptional performance, enabling smooth operation with datasets ranging from hundreds to hundreds of thousands of rows. Advanced rendering techniques, intelligent caching, and WebAssembly optimizations ensure responsive user interactions without performance degradation.
+
+### Performance Features
+
+| Feature | Benefit | Use Case | Documentation |
+|---------|---------|----------|---------------|
+| **[Row Virtualization](./virtual-scrolling#row-virtualization)** | Render only visible rows; dynamically load/unload as users scroll | Large datasets (10K+ rows) | Smooth 60fps scrolling |
+| **[Column Virtualization](./virtual-scrolling#column-virtualization)** | Render only visible columns; optimize for many-column grids | Wide grids (50+ columns) | Efficient horizontal scrolling |
+| **[Lazy-load Grouping](./lazy-load-grouping)** | Load group data on demand when expanded | Grouped datasets | Reduced initial load time |
+| **[Infinite Scrolling](./infinite-scrolling)** | Load records progressively as users scroll | Continuous data exploration | Seamless navigation |
+| **[Overscan Buffer](./virtual-scrolling#render-buffered-data-using-overscan-count)** | Pre-render additional rows beyond viewport | Rapid scrolling scenarios | Smooth transitions |
+| **[WebAssembly Optimization](./webassembly-performance)** | Blazor-specific performance tuning | WebAssembly applications | Optimal WASM performance |## Editing & CRUD Operations
 
 ### Data Operations
 
@@ -145,21 +135,6 @@ Multiple editing modes support different workflow scenarios:
 
 The DataGrid includes built-in [validation with Data Annotations](./column-validation#data-annotation) that enforces business rules using .NET attributes. Validation errors display inline with helpful messages, guiding users to correct data before submission.
 
-### Enabling Edit Operations
-
-To enable editing functionality:
-
-1. Configure **GridEditSettings** properties:
-   - `AllowEditing="true"` — Enable record editing
-   - `AllowAdding="true"` — Enable new record insertion
-   - `AllowDeleting="true"` — Enable record deletion
-
-2. Set the primary key column using `Columns.IsPrimaryKey` to uniquely identify records
-
-3. Configure validation rules using Data Annotations on the model class
-
-4. Select the appropriate [editing mode](./editing) based on UI/UX requirements
-
 ## Columns & Layout Customization
 
 The Blazor DataGrid offers extensive column and layout customization options for creating professional data displays tailored to any device or workflow. Columns are fully customizable with formatting, resizing, reordering, and visibility controls that adapt to various viewing needs.
@@ -184,37 +159,11 @@ The Blazor DataGrid offers extensive column and layout customization options for
 | **[Mobile Responsive](./adaptive-layout)** | Optimized experience for phones and tablets | Touch-friendly interactions |
 | **[Breakpoint-based Adjustments](./adaptive-layout)** | Different layouts for different screen sizes | Tailored mobile and desktop views |
 
-## Performance & Scalability
+### Performance Best Practices
 
-The Blazor DataGrid is engineered for exceptional performance, enabling smooth operation with datasets ranging from hundreds to hundreds of thousands of rows. Advanced rendering techniques, intelligent caching, and WebAssembly optimizations ensure responsive user interactions without performance degradation.
+For comprehensive performance optimization strategies, best practices, and detailed guidance on handling large datasets, refer to the **[Performance Best Practices](./performance)** documentation.
 
-### Performance Features
-
-| Feature | Benefit | Use Case | Documentation |
-|---------|---------|----------|---------------|
-| **[Row Virtualization](./virtual-scrolling#row-virtualization)** | Render only visible rows; dynamically load/unload as users scroll | Large datasets (10K+ rows) | Smooth 60fps scrolling |
-| **[Column Virtualization](./virtual-scrolling#column-virtualization)** | Render only visible columns; optimize for many-column grids | Wide grids (50+ columns) | Efficient horizontal scrolling |
-| **[Lazy-load Grouping](./lazy-load-grouping)** | Load group data on demand when expanded | Grouped datasets | Reduced initial load time |
-| **[Paging](./paging)** | Divide large datasets into manageable pages | Traditional pagination workflows | Reduced memory usage |
-| **[Infinite Scrolling](./infinite-scrolling)** | Load records progressively as users scroll | Continuous data exploration | Seamless navigation |
-| **[Overscan Buffer](./virtual-scrolling#render-buffered-data-using-overscan-count)** | Pre-render additional rows beyond viewport | Rapid scrolling scenarios | Smooth transitions |
-| **[WebAssembly Optimization](./webassembly-performance)** | Blazor-specific performance tuning | WebAssembly applications | Optimal WASM performance |
-
-### Performance Benchmarks
-
-The DataGrid with row virtualization maintains 60fps scrolling performance with:
-- **100,000 rows** — Smooth virtualization with keyboard/mouse interaction
-- **50 columns** — Horizontal scrolling with column virtualization
-- **Complex aggregates** — Real-time calculation updates
-- **Mobile devices** — Touch-optimized scrolling and interactions
-
-### Optimization Tips
-
-- Use **row virtualization** for datasets exceeding 1,000 rows
-- Enable **column virtualization** when grid has more than 20 columns  
-- Leverage **lazy-load grouping** for grouped data scenarios
-- Configure **overscan buffer** for smooth scrolling on slower devices
-- Follow [WebAssembly Performance Guidelines](./webassembly-performance) for optimal WASM apps
+For WebAssembly-specific optimizations and tuning recommendations, see **[WebAssembly Performance Guidelines](./webassembly-performance)**.
 
 ## User Experience & Interaction
 
@@ -305,7 +254,7 @@ For specific implementation patterns, refer to feature documentation:
 
 The Blazor DataGrid works with:
 
-- **Blazor Version**: .NET 6.0 or higher
+- **Blazor Version**: .NET 8.0 or higher
 - **Hosting Models**: Blazor Server, Blazor WebAssembly, Blazor Web App
 - **Browsers**: Chrome, Firefox, Safari, Edge (latest versions)
 - **Mobile**: iOS Safari, Android Chrome
