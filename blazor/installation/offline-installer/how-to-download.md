@@ -57,7 +57,7 @@ Use this path if you obtained Syncfusion components from [NuGet.org](https://www
 
 ## Download the Licensed Version
 
-Licensed installers are available to account holders with an active Blazor license assigned to their account.
+Licensed installers are available to account holders with an active Syncfusion Essential Studio license assigned to their account.
 
 1. Sign in to your Syncfusion<sup style="font-size:70%">&reg;</sup> account and open the [License & Downloads](https://www.syncfusion.com/account/downloads) page.
 2. All licenses (both active and expired) associated with your account are listed.
