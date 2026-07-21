@@ -52,7 +52,7 @@ The DataGrid integrates with virtually any data source through native connectors
 
 #### Relational Databases
 
-| Database | Documentation | Best For |
+| Database | KeyBenefit | Best For |
 |----------|---------------|----------|
 | **[Microsoft SQL Server](./connecting-to-database/microsoft-sql-server)** | ADO.NET & Entity Framework integration | Enterprise applications, complex queries |
 | **[MySQL Server](./connecting-to-database/mysql-server)** | Cross-platform connectivity | Web applications, open-source stacks |
@@ -61,14 +61,14 @@ The DataGrid integrates with virtually any data source through native connectors
 
 #### NoSQL & Cloud Platforms
 
-| Platform | Documentation | Best For |
+| Platform | KeyBenefit | Best For |
 |----------|---------------|----------|
 | **[MongoDB](./connecting-to-database/mongodb-server)** | Document-based storage | Flexible schemas, unstructured data |
 | **[Firebase Firestore](./connecting-to-database/firebase-firestore)** | Cloud real-time sync | Mobile apps, real-time applications |
 
 #### API & Service Integration
 
-| Technology | Documentation | Use Case |
+| Technology | KeyBenefit | Use Case |
 |-----------|---------------|----------|
 | **[GraphQL Adaptor](./connecting-to-adaptors/graphql-adaptor)** | Flexible query APIs | Modern APIs, optimized payloads |
 | **[Web API Adaptor](./connecting-to-adaptors/web-api-adaptor)** | RESTful services | ASP.NET backend, REST endpoints |
@@ -82,7 +82,7 @@ The Blazor DataGrid is engineered for exceptional performance, enabling smooth o
 
 ### Performance Features
 
-| Feature | Benefit | Use Case | Documentation |
+| Feature | Benefit | Use Case | KeyBenefit |
 |---------|---------|----------|---------------|
 | **[Row Virtualization](./virtual-scrolling#row-virtualization)** | Render only visible rows; dynamically load/unload as users scroll | Large datasets (10K+ rows) | Smooth 60fps scrolling |
 | **[Column Virtualization](./virtual-scrolling#column-virtualization)** | Render only visible columns; optimize for many-column grids | Wide grids (50+ columns) | Efficient horizontal scrolling |
@@ -217,7 +217,7 @@ The Blazor DataGrid provides comprehensive export and reporting capabilities, en
 
 ### Export Formats
 
-| Format | Documentation | Best For |
+| Format | KeyBenefit | Best For |
 |--------|---------------|----------|
 | **[Excel Export](./excel-exporting)** | Export to XLSX with formatting, formulas, and styling | Data analysis, spreadsheet workflows, sharing |
 | **[PDF Export](./pdf-export)** | Generate formatted PDF documents with custom layouts | Professional reports, distribution, archiving |
@@ -233,7 +233,7 @@ The Blazor DataGrid includes sophisticated capabilities designed for complex ent
 
 ### Enterprise Capabilities
 
-| Feature | Purpose | Use Case | Documentation |
+| Feature | Purpose | Use Case | KeyBenefit |
 |---------|---------|----------|---------------|
 | **[State Management](./state-management)** | Save/restore user preferences across sessions | Column order, visibility, filters, sorts | Personalized user experience |
 | **[Hierarchical Grids](./detail-template#creating-custom-componenthierarchical-datagrid)** | Master-detail relationships with expandable rows | Orders with line items, parent-child data | Complex data relationships |
