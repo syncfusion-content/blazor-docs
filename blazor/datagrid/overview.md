@@ -15,8 +15,17 @@ The Syncfusion Blazor DataGrid is an enterprise-grade data management component 
 
 ## Quick Start
 
+Quick setup guides for installing and configuring the Blazor DataGrid in Blazor applications.
+
 - [Getting Started with Blazor Web App](./getting-started-with-web-app.md): Provides step-by-step instructions to integrate the Blazor DataGrid into a Blazor Web App project, including configuration and initial data binding setup.
 - [Getting Started with Blazor Web Assembly App](./getting-started.md): Provides step-by-step instructions to integrate the Blazor DataGrid into a Blazor WebAssembly App project, including configuration and initial data binding setup.
+
+## Blazor Grid Video Tutorial
+
+A step-by-step video walkthrough demonstrating the Syncfusion Blazor DataGrid features, setup process, and common implementation scenarios.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=hjPGxApA5W8" %}
 
 ## Data Connectivity
 
