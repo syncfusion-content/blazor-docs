@@ -9,26 +9,281 @@ documentation: ug
 
 # Style and appearance in Blazor DataGrid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports visual customization using CSS and theme-based styling. Styles can be applied to various elements to match the application's design. Styling options are available for:
+The Blazor Data Grid provides comprehensive styling and appearance customization capabilities to align grid designs with application requirements. Built-in themes enable rapid implementation, CSS customization allows visual element adjustment, and theme-based styling creates consistent user experiences.
 
-- **DataGrid root element:** Defines the overall appearance of the grid container.
-- **Alternate rows with frozen columns:** Applies styles to alternate rows when frozen columns are enabled.
-- **Grid lines:** Controls the color and visibility of horizontal and vertical lines between cells.
+## Built-in themes
 
-**Override Default Styles:**
+The Data Grid component provides multiple themes aligned with industry-standard design systems, available in both light and dark variants. Available themes include:
 
-Default styles such as **colors**, **typography**, **spacing**, and **borders** can be customized using CSS. Use browser developer tools to inspect the rendered HTML and identify relevant selectors. Where possible, use CSS variables or theme tokens to maintain consistency across components.
+| Theme                         | Style Sheet Name                         |
+|------------------------------|------------------------------------------|
+| Tailwind 3.4                 | tailwind3.css / tailwind3.scss           |
+| Tailwind 3.4 Dark            | tailwind3-dark.css / tailwind3-dark.scss |
+| Bootstrap 5.3               | bootstrap5.3.css / bootstrap5.3.scss     |
+| Bootstrap 5.3 Dark          | bootstrap5.3-dark.css / bootstrap5.3-dark.scss |
+| Fluent 2                    | fluent2.css / fluent2.scss               |
+| Fluent 2 Dark               | fluent2-dark.css / fluent2-dark.scss     |
+| Material 3                  | material3.css / material3.scss           |
+| Material 3 Dark             | material3-dark.css / material3-dark.scss |
+| Bootstrap 5                 | bootstrap5.css / bootstrap5.scss         |
+| Bootstrap 5 Dark            | bootstrap5-dark.css / bootstrap5-dark.scss |
+| Fluent                      | fluent.css / fluent.scss                 |
+| Fluent Dark                 | fluent-dark.css / fluent-dark.scss       |
+| Google's Material           | material.css / material.scss             |
+| Google's Material Dark      | material-dark.css / material-dark.scss   |
+| Tailwind CSS                | tailwind.css / tailwind.scss             |
+| Tailwind Dark CSS           | tailwind-dark.css / tailwind-dark.scss   |
+| Microsoft Office Fabric     | fabric.css / fabric.scss                 |
+| Microsoft Office Fabric Dark| fabric-dark.css / fabric-dark.scss       |
+| High Contrast               | highcontrast.css / highcontrast.scss     |
 
-```css
-.e-grid .e-headercell {
-    background-color: #333; /* Override the header background color */
-    color: #fff;
+
+## Size modes
+
+The Data Grid component provides two size modes designed for different interaction contexts and device types:
+
+- **Normal mode** (default) — Standard sizing configured for mouse and keyboard interactions.
+- **Touch mode** (bigger) — Enlarged elements with increased padding, font sizes, and touch targets for touch-based interaction and improved accessibility. Apply the `e-bigger` CSS class to the `<body>` element to enable this mode.
+
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+
+<SfButton Content="@buttonContent" onclick="ChangeMode"></SfButton>
+
+<div class="@(isBiggerMode ? "e-bigger" : "")">
+    <SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowPaging="true">
+        <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
+        <GridPageSettings PageSize="8"></GridPageSettings>
+        <GridColumns>
+            <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
+            <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+            <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        </GridColumns>
+    </SfGrid>
+</div>
+
+@code
+{
+    private SfGrid<OrderData> Grid;
+    private List<OrderData> Orders { get; set; }
+    private string buttonContent = "Switch to Normal Mode";
+    private bool isBiggerMode = true;
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    private void ChangeMode()
+    {
+        isBiggerMode = !isBiggerMode;
+        buttonContent = isBiggerMode ? "Switch to Normal Mode" : "Switch to Touch Mode";
+    }
 }
-```
 
-Properties like **background-color**, **color**, **font-family**, and **padding** can be changed to match the grid layout design and improve visual consistency.
+{% endhighlight %}
 
-![Change header background](../images/style-and-appearance/header-background.webp)
+{% highlight c# tabtitle="OrderData.cs" %}
+
+internal sealed class OrderData
+{
+    private static readonly List<OrderData> Data = new();
+    public OrderData(int orderId, string customerId, double freight, string shipCity)
+    {
+        OrderID = orderId;
+        CustomerID = customerId;
+        Freight = freight;
+        ShipCity = shipCity;
+    }
+
+    internal static List<OrderData> GetAllRecords()
+    {
+        if (Data.Count == 0)
+        {
+            Data.Add(new OrderData(10248, "VINET", 32.38, "Reims"));
+            Data.Add(new OrderData(10249, "TOMSP", 11.61, "Münster"));
+            Data.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro"));
+            Data.Add(new OrderData(10251, "VICTE", 41.34, "Lyon"));
+            Data.Add(new OrderData(10252, "SUPRD", 51.30, "Charleroi"));
+            Data.Add(new OrderData(10253, "CHOPS", 58.17, "Bern"));
+            Data.Add(new OrderData(10254, "RICSU", 22.98, "Genève"));
+            Data.Add(new OrderData(10255, "WELLI", 13.97, "San Cristóbal"));
+            Data.Add(new OrderData(10256, "HILAA", 81.91, "Graz"));
+        }
+
+        return Data;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Theme customization
+
+The Blazor Data Grid provides flexible theme customization options to align control appearance with application design requirements. Built-in themes can be customized by overriding default CSS variables or by creating completely customized themes using Syncfusion Theme Studio.
+
+### Default CSS override
+
+The Blazor Data Grid themes use CSS variables with the unified `–sf` naming convention. This ensures visual consistency, straightforward customization, and global updates. Centralized variables allow quick adjustments to **colors**, **backgrounds**, and **borders** across the grid.
+
+#### Material 3 theme color variables
+
+The **Material 3** theme applies scalable CSS custom properties to maintain consistency within the Blazor Data Grid. Variables are designed for straightforward theming and responsive behavior.
+
+The following table highlights commonly used color-related variables in the Material 3 theme:
+
+| Name | Purpose |
+|------|---------|
+| `--e-font-name` | Specifies the default font family applied across the DataGrid |
+| `--color-sf-surface` | Controls base surface styling for UI elements |
+| `--color-sf-on-surface` | Defines text appearance on surface elements |
+| `--color-sf-primary-container` | Applies background styling for active or highlighted row states |
+| `--color-sf-outline-variant` | Defines border and separator styling |
+
+| Name | Purpose |
+|------|---------|
+| `--e-font-name` | Specifies the default font family used across the DataGrid |
+| `--color-sf-surface` | Controls the base surface styling for UI elements |
+| `--color-sf-on-surface` | Sets text appearance on surface elements |
+| `--color-sf-primary-container` | Used for background styling of active or highlighted row states |
+| `--color-sf-outline-variant` | Defines border and separator styling |
+
+#### Bootstrap 5.3 theme color variables
+
+The **Bootstrap 5.3** theme extends Bootstrap's framework with CSS custom properties for the Data Grid. The following table lists color-related variables defined for the Bootstrap 5.3 theme:
+
+| Name | Purpose |
+|------|---------|
+| `--e-font-name` | Specifies the default font family used across the DataGrid |
+| `--color-sf-content-bg-color-alt1` | Controls the background of the DataGrid header |
+| `--color-sf-content-bg-color` | Controls the background of the DataGrid content |
+| `--color-sf-table-bg-color-hover` | Defines the background styling for selected rows during hover interaction |
+| `--color-sf-content-bg-color-hover` | Defines background behavior when primary elements are hovered |
+| `--color-sf-primary` | Defines the main theme styling used across components |
+| `--color-sf-primary-light` | Provides a softer variation of the primary theme for backgrounds |
+| `--color-sf-border-light` | Specifies styling for light borders and separators |
+
+#### Tailwind 3 theme color variables
+
+The **Tailwind 3** theme uses utility-first CSS custom properties to deliver a **flexible**, **modern design system**. The following table presents color-related variables available in the Tailwind 3 theme:
+
+| Name | Purpose |
+|------|---------|
+| `--e-font-name` | Specifies the default font family used across the UI |
+| `--color-sf-content-bg-color` | Controls the main background of the application area |
+| `--color-sf-table-bg-color-hover` | Defines background behavior during hover interaction |
+| `--color-sf-content-bg-color-hover` | Defines the background color for pager during hover interaction |
+| `--color-sf-primary` | Defines the main theme color used across components |
+| `--color-sf-border-light` | Defines the border color used across the component |
+
+#### Fluent 2 theme color variables
+
+The **Fluent 2** theme leverages modern CSS custom properties to provide a clean and consistent design aligned with Fluent UI principles. The following table outlines color-related variables available in the Fluent 2 theme:
+
+| Name | Purpose |
+|------|---------|
+| `--e-font-name` | Specifies the default font family used across the DataGrid |
+| `--color-sf-content-bg-color-alt1` | Controls the main background of the DataGrid |
+| `--color-sf-table-bg-color-hover` | Defines the background styling for selected rows during hover interaction |
+| `--color-sf-content-bg-color-hover` | Defines background behavior when primary elements are hovered |
+| `--color-sf-primary` | Defines the main theme styling used across components |
+| `--color-sf-border-light` | Specifies styling for light borders and separators |
+| `--color-sf-border-alt` | Defines alternate border styling for DataGrid elements |
+
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowPaging="true">
+    <GridSelectionSettings Type="SelectionType.Multiple"></GridSelectionSettings>
+    <GridPageSettings PageSize="8"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style>
+    :root {
+        /* fluent 2 */
+        --e-font-name: 'Verdana';
+        --color-sf-content-bg-color-alt1: rgba(240, 253, 244);
+        --color-sf-table-bg-color-hover: rgba(70, 100, 20, 0.05);
+        --color-sf-border-alt: rgba(34, 197, 94);
+        --color-sf-content-bg-color-hover: rgba(70, 100, 20, 0.05);
+        --color-sf-primary: rgba(34, 197, 94);
+        --color-sf-border-light: rgba(34, 197, 94);
+    }
+</style>
+
+@code {
+    private SfGrid<OrderData> Grid;
+    private List<OrderData> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+internal sealed class OrderData
+{
+    private static readonly List<OrderData> Data = new();
+    public OrderData(int orderId, string customerId, double freight, string shipCity)
+    {
+        OrderID = orderId;
+        CustomerID = customerId;
+        Freight = freight;
+        ShipCity = shipCity;
+    }
+
+    internal static List<OrderData> GetAllRecords()
+    {
+        if (Data.Count == 0)
+        {
+            Data.Add(new OrderData(10248, "VINET", 32.38, "Reims"));
+            Data.Add(new OrderData(10249, "TOMSP", 11.61, "Münster"));
+            Data.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro"));
+            Data.Add(new OrderData(10251, "VICTE", 41.34, "Lyon"));
+            Data.Add(new OrderData(10252, "SUPRD", 51.30, "Charleroi"));
+            Data.Add(new OrderData(10253, "CHOPS", 58.17, "Bern"));
+            Data.Add(new OrderData(10254, "RICSU", 22.98, "Genève"));
+            Data.Add(new OrderData(10255, "WELLI", 13.97, "San Cristóbal"));
+            Data.Add(new OrderData(10256, "HILAA", 81.91, "Graz"));
+        }
+
+        return Data;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVdNGMQfqinyBZn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
 
 ## Customize the DataGrid root element
 
@@ -340,161 +595,6 @@ internal sealed class OrderData
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZLxNmjWrwjAiIqF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
-## Theme customization
-
-The Blazor Data Grid provides flexible theme customization options to align control appearance with application design requirements. Built-in themes can be customized by overriding default CSS variables or by creating completely customized themes using Syncfusion Theme Studio.
-
-### Default CSS override
-
-The Blazor Data Grid themes use CSS variables with the unified `–sf` naming convention. This ensures visual consistency, straightforward customization, and global updates. Centralized variables allow quick adjustments to **colors**, **backgrounds**, and **borders** across the grid.
-
-#### Material 3 theme color variables
-
-The **Material 3** theme applies scalable CSS custom properties to maintain consistency within the Blazor Data Grid. Variables are designed for straightforward theming and responsive behavior.
-
-The following table highlights commonly used color-related variables in the Material 3 theme:
-
-| Name | Purpose |
-|------|---------|
-| `--e-font-name` | Specifies the default font family applied across the DataGrid |
-| `--color-sf-surface` | Controls base surface styling for UI elements |
-| `--color-sf-on-surface` | Defines text appearance on surface elements |
-| `--color-sf-primary-container` | Applies background styling for active or highlighted row states |
-| `--color-sf-outline-variant` | Defines border and separator styling |
-
-| Name | Purpose |
-|------|---------|
-| `--e-font-name` | Specifies the default font family used across the DataGrid |
-| `--color-sf-surface` | Controls the base surface styling for UI elements |
-| `--color-sf-on-surface` | Sets text appearance on surface elements |
-| `--color-sf-primary-container` | Used for background styling of active or highlighted row states |
-| `--color-sf-outline-variant` | Defines border and separator styling |
-
-#### Bootstrap 5.3 theme color variables
-
-The **Bootstrap 5.3** theme extends Bootstrap's framework with CSS custom properties for the Data Grid. The following table lists color-related variables defined for the Bootstrap 5.3 theme:
-
-| Name | Purpose |
-|------|---------|
-| `--e-font-name` | Specifies the default font family used across the DataGrid |
-| `--color-sf-content-bg-color-alt1` | Controls the background of the DataGrid header |
-| `--color-sf-content-bg-color` | Controls the background of the DataGrid content |
-| `--color-sf-table-bg-color-hover` | Defines the background styling for selected rows during hover interaction |
-| `--color-sf-content-bg-color-hover` | Defines background behavior when primary elements are hovered |
-| `--color-sf-primary` | Defines the main theme styling used across components |
-| `--color-sf-primary-light` | Provides a softer variation of the primary theme for backgrounds |
-| `--color-sf-border-light` | Specifies styling for light borders and separators |
-
-#### Tailwind 3 theme color variables
-
-The **Tailwind 3** theme uses utility-first CSS custom properties to deliver a **flexible**, **modern design system**. The following table presents color-related variables available in the Tailwind 3 theme:
-
-| Name | Purpose |
-|------|---------|
-| `--e-font-name` | Specifies the default font family used across the UI |
-| `--color-sf-content-bg-color` | Controls the main background of the application area |
-| `--color-sf-table-bg-color-hover` | Defines background behavior during hover interaction |
-| `--color-sf-content-bg-color-hover` | Defines the background color for pager during hover interaction |
-| `--color-sf-primary` | Defines the main theme color used across components |
-| `--color-sf-border-light` | Defines the border color used across the component |
-
-#### Fluent 2 theme color variables
-
-The **Fluent 2** theme leverages modern CSS custom properties to provide a clean and consistent design aligned with Fluent UI principles. The following table outlines color-related variables available in the Fluent 2 theme:
-
-| Name | Purpose |
-|------|---------|
-| `--e-font-name` | Specifies the default font family used across the DataGrid |
-| `--color-sf-content-bg-color-alt1` | Controls the main background of the DataGrid |
-| `--color-sf-table-bg-color-hover` | Defines the background styling for selected rows during hover interaction |
-| `--color-sf-content-bg-color-hover` | Defines background behavior when primary elements are hovered |
-| `--color-sf-primary` | Defines the main theme styling used across components |
-| `--color-sf-border-light` | Specifies styling for light borders and separators |
-| `--color-sf-border-alt` | Defines alternate border styling for DataGrid elements |
-
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.Grids
-
-<SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowPaging="true">
-    <GridSelectionSettings Type="SelectionType.Multiple"></GridSelectionSettings>
-    <GridPageSettings PageSize="8"></GridPageSettings>
-    <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-<style>
-    :root {
-        /* fluent 2 */
-        --e-font-name: 'Verdana';
-        --color-sf-content-bg-color-alt1: rgba(240, 253, 244);
-        --color-sf-table-bg-color-hover: rgba(70, 100, 20, 0.05);
-        --color-sf-border-alt: rgba(34, 197, 94);
-        --color-sf-content-bg-color-hover: rgba(70, 100, 20, 0.05);
-        --color-sf-primary: rgba(34, 197, 94);
-        --color-sf-border-light: rgba(34, 197, 94);
-    }
-</style>
-
-@code {
-    private SfGrid<OrderData> Grid;
-    private List<OrderData> Orders { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Orders = OrderData.GetAllRecords();
-    }
-}
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="OrderData.cs" %}
-
-internal sealed class OrderData
-{
-    private static readonly List<OrderData> Data = new();
-    public OrderData(int orderId, string customerId, double freight, string shipCity)
-    {
-        OrderID = orderId;
-        CustomerID = customerId;
-        Freight = freight;
-        ShipCity = shipCity;
-    }
-
-    internal static List<OrderData> GetAllRecords()
-    {
-        if (Data.Count == 0)
-        {
-            Data.Add(new OrderData(10248, "VINET", 32.38, "Reims"));
-            Data.Add(new OrderData(10249, "TOMSP", 11.61, "Münster"));
-            Data.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro"));
-            Data.Add(new OrderData(10251, "VICTE", 41.34, "Lyon"));
-            Data.Add(new OrderData(10252, "SUPRD", 51.30, "Charleroi"));
-            Data.Add(new OrderData(10253, "CHOPS", 58.17, "Bern"));
-            Data.Add(new OrderData(10254, "RICSU", 22.98, "Genève"));
-            Data.Add(new OrderData(10255, "WELLI", 13.97, "San Cristóbal"));
-            Data.Add(new OrderData(10256, "HILAA", 81.91, "Graz"));
-        }
-
-        return Data;
-    }
-
-    public int OrderID { get; set; }
-    public string CustomerID { get; set; }
-    public double Freight { get; set; }
-    public string ShipCity { get; set; }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVdNGMQfqinyBZn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Using Theme Studio
 
@@ -504,3 +604,15 @@ Syncfusion Theme Studio provides a unified approach to create custom themes for 
 2. Select the **Grid** control from the left panel.
 3. Customize **colors**, **typography**, **spacing**, and other **visual tokens**.
 4. Download the generated CSS file and integrate it into the Blazor project's site stylesheet or theme bundle.
+
+## See Also
+
+- [Customize Aggregate](./aggregate.md)
+- [Customize Editing](./editing.md)
+- [Customize Filtering](./filtering.md)
+- [Customize Grouping](./grouping.md)
+- [Customize Header](./header.md)
+- [Customize Paging](./paging.md)
+- [Customize Selection](./selection.md)
+- [Customize Sorting](./sorting.md)
+- [Customize Toolbar](./toolbar.md)
