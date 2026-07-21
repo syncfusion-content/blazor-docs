@@ -124,8 +124,8 @@ The Blazor DataGrid enables seamless Create, Read, Update, and Delete (CRUD) ope
 
 Multiple editing modes support different workflow scenarios:
 
-| Mode | Description | Best For | Documentation |
-|------|-------------|----------|---------------|
+| Mode | Description | Best For |
+|------|-------------|----------|
 | **[Inline Editing](./in-line-editing)** | Edit cell content directly in the grid | Quick single-cell edits, power users |
 | **[Dialog Editing](./dialog-editing)** | Open a dedicated form dialog for editing | Comprehensive multi-field edits |
 | **[Batch Editing](./batch-editing)** | Edit multiple records and submit together | Bulk operations, mass updates |
