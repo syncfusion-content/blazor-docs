@@ -64,7 +64,7 @@ Once RTL support is enabled, the Pager component automatically renders its conte
 
 <SfPager TotalItemsCount="20" NumericItemsCount="5" PageSize="5"></SfPager>
 ```
-In the preceding example, the pager is rendered with RTL support when the global EnableRtl option is enabled. Navigation controls, page numbers, and related pager elements automatically follow the RTL layout without requiring additional component-level configuration.
+In the preceding example, the pager is rendered with RTL support when the global `EnableRtl` option is enabled. Navigation controls, page numbers, and related pager elements automatically follow the RTL layout without requiring additional component-level configuration.
 
 RTL support helps ensure that users who read content from right to left can navigate paged data naturally and efficiently. This improves accessibility and provides a consistent experience across different languages and regions.
 
