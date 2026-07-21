@@ -74,7 +74,7 @@ The DataGrid integrates with virtually any data source through native connectors
 | **[Web API Adaptor](./connecting-to-adaptors/web-api-adaptor)** | RESTful services | ASP.NET backend, REST endpoints |
 | **[OData V4 Adaptor](./connecting-to-adaptors/odatav4-adaptor)** | Standardized queries | Enterprise services, standardized operations |
 | **[URL Adaptor](./connecting-to-adaptors/url-adaptor)** | Simple HTTP endpoints | Quick integrations, public APIs |
-| **[Custom Adaptor](./connecting-to-adaptors/custom-adaptor)** | Custom implementations | Specialized backends, proprietary systems |
+| **[Custom Adaptor](./connecting-to-adaptors/custom-adaptor)** | Custom implementations | Specialized back ends, proprietary systems |
 
 ### Large-Scale Rendering Performance
 
