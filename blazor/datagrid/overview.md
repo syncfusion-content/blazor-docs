@@ -15,7 +15,7 @@ The Blazor DataGrid is a powerful and feature-rich UI component designed for dis
 
 ## Quick Start
 
-- [Getting Started with Blazor Web App](./getting-started-with-web-app.md.md): Provides step-by-step instructions to integrate the Blazor DataGrid into a Blazor Web App project, including configuration and initial data binding setup.
+- [Getting Started with Blazor Web App](./getting-started-with-web-app.md): Provides step-by-step instructions to integrate the Blazor DataGrid into a Blazor Web App project, including configuration and initial data binding setup.
 - [Getting Started with Blazor Web Assembly App](./getting-started.md): Provides step-by-step instructions to integrate the Blazor DataGrid into a Blazor WebAssembly App project, including configuration and initial data binding setup.
 
 ## Data Connectivity
@@ -25,16 +25,6 @@ The Blazor DataGrid provides comprehensive data binding and connectivity options
 - [In-Memory Data](./data-binding/local-data): Binds grids to in-memory collections and lists, enabling fast data access and manipulation for small to medium datasets without external service dependencies.
 - [Data Binding from Remote Sources](./data-binding/remote-data): Connects grids to web services and APIs through remote endpoints, enabling dynamic data loading from server sources with automatic request handling and response parsing.
 - [Multiple Data Source Adaptors](./connecting-to-adaptors/url-adaptor): Supports connecting grids to various data source types through specialized adaptor interfaces, enabling flexible integration with different backend services and data formats.
-- [ORM integration](./connecting-to-ORM/): Connects grids to data through Object-Relational Mapping frameworks, enabling seamless integration between grid components and application data models with automatic entity mapping and query support.
-   - [Entity Framework](./connecting-to-orm/entityframework): Integrates with Entity Framework to connect grids directly to database models and DbContext instances, simplifying data retrieval and manipulation through LINQ queries.
-   - [Dapper](./connecting-to-orm/dapper): Connects grids to data retrieved through Dapper queries, enabling lightweight database access with direct SQL control and minimal overhead.
-- [Backend integrations](./connecting-to-backends/): Integrates grids with backend services and platforms for real-time synchronization and advanced data operations, enabling live updates and specialized search capabilities across distributed systems.
-   - [SignalR](./connecting-to-backends/signalr): Enables real-time data synchronization between server and clients using SignalR connections, automatically updating grid content when data changes across multiple users.
-   - [ElasticSearch](./connecting-to-backends/elasticsearch): Integrates with ElasticSearch for powerful full-text search and aggregation capabilities, enabling advanced search functionality within large-scale datasets.
-
-
-The Blazor DataGrid provides extensive data connectivity options with support for multiple data source adapters and backend integrations. Seamless integration with popular databases, ORMs, and cloud services enables developers to connect to virtually any data source and build flexible, scalable applications.
-
 - [ORM integration](./connecting-to-ORM/): Connects grids to data through Object-Relational Mapping frameworks, enabling seamless integration between grid components and application data models with automatic entity mapping and query support.
    - [Entity Framework](./connecting-to-orm/entityframework): Integrates with Entity Framework to connect grids directly to database models and DbContext instances, simplifying data retrieval and manipulation through LINQ queries.
    - [Dapper](./connecting-to-orm/dapper): Connects grids to data retrieved through Dapper queries, enabling lightweight database access with direct SQL control and minimal overhead.
@@ -60,12 +50,6 @@ The Blazor DataGrid provides extensive data connectivity options with support fo
 - [OData V4 Adaptor](./connecting-to-adaptors/odatav4-adaptor): Integrates grids with OData V4 services for standardized query syntax, enabling filter, sort, and paging operations at the service level.
 - [URL Adaptor](./connecting-to-adaptors/url-adaptor): Connects grids directly to HTTP endpoints returning JSON data, supporting simple URL-based data loading from any public or internal web service.
 - [Custom Adaptor](./connecting-to-adaptors/custom-adaptor): Allows defining custom data adapters for specific backend implementations, enabling complete control over data fetching, filtering, and formatting logic.
-
-### Data Binding
-
-
-
-
 
 ### Data Operations
 
