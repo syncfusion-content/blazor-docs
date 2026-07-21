@@ -131,7 +131,7 @@ The Blazor DataGrid delivers a comprehensive user experience with extensive cust
 - [Row Drag and Drop](./row-drag-and-drop): Enables reordering rows by dragging and dropping, allowing users to customize row sequences and rearrange data visually.
 - [Context Menu](./context-menu): Displays right-click menus with row or cell operations, providing quick access to common actions without toolbar navigation.
 - [Customizable toolbar](./custom-toolbar): Allows adding, removing, or repositioning toolbar buttons and controls, enabling personalized action layouts for common operations.
-- [Loading indicators](./virtual-scrolling#enable-cell-placeholder-during-virtualization)
+- [Loading indicators](./virtual-scrolling#enable-cell-placeholder-during-virtualization): Improves user experience by indicating that data is actively being fetched and rendered.
 - [Column Reordering](./column-reorder): Permits users to reorder columns by dragging column headers, customizing column arrangement according to workflow preferences.
 - [Accessibility](./accessibility) (WCAG compliant): Implements Web Content Accessibility Guidelines standards, ensuring full keyboard navigation, screen reader support, and semantic HTML structure.
 - [Keyboard Interaction](./accessibility#keyboard-interaction): Enables complete grid operation through keyboard shortcuts, supporting Tab navigation, arrow keys, Enter for actions, and screen reader compatibility.
