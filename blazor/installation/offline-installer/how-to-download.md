@@ -45,19 +45,19 @@ Use this path if you obtained Syncfusion components from [NuGet.org](https://www
 2. Sign in with a Syncfusion<sup style="font-size:70%">&reg;</sup> account, or sign up if you do not have one.
 3. Select **Syncfusion Blazor** to begin the trial.
 
-   > N> If an existing Blazor trial is still active, a new trial for the same product cannot be started.
+   N> If an existing Blazor trial is still active, a new trial for the same product cannot be started.
 
 4. After starting the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest trial installer. Generate the installer [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) and the project [license key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate) before the trial expires.
 
    ![Trials and Downloads page showing trial installer and key generation options](images/start-trial-download-installer.webp)
 
-   > N> A license key is required to use the trial components in your Blazor application. For more information about license keys, see the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+   N> A license key is required to use the trial components in your Blazor application. For more information about license keys, see the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 5. Your current active trial products are listed on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
 
 ## Download the Licensed Version
 
-Licensed installers are available to account holders with an active Blazor license assigned to their account.
+Licensed installers are available to account holders with an active Syncfusion Essential Studio license assigned to their account.
 
 1. Sign in to your Syncfusion<sup style="font-size:70%">&reg;</sup> account and open the [License & Downloads](https://www.syncfusion.com/account/downloads) page.
 2. All licenses (both active and expired) associated with your account are listed.

@@ -59,7 +59,7 @@ To render a [`Candle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVpZFLtJkIBDGOn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Candle Chart](../images/financial-types/blazor-candle-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrdZRCoAPGoGeHq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Candle Chart](../images/financial-types/blazor-candle-chart.webp)" %}
 
 ## Binding data with series
 
@@ -101,7 +101,7 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVpZFLtJkIBDGOn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVntHCoUbvirMxC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Hollow candle
 
@@ -162,7 +162,7 @@ The color of the candle will be defined by comparing with previous values. [Bull
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhTtlrZzYcERtLX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrRjHWoKvlgwilj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Solid candles
 
@@ -205,7 +205,7 @@ The color of the candle will be defined by comparing with previous values. [Bull
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrJZPrNfEvwlPNT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhRXdCoglYBaUNu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Empty points
 
@@ -252,7 +252,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrJNvhZyNKfjiBM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBdjnMeqPOcrLzC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **Fill**
 
@@ -295,7 +295,7 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBTZFLjSjxgzXQt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVdjRsSgOtjCvAB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Events
 
@@ -343,7 +343,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBpXbhjyNwaIvNz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBdZRseKEtxCSJd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Point render
 
@@ -389,7 +389,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrfZbVDoNPkKESJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhHXxsSKYtgvlbT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
