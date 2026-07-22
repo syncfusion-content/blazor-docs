@@ -69,8 +69,8 @@ The Data Grid component provides two size modes designed for different interacti
 {
     private SfGrid<OrderData> Grid;
     private List<OrderData> Orders { get; set; }
-    private string buttonContent = "Touch Mode";
-    private bool isBiggerMode = true;
+    private string buttonContent = "Normal Mode";
+    private bool isBiggerMode = false;
 
     protected override void OnInitialized()
     {
@@ -126,7 +126,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrdjchLVqnMqsOd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrdtwBVrzUSAuPt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Theme customization
 
