@@ -488,6 +488,120 @@ public class OrderData
 > * The **SortComparer** property is supported only when using `local data`.
 > * When using a `column template`, ensure the [GridColumn.Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property is defined so that SortComparer can access the corresponding field value.
 
+### Display null values always at bottom
+
+By default, null values in the Blazor DataGrid are displayed at the top during descending sorting and at the bottom during ascending sorting. In certain scenarios, it may be necessary to keep null values consistently positioned at the bottom of the grid, irrespective of the selected sort direction. This can be implemented by defining custom sorting logic using the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_SortComparer)  property of the Grid column. This customization is useful when working with datasets where null values should be visually separated from valid data entries for better readability and data interpretation.
+
+The following example demonstrates how to keep null values at the bottom of the grid while sorting the **OrderDate** column in both ascending and descending order.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@GridData" AllowSorting="true" Height="315">
+    <GridEvents Sorting="Sorting" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field="@nameof(OrderData.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.CustomerID)" HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.OrderDate)" HeaderText="Order Date" Format="d" SortComparer="new CustomComparer()" Type="ColumnType.Date" Width="110"></GridColumn>
+        <GridColumn Field="@nameof(OrderData.ShipCountry)" HeaderText="Ship Country" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderData> GridData { get; set; } = new List<OrderData>();
+    public static SortDirection action { get; set; }
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+
+    private Task Sorting(SortingEventArgs args)
+    {
+        action = args.Direction;
+
+        return Task.CompletedTask;
+    }
+
+    public class CustomComparer : IComparer<Object>
+    {
+        public int Compare(object XRowDataToCompare, object YRowDataToCompare)
+        {
+            var sortAsc = action == SortDirection.Descending ? true : false;
+            OrderData XRowData = XRowDataToCompare as OrderData;
+            OrderData YRowData = YRowDataToCompare as OrderData;
+            var reference = XRowData?.OrderDate;
+            var comparer = YRowData?.OrderDate;
+
+            if (sortAsc && reference == null)
+            {
+                return -1;
+            }
+            else if (sortAsc && comparer == null)
+            {
+                return 1;
+            }
+            else if (!sortAsc && reference == null)
+            {
+                return 1;
+            }
+            else if (!sortAsc && comparer == null)
+            {
+                return -1;
+            }
+            else
+            {
+                return reference.Value.CompareTo(comparer.Value);
+            }
+        }
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+{
+    private static readonly List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int? orderId, string customerId, DateTime? orderDate, string shipCountry)
+    {
+            OrderID = orderId;
+            CustomerID = customerId;
+            OrderDate = orderDate;
+            ShipCountry = shipCountry;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", new DateTime(1996, 7, 4), "France"));
+            Orders.Add(new OrderData(10249, "TOMSP", null, "Germany"));
+            Orders.Add(new OrderData(10250, "HANAR", new DateTime(1996, 7, 8), "Brazil"));
+            Orders.Add(new OrderData(10251, "VICTE", null, "France"));
+            Orders.Add(new OrderData(10252, "SUPRD", new DateTime(1996, 7, 9), "Belgium"));
+            Orders.Add(new OrderData(10253, "HANAR", new DateTime(1996, 7, 10), "Brazil"));
+            Orders.Add(new OrderData(10254, "CHOPS", new DateTime(1996, 7, 11), "Switzerland"));
+            Orders.Add(new OrderData(10255, "RICSU", new DateTime(1996, 7, 12), "Switzerland"));
+            Orders.Add(new OrderData(10256, "WELLI", new DateTime(1996, 7, 15), "Brazil"));
+            Orders.Add(new OrderData(10257, "HILAA", new DateTime(1996, 7, 16), "Venezuela"));
+            Orders.Add(new OrderData(10258, "ERNSH", new DateTime(1996, 7, 17), "Austria"));
+            Orders.Add(new OrderData(10259, "CENTC", new DateTime(1996, 7, 18), "Mexico"));
+        }
+
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public string ShipCountry { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBRDHrxTscjRxbI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Touch interaction
 
 The Blazor DataGrid supports sorting through touch gestures. On touch-enabled devices, tapping a column header sorts that column. A popup icon
