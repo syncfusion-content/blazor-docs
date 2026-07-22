@@ -7,7 +7,7 @@ platform: blazor
 documentation: ug
 ---
 
-# Connect Blazor PivotTable with GraphQL using a GraphQL Adaptor (Hot Chocolate)
+# Connect Blazor PivotTable to GraphQL
 
 GraphQL is a query language that allows applications to request exactly the data needed, nothing more and nothing less. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response. When paired with the [Syncfusion Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table), GraphQL provides a convenient data source for loading the raw relational records that the pivot aggregates, sorts, filters, and pages on the client. The only server-side work for the pivot flow is data access (the read query) and persistence of CRUD edits (the mutations).
 
