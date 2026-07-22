@@ -37,14 +37,12 @@ The Data Grid component provides multiple themes aligned with industry-standard 
 | Microsoft Office Fabric Dark| fabric-dark.css / fabric-dark.scss       |
 | High Contrast               | highcontrast.css / highcontrast.scss     |
 
-
 ## Size modes
 
 The Data Grid component provides two size modes designed for different interaction contexts and device types:
 
 - **Normal mode** (default) — Standard sizing configured for mouse and keyboard interactions.
 - **Touch mode** (bigger) — Enlarged elements with increased padding, font sizes, and touch targets for touch-based interaction and improved accessibility. Apply the `e-bigger` CSS class to the `<body>` element to enable this mode.
-
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -192,7 +190,6 @@ The **Fluent 2** theme leverages modern CSS custom properties to provide a clean
 | `--color-sf-border-light` | Specifies styling for light borders and separators |
 | `--color-sf-border-alt` | Defines alternate border styling for DataGrid elements |
 
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -275,7 +272,6 @@ internal sealed class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXVdNGMQfqinyBZn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
-
 
 ## Customize the DataGrid root element
 
@@ -585,8 +581,6 @@ internal sealed class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZLxNmjWrwjAiIqF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
-
-
 
 ### Using Theme Studio
 
