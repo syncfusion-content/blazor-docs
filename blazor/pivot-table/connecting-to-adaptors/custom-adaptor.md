@@ -14,6 +14,17 @@ The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 
 To implement custom data binding in the PivotView, the **DataAdaptor** abstract class is used as the base class for the custom adaptor.
 
+## Prerequisites
+
+Before implementing a custom adaptor, ensure the following are in place:
+
+- A Blazor Server or Blazor Web App project (.NET 6.0 or later).
+- The **Syncfusion.Blazor.PivotView** NuGet package added to the project. Register the Syncfusion Blazor service in `Program.cs` (`builder.Services.AddSyncfusionBlazor()`).
+- The `@using Syncfusion.Blazor.Data` and `@using Syncfusion.Blazor.PivotView` directives available in the component (or registered in `_Imports.razor`).
+- The **DataAdaptor** abstract class lives in the `Syncfusion.Blazor.Data` namespace.
+
+> The async CRUD variants (`InsertAsync`, `UpdateAsync`, `RemoveAsync`, `ReadAsync`) follow the same signatures as their synchronous counterparts and can be overridden when non-blocking data access is required. The samples below use the synchronous forms for brevity.
+
 The **DataAdaptor** abstract class includes both synchronous and asynchronous method signatures, which can be overridden in the custom adaptor. The following are the method signatures available in this class:
 
 ```csharp
@@ -32,48 +43,48 @@ public abstract class DataAdaptor
     /// <summary>
     /// Performs insert operation synchronously.
     /// </summary>
-    public virtual object Insert(DataManager dataManager, object data, string key)
+    public virtual object Insert(DataManager dataManager, object data, string additionalParam)
     /// <summary>
     /// Performs insert operation asynchronously.
     /// </summary>
-    public virtual Task<object> InsertAsync(DataManager dataManager, object data, string key)
+    public virtual Task<object> InsertAsync(DataManager dataManager, object data, string additionalParam)
 
     /// <summary>
     /// Performs remove operation synchronously.
     /// </summary>
-    public virtual object Remove(DataManager dataManager, object data, string keyField, string key)
+    public virtual object Remove(DataManager dataManager, object data, string keyField, string additionalParam)
 
     /// <summary>
     /// Performs remove operation asynchronously.
     /// </summary>
-    public virtual Task<object> RemoveAsync(DataManager dataManager, object data, string keyField, string key)
+    public virtual Task<object> RemoveAsync(DataManager dataManager, object data, string keyField, string additionalParam)
 
     /// <summary>
     /// Performs update operation synchronously.
     /// </summary>
-    public virtual object Update(DataManager dataManager, object data, string keyField, string key)
+    public virtual object Update(DataManager dataManager, object data, string keyField, string additionalParam)
 
     /// <summary>
     /// Performs update operation asynchronously.
     /// </summary>
-    public virtual Task<object> UpdateAsync(DataManager dataManager, object data, string keyField, string key)
+    public virtual Task<object> UpdateAsync(DataManager dataManager, object data, string keyField, string additionalParam)
 }
 ```
 
 ## Overview of Custom Adaptor in PivotView
 
-The Custom Adaptor in Blazor PivotView allows you to manage the complete data binding workflow manually. Unlike the built-in `UrlAdaptor` or `WebApiAdaptor`, the Custom Adaptor provides direct control over:
+Unlike the built-in `UrlAdaptor` or `WebApiAdaptor`, the Custom Adaptor gives you direct control over the data binding workflow. In the PivotView, the Custom Adaptor is used only for **CRUD operations** in the editing popup — all aggregation, grouping, sorting, filtering, and paging of the pivot result are performed client-side by the PivotView engine itself.
 
-- **Data Retrieval**: Fetch data from any source with custom logic
-- **Data Processing**: Apply custom filters, transformations, or aggregations
-- **CRUD Operations**: Handle Insert, Update, and Delete operations for drill-through editing
-- **Request Handling**: Process `DataManagerRequest` to handle pagination, sorting, and filtering
+- **Data Retrieval**: The `Read` method returns the raw data source; aggregation/grouping happens in the PivotView, not in the adaptor.
+- **CRUD Operations**: Handle Insert, Update, and Delete operations raised by the editing popup (`Insert`, `Update`, `Remove`).
 
-The Custom Adaptor is particularly useful for the PivotView's drill-through editor, which allows users to edit, add, or delete records directly from the pivot table's detailed view.
+The Custom Adaptor is particularly useful for the PivotView's editing popup, which allows users to edit, add, or delete records directly from the pivot table's detailed view (referred to throughout this document as the "editing popup").
 
 ## Data Binding
 
 Custom data binding in the Blazor PivotView requires a custom adaptor class. The adaptor extends the **DataAdaptor** abstract class by overriding the **Read** or **ReadAsync** method.
+
+> The `OrderData` model used in this sample is defined in the [OrderData Model Class](#orderdata-model-class) section below.
 
 The following sample code demonstrates how to implement custom data binding using a custom adaptor in a PivotView:
 
@@ -105,7 +116,7 @@ The following sample code demonstrates how to implement custom data binding usin
     // Configure BeginDrillThrough event to set the primary key for CRUD operations
     private void BeginDrillThrough(BeginDrillThroughEventArgs args)
     {
-        // Iterate through all columns in the drill-through grid
+        // Iterate through all columns in the editing popup
         for (int index = 0; index < args.GridObj.Columns.Count; index++)
         {
             // Check if the current column is the primary key column
@@ -122,50 +133,42 @@ The following sample code demonstrates how to implement custom data binding usin
     public class CustomAdaptor : DataAdaptor
     {
         // Performs the data read operation.
+        // The PivotView performs aggregation/grouping client-side, so Read simply
+        // returns the full data source. Do not apply paging/sorting/filtering here —
+        // those are handled by the PivotView engine, not by the adaptor.
         public override object Read(DataManagerRequest dm, string key = null)
         {
             // Retrieves the data source.
             IEnumerable<OrderData> dataSource = OrderData.GetAllRecords();
 
-            // Count the total records.
-            int count = dataSource.Cast<OrderData>().Count();
-
-            if (dm.Skip != 0)
-            {
-                // Skips the specified number of records for paging.
-                dataSource = DataOperations.PerformSkip(dataSource, dm.Skip);
-            }
-            if (dm.Take != 0)
-            {
-                // Takes the specified number of records for paging.
-                dataSource = DataOperations.PerformTake(dataSource, dm.Take);
-            }
-
-            // Returns the result with or without counts based on the request.
+            // The PivotView does not paginate the raw source, so the count equals the
+            // source length when RequiresCounts is true; otherwise just return the data.
             return dm.RequiresCounts
-                ? new DataResult() { Result = dataSource, Count = count }
+                ? new DataResult() { Result = dataSource, Count = dataSource.Count() }
                 : (object)dataSource;
         }
     }
 }
 ```
 
-> If the **DataManagerRequest.RequiresCounts** value is **true**, the `Read/ReadAsync` return value must be of type **DataResult** with properties **Result** (a collection of records) and **Count** (the total number of records). If the **DataManagerRequest.RequiresCounts** is **false**, simply return the collection of records.
+> If the **DataManagerRequest.RequiresCounts** is **true**, the `Read/ReadAsync` return value must be of type **DataResult** with properties **Result** (a collection of records) and **Count** (the total number of records). If **RequiresCounts** is **false**, simply return the collection of records.
 
-![Custom Binding in Pivot](../images/blazor-pivot-table-custom-adaptor.webp)
+![Custom Binding in Pivot - the PivotView rendering data bound via a custom adaptor](../images/blazor-pivot-table-custom-adaptor.webp)
 
 > If the `Read/ReadAsync` method is not overridden in the custom adaptor, it will be handled by the default read handler.
 
 ### How It Works
 
 1. The `SfDataManager` is configured with `AdaptorInstance="@typeof(CustomAdaptor)"` and `Adaptor="Adaptors.CustomAdaptor"`, which tells the Pivot Table to route every data request through the `CustomAdaptor` class.
-2. The `CustomAdaptor` extends `DataAdaptor` and overrides the `Read` method to return data from `OrderData.GetAllRecords()`.
-3. When the Pivot Table requires the source records, it calls `Read` and the returned data is grouped and aggregated by the PivotView.
-4. When a user double-clicks a cell, the drill-through editor opens; the `BeginDrillThrough` event marks the `OrderID` column as the primary key so that subsequent Insert, Update, and Remove operations target the correct record.
+2. The `CustomAdaptor` extends `DataAdaptor` and overrides the `Read` method to return the full raw data source from `OrderData.GetAllRecords()`.
+3. The PivotView engine performs all aggregation, grouping, sorting, filtering, and paging client-side on the records returned by `Read`. The adaptor does not perform these operations.
+4. When a user double-clicks a cell, the editing popup opens; the `BeginDrillThrough` event marks the `OrderID` column as the primary key so that subsequent Insert, Update, and Remove operations target the correct record.
 
 ## OrderData Model Class
 
 The `OrderData` class serves as the data model for the PivotView and contains all order information, including order details, customer information, and order status. This model is used throughout the Custom Adaptor implementation for data binding and CRUD operations.
+
+> The `OrderData` class below uses the namespace `CustomAdaptor.Components.Pages`, matching a Blazor project where the project is named `CustomAdaptor` and the component lives under `Components/Pages`. Adjust the namespace to match your project name and folder layout so it resolves correctly from your `.razor` components.
 
 ### OrderData Class Structure
 
@@ -348,11 +351,13 @@ public static List<OrderData> GetAllRecords()
 - Used by the CustomAdaptor to fetch data
 - Supports CRUD operations (Insert, Update, Delete)
 
-## Inject Service into Custom Adaptor
+## Injecting a Service into the Custom Adaptor
 
 If you want to inject a service into the Custom Adaptor and use it, you can achieve this as shown below.
 
 First, register the required services in the `Program.cs` file. Add the `OrderDataAccessLayer` as a singleton, and the `CustomAdaptor` and `ServiceClass` as scoped services.
+
+> The `OrderDataAccessLayer` and `ServiceClass` types are application-defined data-access and helper classes you provide; they are not part of the Syncfusion library. Register them in DI so the adaptor's constructor-injected dependencies can be resolved. When `AdaptorInstance` is set to a type, Syncfusion resolves that type from the application's service provider, so constructor injection works when the adaptor is registered in `Program.cs`.
 
 ```csharp
 // Registering services in the Program.cs file.
@@ -396,29 +401,17 @@ The following sample code demonstrates how to inject a service into the Custom A
         }
 
         // Performs the data read operation.
+        // The PivotView aggregates/groups client-side, so Read returns the full
+        // source from the injected service. Paging/sorting/filtering are not
+        // applied here — they are handled by the PivotView engine, not the adaptor.
         public override object Read(DataManagerRequest dm, string key = null)
         {
             // Retrieves the data source from the injected service.
             IEnumerable<OrderData> DataSource = context.GetAllOrders();
 
-            // Count the total records.
-            int count = DataSource.Cast<OrderData>().Count();
-
-            if (dm.Skip != 0)
-            {
-                // Skips the specified number of records for paging.
-                DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);
-            }
-
-            if (dm.Take != 0)
-            {
-                // Takes the specified number of records for paging.
-                DataSource = DataOperations.PerformTake(DataSource, dm.Take);
-            }
-
             // Returns the result with or without counts based on the request.
             return dm.RequiresCounts
-                ? new DataResult() { Result = DataSource, Count = count }
+                ? new DataResult() { Result = DataSource, Count = DataSource.Count() }
                 : (object)DataSource;
         }
     }
@@ -427,23 +420,25 @@ The following sample code demonstrates how to inject a service into the Custom A
 
 ## Handling CRUD Operations
 
-The CRUD operations for custom-bound data in the Blazor PivotView can be implemented by overriding the following CRUD methods of the **DataAdaptor** abstract class:
+In the PivotView, the custom adaptor's server-side role is limited to CRUD — `Insert`, `Update`, and `Remove` — raised by the editing popup. Aggregation, sorting, filtering, and paging are not performed server-side; they are handled by the PivotView engine on the records returned by `Read`. Override the following methods of the **DataAdaptor** abstract class to handle CRUD:
 
-* **Insert/InsertAsync** - For adding new records through the drill-through editor
-* **Remove/RemoveAsync** - For deleting records through the drill-through editor
-* **Update/UpdateAsync** - For updating records through the drill-through editor
+* **Insert/InsertAsync** - For adding new records through the editing popup
+* **Remove/RemoveAsync** - For deleting records through the editing popup
+* **Update/UpdateAsync** - For updating records through the editing popup
 
-When editing data in the drill-through editor of the PivotView, the data is sent as a `Dictionary<string, object>` rather than a strongly-typed `OrderData` instance. The Custom Adaptor must handle both data types for robust CRUD operations.
+> When editing data in the editing popup of the PivotView, the record is sent as a `Dictionary<string, object>` rather than a strongly-typed `OrderData` instance. The Custom Adaptor must handle both data types for robust CRUD operations. The samples below only map a subset of `OrderData` properties (`OrderID`, `CustomerID`, `EmployeeID`, `Freight`) from the dictionary; extend the mapping to include the remaining properties (`ShipCity`, `ShipName`, `ShipCountry`, `ShippedDate`, `ShipAddress`, `Status`, `OrderDate`, `OrderedTime`, `Verified`, `CustomerDetails`) if your scenario requires them.
 
-### Configuring the Drill-Through Editor
+### Configuring the Editing Popup
 
-The PivotView provides a drill-through editor that allows users to edit, add, or delete records. The `BeginDrillThrough` event configures the primary key required for Update and Remove operations:
+The `BeginDrillThrough` event shown earlier in the [Data Binding](#data-binding) sample is what configures the primary key required for Update and Remove operations. It is repeated here for completeness:
+
+> To open the editing popup at runtime, enable the cell edit settings on the `SfPivotView` (with `AllowEditing`, `AllowAdding`, and `AllowDeleting` set to `true`), then double-click a value cell. The editing popup lists the underlying records; from there a user can edit, add, or delete a row, which raises `Insert`, `Update`, or `Remove` on the custom adaptor.
 
 ```csharp
 private void BeginDrillThrough(BeginDrillThroughEventArgs args)
 {
     // Configure BeginDrillThrough event to set the primary key for CRUD operations
-    // Iterate through all columns in the drill-through grid
+    // Iterate through all columns in the editing popup
     for (int index = 0; index < args.GridObj.Columns.Count; index++)
     {
         // Check if the current column is the primary key column
@@ -459,7 +454,7 @@ private void BeginDrillThrough(BeginDrillThroughEventArgs args)
 
 ### Insert Operation
 
-The `Insert` method is called when a user adds a new record through the drill-through editor. The method receives the new record data as either a strongly-typed object or a `Dictionary<string, object>`.
+The `Insert` method is called when a user adds a new record through the editing popup. The method receives the new record data as either a strongly-typed object or a `Dictionary<string, object>`.
 
 ```csharp
 public override object Insert(DataManager dataManager, object record, string additionalParam)
@@ -471,8 +466,6 @@ public override object Insert(DataManager dataManager, object record, string add
 
     OrderData newRecord;
 
-    // The Pivot Table drill-through posts the new row as a Dictionary<string, object>
-    // (it is not a strongly-typed OrderData instance), so we must handle both cases.
     if (record is OrderData orderData)
     {
         newRecord = orderData;
@@ -523,17 +516,15 @@ public override object Insert(DataManager dataManager, object record, string add
 4. Insert record into data source
 5. Return the new record
 
-![Insert Operation](../images/blazor-pivot-table-custom-adaptor-insert.webp)
+![Insert Operation - a new row being added through the editing popup](../images/blazor-pivot-table-custom-adaptor-insert.webp)
 
 ### Update Operation
 
-The `Update` method is called when a user edits an existing record through the drill-through editor. The method must identify the record by its primary key and update the corresponding properties.
+The `Update` method is called when a user edits an existing record through the editing popup. The method must identify the record by its primary key and update the corresponding properties.
 
 ```csharp
 public override object Update(DataManager dataManager, object updateRecord, string primaryColumnName, string additionalParam)
 {
-    // The Pivot Table drill-through posts the edited row as a Dictionary<string, object>
-    // (it is not a strongly-typed OrderData instance), so we must handle both cases.
     OrderData? updatedOrder = updateRecord as OrderData;
     int? primaryKeyValue = null;
 
@@ -565,10 +556,11 @@ public override object Update(DataManager dataManager, object updateRecord, stri
 
         if (existingOrder != null)
         {
-            // Update properties when the new value is not null and not zero
+            // Update editable properties when the new value is not null.
+            // OrderID is intentionally not reassigned because it is the primary key
+            // used to locate the record; reassigning it would break record identity.
             if (updatedOrder.CustomerID != null) existingOrder.CustomerID = updatedOrder.CustomerID;
             if (updatedOrder.EmployeeID.HasValue) existingOrder.EmployeeID = updatedOrder.EmployeeID;
-            if (updatedOrder.OrderID.HasValue) existingOrder.OrderID = updatedOrder.OrderID;
             if (updatedOrder.Freight.HasValue) existingOrder.Freight = updatedOrder.Freight;
         }
     }
@@ -586,11 +578,13 @@ public override object Update(DataManager dataManager, object updateRecord, stri
 5. Update the properties with new values
 6. Return the updated record
 
-![Update Operation](../images/blazor-pivot-table-custom-adaptor-update.webp)
+![Update Operation - an existing row being edited through the editing popup](../images/blazor-pivot-table-custom-adaptor-update.webp)
 
 ### Delete Operation
 
-The `Remove` method is called when a user deletes a record through the drill-through editor. The method receives the primary key value and removes the corresponding record from the data source.
+The `Remove` method is called when a user deletes a record through the editing popup. The method receives the primary key value and removes the corresponding record from the data source.
+
+> This implementation assumes the primary key is the `OrderID` field (matching the `IsPrimaryKey` column configured in `BeginDrillThrough`). The `primaryColumnName` and `additionalParam` parameters are unused because the only editable key in this sample is `OrderID`.
 
 ```csharp
 public override object Remove(DataManager dataManager, object primaryColumnValue, string primaryColumnName, string additionalParam)
@@ -613,11 +607,11 @@ public override object Remove(DataManager dataManager, object primaryColumnValue
 4. Remove the record from the data source
 5. Return the primary key value
 
-![Remove Operation](../images/blazor-pivot-table-custom-adaptor-remove.webp)
+![Remove Operation - a row being deleted through the editing popup](../images/blazor-pivot-table-custom-adaptor-remove.webp)
 
 ### Complete CRUD Implementation Example
 
-The following sample code demonstrates a complete implementation of CRUD operations for custom-bound data in the PivotView:
+The following sample assembles the Read/Insert/Update/Remove overrides shown individually above into one complete component, ready to copy into a single `.razor` file. Refer to the per-method subsections above for explanations of each override; the code here is the consolidated reference, also available in the [GitHub sample](https://github.com/SyncfusionExamples/syncfusion-blazor-pivot-table-remote-data-binding/tree/master/CustomAdaptor).
 
 ```cshtml
 @page "/"
@@ -659,19 +653,14 @@ The following sample code demonstrates a complete implementation of CRUD operati
     // Custom adaptor with complete CRUD implementation
     public class CustomAdaptor : DataAdaptor
     {
+        // The PivotView aggregates/groups client-side, so Read returns the full
+        // data source. Paging/sorting/filtering happen in the PivotView, not here.
         public override object Read(DataManagerRequest dm, string key = null)
         {
             IEnumerable<OrderData> dataSource = OrderData.GetAllRecords();
-            int count = dataSource.Cast<OrderData>().Count();
-
-            if (dm.Skip != 0)
-                dataSource = DataOperations.PerformSkip(dataSource, dm.Skip);
-
-            if (dm.Take != 0)
-                dataSource = DataOperations.PerformTake(dataSource, dm.Take);
 
             return dm.RequiresCounts
-                ? new DataResult() { Result = dataSource, Count = count }
+                ? new DataResult() { Result = dataSource, Count = dataSource.Count() }
                 : (object)dataSource;
         }
 
@@ -682,8 +671,6 @@ The following sample code demonstrates a complete implementation of CRUD operati
 
             OrderData newRecord;
 
-            // The Pivot Table drill-through posts the new row as a Dictionary<string, object>
-            // (it is not a strongly-typed OrderData instance), so we must handle both cases.
             if (record is OrderData orderData)
             {
                 newRecord = orderData;
@@ -725,8 +712,6 @@ The following sample code demonstrates a complete implementation of CRUD operati
 
         public override object Update(DataManager dataManager, object updateRecord, string primaryColumnName, string additionalParam)
         {
-            // The Pivot Table drill-through posts the edited row as a Dictionary<string, object>
-            // (it is not a strongly-typed OrderData instance), so we must handle both cases.
             OrderData? updatedOrder = updateRecord as OrderData;
             int? primaryKeyValue = null;
 
@@ -759,7 +744,6 @@ The following sample code demonstrates a complete implementation of CRUD operati
                 {
                     if (updatedOrder.CustomerID != null) existingOrder.CustomerID = updatedOrder.CustomerID;
                     if (updatedOrder.EmployeeID.HasValue) existingOrder.EmployeeID = updatedOrder.EmployeeID;
-                    if (updatedOrder.OrderID.HasValue) existingOrder.OrderID = updatedOrder.OrderID;
                     if (updatedOrder.Freight.HasValue) existingOrder.Freight = updatedOrder.Freight;
                 }
             }
