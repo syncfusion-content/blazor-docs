@@ -71,7 +71,7 @@ The Data Grid component provides two size modes designed for different interacti
 {
     private SfGrid<OrderData> Grid;
     private List<OrderData> Orders { get; set; }
-    private string buttonContent = "Normal Mode";
+    private string buttonContent = "Touch Mode";
     private bool isBiggerMode = true;
 
     protected override void OnInitialized()
@@ -82,7 +82,7 @@ The Data Grid component provides two size modes designed for different interacti
     private void ChangeMode()
     {
         isBiggerMode = !isBiggerMode;
-        buttonContent = isBiggerMode ? "Normal Mode" : "Touch Mode";
+        buttonContent = isBiggerMode ? "Touch Mode" : "Normal Mode";
     }
 }
 
@@ -128,7 +128,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLntQBWzzmHwONX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrdjchLVqnMqsOd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Theme customization
 
@@ -152,7 +152,7 @@ The **Material 3** theme applies scalable CSS custom properties to maintain cons
 
 #### Bootstrap 5.3 theme color variables
 
-The **Bootstrap 5.3** theme extends Bootstrap's framework with CSS custom properties for the Data Grid. The following table lists color-related variables defined for the Bootstrap 5.3 theme:
+The **Bootstrap 5.3** theme extends Bootstrap's framework with CSS custom properties for the Data Grid.
 
 | Name | Purpose |
 |------|---------|
@@ -167,7 +167,7 @@ The **Bootstrap 5.3** theme extends Bootstrap's framework with CSS custom proper
 
 #### Tailwind 3 theme color variables
 
-The **Tailwind 3** theme uses utility-first CSS custom properties to deliver a **flexible**, **modern design system**. The following table presents color-related variables available in the Tailwind 3 theme:
+The **Tailwind 3** theme uses utility-first CSS custom properties to deliver a **flexible**, **modern design system**.
 
 | Name | Purpose |
 |------|---------|
@@ -180,7 +180,7 @@ The **Tailwind 3** theme uses utility-first CSS custom properties to deliver a *
 
 #### Fluent 2 theme color variables
 
-The **Fluent 2** theme leverages modern CSS custom properties to provide a clean and consistent design aligned with Fluent UI principles. The following table outlines color-related variables available in the Fluent 2 theme:
+The **Fluent 2** theme leverages modern CSS custom properties to provide a clean and consistent design aligned with Fluent UI principles.
 
 | Name | Purpose |
 |------|---------|
