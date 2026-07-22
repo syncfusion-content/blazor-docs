@@ -52,7 +52,7 @@ The Data Grid component provides two size modes designed for different interacti
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
-<SfButton Content="@buttonContent" onclick="ChangeMode"></SfButton>
+<SfButton Content="@buttonContent" OnClick="ChangeMode"></SfButton>
 
 <div class="@(isBiggerMode ? "e-bigger" : "")">
     <SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowPaging="true">
@@ -71,7 +71,7 @@ The Data Grid component provides two size modes designed for different interacti
 {
     private SfGrid<OrderData> Grid;
     private List<OrderData> Orders { get; set; }
-    private string buttonContent = "Switch to Normal Mode";
+    private string buttonContent = "Normal Mode";
     private bool isBiggerMode = true;
 
     protected override void OnInitialized()
@@ -82,7 +82,7 @@ The Data Grid component provides two size modes designed for different interacti
     private void ChangeMode()
     {
         isBiggerMode = !isBiggerMode;
-        buttonContent = isBiggerMode ? "Switch to Normal Mode" : "Switch to Touch Mode";
+        buttonContent = isBiggerMode ? "Normal Mode" : "Touch Mode";
     }
 }
 
@@ -142,22 +142,12 @@ The Blazor Data Grid themes use CSS variables with the unified `–sf` naming co
 
 The **Material 3** theme applies scalable CSS custom properties to maintain consistency within the Blazor Data Grid. Variables are designed for straightforward theming and responsive behavior.
 
-The following table highlights commonly used color-related variables in the Material 3 theme:
-
 | Name | Purpose |
 |------|---------|
 | `--e-font-name` | Specifies the default font family applied across the DataGrid |
 | `--color-sf-surface` | Controls base surface styling for UI elements |
 | `--color-sf-on-surface` | Defines text appearance on surface elements |
 | `--color-sf-primary-container` | Applies background styling for active or highlighted row states |
-| `--color-sf-outline-variant` | Defines border and separator styling |
-
-| Name | Purpose |
-|------|---------|
-| `--e-font-name` | Specifies the default font family used across the DataGrid |
-| `--color-sf-surface` | Controls the base surface styling for UI elements |
-| `--color-sf-on-surface` | Sets text appearance on surface elements |
-| `--color-sf-primary-container` | Used for background styling of active or highlighted row states |
 | `--color-sf-outline-variant` | Defines border and separator styling |
 
 #### Bootstrap 5.3 theme color variables
