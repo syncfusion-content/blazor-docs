@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Pivot Table with WebApiAdaptor | Syncfusion®
-description: Learn about binding data and performing CRUD operations using WebApiAdaptor in Blazor Pivot Table.
+description: Learn how to bind remote data and perform CRUD operations using WebApiAdaptor in the Syncfusion Blazor Pivot Table component.
 platform: Blazor
 keywords: adaptors, webapiadaptor, webapi adaptor, remotedata
 control: Pivot Table
