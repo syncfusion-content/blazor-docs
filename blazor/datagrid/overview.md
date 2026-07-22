@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor DataGrid Component - Fast Data Management & CRUD | Syncfusion
-description: Learn how to use the Syncfusion Blazor DataGrid component for advanced data management, CRUD operations, sorting, filtering, grouping, paging, virtualization, and customizable UI features.
+description: Learn how to use Syncfusion Blazor DataGrid for data management, CRUD operations, sorting, filtering, grouping, paging, virtualization, and customization.
 platform: Blazor
 control: DataGrid
 documentation: ug
