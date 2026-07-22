@@ -9,11 +9,11 @@ documentation: ug
 
 # Access public methods in Tree Grid in Blazor TreeGrid Component
 
-The public methods of the Blazor TreeGrid component provide programmatic control over actions such as printing, expanding or collapsing rows, refreshing the grid, and manipulating selection. These methods are available through the component reference that is assigned in the Razor markup.
+The methods are available through the component instance referenced by the `@ref` directive.
 
-A component reference is created by using the `@ref` directive in the `SfTreeGrid` tag. After the component is rendered, you can call the public methods from event handlers or lifecycle methods such as `OnAfterRenderAsync`.
+A component reference is created by using the `@ref` directive in the `SfTreeGrid` tag.The component reference becomes available after rendering. Public methods should typically be invoked from user actions or lifecycle methods such as `OnAfterRenderAsync`.
 
-The following example shows how to invoke the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PrintAsync) method from an external button click. This approach is useful when you need to expose TreeGrid features through custom toolbar buttons or page actions.
+The following examples demonstrate how to access and invoke SfTreeGrid public APIs, such as methods and properties, through component references. This approach is useful when you need to interact with the TreeGrid programmatically from external UI elements such as custom buttons, toolbars, or other page actions.
 
 ## Example: Invoke `PrintAsync` using TreeGrid reference
 
