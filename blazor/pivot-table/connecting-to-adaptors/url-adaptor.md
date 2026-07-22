@@ -266,7 +266,7 @@ app.Run();
 
 Run the application in Visual Studio. The API will be accessible at the URL configured in `Properties/launchSettings.json` (for the default HTTP profile: **http://localhost:5145/api/orders**, or for the HTTPS profile: **https://localhost:7169/api/orders**). Verify that the API returns the order data.
 
-![UrlAdaptor Data](../images/blazor-pivottable-adaptors-data.webp)
+![UrlAdaptor Data](../images/blazor-pivottable-url-adaptors-data.webp)
 
 ## Connecting Blazor Pivot Table to an API service
 
