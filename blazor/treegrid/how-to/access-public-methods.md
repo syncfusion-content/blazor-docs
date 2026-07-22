@@ -15,7 +15,6 @@ A component reference is created by using the `@ref` directive in the `SfTreeGri
 
 The following examples demonstrate how to access and invoke SfTreeGrid public APIs, such as methods and properties, through component references. This approach is useful when you need to interact with the TreeGrid programmatically from external UI elements such as custom buttons, toolbars, or other page actions.
 
-## Example: Invoke `PrintAsync` using TreeGrid reference
 
 {% tabs %}
 
@@ -61,7 +60,6 @@ public async Task Print()
 {% endhighlight %}
 {% endtabs %}
 
-## Sample data model
 
 {% highlight c# %}
 
@@ -95,7 +93,7 @@ namespace TreeGridComponent.Data
 
 {% endhighlight %}
 
-## Common TreeGrid public methods
+**Common TreeGrid public methods**
 
 These public methods are frequently used to perform actions directly on the TreeGrid component instance:
 
@@ -107,14 +105,14 @@ These public methods are frequently used to perform actions directly on the Tree
 - `ClearSelectionAsync()` - Clears all currently selected rows in the TreeGrid.
 - `OpenEditDialogAsync()` / `CloseEditDialogAsync()` - Opens or closes the edit dialog for the selected row.
 
-## Best practices
+**Best practices**
 
 - Always assign the `@ref` reference to a field so you can access the TreeGrid instance from your component code.
 - Call public methods in response to user actions, such as button clicks, or after rendering is complete.
 - Verify the TreeGrid reference is not `null` before calling a method from the component instance.
 - For asynchronous operations, use the method return value when necessary and handle any awaited tasks.
 
-## Additional notes
+**Additional notes**
 
 The TreeGrid public method API is part of the Syncfusion® Blazor TreeGrid component and is documented in the API reference. Use the links below to explore additional methods, properties, and overloads for the TreeGrid component.
 
