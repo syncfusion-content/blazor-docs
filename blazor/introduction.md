@@ -24,7 +24,7 @@ Blazor Components is an enterprise-grade, native UI components library for creat
 
 ## What’s included?
 
-- Data bound components like [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid), [Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), [Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table), and more.
+- Data bound components like [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid), [Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler), [Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table), and more.
 - [Form inputs](https://www.syncfusion.com/blazor-components/blazor-textbox), [Pickers](https://www.syncfusion.com/blazor-components/blazor-datepicker), [Menus](https://www.syncfusion.com/blazor-components/blazor-menu-bar), [Navigation](https://www.syncfusion.com/blazor-components/blazor-treeview), and [Layout](https://www.syncfusion.com/blazor-components/blazor-dashboard) components.
 - Rich visualization: [2D/3D Charts](https://www.syncfusion.com/blazor-components/blazor-3d-charts), [Gauges](https://www.syncfusion.com/blazor-components/blazor-linear-gauge), [Maps](https://www.syncfusion.com/blazor-components/blazor-map), [HeatMaps](https://www.syncfusion.com/blazor-components/blazor-heatmap-chart), and [Sparklines](https://www.syncfusion.com/blazor-components/blazor-sparkline).
 - Theming system with multiple built-in themes and CSS variables for fine grained component.
@@ -249,9 +249,6 @@ padding-top: 20px;
 .sf-icon-menubar:before {
     content: "\e746";
 }
-.sf-icon-scheduler:before {
-    content: "\e747";
-}
 .sf-icon-bullet-chart:before {
     content: "\e748";
 }
@@ -335,9 +332,6 @@ padding-top: 20px;
 }
 .sf-icon-datetime-picker:before {
     content: "\e73f";
-}
-.sf-icon-kanban:before {
-    content: "\e74a";
 }
 .sf-icon-progressbar:before {
     content: "\e74c";
@@ -463,7 +457,6 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/barcode/getting-started"><span class="sf-home-icon sf-icon-barcode-generator"></span>Barcode</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treemap/getting-started"><span class="sf-home-icon sf-icon-treemap"></span>TreeMap</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/bullet-chart/getting-started"><span class="sf-home-icon sf-icon-bullet-chart"></span>Bullet Chart</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/kanban/getting-started"><span class="sf-home-icon sf-icon-kanban"></span>Kanban</a></div>
         <div><p class="controlcategory">BUTTONS</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/button/getting-started"><span class="sf-home-icon sf-icon-button"></span>Button</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/button-group/getting-started"><span class="sf-home-icon sf-icon-button-group"></span>Button Group</a></div>
@@ -477,7 +470,6 @@ padding-top: 20px;
     </td>
     <td>
         <div><p class="controlcategory-topics">CALENDARS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/scheduler/getting-started"><span class="sf-home-icon sf-icon-scheduler"></span>Scheduler</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/calendar/getting-started"><span class="sf-home-icon sf-icon-calendar"></span>Calendar</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/datepicker/getting-started"><span class="sf-home-icon sf-icon-datepicker"></span>DatePicker</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/daterangepicker/getting-started"><span class="sf-home-icon sf-icon-date-range-picker"></span>DateRangePicker</a></div>

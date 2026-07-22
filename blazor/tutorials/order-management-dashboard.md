@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-This guide explains how to create an order management dashboard using [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button), [Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card), [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Blazor DropDown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list), [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) and [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) components. It walks through the core building blocks for a typical e-commerce back-office application, including defining data models, managing application state with dependency-injected services, and building pages for KPI metrics, order tracking, abandoned cart analysis, and return and refund management.
+This guide explains how to create an order management dashboard using [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button), [Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card), [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list), [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion), and [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) components. It walks through the core building blocks for a typical e-commerce back-office application, including defining data models, managing application state with dependency-injected services, and building pages for KPI metrics, order tracking, abandoned cart analysis, and return and refund management.
 
 ## Prerequisites
 
@@ -211,7 +211,6 @@ namespace OrderManagementDashboard.Models
         public string Reason { get; set; } = string.Empty;
         public PaymentStatus PaymentStatus { get; set; }
         public ReceivedStatus ReceivedStatus { get; set; }
-        public DateTime Date { get; set; }
         public string CustomerId { get; set; } = string.Empty;
         public string CustomerName { get; set; } = string.Empty;
         public string Items { get; set; } = string.Empty;
@@ -1921,7 +1920,7 @@ The page binds return and refund records to the grid, showing order details, req
 <SfCard>
     <CardHeader>
         <div class="return-refund-header">
-            <h2 class="return-refund-title">Return &amp; Refund</h2>
+            <h3 class="return-refund-title">Return &amp; Refund</h3>
             <span class="return-refund-total">Total: @Items.Count requests</span>
         </div>
     </CardHeader>
@@ -2133,10 +2132,7 @@ dotnet run
 
 ## See also
 
+* [Build a Blazor Product Catalog App](https://blazor.syncfusion.com/documentation/tutorials/product-catalog)
+* [Creating a Shopping Cart with Blazor Components](https://blazor.syncfusion.com/documentation/tutorials/shopping-cart)
 * [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
 * [Getting started with Blazor Charts](https://blazor.syncfusion.com/documentation/chart/getting-started)
-* [Getting started with Blazor Card](https://blazor.syncfusion.com/documentation/card/getting-started-with-server-app)
-* [Getting started with Blazor Button](https://blazor.syncfusion.com/documentation/button/getting-started-with-server-app)
-* [Getting started with Blazor DropDown List](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-server-app)
-* [Getting started with Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/getting-started-with-server-app)
-* [Getting started with Blazor Dialog](https://blazor.syncfusion.com/documentation/dialog/getting-started-with-server-app)

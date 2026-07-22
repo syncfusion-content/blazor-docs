@@ -13,10 +13,6 @@ Migrating enterprise applications from [ASP.NET Core MVC](https://learn.microsof
 
 ## Why migrate from ASP.NET Core MVC to Blazor?
 
-[ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview) applications follow a request response model, where user requests are handled by controllers and rendered using views. UI updates often require full page reloads or additional techniques such as partial views or AJAX, which can increase complexity as applications become more interactive.
-
-[Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/) introduces a component based, event driven UI model, where user interactions trigger updates directly within components rather than full page reloads. It enables reusable UI components and aligns closely with modern .NET development practices.
-
 | Aspect | ASP.NET Core MVC | Blazor |
 | --- | --- | --- |
 | Execution model | Stateless request response | Blazor Web App (Server / WebAssembly / Auto render modes) |
@@ -52,21 +48,23 @@ The following table maps common [ASP.NET Core MVC](https://learn.microsoft.com/e
 | Routing    | `MapControllerRoute`, attributes | `@page` directive        |
 | Business & data layer  | Models, Services, Repositories |  Reused via dependency injection |
 
-## Migrating Components from ASP.NET Core MVC to Blazor
+## Common setup and configuration
 
-Create a [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/) project using one of the following getting started guides.
+Create a Blazor project using one of the following getting started guides.
 
 * [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 * [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 
+This migration guide focuses on the **Blazor Web App (Interactive Server)** approach, which provides a straightforward migration path from ASP.NET Core MVC applications by keeping business logic and state management on the server. Interactive Server rendering uses SignalR to synchronize UI interactions between the browser and server, making it suitable for enterprise applications that are traditionally built using ASP.NET Core MVC and are being modernized to a component-based web architecture.
+
 The following shared setup applies to all components and covers the common configuration required before proceeding to the [component specific migration steps](#component-specific-migration-steps).
 
 ### Package installation
 
-In [ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview), controls are typically installed using a single combined package, such as [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core). 
+In ASP.NET Core MVC, controls are typically installed using a single combined package, such as [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core). 
 
-In [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/) applications, using individual component packages improves performance and reduces application size. For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
+In Blazor applications, using individual component packages improves performance and reduces application size. For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 Additionally, install the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) NuGet package for styling support.
 
@@ -125,7 +123,7 @@ Import the required namespaces in the `~/_Imports.razor` file.
 {% endhighlight %}
 {% endtabs %}
 
-The preceding code sample lists the namespaces for all components covered in this guide. Import only the namespaces required for the components you use.
+This example includes the namespaces used by the components covered in this guide. Import only the namespaces needed for the components used in your application.
 
 ### Theme and script configuration
 
@@ -357,7 +355,7 @@ The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagr
 
 ### Migrate to Blazor Scheduler component
 
-The [ASP.NET Core MVC Scheduler](https://www.syncfusion.com/aspnet-mvc-ui-controls/scheduler) is a comprehensive event calendar for managing time-based activities, while  [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) provides a modern, high performance component for building interactive scheduling user interfaces.
+The [ASP.NET Core MVC Scheduler](https://www.syncfusion.com/scheduler-sdk/aspnet-mvc-scheduler) is a comprehensive event calendar for managing time-based activities, while  [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) provides a modern, high performance component for building interactive scheduling user interfaces.
 
 For detailed explanation, refer to the [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app) and [ASP.NET Core MVC Scheduler getting started guide](https://ej2.syncfusion.com/aspnetmvc/documentation/schedule/getting-started).
 
@@ -377,7 +375,7 @@ For detailed explanation, refer to the [Blazor Scheduler getting started guide](
 
 **ASP.NET Core MVC approach**
 
-The [ASP.NET Core MVC Scheduler](https://www.syncfusion.com/aspnet-mvc-ui-controls/scheduler) is configured with [Views](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Schedule.Schedule.html#Syncfusion_EJ2_Schedule_Schedule_Views) options such as Day, Week, and Month, and [EventSettings](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Schedule.Schedule.html#Syncfusion_EJ2_Schedule_Schedule_EventSettings) are applied to control how appointments are displayed and managed.
+The [ASP.NET Core MVC Scheduler](https://www.syncfusion.com/scheduler-sdk/aspnet-mvc-scheduler) is configured with [Views](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Schedule.Schedule.html#Syncfusion_EJ2_Schedule_Schedule_Views) options such as Day, Week, and Month, and [EventSettings](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Schedule.Schedule.html#Syncfusion_EJ2_Schedule_Schedule_EventSettings) are applied to control how appointments are displayed and managed.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Index.cshtml" %}
@@ -432,7 +430,7 @@ public class Meeting
 
 **Blazor equivalent**
 
-The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component defines views using the [ScheduleViews](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViews.html) collection and binds event data through [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) to handle appointments within the component.
+The [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) component defines views using the [ScheduleViews](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViews.html) collection and binds event data through [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) to handle appointments within the component.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -479,7 +477,7 @@ N> The `Meeting` class uses the default property names expected by the Scheduler
 
 ### Migrate to Blazor Rich Text Editor component
 
-The [ASP.NET Core MVC Rich Text Editor](https://www.syncfusion.com/aspnet-mvc-ui-controls/wysiwyg-rich-text-editor) is a feature-rich WYSIWYG HTML and Markdown editor, while [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) provides a modern, feature rich component for building interactive and dynamic text editing user interfaces.
+The [ASP.NET Core MVC Rich Text Editor](https://www.syncfusion.com/aspnet-mvc-ui-controls/wysiwyg-rich-text-editor) is a feature-rich WYSIWYG HTML and Markdown editor, while [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) provides a modern, feature rich component for building interactive and dynamic text editing user interfaces.
 
 For detailed explanation, refer to the [Blazor Rich Text Editor getting started guide](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app) and [ASP.NET Core MVC Rich Text Editor getting started guide](https://ej2.syncfusion.com/aspnetmvc/documentation/rich-text-editor/getting-started).
 
@@ -527,7 +525,7 @@ public class HomeController : Controller
 
 **Blazor equivalent**
 
-The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component is defined in Razor markup, where content is managed using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) or `@bind-Value` property and toolbar items can be customized declaratively.
+The [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) component is defined in Razor markup, where content is managed using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) or `@bind-Value` property and toolbar items can be customized declaratively.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -560,6 +558,7 @@ dotnet run
 
 ## See also
 
+* [Migrate WPF to Blazor Components](https://blazor.syncfusion.com/documentation/common/migration/wpf-blazor-migration)
 * [Getting started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
 * [Getting started with Blazor Scheduler](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app)

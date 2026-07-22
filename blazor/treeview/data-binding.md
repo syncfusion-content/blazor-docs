@@ -120,7 +120,7 @@ In the following example, **Id**, **FolderName**, and **SubFolders** columns fro
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBSMtsVUEylUdFX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Hierarchical Data](./images/blazor-treeview-hierarchical-data.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhdtQsDVlAHBlsL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TreeView with Hierarchical Data](./images/blazor-treeview-hierarchical-data.webp)" %}
 
 N> In the Blazor TreeView component, observable collection support is provided only for the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property, not for the [`Child`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Child) property. The [`Child`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Child) property supports only the `List<T>` data type.
 
@@ -217,7 +217,7 @@ To render the root level nodes, specify the ParentID as null or no need to speci
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDroWNWBAucDwMeI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Self-Referential Data](./images/blazor-treeview-hierarchical-data.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBRXcCtBleZlxUf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TreeView with Self-Referential Data](./images/blazor-treeview-hierarchical-data.webp)" %}
 
 ### ExpandoObject Binding 
 
@@ -272,7 +272,7 @@ The Blazor TreeView is a generic component that is strongly bound to a specific 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLSWjMrAuaYSAxb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLHNQCtrFoIeQVI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### DynamicObject Binding
 
@@ -350,7 +350,7 @@ The Blazor TreeView is a generic component that is strongly bound to a specific 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLSsNsrTZDTHpfr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrHXmWtBvnWqswA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Remote Data
 
@@ -437,7 +437,7 @@ The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table are 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjByWXirTXWroCXq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Remote Data](./images/blazor-treeview-remote-data.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjByWXirTXWroCXq?appbar=false&editor=true&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Remote Data](./images/blazor-treeview-remote-data.webp)" %}
 
 ### Web API Adaptor
 
