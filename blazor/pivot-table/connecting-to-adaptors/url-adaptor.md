@@ -20,6 +20,8 @@ To configure a server with the Blazor Pivot Table, follow these steps:
 
 **1. Create a Blazor web app**
 
+> This documentation targets **.NET 8+** and the **Blazor Web App** project template with **Interactive Server** render mode. Earlier .NET versions (Blazor Server / Blazor WebAssembly) follow a different setup and are out of scope here.
+
 You can create a **Blazor Web App** using Visual Studio 2022, either via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
 
 **2. Create a model class**
@@ -90,7 +92,9 @@ namespace URLAdaptor.Models
 
 **3. Create an API controller**
 
-Create an API controller (aka, **OrdersController.cs**) file under **Controllers** folder that helps to establish data communication with the Blazor Pivot Table. This controller includes endpoints for reading data and performing CRUD operations (Insert, Update, Delete) in the drill-through grid.
+> **Prerequisite:** The controller references `Syncfusion.Blazor.Data` and `Syncfusion.Blazor`, so install the [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages first (see the install steps in the "Connecting Blazor Pivot Table to an API service" section below).
+
+Create an API controller (i.e., **OrdersController.cs**) file under **Controllers** folder that helps to establish data communication with the Blazor Pivot Table. This controller includes endpoints for reading data and performing CRUD operations (Insert, Update, Delete) in the editing popup.
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
@@ -115,9 +119,9 @@ namespace URLAdaptor.Controllers
         }
 
         /// <summary>
-        /// Handles data retrieval for the Pivot Table and returns the processed data.
+        /// Retrieves the raw data records consumed by the Pivot Table for aggregation.
         /// </summary>
-        /// <param name="DataManagerRequest">The request object for data retrieval.</param>
+        /// <param name="DataManagerRequest">The request object for the data read.</param>
         /// <returns>Returns a response containing all data records and the total record count.</returns>
         [HttpPost]
         [Route("api/[controller]")]
@@ -150,7 +154,7 @@ namespace URLAdaptor.Controllers
         }
 
         /// <summary>
-        /// Update a existing data item from the data collection.
+        /// Updates an existing data item in the data collection.
         /// </summary>
         /// <param name="updatedRecord">It contains the updated record detail which is need to be updated.</param>
         /// <returns>Returns void.</returns>
@@ -169,16 +173,22 @@ namespace URLAdaptor.Controllers
                     data.CustomerID = updatedOrder.CustomerID;
                     data.EmployeeID = updatedOrder.EmployeeID;
                     data.Freight = updatedOrder.Freight;
-                    // Update other properties similarly.
+                    data.ShipCity = updatedOrder.ShipCity;
+                    data.Verified = updatedOrder.Verified;
+                    data.OrderDate = updatedOrder.OrderDate;
+                    data.ShipName = updatedOrder.ShipName;
+                    data.ShipCountry = updatedOrder.ShipCountry;
+                    data.ShippedDate = updatedOrder.ShippedDate;
+                    data.ShipAddress = updatedOrder.ShipAddress;
                 }
             }
         }
 
         /// <summary>
-        /// Remove a specific data item from the data collection.
+        /// Removes a specific data item from the data collection.
         /// </summary>
         /// <param name="deletedRecord">It contains the specific record detail which is need to be removed.</param>
-        /// <return>Returns void.</return>
+        /// <returns>Returns void.</returns>
         [HttpPost]
         [Route("api/[controller]/Remove")]
         public void Remove([FromBody] CRUDModel<OrdersDetails> deletedRecord)
@@ -276,6 +286,8 @@ To integrate the Blazor Pivot Table into your project using Visual Studio, follo
 
 To add the Blazor Pivot Table in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
+> Replace `{{ site.releaseversion }}` with the latest Syncfusion Blazor package version from [nuget.org](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable).
+
 Alternatively, use the following Package Manager commands:
 
 ```powershell
@@ -294,6 +306,8 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 @using Syncfusion.Blazor.PivotView
 @using Syncfusion.Blazor.Data
 ```
+
+> The `Index.razor` examples below also reference `@using URLAdaptor.Models`. Add this line to `_Imports.razor` (or to `Index.razor` directly) so the `OrdersDetails` type is resolvable. Replace `URLAdaptor` with your actual project's root namespace if you named the project differently.
 
 - Register the Blazor service in the **~/Program.cs** file.
 
@@ -327,7 +341,9 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 
 To connect the Blazor Pivot Table to a hosted API, use the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html). Update the **Index.razor** file as follows.
 
-The `SfDataManager` offers multiple adaptor options to connect with remote database based on an API service. Below is an example of the [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) configuration where an API service is set up to return the resulting data in the result and count format. The full controller (including CRUD endpoints) was created in Step 3 above; only the read actions are referenced here.
+The `SfDataManager` offers multiple adaptor options to connect with remote database based on an API service. Below is an example of the [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) configuration where an API service is set up to return the resulting data in the result and count format.
+
+> **Note:** The controller excerpt shown in the second tab below is **read-only and illustrative** — it only contains the `GET` and `POST` actions. To enable CRUD operations later, append the `Insert`, `Update`, and `Remove` actions from the [full controller in Step 3 of "Creating an API Service"](#creating-an-api-service).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -379,10 +395,10 @@ namespace URLAdaptor.Controllers
         }
 
         /// <summary>
-        /// Handles server-side data operations such as searching, filtering, sorting, paging, and returns the processed data.
+        /// Retrieves the raw data records consumed by the Pivot Table for aggregation.
         /// </summary>
-        /// <param name="DataManagerRequest">The request object contains data operation parameters such as search, filter, sort, and pagination details.</param>
-        /// <returns>Returns a response containing the processed data and the total record count.</returns>
+        /// <param name="DataManagerRequest">The request object for the data read.</param>
+        /// <returns>Returns a response containing all data records and the total record count.</returns>
         [HttpPost]
         [Route("api/[controller]")]
         public object Post([FromBody] DataManagerRequest DataManagerRequest)
@@ -403,6 +419,12 @@ namespace URLAdaptor.Controllers
 {% endtabs %}
 
 > Replace `http://localhost:5145/api/orders` with the actual URL of your API endpoint that provides the data in a consumable format (e.g., JSON). The default port comes from the `http` profile in `Properties/launchSettings.json`; if you change it, update the `Url` property in `Index.razor` to match.
+>
+> **Troubleshooting:** If the Pivot Table shows no data, check the following:
+> * **Port mismatch:** The `Url` value in `Index.razor` must match the actual port in `Properties/launchSettings.json`.
+> * **CORS:** If the API and the Blazor app run on different ports (HTTP vs. HTTPS), enable CORS in `Program.cs` (`builder.Services.AddCors(); ... app.UseCors();`).
+> * **Antiforgery:** A 400 Bad Request on POST `/api/orders` is often caused by antiforgery token validation; ensure `[IgnoreAntiforgeryToken]` is applied to the controller or the Post/Insert/Update/Remove actions.
+> * **404 on /api/orders:** Verify `builder.Services.AddControllers();` and `app.MapControllers();` are present in `Program.cs`.
 
 **5. Run the application**
 
@@ -410,11 +432,11 @@ When you run the application, the Blazor Pivot Table will display data fetched f
 
 ![Blazor Pivot Table](../images/blazor-pivot-table-url-adaptor.webp)
 
-
+> See [Understanding the Data Flow](#understanding-the-data-flow) for the detailed request/response payloads exchanged between the Pivot Table, `SfDataManager`, and the API controller.
 
 ## Handling CRUD operations
 
-The Blazor Pivot Table seamlessly integrates CRUD (Create, Read, Update, and Delete) operations with server-side controller actions through specific properties: [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl), [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_RemoveUrl), and [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl). These properties let the Pivot Table communicate with the data service for every action, enabling server-side operations.
+The Blazor Pivot Table seamlessly integrates CRUD (Create, Read, Update, and Delete) operations with server-side controller actions through specific properties: [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl), [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_RemoveUrl), and [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl). These properties let the Pivot Table send each CRUD action to the data service, where the corresponding controller action mutates the underlying records. (Aggregation, filtering, sorting, and paging of the pivot itself remain client-side; only record-level Create/Update/Delete round-trip to the server.)
 
 **CRUD Operations Mapping**
 
@@ -426,17 +448,17 @@ CRUD operations within the Pivot Table can be mapped to server-side controller a
 
 **Edit Modes Available**
 
-The Pivot Table supports different edit modes for handling data modifications in the drill-through grid. The edit mode is configured through the `Mode` property of [PivotViewCellEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html):
+The Pivot Table supports different edit modes for handling data modifications in the editing popup. The edit mode is configured through the `Mode` property of [PivotViewCellEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html):
 
 - **EditMode.Normal (Inline Editing)**: Edits occur directly in the grid cells. This is the default and recommended mode for quick edits.
 - **EditMode.Dialog (Modal Editing)**: Opens a modal dialog for editing record details. Useful for forms with many fields.
-- **EditMode.Batch (Bulk Editing)**: Allows editing multiple records before saving all changes at once through a batch operation.
+- **EditMode.Batch (Bulk Editing)**: Allows editing multiple records before saving all changes at once through a batch operation. Refer to the [batch editing documentation](https://blazor.syncfusion.com/documentation/pivot-table/editing#batch) for details.
 
-To enable editing in the Blazor Pivot Table, refer to the editing [documentation](https://blazor.syncfusion.com/documentation/pivot-table/editing). The example below demonstrates inline edit mode (Normal mode), which is the default and most common approach for CRUD operations in the drill-through grid. CRUD URLs are configured for managing data operations on the server side.
+To enable editing in the Blazor Pivot Table, refer to the editing [documentation](https://blazor.syncfusion.com/documentation/pivot-table/editing). The example below demonstrates inline edit mode (Normal mode), which is the default and most common approach for CRUD operations in the editing popup. CRUD URLs are configured for managing data operations on the server side.
 
 **Edit Mode: Normal (Inline Editing)**
 
-In Normal edit mode, users can edit data directly within the cells of the drill-through grid. This mode is ideal for quick edits and single-field updates.
+In Normal edit mode, users can edit data directly within the grid cells of the editing popup. This mode is ideal for quick edits and single-field updates.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -468,7 +490,7 @@ In Normal edit mode, users can edit data directly within the cells of the drill-
     private void beginDrillThrough(BeginDrillThroughEventArgs args)
     {
         // Configure beginDrillThrough event to set the primary key for CRUD operations
-        // Iterate through all columns in the drill-through grid
+        // Iterate through all columns in the editing popup grid
         for (int i = 0; i < args.GridObj.Columns.Count; i++)
         {
             // Check if the current column is the primary key column
@@ -485,23 +507,9 @@ In Normal edit mode, users can edit data directly within the cells of the drill-
 {% endhighlight %}
 {% endtabs %}
 
-> To enable CRUD operations, ensure that the primary key is properly configured in the drill-through grid event handler. The example above wires the `BeginDrillThrough` event so the `OrderID` column is marked as the primary key on the drill-through grid; without this, Insert, Update, and Delete operations in the drill-through grid will not be able to uniquely identify records.
+> To enable CRUD operations, ensure that the primary key is properly configured in the editing popup event handler. The example above wires the `BeginDrillThrough` event so the `OrderID` column is marked as the primary key on the editing popup grid; without this, Insert, Update, and Delete operations in the editing popup will not be able to uniquely identify records.
 
-The below class is used to structure data sent during CRUD operations.
-
-```cs
-public class CRUDModel<T> where T : class
-{
-  public string? action { get; set; }
-  public string? keyColumn { get; set; }
-  public object? key { get; set; }
-  public T? value { get; set; }
-  public List<T>? added { get; set; }
-  public List<T>? changed { get; set; }
-  public List<T>? deleted { get; set; }
-  public IDictionary<string, object>? @params { get; set; }
-}
-```
+The `CRUDModel<T>` class used to structure data sent during CRUD operations is defined inside the `OrdersController` in the **Create an API controller** step earlier in this documentation. Each operation sample below references it via `CRUDModel<OrdersDetails>`.
 
 ### Insert operation
 
@@ -541,7 +549,7 @@ For updating existing records, use the [UpdateUrl](https://help.syncfusion.com/c
 {% highlight cs tabtitle="OrdersController.cs" %}
 
 /// <summary>
-/// Update a existing data item from the data collection.
+/// Updates an existing data item in the data collection.
 /// </summary>
 /// <param name="updatedRecord">It contains the updated record detail which is need to be updated.</param>
 /// <returns>Returns void.</returns>
@@ -560,7 +568,13 @@ public void Update([FromBody] CRUDModel<OrdersDetails> updatedRecord)
             data.CustomerID = updatedOrder.CustomerID;
             data.EmployeeID = updatedOrder.EmployeeID;
             data.Freight = updatedOrder.Freight;
-            // Update other properties similarly.
+            data.ShipCity = updatedOrder.ShipCity;
+            data.Verified = updatedOrder.Verified;
+            data.OrderDate = updatedOrder.OrderDate;
+            data.ShipName = updatedOrder.ShipName;
+            data.ShipCountry = updatedOrder.ShipCountry;
+            data.ShippedDate = updatedOrder.ShippedDate;
+            data.ShipAddress = updatedOrder.ShipAddress;
         }
     }
 }
@@ -578,10 +592,10 @@ To delete existing records, use the [RemoveUrl](https://help.syncfusion.com/cr/b
 {% highlight cs tabtitle="OrdersController.cs" %}
 
 /// <summary>
-/// Remove a specific data item from the data collection.
+/// Removes a specific data item from the data collection.
 /// </summary>
 /// <param name="deletedRecord">It contains the specific record detail which is need to be removed.</param>
-/// <return>Returns void.</return>
+/// <returns>Returns void.</returns>
 [HttpPost]
 [Route("api/[controller]/Remove")]
 public void Remove([FromBody] CRUDModel<OrdersDetails> deletedRecord)
@@ -605,12 +619,14 @@ The Pivot Table provides several events to handle CRUD operations:
 
 | Event | Purpose |
 |-------|---------|
-| **BeginDrillThrough** | Fired before the drill-through grid is rendered. Configure the primary key here (see [Configuring Primary Key for CRUD Operations](#configuring-primary-key-for-crud-operations)). |
+| **BeginDrillThrough** | Fired before the editing popup grid is rendered. Configure the primary key here (see [Configuring Primary Key for CRUD Operations](#configuring-primary-key-for-crud-operations)). |
 | **ActionBegin** | Fired before a CRUD action starts (add, edit, delete). |
 | **ActionComplete** | Fired after a CRUD operation completes successfully. |
 | **ActionFailure** | Fired when a CRUD operation fails. Use for error handling. |
 
 **Example: Handling ActionComplete Event**
+
+> The event argument types `[PivotActionCompleteEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs.html)`, `[PivotActionFailureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html)`, and `[BeginDrillThroughEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.BeginDrillThroughEventArgs.html)` live in the `Syncfusion.Blazor.PivotView` namespace, which is already imported via `_Imports.razor`.
 
 ```razor
 <SfPivotView TValue="OrdersDetails" Width="1000" Height="300" ShowFieldList="true">
@@ -642,56 +658,31 @@ The Pivot Table provides several events to handle CRUD operations:
 
 ### Configuring Primary Key for CRUD Operations
 
-For CRUD operations to function correctly in the Drill-Through mode of the Pivot Table, you must configure the primary key column. This is done by handling the `BeginDrillThrough` event and marking the primary key column before the drill-through grid is rendered.
+For CRUD operations to function correctly in the editing popup of the Pivot Table, you must configure the primary key column. This is done by handling the `BeginDrillThrough` event and marking the primary key column before the editing popup grid is rendered.
 
-{% highlight razor tabtitle="Index.razor" %}
+The complete `Index.razor` configuration (including `PivotViewCellEditSettings`, `SfDataManager` CRUD URLs, and the `BeginDrillThrough` handler) was shown in the **Edit Mode: Normal (Inline Editing)** example above. The essential handler snippet is reproduced here for quick reference:
 
-@page "/"
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.PivotView
-@using URLAdaptor.Models
-
-<SfPivotView TValue="OrdersDetails" Width="1000" Height="300" ShowFieldList="true">
-    <PivotViewDataSourceSettings TValue="OrdersDetails" ExpandAll=false EnableSorting=true>
-        <SfDataManager Url="http://localhost:5145/api/orders" InsertUrl="http://localhost:5145/api/orders/Insert" UpdateUrl="http://localhost:5145/api/orders/Update" RemoveUrl="http://localhost:5145/api/orders/Remove" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
-        <PivotViewColumns>
-            <PivotViewColumn Name="OrderID"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="CustomerID"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Freight" Caption="Freight"></PivotViewValue>
-        </PivotViewValues>
-    </PivotViewDataSourceSettings>
-    <PivotViewGridSettings ColumnWidth="120"></PivotViewGridSettings>
-    <PivotViewEvents TValue="OrdersDetails" BeginDrillThrough="beginDrillThrough"></PivotViewEvents>
-    <PivotViewCellEditSettings AllowEditing=true AllowAdding=true AllowDeleting=true Mode=Syncfusion.Blazor.PivotView.EditMode.Normal></PivotViewCellEditSettings>
-</SfPivotView>
-
+```csharp
 @code{
     private void beginDrillThrough(BeginDrillThroughEventArgs args)
     {
-        // Configure beginDrillThrough event to set the primary key for CRUD operations
-        // Iterate through all columns in the drill-through grid
+        // Iterate through all columns in the editing popup grid.
         for (int i = 0; i < args.GridObj.Columns.Count; i++)
         {
-            // Check if the current column is the primary key column
+            // Mark the OrderID column as the primary key so the DataManager
+            // can uniquely identify records during insert/update/delete.
             if (args.GridObj.Columns[i].Field == "OrderID")
             {
-                // Mark this column as the primary key
-                // This tells DataManager to use this column's value to uniquely identify records
                 args.GridObj.Columns[i].IsPrimaryKey = true;
             }
         }
     }
 }
-
-{% endhighlight %}
+```
 
 ![Primary Key Configuration](../images/blazor-pivot-table-url-adaptor-primarykey.webp)
 
-> The `BeginDrillThrough` event is triggered when drilling through the Pivot Table data. This is where you configure the primary key column for the drill-through grid, which is essential for CRUD operations to work correctly.
+> The `BeginDrillThrough` event is triggered when the editing popup opens. This is where you configure the primary key column for the editing popup grid, which is essential for CRUD operations to work correctly.
 
 ### Edit Mode: Dialog (Modal Form Editing)
 
@@ -797,9 +788,9 @@ Content-Type: application/json
 
 **2. CRUD Operations (Insert, Update, Delete)**
 
-- When a user performs an insert, update, or delete operation in the Pivot Table's drill-through grid, the `SfDataManager` sends a request to the appropriate URL (InsertUrl, UpdateUrl, or RemoveUrl).
+- When a user performs an insert, update, or delete operation in the Pivot Table's editing popup, the `SfDataManager` sends a request to the appropriate URL (InsertUrl, UpdateUrl, or RemoveUrl).
 - The request includes a [CRUDModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) object containing:
-  - `action`: The CRUD operation type (e.g., "insert", "update", "remove")
+  - `action`: The CRUD operation type (e.g., "insert", "update", "remove"). Optional for insert/update/remove requests via dedicated `InsertUrl`/`UpdateUrl`/`RemoveUrl` endpoints; required only for the generic batch (`SaveChanges`) flow.
   - `key`: The primary key value of the record
   - `value`: The complete record data
   - `keyColumn`: The name of the primary key column
@@ -841,7 +832,13 @@ Content-Type: application/json
     "CustomerID": "ALFKI",
     "EmployeeID": 2,
     "Freight": 5.5,
-    "ShipCity": "Berlin"
+    "ShipCity": "Berlin",
+    "Verified": false,
+    "OrderDate": "1991-05-15T00:00:00",
+    "ShipName": "Simons bistro",
+    "ShipCountry": "Denmark",
+    "ShippedDate": "1996-07-16T00:00:00",
+    "ShipAddress": "Kirchgasse 6"
   }
 }
 ```
@@ -926,8 +923,6 @@ Inserts a new record into the data collection.
 }
 ```
 
-> The values shown in request/response examples are illustrative. The actual data depends on what the end user enters.
-
 ### POST /api/orders/Update
 Updates an existing record in the data collection.
 
@@ -957,62 +952,33 @@ Deletes a record from the data collection.
 
 ## Configuration Summary
 
-### Application Startup Configuration (Program.cs)
+The following configurations (detailed earlier in the "Creating an API Service" and "Connecting Blazor Pivot Table to an API service" sections) must be present in `Program.cs` for the UrlAdaptor to work:
 
-The following configurations are required in `Program.cs`:
-
-1. **Add Syncfusion Blazor service**
-   ```csharp
-   builder.Services.AddSyncfusionBlazor();
-   ```
-
-2. **Add Razor Components with Interactive Server Render Mode**
-   ```csharp
-   builder.Services.AddRazorComponents()
-       .AddInteractiveServerComponents();
-   ```
-
-3. **Add Controllers Support**
-   ```csharp
-   builder.Services.AddControllers();
-   ```
-
-4. **Map Controller Routes**
-   ```csharp
-   app.MapControllers();
-   ```
-
-### Dependency Injection
-
-The application uses ASP.NET Core's built-in dependency injection:
-
-- **Syncfusion.Blazor**: Registered via `AddSyncfusionBlazor()` to enable Syncfusion Blazor components
-- **Razor Components**: Registered via `AddRazorComponents()` to support server-side rendering
+1. `builder.Services.AddSyncfusionBlazor();` — enables Syncfusion Blazor components.
+2. `builder.Services.AddRazorComponents().AddInteractiveServerComponents();` — server-side rendering with the .NET 8+ Interactive Server render mode.
+3. `builder.Services.AddControllers();` — registers the API controllers (e.g., `OrdersController`).
+4. `app.MapControllers();` — maps the controller routes (`api/orders`, `api/orders/Insert`, etc.).
 
 ### API Response Format
 
-All API endpoints return data in a standardized format:
+All read endpoints return data in the standardized `{ result, count }` shape consumed by the `UrlAdaptor`:
 
 ```csharp
 new { result = DataSource, count = totalRecordsCount }
 ```
 
-This format is consumed by the `UrlAdaptor` to:
-- Display records in the Pivot Table
-- Enable drill-through functionality
-
-> The `count` value is used by the `UrlAdaptor` for record-count tracking. Server-side paging (`Skip` / `Take`) is not implemented in the read endpoint shown above; if you need paging, apply `DataOperations.PerformSkip` / `PerformTake` to the `IQueryable` before returning the result.
+> The `count` value is used by the `UrlAdaptor` for record-count tracking. The Pivot Table performs aggregation, sorting, filtering, and paging **client-side** over the raw records returned by this endpoint — the server only needs to return the full data set (`result`) and a total record `count`. Do **not** apply server-side `Skip`/`Take` or `DataOperations` filtering/sorting here; the Pivot Table expects the complete underlying record set so it can compute the cross-tab correctly.
 
 ## Summary
 Key points covered in this documentation:
 
 - **Remote Data Binding**: Connect the Blazor Pivot Table to any API service using the `Url` property of `SfDataManager` with `Adaptors.UrlAdaptor`.
-- **CRUD Operations**: Perform Insert, Update, and Delete operations through dedicated API endpoints in the drill-through grid via `InsertUrl`, `UpdateUrl`, and `RemoveUrl`.
+- **CRUD Operations**: Perform Insert, Update, and Delete operations through dedicated API endpoints in the editing popup via `InsertUrl`, `UpdateUrl`, and `RemoveUrl`.
 - **Primary Key Configuration**: Use the `BeginDrillThrough` event to mark the primary key column so the `DataManager` can uniquely identify records during edits.
 - **Standardized Request/Response Format**: Use `DataManagerRequest` for read operations and `CRUDModel<T>` for write operations.
 - **In-Memory Sample Data**: The `OrdersDetails.GetAllRecords()` method seeds an in-memory list that resets on application restart; replace it with your own data-access logic for production scenarios
 
-By following the steps outlined in this documentation, you can successfully implement a Blazor Pivot Table application that communicates with a remote API service using the UrlAdaptor, enabling full CRUD functionality within the drill-through mode.
+By following the steps outlined in this documentation, you can successfully implement a Blazor Pivot Table application that communicates with a remote API service using the UrlAdaptor, enabling full CRUD functionality within the editing popup.
 
 ## Complete Sample Repository
 
