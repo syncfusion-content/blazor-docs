@@ -118,8 +118,4 @@ These public methods are frequently used to perform actions directly on the Tree
 
 The TreeGrid public method API is part of the Syncfusion® Blazor TreeGrid component and is documented in the API reference. Use the links below to explore additional methods, properties, and overloads for the TreeGrid component.
 
-| API member type | Reference link |
-|---|---|
-| Methods | [SfTreeGrid methods](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#methods) |
-| Properties | [SfTreeGrid properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#properties) |
-
+For detailed information about the available TreeGrid APIs, refer to the following API reference documentation: [SfTreeGrid Methods](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#methods) and [SfTreeGrid Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#properties).
