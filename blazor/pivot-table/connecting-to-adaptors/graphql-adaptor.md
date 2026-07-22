@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Pivot Table with GraphQL using GraphQL Adaptor | Syncfusion®
-description: Build Blazor apps with a Hot Chocolate GraphQL backend and the Syncfusion Pivot Table to enable CRUD, drill-through, field list, and cell editing for seamless pivot data operations via a GraphQL adaptor.
+description: Build Blazor apps with a Hot Chocolate GraphQL backend and Syncfusion Pivot Table for CRUD, drill-through, and cell editing via a GraphQL adaptor.
 control: PivotTable
 platform: blazor
 documentation: ug
