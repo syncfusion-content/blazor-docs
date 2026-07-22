@@ -10,7 +10,6 @@ documentation: ug
 # Download the Syncfusion® Blazor Mac Installer
 
 > **Prerequisites:**
-> * A registered Syncfusion<sup style="font-size:70%">&reg;</sup> account is required to download any Syncfusion Blazor installer.
 > * Confirm that your machine meets the supported OS and .NET version requirements for the Syncfusion Blazor version you are installing. See the [system requirements](https://blazor.syncfusion.com/documentation/system-requirements) for details.
 > * For licensed downloads, an active Blazor license must be assigned to your account in the Syncfusion account portal.
 
@@ -45,19 +44,19 @@ Use this path if you obtained Syncfusion components from [NuGet.org](https://www
 2. Sign in with a Syncfusion<sup style="font-size:70%">&reg;</sup> account, or sign up if you do not have one.
 3. Select **Syncfusion Blazor** to begin the trial.
 
-   > **Note:** If an existing Blazor trial is still active, a new trial for the same product cannot be started.
+   N> If an existing Blazor trial is still active, a new trial for the same product cannot be started.
 
 4. After starting the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to generate the [unlock key](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate) at any time before the trial expires.
 
    ![Trials and Downloads page showing trial installer and links to generate license key](images/start-trial-download-installer.webp)
 
-   > **Note:** A license key is required to use the trial components in your Blazor application. For more information about license keys, see the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+   N> A license key is required to use the trial components in your Blazor application. For more information about license keys, see the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 5. Your current active trial products are listed on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
 
 ## Download the Licensed Version
 
-Licensed installers are available to account holders with an active Blazor license assigned to their account.
+Licensed installers are available to account holders with an active Syncfusion Essential Studio license assigned to their account.
 
 1. Sign in to your Syncfusion<sup style="font-size:70%">&reg;</sup> account and open the [License & Downloads](https://www.syncfusion.com/account/downloads) page.
 2. All licenses (both active and expired) associated with your account are listed.
