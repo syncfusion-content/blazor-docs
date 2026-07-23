@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bind data to Blazor components using WebApiAdaptor | CRUD | Syncfusion
-description: Learn how to retrieve data from a Web API, bind it to the Blazor DataGrid using SfDataManager with WebApiAdaptor, and perform CRUD operations.
+description: Learn how to retrieve data from a Web API, bind it to the Syncfusion Blazor DataGrid using SfDataManager with WebApiAdaptor, and perform CRUD operations.
 platform: Blazor
 control: Common
 documentation: ug
@@ -53,7 +53,7 @@ Now, click on **Update Database**.
 
 ## Create a new Blazor Web App
 
-Create a **Blazor Web App** using Visual Studio 2022 via [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a **Blazor Web App** using Visual Studio 2022 via [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 Configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling#interactivity-location) when creating the Blazor Web App.
 
@@ -231,7 +231,7 @@ app.MapControllers();
 
 ## Create Blazor Server Application
 
-You can create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ### Generate DbContext and model class from the database
 
@@ -421,7 +421,7 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
 
-## Add Blazor DataGrid package
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid package
 
 To add **Blazor DataGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
@@ -438,7 +438,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
 Open **~/_Imports.razor** file and import the following namespace.
 
@@ -449,9 +449,9 @@ Open **~/_Imports.razor** file and import the following namespace.
 
 {% endhighlight %}
 
-Now, register the Blazor Service in the **~/Program.cs** file of your App.
+Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your App.
 
-For a Blazor Web App with `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode, register the Blazor service in both **~/Program.cs** files of your web app.
+For a Blazor Web App with `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your web app.
 
 ```cshtml
 
@@ -463,7 +463,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ```
 
-Themes provide life to components. Blazor has different themes. They are:
+Themes provide life to components. Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor has different themes. They are:
 
 * Fabric
 * Bootstrap
@@ -493,11 +493,11 @@ Also, Include the script reference at the end of the `<body>` of **~/Components/
 </body>
 ```
 
-## Add Blazor DataGrid component to an application
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component to an application
 
 In previous steps, you have successfully configured the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor package in the application. Now, you can add the grid component to the to the `.razor` page inside the `Pages` folder.
 
-If you have set the interactivity location to `Per page/component` in the web app, ensure that you define a render mode at the top of the Blazor component-included razor page as follows:
+If you have set the interactivity location to `Per page/component` in the web app, ensure that you define a render mode at the top of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component-included razor page as follows:
 
 {% tabs %}
 {% highlight razor %}
@@ -593,7 +593,7 @@ The sample response object should look like this:
 }
 ```
 
-## Handling CRUD operations with our Blazor DataGrid component
+## Handling CRUD operations with our Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
 
 You can enable editing in the grid component using the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. Grid provides various modes of editing options such as [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/in-line-editing), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/dialog-editing), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) editing.
 
