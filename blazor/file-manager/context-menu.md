@@ -9,7 +9,7 @@ documentation: ug
 
 # Context Menu in Blazor File Manager Component
 
-The context menu items can be added for the files, folders, and layout in the Blazor File Manager component using the properties of the [ContextMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html) below.
+The context menu items can be added for the files, folders, and layout in the [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component using the properties of the [ContextMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html) below.
 
 * [File](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html#Syncfusion_Blazor_FileManager_FileManagerContextMenuSettings_File) - Specifies the array of string that is used to configure file items.
 * [Folder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html#Syncfusion_Blazor_FileManager_FileManagerContextMenuSettings_Folder) - Specifies the array of string that is used to configure folder items.
