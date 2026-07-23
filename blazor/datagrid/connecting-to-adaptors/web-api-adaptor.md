@@ -201,7 +201,7 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 ....
 <body>
     ....
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    <script src="_content/Syncfusion.Blazor.Grid/scripts/sf-grid.min.js" type="text/javascript"></script>
 </body>
 ```
  
