@@ -228,6 +228,7 @@ dotnet run
 {% endtabcontents %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBnZGDhUjkSdaFN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Toggle Switch Button Component](./images/blazor-toggle-switch-button.webp)" %}
+
 ## Setting On and Off Text
 
 On and Off text can be set using [OnLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_OnLabel) and [OffLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_OffLabel) properties of Toggle Switch Button component. In the following example, `onLabel` is set as `ON` and `offLabel` is set as `OFF`.

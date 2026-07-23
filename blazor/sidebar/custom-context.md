@@ -87,4 +87,5 @@ In the following sample, click the toggle button to expand or collapse the Sideb
 </style>
 
 ```
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXBntcMdzhEtIVev?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "![Blazor Sidebar with Custom Context](./images/blazor-sidebar-custom-context.webp)" %}
