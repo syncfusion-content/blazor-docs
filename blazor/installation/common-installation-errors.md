@@ -11,20 +11,18 @@ documentation: ug
 
 This article describes the most common installation errors, as well as the causes and solutions to those errors.
 
-
-> **Prerequisites:**
-> * Verify that your machine meets the supported OS and .NET version requirements for the Syncfusion Blazor version you are installing. See the [system requirements](https://blazor.syncfusion.com/documentation/system-requirements) for details.
-> * Close all running Visual Studio instances before starting the installation to avoid conflicts while installing Visual Studio extensions and project templates.
-> * Ensure that Windows is up to date with the latest recommended updates to avoid installation and compatibility issues.
-
-
 * [Unlocking the license installer using the trial key](https://blazor.syncfusion.com/documentation/installation/common-installation-errors#unlocking-the-license-installer-using-the-trial-key)
 * [License has expired](https://blazor.syncfusion.com/documentation/installation/common-installation-errors#license-has-expired)
 * [Unable to find a valid license or trial](https://blazor.syncfusion.com/documentation/installation/common-installation-errors#unable-to-find-a-valid-license-or-trial)
 * [Unable to install because of another installation](https://blazor.syncfusion.com/documentation/installation/common-installation-errors#unable-to-install-because-of-another-installation)
 * [Unable to install due to controlled folder access](https://blazor.syncfusion.com/documentation/installation/common-installation-errors#unable-to-install-due-to-controlled-folder-access)
 
-## Unlocking the License Installer Using the Trial Key
+> **Prerequisites:**
+> * Verify that your machine meets the supported OS and .NET version requirements for the Syncfusion Blazor version you are installing. See the [system requirements](https://blazor.syncfusion.com/documentation/system-requirements) for details.
+> * Close all running Visual Studio instances before starting the installation to avoid conflicts while installing Visual Studio extensions and project templates.
+> * Ensure that Windows is up to date with the latest recommended updates to avoid installation and compatibility issues.s
+
+## Unlocking the license installer using the trial key
 
 **Error message:** Sorry, the provided unlock key is a trial unlock key and cannot be used to unlock the licensed version of our Essential Studio<sup style="font-size:70%">&reg;</sup> for Blazor installer.
 
@@ -34,7 +32,7 @@ This article describes the most common installation errors, as well as the cause
 
 **Suggested solution:** Only a licensed unlock key can unlock a licensed installer. So, to unlock the Licensed installer, use the Licensed unlock key. To generate the licensed unlock key, refer to [this](https://support.syncfusion.com/kb/article/2757/how-to-generate-syncfusion-setup-unlock-key-from-syncfusion-support-account) article.
 
-## License Has Expired
+## License has expired
 
 **Error message:** Your license for Essential Studio<sup style="font-size:70%">&reg;</sup> for Blazor has been expired since {date}. Renew your subscription and try again.
 
@@ -55,7 +53,7 @@ This article describes the most common installation errors, as well as the cause
 
 After renewing or purchasing a license, re-run the installer and enter the new unlock key to complete activation.
 
-## Unable to Find a Valid License or Trial
+## Unable to find a valid license or trial
 
 **Error message:** Sorry, we are unable to find a valid license or trial for Essential Studio<sup style="font-size:70%">&reg;</sup> for Blazor under your account.
 
@@ -84,7 +82,7 @@ After renewing or purchasing a license, re-run the installer and enter the new u
 4. Request assistance: clientrelations@syncfusion.com.
 5. Contact sales: sales@syncfusion.com.
 
-## Unable to Install Because of Another Installation
+## Unable to install because of another installation
 
 **Error message:** Another installation is in progress. You cannot start this installation without completing all other currently active installations. Click cancel to end this installer or retry to attempt after the currently active installation completes.
 
@@ -103,7 +101,7 @@ After renewing or purchasing a license, re-run the installer and enter the new u
 
 ![Windows Task Manager showing msiexec.exe to end task](images/installation-error-6.webp)
 
-## Unable to Install Due to Controlled Folder Access
+## Unable to install due to controlled folder access
 
 N> Controlled Folder Access is a feature of Microsoft Defender on Windows 10, Windows 11, and Windows Server. The steps below apply to those operating systems.
 

@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Install the Syncfusion® Blazor Mac Installer
+# Install the Syncfusion® Blazor Mac installer
 
 The Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac installer installs the Blazor product on macOS (DMG) and integrates with Visual Studio for Mac. The steps below cover Gatekeeper prompts, installation, and license key registration for sample projects.
 
@@ -21,7 +21,7 @@ Before you begin, confirm the following:
 * The downloaded Blazor Mac installer DMG is available locally. If you have not downloaded it yet, see [Download the Blazor Mac installer](https://blazor.syncfusion.com/documentation/installation/mac-installer/how-to-download).
 * Visual Studio for Mac is installed if you intend to open the included sample projects. See [Install Visual Studio for Mac](https://learn.microsoft.com/en-us/visualstudio/mac/installation) for details.
 
-## Resolve the Gatekeeper Warning on macOS Catalina or Later
+## Resolve the Gatekeeper warning on macOS Catalina or later
 
 When running the installer on macOS Catalina or later, a Gatekeeper alert may appear.
 
@@ -64,7 +64,7 @@ If this appears, follow these steps:
 
    ![Eject the mounted DMG from Finder](images/Mac_Installer6.webp)
 
-## Register the License Key in Sample Projects
+## Register the license key in sample projects
 
 After installation, a license key is required to register the demo source included in the Mac installer. The license key is applied in the entry point of your Blazor application.
 
