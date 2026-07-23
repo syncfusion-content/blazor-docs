@@ -47,7 +47,7 @@ Then, go to your **Client** project and install the following package:
 
 ## Add proto file and service to the project
 
-gRPC works with Proto files which are written in protocol buffer language that define your messaging. To learn more about the language, visit this [guide](https://developers.google.com/protocol-buffers/docs/proto3#simple).
+gRPC works with Proto files which are written in protocol buffer language that define your messaging. To learn more about the language, visit this [guide](https://protobuf.dev/programming-guides/proto3/#simple).
 
 To add a proto file, **Right-click** the **Shared** project, go to **Add**, and then select **New item**. You can choose a Class file and name it as `order.proto` and select **Add**.
 
@@ -262,7 +262,7 @@ To consume data from the gRPC service, inject the **OrdersServiceClient** into t
 
 Here,  the `DataSource` property of the DataGrid component is used to bind the data to DataGrid in the WebAssembly application.
 
-Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns/) component. Columns are created using the following code, let’s see the properties used and their usage.
+Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns) component. Columns are created using the following code, let’s see the properties used and their usage.
 
 * `Field` property specifies the column name of the **Orders** table to display in the grid column.
 * The `Width` property specifies the column width.

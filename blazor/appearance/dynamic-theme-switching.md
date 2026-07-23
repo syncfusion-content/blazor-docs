@@ -204,7 +204,7 @@ Include the `ThemeSwitcher` component in your `~/Components/Layout/MainLayout.ra
         <div class="theme-switcher">
             <ThemeSwitcher />
         </div>
-        <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+        <a href="https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-10.0" target="_blank">About</a>
     </div>
 
     <article class="content px-4">
@@ -278,7 +278,7 @@ Modify your `~/Layout/MainLayout.razor` file to include the theme switcher dropd
                     <DropDownListEvents TItem="ThemeDetails" TValue="string" ValueChange="OnThemeChange"></DropDownListEvents>
                 </SfDropDownList>
             </div>
-            <a href="https://learn.microsoft.com/aspnet/" target="_blank">About</a>
+            <a href="https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-10.0" target="_blank">About</a>
         </div>
 
         <article class="content px-4">

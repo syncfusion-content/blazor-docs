@@ -377,7 +377,7 @@ namespace WinFormsDataGridApp
 
 ### Charts
 
-[WinForms Charts](https://www.syncfusion.com/winforms-ui-controls/charts) is a comprehensive charting control for rich desktop visualizations, while [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) is the Razor based component for creating responsive, interactive charts on the web.
+[WinForms Charts](https://www.syncfusion.com/winforms-ui-controls/chart) is a comprehensive charting control for rich desktop visualizations, while [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) is the Razor based component for creating responsive, interactive charts on the web.
 
 For additional details, refer to the [WinForms Charts getting started guide](https://help.syncfusion.com/windowsforms/chart/getting-started) and [Blazor Charts getting started guide](https://blazor.syncfusion.com/documentation/chart/getting-started).
 
@@ -394,7 +394,7 @@ For additional details, refer to the [WinForms Charts getting started guide](htt
 
 #### Component rendering
 
-The [WinForms Chart](https://www.syncfusion.com/winforms-ui-controls/charts) control can be added programmatically or via the Visual Studio Designer. Axes and series are configured programmatically or in the Designer, and data is assigned through the `DataSource` property.
+The [WinForms Chart](https://www.syncfusion.com/winforms-ui-controls/chart) control can be added programmatically or via the Visual Studio Designer. Axes and series are configured programmatically or in the Designer, and data is assigned through the `DataSource` property.
 
 The [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component is declared in Razor markup, with axes and series configured using child components, and data supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) parameter.
 
@@ -500,7 +500,7 @@ namespace WinFormsChartApp
 
 ### Scheduler
 
-[WinForms Scheduler](https://www.syncfusion.com/winforms-ui-controls/scheduler) is a feature rich scheduling control for managing appointments and resources in Windows desktop applications, while [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) is the Blazor component designed for calendar and scheduling scenarios in web applications.
+[WinForms Scheduler](https://www.syncfusion.com/scheduler-sdk/winforms-scheduler) is a feature rich scheduling control for managing appointments and resources in Windows desktop applications, while [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) is the Blazor component designed for calendar and scheduling scenarios in web applications.
 
 For additional details, refer to the [WinForms Scheduler getting started guide](https://help.syncfusion.com/windowsforms/scheduler/getting-started) and [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app).
 
@@ -517,7 +517,7 @@ For additional details, refer to the [WinForms Scheduler getting started guide](
 
 #### Component rendering
 
-The [WinForms Scheduler](https://www.syncfusion.com/winforms-ui-controls/scheduler) control can be added programmatically or via the Visual Studio Designer. Views and appointments are configured programmatically or in the Designer, and data is assigned through the `DataSource` property.
+The [WinForms Scheduler](https://www.syncfusion.com/scheduler-sdk/winforms-scheduler) control can be added programmatically or via the Visual Studio Designer. Views and appointments are configured programmatically or in the Designer, and data is assigned through the `DataSource` property.
 
 The [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) component is declared in Razor markup, where views are configured using child components, and appointment data is supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) parameter.
 

@@ -251,7 +251,7 @@ To make the login and logout actions available throughout the application, add t
     ....
     <main>
         <div class="top-row px-4 d-flex justify-content-between align-items-center">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+            <a href="https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-10.0" target="_blank">About</a>
             <LoginDisplay />
         </div>
 

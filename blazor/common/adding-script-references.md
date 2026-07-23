@@ -372,7 +372,7 @@ The following table lists components and their script file names.
 
 ## Custom Resource Generator
 
-Blazor provides an option to generate component interop scripts using the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) tool. Learn how to [generate component-wise scripts using CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
+Blazor provides an option to generate component interop scripts using the [Custom Resource Generator](https://blazor.syncfusion.com/crg/) (CRG) tool. Learn how to [generate component-wise scripts using CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
 
 ## See also
 

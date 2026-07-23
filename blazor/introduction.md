@@ -517,7 +517,7 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/tabs/getting-started"><span class="sf-home-icon sf-icon-tabs"></span>Tabs</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/toolbar/getting-started"><span class="sf-home-icon sf-icon-toolbar"></span>Toolbar</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treeview/getting-started"><span class="sf-home-icon sf-icon-treeview"></span>TreeView</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/file-manager/getting-started"><span class="sf-home-icon sf-icon-file-manager"></span>File Manager</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/file-manager/getting-started-with-wasm-app"><span class="sf-home-icon sf-icon-file-manager"></span>File Manager</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/ribbon/getting-started"><span class="sf-home-icon sf-icon-ribbon"></span>Ribbon</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/pager/getting-started"><span class="sf-home-icon sf-icon-pager"></span>Pager</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/appbar/getting-started"><span class="sf-home-icon sf-icon-app-bar"></span>AppBar</a></div>
@@ -548,15 +548,15 @@ padding-top: 20px;
 * Visual Studio
     * [Getting started with Blazor Components in Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
     * [Getting started with Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-    * [Getting started with Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
+    * [Getting started with Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 
 * .NET CLI
-    * [Getting started with Blazor Components in Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app-dotnet-cli)
-    * [Getting started with Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
-    * [Getting started with Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+    * [Getting started with Blazor Components in Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+    * [Getting started with Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+    * [Getting started with Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 
 * Visual Studio for Mac
 
-    * [Getting started with Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac)
+    * [Getting started with Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 
-    * [Getting started with Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac)
+    * [Getting started with Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)

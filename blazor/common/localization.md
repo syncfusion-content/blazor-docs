@@ -362,7 +362,7 @@ Add the `CultureSwitcher` component to `~/MainLayout.razor` to enable the cultur
     <main>
         <div class="top-row px-4">
             <CultureSwitcher />
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+            <a href="https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-10.0" target="_blank">About</a>
         </div>
     </main>
 </div>
@@ -398,7 +398,7 @@ app.UseRequestLocalization(localizationOptions);
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://learn.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-10.0&viewFallbackFrom=aspnetcore-2.1&tabs=visual-studio%2Clinux-ubuntu#http-strict-transport-security-protocol-hsts.
     app.UseHsts();
 }
 app.UseHttpsRedirection();
@@ -545,7 +545,7 @@ Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the c
     <main>
         <div class="top-row px-4">
             <CultureSwitcher></CultureSwitcher>
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+            <a href="https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-10.0" target="_blank">About</a>
         </div>
 
         <article class="content px-4">
@@ -649,7 +649,7 @@ Add the `CultureSwitcher` component to `Layout/MainLayout.razor` to enable the c
 
     <main>
         <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+            <a href="https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-10.0" target="_blank">About</a>
         </div>
 
         <article class="content px-4">

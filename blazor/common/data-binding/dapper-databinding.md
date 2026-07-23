@@ -265,7 +265,7 @@ In previous steps, you have successfully configured the Syncfusion<sup style="fo
 
 ## Binding data to the DataGrid component
 
-Now, get SQL data using Dapper and bind it to the DataGrid component. To bind the database table to Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, use the [custom data binding feature](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) here.
+Now, get SQL data using Dapper and bind it to the DataGrid component. To bind the database table to Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, use the [custom data binding feature](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) here.
 
 The following points must be considered for creating a custom adaptor.
 
@@ -443,4 +443,4 @@ N> Find the sample from this [Github](https://github.com/SyncfusionExamples/blaz
 
 ## See also
 
-* [Create Blazor CRUD Application with PostgreSQL and Dapper](https://www.syncfusion.com/blogs/post/create-blazor-crud-application-with-postgresql-and-dapper.aspx)
+* [Create Blazor CRUD Application with PostgreSQL and Dapper](https://www.syncfusion.com/blogs/post/create-blazor-crud-application-with-postgresql-and-dapper)
