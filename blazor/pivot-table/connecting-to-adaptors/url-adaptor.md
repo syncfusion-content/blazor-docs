@@ -423,7 +423,7 @@ namespace URLAdaptor.Controllers
 > **Troubleshooting:** If the Pivot Table shows no data, check the following:
 > * **Port mismatch:** The `Url` value in `Index.razor` must match the actual port in `Properties/launchSettings.json`.
 > * **CORS:** If the API and the Blazor app run on different ports (HTTP vs. HTTPS), enable CORS in `Program.cs` (`builder.Services.AddCors(); ... app.UseCors();`).
-> * **Antiforgery:** A 400 Bad Request on POST `/api/orders` is often caused by antiforgery token validation; ensure `[IgnoreAntiforgeryToken]` is applied to the controller or the Post/Insert/Update/Remove actions.
+> * **Anti-forgery:** A 400 Bad Request on POST `/api/orders` is often caused by anti-forgery token validation; ensure `[IgnoreAntiforgeryToken]` is applied to the controller or the Post/Insert/Update/Remove actions.
 > * **404 on /api/orders:** Verify `builder.Services.AddControllers();` and `app.MapControllers();` are present in `Program.cs`.
 
 **5. Run the application**

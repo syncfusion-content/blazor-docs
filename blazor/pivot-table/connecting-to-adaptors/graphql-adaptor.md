@@ -190,7 +190,7 @@ In the same‑origin HTTPS case, the Blazor `Home.razor` `SfDataManager` `Url` v
 - `MapGraphQL()` - Exposes the GraphQL endpoint at `/graphql`.
 - `MapRazorComponents<App>().AddInteractiveServerRenderMode()` - Wires the Blazor component pipeline using the `App` component from the `Components` folder.
 
-The GraphQL backend is now configured and ready. The GraphQL endpoint is accessible at `https://localhost:xxxx/graphql`.
+The GraphQL backend is now configured and ready. The GraphQL endpoint is accessible at `https://localhost:7009/graphql`.
 
 ---
 
@@ -259,7 +259,7 @@ All configuration steps are now complete.
 
 A data model represents the structure of data that the application stores. It defines the properties (fields) that make up a record. Each property corresponds to a column in the database table. The data model acts as the blueprint for how data is organized and accessed throughout the application.
 
-In the context of an expense tracker, the data model defines what information is stored for each expense entry. Properties include the expense identifier, the department, the category, and the amount. These four properties are sufficient to demonstrate the Pivot Table behaviour because the pivot layout will derive a value cell (sum of **Amount**) per intersection of **Department** rows and **ExpenseId** columns.
+In the context of an expense tracker, the data model defines what information is stored for each expense entry. Properties include the expense identifier, the department, the category, and the amount. These four properties are sufficient to demonstrate the Pivot Table behavior because the pivot layout will derive a value cell (sum of **Amount**) per intersection of **Department** rows and **ExpenseId** columns.
 
 **Instructions**:
 
@@ -762,7 +762,7 @@ A mutation resolver is a C# method decorated with GraphQL attributes that:
 
 After `dotnet run`, open `http://localhost:5272/graphql` (Banana Cake Pop) and execute a sample mutation to confirm the resolver is registered:
 
-```html
+```
 mutation testCreate {
   createExpense(
     record: { expenseId: "EXP1003", department: "Sales", category: "Lodging", amount: 480.0 }
