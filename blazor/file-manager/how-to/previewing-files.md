@@ -9,7 +9,7 @@ documentation: ug
 
 # Previewing files in Blazor File Manager component
 
-In the Blazor File Manager component, you can preview PDF files using the [PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) component, docx files using the [DocumentEditor](https://blazor.syncfusion.com/documentation/document-editor/getting-started/web-app) component, and play videos within the [Dialog](https://blazor.syncfusion.com/documentation/dialog/getting-started-with-web-app) component.
+In the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component, you can preview PDF files using the [PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) component, docx files using the [DocumentEditor](https://blazor.syncfusion.com/documentation/document-editor/getting-started/web-app) component, and play videos within the [Dialog](https://blazor.syncfusion.com/documentation/dialog/getting-started-with-web-app) component.
 
 ## Previewing PDF and Word File in Dialog
 
