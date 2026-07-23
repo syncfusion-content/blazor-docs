@@ -182,7 +182,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 </SfTreeGrid>
 
 @code {
-    
+
    public class BusinessObject
     {
         public int TaskId { get; set; }
