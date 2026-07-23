@@ -762,7 +762,7 @@ A mutation resolver is a C# method decorated with GraphQL attributes that:
 
 After `dotnet run`, open `http://localhost:5272/graphql` (Banana Cake Pop) and execute a sample mutation to confirm the resolver is registered:
 
-```graphql
+```html
 mutation testCreate {
   createExpense(
     record: { expenseId: "EXP1003", department: "Sales", category: "Lodging", amount: 480.0 }

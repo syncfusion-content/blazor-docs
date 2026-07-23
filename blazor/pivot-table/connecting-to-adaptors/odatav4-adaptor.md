@@ -332,7 +332,7 @@ To connect the Blazor Pivot Table to an OData V4 service, use the [Url](https://
 
 Update the **Index.razor** file in the `ODataV4Adaptor.Client` project as follows.
 
-```razor
+```cshtml
 @page "/"
 
 @using Syncfusion.Blazor.PivotView

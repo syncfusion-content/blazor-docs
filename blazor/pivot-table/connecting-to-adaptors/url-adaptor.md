@@ -346,7 +346,7 @@ The `SfDataManager` offers multiple adaptor options to connect with remote datab
 > **Note:** The controller excerpt shown in the second tab below is **read-only and illustrative** — it only contains the `GET` and `POST` actions. To enable CRUD operations later, append the `Insert`, `Update`, and `Remove` actions from the [full controller in Step 3 of "Creating an API Service"](#creating-an-api-service).
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight cshtml tabtitle="Index.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Data
@@ -461,7 +461,7 @@ To enable editing in the Blazor Pivot Table, refer to the editing [documentation
 In Normal edit mode, users can edit data directly within the grid cells of the editing popup. This mode is ideal for quick edits and single-field updates.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight cshtml tabtitle="Index.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Data
@@ -628,7 +628,7 @@ The Pivot Table provides several events to handle CRUD operations:
 
 > The event argument types `[PivotActionCompleteEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs.html)`, `[PivotActionFailureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html)`, and `[BeginDrillThroughEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.BeginDrillThroughEventArgs.html)` live in the `Syncfusion.Blazor.PivotView` namespace, which is already imported via `_Imports.razor`.
 
-```razor
+```cshtml
 <SfPivotView TValue="OrdersDetails" Width="1000" Height="300" ShowFieldList="true">
     <PivotViewEvents TValue="OrdersDetails" 
         BeginDrillThrough="beginDrillThrough" 
@@ -688,7 +688,7 @@ The complete `Index.razor` configuration (including `PivotViewCellEditSettings`,
 
 In Dialog edit mode, a modal dialog form appears when users add or edit records. This mode is ideal for complex forms with multiple fields or when you need better control over data entry validation.
 
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight cshtml tabtitle="Index.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Data
