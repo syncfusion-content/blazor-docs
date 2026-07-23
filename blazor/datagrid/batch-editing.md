@@ -1031,7 +1031,7 @@ public class OrderDetails
 
 ## Enable single-click batch editing in Blazor DataGrid
 
-Single-click batch editing is enabled by setting the **AllowEditOnSingleClick** property to true in the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html). This configuration allows editable cells to enter edit mode on a single click rather than requiring a double-click.
+Single-click batch editing is enabled by setting the [AllowEditOnSingleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowEditOnSingleClick) property to true in the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html). This configuration allows editable cells to enter edit mode on a single click rather than requiring a double-click.
 
 When **AllowEditOnSingleClick** is set to **true**, clicking an editable cell once immediately activates edit mode. This approach streamlines the editing workflow and improves efficiency during batch editing, particularly when handling large datasets or frequent data modifications.
 
@@ -1097,6 +1097,8 @@ public class OrderDetails
 }
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrxNmVUBWOQLhre?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 N> The **AllowEditOnSingleClick** property applies only to **Batch** editing mode. Normal and Dialog editing modes are not affected by this setting.
 
