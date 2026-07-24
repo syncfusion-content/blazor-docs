@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Install the Syncfusion® Blazor Linux Installer
+# Install the Syncfusion® Blazor Linux installer
 
 The steps below describe how to install and use the Blazor Linux offline installer (ZIP), review the included content, and register the license key in the bundled sample projects.
 
@@ -36,7 +36,7 @@ Before you begin, confirm the following:
 3. Open the demo projects from the extracted folder using your preferred editor (for example, Visual Studio Code), and restore the included NuGet packages.
 4. Build and run the sample projects to verify the installation. Use `dotnet restore`, `dotnet build`, and `dotnet run` from the project directory.
 
-## License Key Registration in Samples
+## License key registration in samples
 
 After installation, a license key is required to register the demo source included in the Linux installer. The license key is applied in the entry point of your Blazor application.
 
