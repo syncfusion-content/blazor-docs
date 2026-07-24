@@ -25,7 +25,7 @@ To modify the [Blazor CheckBox](https://www.syncfusion.com/blazor-components/bla
 ## Customize Checkbox appearance
 
 You can customize the appearance of the Checkbox component using the CSS rules. Define own CSS rules according to your requirement and assign the class name to the
-[CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) property.
+[CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfInputBase-1.html#Syncfusion_Blazor_Buttons_SfInputBase_1_CssClass) property.
 
 The background and border color of the Checkbox is customized through the custom classes to create primary, success, warning, and danger info type of checkbox.
 
@@ -239,7 +239,7 @@ In the following example, the check icon can be customized by changing check ico
 
 ## Right-To-Left in Blazor CheckBox Component
 
-Checkbox component has RTL support. This can be achieved by setting [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) as `true`.
+Checkbox component has RTL support. This can be achieved by setting [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfInputBase-1.html#Syncfusion_Blazor_Buttons_SfInputBase_1_EnableRtl) as `true`.
 
 The following example illustrates how to enable right-to-left support in Checkbox component.
 
