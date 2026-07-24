@@ -534,7 +534,7 @@ By default, the Blazor DataGrid searches across all visible columns. To exclude 
 {% endhighlight %}
 {% endtabs %}
 
-N> For a broader overview, see the Blazor DataGrid feature tour and the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5).
+N> For a broader overview, see the Blazor DataGrid feature tour and the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2).
 
 ## Ignore accents in search
 
