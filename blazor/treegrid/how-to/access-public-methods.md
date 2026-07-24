@@ -9,9 +9,12 @@ documentation: ug
 
 # Access public methods in Tree Grid in Blazor TreeGrid Component
 
-The public methods available in the Tree Grid component can be accessed by using its reference defined in the component initialization.
+The methods are available through the component instance referenced by the `@ref` directive.
 
-The following example shows how to invoke the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PrintAsync) method on button click using the TreeGrid reference.
+A component reference is created by using the `@ref` directive in the `SfTreeGrid` tag.The component reference becomes available after rendering. Public methods should typically be invoked from user actions or lifecycle methods such as `OnAfterRenderAsync`.
+
+The following examples demonstrate how to access and invoke SfTreeGrid public APIs, such as methods and properties, through component references. This approach is useful when you need to interact with the TreeGrid programmatically from external UI elements such as custom buttons, toolbars, or other page actions.
+
 
 {% tabs %}
 
@@ -19,8 +22,8 @@ The following example shows how to invoke the [PrintAsync](https://help.syncfusi
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.Buttons
-@using  Syncfusion.Blazor.Grids;
-@using  Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
+@using Syncfusion.Blazor.TreeGrid;
 
 <SfButton OnClick="Print" CssClass="e-primary" IsPrimary="true" Content="Print data"></SfButton>
 
@@ -40,10 +43,13 @@ The following example shows how to invoke the [PrintAsync](https://help.syncfusi
 
     public List<TreeData> TreeGridData { get; set; }
 
-    public void Print()
+public async Task Print()
+{
+    if (TreeGrid != null)
     {
-        this.TreeGrid.PrintAsync();
+        await TreeGrid.PrintAsync();
     }
+}
 
     protected override void OnInitialized()
     {
@@ -52,12 +58,14 @@ The following example shows how to invoke the [PrintAsync](https://help.syncfusi
 }
 
 {% endhighlight %}
+{% endtabs %}
+
 
 {% highlight c# %}
 
-namespace TreeGridComponent.Data {
-
-public class TreeData
+namespace TreeGridComponent.Data
+{
+    public class TreeData
     {
         public int TaskId { get; set; }
         public string TaskName { get; set; }
@@ -85,6 +93,27 @@ public class TreeData
 
 {% endhighlight %}
 
-{% endtabs %}
+**Common TreeGrid public methods**
 
-N> Similarly all the public methods of the Tree Grid can be invoked. The available public methods can be found in this [link](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html).
+These public methods are frequently used to perform actions directly on the TreeGrid component instance:
+
+- `PrintAsync()` - Prints the current TreeGrid content as displayed in the view.
+- `RefreshAsync()` - Re-renders the TreeGrid to reflect any data or layout changes.
+- `ExpandAllAsync()` - Expands all parent rows in the TreeGrid.
+- `CollapseAllAsync()` - Collapses all expanded rows in the TreeGrid.
+- `SelectRowAsync(int rowIndex)` - Selects a row at the specified zero-based index.
+- `ClearSelectionAsync()` - Clears all currently selected rows in the TreeGrid.
+- `OpenEditDialogAsync()` / `CloseEditDialogAsync()` - Opens or closes the edit dialog for the selected row.
+
+**Best practices**
+
+- Always assign the `@ref` reference to a field so you can access the TreeGrid instance from your component code.
+- Call public methods in response to user actions, such as button clicks, or after rendering is complete.
+- Verify the TreeGrid reference is not `null` before calling a method from the component instance.
+- For asynchronous operations, use the method return value when necessary and handle any awaited tasks.
+
+**Additional notes**
+
+The TreeGrid public method API is part of the Syncfusion® Blazor TreeGrid component and is documented in the API reference. Use the links below to explore additional methods, properties, and overloads for the TreeGrid component.
+
+For detailed information about the available TreeGrid APIs, refer to the following API reference documentation: [SfTreeGrid Methods](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#methods) and [SfTreeGrid Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#properties).
