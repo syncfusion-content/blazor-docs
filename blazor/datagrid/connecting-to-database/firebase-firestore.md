@@ -50,7 +50,7 @@ Firebase projects host Firestore databases and handle authentication, storage, a
 **Instructions:**
 
 1. **Access Firebase Console**
-   - Navigate to [Firebase Console](https://console.firebase.google.com/).
+   - Navigate to [Firebase Console](https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fconsole.firebase.google.com%2F&dsh=S1495113961%3A1784888506266813&followup=https%3A%2F%2Fconsole.firebase.google.com%2F&osid=1&passive=1209600&flowName=WebLiteSignIn&flowEntry=ServiceLogin&ifkv=Ac50bxvmvbQRUYywkinvcmS7mi5nZuZdjD6O__jcPvkYs4ivZCQI4vyVf5_x5W-mkJ075JEcTg4KXA).
    - Sign in with your Google account.
 
 2. **Create a New Firebase Project**
@@ -130,7 +130,7 @@ Enable the required APIs in the Google Cloud project for Firestore.
 **Instructions:**
 
 1. **Access Google Cloud Console**
-   - Open [Google Cloud Console](https://console.cloud.google.com/).
+   - Open [Google Cloud Console](https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fconsole.cloud.google.com%2F&dsh=S-937483511%3A1784888506115795&followup=https%3A%2F%2Fconsole.cloud.google.com%2F&osid=1&passive=1209600&service=cloudconsole&flowName=WebLiteSignIn&flowEntry=ServiceLogin&ifkv=Ac50bxvn8S2Eo7gxNAcfX_-99sj1Z4Em6rGmq1Bqx_cXrzWrpUD6Vu1zmAiQOm2Y3HzpxqaY9hQIMg).
    - Select the Firebase project.
 
 2. **Navigate to APIs**
