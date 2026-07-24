@@ -9,18 +9,27 @@ documentation: ug
 
 # Overview of Blazor extension for Visual Studio
 
-The Syncfusion® Blazor extension for Visual Studio streamlines working with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components by configuring the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages and themes. Separate extensions are available for both Visual Studio 2022 and 2026.
+The Syncfusion® Blazor extension for Visual Studio streamlines working with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components by configuring the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages and themes. A single extension supports both Visual Studio 2022 and 2026.
 
 [Download the Visual Studio 2022 / Visual Studio 2026 extension](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.BlazorVSExtension)
 
+## Prerequisites
+
+- Visual Studio 2022 or Visual Studio 2026 (Community, Professional, or Enterprise)
+- .NET 8.0, .NET 9.0, or .NET 10.0 SDK
+- An active internet connection for installing the extension and downloading NuGet packages
+
+## Add-in summary
+
 The Syncfusion® Blazor extension provides the following add-ins in Visual Studio:
 
-[Project template](template-studio): Creates Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor applications with required configuration for development with Syncfusion<sup style="font-size:70%">&reg;</sup>Visual Blazor component.
+- [Project template](template-studio): Creates Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor applications preconfigured with the required NuGet packages, themes, namespaces, and sample render code.
+- [Code generator](code-generator): Inserts Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component markup into a Razor file at the cursor location and adds any required package and style references.
+- [Convert project](convert-project): Converts an existing Blazor application to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application by adding the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages and theme.
+- [Upgrade project](upgrade-project): Upgrades an existing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application from one Essential Studio<sup style="font-size:70%">&reg;</sup> version to another.
+- [Scaffolding](scaffolding): Adds data-driven pages and services wired to your project's data model and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
-[Code generator](code-generator): Adds Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component code in razor file at required place.
+## See also
 
-[Convert project](convert-project): Converts an existing Blazor Web Application to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Application by adding the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages and theme.
-
-[Upgrade project](upgrade-project): Upgrades an existing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Application from one Essential Studio version to another.
-
-[Scaffolding](scaffolding): Simplifies the process of adding views and controller action methods for Syncfusion® Blazor controls in Blazor applications. 
+- [Download and installation](download-and-installation)
+- [Syncfusion notifications](Syncfusion-Notifications) 
