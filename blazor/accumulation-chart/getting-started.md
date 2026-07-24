@@ -234,7 +234,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhdDciIMbTJzWSG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Accumulation Chart](images/getting-started/blazor-pie-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhdDciIMbTJzWSG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Accumulation Chart](images/getting-started/blazor-pie-chart-webapp.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/AccumulationChart).
 
