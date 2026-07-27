@@ -58,7 +58,7 @@ documentation: ug
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXLHXRiIgPLmJsJW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Bubble Chart](../images/chart-types-images/blazor-bubble-chart.webp)" %}
 
-N> Refer to the [Blazor Bubble Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/bubble-chart) feature tour page to know about its other groundbreaking feature representations and also explore the [Blazor Bubble Chart Example](https://blazor.syncfusion.com/demos/chart/bubble?theme=bootstrap5) to know how to render and configure the bubble type charts.
+N> Refer to the [Blazor Bubble Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/bubble-chart) feature tour page to know about its other groundbreaking feature representations and also explore the [Blazor Bubble Chart Example](https://blazor.syncfusion.com/demos/chart/bubble?theme=fluent2) to know how to render and configure the bubble type charts.
 
 ## Binding data with series
 
@@ -587,7 +587,7 @@ Use the [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrxXxiIUbdVMHTl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 
