@@ -729,7 +729,7 @@ public class OrderData
 
 ### Operator-based filtering in the filter bar
 
-The Syncfusion Blazor DataGrid supports operator-based filtering in the filter bar through the **ShowFilterBarOperator** property in [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
+The Blazor DataGrid supports operator-based filtering in the filter bar through the **ShowFilterBarOperator** property in [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
 
 When the **ShowFilterBarOperator** property is enabled, clicking the filter icon in a filter bar cell displays an operator dropdown menu. A filtering condition appropriate to the column type can be selected, removing the need to type operator expressions manually.
 

@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Install the Syncfusion® Blazor Web Installer
+# Install the Syncfusion® Blazor web installer
 
 The Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor web installer lets you install, update, and uninstall Blazor products in a single wizard. The sections below cover both installation and uninstallation.
 
@@ -30,7 +30,7 @@ The steps below show how to install the Essential Studio<sup style="font-size:70
 
    ![Web installer setup extracting package](images/webinstaller-1.webp)
 
-   > **Note:** The installer extracts `syncfusionessentialblazorwebinstaller_{version}.exe` and displays the extraction progress.
+   N> The installer extracts `syncfusionessentialblazorwebinstaller_{version}.exe` and displays the extraction progress.
 
 2. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Installer's **Welcome** wizard is displayed. Select **Next**.
 
@@ -58,7 +58,7 @@ The steps below show how to install the Essential Studio<sup style="font-size:70
 
    ![Web Installer Uninstall Previous Wizard](images/webinstaller-6.webp)
 
-   > **Note:** Starting with the 2021 Volume 1 release, Syncfusion<sup style="font-size:70%">&reg;</sup> provides the option to uninstall previous versions from 18.1 while installing the new version.
+   N> Starting with the 2021 Volume 1 release, Syncfusion<sup style="font-size:70%">&reg;</sup> provides the option to uninstall previous versions from 18.1 while installing the new version.
 
 5. A confirmation dialog is shown to uninstall the selected previous versions.
 
@@ -68,7 +68,7 @@ The steps below show how to install the Essential Studio<sup style="font-size:70
 
    ![Web Installer Product install/uninstall list](images/webinstaller-8.webp)
 
-   > **Note:** Select the **Download size** and **Installation size** links to view approximate sizes.
+   N> Select the **Download size** and **Installation size** links to view approximate sizes.
 
 7. The **Configuration** wizard is displayed. You can change the Download, Install, and Demos locations from here. You can also change the Additional settings on a product-by-product basis. Select **Next** to install with the default settings.
 
@@ -111,19 +111,19 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor can be uninstalled in tw
 
 Follow one of the options below to uninstall the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor installer.
 
-### Option 1: Uninstall Using the Syncfusion Blazor Web Installer
+### Option 1: Uninstall using the Syncfusion Blazor web installer
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> provides the option to uninstall products of the same version directly from the Web Installer application. Open the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Online Installer file from the download location by double-clicking it. Select the products to be uninstalled from the list, and the Web Installer uninstall them one by one.
 
 ![Web Installer Installed Products Uninstall](images/webinstaller-uninstall-2.webp)
 
-### Option 2: Uninstall From Windows Control Panel
+### Option 2: Uninstall from Windows Control Panel
 
 You can uninstall all the installed products by selecting the **Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> {version}** entry (element 1 in the following screenshot) from the Windows Control Panel, or you can uninstall Blazor alone by selecting the **Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> for Blazor {version}** entry (element 2 in the following screenshot) from the Windows Control Panel.
 
 ![Control Panel Uninstallation entries](images/webinstaller-uninstall-1.webp)
 
-> **Note:** If the **Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> for Blazor {version}** entry is selected from the Windows Control Panel, only the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor product is removed and the default MSI uninstallation window is displayed.
+N> If the **Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> for Blazor {version}** entry is selected from the Windows Control Panel, only the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor product is removed and the default MSI uninstallation window is displayed.
 
 1. The Blazor web installer **Welcome** wizard is displayed. Select **Next**.
 
@@ -153,7 +153,7 @@ You can uninstall all the installed products by selecting the **Syncfusion<sup s
 
    ![Web Installer Product Install/Uninstall Wizard](images/webinstaller-uninstall-5.webp)
 
-   > **Note:** Select the **Download Size** and **Installation Size** links to view the approximate size of the download and installation.
+   N> Select the **Download Size** and **Installation Size** links to view the approximate size of the download and installation.
 
 6. The **Configuration** wizard is displayed. You can change the Download, Install, and Demos locations from here. You can also change the Additional settings on a product-by-product basis. Select **Next** to install with the default settings.
 

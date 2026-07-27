@@ -13,10 +13,6 @@ Migrating applications from [ASP.NET Core Razor Pages](https://learn.microsoft.c
 
 ## Why migrate from ASP.NET Core Razor Pages to Blazor?
 
-[ASP.NET Core Razor Pages](https://learn.microsoft.com/en-us/aspnet/core/razor-pages/) simplify the MVC pattern by combining UI and logic at the page level. However, for highly interactive applications, developers often rely on JavaScript, partial rendering, and additional client-side logic to manage dynamic UI behavior.
-
-[Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/) provides a modern approach by enabling component based UI development in C#, along with built-in state management and event driven updates. This reduces dependency on external JavaScript frameworks and improves maintainability, scalability, and developer productivity.
-
 | Aspect     | Razor Pages      | Blazor         |
 | --- | ---| --- |
 | Execution model   | Request response (page based)  | Blazor Server (SignalR) or WebAssembly (client-side)     |
@@ -57,21 +53,23 @@ Migrating applications from [ASP.NET Core Razor Pages](https://learn.microsoft.c
 
 N> Business logic, POCO models, and stateless services from Razor Pages can typically be reused in Blazor with minimal changes. For EF Core, consider using `IDbContextFactory<T>` to avoid `DbContext` lifetime issues in Blazor Server apps. See [EF Core with Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/blazor-ef-core).
 
-## Migrating components from ASP.NET Core Razor Pages to Blazor
+## Common setup and configuration
 
-Create a [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/) project using one of the following getting started guides.
+Create a Blazor project using one of the following getting started guides.
 
 * [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 * [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 
+This migration guide focuses on the **Blazor Web App (Interactive Server)** approach, which provides a straightforward migration path from ASP.NET Razor Pages applications by keeping business logic and state management on the server. Interactive Server rendering uses SignalR to synchronize UI interactions between the browser and server, making it suitable for enterprise applications that are traditionally built using ASP.NET Razor Pages and are being modernized to a component-based web architecture.
+
 The following shared setup applies to all components and covers the common configuration required before proceeding to the [component specific migration steps](#component-specific-migration-steps).
 
 ### Package installation
 
-In [ASP.NET Core Razor Pages](https://learn.microsoft.com/en-us/aspnet/core/razor-pages/), controls are typically installed using a single combined package, such as [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core). 
+In ASP.NET Core Razor Pages, controls are typically installed using a single combined package, such as [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core). 
 
-In [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/) applications, using individual component packages improves performance and reduces application size. For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
+In Blazor applications, using individual component packages improves performance and reduces application size. For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 Additionally, install the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) NuGet package for styling support.
 
@@ -129,7 +127,7 @@ Import the required namespaces in the `~/_Imports.razor` file.
 {% endhighlight %}
 {% endtabs %}
 
-The above lists the namespaces for all components covered in this guide. Import only the namespaces required for the components you use.
+This example includes the namespaces used by the components covered in this guide. Import only the namespaces needed for the components used in your application.
 
 ### Theme and script configuration
 
@@ -693,6 +691,7 @@ dotnet run
 
 ## See also
 
+* [Migrate WPF to Blazor Components](https://blazor.syncfusion.com/documentation/common/migration/wpf-blazor-migration)
 * [Getting started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
 * [Getting started with Blazor Scheduler](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app)
