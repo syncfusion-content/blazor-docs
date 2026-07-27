@@ -9,7 +9,7 @@ documentation: ug
 
 # Upload in Blazor File Manager component
 
-The Blazor File Manager component provides a [FileManagerUploadSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html) property with various options to customize how files are uploaded, such as controlling file size, restricting file types, and enabling chunk uploads.
+The [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component provides a [FileManagerUploadSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html) property with various options to customize how files are uploaded, such as controlling file size, restricting file types, and enabling chunk uploads.
 
 ## Directory Upload
 
