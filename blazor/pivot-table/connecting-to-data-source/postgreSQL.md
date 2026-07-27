@@ -121,7 +121,7 @@ SELECT * FROM public.orders;
 
 The screenshot below shows the records successfully inserted into the `orders` table in PostgreSQL.
 
-![PgAdmin Query Tool Interface](../images/blazor-pivottable-postgresql-crud-pgadmintool.webp)
+![PgAdmin Query Tool Interface](../images/blazor-pivot-table-PostgreSQL-crud-pgadmintool.webp)
 
 **Image Content:**
 - pgAdmin Query Tool window.
@@ -418,7 +418,7 @@ Before wiring up the Pivot Table, confirm the API is returning data correctly. W
 
 The screenshot below shows the JSON response returned by the `POST /api/Order` endpoint.
 
-![Pivot API Order](../images/blazor-pivottable-postgresql-order-api.webp)
+![Pivot API Order](../images/blazor-pivot-table-PostgreSQL-order-api.webp)
 
 **Image Content:**
 - A REST client (Postman) or browser window.
@@ -486,9 +486,9 @@ app.Run();
 - **`AddRazorComponents()` and `AddInteractiveServerComponents()`**: Enables Blazor server-side rendering with interactive components.
 - **`AddControllers()`**: Registers the API controllers (`OrderController`) so the URL Adaptor endpoints are reachable.
 - **`MapControllers()`**: Adds the controller routes to the application's endpoint pipeline.
-- **`UseAntiforgery()`**: Enables antiforgery middleware for endpoints that explicitly require it. The sample API actions do not add antiforgery validation.
+- **`UseAntiforgery()`**: Enables anti-forgery middleware for endpoints that explicitly require it. The sample API actions do not add anti-forgery validation.
 
-> **Note:** The URL Adaptor posts JSON directly to controller endpoints; Blazor interactive-server transport does not automatically add a token to arbitrary API requests. If you add antiforgery validation to these browser-accessible write actions, configure the adaptor to send the request token and document the matching server configuration.
+> **Note:** The URL Adaptor posts JSON directly to controller endpoints; Blazor interactive-server transport does not automatically add a token to arbitrary API requests. If you add anti-forgery validation to these browser-accessible write actions, configure the adaptor to send the request token and document the matching server configuration.
 
 The service registration has been completed successfully.
 
@@ -562,7 +562,7 @@ The complete `App.razor` for the sample looks like this:
 </html>
 ```
 
-Blazor components are now configured and ready to use. For additional guidance, refer to the Pivot Table [getting-started](https://blazor.syncfusion.com/documentation/pivotview/getting-started) documentation.
+Blazor components are now configured and ready to use. For additional guidance, refer to the Pivot Table [getting-started](https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp) documentation.
 
 ### Step 2: Add the PivotTable Package Reference
 
@@ -668,7 +668,7 @@ The Home component has been updated successfully with the Pivot Table.
 
 When `dotnet run` launches the application and the browser loads the URL shown in the terminal, the Pivot Table renders the PostgreSQL `orders` data with the configured field arrangement: `CustomerName` as rows, `EmployeeID` as columns, and `Freight` aggregated as a value. The Field List panel is available so end users can rearrange fields at runtime.
 
-![Blazor Pivot Table](../images/blazor-pivottable-postgresql.webp)
+![Blazor Pivot Table](../images/blazor-pivot-table-PostgreSQL.webp)
 
 **Image Content:**
 - The Blazor application running in the browser at `http://localhost:5145`.
@@ -687,7 +687,7 @@ The URL Adaptor is the contract between the Blazor Pivot Table and the PostgreSQ
 
 1. The pivot table serializes its current data state into a `DataManagerRequest` object.
 2. The `SfDataManager` posts that object as JSON to the `Url` endpoint (`POST /api/Order`).
-3. The controller deserializes the request, queries PostgreSQL, and returns `{ result, count }`.
+3. The controller deserialize the request, queries PostgreSQL, and returns `{ result, count }`.
 4. For write operations, the pivot table posts a `CRUDModel<Order>` payload to the matching `InsertUrl`, `UpdateUrl`, or `RemoveUrl`.
 
 ```razor
@@ -720,7 +720,7 @@ The `OrderController` exposes the following REST endpoints:
 |--------|-------|---------|-------------|
 | `POST` | `/api/Order` | `DataManagerRequest` | Returns all order records as `{ result, count }`; this sample does not process request operations. |
 | `POST` | `/api/Order/Insert` | `CRUDModel<Order>` | Inserts a new order into the `orders` table. |
-| `POST` | `/api/Order/Update` | `CRUDModel<Order>` | Updates an existing order filtered by `orderid`. |
+| `POST` | `/api/Order/Update` | `CRUDModel<Order>` | Updates an existing order filtered by `Order ID`. |
 | `POST` | `/api/Order/Delete` | `CRUDModel<Order>` | Deletes an order using the `Key` (primary key value). |
 
 **Sample read response:**
@@ -765,12 +765,12 @@ The `Insert` action is implemented in the complete controller in Step 4. It vali
 1. The user opens the edit dialog from a pivot cell and adds a new row.
 2. The pivot table posts the new row to `InsertUrl`.
 3. The controller builds an `INSERT` statement and executes it through Npgsql.
-4. PostgreSQL stores the new record (the `orderid` SERIAL column auto-increments).
+4. PostgreSQL stores the new record (the `Order ID` SERIAL column auto-increments).
 5. The pivot table refreshes by calling the read endpoint, and the new record appears in the summarized view.
 
 The screenshot below shows the `CRUDModel<Order>` value received in the `Insert` controller action — the `Value` parameter carrying the `Action`, `KeyColumn`, and the new order record (`CustomerName`, `EmployeeID`, `ShipCity`, `Freight`) that will be inserted into the `orders` table.
 
-![Insert Operation](../images/blazor-pivottable-postgresql-insert.webp)
+![Insert Operation](../images/blazor-pivot-table-PostgreSQL-insert.webp)
 
 **Image Content:**
 - The `Insert` action of `OrderController` open in the editor.
@@ -791,20 +791,20 @@ The `Update` action is implemented in the complete controller in Step 4. It vali
 
 1. The user edits a row in the edit dialog and saves it.
 2. The pivot table posts the edited row to `UpdateUrl`.
-3. The controller builds an `UPDATE` statement filtered by `orderid` and executes it.
+3. The controller builds an `UPDATE` statement filtered by `Order ID` and executes it.
 4. PostgreSQL updates the matching record.
 5. The pivot table refreshes and reflects the updated aggregated value.
 
 The screenshot below shows the `CRUDModel<Order>` value received in the `Update` controller action — the `Value` parameter carrying the `Action`, `KeyColumn`, and the edited order record (`CustomerName`, `EmployeeID`, `ShipCity`, `Freight`, and the `OrderID` used as the update filter) that will update the matching row in the `orders` table.
 
-![Update Operation](../images/blazor-pivottable-postgresql-update.webp)
+![Update Operation](../images/blazor-pivot-table-PostgreSQL-update.webp)
 
 **Image Content:**
 - The `Update` action of `OrderController` open in the editor.
 - The `Value` parameter of type `CRUDModel<Order>` expanded to reveal its contents.
 - The `Action` set to `"update"`, the `KeyColumn` set to `"orderID"`, and the `Value` property holding the modified order fields — including the changed `Freight` or `ShipCity` — along with the `OrderID` used to filter the `UPDATE`.
 
-**Purpose:** Confirms the exact `CRUDModel<Order>` value received by the `Update` action so customers can verify that the client-side payload maps correctly to the server-side `Value` parameter and the `orderid` filter before the `UPDATE` statement runs.
+**Purpose:** Confirms the exact `CRUDModel<Order>` value received by the `Update` action so customers can verify that the client-side payload maps correctly to the server-side `Value` parameter and the `Order ID` filter before the `UPDATE` statement runs.
 
 **Capture Source:** Trigger an update from the edit dialog (double-click a pivot cell, select a row, click **Edit**, modify a field, click **Update**) and inspect the `Value` parameter received by the `Update` controller action.
 
@@ -818,18 +818,18 @@ The `Delete` action is implemented in the complete controller in Step 4. It vali
 
 1. The user selects a row in the edit dialog and deletes it.
 2. The pivot table posts the `Key` (primary key value) to `RemoveUrl`.
-3. The controller builds a `DELETE` statement filtered by `orderid` and executes it.
+3. The controller builds a `DELETE` statement filtered by `Order ID` and executes it.
 4. PostgreSQL removes the matching record.
 5. The pivot table refreshes and the record is removed from the summarized view.
 
-The screenshot below shows the `CRUDModel<Order>` value received in the `Delete` controller action — the `Value` parameter carrying the `Action`, `KeyColumn`, and the `Key` (primary key value of the deleted row) that the `DELETE` statement uses to filter by `orderid`.
+The screenshot below shows the `CRUDModel<Order>` value received in the `Delete` controller action — the `Value` parameter carrying the `Action`, `KeyColumn`, and the `Key` (primary key value of the deleted row) that the `DELETE` statement uses to filter by `Order ID`.
 
-![Delete Operation](../images/blazor-pivottable-postgresql-delete.webp)
+![Delete Operation](../images/blazor-pivot-table-PostgreSQL-delete.webp)
 
 **Image Content:**
 - The `Delete` action of `OrderController` open in the editor.
 - The `Value` parameter of type `CRUDModel<Order>` expanded to reveal its contents.
-- The `Action` set to `"remove"`, the `KeyColumn` set to `"orderID"`, and the `Key` containing the `orderid` of the deleted record.
+- The `Action` set to `"remove"`, the `KeyColumn` set to `"orderID"`, and the `Key` containing the `Order ID` of the deleted record.
 
 **Purpose:** Confirms the exact `CRUDModel<Order>` value received by the `Delete` action so customers can verify that the primary key (`Key`) is being received correctly before the `DELETE` statement runs.
 
@@ -937,7 +937,7 @@ The sample uses relative API URLs, parameterized Npgsql commands, nullable-colum
 
 ## Complete Sample Repository
 
-A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/syncfusion-blazor-pivot-table-postgresql-database-binding-sample).
+A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/syncfusion-blazor-pivot-table-PostgreSQL-database-binding-sample).
 
 ## Summary
 

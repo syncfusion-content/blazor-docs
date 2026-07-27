@@ -360,7 +360,7 @@ The following table shows how C# properties map to database columns and GraphQL 
 
 **Important Convention: Camel Case Conversion**
 
-**Hot Chocolate GraphQL** automatically converts C# property names (**PascalCase**) to GraphQL field names (**camelCase**). This convention ensures consistent naming in the GraphQL schema. The `[JsonPropertyName]` attributes used above are honoured by the Syncfusion GraphQL adaptor when serializing and deserializing the request and response payloads.
+**Hot Chocolate GraphQL** automatically converts C# property names (**PascalCase**) to GraphQL field names (**camelCase**). This convention ensures consistent naming in the GraphQL schema. The `[JsonPropertyName]` attributes used above are honored by the Syncfusion GraphQL adaptor when serializing and deserializing the request and response payloads.
 
 - C# Property: `ExpenseId` → GraphQL Field: `expenseId`
 - C# Property: `Department` → GraphQL Field: `department`
@@ -808,7 +808,7 @@ Syncfusion provides UI components—including the Pivot Table—that display mul
 <link href="_content/Syncfusion.Blazor.Themes/tailwind3.css" rel="stylesheet" />
 ```
 
-The Blazor framework script (`_framework/blazor.web.js`) and the Syncfusion Blazor script (`_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js`) are placed at the end of the `<body>` element so the framework is fully loaded before the Syncfusion runtime is initialised. The default Blazor template already includes the framework script; add the Syncfusion script line immediately after it:
+The Blazor framework script (`_framework/blazor.web.js`) and the Syncfusion Blazor script (`_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js`) are placed at the end of the `<body>` element so the framework is fully loaded before the Syncfusion runtime is initialized. The default Blazor template already includes the framework script; add the Syncfusion script line immediately after it:
 
 ```html
 <script src="@Assets["_framework/blazor.web.js"]"></script>
