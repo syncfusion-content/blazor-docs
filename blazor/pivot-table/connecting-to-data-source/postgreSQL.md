@@ -9,23 +9,23 @@ documentation: ug
 
 # Connecting PostgreSQL to Blazor Pivot Table Using URL Adaptor
 
-The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) supports binding data from a PostgreSQL database using the **URL Adaptor**. This remote-data binding approach exposes the database through a RESTful API controller and lets the pivot table communicate with the server over standard HTTP, making it ideal for large datasets and shared back-ends.
+The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) supports binding data from a PostgreSQL database using the **URL Adaptor**. This remote-data binding approach exposes the database through an HTTP API controller and lets the pivot table communicate with the server over standard HTTP. Server-side query processing is required before using the pattern for large datasets.
 
-**What is the URL Adaptor?**
+### What is the URL Adaptor?
 
 The URL Adaptor is a Syncfusion data adaptor that delegates every data operation—read, insert, update, and delete—to a remote endpoint. Instead of fetching the entire dataset into the browser, the pivot table posts a serialized [`DataManagerRequest`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) to a controller action, and the server returns the processed result. This keeps the pivot table lightweight and pushes the heavy lifting to the server.
 
-**Key Benefits of the URL Adaptor**
+### Key Benefits of the URL Adaptor
 
-- **Server-Side Processing**: Searching, filtering, sorting, aggregation, and paging run on the server, so only the required slice of data travels over the network.
+- **Remote API contract**: The URL Adaptor sends requests to an HTTP endpoint that returns a `{ result, count }` response. The sample below loads the complete `orders` table; add explicit `DataManagerRequest` processing before using it for large datasets.
 - **RESTful contract**: A clean HTTP API that any client (Blazor, Angular, React, mobile) can consume.
 - **Full CRUD Support**: Dedicated `Insert`, `Update`, and `Remove` endpoints power cell editing and drill-through operations in the pivot table.
 - **Loose Coupling**: The pivot component knows only the endpoint URLs, not the underlying database or data-access technology.
-- **Scalability**: Stateless controllers and connection-pooled database access scale horizontally.
+- **Scalability**: Stateless controllers and connection-pooled database access can scale horizontally when the API also applies server-side query operations.
 
-**What is Npgsql?**
+### What is Npgsql?
 
-[Npgsql](https://www.npgsql.org/) is the open-source ADO.NET data provider for PostgreSQL. It allows .NET applications to connect to PostgreSQL, execute SQL commands, and read results using the familiar `DbConnection`, `DbCommand`, and `DbDataAdapter` primitives. The `Npgsql.EntityFrameworkCore.PostgreSQL` NuGet package ships the Npgsql provider and is everything the sample needs to talk to PostgreSQL.
+[Npgsql](https://www.npgsql.org/) is the open-source ADO.NET data provider for PostgreSQL. It allows .NET applications to connect to PostgreSQL, execute SQL commands, and read results using `NpgsqlConnection`, `NpgsqlCommand`, and `NpgsqlDataAdapter`. This sample uses the direct `Npgsql` package and does not use Entity Framework Core.
 
 ## Prerequisites
 
@@ -34,13 +34,24 @@ Ensure the following software and packages are installed before proceeding:
 | Software/Package | Version | Purpose |
 |-----------------|---------|---------|
 | Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
-| .NET SDK | net10.0 or compatible | Runtime and build tools |
+| .NET SDK | 10.0 | Runtime and build tools |
 | PostgreSQL Server | 12 or later | Database server |
 | pgAdmin 4 | Latest | PostgreSQL GUI management tool |
-| Syncfusion.Blazor.PivotTable | Latest | Pivot Table and UI components |
-| Syncfusion.Blazor.Themes | Latest | Styling for Pivot Table components |
-| Npgsql.EntityFrameworkCore.PostgreSQL | 10.0.0 or later | PostgreSQL data provider for .NET |
-| Newtonsoft.Json | 13.0.3 or later | JSON serialization for CRUD models |
+| Syncfusion.Blazor.PivotTable | `{{site.blazorversion}}` | Pivot Table and UI components |
+| Syncfusion.Blazor.Themes | `{{site.blazorversion}}` | Styling for Pivot Table components |
+| Npgsql | 10.0.3 | PostgreSQL data provider for .NET |
+
+The sample targets .NET 10 and the corresponding Syncfusion Blazor release. Do not use wildcard package versions. If you use another .NET or Syncfusion version, verify the API differences before applying the code.
+
+`{{site.blazorversion}}` is resolved by the documentation build. When copying the commands into a standalone project, replace it with the concrete Syncfusion version used by the sample.
+
+### Step 0: Create the Blazor application
+
+Create a **Blazor Web App** named `URLAdaptor` with the .NET 10 SDK. Select **Interactive Server** interactivity and enable HTTPS. The project should contain `Program.cs`, `appsettings.json`, `wwwroot`, `Components`, and `Properties/launchSettings.json`.
+
+If PostgreSQL and pgAdmin are not already installed, install them first, start the PostgreSQL service, and create a database user with permission to connect to `OrderDB`, use the `public` schema, read and modify `public.orders`, and use the `orders_orderid_seq` sequence.
+
+Syncfusion packages obtained from NuGet.org also require a valid Syncfusion license or trial key. Register the key before the first Syncfusion component is initialized; see the [Syncfusion license-key instructions](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application).
 
 ## Setting Up the PostgreSQL Environment
 
@@ -55,26 +66,26 @@ First, the **PostgreSQL database** structure must be created to store order reco
    - Right-click on **Databases** → Select **Create** → **Database**
    - Enter name: `OrderDB`
    - Click **Save**
-3. **Create Table**:
-   - Expand `OrderDB` → Right-click on **Schemas** → **public** → **Tables**
-   - Click **Create** → **Table**
-   - Enter table name: `orders`
-   - Define columns as per the script below
-4. **Execute SQL Script** (Alternative method):
-   - Right-click on `OrderDB` → **Query Tool**
-   - Copy and paste the SQL script below
-   - Execute (F5 or Run button)
+3. **Create the table and sample rows using one of these methods**:
+    - **UI method:** Expand `OrderDB` → **Schemas** → **public** → **Tables**, create `orders`, and define the columns from the SQL script; then insert the sample rows separately.
+    - **SQL method:** Right-click on `OrderDB` → **Query Tool**, copy the table/sample-data script below, and execute it with F5 or the Run button. Do not create the table manually first.
 
-**SQL Script for PostgreSQL:**
+If you prefer SQL for database creation, run the separate database-creation script while connected to the maintenance database, then open a new Query Tool connection to `OrderDB` for the table/sample-data script.
+
+4. **Verify the table and sample rows**:
+    - Right-click on `OrderDB` → **Query Tool**
+    - Run `SELECT * FROM public.orders;`
+
+**Database creation script** (run while connected to the maintenance database, such as `postgres`):
 
 ```sql
--- Create Database
 CREATE DATABASE OrderDB;
+```
 
--- Connect to the database
-\c OrderDB;
+After the database is created, open a new pgAdmin Query Tool connection to `OrderDB` and run the following table and sample-data script:
 
--- Create orders Table
+```sql
+-- Create orders table
 CREATE TABLE public.orders (
     orderid SERIAL PRIMARY KEY,
     customername VARCHAR(100) NOT NULL,
@@ -83,7 +94,7 @@ CREATE TABLE public.orders (
     freight NUMERIC(12,2)
 );
 
--- Insert Sample Data
+-- Insert sample data
 INSERT INTO public.orders (customername, employeeid, shipcity, freight)
 VALUES
 ('Alice Johnson', 1, 'New York', 120.50),
@@ -124,9 +135,7 @@ The screenshot below shows the records successfully inserted into the `orders` t
 
 ### Step 2: Install Required NuGet Packages
 
-Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template. This template automatically generates essential starter files—such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
-
-For this guide, a Blazor application named **URLAdaptor** has been created. Once the project is set up, the next step involves installing the required NuGet packages.
+The `URLAdaptor` Blazor Web App was created in Step 0. Install the required packages in the web project selected as the Package Manager Console's **Default project**.
 
 **Method 1: Using Package Manager Console**
 
@@ -135,10 +144,9 @@ For this guide, a Blazor application named **URLAdaptor** has been created. Once
 3. Run the following commands:
 
 ```powershell
-Install-Package Syncfusion.Blazor.PivotTable -Version {{site.blazorversion}};
-Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}};
-Install-Package Npgsql.EntityFrameworkCore.PostgreSQL -Version 10.0.3;
-Install-Package Newtonsoft.Json -Version 13.0.3
+Install-Package Syncfusion.Blazor.PivotTable -Version {{site.blazorversion}}
+Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
+Install-Package Npgsql -Version 10.0.3
 ```
 
 **Method 2: Using NuGet Package Manager UI**
@@ -147,8 +155,7 @@ Install-Package Newtonsoft.Json -Version 13.0.3
 2. Search for and install each package individually:
    - **[Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable/)** (version {{site.blazorversion}})
    - **[Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)** (version {{site.blazorversion}})
-   - **Npgsql.EntityFrameworkCore.PostgreSQL** (version 10.0.3 or later)
-   - **Newtonsoft.Json** (version 13.0.3 or later)
+   - **Npgsql** (version 10.0.3)
 
 **Project File Reference**
 
@@ -164,10 +171,9 @@ The installed packages are reflected in the **URLAdaptor.csproj** file:
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Syncfusion.Blazor.PivotTable" Version="*" />
-    <PackageReference Include="Syncfusion.Blazor.Themes" Version="*" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.3" />
+    <PackageReference Include="Syncfusion.Blazor.PivotTable" Version="{{site.blazorversion}}" />
+    <PackageReference Include="Syncfusion.Blazor.Themes" Version="{{site.blazorversion}}" />
+    <PackageReference Include="Npgsql" Version="10.0.3" />
   </ItemGroup>
 
 </Project>
@@ -179,18 +185,29 @@ All required packages are now installed.
 
 A connection string contains the information needed to connect the application to the PostgreSQL database, including the server address, database name, and authentication credentials.
 
-The sample project defines the connection string as a private field directly inside `OrderController.cs`. This keeps the data-access configuration alongside the controller that consumes it, and is the pattern used throughout this guide.
+The sample stores the connection string in configuration and injects it into `OrderController`. This keeps credentials out of source code and allows each environment to provide its own database settings.
 
 **Instructions:**
 
-1. Open the `Controllers/OrderController.cs` file (created in [Step 4](#step-4-create-the-controller)).
-2. Add the connection string as a field at the top of the `OrderController` class:
+1. Open `appsettings.json` and add the following configuration:
+
+```json
+{
+  "ConnectionStrings": {
+    "PostgreSQL": "Host=localhost;Port=5432;Database=OrderDB;Username=postgres;Password=replace-with-your-password;"
+  }
+}
+```
+
+2. In `OrderController`, inject `IConfiguration` and retrieve the named connection string:
 
 ```csharp
-[ApiController]
-public class OrderController : ControllerBase
+private readonly string ConnectionString;
+
+public OrderController(IConfiguration configuration)
 {
-    string ConnectionString = @"Host=localhost;Port=5432;Database=OrderDB;Username=postgres;Password=password@123;";
+    ConnectionString = configuration.GetConnectionString("PostgreSQL")
+        ?? throw new InvalidOperationException("The PostgreSQL connection string is not configured.");
 }
 ```
 
@@ -204,9 +221,9 @@ public class OrderController : ControllerBase
 | Username | The PostgreSQL username (default is `postgres`) |
 | Password | The password for the PostgreSQL user account |
 
-This `ConnectionString` field is reused by every action in the controller (`Post`, `GetOrderData`, `Insert`, `Update`, and `Delete`) when opening Npgsql connections.
+This `ConnectionString` field is reused by every database action when opening Npgsql connections.
 
-> **Security Note:** For production environments, do not hard-code credentials in source files. Move the connection string to environment variables or a secrets manager such as Azure Key Vault, and read it at runtime. Example: `Password=${DB_PASSWORD}` and set the environment variable `DB_PASSWORD` on the deployment server.
+> **Security Note:** Do not commit passwords to source control. For local development, use .NET user secrets; for deployment, use environment variables or a secrets manager such as Azure Key Vault. The environment-variable form is `ConnectionStrings__PostgreSQL`.
 
 The database connection string has been configured successfully.
 
@@ -223,119 +240,132 @@ The controller is the heart of the URL Adaptor integration. It exposes HTTP endp
 ```csharp
 using Microsoft.AspNetCore.Mvc;
 using Syncfusion.Blazor.Data;
-using Syncfusion.Blazor;
 using Npgsql;
 using System.Data;
 using System.ComponentModel.DataAnnotations;
-using Newtonsoft.Json;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.Text.Json.Serialization;
 
 namespace URLAdaptor.Controllers
 {
     [ApiController]
+    [Route("api/[controller]")]
     public class OrderController : ControllerBase
     {
-        string ConnectionString = @"Host=localhost;Port=5432;Database=OrderDB;Username=postgres;Password=password@123;";
+        private readonly string ConnectionString;
 
-        [HttpPost]
-        [Route("api/[controller]")]
-        /// <summary>
-        /// Returns the data collection as result and count after performing data operations
-        /// based on the request from <see cref="DataManagerRequest"/>.
-        /// </summary>
-        /// <param name="DataManagerRequest">Contains searching, filtering, sorting, aggregates
-        /// and paging information sent from the Blazor Pivot Table component side.</param>
-        /// <returns>The data collection's type is determined by how this method has been implemented.</returns>
-        public object Post([FromBody] DataManagerRequest DataManagerRequest)
+        public OrderController(IConfiguration configuration)
         {
-            IEnumerable<Order> DataSource = GetOrderData();
-
-            int count = DataSource.Cast<Order>().Count();
-
-            // RequiresCount is passed from the control side itself. Wherever on-demand data
-            // fetching is needed, RequiresCount is set as true on the component side. Here paging
-            // loads data on demand whenever the next page is clicked on the Blazor Pivot Table side.
-            return new { result = DataSource, count = count };
-        }
-
-        [Route("api/[controller]")]
-        public List<Order> GetOrderData()
-        {
-            string QueryStr = "SELECT * FROM public.orders ORDER BY orderid";
-
-            using NpgsqlConnection sqlConnection = new(ConnectionString);
-            sqlConnection.Open();
-
-            using NpgsqlCommand SqlCommand = new(QueryStr, sqlConnection);
-            using NpgsqlDataAdapter DataAdapter = new(SqlCommand);
-
-            DataTable DataTable = new();
-            DataAdapter.Fill(DataTable);
-
-            var DataSource = (from DataRow Data in DataTable.Rows
-                              select new Order()
-                              {
-                                  OrderID = Convert.ToInt32(Data["orderid"]),
-                                  CustomerName = Data["customername"].ToString(),
-                                  EmployeeID = Convert.ToInt32(Data["employeeid"]),
-                                  ShipCity = Data["shipcity"].ToString(),
-                                  Freight = Convert.ToDecimal(Data["freight"])
-                              }).ToList();
-
-            return DataSource;
+            ConnectionString = configuration.GetConnectionString("PostgreSQL")
+                ?? throw new InvalidOperationException("The PostgreSQL connection string is not configured.");
         }
 
         [HttpPost]
-        [Route("api/Order/Insert")]
-        public void Insert([FromBody] CRUDModel<Order> Value)
+        public object Post([FromBody] DataManagerRequest request)
         {
-            string Query =
-                $"INSERT INTO orders " +
-                $"(customername, freight, shipcity, employeeid) " +
-                $"VALUES " +
-                $"('{Value.Value.CustomerName}', " +
-                $"{Value.Value.Freight}, " +
-                $"'{Value.Value.ShipCity}', " +
-                $"{Value.Value.EmployeeID})";
+            // This sample intentionally returns the complete table. The request is
+            // accepted to satisfy the URL Adaptor contract but is not processed.
+            _ = request;
+            List<Order> dataSource = GetOrderData();
 
-            using NpgsqlConnection Connection = new(ConnectionString);
-            Connection.Open();
+            return new { result = dataSource, count = dataSource.Count };
+        }
 
-            using NpgsqlCommand Command = new(Query, Connection);
-            Command.ExecuteNonQuery();
+        private List<Order> GetOrderData()
+        {
+            const string query = "SELECT orderid, customername, employeeid, shipcity, freight FROM public.orders ORDER BY orderid";
+
+            using NpgsqlConnection connection = new(ConnectionString);
+            connection.Open();
+
+            using NpgsqlCommand command = new(query, connection);
+            using NpgsqlDataAdapter dataAdapter = new(command);
+
+            DataTable dataTable = new();
+            dataAdapter.Fill(dataTable);
+
+            return (from DataRow row in dataTable.Rows
+                    select new Order
+                    {
+                        OrderID = Convert.ToInt32(row["orderid"]),
+                        CustomerName = row["customername"].ToString(),
+                        EmployeeID = Convert.ToInt32(row["employeeid"]),
+                        ShipCity = row.IsNull("shipcity") ? null : row["shipcity"].ToString(),
+                        Freight = row.IsNull("freight") ? null : Convert.ToDecimal(row["freight"])
+                    }).ToList();
         }
 
         [HttpPost]
-        [Route("api/Order/Update")]
-        public void Update([FromBody] CRUDModel<Order> Value)
+        [Route("Insert")]
+        public IActionResult Insert([FromBody] CRUDModel<Order> value)
         {
-            string Query =
-                $"UPDATE orders SET " +
-                $"customername='{Value.Value.CustomerName}', " +
-                $"freight={Value.Value.Freight}, " +
-                $"employeeid={Value.Value.EmployeeID}, " +
-                $"shipcity='{Value.Value.ShipCity}' " +
-                $"WHERE orderid={Value.Value.OrderID}";
+            if (value.Value is not Order order || string.IsNullOrWhiteSpace(order.CustomerName) || !order.EmployeeID.HasValue)
+            {
+                return BadRequest("CustomerName and EmployeeID are required.");
+            }
 
-            using NpgsqlConnection Connection = new(ConnectionString);
-            Connection.Open();
+            const string query = "INSERT INTO public.orders (customername, freight, shipcity, employeeid) " +
+                                 "VALUES (@customername, @freight, @shipcity, @employeeid)";
 
-            using NpgsqlCommand Command = new(Query, Connection);
-            Command.ExecuteNonQuery();
+            using NpgsqlConnection connection = new(ConnectionString);
+            connection.Open();
+
+            using NpgsqlCommand command = new(query, connection);
+            command.Parameters.AddWithValue("customername", order.CustomerName);
+            command.Parameters.AddWithValue("freight", order.Freight.HasValue ? order.Freight.Value : (object)DBNull.Value);
+            command.Parameters.AddWithValue("shipcity", order.ShipCity ?? (object)DBNull.Value);
+            command.Parameters.AddWithValue("employeeid", order.EmployeeID.Value);
+            command.ExecuteNonQuery();
+
+            return Ok(order);
         }
 
         [HttpPost]
-        [Route("api/Order/Delete")]
-        public void Delete([FromBody] CRUDModel<Order> Value)
+        [Route("Update")]
+        public IActionResult Update([FromBody] CRUDModel<Order> value)
         {
-            string Query =
-                $"DELETE FROM orders WHERE orderid={Value.Key}";
+            if (value.Value is not Order order || !order.OrderID.HasValue || string.IsNullOrWhiteSpace(order.CustomerName) || !order.EmployeeID.HasValue)
+            {
+                return BadRequest("OrderID, CustomerName, and EmployeeID are required.");
+            }
 
-            using NpgsqlConnection Connection = new(ConnectionString);
-            Connection.Open();
+            const string query = "UPDATE public.orders SET customername=@customername, freight=@freight, " +
+                                 "employeeid=@employeeid, shipcity=@shipcity WHERE orderid=@orderid";
 
-            using NpgsqlCommand Command = new(Query, Connection);
-            Command.ExecuteNonQuery();
+            using NpgsqlConnection connection = new(ConnectionString);
+            connection.Open();
+
+            using NpgsqlCommand command = new(query, connection);
+            command.Parameters.AddWithValue("customername", order.CustomerName);
+            command.Parameters.AddWithValue("freight", order.Freight.HasValue ? order.Freight.Value : (object)DBNull.Value);
+            command.Parameters.AddWithValue("employeeid", order.EmployeeID.Value);
+            command.Parameters.AddWithValue("shipcity", order.ShipCity ?? (object)DBNull.Value);
+            command.Parameters.AddWithValue("orderid", order.OrderID.Value);
+
+            return command.ExecuteNonQuery() == 0
+                ? NotFound()
+                : Ok(order);
+        }
+
+        [HttpPost]
+        [Route("Delete")]
+        public IActionResult Delete([FromBody] CRUDModel<Order> value)
+        {
+            if (!int.TryParse(value.Key?.ToString(), out int orderId))
+            {
+                return BadRequest("A numeric order key is required.");
+            }
+
+            const string query = "DELETE FROM public.orders WHERE orderid=@orderid";
+
+            using NpgsqlConnection connection = new(ConnectionString);
+            connection.Open();
+
+            using NpgsqlCommand command = new(query, connection);
+            command.Parameters.AddWithValue("orderid", orderId);
+
+            return command.ExecuteNonQuery() == 0
+                ? NotFound()
+                : NoContent();
         }
 
         public class Order
@@ -350,21 +380,21 @@ namespace URLAdaptor.Controllers
 
         public class CRUDModel<T> where T : class
         {
-            [JsonProperty("action")]
+            [JsonPropertyName("action")]
             public string? Action { get; set; }
-            [JsonProperty("keyColumn")]
+            [JsonPropertyName("keyColumn")]
             public string? KeyColumn { get; set; }
-            [JsonProperty("key")]
+            [JsonPropertyName("key")]
             public object? Key { get; set; }
-            [JsonProperty("value")]
+            [JsonPropertyName("value")]
             public T? Value { get; set; }
-            [JsonProperty("added")]
+            [JsonPropertyName("added")]
             public List<T>? Added { get; set; }
-            [JsonProperty("changed")]
+            [JsonPropertyName("changed")]
             public List<T>? Changed { get; set; }
-            [JsonProperty("deleted")]
+            [JsonPropertyName("deleted")]
             public List<T>? Deleted { get; set; }
-            [JsonProperty("params")]
+            [JsonPropertyName("params")]
             public IDictionary<string, object>? Params { get; set; }
         }
     }
@@ -373,22 +403,22 @@ namespace URLAdaptor.Controllers
 
 **Explanation:**
 
-- **`Post` action (`POST /api/Order`)**: Reads the full dataset from PostgreSQL and returns it as `{ result, count }`. The pivot table calls this endpoint on initialization and whenever a data operation is performed.
-- **`GetOrderData` helper**: Opens a pooled Npgsql connection, runs a `SELECT` against the `orders` table, fills a `DataTable`, and projects the rows into `Order` objects.
-- **`Insert` action (`POST /api/Order/Insert`)**: Receives a `CRUDModel<Order>` and runs an `INSERT` against PostgreSQL.
-- **`Update` action (`POST /api/Order/Update`)**: Receives a `CRUDModel<Order>` and runs an `UPDATE` filtered by `orderid`.
-- **`Delete` action (`POST /api/Order/Delete`)**: Receives a `CRUDModel<Order>` and runs a `DELETE` filtered by the `Key` (primary key value).
+- **`Post` action (`POST /api/Order`)**: Reads the full dataset from PostgreSQL and returns it as `{ result, count }`. The sample accepts `DataManagerRequest` but does not process its query operations.
+- **`GetOrderData` helper**: Opens an Npgsql connection, runs a `SELECT` against `public.orders`, handles nullable columns, and projects the rows into `Order` objects.
+- **`Insert` action (`POST /api/Order/Insert`)**: Validates a `CRUDModel<Order>`, executes a parameterized `INSERT`, and returns the inserted record.
+- **`Update` action (`POST /api/Order/Update`)**: Validates the primary key, executes a parameterized `UPDATE`, and returns `404` when no row matches.
+- **`Delete` action (`POST /api/Order/Delete`)**: Validates the numeric `Key`, executes a parameterized `DELETE`, and returns `404` when no row matches.
 - The `[ApiController]` attribute enables automatic model validation and HTTP API conventions for the controller.
 
 The controller has been successfully created with read and full CRUD support.
 
 **Verify the Read Endpoint:**
 
-Before wiring up the Pivot Table, confirm the API is returning data correctly. With the application running, open a browser and navigate to `http://localhost:5145/api/Order` (using a REST client such as Postman, or by submitting a `POST` with an empty `DataManagerRequest` body). The response should contain the order records along with a count.
+Before wiring up the Pivot Table, confirm the API is returning data correctly. With the application running, use a REST client such as Postman or `curl` to submit a `POST` request to `http://localhost:5145/api/Order` with `Content-Type: application/json` and body `{}`. A browser address-bar request uses `GET` and will return `405 Method Not Allowed`.
 
 The screenshot below shows the JSON response returned by the `POST /api/Order` endpoint.
 
-![Pivot Api Order](../images/blazor-pivotable-postgre-order-api.webp)
+![Pivot API Order](../images/blazor-pivottable-postgresql-order-api.webp)
 
 **Image Content:**
 - A REST client (Postman) or browser window.
@@ -427,6 +457,9 @@ builder.Services.AddControllers();
 
 var app = builder.Build();
 
+// Register the Syncfusion license before any Syncfusion component is initialized.
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -453,9 +486,9 @@ app.Run();
 - **`AddRazorComponents()` and `AddInteractiveServerComponents()`**: Enables Blazor server-side rendering with interactive components.
 - **`AddControllers()`**: Registers the API controllers (`OrderController`) so the URL Adaptor endpoints are reachable.
 - **`MapControllers()`**: Adds the controller routes to the application's endpoint pipeline.
-- **`UseAntiforgery()`**: Required by Blazor interactive components for form and antiforgery handling.
+- **`UseAntiforgery()`**: Enables antiforgery middleware for endpoints that explicitly require it. The sample API actions do not add antiforgery validation.
 
-> **Note:** The Sample posts JSON to the controller endpoints. Because the project is a Blazor Web App with interactive server rendering, the antiforgery token is handled by the framework. For deployed scenarios, ensure the URL Adaptor requests include a valid antiforgery header if antiforgery is enforced on the controller.
+> **Note:** The URL Adaptor posts JSON directly to controller endpoints; Blazor interactive-server transport does not automatically add a token to arbitrary API requests. If you add antiforgery validation to these browser-accessible write actions, configure the adaptor to send the request token and document the matching server configuration.
 
 The service registration has been completed successfully.
 
@@ -533,16 +566,15 @@ Blazor components are now configured and ready to use. For additional guidance, 
 
 ### Step 2: Add the PivotTable Package Reference
 
-Confirm the `Syncfusion.Blazor.PivotTable` and `Syncfusion.Blazor.Data` packages are referenced. `Syncfusion.Blazor.Data` is brought in transitively by `Syncfusion.Blazor.PivotTable` and provides `SfDataManager` and the `Adaptors` enum used in the next steps.
+Confirm the `Syncfusion.Blazor.PivotTable` package is referenced. It provides the Pivot Table and the transitive `Syncfusion.Blazor.Data` assembly used by `SfDataManager` and `Adaptors`.
 
 The relevant section of **URLAdaptor.csproj**:
 
 ```xml
 <ItemGroup>
-    <PackageReference Include="Syncfusion.Blazor.PivotTable" Version="*" />
-    <PackageReference Include="Syncfusion.Blazor.Themes" Version="*" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.3" />
+    <PackageReference Include="Syncfusion.Blazor.PivotTable" Version="{{site.blazorversion}}" />
+    <PackageReference Include="Syncfusion.Blazor.Themes" Version="{{site.blazorversion}}" />
+    <PackageReference Include="Npgsql" Version="10.0.3" />
 </ItemGroup>
 ```
 
@@ -550,7 +582,7 @@ The package references are now in place.
 
 ### Step 3: Configure the Pivot Table with the URL Adaptor
 
-The pivot table binds to the PostgreSQL-backed API through the [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) configured with [`Adaptors.UrlAdaptor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html). The `Url`, `InsertUrl`, `UpdateUrl`, and `RemoveUrl` properties point at the controller actions created in **Step 6**.
+The pivot table binds to the PostgreSQL-backed API through the [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) configured with [`Adaptors.UrlAdaptor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html). The `Url`, `InsertUrl`, `UpdateUrl`, and `RemoveUrl` properties point at the controller actions created in **Step 4**.
 
 **Instructions:**
 
@@ -559,15 +591,16 @@ The pivot table binds to the PostgreSQL-backed API through the [`SfDataManager`]
 
 ```cshtml
 @page "/"
+@using System.ComponentModel.DataAnnotations
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="Order" Width="1000" Height="300" ShowFieldList="true">
     <PivotViewDataSourceSettings TValue="Order" ExpandAll=false EnableSorting=true>
-    <SfDataManager Url="http://localhost:5145/api/Order"
-                   InsertUrl="http://localhost:5145/api/Order/Insert"
-                   UpdateUrl="http://localhost:5145/api/Order/Update"
-                   RemoveUrl="http://localhost:5145/api/Order/Delete"
+    <SfDataManager Url="/api/Order"
+                   InsertUrl="/api/Order/Insert"
+                   UpdateUrl="/api/Order/Update"
+                   RemoveUrl="/api/Order/Delete"
                    Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
         <PivotViewColumns>
             <PivotViewColumn Name="EmployeeID"></PivotViewColumn>
@@ -580,12 +613,14 @@ The pivot table binds to the PostgreSQL-backed API through the [`SfDataManager`]
         </PivotViewValues>
     </PivotViewDataSourceSettings>
     <PivotViewGridSettings ColumnWidth="120"></PivotViewGridSettings>
-    <PivotViewEvents TValue="Order" BeginDrillThrough="beginDrillThrough"></PivotViewEvents>
     <PivotViewCellEditSettings AllowEditing=true AllowAdding=true AllowDeleting=true
                                Mode=Syncfusion.Blazor.PivotView.EditMode.Normal></PivotViewCellEditSettings>
+    <PivotViewEvents TValue="Order" BeginDrillThrough="beginDrillThrough"></PivotViewEvents>
 </SfPivotView>
 
 @code{
+    public List<Order> Orders { get; set; } = new();
+
     private void beginDrillThrough(BeginDrillThroughEventArgs args)
     {
         // Configure the BeginDrillThrough event to set the primary key for CRUD operations.
@@ -607,17 +642,13 @@ The pivot table binds to the PostgreSQL-backed API through the [`SfDataManager`]
         }
     }
 
-    SfPivotView<Order> pivot { get; set; }
-
-    public List<Order> Orders { get; set; }
-
     public class Order
     {
         public int OrderID { get; set; }
-        public string CustomerName { get; set; }
+        public string? CustomerName { get; set; }
         public int EmployeeID { get; set; }
-        public decimal Freight { get; set; }
-        public string ShipCity { get; set; }
+        public decimal? Freight { get; set; }
+        public string? ShipCity { get; set; }
     }
 }
 ```
@@ -635,9 +666,9 @@ The Home component has been updated successfully with the Pivot Table.
 
 **Pivot Table with PostgreSQL Data:**
 
-When `dotnet run` launches the application and the browser loads `http://localhost:5145`, the Pivot Table renders the PostgreSQL `orders` data with the configured field arrangement: `CustomerName` as rows, `EmployeeID` as columns, and `Freight` aggregated as a value. The Field List panel is available so end users can rearrange fields at runtime.
+When `dotnet run` launches the application and the browser loads the URL shown in the terminal, the Pivot Table renders the PostgreSQL `orders` data with the configured field arrangement: `CustomerName` as rows, `EmployeeID` as columns, and `Freight` aggregated as a value. The Field List panel is available so end users can rearrange fields at runtime.
 
-![Blazor Pivot Table](../images//blazor-pivottable-postgresql.webp)
+![Blazor Pivot Table](../images/blazor-pivottable-postgresql.webp)
 
 **Image Content:**
 - The Blazor application running in the browser at `http://localhost:5145`.
@@ -648,7 +679,7 @@ When `dotnet run` launches the application and the browser loads `http://localho
 
 **Purpose:** Confirms that the data flow (PostgreSQL → Npgsql → OrderController → URL Adaptor → Pivot Table) is wired correctly before the CRUD sections show modified states.
 
-**Capture Source:** Run `dotnet run`, open the browser at the application URL, and capture the full Pivot Table with the field list immediately after the first render (before any insert/update/delete).
+**Capture Source:** Run `dotnet run`, open the browser at the URL shown in the terminal, and capture the full Pivot Table with the field list immediately after the first render (before any insert/update/delete).
 
 ## URL Adaptor Configuration
 
@@ -660,10 +691,10 @@ The URL Adaptor is the contract between the Blazor Pivot Table and the PostgreSQ
 4. For write operations, the pivot table posts a `CRUDModel<Order>` payload to the matching `InsertUrl`, `UpdateUrl`, or `RemoveUrl`.
 
 ```razor
-<SfDataManager Url="http://localhost:5145/api/Order"
-               InsertUrl="http://localhost:5145/api/Order/Insert"
-               UpdateUrl="http://localhost:5145/api/Order/Update"
-               RemoveUrl="http://localhost:5145/api/Order/Delete"
+<SfDataManager Url="/api/Order"
+               InsertUrl="/api/Order/Insert"
+               UpdateUrl="/api/Order/Update"
+               RemoveUrl="/api/Order/Delete"
                Adaptor="Adaptors.UrlAdaptor">
 </SfDataManager>
 ```
@@ -675,7 +706,9 @@ The URL Adaptor is the contract between the Blazor Pivot Table and the PostgreSQ
 | `UpdateUrl` | Updates an existing record | `POST /api/Order/Update` → `Update` |
 | `RemoveUrl` | Deletes a record | `POST /api/Order/Delete` → `Delete` |
 
-> **Port Tip:** The URLs above use port `5145`, which is the HTTP port defined in `Properties/launchSettings.json`. Update the port to match the profile the application is launched with (for example, `7169` for the HTTPS profile).
+> **URL Tip:** Relative URLs keep the adaptor on the same origin and automatically use the active HTTP or HTTPS profile. If absolute URLs are required, update both the scheme and port to match `Properties/launchSettings.json`.
+
+The sample returns `400` for invalid CRUD payloads, `404` when an update or delete key does not exist, and `500` for unhandled database exceptions. Add structured logging and a production exception handler before exposing these endpoints publicly.
 
 The URL Adaptor has been successfully configured. The CRUD sections below include screenshots of the `CRUDModel<Order>` value received by the `Insert`, `Update`, and `Delete` controller actions.
 
@@ -685,7 +718,7 @@ The `OrderController` exposes the following REST endpoints:
 
 | Method | Route | Payload | Description |
 |--------|-------|---------|-------------|
-| `POST` | `/api/Order` | `DataManagerRequest` | Returns all order records as `{ result, count }`. Called on pivot initialization and on every data operation. |
+| `POST` | `/api/Order` | `DataManagerRequest` | Returns all order records as `{ result, count }`; this sample does not process request operations. |
 | `POST` | `/api/Order/Insert` | `CRUDModel<Order>` | Inserts a new order into the `orders` table. |
 | `POST` | `/api/Order/Update` | `CRUDModel<Order>` | Updates an existing order filtered by `orderid`. |
 | `POST` | `/api/Order/Delete` | `CRUDModel<Order>` | Deletes an order using the `Key` (primary key value). |
@@ -725,29 +758,7 @@ The Pivot Table performs CRUD operations through cell editing and the edit dialo
 
 Record insertion allows new orders to be added directly through the edit dialog of the Pivot Table component. The adaptor serializes the new row into a `CRUDModel<Order>` and posts it to `/api/Order/Insert`.
 
-**Controller snippet:**
-
-```csharp
-[HttpPost]
-[Route("api/Order/Insert")]
-public void Insert([FromBody] CRUDModel<Order> Value)
-{
-    string Query =
-        $"INSERT INTO orders " +
-        $"(customername, freight, shipcity, employeeid) " +
-        $"VALUES " +
-        $"('{Value.Value.CustomerName}', " +
-        $"{Value.Value.Freight}, " +
-        $"'{Value.Value.ShipCity}', " +
-        $"{Value.Value.EmployeeID})";
-
-    using NpgsqlConnection Connection = new(ConnectionString);
-    Connection.Open();
-
-    using NpgsqlCommand Command = new(Query, Connection);
-    Command.ExecuteNonQuery();
-}
-```
+The `Insert` action is implemented in the complete controller in Step 4. It validates required fields and uses parameterized SQL.
 
 **What happens behind the scenes:**
 
@@ -759,7 +770,7 @@ public void Insert([FromBody] CRUDModel<Order> Value)
 
 The screenshot below shows the `CRUDModel<Order>` value received in the `Insert` controller action — the `Value` parameter carrying the `Action`, `KeyColumn`, and the new order record (`CustomerName`, `EmployeeID`, `ShipCity`, `Freight`) that will be inserted into the `orders` table.
 
-![Insert Operation](../images//blazor-pivovtable-postgresql-insert.webp)
+![Insert Operation](../images/blazor-pivottable-postgresql-insert.webp)
 
 **Image Content:**
 - The `Insert` action of `OrderController` open in the editor.
@@ -774,28 +785,7 @@ The screenshot below shows the `CRUDModel<Order>` value received in the `Insert`
 
 Record modification allows order details to be updated directly within the edit dialog. The adaptor serializes the edited row and posts it to `/api/Order/Update`.
 
-**Controller snippet:**
-
-```csharp
-[HttpPost]
-[Route("api/Order/Update")]
-public void Update([FromBody] CRUDModel<Order> Value)
-{
-    string Query =
-        $"UPDATE orders SET " +
-        $"customername='{Value.Value.CustomerName}', " +
-        $"freight={Value.Value.Freight}, " +
-        $"employeeid={Value.Value.EmployeeID}, " +
-        $"shipcity='{Value.Value.ShipCity}' " +
-        $"WHERE orderid={Value.Value.OrderID}";
-
-    using NpgsqlConnection Connection = new(ConnectionString);
-    Connection.Open();
-
-    using NpgsqlCommand Command = new(Query, Connection);
-    Command.ExecuteNonQuery();
-}
-```
+The `Update` action is implemented in the complete controller in Step 4. It validates `OrderID`, uses parameterized SQL, and reports a missing row as `404 Not Found`.
 
 **What happens behind the scenes:**
 
@@ -807,7 +797,7 @@ public void Update([FromBody] CRUDModel<Order> Value)
 
 The screenshot below shows the `CRUDModel<Order>` value received in the `Update` controller action — the `Value` parameter carrying the `Action`, `KeyColumn`, and the edited order record (`CustomerName`, `EmployeeID`, `ShipCity`, `Freight`, and the `OrderID` used as the update filter) that will update the matching row in the `orders` table.
 
-![Update Operation](../images/blazor-pivovtable-postgresql-update.webp)
+![Update Operation](../images/blazor-pivottable-postgresql-update.webp)
 
 **Image Content:**
 - The `Update` action of `OrderController` open in the editor.
@@ -822,23 +812,7 @@ The screenshot below shows the `CRUDModel<Order>` value received in the `Update`
 
 Record deletion allows orders to be removed directly from the edit dialog. The adaptor posts the primary key of the deleted row to `/api/Order/Delete`.
 
-**Controller snippet:**
-
-```csharp
-[HttpPost]
-[Route("api/Order/Delete")]
-public void Delete([FromBody] CRUDModel<Order> Value)
-{
-    string Query =
-        $"DELETE FROM orders WHERE orderid={Value.Key}";
-
-    using NpgsqlConnection Connection = new(ConnectionString);
-    Connection.Open();
-
-    using NpgsqlCommand Command = new(Query, Connection);
-    Command.ExecuteNonQuery();
-}
-```
+The `Delete` action is implemented in the complete controller in Step 4. It validates the numeric primary key and reports a missing row as `404 Not Found`.
 
 **What happens behind the scenes:**
 
@@ -850,7 +824,7 @@ public void Delete([FromBody] CRUDModel<Order> Value)
 
 The screenshot below shows the `CRUDModel<Order>` value received in the `Delete` controller action — the `Value` parameter carrying the `Action`, `KeyColumn`, and the `Key` (primary key value of the deleted row) that the `DELETE` statement uses to filter by `orderid`.
 
-![Delete Operation](../images/blazor-pivovtable-postgresql-delete.webp)
+![Delete Operation](../images/blazor-pivottable-postgresql-delete.webp)
 
 **Image Content:**
 - The `Delete` action of `OrderController` open in the editor.
@@ -901,10 +875,10 @@ flowchart TD
 ```
 
 1. **PostgreSQL** stores the `orders` records.
-2. The **Npgsql data provider** executes SQL commands over a pooled connection.
-3. The **`OrderController`** exposes REST endpoints and orchestrates reads and writes.
+2. The **Npgsql data provider** executes parameterized SQL commands over pooled connections.
+3. The **`OrderController`** exposes HTTP endpoints and orchestrates reads and writes.
 4. The **URL Adaptor** inside `SfDataManager` posts `DataManagerRequest` and `CRUDModel<Order>` payloads to those endpoints.
-5. The **`SfPivotView`** renders the summarized data and raises edit dialog events that trigger the write endpoints.
+5. The **`SfPivotView`** renders the summarized data and its raw-item edit grid triggers the write endpoints.
 
 ## Run the Application
 
@@ -931,113 +905,50 @@ dotnet run
 
 1. Open a web browser.
 2. Navigate to the URL shown in the terminal output (for example, `http://localhost:5145`).
-3. The PostgreSQL-backed Pivot Table is now running with full read and CRUD support. Refer to the screenshot in [Step 3](#step-3-configure-the-pivot-table-with-the-url-adaptor) for the rendered output.
+3. The PostgreSQL-backed Pivot Table is now running with read and CRUD support. Refer to the screenshot in [Step 3](#step-3-configure-the-pivot-table-with-the-url-adaptor) for the rendered output.
 
-> **Port Reminder:** The `SfDataManager` URLs in `Home.razor` point to `http://localhost:5145`. If the application launches on a different port (for example, the HTTPS profile on `7169`), update those URLs accordingly before running. The active ports are defined in `Properties/launchSettings.json`.
+> **URL Reminder:** `Home.razor` uses relative API URLs, so no port change is required. If you replace them with absolute URLs, match the scheme and port shown in `Properties/launchSettings.json`.
 
 
 ## Troubleshooting
 
 | Symptom | Likely Cause | Resolution |
 |---------|--------------|------------|
-| Pivot table shows no data | Controller not reachable or wrong port in `SfDataManager` URLs | Verify the application is running and the port in `Home.razor` matches `launchSettings.json`. Open `http://localhost:<port>/api/Order` directly in a browser—expect a JSON response. |
+| Pivot table shows no data | Controller not reachable or API returned an error | Verify the application is running, inspect the browser Network panel, and send a `POST` with `{}` to `/api/Order`; a browser address-bar `GET` is not a valid read test. |
 | `405 Method Not Allowed` on read | The `POST /api/Order` action is missing or routed incorrectly | Confirm `OrderController` is decorated with `[ApiController]`, has `[HttpPost]` on `Post`, and `AddControllers()` + `MapControllers()` are present in `Program.cs`. |
-| `Connection refused` or `NpgsqlException` | PostgreSQL is not running or credentials are wrong | Start the PostgreSQL service, confirm `Host`, `Port`, `Database`, `Username`, and `Password` in the connection string. Use `Password=password@123` as configured. |
+| `Connection refused` or `NpgsqlException` | PostgreSQL is not running or configuration is wrong | Start the PostgreSQL service and confirm the `ConnectionStrings:PostgreSQL` settings and database-user permissions. |
 | `relation "orders" does not exist` | Table not created or wrong schema | Run the SQL script in **Step 1** against `OrderDB`. Confirm the table is in the `public` schema and named `orders` (lowercase). |
-| Insert/Update/Delete does nothing | Primary key column not marked in the edit dialog | Ensure the `BeginDrillThrough` event handler sets `IsPrimaryKey = true` on the `OrderID` column. |
-| CRUD changes do not persist | `CRUDModel<Order>` JSON property names do not match | Confirm `Newtonsoft.Json` is referenced and `[JsonProperty("...")]` attributes are present on `CRUDModel<T>`. |
+| Insert/Update/Delete does nothing | The edit grid does not send a valid primary key | Confirm `OrderID` is present in the raw-item model and marked with `[Key]`; inspect the request payload for `key` or `value.orderID`. |
+| CRUD changes do not persist | Validation or database command failed | Inspect the API response and server logs; verify required fields, table permissions, and the `public.orders` schema. |
 | CORS errors in browser console | API served on a different origin than the Blazor app | Serve both on the same origin, or enable CORS on the controller for the Blazor app's origin. |
-| Antiforgery validation fails on POST | Antiforgery token enforced but not sent by the adaptor | For the sample, rely on Blazor's interactive server transport. For deployed scenarios, add an antiforgery header or relax the policy on the API endpoints. |
+| Antiforgery validation fails on POST | An antiforgery policy was added but the adaptor does not send a token | Configure the adaptor and server to exchange a request token, or use non-cookie authentication for the API; do not assume Blazor transport supplies the token. |
 | Pivot table aggregates look wrong | `Freight` column type mismatch | Ensure `Freight` is a numeric column in PostgreSQL and `decimal` in the `Order` model so aggregation functions correctly. |
-| Edit dialog shows all columns as editable | Visibility not configured in `BeginDrillThrough` | Use the same loop to set `Visible`, `AllowEditing`, and other column flags as needed. |
+| Edit dialog shows unexpected columns | Raw-item grid defaults are being used | Configure the supported Pivot Table editing settings for the package version in use; do not rely on `BeginDrillThrough.GridObj` being populated. |
 
-## Complete Code
+## Complete Implementation
 
-The following is the complete `Home.razor` implementation that integrates all steps and features:
+The complete implementation is assembled across the earlier steps:
 
-```cshtml
-@page "/"
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.PivotView
+1. `appsettings.json` and `OrderController.cs` are provided in [Step 3](#step-3-configure-the-connection-string) and [Step 4](#step-4-create-the-controller).
+2. Service registration and license registration are provided in [Step 5](#step-5-register-services-in-programcs).
+3. `Home.razor`, the relative adaptor URLs, the `[Key]` model property, and editing settings are provided in [Pivot Table Step 3](#step-3-configure-the-pivot-table-with-the-url-adaptor).
 
-<SfPivotView TValue="Order" Width="1000" Height="300" ShowFieldList="true">
-    <PivotViewDataSourceSettings TValue="Order" ExpandAll=false EnableSorting=true>
-    <SfDataManager Url="http://localhost:5145/api/Order"
-                   InsertUrl="http://localhost:5145/api/Order/Insert"
-                   UpdateUrl="http://localhost:5145/api/Order/Update"
-                   RemoveUrl="http://localhost:5145/api/Order/Delete"
-                   Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
-        <PivotViewColumns>
-            <PivotViewColumn Name="EmployeeID"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="CustomerName"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Freight" Caption="Freight"></PivotViewValue>
-        </PivotViewValues>
-    </PivotViewDataSourceSettings>
-    <PivotViewGridSettings ColumnWidth="120"></PivotViewGridSettings>
-    <PivotViewEvents TValue="Order" BeginDrillThrough="beginDrillThrough"></PivotViewEvents>
-    <PivotViewCellEditSettings AllowEditing=true AllowAdding=true AllowDeleting=true
-                               Mode=Syncfusion.Blazor.PivotView.EditMode.Normal></PivotViewCellEditSettings>
-</SfPivotView>
-
-@code{
-    private void beginDrillThrough(BeginDrillThroughEventArgs args)
-    {
-        for (int i = 0; i < args.GridObj.Columns.Count; i++)
-        {
-            if (args.GridObj.Columns[i].Field == "OrderID")
-            {
-                args.GridObj.Columns[i].IsPrimaryKey = true;
-            }
-            else
-            {
-                args.GridObj.Columns[i].Visible = true;
-            }
-        }
-    }
-
-    SfPivotView<Order> pivot { get; set; }
-
-    public List<Order> Orders { get; set; }
-
-    public class Order
-    {
-        public int OrderID { get; set; }
-        public string CustomerName { get; set; }
-        public int EmployeeID { get; set; }
-        public decimal Freight { get; set; }
-        public string ShipCity { get; set; }
-    }
-}
-```
-
-**Key Features of the Complete Implementation:**
-
-1. **URL Adaptor binding**: The pivot table reads and writes via REST endpoints backed by PostgreSQL.
-2. **Field List**: End users can rearrange `EmployeeID`, `CustomerName`, and `Freight` at runtime.
-3. **Edit dialog CRUD**: The `BeginDrillThrough` handler marks the primary key so insert, update, and delete operations target the correct record.
-4. **Cell Editing**: `AllowEditing`, `AllowAdding`, and `AllowDeleting` are enabled in `Normal` edit mode.
-5. **RESTful API**: Four clearly named endpoints (`/api/Order`, `/api/Order/Insert`, `/api/Order/Update`, `/api/Order/Delete`) keep the contract simple.
-6. **Npgsql Data Access**: Raw SQL over pooled Npgsql connections keeps the data layer explicit and easy to debug.
+The sample uses relative API URLs, parameterized Npgsql commands, nullable-column handling, and explicit validation for CRUD requests.
 
 ## Complete Sample Repository
 
-A complete, working sample implementation is available in the [GitHub repository]().
-
+A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/syncfusion-blazor-pivot-table-postgresql-database-binding-sample).
 
 ## Summary
 
 This guide demonstrates how to:
 
-1. Create a PostgreSQL database with order records using pgAdmin 4. [🔗](#step-1-create-the-database-and-table-in-postgresql)
-2. Install the necessary NuGet packages for Syncfusion Pivot Table, Npgsql, and Newtonsoft.Json. [🔗](#step-2-install-required-nuget-packages)
-3. Configure the connection string with `Password=password@123`. [🔗](#step-3-configure-the-connection-string)
-4. Implement an `OrderController` with read and CRUD endpoints backed by Npgsql. [🔗](#step-4-create-the-controller)
-5. Register Syncfusion Blazor services and API controllers in `Program.cs`. [🔗](#step-5-register-services-in-programcs)
-6. Configure the Pivot Table with `SfDataManager` and `Adaptors.UrlAdaptor` to bind PostgreSQL data remotely. [🔗](#step-3-configure-the-pivot-table-with-the-url-adaptor)
-7. Enable edit dialog CRUD through the `BeginDrillThrough` event. [🔗](#enabling-crud-via-the-begindrillthrough-event)
+1. Create a PostgreSQL database with order records using pgAdmin 4.
+2. Create the .NET 10 Blazor Web App and install the Syncfusion and Npgsql packages.
+3. Configure the connection string without committing credentials.
+4. Implement an `OrderController` with read and parameterized CRUD endpoints.
+5. Register Syncfusion Blazor services, the license key, and API controllers in `Program.cs`.
+6. Configure the Pivot Table with relative `SfDataManager` URLs and `Adaptors.UrlAdaptor`.
+7. Run and verify the application using the documented POST request and troubleshooting steps.
 
-The application now provides a complete solution for summarizing and editing PostgreSQL data with a modern, user-friendly Pivot Table interface.
+The application now provides a complete sample for summarizing and editing PostgreSQL data with a modern Pivot Table interface. The read action intentionally returns the full table; implement server-side query processing before using this pattern for large datasets.
