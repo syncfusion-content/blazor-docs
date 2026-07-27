@@ -9,7 +9,7 @@ documentation: ug
 
 # Zooming in Blazor Charts Component
 
-A detailed walkthrough demonstrating how to configure and use zooming and panning in the Blazor charts is presented in the video below.
+A detailed walkthrough demonstrating how to configure and use zooming and panning in the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) is presented in the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=-fqwvVMI9Ec" %}
 
