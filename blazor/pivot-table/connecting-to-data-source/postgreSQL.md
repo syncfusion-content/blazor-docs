@@ -218,7 +218,7 @@ public OrderController(IConfiguration configuration)
 | Host | The address of the PostgreSQL server (`localhost` for local development) |
 | Port | The port number on which PostgreSQL is running (default is `5432`) |
 | Database | The database name (in this case, `OrderDB`) |
-| Username | The PostgreSQL username (default is `postgres`) |
+| Username | The PostgreSQL username (default is `PostgreSQL`) |
 | Password | The password for the PostgreSQL user account |
 
 This `ConnectionString` field is reused by every database action when opening Npgsql connections.
