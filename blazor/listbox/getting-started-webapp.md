@@ -7,7 +7,7 @@ control: ListBox
 documentation: ug
 ---
 
-# Getting Started with Blazor ListBox Component in Blazor Web App
+# Getting Started with Blazor ListBox Component
 
 This section briefly explains how to include the [Blazor ListBox](https://www.syncfusion.com/blazor-components/blazor-listbox) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -159,6 +159,8 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
+N> Replace fluent2.css with your preferred theme. See [Themes documentation](https://blazor.syncfusion.com/documentation/common/adding-script-references) for all available options.
+
 ## Add Blazor ListBox component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor ListBox](https://www.syncfusion.com/blazor-components/blazor-listbox) component inside the razor file.
@@ -170,7 +172,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 @rendermode InteractiveAuto
 
-<SfListBox TValue="string[]" TItem="string[]"></SfListBox>
+<SfListBox></SfListBox>
 
 {% endhighlight %}
 {% endtabs %}
@@ -194,13 +196,13 @@ After initialization, populate the ListBox using the `DataSource` property. In t
         new VehicleData { Text = "SSC Ultimate Aero", Id = "Vehicle-04" },
         new VehicleData { Text = "Koenigsegg CCR", Id = "Vehicle-05" },
         new VehicleData { Text = "McLaren F1", Id = "Vehicle-06" },
-        new VehicleData { Text = "Aston Martin One- 77", Id = "Vehicle-07" },
+        new VehicleData { Text = "Aston Martin One-77", Id = "Vehicle-07" },
         new VehicleData { Text = "Jaguar XJ220", Id = "Vehicle-08" }
     };
 
     public class VehicleData {
-      public string Text  { get; set; }
-      public string Id  { get; set; }
+      public string Text { get; set; }
+      public string Id { get; set; }
     }
 }
 
@@ -209,7 +211,7 @@ After initialization, populate the ListBox using the `DataSource` property. In t
 
 N> `TValue` is the type of the value in the data source used for type inference. It is a generic type and can be specified as string[], int[], etc.
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 

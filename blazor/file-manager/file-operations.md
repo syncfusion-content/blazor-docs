@@ -672,10 +672,10 @@ The available options for the sort order are:
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent" SortBy="Size" SortOrder="SortOrder.Descending">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
 </SfFileManager>
 
@@ -1198,7 +1198,7 @@ The following table represents the request parameters of *download* operations.
             permission:null,
             _fm_created:"2019-07-22T12:15:45.081Z",
             _fm_modified:"2019-07-22T12:15:45.097Z",
-            _fm_imageUrl:"https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage?path=/1.png",
+            _fm_imageUrl:"https://physical-service.syncfusion.com/api/FileManager/GetImage?path=/1.png",
             _fm_imageAttr:
             {
                 alt:"1.png"
@@ -1241,10 +1241,10 @@ To use this method, you need to pass the selected files or folders as parameters
 
 <SfButton OnClick="DownloadFiles">ClickToDownload</SfButton>
 <SfFileManager @ref="FileManager" TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
 </SfFileManager>
 
@@ -1270,10 +1270,10 @@ The following example demonstrates how to prevent the download actions for all t
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                                UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                                DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                                GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                                UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                                DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                                GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" BeforeDownload="BeforeDownload">
     </FileManagerEvents>
@@ -1375,10 +1375,10 @@ The [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Fil
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" BeforeDownload="BeforeDownload">
     </FileManagerEvents>
@@ -1402,10 +1402,10 @@ The [BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Fi
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" BeforeImageLoad="BeforeImageLoad">
     </FileManagerEvents>
@@ -1429,10 +1429,10 @@ The [BeforePopupClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.F
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" BeforePopupClose="BeforePopupClose">
     </FileManagerEvents>
@@ -1456,10 +1456,10 @@ The [BeforePopupOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Fi
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" BeforePopupOpen="BeforePopupOpen">
     </FileManagerEvents>
@@ -1483,10 +1483,10 @@ The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManage
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" Created="Created">
     </FileManagerEvents>
@@ -1510,10 +1510,10 @@ The [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileMana
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" Destroyed="Destroyed">
     </FileManagerEvents>
@@ -1537,10 +1537,10 @@ The [OnError](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManage
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" OnError="OnError">
     </FileManagerEvents>
@@ -1564,10 +1564,10 @@ The [OnFileLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileMan
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" OnFileLoad="OnFileLoad">
     </FileManagerEvents>
@@ -1591,10 +1591,10 @@ The [OnFileOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileMan
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" OnFileOpen="OnFileOpen">
     </FileManagerEvents>
@@ -1618,10 +1618,10 @@ The [OnSend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" OnSend="OnSend">
     </FileManagerEvents>
@@ -1645,10 +1645,10 @@ The [OnSuccess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileMana
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" OnSuccess="OnSuccess">
     </FileManagerEvents>
@@ -1672,10 +1672,10 @@ The [PopupClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileMa
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" PopupClosed="PopupClosed">
     </FileManagerEvents>
@@ -1699,10 +1699,10 @@ The [PopupOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileMa
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" PopupOpened="PopupOpened">
     </FileManagerEvents>
@@ -1726,10 +1726,10 @@ The [UploadListCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" UploadListCreated="UploadListCreated">
     </FileManagerEvents>

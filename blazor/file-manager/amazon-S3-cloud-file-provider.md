@@ -11,7 +11,7 @@ documentation: ug
 
 ## Introduction to Amazon S3
 
-Amazon Simple Storage Service (Amazon S3) is AWS's object storage service for storing and retrieving any amount of data. S3 is durable, scalable, and pay‑as‑you‑go. In this guide the Blazor File Manager connects to S3 through an ASP.NET Core backend so you can securely browse and perform file operations in the File Manager component.
+Amazon Simple Storage Service (Amazon S3) is AWS's object storage service for storing and retrieving any amount of data. S3 is durable, scalable, and pay‑as‑you‑go. In this guide the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) connects to S3 through an ASP.NET Core backend so you can securely browse and perform file operations in the File Manager component.
 
 ## Prerequisites
 
