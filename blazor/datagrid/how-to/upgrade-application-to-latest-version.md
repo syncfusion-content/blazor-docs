@@ -36,7 +36,7 @@ N> For production scenarios and minimal footprint, Syncfusion provides the Custo
 
 ## Breaking changes
 
-Some changes may occur across releases that affect existing applications. Review the breaking changes and notes for the target version before upgrading. Refer to the Blazor components [release notes](https://blazor.syncfusion.com/documentation/release-notes) for details.
+Some changes may occur across releases that affect existing applications. Review the breaking changes and notes for the target version before upgrading. Refer to the Blazor components [release notes](https://blazor.syncfusion.com/documentation/release-notes/34.1.29?type=all) for details.
 
 ## Cache problem
 
