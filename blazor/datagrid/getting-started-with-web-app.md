@@ -76,7 +76,7 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 Install the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
-Install the required NuGet packages in the project that corresponds to your selected interactive render mode.
+Install the required NuGet packages in the appropriate project based on your selected interactive render mode.
 
 | Interactive render mode | Install packages in |
 | --- | --- |
@@ -202,7 +202,7 @@ Open a Razor page (for example, **Home.razor** or **Counter.razor**) and add the
 | **Interactive Auto** | Per page/component | `BlazorWebApp.Client/Pages` | Yes, use `@rendermode InteractiveAuto` |
 | **Interactive Auto** | Global | `BlazorWebApp.Client/Pages` | No |
 
-N> Add a `@rendermode` directive only when the interactivity location is set to **Per page/component**. When using **Global** interactivity, the render mode is configured in `App.razor`, and no page-level `@rendermode` directive is required.
+N> When the interactivity location is set to **Per page/component**, add the appropriate `@rendermode` directive at the top of the Razor page. When using **Global** interactivity, the render mode is configured in `App.razor`, and no page-level `@rendermode` directive is required.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
