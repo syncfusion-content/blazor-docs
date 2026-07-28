@@ -1,7 +1,7 @@
 ---
 layout: post
-title: ObservableCollection and INotifyPropertyChanged in Blazor | Syncfusion
-description: Learn how Blazor components react to changes from ObservableCollection and INotifyPropertyChanged without manual refresh. Explore to more details.
+title: ObservableCollection and INotifyPropertyChanged in Syncfusion Blazor
+description: Learn how Syncfusion Blazor components react to changes from ObservableCollection and INotifyPropertyChanged without manual refresh. Explore to more details.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Data updates with Interface
 
-Blazor components automatically update UI when bound data implements `INotifyCollectionChanged` (`ObservableCollection`) or `INotifyPropertyChanged`.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components automatically update UI when bound data implements `INotifyCollectionChanged` (`ObservableCollection`) or `INotifyPropertyChanged`.
 
 ## ObservableCollection
 
@@ -73,7 +73,7 @@ In the following example, the DataGrid updates automatically when items are adde
 }
 ```
 
-### List of Blazor Components supports ObservableCollection
+### List of Syncfusion<sup style="font-size:70%">&reg;</sup> Components supports ObservableCollection
 
 * AutoComplete
 * Breadcrumb

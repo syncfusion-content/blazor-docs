@@ -53,9 +53,7 @@ await builder.Build().RunAsync();
 
 {% endtabs %}
 
-The above configuration enables the ripple effect globally for all supported Blazor components.
-
-N> Ripple effect is supported in the following themes: `Material`, `Material 3`, `Bootstrap 5`, `Bootstrap 5.3`, `Tailwind`, `Fluent 2`, `Fluent2 High Contrast`.
+The above configuration enables ripple effect globally for all Blazor components.
 
 For example, the Blazor Tab component will display with a ripple animation effect:
 
