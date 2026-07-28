@@ -278,7 +278,7 @@ Within a group, items are organized into collections. Use the [RibbonCollection]
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Ribbon component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The [Blazor Ribbon](https://www.syncfusion.com/blazor-components/blazor-ribbon) component will render in your default web browser.
 
 {% endtabcontent %}
 

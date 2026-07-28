@@ -259,7 +259,7 @@ You can use the [RibbonCollection](https://help.syncfusion.com/cr/blazor/Syncfus
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Ribbon component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The [Blazor Ribbon](https://www.syncfusion.com/blazor-components/blazor-ribbon) component will render in your default web browser.
 
 {% endtabcontent %}
 
