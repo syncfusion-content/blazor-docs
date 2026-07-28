@@ -145,7 +145,7 @@ For .NET 8/9 standalone Blazor WebAssembly apps, add the following to the **wwwr
 </head>
 <body>
     ....
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    <script src="_content/Syncfusion.Blazor.Grid/scripts/sf-grid.min.js" type="text/javascript"></script>
 </body>
 ```
 
