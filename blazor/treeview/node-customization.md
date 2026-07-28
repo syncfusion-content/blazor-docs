@@ -625,21 +625,16 @@ While native tooltip elements might offer limited customization, the Blazor Tool
 <SfTreeView TValue="EmployeeDetails" CssClass="custom" FullRowSelect="true">
     <TreeViewFieldsSettings TValue="EmployeeDetails" Id="EmployeeId" Text="EmployeeName" DataSource="@Employee" Expanded="Expanded" HasChildren="HasChild" Selected="Selected" ParentID="ParentId"></TreeViewFieldsSettings>
     <TreeViewTemplates TValue="EmployeeDetails">
-        <NodeTemplate>
+       <NodeTemplate>
             @{
-                var employee = ((context as EmployeeDetails));
-                <SfTooltip Target="#def">
-                    <ContentTemplate>
-                            @employee.EmployeeName @employee.EmployeeId
-                    </ContentTemplate>
-                    <ChildContent>
-                    <div id="def">
-                        <div class="ename">@((@context as EmployeeDetails).EmployeeName)</div>
-                        <div class="ejob">@((@context as EmployeeDetails).Designation)</div>
-                    </div>
-                    </ChildContent>
-                </SfTooltip>
+                var employee = (EmployeeDetails)context;
             }
+            <div class="employee-node"
+                title="@($"{employee.EmployeeName} ({employee.EmployeeId}) - {employee.Designation}")">
+
+                <div class="ename">@employee.EmployeeName</div>
+                <div class="ejob">@employee.Designation</div>
+            </div>
         </NodeTemplate>
     </TreeViewTemplates>
     <TreeViewEvents TValue="EmployeeDetails"></TreeViewEvents>
