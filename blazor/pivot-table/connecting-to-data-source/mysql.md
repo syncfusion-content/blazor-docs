@@ -127,7 +127,7 @@ SELECT * FROM orders;
 
 The screenshot below shows the records successfully inserted into the `orders` table in MySQL.
 
-![MySQL Workbench Query Results](../images/blazor-pivot-table-mysql-crud-mysqlworkbench.webp)
+![MySQL Workbench Query Results](../images/blazor-pivot-table-MySQL-query.webp)
 
 **Image Content:**
 - MySQL Workbench query results grid window.
@@ -763,7 +763,7 @@ The Home component has been updated successfully with the Pivot Table.
 
 When `dotnet run` launches the application and the browser loads the URL shown in the terminal, the Pivot Table renders the MySQL `orders` data with the configured field arrangement: `CustomerName` as rows, `EmployeeID` as columns, and `Freight` aggregated as a value. The Field List panel is available so end users can rearrange fields at runtime.
 
-![Blazor Pivot Table](../images/blazor-pivot-table-mysql.webp)
+![Blazor Pivot Table](../images/blazor-pivot-table-MySQL.webp)
 
 **Image Content:**
 - The Blazor application running in the browser at `http://localhost:5145`.
@@ -865,7 +865,7 @@ The `Insert` action is implemented in the complete controller in Step 4. The sam
 
 The screenshot below shows the `CRUDModel<Order>` value received in the `Insert` controller action — the `Value` parameter carrying the `Action`, `KeyColumn`, and the new order record (`CustomerName`, `EmployeeID`, `ShipCity`, `Freight`) that will be inserted into the `orders` table.
 
-![Insert Operation](../images/blazor-pivot-table-mysql-insert.webp)
+![Insert Operation](../images/blazor-pivot-table-MySQL-insert.webp)
 
 **Image Content:**
 - The `Insert` action of `OrderController` open in the editor.
@@ -892,7 +892,7 @@ The `Update` action is implemented in the complete controller in Step 4. It uses
 
 The screenshot below shows the `CRUDModel<Order>` value received in the `Update` controller action — the `Value` parameter carrying the `Action`, `KeyColumn`, and the edited order record (`CustomerName`, `EmployeeID`, `ShipCity`, `Freight`, and the `OrderID` used as the update filter) that will update the matching row in the `orders` table.
 
-![Update Operation](../images/blazor-pivot-table-mysql-update.webp)
+![Update Operation](../images/blazor-pivot-table-MySQL-update.webp)
 
 **Image Content:**
 - The `Update` action of `OrderController` open in the editor.
@@ -919,7 +919,7 @@ The `Delete` action is implemented in the complete controller in Step 4. It vali
 
 The screenshot below shows the `CRUDModel<Order>` value received in the `Delete` controller action — the `Value` parameter carrying the `Action`, `KeyColumn`, and the `Key` (primary key value of the deleted row) that the `DELETE` statement uses to filter by `Order ID`.
 
-![Delete Operation](../images/blazor-pivot-table-mysql-delete.webp)
+![Delete Operation](../images/blazor-pivot-table-MySQL-delete.webp)
 
 **Image Content:**
 - The `Delete` action of `OrderController` open in the editor.
