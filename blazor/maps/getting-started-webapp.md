@@ -183,7 +183,7 @@ Bind GeoJSON data to the Maps to render any geometric shape in SVG (Scalable Vec
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Maps component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The [Blazor Maps](https://www.syncfusion.com/blazor-components/blazor-map) component will render in your default web browser.
 
 {% endtabcontent %}
 

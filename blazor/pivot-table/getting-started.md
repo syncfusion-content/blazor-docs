@@ -248,7 +248,7 @@ public class ProductDetails
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Pivot Table component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component will render in your default web browser.
 
 {% endtabcontent %}
 
