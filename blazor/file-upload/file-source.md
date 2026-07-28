@@ -119,26 +119,6 @@ public void Save(IList<IFormFile> chunkFile, IList<IFormFile> UploadFiles)
         Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
     }
 }
-
-[HttpPost("[action]")]
-public void Remove(IList<IFormFile> UploadFiles)
-{
-    try
-    {
-        var filename = hostingEnv.ContentRootPath + $@"\{UploadFiles[0].FileName}";
-        if (System.IO.File.Exists(filename))
-        {
-            System.IO.File.Delete(filename);
-        }
-    }
-    catch (Exception e)
-    {
-        Response.Clear();
-        Response.StatusCode = 200;
-        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "File removed successfully";
-        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
-    }
-}
 ```
 
 N> You can also explore our [Blazor File Upload example](https://blazor.syncfusion.com/demos/file-upload/default-functionalities?theme=bootstrap5) to understand how to browse the files that need to be uploaded to the server.
