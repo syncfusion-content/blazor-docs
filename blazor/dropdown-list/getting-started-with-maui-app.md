@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains the step-by-step process of integrating the [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component in your Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-## Create a new Blazor MAUI App in Visual Studio
+## Create a new Blazor MAUI App
 
 {% tabcontents %}
 
