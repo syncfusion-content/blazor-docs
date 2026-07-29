@@ -412,23 +412,7 @@ namespace URLAdaptor.Controllers
 
 The controller has been successfully created with read and full CRUD support.
 
-**Verify the Read Endpoint:**
-
-Before wiring up the Pivot Table, confirm the API is returning data correctly. With the application running, use a REST client such as Postman or `curl` to submit a `POST` request to `http://localhost:5145/api/Order` with `Content-Type: application/json` and body `{}`. A browser address-bar request uses `GET` and will return `405 Method Not Allowed`.
-
-The screenshot below shows the JSON response returned by the `POST /api/Order` endpoint.
-
-![Pivot API Order](../images/blazor-pivot-table-PostgreSQL-order-api.webp)
-
-**Image Content:**
-- A REST client (Postman) or browser window.
-- A `POST` request to `http://localhost:5145/api/Order`.
-- The JSON response body containing `result` (array of `Order` objects) and `count` (integer).
-- HTTP `200 OK` status.
-
-**Purpose:** Verifies that the controller, Npgsql connection, and PostgreSQL query all work end-to-end before the Pivot Table consumes the endpoint.
-
-**Capture Source:** Postman / browser Developer Tools after running the Blazor app and posting to `/api/Order`.
+> **Read endpoint contract:** The `POST /api/Order` endpoint accepts a JSON `DataManagerRequest` body and returns `{ result, count }`. It is invoked only by the Pivot Table's URL Adaptor over `POST`; it does not respond to a browser address-bar `GET` request and is not meant to be opened directly.
 
 ### Step 5: Register Services in Program.cs
 
@@ -914,7 +898,7 @@ dotnet run
 
 | Symptom | Likely Cause | Resolution |
 |---------|--------------|------------|
-| Pivot table shows no data | Controller not reachable or API returned an error | Verify the application is running, inspect the browser Network panel, and send a `POST` with `{}` to `/api/Order`; a browser address-bar `GET` is not a valid read test. |
+| Pivot table shows no data | Controller not reachable or API returned an error | Verify the application is running and inspect the browser Network panel. Data is loaded only through the Pivot Table's URL Adaptor; the read endpoint requires a `POST` request and is not meant to be opened directly in the browser address bar. |
 | `405 Method Not Allowed` on read | The `POST /api/Order` action is missing or routed incorrectly | Confirm `OrderController` is decorated with `[ApiController]`, has `[HttpPost]` on `Post`, and `AddControllers()` + `MapControllers()` are present in `Program.cs`. |
 | `Connection refused` or `NpgsqlException` | PostgreSQL is not running or configuration is wrong | Start the PostgreSQL service and confirm the `ConnectionStrings:PostgreSQL` settings and database-user permissions. |
 | `relation "orders" does not exist` | Table not created or wrong schema | Run the SQL script in **Step 1** against `OrderDB`. Confirm the table is in the `public` schema and named `orders` (lowercase). |
@@ -949,6 +933,6 @@ This guide demonstrates how to:
 4. Implement an `OrderController` with read and parameterized CRUD endpoints.
 5. Register Syncfusion Blazor services, the license key, and API controllers in `Program.cs`.
 6. Configure the Pivot Table with relative `SfDataManager` URLs and `Adaptors.UrlAdaptor`.
-7. Run and verify the application using the documented POST request and troubleshooting steps.
+7. Run and verify the application using the troubleshooting steps.
 
-The application now provides a complete sample for summarizing and editing PostgreSQL data with a modern Pivot Table interface. The read action intentionally returns the full table; implement server-side query processing before using this pattern for large datasets.
+The application now provides a complete sample for summarizing and editing PostgreSQL data with a modern Pivot Table interface. The read endpoint is invoked only by the URL Adaptor over `POST` and is not browsable directly in the address bar; implement server-side query processing before using this pattern for large datasets.
