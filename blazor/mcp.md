@@ -13,6 +13,8 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> MCP Server accelerate Blazor ap
 
 These tools speed up development and reinforce best practices for Syncfusion component integration.
 
+> The previously available **Agentic UI Builder** (`#sf_blazor_ui_builder`) has been upgraded to an **Agent skill-based experience** and is no longer part of the MCP Server. To learn more about the new **Agentic UI Builder**, see the [documentation](https://blazor.syncfusion.com/documentation/agentic-ui-builder). The **AI Coding Assistant** (#sf_react_assistant) has been **renamed** to **search_docs** (`#search_docs`) to ensure the tool name follows MCP naming conventions.
+
 ## Key Benefits
 
 - **Expert Component Knowledge** - Deep understanding of 145+ Blazor components and their implementation patterns.
@@ -148,6 +150,8 @@ You can install the Syncfusion Blazor MCP server as a local tool without a globa
     ````bash
     dotnet tool install Syncfusion.Blazor.MCP
     ````
+
+    > If the project does not already have a tool manifest, create one first by running `dotnet new tool-manifest` in the project root. This generates a shared `.config/dotnet-tools.json` file that tracks local tools, then re-run the install command above.
 
 2. In your MCP client config (`.vscode/mcp.json`), replace the server entry with:
 
