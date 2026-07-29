@@ -690,7 +690,7 @@ The URL Adaptor is the contract between the Blazor Pivot Table and the PostgreSQ
 3. The controller deserialize the request, queries PostgreSQL, and returns `{ result, count }`.
 4. For write operations, the pivot table posts a `CRUDModel<Order>` payload to the matching `InsertUrl`, `UpdateUrl`, or `RemoveUrl`.
 
-```razor
+```cshtml
 <SfDataManager Url="/api/Order"
                InsertUrl="/api/Order/Insert"
                UpdateUrl="/api/Order/Update"
