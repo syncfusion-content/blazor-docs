@@ -89,4 +89,4 @@ Apply the above CSS to the following sliders to visualize the customized limits 
 </style>
 ```
 
-![Customizing the limits bar in the Blazor Range Slider](./../images/blazor-rangeslider-custom-limits.gif)
+![Customizing the limits bar in the Blazor Range Slider](./../images/blazor-rangeslider-custom-limits.webp)

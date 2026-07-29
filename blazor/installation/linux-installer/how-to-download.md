@@ -7,19 +7,19 @@ control: Common
 documentation: ug
 ---
 
-# Download the Syncfusion® Blazor Linux Installer
+# Download the Syncfusion® Blazor Linux installer
+
+The Blazor Linux installer is available as a trial or a licensed installer, depending on your account status. The sections below describe both download paths. Trial downloads provide a 30‑day evaluation and only the latest version is available.
 
 > **Prerequisites:**
 > * Confirm that your machine meets the supported OS and .NET version requirements for the Syncfusion Blazor version you are installing. See the [system requirements](https://blazor.syncfusion.com/documentation/system-requirements) for details.
 > * For licensed downloads, an active Blazor license must be assigned to your account in the Syncfusion account portal.
 
-The Blazor Linux installer is available as a trial or a licensed installer, depending on your account status. The sections below describe both download paths. Trial downloads provide a 30‑day evaluation and only the latest version is available.
-
-## Download the Trial Version
+## Download the trial version
 
 The 30‑day trial installer can be downloaded from your Syncfusion account. If you obtained Syncfusion components through NuGet, see [Start Trials If Using Components Through NuGet.org](https://www.nuget.org/packages?q=syncfusion).
 
-### Download the Free Trial Setup
+### Download the free trial setup
 
 1. Visit the [Download Free Trial](https://www.syncfusion.com/downloads) page and select **Blazor**.
 2. Complete the form or sign in with a registered Syncfusion<sup style="font-size:70%">&reg;</sup> account. After submission, the Blazor trial installer becomes available on the confirmation page.
@@ -36,7 +36,7 @@ The 30‑day trial installer can be downloaded from your Syncfusion account. If 
 
    ![Trials and Downloads page showing offline installer download options](images/start-trial-download-offline-installer.webp)
 
-### Start Trials If Using Components Through NuGet.org
+### Start trials if using components through NuGet.org
 
 Use this path if you obtained Syncfusion components from [NuGet.org](https://www.nuget.org/packages?q=syncfusion) and only need an evaluation license key — no installer is required.
 
@@ -54,7 +54,7 @@ Use this path if you obtained Syncfusion components from [NuGet.org](https://www
 
 5. Your current active trial products are listed on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
 
-## Download the Licensed Version
+## Download the licensed version
 
 Licensed installers are available to account holders with an active Syncfusion Essential Studio license assigned to their account.
 
