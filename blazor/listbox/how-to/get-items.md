@@ -32,7 +32,7 @@ The following example demonstrates the `GetDataByValue` method. In this sample, 
         new VehicleData { Text = "SSC Ultimate Aero", Id = "Vehicle-04" },
         new VehicleData { Text = "Koenigsegg CCR", Id = "Vehicle-05" },
         new VehicleData { Text = "McLaren F1", Id = "Vehicle-06" },
-        new VehicleData { Text = "Aston Martin One- 77", Id = "Vehicle-07" },
+        new VehicleData { Text = "Aston Martin One-77", Id = "Vehicle-07" },
         new VehicleData { Text = "Jaguar XJ220", Id = "Vehicle-08" }
     };
 
