@@ -13,19 +13,19 @@ This section explains the step-by-step process of integrating the [Blazor DataGr
 
 > **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Code Studio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
-## Create a new Blazor MAUI App in Visual Studio
+## Create a new MAUI Blazor Hybrid App in Visual Studio
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-Create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
+Create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-10.0). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-Run the following command to create a new Blazor MAUI App.
+Run the following command to create a new MAUI Blazor Hybrid App.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -36,13 +36,11 @@ cd MauiBlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-Alternatively, create a **Blazor MAUI App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
-
 {% endtabcontent %}
 
 {% tabcontent .NET CLI %}
 
-Run the following command to create a new Blazor MAUI App.
+Run the following command to create a new MAUI Blazor Hybrid App.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
