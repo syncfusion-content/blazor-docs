@@ -256,7 +256,7 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://learn.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-10.0&viewFallbackFrom=aspnetcore-2.1&tabs=visual-studio%2Clinux-ubuntu#http-strict-transport-security-protocol-hsts.
     app.UseHsts();
 }
 
@@ -626,7 +626,7 @@ The Pivot Table provides several events to handle CRUD operations:
 
 **Example: Handling ActionComplete Event**
 
-> The event argument types `[PivotActionCompleteEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs.html)`, `[PivotActionFailureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html)`, and `[BeginDrillThroughEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.BeginDrillThroughEventArgs.html)` live in the `Syncfusion.Blazor.PivotView` namespace, which is already imported via `_Imports.razor`.
+> The event argument types `[PivotActionCompleteEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html)`, `[PivotActionFailureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html)`, and `[BeginDrillThroughEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.BeginDrillThroughEventArgs.html)` live in the `Syncfusion.Blazor.PivotView` namespace, which is already imported via `_Imports.razor`.
 
 ```cshtml
 <SfPivotView TValue="OrdersDetails" Width="1000" Height="300" ShowFieldList="true">
