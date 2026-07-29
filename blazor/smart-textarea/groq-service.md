@@ -14,7 +14,7 @@ The Blazor Smart TextArea component provides AI-powered autocompletion for conte
 ## Setting Up Groq
 
 1. **Create a Groq Account**  
-   Visit [Groq Cloud Console](https://console.groq.com), sign up or sign in, and complete the verification process.
+   Visit [Groq Cloud Console](https://console.groq.com/home), sign up or sign in, and complete the verification process.
 2. **Obtain an API Key**  
    Navigate to [API Keys](https://console.groq.com/keys) in the Groq Console and click "Create API Key."
 3. **Review Model Specifications**  
