@@ -53,7 +53,7 @@ Firebase projects host the Realtime Database and manage authentication, storage,
 **Instructions:**
 
 1. **Access Firebase Console**
-   - Navigate to [Firebase Console](https://console.firebase.google.com/).
+   - Navigate to [Firebase Console](https://console.firebase.google.com/?pli=1).
    - Sign in with your Google account.
 
 2. **Create a New Firebase Project**

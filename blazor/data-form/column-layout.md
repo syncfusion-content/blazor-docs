@@ -19,7 +19,7 @@ This section explains how to arrange DataForm editors in a column-based layout. 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm column layout](images/blazor_dataform_change_form_width.webp)
+![Blazor DataForm column layout](images/blazor_dataform_column_layout.webp)
 
 ## Configure the column span 
 
