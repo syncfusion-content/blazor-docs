@@ -46,7 +46,7 @@ Ensure the following software and packages are installed before proceeding:
 
 The sample targets .NET 10 and the corresponding Syncfusion Blazor release. Do not use wildcard package versions. If you use another .NET or Syncfusion version, verify the API differences before applying the code.
 
-### Step 0: Create the Blazor application
+### Step 1: Create the Blazor application
 
 Create a **Blazor Web App** named `PivotTableMsSQL` with the .NET 10 SDK. Select **Interactive Server** interactivity and enable HTTPS. The project should contain `Program.cs`, `appsettings.json`, `wwwroot`, `Components`, and `Properties/launchSettings.json`.
 
