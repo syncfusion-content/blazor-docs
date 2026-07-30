@@ -184,7 +184,7 @@ Range Selector supports **DynamicObject** data source when the model type is unk
 
 ### Binding with OData v4 services
 
-The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) can retrieve and consume OData v4 services, which is an upgraded version of OData protocols. Refer to the  [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197) for additional information on OData v4 services. To bind an OData v4 service, use the **ODataV4Adaptor**.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) can retrieve and consume OData v4 services, which is an upgraded version of OData protocols. Refer to the  [OData documentation](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html) for additional information on OData v4 services. To bind an OData v4 service, use the **ODataV4Adaptor**.
 
 ```cshtml
 
@@ -303,4 +303,4 @@ The [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.c
 
 ![Blazor Chart with Web API Binding](images/working-data/blazor-range-observable-collection.webp)
 
-N> Refer to our [Blazor Range Selector](https://www.syncfusion.com/blazor-components/blazor-range-selector) feature tour page for its groundbreaking feature representations and also explore our [Blazor Range Selector Example](https://blazor.syncfusion.com/demos/range-selector/range-navigator) to know various Range Selector types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Range Selector](https://www.syncfusion.com/blazor-components/blazor-range-selector) feature tour page for its groundbreaking feature representations and also explore our [Blazor Range Selector Example](https://blazor.syncfusion.com/demos/range-selector/range-navigator?theme=fluent2) to know various Range Selector types and how to represent time-dependent data, showing trends at equal intervals.
