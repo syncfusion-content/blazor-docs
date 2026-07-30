@@ -34,8 +34,8 @@ Use the [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     };
 
     public class VehicleData {
-      public string Text  { get; set; }
-      public string Id  { get; set; }
+      public string Text { get; set; }
+      public string Id { get; set; }
     }
 
       public List<VehicleData> Item = new List<VehicleData>{

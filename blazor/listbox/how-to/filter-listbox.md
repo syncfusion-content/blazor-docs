@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filter Data in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all Filter ListBox Data Using TextBox Component in Blazor ListBox component and much more.
+description: Checkout and learn here all about Filter ListBox Data Using HTML Input Element in Blazor ListBox component and much more details.
 platform: Blazor
 control: List Box
 documentation: ug

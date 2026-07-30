@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Get Items in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all about select items in Blazor ListBox component and much more.
+description: Checkout and learn here all about getting items by value using a method in the Blazor ListBox component and much more details.
 platform: Blazor
 control: List Box
 documentation: ug
