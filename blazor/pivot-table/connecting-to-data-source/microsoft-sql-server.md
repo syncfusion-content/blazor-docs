@@ -750,7 +750,7 @@ The URL Adaptor is the contract between the Blazor Pivot Table and the SQL Serve
 3. The controller deserializes the request, queries SQL Server, and returns `{ result, count }`.
 4. For write operations, the pivot table posts a `CRUDModel<Order>` payload to the matching `InsertUrl`, `UpdateUrl`, or `RemoveUrl`.
 
-```razor
+```html
 <SfDataManager Url="http://localhost:5145/api/Order"
                InsertUrl="http://localhost:5145/api/Order/Insert"
                UpdateUrl="http://localhost:5145/api/Order/Update"
