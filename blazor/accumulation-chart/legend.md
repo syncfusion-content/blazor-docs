@@ -453,7 +453,7 @@ To use, add a `LegendItemTemplate` inside any [AccumulationChartSeries](https://
 ```
 ![Legend Template in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-template.webp)
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=fluent2) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.
 
 * [Grouping](./grouping)
 * [Data label](./data-label)
