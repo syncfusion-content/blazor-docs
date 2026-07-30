@@ -9,7 +9,7 @@ documentation: ug
 
 # Add/Remove Items in Blazor ListBox Component
 
-Use the [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_AddItemsAsync_System_Collections_Generic_IEnumerable__0__System_Nullable_System_Int32__) method can be used. In the following example, the `Ferrari LaFerrari` and `McLaren P1` items when clicking the Add Items button. Items should conform to the TItem type and field mappings (Text and Value) configured in ListBoxFieldSettings. AddItemsAsync also supports an optional index parameter to insert items at a specific position; when omitted, items are appended.
+Use the [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_AddItemsAsync_System_Collections_Generic_IEnumerable__0__System_Nullable_System_Int32__) method to add items to the ListBox. In the following example, the `Ferrari LaFerrari` and `McLaren P1` items are added when clicking the `Add Items` button. Items should conform to the TItem type and field mappings (Text and Value) configured in ListBoxFieldSettings. AddItemsAsync also supports an optional index parameter to insert items at a specific position; when omitted, items are appended.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -29,13 +29,13 @@ Use the [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
         new VehicleData { Text = "SSC Ultimate Aero", Id = "Vehicle-04" },
         new VehicleData { Text = "Koenigsegg CCR", Id = "Vehicle-05" },
         new VehicleData { Text = "McLaren F1", Id = "Vehicle-06" },
-        new VehicleData { Text = "Aston Martin One- 77", Id = "Vehicle-07" },
+        new VehicleData { Text = "Aston Martin One-77", Id = "Vehicle-07" },
         new VehicleData { Text = "Jaguar XJ220", Id = "Vehicle-08" }
     };
 
     public class VehicleData {
-      public string Text  { get; set; }
-      public string Id  { get; set; }
+      public string Text { get; set; }
+      public string Id { get; set; }
     }
 
       public List<VehicleData> Item = new List<VehicleData>{
@@ -44,7 +44,7 @@ Use the [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
       };
 
       private async Task addData() {
-        await ListBoxObj.AddItems(Item);
+        await ListBoxObj.AddItemsAsync(Item);
       }
 }
 ```
@@ -53,7 +53,7 @@ Use the [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ## Remove items from the listbox
 
-Use the [RemoveItemAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_RemoveItemAsync_System_Collections_Generic_IEnumerable__1__System_Nullable_System_Int32__) method can be used. In the following example, the `Ferrari LaFerrari` and `McLaren P1` items will be removed while clicking `Remove Items` button. Removed items must match the TItem type and the field mappings used by the ListBox. RemoveItemAsync also supports an optional index parameter to target positions when needed.
+Use the [RemoveItemAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_RemoveItemAsync_System_Collections_Generic_IEnumerable__1__System_Nullable_System_Int32__) method to remove items from the ListBox. In the following example, the `Ferrari LaFerrari` and `McLaren P1` items are removed when clicking the `Remove Items` button. Removed items must match the TItem type and the field mappings used by the ListBox. RemoveItemAsync also supports an optional index parameter to target positions when needed.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -73,15 +73,15 @@ Use the [RemoveItemAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
         new VehicleData { Text = "SSC Ultimate Aero", Id = "Vehicle-04" },
         new VehicleData { Text = "Koenigsegg CCR", Id = "Vehicle-05" },
         new VehicleData { Text = "McLaren F1", Id = "Vehicle-06" },
-        new VehicleData { Text = "Aston Martin One- 77", Id = "Vehicle-07" },
+        new VehicleData { Text = "Aston Martin One-77", Id = "Vehicle-07" },
         new VehicleData { Text = "Jaguar XJ220", Id = "Vehicle-08" },
         new VehicleData{ Text = "Ferrari LaFerrari", Id = "Vehicle-09"},
         new VehicleData{ Text = "McLaren P1", Id = "Vehicle-10"}
     };
 
     public class VehicleData {
-      public string Text  { get; set; }
-      public string Id  { get; set; }
+      public string Text { get; set; }
+      public string Id { get; set; }
     }
 
     public List<VehicleData> Item = new List<VehicleData>{

@@ -25,7 +25,7 @@ Customize an individual field editor using the [Template](https://help.syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm field customized using FormItem.Template](images/blazor_dataform_template.webp)
+![Blazor DataForm field customized using FormItem.Template](images/blazor_dataform_field_editor_template.webp)
 
 The above `Template` approach can also be used alongside [FormAutoGenerateItems](./form-items.md) to auto-generate all items except those explicitly customized with a `FormItem` template.
 
