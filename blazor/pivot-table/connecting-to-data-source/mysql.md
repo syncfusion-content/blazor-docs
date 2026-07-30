@@ -48,7 +48,7 @@ The sample targets .NET 10 and the corresponding Syncfusion Blazor release. Do n
 
 `{{site.blazorversion}}` is resolved by the documentation build. When copying the commands into a standalone project, replace it with the concrete Syncfusion version used by the sample.
 
-### Step 0: Create the Blazor application
+### Step 1: Create the Blazor application
 
 Create a **Blazor Web App** named `PivotTableMySQL` with the .NET 10 SDK. Select **Interactive Server** interactivity and enable HTTPS. The project should contain `Program.cs`, `appsettings.json`, `wwwroot`, `Components`, and `Properties/launchSettings.json`.
 
@@ -785,7 +785,7 @@ The URL Adaptor is the contract between the Blazor Pivot Table and the MySQL-bac
 3. The controller deserializes the request, queries MySQL, and returns `{ result, count }`.
 4. For write operations, the pivot table posts a `CRUDModel<Order>` payload to the matching `InsertUrl`, `UpdateUrl`, or `RemoveUrl`.
 
-```razor
+```html
 <SfDataManager Url="http://localhost:5145/api/Order"
                InsertUrl="http://localhost:5145/api/Order/Insert"
                UpdateUrl="http://localhost:5145/api/Order/Update"
@@ -955,25 +955,15 @@ The `BeginDrillThrough` event is raised by the Pivot Table when the Edit Dialog 
 
 ## Data Flow Diagram
 
-The following diagram illustrates how data flows from MySQL to the Pivot Table:
+The following image illustrates how data flows between MySQL, the ASP.NET Core controller, and the Syncfusion Blazor Pivot Table.
 
-```mermaid
-flowchart TD
-    A[(MySQL<br/>orders table)] --> B[MySql.Data Provider]
-    B --> C[OrderController<br/>API Endpoints]
-    C -->|HTTP POST| D[UrlAdaptor<br/>SfDataManager]
-    D --> E[SfPivotView<br/>Pivot Table UI]
-    E -->|User edits| D
-    D -->|HTTP POST CRUDModel| C
-    C -->|SQL INSERT/UPDATE/DELETE| B
-    B --> A
-```
+![Pivot Flow Diagram](../images/blazor-pivot-table-MySQL-FlowDiagram.webp)
 
 1. **MySQL** stores the `orders` records.
-2. The **MySql.Data data provider** executes parameterized SQL commands over pooled connections.
-3. The **`OrderController`** exposes HTTP endpoints and orchestrates reads and writes.
-4. The **URL Adaptor** inside `SfDataManager` posts `DataManagerRequest` and `CRUDModel<Order>` payloads to those endpoints.
-5. The **`SfPivotView`** renders the summarized data and its raw-item edit grid triggers the write endpoints.
+2. The **MySql.Data provider** establishes the connection between the application and the MySQL database and executes SQL commands.
+3. The **`OrderController`** exposes API endpoints that handle data retrieval and CRUD operations.
+4. The **URL Adaptor** configured in the `SfDataManager` communicates with the controller endpoints by sending `DataManagerRequest` and `CRUDModel<Order>` payloads.
+5. The **`SfPivotView`** consumes the returned data and renders the data within the Pivot Table. User modifications are sent back to the controller through the configured CRUD endpoints, which then update the MySQL database.
 
 ## PostgreSQL-to-MySQL Mapping Table
 
