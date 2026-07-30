@@ -11,7 +11,7 @@ documentation: ug
 
 The **Syncfusion® Blazor Template Studio** for Visual Studio Code scaffolds a Blazor application preconfigured with Syncfusion® NuGet packages, namespaces, themes, and sample component render code. Use the guided wizard to quickly create an application tailored to your platform and selected controls.
 
-N> Blazor project templates require Essential Studio `v17.4.0.39` and later are supported by the Syncfusion® Visual Studio Code project template.
+N> Blazor project templates require Essential Studio `v17.4.0.39` or later. These versions are supported by the Syncfusion® Visual Studio Code project template.
 
 Use the following steps to create Syncfusion® Blazor applications in Visual Studio Code:
 
