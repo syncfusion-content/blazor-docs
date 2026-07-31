@@ -639,7 +639,7 @@ The API uses action-oriented routes because they match the URL Adaptor's `Insert
 | Antiforgery validation fails | Configure the adaptor to send the expected request token, or use an appropriate non-cookie API authentication scheme. |
 | Large datasets are slow | Process `DataManagerRequest` operations on the server instead of returning the entire table. |
 
-For current component behavior, see the [Pivot Table editing documentation](https://blazor.syncfusion.com/documentation/pivot-table/editing/) and [Pivot Table data-binding documentation](https://blazor.syncfusion.com/documentation/pivot-table/data-binding).
+For current component behavior, see the [Pivot Table editing documentation](https://blazor.syncfusion.com/documentation/pivot-table/editing) and [Pivot Table data-binding documentation](https://blazor.syncfusion.com/documentation/pivot-table/data-binding).
 
 ## Complete Sample Repository
 
