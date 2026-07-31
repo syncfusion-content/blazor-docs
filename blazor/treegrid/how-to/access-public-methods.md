@@ -1,119 +1,178 @@
 ---
 layout: post
 title: Access public methods in Blazor TreeGrid Component | Syncfusion®
-description: Learn here all about accessing public methods in Tree Grid in Blazor TreeGrid component and much more details.
+description: Learn how to access and use public methods in the Syncfusion Blazor TreeGrid component to perform programmatic actions such as printing, refreshing, expanding rows, and managing selections.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Access public methods in Tree Grid in Blazor TreeGrid Component
+# Access public methods in Blazor TreeGrid Component
 
-The methods are available through the component instance referenced by the `@ref` directive.
+In many applications, TreeGrid actions need to be triggered from outside the TreeGrid user interface. For example, you may want to:
 
-A component reference is created by using the `@ref` directive in the `SfTreeGrid` tag.The component reference becomes available after rendering. Public methods should typically be invoked from user actions or lifecycle methods such as `OnAfterRenderAsync`.
+- Print TreeGrid data from a custom button.
+- Refresh the TreeGrid after updating data from an API.
+- Expand or collapse records from a toolbar action.
+- Select a row programmatically after a search operation.
+- Open an edit dialog based on custom business logic.
 
-The following examples demonstrate how to access and invoke SfTreeGrid public APIs, such as methods and properties, through component references. This approach is useful when you need to interact with the TreeGrid programmatically from external UI elements such as custom buttons, toolbars, or other page actions.
+To support these scenarios, the Blazor TreeGrid provides public methods that can be accessed through a component reference.
 
+## When to use public methods
+
+Use TreeGrid public methods when an operation needs to be performed programmatically instead of through the built-in TreeGrid user interface.
+
+### Common scenarios
+
+TreeGrid public methods are commonly used when you need to:
+
+- Trigger TreeGrid actions from custom buttons, toolbars, or menus.
+- Refresh the TreeGrid after updating data from an API or database.
+- Select, edit, or expand records based on actions performed in another component.
+- Synchronize TreeGrid behavior with dialogs, forms, dashboards, or custom workflows.
+- Perform TreeGrid operations programmatically instead of relying on built-in user interactions.
+
+## Access the TreeGrid instance
+
+Before invoking a TreeGrid public method, you must obtain a reference to the TreeGrid component instance. The component instance provides access to TreeGrid properties and methods and can be accessed using the `@ref` directive.
+
+```razor
+<SfTreeGrid @ref="TreeGrid"></SfTreeGrid>
+```
+
+```csharp
+private SfTreeGrid<TreeData> TreeGrid;
+```
+
+The component reference becomes available after the TreeGrid has been rendered.
+
+> IMPORTANT
+>
+> The component reference is available only after the TreeGrid has been rendered. If you need to access the TreeGrid instance during component initialization, use lifecycle methods such as `OnAfterRenderAsync`.
+
+## Example: Print TreeGrid data using a custom button
+
+The following example demonstrates how to invoke the `PrintAsync` method from an external button.
 
 {% tabs %}
 
 {% highlight razor %}
 
 @using TreeGridComponent.Data;
-@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Buttons;
 @using Syncfusion.Blazor.Grids;
 @using Syncfusion.Blazor.TreeGrid;
 
-<SfButton OnClick="Print" CssClass="e-primary" IsPrimary="true" Content="Print data"></SfButton>
+<SfButton OnClick="Print"
+          CssClass="e-primary"
+          IsPrimary="true"
+          Content="Print data">
+</SfButton>
 
-<SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId"
-            TreeColumnIndex="1" AllowPaging="true" Height="200">
+<SfTreeGrid @ref="TreeGrid"
+            DataSource="@TreeGridData"
+            IdMapping="TaskId"
+            ParentIdMapping="ParentId"
+            TreeColumnIndex="1"
+            AllowPaging="true"
+            Height="200">
+
     <TreeGridColumns>
-        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn>
-        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80"></TreeGridColumn>
+        <TreeGridColumn Field="TaskId"
+                        HeaderText="Task ID"
+                        Width="80"
+                        TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
+        </TreeGridColumn>
+
+        <TreeGridColumn Field="TaskName"
+                        HeaderText="Task Name"
+                        Width="160">
+        </TreeGridColumn>
+
+        <TreeGridColumn Field="Duration"
+                        HeaderText="Duration"
+                        Width="100"
+                        TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
+        </TreeGridColumn>
+
+        <TreeGridColumn Field="Progress"
+                        HeaderText="Progress"
+                        Width="100"
+                        TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
+        </TreeGridColumn>
+
+        <TreeGridColumn Field="Priority"
+                        HeaderText="Priority"
+                        Width="80">
+        </TreeGridColumn>
     </TreeGridColumns>
+
 </SfTreeGrid>
 
-@code{
-    SfTreeGrid<TreeData> TreeGrid;
+@code {
+
+    private SfTreeGrid<TreeData> TreeGrid;
 
     public List<TreeData> TreeGridData { get; set; }
 
-public async Task Print()
-{
-    if (TreeGrid != null)
+    public async Task Print()
     {
-        await TreeGrid.PrintAsync();
+        if (TreeGrid != null)
+        {
+            await TreeGrid.PrintAsync();
+        }
     }
-}
 
     protected override void OnInitialized()
     {
-        this.TreeGridData = TreeData.GetSelfDataSource().ToList();
+        TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
+## Frequently used public methods
 
-{% highlight c# %}
+The following methods are commonly used when interacting with the TreeGrid programmatically.
 
-namespace TreeGridComponent.Data
-{
-    public class TreeData
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public int? Duration { get; set; }
-        public int? Progress { get; set; }
-        public string Priority { get; set; }
-        public int? ParentId { get; set; }
+| Method | When to use |
+|----------|----------|
+| `PrintAsync()` | Generate a printable view from a custom button or toolbar. |
+| `RefreshAsync()` | Refresh the TreeGrid after updating data dynamically. |
+| `ExpandAllAsync()` | Expand all parent records to display the complete hierarchy. |
+| `CollapseAllAsync()` | Collapse all expanded records to simplify the displayed hierarchy. |
+| `SelectRowAsync(int rowIndex)` | Highlight a row after search, navigation, or custom business logic. |
+| `ClearSelectionAsync()` | Remove row selections after completing an action. |
+| `AddRecordAsync()` | Open a new row or dialog to add a record programmatically. |
+| `EditCellAsync()` | Start editing a specific cell programmatically. |
+| `DeleteRecordAsync()` | Remove a selected record from a custom action. |
+| `FilterByColumnAsync()` | Apply filtering dynamically based on user interaction. |
+| `AutoFitColumnsAsync()` | Automatically resize columns based on their content. |
+| `ExportToExcelAsync()` | Export TreeGrid data to an Excel document. |
+| `ExportToCsvAsync()` | Export TreeGrid data to a CSV document. |
+| `ExportToPdfAsync()` | Export TreeGrid data to a PDF document. |
+| `GoToPageAsync()` | Navigate to a specific page programmatically. |
+| `GetSelectedRecordsAsync()` | Retrieve currently selected records. |
+| `GetCurrentViewRecords()` | Retrieve records displayed in the current view. |
+| `GetPersistDataAsync()` | Save the current TreeGrid state for later restoration. |
 
-        public static List<TreeData> GetSelfDataSource()
-        {
-            List<TreeData> TreeDataCollection = new List<TreeData>();
-            TreeDataCollection.Add(new TreeData() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null });
-            TreeDataCollection.Add(new TreeData() { TaskId = 2, TaskName = "Child task 1", Progress = 80, Priority = "Low", Duration = 50, ParentId = 1 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, Priority = "Critical", ParentId = 2 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 4, TaskName = "Child task 3", Duration = 6, Priority = "High", Progress = 77, ParentId = 3 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 5, TaskName = "Parent Task 2", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null });
-            TreeDataCollection.Add(new TreeData() { TaskId = 6, TaskName = "Child task 1", Duration = 4, Progress = 80, Priority = "Critical", ParentId = 5 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 7, TaskName = "Child Task 2", Duration = 5, Progress = 65, Priority = "Low", ParentId = 5 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 8, TaskName = "Child task 3", Duration = 6, Progress = 77, Priority = "High", ParentId = 5 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 9, TaskName = "Child task 4", Duration = 6, Progress = 77, Priority = "Low", ParentId = 5 });
-            return TreeDataCollection;
-        }
-    }
-}
+For a complete list of available methods and overloads, refer to the API reference documentation.
 
-{% endhighlight %}
+## Best practices
 
-**Common TreeGrid public methods**
+- Use public methods when TreeGrid operations must be triggered programmatically.
+- Store the component reference in a field using the `@ref` directive.
+- Verify that the component reference is not `null` before invoking a method.
+- Trigger methods from user actions such as button clicks, toolbar items, or menu commands.
+- Access the TreeGrid instance only after component rendering is completed.
+- Await asynchronous TreeGrid methods to ensure operations complete successfully.
+- Refer to the API documentation for advanced methods and additional overloads.
 
-These public methods are frequently used to perform actions directly on the TreeGrid component instance:
+## See also
 
-- `PrintAsync()` - Prints the current TreeGrid content as displayed in the view.
-- `RefreshAsync()` - Re-renders the TreeGrid to reflect any data or layout changes.
-- `ExpandAllAsync()` - Expands all parent rows in the TreeGrid.
-- `CollapseAllAsync()` - Collapses all expanded rows in the TreeGrid.
-- `SelectRowAsync(int rowIndex)` - Selects a row at the specified zero-based index.
-- `ClearSelectionAsync()` - Clears all currently selected rows in the TreeGrid.
-- `OpenEditDialogAsync()` / `CloseEditDialogAsync()` - Opens or closes the edit dialog for the selected row.
-
-**Best practices**
-
-- Always assign the `@ref` reference to a field so you can access the TreeGrid instance from your component code.
-- Call public methods in response to user actions, such as button clicks, or after rendering is complete.
-- Verify the TreeGrid reference is not `null` before calling a method from the component instance.
-- For asynchronous operations, use the method return value when necessary and handle any awaited tasks.
-
-**Additional notes**
-
-The TreeGrid public method API is part of the Syncfusion® Blazor TreeGrid component and is documented in the API reference. Use the links below to explore additional methods, properties, and overloads for the TreeGrid component.
-
-For detailed information about the available TreeGrid APIs, refer to the following API reference documentation: [SfTreeGrid Methods](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#methods) and [SfTreeGrid Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#properties).
+For detailed information about the available TreeGrid APIs, refer to the following API reference documentation:
+- [SfTreeGrid Methods](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#methods)
+- [SfTreeGrid Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#properties)
+- [TreeGrid API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html)
