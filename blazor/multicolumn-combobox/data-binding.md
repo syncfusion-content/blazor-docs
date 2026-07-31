@@ -187,7 +187,7 @@ The following example demonstrates remote data binding with offline mode enabled
 
 ### Entity Framework
 
-Follow these steps to consume data from the [Entity Framework](https://blazor.syncfusion.com/documentation/common/data-binding/bind-entity-framework) in the MultiColumn ComboBox component.
+Follow these steps to consume data from the [Entity Framework](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-orm/entityframework) in the MultiColumn ComboBox component.
 
 #### Create DBContext class
 

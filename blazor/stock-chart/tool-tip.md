@@ -209,4 +209,4 @@ By default, the tooltip aligns to the left side of the Stock Chart. To move the 
 
 ![Blazor Stock Chart with moving tooltip](images/common/blazor-stock-chart-moving-tooltip.webp)
 
-N> Refer to the [Blazor Stock Charts](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for a summary of key features and explore the [Blazor Stock Chart example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=bootstrap5) to learn about chart types and time based data visualization at equal intervals.
+N> Refer to the [Blazor Stock Charts](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for a summary of key features and explore the [Blazor Stock Chart example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=fluent2) to learn about chart types and time based data visualization at equal intervals.

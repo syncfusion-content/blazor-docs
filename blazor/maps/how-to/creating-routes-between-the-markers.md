@@ -90,7 +90,7 @@ public async Task AddRoutes()
 
 ### Customize the travel mode in the Google Map Directions API
 
-Coordinates can be retrieved based on different travel modes, such as DRIVING, WALKING, BICYCLING, or TRANSIT, using the Google Maps Directions API. DRIVING is the default travel mode for these services. For additional information on available travel modes, refer to this [link](https://developers.google.com/maps/documentation/javascript/directions#TravelModes).
+Coordinates can be retrieved based on different travel modes, such as DRIVING, WALKING, BICYCLING, or TRANSIT, using the Google Maps Directions API. DRIVING is the default travel mode for these services. For additional information on available travel modes, refer to this [link](https://developers.google.com/maps/documentation/javascript/legacy/directions#TravelModes).
 
 ## Plot markers on the Map
 
