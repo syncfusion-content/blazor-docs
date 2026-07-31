@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with FileManager in Blazor MAUI App | Syncfusion
-description: Check out and learn about how to get started with the Blazor FileManager component in a Blazor MAUI App.
+title: Getting Started with File Manager in Blazor MAUI App | Syncfusion
+description: Check out and learn about how to get started with the Blazor File Manager component in a Blazor MAUI App.
 platform: Blazor
-component: FileManager
+component: File Manager
 documentation: ug
 ---
 
-# Getting Started with Blazor FileManager Component in Blazor MAUI App
+# Getting Started with Blazor File Manager Component in Blazor MAUI App
 
 This section explains the step-by-step process of integrating the [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -55,7 +55,7 @@ cd MauiBlazorApp
 
 ## Install the required Blazor packages
 
-Install the [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+Install the [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. Use a supported .NET SDK version and install the package version that matches your Syncfusion release.
 
 {% tabcontents %}
 
@@ -114,7 +114,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/Components/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.FileManager` namespaces.
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/Components/_Imports.razor" %}
 
 @using Syncfusion.Blazor 
 @using Syncfusion.Blazor.FileManager
@@ -148,7 +148,7 @@ public static class MauiProgram
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
+The theme stylesheet and script are available from NuGet as [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -163,7 +163,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor FileManager component
 
-Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component inside the razor file.
+N> Add a route directive such as `@page "/"` if the page needs to be directly accessible.
+
+Open a Razor page in the **~/Components/Pages/*.razor** folder (for example, **Home.razor**) and add the [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component to that page.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
