@@ -20,7 +20,7 @@ GraphQL is a query language that allows applications to request exactly the data
 - **Resolvers**: Each query or mutation is handled by a resolver, which is a function responsible for fetching data or executing an operation. **Query resolvers** handle **read operations**, while **mutation resolvers** handle **write operations**.
 - **Schema**: Defines the structure of the API. The schema describes available data types, the fields within those types, and the operations that can be executed. Query definitions specify how data can be retrieved, and mutation definitions specify how data can be modified. 
 
-[Hot Chocolate](https://chillicream.com/docs/hotchocolate/v15) is an open‑source GraphQL server framework for .NET. Hot Chocolate enables the creation of GraphQL APIs using ASP.NET Core and integrates seamlessly with modern .NET applications, including Blazor.
+[Hot Chocolate](https://chillicream.com/docs/hotchocolate) is an open‑source GraphQL server framework for .NET. Hot Chocolate enables the creation of GraphQL APIs using ASP.NET Core and integrates seamlessly with modern .NET applications, including Blazor.
 
 ## Prerequisites
 
@@ -108,8 +108,6 @@ The `.csproj` file confirms the package configuration. When using the public NuG
 </Project>
 ```
 
----
-
 ### Step 2: Register Hot Chocolate Services in Program.cs
 
 The `Program.cs` file configures and registers the GraphQL services, the Syncfusion Blazor services, and the interactive server render mode used by the Pivot Table.
@@ -190,9 +188,7 @@ In the same‑origin HTTPS case, the Blazor `Home.razor` `SfDataManager` `Url` v
 - `MapGraphQL()` - Exposes the GraphQL endpoint at `/graphql`.
 - `MapRazorComponents<App>().AddInteractiveServerRenderMode()` - Wires the Blazor component pipeline using the `App` component from the `Components` folder.
 
-The GraphQL backend is now configured and ready. The GraphQL endpoint is accessible at `https://localhost:xxxx/graphql`.
-
----
+The GraphQL backend is now configured and ready. The GraphQL endpoint is accessible at `https://localhost:7009/graphql`.
 
 ### Step 3: Configure Launch Settings (Port Configuration)
 
@@ -253,13 +249,11 @@ The **launchsettings.json** file controls the port number where the application 
 
 All configuration steps are now complete.
 
----
-
 ### Step 4: Create the Data Model
 
 A data model represents the structure of data that the application stores. It defines the properties (fields) that make up a record. Each property corresponds to a column in the database table. The data model acts as the blueprint for how data is organized and accessed throughout the application.
 
-In the context of an expense tracker, the data model defines what information is stored for each expense entry. Properties include the expense identifier, the department, the category, and the amount. These four properties are sufficient to demonstrate the Pivot Table behaviour because the pivot layout will derive a value cell (sum of **Amount**) per intersection of **Department** rows and **ExpenseId** columns.
+In the context of an expense tracker, the data model defines what information is stored for each expense entry. Properties include the expense identifier, the department, the category, and the amount. These four properties are sufficient to demonstrate the Pivot Table behavior because the pivot layout will derive a value cell (sum of **Amount**) per intersection of **Department** rows and **ExpenseId** columns.
 
 **Instructions**:
 
@@ -366,7 +360,7 @@ The following table shows how C# properties map to database columns and GraphQL 
 
 **Important Convention: Camel Case Conversion**
 
-**Hot Chocolate GraphQL** automatically converts C# property names (**PascalCase**) to GraphQL field names (**camelCase**). This convention ensures consistent naming in the GraphQL schema. The `[JsonPropertyName]` attributes used above are honoured by the Syncfusion GraphQL adaptor when serializing and deserializing the request and response payloads.
+**Hot Chocolate GraphQL** automatically converts C# property names (**PascalCase**) to GraphQL field names (**camelCase**). This convention ensures consistent naming in the GraphQL schema. The `[JsonPropertyName]` attributes used above are honored by the Syncfusion GraphQL adaptor when serializing and deserializing the request and response payloads.
 
 - C# Property: `ExpenseId` → GraphQL Field: `expenseId`
 - C# Property: `Department` → GraphQL Field: `department`
@@ -382,8 +376,6 @@ The following table shows how C# properties map to database columns and GraphQL 
 - The static `GetAllRecords()` method returns the shared in‑memory list that backs both the query and the mutation resolvers, so that data created at runtime is visible to subsequent reads.
 
 The expense data model has been successfully created.
-
----
 
 ### Step 5: GraphQL Query Resolvers
 
@@ -439,8 +431,6 @@ namespace GraphQLAdaptor.Models
 - Because the Pivot Table performs aggregation, grouping, sorting, paging, and filtering on the client, this resolver simply returns every record. The server is not required to perform any of those operations — the request input type exists only to remain compatible with the standard `DataManagerRequestInput` shape the adaptor sends.
 
 The query resolver has been created successfully.
-
----
 
 ### Step 6: Create the DataManagerRequestInput Class
 
@@ -552,8 +542,6 @@ The Pivot Table populates the `DataManagerRequestInput` whenever it requests dat
 **Key Attributes Explained**
 `[GraphQLName]`: Maps C# property names to GraphQL schema field names. **Hot Chocolate** automatically converts PascalCase to camelCase.
 `[GraphQLType(typeof(AnyType))]`: Allows flexible typing for complex nested structures (such as `Params` and `Aggregates`) that can contain various data types.
-
----
 
 ### Step 7: GraphQL Mutation Resolvers
 
@@ -762,7 +750,7 @@ A mutation resolver is a C# method decorated with GraphQL attributes that:
 
 After `dotnet run`, open `http://localhost:5272/graphql` (Banana Cake Pop) and execute a sample mutation to confirm the resolver is registered:
 
-```graphql
+```
 mutation testCreate {
   createExpense(
     record: { expenseId: "EXP1003", department: "Sales", category: "Lodging", amount: 480.0 }
@@ -781,8 +769,6 @@ mutation testCreate {
 A successful response confirms the GraphQL input type, the `Any` scalar, and the resolver are all wired correctly.
 
 The GraphQL Mutation class has been successfully created and is ready to handle all data modification operations issued from the Pivot Table's editing popup.
-
----
 
 ## Integrating Blazor PivotView
 
@@ -822,7 +808,7 @@ Syncfusion provides UI components—including the Pivot Table—that display mul
 <link href="_content/Syncfusion.Blazor.Themes/tailwind3.css" rel="stylesheet" />
 ```
 
-The Blazor framework script (`_framework/blazor.web.js`) and the Syncfusion Blazor script (`_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js`) are placed at the end of the `<body>` element so the framework is fully loaded before the Syncfusion runtime is initialised. The default Blazor template already includes the framework script; add the Syncfusion script line immediately after it:
+The Blazor framework script (`_framework/blazor.web.js`) and the Syncfusion Blazor script (`_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js`) are placed at the end of the `<body>` element so the framework is fully loaded before the Syncfusion runtime is initialized. The default Blazor template already includes the framework script; add the Syncfusion script line immediately after it:
 
 ```html
 <script src="@Assets["_framework/blazor.web.js"]"></script>
@@ -832,8 +818,6 @@ The Blazor framework script (`_framework/blazor.web.js`) and the Syncfusion Blaz
 For this project, the **tailwind3** theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
 Blazor components are now configured and ready to use. For additional guidance, refer to the [Pivot Table component's getting‑started](https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp) documentation.
-
----
 
 ### Step 2: Create the Blazor PivotView
 
@@ -910,8 +894,6 @@ The `SfDataManager` component connects the Pivot Table to the GraphQL backend us
 - If the backend runs on port `5272`, then the URL must be `http://localhost:5272/graphql` (or `https://localhost:7009/graphql` for the HTTPS profile).
 - The `/graphql` path is set by `app.MapGraphQL()` in `Program.cs`.
 
----
-
 ### Step 3: Configure GraphQL Adaptor and Data Binding
 
 The GraphQL adaptor is a bridge that connects the Blazor Pivot Table with the GraphQL backend. The adaptor translates DataManager operations (initial fetch, drill‑through, value‑axis change, cell edits) into GraphQL queries and mutations. When the user interacts with the pivot, the adaptor automatically sends the appropriate GraphQL request to the backend, receives the response, and updates the pivot display.
@@ -928,8 +910,6 @@ An adaptor is a translator between two different systems. The GraphQL adaptor sp
 - Updates the pivot display with the new data.
 
 The adaptor enables bidirectional communication between the frontend (Pivot Table) and backend (GraphQL server).
-
----
 
 **GraphQL Adaptor Configuration**
 
@@ -1057,8 +1037,6 @@ The `ResolverName` property (`"expenseRecordData"`) tells the GraphQL adaptor wh
 
 Hot Chocolate automatically generates a GraphQL input type named `ExpenseRecordInput` from the `ExpenseRecord` class whenever `ExpenseRecord` is used as an argument to a mutation method (as in `CreateExpense(ExpenseRecord record, ...)`). No `[InputType]` attribute or `.AddInputObjectType<>()` call is required for the sample as written, because the same class is reused for both input and output. If you separate read and write models, register the input type explicitly and update the `Insert`/`Update`/`Batch` mutation strings to reference the new input type name.
 
----
-
 **Response Structure Example**
 
 When the backend executes the query, it returns a **JSON response** in this structure:
@@ -1099,8 +1077,6 @@ When the backend executes the query, it returns a **JSON response** in this stru
 
 Once this raw data is received, the Pivot Table aggregates it on the client and renders the cross‑tab.
 
----
-
 ### Step 4: Configure Drill‑Through and the Primary Key
 
 Cell‑level editing in the Pivot Table happens through a **drill‑through** dialog (referred to here as the editing popup). The editing popup is a Syncfusion Grid that lists the underlying records that contributed to a particular aggregated cell. Because CRUD mutations on the backend expect a primary key (the `ExpenseId`), the editing popup must mark the `ExpenseId` column as its primary key.
@@ -1121,8 +1097,6 @@ The `BeginDrillThrough` event fires just before the editing popup is shown. Insi
 
 Without this event handler, the inner Grid would not have a primary key, and CRUD operations issued from the editing popup would fail because the adaptor would not know which record to send to the backend.
 
----
-
 ### Step 5: Enable Cell Editing on the Pivot
 
 `<PivotViewCellEditSettings>` enables inline CRUD on value cells. With this configuration, the user can right‑click a value cell in the pivot and choose **Add**, **Edit**, or **Delete** to open the editing popup pre‑filtered to that cell's underlying records.
@@ -1139,8 +1113,6 @@ The `<PivotViewCellEditSettings>` element already appears in the `Home.razor` ma
 | `Mode` | `EditMode.Normal` | Uses the default Syncfusion dialog. |
 
 When the user makes a change and clicks **Update**, the GraphQL adaptor picks the corresponding mutation (`createExpense`, `updateExpense`, `deleteExpense`, or `batchUpdate`) from the `Mutation` block of `GraphQLAdaptorOptions` and posts it to the configured `Url`.
-
----
 
 ### Step 6: Running the Application
 
@@ -1169,8 +1141,6 @@ dotnet run
 3. The Expense Tracker Pivot Table is now running and ready to use.
 
 ![Blazor Pivot Table Data Binding](../images/blazor-pivottable-graphql-adaptor.webp)
-
----
 
 ## Perform CRUD Operations
 
@@ -1419,8 +1389,6 @@ mutation batch($changed: [ExpenseRecordInput!], $added: [ExpenseRecordInput!], $
 }
 ```
 
----
-
 ## Data Persistence and Reset Behavior
 
 > The `ExpenseRecord` class stores data in a **static in‑memory list** (see `Models/ExpenseRecord.cs`). All mutations modify this list, so records added, updated, or deleted at runtime are visible to subsequent queries. However, because the data is held in process memory:
@@ -1448,7 +1416,6 @@ The most common issues encountered when wiring the Pivot Table to a Hot Chocolat
 
 A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/syncfusion-blazor-pivot-table-remote-data-binding/tree/master/GraphQLAdaptor).
 
----
 ## Summary
 
 This guide demonstrates how to:

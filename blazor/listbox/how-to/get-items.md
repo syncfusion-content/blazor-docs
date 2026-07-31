@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Get Items in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all about select items in Blazor ListBox component and much more.
+description: Checkout and learn here all about getting items by value using a method in the Blazor ListBox component and much more details.
 platform: Blazor
 control: List Box
 documentation: ug
@@ -32,7 +32,7 @@ The following example demonstrates the `GetDataByValue` method. In this sample, 
         new VehicleData { Text = "SSC Ultimate Aero", Id = "Vehicle-04" },
         new VehicleData { Text = "Koenigsegg CCR", Id = "Vehicle-05" },
         new VehicleData { Text = "McLaren F1", Id = "Vehicle-06" },
-        new VehicleData { Text = "Aston Martin One- 77", Id = "Vehicle-07" },
+        new VehicleData { Text = "Aston Martin One-77", Id = "Vehicle-07" },
         new VehicleData { Text = "Jaguar XJ220", Id = "Vehicle-08" }
     };
 

@@ -315,7 +315,7 @@ The following example uses a distinct color palette and an off-center radial gra
 ```
 ![Radial Gradient for each point in Blazor Accumulation Chart](images/gradient/blazor-accumulation-chart-radial-gradient-points.webp)
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know various features of accumulation charts and how it is used to represent numeric proportional data.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=fluent2) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 
 ## See also
 

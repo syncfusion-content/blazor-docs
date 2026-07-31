@@ -24,7 +24,7 @@ The [Syncfusion® Blazor extension](https://marketplace.visualstudio.com/items?i
 
 2. In Explorer, right-click the project `.csproj` file and choose **Convert to Syncfusion Blazor App...**.
 
-    ![Context menu showing Convert to Blazor Application option](images/conversion.webp)
+    ![Context menu showing Convert to Syncfusion Blazor App option](images/conversion.webp)
 
 3. In the Command Palette, pick **Select Blazor Version** and choose the desired Blazor release (pulled from [nuget.org](https://www.nuget.org)).
 
@@ -42,7 +42,7 @@ N> If you installed the trial setup or NuGet packages from [nuget.org](https://w
 
 ## What changes are made during conversion
 
-- NuGet packages: Adds [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) (and other required packages depending on project type).
+- NuGet packages: Adds [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) (and other required packages depending on the project type).
 
     ![Project file showing NuGet package references](images/nugetpackage.webp)
 
