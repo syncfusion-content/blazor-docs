@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Access public methods in Blazor TreeGrid Component | Syncfusion®
-description: Learn how to access and use public methods in the Syncfusion Blazor TreeGrid component to perform programmatic actions such as printing, refreshing, expanding rows, and managing selections.
+description: Learn how to access and invoke Syncfusion Blazor TreeGrid public methods for programmatic data, editing, selection, and export operations.
 platform: Blazor
 control: Tree Grid
 documentation: ug
