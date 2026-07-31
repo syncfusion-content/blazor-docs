@@ -304,7 +304,7 @@ public string ID { get; set; }
 
 ### Data form display options attribute
 
-The [DataFormDisplayOptionsAttribute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.DataFormDisplayOptionsAttribute.html) attribute configures display options for a property in the DataForm. The DataForm uses this attribute to determine [ColumnSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.DataFormDisplayOptionsAttribute.ColumnSpan.html) for the property.
+The [DataFormDisplayOptionsAttribute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.DataFormDisplayOptionsAttribute.html) attribute configures display options for a property in the DataForm. The DataForm uses this attribute to determine [ColumnSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Blazor_DataForm_DataFormDisplayOptionsAttribute_ColumnSpan) for the property.
 
 {% tabs %}
 
