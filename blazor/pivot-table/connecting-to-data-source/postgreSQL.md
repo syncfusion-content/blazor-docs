@@ -465,7 +465,7 @@ The controller actions do not opt into antiforgery validation. If you add an ant
 
 Add these namespaces to `Components/_Imports.razor`:
 
-```razor
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.PivotView
@@ -476,20 +476,20 @@ The .NET 10 Blazor Web App template already includes `_framework/blazor.web.js` 
 
 Add the Syncfusion theme in the `<head>` element:
 
-```razor
+```cshtml
 <link rel="stylesheet"
       href="@Assets["_content/Syncfusion.Blazor.Themes/bootstrap5.3.css"]" />
 ```
 
 Add the Syncfusion script before the closing `</body>` tag:
 
-```razor
+```cshtml
 <script src="@Assets["_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"]"></script>
 ```
 
 Keep the existing framework script:
 
-```razor
+```cshtml
 <script src="@Assets["_framework/blazor.web.js"]"></script>
 ```
 
@@ -499,7 +499,7 @@ See [Blazor component themes](https://blazor.syncfusion.com/documentation/appear
 
 Replace `Components/Pages/Home.razor` with:
 
-```razor
+```cshtml
 @page "/"
 
 <SfPivotView TValue="Order"
