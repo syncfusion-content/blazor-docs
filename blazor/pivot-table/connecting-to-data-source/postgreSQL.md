@@ -31,7 +31,7 @@ You also need:
 
 - A PostgreSQL account that can create a database, or an administrator who can create it for you.
 - A valid [Syncfusion license or trial key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application).
-- Permission to store local development secrets with the [.NET Secret Manager](https://learn.microsoft.com/aspnet/core/security/app-secrets).
+- Permission to store local development secrets with the [.NET Secret Manager](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-10.0&tabs=windows%2Cpowershell).
 
 ## Create the Blazor Web App
 
@@ -549,7 +549,7 @@ Replace `Components/Pages/Home.razor` with:
 
 `BeginDrillThrough` marks `OrderID` as the edit grid's primary key. The URL Adaptor sends the edited record, including `OrderID`, to the update endpoint and sends the primary-key value in `key` to the delete endpoint.
 
-The editing APIs shown here are tested with the Syncfusion version listed in the prerequisites. See [editing in the Blazor Pivot Table](https://blazor.syncfusion.com/documentation/pivot-table/editing/) and the [`BeginDrillThroughEventArgs` API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.BeginDrillThroughEventArgs.html) when using another package version.
+The editing APIs shown here are tested with the Syncfusion version listed in the prerequisites. See [editing in the Blazor Pivot Table](https://blazor.syncfusion.com/documentation/pivot-table/editing) and the [`BeginDrillThroughEventArgs` API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.BeginDrillThroughEventArgs.html) when using another package version.
 
 ## Build and Verify the Application
 
