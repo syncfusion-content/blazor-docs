@@ -419,7 +419,7 @@ The sample API is same-origin and does not require CORS. If the API and Blazor a
 
 Add these imports to `Components/_Imports.razor`:
 
-```razor
+```cshtml
 @using PivotTableMySQL.Models
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -447,7 +447,7 @@ Do not add a second `_framework/blazor.web.js` reference if the template already
 
 Replace `Components/Pages/Home.razor` with:
 
-```razor
+```cshtml
 @page "/"
 
 <PageTitle>MySQL Pivot Table</PageTitle>
