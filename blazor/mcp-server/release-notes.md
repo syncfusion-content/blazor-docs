@@ -1,19 +1,29 @@
 ---
 layout: post
-title: Release Notes - Syncfusion Blazor AI and Smart Tooling | Syncfusion
-description: Explore the release notes for Syncfusion Blazor AI and Smart Tooling, covering MCP Server, Skills, and Agentic UI Builder updates across all versions.
+title: Release Notes - Syncfusion Blazor AI Coding Assistants | Syncfusion
+description: Explore the release notes for Syncfusion Blazor AI Coding Assistants, covering MCP Server, Skills, and Agentic UI Builder updates across all versions.
 platform: Blazor
-control: Syncfusion Blazor AI and Smart Tooling Release Notes
+control: Syncfusion Blazor AI Coding Assistants Release Notes
 documentation: ug
 ---
 
-# Blazor MCP Server Release Notes
+# Syncfusion Blazor AI Coding Assistants Release Notes
 
-This document provides information about the changes and new features included in each version of the [@syncfusion/blazor-assistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant) MCP server package.
+This document provides information about the changes and new features included in each version of the Syncfusion Blazor AI Coding Assistants, including the [Syncfusion.Blazor.MCP](https://www.nuget.org/packages/Syncfusion.Blazor.MCP) MCP Server, Skills, Agentic UI Builder and so on.
 
-## (v2.0.0) – February 23, 2026
+## MCP Server
 
-### Features
+**(v1.0.0) - July 31, 2026**
+
+**Breaking Changes**
+
+- The [@syncfusion/blazor-assistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant) npm package has been migrated to the [Syncfusion.Blazor.MCP](https://www.nuget.org/packages/Syncfusion.Blazor.MCP) .NET package. As part of this transition, [@syncfusion/blazor-assistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant) package has been deprecated and will no longer receive updates.
+
+- The coding assistant tool identifier has been changed from **`sf_blazor_assistant`** to **`search_docs`** for a better naming convention.
+
+**(v2.0.0) – February 23, 2026**
+
+**Features**
 
 - Introduced **Agentic UI Builder** — a composite MCP tool that analyzes your UI requirements and coordinates specialized tools (Layout, Component, and Styling) to generate complete Blazor applications using natural language prompts, significantly boosting your productivity and accelerating development workflow.
 - Agentic UI Builder sub-tools:
@@ -22,26 +32,26 @@ This document provides information about the changes and new features included i
   - **Styling Tool** (#sf_blazor_style) — Applies theme configurations (Tailwind3 CSS, Bootstrap 5.3, Material 3, Fluent 2), dark mode, color customization, and icon integration.
 - Unlimited, unrestricted access with strict privacy (no project file access, no prompt storage or training).
 
-### Breaking Changes
+**Breaking Changes**
 
 - Renamed the coding assistant tool identifier from **`SyncfusionBlazorAssistant`** to **`sf_blazor_assistant`** for consistency, brevity, and improved user experience.
 
-## (v1.0.1) – February 10, 2026
+**(v1.0.1) – February 10, 2026**
 
-### Features
+**Features**
 
 - Updated package dependencies to resolve security vulnerabilities and enhance stability.
 
-## (v1.0.0) – December 16, 2025
+**(v1.0.0) – December 16, 2025**
 
-### Features
+**Features**
 
 - Added support for API key validation through file path reference.
 - Updated package dependencies and security standards for improved reliability and safety.
 
-## (v0.1.0) – October 10, 2025
+**(v0.1.0) – October 10, 2025**
 
-### Features
+**Features**
 
 - Initial release of AI Coding Assistant for Blazor components.
 - Provides context-aware assistance for building Blazor applications with Blazor components.
