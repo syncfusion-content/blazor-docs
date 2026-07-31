@@ -90,5 +90,4 @@ N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
 ## See also
 
-* [Getting Started with Blazor Smart Paste Button in Blazor Web App](https://blazor.syncfusion.com/documentation)
-* [Getting Started with Blazor Smart Paste Button in Blazor Server App](https://blazor.syncfusion.com/documentation)
+* [Getting Started with Blazor Smart Paste Button in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-paste/getting-started-webapp)

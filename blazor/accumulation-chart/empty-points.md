@@ -147,7 +147,7 @@ When no data is available to render in the accumulation chart, the [NoDataTempla
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDBdtwrtAxNOqjQw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[No Data Template in Blazor Accumulation Chart](images/empty/blazor-accumulation-chart-no-data-template.webp)" %}
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know about the various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=fluent2) to know about the various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 
