@@ -219,7 +219,7 @@ For Windows authentication, use a trusted connection string instead:
 "SQLServer": "Server=<SERVER_NAME>;Database=OrderDB;Trusted_Connection=True;TrustServerCertificate=True;"
 ```
 
-Named instances use a server value such as `localhost\SQLEXPRESS`; a TCP endpoint can use `localhost,1433`. See [SQL Server connection-string syntax](https://learn.microsoft.com/sql/connect/ado-net/connection-string-syntax).
+Named instances use a server value such as `localhost\SQLEXPRESS`; a TCP endpoint can use `localhost,1433`. See [SQL Server connection-string syntax](https://learn.microsoft.com/en-us/sql/connect/ado-net/connection-string-syntax?view=sql-server-ver17).
 
 ## Step 5: Create the Entity Model
 
@@ -510,7 +510,7 @@ The read action intentionally returns all records because the Pivot Table needs 
 
 The `CRUDModel<T>` payload uses `value` for insert and update and `key` for delete. The URL Adaptor can also send `action`, `keyColumn`, and custom `params`; `added`, `changed`, and `deleted` are used by batch requests, which this Normal edit-mode sample does not support. Successful inserts and updates return the saved entity, successful deletes return HTTP 204, invalid payloads return HTTP 400, and unknown keys return HTTP 404.
 
-The sample lets unexpected `DbUpdateException` failures reach ASP.NET Core's exception handler and logs. In a production API, catch database exceptions at an application boundary, log the complete exception, and return a safe [Problem Details](https://learn.microsoft.com/aspnet/core/web-api/handle-errors) response. Add a concurrency token if multiple users can edit the same rows.
+The sample lets unexpected `DbUpdateException` failures reach ASP.NET Core's exception handler and logs. In a production API, catch database exceptions at an application boundary, log the complete exception, and return a safe [Problem Details](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/error-handling-api?view=aspnetcore-10.0&tabs=minimal-apis) response. Add a concurrency token if multiple users can edit the same rows.
 
 ### How Entity Framework Core maps data to C# objects
 
@@ -601,7 +601,7 @@ Pivot Table editing applies to relational data sources. Double-click a value cel
 
 ## Step 10: Run the Application
 
-> **URL note:** The sample uses relative URLs such as `api/Order` because the API and Blazor app share an origin. If they are hosted on different origins, use absolute API URLs and configure a named CORS policy with the exact Blazor origin by following [ASP.NET Core CORS guidance](https://learn.microsoft.com/aspnet/core/security/cors). Register the policy with `AddCors`, and call `UseCors` before `MapControllers`. Do not use `AllowAnyOrigin` with credentials.
+> **URL note:** The sample uses relative URLs such as `api/Order` because the API and Blazor app share an origin. If they are hosted on different origins, use absolute API URLs and configure a named CORS policy with the exact Blazor origin by following [ASP.NET Core CORS guidance](https://learn.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-10.0). Register the policy with `AddCors`, and call `UseCors` before `MapControllers`. Do not use `AllowAnyOrigin` with credentials.
 
 Build and run the application from the project directory.
 
