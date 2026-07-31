@@ -13,6 +13,30 @@ This section briefly explains how to include the [Blazor DataGrid](https://www.s
 
 > **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Code Studio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
+A Blazor Web App can be configured using a combination of **Interactive render mode** and **Interactivity location**. Choose the configuration that matches your application. The following table outlines the available render modes and interactivity options.
+
+| Interactive render mode | Interactivity location | Project structure | Where Syncfusion® components run |
+| --- | --- | --- | --- |
+| **Interactive Server** | Per page/component | Single project (`BlazorWebApp`) | Server-side over SignalR |
+| **Interactive Server** | Global | Single project (`BlazorWebApp`) | Server-side over SignalR |
+| **Interactive WebAssembly** | Per page/component | Server + `.Client` project | Client-side in the browser |
+| **Interactive WebAssembly** | Global | Server + `.Client` project | Client-side in the browser |
+| **Interactive Auto** | Per page/component | Server + `.Client` project | WebAssembly after the initial server render |
+| **Interactive Auto** | Global | Server + `.Client` project | WebAssembly after the initial server render |
+
+## Blazor Web App project configuration reference
+
+The following table maps each render mode and interactivity configuration to the corresponding project and file locations referenced throughout this guide.
+
+| Interactive render mode | Interactivity location | Install NuGet packages in | `_Imports.razor` location | Register Blazor service in | Razor page location | `@rendermode` required |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Interactive Server** | Per page/component | `BlazorWebApp` | `BlazorWebApp/Components/_Imports.razor` | `BlazorWebApp/Program.cs` | `BlazorWebApp/Components/Pages` | Yes, use `@rendermode InteractiveServer` |
+| **Interactive Server** | Global | `BlazorWebApp` | `BlazorWebApp/Components/_Imports.razor` | `BlazorWebApp/Program.cs` | `BlazorWebApp/Components/Pages` | No (configured in `App.razor`) |
+| **Interactive WebAssembly** | Per page/component | `BlazorWebApp.Client` | `BlazorWebApp.Client/_Imports.razor` | Both `BlazorWebApp/Program.cs` and `BlazorWebApp.Client/Program.cs` | `BlazorWebApp.Client/Pages` | Yes, use `@rendermode InteractiveWebAssembly` |
+| **Interactive WebAssembly** | Global | `BlazorWebApp.Client` | `BlazorWebApp.Client/_Imports.razor` | Both `BlazorWebApp/Program.cs` and `BlazorWebApp.Client/Program.cs` | `BlazorWebApp.Client/Pages` | No (configured in `App.razor`) |
+| **Interactive Auto** | Per page/component | `BlazorWebApp.Client` | `BlazorWebApp.Client/_Imports.razor` | Both `BlazorWebApp/Program.cs` and `BlazorWebApp.Client/Program.cs` | `BlazorWebApp.Client/Pages` | Yes, use `@rendermode InteractiveAuto` |
+| **Interactive Auto** | Global | `BlazorWebApp.Client` | `BlazorWebApp.Client/_Imports.razor` | Both `BlazorWebApp/Program.cs` and `BlazorWebApp.Client/Program.cs` | `BlazorWebApp.Client/Pages` | No (configured in `App.razor`) |
+
 ## Create a new Blazor Web App
 
 {% tabcontents %}
@@ -28,7 +52,7 @@ Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https:
 Run the following command to create a new Blazor Web App.
 
 {% tabs %}
-{% highlight razor tabtitle="Terminal" %}
+{% highlight bash tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
 cd BlazorWebApp
@@ -46,7 +70,7 @@ Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microso
 Run the following command to create a new Blazor Web App.
 
 {% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
+{% highlight bash tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
 cd BlazorWebApp
@@ -61,9 +85,11 @@ cd BlazorWebApp.Client
 
 N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-## Install the required Blazor packages
+## Install the required NuGet packages
 
-Install the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project.
+Install the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion® Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+
+Refer to the [Blazor Web App project configuration reference](#blazor-web-app-project-configuration-reference) for the appropriate project location to install the required NuGet packages based on your selected render mode and interactivity configuration.
 
 {% tabcontents %}
 
@@ -75,7 +101,7 @@ Install the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.B
 Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
 {% tabs %}
-{% highlight razor tabtitle="Package Manager Console" %}
+{% highlight powershell tabtitle="Package Manager Console" %}
 
 Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
@@ -90,7 +116,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 Open the terminal and run the following commands.
 
 {% tabs %}
-{% highlight razor tabtitle="Terminal" %}
+{% highlight bash tabtitle="Terminal" %}
 
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
@@ -105,7 +131,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 Open the command prompt and run the following commands.
 
 {% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
+{% highlight bash tabtitle="Command Prompt" %}
 
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
@@ -119,10 +145,10 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces.
+After installing the required packages, import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces into the **_Imports.razor** file. For the appropriate file location based on your selected render mode and interactivity configuration, refer to the [Blazor Web App project configuration reference](#blazor-web-app-project-configuration-reference).
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
@@ -130,9 +156,9 @@ After the packages are installed, open the **~/_Imports.razor** file in the `.Cl
 {% endhighlight %}
 {% endtabs %}
 
-## Register the Blazor service
+## Register Syncfusion® Blazor Service
 
-Open the **Program.cs** file in Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
+Register the Syncfusion® Blazor service in the **Program.cs** file. For the appropriate file location based on your selected render mode and interactivity configuration, refer to the [Blazor Web App project configuration reference](#blazor-web-app-project-configuration-reference).
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -146,7 +172,7 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet and script resources
+## Add theme stylesheet and script references
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~/Components/App.razor** file.
 
@@ -161,11 +187,13 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-## Add Blazor DataGrid component
+## Add Syncfusion® Blazor DataGrid component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component inside the `.Client` project razor file.
+Open a Razor page (for example, **Home.razor** or **Counter.razor**) and add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component. For the appropriate Razor page location based on your selected render mode and interactivity configuration, refer to the [Blazor Web App project configuration reference](#blazor-web-app-project-configuration-reference).
 
-N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
+N> When the interactivity location is set to **Per page/component**, add the appropriate `@rendermode` directive at the top of the Razor page. When using **Global** interactivity, the render mode is configured in `App.razor`, and no page-level `@rendermode` directive is required.
+
+The following example uses `InteractiveAuto` for **Per page/component** interactivity. Adjust the `@rendermode` directive to match your selected render mode.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -235,10 +263,15 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 {% tabcontent Visual Studio Code %}
 
-Open the terminal and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
+Open the terminal and run the application from the appropriate project folder.
 
 {% tabs %}
-{% highlight razor tabtitle="Terminal" %}
+{% highlight bash tabtitle="Interactive Server" %}
+
+dotnet run
+
+{% endhighlight %}
+{% highlight bash tabtitle="Interactive WebAssembly / Interactive Auto" %}
 
 cd ..
 cd BlazorWebApp
@@ -251,10 +284,15 @@ dotnet run
 
 {% tabcontent .NET CLI %}
 
-Open the command prompt and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
+Open the command prompt and run the application from the appropriate project folder.
 
 {% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
+{% highlight razor tabtitle="Interactive Server" %}
+
+dotnet run
+
+{% endhighlight %}
+{% highlight razor tabtitle="Interactive WebAssembly / Interactive Auto" %}
 
 cd ..
 cd BlazorWebApp
@@ -268,3 +306,4 @@ dotnet run
 {% endtabcontents %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htrHZdNkKnhrXYsw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+ 
