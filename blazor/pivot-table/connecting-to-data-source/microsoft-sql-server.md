@@ -451,7 +451,7 @@ Protect the write endpoints with the authentication and authorization mechanism 
 
 Add these namespaces to `Components/_Imports.razor`:
 
-```razor
+```cshtml
 @using System.ComponentModel.DataAnnotations
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -478,7 +478,7 @@ Do not add a second `_framework/blazor.web.js` reference if the template already
 
 Replace `Components/Pages/Home.razor` with:
 
-```razor
+```cshtml
 @page "/"
 
 <SfPivotView TValue="Order"
