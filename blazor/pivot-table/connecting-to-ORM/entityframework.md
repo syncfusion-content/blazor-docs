@@ -506,7 +506,7 @@ The pivot table binds to the SQL Server-backed API through the `SfDataManager` c
 
 Open the file named `Home.razor` in the `Components/Pages` folder and replace its contents with the following markup:
 
-```razor
+```cshtml
 @page "/"
 @using PivotTableMSSQLEFCore.Models
 @using Syncfusion.Blazor.Data
@@ -602,7 +602,7 @@ The URL Adaptor is the contract between the Blazor Pivot Table and the SQL Serve
 3. The controller processes the request, uses EF Core to read or change data, and returns the response in the format expected by the Pivot Table.
 4. For write operations, the Pivot Table posts a `CRUDModel<Order>` payload to the matching insert, update, or remove endpoint.
 
-```razor
+```cshtml
 <SfDataManager Url="api/Order"
                InsertUrl="api/Order/Insert"
                UpdateUrl="api/Order/Update"

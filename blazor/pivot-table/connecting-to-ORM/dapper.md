@@ -96,6 +96,20 @@ INSERT INTO Orders (CustomerName, EmployeeID, ShipCity, Freight) VALUES
 GO
 ```
 
+The following SQL statement is used to read the records from the `Orders` table and provide them to the Pivot Table through Dapper:
+
+```sql
+SELECT OrderID, CustomerName, EmployeeID, ShipCity, Freight
+FROM Orders
+ORDER BY OrderID;
+```
+
+This query provides the source rows that Dapper maps to `Order` objects and sends to the Pivot Table for aggregation and display.
+
+The screenshot below shows the SQL query and the resulting rows from the `Orders` table that Dapper uses to populate the Pivot Table data model.
+
+![Data Retrieval Operation](../images/blazor-pivot-table-Dapper-MSSQL-query.webp)
+
 ### Step 2: Create the Blazor Web App and install packages
 
 Create a Blazor Web App with interactive server rendering:
@@ -451,6 +465,8 @@ The `BeginDrillThrough` event marks `OrderID` as the edit dialog grid's primary 
 
 Relative API URLs are used so the adaptor follows the current scheme, host, and port. If you use absolute URLs, make sure they match the URL in `Properties/launchSettings.json`.
 
+![Blazor Pivot Table](../images/blazor-pivot-table-Dapper-MSSQL.webp)
+
 ## URL Adaptor Configuration
 
 The URL Adaptor is the contract between the Blazor Pivot Table and the SQL Server-backed API. It works as follows:
@@ -559,6 +575,8 @@ order.OrderID = connection.ExecuteScalar<int>(query, order);
 return Ok(order);
 ```
 
+![Insert Operation](../images/blazor-pivot-table-Dapper-MSSQL-insert.webp)
+
 ### Update Operation
 
 The update action uses `value.OrderID` to identify the existing record. It returns `NotFound` when the update affects zero rows.
@@ -568,6 +586,8 @@ int rowsAffected = connection.Execute(query, order);
 return rowsAffected == 0 ? NotFound() : Ok(order);
 ```
 
+![Update Operation](../images/blazor-pivot-table-Dapper-MSSQL-update.webp)
+
 ### Delete Operation
 
 The delete action receives the primary key in the `key` property of the `CRUDModel<Order>`. It returns `NoContent()` when the removal succeeds and `NotFound` when no matching row exists.
@@ -576,6 +596,8 @@ The delete action receives the primary key in the `key` property of the `CRUDMod
 int rowsAffected = connection.Execute(query, new { OrderID = orderId });
 return rowsAffected == 0 ? NotFound() : NoContent();
 ```
+
+![Delete Operation](../images/blazor-pivot-table-Dapper-MSSQL-delete.webp)
 
 ## Run the Application
 
