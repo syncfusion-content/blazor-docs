@@ -9,11 +9,12 @@ documentation: ug
 
 # Data Binding in Blazor File Manager Component
 
-The File Manager uses [SfFileManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html), which supports both RESTful JSON data services binding and IEnumerable binding. It provides the option to load data either with the [AjaxSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html) property or list of objects by providing the response within the corresponding events.
+The File Manager uses [SfFileManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html), which supports both RESTful JSON data services binding and IEnumerable binding. Data can be loaded using either AjaxSettings or list objects by providing responses within corresponding events.
 
-It supports the following kinds of data binding method:
+It supports the following data binding methods:
 * AjaxSettings
 * List objects
+* Injected service
 
 N> When using [AjaxSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html), component will be load data from its Ajax URL. When using list of object, component will be load data by providing the response within the corresponding events.
 
@@ -57,8 +58,7 @@ namespace filemanager.Server.Controllers
         public PhysicalFileProvider operation;
         public string basePath;
         string root = "wwwroot\\Files";
-        [Obsolete]
-        public SampleDataController(IHostingEnvironment hostingEnvironment)
+        public SampleDataController(IWebHostEnvironment hostingEnvironment)
         {
             this.basePath = hostingEnvironment.ContentRootPath;
             this.operation = new PhysicalFileProvider();
@@ -105,9 +105,16 @@ namespace filemanager.Server.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-To access the above File Operations, you need some model class files that have file operations methods. So, create `Models` folder in `server` part of the application and download the `PhysicalFileProvider.cs` and `Base` folder from the [this](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/tree/master/Models) link in the Models folder.
+To access the above File Operations, you need model class files with file operations methods. Follow these steps:
 
-Add your required files and folders under the `wwwroot\Files` directory.
+1. Create a `Models` folder in the server part of your application if it doesn't exist.
+2. Download the `PhysicalFileProvider.cs` file and the `Base` folder from [this GitHub link](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/tree/master/Models).
+3. Extract and place `PhysicalFileProvider.cs` in your `Models` folder.
+4. Extract and place the entire `Base` folder inside your `Models` directory.
+
+Create the required file structure:
+1. Verify or create the `wwwroot\Files` directory in your project root if it doesn't exist.
+2. Add your required files and folders under the `wwwroot\Files` directory.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor File Manager component in your default web browser.
 
@@ -145,8 +152,11 @@ namespace filemanager.Server.Controllers
         [Route("Download")]
         public IActionResult Download(string downloadInput)
         {
-            //Invoking download operation with the required parameters.
-            // path - Current path where the file is downloaded; Names - Files to be downloaded;
+            // The downloadInput parameter is a JSON string containing the file path and names
+            // It is automatically serialized from the client and must be deserialized here.
+            // Parameters:
+            //   - Path: Current path where the file is located
+            //   - Names: Array of file names to be downloaded
             FileManagerDirectoryContent args = JsonConvert.DeserializeObject<FileManagerDirectoryContent>(downloadInput);
             return operation.Download(args.Path, args.Names);
         }
@@ -207,7 +217,7 @@ namespace filemanager.Server.Controllers
 
 ### Folder Upload
 
-To perform the directory(folder) upload in File Manager, set [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DirectoryUpload) as true within the FileManagerUploadSettings. The directory upload feature is supported for the following file service providers:
+To enable directory (folder) upload in File Manager, set [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DirectoryUpload) to `true` within the FileManagerUploadSettings. The directory upload feature is supported for the following file service providers:
 * Physical file service provider.
 * Azure file service provider.
 * Node.js file service provider.
@@ -293,9 +303,9 @@ In this example, you can enable or disable the ability to upload directories by 
 
 #### Physical file service provider
 
-To achieve the directory upload in the physical file service provider, use the below code snippet in `IActionResult Upload` method in the `Controllers/FileManagerController.cs` file.
+To achieve directory upload in the physical file service provider, locate the `Upload` method in your `Controllers/SampleDataController.cs` file and add the following code before calling `operation.Upload()`:
 
-```typescript
+```csharp
 [Route("Upload")]
         public IActionResult Upload(string path, IList<IFormFile> uploadFiles, string action)
         {
@@ -331,9 +341,9 @@ To achieve the directory upload in the physical file service provider, use the b
 
 Refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/blob/master/Controllers/FileManagerController.cs#L76) for more details
 
-And also add the below code snippet in `FileManagerResponse Upload` method in `Models/PhysicalFileProvider.cs` file.
+Also add the following code snippet in the `FileManagerResponse Upload` method in `Models/PhysicalFileProvider.cs` file to handle the uploaded file name:
 
-```typescript
+```csharp
 string[] folders = name.Split('/');
 string fileName = folders[folders.Length - 1];
 var fullName = Path.Combine((this.contentRootPath + path), fileName);
@@ -349,13 +359,13 @@ Refer to the [GitHub](https://github.com/SyncfusionExamples/azure-aspcore-file-p
 
 #### Node.js file service provider
 
-To perform the directory upload in the Node.js file service provider, use the below code snippet in `app.post` method in the `filesystem-server.js` file.
+To implement directory upload in the Node.js file service provider, add the following code snippet in the `app.post` method in your `filesystem-server.js` file before processing the upload:
 
-```typescript
+```javascript
 var folders = (req.body.filename).split('/');
 var filepath = req.body.path;
 var uploadedFileName = folders[folders.length - 1];
-// checking the folder upload
+// Check if this is a folder upload (nested path)
 if (folders.length > 1)
    {
      for (var i = 0; i < folders.length - 1; i++)
@@ -387,13 +397,13 @@ Refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-filemanager-node
 
 #### Amazon file service provider
 
-To perform the directory upload in the Amazon file service provider, use the below code snippet in `IActionResult AmazonS3Upload` method in the `Controllers/AmazonS3ProviderController.cs` file.
+To implement directory upload in the Amazon S3 file service provider, add the following code snippet to the `IActionResult AmazonS3Upload` method in your `Controllers/AmazonS3ProviderController.cs` file:
 
-```typescript
+```csharp
 foreach (var file in uploadFiles)
             {
                 var folders = (file.FileName).Split('/');
-                // checking the folder upload
+                // Check if this is a folder upload (nested path)
                 if (folders.Length > 1)
                 {
                     for (var i = 0; i < folders.Length - 1; i++)
@@ -410,9 +420,9 @@ foreach (var file in uploadFiles)
 
 Refer to the [GitHub](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider/blob/master/Controllers/AmazonS3ProviderController.cs#L83) for more details.
 
-And also add the below code snippet in `AsyncUpload` method in `Models/AmazonS3FileProvider.cs` file.
+Also add the following code snippet in the `AsyncUpload` method in `Models/AmazonS3FileProvider.cs` file to extract the file name from nested paths:
 
-```typescript
+```csharp
 string[] folders = file.FileName.Split('/');
 string name = folders[folders.Length - 1];
 ```
@@ -421,7 +431,7 @@ Refer to the [GitHub](https://github.com/SyncfusionExamples/amazon-s3-aspcore-fi
 
 ### Get Image
 
-To perform image preview support in the File Manager component, initialize the [GetImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_GetImageUrl) property in a FileManagerAjaxSettings.
+To perform image preview support in the File Manager component, initialize the [GetImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_GetImageUrl) property in a FileManagerAjaxSettings. The following image formats are supported: JPEG, PNG, GIF, BMP, and WebP.
 
 {% tabs %}
 {% highlight razor %}
@@ -463,7 +473,7 @@ namespace filemanager.Server.Controllers
 
 ## List objects
 
-The Blazor File Manager component provides the option to load a list of objects. This can be achieved by providing the response within the corresponding events.
+The Blazor File Manager component provides the option to load a list of objects. This can be achieved by providing the response within the corresponding events. This approach is useful when you want complete control over data retrieval without making HTTP requests to a backend server.
 
 **Event information**
 
@@ -485,9 +495,15 @@ Event Name | Description
 [BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeImageLoad) | An event callback that will be invoked before sending the image request to the server.
 [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload)  | An event callback that will be invoked before sending the download request to the server.
 
-Blazor File Manager can be populated with local data that contains the list of objects with [ParentId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_ParentId) mapping.
+Blazor File Manager can be populated with local data that contains a list of objects with [ParentId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_ParentId) mapping. The following key properties are important:
 
-To render the root-level folder, specify the ParentID as null, or there is no need to specify the ParentID in the local list object.
+* **ParentId**: Links child items to their parent; set to `null` for root-level folders
+* **FilterId**: A hierarchical identifier representing the item's position in the folder structure (e.g., "0/1/")
+* **FilterPath**: The full path to the item in the file system (e.g., "/Documents/")
+* **HasChild**: Boolean indicating whether the item has child items
+* **IsFile**: Boolean indicating whether the item is a file (`true`) or folder (`false`)
+
+To render the root-level folder, either specify the ParentId as `null` or omit it from the local list object.
 
 {% tabs %}
 {% highlight razor %}
@@ -628,24 +644,26 @@ N> [Also see the demo here](https://blazor.syncfusion.com/demos/file-manager/fla
 
 ### Injected service
 
-Blazor File Manager can also be populated from an injected service, eliminating the need for HTTP client requests and backend URL configuration. This allows you to utilize your required service, such as physical, Amazon, Azure, etc., through the FileManager's action events.
+Blazor File Manager can also be populated from an injected service, eliminating the need for HTTP client requests and backend URL configuration. This allows you to use services such as physical storage, Amazon S3, Azure Blob Storage, and others through the FileManager's action events.
 
 These events enable you to access essential item details from the event argument. Subsequently, update the File Manager component's result data by incorporating the data returned from the injected service. Assign this returned data to the [Response](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.ReadEventArgs-1.html#Syncfusion_Blazor_FileManager_ReadEventArgs_1_Response) property of the corresponding event argument.
 
-To set up a locally injected physical service, create a new file with the extension `.cs` within the project, include the following GitHub file code in this file, and then proceed to inject the created service into the `program.cs` file.
+To set up a locally injected physical service, follow these steps:
 
-This will fetch the details of the static folder from the `wwwroot` directory. Likewise, you can inject your own service.
+1. Create a new file named `FileManagerService.cs` in your project (in a `Services` or `Data` folder).
+2. Copy the code from [FileManagerService.cs in GitHub](https://github.com/SyncfusionExamples/blazor-filemanager-with-flat-data/blob/master/FileManagerService.cs) into this file.
+3. Register the service in your `program.cs` file by adding the registration code shown below.
 
-N> [View FileManagerService.cs in GitHub ](https://github.com/SyncfusionExamples/blazor-filemanager-with-flat-data/blob/master/FileManagerService.cs).
+This will fetch file details from the `wwwroot` directory. You can also inject your own custom service by following the same pattern.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle="program.cs" %}
 
 using Flat_Data;
 using Flat_Data.Data;
 using Syncfusion.Blazor;
 
-...
+// Add this after builder.Services.AddSyncfusionBlazor();
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddSingleton<FileManagerService>();
 
@@ -729,6 +747,7 @@ To perform a upload action in File Manager component with injected service, util
                     for (var i = 0; i < folders.Length - 1; i++)
                     {
                         string newDirectoryPath = Path.Combine(FileManagerService.basePath + currentPath, folders[i]);
+                        // Security check: Validate path to prevent directory traversal attacks (e.g., "../../../" paths)
                         if (Path.GetFullPath(newDirectoryPath) != (Path.GetDirectoryName(newDirectoryPath) + Path.DirectorySeparatorChar + folders[i]))
                         {
                             throw new UnauthorizedAccessException("Access denied for Directory-traversal");
