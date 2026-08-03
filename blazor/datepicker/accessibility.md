@@ -90,7 +90,7 @@ Use the following list of keys to navigate the Calendar after the pop-up has bee
 | <kbd>Control</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> | Focuses the starting date in the current year. |
 | <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>End</kbd> | Focuses the ending date in the current year. |
 
-N> To focus out the DatePicker component, use the `t` keys. For additional information about native event, [click](https://blazor.syncfusion.com/documentation/datepicker/native-events) here.
+N> To demonstrate custom keyboard interaction, press the `t` key (lowercase) to move focus out of the DatePicker component. This is a user-defined example and not a built-in shortcut. For additional information about native event, [click](https://blazor.syncfusion.com/documentation/datepicker/native-events) here.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

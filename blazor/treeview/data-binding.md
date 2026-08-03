@@ -437,7 +437,7 @@ The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table are 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjByWXirTXWroCXq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Remote Data](./images/blazor-treeview-remote-data.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjByWXirTXWroCXq?appbar=false&editor=true&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Remote Data](./images/blazor-treeview-remote-data.webp)" %}
 
 ### Web API Adaptor
 
