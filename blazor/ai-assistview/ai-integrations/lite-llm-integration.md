@@ -153,15 +153,9 @@ In the following example:
                 .GetProperty("content")
                 .GetString()?.Trim() ?? "No response received.";
 
-            var pipeline = new MarkdownPipelineBuilder()
-                .UseAdvancedExtensions()
-                .UsePipeTables()
-                .UseTaskLists()
-                .Build();
-
             // Add the response to the AIAssistView
             await Task.Delay(1000); // Simulate delay as in original code
-            args.Response = Markdown.ToHtml(responseText, pipeline);
+            args.Response = responseText;
         }
         catch (Exception ex)
         {

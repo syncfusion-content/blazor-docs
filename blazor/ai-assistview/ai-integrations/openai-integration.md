@@ -190,7 +190,7 @@ namespace AIAssistView_AzureAI.Components.Services
                     if (choices.GetArrayLength() > 0)
                     {
                         var content = choices[0].GetProperty("message").GetProperty("content").GetString();
-                        var htmlContent = Markdown.ToHtml(content);
+                        var htmlContent = content;
                         htmlContent = Regex.Replace(htmlContent, @"\s+", " ").Trim();
                         // Collect each character to the results list before yielding
                         foreach (var chunk in htmlContent)

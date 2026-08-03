@@ -67,7 +67,6 @@ const string GeminiApiKey = 'Place your API key here';
 @using Mscc.GenerativeAI
 
 <div class="aiassist-container" style="height: 350px; width: 650px;">
-// Initializes the AI Assist component
     <SfAIAssistView @ref="sfAIAssistView" ID="aiAssistView" PromptSuggestions="@promptSuggestions" PromptRequested="@OnPromptRequest">
         <AssistViews>
             <AssistView>
@@ -105,14 +104,9 @@ const string GeminiApiKey = 'Place your API key here';
             var model = gemini.GenerativeModel(model: "gemini-2.5-flash"); // Select the Gemini model (update model name as needed)
             var response = await model.GenerateContent(args.Prompt);
             var responseText = response.Text;
-            var pipeline = new MarkdownPipelineBuilder()
-                .UseAdvancedExtensions()
-                .UsePipeTables()
-                .UseTaskLists()
-                .Build();
             // Add the response to the AIAssistView
             await Task.Delay(1000); // Simulate delay as in original code
-            args.Response = Markdown.ToHtml(responseText, pipeline);
+            args.Response = responseText;
         }
         catch (Exception ex)
         {

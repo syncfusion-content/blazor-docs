@@ -184,11 +184,6 @@ app.Run();
 
         try
         {
-            var pipeline = new MarkdownPipelineBuilder()
-                .UseAdvancedExtensions()
-                .UsePipeTables()
-                .UseTaskLists()
-                .Build();
 
             var messages = new List<Microsoft.Extensions.AI.ChatMessage>
             {
@@ -209,7 +204,7 @@ app.Run();
 
                 if (buffer.Length - lastLenPushed >= updateRateChars)
                 {
-                    string html = Markdown.ToHtml(buffer.ToString(), pipeline);
+                    string html = buffer.ToString();
                     await AIAssist.UpdateResponseAsync(html);
                     await AIAssist.ScrollToBottomAsync();
                     lastLenPushed = buffer.Length;
@@ -218,7 +213,7 @@ app.Run();
 
             if (!responseStopped)
             {
-                string finalHtml = Markdown.ToHtml(buffer.ToString(), pipeline);
+                string finalHtml = buffer.ToString();
                 await AIAssist.UpdateResponseAsync(finalHtml);
                 await AIAssist.ScrollToBottomAsync();
             }
