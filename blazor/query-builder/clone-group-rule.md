@@ -101,4 +101,4 @@ Cloning is available via the user interface and programmatically:
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htBdXwXuLcDhpRbs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Cloning a group and rule in Blazor Query Builder](./images/clone-group-rule.webp)" %}
 
-N> Ensure that the IDs passed to `CloneGroup` and `CloneRule` refer to existing items in the current model. The cloning buttons can be shown or hidden via `QueryBuilderShowButtons`. You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to learn how to render and configure the Query Builder.
+N> Ensure that the IDs passed to `CloneGroup` and `CloneRule` refer to existing items in the current model. The cloning buttons can be shown or hidden via `QueryBuilderShowButtons`. You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=fluent2) to learn how to render and configure the Query Builder.

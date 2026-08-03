@@ -13,7 +13,7 @@ This section describes how to configure the placeholder and float label behavior
 
 ## Placeholder
 
-Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-1.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_1_Placeholder) property to display guidance text for the expected input value. In the following example, setting `Select a game` as the `Placeholder` value applies it to the input element’s placeholder attribute.
+Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Placeholder) property to display guidance text for the expected input value. In the following example, setting `Select a game` as the `Placeholder` value applies it to the input element’s placeholder attribute.
 
 {% highlight Razor %}
 
@@ -49,7 +49,7 @@ Apply a mandatory indicator (*) to the floating label by targeting the `.e-float
 
 ## FloatLabel
 
-Use the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-1.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_1_FloatLabelType) property to control how the `Placeholder` text floats above the AutoComplete. `FloatLabelType` applies only when `Placeholder` is set. The default value is `Never`.
+Use the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FloatLabelType) property to control how the `Placeholder` text floats above the AutoComplete. `FloatLabelType` applies only when `Placeholder` is set. The default value is `Never`.
 
 The floating label supports the following modes:
 

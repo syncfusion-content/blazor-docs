@@ -90,7 +90,7 @@ Then, create a root node and add children to the root node. Refer to the followi
 
 Here, the `Files` denotes the `rootNode` and the subsequent object refers to the children of the root node. `rootNode` will be taken as the root folder of the file system loaded which will be loaded in File Manager component.
 
-After that, clone the [EJ2.ASP.NET Core Firebase Real Time Database File Provider](https://github.com/SyncfusionExamples/ej2-firebase-realtime-database-aspcore-file-provider) and just open the project in Visual Studio and restore the NuGet package.
+After that, clone the [EJ2.ASP.NET Core Firebase Real Time Database File Provider](https://github.com/SyncfusionExamples/firebase-realtime-database-aspcore-file-provider) and just open the project in Visual Studio and restore the NuGet package.
 
 Register the Firebase Real time Database by assigning *Firebase Real time Database REST API link*, *rootNode*, and *serviceAccountKeyPath* parameters in the `RegisterFirebaseRealtimeDB` method of class `FirebaseRealtimeDBFileProvider` in controller part of the ASP.NET Core application.
 
