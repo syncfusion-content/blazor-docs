@@ -107,7 +107,7 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZhxNHCefyKmumOG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> Refer to the [Blazor Range Step Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-step-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore the [Blazor Range Step Area Chart Example](https://blazor.syncfusion.com/demos/chart/range-step-area?theme=bootstrap5) to know how to show variations in the data values for a given time.
+> Refer to the [Blazor Range Step Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-step-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore the [Blazor Range Step Area Chart Example](https://blazor.syncfusion.com/demos/chart/range-step-area?theme=fluent2) to know how to show variations in the data values for a given time.
 
 ## Series customization
 
@@ -402,7 +402,7 @@ The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjrxNxiopeSoKvyh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## Events
 

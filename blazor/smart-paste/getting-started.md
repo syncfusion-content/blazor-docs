@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Smart Paste Button Component
 
-This section briefly explains about how to include [Blazor Smart Paste Button](https://www.syncfusion.com/blazor-components/blazor-smartpaste-button) component in your Blazor Server App using Visual Studio.
+This section briefly explains about how to include [Blazor Smart Paste Button](https://www.syncfusion.com/blazor-components/blazor-smart-paste-button) component in your Blazor Server App using Visual Studio.
 
 {% tabcontents %}
 
