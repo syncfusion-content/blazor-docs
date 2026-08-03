@@ -67,7 +67,6 @@ const string GeminiApiKey = 'Place your API key here';
 @using Mscc.GenerativeAI
 
 <div class="aiassist-container" style="height: 350px; width: 650px;">
-// Initializes the AI Assist component
     <SfAIAssistView @ref="sfAIAssistView" ID="aiAssistView" PromptSuggestions="@promptSuggestions" PromptRequested="@OnPromptRequest">
         <AssistViews>
             <AssistView>
