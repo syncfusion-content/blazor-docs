@@ -81,5 +81,4 @@ N> For more details on styling options, refer to the [tooltip customization](htt
 </style>
 
 ```
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjhxtmMopsEinSxW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "![Blazor Rating component with tooltip customization](./images/blazor-rating-custom-tooltip.webp)" %}

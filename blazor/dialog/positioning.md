@@ -166,4 +166,4 @@ By default, when scrolling the page or container, the Dialog scrolls along with 
 
 ## See also
 
-* [Positioning in Blazor Dialog Component](https://blazor.syncfusion.com/demos/dialog/positioning)
+* [Positioning in Blazor Dialog Component](https://blazor.syncfusion.com/demos/dialog/positioning?theme=fluent2)
