@@ -20,12 +20,11 @@ The sample was tested with the following versions and configuration:
 | Software or package | Version | Notes |
 |---|---:|---|
 | .NET SDK | 10.0 | Required to target `net10.0` |
-| Visual Studio | 2022 17.14 or later | Install the ASP.NET and web development workload; VS Code and the .NET CLI are also supported |
-| SQLite | 3.x or later | The engine ships with the database file; a command-line or GUI tool is needed to create the schema |
-| Syncfusion.Blazor.PivotTable | `{{site.blazorversion}}` | Keep all Syncfusion packages on the same version |
-| Syncfusion.Blazor.Themes | `{{site.blazorversion}}` | Provides the component theme |
-| Microsoft.Data.Sqlite | 9.0.0 | SQLite ADO.NET provider |
-| Newtonsoft.Json | 13.0.3 | JSON serialization support for the CRUD models |
+| Visual Studio | 2026 18.0 or later | Required to target `net10.0`; install the ASP.NET and web development workload. VS Code and the .NET CLI are also supported |
+| SQLite tools | 3.x or later | The `sqlite3` command-line shell or a GUI tool is needed to create and inspect the database; `Microsoft.Data.Sqlite` supplies the runtime provider and native engine |
+| Syncfusion.Blazor.PivotTable | `{{site.blazorversion}}` (31.2.10 or later) | [.NET 10 support starts with 31.2.10](https://blazor.syncfusion.com/documentation/common/how-to/version-compatibility); keep all Syncfusion packages on the same version |
+| Syncfusion.Blazor.Themes | `{{site.blazorversion}}` (31.2.10 or later) | Provides the component theme |
+| Microsoft.Data.Sqlite | 10.0.10 | SQLite ADO.NET provider aligned with .NET 10 |
 
 The application uses the Blazor Web App template with Interactive Server rendering. Syncfusion packages from NuGet.org require a valid license or trial key; follow the [license-key registration instructions](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application).
 
@@ -34,7 +33,7 @@ The application uses the Blazor Web App template with Interactive Server renderi
 Create an Interactive Server Blazor Web App:
 
 ```powershell
-dotnet new blazor -n PivotTableSQLite -f net10.0 -int Server
+dotnet new blazor -n PivotTableSQLite -f net10.0 -int Server -ai
 cd PivotTableSQLite
 ```
 
@@ -56,19 +55,21 @@ Run the following script to create the `Orders` table and seed it with sample ro
 CREATE TABLE IF NOT EXISTS Orders
 (
     OrderID      INTEGER PRIMARY KEY AUTOINCREMENT,
-    CustomerName TEXT    NULL,
-    EmployeeID   INTEGER NULL,
+    CustomerName TEXT    NOT NULL,
+    EmployeeID   INTEGER NOT NULL,
     ShipCity     TEXT    NULL,
     Freight      REAL    NULL
 );
 
 INSERT INTO Orders (CustomerName, EmployeeID, ShipCity, Freight)
-VALUES
+SELECT * FROM (VALUES
     ('Toms', 1, 'New York', 35.30),
     ('Ravi', 2, 'London',   80.20),
     ('Sven', 1, 'Berlin',   52.10),
     ('Sara', 3, 'Madrid',   18.40),
-    ('Paul', 2, 'Tokyo',    64.75);
+    ('Paul', 2, 'Tokyo',    64.75)
+) AS seed
+WHERE NOT EXISTS (SELECT 1 FROM Orders);
 ```
 
 Verify the inserted data:
@@ -77,6 +78,8 @@ Verify the inserted data:
 SELECT OrderID, CustomerName, EmployeeID, ShipCity, Freight
 FROM Orders
 ORDER BY OrderID;
+
+.quit
 ```
 
 Expected output:
@@ -98,16 +101,14 @@ Run these commands in the `PivotTableSQLite` project directory:
 ```powershell
 dotnet add package Syncfusion.Blazor.PivotTable --version {{site.blazorversion}}
 dotnet add package Syncfusion.Blazor.Themes --version {{site.blazorversion}}
-dotnet add package Microsoft.Data.Sqlite --version 9.0.0
-dotnet add package Newtonsoft.Json --version 13.0.3
+dotnet add package Microsoft.Data.Sqlite --version 10.0.10
 ```
 
 The project file should contain:
 
 ```xml
 <ItemGroup>
-  <PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.0" />
-  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.10" />
   <PackageReference Include="Syncfusion.Blazor.PivotTable" Version="{{site.blazorversion}}" />
   <PackageReference Include="Syncfusion.Blazor.Themes" Version="{{site.blazorversion}}" />
 </ItemGroup>
@@ -134,7 +135,7 @@ Store the SQLite connection string in `appsettings.json`:
 
 > **Note:** Replace `<DATABASE_FILE_NAME>` with the actual SQLite database file name or the full path to the database file used in your environment. For example, `Data Source=Orders.db` for a file in the application working directory, or `Data Source=C:/Data/Orders.db` for an absolute path.
 
-For deployment, store the connection string through the hosting environment or a secrets manager (such as .NET user secrets for local development) rather than committing production paths to source control.
+A relative `Data Source` path is resolved from the application's process working directory. Use an absolute path in deployments where the working directory can differ from the project directory.
 
 ## Step 5: Create the API Controller
 
@@ -142,7 +143,6 @@ Create a `Controllers` folder at the project root, and then create `Controllers/
 
 ```csharp
 using System.ComponentModel.DataAnnotations;
-using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.Sqlite;
 using Syncfusion.Blazor.Data;
@@ -253,6 +253,12 @@ namespace PivotTableSQLite.Controllers
                 order.ShipCity ?? (object)DBNull.Value);
 
             command.ExecuteNonQuery();
+
+            using SqliteCommand keyCommand = new(
+                "SELECT last_insert_rowid();",
+                connection);
+
+            order.OrderID = Convert.ToInt32(keyCommand.ExecuteScalar());
 
             return Ok(order);
         }
@@ -380,29 +386,12 @@ namespace PivotTableSQLite.Controllers
             [JsonPropertyName("params")]
             public IDictionary<string, object>? Params { get; set; }
         }
+
     }
 }
 ```
 
-### CRUD Operations and the URL Adaptor Contract
-
-The controller exposes four endpoints that together provide full create, read, update, and delete behavior for the Pivot Table drill-through editor. The Syncfusion URL Adaptor translates component data operations into `POST` requests with a JSON body, and the Pivot Table's `SfDataManager` is configured with `Adaptor="Adaptors.UrlAdaptor"` and four URLs: `Url` (read/refresh), `InsertUrl`, `UpdateUrl`, and `RemoveUrl`. Each request body uses the `CRUDModel<Order>` shape (for write actions) or the `DataManagerRequest` shape (for the read action), so the controller and the adaptor share a common contract.
-
-**Read** — `POST /api/Order` (the `Url` endpoint)
-
-The default `Post` action accepts a `DataManagerRequest` to satisfy the URL Adaptor read contract. The sample deliberately ignores the request's server-side `where`, `sorted`, and `skip/take` parameters and returns the entire `Orders` table, ordered by `OrderID`. The response shape is `{ result, count }`, which the URL Adaptor expects.
-
-**Insert** — `POST /api/Order/Insert` (the `InsertUrl` endpoint)
-
-The `Insert` action receives a `CRUDModel<Order>` whose `Value` property carries the new record. It validates that `CustomerName` and `EmployeeID` are present, then runs a parameterized `INSERT` against the `Orders` table. Because `OrderID` is an `INTEGER PRIMARY KEY AUTOINCREMENT` column, SQLite generates the value automatically.
-
-**Update** — `POST /api/Order/Update` (the `UpdateUrl` endpoint)
-
-The `Update` action receives a `CRUDModel<Order>` whose `Value` contains the modified record, including the key field `OrderID`. It runs a parameterized `UPDATE` statement scoped to that `OrderID` and returns `404` when no row matches.
-
-**Delete** — `POST /api/Order/Delete` (the `RemoveUrl` endpoint)
-
-The `Delete` action receives a `CRUDModel<Order>` whose `Key` property holds the primary key of the record to remove. It parses the key, runs a parameterized `DELETE`, and returns `204` on success or `404` when the row does not exist.
+The controller exposes the read, insert, update, and delete endpoints described in the [API Contract](#api-contract). The exception middleware configured in the next step logs unhandled `SqliteException` instances and returns generic problem responses without exposing database paths or SQL details.
 
 ## Step 6: Configure Program.cs
 
@@ -426,16 +415,17 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
 builder.Services.AddControllers();
+builder.Services.AddProblemDetails();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error", createScopeForErrors: true);
     app.UseHsts();
 }
 
+app.UseExceptionHandler();
 app.UseHttpsRedirection();
 
 app.MapControllers();
@@ -455,14 +445,11 @@ Key registration points:
 - `AddSyncfusionBlazor()` registers the Syncfusion Blazor services required by the Pivot Table.
 - `AddRazorComponents().AddInteractiveServerComponents()` enables Interactive Server rendering.
 - `AddControllers()` registers the API controllers, including `OrderController`.
+- `AddProblemDetails()` and `UseExceptionHandler()` log unhandled failures and return generic error responses.
 - `MapControllers()` routes requests to the API endpoints.
-- `MapStaticAssets()` serves the Syncfusion theme stylesheet and scripts.
+- `MapStaticAssets()` maps the application's static web assets, including assets supplied by referenced component packages.
 
 > **Note:** Remove the comment markers and fill in your Syncfusion license or trial key in `Program.cs` before running the application. Follow the [license-key registration instructions](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application) for details.
-
-The API is same-origin, so CORS configuration is not required. If the API is later hosted on another origin, configure an explicit CORS policy that allows only the Blazor application's origin.
-
-Protect the write endpoints with the authentication and authorization mechanism used by your application before production deployment. If cookie-authenticated API actions require antiforgery validation, configure `SfDataManager` to send the request token expected by the server.
 
 ## Step 7: Configure the Pivot Table
 
@@ -470,6 +457,7 @@ Add these namespaces to `Components/_Imports.razor`:
 
 ```cshtml
 @using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.PivotView
 ```
 
@@ -519,12 +507,14 @@ Replace `Components/Pages/Home.razor` with the following markup. The `SfDataMana
 
 ```cshtml
 @page "/"
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.PivotView
-
 <SfPivotView TValue="Order" Width="1000" Height="300" ShowFieldList="true">
-    <PivotViewDataSourceSettings TValue="Order" ExpandAll=false EnableSorting=true>
-    <SfDataManager Url="http://localhost:5145/api/Order" InsertUrl="http://localhost:5145/api/Order/Insert" UpdateUrl="http://localhost:5145/api/Order/Update" RemoveUrl="http://localhost:5145/api/Order/Delete" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+    <PivotViewDataSourceSettings TValue="Order" ExpandAll="false" EnableSorting="true">
+        <SfDataManager Url="/api/Order"
+                       InsertUrl="/api/Order/Insert"
+                       UpdateUrl="/api/Order/Update"
+                       RemoveUrl="/api/Order/Delete"
+                       Adaptor="Adaptors.UrlAdaptor">
+        </SfDataManager>
         <PivotViewColumns>
             <PivotViewColumn Name="EmployeeID"></PivotViewColumn>
         </PivotViewColumns>
@@ -536,47 +526,43 @@ Replace `Components/Pages/Home.razor` with the following markup. The `SfDataMana
         </PivotViewValues>
     </PivotViewDataSourceSettings>
     <PivotViewGridSettings ColumnWidth="120"></PivotViewGridSettings>
-    <PivotViewEvents TValue="Order" BeginDrillThrough="beginDrillThrough"></PivotViewEvents>
-    <PivotViewCellEditSettings AllowEditing=true AllowAdding=true AllowDeleting=true Mode=Syncfusion.Blazor.PivotView.EditMode.Normal></PivotViewCellEditSettings>
+    <PivotViewEvents TValue="Order" BeginDrillThrough="BeginDrillThrough"></PivotViewEvents>
+    <PivotViewCellEditSettings AllowEditing="true"
+                               AllowAdding="true"
+                               AllowDeleting="true"
+                               Mode="EditMode.Normal">
+    </PivotViewCellEditSettings>
 </SfPivotView>
 
-@code{
-    private void beginDrillThrough(BeginDrillThroughEventArgs args)
+@code {
+    private void BeginDrillThrough(BeginDrillThroughEventArgs args)
     {
-        // Configure beginDrillThrough event to set the primary key for CRUD operations
-        // Iterate through all columns in the drill-through Order
+        // Identify the key used by URL Adaptor update and delete requests.
         for (int i = 0; i < args.GridObj.Columns.Count; i++)
         {
-            // Check if the current column is the primary key column
             if (args.GridObj.Columns[i].Field == "OrderID")
             {
-                // Mark this column as the primary key
-                // This tells DataManager to use this column's value to uniquely identify records
                 args.GridObj.Columns[i].IsPrimaryKey = true;
             }
             else
             {
-                 args.GridObj.Columns[i].Visible = true; // Ensure other columns are visible in the drill-through grid
+                args.GridObj.Columns[i].Visible = true;
             }
         }
     }
-    SfPivotView<Order> pivot { get; set; }
 
-    public List<Order> Orders { get; set; }
     public class Order
     {
-        public int OrderID { get; set; }
-        public string CustomerName { get; set; }
-        public int EmployeeID { get; set; }
-        public decimal Freight { get; set; }
-        public string ShipCity { get; set; }
+        public int? OrderID { get; set; }
+        public string? CustomerName { get; set; }
+        public int? EmployeeID { get; set; }
+        public decimal? Freight { get; set; }
+        public string? ShipCity { get; set; }
     }
 }
 ```
 
 The `BeginDrillThrough` event is used to mark `OrderID` as the primary key on the drill-through grid. This tells the DataManager which column uniquely identifies each record so that insert, update, and delete requests carry the correct key. Without this configuration, the write operations cannot target the intended row.
-
-> **Note:** Replace the `http://localhost:5145` base in the URLs with the actual port assigned to your application, or use same-origin relative URLs such as `/api/Order` to avoid hard-coded development ports and HTTP-to-HTTPS mixed-content failures.
 
 ## API Contract
 
@@ -589,20 +575,57 @@ The `BeginDrillThrough` event is used to mark `OrderID` as the primary key on th
 
 The API uses action-oriented routes because they match the URL Adaptor's `InsertUrl`, `UpdateUrl`, and `RemoveUrl` contract.
 
+For write requests, `action` identifies the operation, `keyColumn` names the primary-key field, `key` carries the value used by delete operations, and `value` carries the inserted or updated record. The Syncfusion model also supports `added`, `changed`, and `deleted` collections for batch editing, `params` for additional values, and `table` for an optional table name; this sample uses normal editing and does not consume those optional properties.
+
+| Route | Failure response |
+|---|---|
+| `/api/Order` | `500` when the database cannot be queried |
+| `/api/Order/Insert` | `400` when required fields are missing; `500` on a database failure |
+| `/api/Order/Update` | `400` when required fields are missing; `404` when the key does not exist; `500` on a database failure |
+| `/api/Order/Delete` | `400` when the key is not numeric; `404` when the key does not exist; `500` on a database failure |
+
 Example read response:
 
 ```json
 {
   "result": [
     {
+      "orderID": 1,
+      "customerName": "Toms",
+      "employeeID": 1,
+      "freight": 35.30,
+      "shipCity": "New York"
+    },
+    {
       "orderID": 2,
       "customerName": "Ravi",
       "employeeID": 2,
       "freight": 80.20,
       "shipCity": "London"
+    },
+    {
+      "orderID": 3,
+      "customerName": "Sven",
+      "employeeID": 1,
+      "freight": 52.10,
+      "shipCity": "Berlin"
+    },
+    {
+      "orderID": 4,
+      "customerName": "Sara",
+      "employeeID": 3,
+      "freight": 18.40,
+      "shipCity": "Madrid"
+    },
+    {
+      "orderID": 5,
+      "customerName": "Paul",
+      "employeeID": 2,
+      "freight": 64.75,
+      "shipCity": "Tokyo"
     }
   ],
-  "count": 1
+  "count": 5
 }
 ```
 
@@ -620,6 +643,8 @@ Example insert request:
   }
 }
 ```
+
+The insert response returns the persisted record with the generated `orderID` populated.
 
 Example update request:
 
@@ -649,10 +674,9 @@ Example delete request:
 
 ## Run and Verify the Application
 
-Restore, build, and run the project:
+Build and run the project:
 
 ```powershell
-dotnet restore
 dotnet build
 dotnet run
 ```
@@ -662,10 +686,9 @@ Open the URL shown in the terminal. Verify the following:
 1. The Pivot Table displays `CustomerName` as rows, `EmployeeID` as columns, and the sum of `Freight` as values.
 2. The browser Network panel shows `POST /api/Order` returning `200` with `result` and `count`.
 3. Double-click a value (summary) cell to open its raw-record editor.
-4. Add, edit, and delete a record, and confirm the corresponding API request succeeds.
-5. Query the `Orders` table (using your SQLite client) to confirm the change was persisted locally. For deployed apps with no direct database access, re-open the drill-through editor and confirm the row reflects the change.
-
-![Blazor Pivot Table](../images/blazor-pivot-table-sqlite.webp)
+4. Add a record and confirm that `POST /api/Order/Insert` returns the generated, nonzero `orderID`.
+5. Edit and delete records, and confirm the corresponding API requests succeed with that key.
+6. Query the `Orders` table (using your SQLite client) to confirm the changes were persisted locally. For deployed apps with no direct database access, re-open the drill-through editor and confirm that the rows reflect the changes.
 
 ## Production Considerations
 
