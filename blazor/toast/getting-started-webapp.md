@@ -263,7 +263,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-* [Show or hide toast from any page using service in Blazor](https://support.syncfusion.com/kb/article/11734/show-or-hide-toast-from-any-page-using-service-in-blazor)
+* [Show or hide toast from any page using service in Blazor](https://support.syncfusion.com/kb/article/11734/how-to-show-or-hide-any-page-using-blazor-toast)
 * [Getting Started with Blazor for client-side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Blazor for server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Blazor for server-side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli)

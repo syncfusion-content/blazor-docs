@@ -41,4 +41,4 @@ In the following example, the ComboBox lists countries, and textboxes display th
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXLxZdLUKDDGkuiV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Cascading with other form field in Blazor ComboBox](./images/cascading/blazor_combobox_cascading-with-other-form-field.webp)" %}
 
-N> [View the cascading ComboBox demo](https://blazor.syncfusion.com/demos/combobox/cascading?theme=bootstrap5).
+N> [View the cascading ComboBox demo](https://blazor.syncfusion.com/demos/combobox/cascading?theme=fluent2).

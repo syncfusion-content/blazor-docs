@@ -188,7 +188,7 @@ The following code example demonstrates how to customize the layout and design o
             <span class="textElement">125k posts</span>
         </ChipItem>
         <ChipItem LeadingIconCss="cameraIcon">
-            <a href="https://blog.google/products/photos/" target="_blank" class="anchorElement">#PhotoOfTheDay</a>
+            <a href="https://blog.google/products-and-platforms/products/photos/" target="_blank" class="anchorElement">#PhotoOfTheDay</a>
         </ChipItem>
         <ChipItem LeadingIconCss="trendingIcon">
             <a href="https://indianexpress.com/section/technology/" target="_blank" class="anchorElement">#TechNews</a>

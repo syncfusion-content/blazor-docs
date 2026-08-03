@@ -105,7 +105,7 @@ For independent checked states, allowing child nodes to be checked or unchecked 
 
 ## Check Nodes through Data Binding
 
-A specific node is checked by setting the [`IsChecked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldSettings-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldSettings_1_IsChecked) field to `true` for the corresponding node in the data source. This field specifies the checked state of the TreeView node.
+A specific node is checked by setting the [`IsChecked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_IsChecked) field to `true` for the corresponding node in the data source. This field specifies the checked state of the TreeView node.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
