@@ -9,7 +9,7 @@ documentation: ug
 
 # Upgrade the Blazor Application to the Latest Version
 
-The [Syncfusion® Blazor extension](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions) extension for Visual Studio Code enables upgrading an existing Blazor application to a newer Essential ® release by updating NuGet package references and theme links automatically.
+The [Syncfusion® Blazor extension](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions) for Visual Studio Code enables upgrading an existing Blazor application to a newer Essential Studio® release by updating NuGet package references and theme links automatically.
 
 ## Supported project types
 
@@ -22,7 +22,7 @@ The [Syncfusion® Blazor extension](https://marketplace.visualstudio.com/items?i
 
 1. Open the Blazor project in Visual Studio Code.
 
-2. In Explorer, right-click the project `.csproj` file and choose **Migrate Syncfusion Blazor Application to another version**.
+2. In Explorer, right-click the project `.csproj` file and choose **Migrate Syncfusion Blazor Application to Another Version**.
 
     ![Context menu showing Migrate Syncfusion Blazor Application option](images/migration.webp)
 
@@ -36,7 +36,7 @@ The [Syncfusion® Blazor extension](https://marketplace.visualstudio.com/items?i
 
     ![Project file updated with NuGet package references](images/nugetpackage.webp)
 
-N> If you installed the trial setup or NuGet packages from [nuget.org](https://www.nuget.org), you must register the license key. Refer to the [licensing overview](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for details on generating and registering your license key.  
+N> If you installed the trial setup or NuGet packages from [nuget.org](https://www.nuget.org), you must register the license key. Refer to the [licensing overview](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for details on generating and registering your license key.
 
 ## See also
 

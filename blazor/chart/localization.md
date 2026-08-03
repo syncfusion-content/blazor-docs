@@ -16,7 +16,7 @@ To implement localization in the [Blazor Charts](https://www.syncfusion.com/blaz
 By applying localization, the chart component can automatically adapt to the selected culture. For example, date values displayed on the axis will follow the regional format, and numeric values will be shown with appropriate separators and symbols.
 In addition to text translation, localization also improves the user experience by aligning with regional expectations. For instance, decimal separators may vary between cultures (e.g., . vs ,), and date formats can differ significantly. Proper localization ensures that such variations are handled seamlessly within the chart.
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ### Key Benefits of Localization in Charts
 
