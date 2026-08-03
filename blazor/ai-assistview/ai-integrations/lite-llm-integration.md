@@ -28,14 +28,6 @@ Before starting, ensure you have the following:
 
 * **Syncfusion AI AssistView**: Package [Syncfusion Blazor package](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed.
 
-* **Markdig**: For parsing Markdown responses.
-
-```bash
-
-Nuget\Install-Package Markdig
-
-```
-
 ## Set Up the AI AssistView Component
 
 Follow the [Getting Started](../getting-started) guide to configure and render the AI AssistView component in the application and that prerequisites are met.
@@ -76,7 +68,7 @@ In the following example:
 
 * The [PromptRequested](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptRequested) event sends the user prompt to the LiteLLM proxy at `/v1/chat/completions`. 
 * The proxy uses the **model alias** defined in `config.yaml` (e.g., `openai/gpt-4o-mini`) and routes the request to the actual LLM provider. 
-* The response is parsed as **Markdown** using the `Markdig` library and displayed in the AI AssistView component.
+* The response is parsed as **Markdown** and displayed in the AI AssistView component.
 
 {% tabs %}
 {% highlight razor %}
@@ -84,7 +76,6 @@ In the following example:
 @rendermode InteractiveAuto
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Navigations
-@using Markdig
 @using System.Text.Json
 @using System.Text
 @inject HttpClient Http
@@ -162,15 +153,9 @@ In the following example:
                 .GetProperty("content")
                 .GetString()?.Trim() ?? "No response received.";
 
-            var pipeline = new MarkdownPipelineBuilder()
-                .UseAdvancedExtensions()
-                .UsePipeTables()
-                .UseTaskLists()
-                .Build();
-
             // Add the response to the AIAssistView
             await Task.Delay(1000); // Simulate delay as in original code
-            args.Response = Markdown.ToHtml(responseText, pipeline);
+            args.Response = responseText;
         }
         catch (Exception ex)
         {

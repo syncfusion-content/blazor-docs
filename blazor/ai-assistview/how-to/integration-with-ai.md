@@ -30,7 +30,6 @@ To add the required NuGet packages, use the NuGet Package Manager in Visual Stud
 * `Azure.Identity`
 * `Microsoft.Extensions.AI`
 * `Microsoft.Extensions.AI.OpenAI`
-* `Markdig`
 
 Alternatively, run the following commands in your terminal:
 
@@ -41,7 +40,6 @@ dotnet add package Azure.AI.OpenAI
 dotnet add package Azure.Identity
 dotnet add package Microsoft.Extensions.AI
 dotnet add package Microsoft.Extensions.AI.OpenAI
-dotnet add package Markdig
 
 {% endhighlight %}
 {% endtabs %}
@@ -90,7 +88,7 @@ var app = builder.Build();
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> AI AssistView component is designed to integrate seamlessly with external AI services. When an `IChatClient` is registered via Microsoft.Extensions.AI, the component automatically uses it to process user prompts without additional component configuration.
 
-In the following example, user input is sent to the injected `IChatClient`. The AI model’s response is returned in Markdown, converted to HTML using the `Markdig` library, and rendered in the AI AssistView component.
+In the following example, user input is sent to the injected `IChatClient`. The AI model’s response is returned in Markdown, converted to HTML, and rendered in the AI AssistView component.
 
 {% tabs %}
 {% highlight razor %}
@@ -99,7 +97,6 @@ In the following example, user input is sent to the injected `IChatClient`. The 
 
 @using Syncfusion.Blazor.InteractiveChat
 @using Microsoft.Extensions.AI
-@using Markdig;
 @using System.Text.RegularExpressions;
 @inject IChatClient ChatClient
 
@@ -113,8 +110,7 @@ In the following example, user input is sent to the injected `IChatClient`. The 
     {
         // Send the user’s prompt to the AI model
         var chatResponse = await ChatClient.GetResponseAsync(args.Prompt, new ChatOptions());
-        // Convert markdown to HTML
-        var htmlContent = Markdown.ToHtml(chatResponse.Text);
+        var htmlContent = chatResponse.Text;
         // Clean up extra whitespace
         htmlContent = Regex.Replace(htmlContent, @"\s+", " ").Trim();
         // Set the cleaned HTML as the response
