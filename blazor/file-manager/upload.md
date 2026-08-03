@@ -35,7 +35,7 @@ When set to `true`, this property enables directory upload in the FileManager, a
 ```
 N> When `DirectoryUpload` is set to `true`, only folders can be uploaded. When it is set to `false`, only individual files can be uploaded. Simultaneous uploading of files and folders is not supported.
 
-The screenshot below shows after successfully selecting a directory it uploads all the file inside it automatically. This demonstrates how the `DirectoryUpload` property works in the Blazor File Manager component.
+The screenshot below shows how selecting a directory uploads all contained files automatically when `DirectoryUpload` is enabled.
 
 ![Blazor File Manager with DirectoryUpload](images/blazor-filemanager-directoryupload.webp)
 
@@ -45,7 +45,7 @@ The [SequentialUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.F
 
 To enable sequential upload, set the `SequentialUpload` property to `true` in the [FileManagerUploadSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html) configuration.
 
-When set to `true`, the selected files will process sequentially (one after the other) to the server. If the file uploaded successfully or failed, the next file will upload automatically in this sequential upload. This feature helps to reduce the upload traffic and reduce the failure of file upload.
+When set to `true`, the selected files will process sequentially (one after the other) to the server. If a file uploads successfully or fails, the next file will upload automatically. This reduces server load and improves upload reliability by preventing concurrent connection issues.
 
 ```cshtml
 
@@ -61,7 +61,7 @@ When set to `true`, the selected files will process sequentially (one after th
 </SfFileManager>
 
 ```
-The screenshot below shows that each file begins uploading only after the previous one completes. This demonstrates how the `SequentialUpload` property works in the Blazor File Manager component.
+The screenshot below shows sequential file uploads, where each file begins uploading only after the previous one completes.
 
 ![Blazor File Manager with SequentialUpload](images/blazor-filemanager-sequentialupload.webp)
 
@@ -87,9 +87,9 @@ By specifying a `ChunkSize`, the large file is divided into smaller parts, reduc
 </SfFileManager>
 
 ```
-In the following example, the ChunkSize is set to 5 MB (5,242,880 bytes), and the MaxFileSize is set to 70 MB (73,728,000 bytes). This means files that are up to 70 MB will be uploaded in 5 MB chunks.
+In the following example, the ChunkSize is set to 5 MB (5,242,880 bytes), and the [MaxFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_MaxFileSize) property is set to 70 MB (73,728,000 bytes). Files up to 70 MB will be uploaded in 5 MB chunks.
 
-With chunk upload, the pause and resume options gives users enhanced control over the file upload process.
+**Note:** When chunk upload is enabled, the UI automatically provides pause and resume buttons, giving users control over the upload process. Paused uploads can be resumed from the same position.
 
 ![Blazor File Manager with chunkUpload](images/blazor-filemanager-chunkupload.webp)
 
@@ -122,7 +122,7 @@ The screenshot demonstrates the AutoUpload property set to `false`. When disable
 
 The [AutoClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_AutoClose) property controls whether the upload dialog automatically closes after all the files have been uploaded.
 
-The default value is set to `false`, the upload dialog remains open even after the upload process is complete. If `AutoClose` set to `true`, the upload dialog will automatically close after all the files in the upload queue are uploaded.
+The default value is set to `false`, the upload dialog remains open even after the upload process is complete. If `AutoClose` is set to `true`, the upload dialog will automatically close after all the files in the upload queue are uploaded.
 
 ```cshtml
 
@@ -143,9 +143,7 @@ The default value is set to `false`, the upload dialog remains open even after t
 
 The [AllowedExtensions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_AllowedExtensions) property specifies which file types are allowed for upload in the File Manager component by defining their extensions.
 
-This property lets you define which file types can be uploaded by specifying allowed extensions, separated by commas. For example, to allow only image files, you would set the `AllowedExtensions` property to .jpg,.png.
-
-By setting the `AllowedExtensions` property, you restrict the file types that can be uploaded. Only files with the specified extensions will be accepted.
+Specify allowed extensions as a comma-separated list (without spaces) with a leading dot for each extension. For example: `.jpg,.png,.gif`. Only files matching these extensions will be accepted for upload.
 
 If you want to allow only image files like .jpg and .png, you would set the property as follows:
 
@@ -169,10 +167,11 @@ If you want to allow only image files like .jpg and .png, you would set the prop
 
 The [UploadMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_UploadMode) property defines the method used to perform the upload operation in the File Manager component.
 
-This property lets you choose between two upload modes. `FormSubmit` Uses the traditional form submission method for file uploads.
-`HttpClient` uses the HttpClient instance for the upload, providing more control over the request.
+This property lets you choose between two upload modes:
+- `FormSubmit` — Uses traditional form submission for file uploads (default).
+- `HttpClient` — Uses the HttpClient instance for uploads, providing more control over headers, authentication tokens, and request configuration.
 
-By default, the `UploadMode` is set to `FormSubmit`, but you can switch to HttpClient for more control, such as managing headers or authorizing the upload response.
+Switch to `HttpClient` mode when you need custom headers or token-based authentication (e.g., Bearer tokens). Use the `OnSend` event to customize the request before sending.
 
 {% tabs %}
 {% highlight razor %}
@@ -193,12 +192,13 @@ By default, the `UploadMode` is set to `FormSubmit`, but you can switch to HttpC
 
 @code { 
 
+    [Inject]
     private IApiAuthTokenService ApiAuthTokenService { get; set; }
     
     private async Task OnBeforeSend(BeforeSendEventArgs args)
     {
         var token = await ApiAuthTokenService.GetToken();
-        args.HttpClientInstance.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+        args.HttpClientInstance.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
     }
 }
 
@@ -263,7 +263,9 @@ namespace Blazor
 
 ## Drag and Drop upload
 
-The Blazor File Manager component allows you to easily perform drag and drop file uploads. You can drag files from your local file system and drop them directly into the FileManager. Additionally, you have the ability to customize the drop area for file uploads using the [DropArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DropArea) property in the [FileManagerUploadSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html) class.
+The Blazor File Manager component supports drag and drop file uploads. You can drag files from your local file system and drop them directly into the FileManager. By default, the entire FileManager area accepts dropped files.
+
+To restrict the drop zone to a specific area, use the [DropArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DropArea) property in the [FileManagerUploadSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html) class. Specify a CSS selector (e.g., `.e-layout-content`, `#drop-zone`) to define the droppable region.
 
 ```cshtml
 
@@ -280,7 +282,19 @@ The Blazor File Manager component allows you to easily perform drag and drop fil
 
 ```
 
+## Upload Events
+
+The File Manager component provides several events for handling upload operations:
+- `OnUploadStart` — Triggered when an upload begins
+- `OnUploadSuccess` — Triggered when an upload completes successfully
+- `OnUploadFailed` — Triggered when an upload fails
+- `OnSend` — Triggered before sending the request (used with HttpClient mode for custom headers/auth)
+
+For more details, refer to the [FileManagerEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html) documentation.
+
 ## See also
+
+* [FileManagerUploadSettings API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html)
 
 * [Set min and max file size in upload](https://blazor.syncfusion.com/documentation/file-manager/how-to/upload-large-files)
 
