@@ -19,8 +19,6 @@ Before starting, ensure you have the following:
 
 * **Syncfusion AI AssistView**: Package [Syncfusion Blazor package](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed.
 
-* [Markdig](https://www.nuget.org/packages/Markdig) package: For parsing Markdown responses.
-
 ## Set Up the AI AssistView Component
 
 Follow the [Getting Started](../getting-started) guide to configure and render the AI AssistView component in the application and that prerequisites are met.
@@ -34,14 +32,6 @@ Install the required packages:
 ```bash
 
 Nuget\Install-Package Mscc.GenerativeAI
-
-```
-
-* Install the `Markdig` nuget packages in the application.
-
-```bash
-
-Nuget\Install-Package Markdig
 
 ```
 
@@ -75,7 +65,6 @@ const string GeminiApiKey = 'Place your API key here';
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Navigations
 @using Mscc.GenerativeAI
-@using Markdig
 
 <div class="aiassist-container" style="height: 350px; width: 650px;">
 // Initializes the AI Assist component

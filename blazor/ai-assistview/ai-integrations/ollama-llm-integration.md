@@ -19,15 +19,9 @@ Before starting, ensure you have the following:
 
 * **Syncfusion AI AssistView**: Package [Syncfusion Blazor package](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed.
 
-* [Markdig](https://www.nuget.org/packages/Markdig) package: For parsing Markdown responses.
-
 ## Set Up the AI AssistView Component
 
 Follow the [Getting Started](../getting-started) guide to configure and render the AI AssistView component in the application and that prerequisites are met.
-
-## Install Dependency
-
-To install the Markdig package by run `NuGet\Install-Package Markdig` in Package Manager Console.
 
 ## Configuring Ollama
 
@@ -140,7 +134,6 @@ app.Run();
 {% highlight razor %}
 
 @rendermode InteractiveServer
-@using Markdig
 @using Microsoft.Extensions.AI
 @using Syncfusion.Blazor.Navigations
 

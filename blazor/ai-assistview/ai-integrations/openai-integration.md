@@ -19,8 +19,6 @@ Before starting, ensure you have the following:
 
 * **Syncfusion AI AssistView**: Package [Syncfusion Blazor package](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed.
 
-* [Markdig](https://www.nuget.org/packages/Markdig) package available in the project for Markdown-to-HTML conversion (required by the sample code).
-
 ## Set Up the AI AssistView Component
 
 Follow the [Getting Started](../getting-started) guide to configure and render the AI AssistView component in the application and that prerequisites are met.
@@ -36,14 +34,6 @@ Install the required packages:
 NuGet\Install-Package OpenAI
 NuGet\Install-Package Azure.AI.OpenAI
 NuGet\Install-Package Azure.Core
-
-```
-
-* Install the `Markdig` nuget packages in the application.
-
-```bash
-
-Nuget\Install-Package Markdig
 
 ```
 
@@ -155,7 +145,6 @@ Modify the razor file to integrate the Azure OpenAI with the AI AssistView compo
 {% highlight c# tabtitle="cs" %}
 
 using System.Text.Json;
-using Markdig;
 using System.Text.RegularExpressions;
 
 namespace AIAssistView_AzureAI.Components.Services
