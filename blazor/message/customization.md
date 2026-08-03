@@ -57,6 +57,7 @@ The following example shows the rounded and squared appearance of the message, w
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Notifications
 
 <div class="msg-custom-section">
@@ -137,10 +138,8 @@ The following example shows the message which renders without any script referen
 {% tabs %}
 {% highlight razor %}
 
-@using Syncfusion.Blazor.Notifications
-
 <div class="msg-default">
-    <div id="msg" class="e-message" role="alert">
+    <div class="e-message" role="alert">
       <span class="e-msg-icon"></span>
       <div class="e-msg-content">Please read the comments carefully</div>
     </div>

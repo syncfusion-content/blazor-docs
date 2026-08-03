@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Install the Syncfusion® Blazor Offline Installer
+# Install the Syncfusion® Blazor offline installer
 
 The Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor offline installer is available in EXE or ZIP format and can be installed either through the user interface or silently from the command line. The sections below cover both approaches, including how to unlock the installer and how to uninstall from the command line.
 
@@ -21,7 +21,7 @@ Before you begin, confirm the following:
 * The downloaded Blazor offline installer is available locally. If you have not downloaded it yet, see [Download the Blazor offline installer](https://blazor.syncfusion.com/documentation/installation/offline-installer/how-to-download).
 * A trial unlock key, a licensed unlock key, or valid Syncfusion<sup style="font-size:70%">&reg;</sup> account credentials are available to unlock the installer. See [How to generate an unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) for details.
 
-## Install with the User Interface
+## Install with the user interface
 
 The steps below show how to install the Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor offline installer.
 
@@ -29,7 +29,7 @@ The steps below show how to install the Essential Studio<sup style="font-size:70
 
    ![Offline installer setup extracting package](images/webofflineinstaller-1.webp)
 
-   > **Note:** The installer extracts `syncfusionessentialblazor_(version).exe` and displays the extraction progress (the unzip operation).
+   N> The installer extracts `syncfusionessentialblazor_(version).exe` and displays the extraction progress (the unzip operation).
 
 2. To unlock the offline installer, choose one of the following options:
 
@@ -68,7 +68,7 @@ The steps below show how to install the Essential Studio<sup style="font-size:70
 
    ![Offline installer Uninstall previous versions wizard](images/webofflineinstaller-5.webp)
 
-   > **Note:** Starting with the 2021 Volume 1 release, the option to uninstall previous versions from 18.1 has been added while installing the new version. If any version is selected to uninstall, a confirmation screen will appear. If **Continue** is selected, the **Progress** screen displays the uninstall and install progress, respectively. If none of the versions are chosen to be uninstalled, only the installation progress is displayed.
+   N> Starting with the 2021 Volume 1 release, the option to uninstall previous versions from 18.1 has been added while installing the new version. If any version is selected to uninstall, a confirmation screen will appear. If **Continue** is selected, the **Progress** screen displays the uninstall and install progress, respectively. If none of the versions are chosen to be uninstalled, only the installation progress is displayed.
 
    **Confirmation alert**
 
@@ -82,18 +82,18 @@ The steps below show how to install the Essential Studio<sup style="font-size:70
 
    ![Web Offline Installer Progress Wizard](images/webofflineinstaller-8.webp)
 
-   > **Note:** The **Completed** screen appears after installation. If versions were uninstalled, it shows both uninstall and install status.
+   N> The **Completed** screen appears after installation. If versions were uninstalled, it shows both uninstall and install status.
 
    ![Web Offline Installer Summary Wizard](images/webofflineinstaller-9.webp)
 
 6. After installation, select **Launch Control Panel** to open the Control Panel.
 7. Select **Finish**. The Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor product is installed.
 
-## Install in Silent Mode
+## Install in silent mode
 
 The Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor installer supports silent installation and uninstallation via the command line.
 
-### Command-Line Installation
+### Command-line installation
 
 To install through the command line in silent mode, follow these steps:
 
@@ -110,7 +110,7 @@ To install through the command line in silent mode, follow these steps:
    "installer file path\SyncfusionEssentialStudio(product)_(version).exe" /Install silent /UNLOCKKEY:"(product unlock key)" [/log "{Log file path}"] [/InstallPath:{Location to install}] [/InstallSamples:{true/false}] [/CreateShortcut:{true/false}] [/CreateStartMenuShortcut:{true/false}]
    ```
 
-   > **Note:** Arguments inside square brackets are optional.
+   N> Arguments inside square brackets are optional.
 
    **Example**
 
@@ -120,9 +120,9 @@ To install through the command line in silent mode, follow these steps:
 
 7. Essential Studio<sup style="font-size:70%">&reg;</sup> for Blazor is installed.
 
-   > **Note:** Replace `x.x.x.x` with the Essential Studio<sup style="font-size:70%">&reg;</sup> version, and replace the product unlock key with the unlock key for that version.
+   N> Replace `x.x.x.x` with the Essential Studio<sup style="font-size:70%">&reg;</sup> version, and replace the product unlock key with the unlock key for that version.
 
-### Command-Line Uninstallation
+### Command-line uninstallation
 
 Essential<sup style="font-size:70%">&reg;</sup> Blazor can be uninstalled silently using the command line.
 
