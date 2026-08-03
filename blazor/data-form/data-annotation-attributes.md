@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data annotation attributes in Blazor DataForm | Syncfusion®
-description: Checkout and learn here about Model ,EditContext and Custom Validation attributes binding with Blazor DataForm component.
+description: Check out and learn about how to use data annotation attributes such as display, validation, data type to control the Blazor DataForm component.
 platform: Blazor
 control: DataForm
 documentation: ug

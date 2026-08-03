@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and appearance in Blazor TextArea Component | Syncfusion®
-description: Learn here all about Style and appearance of the Blazor Textarea component and much more.
+description: Learn how to style and customize the Blazor TextArea component, including sizing, height, colors, and borders.
 platform: Blazor
 control: TextArea
 documentation: ug
