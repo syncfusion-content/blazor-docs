@@ -9,7 +9,14 @@ documentation: ug
 
 # File Operations in Blazor File Manager Component
 
-The File Manager component is used to browse, manage, and organize the files and folders in a file system through a web application. All basic file operations like creating a new folder, uploading and downloading of files in the file system, and deleting and renaming of existing files and folders are available in the File Manager component.  Additionally, previewing of image files is also provided in the File Manager component.
+The File Manager component enables browsing, managing, and organizing files and folders in a file system through a web application. It supports all basic file operations including creating folders, uploading and downloading files, and renaming or deleting existing items. Image preview functionality is also available.
+
+## Prerequisites
+
+- **NuGet Package**: `Syncfusion.Blazor.FileManager` (latest version)
+- **.NET Version**: .NET 6.0 or later
+- **Server-side API**: ASP.NET Core project for backend file operations
+- **Folder Structure**: `wwwroot\Files` directory in your server project for storing files
 
 The following table represents the basic operations available in the File Manager and their corresponding functions.
 
@@ -59,11 +66,11 @@ The following table represents the contents of *details* in the File Manager req
 |dateCreated|String|-|Date in which file was created (UTC Date string).|
 |dateModified|String|-|Date in which file was last modified (UTC Date string).|
 |filterPath|String|-|Relative path to the file or folder.|
-|hasChild|Boolean|-|Defines this folder has any child folder or not.|
-|isFile|Boolean|-|Say whether the item is file or folder.|
-|size|Number|-|File size|
-|type|String|-|File extension|
-|multipleFiles|Boolean|-|Say whether the details are about single file or multiple files.|
+|hasChild|Boolean|-|Indicates whether the folder contains child folders.|
+|isFile|Boolean|-|Indicates whether the item is a file or a folder.|
+|size|Number|-|File size in bytes|
+|type|String|-|File extension (e.g., .txt, .jpg)|
+|multipleFiles|Boolean|-|Indicates whether the details are for a single file or multiple files.|
 
 ## Reading Files and Folders
 
@@ -76,7 +83,7 @@ The following table represents the request parameters of *read* operations.
 |showHiddenItems|Boolean|-|Defines show or hide the hidden items.|
 |data|FileManagerDirectoryContent|-|Details about the current path (directory).|
 
-*Refer [File request and response contents](#file-request-and-response-contents) for the contents of data*.
+*Refer to the [File request and response contents](#file-request-and-response-contents) section for the contents of data*.
 
 *Example:*
 
@@ -97,7 +104,7 @@ The following table represents the response parameters of *read* operations.
 |files|FileManagerDirectoryContent[]|-|Details of files and folders present in given path or directory.|
 |error|ErrorDetails|-|Error Details|
 
-*Refer [File request and response contents](#file-request-and-response-contents) for the contents of cwd, files, and error*.
+*Refer to the [File request and response contents](#file-request-and-response-contents) section for the contents of cwd, files, and error*.
 
 *Example:*
 
@@ -131,14 +138,12 @@ The following table represents the response parameters of *read* operations.
 }
 ```
 
-Read operation triggers on the server side and find the related code details.
+Read operation implementation on the server side:
 
 ```csharp
-
 case "read":
-    // reads the file(s) or folder(s) from the given path.
-    return this.operation.ToCamelCase(this.operation.GetFiles(args.Path, args.howHiddenItems));
-
+    // Reads the file(s) or folder(s) from the given path.
+    return this.operation.ToCamelCase(this.operation.GetFiles(args.Path, args.ShowHiddenItems));
 ```
 
 ## Creating Files and Folders
@@ -152,7 +157,7 @@ The following table represents the request parameters of *create* operations.
 |name|String|-|Name of the folder to be created.|
 |data|FileManagerDirectoryContent|-|Details about the current path (directory).|
 
-*Refer [File request and response contents](#file-request-and-response-contents) for the contents of data*
+*Refer to the [File request and response contents](#file-request-and-response-contents) section for the contents of data*.
 
 *Example:*
 
@@ -208,14 +213,12 @@ The following table represents the response parameters of *create* operations.
 }
 ```
 
-Create operation triggers on the server side and find the related code details.
+Create operation implementation on the server side:
 
 ```csharp
-
 case "create":
-    // creates a new folder in a given path.
+    // Creates a new folder in the given path.
     return this.operation.ToCamelCase(this.operation.Create(args.Path, args.Name));
-
 ```
 
 ## Renaming Files and Folders
@@ -287,15 +290,13 @@ The following table represents the response parameters of *rename* operations.
 }
 ```
 
-Rename operation triggers on the server side and find the related code details.
+Rename operation implementation on the server side:
 
 ```csharp
-
 case "rename":
-    // renames a file or folder.
+    // Renames a file or folder.
     return this.operation.ToCamelCase(this.operation.Rename(args.Path, args.Name, 
-    args.newName, false, args.ShowFileExtension, args.Data));
-
+        args.NewName, false, args.ShowFileExtension, args.Data));
 ```
 
 ## Deleting Files and Folders
@@ -353,14 +354,12 @@ The following table represents the response parameters of *delete* operations.
 }
 ```
 
-Delete operation triggers on the server side and find the related code details.
+Delete operation implementation on the server side:
 
 ```csharp
-
-    case "delete":
-        // deletes the selected file(s) or folder(s) from the given path.
-        return this.operation.ToCamelCase(this.operation.Delete(args.Path, args.Names));
-
+case "delete":
+    // Deletes the selected file(s) or folder(s) from the given path.
+    return this.operation.ToCamelCase(this.operation.Delete(args.Path, args.Names));
 ```
 
 ## Getting File Details
@@ -416,15 +415,13 @@ The following table represents the response parameters of *details* operations.
 }
 ```
 
-Details operation triggers on the server side and find the related code details.
+Details operation implementation on the server side:
 
 ```csharp
-
-    case "details":
-        // gets the details of the selected file(s) or folder(s).
-        return this.operation.ToCamelCase(this.operation.Details(args.Path, args.Names, 
+case "details":
+    // Gets the details of the selected file(s) or folder(s).
+    return this.operation.ToCamelCase(this.operation.Details(args.Path, args.Names, 
         args.Data));
-
 ```
 
 ## Searching Files and Folders
@@ -495,15 +492,13 @@ The following table represents the response parameters of *search* operations.
 }
 ```
 
-Searching operation triggers on the server side and find the related code details.
+Search operation implementation on the server side:
 
 ```csharp
-
 case "search":
-    // gets the list of file(s) or folder(s) from a given path based on the searched key string
+    // Gets the list of file(s) or folder(s) from a given path based on the search string.
     return this.operation.ToCamelCase(this.operation.Search(args.Path, args.SearchString, 
-    args.ShowHiddenItems, args.CaseSensitive));
-
+        args.ShowHiddenItems, args.CaseSensitive));
 ```
 
 ## Copying Files and Folders
@@ -573,11 +568,10 @@ Copy operation triggers on the server side and find the related code details.
 
 ```csharp
 
-    case "copy":
-        // copies the selected file(s) or folder(s) from a path and then pastes them into a given target path.
-        return this.operation.ToCamelCase(this.operation.Copy(args.Path, args.TargetPath, 
+case "copy":
+    // Copies the selected file(s) or folder(s) from a path and pastes them into the target path.
+    return this.operation.ToCamelCase(this.operation.Copy(args.Path, args.TargetPath, 
         args.Names, args.RenameFiles, args.TargetData));
-
 ```
 
 ## Moving Files and Folders
@@ -643,25 +637,23 @@ The following table represents the response parameters of *copy* operations.
 }
 ```
 
-Move operation triggers on the server side and find the related code details.
+Move operation implementation on the server side:
 
 ```csharp
-
-    case "move":
-        // cuts the selected file(s) or folder(s) from a path and then pastes them into a given target path.
-        return this.operation.ToCamelCase(this.operation.Move(args.Path, args.TargetPath, 
+case "move":
+    // Moves (cuts) the selected file(s) or folder(s) from a path and pastes them into the target path.
+    return this.operation.ToCamelCase(this.operation.Move(args.Path, args.TargetPath, 
         args.Names, args.RenameFiles, args.TargetData));
-
 ```
 
 ## Sorting Files and Folders 
 
-In the Blazor File Manager component, you can perform sorting operations for both folders and files using the [SortBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortBy) and [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortOrder) properties. Additionally, you can use the **Sort by** toolbar button available in the File Manager component to perform sorting operations.
+You can perform sorting operations for both folders and files using the [SortBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortBy) and [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortOrder) properties, or use the **Sort by** toolbar button.
 
-**SortBy** - A field name used to sort the folders and files in the File Manager component. The default value is Name.
-**SortOrder** - sort order for the files and folders in the File Manager component.
+**SortBy** - The field name used to sort folders and files (default: Name).  
+**SortOrder** - The sort order for files and folders.
 
-The available options for the sort order are:
+Available sort order options:
 
 * [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SortOrder.html#Syncfusion_Blazor_FileManager_SortOrder_None): The folders and files are not sorted.
 * [Ascending](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SortOrder.html#Syncfusion_Blazor_FileManager_SortOrder_Ascending): The folders and files are sorted in ascending order.
@@ -765,9 +757,7 @@ The following example demonstrates how to define custom sort comparer function t
 {% endhighlight %}
 {% endtabs %}
 
-To set up a local data, create a new file with the extension `.cs` within the project, include the following code in this file.
-
-This will fetch the details of the static folder from the `wwwroot` directory. Likewise, you can inject your own service.
+To set up local data, create a `.cs` file in your project with a service class that fetches file details from the `wwwroot` directory. Alternatively, you can inject your own custom service.
 
 {% tabs %}
 {% highlight c# %}
@@ -1323,43 +1313,6 @@ GetImage operation triggers on the server side and find the related code details
 
 N> Refer to the [Providers](https://blazor.syncfusion.com/documentation/file-manager/file-system-provider) for more details.
 
-## Request and Response Contents Format
-
-The following table represents the contents of *data, cwd, and files* in the File Manager request and response.
-
-|Parameter|Type|Default|Explanation|
-|----|----|----|----|
-|name|String|-|File name|
-|dateCreated|String|-|Date in which file was created (UTC Date string).|
-|dateModified|String|-|Date in which file was last modified (UTC Date string).|
-|filterPath|String|-|Relative path to the file or folder.|
-|hasChild|Boolean|-|Defines this folder has any child folder or not.|
-|isFile|Boolean|-|Say whether the item is file or folder.|
-|size|Number|-|File size|
-|type|String|-|File extension|
-
-The following table represents the contents of *error* in the File Manager request and response.
-
-|Parameter|Type|Default|Explanation|
-|----|----|----|----|
-|code|String|-|Error code|
-|message|String|-|Error message|
-|fileExists|String[]|-|List of duplicate file names|
-
-The following table represents the contents of *details* in the File Manager request and response.
-
-|Parameter|Type|Default|Explanation|
-|----|----|----|----|
-|name|String|-|File name|
-|dateCreated|String|-|Date in which file was created (UTC Date string).|
-|dateModified|String|-|Date in which file was last modified (UTC Date string).|
-|filterPath|String|-|Relative path to the file or folder.|
-|hasChild|Boolean|-|Defines this folder has any child folder or not.|
-|isFile|Boolean|-|Say whether the item is file or folder.|
-|size|Number|-|File size|
-|type|String|-|File extension|
-|multipleFiles|Boolean|-|Say whether the details are about single file or multiple files.|
-
 ## Events 
 
 The Blazor File Manager component has a list of events that can be triggered for certain actions. These events can be bound to the File Manager using the **FileManagerEvents**, which requires the **TValue** to be provided.
@@ -1830,31 +1783,26 @@ The following table provides the toolbar buttons that appear based on the select
 
 ## Server-side Configuration
 
-This documentation outlines the server-side implementation and configuration required for enabling comprehensive file management operations in the Blazor File Manager component.
+The following outlines the server-side implementation required for file management operations in the Blazor File Manager component.
 
 ### Create Models
 
-Create a new folder named `Models` in the server project. Add the necessary model files to this folder for handling file operations. Download the `PhysicalFileProvider.cs` and `Base` folder from this [repository](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/tree/master/Models) and place them in the Models folder.
+Create a `Models` folder in the server project. Download `PhysicalFileProvider.cs` and the `Base` folder from the [Syncfusion File Provider repository](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/tree/master/Models) and place them in the Models folder.
 
-### Create a new folder Controllers
+### Create Controllers Folder
 
-To initialize a local service, create a new folder named `Controllers` inside the server part of the project. Then, create a new file `FileManagerController` with extension `.cs` inside the `Controllers` folder.
+Create a `Controllers` folder in the server project. Add a new file `FileManagerController.cs` that will handle file operations.
 
-Make sure your controller `FileManagerController.cs` uses the model classes you've created. Import the model namespace at the top of your controller file
+Import the required namespaces at the top of your controller:
 
-File Manager's base functions are available in the following namespace.
-```cshtml
+```csharp
 using Syncfusion.EJ2.FileManager.Base;
-````
-File Manager's operations are available in the following namespace.
-````cshtml
 using Syncfusion.EJ2.FileManager.PhysicalFileProvider;
-````
+```
 
-### Initialize the service in controller
+### Initialize Service in Controller
 
-File Manager supports the basic file actions like Read, Delete, Copy, Move, Get Details, Search, Rename, and Create New Folder.
-To perform the action add the following code in that `FileManagerController.cs` file.
+The File Manager supports basic file operations: Read, Delete, Copy, Move, Get Details, Search, Rename, and Create Folder. Add the following code to `FileManagerController.cs`:
 
 {% tabs %}
 {% highlight cs tabtitle="Controllers/FileManagerController.cs" %}
@@ -1929,9 +1877,11 @@ namespace filemanager.Server.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-N> For standalone Blazor WASM applications, the service from this [link](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/) can be used. This service is an ASP.NET Core project that acts as the backend API for your File Manager
+N> For standalone Blazor WebAssembly applications, use the ASP.NET Core backend API from the [Syncfusion File Provider repository](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/).
 
-To configure and map the controller, open the `~/Program.cs` file of the server part of the application. Add the following code to configure the service for the controller and map the controller after `app.UseRouting()`. The `app.UseRouting()` middleware should be placed after `app.UseHttpsRedirection()`. The correct ordering is essential to ensure proper request handling and middleware functionality:
+Configure the controller in `Program.cs` by adding controller services and mapping:
+
+**Important**: Place `app.UseRouting()` after `app.UseHttpsRedirection()` for correct middleware ordering.
 
 ```cshtml
 
@@ -1944,7 +1894,7 @@ app.MapControllers();
 
 ```
 
-This will configure and map the controller in your Blazor App.
+This configures and maps the controller for the Blazor application.
 
 ## Add File Manager to the Application
 
@@ -1967,28 +1917,30 @@ Add the Blazor File Manager component in `.razor` file inside the `Pages` folder
 {% endhighlight %}
 {% endtabs %}
 
-Add your required files and folders under the `wwwroot\Files` directory.
+Add files to the `wwwroot\Files` directory:
 
-* In your  project, the `wwwroot` directory is where static files are served from. It is typically found at the root level of your server project.
-* Inside the `wwwroot` directory, create a new folder named `Files`. This will be used to store static files like images, documents, or other resources that you want to serve directly.
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor File Manager component in the default web browser.
+* The `wwwroot` folder in your server project contains static files served to the client. It is located at the root level of your server project.
+* Create a `Files` folder inside `wwwroot` to store resources (images, documents, etc.) that the File Manager will manage.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application and render the File Manager.
 
 ![Blazor File Manager Component](images/blazor-filemanager-component.webp)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FileManager).
 
-### Blazor Web App: Configure interactive render mode
+### Blazor Web App: Configure Interactive Render Mode
 
-Blazor supports different interactive modes for server-side rendering:
+Blazor Web Apps support Interactive Server Render Mode, which renders components on the server while maintaining interactivity on the client.
 
-* Interactive Server Render Mode: This mode allows Blazor components to be rendered on the server, sending the HTML to the client while maintaining interactive capabilities. It provides a balance between server-side processing and client-side responsiveness.
+To enable this mode:
 
-* To enable this mode, configure the `Program.cs` file in your Blazor  project using the `AddInteractiveServerRenderMode` method.
-````cshtml
+1. Configure `Program.cs`:
+
+```csharp
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-````
-Define a render mode at top of the component, as follows:
+```
+
+2. Add the render mode directive at the top of your component:
 
 {% tabs %}
 {% highlight razor %}

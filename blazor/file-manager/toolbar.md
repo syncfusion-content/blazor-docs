@@ -17,16 +17,19 @@ By default, the File Manager includes several pre-defined toolbar items. These i
 
 Some common built-in toolbar items include:
 
-* `New Folder` - Creates a new folder in the current directory.
-* `SortBy` - Allows users to sort files and folders based on different criteria (e.g., name, size, date modified).
-* `Upload` - Enables users to upload files to the server.
-* `Refresh` - Specifies the array of string that is used to configure file items.
-* `View` - Specifies the array of string that is used to configure folder items.
-* `Details` - Specifies the array of string that is used to configure layout items.
+* `NewFolder` — Creates a new folder in the current directory.
+* `SortBy` — Allows users to sort files and folders by name, size, date modified, or custom criteria.
+* `Upload` — Opens the file upload dialog to upload files to the server.
+* `Refresh` — Reloads the file list from the server and refreshes the current directory view.
+* `View` — Toggles between different view modes (e.g., details, icons, list view).
+* `Details` — Switches to detailed list view showing file properties (size, date modified, etc.).
+* `Download` — Downloads selected files to the local machine.
+* `Delete` — Deletes selected files and folders.
+* `Rename` — Enables renaming of selected files and folders.
 
-## Control Toolbar visibility
+## Customize Toolbar Items
 
-The Toolbar visibility can also be controlled by using the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerToolbarSettings.html#Syncfusion_Blazor_FileManager_FileManagerToolbarSettings_Visible) property. Set this property as false to hide the toolbar. You can also toggle this property dynamically based on your application logic.
+You can customize which toolbar items appear by setting the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerToolbarSettings.html#Syncfusion_Blazor_FileManager_FileManagerToolbarSettings_Items) property in [FileManagerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerToolbarSettings.html). Pass a comma-separated list of toolbar item names to display only those items. Refer to the built-in items list above for available item names.
 
 ```cshtml
 
@@ -38,16 +41,43 @@ The Toolbar visibility can also be controlled by using the [Visible](https://hel
                              DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
                              GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
-    <FileManagerToolbarSettings Visible=false></FileManagerToolbarSettings>
+    <FileManagerToolbarSettings Items="@ToolbarItems"></FileManagerToolbarSettings>
+</SfFileManager>
+
+@code {
+    private string[] ToolbarItems = new string[] { "NewFolder", "Upload", "Download", "Delete", "Refresh", "SortBy", "View" };
+}
+
+```
+
+## Control Toolbar Visibility
+
+The toolbar visibility can be controlled using the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerToolbarSettings.html#Syncfusion_Blazor_FileManager_FileManagerToolbarSettings_Visible) property. Set this property to `false` to hide the toolbar, or toggle it dynamically based on your application logic.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerToolbarSettings Visible="false"></FileManagerToolbarSettings>
 </SfFileManager>
 
 ```
 
 ## Events
 
-The Blazor File Manager Toolbar component has a [ToolbarCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ToolbarCreated) and [ToolbarItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ToolbarItemClicked) events that can be triggered for certain actions. These events can be bound to the File Manager using the **FileManagerEvents**, which requires the **TValue** to be provided.
+The Blazor File Manager Toolbar component provides two primary events:
+- [ToolbarCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ToolbarCreated) — Triggered before the toolbar is initialized.
+- [ToolbarItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ToolbarItemClicked) — Triggered when a toolbar item is clicked.
 
-N> All the events should be provided in a single **FileManagerEvents** component.
+These events are bound to the File Manager using the [FileManagerEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html) component, which requires the **TValue** generic parameter.
+
+> **Important:** All events should be provided within a single **FileManagerEvents** component.
 
 ### ToolbarCreated
 
@@ -63,13 +93,14 @@ The [ToolbarCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Fil
                              DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
                              GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
-    <FileManagerEvents TValue="FileManagerDirectoryContent" ToolbarCreated="ToolbarCreated"></FileManagerEvents>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" ToolbarCreated="OnToolbarCreated"></FileManagerEvents>
 </SfFileManager>
 
 @code {
-    public void ToolbarCreated(ToolbarCreateEventArgs args)
+    private void OnToolbarCreated(ToolbarCreateEventArgs args)
     {
-        // Here, you can customize your code.
+        // Customize toolbar before it renders
+        Console.WriteLine("Toolbar created");
     }
 }
 
@@ -77,7 +108,11 @@ The [ToolbarCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Fil
 
 ### ToolbarItemClicked
 
-The [ToolbarItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ToolbarItemClicked) event of the Blazor File Manager component is triggered when the toolbar item is clicked.
+The [ToolbarItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ToolbarItemClicked) event is triggered when a toolbar item is clicked. Use this event to perform custom actions or prevent default behavior.
+
+**Event Arguments ([ToolbarClickEventArgs<TValue>](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.ToolbarClickEventArgs-1.html)):**
+- `Item` — The clicked toolbar item name (e.g., "Upload", "Download").
+- `Cancel` — Set to `true` to prevent the default toolbar action.
 
 ```cshtml
 
@@ -89,13 +124,21 @@ The [ToolbarItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
                              DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
                              GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
-    <FileManagerEvents TValue="FileManagerDirectoryContent" ToolbarItemClicked="ToolbarItemClicked"></FileManagerEvents>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" ToolbarItemClicked="OnToolbarItemClicked"></FileManagerEvents>
 </SfFileManager>
 
 @code {
-    public void OnMenuClick(ToolbarClickEventArgs<FileManagerDirectoryContent> args)
+    private void OnToolbarItemClicked(ToolbarClickEventArgs<FileManagerDirectoryContent> args)
     {
-        // Here, you can customize your code.
+        // Handle toolbar item clicks
+        Console.WriteLine($"Toolbar item clicked: {args.Item}");
+        
+        // Optionally prevent default action
+        if (args.Item == "Delete")
+        {
+            // Custom delete logic
+            args.Cancel = true;
+        }
     }
 }
 
@@ -103,4 +146,8 @@ The [ToolbarItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## See Also
 
-[Adding Custom Item To Toolbar](https://blazor.syncfusion.com/documentation/file-manager/how-to/add-custom-tool-bar)
+* [FileManagerToolbarSettings API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerToolbarSettings.html)
+
+* [FileManagerEvents API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html)
+
+* [Adding Custom Item To Toolbar](https://blazor.syncfusion.com/documentation/file-manager/how-to/add-custom-tool-bar)

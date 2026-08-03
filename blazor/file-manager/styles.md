@@ -9,30 +9,54 @@ documentation: ug
 
 # Styles and Appearance in Blazor File Manager Component
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+Customize the Blazor File Manager's appearance by applying CSS to the selectors provided in this guide. The File Manager component renders with predefined Syncfusion CSS classes that you can override to match your application's design.
 
-## Customizing the File Manager navigation pane
+## How to Apply Custom Styles
 
-To customize the File Manager navigation pane, use the `.e-navigation` selector and apply styles.
+1. **Add CSS to your Blazor component** — Define styles in a `<style>` block within your `.razor` component file:
+
+```razor
+<style>
+    .e-filemanager .e-navigation {
+        background: #3a0647;
+    }
+</style>
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <!-- Component markup -->
+</SfFileManager>
+```
+
+2. **Or use a global stylesheet** — Add styles to your `app.css` or `site.css` file in the `wwwroot` directory.
+
+3. **Verify specificity** — Use your browser's DevTools (F12) to inspect elements and ensure your CSS has sufficient specificity to override default Syncfusion styles.
+
+> **Version Note:** These CSS selectors apply to Syncfusion Blazor v20.0 and later. Verify selectors match your installed version by inspecting the rendered DOM.
+
+---
+
+## Customizing the File Manager Navigation Pane
+
+The navigation pane displays folder structure as a tree. Use the `.e-navigation` selector to customize its appearance.
 
 ```css
 
-/* Set background color for the File Manager navigation pane */
+/* Background color for the File Manager navigation pane */
 .e-filemanager .e-navigation {
     background: #3a0647;
 }
 
-/* Highlight the active item in the TreeView inside the navigation pane */
+/* Style for active folder item in the TreeView */
 .e-filemanager .e-treeview .e-list-item.e-active > .e-fullrow {
     background: #c3d3f9a1;
 }
 
-/* Set text color for TreeView items in the navigation pane */
+/* Text color for TreeView items */
 .e-filemanager .e-treeview .e-list-text {
     color: #fff;
 }
 
-/* Set icon color for collapsible and expandable TreeView nodes */
+/* Icon color for collapsible/expandable folder nodes */
 .e-treeview .e-icon-collapsible,
 .e-treeview .e-icon-expandable {
     color: #fff;
@@ -40,35 +64,35 @@ To customize the File Manager navigation pane, use the `.e-navigation` selector 
 
 ```
 
-![Blazor File Manager displays Customized Navigation Pane](images/blazor-filemanager-customized-navigation-pane.webp)
+![Blazor File Manager with customized navigation pane — dark background with highlighted active folder](images/blazor-filemanager-customized-navigation-pane.webp)
 
-## Customizing the File Manager thumbnail
+## Customizing File Type Icons
 
-To customize the thumbnails in the File Manager, you can apply background-image styles to specific CSS selectors that represent different file types, as listed in the table below.
+Customize file type icons by applying background-image styles to CSS selectors representing different file extensions. Use the `background-image` property with SVG data URIs or image URLs.
 
-|File Type|CSS Selector|
-|----|----|
-|Image|.e-fe-image|
-|Music|.e-fe-music|
-|Excel|.e-fe-xlsx|
-|Video|.e-fe-video|
-|PowerPoint|.e-fe-pptx|
-|RAR|.e-fe-rar|
-|ZIP|.e-fe-zip|
-|Text|.e-fe-txt|
-|JavaScript|.e-fe-js|
-|CSS|.e-fe-css|
-|HTML|.e-fe-html|
-|Unknown|.e-fe-unknown|
-|Executable|.e-fe-exe|
-|MSI|.e-fe-msi|
-|PHP|.e-fe-php|
-|Word|.e-fe-doc|
-|Word(docx)|.e-fe-docx|
-|XML|.e-fe-xml|
-|Folder|.e-fe-folder|
+| File Type | CSS Selector |
+|-----------|--------------|
+| Image | `.e-fe-image` |
+| Music | `.e-fe-music` |
+| Excel | `.e-fe-xlsx` |
+| Video | `.e-fe-video` |
+| PowerPoint | `.e-fe-pptx` |
+| RAR | `.e-fe-rar` |
+| ZIP | `.e-fe-zip` |
+| Text | `.e-fe-txt` |
+| JavaScript | `.e-fe-js` |
+| CSS | `.e-fe-css` |
+| HTML | `.e-fe-html` |
+| Unknown | `.e-fe-unknown` |
+| Executable | `.e-fe-exe` |
+| MSI | `.e-fe-msi` |
+| PHP | `.e-fe-php` |
+| Word (.doc) | `.e-fe-doc` |
+| Word (.docx) | `.e-fe-docx` |
+| XML | `.e-fe-xml` |
+| Folder | `.e-fe-folder` |
 
-The following example demonstrates how to customize the File Manager's thumbnail icon for folders:
+**Example:** Customize the folder icon to appear in both Large Icons and Details views:
 
 ```css
 
@@ -80,25 +104,25 @@ The following example demonstrates how to customize the File Manager's thumbnail
 
 ```
 
-![Blazor FileManager displays Custom Thumbnail](images/blazor-filemanager-custom-thumbnail.webp)
+![Blazor File Manager with custom folder icon — displays custom SVG in place of default folder icon](images/blazor-filemanager-custom-thumbnail.webp)
 
-## Customizing the File Manager layout
+## Customizing the File Manager Layout
 
-To customize the File Manager layout, use the `.e-layout-content` selector and apply styles. 
+The layout comprises the breadcrumb (path bar), content area, and status bar. Customize these components using the `.e-layout-content` selector.
 
 ```css
 
-/* Style for breadcrumb (address bar) */
+/* Background color for the breadcrumb path bar */
 .e-filemanager .e-layout-content .e-address {
     background: #dee2e6;
 }
 
-/* Customize the background for the Large Icons view */
+/* Background for Large Icons view */
 .e-filemanager .e-layout-content .e-large-icons {
     background: #f8f9fa;
 }
 
-/* Customize the background for the Details view table and content area */
+/* Background for Details view table and content area */
 .e-filemanager .e-layout-content .e-grid .e-table,
 .e-filemanager .e-grid .e-gridcontent .e-content {
     background: #f8f9fa;
@@ -106,41 +130,41 @@ To customize the File Manager layout, use the `.e-layout-content` selector and a
 
 ```
 
-![Blazor FileManager displays Custom Layout](images/blazor-filemanager-custom-layout.webp)
+![Blazor File Manager with custom layout — showing custom background colors in breadcrumb and content area](images/blazor-filemanager-custom-layout.webp)
 
 ## Customizing the File Manager Toolbar
 
-To customize the File Manager toolbar items, use the `.e-toolbar` selector and apply styles.
+Customize toolbar buttons, icons, and text using the `.e-toolbar` selector. Style individual button states and icons.
 
 ```css
 
-/* Style for individual toolbar buttons */
+/* Background and border for toolbar buttons */
 .e-filemanager .e-toolbar .e-tbar-btn {
-        background: #0d9cf6;
+    background: #0d9cf6;
     border: 1px solid #000000;
 }
 
-/* Style for toolbar icons */
+/* Icon color in toolbar buttons */
 .e-filemanager .e-toolbar .e-tbar-btn .e-icons {
     color: #ffffff;
 }
 
-/* Style for toolbar button text */
+/* Button text color in toolbar */
 .e-filemanager .e-toolbar .e-toolbar-item .e-tbar-btn .e-tbar-btn-text {
     color: #ffffff;
 }
 
 ```
 
-![Blazor FileManager displays Custom Toolbar](images/blazor-filemanager-custom-toolbar.webp)
+![Blazor File Manager with custom toolbar — showing colored toolbar buttons with styled icons and text](images/blazor-filemanager-custom-toolbar.webp)
 
-## Customizing the File Manager selected files/folders
+## Customizing Selected Files and Folders
 
-To customize the File Manager selected files/folders, use the below selectors and apply styles.
+Customize the appearance of selected items in both Large Icons and Details views using the `.e-active` class selector.
 
 ```css
 
-/* Highlight for active and hover item in Large Icons view */
+/* Highlight for selected items in Large Icons view */
 .e-filemanager li.e-list-item.e-large-icon.e-active,
 .e-filemanager li.e-list-item.e-large-icon.e-active:hover {
     background: #dee2e6;
@@ -148,40 +172,41 @@ To customize the File Manager selected files/folders, use the below selectors an
     border-radius: 10%;
 }
 
-/* Color for text */
+/* Text color for selected items */
 .e-filemanager .e-large-icons .e-active {
     color: #212529;
 }
 
-/* Highlight for active row in Details view */
+/* Highlight for selected row in Details view */
 .e-filemanager .e-grid td.e-active {
     background: #dee2e6;
 }
 
 ```
 
-![Blazor FileManager displays Custom Selected Items](images/blazor-filemanager-custom-selected-items.webp)
+![Blazor File Manager with custom selected items — showing highlighted selection boxes in both icon and details views](images/blazor-filemanager-custom-selected-items.webp)
 
-## Customizing the File Manager Dialog
+## Customizing Dialogs
 
-To customize the dialog popup in the File Manager, you can apply styles to specific CSS selectors, as listed in the table below.
+Customize dialog popups (upload, rename, delete, etc.) by targeting specific dialog elements. Common dialogs include file upload, rename, and delete confirmation dialogs.
 
-|Element|CSS Selector|
-|---------|------------|
-|Header|`.e-dlg-header-content`|
-|Content|`.e-dlg-content`|
-|Overlay|`.e-dlg-overlay`|
-|Footer|`.e-footer-content`|
+| Dialog Element | CSS Selector | Purpose |
+|---|---|---|
+| Header | `.e-dlg-header-content` | Dialog title bar |
+| Content Area | `.e-dlg-content` | Main dialog content |
+| Overlay/Backdrop | `.e-dlg-overlay` | Semi-transparent background behind dialog |
+| Footer | `.e-footer-content` | Dialog buttons (OK, Cancel, etc.) |
 
-In this example, we have applied styles to the header content.
+**Example:** Style the dialog header:
 
 ```css
 
-/* For File Manager Dialog header */
+/* Dialog header background color */
 .e-filemanager .e-dialog .e-dlg-header-content {
     background-color: #0d6efd;
 }
-/* For File Manager Dialog header close icon and text*/
+
+/* Dialog header text and close icon color */
 .e-filemanager .e-dialog .e-icon-dlg-close,
 .e-filemanager .e-dialog .e-dlg-header {
     color: #fff;
@@ -189,4 +214,14 @@ In this example, we have applied styles to the header content.
 
 ```
 
-![Blazor FileManager displays Custom Dialog](images/blazor-filemanager-custom-dialog.webp)
+![Blazor File Manager with custom dialog — showing blue header with white text and icons](images/blazor-filemanager-custom-dialog.webp)
+
+## Troubleshooting Custom Styles
+
+If your custom CSS is not applying:
+
+1. **Verify CSS specificity** — Ensure your selectors have sufficient specificity to override Syncfusion defaults. Add `.e-filemanager` prefix to increase specificity.
+2. **Check placement** — Confirm CSS is in a `<style>` block or external stylesheet that's loaded before the component renders.
+3. **Inspect element** — Use browser DevTools (F12) to inspect the rendered element and confirm the correct CSS selector names.
+4. **Clear cache** — Hard-refresh your browser (Ctrl+Shift+R or Cmd+Shift+R) to clear cached styles.
+5. **Use !important** — As a last resort, add `!important` to override conflicting styles (use sparingly).

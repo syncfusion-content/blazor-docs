@@ -167,7 +167,7 @@ In the Blazor File Manager component, you are able to [search](https://blazor.sy
 
 ### Cut, Copy, and Paste
 
-You can perform the **cut**, **copy**(https://blazor.syncfusion.com/documentation/file-manager/file-operations#copying-files-and-folders), and **paste** operation for the files and folders in the Blazor File Manager component with the help of the Toolbar items button or by using Context Menu items.
+You can perform the **cut**, **[copy](https://blazor.syncfusion.com/documentation/file-manager/file-operations#copying-files-and-folders)**, and **paste** operation for the files and folders in the Blazor File Manager component with the help of the Toolbar items button or by using Context Menu items.
 
 Refer to the [Toolbar](https://blazor.syncfusion.com/documentation/file-manager/file-operations#toolbar)and [Context Menu](https://blazor.syncfusion.com/documentation/file-manager/context-menu) sections to learn more about the items that are present in the Toolbar and Context Menu.
 

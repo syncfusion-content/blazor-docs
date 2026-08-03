@@ -61,7 +61,7 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ## Install the required Blazor packages
 
-Install the [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project.
+Install the [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project. Use a supported .NET SDK version and install the package version that matches your Syncfusion release.
 
 {% tabcontents %}
 
@@ -142,7 +142,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) at the end of the `<head>` section in the **App.razor** file.
+The theme stylesheet and script are available from NuGet as [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) at the end of the `<head>` section in the **App.razor** file.
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
@@ -164,13 +164,14 @@ Include the required [script references](https://blazor.syncfusion.com/documenta
 
 ## Add Blazor File Manager component
 
-Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component inside the `.Client` project Razor file.
+Open a Razor page in the **~/Components/Pages/*.razor** folder (for example, **Home.razor**) in the `.Client` project and add the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component.
 
-N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the Razor file (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
+N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the Razor file (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default. For production apps, replace the demo file operation URLs with your own backend endpoints.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@page "/"
 @rendermode InteractiveAuto
 
 <SfFileManager TValue="FileManagerDirectoryContent">

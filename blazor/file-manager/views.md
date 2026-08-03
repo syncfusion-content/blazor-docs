@@ -9,40 +9,51 @@ documentation: ug
 
 # Views in Blazor File Manager component
 
-The [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component provides both the `Large Icons View` for visual recognition and the `Details View` for organized information.
+The [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component provides two view modes: **Large Icons View** for visual file recognition and **Details View** for organized information.
+
+## Prerequisites
+
+- Syncfusion Blazor FileManager NuGet package installed
+- `using Syncfusion.Blazor.FileManager` namespace imported
+- Backend AJAX service configured (FileOperations, Upload, Download, GetImage endpoints)
+- .NET 6.0 or later; Blazor WebAssembly or Server-side Blazor
+
+## View Types Overview
+
+| View Type | Default | Use Case | Display |
+|-----------|---------|----------|---------|
+| **Large Icons** | Yes | Visual browsing, image/media preview | Large thumbnails/icons |
+| **Details** | — | Data-driven workflows, sorting/filtering | Tabular column-based list |
 
 ## Large Icons View
 
-The `Large Icons View` is the default starting view in the FileManager. The view can be changed by using the [Toolbar](https://blazor.syncfusion.com/documentation/file-manager/file-operations#toolbar) view button or by using the view menu in [Context Menu](https://blazor.syncfusion.com/documentation/file-manager/context-menu). The [View](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_View) API can also be used to change the initial view of the FileManager.
+The `Large Icons View` is the default view in FileManager. Change views using:
+- The toolbar view button  
+- The context menu
+- Programmatically via the [View](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_View) property
 
-In the large icons view, the thumbnail icons will be shown in a larger size, which displays the data in a form that best suits their content. For image type files, a **preview** will be displayed. Extension thumbnails will be displayed for other type files.
+In Large Icons View, files display with large thumbnails. Image files show preview thumbnails; other file types display extension-based icons. 
 
-### Customize existing Large Icons View
+### Customize Large Icons View
 
-The large icons view layout can be customized using the `LargeIconsTemplate` property, which allows you to display file or folder information, apply custom formatting, and use conditional rendering based on item type. You can customize it further based on your application requirements.
+The `LargeIconsTemplate` property customizes the display of each file/folder. This template accepts a `FileManagerDirectoryContent` context item and allows you to render custom HTML, apply CSS classes, and conditionally display information based on file type.
 
 ```cshtml
 
-@using Syncfusion.Blazor.FileManager;
-<SfFileManager TValue="FileManagerDirectoryContent" CssClass="e-fm-template-sample">
-    <ChildContent>
-        <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
-                                 UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
-                                 DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
-                                 GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
-        </FileManagerAjaxSettings>
-    </ChildContent>
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager TValue="FileManagerDirectoryContent" View="ViewType.LargeIcons" CssClass="custom-fm-sample">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
     <LargeIconsTemplate Context="item">
-        @if (item is not null)
-        {
-            <div class="custom-icon-card">
-                <div class="file-header">
-                    <div class="file-name" title="@item.Name">@item.Name</div>
-                </div>
-                <div class="@GetFileTypeCssClass(item)"></div>
-                <div class="file-formattedDate">Created on @item.DateCreated.ToString("MMMM d, yyyy")</div>
-            </div>
-        }
+        <div class="custom-icon-card">
+            <div class="file-icon @GetFileTypeCssClass(item)"></div>
+            <div class="file-name" title="@item.Name">@item.Name</div>
+            <div class="file-date">@item.DateModified?.ToString("MMM d, yyyy")</div>
+        </div>
     </LargeIconsTemplate>
 </SfFileManager>
 
@@ -50,63 +61,54 @@ The large icons view layout can be customized using the `LargeIconsTemplate` pro
     private string GetFileTypeCssClass(FileManagerDirectoryContent item)
     {
         if (!item.IsFile)
-        {
-            return $"e-list-icon e-fe-folder";
-        }
+            return "e-fe-folder";
+        
         var ext = System.IO.Path.GetExtension(item.Name)?.TrimStart('.') ?? string.Empty;
-        var type = ExtensionIconClassMap.GetValueOrDefault(ext, "unknown");
-        return $"e-list-icon e-fe-{type}";
+        return ext switch
+        {
+            "jpg" or "jpeg" or "png" or "gif" => "e-fe-image",
+            "mp3" or "wav" => "e-fe-music",
+            "mp4" or "avi" => "e-fe-video",
+            "pdf" => "e-fe-pdf",
+            "zip" or "rar" => "e-fe-zip",
+            "txt" => "e-fe-txt",
+            "doc" or "docx" => "e-fe-docx",
+            _ => "e-fe-unknown"
+        };
     }
-    private static readonly Dictionary<string, string> ExtensionIconClassMap = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
-    {
-        { "jpg", "image" }, { "jpeg", "image" }, { "png", "image" }, { "gif", "image" },
-        { "mp3", "music" }, { "wav", "music" }, { "mp4", "video" }, { "avi", "video" },
-        { "xlsx", "xlsx" }, { "xls", "xlsx" }, { "pptx", "pptx" }, { "ppt", "pptx" },
-        { "rar", "rar" }, { "zip", "zip" }, { "txt", "txt" }, { "js", "js" },
-        { "css", "css" }, { "html", "html" }, { "exe", "exe" }, { "msi", "msi" },
-        { "php", "php" }, { "doc", "doc" }, { "docx", "docx" }, { "xml", "xml" },
-        { "pdf", "pdf" }
-    };
 }
+
 <style>
-    .e-fm-template-sample .custom-icon-card {
+    .custom-fm-sample .custom-icon-card {
         padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        height: 100%;
-        box-sizing: border-box;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        height: 140px;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
+        gap: 8px;
     }
 
-    .e-fm-template-sample .file-header {
-        display: contents;
-        align-items: center;
-        width: 100%;
-        margin-bottom: 10px;
+    .custom-fm-sample .file-icon {
+        font-size: 32px;
+        height: 40px;
     }
 
-    .e-fm-template-sample .file-name {
-        font-size: 14px;
-        font-weight: 600;
+    .custom-fm-sample .file-name {
+        font-size: 13px;
+        font-weight: 500;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         max-width: 110px;
     }
 
-    .e-fm-template-sample .file-formattedDate {
-        font-size: 12px;
-        margin-top: 8px;
+    .custom-fm-sample .file-date {
+        font-size: 11px;
+        color: #666;
         text-align: center;
-        font-weight: 600;
-    }
-
-    .e-filemanager.e-fm-template-sample .e-large-icons .e-list-item {
-        height: 150px;
-        width: 135px;
     }
 </style>
 
@@ -114,11 +116,11 @@ The large icons view layout can be customized using the `LargeIconsTemplate` pro
 
 ## Details View
 
-In the details view, the files are displayed in a sorted list order. This file list comprises of several columns of information about the files such as **Name**, **Date Modified**, **Type**, and **Size**. Each file has its own small icon representing the file type. Additional columns can be added using [DetailsViewSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDetailsViewSettings.html) API. The details view allows you to perform sorting using column header.
+Details View displays files in a sortable table with columns for **Name**, **Date Modified**, **Type**, and **Size**. Each file shows a type-identifying icon. You can add custom columns, customize formatting, and perform sorting by clicking column headers. Use [FileManagerDetailsViewSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDetailsViewSettings.html) to configure columns.
 
-### Define custom columns
+### Add Custom Columns
 
-To add a custom column to the details view, use the [FileManagerColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerColumn.html) from the `Syncfusion.Blazor.FileManager` namespace. Here's an example:
+Add custom columns using the [FileManagerColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerColumn.html) component. Built-in fields include: `Name`, `DateModified`, `Type`, `Size`, `DateCreated`. You can also bind custom data properties returned from your AJAX backend.
 
 ```cshtml
 
@@ -152,9 +154,13 @@ To add a custom column to the details view, use the [FileManagerColumn](https://
 
 ```
 
-### Customize existing column format
+### Customize Column Formatting and Display
 
-The details view settings like, column [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerColumn.html#Syncfusion_Blazor_FileManager_FileManagerColumn_Width), [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerColumn.html#Syncfusion_Blazor_FileManager_FileManagerColumn_Format), [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerColumn.html#Syncfusion_Blazor_FileManager_FileManagerColumn_HeaderText), [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerColumn.html#Syncfusion_Blazor_FileManager_FileManagerColumn_Template) for each field can be customized using [FileManagerColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerColumn.html) property.
+Customize column appearance and behavior using [FileManagerColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerColumn.html) properties:
+- **Width**: Set fixed or flexible column width
+- **Format**: Apply date/number formatting (e.g., "MM/dd/yyyy h:mm tt")
+- **HeaderText**: Custom column header label
+- **Template**: Render custom HTML per cell
 
 ```cshtml
 

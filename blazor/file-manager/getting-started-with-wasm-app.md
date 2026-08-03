@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Blazor File Manager component in Blazor WASM App
+# Getting Started with Blazor File Manager Component in Blazor WASM App
 
 This section briefly explains how to include the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -59,7 +59,7 @@ cd BlazorApp
 
 ## Install the required Blazor packages
 
-Install the [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+Install the [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. Use a supported .NET SDK version and install the package version that matches your Syncfusion release.
 
 {% tabcontents %}
 
@@ -140,7 +140,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) at the end of the `<head>` section in the **~wwwroot/index.html** file.
+The theme stylesheet and script are available from NuGet as [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) at the end of the `<head>` section in the **~wwwroot/index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -162,7 +162,9 @@ Include the required [script references](https://blazor.syncfusion.com/documenta
 
 ## Add Blazor File Manager component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component inside the Razor file.
+N> Add a route directive such as `@page "/"` if the page needs to be directly accessible.
+
+Open a Razor page in the **~/Pages/*.razor** folder (for example, **Home.razor**) and add the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component to that page.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
