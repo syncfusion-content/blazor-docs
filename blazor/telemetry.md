@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Telemetry Usage Details in .NET | Syncfusion
-description: Syncfusion® Telemetry collects anonymous usage data in .NET to improve product quality, track feature adoption, and guide product planning.
+title: Telemetry Usage Details in Blazor | Syncfusion
+description: Syncfusion® Telemetry collects anonymous usage data in Blazor to improve product quality, track feature adoption, and guide product planning.
 platform: Blazor
 component: Common
-documentation: UG
+documentation: ug
 ---
 
 # Syncfusion<sup>&reg;</sup> Telemetry  
@@ -132,11 +132,7 @@ Telemetry is supported across major Syncfusion® Blazor components, including da
             <td>Syncfusion.Blazor.Gantt</td>
         </tr>
         <tr>
-            <td>Charts</td>
-            <td>Syncfusion.Blazor.Charts</td>
-        </tr>
-        <tr>
-            <td>Accumulation Chart</td>
+            <td>Charts, Accumulation Chart</td>
             <td>Syncfusion.Blazor.Charts</td>
         </tr>
         <tr>
@@ -208,7 +204,7 @@ Syncfusion<sup>&reg;</sup> does not collect:
 
 ## How to Disable Telemetry (Opt-out)? 
 
-You can disable telemetry in Syncfusion<sup>&reg;</sup> .NET products by calling the `Telemetry.Disable()` API before using any Syncfusion<sup>&reg;</sup> product APIs in your application. 
+You can disable telemetry in Syncfusion<sup>&reg;</sup> Blazor products by calling the `Telemetry.Disable()` API before using any Syncfusion<sup>&reg;</sup> product APIs in your application. 
 
 ### Step 1: Add the telemetry namespace 
 
@@ -239,7 +235,7 @@ Telemetry.Disable();
 
 {% endtabs %}
 
-Now, the telemetry is disabled, you can continue using Syncfusion<sup>&reg;</sup> .NET products based on your application requirements. The Syncfusion<sup>&reg;</sup> product will work normally, but telemetry data will not be collected or sent. 
+Now, the telemetry is disabled, you can continue using Syncfusion<sup>&reg;</sup> Blazor products based on your application requirements. The Syncfusion<sup>&reg;</sup> product will work normally, but telemetry data will not be collected or sent. 
 
 N> The `Telemetry.Disable()` API should be called, before creating or using any Syncfusion<sup>&reg;</sup> components. 
 
