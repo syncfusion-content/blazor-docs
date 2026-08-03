@@ -28,7 +28,9 @@ The sample was tested with the following versions and configuration:
 
 The application uses the Blazor Web App template with Interactive Server rendering. Syncfusion packages from NuGet.org require a valid license or trial key; follow the [license-key registration instructions](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application).
 
-## Step 1: Create the Blazor Web App
+## SQLite Database Setup and Application Configuration
+
+### Step 1: Create the Blazor Web App
 
 Create an Interactive Server Blazor Web App:
 
@@ -39,7 +41,7 @@ cd PivotTableSQLite
 
 In Visual Studio, the equivalent choices are **Blazor Web App**, **.NET 10**, **Interactive render mode: Server**, and **Interactivity location: Global**.
 
-## Step 2: Create the SQLite Database
+### Step 2: Create the SQLite Database
 
 SQLite stores an entire database in a single file, so there is no server to install or configure. Download the SQLite tools from the [SQLite download page](https://www.sqlite.org/download.html) and use either the `sqlite3` command-line shell or a GUI client such as DB Browser for SQLite.
 
@@ -94,7 +96,7 @@ Expected output:
 
 Copy the generated `Orders.db` file to a location the ASP.NET Core application can read, and use that path in the connection string configured in the next steps.
 
-## Step 3: Install the Required NuGet Packages
+### Step 3: Install the Required NuGet Packages
 
 Run these commands in the `PivotTableSQLite` project directory:
 
@@ -114,7 +116,7 @@ The project file should contain:
 </ItemGroup>
 ```
 
-## Step 4: Configure the Connection String
+### Step 4: Configure the Connection String
 
 Store the SQLite connection string in `appsettings.json`:
 
@@ -137,7 +139,7 @@ Store the SQLite connection string in `appsettings.json`:
 
 A relative `Data Source` path is resolved from the application's process working directory. Use an absolute path in deployments where the working directory can differ from the project directory.
 
-## Step 5: Create the API Controller
+### Step 5: Create the API Controller
 
 Create a `Controllers` folder at the project root, and then create `Controllers/OrderController.cs`. In this sample, the `Order` model and the `CRUDModel<T>` wrapper are defined inside `OrderController.cs` rather than in a separate file. The same `Order` shape is also declared in the Pivot Table page (`Home.razor`) so the component can strongly type its data source. Keeping the model close to the code that uses it makes the contract between the controller and the page easy to follow.
 
@@ -393,7 +395,7 @@ namespace PivotTableSQLite.Controllers
 
 The controller exposes the read, insert, update, and delete endpoints described in the [API Contract](#api-contract). The exception middleware configured in the next step logs unhandled `SqliteException` instances and returns generic problem responses without exposing database paths or SQL details.
 
-## Step 6: Configure Program.cs
+### Step 6: Configure Program.cs
 
 Replace `Program.cs` with:
 
@@ -451,7 +453,7 @@ Key registration points:
 
 > **Note:** Remove the comment markers and fill in your Syncfusion license or trial key in `Program.cs` before running the application. Follow the [license-key registration instructions](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application) for details.
 
-## Step 7: Configure the Pivot Table
+### Step 7: Configure the Pivot Table
 
 Add these namespaces to `Components/_Imports.razor`:
 
