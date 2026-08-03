@@ -1122,4 +1122,4 @@ The following table summarizes all available events in the [`MultiSelectEvents`]
 - [MultiSelect Dropdown filtering](https://blazor.syncfusion.com/documentation/multiselect-dropdown/filtering)
 - [MultiSelect Dropdown custom value](https://blazor.syncfusion.com/documentation/multiselect-dropdown/custom-value)
 - [MultiSelect Dropdown virtualization](https://blazor.syncfusion.com/documentation/multiselect-dropdown/virtualization)
-- [Live demo: Blazor MultiSelect Dropdown](https://blazor.syncfusion.com/demos/multiselect-dropdown/default-functionalities)
+- [Live demo: Blazor MultiSelect Dropdown](https://blazor.syncfusion.com/demos/multiselect-dropdown/default-functionalities?theme=fluent2)
