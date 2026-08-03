@@ -1,285 +1,896 @@
 ---
 layout: post
-title: "MongoDB Data Binding in Blazor Pivot Table Component | Syncfusion®"
-component: "Pivot Table"
-description: "Learn how to connect a MongoDB database to the Blazor Pivot Table component using the MongoDB.Driver library and much more details."
+title: Blazor Pivot Table with MongoDB via URL Adaptor | Syncfusion®
+description: Bind a MongoDB database to the Blazor Pivot Table through an ASP.NET Core API and the Syncfusion URL Adaptor.
 platform: Blazor
+control: PivotTable
 documentation: ug
 ---
 
-# MongoDB Data Binding in Blazor Pivot Table Component
+# Connect MongoDB to a Blazor Pivot Table Using the URL Adaptor
 
-This guide explains how to connect a MongoDB database to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using the [MongoDB.Driver](https://www.nuget.org/packages/MongoDB.Driver) library. It covers two methods: directly retrieving and binding data to the Pivot Table, and using a Web API service to fetch and display MongoDB data.
+The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) can load and edit MongoDB data through an ASP.NET Core API. [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) sends HTTP requests to the API, and the API uses [`MongoDB.Driver`](https://www.nuget.org/packages/MongoDB.Driver/) to access the MongoDB database.
 
-## Connecting a MongoDB to a Blazor Pivot Table
+This guide uses same-origin relative API URLs. The sample read action returns the complete `Orders` collection and does not apply `DataManagerRequest` operations. Add server-side filtering, sorting, and paging before using this design with large datasets.
 
-This section describes how to connect the Blazor Pivot Table to a MongoDB database by directly retrieving data using the [MongoDB.Driver](https://www.nuget.org/packages/MongoDB.Driver) library.
+## Prerequisites
 
-### Step 1: Set Up a Blazor Pivot Table
-1. Create a Blazor Pivot Table by following the [Getting Started](../getting-started) guide.
+The sample was tested with the following versions and configuration:
 
-### Step 2: Install the MongoDB.Driver NuGet Package
-1. Open the **NuGet Package Manager** in your project solution.
-2. Search for the [MongoDB.Driver](https://www.nuget.org/packages/MongoDB.Driver) package and install it to enable MongoDB connectivity.
+| Software or package | Version | Notes |
+|---|---:|---|
+| .NET SDK | 10.0 | Required to target `net10.0` |
+| Visual Studio | 2026 18.0 or later | Required to target `net10.0`; install the ASP.NET and web development workload. VS Code and the .NET CLI are also supported |
+| MongoDB Community Server | 8.0 or later | The MongoDB daemon (`mongod`) supplies the document database runtime; install it as a service or run it manually |
+| MongoDB Compass | Latest | The official MongoDB GUI used to create, inspect, and import data into collections |
+| Syncfusion.Blazor.PivotTable | 34.1.33 | [.NET 10 support starts with 31.2.10](https://blazor.syncfusion.com/documentation/common/how-to/version-compatibility); keep all Syncfusion packages on the same version |
+| Syncfusion.Blazor.Themes | 34.1.33 | Provides the component theme |
+| MongoDB.Driver | 3.10.0 | Official MongoDB C# driver used by the API to read and write documents |
 
-![Add the NuGet package MongoDB.Driver to the project](../images/mongodb-nuget-package-install.webp)
+The application uses the Blazor Web App template with Interactive Server rendering. Syncfusion packages from NuGet.org require a valid license or trial key; follow the [license-key registration instructions](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-appflication).
+
+## MongoDB Architecture
+
+The data flows through the following layers:
+
+```text
+Blazor Pivot Table
+        ↓
+   SfDataManager
+        ↓
+    UrlAdaptor
+        ↓
+  OrderController
+        ↓
+   MongoDB.Driver
+        ↓
+      MongoDB
+        ↓
+   OrderDB / Orders
+```
+
+The Blazor Pivot Table renders aggregated data and issues read and write requests through `SfDataManager`. The `UrlAdaptor` serializes those requests as HTTP `POST` calls to the `OrderController` API. The controller uses `MongoDB.Driver` to run find, insert, update, and delete operations against the `OrderDB` database and its `Orders` collection, and returns JSON responses that the adaptor understands.
+
+## MongoDB Database Setup and Application Configuration
+
+### Step 1: Install MongoDB Community Server
+
+Download MongoDB Community Server from the [MongoDB download page](https://www.mongodb.com/try/download/community) and install it for your platform. On Windows, accept the option to run MongoDB as a service so that the daemon (`mongod`) starts automatically and listens on the default port `27017`.
+
+Verify the server is running:
+
+```powershell
+mongod --version
+```
+
+Confirm the service is listening:
+
+```powershell
+Get-Service MongoDB
+```
+
+### Step 2: Install MongoDB Compass
+
+Download MongoDB Compass from the [MongoDB Compass download page](https://www.mongodb.com/try/download/compass) and install it. Compass is the official MongoDB GUI used to browse databases, inspect collections, and import documents.
 
 ### Step 3: Connect to MongoDB
-1. In the **Index.razor** file, under the `OnInitialized` method, use the **MongoClient** class to connect to the MongoDB database with a valid connection string.
-2. Access the desired database using the **GetDatabase** method and retrieve the target collection with the **GetCollection** method.
-3. Use the **Find** method with a **BsonDocument** to fetch data from the collection and convert it to a list.
 
-### Step 4: Bind Data to the Pivot Table
-1. Assign the retrieved list to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property of the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
-2. Configure the Pivot Table report by defining fields in the [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Rows), [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Columns), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Values), and [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings) to organize and format the data.
+Open MongoDB Compass and connect to the local server using the default connection string:
 
-The following code connects to a MongoDB database, retrieves data, and binds it to the Pivot Table.
+```text
+mongodb://localhost:27017
+```
+
+> **Note:** If you enabled authentication during installation, use a connection string that includes the database, username, and password, for example `mongodb://username:password@localhost:27017/?authSource=admin`.
+
+### Step 4: Create the Database and Collection
+
+In MongoDB Compass:
+
+1. Click **Create Database**.
+2. Enter the database name `OrderDB`.
+3. Enter the collection name `Orders`.
+4. Click **Create Database**.
+
+You can also create the database and collection from the `mongosh` shell:
+
+```javascript
+use OrderDB
+db.createCollection("Orders")
+```
+
+### Step 5: Import Sample Order Documents
+
+Each document in the `Orders` collection represents a single order. Import the following sample documents into the `Orders` collection through MongoDB Compass (**Add Data > Import JSON File**) or `mongosh`:
+
+```javascript
+db.Orders.insertMany([
+    { orderId: 1, customerName: "Toms",    employeeId: 1, freight: 35.30, shipCity: "New York" },
+    { orderId: 2, customerName: "Ravi",    employeeId: 2, freight: 80.20, shipCity: "London"   },
+    { orderId: 3, customerName: "Sven",    employeeId: 1, freight: 52.10, shipCity: "Berlin"   },
+    { orderId: 4, customerName: "Sara",    employeeId: 3, freight: 18.40, shipCity: "Madrid"   },
+    { orderId: 5, customerName: "Paul",    employeeId: 2, freight: 64.75, shipCity: "Tokyo"    }
+])
+```
+
+### Step 6: Verify the Data
+
+In MongoDB Compass, select the `OrderDB` database and the `Orders` collection. The documents should appear as:
+
+| _id (ObjectId) | orderId | customerName | employeeId | freight | shipCity |
+|---|---:|---|---:|---:|---|
+| (auto) | 1 | Toms | 1 | 35.30 | New York |
+| (auto) | 2 | Ravi | 2 | 80.20 | London |
+| (auto) | 3 | Sven | 1 | 52.10 | Berlin |
+| (auto) | 4 | Sara | 3 | 18.40 | Madrid |
+| (auto) | 5 | Paul | 2 | 64.75 | Tokyo |
+
+> **Note:** MongoDB automatically generates a unique `_id` (ObjectId) for each document when one is not supplied. The application maps `_id` to the `Id` property of the `Order` model, and uses the business key `orderId` for update and delete operations.
+
+## Create the Blazor Web App
+
+Create an Interactive Server Blazor Web App:
+
+```powershell
+dotnet new blazor -n PivotTableMongoDB -f net10.0 -int Server -ai
+cd PivotTableMongoDB
+```
+
+In Visual Studio, the equivalent choices are **Blazor Web App**, **.NET 10**, **Interactive render mode: Server**, and **Interactivity location: Global**.
+
+## Install the Required NuGet Packages
+
+Run these commands in the `PivotTableMongoDB` project directory:
+
+```powershell
+dotnet add package Syncfusion.Blazor.PivotTable --version 34.1.33
+dotnet add package Syncfusion.Blazor.Themes --version 34.1.33
+dotnet add package MongoDB.Driver --version 3.10.0
+```
+
+The project file should contain:
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Syncfusion.Blazor.PivotTable" Version="34.1.33" />
+  <PackageReference Include="Syncfusion.Blazor.Themes" Version="34.1.33" />
+  <PackageReference Include="MongoDB.Driver" Version="3.10.0" />
+</ItemGroup>
+```
+
+## Configure the Connection String
+
+Store the MongoDB connection string and the database and collection names in `appsettings.json`:
+
+```json
+{
+  "ConnectionStrings": {
+    "MongoDB": "mongodb://localhost:27017"
+  },
+  "MongoDbSettings": {
+    "DatabaseName": "OrderDB",
+    "CollectionName": "Orders"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}
+```
+
+> **Note:** Use `mongodb://localhost:27017` for a local MongoDB server without authentication. For a remote or secured MongoDB instance, replace the connection string with the appropriate URI, for example `mongodb+srv://<user>:<password>@cluster0.example.net/?retryWrites=true&w=majority`. Keep production connection strings out of source control through user secrets or environment variables.
+
+A `MongoDbSettings:DatabaseName` value of `OrderDB` and a `MongoDbSettings:CollectionName` value of `Orders` must match the database and collection created in [Step 4](#step-4-create-the-database-and-collection).
+
+## Create the API Controller
+
+Create a `Controllers` folder at the project root, and then create `Controllers/OrderController.cs`. In this sample, the `Order` model and the `CRUDModel<T>` wrapper are defined inside `OrderController.cs` rather than in a separate file. The same `Order` shape is also declared in the Pivot Table page (`Home.razor`) so the component can strongly type its data source. Keeping the model close to the code that uses it makes the contract between the controller and the page easy to follow.
+
+```csharp
+using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Mvc;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Driver;
+using Syncfusion.Blazor;
+using Syncfusion.Blazor.Data;
+
+namespace PivotTableMongoDB.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class OrderController : ControllerBase
+    {
+        private readonly IMongoCollection<Order> ordersCollection;
+
+        public OrderController(IConfiguration configuration)
+        {
+            string connectionString =
+                configuration.GetConnectionString("MongoDB")
+                ?? throw new InvalidOperationException(
+                    "The MongoDB connection string is not configured.");
+
+            string databaseName =
+                configuration["MongoDbSettings:DatabaseName"]
+                ?? "OrderDB";
+
+            string collectionName =
+                configuration["MongoDbSettings:CollectionName"]
+                ?? "Orders";
+
+            MongoClient client = new(connectionString);
+            IMongoDatabase database = client.GetDatabase(databaseName);
+
+            ordersCollection =
+                database.GetCollection<Order>(collectionName);
+        }
+
+        [HttpPost]
+        public object Post([FromBody] DataManagerRequest request)
+        {
+            _ = request;
+
+            List<Order> dataSource = ordersCollection
+                .Find(_ => true)
+                .SortBy(x => x.OrderID)
+                .ToList();
+
+            return new
+            {
+                result = dataSource,
+                count = dataSource.Count
+            };
+        }
+
+        [HttpPost("Insert")]
+        public IActionResult Insert([FromBody] CRUDModel<Order> value)
+        {
+            if (value.Value is not Order order
+                || string.IsNullOrWhiteSpace(order.CustomerName)
+                || !order.EmployeeID.HasValue)
+            {
+                return BadRequest(
+                    "CustomerName and EmployeeID are required.");
+            }
+
+            Order? lastRecord = ordersCollection
+                .Find(_ => true)
+                .SortByDescending(x => x.OrderID)
+                .FirstOrDefault();
+
+            order.OrderID = lastRecord?.OrderID + 1 ?? 1;
+
+            ordersCollection.InsertOne(order);
+
+            return Ok(order);
+        }
+
+        [HttpPost("Update")]
+        public IActionResult Update([FromBody] CRUDModel<Order> value)
+        {
+            if (value.Value is not Order order
+                || !order.OrderID.HasValue
+                || string.IsNullOrWhiteSpace(order.CustomerName)
+                || !order.EmployeeID.HasValue)
+            {
+                return BadRequest(
+                    "OrderID, CustomerName and EmployeeID are required.");
+            }
+
+            UpdateDefinition<Order> update =
+                Builders<Order>.Update
+                    .Set(x => x.CustomerName, order.CustomerName)
+                    .Set(x => x.EmployeeID, order.EmployeeID)
+                    .Set(x => x.Freight, order.Freight)
+                    .Set(x => x.ShipCity, order.ShipCity);
+
+            UpdateResult result =
+                ordersCollection.UpdateOne(
+                    x => x.OrderID == order.OrderID,
+                    update);
+
+            return result.MatchedCount == 0
+                ? NotFound()
+                : Ok(order);
+        }
+
+        [HttpPost("Delete")]
+        public IActionResult Delete([FromBody] CRUDModel<Order> value)
+        {
+            if (!int.TryParse(
+                value.Key?.ToString(),
+                out int orderId))
+            {
+                return BadRequest(
+                    "A numeric order key is required.");
+            }
+
+            DeleteResult result =
+                ordersCollection.DeleteOne(
+                    x => x.OrderID == orderId);
+
+            return result.DeletedCount == 0
+                ? NotFound()
+                : NoContent();
+        }
+
+        public class Order
+        {
+            [BsonId]
+            [BsonRepresentation(BsonType.ObjectId)]
+            public string? Id { get; set; }
+
+            [BsonElement("orderId")]
+            public int? OrderID { get; set; }
+
+            [BsonElement("customerName")]
+            public string? CustomerName { get; set; }
+
+            [BsonElement("employeeId")]
+            public int? EmployeeID { get; set; }
+
+            [BsonElement("freight")]
+            public double? Freight { get; set; }
+
+            [BsonElement("shipCity")]
+            public string? ShipCity { get; set; }
+        }
+
+        public class CRUDModel<T> where T : class
+        {
+            [JsonPropertyName("action")]
+            public string? Action { get; set; }
+
+            [JsonPropertyName("keyColumn")]
+            public string? KeyColumn { get; set; }
+
+            [JsonPropertyName("key")]
+            public object? Key { get; set; }
+
+            [JsonPropertyName("value")]
+            public T? Value { get; set; }
+
+            [JsonPropertyName("added")]
+            public List<T>? Added { get; set; }
+
+            [JsonPropertyName("changed")]
+            public List<T>? Changed { get; set; }
+
+            [JsonPropertyName("deleted")]
+            public List<T>? Deleted { get; set; }
+
+            [JsonPropertyName("params")]
+            public IDictionary<string, object>? Params { get; set; }
+        }
+    }
+}
+```
+
+The controller exposes the read, insert, update, and delete endpoints described in the [API Contract](#api-contract). The `OrderController` constructor resolves the MongoDB connection string, database name, and collection name from configuration, creates a `MongoClient`, and caches the `IMongoCollection<Order>` used by every action. The exception middleware configured in the next step logs unhandled `MongoException` instances and returns generic problem responses without exposing connection strings or driver details.
+
+## Configure Program.cs
+
+Replace `Program.cs` with:
+
+```csharp
+using PivotTableMongoDB.Components;
+using Syncfusion.Blazor;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Register the Syncfusion license before builder.Build().
+// Syncfusion packages require a valid license or trial key.
+// Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(
+//     "YOUR LICENSE KEY");
+
+builder.Services.AddSyncfusionBlazor();
+
+// Add services to the container.
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+
+builder.Services.AddControllers();
+
+builder.Services.AddProblemDetails();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseHsts();
+}
+
+app.UseExceptionHandler();
+
+app.UseHttpsRedirection();
+
+app.MapControllers();
+
+app.UseAntiforgery();
+
+app.MapStaticAssets();
+
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode();
+
+app.Run();
+```
+
+Key registration points:
+
+- `AddSyncfusionBlazor()` registers the Syncfusion Blazor services required by the Pivot Table.
+- `AddRazorComponents().AddInteractiveServerComponents()` enables Interactive Server rendering.
+- `AddControllers()` registers the API controllers, including `OrderController`.
+- `AddProblemDetails()` and `UseExceptionHandler()` log unhandled failures and return generic error responses.
+- `MapControllers()` routes requests to the API endpoints.
+- `MapStaticAssets()` maps the application's static web assets, including assets supplied by referenced component packages.
+
+> **Note:** Remove the comment markers and fill in your Syncfusion license or trial key in `Program.cs` before running the application. Follow the [license-key registration instructions](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application) for details.
+
+## Configure the Pivot Table
+
+Add these namespaces to `Components/_Imports.razor`:
 
 ```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.PivotView
-@using MongoDB.Bson;
-@using MongoDB.Driver;
-@using MongoDB.Driver.Core.Authentication;
+```
 
-<SfPivotView TValue="ProductDetails" Width="1000" Height="300" ShowFieldList="true">
-    <PivotViewDataSourceSettings TValue="ProductDetails" DataSource="@dataSource" ExpandAll=false EnableSorting=true>
+In `Components/App.razor`, add the Syncfusion stylesheet inside `<head>`:
+
+```html
+<link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css"
+      rel="stylesheet" />
+```
+
+Add the Syncfusion script immediately before `</body>`, after the template's existing `_framework/blazor.web.js` reference:
+
+```html
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"
+        type="text/javascript"></script>
+```
+
+Do not add a second `_framework/blazor.web.js` reference if the template already contains one. The completed `App.razor` should look like:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <link rel="stylesheet" href="@Assets["lib/bootstrap/dist/css/bootstrap.min.css"]" />
+    <link rel="stylesheet" href="@Assets["app.css"]" />
+    <link rel="stylesheet" href="@Assets["PivotTableMongoDB.styles.css"]" />
+    <ImportMap />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <HeadOutlet @rendermode="InteractiveServer" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+<body>
+    <Routes @rendermode="InteractiveServer" />
+    <script src="_framework/blazor.web.js"></script>
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</body>
+
+</html>
+```
+
+Replace `Components/Pages/Home.razor` with the following markup. The `SfDataManager` URLs use same-origin relative paths (`/api/Order`, `/api/Order/Insert`, etc.) so they resolve against whatever port the application is launched on, avoiding hard-coded development ports and HTTP-to-HTTPS mixed-content failures:
+
+```cshtml
+@page "/"
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="Order" Width="1000" Height="300" ShowFieldList="true">
+    <PivotViewDataSourceSettings TValue="Order" ExpandAll="false" EnableSorting="true">
+        <SfDataManager Url="/api/Order"
+                       InsertUrl="/api/Order/Insert"
+                       UpdateUrl="/api/Order/Update"
+                       RemoveUrl="/api/Order/Delete"
+                       Adaptor="Adaptors.UrlAdaptor">
+        </SfDataManager>
         <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>                    
+            <PivotViewColumn Name="EmployeeID"></PivotViewColumn>
         </PivotViewColumns>
         <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
+            <PivotViewRow Name="CustomerName"></PivotViewRow>
         </PivotViewRows>
         <PivotViewValues>
-            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+            <PivotViewValue Name="Freight" Caption="Freight"></PivotViewValue>
         </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Sold" Format="N2"></PivotViewFormatSetting>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
     <PivotViewGridSettings ColumnWidth="120"></PivotViewGridSettings>
+    <PivotViewEvents TValue="Order" BeginDrillThrough="BeginDrillThrough"></PivotViewEvents>
+    <PivotViewCellEditSettings AllowEditing="true"
+                               AllowAdding="true"
+                               AllowDeleting="true"
+                               Mode="EditMode.Normal">
+    </PivotViewCellEditSettings>
 </SfPivotView>
 
 @code {
-    private List<ProductDetails> dataSource { get; set; }
-
-    protected override void OnInitialized()
+    private void BeginDrillThrough(BeginDrillThroughEventArgs args)
     {
-        // Replace with your own connection string.
-        string connectionString = "<Enter your valid connection string here>";
-        MongoClient client = new MongoClient(connectionString);
-        IMongoDatabase database = client.GetDatabase("sample_training");
-        IMongoCollection<ProductDetails> collection = database.GetCollection<ProductDetails>("ProductDetails");
-        dataSource = collection.Find(new BsonDocument()).ToList();      
+        // Identify the key used by URL Adaptor update and delete requests.
+        for (int i = 0; i < args.GridObj.Columns.Count; i++)
+        {
+            if (args.GridObj.Columns[i].Field == "OrderID")
+            {
+                args.GridObj.Columns[i].IsPrimaryKey = true;
+            }
+            else
+            {
+                args.GridObj.Columns[i].Visible = true;
+            }
+        }
     }
 
-    public class ProductDetails
-    {  
-        public ObjectId _id { get; set; }
-        public int Sold { get; set; }
-        public double Amount { get; set; }
-        public string Country { get; set; }
-        public string Products { get; set; }
-        public string Year { get; set; }
-        public string Quarter { get; set; }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string? CustomerName { get; set; }
+        public int? EmployeeID { get; set; }
+        public double? Freight { get; set; }
+        public string? ShipCity { get; set; }
     }
 }
 ```
 
-### Step 5: Run and Verify the Pivot Table
-1. Run the Blazor application.
-2. The Pivot Table will display the MongoDB data, organized according to the defined report.
-3. The resulting Pivot Table will look like this:
+The `BeginDrillThrough` event is used to mark `OrderID` as the primary key on the drill-through grid. This tells the DataManager which column uniquely identifies each record so that insert, update, and delete requests carry the correct key. Without this configuration, the write operations cannot target the intended document.
 
-![Blazor Pivot Table bound with MongoDB data](../images/blazor-pivottable-mongodb-databinding.webp)
+> **Note:** The `Order` class declared in `Home.razor` mirrors the shape sent by the API, but it does not include the MongoDB `_id` field. The Pivot Table only needs the business fields for aggregation and editing; MongoDB's internal `_id` is preserved on the server and never modified by the controller.
 
-## Connecting a MongoDB to a Blazor Pivot Table via Web API service
+## MongoDB Document Structure
 
-This section explains how to create a Web API service to fetch data from a MongoDB database and connect it to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using the [MongoDB.Driver](https://www.nuget.org/packages/MongoDB.Driver).
+Each row in the Pivot Table corresponds to one document in the `Orders` collection. A sample document looks like:
 
-### Create a Web API Service to Fetch MongoDB Data
+```json
+{
+  "_id": "65a1f2c3b7d8e9f0a1b2c3d4",
+  "orderId": 1,
+  "customerName": "John Smith",
+  "employeeId": 101,
+  "freight": 32.5,
+  "shipCity": "New York"
+}
+```
 
-Follow these steps to set up a Web API service that retrieves MongoDB data for the Pivot Table.
+| Field | Type | Description |
+|---|---|---|
+| `_id` | ObjectId | MongoDB-generated unique identifier for each document. Mapped to `Order.Id` with `[BsonId]` and `[BsonRepresentation(BsonType.ObjectId)]`; never edited by the Pivot Table. |
+| `orderId` | Integer | Business key used by the read, insert, update, and delete operations. Auto-incremented on insert from the highest existing `orderId`; mapped to `Order.OrderID` with `[BsonElement("orderId")]`. |
+| `customerName` | String | Name of the customer; required for insert and update; mapped to `Order.CustomerName` with `[BsonElement("customerName")]`. |
+| `employeeId` | Integer | Identifier of the employee who placed the order; required for insert and update; mapped to `Order.EmployeeID` with `[BsonElement("employeeId")]`. |
+| `freight` | Double | Shipping cost aggregated by the Pivot Table; mapped to `Order.Freight` with `[BsonElement("freight")]`. |
+| `shipCity` | String | Destination city; mapped to `Order.ShipCity` with `[BsonElement("shipCity")]`. |
 
-#### Step 1: Create an ASP.NET Core Web Application
-1. Open Visual Studio and create a new **ASP.NET Core Web App** project named **MyWebService**.
-2. Refer to the [Microsoft documentation](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022) for detailed setup instructions.
+> **Note:** The `[BsonElement]` attributes control the field names written to MongoDB. The `[BsonId]` and `[BsonRepresentation]` attributes tell the driver that `Id` is the document primary key and should be stored as an `ObjectId`. Mismatched element names are the most common cause of empty Pivot Tables, so keep the attribute names in sync with the fields imported in [Step 5](#step-5-import-sample-order-documents).
 
-![Create ASP.NET Core Web App project](../images/azure-asp-core-web-service-create.webp)
+## CRUD Operations
 
-#### Step 2: Install the MongoDB.Driver NuGet Package
-1. Open the **NuGet Package Manager** in the project solution.
-2. Search for and install the [MongoDB.Driver](https://www.nuget.org/packages/MongoDB.Driver) package to enable MongoDB connectivity.
+### Read
 
-![Add the NuGet package MongoDB.Driver to the project](../images/mongodb-nuget-package-install-in-web-service-app.webp)
-
-#### Step 3: Create a Web API Controller
-1. In the **Controllers** folder, create a new Web API controller named **PivotController.cs**.
-2. This controller manages data communication between the MongoDB database and the Pivot Table.
-
-#### Step 4: Connect to MongoDB and Retrieve Data
-1. In the **PivotController.cs** file, use **MongoClient** to connect to the MongoDB database with a valid connection string.
-2. Access the database with **GetDatabase** and the target collection with **GetCollection**.
-3. Retrieve data using the **Find** method and convert it to a list.
+The read operation returns every document in the `Orders` collection to the Pivot Table:
 
 ```csharp
-using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using MongoDB.Bson;
-using MongoDB.Driver;
-
-namespace MyWebService.Controllers
+[HttpPost]
+public object Post([FromBody] DataManagerRequest request)
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class PivotController : ControllerBase
-    {
-        private static List<ProductDetails> FetchMongoDbResult()
-        {
-            // Replace with your own connection string.
-            string connectionString = "<Enter your valid connection string here>";
-            MongoClient client = new MongoClient(connectionString);
-            IMongoDatabase database = client.GetDatabase("sample_training");
-            var collection = database.GetCollection<ProductDetails>("ProductDetails");
-            return collection.Find(new BsonDocument()).ToList();
-        }
+    _ = request;
 
-        public class ProductDetails
-        {
-            public ObjectId Id { get; set; }
-            public int Sold { get; set; }
-            public double Amount { get; set; }
-            public string? Country { get; set; }
-            public string? Products { get; set; }
-            public string? Year { get; set; }
-            public string? Quarter { get; set; }
-        }
-    }
+    List<Order> dataSource = ordersCollection
+        .Find(_ => true)
+        .SortBy(x => x.OrderID)
+        .ToList();
+
+    return new
+    {
+        result = dataSource,
+        count = dataSource.Count
+    };
 }
 ```
 
-#### Step 5: Serialize Data to JSON
-1. In the **PivotController.cs** file, create a **Get** method that calls **FetchMongoDbResult** to retrieve MongoDB data.
-2. Use **JsonConvert.SerializeObject** from the [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json) library to serialize the data into JSON format.
+How it works:
 
-> Ensure the **Newtonsoft.Json** NuGet package is installed in your project.
+- `ordersCollection` resolves to the `OrderDB.Orders` collection configured in the constructor.
+- `Find(_ => true)` matches all documents in the collection.
+- `SortBy(x => x.OrderID)` orders the results by `orderId` so rows appear in a stable order in the drill-through grid.
+- The action wraps the documents in a `{ result, count }` envelope that the UrlAdaptor expects.
 
-The following code sets up the Web API controller to fetch and serialize MongoDB data.
+### Insert
+
+The insert operation creates a new document and assigns the next available `orderId`:
 
 ```csharp
-using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using MongoDB.Bson;
-using MongoDB.Driver;
-
-namespace MyWebService.Controllers
+[HttpPost("Insert")]
+public IActionResult Insert([FromBody] CRUDModel<Order> value)
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class PivotController : ControllerBase
+    if (value.Value is not Order order
+        || string.IsNullOrWhiteSpace(order.CustomerName)
+        || !order.EmployeeID.HasValue)
     {
-        [HttpGet(Name = "GetMongoDbResult")]
-        public object Get()
-        {
-            return JsonConvert.SerializeObject(FetchMongoDbResult());
-        }
-
-        private static List<ProductDetails> FetchMongoDbResult()
-        {
-            // Replace with your own connection string.
-            string connectionString = "<Enter your valid connection string here>";
-            MongoClient client = new MongoClient(connectionString);
-            IMongoDatabase database = client.GetDatabase("sample_training");
-            var collection = database.GetCollection<ProductDetails>("ProductDetails");
-            return collection.Find(new BsonDocument()).ToList();
-        }
-        public class ProductDetails
-        {
-            public ObjectId Id { get; set; }
-            public int Sold { get; set; }
-            public double Amount { get; set; }
-            public string? Country { get; set; }
-            public string? Products { get; set; }
-            public string? Year { get; set; }
-            public string? Quarter { get; set; }
-        }
+        return BadRequest(
+            "CustomerName and EmployeeID are required.");
     }
+
+    Order? lastRecord = ordersCollection
+        .Find(_ => true)
+        .SortByDescending(x => x.OrderID)
+        .FirstOrDefault();
+
+    order.OrderID = lastRecord?.OrderID + 1 ?? 1;
+
+    ordersCollection.InsertOne(order);
+
+    return Ok(order);
 }
 ```
 
-#### Step 6: Run the Web API Service
-1. Build and run the application.
-2. The application will be hosted at `https://localhost:44346/` (the port number may vary).
+How it works:
 
-#### Step 7: Verify the JSON Data
-1. Access the Web API endpoint at `https://localhost:44346/Pivot` to view the JSON data retrieved from MongoDB.
-2. The browser will display the JSON data, as shown below.
+- The action validates that `CustomerName` and `EmployeeID` are present before writing.
+- It locates the document with the highest `orderId` and computes the next value as `lastRecord.OrderID + 1`, or `1` when the collection is empty. MongoDB does not provide an auto-increment integer, so the controller generates the business key.
+- `InsertOne` writes the new document. MongoDB assigns the `_id` automatically because none is supplied.
+- The inserted `Order` (with the generated `OrderID`) is returned so the Pivot Table can update its local copy.
 
-![Hosted Web API URL](../images/mongodb-data.webp)
+### Update
 
-### Connecting the Pivot Table to MongoDB Using the Web API Service
+The update operation modifies an existing document by `orderId` while preserving the MongoDB `_id`:
 
-This section explains how to connect the Blazor Pivot Table to MongoDB data retrieved via the Web API service.
-
-#### Step 1: Set Up a Blazor Pivot Table
-1. Create a Blazor Pivot Table by following the [Getting Started](../getting-started) guide.
-
-#### Step 2: Configure the Web API URL
-1. In the **Index.razor** file, map the Web API URL (`https://localhost:44346/Pivot`) to the Pivot Table using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property of [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
-2. The [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property facilitates deserializing MongoDB data into instances of your model data class (i.e., TValue="ProductDetails") for binding to the Pivot Table.
-
-#### Step 3: Define the Pivot Table Report
-1. Configure the Pivot Table report by defining fields in the [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Rows), [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Columns), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Values), and [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings) properties.
-2. Enable the field list by setting [ShowFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowFieldList) to **true** for interactive field management.
-
-The following code connects the Pivot Table to the Web API and configures the report.
-
-```cshtml
-@using Syncfusion.Blazor.PivotView
-
-<SfPivotView TValue="ProductDetails" Width="1000" Height="300" ShowFieldList="true">
-    <PivotViewDataSourceSettings TValue="ProductDetails" Url="https://localhost:44346/Pivot" ExpandAll="false" EnableSorting="true">
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Sold" Format="N2"></PivotViewFormatSetting>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
-    <PivotViewGridSettings ColumnWidth="120"></PivotViewGridSettings>
-</SfPivotView>
-
-@code {
-    public class ProductDetails
+```csharp
+[HttpPost("Update")]
+public IActionResult Update([FromBody] CRUDModel<Order> value)
+{
+    if (value.Value is not Order order
+        || !order.OrderID.HasValue
+        || string.IsNullOrWhiteSpace(order.CustomerName)
+        || !order.EmployeeID.HasValue)
     {
-        public ObjectId _id { get; set; }
-        public int Sold { get; set; }
-        public double Amount { get; set; }
-        public string Country { get; set; }
-        public string Products { get; set; }
-        public string Year { get; set; }
-        public string Quarter { get; set; }
+        return BadRequest(
+            "OrderID, CustomerName and EmployeeID are required.");
     }
+
+    UpdateDefinition<Order> update =
+        Builders<Order>.Update
+            .Set(x => x.CustomerName, order.CustomerName)
+            .Set(x => x.EmployeeID, order.EmployeeID)
+            .Set(x => x.Freight, order.Freight)
+            .Set(x => x.ShipCity, order.ShipCity);
+
+    UpdateResult result =
+        ordersCollection.UpdateOne(
+            x => x.OrderID == order.OrderID,
+            update);
+
+    return result.MatchedCount == 0
+        ? NotFound()
+        : Ok(order);
 }
 ```
 
-#### Step 4: Run and Verify the Pivot Table
-1. Run the Blazor application.
-2. The Pivot Table will display the MongoDB data fetched via the Web API, structured according to the defined report.
-3. The resulting Pivot Table will look like this:
+How it works:
 
-![Blazor Pivot Table bound with MongoDB data](../images/blazor-pivottable-mongodb-databinding.webp)
+- The filter `x => x.OrderID == order.OrderID` locates the document by business key. Using `UpdateOne` instead of replacing the document keeps the original `_id` and any other unedited fields intact.
+- `Builders<Order>.Update.Set` builds an update definition that changes only the editable fields.
+- When no document matches the supplied `orderId`, the action returns `404` so the Pivot Table can surface the failure.
 
-### Additional Resources
-Explore a complete example of the Blazor Pivot Table integrated with MongoDB using a Web API service in this [GitHub repository](https://github.com/SyncfusionExamples/web-how-to-bind-MongoDB-to-pivot-table/tree/master/Blazor).
+### Delete
+
+The delete operation removes a document by `orderId`:
+
+```csharp
+[HttpPost("Delete")]
+public IActionResult Delete([FromBody] CRUDModel<Order> value)
+{
+    if (!int.TryParse(
+        value.Key?.ToString(),
+        out int orderId))
+    {
+        return BadRequest(
+            "A numeric order key is required.");
+    }
+
+    DeleteResult result =
+        ordersCollection.DeleteOne(
+            x => x.OrderID == orderId);
+
+    return result.DeletedCount == 0
+        ? NotFound()
+        : NoContent();
+}
+```
+
+How it works:
+
+- The UrlAdaptor sends the primary key in the `key` property. The action parses it as an integer before querying.
+- `DeleteOne` removes the matching document. The action returns `204` on success and `404` when no document matches the key.
+
+## API Contract
+
+| Method | Route | Payload | Success response |
+|---|---|---|---|
+| `POST` | `/api/Order` | `DataManagerRequest` | `200` with `{ result, count }` |
+| `POST` | `/api/Order/Insert` | `CRUDModel<Order>` | `200` with the inserted record |
+| `POST` | `/api/Order/Update` | `CRUDModel<Order>` | `200` with the updated record |
+| `POST` | `/api/Order/Delete` | `CRUDModel<Order>` | `204` with no body |
+
+The API uses action-oriented routes because they match the URL Adaptor's `InsertUrl`, `UpdateUrl`, and `RemoveUrl` contract.
+
+For write requests, `action` identifies the operation, `keyColumn` names the primary-key field, `key` carries the value used by delete operations, and `value` carries the inserted or updated record. The Syncfusion model also supports `added`, `changed`, and `deleted` collections for batch editing, `params` for additional values, and `table` for an optional table name; this sample uses normal editing and does not consume those optional properties.
+
+| Route | Failure response |
+|---|---|
+| `/api/Order` | `500` when the database cannot be queried |
+| `/api/Order/Insert` | `400` when required fields are missing; `500` on a database failure |
+| `/api/Order/Update` | `400` when required fields are missing; `404` when the key does not exist; `500` on a database failure |
+| `/api/Order/Delete` | `400` when the key is not numeric; `404` when the key does not exist; `500` on a database failure |
+
+Example read response:
+
+```json
+{
+  "result": [
+    {
+      "id": "65a1f2c3b7d8e9f0a1b2c3d4",
+      "orderID": 1,
+      "customerName": "Toms",
+      "employeeID": 1,
+      "freight": 35.30,
+      "shipCity": "New York"
+    },
+    {
+      "id": "65a1f2c3b7d8e9f0a1b2c3d5",
+      "orderID": 2,
+      "customerName": "Ravi",
+      "employeeID": 2,
+      "freight": 80.20,
+      "shipCity": "London"
+    }
+  ],
+  "count": 2
+}
+```
+
+Example insert request:
+
+```json
+{
+  "action": "insert",
+  "keyColumn": "orderID",
+  "value": {
+    "customerName": "Mei Chen",
+    "employeeID": 4,
+    "shipCity": "Sydney",
+    "freight": 142.50
+  }
+}
+```
+
+The insert response returns the persisted record with the generated `orderID` and the MongoDB-assigned `id` populated.
+
+Example update request:
+
+```json
+{
+  "action": "update",
+  "keyColumn": "orderID",
+  "value": {
+    "orderID": 3,
+    "customerName": "Sven",
+    "employeeID": 1,
+    "shipCity": "Hamburg",
+    "freight": 60.00
+  }
+}
+```
+
+Example delete request:
+
+```json
+{
+  "action": "remove",
+  "keyColumn": "orderID",
+  "key": 5
+}
+```
+
+## Data Flow Diagram
+
+The end-to-end request flow is:
+
+```text
+Blazor Pivot Table
+        ↓
+   SfDataManager
+        ↓
+    UrlAdaptor
+        ↓
+  OrderController
+        ↓
+   MongoDB.Driver
+        ↓
+      MongoDB
+        ↓
+   OrderDB / Orders
+```
+
+1. The Blazor Pivot Table renders and issues a `POST /api/Order` request through `SfDataManager` and the UrlAdaptor.
+2. `OrderController.Post` runs `Find(_ => true)` against the `OrderDB.Orders` collection and returns `{ result, count }`.
+3. The UrlAdaptor deserializes the response and the Pivot Table aggregates `CustomerName` (rows), `EmployeeID` (columns), and the sum of `Freight` (values).
+4. When the user drills through a value cell and edits, adds, or deletes a record, the Pivot Table calls `InsertUrl`, `UpdateUrl`, or `RemoveUrl`.
+5. The corresponding controller action validates the payload, runs `InsertOne`, `UpdateOne`, or `DeleteOne` on the MongoDB collection, and returns the result.
+6. The Pivot Table refreshes its aggregated view from the updated collection on the next read request.
+
+## Run and Verify the Application
+
+Build and run the project:
+
+```powershell
+dotnet build
+dotnet run
+```
+
+Open the URL shown in the terminal. Verify the following:
+
+1. The Pivot Table displays `CustomerName` as rows, `EmployeeID` as columns, and the sum of `Freight` as values.
+2. The browser Network panel shows `POST /api/Order` returning `200` with `result` and `count`.
+3. Double-click a value (summary) cell to open its raw-record editor.
+4. Add a record and confirm that `POST /api/Order/Insert` returns the generated, nonzero `orderID`.
+5. Edit and delete records, and confirm the corresponding API requests succeed with that key.
+6. Inspect the `Orders` collection in MongoDB Compass to confirm the changes were persisted. For deployed apps with no direct database access, re-open the drill-through editor and confirm that the rows reflect the changes.
+
+## Production Considerations
+
+MongoDB is ideal for document-oriented workloads and scales horizontally through sharding. Before using this design in production, consider the following:
+
+- **Concurrency:** MongoDB supports concurrent readers and writers. For write-heavy workloads, prefer `UpdateOne` and `DeleteOne` over whole-document replacement, and index the `orderId` field used by update and delete filters.
+- **Server-side data operations:** The sample returns the entire `Orders` collection. Apply `DataManagerRequest` `where`, `sorted`, `skip`, and `take` parameters on the server before using this design with large datasets.
+- **Connection string:** Store the MongoDB connection string through the hosting environment or a secrets manager rather than committing production URIs to source control.
+- **Authentication and authorization:** Configure MongoDB authentication and protect the write endpoints with the authentication and authorization mechanism used by your application.
+- **Antiforgery:** If cookie-authenticated API actions require antiforgery validation, configure `SfDataManager` to send the request token expected by the server.
+- **Schema validation:** Enforce a [JSON schema validator](https://www.mongodb.com/docs/manual/core/schema-validation/) on the `Orders` collection so that inserted and updated documents always match the `Order` model.
+- **Deployment:** For cross-origin hosting, configure an explicit CORS policy that allows only the Blazor application's origin.
+- **Atomic auto-increment:** The sample computes `orderId` from the highest existing value. For high-throughput inserts, switch to a dedicated `counters` collection with `FindOneAndUpdate` to assign `orderId` atomically.
+
+## Troubleshooting
+
+| Symptom | Resolution |
+|---|---|
+| MongoDB service is not running | Start the MongoDB service (`Start-Service MongoDB` on Windows, or run `mongod` manually) and confirm it is listening on `27017`. |
+| MongoDB Compass connection failure | Confirm the connection string matches `mongodb://localhost:27017`. If authentication is enabled, include credentials and `authSource` in the URI. |
+| Database not found | Create the `OrderDB` database (see [Step 4](#step-4-create-the-database-and-collection)) and confirm `MongoDbSettings:DatabaseName` matches. MongoDB creates a database lazily, but the sample read returns an empty result set until documents are inserted. |
+| Collection not found | Create the `Orders` collection and confirm `MongoDbSettings:CollectionName` matches. |
+| Pivot Table shows no data | Inspect `POST /api/Order` in the browser Network panel and check the server log. A `GET` request from the browser address bar returns `405`. |
+| `405 Method Not Allowed` | Confirm `[HttpPost]`, `AddControllers()`, and `MapControllers()` are present. |
+| `The MongoDB connection string is not configured.` | Add a `ConnectionStrings:MongoDB` entry to `appsettings.json` and restart the application. |
+| Documents are inserted but fields appear as null | Confirm the `[BsonElement]` names match the document field names imported in [Step 5](#step-5-import-sample-order-documents) (`orderId`, `customerName`, `employeeId`, `freight`, `shipCity`). |
+| `_id` mapping failures | Confirm the `Order.Id` property is decorated with `[BsonId]` and `[BsonRepresentation(BsonType.ObjectId)]`. Do not send `_id` from the Pivot Table; let MongoDB generate it. |
+| Update returns `404` | Confirm that the supplied `OrderID` exists and that `OrderID` is marked as the primary key in the `BeginDrillThrough` event handler. |
+| Duplicate `orderId` on insert | The sample computes `orderId` from the highest existing value. Concurrent inserts can collide; switch to an atomic counter document for high-throughput inserts. |
+| CRUD returns `400` | Inspect the request JSON and confirm required fields (`CustomerName`, `EmployeeID`) and a numeric key are present. |
+| CRUD returns `500` | Check the server log and verify the connection string, database and collection names, and MongoDB server status. |
+| Browser reports mixed content or a redirect failure | Confirm `Home.razor` uses same-origin relative URLs (for example `/api/Order`) rather than hard-coded HTTP URLs. |
+| Cross-origin request is blocked | Prefer same-origin relative URLs; otherwise configure `AddCors` and `UseCors` for the exact Blazor application origin. |
+| Antiforgery validation fails | Configure the adaptor to send the expected request token, or use an appropriate non-cookie API authentication scheme. |
+| Large datasets are slow | Process `DataManagerRequest` operations on the server (MongoDB `Filter`, `Sort`, `Skip`, and `Limit`) instead of returning the entire collection. |
+
+For current component behavior, see the [Pivot Table editing documentation](https://blazor.syncfusion.com/documentation/pivot-table/editing) and [Pivot Table data-binding documentation](https://blazor.syncfusion.com/documentation/pivot-table/data-binding).
+
+## Complete Sample Repository
+
+A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/syncfusion-blazor-pivot-table-mongodb-database-binding-sample/tree/master).
+
+## Summary
+
+This guide walked through binding a MongoDB database to the Syncfusion Blazor Pivot Table using the URL Adaptor. You installed MongoDB Community Server and MongoDB Compass, created the `OrderDB` database and `Orders` collection, imported sample documents, and built an ASP.NET Core API that uses `MongoDB.Driver` to read and write those documents. The Blazor Pivot Table consumed the API through `SfDataManager` and the `UrlAdaptor`, configured `OrderID` as the primary key for drill-through editing, and performed read, insert, update, and delete operations through same-origin relative API URLs. Use this sample as a starting point for adding server-side filtering, sorting, paging, authentication, and schema validation before deploying to production.
