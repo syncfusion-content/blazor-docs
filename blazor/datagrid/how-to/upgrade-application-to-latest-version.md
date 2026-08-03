@@ -36,7 +36,7 @@ N> For production scenarios and minimal footprint, Syncfusion provides the Custo
 
 ## Breaking changes
 
-Some changes may occur across releases that affect existing applications. Review the breaking changes and notes for the target version before upgrading. Refer to the Blazor components [release notes](https://blazor.syncfusion.com/documentation/release-notes) for details.
+Some changes may occur across releases that affect existing applications. Review the breaking changes and notes for the target version before upgrading. Refer to the Blazor components [release notes](https://blazor.syncfusion.com/documentation/release-notes/34.1.29?type=all) for details.
 
 ## Cache problem
 
@@ -47,5 +47,3 @@ The following steps explain how to clean the cache:
 1. Delete/clear the `Syncfusion.Blazor` package from the installed location `{System drive}/Users/{user-name}/.nuget/packages/syncfusion.blazor`. On Windows, the installed location can also be accessed using `%userprofile%/.nuget/packages/syncfusion.blazor`.
 
 2. Update to the latest version of the `Syncfusion.Blazor` NuGet package.
-
-N> Looking for a complete Blazor DataGrid Component overview, including features, pricing, and documentation? Explore the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) Component page.

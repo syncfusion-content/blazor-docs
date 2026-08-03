@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Smart Paste Button in Blazor Web App
 
-This section explains how to integrate the [Blazor Smart Paste Button](https://www.syncfusion.com/blazor-components/blazor-smartpaste-button) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/). The Smart Paste Button leverages AI to intelligently populate form fields from copied text, streamlining user input workflows.
+This section explains how to integrate the [Blazor Smart Paste Button](https://www.syncfusion.com/blazor-components/blazor-smart-paste-button) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/). The Smart Paste Button leverages AI to intelligently populate form fields from copied text, streamlining user input workflows.
 
 To get started quickly with the Blazor Smart Paste Button component, watch this video:
 
@@ -463,7 +463,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor Smart Paste Button Component
 
-Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Smart Paste Button](https://www.syncfusion.com/blazor-components/blazor-smartpaste-button) component inside the razor file. This example uses the [Blazor DataForm](https://www.syncfusion.com/blazor-components/blazor-data-form) component to manage form input fields. Install the [Syncfusion.Blazor.DataForm](https://www.nuget.org/packages/Syncfusion.Blazor.DataForm) package.
+Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Smart Paste Button](https://www.syncfusion.com/blazor-components/blazor-smart-paste-button) component inside the razor file. This example uses the [Blazor DataForm](https://www.syncfusion.com/blazor-components/blazor-data-form) component to manage form input fields. Install the [Syncfusion.Blazor.DataForm](https://www.nuget.org/packages/Syncfusion.Blazor.DataForm) package.
 
 N> If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file. (For example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 

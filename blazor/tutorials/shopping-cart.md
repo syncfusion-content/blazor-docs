@@ -24,6 +24,8 @@ To create a Blazor server application, follow the [Blazor Server App getting sta
 
 Install required packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
+The following table lists the components used in this application and their corresponding NuGet packages.
+
 | Component | Package |
 |----------------|---------|
 | Button     | [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons) |
@@ -33,6 +35,24 @@ Install required packages in your project using the NuGet Package Manager in Vis
 | TextBox, MaskedTextBox, Rating    | [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) |
 | Spinner        | [Syncfusion.Blazor.Spinner](https://www.nuget.org/packages/Syncfusion.Blazor.Spinner) |
 | Themes         | [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) |
+
+Open a terminal in the project root and run the following commands to install these packages.
+
+{% tabs %}
+{% highlight bash tabtitle="Terminal" %}
+
+dotnet add package Syncfusion.Blazor.Buttons --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Cards --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.DropDowns --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Grid --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Inputs --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Spinner --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 ### Add required namespaces
 
@@ -607,19 +627,19 @@ Reusable components help create a consistent user interface and promote code reu
 
     <CardFooter>
         <div class="footer-row">
-            <!-- LEFT: Price -->
+            @* LEFT: Price *@
             <span class="price">
                 @Item.Price.ToString("C")
             </span>
 
-            <!-- RIGHT: Actions -->
+             @* RIGHT: Actions *@
             <div class="footer-actions">
                 <SfButton Content="Add to Cart"
                           CssClass="e-outline e-primary e-small"
                           Disabled="@(!Item.IsInStock)"
                           OnClick="AddToCart" />
 
-                <!-- ❤️ Wishlist Heart -->
+                 @* ❤️ Wishlist Heart *@
                 <SfButton CssClass="e-outline e-small wishlist-btn"
                           Content="@HeartIcon"
                           OnClick="ToggleWishlist" />
@@ -645,7 +665,7 @@ Reusable components help create a consistent user interface and promote code reu
 
 {% endhighlight %}
 
-{% highlight css tabtitle="Components/ProductCard.razor.css"  %}
+{% highlight css tabtitle="Components/ProductCard.css"  %}
 
 .product-card {
     border-radius: 10px;
@@ -768,7 +788,7 @@ Serves as the landing page and provides quick navigation to key sections of the 
 
 <div class="home-container">
 
-    <!-- HERO SECTION -->
+    @* HERO SECTION *@
     <SfCard CssClass="hero-card">
         <CardContent>
             <h2>Welcome to Syncfusion Blazor Shopping Cart</h2>
@@ -777,10 +797,10 @@ Serves as the landing page and provides quick navigation to key sections of the 
         </CardContent>
     </SfCard>
 
-    <!-- NAVIGATION CARDS -->
+    @* NAVIGATION CARDS *@
     <div class="nav-card-container">
 
-        <!-- Catalog Card -->
+        @* Catalog Card *@
         <SfCard CssClass="nav-card" 
                 @onclick="@(() => Nav.NavigateTo("/catalog"))">
             <CardContent>
@@ -788,7 +808,7 @@ Serves as the landing page and provides quick navigation to key sections of the 
             </CardContent>
         </SfCard>
 
-        <!-- Wishlist Card -->
+        @* Wishlist Card *@
         <SfCard CssClass="nav-card"
                 @onclick="@(() => Nav.NavigateTo("/wishlist"))">
             <CardContent>
@@ -801,7 +821,7 @@ Serves as the landing page and provides quick navigation to key sections of the 
 
 {% endhighlight %}
 
-{% highlight css tabtitle="Home.razor.css"  %}
+{% highlight css tabtitle="Home.css"  %}
 
 /* PAGE LAYOUT */
 .home-container {
@@ -956,7 +976,7 @@ Displays available products and provides filtering and cart actions.
 
 {% endhighlight %}
 
-{% highlight css tabtitle="Catalog.razor.css"  %}
+{% highlight css tabtitle="Catalog.css"  %}
   
 article.content {
     overflow: hidden;
@@ -1035,7 +1055,7 @@ Displays selected items and allows users to update quantities or remove items.
                     >
 
                     <GridColumns>
-                        <!-- Product -->
+                        @* Product *@
                         <GridColumn HeaderText="Item" Width="250px">
                             <Template Context="context">
                                 @{
@@ -1049,7 +1069,7 @@ Displays selected items and allows users to update quantities or remove items.
                             </Template>
                         </GridColumn>
 
-                        <!-- Price -->
+                        @* Price *@
                         <GridColumn HeaderText="Price">
                             <Template Context="context">
                                 @{
@@ -1059,7 +1079,7 @@ Displays selected items and allows users to update quantities or remove items.
                             </Template>
                         </GridColumn>
 
-                        <!-- Quantity -->
+                        @* Quantity *@
                         <GridColumn HeaderText="Qty">
                             <Template Context="context">
                                 @{
@@ -1079,7 +1099,7 @@ Displays selected items and allows users to update quantities or remove items.
                             </Template>
                         </GridColumn>
 
-                        <!-- Subtotal -->
+                        @* Subtotal *@
                         <GridColumn HeaderText="Subtotal">
                             <Template Context="context">
                                 @{
@@ -1089,7 +1109,7 @@ Displays selected items and allows users to update quantities or remove items.
                             </Template>
                         </GridColumn>
 
-                        <!-- Remove -->
+                        @* Remove *@
                         <GridColumn HeaderText="">
                             <Template Context="context">
                                 @{
@@ -1109,7 +1129,7 @@ Displays selected items and allows users to update quantities or remove items.
 
         @if (CartService.Items.Any())
         {
-            <!-- Order Summary -->
+            @* Order Summary *@
             <div class="col-lg-4">
                 <SfCard CssClass="order-summary-card">
                     <CardHeader>
@@ -1203,7 +1223,7 @@ Displays selected items and allows users to update quantities or remove items.
 
 {% endhighlight %}
 
-{% highlight css tabtitle="Cart.razor.css"  %}
+{% highlight css tabtitle="Cart.css"  %}
 
 .e-card {
     border: 0px;
@@ -1340,7 +1360,7 @@ Collects user details and processes the order.
         <ValidationSummary />
         <div class="row">
             <div class="col-md-7">
-                <!-- Shipping Information -->
+                @* Shipping Information *@
                 <div class="card mb-4">
                     <div class="card-header">
                         <h4>📍 Shipping Information</h4>
@@ -1379,7 +1399,7 @@ Collects user details and processes the order.
                     </div>
                 </div>
 
-                <!-- Payment Information -->
+                @* Payment Information *@
                 <div class="card mb-4">
                     <div class="card-header">
                         <h4>💳 Payment Information</h4>
@@ -1705,7 +1725,7 @@ else
 }
 
 {% endhighlight %}
-{% highlight css tabtitle="Whishlist.razor.css"  %}
+{% highlight css tabtitle="Whishlist.css"  %}
 
 .e-card.empty-wishlist-card {
     border: 0px;
@@ -1753,6 +1773,16 @@ This page uses [Blazor Card](https://www.syncfusion.com/blazor-components/blazor
 ## Run the application
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. 
+
+Alternatively, run the application using the following .NET CLI command from the project root directory.
+
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
 
 **Expected behavior**
 

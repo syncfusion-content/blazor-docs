@@ -60,7 +60,7 @@ This indicates that the data should be represented as a hilo chart, which shows 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZhxZdsozWHsAlYC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Hilo Chart](../images/financial-types/blazor-hilo-chart.webp)" %}
 
-N> Refer to the [Blazor Hilo Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/hilo-chart) feature tour page to know about its other groundbreaking feature representations and also explore the [Blazor Hilo Chart Example](https://blazor.syncfusion.com/demos/chart/hilo) to know how to render and configure the Hilo type series.
+N> Refer to the [Blazor Hilo Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/hilo-chart) feature tour page to know about its other groundbreaking feature representations and also explore the [Blazor Hilo Chart Example](https://blazor.syncfusion.com/demos/chart/hilo?theme=fluent2) to know how to render and configure the Hilo type series.
 
 ## Binding data with series
 
@@ -451,7 +451,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXrHNxWofWPJmGDm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

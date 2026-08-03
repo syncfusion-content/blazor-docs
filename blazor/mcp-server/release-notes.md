@@ -1,3 +1,12 @@
+---
+layout: post
+title: Release Notes - Syncfusion Blazor AI and Smart Tooling | Syncfusion
+description: Explore the release notes for Syncfusion Blazor AI and Smart Tooling, covering MCP Server, Skills, and Agentic UI Builder updates across all versions.
+platform: Blazor
+control: Syncfusion Blazor AI and Smart Tooling Release Notes
+documentation: ug
+---
+
 # Blazor MCP Server Release Notes
 
 This document provides information about the changes and new features included in each version of the [@syncfusion/blazor-assistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant) MCP server package.
