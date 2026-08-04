@@ -13,15 +13,13 @@ Native DOM events (such as click, change, focus, mouse, keyboard, and touch even
 
 The following event argument types are available for the corresponding native events:
 
-| Event Category | Event Argument Type |
-| --- | --- |
-| Focus Events | [UIFocusEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.UIFocusEventArgs.html) |
-| Mouse Events | [UIMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.UIMouseEventArgs.html) |
-| Keyboard Events | [UIKeyboardEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.UIKeyboardEventArgs.html) |
-| Touch Events | [UITouchEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.UITouchEventArgs.html) |
-| Change Events | [ChangeEventArgs](https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.web.changeeventargs) |
+* Focus Events - `FocusEventArgs`
+* Mouse Events - `MouseEventArgs`
+* Keyboard Events - `KeyboardEventArgs`
+* Touch Events - `TouchEventArgs`
+* Change Events - `ChangeEventArgs`
 
-> The `ChangeEventArgs` type is provided by `Microsoft.AspNetCore.Components.Web` and is included automatically in Blazor projects.
+> All event argument types except `ChangeEventArgs` are from the `Microsoft.AspNetCore.Components.Web` namespace.
 
 ## List of native events supported for default Button Group
 
@@ -117,18 +115,25 @@ The `@onchange` directive is used to bind the change event for the Button Group 
     <ButtonGroupButton @onchange="OnRightChange">Right</ButtonGroupButton>
 </SfButtonGroup>
 
-@code{
-    private void OnLeftChange(ChangeEventArgs args)
+<p>@message</p>
+
+@code {
+    private string message = "No button selected";
+
+    private void OnLeftChange ( ChangeEventArgs args )
     {
-        var selectedValue = args.Value;
+        message = $"Selected Button: Left";
+
     }
-    private void OnCenterChange(ChangeEventArgs args)
+
+    private void OnCenterChange ( ChangeEventArgs args )
     {
-        var selectedValue = args.Value;
+        message = $"Selected Button: Center";
     }
-    private void OnRightChange(ChangeEventArgs args)
+
+    private void OnRightChange ( ChangeEventArgs args )
     {
-        var selectedValue = args.Value;
+        message = $"Selected Button: Right";
     }
 }
 ```
