@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Pivot Table in MAUI App | Syncfusion®
+title: Getting Started with Blazor Pivot Table in Blazor MAUI App | Syncfusion
 description: Check out and learn all documentation for getting started with Blazor Pivot Table component in Blazor MAUI App and much more details.
 platform: Blazor
 component: Pivot Table
 documentation: ug
 ---
 
-# Getting started with Blazor Pivot Table Component in Blazor MAUI App
+# Getting Started with Blazor Pivot Table in Blazor MAUI App
 
 This section guides you through the steps to add the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component in a Blazor MAUI App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

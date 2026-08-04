@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Pivot Table connected to SQL Server via Dapper | Syncfusion
-description: Bind SQL Server data to the Syncfusion Blazor Pivot Table using Dapper with CRUD operations, remote data binding, and URL adaptor support.
+title: Dapper in Blazor Pivot Table | Syncfusion
+description: Learn how to connect the Blazor Pivot Table to SQL Server with the Dapper micro-ORM for parameterized queries with minimal data-access overhead.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Connecting SQL Server to Blazor Pivot Table Using Dapper
+# Dapper in Blazor Pivot Table
 
 The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivottable) can be connected to a Microsoft SQL Server database using the lightweight Dapper micro-ORM. This approach provides a simple way to execute SQL statements while keeping the data access layer minimal and efficient.
 

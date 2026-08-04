@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Conditional Formatting in Blazor Pivot Table Component | Syncfusion®
-description: Learn how to apply conditional formatting in Blazor Pivot Table component with examples and much more details.
+title: Conditional Formatting in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table applies conditional formatting to value cells via the built-in dialog to control background color, font color, font family, and font size.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Conditional Formatting in Blazor Pivot Table Component
+# Conditional Formatting in Blazor Pivot Table
 
 The conditional formatting feature enables users to customize the appearance of pivot table value cells by modifying background color, font color, font family, and font size based on specific conditions. This powerful visualization feature helps highlight important value cells and makes them stand out in the pivot table.
 

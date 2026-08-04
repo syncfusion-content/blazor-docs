@@ -1,14 +1,14 @@
 ---
 layout: post
-title: AI-Powered Smart Pivot Table in Blazor | Syncfusion®
-description: Learn how to use Blazor Pivot Table with AI services for smart data aggregation and predictive modeling.
+title: AI-Powered Smart Pivot Table in Blazor Pivot Table | Syncfusion
+description: Learn how to add AI-driven Smart Data Aggregation, Predictive Modeling, and Adaptive Filtering to the Blazor Pivot Table using OpenAI, Azure OpenAI, or Ollama services.
 platform: Blazor
 control: AI Integration
 documentation: ug
 keywords: Blazor Pivot Table, Blazor AI, Smart Data Aggregation, Predictive Modeling and Adaptive Filtering
 ---
 
-# Building an AI-Powered Smart Pivot Table in Blazor
+# AI-Powered Smart Pivot Table in Blazor Pivot Table
 
 The Blazor Pivot Table can be enhanced with AI-driven features by using the [**Syncfusion.Blazor.AI**](https://www.nuget.org/packages/Syncfusion.Blazor.AI) NuGet package. This guide helps you add AI features to your Pivot Table, including Smart Data Aggregation, Predictive Modeling, and Adaptive Filtering. You can use different AI services such as OpenAI, Azure OpenAI, or Ollama. With these features, you can interact with the Pivot Table in a smarter way to understand your data better.
 

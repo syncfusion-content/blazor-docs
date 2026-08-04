@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Editing in Blazor Pivot Table Component | Syncfusion®
-description: Learn about editing features in Blazor Pivot Table component for CRUD operations with examples and much more details.
+title: Editing in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table enables CRUD editing of value cells in a data grid popup with add, edit, delete, dialog, batch, command-column, and inline modes.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Editing in Blazor Pivot Table Component
+# Editing in Blazor Pivot Table
 
 N> This feature is applicable only for the relational data source.
 
