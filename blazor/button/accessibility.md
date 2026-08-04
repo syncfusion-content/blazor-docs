@@ -55,7 +55,7 @@ The Blazor Button component follows the [keyboard interaction](https://www.w3.or
 
 ## Ensuring accessibility
 
-The Blazor Button component's accessibility compliance is verified using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests. To run accessibility validation against a Blazor sample, install the [Deque.AxeCore.Playwright](https://www.nuget.org/packages/Deque.AxeCore.Playwright) NuGet package and follow the [Playwright testing setup guide](https://playwright.dev/dotnet/).
+The Blazor Button component's accessibility compliance is verified using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
 
 The accessibility compliance of the Blazor Button component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/button) in a new window to evaluate the accessibility of the Blazor Button component with accessibility tools.
 
