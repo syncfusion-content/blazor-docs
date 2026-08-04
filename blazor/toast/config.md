@@ -240,7 +240,7 @@ Both the width and height properties allow setting pixels/numbers/percentage. Th
             await ToastObj.HideAsync();
             this.Width = "100%";
             this.Title = "";
-            this.ToastContent = "<div class='e-custom'>Take a look at our next generation <b>Javascript</b> <a href='https://blazor.syncfusion.com/home/index.html' target='_blank'>LEARN MORE</a></div>";
+            this.ToastContent = "<div class='e-custom'>Take a look at our next generation <b>Javascript</b> <a href='https://blazor.syncfusion.com/demos/' target='_blank'> LEARN MORE</a></div>";
             StateHasChanged();
         }
         else

@@ -225,7 +225,7 @@ N> The column template feature is used to render the customized element value in
 The following screenshot represents the column Template.
 ![Blazor Tree Grid with Column template](../images/blazor-treegrid-column-template.webp)
 
-N> * Tree Grid actions such as editing, filtering and sorting etc. will depend upon the column [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Field.html). If the `Field` is not specified in the
+N> * Tree Grid actions such as editing, filtering and sorting etc. will depend upon the column [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field). If the `Field` is not specified in the
 template column, the tree grid actions cannot be performed.
 <br/> * For Templated tree grid component, [ModelType](../templates.md#template-modeltype) property of tree grid should be defined.
 
@@ -331,7 +331,7 @@ N> For Templated Tree Grid component, [ModelType](../templates.md#template-model
 
 ## Using image inside template
 
-You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component to specify the custom image content. Inside the `Template`, you can access the data using the implicit named parameter **context** of Model type.
+You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component to specify the custom image content. Inside the `Template`, you can access the data using the implicit named parameter **context** of Model type.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid
@@ -540,7 +540,7 @@ The following screenshot represents the Image Template.
 
 ## Using hyperlink column
 
-You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) to render the hyperlinks and for routing, [UriHelper](https://docs.microsoft.com/en-us/aspnet/core/blazor/routing?view=aspnetcore-3.0#uri-and-navigation-state-helpers) can be utilized.
+You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) to render the hyperlinks and for routing, [UriHelper](https://learn.microsoft.com/en-us/aspnet/core/blazor/routing?view=aspnetcore-3.0) can be utilized.
 
 This can be achieved by initially defining an anchor tag inside the column template and binding click event to it. By using the named parameter **context** of Model type, we can pass the row data to click event handler.
 
