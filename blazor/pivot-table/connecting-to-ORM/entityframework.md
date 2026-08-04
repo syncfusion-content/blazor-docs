@@ -29,14 +29,20 @@ Ensure the following software and packages are installed before proceeding:
 
 | Software/Package | Version | Purpose |
 |------------------|---------|---------|
-| Visual Studio 2022 / VS Code | Latest | Development environment with the Blazor workload |
-| .NET SDK | net10.0 or compatible | Runtime and build tools |
+| Visual Studio 2022 / VS Code | Visual Studio 2022 17.14+ or current VS Code | Development environment; Visual Studio requires the **ASP.NET and web development** workload |
+| .NET SDK | .NET 10 SDK (`net10.0` target framework) | Runtime and build tools |
 | SQL Server | 2019 or later | Database server |
-| Syncfusion.Blazor.PivotTable | Latest | Pivot Table UI component |
-| Syncfusion.Blazor.Themes | Latest | Styling for Pivot Table components |
-| Microsoft.EntityFrameworkCore.SqlServer | Latest | SQL Server provider for EF Core |
-| Microsoft.EntityFrameworkCore.Tools | Latest | EF Core tooling support |
-| Newtonsoft.Json | Latest | JSON serialization for CRUD models |
+| Syncfusion.Blazor.PivotTable | `{{site.blazorversion}}` | Pivot Table UI component |
+| Syncfusion.Blazor.Themes | `{{site.blazorversion}}` | Styling for Pivot Table components |
+| Microsoft.EntityFrameworkCore.SqlServer | 10.0.10 | SQL Server provider for EF Core |
+
+The versions above are the tested combination for this guide. Keep all Syncfusion packages on the same version and all Microsoft EF Core packages on the same version if you update them.
+
+You also need:
+
+- A Syncfusion account and a valid license key when using packages from NuGet.org or a trial installer. See [Register a Syncfusion license key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application).
+- A SQL Server login that can connect to `OrderDB` and read, insert, update, and delete rows in `dbo.Orders`.
+- Permission to create a database and table for Step 1. Otherwise, ask a database administrator to run the script and grant the application login access.
 
 ## Architecture and Data Flow
 
@@ -58,18 +64,21 @@ The request flow is as follows:
 
 1. The Pivot Table sends data requests through the URL adaptor.
 2. The ASP.NET Core controller receives the request and uses ApplicationDbContext.
-3. Entity Framework Core translates the request into the appropriate SQL operation against SQL Server.
+3. For reads, the sample queries all rows through Entity Framework Core. For writes, the controller performs the requested insert, update, or delete operation.
 4. The returned rows are mapped to C# entity objects and sent back to the Pivot Table.
 
-## Step 1: Create the database and table in SQL Server
+## SQL Server and Entity Framework Core Setup
+
+### Step 1: Create the database and table in SQL Server
 
 First, create the SQL Server database structure that will store the order records used by the Pivot Table.
 
-**Instructions (SQL Server Management Studio or Azure Data Studio):**
+**Instructions**
 
 1. Open SQL Server Management Studio (SSMS) and connect to your local SQL Server instance.
 2. Open a new query window and run the SQL script below.
-3. Verify the table and sample rows with the query shown after the script.
+3. If you use SQL authentication, confirm that SQL Server authentication is enabled and that the application login is mapped to `OrderDB`.
+4. Run the validation query shown after the sample-data script and confirm that it returns the expected rows.
 
 Run the following SQL script:
 
@@ -112,9 +121,7 @@ END
 GO
 ```
 
-After executing these statements, the SQL Server database is ready for integration with the Blazor Pivot Table.
-
-The following SQL statement is used to read the records from the `Orders` table and provide them to the Pivot Table through Entity Framework Core:
+Run the following validation query:
 
 ```sql
 SELECT OrderID, CustomerName, EmployeeID, ShipCity, Freight
@@ -122,39 +129,32 @@ FROM Orders
 ORDER BY OrderID;
 ```
 
-This query provides the source rows that EF Core materializes into `Order` entities and sends to the Pivot Table for aggregation and display.
+Confirm that the query returns the five sample rows (or your existing rows). This verifies that the table is available before connecting the Blazor application.
 
-The screenshot below shows the SQL query and the resulting rows from the `Orders` table that EF Core uses to populate the Pivot Table data model.
-
-![Data Retrieval Operation](../images/blazor-pivot-table-EFCore-MSSQL-query.webp)
-
-**Purpose:** This validation step confirms that the database table is available and that the sample rows can be read before the Blazor application is connected to SQL Server.
-
-## Step 2: Create the Blazor Web App
+### Step 2: Create the Blazor Web App
 
 Create a Blazor Web App if you do not already have one:
 
 ```bash
-dotnet new blazor -n PivotTableMSSQLEFCore
+dotnet new blazor -n PivotTableMSSQLEFCore --framework net10.0 --interactivity Server
 cd PivotTableMSSQLEFCore
 ```
 
 In Visual Studio, create a new **Blazor Web App** project and select **Interactive render mode: Server**.
 
-## Step 3: Install Required NuGet Packages
+### Step 3: Install Required NuGet Packages
 
 The Blazor Web App project is the one that will receive the Syncfusion and EF Core packages.
 
-### Method 1: Using the .NET CLI
+**Method 1: Using the .NET CLI**
 
 ```bash
-dotnet add package Syncfusion.Blazor.PivotTable --version 34.1.32
-dotnet add package Syncfusion.Blazor.Themes --version 34.1.32
-dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 9.0.0
-dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.0
+dotnet add package Syncfusion.Blazor.PivotTable --version {{site.blazorversion}}
+dotnet add package Syncfusion.Blazor.Themes --version {{site.blazorversion}}
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 10.0.10
 ```
 
-### Method 2: Using NuGet Package Manager UI
+**Method 2: Using NuGet Package Manager UI**
 
 1. Open Visual Studio and navigate to **Tools > NuGet Package Manager > Manage NuGet Packages for Solution**.
 2. Search for and install each package individually:
@@ -162,13 +162,12 @@ dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.0
 - `Syncfusion.Blazor.PivotTable`
 - `Syncfusion.Blazor.Themes`
 - `Microsoft.EntityFrameworkCore.SqlServer`
-- `Microsoft.EntityFrameworkCore.Tools`
 
 All required packages are now installed.
 
 **Project file reference:** The installed packages appear in the project file as package references for the Syncfusion UI components and EF Core SQL provider.
 
-## Step 4: Configure the Connection String
+### Step 4: Configure the Connection String
 
 The connection string is stored in `appsettings.json` under the `ConnectionStrings` section.
 
@@ -205,7 +204,16 @@ Replace the placeholder values with the values that match your SQL Server enviro
 | Password | The password for that SQL login |
 | TrustServerCertificate | Enables trusted local-development connections when required |
 
-**Security note:** Avoid storing production credentials directly in source control. For local development, consider using user secrets or environment variables such as `ConnectionStrings__SQLServer`.
+**Store credentials safely**
+
+Do not store production credentials in source control. For local development, store the connection string with user secrets:
+
+```bash
+dotnet user-secrets init
+dotnet user-secrets set "ConnectionStrings:SQLServer" "Server=<SERVER_NAME>;Database=OrderDB;User Id=<USER_ID>;Password=<PASSWORD>;TrustServerCertificate=True;"
+```
+
+In deployed environments, use the `ConnectionStrings__SQLServer` environment variable or a managed secret store.
 
 For Windows authentication, use a trusted connection string instead:
 
@@ -213,7 +221,9 @@ For Windows authentication, use a trusted connection string instead:
 "SQLServer": "Server=<SERVER_NAME>;Database=OrderDB;Trusted_Connection=True;TrustServerCertificate=True;"
 ```
 
-## Step 5: Create the Entity Model
+Named instances use a server value such as `localhost\SQLEXPRESS`; a TCP endpoint can use `localhost,1433`. See [SQL Server connection-string syntax](https://learn.microsoft.com/en-us/sql/connect/ado-net/connection-string-syntax?view=sql-server-ver17).
+
+### Step 5: Create the Entity Model
 
 The sample uses an `Order` entity model to represent each row in the `Orders` table. This model is defined in the `Models` folder.
 
@@ -242,12 +252,12 @@ namespace PivotTableMSSQLEFCore.Models
 
 This model is the shape used by EF Core when reading data from and writing data to the `Orders` table.
 
-**Important details:**
+**Important details**
 - The property names should align closely with the SQL column names to reduce mapping confusion.
 - The `[Key]` attribute marks `OrderID` as the primary key and helps the CRUD operations identify the record to update or delete.
 - Nullable properties are used here because the sample table allows null values for several columns. `OrderID` is not nullable because it is the primary key.
 
-## Step 6: Create the DbContext
+### Step 6: Create the DbContext
 
 Entity Framework Core uses `DbContext` to manage the entity model and expose the database set. Create a `Data/ApplicationDbContext.cs` file with the following implementation:
 
@@ -265,7 +275,7 @@ namespace PivotTableMSSQLEFCore.Data
         {
         }
 
-        public DbSet<Order> Orders { get; set; }
+        public DbSet<Order> Orders => Set<Order>();
     }
 }
 ```
@@ -274,17 +284,30 @@ The `DbSet<Order>` property maps the `Order` entity to the `Orders` table in SQL
 
 **Why this matters:** The `DbContext` is the bridge between the ASP.NET Core application and SQL Server. It tracks entities, generates SQL commands, and exposes the `Orders` set that the controller uses for reading and writing data.
 
-## Step 7: Register Services and Styles
+### Step 7: Configure Application Services and Static Assets
 
 Update `Program.cs` to register the required Syncfusion, Razor component, API controller, and Entity Framework Core services.
+
+Store the Syncfusion license key outside source control:
+
+```bash
+dotnet user-secrets init
+dotnet user-secrets set "SyncfusionLicenseKey" "<YOUR_LICENSE_KEY>"
+```
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
 using PivotTableMSSQLEFCore.Components;
 using PivotTableMSSQLEFCore.Data;
 using Syncfusion.Blazor;
+using Syncfusion.Licensing;
 
 var builder = WebApplication.CreateBuilder(args);
+
+string syncfusionLicenseKey = builder.Configuration["SyncfusionLicenseKey"]
+    ?? throw new InvalidOperationException(
+        "Configuration value 'SyncfusionLicenseKey' is missing.");
+SyncfusionLicenseProvider.RegisterLicense(syncfusionLicenseKey);
 
 builder.Services.AddSyncfusionBlazor();
 
@@ -293,9 +316,12 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddControllers();
 
+string connectionString = builder.Configuration.GetConnectionString("SQLServer")
+    ?? throw new InvalidOperationException(
+        "Connection string 'SQLServer' is missing.");
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(
-        builder.Configuration.GetConnectionString("SQLServer")));
+    options.UseSqlServer(connectionString));
 
 var app = builder.Build();
 
@@ -319,19 +345,21 @@ app.Run();
 
 This registration ensures that the controller receives an `ApplicationDbContext` instance that is already configured to use the SQL Server connection string.
 
-**What each registration does:**
+**Service registrations**
 - `AddSyncfusionBlazor()` enables the Pivot Table component and its supporting services.
 - `AddRazorComponents()` and `AddInteractiveServerComponents()` prepare the Blazor app for interactive rendering.
 - `AddControllers()` exposes the API endpoints used by the URL Adaptor.
-- `AddDbContext<ApplicationDbContext>()` wires EF Core to the SQL Server connection string from `appsettings.json`.
+- `AddDbContext<ApplicationDbContext>()` wires EF Core to the SQL Server connection string supplied by the application configuration providers.
 
-Add the Syncfusion theme stylesheet to `Components/App.razor` inside the `<head>` element:
+Add the Syncfusion theme stylesheet inside the `<head>` element and the script before the closing `<body>` element in `Components/App.razor`:
 
 ```html
 <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"
+        type="text/javascript"></script>
 ```
 
-## Step 8: Create the Controller with Entity Framework Core
+### Step 8: Create the Controller with Entity Framework Core
 
 The controller acts as the bridge between the Blazor Pivot Table and the EF Core data layer. It exposes the API endpoints that the `SfDataManager` uses for reading and CRUD operations. By keeping the database logic in the controller and the entity mapping in the model and DbContext, the sample remains clean and easy to extend.
 
@@ -480,11 +508,13 @@ namespace PivotTableMSSQLEFCore.Controllers
 }
 ```
 
-The read action returns all records. Add server-side filtering, sorting, or paging from `DataManagerRequest` if the dataset is large.
+The read action intentionally returns all records because the Pivot Table needs the raw rows for client-side aggregation. The `DataManagerRequest` is accepted to satisfy the URL Adaptor contract but is not used by this small sample. For a large dataset, do not use this implementation unchanged; design a server-side aggregation or virtualization strategy appropriate to the required Pivot Table features.
 
-The `CRUDModel<T>` payload uses `value` for insert and update, `key` for delete, `action` for the requested operation, and `added`, `changed`, and `deleted` for batch-style payloads.
+The `CRUDModel<T>` payload uses `value` for insert and update and `key` for delete. The URL Adaptor can also send `action`, `keyColumn`, and custom `params`; `added`, `changed`, and `deleted` are used by batch requests, which this Normal edit-mode sample does not support. Successful inserts and updates return the saved entity, successful deletes return HTTP 204, invalid payloads return HTTP 400, and unknown keys return HTTP 404.
 
-### How Entity Framework Core maps data to C# objects
+The sample lets unexpected `DbUpdateException` failures reach ASP.NET Core's exception handler and logs. In a production API, catch database exceptions at an application boundary, log the complete exception, and return a safe [Problem Details](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/error-handling-api?view=aspnetcore-10.0&tabs=minimal-apis) response. Add a concurrency token if multiple users can edit the same rows.
+
+**How Entity Framework Core maps data to C# objects**
 
 Entity Framework Core maps rows from the `Orders` table into the `Order` class using the `DbSet<Order>` exposed by `ApplicationDbContext`. The controller retrieves the data by calling `context.Orders` and uses LINQ to order the results before materializing them into `Order` objects.
 
@@ -500,13 +530,13 @@ are mapped directly to the corresponding properties of the `Order` model.
 
 The benefit of this approach is that the controller does not need to manually build a data table or manually map each column. EF Core handles the translation between SQL rows and .NET objects so the application code stays focused on business and UI logic.
 
-## Step 9: Configure the Pivot Table with the URL Adaptor
+### Step 9: Configure the Pivot Table with the URL Adaptor
 
 The pivot table binds to the SQL Server-backed API through the `SfDataManager` configured with `Adaptors.UrlAdaptor`. The `Url`, `InsertUrl`, `UpdateUrl`, and `RemoveUrl` properties point at the controller actions created in the previous step.
 
 Open the file named `Home.razor` in the `Components/Pages` folder and replace its contents with the following markup:
 
-```razor
+```cshtml
 @page "/"
 @using PivotTableMSSQLEFCore.Models
 @using Syncfusion.Blazor.Data
@@ -555,12 +585,14 @@ Open the file named `Home.razor` in the `Components/Pages` folder and replace it
 
 The Home component has been updated successfully with the Pivot Table.
 
-**Important implementation details:**
+**Important implementation details**
 - Relative URLs such as `api/Order` work when the Blazor app and API share the same origin. If the API runs on another origin, use the full URL and configure CORS.
 - The `BeginDrillThrough` event is essential for CRUD because it marks `OrderID` as the primary key of the edit dialog grid so update and delete operations can target the correct record.
 - The field arrangement in `PivotViewDataSourceSettings` defines the default layout that the Pivot Table uses when it first renders.
 
-**Component Explanation:**
+Pivot Table editing applies to relational data sources. Double-click a value cell to open its drill-through grid; use that grid's Add, Edit, Delete, Update, and Cancel commands. See [Editing in the Blazor Pivot Table](https://blazor.syncfusion.com/documentation/pivot-table/editing) for supported modes and limitations.
+
+**Component explanation**
 
 - **`<SfPivotView TValue="Order">`**: The pivot table component bound to the `Order` type.
 - **`ShowFieldList="true"`**: Displays the field list UI so end users can drag fields between rows, columns, and values at runtime.
@@ -569,19 +601,9 @@ The Home component has been updated successfully with the Pivot Table.
 - **`<PivotViewCellEditSettings>`**: Enables cell-level editing, adding, and deleting in `Normal` edit mode.
 - **`BeginDrillThrough` event**: When a user opens the edit dialog from a pivot cell, this handler runs and marks `OrderID` as the primary key so insert, update, and delete operations can target the correct record.
 
-The screenshot below shows the Blazor Pivot Table rendered with EF Core-backed data from SQL Server.
+### Step 10: Run the Application
 
-![Blazor Pivot Table](../images/blazor-pivot-table-EFCore-MSSQL.webp)
-
-**Image Content:**
-- The Blazor application running in the browser.
-- The `SfPivotView` rendered with rows, columns, and values configured for the sample.
-- The Field List panel open or accessible, demonstrating runtime layout customization.
-- Aggregated subtotals and grand totals visible in the pivot body.
-
-## Step 10: Run the Application
-
-> **URL Note:** The sample uses relative URLs such as `api/Order` in the `SfDataManager` configuration. If the API is hosted separately from the Blazor app, update the URLs in `Home.razor` to match the API host and configure CORS.
+> **URL note:** The sample uses relative URLs such as `api/Order` because the API and Blazor app share an origin. If they are hosted on different origins, use absolute API URLs and configure a named CORS policy with the exact Blazor origin by following [ASP.NET Core CORS guidance](https://learn.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-10.0). Register the policy with `AddCors`, and call `UseCors` before `MapControllers`. Do not use `AllowAnyOrigin` with credentials.
 
 Build and run the application from the project directory.
 
@@ -593,6 +615,15 @@ dotnet run
 
 Open the application in your browser and navigate to the local development URL. The Pivot Table loads data from SQL Server through the controller and Entity Framework Core.
 
+Verify the complete flow:
+
+1. Confirm that the Pivot Table displays the sample rows as aggregated values.
+2. Double-click a value cell to open the drill-through grid.
+3. Add a row, edit it, and then delete it using the grid commands.
+4. Run the validation query from Step 1 after each operation and confirm that SQL Server contains the expected change.
+
+![Blazor Pivot Table](../images/blazor-pivot-table-EFCore-MSSQL.webp)
+
 ## URL Adaptor Configuration
 
 The URL Adaptor is the contract between the Blazor Pivot Table and the SQL Server-backed API. It works as follows:
@@ -602,7 +633,7 @@ The URL Adaptor is the contract between the Blazor Pivot Table and the SQL Serve
 3. The controller processes the request, uses EF Core to read or change data, and returns the response in the format expected by the Pivot Table.
 4. For write operations, the Pivot Table posts a `CRUDModel<Order>` payload to the matching insert, update, or remove endpoint.
 
-```razor
+```cshtml
 <SfDataManager Url="api/Order"
                InsertUrl="api/Order/Insert"
                UpdateUrl="api/Order/Update"
@@ -679,8 +710,6 @@ private List<Order> GetOrderData()
 
 This code sample shows how the controller executes the EF Core query, materializes the results into `Order` entities, and returns them to the Pivot Table.
 
-> Note: the repository does not include a dedicated read-operation screenshot for this EF Core sample.
-
 ### Insert Operation
 
 **Purpose:**
@@ -693,7 +722,7 @@ The insert operation adds a new order to the SQL Server database from the Pivot 
 4. EF Core persists the new record to SQL Server and the Pivot Table refreshes its summarized view.
 
 **How it works:**
-The insert action receives the new row through the `value` property of the `CRUDModel<Order>`. The controller checks that the payload is present and then adds the entity to the EF Core context. The `OrderID` column is omitted from the insert because it is an identity column in SQL Server. On success, the action returns `Ok(order)` so the client can refresh the data source.
+The insert action receives the new row through the `value` property of the `CRUDModel<Order>`. The posted object has the default `OrderID` value; because SQL Server generates this identity column, EF Core omits it from the generated `INSERT` statement and populates it after `SaveChanges()`. On success, the action returns the saved entity.
 
 **Controller code snippet:**
 
@@ -715,15 +744,6 @@ public IActionResult Insert([FromBody] CRUDModel<Order>? value)
     return Ok(order);
 }
 ```
-
-The screenshot below shows the `CRUDModel<Order>` value received by the insert action.
-
-![Insert Operation](../images/blazor-pivot-table-EFCore-MSSQL-insert.webp)
-
-**Image Content:**
-- The `Insert` action of `OrderController` open in the editor.
-- The `Value` parameter carrying the new order fields.
-- The new entity being added to the EF Core context.
 
 ### Update Operation
 
@@ -773,15 +793,6 @@ public IActionResult Update([FromBody] CRUDModel<Order>? value)
 }
 ```
 
-The screenshot below shows the `CRUDModel<Order>` value received by the update action.
-
-![Update Operation](../images/blazor-pivot-table-EFCore-MSSQL-update.webp)
-
-**Image Content:**
-- The `Update` action of `OrderController` open in the editor.
-- The `Value` parameter carrying the modified order fields.
-- The `OrderID` used as the filter for the update.
-
 ### Delete Operation
 
 **Purpose:**
@@ -823,15 +834,6 @@ public IActionResult Delete([FromBody] CRUDModel<Order>? value)
 }
 ```
 
-The screenshot below shows the `CRUDModel<Order>` value received by the delete action.
-
-![Delete Operation](../images/blazor-pivot-table-EFCore-MSSQL-delete.webp)
-
-**Image Content:**
-- The `Delete` action of `OrderController` open in the editor.
-- The `Key` parameter carrying the primary key of the deleted record.
-- The entity being removed from the EF Core context.
-
 ### Enabling CRUD Through the Edit Dialog
 
 For CRUD operations to work correctly, the primary key column must be marked. The `BeginDrillThrough` event handler does this dynamically when the edit dialog opens:
@@ -863,20 +865,14 @@ This step is required so the URL Adaptor knows which column to send as the key f
 | `405 Method Not Allowed` on read | The `POST /api/Order` action is missing or routed incorrectly | Confirm `OrderController` is decorated with `[ApiController]`, the `Post` action has `[HttpPost]`, and `AddControllers()` + `MapControllers()` are present in `Program.cs`. |
 | `SqlException` or `Cannot connect to server` | SQL Server is not running or configuration is wrong | Start the SQL Server service and confirm the `Server`, `Database`, `User Id`, and `Password` values in the connection string. |
 | `Invalid object name 'Orders'` | Table not created or wrong database | Run the SQL script in Step 1 against the `OrderDB` database. |
-| Insert/Update/Delete does nothing | The edit dialog does not send a valid primary key | Confirm `OrderID` is present in the payload and marked with `[Key]` in the model. |
+| Insert/Update/Delete does nothing | The drill-through grid is not sending a valid primary key | Confirm that `BeginDrillThrough` sets the `OrderID` grid column's `IsPrimaryKey` property and inspect the outgoing payload. |
 | CRUD changes do not persist | Validation or database command failed | Inspect the API response and server logs; verify required fields and table permissions. |
 | `DbUpdateException` on save | SQL Server rejected the insert, update, or delete | Inspect the inner exception and verify column types, nullability, identity settings, and table permissions. |
 | `Login failed for user '<USER_ID>'` | SQL Server login not mapped to a database user, or wrong credentials | Verify the SQL Server login exists and has the required permissions on `OrderDB.Orders`. |
-
-## Implementation Summary
-
-The implementation is assembled across the earlier steps:
-
-1. The `appsettings.json` connection-string configuration and the controller are provided in Steps 4 and 8.
-2. Service registration for Syncfusion Blazor, Razor components, API controllers, EF Core, and the theme stylesheet is provided in Step 7.
-3. `Home.razor`, the URL adaptor configuration, and the `BeginDrillThrough` event handler are provided in Step 9.
-
-The sample uses the `appsettings.json`-based connection string, EF Core entity mapping, and the URL Adaptor to connect the Syncfusion Blazor Pivot Table to SQL Server.
+| Syncfusion license warning | The license key is missing, invalid, or registered too late | Set `SyncfusionLicenseKey` and register it before calling `AddSyncfusionBlazor()`. |
+| Browser reports a CORS error | The API is on another origin without an allowed-origin policy | Add a named CORS policy for the exact Blazor origin and call `UseCors` before mapping controllers. |
+| API returns HTTP 400 | The URL Adaptor payload failed validation or deserialization | Inspect the response body and browser network payload; verify property names, types, and required values. |
+| API returns an antiforgery error | Antiforgery validation was added to the API without a token in the request | Either supply the antiforgery token from the client or apply validation only to endpoints designed for it. |
 
 ## Complete Sample Repository
 
