@@ -1635,4 +1635,4 @@ In the example below, clicking an external button labeled "Print Chart" calls th
 
 ![Printing in Blazor Pivot Chart](images/blazor-pivotchart-printing.webp)
 
-N> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
+N> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

@@ -9,13 +9,13 @@ documentation: ug
 
 # Integrate Google Dialogflow with Blazor Chat UI component
 
-The Chat UI component integrates with [Google Dialogflow](https://cloud.google.com/dialogflow/docs) to enable advanced conversational AI features in your Blazor applications. The component acts as a user interface for a support bot, where user prompts are sent to the Dialogflow service via API calls, providing natural language understanding and context-aware responses.
+The Chat UI component integrates with [Google Dialogflow](https://docs.cloud.google.com/dialogflow/docs) to enable advanced conversational AI features in your Blazor applications. The component acts as a user interface for a support bot, where user prompts are sent to the Dialogflow service via API calls, providing natural language understanding and context-aware responses.
 
 ## Prerequisites
 
 Before starting, ensure you have the following:
 
-* **Google Account**: To access [Google Dialogflow](https://cloud.google.com/dialogflow/docs) and [Google Cloud Console](https://console.cloud.google.com/).
+* **Google Account**: To access [Google Dialogflow](https://docs.cloud.google.com/dialogflow/docs) and [Google Cloud Console](https://console.cloud.google.com/welcome/new).
 
 * **Chat UI**: Package [Syncfusion Blazor package](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed.
 

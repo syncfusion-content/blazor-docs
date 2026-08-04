@@ -379,7 +379,7 @@ N> Refer to the [code block](#adding-treemap-component) to know about the proper
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtrHZwXnCULNBToQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TreeMap with Tooltip](images/blazor-treemap-tooltip.webp)" %}
 
-N> You can also explore our [Blazor TreeMap example](https://blazor.syncfusion.com/demos/treemap/default-functionalities?theme=bootstrap5) that shows you how to render and configure the treemap.
+N> You can also explore our [Blazor TreeMap example](https://blazor.syncfusion.com/demos/treemap/default-functionalities?theme=fluent2) that shows you how to render and configure the treemap.
 
 ## See also
 
