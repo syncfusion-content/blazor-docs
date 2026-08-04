@@ -32,7 +32,7 @@ Before you integrate Amazon S3 with the Blazor File Manager, ensure you have:
 Clone the [Amazon S3 File Provider](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider) using the following command,
 
 ```bash
-git clone https://github.com/SyncfusionExamples/ej2-amazon-s3-aspcore-file-provider ej2-amazon-s3-aspcore-file-provider
+git clone https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider.git ej2-amazon-s3-aspcore-file-provider
 ```
 
 N> This Amazon S3 provider for the Blazor File Manager is intended for demonstration and evaluation only. Before using it consult your security team and complete a security review.
