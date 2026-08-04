@@ -21,6 +21,12 @@ This document provides information about the changes and new features included i
 
 - The coding assistant tool identifier has been changed from **`sf_blazor_assistant`** to **`search_docs`** for a better naming convention.
 
+**(v3.0.0) - July 21, 2026**
+
+**Breaking Changes**
+
+- The **UI Builder** tool has been redefined as an agent-skill based experience and is no longer available within this server. For more information about the **Agentic UI Builder**, refer to this [link](https://www.syncfusion.com/explore/agentic-ui-builder).
+
 **(v2.0.0) – February 23, 2026**
 
 **Features**
