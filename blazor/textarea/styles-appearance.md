@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and appearance in Blazor TextArea Component | Syncfusion®
-description: Learn here all about Style and appearance of the Blazor Textarea component and much more.
+description: Learn how to style and customize the Blazor TextArea component, including sizing, height, colors, and borders.
 platform: Blazor
 control: TextArea
 documentation: ug
@@ -77,7 +77,7 @@ Applying these classes helps align the TextArea with the overall density and vis
 ## Filled and outline mode
 
 The Filled and Outline modes can be enabled in the TextArea component by adding the `e-outline` or `e-filled` class to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_CssClass) API.
-By adding these classes, users can choose between a filled or outline appearance for the TextArea control, aligning with the design aesthetics of their application. Please find the demo link [here](https://blazor.syncfusion.com/demos/textarea/default-functionalities?theme=material3).
+By adding these classes, users can choose between a filled or outline appearance for the TextArea control, aligning with the design aesthetics of their application. Please find the demo link [here](https://blazor.syncfusion.com/demos/textarea/default-functionalities?theme=fluent2).
 
 {% tabs %}
 {% highlight razor %}

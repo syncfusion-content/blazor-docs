@@ -565,4 +565,4 @@ Convert the current rules to MongoDB query syntax using [`GetMongoQuery`](https:
 
 ```
 
-N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.
+N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=fluent2) to know how to render and configure the query builder.

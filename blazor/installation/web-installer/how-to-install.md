@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Install the Syncfusion® Blazor Web Installer
+# Install the Syncfusion® Blazor web installer
 
 The Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor web installer lets you install, update, and uninstall Blazor products in a single wizard. The sections below cover both installation and uninstallation.
 
@@ -111,13 +111,13 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor can be uninstalled in tw
 
 Follow one of the options below to uninstall the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor installer.
 
-### Option 1: Uninstall Using the Syncfusion Blazor Web Installer
+### Option 1: Uninstall using the Syncfusion Blazor web installer
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> provides the option to uninstall products of the same version directly from the Web Installer application. Open the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Online Installer file from the download location by double-clicking it. Select the products to be uninstalled from the list, and the Web Installer uninstall them one by one.
 
 ![Web Installer Installed Products Uninstall](images/webinstaller-uninstall-2.webp)
 
-### Option 2: Uninstall From Windows Control Panel
+### Option 2: Uninstall from Windows Control Panel
 
 You can uninstall all the installed products by selecting the **Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> {version}** entry (element 1 in the following screenshot) from the Windows Control Panel, or you can uninstall Blazor alone by selecting the **Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> for Blazor {version}** entry (element 2 in the following screenshot) from the Windows Control Panel.
 
