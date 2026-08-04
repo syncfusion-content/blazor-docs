@@ -65,7 +65,7 @@ The Blazor ContextMenu component followed the [keyboard interaction](https://www
 
 The Blazor ContextMenu component's accessibility levels are ensured through [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
 
-The accessibility compliance of the Blazor ContextMenu component is shown in the following sample. Evaluate the accessibility of the Blazor ContextMenu component with accessibility tools.
+The accessibility compliance of the Blazor ContextMenu component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/context-menu) in a new window to evaluate the accessibility of the Blazor ContextMenu component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/context-menu.html" %}
 
