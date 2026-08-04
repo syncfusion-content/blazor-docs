@@ -57,7 +57,7 @@ The following list of attributes are added in the Tab.
 
 ## Keyboard interaction
 
-By default, keyboard navigation is enabled. This component implements keyboard navigation support by following the [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/#Tabpanel) practices. Once focused on the active Tab element, you can use the following key combination for interacting with the Tab.
+By default, keyboard navigation is enabled. This component implements keyboard navigation support by following the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/#Tabpanel) practices. Once focused on the active Tab element, you can use the following key combination for interacting with the Tab.
 
 | Windows | Mac | Actions |
 |--- |--- | --- |

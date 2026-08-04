@@ -216,7 +216,7 @@ In the following code example, Calendar and Scheduler have been rendered in firs
             <ContentTemplate>
                 <p>You can check out our Blazor demo here - https://blazor.syncfusion.com/demos/ </p>
                 <br />
-                <p>Also user guide will be avail here - https://blazor.syncfusion.com/documentation/introduction/</p>
+                <p>Also user guide will be avail here - https://blazor.syncfusion.com/documentation/introduction</p>
             </ContentTemplate>
         </TabItem>
         <TabItem>

@@ -198,7 +198,7 @@ The [Web API adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#
 
 ### Custom adaptor
 
-The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) supports custom adaptors to perform manual operations on data. This can be used to implement custom data binding and editing operations in the MultiSelect component.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) supports custom adaptors to perform manual operations on data. This can be used to implement custom data binding and editing operations in the MultiSelect component.
 
 For custom data binding in the MultiSelect, use the `DataAdaptor` class. This abstract class acts as the base for a custom adaptor.
 
@@ -245,7 +245,7 @@ The following example demonstrates remote data binding with offline mode enabled
 
 ## Entity Framework
 
-Follow these steps to consume data from [Entity Framework](https://blazor.syncfusion.com/documentation/common/data-binding/bind-entity-framework) in the MultiSelect component.
+Follow these steps to consume data from [Entity Framework](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-orm/entityframework) in the MultiSelect component.
 
 #### Create DBContext class
 
