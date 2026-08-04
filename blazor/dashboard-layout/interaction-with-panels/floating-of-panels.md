@@ -9,7 +9,7 @@ documentation: ug
 
 # Floating Panels in Blazor Dashboard Layout Component
 
-The Dashboard Layout component provides panel floating functionality through the [`AllowFloating`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_AllowFloating) property. When the property is enabled, panels automatically move upward to occupy any available empty cells in preceding rows. This behavior helps utilize the available Dashboard space efficiently and maintains a compact layout arrangement.
+The Dashboard Layout component provides panel floating functionality through the [`AllowFloating`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_AllowFloating) property. The default value of `AllowFloating` is `true`. When the property is enabled, panels automatically move upward to occupy any available empty cells in preceding rows. This behavior helps utilize the available Dashboard space efficiently and maintains a compact layout arrangement.
 
 When the property is disabled, panels retain their configured row and column positions, even if empty cells are available above them.
 
