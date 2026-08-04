@@ -2562,7 +2562,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 ```
 ## Sorting
 
-[Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~Sorting) event is raised before a sorting action is performed or a column is removed from sorting in the Tree Grid or when the sort column direction changes from Ascending to Descending or vice versa for the same column.
+[Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Sorting) event is raised before a sorting action is performed or a column is removed from sorting in the Tree Grid or when the sort column direction changes from Ascending to Descending or vice versa for the same column.
 
 ```cshtml
 
@@ -2617,7 +2617,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## Sorted
 
-[Sorted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~Sorted) event is raised after a sorting action is performed or a column is removed from sorting in the Tree Grid or when the sort column direction changes from Ascending to Descending or vice versa for the same column.
+[Sorted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Sorted) event is raised after a sorting action is performed or a column is removed from sorting in the Tree Grid or when the sort column direction changes from Ascending to Descending or vice versa for the same column.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -2671,7 +2671,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## Searching
 
-[Searching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~Searching) event is raised before the search action is performed in the Tree Grid.
+[Searching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Searching) event is raised before the search action is performed in the Tree Grid.
 ```cshtml
 
 @using Syncfusion.Blazor.TreeGrid;
@@ -2725,7 +2725,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## Searched
 
-[Searched](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~Searched) event is raised after the search action is performed in the Tree Grid.
+[Searched](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Searched) event is raised after the search action is performed in the Tree Grid.
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
 
@@ -2778,7 +2778,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## RowCreating
 
-[RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~RowCreating) event triggers before the add action is performed in the Tree Grid.
+[RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowCreating) event triggers before the add action is performed in the Tree Grid.
 
 ```cshtml
 
@@ -2834,7 +2834,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## RowCreated
 
-[RowCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~RowCreated) event is raised after the add action is performed in the Tree Grid.
+[RowCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowCreated) event is raised after the add action is performed in the Tree Grid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -2889,7 +2889,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## RowUpdating
 
-[RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~RowUpdating) event is raised before the edited or added data is saved in the Tree Grid.
+[RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowUpdating) event is raised before the edited or added data is saved in the Tree Grid.
 
 ```cshtml
 
@@ -2945,7 +2945,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## RowUpdated
 
-[RowUpdated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~RowUpdated) event is raised after edited or added data is saved in the Tree Grid.
+[RowUpdated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowUpdated) event is raised after edited or added data is saved in the Tree Grid.
 
 ```cshtml
 
@@ -3001,7 +3001,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## RowDeleting
 
-[RowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~RowDeleting) event is raised before the record is deleted in the Tree Grid.
+[RowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDeleting) event is raised before the record is deleted in the Tree Grid.
 
 ```cshtml
 
@@ -3057,7 +3057,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## RowDeleted
 
-[RowDeleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~RowDeleted) event is raised after a record is deleted in the Tree Grid.
+[RowDeleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDeleted) event is raised after a record is deleted in the Tree Grid.
 
 ```cshtml
 
@@ -3113,7 +3113,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## EditCanceling
 
-[EditCanceling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~EditCanceling) event is raised before canceling the update of edited or added data in the Tree Grid.
+[EditCanceling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Cancelling) event is raised before canceling the update of edited or added data in the Tree Grid.
 
 ```cshtml
 
@@ -3170,7 +3170,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## EditCanceled
 
-[EditCanceled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~EditCanceled) event is raised after canceling the update of edited or added data in the Tree Grid.
+[EditCanceled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Cancelled) event is raised after canceling the update of edited or added data in the Tree Grid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3226,7 +3226,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## OnRowEditStart
 
-[OnRowEditStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnRowEditStart) event is raised before when the editing action of a row begins in the Tree Grid.
+[OnRowEditStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeRowEditing) event is raised before when the editing action of a row begins in the Tree Grid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3282,7 +3282,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## RowEditing
 
-[RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~RowEditing) event is raised before the edit action is performed in the Tree Grid.
+[RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowEditing) event is raised before the edit action is performed in the Tree Grid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3337,7 +3337,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## RowEdited
 
-[RowEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~RowEdited) event is raised after the edit action is performed in the Tree Grid.
+[RowEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowEdited) event is raised after the edit action is performed in the Tree Grid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3392,7 +3392,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## Filtering
 
-[Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~Filtering) event is raised before the filtering or clear filtering action is performed in the Tree Grid.
+[Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Filtering) event is raised before the filtering or clear filtering action is performed in the Tree Grid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3447,7 +3447,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## Filtered
 
-[Filtered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~Filtered) event is raised after the filtering or clear filtering action is performed in the Tree Grid.
+[Filtered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Filtered) event is raised after the filtering or clear filtering action is performed in the Tree Grid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3502,7 +3502,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## FilterDialogOpening
 
-[FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~FilterDialogOpening) event triggers before the filter dialog is opened in the Tree Grid.
+[FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_FilterDialogOpening) event triggers before the filter dialog is opened in the Tree Grid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3559,7 +3559,7 @@ N> This event is raised specifically for the `Menu` and `Excel` [FilterType](htt
 
 ## FilterDialogOpened
 
-[FilterDialogOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~FilterDialogOpened) event is raised after the filter dialog is opened in the Tree Grid.
+[FilterDialogOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_FilterDialogOpened) event is raised after the filter dialog is opened in the Tree Grid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3616,7 +3616,7 @@ N> This event is raised specifically for the `Excel` [FilterType](https://help.s
 
 ## CheckboxFilterSearching
 
-[CheckboxFilterSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~CheckboxFilterSearching) event is raised when values get filtered using search bar in [Excel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.FilterType.html#Syncfusion_Blazor_TreeGrid_FilterType_Excel) filter.
+[CheckboxFilterSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_CheckboxFilterSearching) event is raised when values get filtered using search bar in [Excel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.FilterType.html#Syncfusion_Blazor_TreeGrid_FilterType_Excel) filter.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3672,7 +3672,7 @@ N> This event is raised specifically for the `Excel` [FilterType](https://help.s
 
 ## ColumnReordering
 
-[ColumnReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~ColumnReordering) event is raised before when columns reordering action is performed in the Tree Grid.
+[ColumnReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ColumnReordering) event is raised before when columns reordering action is performed in the Tree Grid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3727,7 +3727,7 @@ N> This event is raised specifically for the `Excel` [FilterType](https://help.s
 
 ## ColumnReordered
 
-[ColumnReordered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~ColumnReordered) event is raised after when columns are reordered in the Tree Grid.
+[ColumnReordered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ColumnReordered) event is raised after when columns are reordered in the Tree Grid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3782,7 +3782,7 @@ N> This event is raised specifically for the `Excel` [FilterType](https://help.s
 
 ## ColumnVisibilityChanging
 
-[ColumnVisibilityChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~ColumnVisibilityChanging) event is raised before the Tree Grid's column visibility is changing.
+[ColumnVisibilityChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ColumnsStateChanging) event is raised before the Tree Grid's column visibility is changing.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3837,7 +3837,7 @@ N> This event is raised specifically for the `Excel` [FilterType](https://help.s
 
 ## ColumnVisibilityChanged
 
-[ColumnVisibilityChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~ColumnVisibilityChanged) event is raised after the Tree Grid's column visibility is changed.
+[ColumnVisibilityChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ColumnsStateChanged) event is raised after the Tree Grid's column visibility is changed.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;

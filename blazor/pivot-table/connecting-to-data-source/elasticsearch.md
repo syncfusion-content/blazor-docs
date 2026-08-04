@@ -256,4 +256,4 @@ This section explains how to connect the Pivot Table component to an Elasticsear
 
 ![Blazor Pivot Table bound with Elasticsearch data](../images/blazor-pivottable-Elasticsearch-databinding.webp)
 
-N> In [this](https://github.com/SyncfusionExamples/how-to-bind-Elasticsearch-database-to-pivot-table/tree/master/Blazor) GitHub repository, you can find our Blazor Pivot Table sample for binding data from an Elasticsearch database using the Web API service.
+N> In [this](https://github.com/SyncfusionExamples/web-how-to-bind-Elasticsearch-database-to-pivot-table/tree/master/Blazor) GitHub repository, you can find our Blazor Pivot Table sample for binding data from an Elasticsearch database using the Web API service.
