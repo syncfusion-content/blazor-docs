@@ -17,9 +17,8 @@ The following event argument types are available for the corresponding native ev
 * Mouse Events - `MouseEventArgs`
 * Keyboard Events - `KeyboardEventArgs`
 * Touch Events - `TouchEventArgs`
-* Change Events - `ChangeEventArgs`
 
-> All event argument types except `ChangeEventArgs` are from the `Microsoft.AspNetCore.Components.Web` namespace.
+> All event argument types are from the `Microsoft.AspNetCore.Components.Web` namespace.
 
 ## List of native events supported for default Button Group
 
