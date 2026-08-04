@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Command Column Editing in Blazor DataGrid | Syncfusion®
-description: Learn how to configure Command Column Editing in Blazor DataGrid with setup, usage, and customization tips.
+title: Command Column Editing in Blazor Data Grid | Syncfusion®
+description: Learn how to use command column editing in Blazor Data Grid with built-in edit, delete, save, cancel, and custom command buttons for CRUD operations.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Command column editing in Blazor DataGrid
+# Command Column Editing in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports command column editing, which enables CRUD (Create, Read, Update, Delete) action buttons within a column to perform operations on individual rows. This approach is suitable for inline editing, deletion, or saving changes directly within the Grid.
 

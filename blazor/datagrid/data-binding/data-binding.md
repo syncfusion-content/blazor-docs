@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor DataGrid | Syncfusion®
-description: Learn how to bind data from various sources to the Blazor DataGrid and explore supported data binding options in detail.
+title: Data Binding in Blazor Data Grid | Syncfusion®
+description: Learn how to bind data from various data sources in Blazor Data Grid using Syncfusion controls and explore data binding options.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Data Binding in Blazor DataGrid
+# Data Binding in Blazor Data Grid
 
 Data binding is a fundamental technique that empowers the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) to integrate data into its interface, enabling the creation of dynamic and interactive Grid views. This feature is particularly valuable when working with large datasets or when data needs to be fetched remotely. 
 

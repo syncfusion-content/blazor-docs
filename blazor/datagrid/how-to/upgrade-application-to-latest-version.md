@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Upgrade Blazor DataGrid App to Latest Version | Syncfusion®
-description: Learn how to upgrade a Blazor DataGrid application to the latest version, update resource links, and resolve NuGet cache issues.
+title: Upgrade Blazor Data Grid App to Latest Version | Syncfusion
+description: Learn how to upgrade a Blazor Data Grid application to the latest version, update resources, refresh NuGet packages, and resolve cache-related issues.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Upgrade application To latest version in Blazor DataGrid
+# Upgrade Blazor Data Grid App to Latest Version
 
 **Step 1:** Update to the latest Blazor [NuGet](https://www.nuget.org/packages/Syncfusion.Blazor/) package using the NuGet Package Manager in the application.
 
