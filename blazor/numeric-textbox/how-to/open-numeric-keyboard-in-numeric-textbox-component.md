@@ -40,4 +40,4 @@ To see a live example of the Numeric TextBox configured for the numeric keyboard
 [Blazor Playground - Numeric Textbox](https://blazorplayground.syncfusion.com/embed/rDLpjJrOLrHzOprq?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5)
 
 **Additional References:**
-- [MDN Web Docs: input type="tel"](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel)
+- [MDN Web Docs: input type="tel"](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/tel)

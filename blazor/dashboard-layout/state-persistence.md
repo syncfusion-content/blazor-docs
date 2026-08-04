@@ -13,7 +13,7 @@ State persistence allows users to save and restore the layout of the Blazor Dash
 
 ## Enabling Persistence in Dashboard Layout
 
-State persistence allowed Dashboard Layout component to retain the panel positions [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_Column), [Row](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_Row), width ([SizeX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_SizeX)), and height ([SizeY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_SizeY)) values in the [localStorage](https://www.w3schools.com/html/html5_webstorage.asp) for state maintenance even if the browser is refreshed or if you move to the next page within the browser. This action is handled through the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_EnablePersistence) property which is set to `false` by default. When it is set to `true`, the panel positions `Column`, `Row`, width (`SizeX`), and height (`SizeY`) values of the Dashboard Layout component will be retained even after refreshing the page.
+State persistence enables the Dashboard Layout component to retain the panel positions [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_Column), [Row](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_Row), width ([SizeX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_SizeX)), and height ([SizeY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_SizeY)) values in the [localStorage](https://www.w3schools.com/html/html5_webstorage.asp) for state maintenance even if the browser is refreshed or if you move to the next page within the browser. Use the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_EnablePersistence) property, which is set to `false` by default. When it is set to `true`, the panel positions `Column`, `Row`, width (`SizeX`), and height (`SizeY`) values of the Dashboard Layout component will be retained even after refreshing the page.
 
 N> The Dashboard Layout component's [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_ID) is crucial for state persistence, as data is stored and retrieved based on this unique identifier.
 
@@ -113,7 +113,6 @@ The Blazor Dashboard Layout component provides built-in methods to manage its st
         if (dashboardObject != null)
         {
             await dashboardObject.SetPersistDataAsync(_state);
-
         }
     }
     private async Task ResetState()
@@ -121,7 +120,6 @@ The Blazor Dashboard Layout component provides built-in methods to manage its st
         if (dashboardObject != null)
         {
             await dashboardObject.ResetPersistDataAsync();
-
         }
     }
 }

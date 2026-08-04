@@ -11,8 +11,6 @@ documentation: ug
 
 Panels are fundamental building blocks within the Blazor Dashboard Layout component, serving as containers for data visualization and presentation.
 
-Panels are fundamental building blocks within the Blazor Dashboard Layout component, serving as containers for data visualization and presentation.
-
 | **Panel Property** | **Default Value** | **Description** |
 | --- | --- | --- |
 | <kbd>Id</kbd> | null | Specifies the ID value of the panel. |
