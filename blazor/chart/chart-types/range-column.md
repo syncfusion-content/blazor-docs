@@ -66,7 +66,7 @@ documentation: ug
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNrRtRsoJJPUGkNx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Range Column Chart](../images/chart-types-images/blazor-range-column-chart.webp)" %}
 
-N> Refer to the [Blazor Range Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-column-chart) feature tour page to know about its other groundbreaking feature representations. Explore the [Blazor Range Column Chart Example](https://blazor.syncfusion.com/demos/chart/range-column?theme=bootstrap5) to know how to show variations in the data values for a given time.
+N> Refer to the [Blazor Range Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-column-chart) feature tour page to know about its other groundbreaking feature representations. Explore the [Blazor Range Column Chart Example](https://blazor.syncfusion.com/demos/chart/range-column?theme=fluent2) to know how to show variations in the data values for a given time.
 
 ## Binding data with series
 
@@ -890,7 +890,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhntdiypIBIURJF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 
