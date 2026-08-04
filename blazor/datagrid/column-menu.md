@@ -1,14 +1,14 @@
 ---
 layout: post
 
-title: Column Menu in Blazor DataGrid Component | Syncfusion®
-description: Learn how to use and customize the column menu in Blazor DataGrid, including events, actions, and advanced options for better control.
+title: Column Menu in Blazor Data Grid Component | Syncfusion®
+description: Learn how to use and customize the Column Menu in Blazor Data Grid, including sorting, filtering, grouping, menu items, and event handling.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Column Menu in Blazor DataGrid
+# Column Menu in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports a column menu that provides quick access to features such as sorting, grouping, filtering, column chooser, and autofit. Clicking the column header’s menu icon displays a contextual menu with these options.
 

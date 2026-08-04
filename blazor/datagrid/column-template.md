@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column Template in Blazor DataGrid Component | Syncfusion®
-description: Checkout and learn here all about column template in the Blazor DataGrid component and much more details.
+title: Column Template in Blazor Data Grid Component | Syncfusion®
+description: Learn how to use column templates in Blazor Data Grid to render custom HTML, images, buttons, components, and dynamic content within grid cells.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Column Template in Blazor DataGrid
+# Column Template in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property that allows rendering custom elements in a column instead of the default field value. This feature is useful for displaying images, buttons, or other custom content within a column.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Export options in Blazor DataGrid | Syncfusion®
-description: Learn about Excel export options in Blazor DataGrid, including customizing data sources, hidden columns, themes, headers, and footers.
+title: Excel Export Options in Blazor Data Grid | Syncfusion
+description: Learn how to customize Excel export in Blazor Data Grid with export options for hidden columns, themes, headers, footers, custom data sources, and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Excel export options in Blazor DataGrid 
+# Excel Export Options in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) allows customization of Excel and CSV export functionality. This flexibility enables precise control over the exported content and layout to meet specific requirements.
 

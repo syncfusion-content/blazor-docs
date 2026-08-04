@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filter Menu in Blazor DataGrid | Syncfusion®
-description: Explore and understand the Filter Menu in Blazor DataGrid. Learn about its features, usage, customization, and more.
+title: Filter Menu in Blazor Data Grid | Syncfusion
+description: Learn how to use and customize the Filter Menu in Blazor Data Grid with filter operators, custom filter UI, templates, and advanced filtering options.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Filter menu in Blazor DataGrid
+# Filter Menu in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) filter menu provides an intuitive interface for filtering data on a per-column basis. It utilizes a pop-up menu that contains a range of filter operators, offering precise control over the displayed data.
 

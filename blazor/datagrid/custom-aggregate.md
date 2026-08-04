@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  Custom aggregate in Blazor DataGrid Component | Syncfusion®
-description: Learn how to create and display custom aggregates in Blazor DataGrid using CustomAggregate callback and template context.
+title:  Custom Aggregate in Blazor Data Grid | Syncfusion®
+description: Learn how to create custom aggregates in Blazor Data Grid using CustomAggregate callbacks, template context, and custom summary calculations.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Custom aggregate in Blazor DataGrid
+# Custom Aggregate in Blazor Data Grid
 
 The custom aggregate feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables calculating summary values with a user-defined function when built-in aggregate types do not meet specific requirements. Configure a custom aggregate by setting the aggregate type and providing a delegate that computes the value.
 

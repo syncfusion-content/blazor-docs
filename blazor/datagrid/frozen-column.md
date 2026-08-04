@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column pinning (Frozen) in Blazor DataGrid Component | Syncfusion®
-description: Checkout and learn here all about column pinning (Frozen) in the Blazor DataGrid component and much more details.
+title: Column Pinning (Frozen) in Blazor Data Grid Component | Syncfusion
+description: Learn how to use column pinning in Blazor Data Grid with frozen columns, frozen rows, freeze direction options, and advanced scrolling behavior.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Column Pinning (Frozen) in Blazor DataGrid
+# Column Pinning (Frozen) in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports freezing columns to keep them visible while scrolling through large datasets. This feature ensures that important fields remain accessible regardless of horizontal scroll position.
 

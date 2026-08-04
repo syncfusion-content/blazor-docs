@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor DataGrid | Syncfusion®
-description: Learn how to configure and handle Blazor DataGrid events, including lifecycle, data binding, selection, editing, exporting, and menu interactions.
+title: Events in Blazor Data Grid | Syncfusion®
+description: Learn how to handle Blazor Data Grid events, including lifecycle, data binding, selection, editing, filtering, grouping, exporting, and action events.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Events in Blazor DataGrid
+# Events in Blazor Data Grid
 
 This section lists the events available in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and when they are triggered for various Grid actions.
 

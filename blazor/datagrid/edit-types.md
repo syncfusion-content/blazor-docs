@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Edit Types in Blazor DataGrid | Syncfusion®
-description: Learn about edit types in Blazor DataGrid, including customization options, supported events, and editing configurations.
+title: Edit Types in Blazor Data Grid | Syncfusion®
+description: Learn about edit types in Blazor Data Grid, including text, numeric, date, dropdown, checkbox editors, custom edit types, and editor customization.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Edit Types in Blazor DataGrid
+# Edit Types in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports multiple edit types that allow customization of the editing behavior for individual columns. These edit types improve data entry efficiency and provide flexibility for handling various data types.
 

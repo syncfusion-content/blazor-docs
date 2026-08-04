@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Columns in Blazor DataGrid Component | Syncfusion®
-description: Learn about configuring and customizing columns in Blazor DataGrid for better data presentation and interaction.
+title: Columns in Blazor Data Grid Component | Syncfusion
+description: Learn how to configure and customize columns in Blazor Data Grid, including column types, formatting, visibility, freezing, responsiveness, and other options.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Columns in Blazor DataGrid
+# Columns in Blazor Data Grid
 
 Columns are the core structural elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid).
 Each column defines:

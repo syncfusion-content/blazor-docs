@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filtering in Blazor DataGrid | Syncfusion®
-description: Check out this page to learn all about how to configure initial filtering and filter operators in the Blazor DataGrid component.
+title: Filtering in Blazor Data Grid | Syncfusion
+description: Learn how to filter data in Blazor Data Grid using filter operators, multiple filter conditions, filter settings, and advanced filtering options.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Filtering in Blazor DataGrid
+# Filtering in Blazor Data Grid
 
 Filtering is a key feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) that enables selective data viewing based on defined criteria. It helps narrow down large datasets and focus on relevant information, improving data analysis and decision-making.
 

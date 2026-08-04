@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Aggregates in Blazor DataGrid Component | Syncfusion®
-description: Learn how to configure and display aggregates in Blazor DataGrid using templates for footer, group footer, and caption.
+title: Aggregates in Blazor Data Grid Component | Syncfusion®
+description: Learn how to configure and display aggregates in Blazor Data Grid using footer, group footer, and caption templates for summary calculations.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Aggregates in Blazor DataGrid
+# Aggregates in Blazor Data Grid
 
 The aggregates feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) displays summary values in the footer, group footer, and group caption. It enables computing summary information for specific columns and presenting it at key locations in the DataGrid. Configure aggregates with the GridAggregates component. For each aggregate column, specify at least the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Field) and [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) properties.
 
