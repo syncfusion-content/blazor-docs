@@ -39,7 +39,7 @@ The accessibility compliance for the Blazor Color Picker component is outlined b
 
 ## WAI-ARIA attributes
 
-The Blazor Color Picker component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/) practices to support assistive technologies. The following ARIA attributes are used in the Blazor Color Picker component:
+The Blazor Color Picker component follows [WAI-ARIA](https://www.w3.org/WAI/about/groups/ariawg/) practices to support assistive technologies. The following ARIA attributes are used in the Blazor Color Picker component:
 
 | Attributes | Purpose |
 | --- | --- |

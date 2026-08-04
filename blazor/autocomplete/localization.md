@@ -15,9 +15,9 @@ documentation: ug
 
 ### Enable RTL mode
 
-The direction can be switched to right-to-left by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-1.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_1_EnableRtl) property to `true`. The default value is `false`. Enable RTL for right-to-left languages such as Arabic and Hebrew; the component layout and icon alignment will mirror automatically based on Syncfusion styles.
+The direction can be switched to right-to-left by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_EnableRtl) property to `true`. The default value is `false`. Enable RTL for right-to-left languages such as Arabic and Hebrew; the component layout and icon alignment will mirror automatically based on Syncfusion styles.
 
-Specifies the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-1.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_1_EnableRtl) as a boolean value that enables or disables rendering the component in a right-to-left direction.
+Specifies the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_EnableRtl) as a boolean value that enables or disables rendering the component in a right-to-left direction.
 
 {% highlight cshtml %}
 
