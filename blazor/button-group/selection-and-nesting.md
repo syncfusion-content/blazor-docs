@@ -88,7 +88,7 @@ The Button Group supports a multiple selection type in which multiple buttons ca
 ## Nesting
 
 Other components can be nested inside a Button Group. The following components can be nested in a Button Group:
-* [DropDownButton](https://blazor.syncfusion.com/documentation/drop-down-button/getting-started)
+* [DropDownButton](https://blazor.syncfusion.com/documentation/drop-down-menu/getting-started-with-web-app)
 * [SplitButton](https://blazor.syncfusion.com/documentation/split-button/getting-started)
 
 To make the nested components visually match the surrounding buttons, the same `CssClass` (for example, `e-btn e-success`) should be applied to the nested component, as shown in the following examples.

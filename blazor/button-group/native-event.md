@@ -9,7 +9,7 @@ documentation: ug
 
 # Native Events in Blazor Button Group Component
 
-Native DOM events (such as click, change, focus, mouse, keyboard, and touch events) can be handled on the Button Group component through Blazor's `@onevent` directive (for example, `@onclick`, `@onchange`). The value of the directive is treated as an event handler. The event-specific data is passed to the handler through the event arguments.
+Native DOM events (such as click, change, focus, mouse, keyboard, and touch events) can be handled on the Button Group component through Blazor's `@on{event}` directive (for example, `@onclick`, `@onchange`). The value of the directive is treated as an event handler. The event-specific data is passed to the handler through the event arguments.
 
 The following event argument types are available for the corresponding native events:
 
