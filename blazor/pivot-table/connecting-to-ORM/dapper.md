@@ -32,8 +32,8 @@ Ensure the following software and packages are installed before proceeding:
 | Visual Studio 2022 / VS Code | Latest | Development environment with the Blazor workload |
 | .NET SDK | .NET 10 SDK or compatible | Runtime and build tools |
 | SQL Server | 2019 or later | Database server |
-| Syncfusion.Blazor.PivotTable | 34.1.32 or latest | Pivot Table UI component |
-| Syncfusion.Blazor.Themes | 34.1.32 or latest | Styling for Pivot Table components |
+| Syncfusion.Blazor.PivotTable | `{{site.blazorversion}}` | Pivot Table UI component |
+| Syncfusion.Blazor.Themes | `{{site.blazorversion}}` | Styling for Pivot Table components |
 | Microsoft.Data.SqlClient | 6.1.1 | SQL Server ADO.NET provider |
 | Dapper | 2.1.79 | Lightweight ORM and object mapper |
 
@@ -108,8 +108,8 @@ cd PivotTableMSSQLDapper
 Install the required NuGet packages:
 
 ```bash
-dotnet add package Syncfusion.Blazor.PivotTable --version 34.1.32
-dotnet add package Syncfusion.Blazor.Themes --version 34.1.32
+dotnet add package Syncfusion.Blazor.PivotTable --version {{site.blazorversion}}
+dotnet add package Syncfusion.Blazor.Themes --version {{site.blazorversion}}
 dotnet add package Microsoft.Data.SqlClient --version 6.1.1
 dotnet add package Dapper --version 2.1.79
 ```
@@ -588,6 +588,8 @@ dotnet run
 ```
 
 Open the URL shown in the terminal output. The Pivot Table loads SQL Server data through the controller and Dapper.
+
+![Blazor Pivot Table](../images/blazor-pivot-table-Dapper-MSSQL.webp)
 
 ## Troubleshooting
 

@@ -141,4 +141,4 @@ public void Remove(IList<IFormFile> UploadFiles)
 }
 ```
 
-N> You can also explore our [Blazor File Upload example](https://blazor.syncfusion.com/demos/file-upload/default-functionalities?theme=bootstrap5) to understand how to browse the files that need to be uploaded to the server.
+N> You can also explore our [Blazor File Upload example](https://blazor.syncfusion.com/demos/file-upload/default-functionalities?theme=fluent2) to understand how to browse the files that need to be uploaded to the server.
