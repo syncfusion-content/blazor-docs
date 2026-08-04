@@ -21,7 +21,7 @@ The sample was tested with the following versions and configuration:
 |---|---:|---|
 | .NET SDK | 10.0 | Required to target `net10.0` |
 | Visual Studio | 2026 18.0 or later | Required to target `net10.0`; install the ASP.NET and web development workload. VS Code and the .NET CLI are also supported |
-| MongoDB Community Server | 8.0 or later | The MongoDB daemon (`mongod`) supplies the document database runtime; install it as a service or run it manually |
+| MongoDB Community Server | 8.0 or later | Provides the MongoDB database server runtime required to host and manage document data |
 | MongoDB Compass | Latest | The official MongoDB GUI used to create, inspect, and import data into collections |
 | Syncfusion.Blazor.PivotTable | 34.1.33 | [.NET 10 support starts with 31.2.10](https://blazor.syncfusion.com/documentation/common/how-to/version-compatibility); keep all Syncfusion packages on the same version |
 | Syncfusion.Blazor.Themes | 34.1.33 | Provides the component theme |
