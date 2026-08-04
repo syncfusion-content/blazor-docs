@@ -47,7 +47,6 @@ The Blazor Dashboard Layout component integrates [WAI-ARIA](https://www.w3.org/W
 | --- | --- |
 | role=presentation | Indicates the role as a presentation for the table when the `ShowGridLines` property is enabled. |
 | aria-grabbed | Indicates the drag state of a panel. When set to `true`, the panel is currently selected for dragging. When set to `false`, the panel can be grabbed for a drag-and-drop operation but is not currently grabbed. |
-| role=region | Applied to each panel container to expose it as a perceivable landmark that contains a related set of content. |
 
 ## Keyboard Interaction
 
