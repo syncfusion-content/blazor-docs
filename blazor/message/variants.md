@@ -72,7 +72,7 @@ The following example demonstrates the default message with different variant ty
 
 ![Message Text Variant](./images/variants-text.webp)
 
-N> The variant appearance (colors, borders) is controlled by the active Syncfusion theme. Switch themes via the fluent2.css/material.css/bootstrap5.css stylesheet to change all variants globally.
+N> Message variant styles such as colors and borders are determined by the active Syncfusion theme. When you switch to a different theme, the appearance of all variants is updated automatically.
 
 ## Change Variant Dynamically
 
