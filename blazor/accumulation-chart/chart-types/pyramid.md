@@ -246,7 +246,7 @@ The corners of the first data point and last data point in the pyramid chart ser
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDrHtwiShfICviDm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Pyramid Chart with border radius applied.](../images/pyramid/blazor-pyramid-border-radius.webp)" %}
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pyramid?theme=bootstrap5) to know various features of accumulation charts and how it is used to represent numeric proportional data.
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pyramid?theme=fluent2) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 
 ## See also
 

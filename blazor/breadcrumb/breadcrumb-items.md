@@ -44,7 +44,7 @@ The Breadcrumb items can be generated based on the current URL of the page when 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLRZdCsfeBjfFYF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-current-url.webp)" %}
 
-N> This output screenshot shows the [Bind to Location](https://blazor.syncfusion.com/demos/breadcrumb/bind-to-location) sample.
+N> This output screenshot shows the [Bind to Location](https://blazor.syncfusion.com/demos/breadcrumb/bind-to-location?theme=fluent2) sample.
 
 ## Absolute URL
 

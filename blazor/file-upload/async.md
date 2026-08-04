@@ -527,5 +527,5 @@ The OnClear event is triggered when the file list in the uploader is cleared (ei
 
 - Handling custom data with upload: https://support.syncfusion.com/kb/article/16000/handling-custom-data-with-file-upload-component-in-blazor
 - Upload with user info in SfUploader: https://support.syncfusion.com/kb/article/15190/how-to-handle-blazor-file-upload-with-user-information-in-sfuploader
-- Upload to Azure Blob Storage: https://www.syncfusion.com/blogs/post/simple-steps-to-upload-files-to-azure-blob-storage-in-b
+- Upload to Azure Blob Storage: https://www.syncfusion.com/blogs/post/simple-steps-to-upload-files-to-azure-blob-storage-in-blazor-app
 - Upload files to Database in Blazor: (https://github.com/SyncfusionExamples/how-to-upload-files-to-database-in-blazor)

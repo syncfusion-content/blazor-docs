@@ -574,7 +574,7 @@ The Blazor TreeView component has the built-in option to customize each node's a
 
 ## Navigation within Sidebar
 
-The Blazor TreeView component's [`NavigateUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldSettings-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldSettings_1_NavigateUrl) field is used for navigation between pages. This example maps `NavigateUrl` to facilitate page transitions when the TreeView is embedded within a Sidebar component.
+The Blazor TreeView component's [`NavigateUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_NavigateUrl) field is used for navigation between pages. This example maps `NavigateUrl` to facilitate page transitions when the TreeView is embedded within a Sidebar component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
