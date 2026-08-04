@@ -11,10 +11,6 @@ documentation: ug
 
 The Blazor Button Group component provides two-way binding support in both single and multiple selection modes through the [`Selected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ButtonGroupButton.html#Syncfusion_Blazor_SplitButtons_ButtonGroupButton_Selected) property of `ButtonGroupButton`. The `@bind-Selected` directive enables two-way data binding, allowing the state of each button (selected or not) to synchronize between the UI and the backing properties. To disable selection entirely, set `Mode="SelectionMode.None"` (the default).
 
-## Pre-selecting buttons
-
-One or more buttons can be pre-selected by initializing the bound property to `true` in the `@code` block. In single selection mode, only one button can be pre-selected; in multiple selection mode, multiple buttons can be pre-selected.
-
 ## Single selection
 
 The Button Group supports a single selection type in which only one button can be selected at a time. The following example illustrates the single selection behavior in the Button Group.
