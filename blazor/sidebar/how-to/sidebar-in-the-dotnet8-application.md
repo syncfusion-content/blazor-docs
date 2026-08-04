@@ -13,7 +13,7 @@ documentation: ug
 
 Integrate the Blazor Sidebar component into the `MainLayout.razor` page of the .NET 8 application. Next, include the `@rendermode InteractiveServer` directive in the `Routes.razor` page of the application. When you specify InteractiveServer as the render mode for the Routes component, you are enabling interactive server-side rendering (SSR) for your entire Blazor application.
 
-N> Add the following code in the `MainLayout.razor` file. The `@Body` property is available only in layout components. If the code is copied into a page such as `Index.razor` or `Home.razor`, the application will throw the compiler error: `CS0103: The name 'Body' does not exist in the current context`.
+N> Add the following code in the `MainLayout.razor` file. The `@Body` property is available only in layout components.
 
 {% tabs %}
 {% highlight razor tabtitle="MainLayout.razor" %}
