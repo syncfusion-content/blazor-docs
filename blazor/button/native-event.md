@@ -22,7 +22,7 @@ The following event argument types are used for each event category:
 
 ## List of native events supported
 
-The following native events are supported by the Blazor Button component. Use the Blazor `@on{event}` directive syntax (for example, `@onclick`, `@ondblclick`) to bind them.
+The following native events are supported by the Blazor Button component. Use the Blazor `@on{event}` directive syntax (for example, `@onclick`, `@onfocus`) to bind them.
 
 | List of Native events |  |  |  |  |
 | --- | --- | --- | --- | --- |
