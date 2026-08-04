@@ -92,7 +92,7 @@ The primary button is styled with background color and it is used to represent a
 
 ### Toggle Button
 
-A Toggle Button allows you to toggle between two states. The Button is active in the toggled state and can be recognized through the `e-active` CSS class. You can style the active state using a custom CSS rule such as `.e-btn.e-active { background-color: #0078d4; color: #fff; }`. The functionality of the Toggle Button is handled by the [`@onclick`](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/event-handling) event. To create a Toggle Button, set the [IsToggle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IsToggle) property to `true`. In the following code snippet, the Toggle Button text changes to Play/Pause based on the state of the Button.
+A Toggle Button allows you to toggle between two states. The Button is active in the toggled state and can be recognized through the `e-active` CSS class. The functionality of the Toggle Button is handled by the [`@onclick`](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/event-handling) event. To create a Toggle Button, set the [IsToggle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IsToggle) property to `true`. In the following code snippet, the Toggle Button text changes to Play/Pause based on the state of the Button.
 
 ```csharp
 
@@ -157,7 +157,7 @@ The Button can have an icon to provide the visual representation of the action. 
 </style>
 ```
 
-The `IconPosition` property accepts the following values from the `IconPosition` enum:
+The [`IconPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconPosition) property accepts the following values from the [`IconPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconPosition) enum:
 
 * `Left` - Places the icon to the left of the Button content (default).
 * `Right` - Places the icon to the right of the Button content.
