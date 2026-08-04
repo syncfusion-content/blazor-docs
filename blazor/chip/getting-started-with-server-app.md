@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Chips Component in Blazor Server App
 
-This section briefly explains how to include the [Blazor Chips](https://www.syncfusion.com/blazor-components/blazor-chip) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Chips](https://www.syncfusion.com/blazor-components/blazor-chips) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Server App
 
