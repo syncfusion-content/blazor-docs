@@ -147,7 +147,7 @@ Adjust the popup height based on the available viewport space by handling the wi
 
 ## Programmatically opening and closing popup
 
-Open and close the popup programmatically by calling `ShowPopupAsync()` and `HidePopupAsync()` on the component instance. For example, bind button click events to these methods to toggle the popup.
+Open and close the popup programmatically by calling [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_ShowPopupAsync) and [HidePopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_HidePopupAsync) on the component instance. For example, bind button click events to these methods to toggle the popup.
 
 {% highlight Razor %}
 
