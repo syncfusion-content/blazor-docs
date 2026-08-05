@@ -104,9 +104,11 @@ In the following sample, navigation URL for Flipkart, Amazon, and Snapdeal actio
 
 ![Blazor dropdown menu items with navigation links](./images/blazor-dropdownmenu-navigation.webp)
 
-## Customizing item appearance
+## Template
 
-Popup items can be customized using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_CssClass) property. The following example demonstrates customizing items with CSS. To customize item *content* (for example, with icons plus formatted text or links), use the `ItemTemplate` property—see [Item template](./template) for details.
+### Item Templating
+
+Popup items can be customized using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_CssClass) property. The following example demonstrates customizing items with CSS:
 
 ```cshtml
 
