@@ -236,7 +236,7 @@ In the following sample, the footer element displays the total number of employe
 
 ## No records template
 
-The Dropdown Tree is provided with support to custom design the popup list content when no data is found and no matches found on search with the help of [`NoRecordsTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_NoRecordsTemplate) property.
+The Dropdown Tree provides support to customize the design of the popup list content when no data is found and no matches are found on search with the help of [`NoRecordsTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_NoRecordsTemplate) property.
 
 In the following sample, popup list content displays the notification of no data available.
 
@@ -271,7 +271,7 @@ In the following sample, popup list content displays the notification of no data
 
 ## Action failure template
 
-There is also an option to custom design the popup list content when the data fetch request fails at the remote server. This can be achieved using the [`ActionFailureTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ActionFailureTemplate) property.
+There is also an option to customize the design of the popup list content when the data fetch request fails at the remote server. This can be achieved using the [`ActionFailureTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ActionFailureTemplate) property.
 
 In the following sample, when the data fetch request fails, the Dropdown Tree displays the notification.
 
@@ -284,8 +284,8 @@ In the following sample, when the data fetch request fails, the Dropdown Tree di
         <DropDownTreeField TItem="TreeData" Query="@employeeQuery" ID="EmployeeID" Text="FirstName" HasChildren="EmployeeID">
             <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
         </DropDownTreeField>
-        <DropDownTreeField TItem="TreeData" Query="@orderQuery" Id="OrderID" Text="ShipName" ParentID="EmployeeID">
-            <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svs" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
+        <DropDownTreeField TItem="TreeData" Query="@orderQuery" ID="OrderID" Text="ShipName" ParentID="EmployeeID">
+            <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
         </DropDownTreeField>
     </ChildContent>
     <ActionFailureTemplate>
@@ -357,9 +357,9 @@ Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Na
 
 ## FloatLabel
 
-Use the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_FloatLabelType) property to specify the floating label behavior of the Dropdown Tree that the `Placeholder` text floats above the TextBox based on the following values. `FloatLabelType` is applicable only when `Placeholder` is used. `FloatLabelType` is depends on `Placeholder`. Default value of `FloatLabelType` is `Never`.
+Use the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_FloatLabelType) property to specify the floating label behavior of the Dropdown Tree. The `Placeholder` text floats above the TextBox based on the following values. `FloatLabelType` is applicable only when `Placeholder` is used. `FloatLabelType` depends on `Placeholder`. The default value of `FloatLabelType` is `Never`.
 
-The floating label supports the types of actions as follow.
+The floating label supports the following types of actions.
 
 Type     | Description
 ------------ | -------------
@@ -419,7 +419,6 @@ In this example, the custom text provided is displayed instead of the text of th
  
     </ChildContent>
 <SelectedItemTemplate>
- 
         @if (context != null && context.Value != null && context.Value.Count>0)
         {
             string content = $"{context.Value.Count} item{(context.Value.Count == 1 ? "" : "s")} selected";
