@@ -7,19 +7,22 @@ control: MultiColumn ComboBox
 documentation: ug
 ---
 
-# Paging in Blazor MultiColumn ComboBox component
+# Paging in Blazor MultiColumn ComboBox Component
 
-Paging provides an option to display data in segmented pages, making it easier to navigate large datasets. To enable paging, set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_AllowPaging) property to `true` (default is `false`). When paging is enabled, a pager component is rendered at the bottom of the MultiColumn ComboBox popup to navigate between pages. If the total records fit on a single page, the pager is hidden. Paging works with both local and remote data sources; when used with remote data, queries can be shaped to request only the current page of data.
+Paging provides an option to display data in segmented pages, making it easier to navigate large datasets. To enable paging, set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_AllowPaging) property to `true` (default is `false`). When paging is enabled, a pager component is rendered at the bottom of the MultiColumn ComboBox popup to navigate between pages. If the total records fit on a single page, the pager is hidden.
 
-## Customize the pager options
+> With local data, the full data set is loaded into the client and paging is performed in the browser. With remote data, paging is performed on the server: the MultiColumn ComboBox issues a `Query` containing `$skip` and `$top` (or `Skip`/`Take`) parameters, and the endpoint must support them. If the endpoint does not, configure it to handle paging requests or use offline mode.
 
-Customize the pager to meet specific requirements using the following properties:
+## Pager Options
+
+The pager can be customized using the following properties:
+
 - [PageCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PageCount): Number of page links displayed in the pager (default is `8`).
 - [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PageSize): Number of records displayed per page (default is `12`).
 
-### Change the page size
+### Change the Page Size
 
-The Blazor MultiColumn ComboBox allows you to control the number of records displayed per page, providing you with flexibility in managing your data. This feature is particularly useful when you want to adjust the amount of data visible to you at any given time. To achieve this, you can utilize the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PageSize) property. This property is used to specify the initial number of records to display on each page. The default value of pageSize property is 12.
+The Blazor MultiColumn ComboBox allows you to control the number of records displayed per page. To specify the number of records to display on each page, use the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PageSize) property. The default value of `PageSize` is `12`.
 
 The following example demonstrates how to change the page size of a MultiColumn ComboBox using an external button click based on **NumericTextBox** input.
 
@@ -31,7 +34,7 @@ The following example demonstrates how to change the page size of a MultiColumn 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVzXkBAfiXjxboe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with Page size](./images/paging/blazor_multicolumn_combobox_page_size.gif)" %}
 
-### Change the page count
+### Change the Page Count
 
 Adjust how many page links are visible in the pager using the `PageCount` property (default is `8`). Increasing the page count shows more page links at once; decreasing it shows fewer links and may require more navigation.
 

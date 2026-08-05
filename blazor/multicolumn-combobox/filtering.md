@@ -25,7 +25,7 @@ The following code demonstrates the filtering functionality with local data in t
 
 ## Remote data
 
-For remote data, every key press and filter action request is processed on the server side.
+For remote data, each keystroke triggers a server-side filter request that returns only matching records.
 
 The following code illustrates the filtering capabilities using the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) in the MultiColumn ComboBox component, utilizing the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
 
@@ -102,7 +102,7 @@ The following example shows how to perform case-sensitive filter.
 
 ## Custom filtering
 
-The MultiColumn ComboBox allows you to customize filter queries using the [`Filtering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Filtering) event. Multiple-column filtering can be implemented by composing predicates and applying them with the `FilterAsync` method in combination with the `Filtering` event.
+The MultiColumn ComboBox allows you to customize filter queries using the [`Filtering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Filtering) event. Multiple-column filtering can be implemented by composing predicates and applying them with the `FilterAsync` method in combination with the `Filtering` event. To prevent the default filtering action, set the event argument's `PreventDefaultAction` property to `true`.
 
 In the following example, the filter is configured to search based on both the `Name` and `Category` fields. The `Filtering` event uses a [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Condition) with an `or` condition to allow filtering across these fields.
 
