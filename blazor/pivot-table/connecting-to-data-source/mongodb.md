@@ -21,13 +21,13 @@ The sample was tested with the following versions and configuration:
 |---|---:|---|
 | .NET SDK | 10.0 | Required to target `net10.0` |
 | Visual Studio | 2026 18.0 or later | Required to target `net10.0`; install the ASP.NET and web development workload. VS Code and the .NET CLI are also supported |
-| MongoDB Community Server | 8.0 or later | Provides the MongoDB database server runtime required to host and manage document data |
+| MongoDB Community Server | 8.0 or later | The MongoDB daemon (`mongod`) supplies the document database runtime; install it as a service or run it manually |
 | MongoDB Compass | Latest | The official MongoDB GUI used to create, inspect, and import data into collections |
 | Syncfusion.Blazor.PivotTable | 34.1.33 | [.NET 10 support starts with 31.2.10](https://blazor.syncfusion.com/documentation/common/how-to/version-compatibility); keep all Syncfusion packages on the same version |
 | Syncfusion.Blazor.Themes | 34.1.33 | Provides the component theme |
 | MongoDB.Driver | 3.10.0 | Official MongoDB C# driver used by the API to read and write documents |
 
-The application uses the Blazor Web App template with Interactive Server rendering. Syncfusion packages from NuGet.org require a valid license or trial key; follow the [license-key registration instructions](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-appflication).
+The application uses the Blazor Web App template with Interactive Server rendering. Syncfusion packages from NuGet.org require a valid license or trial key; follow the [license-key registration instructions](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application).
 
 ## MongoDB Architecture
 
@@ -51,7 +51,7 @@ Blazor Pivot Table
 
 The Blazor Pivot Table renders aggregated data and issues read and write requests through `SfDataManager`. The `UrlAdaptor` serializes those requests as HTTP `POST` calls to the `OrderController` API. The controller uses `MongoDB.Driver` to run find, insert, update, and delete operations against the `OrderDB` database and its `Orders` collection, and returns JSON responses that the adaptor understands.
 
-## MongoDB Database Setup and Application Configuration
+## MongoDB Database Setup
 
 ### Step 1: Install MongoDB Community Server
 
@@ -148,6 +148,12 @@ dotnet add package Syncfusion.Blazor.Themes --version 34.1.33
 dotnet add package MongoDB.Driver --version 3.10.0
 ```
 
+> **Note:** The Syncfusion Blazor packages 34.1.33 are published to the public NuGet.org feed. If your environment only resolves a private NuGet source, add the Syncfusion feed or set the `nuget.org` source (`https://api.nuget.org/v3/index.json`) as a package source before running the commands above. Restore packages after adding them so the project references resolve:
+
+```powershell
+dotnet restore
+```
+
 The project file should contain:
 
 ```xml
@@ -187,10 +193,9 @@ A `MongoDbSettings:DatabaseName` value of `OrderDB` and a `MongoDbSettings:Colle
 
 ## Create the API Controller
 
-Create a `Controllers` folder at the project root, and then create `Controllers/OrderController.cs`. In this sample, the `Order` model and the `CRUDModel<T>` wrapper are defined inside `OrderController.cs` rather than in a separate file. The same `Order` shape is also declared in the Pivot Table page (`Home.razor`) so the component can strongly type its data source. Keeping the model close to the code that uses it makes the contract between the controller and the page easy to follow.
+Create a `Controllers` folder at the project root, and then create `Controllers/OrderController.cs`. In this sample, the `Order` model and the `CRUDModel<T>` wrapper are defined inside `OrderController.cs` rather than in a separate file. The same `Order` shape is also declared in the Pivot Table page (`Home.razor`) so the component can strongly type its data source. Defining the model alongside the code that consumes it keeps the contract between the controller and the page clear.
 
 ```csharp
-using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
@@ -370,7 +375,7 @@ namespace PivotTableMongoDB.Controllers
 }
 ```
 
-The controller exposes the read, insert, update, and delete endpoints described in the [API Contract](#api-contract). The `OrderController` constructor resolves the MongoDB connection string, database name, and collection name from configuration, creates a `MongoClient`, and caches the `IMongoCollection<Order>` used by every action. The exception middleware configured in the next step logs unhandled `MongoException` instances and returns generic problem responses without exposing connection strings or driver details.
+The controller exposes the read, insert, update, and delete endpoints described in the [API Contract](#api-contract). The `OrderController` constructor resolves the MongoDB connection string, database name, and collection name from configuration, creates a `MongoClient`, and caches the `IMongoCollection<Order>` used by every action. The exception middleware configured in [Configure Program.cs](#configure-programcs) returns generic problem responses without exposing connection strings or driver details.
 
 ## Configure Program.cs
 
@@ -552,15 +557,15 @@ The `BeginDrillThrough` event is used to mark `OrderID` as the primary key on th
 
 ## MongoDB Document Structure
 
-Each row in the Pivot Table corresponds to one document in the `Orders` collection. A sample document looks like:
+Each row in the Pivot Table corresponds to one document in the `Orders` collection. A sample document (matching the records imported in [Step 5](#step-5-import-sample-order-documents)) looks like:
 
 ```json
 {
   "_id": "65a1f2c3b7d8e9f0a1b2c3d4",
   "orderId": 1,
-  "customerName": "John Smith",
-  "employeeId": 101,
-  "freight": 32.5,
+  "customerName": "Toms",
+  "employeeId": 1,
+  "freight": 35.30,
   "shipCity": "New York"
 }
 ```
@@ -577,6 +582,8 @@ Each row in the Pivot Table corresponds to one document in the `Orders` collecti
 > **Note:** The `[BsonElement]` attributes control the field names written to MongoDB. The `[BsonId]` and `[BsonRepresentation]` attributes tell the driver that `Id` is the document primary key and should be stored as an `ObjectId`. Mismatched element names are the most common cause of empty Pivot Tables, so keep the attribute names in sync with the fields imported in [Step 5](#step-5-import-sample-order-documents).
 
 ## CRUD Operations
+
+The action methods below are defined in the `OrderController` class shown in [Create the API Controller](#create-the-api-controller). Each subsection reproduces a single method and explains how it implements the corresponding read, insert, update, or delete operation.
 
 ### Read
 
@@ -640,7 +647,7 @@ public IActionResult Insert([FromBody] CRUDModel<Order> value)
 How it works:
 
 - The action validates that `CustomerName` and `EmployeeID` are present before writing.
-- It locates the document with the highest `orderId` and computes the next value as `lastRecord.OrderID + 1`, or `1` when the collection is empty. MongoDB does not provide an auto-increment integer, so the controller generates the business key.
+- It locates the document with the highest `orderId` and computes the next value as `lastRecord.OrderID + 1`, or `1` when the collection is empty. MongoDB does not provide an auto-incrementing integer field, so the controller generates the business key.
 - `InsertOne` writes the new document. MongoDB assigns the `_id` automatically because none is supplied.
 - The inserted `Order` (with the generated `OrderID`) is returned so the Pivot Table can update its local copy.
 
@@ -727,7 +734,7 @@ How it works:
 
 The API uses action-oriented routes because they match the URL Adaptor's `InsertUrl`, `UpdateUrl`, and `RemoveUrl` contract.
 
-For write requests, `action` identifies the operation, `keyColumn` names the primary-key field, `key` carries the value used by delete operations, and `value` carries the inserted or updated record. The Syncfusion model also supports `added`, `changed`, and `deleted` collections for batch editing, `params` for additional values, and `table` for an optional table name; this sample uses normal editing and does not consume those optional properties.
+For write requests, `action` identifies the operation, `keyColumn` names the primary-key field, `key` carries the value used by delete operations, and `value` carries the inserted or updated record. The Syncfusion model also supports `added`, `changed`, and `deleted` collections for batch editing and `params` for additional values; this sample uses normal editing and does not consume those optional properties.
 
 | Route | Failure response |
 |---|---|
@@ -756,11 +763,37 @@ Example read response:
       "employeeID": 2,
       "freight": 80.20,
       "shipCity": "London"
+    },
+    {
+      "id": "65a1f2c3b7d8e9f0a1b2c3d6",
+      "orderID": 3,
+      "customerName": "Sven",
+      "employeeID": 1,
+      "freight": 52.10,
+      "shipCity": "Berlin"
+    },
+    {
+      "id": "65a1f2c3b7d8e9f0a1b2c3d7",
+      "orderID": 4,
+      "customerName": "Sara",
+      "employeeID": 3,
+      "freight": 18.40,
+      "shipCity": "Madrid"
+    },
+    {
+      "id": "65a1f2c3b7d8e9f0a1b2c3d8",
+      "orderID": 5,
+      "customerName": "Paul",
+      "employeeID": 2,
+      "freight": 64.75,
+      "shipCity": "Tokyo"
     }
   ],
-  "count": 2
+  "count": 5
 }
 ```
+
+> **Note:** The JSON payloads below use camelCase property names (`orderID`, `customerName`, `employeeID`, `freight`, `shipCity`) because the URL Adaptor serializes fields from the grid's camelCase wire format and the API deserializes them into the PascalCase C# properties of `Order` (`OrderID`, `CustomerName`, `EmployeeID`, `Freight`, `ShipCity`) through System.Text.Json's default case-insensitive binding. The `keyColumn` value (`orderID`) must match the field name the grid sends — the one you marked as `IsPrimaryKey` in the `BeginDrillThrough` handler — and not the C# property name.
 
 Example insert request:
 
@@ -805,38 +838,12 @@ Example delete request:
 }
 ```
 
-## Data Flow Diagram
-
-The end-to-end request flow is:
-
-```text
-Blazor Pivot Table
-        ↓
-   SfDataManager
-        ↓
-    UrlAdaptor
-        ↓
-  OrderController
-        ↓
-   MongoDB.Driver
-        ↓
-      MongoDB
-        ↓
-   OrderDB / Orders
-```
-
-1. The Blazor Pivot Table renders and issues a `POST /api/Order` request through `SfDataManager` and the UrlAdaptor.
-2. `OrderController.Post` runs `Find(_ => true)` against the `OrderDB.Orders` collection and returns `{ result, count }`.
-3. The UrlAdaptor deserializes the response and the Pivot Table aggregates `CustomerName` (rows), `EmployeeID` (columns), and the sum of `Freight` (values).
-4. When the user drills through a value cell and edits, adds, or deletes a record, the Pivot Table calls `InsertUrl`, `UpdateUrl`, or `RemoveUrl`.
-5. The corresponding controller action validates the payload, runs `InsertOne`, `UpdateOne`, or `DeleteOne` on the MongoDB collection, and returns the result.
-6. The Pivot Table refreshes its aggregated view from the updated collection on the next read request.
-
 ## Run and Verify the Application
 
-Build and run the project:
+After editing `Program.cs`, `Home.razor`, and `App.razor`, restore dependencies and build the project. Ensure the Syncfusion license or trial key has been registered in `Program.cs` (see [Configure Program.cs](#configure-programcs)) before building; an unregistered key does not fail the build, but the component will render a license warning at runtime.
 
 ```powershell
+dotnet restore
 dotnet build
 dotnet run
 ```
@@ -854,7 +861,7 @@ Open the URL shown in the terminal. Verify the following:
 
 MongoDB is ideal for document-oriented workloads and scales horizontally through sharding. Before using this design in production, consider the following:
 
-- **Concurrency:** MongoDB supports concurrent readers and writers. For write-heavy workloads, prefer `UpdateOne` and `DeleteOne` over whole-document replacement, and index the `orderId` field used by update and delete filters.
+- **Concurrency:** MongoDB supports concurrent readers and writers. For write-heavy workloads, prefer `UpdateOne` over `ReplaceOne` (whole-document replacement), and index the `orderId` field used by update and delete filters.
 - **Server-side data operations:** The sample returns the entire `Orders` collection. Apply `DataManagerRequest` `where`, `sorted`, `skip`, and `take` parameters on the server before using this design with large datasets.
 - **Connection string:** Store the MongoDB connection string through the hosting environment or a secrets manager rather than committing production URIs to source control.
 - **Authentication and authorization:** Configure MongoDB authentication and protect the write endpoints with the authentication and authorization mechanism used by your application.
