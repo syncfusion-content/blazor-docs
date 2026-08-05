@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Positioning in Blazor AppBar Component | Syncfusion®
-description: Checkout and learn about the available position options in the Blazor AppBar component, including the Top, Bottom, and Sticky positions.
+description: Check out and learn about Positioning in the Blazor AppBar component in the Blazor Server App and the Blazor WebAssembly App.
 platform: Blazor
 control: AppBar
 documentation: ug

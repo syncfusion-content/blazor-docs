@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Show/Hide Accordion item in Blazor Accordion Component | Syncfusion®
-description: Check out and learn how to show or hide specific items in the Blazor Accordion component, either with conditional rendering or the Visible parameter.
+description: Checkout and learn here all about how to Show/Hide Accordion item in Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug

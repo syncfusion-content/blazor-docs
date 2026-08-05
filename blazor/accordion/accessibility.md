@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Accordion Component | Syncfusion®
-description: Check out and learn about the accessibility features of the Blazor Accordion component, including ARIA support and keyboard navigation.
+description: Checkout and learn here all features about Accessibility in Blazor Accordion component and much more.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -49,8 +49,6 @@ The accessibility compliance for the Blazor Accordion component is outlined belo
 | aria-expanded        | Attribute is set to the Accordion header elements to indicate the expand state of the Accordion item. Default value of this attribute is `false`. If an item is expanded, the attribute value changes to `true`. |
 | aria-hidden          | Attribute is set to the Accordion panel elements to indicate the visibility of the Accordion item content. Default value of this attribute is `true`. If an item content is visible, the attribute value changes to `false`. |
 | aria-disabled        | Set on the Accordion header (button) to indicate that the corresponding item is disabled, preventing toggle interaction. |
-| tabindex             | Set to `0` on the Accordion header buttons to include them in the page tab sequence for keyboard navigation. |
-| aria-level (optional)| Set on the Accordion header (button) when nested inside other WAI-ARIA pattern structures (e.g., tablist) to indicate the heading level. |
 
 ## Keyboard interaction
 

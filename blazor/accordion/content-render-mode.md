@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Content Render Mode in Blazor Accordion Component | Syncfusion®
-description: Check out and learn about the content render mode options in the Blazor Accordion component, including the LoadOnDemand property.
+description: Checkout and learn here all features about Content Render Mode in Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -18,10 +18,6 @@ The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accor
 | Property | Type | Default | Description |
 | -- | -- | -- | -- |
 | `LoadOnDemand` | `bool` | `true` | When `true`, content is rendered on demand (lazy) and removed from the DOM when the panel collapses. When `false`, every item's content is rendered up front and kept in the DOM. |
-
-
-
-* The Accordion requires an interactive Blazor render mode. Ensure the parent component or the app uses `InteractiveServer`, `InteractiveWebAssembly`, or `InteractiveAuto` render mode. `StaticSSR` will not allow client-side expand/collapse to function.
 
 ## Example: render all panel contents on initial load
 

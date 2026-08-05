@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Design User Interface with Blazor AppBar Component | Syncfusion®
-description: Checkout and learn about designing the user interface of the Blazor AppBar component in Blazor Server and WebAssembly apps, including spacers, separators, media queries, menus, buttons, and the Sidebar integration.
+description: Check out and learn about Design User Interface with the Blazor AppBar component in the Blazor Server App and the Blazor WebAssembly App.
 platform: Blazor
 control: AppBar
 documentation: ug
@@ -117,7 +117,7 @@ Media Query is used to adjust the AppBar for different screen sizes. Resize the 
 
 ## Designing AppBar with Menu
 
-The **SfMenu** component can be rendered as a child content of the AppBar. You can inherit the AppBar component styles by setting the CSS class as `e-inherit` on the SfMenu component. The `TValue="MenuItem"` generic parameter is required to specify the menu item type used by the menu items collection.
+The **SfMenu** component can be rendered as a child content of the AppBar. You can inherit the AppBar component styles by setting the CSS class as `e-inherit` on the SfMenu component. 
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -211,7 +211,7 @@ The **SfButton** and **SfDropDownButton** components can be rendered as a child 
 
 ## Designing AppBar with SideBar
 
-The AppBar toggle button is used to control the expand and collapse state of the **SfSidebar** component. Click on the menu icon to expand/collapse the Sidebar. In the following sample, the `IsOpen` property has been used to show or hide the Sidebar on the AppBar button click. The `@bind-IsOpen` two-way binding reflects changes in the Sidebar state back to the `SidebarToggle` field, while the `Toggle` event handler flips the bound value on each AppBar button click.
+The AppBar toggle button is used to control the expand and collapse state of the **SfSidebar** component. Click on the menu icon to expand/collapse the Sidebar. In the following sample, the `IsOpen` property has been used to show or hide the Sidebar on the AppBar button click.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Breadcrumb Icons with Blazor Breadcrumb component | Syncfusion®
-description: Render icons in Blazor Breadcrumb items so users can navigate by clicking the items.
+description: Breadcrumb allows the end user to place the icons on Breadcrumb items and navigate to other webpages while clicking the Breadcrumb items.
 platform: Blazor
 control: Breadcrumb
 documentation: ug

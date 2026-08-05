@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animations in Blazor Accordion Component | Syncfusion®
-description: Check out and learn about the animation options available in the Blazor Accordion component, including effect, duration, and easing.
+description: Checkout and learn here all features for handling Animations in Blazor Accordion component and much more.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -25,15 +25,41 @@ By default, the Accordion uses `SlideDown` animation for expanding panels (set t
 
 | Value | Applies To | Description |
 | -- | -- | -- |
-| `SlideDown` | Expand | Slides the panel downward when expanding. |
-| `SlideUp` | Collapse | Slides the panel upward when collapsing. |
-| `FadeIn` | Expand | Fades the panel into view. |
-| `FadeOut` | Collapse | Fades the panel out of view. |
-| `FadeZoomIn` | Expand | Combined fade and zoom-in. |
-| `FadeZoomOut` | Collapse | Combined fade and zoom-out. |
-| `ZoomIn` | Expand | Scales the panel from small to full size. |
-| `ZoomOut` | Collapse | Scales the panel from full to small size. |
-| `None` | Expand / Collapse | Disables the animation entirely. |
+| `SlideDown` | Expand | Slides the panel downward. |
+| `SlideUp` | Collapse | Slides the panel upward. |
+| `SlideLeft` | Expand / Collapse | Slides the panel to the left. |
+| `SlideRight` | Expand / Collapse | Slides the panel to the right. |
+| `SlideLeftIn` | Expand | Slides the panel in from the left. |
+| `SlideRightIn` | Expand | Slides the panel in from the right. |
+| `SlideLeftOut` | Collapse | Slides the panel out to the left. |
+| `SlideRightOut` | Collapse | Slides the panel out to the right. |
+| `SlideTopIn` | Expand | Slides the panel in from the top. |
+| `SlideBottomIn` | Expand | Slides the panel in from the bottom. |
+| `SlideTopOut` | Collapse | Slides the panel out to the top. |
+| `SlideBottomOut` | Collapse | Slides the panel out to the bottom. |
+| `FadeIn` | Expand / Collapse | Fades the panel in. |
+| `FadeOut` | Expand / Collapse | Fades the panel out. |
+| `FadeZoomIn` | Expand / Collapse | Combined fade and zoom-in. |
+| `FadeZoomOut` | Expand / Collapse | Combined fade and zoom-out. |
+| `ZoomIn` | Expand / Collapse | Scales the panel up from small. |
+| `ZoomOut` | Expand / Collapse | Scales the panel down to small. |
+| `FlipXDownIn` | Expand | Flips the panel in from the top. |
+| `FlipXDownOut` | Collapse | Flips the panel out to the top. |
+| `FlipXUpIn` | Expand | Flips the panel in from the bottom. |
+| `FlipXUpOut` | Collapse | Flips the panel out to the bottom. |
+| `FlipYLeftIn` | Expand | Flips the panel in from the right. |
+| `FlipYLeftOut` | Collapse | Flips the panel out to the right. |
+| `FlipYRightIn` | Expand | Flips the panel in from the left. |
+| `FlipYRightOut` | Collapse | Flips the panel out to the left. |
+| `FlipLeftDownIn` | Expand | Flip on left axis, slide in from top. |
+| `FlipLeftDownOut` | Collapse | Flip on left axis, slide out to top. |
+| `FlipLeftUpIn` | Expand | Flip on left axis, slide in from bottom. |
+| `FlipLeftUpOut` | Collapse | Flip on left axis, slide out to bottom. |
+| `FlipRightDownIn` | Expand | Flip on right axis, slide in from top. |
+| `FlipRightDownOut` | Collapse | Flip on right axis, slide out to top. |
+| `FlipRightUpIn` | Expand | Flip on right axis, slide in from bottom. |
+| `FlipRightUpOut` | Collapse | Flip on right axis, slide out to bottom. |
+| `None` | Expand / Collapse | Disables the animation. |
 
 ## Customizing duration and easing
 
@@ -86,8 +112,7 @@ The following example demonstrates how to bind a DropDownList so a user can choo
                 <label> Expand Animation </label>
             </div>
             <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
-                <SfDropDownList TValue="AnimationEffect" DataSource="@AnimationData" TItem="Effect" PopupHeight="150px" Placeholder="Select a animate type" @bind-Value="ExpandEffect">
-                    <DropDownListEvents ValueChange="ExpandOption" TValue="AnimationEffect" TItem="Effect"></DropDownListEvents>
+                <SfDropDownList TValue="AnimationEffect" DataSource="@AnimationData" TItem="Effect" PopupHeight="200px" Placeholder="Select an animation" @bind-Value="ExpandEffect">
                     <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
                 </SfDropDownList>
             </div>
@@ -97,8 +122,7 @@ The following example demonstrates how to bind a DropDownList so a user can choo
                 <label> Collapse Animation </label>
             </div>
             <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
-                <SfDropDownList TValue="AnimationEffect" DataSource="@AnimationData" TItem="Effect" PopupHeight="150px" Placeholder="Select a animate type" @bind-Value="CollapseEffect">
-                    <DropDownListEvents ValueChange="CollapseOption" TValue="AnimationEffect" TItem="Effect"></DropDownListEvents>
+                <SfDropDownList TValue="AnimationEffect" DataSource="@AnimationData" TItem="Effect" PopupHeight="200px" Placeholder="Select an animation" @bind-Value="CollapseEffect">
                     <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
                 </SfDropDownList>
             </div>
@@ -114,53 +138,64 @@ The following example demonstrates how to bind a DropDownList so a user can choo
             </AccordionItem>
             <AccordionItem Header="ASP.NET MVC" Content="The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller. The ASP.NET MVC framework provides an alternative to the ASP.NET Web Forms pattern for creating Web applications. The ASP.NET MVC framework is a lightweight, highly testable presentation framework that (as with Web Forms-based applications) is integrated with existing ASP.NET features, such as master pages and membership-based authentication.">
             </AccordionItem>
-            <AccordionItem Header="JavaScript" Content="JavaScript (JS) is an interpreted computer programming language.It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed.More recently, however, it has become common in both Animation development and the creation of desktop applications.">
+            <AccordionItem Header="JavaScript" Content="JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed. More recently, however, it has become common in both server-side development and the creation of desktop applications.">
             </AccordionItem>
         </AccordionItems>
     </SfAccordion>
 </div>
 
-@code{
+@code {
     public AnimationEffect ExpandEffect = AnimationEffect.SlideDown;
     public AnimationEffect CollapseEffect = AnimationEffect.SlideUp;
-    public void ExpandOption(Syncfusion.Blazor.DropDowns.ChangeEventArgs<AnimationEffect, Effect> args)
-    {
-        this.ExpandEffect = args.Value;
-    }
-    public void CollapseOption(Syncfusion.Blazor.DropDowns.ChangeEventArgs<AnimationEffect, Effect> args)
-    {
-        this.CollapseEffect = args.Value;
-    }
-    List<Effect> AnimationData = new List<Effect> {
-        new Effect() { ID= AnimationEffect.SlideDown, Text= "SlideDown" },
-        new Effect() { ID= AnimationEffect.SlideUp, Text= "SlideUp" },
-        new Effect() { ID= AnimationEffect.FadeIn, Text= "FadeIn" },
-        new Effect() { ID= AnimationEffect.FadeOut, Text= "FadeOut" },
-        new Effect() { ID= AnimationEffect.FadeZoomIn, Text= "FadeZoomIn" },
-        new Effect() { ID= AnimationEffect.FadeZoomOut, Text= "FadeZoomOut" },
-        new Effect() { ID= AnimationEffect.ZoomIn, Text= "ZoomIn" },
-        new Effect() { ID= AnimationEffect.ZoomOut, Text= "ZoomOut" },
-        new Effect() { ID= AnimationEffect.None, Text= "None" }
-    };
+
     public class Effect
     {
         public AnimationEffect ID { get; set; }
         public string Text { get; set; }
     }
+
+    private List<Effect> AnimationData = new()
+    {
+        new Effect { ID = AnimationEffect.SlideDown,        Text = "SlideDown" },
+        new Effect { ID = AnimationEffect.SlideUp,          Text = "SlideUp" },
+        new Effect { ID = AnimationEffect.SlideLeft,        Text = "SlideLeft" },
+        new Effect { ID = AnimationEffect.SlideRight,       Text = "SlideRight" },
+        new Effect { ID = AnimationEffect.SlideLeftIn,      Text = "SlideLeftIn" },
+        new Effect { ID = AnimationEffect.SlideRightIn,     Text = "SlideRightIn" },
+        new Effect { ID = AnimationEffect.SlideLeftOut,     Text = "SlideLeftOut" },
+        new Effect { ID = AnimationEffect.SlideRightOut,    Text = "SlideRightOut" },
+        new Effect { ID = AnimationEffect.SlideTopIn,       Text = "SlideTopIn" },
+        new Effect { ID = AnimationEffect.SlideBottomIn,    Text = "SlideBottomIn" },
+        new Effect { ID = AnimationEffect.SlideTopOut,      Text = "SlideTopOut" },
+        new Effect { ID = AnimationEffect.SlideBottomOut,   Text = "SlideBottomOut" },
+        new Effect { ID = AnimationEffect.FadeIn,           Text = "FadeIn" },
+        new Effect { ID = AnimationEffect.FadeOut,          Text = "FadeOut" },
+        new Effect { ID = AnimationEffect.FadeZoomIn,       Text = "FadeZoomIn" },
+        new Effect { ID = AnimationEffect.FadeZoomOut,      Text = "FadeZoomOut" },
+        new Effect { ID = AnimationEffect.ZoomIn,           Text = "ZoomIn" },
+        new Effect { ID = AnimationEffect.ZoomOut,          Text = "ZoomOut" },
+        new Effect { ID = AnimationEffect.FlipXDownIn,      Text = "FlipXDownIn" },
+        new Effect { ID = AnimationEffect.FlipXDownOut,     Text = "FlipXDownOut" },
+        new Effect { ID = AnimationEffect.FlipXUpIn,        Text = "FlipXUpIn" },
+        new Effect { ID = AnimationEffect.FlipXUpOut,       Text = "FlipXUpOut" },
+        new Effect { ID = AnimationEffect.FlipYLeftIn,      Text = "FlipYLeftIn" },
+        new Effect { ID = AnimationEffect.FlipYLeftOut,     Text = "FlipYLeftOut" },
+        new Effect { ID = AnimationEffect.FlipYRightIn,     Text = "FlipYRightIn" },
+        new Effect { ID = AnimationEffect.FlipYRightOut,    Text = "FlipYRightOut" },
+        new Effect { ID = AnimationEffect.FlipLeftDownIn,   Text = "FlipLeftDownIn" },
+        new Effect { ID = AnimationEffect.FlipLeftDownOut,  Text = "FlipLeftDownOut" },
+        new Effect { ID = AnimationEffect.FlipLeftUpIn,     Text = "FlipLeftUpIn" },
+        new Effect { ID = AnimationEffect.FlipLeftUpOut,    Text = "FlipLeftUpOut" },
+        new Effect { ID = AnimationEffect.FlipRightDownIn,  Text = "FlipRightDownIn" },
+        new Effect { ID = AnimationEffect.FlipRightDownOut, Text = "FlipRightDownOut" },
+        new Effect { ID = AnimationEffect.FlipRightUpIn,    Text = "FlipRightUpIn" },
+        new Effect { ID = AnimationEffect.FlipRightUpOut,   Text = "FlipRightUpOut" },
+        new Effect { ID = AnimationEffect.None,             Text = "None" }
+    };
 }
 ```
 
-> The DropDownList uses `@bind-Value` only. Do not also wire a `ValueChange` handler to the same property, or the value will be updated twice.
-
-## Per-item animation
-
-Animations are configured at the Accordion level using `AccordionAnimationSettings`. To control the open/close effect of a specific item, use the [`Expanded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html) and [`ExpandedChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html) two-way binding on `AccordionItem`. Custom per-item easing or duration is not currently supported; only `Effect` and `None` can be applied per item by toggling the animation settings around an expand/collapse event.
-
-## Live sample
-
-Open the [Blazor Playground sample](https://blazorplayground.syncfusion.com/embed/rtLRDdiWilSZPJDq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2) to try the example.
-
-![Customize Accordion expand or collapse animation behavior](images/blazor-accordion-animation.webp)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLRDdiWilSZPJDq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customize Accordion expand or collapse animation behavior](./images/blazor-accordion-animation.webp)" %}
 
 ## See also
 

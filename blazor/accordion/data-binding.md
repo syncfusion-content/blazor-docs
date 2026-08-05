@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data binding in Blazor Accordion Component | Syncfusion®
-description: Check out and learn how to bind local data to the Blazor Accordion component using templates.
+description: Checkout and learn here all features about Data binding in Blazor Accordion component and much more.
 platform: Blazor
 control: Accordion
 documentation: ug

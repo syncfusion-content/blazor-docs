@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Styles and appearance in Blazor Carousel component | Syncfusion®
-description: Check out and learn about styles and appearance in the Blazor Carousel component and more.
+title: Style and Appearance in Blazor Carousel Component | Syncfusion®
+description: Checkout and learn here all about style and appearance in Blazor Carousel component and much more details.
 platform: Blazor
 control: Carousel
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enable or Disable item in Blazor Accordion Component | Syncfusion®
-description: Check out and learn how to enable or disable specific items in the Blazor Accordion component using the Disabled parameter.
+description: Checkout and learn here all features about Enable or Disable item in Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug

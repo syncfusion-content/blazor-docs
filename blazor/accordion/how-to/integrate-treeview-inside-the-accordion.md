@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Treeview Integration in Blazor Accordion Component | Syncfusion®
-description: Check out and learn how to embed a Syncfusion TreeView inside the Blazor Accordion component's panels.
+description: Checkout and learn here all features about Treeview Integration in Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug

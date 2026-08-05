@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Accordion Component | Syncfusion®
-description: Check out and learn about the events available in the Blazor Accordion component, including Created, Destroyed, Clicked, Expanding, Expanded, Collapsing, and Collapsed.
+description: Checkout and learn here all features about handling Accordion events in Blazor Accordion components.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 This section lists the events raised by the [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) and when each is triggered.
 
-Configure events by adding an `<AccordionEvents>` child component to `<SfAccordion>`. All events are `EventCallback<T>` parameters, so you can bind them to a method that takes the event arguments and returns `void` or `Task`.
+Configure events by adding an `<AccordionEvents>` child component to `<SfAccordion>`. 
 
 N> All events should be configured within a single **AccordionEvents** component.
 

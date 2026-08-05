@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styles and Appearances in Blazor AppBar Component | Syncfusion®
-description: Checkout and learn how to customize the styles and appearances of the Blazor AppBar component using built-in CSS classes, the CssClass property, and the HtmlAttributes parameter.
+description: Check out and learn in detail about Styles and Appearances in Blazor AppBar component and more here.
 platform: Blazor
 control: AppBar
 documentation: ug
@@ -70,10 +70,9 @@ The following example achieves the same result by using the `@attributes` direct
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
-@using Microsoft.AspNetCore.Components
 
 <div class="control-container">
-    <SfAppBar ColorMode="AppBarColor.Primary" @attributes="CustomAttributes">
+    <SfAppBar ColorMode="AppBarColor.Primary" HtmlAttributes="CustomAttributes">
        <SfButton CssClass="e-inherit" IconCss="e-icons e-home"></SfButton>
     </SfAppBar>
 </div>

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Carousel component | Syncfusion®
-description: Check out and learn about accessibility with the Blazor Carousel component in Blazor Server App and Blazor WebAssembly App.
+title: Accessibility with Blazor Carousel Component | Syncfusion®
+description: Checkout and learn about accessibility with Blazor Carousel component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Carousel
 documentation: ug

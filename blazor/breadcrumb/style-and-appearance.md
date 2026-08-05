@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Styles and Appearance in Blazor Breadcrumb Component | Syncfusion®
-description: Learn how to customize the styles and appearance of the Blazor Breadcrumb component.
+title: Styles and Appearances in Blazor Breadcrumb Component | Syncfusion®
+description: Checkout and learn here all features about Styles and Appearances in Blazor Breadcrumb component and much more.
 platform: Blazor
 control: Breadcrumb
 documentation: ug

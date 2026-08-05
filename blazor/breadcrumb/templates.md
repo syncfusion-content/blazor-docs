@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Breadcrumb Templates with Blazor Breadcrumb component | Syncfusion®
-description: Customize the item template and separator template of the Blazor Breadcrumb component.
+description: Breadcrumb section explains how to customize the item template and separator template to the Breadcrumb items.
 platform: Blazor
 control: Breadcrumb
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Expand Mode in Blazor Accordion Component | Syncfusion®
-description: Check out and learn about the available expand modes (Single and Multiple) in the Blazor Accordion component, including how to set expanded items on initial load.
+description: Checkout and learn here all features for handling Expand Mode in Blazor Accordion component and much more.
 platform: Blazor
 control: Accordion
 documentation: ug

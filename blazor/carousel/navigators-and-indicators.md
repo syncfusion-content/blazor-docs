@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Navigators and Indicators in Blazor Carousel component | Syncfusion®
-description: Check out and learn about navigators and indicators with the Blazor Carousel component in Blazor Server App and Blazor WebAssembly App.
+title: Navigations and Indicators with Blazor Carousel | Syncfusion®
+description: Checkout and learn about Navigations and Indicators with Blazor Carousel component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Carousel
 documentation: ug

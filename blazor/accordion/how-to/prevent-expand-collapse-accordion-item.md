@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Prevent the Expand or Collapse Item in Blazor Accordion Component | Syncfusion®
-description: Check out and learn how to prevent the expand or collapse action in the Blazor Accordion component using the Expanding and Collapsing events.
+title: Prevent the Expand or Collapse item in Blazor Accordion | Syncfusion®
+description: learn here all features about how to prevent Expand or Collapse item in Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug

@@ -1,17 +1,13 @@
 ---
 layout: post
 title: Size and Color with Blazor AppBar Component | Syncfusion®
-description: Checkout and learn about the available size modes and color modes of the Blazor AppBar component, controlled by the Mode and ColorMode properties.
+description: Check out and learn about Size and Color with the Blazor AppBar component in the Blazor Server App and the Blazor WebAssembly App.
 platform: Blazor
 control: AppBar
 documentation: ug
 ---
 
 # Size and Color with Blazor AppBar Component
-
-The Blazor AppBar exposes two properties that control its visual appearance: the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Mode) property, which determines the AppBar height, and the [ColorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_ColorMode) property, which determines the background and font colors.
-
-N> Refer to the [Getting Started with Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/getting-started) page for prerequisites (NuGet packages, theme, and script references) before running the samples in this document.
 
 ## Size
 
