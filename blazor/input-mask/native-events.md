@@ -34,7 +34,7 @@ Also, the previous example can be written using a lambda expression.
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
-<SfMaskedTextBox Mask='000-000-0000' @onkeypress="@(() => Console.WriteLine("Key Pressed!"))"></SfMaskedTextBox>
+<SfMaskedTextBox Mask="000-000-0000" @onkeypress="@(() => Console.WriteLine("Key Pressed!"))"></SfMaskedTextBox>
 ```
 
 ## Pass event data to event handler
@@ -53,18 +53,20 @@ In the following example, the KeyPressed method is invoked for every key press i
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
-<SfMaskedTextBox Mask='000-000-0000' @onkeypress='@(e => KeyPressed(e))' ></SfMaskedTextBox>
+<SfMaskedTextBox Mask="000-000-0000" @onkeypress="@(e => KeyPressed(e))"></SfMaskedTextBox>
 
 @code {
-  public void KeyPressed(KeyboardEventArgs args) {
-    if (args.Key == "m") {
-      Console.WriteLine("M was pressed");
+    public void KeyPressed(KeyboardEventArgs args)
+    {
+        if (args.Key == "m")
+        {
+            Console.WriteLine("M was pressed");
+        }
     }
-  }
 }
 ```
 
-Using Lambda expression also, you can pass the event data to the event handler.
+Using a lambda expression, you can also pass the event data to the event handler.
 
 ## List of native events supported
 
