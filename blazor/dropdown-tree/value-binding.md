@@ -120,7 +120,7 @@ In this example, the selected value is obtained through two-way binding using th
 
 ## Clear Selection
 
-In this example, you have the option to eliminate the selection by utilizing the [ClearAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ClearAsync) method.
+In this example, you can clear the selection by using the [ClearAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ClearAsync) method.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

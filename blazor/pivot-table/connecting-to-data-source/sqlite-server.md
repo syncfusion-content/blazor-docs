@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Pivot Table with SQLite via URL Adaptor | Syncfusion®
-description: Bind a SQLite database to the Blazor Pivot Table through an ASP.NET Core API and the Syncfusion URL Adaptor.
+title: SQLite in Blazor Pivot Table | Syncfusion
+description: Learn how to load and edit SQLite data in the Blazor Pivot Table through an ASP.NET Core API that uses Microsoft.Data.Sqlite and the Syncfusion URL adaptor.
 platform: Blazor
 control: PivotTable
 documentation: ug
 ---
 
-# Connect SQLite to a Blazor Pivot Table Using the URL Adaptor
+# SQLite in Blazor Pivot Table
 
 The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) can load and edit SQLite data through an ASP.NET Core API. [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) sends HTTP requests to the API, and the API uses [`Microsoft.Data.Sqlite`](https://www.nuget.org/packages/Microsoft.Data.Sqlite/) to access the SQLite database.
 

@@ -24,7 +24,7 @@ The following example demonstrates brightness, contrast, and saturation fine-tun
 <div style="padding-bottom: 15px">
     <SfButton OnClick="BrightnessClick">Brightness</SfButton>
     <SfButton OnClick="ContrastClick">Contrast</SfButton>
-    <SfButton OnClick="SaturationClick">Contrast</SfButton>
+    <SfButton OnClick="SaturationClick">Saturation</SfButton>
 </div>
 
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
