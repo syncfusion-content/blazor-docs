@@ -68,8 +68,6 @@ Locking can be done through the user interface or programmatically.
         }
         };
 
-    public string[] GroupID = new string[] { "group1" };
-
     private void lockGroup()
     {
         QuerybuilderObj.LockGroup("group0");
