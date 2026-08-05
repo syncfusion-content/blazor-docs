@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Toast Component | Syncfusion®
-description: Check out and learn here all the features about accessibility in Blazor Toast component and much more details.
+description: Checkout and learn here all the features about accessibility in Blazor Toast component and much more details.
 platform: Blazor
 control: Toast
 documentation: ug
