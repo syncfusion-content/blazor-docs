@@ -7,11 +7,11 @@ control: Floating Action Button
 documentation: ug
 ---
 
-# Accessibility in Blazor Floating Action Button component
+# Accessibility in Blazor Floating Action Button Component
 
 The Blazor Floating Action Button component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Blazor Floating Action Button component is outlined below.
+The accessibility compliance of the Blazor Floating Action Button component is summarized below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -61,4 +61,4 @@ The accessibility compliance of the Blazor Floating Action Button component is s
 
 ## See also
 
-* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)
