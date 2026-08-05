@@ -16,6 +16,7 @@ Attach event handlers to the Dropdown Menu using the [DropDownButtonEvents](http
 The DropDownButton component supports the following events and argument types:
 
 
+* [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_Created) - EventCallback; raised when the Dropdown Menu component is created.
 * [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_OnOpen) - BeforeOpenCloseMenuEventArgs; raised before the dropdown menu opens.
 * [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_Opened) - OpenCloseMenuEventArgs; raised after the dropdown menu opens.
 * [ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_ItemSelected) - MenuEventArgs; raised when a menu item is selected.
