@@ -81,12 +81,11 @@ This section lists the events available in the Blazor Input Mask (MaskedTextBox)
 
 ## ValueChange
 
-`ValueChange` is raised whenever the value of the MaskedTextBox changes. Use this event to react to value updates after a user edit. For two-way binding, see `ValueChanged`.
+[`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_ValueChange) is raised whenever the value of the MaskedTextBox changes. Use this event to react to value updates after a user edit. For two-way binding, see [`ValueChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_ValueChanged).
 
 | Event Argument | Property | Description |
 | --- | --- | --- |
-| `MaskChangeEventArgs` | `Value` | Gets the current value of the MaskedTextBox. |
-| `MaskChangeEventArgs` | `IsInteraction` | Indicates whether the change is triggered by user interaction. |
+| [`MaskChangeEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.MaskChangeEventArgs.html) | [`IsInteracted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.MaskChangeEventArgs.html#Syncfusion_Blazor_Inputs_MaskChangeEventArgs_IsInteracted) | Indicates whether the change is triggered by user interaction. |
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -117,8 +116,6 @@ This section lists the events available in the Blazor Input Mask (MaskedTextBox)
     }
 }
 ```
-
-> The Input Mask component currently includes these events. If a required event is not listed, submit a feature request in the Blazor feedback portal: [https://www.syncfusion.com/feedback/blazor-components](https://www.syncfusion.com/feedback/blazor-components).
 
 ## See also
 
