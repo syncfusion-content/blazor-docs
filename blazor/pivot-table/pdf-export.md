@@ -1,13 +1,13 @@
 ---
 layout: post
-title: PDF Export in Blazor Pivot Table Component | Syncfusion®
-description: checkout and learn all about PDF export feature in Blazor Pivot Table component with examples and much more details.
+title: PDF Export in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table exports data to a PDF document through ExportToPdfAsync when AllowPdfExport is true, with direct download or memory stream.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# PDF Export in Blazor Pivot Table Component
+# PDF Export in Blazor Pivot Table
 
 The PDF export allows users to easily export their Pivot Table data as a PDF document. To enable PDF export in the Pivot Table, set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowPdfExport) property to **true** in the [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) configuration. Once enabled, you can use the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method to generate and download the PDF file.
 
