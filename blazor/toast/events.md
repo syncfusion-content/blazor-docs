@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Toast Component | Syncfusion®
-description: Check out and learn here all about the features events in Blazor Toast component and much more details.
+description: Checkout and learn here all about the features events in Blazor Toast component and much more details.
 platform: Blazor
 control: Toast
 documentation: ug
