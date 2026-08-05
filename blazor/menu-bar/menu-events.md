@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Menu Bar Events in Blazor | Syncfusion®
+title: Menu Bar Events in Blazor Menu Bar | Syncfusion®
 description: Checkout and learn here all the features about Events in the Blazor MenuBar component and much more details.
 platform: Blazor
 control: Menu Bar
@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Menu Bar Component
 
-The Blazor Menu Bar component exposes a list of events that fire in response to user actions. The events are wired through the `MenuEvents` child tag of `SfMenu`. When using the `MenuEvents` tag, the `TValue` parameter must be supplied, and it must match the `TValue` of the parent `SfMenu` (or `MenuItem` when `SfMenu` is used declaratively without an explicit `TValue`).
+The Blazor Menu Bar component exposes a list of events that fire in response to user actions. The events are wired through the `MenuEvents` child tag of `SfMenu`. When using the `MenuEvents` tag, the `TValue` parameter must be supplied, and it must match the `TValue` of the parent `SfMenu`.
 
 N> All the events should be provided in a single `MenuEvents` tag.
 

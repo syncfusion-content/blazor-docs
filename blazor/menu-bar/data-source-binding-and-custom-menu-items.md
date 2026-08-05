@@ -74,9 +74,8 @@ N> In the above example, `TValue` is specified as `CustomMenuItem` because the m
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZhxDxAZVKMkqGfi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Binding in Blazor MenuBar](./images/blazor-menubar-data-binding.webp)" %}
 
-Self-Referential Data with CustomMenuItem in a MenuTemplate
+N> In the above example, `TValue` is specified as `MenuItemModel` because the menu is rendered using the `Items` property.
 
-When using `TValue="CustomMenuItem"` together with [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuTemplates-1.html), self-referential data structures with `ParentId` mapping are not supported automatically. To work around this limitation, you must manually convert the flat list into a parent/child hierarchy before binding it. The `BuildMenuHierarchy` helper in the example below performs that conversion by cloning each item, looking up its parent by `Id`, attaching the clone to the parent's `SubMenu` collection, and finally clearing the `ParentId` from the rendered hierarchy
 ## Handling Self-Referential Data with CustomMenuItem TValue in MenuTemplate
 
 When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuTemplates-1.html), self-referential data structures with ParentId mapping are not supported. To address this limitation, you need to manually map the parent and child menu items within the menu template. In the following example, we demonstrate how to configure the SfMenu component using self-referential data with CustomMenuItem as the TValue in the MenuTemplate.

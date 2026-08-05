@@ -11,7 +11,7 @@ documentation: ug
 
 The Menu Bar component supports right-to-left (RTL) layout direction for languages such as Arabic and Hebrew. This is enabled by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~EnableRtl.html) property to `true`. When enabled, the menu bar reverses its layout: items align to the right, submenus open toward the left, and any built-in icons are mirrored.
 
-The following example illustrates how to enable right-to-left support in the Menu Bar component. The `EnableRtl` property only changes the layout direction of the component; to fully localize your page, also set the `dir="rtl"` attribute on the surrounding element (or the `<html>` tag) and provide translated `Text` values for each `MenuItem`.
+The following example illustrates how to enable right-to-left support in the Menu Bar component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

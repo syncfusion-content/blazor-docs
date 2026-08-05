@@ -3,7 +3,7 @@ layout: post
 title: Use Case Scenarios in Blazor Menu Bar Component | Syncfusion®
 description: Checkout and learn here all about use case scenarios in Blazor Menu Bar component and much more details.
 platform: Blazor
-control: Menu Bar
+control: Menu Bar 
 documentation: ug
 ---
 

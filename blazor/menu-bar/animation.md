@@ -3,7 +3,7 @@ layout: post
 title: Animation in Blazor Menu Bar Component | Syncfusion®
 description: Checkout and learn here all about Change animation settings in Blazor ContextMenu component and much more details.
 platform: Blazor
-control: Menu Bar
+control: Context Menu
 documentation: ug
 ---
 

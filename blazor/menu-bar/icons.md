@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Icons and Submenu Items in Blazor Menu Bar Component | Syncfusion®
+title: Icons and submenu Items in Blazor Menu Bar Component | Syncfusion®
 description: Checkout and learn here all about icons and submenu items in Blazor Menu Bar component and much more details.
 platform: Blazor
 control: Menu Bar
@@ -152,9 +152,9 @@ The Menu Bar supports multiple level nesting, and it can be achieved by mapping 
                 <MenuItem Text="Men Fashion">
                     <MenuItems>
                         <MenuItem Text="Personal Care">
-                            <MenuItems>Shirts"></MenuItem>
-                                <MenuItem Text="Jackets"></MenuItem>
-                                <MenuItem Text="Trackers"></MenuItem>
+                            <MenuItems>
+                                <MenuItem Text="Trimmers"></MenuItem>
+                                <MenuItem Text="Shavers"></MenuItem>
                             </MenuItems>
                         </MenuItem>
                         <MenuItem Text="Clothing">
