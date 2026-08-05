@@ -23,12 +23,6 @@ Customize the Color Picker appearance by overriding its default CSS. The followi
 
 ## Applying custom CSS
 
-To apply custom styles, add a CSS file to your Blazor project and link it after the Syncfusion theme stylesheet so that your rules take precedence. For example, place the required rules in `wwwroot/css/color-picker.css` and reference the file of the project.
-
-```html
-<link rel="stylesheet" href="css/color-picker.css" />
-```
-
 The following example shows how to change the selection handler size, the tile border radius, and the switch control background using the CSS classes listed above.
 
 ```css
