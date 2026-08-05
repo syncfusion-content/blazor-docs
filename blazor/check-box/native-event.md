@@ -27,7 +27,7 @@ The following native events are supported by the CheckBox component:
 | List of native events |  |  |  |  |
 | --- | --- | --- | --- | --- |
 | onchange | oninput | onblur | onfocusout | onfocusin |
-| onfocus | onclick | onkeydown | onkeyup | onkeypress |
+| onfocus | onkeydown | onkeyup | onkeypress |
 
 | Event | Description |
 | --- | --- |
@@ -37,7 +37,6 @@ The following native events are supported by the CheckBox component:
 | `onfocus` | Fires when the CheckBox gains focus. |
 | `onfocusin` | Fires when focus enters the CheckBox (bubbling). |
 | `onfocusout` | Fires when focus leaves the CheckBox (bubbling). |
-| `onclick` | Fires when the CheckBox is clicked. |
 | `onkeydown` | Fires when a key is pressed down. |
 | `onkeyup` | Fires when a key is released. |
 | `onkeypress` | Fires when a key that produces a character is pressed. |

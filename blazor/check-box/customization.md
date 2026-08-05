@@ -140,7 +140,7 @@ The `HtmlAttributes` parameter can also be used to set inline `style` directly o
 
 The CheckBox frame can be customized by adding CSS rules.
 
-In the following example, a to-do list is displayed with a circular CheckBox by setting `border-radius: 50%` through the `e-custom` class. The `e-checkicon` class is also applied to style the check icon when the CheckBox is selected.
+In the following example, to-do list is displayed with round checkbox by changing `border-radius` as `100%` by adding `e-custom` class.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -160,33 +160,6 @@ In the following example, a to-do list is displayed with a circular CheckBox by 
 <style>
         .e-custom .e-frame {
             border-radius: 100%;
-        }
-
-        .e-checkicon.e-checkbox-wrapper .e-frame.e-check::before {
-            content: '\e77d';
-        }
-
-        .e-checkicon.e-checkbox-wrapper .e-check {
-            font-size: 8.5px;
-        }
-
-        .e-checkicon.e-checkbox-wrapper .e-frame.e-check {
-            background-color: white;
-            border-color: grey;
-            color: grey;
-        }
-
-        .e-checkicon.e-checkbox-wrapper:hover .e-frame.e-check {
-            background-color: white;
-            border-color: grey;
-            color: grey;
-        }
-
-        .e-checkicon.e-checkbox-wrapper .e-checkbox:focus + .e-frame.e-check {
-            background-color: white;
-            border-color: grey;
-            box-shadow: none;
-            color: grey;
         }
 </style>
 
