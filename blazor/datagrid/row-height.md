@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Row Height in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Row Height in Syncfusion Blazor DataGrid component and much more details.
+title: Blazor Grid Row Height | Syncfusion
+description: Learn how to customize row height in Blazor Data Grid to improve data readability, layout control, and user experience.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Row Height in Blazor DataGrid Component
+# Row Height in Blazor Data Grid
 
 You can customize the row height of [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) rows through the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property. The [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property is used to change the row height of entire datagrid rows.
 

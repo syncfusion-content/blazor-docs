@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Group and caption aggregates in Blazor DataGrid
+# Group and Caption Aggregates in Blazor Data Grid
 
 Group footer and group caption aggregates in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) calculate values based on items in each group and display results in group footer cells and group caption cells. Configure these using the [GroupFooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupFooterTemplate) and [GroupCaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupCaptionTemplate) properties of the [GridAggregateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn__ctor) component. Aggregate values inside templates can be accessed through AggregateTemplateContext (for example, Sum, Min, Max).
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Inline Editing in Blazor DataGrid | Syncfusion®
-description: Learn about Inline Editing in Blazor DataGrid, including supported events, configuration options, and customization techniques.
+title: Blazor Grid Inline Editing | Syncfusion
+description: Learn how to perform inline editing in Blazor Data Grid, configure editing events, customize behavior, and update data efficiently.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Inline editing in Blazor DataGrid
+# Inline Editing in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides in-line editing functionality, enabling direct modification of cell values within the Grid. This approach supports efficient data updates without requiring a separate edit form.
 

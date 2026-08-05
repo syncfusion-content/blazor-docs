@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Detail Template in Blazor DataGrid | Syncfusion®
-description: Learn how to use detail templates in Blazor DataGrid to display expandable content, hierarchical grids, template columns, and aggregates.
+title: Blazor Grid Detail Template | Syncfusion
+description: Learn how to use detail templates in Blazor Data Grid to display hierarchical data, nested grids, expandable content, template columns, and custom layouts.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Detail Template in Blazor DataGrid
+# Detail Template in Blazor Data Grid
 
 The detail template in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) displays expandable sections for each row to show additional, context-specific information. This is useful when rows contain nested or supplementary data that would otherwise clutter the main grid view. Define the template using the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) property, which supports any HTML content, Blazor components, or custom Blazor components.
 

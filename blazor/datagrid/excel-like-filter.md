@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Like Filter in Blazor DataGrid | Syncfusion®
-description: Implement Excel-like filtering in Blazor DataGrid for efficient data management in Blazor applications.
+title: Blazor Grid Excel Like Filter | Syncfusion
+description: Learn how to implement Excel-like filtering in Blazor Data Grid with checkbox filters, search, sorting, custom filter choices, and advanced filtering options.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Excel-like Filter in Blazor DataGrid
+# Excel-like Filter in Blazor Data Grid
 
 ## Introduction
 

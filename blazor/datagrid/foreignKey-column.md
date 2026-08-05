@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Foreign key column in Blazor DataGrid Component | Syncfusion®
-description: Learn how to configure and customize foreign key columns in Blazor DataGrid, including remote data binding and edit templates.
+title: Blazor Grid Foreign Key Column | Syncfusion
+description: Learn how to use foreign key columns in Blazor Data Grid with lookup data sources, display values, edit templates, and remote data binding support.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Foreign key column in Blazor DataGrid
+# Foreign Key Column in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports displaying related data from a **foreign key data source** in a column. This feature is useful when a column represents a foreign key relationship with another data source.
 

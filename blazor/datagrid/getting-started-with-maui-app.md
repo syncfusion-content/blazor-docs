@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with DataGrid in Blazor MAUI App | Syncfusion®
-description: Check out and learn about the documentation for getting started with Blazor DataGrid Component in Blazor MAUI App.
+title: Blazor Grid Getting Started in MAUI App | Syncfusion
+description: Learn how to get started with Syncfusion DataGrid in a Blazor MAUI app, including project setup, package installation, configuration, and data binding.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Getting Started with Blazor DataGrid Component in Blazor MAUI App
+# Getting Started in MAUI App in Blazor Data Grid
 
 This section explains the step-by-step process of integrating the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component in your Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
