@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Toolbar in Blazor Pivot Table Component | Syncfusion®
-description: Learn about toolbar in Blazor Pivot Table component for quick access to common features with examples and much more details.
+title: Toolbar in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table exposes a toolbar with built-in options for new, save, load, grid-chart switching, exporting, and conditional formatting.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Toolbar in Blazor Pivot Table Component
+# Toolbar in Blazor Pivot Table
 
 The toolbar in the Blazor Pivot Table component provides easy access to commonly used features, such as switching between a pivot table and a pivot chart, changing chart types, applying conditional formatting, exporting data, and more. To enable the toolbar, set the [ShowToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowToolbar) property to **true**. Additionally, the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_Toolbar) property accepts a collection of built-in toolbar options, allowing users to interact with the Pivot Table efficiently at runtime.
 
