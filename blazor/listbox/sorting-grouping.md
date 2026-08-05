@@ -11,7 +11,7 @@ documentation: ug
 
 ## Sorting
 
-The ListBox can sort items alphabetically in ascending or descending order by using the [SortOrder enum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html). Sorting applies to the text mapped via the Text field in ListBoxFieldSettings. The default sort order is `None`.
+The ListBox can sort items alphabetically in ascending or descending order by using the [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html) property. Sorting applies to the text mapped via the `Text` field in `ListBoxFieldSettings`. The default sort order is `None`.
 
 In the following example, `SortOrder` is set to `Descending`.
 
@@ -34,6 +34,7 @@ In the following example, `SortOrder` is set to `Descending`.
         new CountryCode{ Name = "Germany", Code = "DE" },
         new CountryCode{ Name = "Hong Kong", Code = "HK" }
     };
+
     public class CountryCode {
       public string Name { get; set; }
       public string Code { get; set; }
@@ -47,9 +48,9 @@ In the following example, `SortOrder` is set to `Descending`.
 
 ## Grouping
 
-The ListBox can group items by a category using the [GroupBy field in ListBoxFieldSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ListBoxFieldSettings_GroupBy). Each item is assigned to a group based on the value of the mapped field, and group headers act as visual categories (not selectable items).
+The ListBox can group items by a category by mapping the [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ListBoxFieldSettings_GroupBy) field in `ListBoxFieldSettings`. Each item is assigned to a group based on the value of the mapped field, and group headers act as visual categories (they are not selectable items).
 
-To get started quickly with grouping in the Blazor ListBox component, you can check the video below.
+Watch the video below for a quick introduction to grouping in the Blazor ListBox component.
 
 {% youtube "https://www.youtube.com/watch?v=Ja_UJva-cHA" %}
 
@@ -84,3 +85,10 @@ To get started quickly with grouping in the Blazor ListBox component, you can ch
 ```
 
 ![Blazor ListBox with items grouped by category](images/blazor-listbox-grouping.webp)
+
+## See also
+
+* [Data Binding in Blazor ListBox](./data-binding.md)
+* [Filtering in Blazor ListBox](./filtering.md)
+* [Icons and Templates in Blazor ListBox](./icons-and-templates.md)
+* [Getting Started with Blazor ListBox](./getting-started.md)
