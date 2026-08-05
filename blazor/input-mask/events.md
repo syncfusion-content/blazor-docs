@@ -81,7 +81,12 @@ This section lists the events available in the Blazor Input Mask (MaskedTextBox)
 
 ## ValueChange
 
-`ValueChange` is raised when the input value changes and the component then loses focus (or commits the change). This is typically used to react to completed edits; for two-way binding, see `ValueChanged`.
+`ValueChange` is raised whenever the value of the MaskedTextBox changes. Use this event to react to value updates after a user edit. For two-way binding, see `ValueChanged`.
+
+| Event Argument | Property | Description |
+| --- | --- | --- |
+| `MaskChangeEventArgs` | `Value` | Gets the current value of the MaskedTextBox. |
+| `MaskChangeEventArgs` | `IsInteraction` | Indicates whether the change is triggered by user interaction. |
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -98,18 +103,23 @@ This section lists the events available in the Blazor Input Mask (MaskedTextBox)
 
 ## ValueChanged
 
-`ValueChanged` is raised whenever the value changes.
+`ValueChanged` is the `EventCallback<string>` used for two-way binding. It is raised whenever the value changes, and is typically used with the `@bind-Value` directive. Prefer `ValueChange` if you need the `MaskChangeEventArgs` payload.
+
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfMaskedTextBox ValueChanged="@ValueChangedHandler"></SfMaskedTextBox>
 
 @code {
-    private void ValueChangedHandler(String args)
+    private async Task ValueChangedHandler(string args)
     {
         // Here, you can customize your code.
     }
 }
 ```
 
-N> Input Mask currently includes these events. Additional events may be added based on user requests. If a required event is not listed, submit a feature request in the Blazor feedback portal: https://www.syncfusion.com/feedback/blazor-components
+> The Input Mask component currently includes these events. If a required event is not listed, submit a feature request in the Blazor feedback portal: [https://www.syncfusion.com/feedback/blazor-components](https://www.syncfusion.com/feedback/blazor-components).
+
+## See also
+
+* [SfMaskedTextBox API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html)
