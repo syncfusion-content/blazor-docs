@@ -94,7 +94,7 @@ Filter chips allow multiple chips to be selected from the set of `ChipItems`. Th
 
 ## Action Chip
 
-Action chips trigger the [`OnClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_OnClick) or [`OnDelete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_OnDelete) event so the application can handle chip interactions. The `ChipEventArgs` provided to the handler exposes the clicked chip's `Text` (the chip label) and `Index` (its position in the `ChipItems` collection).
+Action chips trigger the [`OnClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_OnClick) or [`OnDelete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_OnDelete) event so the application can handle chip interactions. The [`ChipEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEventArgs.html) provided to the handler exposes the clicked chip's `Text` (the chip label) and [`Index`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEventArgs.html#Syncfusion_Blazor_Buttons_ChipEventArgs_Index) (its position in the [`ChipItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipItem.html) collection).
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
