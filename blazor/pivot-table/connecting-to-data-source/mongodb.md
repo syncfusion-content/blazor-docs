@@ -44,9 +44,7 @@ Blazor Pivot Table
         ↓
    MongoDB.Driver
         ↓
-      MongoDB
-        ↓
-   OrderDB / Orders
+      MongoDB → OrderDB (database) → Orders (collection)
 ```
 
 The Blazor Pivot Table renders aggregated data and issues read and write requests through `SfDataManager`. The `UrlAdaptor` serializes those requests as HTTP `POST` calls to the `OrderController` API. The controller uses `MongoDB.Driver` to run find, insert, update, and delete operations against the `OrderDB` database and its `Orders` collection, and returns JSON responses that the adaptor understands.
@@ -57,11 +55,13 @@ The Blazor Pivot Table renders aggregated data and issues read and write request
 
 Download MongoDB Community Server from the [MongoDB download page](https://www.mongodb.com/try/download/community) and install it for your platform. On Windows, accept the option to run MongoDB as a service so that the daemon (`mongod`) starts automatically and listens on the default port `27017`.
 
-Verify the server is running:
+Verify the server is running. If the MongoDB installer did not add the `bin` folder to your `PATH` (it usually does not on Windows), run the command from the installation directory, for example `C:\Program Files\MongoDB\Server\8.0\bin`:
 
 ```powershell
 mongod --version
 ```
+
+> **Tip:** To run `mongod` from any directory, add `C:\Program Files\MongoDB\Server\8.0\bin` to your system `PATH` and restart the terminal.
 
 Confirm the service is listening:
 
@@ -129,10 +129,10 @@ In MongoDB Compass, select the `OrderDB` database and the `Orders` collection. T
 
 ## Create the Blazor Web App
 
-Create an Interactive Server Blazor Web App:
+Create an Interactive Server Blazor Web App.
 
 ```powershell
-dotnet new blazor -n PivotTableMongoDB -f net10.0 -int Server -ai
+dotnet new blazor -n PivotTableMongoDB -f net10.0 -i Server -ai
 cd PivotTableMongoDB
 ```
 
@@ -140,7 +140,7 @@ In Visual Studio, the equivalent choices are **Blazor Web App**, **.NET 10**, **
 
 ## Install the Required NuGet Packages
 
-Run these commands in the `PivotTableMongoDB` project directory:
+Run these commands in the `PivotTableMongoDB` project directory.
 
 ```powershell
 dotnet add package Syncfusion.Blazor.PivotTable --version 34.1.33
@@ -188,6 +188,23 @@ Store the MongoDB connection string and the database and collection names in `ap
 ```
 
 > **Note:** Use `mongodb://localhost:27017` for a local MongoDB server without authentication. For a remote or secured MongoDB instance, replace the connection string with the appropriate URI, for example `mongodb+srv://<user>:<password>@cluster0.example.net/?retryWrites=true&w=majority`. Keep production connection strings out of source control through user secrets or environment variables.
+
+To override the connection string for local development without committing it to source, add an `appsettings.Development.json` file (already git-ignored by the Blazor template) or use the user-secrets store:
+
+```powershell
+dotnet user-secrets init
+dotnet user-secrets set "ConnectionStrings:MongoDB" "mongodb://localhost:27017"
+```
+
+`appsettings.Development.json`:
+
+```json
+{
+  "ConnectionStrings": {
+    "MongoDB": "mongodb://localhost:27017"
+  }
+}
+```
 
 A `MongoDbSettings:DatabaseName` value of `OrderDB` and a `MongoDbSettings:CollectionName` value of `Orders` must match the database and collection created in [Step 4](#step-4-create-the-database-and-collection).
 
@@ -310,7 +327,7 @@ namespace PivotTableMongoDB.Controllers
                 value.Key?.ToString(),
                 out int orderId))
             {
-                return BadRequest(
+                return ValidationProblem(
                     "A numeric order key is required.");
             }
 
@@ -407,16 +424,22 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
+    app.UseExceptionHandler();
     app.UseHsts();
+}
+else
+{
+    // The developer exception page shows stack traces during local development.
+    app.UseDeveloperExceptionPage();
 }
 
 app.UseExceptionHandler();
 
 app.UseHttpsRedirection();
 
-app.MapControllers();
-
 app.UseAntiforgery();
+
+app.MapControllers();
 
 app.MapStaticAssets();
 
@@ -431,7 +454,8 @@ Key registration points:
 - `AddSyncfusionBlazor()` registers the Syncfusion Blazor services required by the Pivot Table.
 - `AddRazorComponents().AddInteractiveServerComponents()` enables Interactive Server rendering.
 - `AddControllers()` registers the API controllers, including `OrderController`.
-- `AddProblemDetails()` and `UseExceptionHandler()` log unhandled failures and return generic error responses.
+- `AddProblemDetails()` and `UseExceptionHandler()` log unhandled failures and return generic `ProblemDetails` error responses.
+- `UseAntiforgery()` is registered before `MapControllers()` so the antiforgery middleware is in the pipeline for any endpoint that opts into validation. The sample API actions do not require it, but ordering it correctly now avoids surprises if you later add cookie authentication.
 - `MapControllers()` routes requests to the API endpoints.
 - `MapStaticAssets()` maps the application's static web assets, including assets supplied by referenced component packages.
 
@@ -454,7 +478,7 @@ In `Components/App.razor`, add the Syncfusion stylesheet inside `<head>`:
       rel="stylesheet" />
 ```
 
-Add the Syncfusion script immediately before `</body>`, after the template's existing `_framework/blazor.web.js` reference:
+Add the Syncfusion script immediately before `</body>`, after the template's existing `_framework/blazor.web.js` reference.
 
 ```html
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"
@@ -627,7 +651,7 @@ public IActionResult Insert([FromBody] CRUDModel<Order> value)
         || string.IsNullOrWhiteSpace(order.CustomerName)
         || !order.EmployeeID.HasValue)
     {
-        return BadRequest(
+        return ValidationProblem(
             "CustomerName and EmployeeID are required.");
     }
 
@@ -664,7 +688,7 @@ public IActionResult Update([FromBody] CRUDModel<Order> value)
         || string.IsNullOrWhiteSpace(order.CustomerName)
         || !order.EmployeeID.HasValue)
     {
-        return BadRequest(
+        return ValidationProblem(
             "OrderID, CustomerName and EmployeeID are required.");
     }
 
@@ -704,7 +728,7 @@ public IActionResult Delete([FromBody] CRUDModel<Order> value)
         value.Key?.ToString(),
         out int orderId))
     {
-        return BadRequest(
+        return ValidationProblem(
             "A numeric order key is required.");
     }
 
@@ -725,23 +749,16 @@ How it works:
 
 ## API Contract
 
-| Method | Route | Payload | Success response |
-|---|---|---|---|
-| `POST` | `/api/Order` | `DataManagerRequest` | `200` with `{ result, count }` |
-| `POST` | `/api/Order/Insert` | `CRUDModel<Order>` | `200` with the inserted record |
-| `POST` | `/api/Order/Update` | `CRUDModel<Order>` | `200` with the updated record |
-| `POST` | `/api/Order/Delete` | `CRUDModel<Order>` | `204` with no body |
+| Method | Route | Payload | Success response | Failure response |
+|---|---|---|---|---|
+| `POST` | `/api/Order` | `DataManagerRequest` | `200` with `{ result, count }` | `500` when the database cannot be queried |
+| `POST` | `/api/Order/Insert` | `CRUDModel<Order>` | `200` with the inserted record | `400` when required fields are missing; `500` on a database failure |
+| `POST` | `/api/Order/Update` | `CRUDModel<Order>` | `200` with the updated record | `400` when required fields are missing; `404` when the key does not exist; `500` on a database failure |
+| `POST` | `/api/Order/Delete` | `CRUDModel<Order>` | `204` with no body | `400` when the key is not numeric; `404` when the key does not exist; `500` on a database failure |
 
 The API uses action-oriented routes because they match the URL Adaptor's `InsertUrl`, `UpdateUrl`, and `RemoveUrl` contract.
 
-For write requests, `action` identifies the operation, `keyColumn` names the primary-key field, `key` carries the value used by delete operations, and `value` carries the inserted or updated record. The Syncfusion model also supports `added`, `changed`, and `deleted` collections for batch editing and `params` for additional values; this sample uses normal editing and does not consume those optional properties.
-
-| Route | Failure response |
-|---|---|
-| `/api/Order` | `500` when the database cannot be queried |
-| `/api/Order/Insert` | `400` when required fields are missing; `500` on a database failure |
-| `/api/Order/Update` | `400` when required fields are missing; `404` when the key does not exist; `500` on a database failure |
-| `/api/Order/Delete` | `400` when the key is not numeric; `404` when the key does not exist; `500` on a database failure |
+For write requests, `action` identifies the operation, `keyColumn` names the primary-key field, `key` carries the value used by delete operations, and `value` carries the inserted or updated record. The local `CRUDModel<T>` class also exposes `added`, `changed`, and `deleted` collections (used by the URL Adaptor in batch edit mode) and `params` for additional values. This sample uses normal editing and does not consume those optional properties.
 
 Example read response:
 
@@ -848,6 +865,12 @@ dotnet build
 dotnet run
 ```
 
+Before launching the app, confirm the MongoDB service is reachable. The `OrderController` constructor opens the collection eagerly and will throw on the first request if MongoDB is not listening on `27017`:
+
+```powershell
+Get-Service MongoDB   # should report Status: Running
+```
+
 Open the URL shown in the terminal. Verify the following:
 
 1. The Pivot Table displays `CustomerName` as rows, `EmployeeID` as columns, and the sum of `Freight` as values.
@@ -865,7 +888,14 @@ MongoDB is ideal for document-oriented workloads and scales horizontally through
 - **Server-side data operations:** The sample returns the entire `Orders` collection. Apply `DataManagerRequest` `where`, `sorted`, `skip`, and `take` parameters on the server before using this design with large datasets.
 - **Connection string:** Store the MongoDB connection string through the hosting environment or a secrets manager rather than committing production URIs to source control.
 - **Authentication and authorization:** Configure MongoDB authentication and protect the write endpoints with the authentication and authorization mechanism used by your application.
-- **Antiforgery:** If cookie-authenticated API actions require antiforgery validation, configure `SfDataManager` to send the request token expected by the server.
+- **Antiforgery:** If cookie-authenticated API actions require antiforgery validation, configure `SfDataManager` to send the request token expected by the server. Add a custom header name in `Program.cs` and read it inside the action filter:
+
+```csharp
+builder.Services.AddAntiforgery(o => o.HeaderName = "X-CSRF-TOKEN");
+```
+
+Then configure the data manager to send the same header by adding a custom adaptor option (the default `UrlAdaptor` does not forward antiforgery tokens; a small custom adaptor is the cleanest way). For non-cookie authentication (bearer tokens, API keys) skip this step entirely.
+- **Reverse proxy / load balancer:** When the app runs behind IIS, Nginx, or a cloud load balancer, the forwarded scheme and host are not visible to the app, and `UseHttpsRedirection` will redirect to the wrong port. Insert `app.UseForwardedHeaders()` immediately after `app.Build()` (and before the exception handler) and configure the forwarded headers options to trust the proxy range.
 - **Schema validation:** Enforce a [JSON schema validator](https://www.mongodb.com/docs/manual/core/schema-validation/) on the `Orders` collection so that inserted and updated documents always match the `Order` model.
 - **Deployment:** For cross-origin hosting, configure an explicit CORS policy that allows only the Blazor application's origin.
 - **Atomic auto-increment:** The sample computes `orderId` from the highest existing value. For high-throughput inserts, switch to a dedicated `counters` collection with `FindOneAndUpdate` to assign `orderId` atomically.
