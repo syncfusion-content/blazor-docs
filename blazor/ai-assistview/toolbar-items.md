@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Toolbar Items in Blazor AI AssistView | Syncfusion
+title: Toolbar Items in Blazor AI AssistView | Syncfusion®
 description: Configure Blazor AI AssistView toolbar items using AssistViewToolbarItem, PromptToolbarItem, and ResponseToolbarItem directives with position control.
 platform: Blazor
 control: AI AssistView

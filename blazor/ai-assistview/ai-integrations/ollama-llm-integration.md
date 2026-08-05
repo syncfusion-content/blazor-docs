@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Integrate Ollama LLM With Blazor AI AssistView | Syncfusion
+title: Integrate Ollama LLM With Blazor AI AssistView | Syncfusion®
 description: Checkout and learn about Integration of LLM Model with Blazor AI AssistView component in Blazor Application.
 platform: Blazor
 control: AI AssistView

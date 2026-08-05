@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Methods in Blazor AI AssistView | Syncfusion
+title: Methods in Blazor AI AssistView | Syncfusion®
 description: Execute prompts dynamically in Blazor AI AssistView using ExecutePromptAsync method to trigger PromptRequested event callbacks.
 platform: Blazor
 control: AI AssistView

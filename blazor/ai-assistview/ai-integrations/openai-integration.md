@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Integrate Azure OpenAI With Blazor AI AssistView | Syncfusion
+title: Integrate Azure OpenAI With Blazor AI AssistView | Syncfusion®
 description: Checkout and learn about Azure OpenAI with Blazor AI AssistView component in Blazor Application.
 platform: Blazor
 control: AI AssistView

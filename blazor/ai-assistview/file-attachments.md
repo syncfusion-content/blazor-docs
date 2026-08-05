@@ -1,6 +1,6 @@
 ---
 layout: post
-title: File Attachments in Blazor AI AssistView | Syncfusion
+title: File Attachments in Blazor AI AssistView | Syncfusion®
 description: Enable file attachments in Blazor AI AssistView with configurable upload URLs, allowed file types, and max file size restrictions.
 platform: Blazor
 control: AI AssistView

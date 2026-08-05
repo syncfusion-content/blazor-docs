@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to integrate with AI in Blazor AI AssistView | Syncfusion
+title: How to integrate with AI in Blazor AI AssistView | Syncfusion®
 description: Checkout and learn about Integration with Microsoft.Extensions.AI and Keyboard interaction with Blazor AI AssistView component and more details.
 platform: Blazor
 control: AI AssistView

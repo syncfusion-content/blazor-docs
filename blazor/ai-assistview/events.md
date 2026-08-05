@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in Blazor AI AssistView | Syncfusion
+title: Events in Blazor AI AssistView | Syncfusion®
 description: Handle Blazor AI AssistView events like Created and PromptRequested to trigger actions when component loads or user submits a prompt.
 platform: Blazor
 control: AI AssistView

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Assist View in Blazor AI AssistView | Syncfusion
+title: Assist View in Blazor AI AssistView | Syncfusion®
 description: Configure prompts in Blazor AI AssistView using Prompt property, placeholder text, and collection-based prompt-response pairs. Supports Markdown rendering.
 platform: Blazor
 control: AI AssistView

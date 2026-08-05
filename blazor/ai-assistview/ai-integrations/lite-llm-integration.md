@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Integrate LiteLLM With Blazor AI AssistView | Syncfusion
+title: Integrate LiteLLM With Blazor AI AssistView | Syncfusion®
 description: Checkout and learn about LiteLLM integration with Blazor AI AssistView component in Blazor Application.
 platform: Blazor
 control: AI AssistView
