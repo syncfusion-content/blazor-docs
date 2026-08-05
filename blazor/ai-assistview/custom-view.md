@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Custom views in Blazor AI AssistView Component | Syncfusion
-description: Checkout and learn here all about Custom views with Syncfusion Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
+title: Custom Views in Blazor AI AssistView | Syncfusion
+description: Create custom views in Blazor AI AssistView by configuring AssistView and CustomView components with headers, icons, and view templates.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 ---
 
-# Custom views in Blazor AI AssistView component
+# Custom Views in Blazor AI AssistView
 
 ## Adding custom views
 

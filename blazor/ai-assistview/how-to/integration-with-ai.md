@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Integration | Blazor AI AssistView component | Syncfusion
+title: How to integrate with Microsoft.Extensions.AI in Blazor AI AssistView | Syncfusion
 description: Checkout and learn about Integration with Microsoft.Extensions.AI and Keyboard interaction with Blazor AI AssistView component and more details.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 ---
 
-# Integration of Microsoft.Extensions.AI with AI AssistView component
+# How to integrate with Microsoft.Extensions.AI in Blazor AI AssistView
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> AI AssistView component supports integration with the `Microsoft.Extensions.AI` framework, enabling seamless communication with various large language models (LLMs) such as `Azure OpenAI`, `OpenAI`, and more.
 

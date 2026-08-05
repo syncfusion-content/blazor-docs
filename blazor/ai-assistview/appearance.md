@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and Appearance in Blazor AI AssistView Component | Syncfusion
-description: Checkout and learn here all about Style and Appearance with Syncfusion Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
+title: Style and Appearance in Blazor AI AssistView | Syncfusion
+description: Customize the Blazor AI AssistView appearance using Width, Height, and CssClass properties to match your application's design.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 ---
 
-# Style and Appearance in Blazor AI AssistView component
+# Style and Appearance in Blazor AI AssistView
 
 ## Setting width
 

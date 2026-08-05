@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with AI AssistView in Blazor Server App | Syncfusion
+title: Getting Started with AI AssistView in Blazor WASM App | Syncfusion
 description: Learn how to get started with the Syncfusion Blazor AI AssistView control. Explore setup, features, examples, and customization options.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 ---
 
-# Getting Started with Blazor AI AssistView in Blazor Server App
+# Getting Started with Blazor AI AssistView in Blazor WASM App
 
-This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AI AssistView](https://www.syncfusion.com/blazor-components/blazor-ai-assistview) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AI AssistView](https://www.syncfusion.com/blazor-components/blazor-ai-assistview) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -21,7 +21,7 @@ This section briefly explains about how to include [Syncfusion<sup style="font-s
 
 ## Create a new Blazor App in Visual Studio
 
-Create a **Blazor Server App** by using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation.
+Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) documentation.
 
 {% endtabcontent %}
 
@@ -31,15 +31,17 @@ Create a **Blazor Server App** by using the **Blazor Web App** template in Visua
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-Create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code) documentation.
+## Create a new Blazor App in Visual Studio Code
 
-Alternatively, create a Server application by using the following command in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=visual-studio-code) documentation.
+
+Alternatively, create a WebAssembly application by using the following command in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 {% tabs %}
 
-{% highlight c# tabtitle="Blazor Server App" %}
+{% highlight c# tabtitle="Blazor WASM App" %}
 
-dotnet new blazor -o BlazorApp -int Server
+dotnet new blazorwasm -o BlazorApp
 cd BlazorApp
 
 {% endhighlight %}
@@ -62,14 +64,14 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
-## Create a Blazor Server App using .NET CLI
+## Create a Blazor WebAssembly App using .NET CLI
 
-Run the following command to create a new Blazor Server App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=.net-cli) documentation.
+Run the following command to create a new Blazor WebAssembly App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=.net-cli) documentation.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
 
-dotnet new blazor -o BlazorApp -int Server
+dotnet new blazorwasm -o BlazorApp
 cd BlazorApp
 
 {% endhighlight %}
@@ -78,8 +80,6 @@ cd BlazorApp
 {% endtabcontent %}
 
 {% endtabcontents %}
-
-N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Server App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
@@ -143,15 +143,12 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AI AssistView component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AI AssistView component in the **~/Components/Pages/Home.razor** file. If the interactivity location is set to `Per page/component`, define a render mode at the top of the `~Pages/Home.razor` file.Use the [PromptSuggestions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptSuggestions) property to add prompt suggestions and the [PromptRequested](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptRequested) event to generate responses based on the entered prompts.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AI AssistView component in the **~/Pages/Index.razor** file. Use the [PromptSuggestions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptSuggestions) property to add prompt suggestions and the [PromptRequested](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptRequested) event to generate responses based on the entered prompts.
 
 N> If the Interactivity Location is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-@* desired render mode define here *@
-@rendermode InteractiveServer
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.InteractiveChat
 
@@ -162,44 +159,44 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 </div>
 
 @code {
-    List<string> promptSuggestions = new List<string>
-    {
-        "How do I prioritize my tasks?",
-        "How can I improve my time management skills?"
-    };
+List<string> promptSuggestions = new List<string>
+{
+"How do I prioritize my tasks?",
+"How can I improve my time management skills?"
+};
 
-    ```
-    public class AssistModel
+```
+public class AssistModel
+{
+    public string Prompt { get; set; }
+    public string Response { get; set; }
+}
+
+private List<AssistModel> prompts = new List<AssistModel>()
+{
+    new AssistModel()
     {
-        public string Prompt { get; set; }
-        public string Response { get; set; }
+        Prompt = "How do I prioritize my tasks?",
+        Response = "Prioritize tasks by urgency and impact: tackle high-impact tasks first, delegate when possible, and break large tasks into smaller steps. For more assistance, feel free to ask—I’m here to help!"
+    },
+    new AssistModel()
+    {
+        Prompt = "How can I improve my time management skills?",
+        Response = "To improve time management skills, try setting clear goals, using a planner or digital tools, prioritizing tasks, breaking tasks into smaller steps, and minimizing distractions. Regularly review and adjust your approach for better efficiency."
     }
+};
 
-    private List<AssistModel> prompts = new List<AssistModel>()
-    {
-        new AssistModel()
-        {
-            Prompt = "How do I prioritize my tasks?",
-            Response = "Prioritize tasks by urgency and impact: tackle high-impact tasks first,     delegate when possible, and break large tasks into smaller steps. For more  assistance, feel free to ask—I’m here to help!"
-        },
-        new AssistModel()
-        {
-            Prompt = "How can I improve my time management skills?",
-            Response = "To improve time management skills, try setting clear goals, using a     planner or digital tools, prioritizing tasks, breaking tasks into smaller steps, and    minimizing distractions. Regularly review and adjust your approach for better  efficiency."
-        }
-    };
+private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+{
+    await Task.Delay(3000);
 
-    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
-    {
-        await Task.Delay(3000);
+    var isPromptFound = prompts.Any(prompt => prompt.Prompt == args.Prompt);
+    var promptData = prompts.FirstOrDefault(prompt => prompt.Prompt == args.Prompt);
 
-        var isPromptFound = prompts.Any(prompt => prompt.Prompt == args.Prompt);
-        var promptData = prompts.FirstOrDefault(prompt => prompt.Prompt == args.Prompt);
+    var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
 
-        var defaultResponse = "For real-time prompt processing, connect the AI AssistView   component to your preferred AI service, such as OpenAI or Azure Cognitive Services.   Ensure you obtain the necessary API credentials to authenticate and enable seamless   integration.";
-
-        args.Response = isPromptFound ? promptData.Response : defaultResponse;
-    }
+    args.Response = isPromptFound ? promptData.Response : defaultResponse;
+}
 ```
 
 }

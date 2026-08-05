@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor AI AssistView Component | Syncfusion
-description: Checkout and learn about Accessibility and Keyboard interaction with Blazor AI AssistView component and more details.
+title: Accessibility in Blazor AI AssistView | Syncfusion
+description: Blazor AI AssistView adheres to WCAG 2.2 AA, Section 508, and ADA accessibility standards with full keyboard navigation support.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 ---
 
-# Accessibility in Blazor AI AssistView component
+# Accessibility in Blazor AI AssistView
 
 The Blazor AI AssistView component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
