@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Pivot Table with MySQL via URL Adaptor | Syncfusion®
-description: Bind MySQL data to the Blazor Pivot Table through an ASP.NET Core API and the Syncfusion URL Adaptor, with create, read, update, and delete support.
+title: MySQL in Blazor Pivot Table | Syncfusion
+description: Learn how to load and edit MySQL data in the Blazor Pivot Table through an ASP.NET Core API using MySql.Data and the Syncfusion URL adaptor.
 platform: Blazor
 control: PivotTable
 documentation: ug
 ---
 
-# Connecting MySQL to Blazor Pivot Table Using URL Adaptor
+# MySQL in Blazor Pivot Table
 
 The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) can load and edit MySQL data through an ASP.NET Core API and the Syncfusion URL Adaptor. The adaptor sends read and CRUD requests to controller endpoints; the controller uses `MySql.Data` to execute parameterized SQL against MySQL.
 

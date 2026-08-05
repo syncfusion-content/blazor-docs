@@ -9,24 +9,25 @@ documentation: ug
 
 # Styles and Appearances in Blazor Button Component
 
-To modify the Button appearance, you need to override the default CSS of Button component. Find the list of CSS classes and its corresponding section in Button component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+To modify the Button appearance, you need to override the default CSS of the Button component. The following table lists the available CSS classes and their corresponding section in the Button component. You can also create your own custom theme for the controls using the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
-|CSS Class | Purpose of Class |
-|-----|----- |
-|.e-btn|To customize the button.|
-|.e-btn:hover|To customize the button on hover.|
-|.e-btn:focus|To customize the button on focus.|
-|.e-btn:active|To customize the button on active.|
+| CSS Class | Purpose of Class |
+| --- | --- |
+| .e-btn | To customize the button. |
+| .e-btn:hover | To customize the button on hover. |
+| .e-btn:focus | To customize the button on focus. |
+| .e-btn:active | To customize the button on active. |
+| .e-btn:disabled | To customize the button in the disabled state. |
 
 ## Customizing the appearance of button
 
-Use the following CSS to customize the background color of button while clicking, hovering and focusing.
+Use the following CSS to customize the background color of the button while clicking, hovering, and focusing.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Buttons
 
-<SfButton CssClass="e-btn">CUSTOM</SfButton>
+<SfButton>CUSTOM</SfButton>
 
 <style>
     .e-btn {
@@ -38,10 +39,15 @@ Use the following CSS to customize the background color of button while clicking
     }
 
     .e-btn:focus, .e-btn:active {
-       background-color: #0078d4;
-    }   
+        background-color: #0078d4;
+    }
 </style>
-
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htrdZHCVVKwTFEJD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button with Style and Appearance](./images/blazor-button-style-and-appearance.gif)" %}
+
+## See also
+
+* [Types and Styles in Blazor Button](types-and-styles.md)
+* [Accessibility in Blazor Button](accessibility.md)
+* [Blazor Button API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html)

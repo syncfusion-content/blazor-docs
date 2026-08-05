@@ -1,13 +1,13 @@
 ---
 layout: post
-title: State Persistence in Blazor Pivot Table Component | Syncfusion®
-description: Learn about state persistence in Blazor Pivot Table component for retaining configuration with examples and much more details.
+title: State Persistence in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table retains layout, fields, sorting, filters, and expand-collapse state in browser storage between sessions via EnablePersistence.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# State Persistence in Blazor Pivot Table Component
+# State Persistence in Blazor Pivot Table
 
 State persistence enables users to automatically retain the entire configuration of the Pivot Table component in the browser's local storage (cookies). This includes the current layout, field arrangements, sorting, applied filters, and the expanded or collapsed states of fields. By enabling the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_EnablePersistence) property in the [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class, all these interactive states and settings are saved automatically. As a result, users can refresh the browser or navigate to different pages and return at any time, knowing that all modified report settings will be retained—ensuring a seamless and uninterrupted data analysis experience.
 
