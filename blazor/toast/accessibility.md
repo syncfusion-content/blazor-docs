@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Toast Component | Syncfusion®
-description: Checkout and learn here all the features about accessibility in Blazor Toast component and much more details.
+description: Check out and learn here all the features about accessibility in Blazor Toast component and much more details.
 platform: Blazor
 control: Toast
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Toast Component
 
-The [Blazor Toast](https://www.syncfusion.com/blazor-components/blazor-toast) component has been designed with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/practices/) specifications in mind by applying the prompt WAI-ARIA roles, states, and properties with the keyboard support. It helps users who use assistive WAI-ARIA accessibility support, which is achieved using attributes.
+The [Blazor Toast](https://www.syncfusion.com/blazor-components/blazor-toast) component has been designed with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/practices/) specifications in mind by applying the proper WAI-ARIA roles, states, and properties with the keyboard support. It helps users who use assistive WAI-ARIA accessibility support, which is achieved using attributes.
 
 It provides information about the elements in a document for assistive technology.
 
