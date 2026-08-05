@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Number Formatting in Blazor Pivot Table Component | Syncfusion®
-description: Learn about number formatting options in Blazor Pivot Table component with examples and much more details.
+title: Number Formatting in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table formats numeric values as Number, Currency, Percentage, or custom patterns via PivotViewFormatSettings applied per field.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Number Formatting in Blazor Pivot Table Component
+# Number Formatting in Blazor Pivot Table
 
 The Pivot Table component provides comprehensive number formatting capabilities, allowing you to display numeric values in various formats. This enhances data readability and ensures values are displayed accurately to meet your specific needs.
 
