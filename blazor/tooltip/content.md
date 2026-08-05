@@ -65,8 +65,9 @@ The Tooltip's Template property enables you to completely customize the layout a
 Check out the following code example to see how to include an HTML template inside the Tooltip.
 
 ```cshtml
-@using Syncfusion.Blazor.Buttons;
-@using Syncfusion.Blazor.Popups;
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Popups
+
 <SfTooltip CssClass="e-tooltip-css" OpensOn="Click" Target="#btn">
     <ContentTemplate>
         <div id='democontent' class='democontent'>
@@ -76,7 +77,7 @@ Check out the following code example to see how to include an HTML template insi
                     <div style='float:left;width:57%'>
                         The
                             <a href='https://en.wikipedia.org/wiki/Eastern_bluebird' target='blank'> Eastern Bluebird
-                            </a> 
+                            </a>
                                 is easily found in open fields and sparse woodland areas, including along woodland edges.These are
                             <i>
                                 cavity-nesting birds
