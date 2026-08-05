@@ -9,9 +9,9 @@ documentation: ug
 
 # Connect Firebase Firestore to Blazor Pivot Table
 
-This User Guide explains how to bind a Firebase Firestore database to the Syncfusion Blazor Pivot Table through an ASP.NET Core API and the Syncfusion `UrlAdaptor`. The sample uses the `Google.Cloud.Firestore` client library to read and persist documents in an `Orders` collection, while the Pivot Table consumes the API through `SfDataManager`.
+This User Guide explains how to bind a Firebase Firestore database to the Syncfusion Blazor Pivot Table through an ASP.NET Core API and the Syncfusion `UrlAdaptor`. The sample uses the `Google.Cloud.Firestore` client library to read and write documents in an `Orders` collection, while the Pivot Table consumes the API through `SfDataManager`.
 
-Firestore is a cloud-hosted NoSQL document database. Data is stored in documents, which are grouped into collections. The implementation follows a server-hosted pattern: the Blazor Pivot Table requests data from the server, and the server handles Firestore access, authentication, validation, and CRUD operations. This keeps the component focused on aggregation and editing while the API handles persistence against the cloud-hosted Firestore database.
+Firestore is a cloud-hosted NoSQL document database. Data is stored in documents, which are grouped into collections. The implementation follows a server-hosted pattern: the Blazor Pivot Table requests data from the server, and the server handles Firestore access, authentication, and CRUD operations. This keeps the component focused on aggregation and editing while the API handles persistence against the cloud-hosted Firestore database.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ The following table lists the tools and libraries required to build and run the 
 | Visual Studio 2026 or Code Studio | 18.0+ / latest | Development environment with the ASP.NET and web workloads installed. |
 | Firebase Account | Active Google account | Used to create a Firebase project and a Firestore database. |
 | Firebase Firestore Database | Provisioned instance | Cloud-hosted NoSQL document store that holds the `Orders` collection. |
-| Google.Cloud.Firestore | 4.3.0 | Official Google Cloud Firestore client library for .NET. |
+| Google.Cloud.Firestore | 4.3.0 | Official Google Cloud Firestore client library for .NET. Requires .NET 8 or later; verified with .NET 10. |
 | Syncfusion.Blazor.PivotTable | 34.1.33 | Renders the Pivot Table UI and performs aggregation. |
 | Syncfusion.Blazor.Themes | 34.1.33 | Applies the Bootstrap 5 theme to the Pivot Table. |
 | Newtonsoft.Json | 13.0.4 | Serializes the JSON payloads exchanged with the URL Adaptor. |
@@ -33,6 +33,8 @@ The following table lists the tools and libraries required to build and run the 
 The sample reads and writes documents in an `Orders` collection. Complete the steps below to provision the Firestore database, the collection, sample data, and the service account key, and then build the Blazor web app that consumes them.
 
 ### Step 1: Create a Firebase Project
+
+For the official walkthrough, see the [Firebase documentation: Create a Firebase project](https://firebase.google.com/docs/projects/api/workflow_set-up-and-manage-project).
 
 1. Sign in to the [Firebase Console](https://console.firebase.google.com/) using a Google account.
 2. Click **Add project** and enter a project name, for example `pivottablefirestore`.
@@ -46,7 +48,18 @@ The sample reads and writes documents in an `Orders` collection. Complete the st
 3. Choose **Start in test mode** so that read and write access is allowed during local development.
 4. Select a Firestore region close to your users and click **Enable**.
 
-> **Note:** Test mode leaves the database open for 30 days. Replace the test rules with production rules before deploying the sample.
+> **Note:** Test mode leaves the database open for 30 days. Replace the test rules with production rules before deploying the sample. For example, a minimum locked-down ruleset is:
+>
+> ```text
+> rules_version = '2';
+> service cloud.firestore {
+>   match /databases/{database}/documents {
+>     match /{document=**} {
+>       allow read, write: if request.auth != null;
+>     }
+>   }
+> }
+> ```
 
 ### Step 3: Create the Orders Collection
 
@@ -59,11 +72,11 @@ The sample reads and writes documents in an `Orders` collection. Complete the st
 
 3. Click **Next** and then **Save** to create an empty collection.
 
-The `Orders` collection stores one document per order. Firestore generates a unique document ID for each inserted document, while the `orderId` field inside each document serves as the business key used by the controller for update and delete operations.
+The `Orders` collection stores one document per order. Firestore generates a unique document ID for each inserted document. The `orderId` field inside each document serves as the business key used by the controller for update and delete operations.
 
 ### Step 4: Add Sample Data
 
-Add the following sample documents to the `Orders` collection. Each document uses a Firestore-generated ID and stores the fields shown below. The block is shown as JSON Lines (one document per line) because each document is added to Firestore individually:
+Add the following five sample documents to the `Orders` collection. Each document uses a Firestore-generated ID and stores the fields shown below. The block is shown as a JSON array for readability; each entry is added to Firestore individually:
 
 ```json
 [
@@ -75,7 +88,7 @@ Add the following sample documents to the `Orders` collection. Each document use
 ]
 ```
 
-In the Firebase console, click **Add document**, leave the document ID blank so Firestore auto-generates one, and add the fields above as key/value pairs.
+For each entry in the array, click **Add document** in the Firestore console, leave the document ID blank so Firestore auto-generates one, and add the fields above as key/value pairs. Repeat the operation for all five documents. For bulk import, use the [Google Cloud Firestore import/export tooling](https://firebase.google.com/docs/firestore/manage-data/export-import) instead.
 
 ### Step 5: Generate and Store a Firebase Service Account Key
 
@@ -88,7 +101,7 @@ Firebase Console
     → Generate New Private Key
 ```
 
-A JSON credentials file is downloaded to your machine. This file is used by the ASP.NET Core API to authenticate as the project's service account.
+Firebase downloads the JSON credentials file to your machine. This file is used by the ASP.NET Core API to authenticate as the project's service account.
 
 The sample expects the credentials file to be available in the project. Create a folder named:
 
@@ -207,6 +220,8 @@ Environment.SetEnvironmentVariable(
         "serviceAccountKey.json"));
 
 // Register a valid Syncfusion license key to remove the license banner.
+// Register a Syncfusion license or trial key before running the app. Without a valid
+// key, the Pivot Table shows a license banner and evaluation watermarks.
 // Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(
 //     "YOUR_LICENSE_KEY");
 
@@ -234,11 +249,11 @@ app.MapRazorComponents<App>()
 app.Run();
 ```
 
-The service account file authorizes the server-side API to read and write the `Orders` collection on behalf of the Firebase project. Without this file, `FirestoreDb.Create` cannot authenticate and all controller endpoints will fail.
+The service account file authorizes the server-side API to read and write the `Orders` collection on behalf of the Firebase project. Without this file, `FirestoreDb.Create` cannot authenticate and all controller endpoints will fail. The path is resolved relative to `builder.Environment.ContentRootPath` because the `<None Update="Firebase\*.json">` entry in `PivotTableFirestore.csproj` (see Step 7) copies the file into the build output alongside the assembly.
 
 ### Step 9: Create the Order Model
 
-The `Order` model maps .NET properties to Firestore document fields. The class is decorated with `[FirestoreData]` so the Firestore client can convert documents to and from the type, and each property uses `[FirestoreProperty]` to bind to the corresponding field name in the document. In this sample, `Order` is declared as a nested class inside `OrderController`, so the following `using` directives are required at the top of the controller file:
+The `Order` model maps .NET properties to Firestore document fields. The class is decorated with `[FirestoreData]` so the Firestore client can convert documents to and from the type, and each property uses `[FirestoreProperty]` to bind to the corresponding field name in the document. In this sample, `Order` is declared as a nested class inside `OrderController`, so the following `using` directives are required at the top of `Controllers/OrderController.cs`:
 
 ```csharp
 using System.ComponentModel.DataAnnotations; // [Key]
@@ -249,38 +264,30 @@ using Syncfusion.Blazor.Data;                // DataManagerRequest
 ```
 
 ```csharp
-[FirestoreData]
-public class Order
-{
-    [Key]
-    [FirestoreProperty("orderId")]
-    public int? OrderID { get; set; }
-
-    [FirestoreProperty("customerName")]
-    public string? CustomerName { get; set; }
-
-    [FirestoreProperty("employeeId")]
-    public int? EmployeeID { get; set; }
-
-    [FirestoreProperty("freight")]
-    public double? Freight { get; set; }
-
-    [FirestoreProperty("shipCity")]
-    public string? ShipCity { get; set; }
-}
-```
-
-The `[Key]` attribute marks `OrderID` as the primary key for the URL Adaptor's update and delete operations; it is a client-side marker for the adaptor and not a Firestore constraint. The `[FirestoreProperty]` attribute controls how each field is named inside the Firestore document.
-
-### Step 10: Create the API Controller
-
-The `OrderController` exposes the API endpoints consumed by the Pivot Table. It creates a `FirestoreDb` instance using the configured project ID and reads the collection name from `appsettings.json`.
-
-```csharp
 [ApiController]
 [Route("api/[controller]")]
 public class OrderController : ControllerBase
 {
+    [FirestoreData]
+    public class Order
+    {
+        [Key]
+        [FirestoreProperty("orderId")]
+        public int? OrderID { get; set; }
+
+        [FirestoreProperty("customerName")]
+        public string? CustomerName { get; set; }
+
+        [FirestoreProperty("employeeId")]
+        public int? EmployeeID { get; set; }
+
+        [FirestoreProperty("freight")]
+        public double? Freight { get; set; }
+
+        [FirestoreProperty("shipCity")]
+        public string? ShipCity { get; set; }
+    }
+
     private readonly FirestoreDb firestoreDb;
     private readonly string collectionName;
 
@@ -300,7 +307,13 @@ public class OrderController : ControllerBase
 }
 ```
 
-The controller also declares the `CRUDModel<T>` type that the URL Adaptor sends for insert, update, and delete requests:
+The `[Key]` attribute marks `OrderID` as the primary key for the URL Adaptor's update and delete operations; it is a client-side marker for the adaptor and not a Firestore constraint. The `[FirestoreProperty]` attribute controls how each field is named inside the Firestore document.
+
+### Step 10: Create the API Controller
+
+The `OrderController` exposes the API endpoints consumed by the Pivot Table. It creates a `FirestoreDb` instance using the configured project ID and reads the collection name from `appsettings.json`. Create the file at `Controllers/OrderController.cs` (Add → New Item → API Controller in Visual Studio, or the file location the CLI scaffold gives you under the project's `Controllers` folder). Then paste the snippets below into that single file, in this order: `using` directives, the `OrderController` class with the nested `Order` class, the `CRUDModel<T>` class below the `OrderController` body, and the four action methods (read, insert, update, delete).
+
+Append the `CRUDModel<T>` class to `Controllers/OrderController.cs`, below the `OrderController` class body. The URL Adaptor sends this type for insert, update, and delete requests:
 
 ```csharp
 public class CRUDModel<T> where T : class
@@ -468,7 +481,7 @@ public async Task<IActionResult> Delete([FromBody] CRUDModel<Order> value)
 
 ### Step 11: Configure the Pivot Table
 
-The Pivot Table is rendered in `Components/Pages/Home.razor`. It binds to the API through `SfDataManager` and the `UrlAdaptor`, mapping the read, insert, update, and delete URLs to the corresponding controller endpoints.
+The Pivot Table is rendered in `Components/Pages/Home.razor`. It binds to the API through `SfDataManager` and the `UrlAdaptor`, passing read, insert, update, and delete URLs to the corresponding controller endpoints.
 
 **_Imports.razor**
 
@@ -661,7 +674,7 @@ Example delete request body sent by the URL Adaptor:
 
 ## Run and Verify
 
-> Register a valid Syncfusion license key in `Program.cs` (see the commented `RegisterLicense` call above) before running to remove the license banner.
+> Register a valid Syncfusion license or trial key in `Program.cs` (see the commented `RegisterLicense` call above) before running to remove the license banner.
 
 1. Provision the Firebase project, Firestore database, `Orders` collection, and sample documents as described in the [Firestore Database Setup and Application Configuration](#firestore-database-setup-and-application-configuration) section.
 2. Generate a service account key and place it at `Firebase/serviceAccountKey.json`.
@@ -672,14 +685,20 @@ Example delete request body sent by the URL Adaptor:
    dotnet build
    ```
 
-4. Run the application:
+4. Optionally, verify the API directly before opening the Pivot Table. From a separate terminal, POST to the read endpoint and confirm the seeded documents are returned:
+
+   ```bash
+   curl -X POST http://localhost:5000/api/Order -H "Content-Type: application/json" -d "{}"
+   ```
+
+5. Run the application:
 
    ```bash
    dotnet run --project PivotTableFirestore/PivotTableFirestore.csproj
    ```
 
-5. Open the local URL shown in the terminal.
-6. Confirm that the Pivot Table loads with the sample data and that drill-through editing inserts, updates, and deletes documents in the `Orders` collection.
+6. Open the local URL shown in the terminal.
+7. Confirm that the Pivot Table loads with the sample data and that drill-through editing inserts, updates, and deletes documents in the `Orders` collection.
 
 ## Production Considerations
 
@@ -698,6 +717,11 @@ Example delete request body sent by the URL Adaptor:
 | Collection not found | The `Orders` collection was not created in Firestore, or `CollectionName` in `appsettings.json` is misspelled. | Create the `Orders` collection in the Firebase console and ensure the `CollectionName` value matches exactly. |
 | CRUD operation issues | The document does not exist, or the `orderId` cannot be matched during update or delete. | Confirm that sample documents were inserted with valid `orderId` values and that the drill-through grid marks `OrderID` as the primary key. |
 | UrlAdaptor request failures | The Pivot Table cannot reach the API endpoint, or the response shape does not match the adaptor contract. | Verify the `SfDataManager` URLs are correct relative paths and that the controller returns `{ result, count }` for read requests. |
+| `AddControllers` / `MapControllers` missing | The Pivot Table receives `404 Not Found` for `/api/Order` and the controller file is not picked up. | Confirm that `builder.Services.AddControllers();` is present in `Program.cs` and that `app.MapControllers();` is called between `app.Build()` and `app.Run()`. |
+| CORS errors during local development | The browser blocks the Pivot Table's fetch to `/api/Order` because the API lives on a different origin. | Both the Blazor app and the API run on the same origin in the scaffold used here, so CORS is not required. If you split the API into a separate project, register a CORS policy and call `app.UseCors(...)` before `app.MapControllers()`. |
+| Port conflict on `dotnet run` | Another process is already bound to the port shown in the terminal, or a previous `dotnet run` was not stopped. | Stop the previous process with `Get-Process -Name "PivotTableFirestore" \| Stop-Process -Force` (PowerShell) before rebuilding; otherwise the build fails with `MSB3027` because the DLL is locked. |
+| ADC not set at runtime | `GOOGLE_APPLICATION_CREDENTIALS` is read before `builder.Build()` but the `Firebase/serviceAccountKey.json` file is missing from the output directory. | Confirm the `<None Update="Firebase\*.json">` entry in `PivotTableFirestore.csproj` and rebuild. The file must be copied to `bin/Debug/net10.0/Firebase/`. |
+| Test-mode rules expired | Firestore returns `PERMISSION_DENIED` after 30 days because the test-mode security rules have expired. | Replace the test rules with the production example shown in Step 2, or extend the test-mode window from the Firebase console. |
 
 ## Complete Sample Repository
 
