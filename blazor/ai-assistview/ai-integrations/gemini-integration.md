@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Integrate Gemini With Blazor AI AssistView | Syncfusion
-description: Checkout and learn about gemini integration with Blazor AI AssistView component in Blazor WebAssembly Application.
+description: Checkout and learn about gemini integration with Blazor AI AssistView component in Blazor Application.
 platform: Blazor
 control: AI AssistView
 documentation: ug

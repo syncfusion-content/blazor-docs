@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text To Speech in Blazor AI AssistView | Syncfusion
-description: Checkout and learn about Text-to-Speech configuration with Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
+description: Checkout and learn about Text-to-Speech configuration with Blazor AI AssistView component in Blazor App.
 platform: Blazor
 control: AI AssistView
 documentation: ug

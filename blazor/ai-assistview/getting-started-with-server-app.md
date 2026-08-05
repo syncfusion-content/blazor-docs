@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with AI AssistView in Blazor Server App | Syncfusion
-description: Learn how to get started with the Syncfusion Blazor AI AssistView control. Explore setup, features, examples, and customization options.
+description: Learn how to get started with the Syncfusion Blazor AI AssistView. Explore setup, features, examples, and customization options.
 platform: Blazor
 control: AI AssistView
 documentation: ug
