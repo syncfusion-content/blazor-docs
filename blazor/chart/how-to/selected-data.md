@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Visualize grid data in chart in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about Visualize grid data in chart in Blazor Charts component and more.
+title: How to get selected data in Blazor Charts | Syncfusion®
+description: Read the selected data from a Blazor Chart using the OnSelectionChanged event and deserialize the SelectedDataValues payload into your model.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Visualize Grid Data in Chart in Blazor Charts Component
+# How to get selected data in Blazor Charts
 
 Use the chart's [OnSelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSelectionChanged) event to get the list of selected data from the chart.
 

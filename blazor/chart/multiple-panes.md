@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Multiple Panes in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about Multiple Panes in Blazor Charts component and much more.
+title: Multiple Panes in Blazor Charts | Syncfusion®
+description: Divide the Blazor Charts plot area into multiple panes using ChartRows and ChartColumns, each with its own height, axis, and series.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Multiple Panes in Blazor Charts Component
+# Multiple Panes in Blazor Charts
 
 The chart area can be divided into multiple panes using [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartRow.html) and [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartColumn.html) settings.
 

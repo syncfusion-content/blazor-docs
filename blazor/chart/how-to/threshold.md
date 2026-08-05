@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Threshold in Chart in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about Threshold in Chart in Blazor Charts component and more.
+title: How to add a threshold in Blazor Charts | Syncfusion®
+description: Mark a threshold value in a Blazor Chart with a horizontal stripline using the ChartStripline property bound to a vertical axis value.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
 <!-- markdownlint-disable MD036 -->
 
-# Threshold in Chart in Blazor Charts Component
+# How to add a threshold in Blazor Charts
 
 The threshold level can be indicated in the chart using the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html). Follow the steps below to add a threshold to the chart.
 

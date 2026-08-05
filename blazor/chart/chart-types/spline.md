@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Spline in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Spline Chart in Blazor Charts component and much more.
+title: Spline in Blazor Charts | Syncfusion®
+description: Render Blazor Charts Spline series to connect data points with smooth curves instead of straight lines for visually continuous trends.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Spline in Blazor Charts Component
+# Spline in Blazor Charts
 
 ## Spline
 

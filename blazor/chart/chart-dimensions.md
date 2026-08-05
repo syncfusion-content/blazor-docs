@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Chart Dimensions in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about Chart Dimensions in Blazor Charts component and much more.
+title: Chart Dimensions in Blazor Charts | Syncfusion®
+description: Set Blazor Charts size with Width and Height properties; default is 600×450 px. Use percentages and CDN script to avoid redraws.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Chart Dimensions in Blazor Charts Component
+# Chart Dimensions in Blazor Charts
 
 N> 
 * When no size is specified, the default height and width are 450px and 600px, respectively.

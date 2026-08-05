@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotation in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about using Annotation in Blazor Charts component and much more.
+title: Annotation in Blazor Charts | Syncfusion®
+description: Add annotations to Blazor Charts to highlight regions of interest with custom HTML text, shapes, or images at chart coordinates.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Annotation in Blazor Charts Component
+# Annotation in Blazor Charts
 
 Annotations are texts, shapes, or images that are used to highlight a specific region of interest in a chart.
 

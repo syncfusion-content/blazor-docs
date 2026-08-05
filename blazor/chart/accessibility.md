@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all about Accessibility using Keyboard navigation in Blazor Charts component and more.
+title: Accessibility in Blazor Charts | Syncfusion®
+description: Explore the Blazor Charts accessibility compliance table covering WCAG 2.2, Section 508, screen reader, and keyboard navigation support.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Accessibility in Blazor Chart Component
+# Accessibility in Blazor Charts
 
 The [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

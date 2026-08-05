@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column Chart in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Column Chart in Blazor Charts component and much more.
+title: Column in Blazor Charts | Syncfusion®
+description: Render Blazor Charts Column series to compare Frequency, Count, Total, or Average across categories, with vertical bars per data point.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Column Chart in Blazor Charts Component
+# Column in Blazor Charts
 
 ## Column
 

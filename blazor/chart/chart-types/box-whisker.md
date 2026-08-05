@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Box and Whisker in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Box and Whisker Chart in Blazor Charts component and much more.
+title: Box and Whisker in Blazor Charts | Syncfusion®
+description: Render Blazor Charts Box and Whisker series to visualize statistical distribution with Type BoxAndWhisker, requiring at least five Y values per point.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Box and Whisker in Blazor Charts Component
+# Box and Whisker in Blazor Charts
 
 ## Box and Whisker
 

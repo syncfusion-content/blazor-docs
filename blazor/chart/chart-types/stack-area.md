@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 100% Stacked Area in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about 100% Stacked Area Chart in Blazor Charts component and much more.
+title: 100% Stacked Area in Blazor Charts | Syncfusion®
+description: Render Blazor Charts 100% stacked area series with StackingArea100 to show each series as a percentage of the total, summing to 100 at every point.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# 100% Stacked Area in Blazor Charts Component
+# 100% Stacked Area in Blazor Charts
 
 ## 100% Stacked Area Chart
 

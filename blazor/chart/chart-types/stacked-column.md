@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stacked Column in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about Stacked Column Chart in Blazor Charts component and more.
+title: Stacked Column in Blazor Charts | Syncfusion®
+description: Render Blazor Charts StackedColumn series with vertical bars to show individual Y values contributing to a total per category in series order.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Stacked Column in Blazor Charts Component
+# Stacked Column in Blazor Charts
 
 ## Stacked Column
 

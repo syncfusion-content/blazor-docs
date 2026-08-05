@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Spline Range Area in Blazor Charts component | Syncfusion®
-description: Checkout and learn here all the features about Spline Range Area Chart in Blazor Charts component and much more.
+title: Spline Range Area in Blazor Charts | Syncfusion®
+description: Render Blazor Charts SplineRangeArea series to visualize high and low ranges with smooth curves over continuous intervals of time.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Spline Range Area in Blazor Charts Component
+# Spline Range Area in Blazor Charts
 
 ## Spline Range Area
 

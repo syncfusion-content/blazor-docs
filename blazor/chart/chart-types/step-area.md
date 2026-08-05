@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Step Area in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about Step Area Chart in Blazor Charts component and much more.
+title: Step Area in Blazor Charts | Syncfusion®
+description: Render Blazor Charts StepArea series to connect data points with vertical and horizontal lines, creating a step-like filled area appearance.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Step Area in Blazor Charts Component
+# Step Area in Blazor Charts
 
 ## Step Area
 
