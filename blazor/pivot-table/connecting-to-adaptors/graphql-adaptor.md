@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Pivot Table with GraphQL using GraphQL Adaptor | Syncfusion®
-description: Build Blazor apps with a Hot Chocolate GraphQL backend and Syncfusion Pivot Table for CRUD, drill-through, and cell editing via a GraphQL adaptor.
+title: GraphQL Adaptor in Blazor Pivot Table | Syncfusion
+description: Learn how to bind the Blazor Pivot Table to a Hot Chocolate GraphQL server that loads raw relational records and persists CRUD edits as GraphQL mutations.
 control: PivotTable
 platform: blazor
 documentation: ug
 ---
 
-# Connect Blazor PivotTable to GraphQL
+# GraphQL Adaptor in Blazor Pivot Table
 
 GraphQL is a query language that allows applications to request exactly the data needed, nothing more and nothing less. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response. When paired with the [Syncfusion Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table), GraphQL provides a convenient data source for loading the raw relational records that the pivot aggregates, sorts, filters, and pages on the client. The only server-side work for the pivot flow is data access (the read query) and persistence of CRUD edits (the mutations).
 
