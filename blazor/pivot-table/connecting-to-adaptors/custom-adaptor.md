@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Blazor PivotView with Custom Adaptor | Syncfusion®
-description: Learn about Custom Data Binding and perform CRUD operations using CustomAdaptor in Blazor PivotView and much more details.
+title: Custom Adaptor in Blazor Pivot Table | Syncfusion
+description: Learn how to implement a custom data adaptor for the Blazor Pivot Table by extending DataAdaptor and overriding the Read, Insert, Update, and Remove methods.
 platform: Blazor
 control: PivotView
 keywords: adaptors, CustomAdaptor, custom adaptor, remotedata, custombinding, custom binding
 documentation: ug
 ---
 
-# Custom Binding in Blazor PivotView
+# Custom Adaptor in Blazor Pivot Table
 
 The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) supports custom adaptors, enabling you to perform manual operations on the data. This feature is useful for implementing custom data binding and CRUD operations in the Blazor PivotView.
 

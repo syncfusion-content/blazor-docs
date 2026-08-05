@@ -9,11 +9,11 @@ documentation: ug
 
 # Overview of Syncfusion Blazor DataGrid Component
 
-## What is Syncfusion Blazor DataGrid?
+## Introduction to Syncfusion Blazor DataGrid
 
 The Blazor DataGrid is a powerful and feature-rich UI component designed for displaying and managing tabular data with high performance and flexibility. It offers a comprehensive set of enterprise-grade capabilities, including advanced data operations, seamless integration with multiple data sources, and extensive customization options. Built for scalability, it enables developers to create responsive, data-intensive applications with ease.
 
-## Common Use Cases
+## Common use cases
 
 The Blazor DataGrid is ideal for a wide range of business scenarios:
 
@@ -30,7 +30,7 @@ The Blazor DataGrid is ideal for a wide range of business scenarios:
 
 The Blazor DataGrid enables multiple data binding approaches, offering flexibility in choosing the right strategy for different application architectures. The DataGrid can work with in-memory collections for small datasets, connect to remote services for scalable applications, or leverage ORM frameworks for seamless database integration.
 
-### Data Binding Approaches
+**Data Binding Approaches**
 
 - **[In-Memory Data](./data-binding/local-data)** — Bind grids to local collections and lists for fast data access without external dependencies. Ideal for small to medium datasets and rapid prototyping.
 
@@ -44,7 +44,7 @@ The Blazor DataGrid enables multiple data binding approaches, offering flexibili
   - [SignalR](./connecting-to-backends/signalr) — Real-time data updates across multiple users and browser instances
   - [Elasticsearch](./connecting-to-backends/elasticsearch) — Full-text search and powerful aggregation capabilities for large-scale datasets
 
-### Database Compatibility
+**Database Compatibility**
 
 The DataGrid integrates with virtually any data source through native connectors and adaptor patterns:
 
@@ -55,7 +55,7 @@ The DataGrid integrates with virtually any data source through native connectors
 | **[PostgreSQL](./connecting-to-database/postgresql-server)** | Advanced relational features | Large-scale applications, complex data structures |
 | **[SQLite](./connecting-to-database/sqlite-server)** | Embedded database | Desktop apps, mobile apps, local storage |
 
-### Modern databases & cloud platforms
+**Modern databases & cloud platforms**
 
 Connect your application to modern databases and cloud-hosted data platforms. These integrations provide scalable, flexible, and real-time data storage solutions for applications that require high performance, dynamic schemas, and seamless cloud synchronization.
 
@@ -64,7 +64,9 @@ Connect your application to modern databases and cloud-hosted data platforms. Th
 | **[MongoDB](./connecting-to-database/mongodb-server)** | Document-based storage | Flexible schemas, unstructured data |
 | **[Firebase Firestore](./connecting-to-database/firebase-firestore)** | Cloud real-time sync | Mobile apps, real-time applications |
 
-### API & Service Integration
+**API & service integration**
+
+API & service integration enables the DataGrid to connect seamlessly with GraphQL, Web API, OData, URL, and custom services for flexible backend data access.
 
 | Technology | Key Benefit | Use Case |
 |-----------|---------------|----------|
@@ -74,7 +76,25 @@ Connect your application to modern databases and cloud-hosted data platforms. Th
 | **[URL Adaptor](./connecting-to-adaptors/url-adaptor)** | Simple HTTP endpoints | Quick integrations, public APIs |
 | **[Custom Adaptor](./connecting-to-adaptors/custom-adaptor)** | Custom implementations | Specialized back ends, proprietary systems |
 
-### Large-scale rendering performance
+## Data Operations
+
+The Blazor DataGrid provides comprehensive data manipulation capabilities that enable users to analyze, organize, and understand their data efficiently:
+
+| Feature | Purpose | Key Benefit |
+|---------|---------|-------------|
+| **[Sorting](./sorting)** | Arrange records in ascending or descending order to identify trends and patterns | Quick sort by clicking column headers |
+| **[Filter Bar](./filter-bar)** | Quick filtering with inline text inputs in column headers | Immediate results without dialogs |
+| **[Filter Menu](./filter-menu)** | Advanced filtering with complex conditions and multiple criteria | Powerful expression-based filtering |
+| **[Excel-like Filter](./excel-like-filter)** | Familiar checkbox-based filtering interface | Multi-select from available values |
+| **[Searching](./searching)** | Rapid text-based search across one or multiple columns | Global or column-specific search |
+| **[Grouping](./grouping)** | Organize records into categories for better data comprehension | Multi-level hierarchical grouping |
+| **[Aggregates](./aggregates)** | Calculate summary values (sum, average, min, max) on grouped data | Built-in aggregate functions |
+| **[Footer Aggregate](./footer-aggregate)** | Display summary totals in the grid footer | Overall statistics for all visible records |
+| **[Group Caption Aggregate](./group-and-caption-aggregate)** | Show aggregated values within group headers | Summary per group |
+| **[Custom Aggregate](./custom-aggregate)** | Define custom calculation logic beyond standard functions | Specialized business calculations |
+| **[Reactive Aggregate](./reactive-aggregate)** | Automatically update aggregates in real-time when data changes | Live calculation updates |
+
+## Large-scale rendering performance
 
 The Blazor DataGrid is engineered for exceptional performance, enabling smooth operation with datasets ranging from hundreds to hundreds of thousands of rows. Advanced rendering techniques, intelligent caching, and WebAssembly optimizations ensure responsive user interactions without performance degradation.
 
@@ -85,36 +105,11 @@ The Blazor DataGrid is engineered for exceptional performance, enabling smooth o
 | **[Lazy-load Grouping](./lazy-load-grouping)** | Load group data on demand when expanded | Grouped datasets | Reduced initial load time |
 | **[Infinite Scrolling](./infinite-scrolling)** | Load records progressively as users scroll | Continuous data exploration | Seamless navigation |
 
-### Data Operations
-
-The Blazor DataGrid provides comprehensive data manipulation capabilities that enable users to analyze, organize, and understand their data efficiently:
-
-**Sorting & Filtering**
-
-| Feature | Purpose | Key Benefit |
-|---------|---------|-------------|
-| **[Sorting](./sorting)** | Arrange records in ascending or descending order to identify trends and patterns | Quick sort by clicking column headers |
-| **[Filter Bar](./filter-bar)** | Quick filtering with inline text inputs in column headers | Immediate results without dialogs |
-| **[Filter Menu](./filter-menu)** | Advanced filtering with complex conditions and multiple criteria | Powerful expression-based filtering |
-| **[Excel-like Filter](./excel-like-filter)** | Familiar checkbox-based filtering interface | Multi-select from available values |
-| **[Searching](./searching)** | Rapid text-based search across one or multiple columns | Global or column-specific search |
-
-**Grouping & Aggregation**
-
-| Feature | Purpose | Key Benefit |
-|---------|---------|-------------|
-| **[Grouping](./grouping)** | Organize records into categories for better data comprehension | Multi-level hierarchical grouping |
-| **[Aggregates](./aggregates)** | Calculate summary values (sum, average, min, max) on grouped data | Built-in aggregate functions |
-| **[Footer Aggregate](./footer-aggregate)** | Display summary totals in the grid footer | Overall statistics for all visible records |
-| **[Group Caption Aggregate](./group-and-caption-aggregate)** | Show aggregated values within group headers | Summary per group |
-| **[Custom Aggregate](./custom-aggregate)** | Define custom calculation logic beyond standard functions | Specialized business calculations |
-| **[Reactive Aggregate](./reactive-aggregate)** | Automatically update aggregates in real-time when data changes | Live calculation updates |
-
 ## Editing & CRUD Operations
 
 The Blazor DataGrid enables seamless Create, Read, Update, and Delete (CRUD) operations directly within the grid interface, eliminating the need for separate forms or pages. Data modification occurs inline with immediate visual feedback, improving productivity and reducing context switching.
 
-### Editing Modes
+**Editing Modes**
 
 Multiple editing modes support different workflow scenarios:
 
@@ -125,15 +120,19 @@ Multiple editing modes support different workflow scenarios:
 | **[Batch Editing](./batch-editing)** | Edit multiple records and submit together | Bulk operations, mass updates | Efficient mass updates with single submission |
 | **[Template Editing](./template-editing)** | Use custom HTML templates for forms | Complex layouts, specialized controls | Flexible, custom-designed edit forms |
 
-### Data Validation
+**Data Validation**
 
 The DataGrid includes built-in [validation with Data Annotations](./column-validation#data-annotation) that enforces business rules using .NET attributes. Validation errors display inline with helpful messages, guiding users to correct data before submission.
+
+## Performance Best Practices
+
+For comprehensive performance optimization strategies, best practices, and detailed guidance on handling large datasets, refer to the **[Performance Best Practices](./performance)** documentation.
+
+For WebAssembly-specific optimizations and tuning recommendations, see **[WebAssembly Performance Guidelines](./webassembly-performance)**.
 
 ## Columns
 
 The Blazor DataGrid offers extensive column and layout customization options for creating professional data displays tailored to any device or workflow. Columns are fully customizable with formatting, resizing, reordering, and visibility controls that adapt to various viewing needs.
-
-**Column Features**
 
 | Feature | Purpose | Key Benefit |
 |---------|---------|-------------|
@@ -145,7 +144,7 @@ The Blazor DataGrid offers extensive column and layout customization options for
 | **[Column Menu](./column-menu)** | Dropdown menu for visibility, filtering, sorting, grouping, autofit | Quick column management |
 | **[Column Chooser](./column-chooser)** | Dialog to dynamically show/hide columns | User-controlled visibility |
 
-## Responsive Design
+## Responsive design
 
 | Feature | Purpose | Key Benefit |
 |---------|---------|-------------|
@@ -153,17 +152,13 @@ The Blazor DataGrid offers extensive column and layout customization options for
 | **[Mobile Responsive](./adaptive-layout)** | Optimized experience for phones and tablets | Touch-friendly interactions |
 | **[Breakpoint-based Adjustments](./adaptive-layout)** | Different layouts for different screen sizes | Tailored mobile and desktop views |
 
-## Performance Best Practices
-
-For comprehensive performance optimization strategies, best practices, and detailed guidance on handling large datasets, refer to the **[Performance Best Practices](./performance)** documentation.
-
-For WebAssembly-specific optimizations and tuning recommendations, see **[WebAssembly Performance Guidelines](./webassembly-performance)**.
-
-## User Experience & Interaction
+## User experience & interaction
 
 The Blazor DataGrid provides a comprehensive, accessible user experience with extensive customization options, flexible interaction modes, and accessibility standards compliance. Every aspect of the grid interface supports customization to match application design systems and workflow requirements.
 
-### Templating & Customization
+**Templating & Customization**
+
+Templating & Customization allows developers to personalize the DataGrid’s headers, cells, rows, editing experience, and detail views with custom UI and behavior.
 
 | Template Type | Purpose | Key Benefit |
 |---------------|---------|-------------|
@@ -173,7 +168,9 @@ The Blazor DataGrid provides a comprehensive, accessible user experience with ex
 | **[Edit Template](./template-editing)** | Custom edit forms with specialized controls and validation | Complex data entry forms |
 | **[Detail Template](./detail-template)** | Expandable row sections for additional information | Hierarchical data display |
 
-### Selection
+**Selection**
+
+Selection enables users to choose rows, cells, or ranges in the DataGrid for interaction, bulk actions, and persistent context-aware workflows.
 
 | Feature | Purpose | Key Benefit |
 |---------|---------|-------------|
@@ -182,7 +179,7 @@ The Blazor DataGrid provides a comprehensive, accessible user experience with ex
 | **[Cell Selection](./cell-selection)** | Individual cell or range selection with copy-paste | Spreadsheet-like interaction |
 | **[Persist Selection](./selection#persist-selection)** | Maintain selections across sort/filter/page operations | Consistent user context |
 
-### Accessibility & Keyboard Navigation
+**Accessibility & Keyboard Navigation**
 
 The DataGrid is fully accessible and compliant with Web Content Accessibility Guidelines (WCAG) standards:
 
@@ -200,23 +197,19 @@ The DataGrid is fully accessible and compliant with Web Content Accessibility Gu
 
 The Blazor DataGrid provides comprehensive export and reporting capabilities, enabling users to extract, analyze, and distribute grid data in professional document formats. Built-in Excel, PDF, and print functionality with customizable templates eliminates the need for external reporting tools.
 
-### Export Formats
-
 | Format | Key Benefit | Best For |
 |--------|---------------|----------|
 | **[Excel Export](./excel-exporting)** | Export to XLSX with formatting, formulas, and styling | Data analysis, spreadsheet workflows, sharing |
 | **[PDF Export](./pdf-export)** | Generate formatted PDF documents with custom layouts | Professional reports, distribution, archiving |
 | **[Print](./print)** | Printer-ready output with page orientation control | Hard copy reports, on-demand printing |
 
-### Export Capabilities
+**Export Capabilities**
 
 See [Export Documentation](./excel-exporting) for detailed configuration of column selection, filtering, grouping, aggregates, branding, formatting, and custom templates.
 
-## Advanced Features
+## Advanced features
 
 The Blazor DataGrid includes sophisticated capabilities designed for complex enterprise data scenarios. These advanced features enable developers to build powerful, scalable data management solutions that handle demanding business requirements.
-
-### Enterprise Capabilities
 
 | Feature | Purpose | Use Case | Key Benefit |
 |---------|---------|----------|---------------|
@@ -227,7 +220,7 @@ The Blazor DataGrid includes sophisticated capabilities designed for complex ent
 | **[Foreign Key Columns](./foreignkey-column)** | Display related data with automatic lookup | Customer names from ID, category names | Data relationships |
 | **[Global/Local Formatting](./global-local)** | Consistent or column-specific formatting | Currency, dates, numbers, text | Professional presentation |
 
-### Enterprise Patterns
+**Enterprise Patterns**
 
 For specific implementation patterns, refer to feature documentation:
 
@@ -235,7 +228,7 @@ For specific implementation patterns, refer to feature documentation:
 - **Real-time Systems** — Implement [SignalR Integration](./connecting-to-backends/signalr) and [Reactive Aggregates](./reactive-aggregate)
 - **Multi-tenant Applications** — Combine [Custom Adaptors](./connecting-to-adaptors/custom-adaptor) with [State Management](./state-management) and [Detail Templates](./detail-template)
 
-## System Requirements
+## System requirements
 
 The Blazor DataGrid works with:
 
@@ -244,7 +237,7 @@ The Blazor DataGrid works with:
 - **Browsers**: Chrome, Firefox, Safari, Edge (latest versions)
 - **Mobile**: iOS Safari, Android Chrome
 
-## Quick Links
+## Quick links
 
 **Getting Started:**
 - [Blazor Web App Guide](./getting-started-with-web-app.md)

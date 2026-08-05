@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Pivot Table in WASM App | Syncfusion
+title: Getting Started with Blazor Pivot Table | Syncfusion
 description: Check out and learn about getting started with Blazor Pivot Table component in Blazor WebAssembly Application.
 platform: Blazor
 control: Pivot Table
@@ -12,7 +12,7 @@ documentation: ug
 <!-- markdownlint-disable MD029 -->
 <!-- markdownlint-disable MD009 -->
 
-# Getting Started with Blazor Pivot Table in Blazor WASM App
+# Getting Started with Blazor Pivot Table
 
 This guide briefly explains how to include the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/). Follow these steps to set up and configure the component for your project.
 

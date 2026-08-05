@@ -29,7 +29,7 @@ The `DrawFrameAsync` method accepts nine parameters that define the frame proper
 
 - `inset` - Specifies the inset value for line, hook, and inset frame types.
 
-- `offset` - Specifies the offset value for line and inset frame types.
+- `offset` - Specifies the offset value for the line and inset frame types.
 
 - `borderRadius` - Specifies the border radius for the line frame type.
 
