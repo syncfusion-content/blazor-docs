@@ -134,5 +134,4 @@ This sample requires the `Syncfusion.Blazor.SplitButtons` NuGet package in addit
 
 * [Blazor Color Picker Getting Started](https://blazor.syncfusion.com/documentation/color-picker/getting-started)
 * [Blazor SplitButton Getting Started](https://blazor.syncfusion.com/documentation/split-button/getting-started)
-* [Blazor Color Picker Customizations](https://blazor.syncfusion.com/
-documentation/color-picker/how-to/customize-color-picker)
+* [Blazor Color Picker Customizations](https://blazor.syncfusion.com/documentation/color-picker/how-to/customize-color-picker)
