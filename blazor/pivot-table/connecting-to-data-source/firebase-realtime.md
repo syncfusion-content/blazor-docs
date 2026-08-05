@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Pivot Table Firebase Realtime Binding | Syncfusion®
-description: Bind a Firebase Realtime Database to the Blazor Pivot Table through an ASP.NET Core API and the Syncfusion URL Adaptor.
+title: Blazor Pivot Table Firebase Realtime Database Binding | Syncfusion®
+description: Bind a Firebase Realtime Database to the Blazor Pivot Table through an ASP.NET Core API and the Syncfusion UrlAdaptor.
 platform: Blazor
 control: PivotTable
 documentation: ug
 ---
 
-# Connect Firebase Realtime to Blazor Pivot Table
+# Connect Firebase Realtime Database to Blazor Pivot Table
 
 The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) can load and edit Firebase Realtime Database data through an ASP.NET Core API. [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) sends HTTP requests to the API, and the API uses the [Firebase Realtime Database REST API](https://firebase.google.com/docs/database/rest/save-data) to read and persist JSON records stored under an `Orders` node.
 
@@ -19,12 +19,11 @@ The sample was tested with the following versions and configuration:
 
 | Software or package | Version | Notes |
 |---|---:|---|
-| .NET SDK | 10.0 | Required to target `net10.0` |
-| Visual Studio | 2026 18.0 or later | Required to target `net10.0`; install the ASP.NET and web development workload. VS Code and the .NET CLI are also supported |
+| .NET SDK | 10.0 | Required to target `net10.0`. `MapStaticAssets()` requires .NET 9 or later. |
+| Visual Studio | 2026 (version 18.0) or later | Required to target `net10.0`; install the ASP.NET and web development workload. VS Code and the .NET CLI are also supported |
 | Firebase project | Active project | A Firebase project with Realtime Database enabled is required to host the data |
 | Syncfusion.Blazor.PivotTable | 34.1.33 (31.2.10 or later) | [.NET 10 support starts with 31.2.10](https://blazor.syncfusion.com/documentation/common/how-to/version-compatibility); keep all Syncfusion packages on the same version |
 | Syncfusion.Blazor.Themes | 34.1.33 (31.2.10 or later) | Provides the component theme |
-| Newtonsoft.Json | 13.0.4 | Transitive dependency of the Syncfusion packages; the controller uses `System.Text.Json` for serialization |
 
 The application uses the Blazor Web App template with Interactive Server rendering. Syncfusion packages from NuGet.org require a valid license or trial key; follow the [license-key registration instructions](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application).
 
@@ -43,15 +42,15 @@ In Visual Studio, the equivalent choices are **Blazor Web App**, **.NET 10**, **
 
 ### Step 2: Create the Firebase Project
 
-Open the [Firebase Console](https://console.firebase.google.com/) and create a new project (for example, `pivottablerealtimedatabase`). Accept the default Google Analytics configuration or disable it; the Realtime Database does not require Analytics.
+Open the [Firebase console](https://console.firebase.google.com/) and create a new project (for example, `pivottablerealtimedatabase`). Accept the default Google Analytics configuration or disable it; the Realtime Database does not require Analytics.
 
 ### Step 3: Create the Realtime Database
 
-In the Firebase Console, navigate to **Build → Realtime Database** and click **Create Database**. Select **Start in test mode** so the REST API can read and write during development, and choose a region close to your users (for example, `asia-southeast1`).
+In the Firebase console, navigate to **Build → Realtime Database** and click **Create Database**. Select **Start in test mode** so the REST API can read and write during development, and choose a region close to your users (for example, `asia-southeast1`).
 
-> **Note:** Test mode opens read and write access to the database for 30 days. Configure [Firebase Security Rules](https://firebase.google.com/docs/database/security) before deploying the application.
+> **Note:** Test mode opens read and write access to the database for 30 days. Configure [Firebase Security Rules](https://firebase.google.com/docs/database/security) before deploying the application. See Step 3.5 for a sample production ruleset.
 
-After the database is provisioned, copy the database URL from the **Data** tab. This URL is required in `appsettings.json` later in this guide.
+After the database is provisioned, copy the database URL from the **Data** tab. This URL is required in `appsettings.json` later in this guide. The URL follows the format `https://<project-id>-default-rtdb.<region>.firebasedatabase.app`; projects created before February 2025 may use the legacy `https://<project-id>.firebaseio.com` host instead.
 
 ### Step 4: Create the Orders Node and Import Sample Data
 
@@ -63,7 +62,7 @@ Create a root node named:
 Orders
 ```
 
-Use the Firebase console **Import JSON** panel to import the following sample data into the `Orders` node:
+Use the Firebase console **Import JSON** panel to import the following sample data into the `Orders` node (the keys under `Orders` are numeric strings, e.g. `"1"`, `"2"`):
 
 ```json
 {
@@ -119,6 +118,24 @@ Verify the imported data in the **Data** tab:
 
 > **Note:** The sample uses numeric keys (`1`–`5`) under the `Orders` node. The controller is implemented to deserialize the resulting REST API response shape; see the Read Operation in Step 7 for details.
 
+### Step 3.5: Add a Production Security Ruleset (Recommended Before Continuing)
+
+The test-mode ruleset allows unrestricted read and write access for 30 days. Before you start building, replace the rules with a minimum locked-down ruleset that allows only the operations this sample needs. In the Firebase console, open **Build → Realtime Database → Rules** and replace the body with:
+
+```json
+{
+  "rules": {
+    "Orders": {
+      ".read": true,
+      ".write": true,
+      ".indexOn": ["orderId"]
+    }
+  }
+}
+```
+
+> **Note:** The `.read: true` / `.write: true` rules above still expose the database to anonymous clients and are only suitable for local development. For production, gate access behind an authentication provider (for example, Firebase Auth ID tokens) and restrict the rules to authenticated requests with the structure shown in the [Firebase Security Rules quickstart](https://firebase.google.com/docs/database/security). The `.indexOn` entry enables efficient `WhereEqualTo` queries against the `orderId` field once you switch to a query-based controller.
+
 ### Step 5: Install the Required NuGet Packages
 
 Run these commands in the `PivotTableRealtimeDatabase` project directory:
@@ -126,20 +143,21 @@ Run these commands in the `PivotTableRealtimeDatabase` project directory:
 ```powershell
 dotnet add package Syncfusion.Blazor.PivotTable --version 34.1.33
 dotnet add package Syncfusion.Blazor.Themes --version 34.1.33
-dotnet add package Newtonsoft.Json --version 13.0.4
+dotnet restore
 ```
 
 The project file should contain:
 
 ```xml
 <ItemGroup>
-  <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
   <PackageReference Include="Syncfusion.Blazor.PivotTable" Version="34.1.33" />
   <PackageReference Include="Syncfusion.Blazor.Themes" Version="34.1.33" />
 </ItemGroup>
 ```
 
-The sample accesses the Realtime Database directly through the REST API using `HttpClient`, so no Firebase client SDK package is required.
+The sample accesses the Realtime Database directly through the REST API using `HttpClient`, so no Firebase client SDK package is required. The controller uses `System.Text.Json`, so no `Newtonsoft.Json` reference is needed.
+
+> **Note:** If you are behind a corporate proxy or use an internal NuGet feed (for example, a Nexus or Artifactory mirror), pass `--source https://api.nuget.org/v3/index.json` to each `dotnet add package` command so the public Syncfusion packages are resolved from nuget.org. Confirm with `dotnet nuget list source` that the desired source appears first.
 
 ### Step 6: Configure the Realtime Database URL
 
@@ -160,13 +178,15 @@ Store the Realtime Database URL in `appsettings.json`:
 }
 ```
 
-> **Note:** Replace `<YOUR_FIREBASE_REALTIME_DATABASE_URL>` with the Realtime Database URL copied from the Firebase Console **Data** tab (for example, `https://<project-id>-default-rtdb.<region>.firebasedatabase.app`). A relative URL is not supported here because the URL points to the Firebase host, not the application host.
+The required key is `FirebaseSettings:DatabaseUrl`. The other top-level keys (`Logging`, `AllowedHosts`) are the standard ASP.NET Core defaults. If `appsettings.Development.json` exists, it overrides these values when the app runs under the `Development` environment.
+
+> **Note:** Replace `<YOUR_FIREBASE_REALTIME_DATABASE_URL>` with the Realtime Database URL copied from the Firebase console **Data** tab (for example, `https://<project-id>-default-rtdb.<region>.firebasedatabase.app`). Older projects (created before February 2025) use the legacy host `https://<project-id>.firebaseio.com`; the controller works with either host. A relative URL is not supported here because the URL points to the Firebase host, not the application host.
 
 ### Step 7: Create the API Controller
 
-Create a `Controllers` folder at the project root, and then create `Controllers/OrderController.cs`. In this sample, the `Order` model and the `CRUDModel<T>` wrapper are defined inside `OrderController.cs` rather than in a separate file. The same `Order` shape is also declared in the Pivot Table page (`Home.razor`) so the component can strongly type its data source. Keeping the model close to the code that uses it makes the contract between the controller and the page easy to follow.
+Create a `Controllers` folder and a `Models` folder at the project root. The `Order` model and the `CRUDModel<T>` wrapper live in `Models/Order.cs` and `Models/CRUDModel.cs` so the same types can be referenced from `OrderController` and the Pivot Table page. The controller uses `IHttpClientFactory` so the underlying `HttpClient` is properly pooled and disposed, applies a 30-second timeout, and sends an `Accept: application/json` header on every request.
 
-The controller reads the `FirebaseSettings:DatabaseUrl` configuration value and uses a single `HttpClient` instance to call the Realtime Database REST API. Before showing the full file, here is a summary of what each endpoint does:
+Before showing the full files, here is a summary of what each endpoint does:
 
 | Endpoint | HTTP verb | Firebase REST call | Action |
 |---|---|---|---|
@@ -175,13 +195,82 @@ The controller reads the `FirebaseSettings:DatabaseUrl` configuration value and 
 | `Update` | `POST /api/Order/Update` | `PUT {databaseUrl}/Orders/{OrderID}.json` | Replaces the node at the supplied key path with the incoming record. |
 | `Delete` | `POST /api/Order/Delete` | `DELETE {databaseUrl}/Orders/{orderId}.json` | Removes the node at the supplied key path. |
 
-The complete `OrderController.cs` is shown below:
+The endpoint behavior is also described in the [API Contract](#api-contract) section; the table above is a quick reference.
+
+**Models/Order.cs**
 
 ```csharp
 using System.ComponentModel.DataAnnotations;
-using System.Text.Json;
 using System.Text.Json.Serialization;
+
+namespace PivotTableRealtimeDatabase.Models
+{
+    public class Order
+    {
+        [Key]
+        [JsonPropertyName("orderId")]
+        public int OrderID { get; set; }
+
+        [JsonPropertyName("customerName")]
+        public string? CustomerName { get; set; }
+
+        [JsonPropertyName("employeeId")]
+        public int EmployeeID { get; set; }
+
+        [JsonPropertyName("freight")]
+        public double Freight { get; set; }
+
+        [JsonPropertyName("shipCity")]
+        public string? ShipCity { get; set; }
+    }
+}
+```
+
+**Models/CRUDModel.cs**
+
+```csharp
+using System.Text.Json.Serialization;
+
+namespace PivotTableRealtimeDatabase.Models
+{
+    public class CRUDModel<T> where T : class
+    {
+        // One of "insert", "update", or "remove". The controller uses the
+        // route (Insert/Update/Delete) rather than this value, but the field
+        // is kept for compatibility with the UrlAdaptor payload shape.
+        [JsonPropertyName("action")]
+        public string? Action { get; set; }
+
+        [JsonPropertyName("keyColumn")]
+        public string? KeyColumn { get; set; }
+
+        [JsonPropertyName("key")]
+        public object? Key { get; set; }
+
+        [JsonPropertyName("value")]
+        public T? Value { get; set; }
+
+        [JsonPropertyName("added")]
+        public List<T>? Added { get; set; }
+
+        [JsonPropertyName("changed")]
+        public List<T>? Changed { get; set; }
+
+        [JsonPropertyName("deleted")]
+        public List<T>? Deleted { get; set; }
+
+        [JsonPropertyName("params")]
+        public IDictionary<string, object>? Params { get; set; }
+    }
+}
+```
+
+**Controllers/OrderController.cs**
+
+```csharp
+using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
+using PivotTableRealtimeDatabase.Models;
 using Syncfusion.Blazor;
 using Syncfusion.Blazor.Data;
 
@@ -189,25 +278,42 @@ namespace PivotTableRealtimeDatabase.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    // See the antiforgery note in Step 8: SfDataManager does not attach an
+    // antiforgery token, so bypass the global token check for these endpoints.
+    [IgnoreAntiforgeryToken]
     public class OrderController : ControllerBase
     {
-        private readonly HttpClient httpClient;
+        private readonly IHttpClientFactory httpClientFactory;
         private readonly string databaseUrl;
 
-        public OrderController(IConfiguration configuration)
+        public OrderController(
+            IConfiguration configuration,
+            IHttpClientFactory httpClientFactory)
         {
+            this.httpClientFactory = httpClientFactory;
+
             databaseUrl =
                 configuration["FirebaseSettings:DatabaseUrl"]
                 ?? throw new InvalidOperationException(
                     "Firebase Realtime Database URL is not configured.");
+        }
 
-            httpClient = new HttpClient();
+        private HttpClient CreateClient()
+        {
+            HttpClient client = httpClientFactory.CreateClient();
+            client.Timeout = TimeSpan.FromSeconds(30);
+            client.DefaultRequestHeaders.Accept.Add(
+                new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue(
+                    "application/json"));
+            return client;
         }
 
         [HttpPost]
         public async Task<object> Post([FromBody] DataManagerRequest request)
         {
             _ = request;
+
+            HttpClient httpClient = CreateClient();
 
             string url = $"{databaseUrl}/Orders.json";
 
@@ -219,7 +325,7 @@ namespace PivotTableRealtimeDatabase.Controllers
             List<Order> orders =
                 firebaseData?
                     .Where(x => x != null)
-                    .Cast<Order>()
+                    .Select(x => x!)
                     .OrderBy(x => x.OrderID)
                     .ToList()
                 ?? new();
@@ -239,6 +345,8 @@ namespace PivotTableRealtimeDatabase.Controllers
                 return BadRequest();
             }
 
+            HttpClient httpClient = CreateClient();
+
             string url = $"{databaseUrl}/Orders.json";
 
             string json = await httpClient.GetStringAsync(url);
@@ -246,11 +354,13 @@ namespace PivotTableRealtimeDatabase.Controllers
             List<Order?>? firebaseData =
                 JsonSerializer.Deserialize<List<Order?>>(json);
 
-            int nextOrderId =
-                firebaseData?
-                    .Where(x => x != null)
-                    .Max(x => x!.OrderID ?? 0) + 1
-                ?? 1;
+            // Use DefaultIfEmpty so the Max call never throws on an empty
+            // collection. If the database has no records, the next id is 1.
+            int nextOrderId = (firebaseData ?? new List<Order?>())
+                .Where(x => x != null)
+                .Select(x => x!.OrderID)
+                .DefaultIfEmpty(0)
+                .Max() + 1;
 
             order.OrderID = nextOrderId;
 
@@ -269,10 +379,12 @@ namespace PivotTableRealtimeDatabase.Controllers
         [HttpPost("Update")]
         public async Task<IActionResult> Update([FromBody] CRUDModel<Order> value)
         {
-            if (value.Value is not Order order || !order.OrderID.HasValue)
+            if (value.Value is not Order order)
             {
                 return BadRequest();
             }
+
+            HttpClient httpClient = CreateClient();
 
             string orderJson = JsonSerializer.Serialize(order);
 
@@ -294,56 +406,12 @@ namespace PivotTableRealtimeDatabase.Controllers
                 return BadRequest();
             }
 
+            HttpClient httpClient = CreateClient();
+
             HttpResponseMessage response = await httpClient.DeleteAsync(
                 $"{databaseUrl}/Orders/{orderId}.json");
 
             return response.IsSuccessStatusCode ? NoContent() : NotFound();
-        }
-
-        public class Order
-        {
-            [Key]
-            [JsonPropertyName("orderId")]
-            public int? OrderID { get; set; }
-
-            [JsonPropertyName("customerName")]
-            public string? CustomerName { get; set; }
-
-            [JsonPropertyName("employeeId")]
-            public int? EmployeeID { get; set; }
-
-            [JsonPropertyName("freight")]
-            public double? Freight { get; set; }
-
-            [JsonPropertyName("shipCity")]
-            public string? ShipCity { get; set; }
-        }
-
-        public class CRUDModel<T> where T : class
-        {
-            [JsonPropertyName("action")]
-            public string? Action { get; set; }
-
-            [JsonPropertyName("keyColumn")]
-            public string? KeyColumn { get; set; }
-
-            [JsonPropertyName("key")]
-            public object? Key { get; set; }
-
-            [JsonPropertyName("value")]
-            public T? Value { get; set; }
-
-            [JsonPropertyName("added")]
-            public List<T>? Added { get; set; }
-
-            [JsonPropertyName("changed")]
-            public List<T>? Changed { get; set; }
-
-            [JsonPropertyName("deleted")]
-            public List<T>? Deleted { get; set; }
-
-            [JsonPropertyName("params")]
-            public IDictionary<string, object>? Params { get; set; }
         }
     }
 }
@@ -351,29 +419,15 @@ namespace PivotTableRealtimeDatabase.Controllers
 
 The controller exposes the read, insert, update, and delete endpoints described in the [API Contract](#api-contract). The exception middleware configured in the next step logs unhandled failures and returns generic problem responses without exposing Firebase URLs or request details.
 
-#### Read Operation
+The `Post` action deserializes the REST response into `List<Order?>` so any missing numeric positions in the `Orders` node are represented as `null` and filtered out. The `Insert` action uses `DefaultIfEmpty(0).Max() + 1` so it is safe on an empty database (the first insert is assigned `orderId = 1`).
 
-The `Post` action calls the Realtime Database REST endpoint `GET {databaseUrl}/Orders.json`, which returns the entire `Orders` node as JSON. Because the sample uses numeric keys under the `Orders` node, the controller deserializes the REST response into `List<Order?>` so that any missing index positions (for example, a missing `0` entry) are represented as `null` and filtered out before the result is ordered by `OrderID` and returned as `{ result, count }`. The Pivot Table URL Adaptor calls this `Post` action to perform the read and bind the Pivot Table.
-
-> The URL Adaptor sends a `DataManagerRequest` object, but the sample intentionally discards it (`_ = request;`) and returns the complete `Orders` collection. The Pivot Table performs aggregation and client-side processing after the data is loaded.
-
-#### Insert Operation
-
-The `Insert` action reads the existing `Orders` node to compute the next `orderId`, serializes the incoming record, and writes it to `{databaseUrl}/Orders/{nextOrderId}.json` using a `PUT` request. Because `PUT` overwrites the node at the specified key path, each insertion targets `{databaseUrl}/Orders/{orderId}.json`, and the controller returns the inserted record with the generated `OrderID` populated.
-
-#### Update Operation
-
-The `Update` action serializes the incoming record and performs a `PUT` request to `{databaseUrl}/Orders/{OrderID}.json`, replacing the existing node. `PUT` writes the entire object at the supplied key path, so the controller requires a non-null `OrderID` to target the correct node and returns the updated record on a successful response.
-
-#### Delete Operation
-
-The `Delete` action parses the numeric key from the URL Adaptor request and performs a `DELETE` request to `{databaseUrl}/Orders/{orderId}.json`, removing the matching node. It returns `204 No Content` on success or `404 Not Found` when the key does not exist.
+> The `Insert` action reads the entire `Orders` node on every insert to compute the next id. For large datasets, append `?shallow=true` to the read URL and count the keys client-side to avoid a full payload transfer.
 
 #### Order Model and CRUDModel
 
-The `Order` model maps .NET properties to Realtime Database JSON fields through `[JsonPropertyName]` attributes, and `OrderID` carries `[Key]` so the Pivot Table can identify the primary key for update and delete requests. `Freight` is declared as `double?` to match the Realtime Database JSON values.
+The `Order` model maps .NET properties to Realtime Database JSON fields through `[JsonPropertyName]`, and `OrderID` carries `[Key]` so the Pivot Table can identify the primary key for update and delete requests. `OrderID` is declared as non-nullable `int`; the UrlAdaptor uses the key to target the correct document path and requires a value. `Freight` is declared as `double` to match the Realtime Database JSON values.
 
-The `CRUDModel<T>` wrapper carries the URL Adaptor `action`, `keyColumn`, `key`, and `value` fields the controller uses for write operations, together with the optional `added`, `changed`, `deleted`, and `params` collections supported by the Syncfusion model. This sample uses normal editing and does not consume those optional properties.
+The `CRUDModel<T>.Action` field is one of `"insert"`, `"update"`, or `"remove"` and identifies the operation; this sample routes writes by controller route (`/Insert`, `/Update`, `/Delete`) rather than reading `Action`, so the field is preserved for compatibility with the UrlAdaptor payload shape. The other properties (`added`, `changed`, `deleted`, `params`) are used for batch editing, which this sample does not enable.
 
 ### Step 8: Configure Program.cs
 
@@ -386,9 +440,17 @@ using Syncfusion.Blazor;
 var builder = WebApplication.CreateBuilder(args);
 
 // Register the Syncfusion license before builder.Build().
-// Syncfusion packages require a valid license or trial key.
-// Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(
-//     "YOUR LICENSE KEY");
+// Load the license from configuration (or an environment variable) so the
+// key never lives in source control. Leave the line commented out if you
+// do not have a key yet — the app runs with a license banner only.
+string? syncfusionLicense =
+    builder.Configuration["Syncfusion:LicenseKey"]
+    ?? Environment.GetEnvironmentVariable("SYNCFUSION_LICENSE_KEY");
+if (!string.IsNullOrWhiteSpace(syncfusionLicense))
+{
+    Syncfusion.Licensing.SyncfusionLicenseProvider
+        .RegisterLicense(syncfusionLicense);
+}
 
 builder.Services.AddSyncfusionBlazor();
 
@@ -397,6 +459,12 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
 builder.Services.AddControllers();
+
+// IHttpClientFactory is consumed by OrderController to avoid socket
+// exhaustion under sustained load. Add a named client if you want to
+// centralize the base address and default headers for the Firebase REST
+// API in one place.
+builder.Services.AddHttpClient();
 builder.Services.AddProblemDetails();
 
 var app = builder.Build();
@@ -427,11 +495,16 @@ Key registration points:
 - `AddSyncfusionBlazor()` registers the Syncfusion Blazor services required by the Pivot Table.
 - `AddRazorComponents().AddInteractiveServerComponents()` enables Interactive Server rendering.
 - `AddControllers()` registers the API controllers, including `OrderController`.
+- `AddHttpClient()` registers `IHttpClientFactory`, which `OrderController` resolves in its constructor. The factory pools underlying handlers, so a fresh client per request is safe.
 - `AddProblemDetails()` and `UseExceptionHandler()` log unhandled failures and return generic error responses.
 - `MapControllers()` routes requests to the API endpoints.
-- `MapStaticAssets()` maps the application's static web assets, including assets supplied by referenced component packages.
+- `MapStaticAssets()` is a .NET 9+ API; it maps the application's static web assets, including assets supplied by referenced component packages.
 
-> **Note:** Remove the comment markers and fill in your Syncfusion license or trial key in `Program.cs` before running the application. Follow the [license-key registration instructions](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application) for details.
+> **Note:** Remove the comment markers and fill in your Syncfusion license or trial key in `Program.cs` before running the application. The recommended way is to store the key in `appsettings.json` (for example, `"Syncfusion": { "LicenseKey": "..." }`) or in the `SYNCFUSION_LICENSE_KEY` environment variable so the key never appears in source control. Follow the [license-key registration instructions](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application) for details.
+
+> **Note:** `app.UseHttpsRedirection()` requires `Properties/launchSettings.json` to define an HTTPS `applicationUrl` (for example, `"https://localhost:5001"`) and a trusted ASP.NET Core development certificate. On Windows, run `dotnet dev-certs https --trust` once after installing the SDK so the redirect does not fail with `ERR_CERT_AUTHORITY_INVALID` on first launch. The default `dotnet new blazor` launch profile already includes both, but confirm the file has not been edited away.
+
+> **Note:** `app.UseAntiforgery()` protects form posts and Razor component actions, but `SfDataManager` does not automatically attach an antiforgery token to its POSTs. For the API endpoints in this sample, leave the global antiforgery middleware in place and add an `[IgnoreAntiforgeryToken]` attribute on `OrderController` (or apply a named policy) so the controller actions remain callable from the Pivot Table. If you later authenticate the API with cookies, configure the adaptor to send the antiforgery token and remove the ignore attribute.
 
 ### Step 9: Configure the Pivot Table
 
@@ -441,6 +514,7 @@ Add these namespaces to `Components/_Imports.razor`:
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.PivotView
+@using PivotTableRealtimeDatabase.Models
 ```
 
 In `Components/App.razor`, add the Syncfusion stylesheet inside `<head>`:
@@ -489,6 +563,8 @@ Replace `Components/Pages/Home.razor` with the following markup. The `SfDataMana
 
 ```cshtml
 @page "/"
+@using PivotTableRealtimeDatabase.Models
+
 <SfPivotView TValue="Order" Width="1000" Height="300" ShowFieldList="true">
     <PivotViewDataSourceSettings TValue="Order" ExpandAll="false" EnableSorting="true">
         <SfDataManager Url="/api/Order"
@@ -517,9 +593,12 @@ Replace `Components/Pages/Home.razor` with the following markup. The `SfDataMana
 </SfPivotView>
 
 @code {
+    // The BeginDrillThrough event fires when the user double-clicks a
+    // summary value cell to open the drill-through editor. The handler
+    // marks the OrderID column as the primary key on the drill-through
+    // grid so the UrlAdaptor can target update and delete requests.
     private void BeginDrillThrough(BeginDrillThroughEventArgs args)
     {
-        // Identify the key used by URL Adaptor update and delete requests.
         for (int i = 0; i < args.GridObj.Columns.Count; i++)
         {
             if (args.GridObj.Columns[i].Field == "OrderID")
@@ -531,15 +610,6 @@ Replace `Components/Pages/Home.razor` with the following markup. The `SfDataMana
                 args.GridObj.Columns[i].Visible = true;
             }
         }
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string? CustomerName { get; set; }
-        public int? EmployeeID { get; set; }
-        public double? Freight { get; set; }
-        public string? ShipCity { get; set; }
     }
 }
 ```
@@ -555,7 +625,7 @@ The `BeginDrillThrough` event is used to mark `OrderID` as the primary key on th
 | `POST` | `/api/Order/Update` | `CRUDModel<Order>` | `200` with the updated record |
 | `POST` | `/api/Order/Delete` | `CRUDModel<Order>` | `204` with no body |
 
-The API uses action-oriented routes because they match the URL Adaptor's `InsertUrl`, `UpdateUrl`, and `RemoveUrl` contract.
+The API uses action-oriented routes because they match the UrlAdaptor's `InsertUrl`, `UpdateUrl`, and `RemoveUrl` contract.
 
 For write requests, `action` identifies the operation, `keyColumn` names the primary-key field, `key` carries the value used by delete operations, and `value` carries the inserted or updated record. The Syncfusion model also supports `added`, `changed`, and `deleted` collections for batch editing, `params` for additional values, and `table` for an optional table name; this sample uses normal editing and does not consume those optional properties.
 
@@ -670,7 +740,7 @@ Open the URL shown in the terminal. Verify the following:
 3. Double-click a value (summary) cell to open its raw-record editor.
 4. Add a record and confirm that `POST /api/Order/Insert` returns the generated, nonzero `orderId`.
 5. Edit and delete records, and confirm the corresponding API requests succeed with that key.
-6. Open the Realtime Database **Data** tab in the Firebase Console and confirm that the `Orders` node reflects the added, updated, and deleted records.
+6. Open the Realtime Database **Data** tab in the Firebase console and confirm that the `Orders` node reflects the added, updated, and deleted records.
 
 ## Production Considerations
 
@@ -694,7 +764,7 @@ Firebase Realtime Database is a JSON tree database suitable for real-time JSON s
 | `405 Method Not Allowed` | Confirm `[HttpPost]`, `AddControllers()`, and `MapControllers()` are present. |
 | UrlAdaptor request fails | Confirm `Home.razor` uses same-origin relative URLs (for example `/api/Order`) and that the Syncfusion stylesheet and script are registered in `App.razor`. |
 | **Database and network connectivity** | |
-| Unable to connect to Realtime Database | Verify the `DatabaseUrl` value matches the URL shown in the Firebase Console **Data** tab, including the region segment, and confirm the application host has outbound HTTPS access to `*.firebasedatabase.app`. |
+| Unable to connect to Realtime Database | Verify the `DatabaseUrl` value matches the URL shown in the Firebase console **Data** tab, including the region segment, and confirm the application host has outbound HTTPS access to `*.firebasedatabase.app`. |
 | Realtime Database permission denied | Verify the Firebase Realtime Database rules allow the requested operation, or test in development with test mode. |
 | Browser reports mixed content or a redirect failure | Confirm `Home.razor` uses same-origin relative URLs rather than hard-coded HTTP URLs, and that `appsettings.json` uses an HTTPS Realtime Database URL. |
 | Cross-origin request is blocked | Prefer same-origin relative URLs; otherwise configure `AddCors` and `UseCors` for the exact Blazor application origin. |
@@ -716,4 +786,4 @@ A complete, working sample implementation is available in the [GitHub repository
 
 ## Summary
 
-This guide demonstrated how to bind a Firebase Realtime Database to the Syncfusion Blazor Pivot Table through an ASP.NET Core API and the URL Adaptor. The Realtime Database REST API exposes the `Orders` node as JSON, and `OrderController` performs read and CRUD operations against that node using `HttpClient`. `SfDataManager` resolves the same-origin relative API URLs through the URL Adaptor. The Pivot Table displays `CustomerName` as rows, `EmployeeID` as columns, and the sum of `Freight` as values, with drill-through editing that inserts, updates, and deletes records that are persisted back to the Realtime Database.
+This guide demonstrated how to bind a Firebase Realtime Database to the Syncfusion Blazor Pivot Table through an ASP.NET Core API and the UrlAdaptor. The Realtime Database REST API exposes the `Orders` node as JSON, and `OrderController` performs read and CRUD operations against that node using `HttpClient`. `SfDataManager` resolves the same-origin relative API URLs through the UrlAdaptor. The Pivot Table displays `CustomerName` as rows, `EmployeeID` as columns, and the sum of `Freight` as values, with drill-through editing that inserts, updates, and deletes records that are persisted back to the Realtime Database.
