@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Pivot Table with SQL Server via URL Adaptor | Syncfusion®
-description: Bind Microsoft SQL Server data to the Blazor Pivot Table through an ASP.NET Core API and the Syncfusion URL Adaptor.
+title: Microsoft SQL Server in Blazor Pivot Table | Syncfusion
+description: Learn how to load and edit Microsoft SQL Server data in the Blazor Pivot Table through an ASP.NET Core API using Microsoft.Data.SqlClient.
 platform: Blazor
 control: PivotTable
 documentation: ug
 ---
 
-# Connect SQL Server to a Blazor Pivot Table Using the URL Adaptor
+# Microsoft SQL Server in Blazor Pivot Table
 
 The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) can load and edit SQL Server data through an ASP.NET Core API. [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) sends HTTP requests to the API, and the API uses [`Microsoft.Data.SqlClient`](https://www.nuget.org/packages/Microsoft.Data.SqlClient/) to access SQL Server.
 

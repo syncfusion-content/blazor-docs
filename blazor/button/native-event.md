@@ -9,18 +9,20 @@ documentation: ug
 
 # Native Events in Blazor Button Component
 
-You can define the native event using `event` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.
+You can bind native Blazor events to the Button component using the `@on{event}` directive. The event-specific data is available through the event arguments.
 
-The different event argument types for each event are,
+The following event argument types are used for each event category:
 
-* Focus Events - UIFocusEventArgs
-* Mouse Events - UIMouseEventArgs
-* Keyboard Events - UIKeyboardEventArgs
-* Touch Events – UITouchEventArgs
+* Focus Events - `FocusEventArgs`
+* Mouse Events - `MouseEventArgs`
+* Keyboard Events - `KeyboardEventArgs`
+* Touch Events - `TouchEventArgs`
+
+> All event argument types are from the `Microsoft.AspNetCore.Components.Web` namespace.
 
 ## List of native events supported
 
-The following native event support has been provided to the Button component:
+The following native events are supported by the Blazor Button component. Use the Blazor `@on{event}` directive syntax (for example, `@onclick`, `@onfocus`) to bind them.
 
 | List of Native events |  |  |  |  |
 | --- | --- | --- | --- | --- |
@@ -31,10 +33,11 @@ The following native event support has been provided to the Button component:
 
 ## How to bind click event to Button
 
-The `onclick` event fires when the user clicks the button with a mouse or activates it via keyboard. It is the most commonly used event for triggering actions such as form submission, navigation, or toggling UI state.
+The `onclick` event fires when the user clicks the button with a mouse or activates it via the keyboard (`Space` or `Enter`). It is the most commonly used event for triggering actions such as form submission, navigation, or toggling UI state.
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
+@using Microsoft.AspNetCore.Components.Web
 
 <SfButton @ref="ToggleBtn" @onclick="OnToggleClick" CssClass="e-flat" IsToggle="true" IsPrimary="true" Content="@Content"></SfButton>
 
@@ -42,7 +45,7 @@ The `onclick` event fires when the user clicks the button with a mouse or activa
     SfButton ToggleBtn;
     public string Content = "Play";
 
-    private void OnToggleClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    private void OnToggleClick(MouseEventArgs args)
     {
         Content = (ToggleBtn.Content == "Play") ? "Pause" : "Play";
     }
@@ -55,6 +58,7 @@ The `ondblclick` event fires when the user rapidly clicks the button twice in qu
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
+@using Microsoft.AspNetCore.Components.Web
 
 <SfButton @ondblclick="OnDoubleClick" Content="Double Click Me" IsPrimary="true"></SfButton>
 <p>@Message</p>
@@ -62,7 +66,7 @@ The `ondblclick` event fires when the user rapidly clicks the button twice in qu
 @code {
     public string Message = "";
 
-    private void OnDoubleClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    private void OnDoubleClick(MouseEventArgs args)
     {
         Message = $"Double-clicked at position X: {args.ClientX}, Y: {args.ClientY}";
     }
@@ -75,6 +79,7 @@ The `onmousedown` event fires the moment a mouse button is pressed down on the B
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
+@using Microsoft.AspNetCore.Components.Web
 
 <SfButton @onmousedown="OnMouseDown" Content="Press Me" IsPrimary="true"></SfButton>
 <p>@Message</p>
@@ -82,7 +87,7 @@ The `onmousedown` event fires the moment a mouse button is pressed down on the B
 @code {
     public string Message = "";
 
-    private void OnMouseDown(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    private void OnMouseDown(MouseEventArgs args)
     {
         Message = $"Mouse button {args.Button} pressed down.";
     }
@@ -95,6 +100,7 @@ The `onmouseup` event fires when a mouse button is released after being pressed 
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
+@using Microsoft.AspNetCore.Components.Web
 
 <SfButton @onmouseup="OnMouseUp" Content="Release Me" IsPrimary="true"></SfButton>
 <p>@Message</p>
@@ -102,7 +108,7 @@ The `onmouseup` event fires when a mouse button is released after being pressed 
 @code {
     public string Message = "";
 
-    private void OnMouseUp(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    private void OnMouseUp(MouseEventArgs args)
     {
         Message = $"Mouse button {args.Button} released.";
     }
@@ -115,6 +121,7 @@ The `onmouseover` event fires when the mouse pointer enters the Button element o
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
+@using Microsoft.AspNetCore.Components.Web
 
 <SfButton @onmouseover="OnMouseOver" Content="Hover Over Me" IsPrimary="true"></SfButton>
 <p>@Message</p>
@@ -122,7 +129,7 @@ The `onmouseover` event fires when the mouse pointer enters the Button element o
 @code {
     public string Message = "";
 
-    private void OnMouseOver(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    private void OnMouseOver(MouseEventArgs args)
     {
         Message = "Mouse is over the button.";
     }
@@ -135,6 +142,7 @@ The `onmouseout` event fires when the mouse pointer leaves the Button element or
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
+@using Microsoft.AspNetCore.Components.Web
 
 <SfButton @onmouseout="OnMouseOut" Content="Move Away" IsPrimary="true"></SfButton>
 <p>@Message</p>
@@ -142,7 +150,7 @@ The `onmouseout` event fires when the mouse pointer leaves the Button element or
 @code {
     public string Message = "";
 
-    private void OnMouseOut(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    private void OnMouseOut(MouseEventArgs args)
     {
         Message = "Mouse has left the button.";
     }
@@ -155,6 +163,7 @@ The `onmousemove` event fires continuously as the mouse pointer moves over the B
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
+@using Microsoft.AspNetCore.Components.Web
 
 <SfButton @onmousemove="OnMouseMove" Content="Move Mouse Here" IsPrimary="true"></SfButton>
 <p>@Message</p>
@@ -162,7 +171,7 @@ The `onmousemove` event fires continuously as the mouse pointer moves over the B
 @code {
     public string Message = "";
 
-    private void OnMouseMove(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    private void OnMouseMove(MouseEventArgs args)
     {
         Message = $"Mouse position — X: {args.OffsetX:F0}, Y: {args.OffsetY:F0}";
     }
@@ -175,6 +184,7 @@ The `onmouseenter` event fires when the mouse pointer enters the Button element.
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
+@using Microsoft.AspNetCore.Components.Web
 
 <SfButton @onmouseenter="OnMouseEnter" Content="Enter Button" IsPrimary="true"></SfButton>
 <p>@Message</p>
@@ -182,7 +192,7 @@ The `onmouseenter` event fires when the mouse pointer enters the Button element.
 @code {
     public string Message = "";
 
-    private void OnMouseEnter(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    private void OnMouseEnter(MouseEventArgs args)
     {
         Message = "Mouse entered the button area.";
     }
@@ -195,6 +205,7 @@ The `onmouseleave` event fires when the mouse pointer leaves the Button element.
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
+@using Microsoft.AspNetCore.Components.Web
 
 <SfButton @onmouseleave="OnMouseLeave" Content="Leave Button" IsPrimary="true"></SfButton>
 <p>@Message</p>
@@ -202,7 +213,7 @@ The `onmouseleave` event fires when the mouse pointer leaves the Button element.
 @code {
     public string Message = "";
 
-    private void OnMouseLeave(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    private void OnMouseLeave(MouseEventArgs args)
     {
         Message = "Mouse left the button area.";
     }
@@ -215,14 +226,15 @@ The `oncontextmenu` event fires when the user right-clicks the Button element, t
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
+@using Microsoft.AspNetCore.Components.Web
 
-<SfButton @oncontextmenu="OnContextMenu" @oncontextmenu:preventDefault="true" Content="Right Click Me" IsPrimary="true"></SfButton>
+<SfButton @oncontextmenu="OnContextMenu" Content="Right Click Me" IsPrimary="true"></SfButton>
 <p>@Message</p>
 
 @code {
     public string Message = "";
 
-    private void OnContextMenu(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    private void OnContextMenu(MouseEventArgs args)
     {
         Message = $"Context menu triggered at X: {args.ClientX}, Y: {args.ClientY}";
     }
@@ -235,6 +247,7 @@ The `onkeydown` event fires when any key is pressed down while the Button has fo
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
+@using Microsoft.AspNetCore.Components.Web
 
 <SfButton @onkeydown="OnKeyDown" Content="Focus & Press Key" IsPrimary="true"></SfButton>
 <p>@Message</p>
@@ -242,7 +255,7 @@ The `onkeydown` event fires when any key is pressed down while the Button has fo
 @code {
     public string Message = "";
 
-    private void OnKeyDown(Microsoft.AspNetCore.Components.Web.KeyboardEventArgs args)
+    private void OnKeyDown(KeyboardEventArgs args)
     {
         Message = $"Key down: {args.Key} (Code: {args.Code})";
     }
@@ -255,6 +268,7 @@ The `onkeypress` event fires when a key that produces a character value is press
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
+@using Microsoft.AspNetCore.Components.Web
 
 <SfButton @onkeypress="OnKeyPress" Content="Focus & Press Key" IsPrimary="true"></SfButton>
 <p>@Message</p>
@@ -262,7 +276,7 @@ The `onkeypress` event fires when a key that produces a character value is press
 @code {
     public string Message = "";
 
-    private void OnKeyPress(Microsoft.AspNetCore.Components.Web.KeyboardEventArgs args)
+    private void OnKeyPress(KeyboardEventArgs args)
     {
         Message = $"Key pressed: {args.Key}";
     }
@@ -275,6 +289,7 @@ The `onkeyup` event fires when a key is released after being pressed while the B
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
+@using Microsoft.AspNetCore.Components.Web
 
 <SfButton @onkeyup="OnKeyUp" Content="Focus & Release Key" IsPrimary="true"></SfButton>
 <p>@Message</p>
@@ -282,7 +297,7 @@ The `onkeyup` event fires when a key is released after being pressed while the B
 @code {
     public string Message = "";
 
-    private void OnKeyUp(Microsoft.AspNetCore.Components.Web.KeyboardEventArgs args)
+    private void OnKeyUp(KeyboardEventArgs args)
     {
         Message = $"Key released: {args.Key}";
     }
@@ -291,10 +306,11 @@ The `onkeyup` event fires when a key is released after being pressed while the B
 
 ## How to bind focus event to Button
 
-The `onfocus` event fires when the Button receives focus, either through a mouse click or keyboard navigation (e.g., `Tab` key). It is used to highlight the button, display hints, or trigger focus-related UI changes.
+The `onfocus` event fires when the Button receives focus, either through a mouse click or keyboard navigation (for example, the `Tab` key). It is used to highlight the button, display hints, or trigger focus-related UI changes.
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
+@using Microsoft.AspNetCore.Components.Web
 
 <SfButton @onfocus="OnFocus" Content="Click or Tab to Focus" IsPrimary="true"></SfButton>
 <p>@Message</p>
@@ -302,7 +318,7 @@ The `onfocus` event fires when the Button receives focus, either through a mouse
 @code {
     public string Message = "";
 
-    private void OnFocus(Microsoft.AspNetCore.Components.Web.FocusEventArgs args)
+    private void OnFocus(FocusEventArgs args)
     {
         Message = "Button is focused.";
     }
@@ -315,6 +331,7 @@ The `onblur` event fires when the Button loses focus, typically when the user cl
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
+@using Microsoft.AspNetCore.Components.Web
 
 <SfButton @onblur="OnBlur" Content="Click Then Click Away" IsPrimary="true"></SfButton>
 <p>@Message</p>
@@ -322,7 +339,7 @@ The `onblur` event fires when the Button loses focus, typically when the user cl
 @code {
     public string Message = "";
 
-    private void OnBlur(Microsoft.AspNetCore.Components.Web.FocusEventArgs args)
+    private void OnBlur(FocusEventArgs args)
     {
         Message = "Button lost focus.";
     }
@@ -335,6 +352,7 @@ The `onfocusin` event fires when the Button or any of its child elements receive
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
+@using Microsoft.AspNetCore.Components.Web
 
 <SfButton @onfocusin="OnFocusIn" Content="Focus In" IsPrimary="true"></SfButton>
 <p>@Message</p>
@@ -342,7 +360,7 @@ The `onfocusin` event fires when the Button or any of its child elements receive
 @code {
     public string Message = "";
 
-    private void OnFocusIn(Microsoft.AspNetCore.Components.Web.FocusEventArgs args)
+    private void OnFocusIn(FocusEventArgs args)
     {
         Message = "Focus moved into the button (focusin).";
     }
@@ -355,6 +373,7 @@ The `onfocusout` event fires when the Button or any of its child elements loses 
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
+@using Microsoft.AspNetCore.Components.Web
 
 <SfButton @onfocusout="OnFocusOut" Content="Focus Out" IsPrimary="true"></SfButton>
 <p>@Message</p>
@@ -362,9 +381,41 @@ The `onfocusout` event fires when the Button or any of its child elements loses 
 @code {
     public string Message = "";
 
-    private void OnFocusOut(Microsoft.AspNetCore.Components.Web.FocusEventArgs args)
+    private void OnFocusOut(FocusEventArgs args)
     {
         Message = "Focus moved out of the button (focusout).";
     }
 }
 ```
+
+## How to bind touch events to Button
+
+The `ontouchstart` and `ontouchend` events fire when the user touches and releases the Button on a touch-enabled device. Use the `TouchEventArgs` type to access touch-specific data such as the list of changed touches.
+
+```csharp
+@using Syncfusion.Blazor.Buttons
+@using Microsoft.AspNetCore.Components.Web
+
+<SfButton @ontouchstart="OnTouchStart" @ontouchend="OnTouchEnd" Content="Touch Me" IsPrimary="true"></SfButton>
+<p>@Message</p>
+
+@code {
+    public string Message = "";
+
+    private void OnTouchStart(TouchEventArgs args)
+    {
+        Message = $"Touch started with {args.Touches.Length} touch point(s).";
+    }
+
+    private void OnTouchEnd(TouchEventArgs args)
+    {
+        Message = $"Touch ended with {args.ChangedTouches.Length} changed touch point(s).";
+    }
+}
+```
+
+## See also
+
+* [Types and Styles in Blazor Button](types-and-styles.md)
+* [Accessibility in Blazor Button](accessibility.md)
+* [Blazor Button API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html)
