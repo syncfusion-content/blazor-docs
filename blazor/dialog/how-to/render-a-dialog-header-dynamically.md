@@ -9,7 +9,7 @@ documentation: ug
 
 # Render a dialog header dynamically in Blazor Dialog Component
 
-By default, the dialog is rendered without a header. You can update its header dynamically using the `Header` property.
+By default, the dialog is rendered without a header. You can update its header dynamically using the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Header) property.
 
 In the following code, the dialog header is rendered on a button click.
 
