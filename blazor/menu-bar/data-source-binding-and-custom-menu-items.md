@@ -3,26 +3,26 @@ layout: post
 title: DataSource Binding and Custom Items in Blazor Menu Bar | Syncfusion®
 description: Learn here all about data source binding and custom items in Blazor Menu Bar component and much more details.
 platform: Blazor
-control: Menu Bar 
+control: Menu Bar
 documentation: ug
 ---
 
 # DataSource Binding and Custom Items in Blazor Menu Bar Component
 
-The [Blazor Menu Bar](https://www.syncfusion.com/blazor-components/blazor-menu-bar) supports data source bindings such as data source that can be structured as `Self-referential` data.
+The [Blazor Menu Bar](https://www.syncfusion.com/blazor-components/blazor-menu-bar) supports data source binding, including self-referential data structures.
 
 ## Self-referential data
 
-Menu Bar can be populated from self-referential data structure that contains data with `ParentId` mapping.
+Menu Bar can be populated from a self-referential data structure that contains data with `ParentId` mapping.
 
-In the following example, the **id**, **pId**, and **text** columns from self-referential data have been mapped to the [ItemId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_ItemId), [ParentId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_ParentId), and [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_Text) fields, respectively.
+In the following example, the `Id`, `ParentId`, and `Text` properties of the `CustomMenuItem` model are mapped to the [ItemId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_ItemId), [ParentId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_ParentId), and [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_Text) fields, respectively.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
-<SfMenu Items="@MenuItems">
-    <MenuEvents  TValue="MenuItemModel" OnOpen="onOpen"></MenuEvents>
+<SfMenu TValue="CustomMenuItem" Items="@MenuItems">
+    <MenuEvents TValue="CustomMenuItem" OnOpen="OnOpenHandler"></MenuEvents>
     <MenuFieldSettings ItemId="Id" Text="Text" ParentId="ParentId"></MenuFieldSettings>
 </SfMenu>
 
@@ -43,7 +43,7 @@ In the following example, the **id**, **pId**, and **text** columns from self-re
         new CustomMenuItem{ Id = "parent9", Text = "Now Showing", ParentId = "parent2" },
         new CustomMenuItem{ Id = "parent10", Text = "Coming Soon", ParentId = "parent2" },
 
-        new CustomMenuItem{ Id = "parent10", Text = "Media Gallery", ParentId = "parent3" },
+        new CustomMenuItem{ Id = "parent17", Text = "Media Gallery", ParentId = "parent3" },
         new CustomMenuItem{ Id = "parent11", Text = "Newsletters", ParentId = "parent3" },
 
         new CustomMenuItem{ Id = "parent12", Text = "Our Policy", ParentId = "parent4" },
@@ -61,18 +61,22 @@ In the following example, the **id**, **pId**, and **text** columns from self-re
         public string ParentId { get; set; }
     }
 
-    private void onOpen()
+    private void OnOpenHandler(BeforeOpenCloseMenuEventArgs<CustomMenuItem> args)
     {
+        // Handle the OnOpen event here. The args parameter exposes the
+        // parent menu item, the opening submenu element, and cancellable
+        // Top/Left coordinates.
         this.eventName = "OnOpen";
     }
 }
 
+N> In the above example, `TValue` is specified as `CustomMenuItem` because the menu is rendered using the `Items` property, which is a generic `List<TValue>` source
 
-```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZhxDxAZVKMkqGfi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Binding in Blazor MenuBar](./images/blazor-menubar-data-binding.webp)" %}
 
-N> In the above example, `TValue` is specified as `MenuItemModel` because the menu is rendered using the `Items` property.
+Self-Referential Data with CustomMenuItem in a MenuTemplate
 
+When using `TValue="CustomMenuItem"` together with [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuTemplates-1.html), self-referential data structures with `ParentId` mapping are not supported automatically. To work around this limitation, you must manually convert the flat list into a parent/child hierarchy before binding it. The `BuildMenuHierarchy` helper in the example below performs that conversion by cloning each item, looking up its parent by `Id`, attaching the clone to the parent's `SubMenu` collection, and finally clearing the `ParentId` from the rendered hierarchy
 ## Handling Self-Referential Data with CustomMenuItem TValue in MenuTemplate
 
 When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuTemplates-1.html), self-referential data structures with ParentId mapping are not supported. To address this limitation, you need to manually map the parent and child menu items within the menu template. In the following example, we demonstrate how to configure the SfMenu component using self-referential data with CustomMenuItem as the TValue in the MenuTemplate.
@@ -117,7 +121,7 @@ When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfu
         new CustomMenuItem { Id = "parent15", Text = "Folk", ParentId = "parent7" },
         new CustomMenuItem { Id = "parent16", Text = "Classical", ParentId = "parent7" }
     };
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
         MenuHierarchy = BuildMenuHierarchy(MenuItems);
     }
@@ -135,7 +139,7 @@ When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfu
         foreach (var item in menuItems)
         {
             var clonedItem = menuDict[item.Id];
-            if (!string.IsNullOrEmpty(item.ParentId) && item.ParentId != null)
+            if (!string.IsNullOrEmpty(item.ParentId))
             {
                 if (menuDict.ContainsKey(item.ParentId))
                 {
@@ -195,16 +199,15 @@ When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfu
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrdZnAtLAdDGBiO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor MenuBar with Self-Referential Data with CustomMenuItem TValue in MenuTemplate](./images/blazor-menubar-self-referential-data.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrdZnAtLAdDGBiO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage="./images/blazor-menubar-self-referential-data.webp" %}
 
 ## Custom Menu Bar Items
 
-To customize Menu Bar items in your application, set your customized template using [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuTemplates-1.html). In the following example, the Menu Bar has been rendered with customized Menu Bar items.
+To customize Menu Bar items in your application, set a custom template using [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuTemplates-1.html). The `Template` block in the example below renders three different layouts based on the data: a plain label when only `Value` is set, a row with an avatar / badge when `Url` or `Count` is present, and a card-style "About Us" item when `About` is provided. The accompanying `<style>` block provides the avatar, badge, and card CSS used by these layouts. In the following example, the Menu Bar has been rendered with customized Menu Bar items.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Navigations
-@inject Microsoft.AspNetCore.Components.NavigationManager UriHelper;
 
 <div class="menu-control">
     <SfMenu Items="@data">
@@ -246,7 +249,7 @@ To customize Menu Bar items in your application, set your customized template us
                             </div>
                             <div class="e-card-actions">
                                 <input type="button" class="e-btn e-outline" style="pointer-events: auto;" value="Read More" />
-                            </div>
+                            </divbutton type="button" class="e-btn e-outline" style="pointer-events: auto;">Read More</button
                         </div>
                     }
                 }

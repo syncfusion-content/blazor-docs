@@ -120,8 +120,6 @@ You can show the previous and next buttons only on mouse hover by setting the [B
 
 You can customize the previous and next buttons using the [PreviousButtonTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_PreviousButtonTemplate) and [NextButtonTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_NextButtonTemplate) template properties. The following example demonstrates how to apply a template to the previous and next buttons.
 
-> This example uses `SfButton` from the `Syncfusion.Blazor.Buttons` namespace, which requires the `Syncfusion.Blazor.Buttons` NuGet package.
-
 ```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Navigations

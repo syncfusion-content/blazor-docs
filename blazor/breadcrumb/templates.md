@@ -11,8 +11,6 @@ documentation: ug
 
 Blazor has templated components that accept one or more UI segments and render them as part of the component. The [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) is a templated component that lets you customize parts of its UI through template parameters. Use templates to render custom components or content based on your own logic.
 
-N> Before using the Breadcrumb, make sure the Syncfusion Blazor package is installed, the theme stylesheet is referenced, and `SfBreadcrumb` is registered. See the [Getting started with Blazor Breadcrumb](https://blazor.syncfusion.com/documentation/breadcrumb/getting-started) page for setup details.
-
 The available template options in the Blazor Breadcrumb are:
 
 * [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_ItemTemplate) - Customizes each Breadcrumb item.

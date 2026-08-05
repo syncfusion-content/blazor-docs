@@ -71,8 +71,6 @@ All Carousel actions can be controlled using keyboard keys through the [`AllowKe
 
 This control implements keyboard navigation support by following WAI-ARIA practices. When focus is on the active Carousel element, you can use the following key combinations to interact with the Carousel.
 
-> The <kbd>Alt</kbd> + <kbd>J</kbd> shortcut to focus the carousel must be implemented at the application level (it is not handled by the component).
-
 | Windows | Mac | Description |
 | --- | --- | --- |
 | <kbd>Alt</kbd> + <kbd>J</kbd> | <kbd>⌥</kbd> + <kbd>J</kbd> | Focuses the carousel component (implemented at the application level). |

@@ -11,8 +11,6 @@ documentation: ug
 
 To modify the Breadcrumb appearance, override the default CSS classes of the component. The table below lists the available CSS classes and the section of the Breadcrumb each one targets. You can also create a custom theme for the component using the [Theme Studio](https://blazor.syncfusion.com/themestudio/).
 
-N> Before using the Breadcrumb, make sure the Syncfusion Blazor package is installed, the theme CSS is referenced in your application, and `SfBreadcrumb` is registered. See the [Getting started with Blazor Breadcrumb](https://blazor.syncfusion.com/documentation/breadcrumb/getting-started) page for setup details.
-
 ## CSS classes
 
 | CSS Class | Targets | Purpose |

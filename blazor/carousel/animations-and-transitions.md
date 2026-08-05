@@ -67,7 +67,7 @@ The following example demonstrates the `Fade` animation:
 
 ### Custom animation
 
-You can apply customized animation effects for slide transitions by setting [`AnimationEffect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_AnimationEffect) to `CarouselAnimationEffect.Custom` and providing the animation CSS through the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_CssClass) property. The custom styles typically target the `.e-carousel-item`, `.e-next`, and `.e-prev` classes to style the entering and leaving slides.
+You can apply customized animation effects for slide transitions by setting [`AnimationEffect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_AnimationEffect) to `CarouselAnimationEffect.Custom` and providing the animation CSS through the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_CssClass) property.
 
 The following example demonstrates a `parallax` custom animation:
 
@@ -447,7 +447,7 @@ By default, the Carousel allows users to swipe between slides using touch action
 
 ## Swipe modes
 
-The [`SwipeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_SwipeMode) property specifies whether the Carousel transitions slides when swiping via touch, mouse, or both. Swipe modes are combined using bitwise operators: use `|` to combine flags and `~` to negate them.
+The [`SwipeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_SwipeMode) property specifies whether the Carousel transitions slides when swiping via touch, mouse, or both. Swipe modes are combined using bitwise operators.
 
 The following swipe modes are available:
 

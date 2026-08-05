@@ -11,8 +11,6 @@ documentation: ug
 
 To modify the AppBar appearance, override the default CSS of the AppBar component. The following table lists the built-in CSS classes and their corresponding sections in the AppBar component. These classes are state modifiers that are applied automatically based on the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Mode) and [ColorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_ColorMode) property values, so they can be combined with a custom class to scope overrides. Alternatively, create a custom theme using the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
-N> Refer to the [Getting Started with Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/getting-started) page for prerequisites (NuGet packages, theme, and script references) before running the samples in this document.
-
 | CSS Class | Description |
 |-----|----- |
 | .e-appbar | Applied to the AppBar root element. Customize the base AppBar. |

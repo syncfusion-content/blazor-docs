@@ -116,8 +116,6 @@ Use the [SelectedIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 Use the [`PreviousAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_PreviousAsync) or [`NextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_NextAsync) public methods of the Carousel component to navigate to the previous or next slide programmatically.
 
-> This example uses `SfButton` from the `Syncfusion.Blazor.Buttons` namespace, which requires the `Syncfusion.Blazor.Buttons` NuGet package.
-
 ```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Navigations
