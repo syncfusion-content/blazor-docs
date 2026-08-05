@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animations in Blazor Accordion Component | Syncfusion®
-description: Checkout and learn here all features for handling Animations in Blazor Accordion component and much more.
+description: Check out and learn about the animation options available in the Blazor Accordion component, including effect, duration, and easing.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -9,11 +9,70 @@ documentation: ug
 
 # Animations in Blazor Accordion Component
 
-The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component supports custom animations for both expand and collapse actions using the animation options provided by the `Animation` library. The animation property allows you to customize various aspects including [Easing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationCollapse.html#Syncfusion_Blazor_Navigations_AccordionAnimationCollapse_Easing), [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationCollapse.html#Syncfusion_Blazor_Navigations_AccordionAnimationCollapse_Duration), and other effects according to your preference.
+The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component supports custom animations for both expand and collapse actions using the options provided by the `AccordionAnimationSettings` component. The animation properties allow you to customize aspects such as [Effect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationExpand.html#Syncfusion_Blazor_Navigations_AccordionAnimationExpand_Effect), [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationExpand.html#Syncfusion_Blazor_Navigations_AccordionAnimationExpand_Duration), and [Easing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationExpand.html#Syncfusion_Blazor_Navigations_AccordionAnimationExpand_Easing) according to your preference.
 
-By default, the accordion uses `SlideDown` animation for expanding panels (set through the [Expand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationSettings.html#Syncfusion_Blazor_Navigations_AccordionAnimationSettings_Expand) property) and `SlideUp` animation for collapsing panels (set through the [Collapse](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationSettings.html#Syncfusion_Blazor_Navigations_AccordionAnimationSettings_Collapse) property). You can disable animations completely by setting the animation [Effect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationCollapse.html#Syncfusion_Blazor_Navigations_AccordionAnimationCollapse_Effect) to `None`.
+By default, the Accordion uses `SlideDown` animation for expanding panels (set through the [Expand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationSettings.html#Syncfusion_Blazor_Navigations_AccordionAnimationSettings_Expand) property) and `SlideUp` animation for collapsing panels (set through the [Collapse](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationSettings.html#Syncfusion_Blazor_Navigations_AccordionAnimationSettings_Collapse) property). You can disable animations completely by setting [Effect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationCollapse.html#Syncfusion_Blazor_Navigations_AccordionAnimationCollapse_Effect) to `None`.
 
-The following example demonstrates various animation types that can be applied to the Accordion component:
+## Available animation properties
+
+| Property | Type | Default | Description |
+| -- | -- | -- | -- |
+| `Effect` | `AnimationEffect` | `SlideDown` (Expand) / `SlideUp` (Collapse) | Specifies the type of animation effect. Use `None` to disable animation. |
+| `Duration` | `int` | `400` | Duration of the animation in milliseconds. |
+| `Easing` | `string` | `linear` | CSS `animation-timing-function` value (e.g., `ease`, `ease-in`, `ease-out`, `ease-in-out`, `cubic-bezier(…)`). |
+
+## Supported `AnimationEffect` values
+
+| Value | Applies To | Description |
+| -- | -- | -- |
+| `SlideDown` | Expand | Slides the panel downward when expanding. |
+| `SlideUp` | Collapse | Slides the panel upward when collapsing. |
+| `FadeIn` | Expand | Fades the panel into view. |
+| `FadeOut` | Collapse | Fades the panel out of view. |
+| `FadeZoomIn` | Expand | Combined fade and zoom-in. |
+| `FadeZoomOut` | Collapse | Combined fade and zoom-out. |
+| `ZoomIn` | Expand | Scales the panel from small to full size. |
+| `ZoomOut` | Collapse | Scales the panel from full to small size. |
+| `None` | Expand / Collapse | Disables the animation entirely. |
+
+## Customizing duration and easing
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Navigations
+
+<SfAccordion>
+    <AccordionAnimationSettings>
+        <AccordionAnimationCollapse Effect="AnimationEffect.FadeOut"
+                                    Duration="600"
+                                    Easing="ease-in-out">
+        </AccordionAnimationCollapse>
+        <AccordionAnimationExpand Effect="AnimationEffect.FadeZoomIn"
+                                  Duration="600"
+                                  Easing="ease-in-out">
+        </AccordionAnimationExpand>
+    </AccordionAnimationSettings>
+    <AccordionItems>
+        <AccordionItem Header="ASP.NET" Content="Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services."></AccordionItem>
+        <AccordionItem Header="ASP.NET MVC" Content="The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller."></AccordionItem>
+    </AccordionItems>
+</SfAccordion>
+```
+
+## How to disable animations
+
+Set `Effect` to `None` on both the `AccordionAnimationExpand` and `AccordionAnimationCollapse` elements:
+
+```cshtml
+<AccordionAnimationSettings>
+    <AccordionAnimationExpand Effect="AnimationEffect.None"></AccordionAnimationExpand>
+    <AccordionAnimationCollapse Effect="AnimationEffect.None"></AccordionAnimationCollapse>
+</AccordionAnimationSettings>
+```
+
+## Example: selecting an animation from a DropDownList
+
+The following example demonstrates how to bind a DropDownList so a user can choose the Expand and Collapse animation at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -91,4 +150,22 @@ The following example demonstrates various animation types that can be applied t
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLRDdiWilSZPJDq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customize Accordion expand or collapse animation behavior](./images/blazor-accordion-animation.webp)" %}
+> The DropDownList uses `@bind-Value` only. Do not also wire a `ValueChange` handler to the same property, or the value will be updated twice.
+
+## Per-item animation
+
+Animations are configured at the Accordion level using `AccordionAnimationSettings`. To control the open/close effect of a specific item, use the [`Expanded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html) and [`ExpandedChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html) two-way binding on `AccordionItem`. Custom per-item easing or duration is not currently supported; only `Effect` and `None` can be applied per item by toggling the animation settings around an expand/collapse event.
+
+## Live sample
+
+Open the [Blazor Playground sample](https://blazorplayground.syncfusion.com/embed/rtLRDdiWilSZPJDq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2) to try the example.
+
+![Customize Accordion expand or collapse animation behavior](images/blazor-accordion-animation.webp)
+
+## See also
+
+* [Getting Started with Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/getting-started)
+* [Accessibility in Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/accessibility)
+* [AccordionAnimationExpand API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationExpand.html)
+* [AccordionAnimationCollapse API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationCollapse.html)
+* [AnimationEffect Enumeration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.AnimationEffect.html)

@@ -1,21 +1,22 @@
 ---
 layout: post
 title: Breadcrumb Templates with Blazor Breadcrumb component | Syncfusion®
-description: Breadcrumb section explains how to customize the item template and separator template to the Breadcrumb items.
+description: Customize the item template and separator template of the Blazor Breadcrumb component.
 platform: Blazor
 control: Breadcrumb
 documentation: ug
 ---
 
-# Templates in Blazor Breadcrumb Component
+# Templates in Blazor Breadcrumb
 
-Blazor has templated components which accepts one or more UI segments as input that can be rendered as part of the component during component rendering. Breadcrumb is a templated blazor component, that allow you to customize various part of the UI using template parameters. It allows you to render custom components or content based on your own logic.
+Blazor has templated components that accept one or more UI segments and render them as part of the component. The [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) is a templated component that lets you customize parts of its UI through template parameters. Use templates to render custom components or content based on your own logic.
 
-The available template options in Breadcrumb are as follows,
+N> Before using the Breadcrumb, make sure the Syncfusion Blazor package is installed, the theme stylesheet is referenced, and `SfBreadcrumb` is registered. See the [Getting started with Blazor Breadcrumb](https://blazor.syncfusion.com/documentation/breadcrumb/getting-started) page for setup details.
 
-[Item template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_ItemTemplate) - Used to customize the items.
+The available template options in the Blazor Breadcrumb are:
 
-[Separator template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_SeparatorTemplate)- Used to customize the separators.
+* [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_ItemTemplate) - Customizes each Breadcrumb item.
+* [SeparatorTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_SeparatorTemplate) - Customizes the separator between items.
 
 ## Template context
 
@@ -23,7 +24,7 @@ The templates used by Breadcrumb are of type `RenderFragment` and they will be p
 
 ## Item template
 
-In the following example, shopping cart details are used as Breadcrumb items and each item is rendered as Chip component using [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_ItemTemplate) tag directive. You can get the current item in `context` property.
+In the following example, shopping cart details are used as Breadcrumb items and each item is rendered as a `SfChip` using the `ItemTemplate` tag directive. Access the current item through the `context` parameter.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -47,11 +48,14 @@ In the following example, shopping cart details are used as Breadcrumb items and
     </BreadcrumbTemplates>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLRZdCCpxDqpuWZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-item-template.webp)" %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLRZdCCpxDqpuWZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage="[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-item-template.webp)" %}
+
+N> The `ItemTemplate` replaces the default item rendering. If you want users to be able to click the item, you must render an anchor or button yourself and bind the `Url` from `context.Url`. To use `SfChip`, add the `Syncfusion.Blazor.Buttons` NuGet package.
 
 ## Separator template
 
-In the following example, the separators are customized with icons using [SeparatorTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_SeparatorTemplate) tag directive. You can get the previous and next item in `context` property.
+In the following example, the separators are customized with an icon using the `SeparatorTemplate` tag directive. Access the previous and next items through the `context.CurrentItem` and `context.NextItem` properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -69,19 +73,15 @@ In the following example, the separators are customized with icons using [Separa
         </SeparatorTemplate>
     </BreadcrumbTemplates>
 </SfBreadcrumb>
-
-<style>
-    .e-bullet-arrow::before {
-        content: '\e763';
-        font-size: 12px;
-    }
-</style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBntHMMzHDnPVbH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-breadcrumb-separator-temp.webp)" %}
 
-## Customize Specific Item Template
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBntHMMzHDnPVbH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage="[Blazor Breadcrumb Component](./images/blazor-breadcrumb-separator-temp.webp)" %}
 
-The specific breadcrumb item can be customizable by adding the custom element as Child Content. In the following example, added the span element only for the breadcrumb text in breadcrumb item.
+N> The icon used in the separator requires the Syncfusion theme stylesheet to be referenced. See [Getting started with Blazor Breadcrumb](https://blazor.syncfusion.com/documentation/breadcrumb/getting-started).
+
+## Customize a specific item
+
+Customize a single Breadcrumb item by providing custom content as the `BreadcrumbItem` child content. The default `Text` rendering is replaced by your custom content. In the following example, a `<span>` element with a label and link is rendered only on the last item.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -144,4 +144,14 @@ The specific breadcrumb item can be customizable by adding the custom element as
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhHXRWipdWiDWGo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/breadcrumb-specific-item-template.webp)" %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhHXRWipdWiDWGo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage="[Blazor Breadcrumb Component](./images/breadcrumb-specific-item-template.webp)" %}
+
+N> When you supply child content for a `BreadcrumbItem`, the `Text` and `Url` properties are ignored. To make the link clickable, use Blazor's `@onclick` with `NavigationManager.NavigateTo(context.Url)` instead of the legacy `onclick` HTML attribute, which requires interactive render mode.
+
+## See also
+
+* [Getting started with Blazor Breadcrumb](https://blazor.syncfusion.com/documentation/breadcrumb/getting-started)
+* [Breadcrumb Items in Blazor](https://blazor.syncfusion.com/documentation/breadcrumb/breadcrumb-items)
+* [Styles and Appearance in Blazor Breadcrumb](https://blazor.syncfusion.com/documentation/breadcrumb/style-and-appearance)
+* [Accessibility in Blazor Breadcrumb](https://blazor.syncfusion.com/documentation/breadcrumb/accessibility)
