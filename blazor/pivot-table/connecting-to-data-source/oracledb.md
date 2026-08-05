@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Oracle Data Binding in Blazor Pivot Table | Syncfusion®"
+title: "Oracle Data Binding in Blazor Pivot Table | Syncfusion"
 component: "Pivot Table"
-description: "Learn how to connect an Oracle database to the Blazor Pivot Table component using the Oracle.ManagedDataAccess library and much more details."
+description: "Learn how to bind the Blazor Pivot Table to an Oracle database using Oracle.ManagedDataAccess, either directly or through a Web API service."
 platform: Blazor
 documentation: ug
 ---
 
-# Oracle Data Binding in Blazor Pivot Table Component
+# Oracle Data Binding in Blazor Pivot Table
 
 This guide explains how to connect an Oracle database to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using the [Oracle.ManagedDataAccess](https://www.nuget.org/packages/Oracle.ManagedDataAccess) library. It covers two methods: directly retrieving and binding data to the Pivot Table and using a Web API service to fetch and display Oracle data.
 

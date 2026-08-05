@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Aggregation in Blazor Pivot Table Component | Syncfusion®
-description: Learn about aggregation types in Blazor Pivot Table component for value field calculations and much more details.
+title: Aggregation in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table performs value-axis aggregations such as Sum, Count, Min, Max, Average, running totals, and percentage comparisons.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Aggregation in Blazor Pivot Table Component
+# Aggregation in Blazor Pivot Table
 
 N> This feature is applicable only for the relational data source.
 
