@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Chip Component
 
-The [Blazor Chips](https://www.syncfusion.com/blazor-components/blazor-chips) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The [Blazor Chips](https://www.syncfusion.com/blazor-components/blazor-chips) component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor Chips component is outlined below.
 
@@ -39,21 +39,20 @@ The accessibility compliance for the Blazor Chips component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Blazor Chips component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following ARIA attributes are used in the Chips component:
+The Blazor Chips component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet accessibility requirements. The following ARIA attributes are used in the Chips component:
 
 | Attributes | Purpose |
 | -- | -- |
-| `role=listbox` | Indicates the ChipList component wrapper element as `listbox`. |
-| `role=option` | Used to convey a significant and contextual message to the user(ChipList). |
-| `role=button` | Used to convey a significant and contextual message to the user(Single Chip). |
+| `role=listbox` | Indicates that the ChipList component wrapper element acts as a `listbox`, which contains a set of selectable options. |
+| `role=option` | Indicates each selectable chip within the ChipList (used when `Selection` is set to `Single` or `Multiple`). |
 | `aria-label` | Provides an accessible name for the Chip. |
-| `aria-selected` | Indicates the element is selected. |
-| `aria-disabled` | Indicates element is perceivable but disabled. |
-| `aria-multiselectable` | Indicates multiple items to be selected. |
+| `aria-selected` | Indicates whether the chip is currently selected. |
+| `aria-disabled` | Indicates the element is perceivable but disabled. |
+| `aria-multiselectable` | Indicates that multiple items in the ChipList can be selected at the same time. |
 
 ## Keyboard interaction
 
-The following shortcut keys are used to access the Blazor Chip component without any interruption.
+The following shortcut keys are used to access the Blazor Chip component seamlessly. To make the <kbd>Delete</kbd> key functional, set [`EnableDelete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfChip.html#Syncfusion_Blazor_Buttons_SfChip_EnableDelete) to `true` on the `SfChip` component. Focus order follows the order in which chips are rendered.
 
 | Windows | Mac | Actions |
 |------------|-------|------------|
@@ -62,9 +61,9 @@ The following shortcut keys are used to access the Blazor Chip component without
 
 ## Ensuring accessibility
 
-The Blazor Chips component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
+The Blazor Chips component's accessibility is validated through the [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
-The accessibility compliance of the Chip component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/chips) in a new window to evaluate the accessibility of the Chip component with accessibility tools.
+The accessibility compliance of the Chip component is shown in the following sample. The sample references the local image files (`andrew.png`, `janet.png`, `laura.png`, `margaret.png`) that ship with the Syncfusion Blazor sample assets. The [sample](https://blazor.syncfusion.com/accessibility/chips) can be opened in a new window to evaluate the accessibility of the Chip component with accessibility tools.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -102,3 +101,8 @@ The accessibility compliance of the Chip component is shown in the following sam
 ## See also
 
 * [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Getting Started with Blazor Chip](getting-started.md)
+* [Types in Blazor Chip](types.md)
+* [Customization in Blazor Chip](customization.md)
+* [Events in Blazor Chip](events.md)
+* [CSS Structure in Blazor Chip](style.md)
