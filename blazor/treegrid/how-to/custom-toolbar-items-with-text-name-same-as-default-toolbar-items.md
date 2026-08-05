@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom toolbar items in Blazor TreeGrid Component | Syncfusion
-description: Learn here all about custom toolbar items with text name same as default toolbar items in Syncfusion Blazor TreeGrid component and more.
+title: Custom toolbar items in Blazor TreeGrid Component | Syncfusion®
+description: Learn here all about custom toolbar items with text name same as default toolbar items in Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug

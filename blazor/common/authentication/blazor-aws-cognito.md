@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Authentication using AWS Cognito | Syncfusion
+title: Blazor Authentication using AWS Cognito | Syncfusion®
 description: Authenticate a Blazor Web App or Blazor Server App with AWS Cognito (OIDC Hosted UI) and secure Blazor components.
 platform: Blazor
 control: Common
@@ -218,9 +218,9 @@ else
 // In Production require a valid HTTPS Cognito authority.
 if (!builder.Environment.IsDevelopment())
 {
-    if (!TryGetAuthorityUri(cognitoAuthority, out var prodUri) 
-    || prodUri!.Scheme != Uri.UriSchemeHttps 
-    || string.IsNullOrWhiteSpace(cognitoClientId) 
+    if (!TryGetAuthorityUri(cognitoAuthority, out var prodUri)
+    || prodUri!.Scheme != Uri.UriSchemeHttps
+    || string.IsNullOrWhiteSpace(cognitoClientId)
     || cognitoClientId.Contains("YOUR_APP_CLIENT_ID"))
     {
         throw new InvalidOperationException(

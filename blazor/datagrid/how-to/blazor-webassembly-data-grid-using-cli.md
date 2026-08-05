@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add Syncfusion DataGrid to Blazor WebAssembly using .NET CLI
-description: Create a standalone Blazor WebAssembly app on .NET 8/9 and add Syncfusion DataGrid using .NET CLI with setup, themes, scripts, and grid features.
+title: Add DataGrid to Blazor WebAssembly using .NET CLI | Syncfusion®
+description: Create a standalone Blazor WebAssembly app on .NET 8/9 and add DataGrid using .NET CLI with setup, themes, scripts, and grid features.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -13,7 +13,7 @@ This article provides step-by-step instructions to build a standalone Blazor Web
 
 ## Using the Playground
 
-[Blazor Playground](https://blazor.syncfusion.com/documentation/common/playground/getting-started) allows interacting with Syncfusion Blazor components directly in a web browser without installing any NuGet packages locally. By default, the `Syncfusion.Blazor` package is included.
+[Blazor Playground](https://blazor.syncfusion.com/documentation/common/playground/getting-started) allows interacting with Blazor components directly in a web browser without installing any NuGet packages locally. By default, the `Syncfusion.Blazor` package is included.
 
 {% playground "https://blazorplayground.syncfusion.com/" %}
 
@@ -95,9 +95,9 @@ dotnet restore
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of available packages and component details. If a project requires a Syncfusion license key, see the [licensing](https://blazor.syncfusion.com/documentation/common/essential-studio/licensing/overview) topic to register it at startup.
+N> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of available packages and component details. If a project requires a license key, see the [licensing](https://blazor.syncfusion.com/documentation/common/essential-studio/licensing/overview) topic to register it at startup.
 
-### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+### Register Blazor service
 
 1. Import namespaces
 
@@ -109,9 +109,9 @@ Open the **~/_Imports.razor** file and add the following namespaces:
 @using Syncfusion.Blazor.Grids
 
 ```
-2. Register the Syncfusion service
+2. Register the service
 
-In **~/Program.cs**, register the Syncfusion Blazor service as shown below:
+In **~/Program.cs**, register the Blazor service as shown below:
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor WebAssembly App" hl_lines="3 11" %}
@@ -224,7 +224,7 @@ After the app starts, navigate to `http://localhost:<port-number>` in the browse
 
 ![Blazor DataGrid running in a WebAssembly app](../images/blazor-datagrid-component.webp)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrIZoWghZXnoxDw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVRNdgtetUSCuOz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Defining row data
 
@@ -292,7 +292,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrotoiKCoYkHoHn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVRjRKtIXhPRUvl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Defining columns
 
@@ -379,7 +379,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLyNosqiEMHcPrL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBHjHqjSjJlQWGd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Enable paging
 
@@ -455,7 +455,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrejSMgCdnGAijD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVxDxgNSjSVyErQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Enable sorting
 
@@ -530,7 +530,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhSXosACxQRZrki?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVRtnKtejeojQfd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Enable filtering
 
@@ -606,7 +606,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrIDoMqsHPeUEtz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVHXRgtotIQaqeb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Enable grouping
 
@@ -682,7 +682,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBoZosUMRYBBVqA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBxZHgDIXxXecpf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Blazor DataGrid](../images/blazor-datagrid-render.webp)
 
@@ -690,8 +690,8 @@ public class OrderData
 
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid in Blazor WebAssembly using Visual Studio 2022](./blazor-webassembly-datagrid-using-visual-studio)
+* [Getting Started with DataGrid in Blazor WebAssembly using Visual Studio 2022](./blazor-webassembly-datagrid-using-visual-studio)
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid in Blazor Server using Visual Studio 2022](../getting-started-with-server-app.md)
+* [Getting Started with DataGrid in Blazor Server using Visual Studio 2022](../getting-started-with-server-app.md)
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid in Blazor Server using .NET Core CLI](./server-side-using-cli)
+* [Getting Started with DataGrid in Blazor Server using .NET Core CLI](./server-side-using-cli)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor ContextMenu Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor ContextMenu component and more.
+title: Accessibility in Blazor ContextMenu Component | Syncfusion®
+description: Checkout and learn here all the featurescabout Accessibility in Blazor ContextMenu component and more.
 platform: Blazor
 control: Context Menu
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor ContextMenu Component
 
-The Blazor ContextMenu component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor ContextMenu component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor ContextMenu component is outlined below.
 
@@ -39,14 +39,14 @@ The accessibility compliance for the Blazor ContextMenu component is outlined be
 
 ## WAI-ARIA attributes
 
-The Blazor ContextMenu component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor ContextMenu component:
+The Blazor ContextMenu component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor ContextMenu component:
 
-| Attributes | Purpose |
-| --- | --- |
-| `role` | Indicates ContextMenu component popup as `menu`, and the popup items as `menuitem`. |
-| `aria-haspopup` | Indicates the availability and type of interactive popup element. |
-| `aria-expanded` | Indicates whether the subtree can be expanded or collapsed, as well as indicates whether its current state is expanded or collapsed. |
-| `aria-label` | Indicates the menu item text. |
+| Attributes | Purpose | Example Value |
+| --- | --- | --- |
+| `role` | Indicates the ContextMenu component popup as `menu`, and the popup items as `menuitem`. | `role="menu"` (popup), `role="menuitem"` (item) |
+| `aria-haspopup` | Indicates the availability and type of interactive popup element. | `aria-haspopup="true"` |
+| `aria-expanded` | Indicates whether the subtree is currently expanded or collapsed. | `aria-expanded="true"` / `aria-expanded="false"` |
+| `aria-label` | Provides an accessible name for the menu item when the visible text is not sufficient. | `aria-label="Cut"` |
 
 ## Keyboard interaction
 
@@ -58,12 +58,12 @@ The Blazor ContextMenu component followed the [keyboard interaction](https://www
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item. |
 | <kbd>↑</kbd> | <kbd>↑</kbd> | Navigates up or to the previous menu item. |
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Navigates down or to the next menu item. |
-| <kbd>←</kbd> | <kbd>←</kbd> | Close the current sub menu and navigates to the parent menu. |
-| <kbd>→</kbd> | <kbd>→</kbd> | Navigates and open the next sub menu. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Closes the current sub menu and navigates to the parent menu. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Navigates and opens the next sub menu. |
 
 ## Ensuring accessibility
 
-The Blazor ContextMenu component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The Blazor ContextMenu component's accessibility levels are ensured through [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
 
 The accessibility compliance of the Blazor ContextMenu component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/context-menu) in a new window to evaluate the accessibility of the Blazor ContextMenu component with accessibility tools.
 
@@ -71,4 +71,4 @@ The accessibility compliance of the Blazor ContextMenu component is shown in the
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

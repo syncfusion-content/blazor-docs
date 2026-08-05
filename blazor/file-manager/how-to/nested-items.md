@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Nested items in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about nested items in Syncfusion Blazor File Manager component and more.
+title: Nested items in Blazor File Manager Component | Syncfusion®
+description: Checkout and learn here all about nested items in Blazor File Manager component and much more details.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -180,7 +180,7 @@ The following example shows how to render the SfFileManager component inside the
 
 ```
 
-![Syncfusion Blazor File Manager displayed inside a dialog](../images/blazor-filemanager-inside-dialog.png)
+![Blazor File Manager displayed inside a dialog](../images/blazor-filemanager-inside-dialog.webp)
 
 ## Adding File Manager inside the Tab
 
@@ -212,10 +212,10 @@ The following example demonstrates how to integrate the Blazor File Manager comp
             </ChildContent>
             <ContentTemplate>
                 <SfFileManager TValue="FileManagerDirectoryContent">
-                    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+                    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
                     </FileManagerAjaxSettings>
                 </SfFileManager>
             </ContentTemplate>
@@ -231,4 +231,4 @@ The following example demonstrates how to integrate the Blazor File Manager comp
 
 ```
 
-![Syncfusion Blazor File Manager displayed inside a tab](../images/blazor-filemanager-inside-tab.png)
+![Blazor File Manager displayed inside a tab](../images/blazor-filemanager-inside-tab.webp)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Internationalization in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Internationalization in Syncfusion Blazor Charts component and more.
+title: Internationalization in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about Internationalization in Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -82,7 +82,7 @@ Learn more about axis label format in-relation to axis types from the pages belo
 * [Logarithmic Label Format](./logarithmic-axis#label-format)
 * [Custom Label Format](./numeric-axis#custom-label-format)
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

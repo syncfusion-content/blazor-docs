@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Convert millisecond to date time in Blazor Chart | Syncfusion
-description: Learn here all about Convert millisecond to date time in Syncfusion Blazor Charts component and more.
+title: Convert millisecond to date time in Blazor Chart | Syncfusion®
+description: Learn here all the features about Convert millisecond to date time in Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug

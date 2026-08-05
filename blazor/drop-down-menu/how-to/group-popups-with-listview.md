@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Group dropdown listview items in Blazor Dropdown Menu| Syncfusion
-description: Learn here all about grouping dropdown listview items in Syncfusion Blazor Dropdown Menu component and more.
+title: Group dropdown listview items in Blazor Dropdown Menu| Syncfusion®
+description: Learn here all about grouping dropdown listview items in Blazor Dropdown Menu component and much more details.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug

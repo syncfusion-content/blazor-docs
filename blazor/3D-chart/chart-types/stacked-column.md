@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Stacked Column in Blazor 3D Chart Component | Syncfusion
-description: Checkout and learn here all about Stacked Column Chart in Syncfusion Blazor 3D Chart component and more.
+title: Stacked Column in Blazor 3D Chart Component | Syncfusion®
+description: Checkout and learn here all features about Stacked Column Chart in Blazor 3D Chart component and more.
 platform: Blazor
 control: 3D Chart
 documentation: ug
@@ -50,7 +50,7 @@ To render a stacked column series, use series `Type` as `StackingColumn`.
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBftRMAVjJALNDA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stacked Column 3D Chart](../images/chart-types-images/blazor-stacked-column-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVHXxsZfdaGkrxt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Stacked Column 3D Chart](../images/chart-types-images/blazor-stacked-column-chart.webp)" %}
 
 ## Stacking group
 
@@ -93,7 +93,7 @@ To group the stacked column, the `StackingGroup` property can be used. The colum
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhpZnCUhDzupZKQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Grouping in Blazor Stacked Column 3D Chart](../images/chart-types-images/blazor-stacked-colum-chart-with-grouping.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLdjxCZJcZWFFMe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Grouping in Blazor Stacked Column 3D Chart](../images/chart-types-images/blazor-stacked-colum-chart-with-grouping.webp)" %}
 
 ## Cylindrical stacked column chart
 
@@ -136,7 +136,7 @@ To render a cylindrical stacked column chart, set the `ColumnFacet` property to 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhTDnCqVjoUjFfB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Cylindrical Column 3D Chart](../images/chart-types-images/blazor-cylindricaal-stacked-column-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLRNRWjzQDmsFSy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Cylindrical Column 3D Chart](../images/chart-types-images/blazor-cylindricaal-stacked-column-chart.webp)" %}
 
 ## Series customization
 
@@ -182,4 +182,4 @@ The following properties can be used to customize the `Stacked Column` series.
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVJXHMqLXoxCjlL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stacked Column 3D Chart with Custom Series](../images/chart-types-images/blazor-stacked-column-chart-custom-series.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLxZxWtTGDuxrFB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Stacked Column 3D Chart with Custom Series](../images/chart-types-images/blazor-stacked-column-chart-custom-series.webp)" %}

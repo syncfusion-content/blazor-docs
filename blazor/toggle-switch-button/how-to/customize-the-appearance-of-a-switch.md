@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize the appearance of Blazor Toggle Switch Button | Syncfusion
-description: Learn here all about customizing the appearance of a Syncfusion Blazor Toggle Switch Button component and more.
+title: Customize the appearance of Blazor Toggle Switch Button | Syncfusion®
+description: Learn here all about customizing the appearance of a Blazor Toggle Switch Button component and more.
 platform: Blazor
 control: Toggle Switch Button 
 documentation: ug
@@ -212,4 +212,4 @@ N> For this customization you need to refer the `bootstrap.css` file. This could
 
 ```
 
-![Blazor Toggle Switch Button with Custom Color](./../images/blazor-toggle-switch-button-custom-color.png)
+![Blazor Toggle Switch Button with Custom Color](./../images/blazor-toggle-switch-button-custom-color.webp)

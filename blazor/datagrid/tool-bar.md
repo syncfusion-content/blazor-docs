@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Configuring and Customizing Toolbar in Syncfusion Blazor DataGrid
-description: Learn how to configure, customize, and manage toolbar actions in Syncfusion Blazor DataGrid, including dynamic control and CSS styling
+title: Configuring and Customizing Toolbar in Blazor DataGrid | Syncfusion®
+description: Learn how to configure, customize, and manage toolbar actions in Blazor DataGrid, including dynamic control and CSS styling.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -82,7 +82,7 @@ The toolbar can be configured with built-in toolbar items or custom items using 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVgXkrOVKNnhlEE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLntwtxBRubEXyl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Enable or disable toolbar items
 
@@ -199,7 +199,7 @@ Toolbar items in the Blazor DataGrid can be enabled or disabled dynamically usin
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrAXEVuUjkraxax?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBxXwDdBcFzQKTI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Enable or disable toolbar items based on selected row data
 
@@ -302,7 +302,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}      
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBIXGVkiYUtauxh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhxtmjxrcErMecu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize Toolbar buttons using CSS
 
@@ -393,10 +393,10 @@ The following example demonstrates changing the background color of the `Add`, `
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBAZOBaUBJADIrr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVdDQjRhGuILgZd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/Customizing-the-toolbar-items-tooltip-text-in-Blazor-Grid)
 
-N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand data presentation and manipulation.
+N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.
 
 N> Styling tips: when using CSS isolation, place styles in the component’s **.razor.css** file. To target inner elements from isolated CSS, use the **::deep** selector where appropriate. Consider additional state styles (hover, active, focus-visible, disabled) and high-contrast themes to improve accessibility.

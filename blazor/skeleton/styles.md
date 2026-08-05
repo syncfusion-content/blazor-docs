@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Styles in Blazor Skeleton Component | Syncfusion
-description: Checkout and learn here all about styles and how to use them in Syncfusion Blazor Skeleton component and much more.
+title: Styles in Blazor Skeleton Component | Syncfusion®
+description: Checkout and learn here all about styles and how to use them in Blazor Skeleton component and much more.
 platform: Blazor
 control: Skeleton
 documentation: ug

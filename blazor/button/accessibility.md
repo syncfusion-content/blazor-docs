@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Button Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Button component and much more.
+title: Accessibility in Blazor Button Component | Syncfusion®
+description: Checkout and learn here all about Accessibility in Blazor Button component including keyboard navigation, ARIA attributes, and usability features.
 platform: Blazor
 control: Button
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Button component
 
-The Blazor Button component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Button component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor Button component is outlined below.
 
@@ -38,7 +38,7 @@ The accessibility compliance for the Blazor Button component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Blazor Button component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/button/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Button component:
+The Blazor Button component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/button/) patterns to meet accessibility standards. The following ARIA attributes are used in the Blazor Button component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -46,20 +46,23 @@ The Blazor Button component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/
 
 ## Keyboard interaction
 
-The Blazor Button component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/button/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Button component.
+The Blazor Button component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/button/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and people who rely entirely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Button component.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
-| <kbd>Space</kbd> | <kbd>Space</kbd> | When the button has focus, pressing the space key changes the state of the button. |
+| <kbd>Space</kbd> | <kbd>Space</kbd> | When the button has focus, pressing the <kbd>Space</kbd> key activates the button. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | When the button has focus, pressing the <kbd>Enter</kbd> key activates the button. |
 
 ## Ensuring accessibility
 
-The Blazor Button component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The Blazor Button component's accessibility compliance is verified using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
 
 The accessibility compliance of the Blazor Button component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/button) in a new window to evaluate the accessibility of the Blazor Button component with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/button.html" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/button" %}
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Syncfusion Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Types and Styles in Blazor Button](types-and-styles.md)
+* [Native Events in Blazor Button](native-event.md)

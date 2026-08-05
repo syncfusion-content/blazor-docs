@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Editing in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about the Data Editing in Syncfusion Blazor Charts component and much more.
+title: Data Editing in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about the Data Editing in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -71,7 +71,7 @@ Data editing allows rendered data points to be dragged and dropped at run time. 
 
 ![Data Editing in Blazor Chart](images/data-editing/blazor-chart-data-editing.webp)
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 

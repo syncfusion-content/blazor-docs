@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization in Blazor Bullet Chart Component | Syncfusion
-description: Checkout and learn here all about Customization in Syncfusion Blazor Bullet Chart component and more.
+title: Customization in Blazor Bullet Chart Component | Syncfusion®
+description: Checkout and learn here all features about Customization in Blazor Bullet Chart component and more more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug

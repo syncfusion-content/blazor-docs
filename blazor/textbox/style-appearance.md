@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and appearance in Blazor TextBox Component | Syncfusion
-description: Checkout and learn here all about Style and appearance in Syncfusion Blazor TextBox component and more.
+title: Style and appearance in Blazor TextBox Component | Syncfusion®
+description: Checkout and learn here all about Style and appearance in Blazor TextBox component and much more details.
 platform: Blazor
 control: TextBox
 documentation: ug

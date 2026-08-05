@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor File Manager component and more.
+title: Accessibility in Blazor File Manager Component | Syncfusion®
+description: Checkout and learn here all about Accessibility in Blazor File Manager component and much more details.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor File Manager Component
 
-The [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component has been designed with keeping the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications in mind, and applied the `WAI-ARIA` roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support, which makes navigation easy for people who use assistive technologies (AT) or for users who completely rely on keyboard navigation.
+The [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component has been designed with keeping the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications in mind, and applied the `WAI-ARIA` roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support, which makes navigation easy for people who use assistive technologies (AT) or for users who completely rely on keyboard navigation.
 
 The Blazor File Manager component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -92,4 +92,4 @@ The accessibility compliance of the File Manager component is shown in the follo
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

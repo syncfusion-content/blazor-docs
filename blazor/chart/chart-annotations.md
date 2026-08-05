@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Annotation in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about using Annotation in Syncfusion Blazor Charts component and much more.
+title: Annotation in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about using Annotation in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -167,7 +167,7 @@ The [CoordinateUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ![Inserting Annotation using Coordinate in Blazor Column Chart](images/annotation/blazor-column-chart-coordinate-annotation.webp)
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

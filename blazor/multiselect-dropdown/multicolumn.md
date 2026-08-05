@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Multicolumn in Blazor MultiSelect Component | Syncfusion
-description: Checkout and learn here all about Multicolumn in Syncfusion Blazor MultiSelect component and much more.
+title: Multicolumn in Blazor MultiSelect Component | Syncfusion®
+description: Checkout and learn here all about Multicolumn in Blazor MultiSelect component and much more details.
 platform: Blazor
 control: MultiSelect
 documentation: ug

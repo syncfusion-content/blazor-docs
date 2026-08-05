@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about the Events usage in Syncfusion Blazor Charts component and much more.
+title: Events in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about the Events usage in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -1547,4 +1547,4 @@ The following properties are available in the [SharedTooltipRenderEventArgs](htt
 
 ```
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bubble in Blazor Maps Component | Syncfusion
-description: Check out and learn how to add and customize bubble markers in the Syncfusion Blazor Maps component.
+title: Bubble in Blazor Maps Component | Syncfusion®
+description: Check out and learn how to add and customize bubble markers in the Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug

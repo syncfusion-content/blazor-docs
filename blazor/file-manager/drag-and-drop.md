@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Drag and Drop in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about drag and drop in Syncfusion Blazor File Manager component and more.
+title: Drag and Drop in Blazor File Manager Component | Syncfusion®
+description: Checkout and learn here all about drag and drop in Blazor File Manager component and much more details.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -42,4 +42,4 @@ After successful compilation of your application, simply press `F5` to run the a
 
 
 
-![Drag and Drop in Blazor FileManager](images/blazor-filemanager-drag-and-drop.gif)
+![Drag and Drop in Blazor FileManager](images/blazor-filemanager-drag-and-drop.webp)

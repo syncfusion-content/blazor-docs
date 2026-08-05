@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add or Remove Series in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Add or Remove Series in Syncfusion Blazor Charts component and more.
+title: Add or Remove Series in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about Add or Remove Series in Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -189,4 +189,4 @@ By clicking the **Add Chart Series** button a new series will be added to the ch
 }
 ```
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

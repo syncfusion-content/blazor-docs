@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Trendlines in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about the Trendlines in Syncfusion Blazor Charts component and much more.
+title: Trendlines in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about the Trendlines in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -493,7 +493,7 @@ The value set to [BackwardForecast](https://help.syncfusion.com/cr/blazor/Syncfu
 
 The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Fill) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Width) properties are used to customize the appearance of the trendline.
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## Show or hide a trendline
 

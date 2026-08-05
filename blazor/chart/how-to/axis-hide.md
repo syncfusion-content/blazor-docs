@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Hiding Axis in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Hiding Axis in Syncfusion Blazor Charts component and much more details.
+title: Hiding Axis in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about Hiding Axis in Blazor Charts component and much more details.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -95,4 +95,4 @@ By clicking the legend items, one can now toggle the visibility of the associate
 }
 ```
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

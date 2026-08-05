@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Popup Setting in Blazor MultiSelect Component | Syncfusion
-description: Checkout and learn here all about Popup Setting in Syncfusion Blazor MultiSelect component and much more.
+title: Popup Setting in Blazor MultiSelect Component | Syncfusion®
+description: Checkout and learn here all about Popup Setting in Blazor MultiSelect component and much more details.
 platform: Blazor
 control: MultiSelect
 documentation: ug

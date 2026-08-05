@@ -9,7 +9,7 @@ documentation: ug
 
 # How to integrate with Microsoft.Extensions.AI in Blazor AI AssistView
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> AI AssistView component supports integration with the `Microsoft.Extensions.AI` framework, enabling seamless communication with various large language models (LLMs) such as `Azure OpenAI`, `OpenAI`, and more.
+The AI AssistView component supports integration with the `Microsoft.Extensions.AI` framework, enabling seamless communication with various large language models (LLMs) such as `Azure OpenAI`, `OpenAI`, and more.
 
 `Microsoft.Extensions.AI` simplifies integration with different providers and typically requires only minimal configuration changes based on the selected model. The following example demonstrates integration using `Azure OpenAI`.
 
@@ -30,7 +30,6 @@ To add the required NuGet packages, use the NuGet Package Manager in Visual Stud
 * `Azure.Identity`
 * `Microsoft.Extensions.AI`
 * `Microsoft.Extensions.AI.OpenAI`
-* `Markdig`
 
 Alternatively, run the following commands in your terminal:
 
@@ -41,14 +40,13 @@ dotnet add package Azure.AI.OpenAI
 dotnet add package Azure.Identity
 dotnet add package Microsoft.Extensions.AI
 dotnet add package Microsoft.Extensions.AI.OpenAI
-dotnet add package Markdig
 
 {% endhighlight %}
 {% endtabs %}
 
 ### Configure services in Program.cs
 
-Register the `Azure OpenAI` client and the Syncfusion<sup style="font-size:70%">&reg;</sup> AI AssistView component within the Blazor application.
+Register the `Azure OpenAI` client and the AI AssistView component within the Blazor application.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
@@ -78,7 +76,7 @@ builder.Services.AddChatClient(
         .AsIChatClient()
 );
 
-// Register Syncfusion Blazor components
+// Register Blazor components
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
@@ -88,9 +86,9 @@ var app = builder.Build();
 
 ### AI AssistView with IChatClient
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> AI AssistView component is designed to integrate seamlessly with external AI services. When an `IChatClient` is registered via Microsoft.Extensions.AI, the component automatically uses it to process user prompts without additional component configuration.
+The AI AssistView component is designed to integrate seamlessly with external AI services. When an `IChatClient` is registered via Microsoft.Extensions.AI, the component automatically uses it to process user prompts without additional component configuration.
 
-In the following example, user input is sent to the injected `IChatClient`. The AI model’s response is returned in Markdown, converted to HTML using the `Markdig` library, and rendered in the AI AssistView component.
+In the following example, user input is sent to the injected `IChatClient`. The AI model’s response is returned in Markdown, converted to HTML, and rendered in the AI AssistView component.
 
 {% tabs %}
 {% highlight razor %}
@@ -99,7 +97,6 @@ In the following example, user input is sent to the injected `IChatClient`. The 
 
 @using Syncfusion.Blazor.InteractiveChat
 @using Microsoft.Extensions.AI
-@using Markdig;
 @using System.Text.RegularExpressions;
 @inject IChatClient ChatClient
 
@@ -113,8 +110,7 @@ In the following example, user input is sent to the injected `IChatClient`. The 
     {
         // Send the user’s prompt to the AI model
         var chatResponse = await ChatClient.GetResponseAsync(args.Prompt, new ChatOptions());
-        // Convert markdown to HTML
-        var htmlContent = Markdown.ToHtml(chatResponse.Text);
+        var htmlContent = chatResponse.Text;
         // Clean up extra whitespace
         htmlContent = Regex.Replace(htmlContent, @"\s+", " ").Trim();
         // Set the cleaned HTML as the response

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor Pivot Table component and more.
+title: Accessibility in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table complies with WCAG 2.2 and Section 508 guidelines through WAI-ARIA roles, keyboard navigation, and screen reader support.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Accessibility in Blazor Pivot Table component
+# Accessibility in Blazor Pivot Table
 
 The pivot table component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -228,4 +228,4 @@ The accessibility compliance of the pivot table component is shown in the follow
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

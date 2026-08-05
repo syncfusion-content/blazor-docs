@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Syncfusion Blazor Pager Styling Guide with CSS
-description: Learn to customize the Syncfusion Blazor Pager using CSS, including root elements, numeric items, navigation buttons, and page size dropdown.
+title: Style and Appearance in Blazor Pager Component | Syncfusion®
+description: Learn to customize Blazor Pager using CSS, including root elements, numeric items, navigation buttons, and page size dropdown.
 platform: Blazor
 control: Pager
 documentation: ug
 ---
 
-# Style and appearance in Syncfusion Blazor Pager
+# Style and appearance in Blazor Pager
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager supports visual customization using CSS and theme-based styling. Styles can be applied to various elements to match the application's design. Styling options are available for:
+The Blazor Pager supports visual customization using CSS and theme-based styling. Styles can be applied to various elements to match the application's design. Styling options are available for:
 
 - **Pager root element:** Defines the overall appearance of the pager container.
 - **Numeric items:** Controls the appearance of page number buttons and currently selected page indicator.

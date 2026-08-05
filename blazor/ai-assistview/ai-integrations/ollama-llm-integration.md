@@ -19,15 +19,9 @@ Before starting, ensure you have the following:
 
 * **Syncfusion AI AssistView**: Package [Syncfusion Blazor package](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed.
 
-* [Markdig](https://www.nuget.org/packages/Markdig) package: For parsing Markdown responses.
-
 ## Set Up the AI AssistView Component
 
 Follow the [Getting Started](../getting-started) guide to configure and render the AI AssistView component in the application and that prerequisites are met.
-
-## Install Dependency
-
-To install the Markdig package by run `NuGet\Install-Package Markdig` in Package Manager Console.
 
 ## Configuring Ollama
 
@@ -80,9 +74,9 @@ ollama serve
 
 ## Configure AI AssistView with Ollama
 
-To integrate Ollama with the Syncfusion Blazor AI AssistView component in your Blazor application:
+To integrate Ollama with the Blazor AI AssistView component in your Blazor application:
 
-* Configure the AI services in the `Program.cs` file to register the Ollama client and Syncfusion Blazor services.
+* Configure the AI services in the `Program.cs` file to register the Ollama client and Blazor services.
 
 {% tabs %}
 {% highlight cs tabtitle="Program.cs" %}
@@ -140,7 +134,6 @@ app.Run();
 {% highlight razor %}
 
 @rendermode InteractiveServer
-@using Markdig
 @using Microsoft.Extensions.AI
 @using Syncfusion.Blazor.Navigations
 
@@ -191,11 +184,6 @@ app.Run();
 
         try
         {
-            var pipeline = new MarkdownPipelineBuilder()
-                .UseAdvancedExtensions()
-                .UsePipeTables()
-                .UseTaskLists()
-                .Build();
 
             var messages = new List<Microsoft.Extensions.AI.ChatMessage>
             {
@@ -216,7 +204,7 @@ app.Run();
 
                 if (buffer.Length - lastLenPushed >= updateRateChars)
                 {
-                    string html = Markdown.ToHtml(buffer.ToString(), pipeline);
+                    string html = buffer.ToString();
                     await AIAssist.UpdateResponseAsync(html);
                     await AIAssist.ScrollToBottomAsync();
                     lastLenPushed = buffer.Length;
@@ -225,7 +213,7 @@ app.Run();
 
             if (!responseStopped)
             {
-                string finalHtml = Markdown.ToHtml(buffer.ToString(), pipeline);
+                string finalHtml = buffer.ToString();
                 await AIAssist.UpdateResponseAsync(finalHtml);
                 await AIAssist.ScrollToBottomAsync();
             }

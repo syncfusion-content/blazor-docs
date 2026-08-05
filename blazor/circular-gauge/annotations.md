@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Annotations in Blazor Circular Gauge Component | Syncfusion
-description: Checkout and learn here all about Annotations in Syncfusion Blazor Circular Gauge component and more.
+title: Annotations in Blazor Circular Gauge Component | Syncfusion®
+description: Checkout and learn here all the features about Annotations in Blazor Circular Gauge component and more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
@@ -13,7 +13,7 @@ Annotations are used to mark a specific area of interest in the Circular Gauge w
 
 ## Customization
 
-You can place any custom element on the axis area using [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAnnotation_ContentTemplate) in the [CircularGaugeAnnotation](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html).
+You can place any custom element on the axis area using [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAnnotation_ContentTemplate) in the [CircularGaugeAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html).
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -25,7 +25,7 @@ You can place any custom element on the axis area using [ContentTemplate](https:
                 <CircularGaugePointer Value="50"></CircularGaugePointer>
             </CircularGaugePointers>
             <CircularGaugeAnnotations>
-                <CircularGaugeAnnotation Angle="195" ZIndex="1">
+                <CircularGaugeAnnotation Angle="180" ZIndex="1">
                     <ContentTemplate>
                         <div class="custom-annotation">50</div>
                     </ContentTemplate>
@@ -46,7 +46,7 @@ You can place any custom element on the axis area using [ContentTemplate](https:
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLgWrBGKhmauxQC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge with Annotation](./images/blazor-circulargauge-annotation.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBxjRhdWaPWNSlp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge with Annotation](./images/blazor-circulargauge-annotation.webp)" %}
 
 ## Positioning the annotation
 
@@ -65,7 +65,7 @@ The radius of an annotation takes values either in pixel or in percentage. By se
             </CircularGaugePointers>
             <CircularGaugeAnnotations>
                 <CircularGaugeAnnotation Angle="90"
-                                         Radius="110%"
+                                         Radius="120%"
                                          ZIndex="1">
                     <ContentTemplate>
                         <div class="custom-annotation">50</div>
@@ -87,11 +87,11 @@ The radius of an annotation takes values either in pixel or in percentage. By se
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBgsrVcKVvLKeKB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Annotation Position in Blazor Circular Gauge](./images/blazor-circulargauge-annotation-position.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLHDRhHVNKqVrhw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Annotation Position in Blazor Circular Gauge](./images/blazor-circulargauge-annotation-position.webp)" %}
 
 ## Multiple annotations
 
-Using [CircularGaugeAnnotation](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html), you can add multiple annotations to the circular gauge and each annotation content can be customized separately.
+Using [CircularGaugeAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html), you can add multiple annotations to the circular gauge and each annotation content can be customized separately.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -142,7 +142,7 @@ Using [CircularGaugeAnnotation](https://help.syncfusion.com/cr/aspnetcore-blazor
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVKWrBQqrFpJXLX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge with Multiple Annotation](./images/blazor-circulargauge-multiple-annotation.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBHXHLdLIUFgvum?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge with Multiple Annotation](./images/blazor-circulargauge-multiple-annotation.webp)" %}
 
 ## See also
 

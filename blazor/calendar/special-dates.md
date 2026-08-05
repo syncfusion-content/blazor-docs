@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Special Dates in Blazor Calendar Component | Syncfusion
-description: Checkout and learn here all about Special Dates in Syncfusion Blazor Calendar component and more details.
+title: Special Dates in Blazor Calendar Component | Syncfusion®
+description: Checkout and learn here all features about Special Dates in Blazor Calendar component and more details.
 platform: Blazor
 control: Calendar
 documentation: ug
@@ -91,6 +91,6 @@ Customize specific dates in a [Blazor Calendar](https://www.syncfusion.com/blazo
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVAMBLBLyofGefV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Calendar with special dates](./images/blazor_calendar_special_dates.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhdtRMBrlYlIhNB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Calendar with special dates](./images/blazor_calendar_special_dates.webp)" %}
 
 N> The `RenderDayCellEventArgs` includes a `CurrentView` property that identifies the active calendar view during rendering. Possible values are `Month`, `Year`, and `Decade`. Use this to apply view-specific logic within the [OnRenderDayCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarEvents-1.html#Syncfusion_Blazor_Calendars_CalendarEvents_1_OnRenderDayCell) handler. This property is useful for customizing the rendering of day cells based on the calendar's current view.

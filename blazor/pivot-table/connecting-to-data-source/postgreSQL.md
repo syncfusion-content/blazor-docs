@@ -1,275 +1,648 @@
 ---
 layout: post
-title: "PostgreSQL Data Binding in Blazor Pivot Table Component | Syncfusion"
-component: "Pivot Table"
-description: "Learn how to connect a PostgreSQL database to the Syncfusion Blazor Pivot Table using the Npgsql.EntityFrameworkCore.PostgreSQL library."
+title: PostgreSQL in Blazor Pivot Table | Syncfusion
+description: Learn how to bind the Blazor Pivot Table to PostgreSQL through an ASP.NET Core API that uses Npgsql and the Syncfusion URL adaptor for read and CRUD operations.
 platform: Blazor
+control: PivotTable
 documentation: ug
 ---
 
-# PostgreSQL Data Binding in Blazor Pivot Table Component
+# PostgreSQL in Blazor Pivot Table
 
-This guide explains how to connect a PostgreSQL database to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using the [Npgsql.EntityFrameworkCore.PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) library. It covers two methods: directly retrieving and binding data to the Pivot Table and using a Web API service to fetch and display PostgreSQL data.
+The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) can bind to PostgreSQL data exposed by an ASP.NET Core controller. In this example, [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses `Adaptors.UrlAdaptor` to read and modify order records through HTTP endpoints.
 
-## Connecting a PostgreSQL to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table
+This sample intentionally loads the complete `orders` table so that the Pivot Table can aggregate the raw records in the application. Use it only for small datasets. For large datasets, use a server-side aggregation design or an OLAP/data-engine solution instead of returning every source row.
 
-This section explains how to connect a PostgreSQL database to the Blazor Pivot Table by directly retrieving data using the [Npgsql.EntityFrameworkCore.PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) library.
+## Prerequisites
 
-### Step 1: Set Up a Blazor Pivot Table
-1. Create a [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) by following the [Getting Started](../getting-started) guide.
+Install or obtain the following:
 
-### Step 2: Install the Npgsql.EntityFrameworkCore.PostgreSQL NuGet Package
-1. Open the **NuGet Package Manager** in your project solution and search for **Npgsql.EntityFrameworkCore.PostgreSQL**.
-2. Install the **Npgsql.EntityFrameworkCore.PostgreSQL** package to add PostgreSQL support.
+| Software or package | Tested version | Purpose |
+|---|---:|---|
+| Visual Studio | 2026 (18.0 or later) | IDE with the ASP.NET and web development workload |
+| .NET SDK | 10.0 | Runtime and build tools |
+| PostgreSQL Server | 12 or later | Database server |
+| pgAdmin 4 | 9.6 or later | Optional PostgreSQL administration UI |
+| Syncfusion.Blazor.PivotTable | `{{site.blazorversion}}` | Pivot Table and data components |
+| Syncfusion.Blazor.Themes | `{{site.blazorversion}}` | Component themes |
+| Npgsql | 10.0.3 | PostgreSQL provider for .NET |
 
-![Installing the Npgsql.EntityFrameworkCore.PostgreSQL NuGet package](../images/postgreSQL-nuget-package-install.webp)
+You also need:
 
-### Step 3: Connect to the PostgreSQL Database
-In the **Index.razor** file, under the `OnInitialized` method, use the [Npgsql.EntityFrameworkCore.PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) library to connect to the PostgreSQL database and retrieve data.
+- A PostgreSQL account that can create a database, or an administrator who can create it for you.
+- A valid [Syncfusion license or trial key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application).
+- Permission to store local development secrets with the [.NET Secret Manager](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-10.0&tabs=windows%2Cpowershell).
 
-1. **Establish Connection**: Use `NpgsqlConnection` with a valid connection string (e.g., `Server=localhost;Database=mydb;User Id=myuser;Password=mypassword;`) to connect to the PostgreSQL database.
-2. **Query and Fetch Data**: Execute a SQL query, such as `SELECT * FROM apxtimestamp`, using `NpgsqlCommand` to retrieve data for the Pivot Table.
-3. **Structure Data**: Use `NpgsqlDataReader` to read the query results and populate them into a list for binding to the Pivot Table.
+## Create the Blazor Web App
 
-### Step 4: Bind Data to the Pivot Table
-1. Assign the retrieved list to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property of the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html).
-2. Configure the Pivot Table by defining fields in the [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Columns), [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Rows), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Values), and [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings) to organize and format the data.
+Create a **Blazor Web App** named `URLAdaptor` that targets .NET 10. Select **Interactive Server** interactivity and enable HTTPS.
 
-```cshtml
-@using System.Data
-@using Npgsql
-@using Syncfusion.Blazor.PivotView
+You can also create it from a terminal:
 
-<SfPivotView TValue="PostgreSQLService" Width="1000" Height="300" ShowFieldList="true">
-    <PivotViewDataSourceSettings TValue="PostgreSQLService" DataSource="@dataSource" ExpandAll=false EnableSorting=true>
-        <PivotViewColumns>
-            <PivotViewColumn Name="openinghours_practice" Caption="Openinghours Practice"></PivotViewColumn>
-            <PivotViewColumn Name="closinghours_practice" Caption="Closinghours Practice"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="servicetype" Caption="Service Type"></PivotViewRow>
-            <PivotViewRow Name="servicecategory" Caption="Service Category"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="revenue" Caption="Revenue"></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="revenue" Format="C0"></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
-    <PivotViewGridSettings ColumnWidth="120"></PivotViewGridSettings>
-</SfPivotView>
+```powershell
+dotnet new blazor -n URLAdaptor -f net10.0 -int Server
+cd URLAdaptor
+```
 
-@code {
-    private List<PostgreSQLService> dataSource { get; set; }
+The remaining paths in this guide are relative to the `URLAdaptor` project directory.
 
-    protected override void OnInitialized()
+## Create the PostgreSQL Database
+
+Start PostgreSQL, open pgAdmin or `psql`, and connect as a role that can create databases.
+
+Run this statement while connected to a maintenance database such as `postgres`:
+
+```sql
+CREATE DATABASE "OrderDB";
+```
+
+Reconnect to `OrderDB`, then create the table and sample data:
+
+```sql
+CREATE TABLE public.orders (
+    orderid INTEGER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
+    customername VARCHAR(100) NOT NULL,
+    employeeid INTEGER NOT NULL,
+    shipcity VARCHAR(100),
+    freight NUMERIC(12, 2)
+);
+
+INSERT INTO public.orders (customername, employeeid, shipcity, freight)
+VALUES
+('Alice Johnson', 1, 'New York', 120.50),
+('Bob Smith', 2, 'London', 85.20),
+('Carol Davis', 1, 'New York', 210.75),
+('David Brown', 3, 'Berlin', 95.00),
+('Eve Wilson', 2, 'London', 150.25),
+('Frank Moore', 4, 'Tokyo', 60.80),
+('Grace Taylor', 1, 'New York', 180.40),
+('Henry Anderson', 3, 'Berlin', 220.60),
+('Ivy Thomas', 2, 'London', 75.10),
+('Jack White', 4, 'Tokyo', 130.90);
+
+SELECT * FROM public.orders ORDER BY orderid;
+```
+
+For local development, you can use the role that created the database. For a separate application role, have a database administrator run the following commands in `OrderDB`, replacing `url_adaptor_app` and the example password:
+
+```sql
+CREATE ROLE url_adaptor_app LOGIN PASSWORD 'replace-with-a-strong-password';
+GRANT CONNECT ON DATABASE "OrderDB" TO url_adaptor_app;
+GRANT USAGE ON SCHEMA public TO url_adaptor_app;
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.orders TO url_adaptor_app;
+GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO url_adaptor_app;
+```
+
+The sequence grant supports PostgreSQL installations or schemas that use sequence-backed identity columns.
+
+## Install the NuGet Packages
+
+Run the following commands in the project directory.
+
+```powershell
+dotnet add package Syncfusion.Blazor.PivotTable --version {{site.blazorversion}}
+dotnet add package Syncfusion.Blazor.Themes --version {{site.blazorversion}}
+dotnet add package Npgsql --version 10.0.3
+```
+
+The project file should contain equivalent package references:
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Syncfusion.Blazor.PivotTable" Version="{{site.blazorversion}}" />
+  <PackageReference Include="Syncfusion.Blazor.Themes" Version="{{site.blazorversion}}" />
+  <PackageReference Include="Npgsql" Version="10.0.3" />
+</ItemGroup>
+```
+
+## Configure Secrets and the Connection String
+
+Do not store a database password or license key in `appsettings.json`. Initialize Secret Manager and add both values:
+
+```powershell
+dotnet user-secrets init
+dotnet user-secrets set "ConnectionStrings:PostgreSQL" "Host=localhost;Port=5432;Database=OrderDB;Username=url_adaptor_app;Password=replace-with-your-password"
+dotnet user-secrets set "Syncfusion:LicenseKey" "YOUR LICENSE KEY"
+```
+
+If you use the local `postgres` role instead, change `Username` and `Password` accordingly.
+
+For deployment, provide these settings through a secrets manager or environment variables:
+
+```text
+ConnectionStrings__PostgreSQL
+Syncfusion__LicenseKey
+```
+
+See the [Npgsql connection-string reference](https://www.npgsql.org/doc/connection-string-parameters.html) for SSL, pooling, timeout, and certificate options required by your PostgreSQL environment.
+
+## Create the Shared Order Model
+
+Create `Models/Order.cs`:
+
+```csharp
+using System.ComponentModel.DataAnnotations;
+
+namespace URLAdaptor.Models;
+
+public class Order
+{
+    [Key]
+    public int? OrderID { get; set; }
+
+    [Required]
+    public string? CustomerName { get; set; }
+
+    [Required]
+    public int? EmployeeID { get; set; }
+
+    public decimal? Freight { get; set; }
+    public string? ShipCity { get; set; }
+}
+```
+
+The nullable key allows an inserted record to omit `OrderID`; PostgreSQL generates it and the API returns it after insertion.
+
+## Create the API Controller
+
+Create the `Controllers` folder and add `Controllers/OrderController.cs`:
+
+```csharp
+using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Mvc;
+using Npgsql;
+using NpgsqlTypes;
+using Syncfusion.Blazor.Data;
+using URLAdaptor.Models;
+
+namespace URLAdaptor.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class OrderController : ControllerBase
+{
+    private readonly string connectionString;
+    private readonly ILogger<OrderController> logger;
+
+    public OrderController(
+        IConfiguration configuration,
+        ILogger<OrderController> logger)
     {
-        List<PostgreSQLService> postGreSqlData = new List<PostgreSQLService>();
-        // Replace with your own connection string.
-        NpgsqlConnection connection = new NpgsqlConnection("<Enter your valid connection string here>");
-        connection.Open();
-        NpgsqlCommand cmd = new NpgsqlCommand("SELECT * FROM apxtimestamp", connection);
-        using (NpgsqlDataReader reader = cmd.ExecuteReader())
+        connectionString = configuration.GetConnectionString("PostgreSQL")
+            ?? throw new InvalidOperationException(
+                "The PostgreSQL connection string is not configured.");
+        this.logger = logger;
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<object>> Read(
+        [FromBody] DataManagerRequest request,
+        CancellationToken cancellationToken)
+    {
+        _ = request;
+        List<Order> orders = [];
+
+        const string sql = """
+            SELECT orderid, customername, employeeid, shipcity, freight
+            FROM public.orders
+            ORDER BY orderid
+            """;
+
+        try
         {
-            while (reader.Read())
+            await using NpgsqlConnection connection = new(connectionString);
+            await connection.OpenAsync(cancellationToken);
+            await using NpgsqlCommand command = new(sql, connection);
+            await using NpgsqlDataReader reader =
+                await command.ExecuteReaderAsync(cancellationToken);
+
+            while (await reader.ReadAsync(cancellationToken))
             {
-                postGreSqlData.Add(new PostgreSQLService()
+                orders.Add(new Order
                 {
-                    openinghours_practice = (TimeSpan)reader["openinghours_practice"],
-                    closinghours_practice = (TimeSpan)reader["closinghours_practice"],
-                    servicetype = reader["servicetype"].ToString(),
-                    servicecategory = reader["servicecategory"].ToString(),
-                    revenue = Convert.ToInt32(reader["revenue"])
+                    OrderID = reader.GetInt32(0),
+                    CustomerName = reader.GetString(1),
+                    EmployeeID = reader.GetInt32(2),
+                    ShipCity = reader.IsDBNull(3) ? null : reader.GetString(3),
+                    Freight = reader.IsDBNull(4) ? null : reader.GetDecimal(4)
                 });
             }
+
+            return Ok(new { result = orders, count = orders.Count });
         }
-        connection.Close();   
-        this.dataSource = postGreSqlData;
+        catch (NpgsqlException exception)
+        {
+            logger.LogError(exception, "Unable to read orders from PostgreSQL.");
+            return Problem("The order data could not be loaded.");
+        }
     }
 
-    public class PostgreSQLService
+    [HttpPost("Insert")]
+    public async Task<ActionResult<Order>> Insert(
+        [FromBody] CrudModel<Order> request,
+        CancellationToken cancellationToken)
     {
-        public TimeSpan openinghours_practice { get; set; }
-        public TimeSpan closinghours_practice { get; set; }
-        public string servicetype { get; set; }
-        public string servicecategory { get; set; }
-        public int revenue { get; set; }
+        if (request.Value is not Order order ||
+            string.IsNullOrWhiteSpace(order.CustomerName) ||
+            !order.EmployeeID.HasValue)
+        {
+            return BadRequest("CustomerName and EmployeeID are required.");
+        }
+
+        const string sql = """
+            INSERT INTO public.orders
+                (customername, freight, shipcity, employeeid)
+            VALUES
+                ($1, $2, $3, $4)
+            RETURNING orderid
+            """;
+
+        try
+        {
+            await using NpgsqlConnection connection = new(connectionString);
+            await connection.OpenAsync(cancellationToken);
+            await using NpgsqlCommand command = new(sql, connection);
+            command.Parameters.Add(new NpgsqlParameter
+                { NpgsqlDbType = NpgsqlDbType.Varchar, Value = order.CustomerName });
+            command.Parameters.Add(new NpgsqlParameter
+                { NpgsqlDbType = NpgsqlDbType.Numeric, Value = order.Freight ?? (object)DBNull.Value });
+            command.Parameters.Add(new NpgsqlParameter
+                { NpgsqlDbType = NpgsqlDbType.Varchar, Value = order.ShipCity ?? (object)DBNull.Value });
+            command.Parameters.Add(new NpgsqlParameter
+                { NpgsqlDbType = NpgsqlDbType.Integer, Value = order.EmployeeID.Value });
+
+            object? generatedKey = await command.ExecuteScalarAsync(cancellationToken);
+            order.OrderID = Convert.ToInt32(generatedKey);
+            return Ok(order);
+        }
+        catch (PostgresException exception)
+            when (exception.SqlState == PostgresErrorCodes.CheckViolation ||
+                  exception.SqlState == PostgresErrorCodes.NotNullViolation ||
+                  exception.SqlState == PostgresErrorCodes.ForeignKeyViolation)
+        {
+            logger.LogWarning(exception, "PostgreSQL rejected an inserted order.");
+            return BadRequest("The order violates a database constraint.");
+        }
+        catch (NpgsqlException exception)
+        {
+            logger.LogError(exception, "Unable to insert an order.");
+            return Problem("The order could not be inserted.");
+        }
     }
+
+    [HttpPost("Update")]
+    public async Task<ActionResult<Order>> Update(
+        [FromBody] CrudModel<Order> request,
+        CancellationToken cancellationToken)
+    {
+        if (request.Value is not Order order ||
+            !order.OrderID.HasValue ||
+            string.IsNullOrWhiteSpace(order.CustomerName) ||
+            !order.EmployeeID.HasValue)
+        {
+            return BadRequest(
+                "OrderID, CustomerName, and EmployeeID are required.");
+        }
+
+        const string sql = """
+            UPDATE public.orders
+            SET customername = $1,
+                freight = $2,
+                employeeid = $3,
+                shipcity = $4
+            WHERE orderid = $5
+            """;
+
+        try
+        {
+            await using NpgsqlConnection connection = new(connectionString);
+            await connection.OpenAsync(cancellationToken);
+            await using NpgsqlCommand command = new(sql, connection);
+            command.Parameters.Add(new NpgsqlParameter
+                { NpgsqlDbType = NpgsqlDbType.Varchar, Value = order.CustomerName });
+            command.Parameters.Add(new NpgsqlParameter
+                { NpgsqlDbType = NpgsqlDbType.Numeric, Value = order.Freight ?? (object)DBNull.Value });
+            command.Parameters.Add(new NpgsqlParameter
+                { NpgsqlDbType = NpgsqlDbType.Integer, Value = order.EmployeeID.Value });
+            command.Parameters.Add(new NpgsqlParameter
+                { NpgsqlDbType = NpgsqlDbType.Varchar, Value = order.ShipCity ?? (object)DBNull.Value });
+            command.Parameters.Add(new NpgsqlParameter
+                { NpgsqlDbType = NpgsqlDbType.Integer, Value = order.OrderID.Value });
+
+            int affectedRows = await command.ExecuteNonQueryAsync(cancellationToken);
+            return affectedRows == 0 ? NotFound() : Ok(order);
+        }
+        catch (PostgresException exception)
+            when (exception.SqlState == PostgresErrorCodes.CheckViolation ||
+                  exception.SqlState == PostgresErrorCodes.NotNullViolation ||
+                  exception.SqlState == PostgresErrorCodes.ForeignKeyViolation)
+        {
+            logger.LogWarning(exception, "PostgreSQL rejected an updated order.");
+            return BadRequest("The order violates a database constraint.");
+        }
+        catch (NpgsqlException exception)
+        {
+            logger.LogError(exception, "Unable to update order {OrderID}.", order.OrderID);
+            return Problem("The order could not be updated.");
+        }
+    }
+
+    [HttpPost("Delete")]
+    public async Task<ActionResult<object>> Delete(
+        [FromBody] CrudModel<Order> request,
+        CancellationToken cancellationToken)
+    {
+        if (!int.TryParse(request.Key?.ToString(), out int orderID))
+        {
+            return BadRequest("A numeric order key is required.");
+        }
+
+        const string sql =
+            "DELETE FROM public.orders WHERE orderid = $1";
+
+        try
+        {
+            await using NpgsqlConnection connection = new(connectionString);
+            await connection.OpenAsync(cancellationToken);
+            await using NpgsqlCommand command = new(sql, connection);
+            command.Parameters.Add(new NpgsqlParameter
+                { NpgsqlDbType = NpgsqlDbType.Integer, Value = orderID });
+
+            int affectedRows = await command.ExecuteNonQueryAsync(cancellationToken);
+            return affectedRows == 0
+                ? NotFound()
+                : Ok(new { key = orderID });
+        }
+        catch (NpgsqlException exception)
+        {
+            logger.LogError(exception, "Unable to delete order {OrderID}.", orderID);
+            return Problem("The order could not be deleted.");
+        }
+    }
+}
+
+public class CrudModel<T> where T : class
+{
+    [JsonPropertyName("action")]
+    public string? Action { get; set; }
+
+    [JsonPropertyName("keyColumn")]
+    public string? KeyColumn { get; set; }
+
+    [JsonPropertyName("key")]
+    public object? Key { get; set; }
+
+    [JsonPropertyName("value")]
+    public T? Value { get; set; }
+
+    [JsonPropertyName("added")]
+    public List<T>? Added { get; set; }
+
+    [JsonPropertyName("changed")]
+    public List<T>? Changed { get; set; }
+
+    [JsonPropertyName("deleted")]
+    public List<T>? Deleted { get; set; }
+
+    [JsonPropertyName("params")]
+    public IDictionary<string, object>? Params { get; set; }
 }
 ```
 
-### Step 5: Run and Verify the Pivot Table
-1. Run the Blazor application.
-2. The Pivot Table will display the PostgreSQL data, organized based on the defined configuration.
-3. The resulting Pivot Table will look like this:
+The URL Adaptor uses `value` for insert and update records and `key` for the delete identifier. The remaining `CrudModel<T>` properties support the complete DataManager request shape even though this sample does not use batch operations.
 
-![Blazor Pivot Table bound with PostgreSQL data](../images/blazor-pivottable-postgreSQL-databinding.webp)
+The controller returns:
 
-## Connecting a PostgreSQL Database to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table via Web API Service
+| Endpoint | Success | Client error | Missing row | Database error |
+|---|---|---|---|---|
+| `POST /api/Order` | `200` with `{ result, count }` | `400` for an invalid body | Not applicable | `500` problem response |
+| `POST /api/Order/Insert` | `200` with the inserted record and generated key | `400` | Not applicable | `500` problem response |
+| `POST /api/Order/Update` | `200` with the updated record | `400` | `404` | `500` problem response |
+| `POST /api/Order/Delete` | `200` with the deleted key | `400` | `404` | `500` problem response |
 
-This section explains how to create a Web API service to fetch data from a PostgreSQL database and connect it to the Blazor Pivot Table.
+## Register Services and Endpoints
 
-### Create a Web API service to fetch PostgreSQL data
-
-Follow these steps to set up a Web API service that retrieves PostgreSQL data for the Pivot Table.
-
-#### Step 1: Create an ASP.NET Core Web Application
-1. Open Visual Studio and create a new ASP.NET Core Web App project named **MyWebService**.
-2. Refer to the [Microsoft documentation](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022) for detailed setup instructions.
-
-![Creating an ASP.NET Core Web App project](../images/azure-asp-core-web-service-create.webp)
-
-#### Step 2: Install the Npgsql NuGet Package
-1. Install the [Npgsql.EntityFrameworkCore.PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) package using the **NuGet Package Manager** to enable PostgreSQL connectivity.
-
-![Installing the Npgsql.EntityFrameworkCore.PostgreSQL NuGet package](../images/postgreSQL-nuget-package-install-in-web-service-app.webp)
-
-#### Step 3: Create a Web API Controller
-1. In the **Controllers** folder, create a new Web API controller named **PivotController.cs**.
-2. This controller handles data communication between the PostgreSQL database and the Pivot Table.
-
-#### Step 4: Connect to PostgreSQL and Retrieve Data
-In the **PivotController.cs** file, use the [Npgsql.EntityFrameworkCore.PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) library to connect to the PostgreSQL database and fetch data.
-
-1. **Establish Connection**: Use `NpgsqlConnection` with a valid connection string to access the PostgreSQL database.
-2. **Fetch Data**: Execute a SQL query, such as `SELECT * FROM apxtimestamp`, using `NpgsqlCommand` to retrieve data.
-3. **Prepare Data**: Use `NpgsqlDataAdapter`’s `Fill` method to store the query results in a `DataTable` for JSON serialization.
+Replace `Program.cs` with:
 
 ```csharp
-using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using System.Data;
-using Npgsql;
+using Syncfusion.Blazor;
+using URLAdaptor.Components;
 
-namespace MyWebService.Controllers
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddSyncfusionBlazor();
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+builder.Services.AddControllers();
+
+var app = builder.Build();
+
+string licenseKey = builder.Configuration["Syncfusion:LicenseKey"]
+    ?? throw new InvalidOperationException(
+        "The Syncfusion license key is not configured.");
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(licenseKey);
+
+if (!app.Environment.IsDevelopment())
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class PivotController : ControllerBase
-    {
-        private dynamic GetPostgreSQLResult()
-        {
-            // Replace with your own connection string.
-            NpgsqlConnection connection = new NpgsqlConnection("<Enter your valid connection string here>");
-            connection.Open();
-            NpgsqlCommand command = new NpgsqlCommand("SELECT * FROM apxtimestamp", connection);
-            NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(command);
-            DataTable dataTable = new DataTable();
-            dataAdapter.Fill(dataTable);
-            connection.Close();
-            return dataTable;
-        }
-    }
+    app.UseExceptionHandler("/Error", createScopeForErrors: true);
+    app.UseHsts();
 }
+
+app.UseHttpsRedirection();
+app.UseAntiforgery();
+app.MapStaticAssets();
+app.MapControllers();
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode();
+
+app.Run();
 ```
 
-#### Step 5: Serialize Data to JSON
-1. In the **PivotController.cs** file, create a `Get` method that calls `GetPostgreSQLResult` to retrieve PostgreSQL data.
-2. Use `JsonConvert.SerializeObject` from the [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json) library to serialize the `DataTable` into JSON format.
+The controller actions do not opt into antiforgery validation. If you add an antiforgery policy to these cookie-authenticated endpoints, configure `SfDataManager` to send the matching request token. For a public deployment, also add authentication, authorization, rate limiting, and an appropriate production logging policy.
 
-> Ensure the **Newtonsoft.Json** NuGet package is installed in your project.
+## Configure Imports and Static Assets
 
-```csharp
-using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using System.Data;
-using Npgsql;
-
-namespace MyWebService.Controllers
-{
-    [ApiController]
-    [Route("[controller]")]
-    public class PivotController : ControllerBase
-    {
-        [HttpGet(Name = "GetPostgreSQLResult")]
-        public object Get()
-        {
-            return JsonConvert.SerializeObject(GetPostgreSQLResult());
-        }
-
-        private dynamic GetPostgreSQLResult()
-        {
-            // Replace with your own connection string.
-            NpgsqlConnection connection = new NpgsqlConnection("<Enter your valid connection string here>");
-            connection.Open();
-            NpgsqlCommand command = new NpgsqlCommand("SELECT * FROM apxtimestamp", connection);
-            NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(command);
-            DataTable dataTable = new DataTable();
-            dataAdapter.Fill(dataTable);
-            connection.Close();
-            return dataTable;
-        }
-    }
-}
-```
-
-#### Step 6: Run the Web API Service
-1. Build and run the application.
-2. The application will be hosted at `https://localhost:44378/` (the port number may vary).
-
-#### Step 7: Verify the JSON Data
-1. Access the Web API endpoint at `https://localhost:44378/Pivot` to view the JSON data retrieved from PostgreSQL.
-2. The browser will display the JSON data, as shown below.
-
-![Hosted Web API URL](../images/postgresql_data.webp)
-
-### Connecting the Pivot Table to a PostgreSQL Database Using the Web API Service
-
-This section explains how to connect the Blazor Pivot Table to PostgreSQL data retrieved via the Web API service.
-
-#### Step 1: Set Up a Blazor Pivot Table
-1. Create a Blazor Pivot Table by following the [Getting Started](../getting-started) guide.
-
-#### Step 2: Configure the Web API URL
-1. In the **Index.razor** file, map the Web API URL (`https://localhost:44378/Pivot`) to the Pivot Table using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property of [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html).
-2. The [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property deserialize PostgreSQL data into instances of your model data class (e.g., `TValue="PostgreSQLService"`) for binding to the Pivot Table.
-
-#### Step 3: Define the Pivot Table Report
-1. Configure the Pivot Table by defining fields in the [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Columns), [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Rows), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Values), and [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings) properties.
-2. Enable the field list by setting [ShowFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowFieldList) to `true` for interactive field management.
+Add these namespaces to `Components/_Imports.razor`:
 
 ```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.PivotView
+@using URLAdaptor.Models
+```
 
-<SfPivotView TValue="PostgreSQLService" Width="1000" Height="300" ShowFieldList="true">
-    <PivotViewDataSourceSettings TValue="PostgreSQLService" Url="https://localhost:44378/Pivot" ExpandAll=false EnableSorting=true>
+The .NET 10 Blazor Web App template already includes `_framework/blazor.web.js` in `Components/App.razor`; do not add it a second time.
+
+Add the Syncfusion theme in the `<head>` element:
+
+```cshtml
+<link rel="stylesheet"
+      href="@Assets["_content/Syncfusion.Blazor.Themes/bootstrap5.3.css"]" />
+```
+
+Add the Syncfusion script before the closing `</body>` tag:
+
+```cshtml
+<script src="@Assets["_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"]"></script>
+```
+
+Keep the existing framework script:
+
+```cshtml
+<script src="@Assets["_framework/blazor.web.js"]"></script>
+```
+
+See [Blazor component themes](https://blazor.syncfusion.com/documentation/appearance/themes) for other supported themes.
+
+## Configure the Pivot Table
+
+Replace `Components/Pages/Home.razor` with:
+
+```cshtml
+@page "/"
+
+<SfPivotView TValue="Order"
+             Width="1000"
+             Height="300"
+             ShowFieldList="true">
+    <PivotViewDataSourceSettings TValue="Order"
+                                 ExpandAll="false"
+                                 EnableSorting="true">
+        <SfDataManager Url="/api/Order"
+                       InsertUrl="/api/Order/Insert"
+                       UpdateUrl="/api/Order/Update"
+                       RemoveUrl="/api/Order/Delete"
+                       Adaptor="Adaptors.UrlAdaptor">
+        </SfDataManager>
         <PivotViewColumns>
-            <PivotViewColumn Name="openinghours_practice" Caption="Openinghours Practice"></PivotViewColumn>
-            <PivotViewColumn Name="closinghours_practice" Caption="Closinghours Practice"></PivotViewColumn>
+            <PivotViewColumn Name="EmployeeID" />
         </PivotViewColumns>
         <PivotViewRows>
-            <PivotViewRow Name="servicetype" Caption="Service Type"></PivotViewRow>
-            <PivotViewRow Name="servicecategory" Caption="Service Category"></PivotViewRow>
+            <PivotViewRow Name="CustomerName" />
         </PivotViewRows>
         <PivotViewValues>
-            <PivotViewValue Name="revenue" Caption="Revenue"></PivotViewValue>
+            <PivotViewValue Name="Freight" Caption="Freight" />
         </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="revenue" Format="C0"></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
-    <PivotViewGridSettings ColumnWidth="120"></PivotViewGridSettings>
+    <PivotViewGridSettings ColumnWidth="120" />
+    <PivotViewCellEditSettings AllowEditing="true"
+                               AllowAdding="true"
+                               AllowDeleting="true"
+                               Mode="EditMode.Normal" />
+    <PivotViewEvents TValue="Order"
+                     BeginDrillThrough="BeginDrillThrough" />
 </SfPivotView>
 
 @code {
-    public class PostgreSQLService
+    private static void BeginDrillThrough(
+        BeginDrillThroughEventArgs args)
     {
-        public TimeSpan openinghours_practice { get; set; }
-        public TimeSpan closinghours_practice { get; set; }
-        public string servicetype { get; set; }
-        public string servicecategory { get; set; }
-        public int revenue { get; set; }
+        foreach (var column in args.GridObj.Columns)
+        {
+            column.Visible = true;
+            column.IsPrimaryKey = column.Field == nameof(Order.OrderID);
+        }
     }
 }
 ```
 
-#### Step 4: Run and Verify the Pivot Table
-1. Run the Blazor application.
-2. The Pivot Table will display the PostgreSQL data fetched via the Web API, structured according to the defined configuration.
-3. The resulting Pivot Table will look like this:
+`BeginDrillThrough` marks `OrderID` as the edit grid's primary key. The URL Adaptor sends the edited record, including `OrderID`, to the update endpoint and sends the primary-key value in `key` to the delete endpoint.
 
-![Blazor Pivot Table bound with PostgreSQL data](../images/blazor-pivottable-mongodb-databinding.webp)
+The editing APIs shown here are tested with the Syncfusion version listed in the prerequisites. See [editing in the Blazor Pivot Table](https://blazor.syncfusion.com/documentation/pivot-table/editing) and the [`BeginDrillThroughEventArgs` API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.BeginDrillThroughEventArgs.html) when using another package version.
 
-### Additional Resources
-Explore a complete example of the Blazor Pivot Table integrated with an ASP.NET Core Web application to fetch data from a PostgreSQL database in this [GitHub repository](https://github.com/SyncfusionExamples/how-to-bind-PostgreSQL-database-to-pivot-table/tree/master/Blazor).
+## Build and Verify the Application
+
+Confirm that PostgreSQL is running and that the configured role can read and modify `public.orders`. Then restore, build, and run the application:
+
+```powershell
+dotnet restore
+dotnet build
+dotnet run
+```
+
+Open the HTTPS URL shown in the terminal. The Pivot Table should display `CustomerName` as rows, `EmployeeID` as columns, and the sum of `Freight` as values.
+
+Before testing the UI, you can verify the read endpoint with PowerShell. Replace the URL with the HTTPS address printed by `dotnet run`:
+
+```powershell
+Invoke-RestMethod `
+  -Method Post `
+  -Uri "https://localhost:7001/api/Order" `
+  -ContentType "application/json" `
+  -Body "{}"
+```
+
+A browser address-bar request sends `GET`, so it is not a valid test for this `POST` endpoint.
+
+## Test CRUD Operations
+
+Double-click an aggregated value cell to open its underlying records.
+
+- To insert, select **Add**, enter `CustomerName`, `EmployeeID`, and optional values, then save. PostgreSQL generates `OrderID`, and the insert response returns it.
+- To update, select a row, select **Edit**, change a value, and save. The edited record supplies `OrderID`.
+- To delete, select a row, select **Delete**, and confirm. The edit grid supplies `OrderID` as the request key.
+
+After each operation, the Pivot Table refreshes its aggregated values. If it does not, inspect the write response in the browser Network panel and confirm that it returned a success status and the documented JSON body.
+
+Representative payloads are:
+
+```json
+{
+  "action": "insert",
+  "keyColumn": "OrderID",
+  "value": {
+    "customerName": "Karen Lee",
+    "employeeID": 3,
+    "shipCity": "Berlin",
+    "freight": 110.00
+  }
+}
+```
+
+```json
+{
+  "action": "update",
+  "keyColumn": "OrderID",
+  "value": {
+    "orderID": 1,
+    "customerName": "Alice Johnson",
+    "employeeID": 1,
+    "shipCity": "Boston",
+    "freight": 125.00
+  }
+}
+```
+
+```json
+{
+  "action": "remove",
+  "keyColumn": "OrderID",
+  "key": 1
+}
+```
+
+## Troubleshooting
+
+| Symptom | Likely cause | Resolution |
+|---|---|---|
+| Pivot Table shows no data | The API returned an error or is unreachable | Inspect the browser Network panel and send a `POST` request with `{}` to `/api/Order`. |
+| `405 Method Not Allowed` | The endpoint was tested with `GET` | Use `POST` and confirm `AddControllers()` and `MapControllers()` are present. |
+| `NpgsqlException` or connection refused | PostgreSQL is stopped or the connection string is wrong | Start PostgreSQL and verify the host, port, database, credentials, SSL settings, and role permissions. |
+| `relation "orders" does not exist` | The script ran in the wrong database or schema | Run the table script in `OrderDB` and confirm `public.orders` exists. |
+| `permission denied for table orders` | The application role lacks table privileges | Grant `SELECT`, `INSERT`, `UPDATE`, and `DELETE` on `public.orders`. |
+| Insert fails while reads work | The role lacks identity-sequence privileges | Grant `USAGE` and `SELECT` on sequences in the `public` schema. |
+| Insert or update returns `400` | Required values are missing or a constraint rejected the row | Inspect the response and server log; supply `CustomerName` and `EmployeeID`. |
+| Update or delete returns `404` | The supplied `OrderID` no longer exists | Refresh the Pivot Table and retry with a current record. |
+| Editing sends no usable key | The edit grid did not mark `OrderID` as its primary key | Confirm the shared model has `[Key]` and the `BeginDrillThrough` handler runs. |
+| CORS error | The API and Blazor app are on different origins | Keep the relative URLs or configure a restricted CORS policy for the Blazor origin. |
+| Antiforgery validation fails | A policy requires a token that the adaptor does not send | Configure the client and server to exchange the token, or use an appropriate non-cookie API authentication design. |
+| Aggregates are incorrect | `Freight` has an incompatible type | Keep PostgreSQL `freight` numeric and the .NET property `decimal?`. |
+
+## Complete Sample Repository
+
+A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/syncfusion-blazor-pivot-table-PostgreSQL-database-binding-sample).
+
+## Summary
+
+This guide provides a small-dataset URL Adaptor implementation with parameterized SQL, generated-key handling, validation, logging, and CRUD endpoints. Use a server-side aggregation architecture for production-scale datasets.

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Print in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about print in Syncfusion Blazor TreeGrid component and much more details.
+title: Print in Blazor TreeGrid Component | Syncfusion®
+description: Checkout and learn here all the features about print in Blazor TreeGrid component and much more details.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Print in Syncfusion Blazor TreeGrid Component
+# Print in Blazor TreeGrid Component
 
-To print the TreeGrid, use the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PrintAsync) method from the TreeGrid instance. The print option can be enabled in the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Toolbar.html) by adding the **Print** item.
+To print the TreeGrid, use the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PrintAsync) method from the TreeGrid instance. The print option can be enabled in the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar) by adding the **Print** item.
 
 {% tabs %}
 
@@ -84,11 +84,11 @@ Some print settings such as layout, paper size, and margins must be configured u
 * [Chrome](https://support.google.com/chrome/answer/1069693?hl=en&visit_id=1-636335333734668335-3165046395&rd=1)
 * [Firefox](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)
 * [Safari](https://www.mintprintables.com/print-tips/adjust-margins-osx/)
-* [IE](http://www.helpteaching.com/help/print/index.htm)
+* [IE](https://www.helpteaching.com/help/print/index.htm)
 
 ## Printing Using an External Button
 
-To trigger printing from an external button, invoke the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Print.html) method on the TreeGrid instance.
+To trigger printing from an external button, invoke the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PrintAsync) method on the TreeGrid instance.
 
 {% tabs %}
 
@@ -165,7 +165,7 @@ public class TreeData
 
 ## Print the Visible Page
 
-By default, the TreeGrid prints all the pages. To print the current page alone, set the [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~PrintMode.html) to **CurrentPage**.
+By default, the TreeGrid prints all the pages. To print the current page alone, set the [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PrintMode) to **CurrentPage**.
 
 {% tabs %}
 

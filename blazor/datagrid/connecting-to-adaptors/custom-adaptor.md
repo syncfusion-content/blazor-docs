@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Blazor DataGrid with Custom Adaptor | Syncfusion
-description: Learn about Custom Data Binding and perform CRUD operations using CustomAdaptor in Syncfusion Blazor DataGrid.
+title: Blazor DataGrid with Custom Adaptor | Syncfusion®
+description: Learn about Custom Data Binding and perform CRUD operations using CustomAdaptor in Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 keywords: adaptors, CustomAdaptor, custom adaptor, remotedata, custombinding, custom binding
@@ -1104,7 +1104,7 @@ The following GIF demonstrates the CRUD operations on custom-bound data in the G
 
 You can find the complete code in the [Github](https://github.com/SyncfusionExamples/Binding-data-from-remote-service-to-blazor-data-grid/tree/master/CustomAdaptor).
 
-> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
+> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand how to present and manipulate data.
 
 ## How to pass additional parameters to custom adaptor
 

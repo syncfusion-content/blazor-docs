@@ -9,7 +9,7 @@ documentation: ug
 
 # Features and Capabilities of Blazor Playground
 
-The [Blazor Playground](https://blazorplayground.syncfusion.com) provides a rich set of built-in features for developing, testing, and sharing [Blazor components](https://www.syncfusion.com/blazor-components) directly in the browser, including theme switching, a feature-rich code editor, error handling, code sharing, embedding, and static asset management.
+The [Blazor Playground](https://blazorplayground.syncfusion.com) provides a rich set of built-in features for developing, testing, and sharing [Blazor components](https://www.syncfusion.com/blazor-components) directly in the browser, including theme switching, a feature rich code editor, error handling, code sharing, embedding, and static asset management.
 
 ## Switch themes
 

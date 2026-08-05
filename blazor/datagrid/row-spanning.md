@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Row Spanning in Blazor DataGrid Component | Syncfusion
-description: Learn here all about row spanning in Syncfusion Blazor DataGrid component of Syncfusion Essential Studio and more.
+title: Row Spanning in Blazor DataGrid Component | Syncfusion®
+description: Learn here all about row spanning in Blazor DataGrid component of Essential Studio and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -464,7 +464,7 @@ public class TelecastData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBoChWHeiPSwUHb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVdjmNxsYZDHzJg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Disable spanning for specific column
 
@@ -908,7 +908,7 @@ public class TelecastData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXByMVixeXvnPXRS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBRZctxWkXSdSlV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 The effective spanning behavior in the Blazor DataGrid is determined by the intersection of grid-level and column-level [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoSpan) modes. A column can only restrict the spanning directions permitted at the grid level and cannot enable a span direction that has been disabled globally. This ensures consistent behavior across the grid while allowing fine-grained control for individual columns.
 
@@ -1421,7 +1421,7 @@ public class TelecastData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrIsLWHIWcXcUwy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBHtwtxCEDYPCfx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Clear spanning via programmatically
 
@@ -1932,7 +1932,7 @@ public class TelecastData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZryMVWdoMJJubZh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLdjwtnWkMTIQGD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
 ## Limitations

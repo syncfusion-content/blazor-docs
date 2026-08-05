@@ -21,12 +21,10 @@ The [Blazor Playground](https://blazorplayground.syncfusion.com) allows you to c
 {% highlight razor tabtitle="ChildComponent.razor" %}
 
 <input @oninput="OnPasswordChanged"
-       required
        type="@(_showPassword ? "text" : "password")"
        value="@Password" />
-<button class="btn btn-primary" @onclick="ToggleShowPassword">
-    Show password
-</button>
+<button class="btn btn-primary" @onclick="ToggleShowPassword"> Show password </button>
+
 @code {
     private bool _showPassword;
     [Parameter]
@@ -37,7 +35,6 @@ The [Blazor Playground](https://blazorplayground.syncfusion.com) allows you to c
     private Task OnPasswordChanged(ChangeEventArgs e)
     {
         Password = e.Value.ToString();
-
         return PasswordChanged.InvokeAsync(Password);
     }
     private void ToggleShowPassword()

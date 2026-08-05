@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Remote Data in Blazor DataGrid | Syncfusion
+title: Remote Data in Blazor DataGrid | Syncfusion®
 description: Explore remote data integration in Syncfusion® Blazor DataGrid, including setup, binding options, and advanced features.
 platform: Blazor
 control: DataGrid
@@ -279,7 +279,7 @@ The example demonstrates modifying the query parameter dynamically. Initially, t
 }
 ```
 
-![Changing Query Dynamically in the Grid](./images/blazor-datagrid-query-update.webp)
+![Changing Query Dynamically in the Grid](../images/blazor-datagrid-query-update.webp)
 
 ## Offline mode
 

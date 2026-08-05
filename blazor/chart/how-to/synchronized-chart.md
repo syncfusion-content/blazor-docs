@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Synchronized Chart in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Synchronized Chart in Syncfusion Blazor Charts component and much more details.
+title: Synchronized Chart in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about Synchronized Chart in Blazor Charts component and much more details.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -405,4 +405,4 @@ You can maintain constant zoom levels across multiple charts using the [OnZoomEn
 
 Check out the JSON file used for the above samples from here [Synchronized Chart Data](https://www.syncfusion.com/downloads/support/directtrac/general/ze/synchronized-data641318336).
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

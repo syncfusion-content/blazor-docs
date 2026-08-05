@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Azure Maps in Blazor Maps Component | Syncfusion
-description: Check out and learn how to use Azure Maps in the Syncfusion Blazor Maps component and much more details.
+title: Azure Maps in Blazor Maps Component | Syncfusion®
+description: Check out and learn the features and how to use Azure Maps in the Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug
@@ -13,7 +13,7 @@ Azure Maps is an online map tile provider from Microsoft. Similar to OSM and Bin
 
 ## Adding Azure Maps
 
-Azure Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property with the tile server URL provided by the online map provider. A subscription key is required for Azure Maps. Follow the steps in this [link](https://docs.microsoft.com/en-us/azure/search/search-security-api-keys) to generate an API key, and then add the key to the URL.
+Azure Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property with the tile server URL provided by the online map provider. A subscription key is required for Azure Maps. Follow the steps in this [link](https://learn.microsoft.com/en-us/azure/search/search-security-api-keys?tabs=portal-find%2Cportal-use%2Cportal-query) to generate an API key, and then add the key to the URL.
 
 N>Refer to [Azure Maps Licensing](https://azure.microsoft.com/en-in/support/legal/).
 

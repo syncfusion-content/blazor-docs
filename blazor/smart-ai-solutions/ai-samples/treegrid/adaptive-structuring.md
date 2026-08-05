@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Data restructuring with Blazor TreeGrid and AI models | Syncfusion
-description: Learn how to use the Syncfusion Blazor TreeGrid with OpenAI, Azure OpenAI, or Ollama to automatically organize hierarchical data. Explore to more details.
+title: Data restructuring with Blazor TreeGrid and AI models | Syncfusion®
+description: Learn how to use the Blazor TreeGrid with OpenAI, Azure OpenAI, or Ollama to automatically organize hierarchical data. Explore to more details.
 platform: Blazor
 control: AI Integration
 documentation: ug
-keywords: Blazor TreeGrid, AI data restructuring, Syncfusion Blazor AI
+keywords: Blazor TreeGrid, AI data restructuring, Blazor AI
 ---
 
 # Data restructuring with Blazor TreeGrid and AI models
 
-This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to automatically organize hierarchical data in a Syncfusion Blazor TreeGrid component. The [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package enables integration with AI models to process and structure data, while Ollama provides self-hosted or cloud-based AI capabilities for analyzing relationships in datasets. In the example below, the application assigns appropriate `ParentId` values based on `CategoryName` relationships and dynamically updates the TreeGrid to reflect the corrected hierarchical structure.
+This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to automatically organize hierarchical data in a Blazor TreeGrid component. The [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package enables integration with AI models to process and structure data, while Ollama provides self-hosted or cloud-based AI capabilities for analyzing relationships in datasets. In the example below, the application assigns appropriate `ParentId` values based on `CategoryName` relationships and dynamically updates the TreeGrid to reflect the corrected hierarchical structure.
 
 ## Prerequisites
 
@@ -194,9 +194,9 @@ var app = builder.Build();
 
 - **Verify connectivity**: Ensure the Ollama server is running and accessible at the specified endpoint (for example, `http://localhost:11434`) before starting the application.
 
-## Register Syncfusion Blazor service
+## Register Blazor service
 
-Add the Syncfusion Blazor service to the **~/Program.cs** file. The configuration depends on the app’s **Interactive Render Mode**:
+Add the Blazor service to the **~/Program.cs** file. The configuration depends on the app’s **Interactive Render Mode**:
 
 - **Server mode**: Register the service in the single **~/Program.cs** file.
 - **WebAssembly or Auto mode**: Register the service in both the server-side **~/Program.cs** and client-side **~/Program.cs** files.
@@ -230,7 +230,7 @@ await builder.Build().RunAsync();
 
 ## Razor component (`Home.razor`)
 
-This section implements the Syncfusion Blazor TreeGrid with AI-driven data restructuring, using the AI model to assign `ParentId` values based on `CategoryName` relationships.
+This section implements the Blazor TreeGrid with AI-driven data restructuring, using the AI model to assign `ParentId` values based on `CategoryName` relationships.
 
 ```csharp
 @page "/"
@@ -377,6 +377,6 @@ When handling large datasets, ensure the Ollama server has sufficient resources 
 
 ## Sample code
 
-A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
+A complete working example is available in the [Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
 
 ![Smart Structuring - Output](../../ai/images/adaptive-datastructuring.webp)

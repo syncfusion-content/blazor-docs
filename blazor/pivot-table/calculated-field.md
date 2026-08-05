@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Calculated Field in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about calculated field in Syncfusion Blazor Pivot Table component and more.
+title: Calculated Field in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table creates custom value fields from existing fields with formulas via the built-in dialog or the API.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Calculated Field in Blazor Pivot Table Component
+# Calculated Field in Blazor Pivot Table
 
 The calculated field feature enables users to create custom value fields using mathematical formulas and existing fields from their data source. Users can perform complex calculations with basic arithmetic operators and seamlessly integrate these custom fields into their pivot table for enhanced data visualization and reporting.
 
@@ -665,4 +665,4 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pi
 }
 ```
 
-N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
+N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

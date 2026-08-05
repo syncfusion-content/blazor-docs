@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Other Maps in Blazor Maps Component | Syncfusion
-description: Check out and learn here all about other maps in Syncfusion Blazor Maps component and much more details.
+title: Other Maps in Blazor Maps Component | Syncfusion®
+description: Check out and learn here all about other maps in Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug

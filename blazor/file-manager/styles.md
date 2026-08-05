@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Styles and Appearance in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about styles and appearance in Syncfusion Blazor File Manager component and more.
+title: Styles and Appearance in Blazor File Manager Component | Syncfusion®
+description: Checkout and learn here all about styles and appearance in Blazor File Manager component and much more details.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -40,7 +40,7 @@ To customize the File Manager navigation pane, use the `.e-navigation` selector 
 
 ```
 
-![Blazor File Manager displays Customized Navigation Pane](images/blazor-filemanager-customized-navigation-pane.png)
+![Blazor File Manager displays Customized Navigation Pane](images/blazor-filemanager-customized-navigation-pane.webp)
 
 ## Customizing the File Manager thumbnail
 
@@ -80,7 +80,7 @@ The following example demonstrates how to customize the File Manager's thumbnail
 
 ```
 
-![Blazor FileManager displays Custom Thumbnail](images/blazor-filemanager-custom-thumbnail.png)
+![Blazor FileManager displays Custom Thumbnail](images/blazor-filemanager-custom-thumbnail.webp)
 
 ## Customizing the File Manager layout
 
@@ -106,7 +106,7 @@ To customize the File Manager layout, use the `.e-layout-content` selector and a
 
 ```
 
-![Blazor FileManager displays Custom Layout](images/blazor-filemanager-custom-layout.png)
+![Blazor FileManager displays Custom Layout](images/blazor-filemanager-custom-layout.webp)
 
 ## Customizing the File Manager Toolbar
 
@@ -132,7 +132,7 @@ To customize the File Manager toolbar items, use the `.e-toolbar` selector and a
 
 ```
 
-![Blazor FileManager displays Custom Toolbar](images/blazor-filemanager-custom-toolbar.png)
+![Blazor FileManager displays Custom Toolbar](images/blazor-filemanager-custom-toolbar.webp)
 
 ## Customizing the File Manager selected files/folders
 
@@ -160,7 +160,7 @@ To customize the File Manager selected files/folders, use the below selectors an
 
 ```
 
-![Blazor FileManager displays Custom Selected Items](images/blazor-filemanager-custom-selected-items.png)
+![Blazor FileManager displays Custom Selected Items](images/blazor-filemanager-custom-selected-items.webp)
 
 ## Customizing the File Manager Dialog
 
@@ -189,4 +189,4 @@ In this example, we have applied styles to the header content.
 
 ```
 
-![Blazor FileManager displays Custom Dialog](images/blazor-filemanager-custom-dialog.png)
+![Blazor FileManager displays Custom Dialog](images/blazor-filemanager-custom-dialog.webp)

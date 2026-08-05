@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Text placing center of Blazor Doughnut Chart Component | Syncfusion
-description: Learn here all about Text placing center of the doughnut in Syncfusion Blazor Accumulation Chart component and more.
+title: Text placing center of Blazor Doughnut Chart Component | Syncfusion®
+description: Learn here all about Text placing center of the doughnut in Syncfusion Blazor Accumulation Chart component and much more details.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -99,6 +99,6 @@ The complete code snippet for the preceding steps is as follows.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhAMLCziQTKvjhv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLxNmBjfKgxTeAK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=fluent2) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.

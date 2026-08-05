@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in Blazor MultiColumn ComboBox Component | Syncfusion
-description: Checkout and learn here all about the Selection feature in Syncfusion Blazor MultiColumn ComboBox component and more.
+title: Selection in Blazor MultiColumn ComboBox Component | Syncfusion®
+description: Checkout and learn here all about the Selection feature in Blazor MultiColumn ComboBox component and more.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
@@ -69,7 +69,7 @@ The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiC
 
 ### OnValueSelect event 
 
-The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_OnValueSelect) event is raised when a value is chosen in the Blazor MultiColumn ComboBox. Access the selected data via [ValueSelectEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.ValueSelectEventArgs-2.html#Syncfusion_Blazor_MultiColumnComboBox_ValueSelectEventArgs_2_ItemData). To prevent selection, set [ValueSelectEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.ValueSelectEventArgs-2.html#Syncfusion_Blazor_MultiColumnComboBox_ValueSelectEventArgs_2_Cancel) to `true`.
+The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_OnValueSelect) event is raised when a value is chosen in the Blazor MultiColumn ComboBox. Access the selected data via [ValueSelectEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.ValueSelectEventArgs-1.html#Syncfusion_Blazor_MultiColumnComboBox_ValueSelectEventArgs_1_ItemData). To prevent selection, set [ValueSelectEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.ValueSelectEventArgs-1.html#Syncfusion_Blazor_MultiColumnComboBox_ValueSelectEventArgs_1_Cancel) to `true`.
 
 {% highlight cshtml %}
 

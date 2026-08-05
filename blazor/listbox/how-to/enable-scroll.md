@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Enable Scroller in Blazor ListBox Component | Syncfusion
-description: Checkout and learn here all about enable scroller in Syncfusion Blazor ListBox component and much more.
+title: Enable Scroller in Blazor ListBox Component | Syncfusion®
+description: Checkout and learn here all about enable scroller in Blazor ListBox component and and much more details.
 platform: Blazor
 control: List Box
 documentation: ug
@@ -28,13 +28,13 @@ In the following sample, the Height of the ListBox is set to 250px to enable scr
         new VehicleData { Text = "SSC Ultimate Aero", Id = "Vehicle-04" },
         new VehicleData { Text = "Koenigsegg CCR", Id = "Vehicle-05" },
         new VehicleData { Text = "McLaren F1", Id = "Vehicle-06" },
-        new VehicleData { Text = "Aston Martin One- 77", Id = "Vehicle-07" },
+        new VehicleData { Text = "Aston Martin One-77", Id = "Vehicle-07" },
         new VehicleData { Text = "Jaguar XJ220", Id = "Vehicle-08" }
     };
 
     public class VehicleData {
-      public string Text  { get; set; }
-      public string Id  { get; set; }
+      public string Text { get; set; }
+      public string Id { get; set; }
     }
 }
 

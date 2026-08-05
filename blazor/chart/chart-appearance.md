@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Appearance in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Appearance Customization in Syncfusion Blazor Charts component and much more.
+title: Appearance in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about Appearance Customization in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -330,7 +330,7 @@ N> The subtitle, which appears below the title, will also be positioned along wi
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthIjzjTrISHobHi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Position customization of title in Blazor Chart](images/appearance/blazor-chart-title-position.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVRtnCLTIgzfrSp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Position customization of title in Blazor Chart](images/appearance/blazor-chart-title-position.webp)" %}
 
 When the `Position` is set to `Custom`, the title can be positioned anywhere on the chart using the [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_X) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_Y) properties in [ChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html). This provides precise control over the title’s location, enabling customization to fit specific design or layout needs. The `X` and `Y` values specify the horizontal and vertical coordinates, respectively.
 
@@ -373,7 +373,7 @@ When the `Position` is set to `Custom`, the title can be positioned anywhere on 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLoXTtfLyEQbMWr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Custom position of title in Blazor Chart](images/appearance/blazor-chart-title-position-custom.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBnXxCLTeKkvACG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Custom position of title in Blazor Chart](images/appearance/blazor-chart-title-position-custom.webp)" %}
 
 ## Chart subtitle
 

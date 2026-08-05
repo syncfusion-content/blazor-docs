@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization in Blazor ProgressBar Component | Syncfusion
-description: Checkout and learn here all about customization in Syncfusion Blazor ProgressBar component and more.
+title: Customization in Blazor ProgressBar Component | Syncfusion®
+description: Learn about customization options in Blazor ProgressBar component with examples and much more details.
 platform: Blazor
 control: Progress Bar 
 documentation: ug

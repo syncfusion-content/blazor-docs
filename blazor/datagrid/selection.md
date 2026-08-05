@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in Blazor DataGrid | Syncfusion
-description: Learn how to use row, cell, multi, drag, toggle, and programmatic selection features in Syncfusion Blazor DataGrid.
+title: Selection in Blazor DataGrid | Syncfusion®
+description: Learn how to use row, cell, multi, drag, toggle, and programmatic selection features in Blazor DataGrid.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -112,7 +112,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrIZyjJxwYNLLwY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLHtwtHhrBXLwbw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Selection mode
 
@@ -216,7 +216,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLyXeNfdPWbBobj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrxtwtHhBhhPcbd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 <!-- ## Touch interaction
 
@@ -230,19 +230,19 @@ When you tap on a Grid row using a touch screen, the tapped row is automatically
 
 To select multiple rows in the Grid, you can utilize the multi-row selection feature. When you tap on a row, a popup is displayed, indicating the option for multi-row selection. You can tap on the popup, and then proceed to tap on the desired rows that you want to select. This allows you to select and interact with multiple rows simultaneously, as shown in the following image:
 
-![Multi row selection](images/selection.jpg)
+![Multi row selection](images/selection.webp)
 
 **Multi-Row or Cell Selection**
 
 In addition to selecting multiple rows, you can also perform multi-row or cell selection in the Grid. By tapping on the popup, you can choose the option for multi-row or cell selection. Once selected, you can then tap on the desired rows or cells to make the selection, as shown in the following image:
 
-![Multi row or cell selection](images/mselection.jpg)
+![Multi row or cell selection](images/mselection.webp)
 
 > For multi-selection, it requires the selection [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) to be **Multiple**.
 
 The following screenshot represents a Grid touch selection in the device.
 
-![Touch Selection in Blazor DataGrid](./images/blazor-datagrid-touch-selection.jpg) -->
+![Touch Selection in Blazor DataGrid](./images/blazor-datagrid-touch-selection.webp) -->
 
 ## Toggle selection
 
@@ -353,7 +353,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLItyZpnEdccjFY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrnDcXxLrqivebU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * If multi-selection is enabled, clicking a selected row without pressing the **Ctrl** key will first clear the multi-selection. A second click on the same row will unselect it.
 > * Toggle selection applies to all selection types. When the `CheckboxOnly` property is set to **true**, selection and deselection by clicking are disabled, restricting interaction to checkbox clicks only.
@@ -448,7 +448,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLItyZpnEdccjFY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrdtcXRrBgdvBMs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Drag selection
 
@@ -536,7 +536,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVSNSZoplknSuoI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVnNQXdVrfNoBoS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > Drag selection is not compatible with [AutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAutoFill) feature.
 
@@ -625,7 +625,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrSjeUtTtrXrowm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthxjcDnLVTbzhJl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * In **Both** mode, calling `ClearCellSelectionAsync` first will clear cell selections, followed by `ClearRowSelectionAsync` to clear row selections. The order of method calls determines which selection type is cleared first.
 > * To remove a specific selection type, use the following methods:
@@ -714,6 +714,6 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLejIZoMcsYDjdk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhntmtnrVSBeSlF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > When **Select All** is used, only records visible in the current view are selected. The **SelectedRecords** property shows the count for the current page. As navigation continues to other pages, new records load on demand, and **SelectedRecords** includes selections from each visited page. This design ensures efficient data retrieval with paging. Selecting all records across the entire dataset and retrieving them at once is not supported when **Select All** is enabled.

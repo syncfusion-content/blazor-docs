@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sorting in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about Sorting in Syncfusion Blazor TreeView component and much more details.
+title: Sorting in Blazor TreeView Component | Syncfusion®
+description: Checkout and learn here all the features about Sorting in Blazor TreeView component and much more details.
 platform: Blazor
 control: TreeView
 documentation: ug
@@ -114,4 +114,4 @@ In the following example, the `SortOrder` property is dynamically updated on the
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVICtCUhBoSVZoy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhnjcWNzrzFPmaA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

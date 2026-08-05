@@ -1,7 +1,7 @@
 ---
 layout: post
-title: OLAP in Blazor Pivot Table component | Syncfusion
-description: Checkout and learn here all about OLAP in Syncfusion Blazor Pivot Table component and much more details.
+title: OLAP in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table connects to an OLAP cube such as SQL Server Analysis Services via ProviderType.SSAS, Catalog, Cube, and URL properties.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -10,19 +10,19 @@ documentation: ug
 <!-- markdownlint-disable MD024 -->
 <!-- markdownlint-disable MD012 -->
 
-# OLAP in Blazor Pivot Table component
+# OLAP in Blazor Pivot Table
 
 ## Getting started
 
-This section explains how to create a simple [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using an OLAP data source. For details on setting up a Blazor application, refer to the [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in Visual Studio 2022](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) guide, which covers the initial setup and configuration steps.
+This section explains how to create a simple [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using an OLAP data source. For details on setting up a Blazor application, refer to the [Getting started with Blazor for client-side in Visual Studio 2022](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) guide, which covers the initial setup and configuration steps.
 
-### Adding the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component package
+### Adding the Blazor component package
 
 To use the Pivot Table, install the **Syncfusion.Blazor** NuGet package in your application using the NuGet Package Manager. Make sure to select the **Include prerelease** option to access the latest package versions.
 
 ### Setting up the Pivot Table component
 
-You can add the Syncfusion<sup style="font-size:70%">&reg;</sup> Pivot Table component to any Razor page in the `~/Pages` folder. In this example, the component is added to the `~/Pages/Index.razor` page. If the `Index.razor` page contains default content, remove it and add the following code to initialize the Pivot Table.
+You can add the Pivot Table component to any Razor page in the `~/Pages` folder. In this example, the component is added to the `~/Pages/Index.razor` page. If the `Index.razor` page contains default content, remove it and add the following code to initialize the Pivot Table.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -314,7 +314,7 @@ There are two types of calculated fields:
 - **Calculated Measure** – Creates a new measure by using a custom expression.
 - **Calculated Dimension** – Creates a new dimension by using a custom expression.
 
-You can define calculated fields in your code by using the [PivotViewCalculatedFieldSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCalculatedFieldSetting.html) class in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings.html) configuration. The available options for calculated fields are:
+You can define calculated fields in your code by using the [PivotViewCalculatedFieldSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCalculatedFieldSetting.html) class in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) configuration. The available options for calculated fields are:
 
 - [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCalculatedFieldSetting.html#Syncfusion_Blazor_PivotView_PivotCalculatedFieldSetting_Name): Sets a unique name for the new calculated field.
 - [Formula](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCalculatedFieldSetting.html#Syncfusion_Blazor_PivotView_PivotCalculatedFieldSetting_Formula): Allows you to set the expression for the calculated field.
@@ -868,4 +868,4 @@ In the field list, each node uses a specific icon to help users quickly identify
 | ![First level icon in Blazor pivot table component](images/FirstLevel.webp)<br>![Second level icon in Blazor pivot table component](images/SecondLevel.webp)<br>![Third level icon in Blazor pivot table component](images/ThirdLevel.webp) | Levels (in order) | Level Element | Yes |
 | ![NamedSet icon in Blazor pivot client control](images/NamedSet.webp) | Named set | Named Set | Yes |
 
-N> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
+N> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

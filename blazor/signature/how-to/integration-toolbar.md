@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Integration Toolbar with Blazor Signature Component | Syncfusion
+title: Integration Toolbar with Blazor Signature Component | Syncfusion®
 description: Integrate Blazor Signature with Toolbar to enable undo, redo, save, clear, and color customization features.
 platform: Blazor
 control: Signature

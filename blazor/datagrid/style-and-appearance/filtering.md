@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize filtering in Blazor DataGrid | Syncfusion
-description: Learn how to style and customize the Syncfusion Blazor DataGrid filter UI using CSS—filter bar, dialog, icons, buttons, and menus.
+title: Customize filtering in Blazor DataGrid | Syncfusion®
+description: Learn how to style and customize the Blazor DataGrid filter UI using CSS—filter bar, dialog, icons, buttons, and menus.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Filtering customization in Syncfusion Blazor DataGrid
+# Filtering customization in Blazor DataGrid
 
 The appearance of filtering elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. Styling options are available for different parts of the filtering interface:
 
@@ -171,7 +171,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDryMjMRrYykDUIW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLntQXWVnLBYnNS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize the filtering icon in the header
 
@@ -355,4 +355,4 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLIsNixVEFSwNFe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVdNcDsVHVxdOKe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Pane Settings in Blazor Splitter Component | Syncfusion
-description: Checkout and learn here all about Pane Settings in Syncfusion Blazor Splitter component and much more.
+title: Pane Settings in Blazor Splitter Component | Syncfusion®
+description: Checkout and learn here all the features about Pane Settings in Blazor Splitter component much more details.
 platform: Blazor
 control: Splitter
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Set the Disabled State in Blazor TextBox Component | Syncfusion
-description: Checkout and learn here all about how to set the disabled state in Syncfusion Blazor TextBox component and more.
+title: Set the Disabled State in Blazor TextBox Component | Syncfusion®
+description: Checkout and learn here all about how to set the disabled state in Blazor TextBox component and much more details.
 platform: Blazor
 control: TextBox
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Technical Indicators in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Technical Indicators in Syncfusion Blazor Charts component and more.
+title: Technical Indicators in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about Technical Indicators in Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -1644,7 +1644,7 @@ N> Technical indicators can also be added without series using [DataSource](http
 
 ```
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

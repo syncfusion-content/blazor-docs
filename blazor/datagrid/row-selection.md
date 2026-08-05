@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Row selection in Blazor DataGrid | Syncfusion
-description: Learn how to use row selection in Syncfusion Blazor DataGrid including single/multiple selection, paging, initial selection, and programmatic control.
+title: Row selection in Blazor DataGrid | Syncfusion®
+description: Learn how to use row selection in Blazor DataGrid including single/multiple selection, paging, initial selection, and programmatic control.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -94,7 +94,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBeNytTxjBLpwCY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLHNcZxslZbqgny?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Multiple row selection
 
@@ -177,7 +177,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthIjeZfHjHdCEwD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhnNmXxsFWiwMNH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Select row at initial rendering
 
@@ -253,7 +253,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtroXSZfRWMkkcaW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVxNQXdivMGMamA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Select rows in any page based on index value
 
@@ -369,7 +369,7 @@ public class Order
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVojfLsCxSoSKyn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLxjQNRiFhxSIwK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Multiple row selection by single click on row
 
@@ -459,7 +459,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrIjfWoTqSCQLJr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrxNwDdslKLrkjF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Select row via programmatically
 
@@ -555,7 +555,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthetJCezkFWiJjM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVHtQZxiFUPfevK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Multiple rows selection
 
@@ -651,7 +651,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBejJCxVytqWHSm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrdjwNRiFppNCYT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Range of rows selection
 
@@ -748,7 +748,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhINfiIdMXhvlal?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLRtcDRMbJRgiTp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Select Grid rows based on certain condition
 
@@ -853,7 +853,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVeXIjeIHNkaocG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBnjGNxsPoGVFUT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## How to get selected row indexes 
 
@@ -949,7 +949,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVSXojzHLZfAtKS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBnZwXRsPRqybMj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## How to get selected records on various pages 
 
@@ -1052,7 +1052,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLyNotfnVyUShmR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBdtcZnWlRvpYCd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > To persist the Grid selection, it is necessary to define any one of the columns as a primary key using the [GridColumn.IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property.
 
@@ -1160,7 +1160,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhSjStfdJDnCgcQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrRNwXdMvGUlpsP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Clear selection via programmatically 
 
@@ -1247,7 +1247,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVIZoZTxRbhiIYw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVxZcDxslFTTegw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Row selection events 
 
@@ -1360,4 +1360,4 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBSDoDzHHtCzbSp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBdXQNnWFluDkof?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

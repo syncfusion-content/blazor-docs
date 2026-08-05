@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reset an image in the Blazor Image Editor | Syncfusion
+title: Reset an image in the Blazor Image Editor | Syncfusion®
 description: Learn how to reset an image in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor

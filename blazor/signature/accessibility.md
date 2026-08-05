@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility with Blazor Signature Component | Syncfusion
+title: Accessibility with Blazor Signature Component | Syncfusion®
 description: Explore Blazor Signature accessibility with WCAG 2.2 support, screen readers, keyboard navigation, and mobile device compatibility.
 platform: Blazor
 control: Signature
@@ -57,4 +57,4 @@ The accessibility compliance of the Blazor Signature component is shown in the f
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

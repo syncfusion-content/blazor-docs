@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Marker and Data labels in Blazor Smith Chart Component | Syncfusion
-description: Checkout and learn here all about marker and data labels in Syncfusion Blazor Smith Chart component and more.
+title: Marker and Data labels in Blazor Smith Chart Component | Syncfusion®
+description: Checkout and learn here all the features about marker and data labels in Blazor Smith Chart component and more.
 platform: Blazor
 control: Smith Chart
 documentation: ug

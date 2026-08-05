@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Color Picker Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Color Picker component and more.
+title: Accessibility in Blazor Color Picker Component | Syncfusion®
+description: Checkout and learn here all the features about Accessibility in Blazor Color Picker component and more.
 platform: Blazor
 control: Color Picker
 documentation: ug
@@ -39,7 +39,7 @@ The accessibility compliance for the Blazor Color Picker component is outlined b
 
 ## WAI-ARIA attributes
 
-The Blazor Color Picker component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/) practices to support assistive technologies. The following ARIA attributes are used in the Blazor Color Picker component:
+The Blazor Color Picker component follows [WAI-ARIA](https://www.w3.org/WAI/about/groups/ariawg/) practices to support assistive technologies. The following ARIA attributes are used in the Blazor Color Picker component:
 
 | Attributes | Purpose |
 | --- | --- |

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility in Blazor Chat UI Component | Syncfusion
+title: Accessibility in Blazor Chat UI Component | Syncfusion®
 description: Checkout and learn about Accessibility and Keyboard interaction with Blazor Chat UI component and more details.
 platform: Blazor
 control: Chat UI
@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Chat UI Component
 
-The Syncfusion Blazor Chat component follows key accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) roles. This commitment ensures that the component is accessible to all users.
+The Blazor Chat component follows key accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) roles. This commitment ensures that the component is accessible to all users.
 
 The accessibility compliance for the Chat UI component is outlined below:
 
@@ -82,4 +82,4 @@ The accessibility of the Blazor Chat UI component is ensured through automated t
 
 ## See Also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor Components](https://blazor.syncfusion.com/documentation/common/accessibility)

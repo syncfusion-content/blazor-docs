@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sorting in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about sorting in Syncfusion Blazor TreeGrid component and much more details.
+title: Sorting in Blazor TreeGrid Component | Syncfusion®
+description: Checkout and learn here all the features about sorting in Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -606,7 +606,7 @@ namespace TreeGridComponent.Data {
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLosBiEBFOpdhVk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhntcjPpBaqtFif?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * The `SortComparer` function takes two parameters: `a` and `b`. These parameters represent the values to be compared. The function returns **-1**, **0**, or **1**, depending on the comparison result, which showcases the sorting order.
 > * The `SortComparer` property will work only for local data.

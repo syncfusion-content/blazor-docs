@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Data Grid connected to MySQL via Entity Framework | Syncfusion
+title: Blazor Data Grid connected to MySQL via Entity Framework | Syncfusion®
 description: Bind MySQL data to Blazor Data Grid using Entity Framework Core with complete CRUD, filtering, sorting, paging, and advanced data operations.
 platform: Blazor
 control: DataGrid
@@ -469,7 +469,7 @@ builder.Services.AddDbContext<TransactionDbContext>(options =>
 // Register the repository for dependency injection
 builder.Services.AddScoped<TransactionRepository>();
 
-// Register Syncfusion Blazor services
+// Register Blazor services
 builder.Services.AddSyncfusionBlazor();
 
 // Add other services as needed
@@ -498,7 +498,7 @@ The service registration has been completed successfully.
 
 ---
 
-## Integrating Syncfusion Blazor DataGrid
+## Integrating Blazor DataGrid
 
 ### Step 1: Install and Configure Blazor DataGrid Components
 
@@ -516,19 +516,19 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 @using Syncfusion.Blazor.DropDowns
 ```
 
-* Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+* Add the stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
-<!-- Syncfusion Blazor Stylesheet -->
+<!-- Blazor Stylesheet -->
 <link href="_content/Syncfusion.Blazor.Themes/tailwind3.css" rel="stylesheet" />
 
-<!-- Syncfusion Blazor Scripts -->
+<!-- Blazor Scripts -->
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
 
-For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
+For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component’s [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
+Blazor components are now configured and ready to use. For additional guidance, refer to the Grid component’s [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
 ### Step 2: Update the Blazor DataGrid
 
@@ -550,7 +550,7 @@ The `Home.razor` component will display the transaction data in a Blazor DataGri
     <h1 class="mb-4">Transaction Management System</h1>
     <p class="mb-3">Manage and view all transaction records from the database.</p>
     
-    <!-- Syncfusion Blazor DataGrid Component -->
+    <!-- Blazor DataGrid Component -->
     <SfGrid TValue="TransactionModel" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
         <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
         

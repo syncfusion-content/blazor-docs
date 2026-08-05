@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to troubleshoot exceptions in TextBox Blazor | Syncfusion
-description: Checkout and learn here all about troubleshooting server and client exceptions in Blazor TextBox component.
+title: How to troubleshoot exceptions in TextBox Blazor | Syncfusion®
+description: Checkout and learn here all about troubleshooting server and client exceptions in Blazor TextBox component and much more details.
 platform: Blazor
 component: Common
 documentation: ug
@@ -20,11 +20,11 @@ documentation: ug
   E> InvalidOperationException: Cannot provide a value for property 'SyncfusionService' on type 'Syncfusion.Blazor.Inputs.SfTextBox'. There is no registered service of type 'Syncfusion.Blazor.SyncfusionBlazorService'.
 
 **Cause:**
-  This exception occurs when the Syncfusion Blazor service is not registered in Program.cs.
+  This exception occurs when the Blazor service is not registered in Program.cs.
 
 **Solution:**
 
-  Register the Syncfusion Blazor service in the Program.cs file to resolve the exception.
+  Register the Blazor service in the Program.cs file to resolve the exception.
 
   ```c#
   using Syncfusion.Blazor;

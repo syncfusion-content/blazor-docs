@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance | Blazor Chart Wizard Component | Syncfusion
+title: Appearance | Blazor Chart Wizard Component | Syncfusion®
 description: Check out and learn how to customize the appearance of the Blazor Chart Wizard component including themes and layout.
 platform: Blazor
 control: Chart Wizard

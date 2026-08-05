@@ -1,7 +1,7 @@
 ---
 layout: post
-title: IsInteracted property of Tab in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about find whether the tab is selected programmatically or not in Syncfusion Blazor Tabs component and much more.
+title: IsInteracted property of Tab in Blazor Tabs Component | Syncfusion®
+description: Checkout and learn here all about find whether the tab is selected programmatically or not in Blazor Tabs component and much more.
 platform: Blazor
 control: Tabs
 documentation: ug

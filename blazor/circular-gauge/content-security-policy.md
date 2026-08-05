@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Circular Gauge - Strict CSP Feature Limitations - Syncfusion
-description: Details on Syncfusion Blazor features in Circular Gauge that require Content Security Policy (CSP) relaxation.
+title: Circular Gauge - Strict CSP Feature Limitations | Syncfusion®
+description: Details on Blazor features in Circular Gauge Component that require Content Security Policy (CSP) relaxation.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
@@ -78,4 +78,4 @@ Include `'unsafe-inline'` if you want smooth animations:
 
 ## See also
 
-* [Content security policy in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/content-security-policy)
+* [Content security policy in Blazor components](https://blazor.syncfusion.com/documentation/common/content-security-policy)

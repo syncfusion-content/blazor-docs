@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Query Builder component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Query Builder component and more.
+title: Accessibility in Blazor Query Builder Component | Syncfusion®
+description: Checkout and learn here all about Accessibility in Blazor Query Builder component with examples and much more details.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
@@ -64,4 +64,4 @@ The accessibility compliance of the Blazor Query Builder is shown in the followi
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

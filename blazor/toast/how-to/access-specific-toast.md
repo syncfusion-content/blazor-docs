@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Access specific toast in Blazor Toast Component | Syncfusion
-description: Checkout and learn here all about access specific toast in Syncfusion Blazor Toast component and more.
+title: Access specific toast in Blazor Toast Component | Syncfusion®
+description: Checkout and learn here all the features about access specific toast in Blazor Toast component and more.
 platform: Blazor
 control: Toast
 documentation: ug

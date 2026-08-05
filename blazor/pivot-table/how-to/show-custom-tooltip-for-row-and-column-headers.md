@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Show tooltip for row and column headers in Blazor | Syncfusion
-description: Learn here all about how to show tooltip for row and column headers in Syncfusion Blazor Pivot Table component and more.
+title: How to show tooltips for headers in Blazor Pivot Table | Syncfusion
+description: Step-by-step example showing how to show tooltips for headers in the Blazor Pivot Table, binding SfTooltip to header cells via OnRender and ContentTemplate.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Show tooltip for row and column headers in Blazor Pivot Table
+# How to show tooltips for headers in Blazor Pivot Table
 
 This guide explains how to display tooltips for row and column headers in the Blazor Pivot Table using an external tooltip component. By leveraging the tooltip component, users can view additional details about headers when hovering over them, enhancing the interactivity of the Pivot Table. The example below demonstrates how to achieve this with clear and concise code.
 

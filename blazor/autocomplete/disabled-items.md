@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Disabled Items in Blazor AutoComplete Component | Syncfusion
-description: Learn how to configure and manage disabled items in the Syncfusion Blazor AutoComplete component, including field mapping and dynamic enabling or disabling.
+title: Disabled Items in Blazor AutoComplete Component | Syncfusion®
+description: Learn how to configure and manage disabled items in the Blazor AutoComplete component, including field mapping and dynamic enabling or disabling.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -19,7 +19,7 @@ In the following sample, items are disabled based on the `Disabled` field value 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrTZxiVzQacaXHw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLdZRMMAXDZstRg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Disable Item Method
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Hide empty headers in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about how to hide empty headers in Syncfusion Blazor Pivot Table component and more.
+title: How to hide empty headers in Blazor Pivot Table | Syncfusion
+description: Step-by-step example showing how to hide empty headers in the Blazor Pivot Table by setting ShowHeaderWhenEmpty to false to suppress null field labels.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Hide empty headers in Blazor Pivot Table Component
+# How to hide empty headers in Blazor Pivot Table
 
 When the raw data for a particular field is not defined, it will be shown as 'null' in the pivot table headers. You can hide those headers by setting the [ShowHeaderWhenEmpty](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowHeaderWhenEmpty) property to **false** in the pivot table.
 
@@ -90,4 +90,4 @@ N> By default, this property is set to **true**.
 }
 ```
 
-N> You can refer to [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
+N> You can refer to [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

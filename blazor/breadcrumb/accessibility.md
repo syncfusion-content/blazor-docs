@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Breadcrumb Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Breadcrumb component and much more.
+title: Accessibility in Blazor Breadcrumb Component | Syncfusion®
+description: Checkout and learn here all about features Accessibility in Blazor Breadcrumb component and much more.
 platform: Blazor
 control: Button
 documentation: ug
@@ -66,4 +66,4 @@ The accessibility compliance of the Blazor Breadcrumb component is shown in the 
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

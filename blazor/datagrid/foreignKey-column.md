@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Foreign key column in Blazor DataGrid Component | Syncfusion
-description: Learn how to configure and customize foreign key columns in Syncfusion Blazor DataGrid, including remote data binding and edit templates.
+title: Foreign key column in Blazor DataGrid Component | Syncfusion®
+description: Learn how to configure and customize foreign key columns in Blazor DataGrid, including remote data binding and edit templates.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -111,7 +111,7 @@ public class EmployeeDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhTWhNzzhjrqtUe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrdjmNULqIwrDSc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Binding remote data
 
@@ -312,7 +312,7 @@ The Blazor DataGrid supports customizing the editor for a foreign key column usi
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthqiCZnKFZSBjXt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrxZmNqBAHJewHX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize filter UI in foreign key column
 
@@ -420,7 +420,7 @@ public class EmployeeDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVTMLDyAzdAAcbt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLRjGNKBqQNIsyi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-customize-filter-ui-in-foreignkey-column)
 
@@ -554,7 +554,7 @@ public class EmployeeDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBpiVDnrpdKsebf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrdNwjULAGmihdh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Perform aggregation in foreign key column
 
@@ -673,7 +673,7 @@ public class EmployeeDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVzisLyKJzudYVg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVHNwtAVAlWeQoQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Prevent filter query generation for foreign key column
 
@@ -858,7 +858,7 @@ To configure this feature, define a column using the [Template](https://help.syn
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrSDojmVniWmsTS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBnZcjKBKPxsPOH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Enable multiple foreign key columns
 
@@ -993,7 +993,7 @@ public class EmployeeDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBJCLZnLheGLept?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLdNwjKBUOlLvic?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Edit template in foreign key column using remote data
 

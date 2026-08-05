@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Semantic Search with Blazor ComboBox and AI models | Syncfusion
-description: Learn how to use the Syncfusion Blazor ComboBox with OpenAI, Azure OpenAI, or Ollama for semantic search. Explore to more details.
+title: Semantic Search with Blazor ComboBox and AI models | Syncfusion®
+description: Learn how to use the Blazor ComboBox with OpenAI, Azure OpenAI, or Ollama for semantic search. Explore to more details.
 platform: Blazor
 control: AI Integration
 documentation: ug
-keywords: Blazor ComboBox, AI embeddings, Syncfusion Blazor AI
+keywords: Blazor ComboBox, AI embeddings, Blazor AI
 --- 
 
 # Semantic Search with Blazor ComboBox and AI models
 
-This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to advanced capabilities of the Syncfusion Blazor ComboBox component, specifically focusing on the Semantic Search feature.
+This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to advanced capabilities of the Blazor ComboBox component, specifically focusing on the Semantic Search feature.
 
 ## Prerequisites
 
@@ -203,13 +203,13 @@ var app = builder.Build();
 
 - **Verify connectivity**: Ensure the Ollama server is running and accessible at the specified endpoint (for example, `http://localhost:11434`) before starting the application.
 
-## Register Syncfusion Blazor service
+## Register Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of the Blazor Web App.
+Register the Blazor Service in the **~/Program.cs** file of the Blazor Web App.
 
-If the **Interactive Render Mode** is set to `Server`, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file.
+If the **Interactive Render Mode** is set to `Server`, register the Blazor service in the **~/Program.cs** file.
 
-If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** files of the main server project and associated .Client project.
+If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in the **~/Program.cs** files of the main server project and associated .Client project.
 
 {% tabs %}
 {% highlight C# tabtitle="Server (~/_Program.cs)" hl_lines="3 11" %}
@@ -242,11 +242,11 @@ await builder.Build().RunAsync();
 
 ### AI-powered ComboBox Semantic Searching with Embeddings
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ComboBox component in the **~Pages/Home.razor** file.
+Add the Blazor ComboBox component in the **~Pages/Home.razor** file.
 
 The **Semantic Search** feature allows users to search for items based on the meaning and context of their queries, rather than relying solely on exact keyword matches. Powered by local embeddings, this feature enhances search accuracy by understanding the user's intent, delivering more relevant and intuitive results.
 
-This functionality is particularly useful in applications where quickly finding the right item is critical, making the Syncfusion Blazor ComboBox a powerful tool for building smarter and more responsive search interfaces.
+This functionality is particularly useful in applications where quickly finding the right item is critical, making the Blazor ComboBox a powerful tool for building smarter and more responsive search interfaces.
 
 **Features**:
 
@@ -364,7 +364,7 @@ Explore the AI-powered Smart ComboBox in action by visiting the live demo:
 
 👉 [Try the Live Demo](https://blazor.syncfusion.com/demos/combobox/embeddings?theme=fluent2)
 
-N> A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
+N> A complete working example is available in the [Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
 
 ## How it Works
 

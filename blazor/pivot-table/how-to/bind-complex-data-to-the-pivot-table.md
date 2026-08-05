@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Convert complex data and assign it to the Blazor | Syncfusion
-description: Learn here all about how to convert complex data to flat data and assign it to the Syncfusion Blazor Pivot Table component and more.
+title: How to bind complex data in Blazor Pivot Table | Syncfusion
+description: Step-by-step example showing how to bind complex data in the Blazor Pivot Table by flattening nested objects into a flat structure with ExpandoObject.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Convert complex data to flat data and assign it to the Pivot Table
+# How to bind complex data in Blazor Pivot Table
 
 The Pivot Table component requires flat data for binding. Complex data, such as nested objects or hierarchical structures, must be converted into a flat structure before it can be assigned to the Pivot Table using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property within [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Edit Types in Blazor DataGrid | Syncfusion
-description: Learn about edit types in Syncfusion Blazor DataGrid, including customization options, supported events, and editing configurations.
+title: Edit Types in Blazor DataGrid | Syncfusion®
+description: Learn about edit types in Blazor DataGrid, including customization options, supported events, and editing configurations.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -39,7 +39,7 @@ The available default edit types include:
 
 ## Customizing the default editors
 
-The behavior of default editors in the Blazor DataGrid can be customized using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html)component.
+The behavior of default editors in the Blazor DataGrid can be customized using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html)component.
 
 > * The properties that can be customized through `EditorSettings` in default Grid editors are limited. Refer to the related topics below for a list of supported properties.
 > * To apply additional customizations beyond the supported properties, refer to the [Template Editing](https://blazor.syncfusion.com/documentation/datagrid/template-editing) documentation for rendering custom components within the edit form.
@@ -140,7 +140,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNretIsEsetnBOie?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVxZcNLLfdxmTIW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize NumericTextBox of NumericEdit type 
 
@@ -241,7 +241,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLyNSMzsdfWrGHf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVnZwDVBfcjDszX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Restrict decimal points in a NumericTextBox while editing a numeric column
 
@@ -341,7 +341,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhyjoifsHoSQlcn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrRXmNVLpGqHUzn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize DropDownList of DropDownEdit type
 
@@ -443,7 +443,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhyjyWkslpZKQfq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBxNQNhLpcHyxVH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Provide custom data source for DropDownList
 
@@ -542,7 +542,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhINespMHFAJVNG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrntGtBrzPIObyj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Apply filtering for DropDownList
 
@@ -636,7 +636,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNByZeMTscjKzOYt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVRNmNhLTblLaNY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize CheckBox of BooleanEdit Type
 
@@ -648,7 +648,7 @@ The table below outlines key aspects of customizing a `SfCheckBox` using the `Ed
 
 | Component  | Edit Type    | Description                                                                                              | Example Customized Edit Params |
 |------------|--------------|----------------------------------------------------------------------------------------------------------|---------------------------------|
-| [SfCheckBox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app) | BooleanEdit  | Renders a `SfCheckBox` for boolean data type columns. For additional configuration options, refer to the [SfCheckBox API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox.html). | Params: { Checked: true }      |
+| [SfCheckBox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app) | BooleanEdit  | Renders a `SfCheckBox` for boolean data type columns. For additional configuration options, refer to the [SfCheckBox API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html). | Params: { Checked: true }      |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -736,7 +736,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrSZoMkiYjhGzhe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVRjGjBrparTERp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize DatePicker of DatePickerEdit Type
 
@@ -843,7 +843,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVytSsfiwVcCUKx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrHZmZBBeZoDKPE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize TimePicker of TimePickerEdit Type
 
@@ -946,7 +946,7 @@ The table below outlines key aspects of customizing a `SfTimePicker` using the `
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrfWhWRHKMBbbnG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthxtcDBLyWLlKUd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize DateTimePicker of DateTimePickerEdit Type
 
@@ -1059,7 +1059,7 @@ The table below outlines key aspects of customizing a `SfDateTimePicker` using t
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVyjeifiFjCszTL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhnDwDhhSiGBzzZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
  
 ## Render custom cell editors
 
@@ -1167,7 +1167,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLoDyMfsPsqnkLl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVnZcjhreKdMFYa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Prevent the enter key functionality in multiline textbox while editing
 
@@ -1335,7 +1335,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVoNSipsbGwSAva?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVdtmXrhySqefsW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Render MaskedTextBox in EditTemplate
 
@@ -1435,7 +1435,7 @@ To render a `SfMaskedTextBox` in the edit form, define an [EditTemplate](https:/
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLyXoWJMkZVqmfQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhnDmNrreHDZxoK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Render DropDownList in EditTemplate
 
@@ -1548,7 +1548,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLSDSiJCksxoYrE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBdNwXhhInyBdgv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Render images in the DropDownList editor using the ItemTemplate
 
@@ -1854,7 +1854,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLojyCJskAfAMft?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBHDctLheQjnwDM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > For more information about available templates in the `SfDropDownList`, refer to the [DropDownList Templates](https://blazor.syncfusion.com/documentation/dropdown-list/templates) documentation.
 
@@ -1970,7 +1970,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtryNeifWknMNovQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhxDmtBhIQUcVIT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Render NumericTextBox in EditTemplate 
 
@@ -2070,7 +2070,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrSZoMahfqlWyLX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhHtGZhLnmsLjoM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Render TimePicker in EditTemplate
 
@@ -2171,7 +2171,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVoDoCTWuGyZZsM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLxjGZBLRGdLVLr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Render MultiSelect DropDown in EditTemplate
 
@@ -2297,7 +2297,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrSjyVNJjotXFbu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLxZGXLLxYrvyBa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Render RichTextEditor in EditTemplate
 
@@ -2398,7 +2398,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrSNespVDMPcVFs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBxNcDBBmXQusLW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Render Uploader in EditTemplate
 
@@ -2644,7 +2644,7 @@ To implement cascading DropDownLists in Grid editing, configure the [EditTemplat
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVACDDzLCOPwlKE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhxjctVrwMJiCLk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### DynamicObject data binding with EditTemplate
 
@@ -2759,7 +2759,7 @@ This event-driven method ensures smooth editing functionality even when working 
 
 The [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) enables rendering a custom editor inside the Blazor DataGrid's edit form. Two-way (**@bind-Value**) binding cannot be applied to the editor within the `EditTemplate` when the Grid is bound to an `ExpandoObject`, due to the absence of compile-time property types.
 
-An alternative approach can be used to perform CRUD operations. For example, an [SfTextBox](http://blazor.syncfusion.com/documentation/textbox/getting-started-webapp) can be placed inside the EditTemplate, and changes can be captured using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event of the `SfTextBox`. The updated value can then be manually applied to the dynamic data using the Grid’s [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) event.
+An alternative approach can be used to perform CRUD operations. For example, an [SfTextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp) can be placed inside the EditTemplate, and changes can be captured using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event of the `SfTextBox`. The updated value can then be manually applied to the dynamic data using the Grid’s [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) event.
 
 This alternative enables manual updates to the underlying `ExpandoObject` data, ensuring editing functionality without relying on direct binding.
 

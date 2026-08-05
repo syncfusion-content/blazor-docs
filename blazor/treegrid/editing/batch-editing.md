@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Batch Editing in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about Batch Editing in Syncfusion Blazor Tree Grid component and much more details.
+title: Batch Editing in Blazor TreeGrid Component | Syncfusion®
+description: Checkout and learn here all about Batch Editing in Blazor Tree Grid component and much more details.
 platform: Blazor
 control: TreeGrid
 documentation: ug

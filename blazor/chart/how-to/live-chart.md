@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Live Chart in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Live Chart in Syncfusion Blazor Charts component and much more details.
+title: Live Chart in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about Live Chart in Blazor Charts component and much more details.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -161,4 +161,4 @@ The complete code snippet for the preceding steps is available below.
 
 ```
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

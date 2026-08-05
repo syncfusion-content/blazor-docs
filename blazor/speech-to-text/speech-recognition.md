@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Speech recognition in Blazor SpeechToText Component | Syncfusion
+title: Speech recognition in Blazor SpeechToText Component | Syncfusion®
 description: Checkout and learn about Speech recognition in Blazor SpeechToText component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: SpeechToText

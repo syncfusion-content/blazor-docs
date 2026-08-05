@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Angular Blazor integration | Syncfusion
+title: Angular Blazor integration | Syncfusion®
 description: Learn how to host Angular components into a Blazor app by packaging them as Angular Custom Elements for seamless UI rendering.
 platform: Blazor
 control: Common
@@ -238,7 +238,7 @@ You can place the `<sf-grid>` HTML tag directly inside any `.razor` (e.g `Index.
 {% endhighlight %}
 {% endtabs %}
 
-N> `<sf-grid>` is the wrapper web component, not the Syncfusion grid tag itself.
+N> `<sf-grid>` is the wrapper web component, not the grid tag itself.
 
 ## Run the application
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Template in Blazor SpeedDial Component | Syncfusion
-description: Checkout and learn here all about templates and how to use them in Syncfusion Speed Dial component and much more.
+title: Template in Blazor SpeedDial Component | Syncfusion®
+description: Checkout and learn here all about templates and how to use them in Blazor Speed Dial component and much more.
 platform: Blazor
 control: SpeedDial
 documentation: ug

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Sentiment Analysis in Blazor Kanban | Syncfusion
-description: Learn how to use Syncfusion Blazor Kanban with AI to analyze the emotional tone of tasks using sentiment analysis.
+title: Sentiment Analysis in Blazor Kanban | Syncfusion®
+description: Learn how to use Blazor Kanban with AI to analyze the emotional tone of tasks using sentiment analysis.
 platform: Blazor
 control: AI Integration
 documentation: ug
-keywords: Blazor Kanban, AI sentiment analysis, Syncfusion Blazor AI
+keywords: Blazor Kanban, AI sentiment analysis, Blazor AI
 ---
 
 # Sentiment Analysis in Blazor Kanban Component
 
-This guide demonstrates how to use the [**Syncfusion.Blazor.AI**](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to perform sentiment analysis in the Syncfusion Blazor Kanban component. The AI integration enables automatic detection of emotional tone in task descriptions, helping teams prioritize and respond to tasks more effectively. These capabilities are powered by AI models hosted via services like OpenAI, Azure OpenAI, or Ollama.
+This guide demonstrates how to use the [**Syncfusion.Blazor.AI**](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to perform sentiment analysis in the Blazor Kanban component. The AI integration enables automatic detection of emotional tone in task descriptions, helping teams prioritize and respond to tasks more effectively. These capabilities are powered by AI models hosted via services like OpenAI, Azure OpenAI, or Ollama.
 
 ## Prerequisites
 
@@ -194,9 +194,9 @@ var app = builder.Build();
 
 - **Verify connectivity**: Ensure the Ollama server is running and accessible at the specified endpoint (e.g., `http://localhost:11434`) before starting the application.
 
-## Register Syncfusion Blazor Service
+## Register Blazor Service
 
-Add the Syncfusion Blazor service to your **~/Program.cs** file. The configuration depends on your app's **Interactive Render Mode**:
+Add the Blazor service to your **~/Program.cs** file. The configuration depends on your app's **Interactive Render Mode**:
 
 - **Server Mode**: Register the service in the single **~/Program.cs** file.
 - **WebAssembly or Auto Mode**: Register the service in both the server-side **~/Program.cs** and client-side **~/Program.cs** files.
@@ -445,7 +445,7 @@ if (card.Category == "Delivered" || card.Category == "Served")
 
 ## Sample Code
 
-A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
+A complete working example is available in the [Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
 
 ![Kanban AI Assistant - Output](../../ai/images/sentiment-analysis.webp)
 

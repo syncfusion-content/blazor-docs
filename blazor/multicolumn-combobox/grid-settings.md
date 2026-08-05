@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Grid settings with Syncfusion Blazor MultiColumn ComboBox
-description: Checkout and learn here all about Gridlines in Syncfusion Blazor MultiColumn ComboBox component and much more details.
+title: Grid Settings in Blazor MultiColumn ComboBox | Syncfusion®
+description: Checkout and learn here all about Gridlines in Blazor MultiColumn ComboBox component and much more details.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug

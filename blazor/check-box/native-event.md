@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Native Events in Blazor CheckBox Component | Syncfusion
-description: Checkout and learn here all about Native Events in Syncfusion Blazor CheckBox component and much more.
+title: Native Events in Blazor CheckBox Component | Syncfusion®
+description: Checkout and learn here all the features about Native Events in Blazor CheckBox component and much more.
 platform: Blazor
 control: Checkbox
 documentation: ug

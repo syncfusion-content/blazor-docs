@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Render Scrollable Context Menu in Blazor ContextMenu | Syncfusion
-description: Checkout and learn here all about Render Scrollable Context Menu in Syncfusion Blazor ContextMenu component and more.
+title: Render Scrollable Context Menu in Blazor ContextMenu | Syncfusion®
+description: Checkout and learn here all about Render Scrollable Context Menu in Blazor ContextMenu component and more.
 platform: Blazor
 control: Context Menu
 documentation: ug
 ---
 
-# Render Scrollable Context Menu in Blazor ContextMenu Component
+# Render a Scrollable ContextMenu in Blazor ContextMenu Component
 
 To enable scrolling for the Context Menu, use the `EnableScrolling` property to manage the overflow behavior of menu items by enabling or disabling scroll functionality. This is especially useful when dealing with a large number of menu items that exceed the viewport height, ensuring the context menu remains accessible without affecting the page layout.
 
@@ -16,7 +16,9 @@ To achieve this functionality, set the `EnableScrolling` property to `true`. Add
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 
-<SfContextMenu Target="#target" TValue="MenuItem" CssClass="custom" EnableScrolling="true" BeforeOpen="OnBeforeOpen">
+<div id="target">Right click/Touch hold to open the ContextMenu </div>
+
+<SfContextMenu Target="#target" TValue="MenuItem" CssClass="custom" EnableScrolling="true">
     <MenuEvents TValue="MenuItem" OnOpen="@OnBeforeOpen"></MenuEvents>
     <MenuItems>
         <MenuItem Text="View">
@@ -36,8 +38,6 @@ To achieve this functionality, set the `EnableScrolling` property to `true`. Add
     </MenuItems>
 </SfContextMenu>
 
-<div id="target">Right click/Touch hold to open the ContextMenu </div>
-
 @code {
     private void OnBeforeOpen(BeforeOpenCloseMenuEventArgs<MenuItem> args)
     {
@@ -53,11 +53,11 @@ To achieve this functionality, set the `EnableScrolling` property to `true`. Add
         position: relative;
         text-align: center;
         color: gray;
-        line-height: 17;
+        line-height: 17px;
         font-size: 14px;
     }
 </style>
 
 ```
 
-![Blazor ContextMenu with Scroller Support](./../images/blazor-contextmenu-scroller.png)
+![Blazor ContextMenu with Scroller Support](./../images/blazor-contextmenu-scroller.webp)

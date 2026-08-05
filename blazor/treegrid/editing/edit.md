@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Editing in Blazor TreeGrid Component | Syncfusion
-description: Learn how to enable and use editing in the Syncfusion Blazor TreeGrid component and much more details.
+title: Editing in Blazor TreeGrid Component | Syncfusion®
+description: Checkout and learn how to enable and use editing in the Blazor TreeGrid component and much more details.
 platform: Blazor
 control: TreeGrid
 documentation: ug
