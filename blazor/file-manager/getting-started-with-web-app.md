@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with File Manager in Blazor Web App | Syncfusion
-description: Checkout and learn about how to get started with the File Manager Component in Blazor Web App.
+description: Checkout and learn about how to get started with the Blazor File Manager Component in Blazor Web App.
 component: File Manager
 platform: Blazor
 documentation: ug
