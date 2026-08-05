@@ -66,7 +66,7 @@ The Blazor Color Picker component follows the WAI-ARIA [keyboard interaction](ht
 
 ## Ensuring accessibility
 
-The Blazor Color Picker component's accessibility levels are validated with [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) using Playwright-based tests. The validation script automates keyboard navigation, runs axe-core checks against WCAG 2.2 AA rules, and confirms that ARIA roles and properties are correctly applied to the palette, handler, and control buttons.
+The Blazor Color Picker component's accessibility levels are validated with [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) using Playwright-based tests.
 
 The accessibility compliance of the Blazor Color Picker component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/color-picker) in a new window to evaluate the component with accessibility tools such as the [Accessibility Insights extension](https://accessibilityinsights.io/) or the built-in browser developer tools.
 
