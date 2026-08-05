@@ -27,7 +27,7 @@ The following overflow modes are available in the Breadcrumb component:
 
 The examples in this page reuse the same five-item list and the same `SeparatorTemplate` (a `...` icon) so you can focus on the differences between modes. See [Breadcrumb Templates in Blazor](https://blazor.syncfusion.com/documentation/breadcrumb/templates) for details on customizing the separator.
 
-## Default
+## Default Mode
 
 Default mode shows all items on a single line. When the container is not wide enough, items may overflow visually.
 

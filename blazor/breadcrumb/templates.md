@@ -75,8 +75,6 @@ In the following example, the separators are customized with an icon using the `
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXBntHMMzHDnPVbH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage="[Blazor Breadcrumb Component](./images/blazor-breadcrumb-separator-temp.webp)" %}
 
-N> The icon used in the separator requires the Syncfusion theme stylesheet to be referenced. See [Getting started with Blazor Breadcrumb](https://blazor.syncfusion.com/documentation/breadcrumb/getting-started).
-
 ## Customize a specific item
 
 Customize a single Breadcrumb item by providing custom content as the `BreadcrumbItem` child content. The default `Text` rendering is replaced by your custom content. In the following example, a `<span>` element with a label and link is rendered only on the last item.
