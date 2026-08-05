@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with TreeGrid in Blazor Web App | Syncfusion®
+title: Blazor TreeGrid Getting Started with Web App | Syncfusion
 description: Learn how to set up and integrate Blazor TreeGrid in a Blazor Web App using Visual Studio, VS Code, and .NET CLI.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Getting started with Blazor TreeGrid in Blazor Web App
+# Getting Started with Web App in Blazor TreeGrid
 
 This guide explains how to integrate the [Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bind GraphQL Adaptor in Blazor TreeGrid | Syncfusion®
-description: Learn how to bind data from a GraphQL API to the Blazor TreeGrid, including querying, mutation, and integration techniques.
+title: Blazor TreeGrid GraphQL Adaptor | Syncfusion
+description: Learn how to bind data from a GraphQL API to Blazor TreeGrid, perform queries and mutations, and integrate GraphQL data efficiently.
 platform: Blazor
 control: TreeGrid
 documentation: ug

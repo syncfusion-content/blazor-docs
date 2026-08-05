@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Command Column Editing in Blazor Tree Grid Component | Syncfusion®
-description: Checkout and learn here all about Command Column Editing in Blazor Tree Grid component and much more details.
+title: Blazor Grid Command Column Editing | Syncfusion
+description: Learn how to use command column editing in Blazor Data Grid to perform CRUD actions, customize command buttons, and streamline data management.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Command Column Editing in Blazor Tree Grid Component
+# Command Column Editing in Blazor Data Grid
 
 The command column provides an option to add CRUD action buttons in a column. This can be defined by the [TreeGridColumn.Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Commands) property.
 

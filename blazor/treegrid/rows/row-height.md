@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Row Height in Blazor Tree Grid Component | Syncfusion®
-description: Check out here and learn more details about the Row Height in the Blazor Tree Grid component and much more details.
+title: Blazor TreeGrid Row Height | Syncfusion
+description: Learn how to customize row height in Blazor TreeGrid  to improve data readability, layout control, and user experience.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Row Height in Blazor Tree Grid Component
+# Row Height in Blazor TreeGrid
 
 The row height of tree grid rows can be customized through the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_RowHeight) property. The `RowHeight` property changes the row height of the entire tree grid rows.
 

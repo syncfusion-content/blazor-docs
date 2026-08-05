@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Entity Framework in Blazor Tree Grid Component | Syncfusion®
-description: Checkout and learn here all about Entity Framework in Blazor Tree Grid component and much more details.
+title: Blazor TreeGrid Entity Framework Integration | Syncfusion
+description: Learn how to integrate Entity Framework with Blazor TreeGrid to perform CRUD operations, bind database records, and manage data efficiently.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Entity Framework in Blazor Tree Grid Component
+# Entity Framework in Blazor Tree Grid
 
 This section uses and follows the code explained in the [Entity Framework data binding](https://blazor.syncfusion.com/documentation/treegrid/data-binding#entity-framework) section hence it is recommended to refer Entity Framework data binding section before continue this section.
 

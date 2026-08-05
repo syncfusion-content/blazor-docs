@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column Chooser in Blazor Tree Grid Component | Syncfusion®
-description: Checkout and learn here all about column chooser in Blazor Tree Grid component and much more details.
+title: Blazor TreeGrid Column Chooser | Syncfusion
+description: Learn how to use the column chooser in Blazor TreeGrid to show, hide, and manage columns for a personalized data viewing experience.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Column Chooser in Blazor Tree Grid Component
+# Column Chooser in Blazor TreeGrid
 
 The column chooser has options to show or hide columns dynamically. It can be enabled by defining the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ShowColumnChooser) as true.
 

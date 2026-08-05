@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Calculate column value in Blazor TreeGrid | Syncfusion®
-description: Learn here all about how to calculate column value based on other columns in Blazor TreeGrid component and more.
+title: Blazor TreeGrid Access Public Methods | Syncfusion
+description: Learn how to access public methods in Blazor TreeGrid to perform programmatic operations, manage data, and customize grid behavior.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Calculate column value based on other columns in Blazor TreeGrid
+# Access Public Methods in Blazor TreeGrid
 
 The values for a Tree Grid column can be calculated based on other column values by using the **context** parameter in the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component. Inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template), the column values can be accessed using the implicit named parameter **context** and then calculate the values for the new column as required.
 

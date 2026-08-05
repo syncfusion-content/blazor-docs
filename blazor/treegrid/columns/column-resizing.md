@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column Resizing in Blazor Tree Grid Component | Syncfusion®
-description: Checkout and learn here all about column resizing in the Blazor Tree Grid component and much more details.
+title: Blazor TreeGrid Column Resizing | Syncfusion
+description: Learn how to resize columns in Blazor TreeGrid, set minimum and maximum widths, and improve data presentation and usability.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Column Resizing in Blazor Tree Grid
+# Column Resizing in Blazor TreeGrid 
 
 Column width can be resized by clicking and dragging the right edge of the column header. While dragging, the width of the respective column will be resized immediately. Each column can be auto resized by double-clicking the right edge of the column header to fit the width of that column based on the widest cell content. To enable column resize, set the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowResizing) property to true.
 
