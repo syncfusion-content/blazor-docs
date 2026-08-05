@@ -45,7 +45,6 @@ The Blazor Chips component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/ap
 | -- | -- |
 | `role=listbox` | Indicates that the ChipList component wrapper element acts as a `listbox`, which contains a set of selectable options. |
 | `role=option` | Indicates each selectable chip within the ChipList (used when `Selection` is set to `Single` or `Multiple`). |
-| `role=button` | Indicates that a single chip (outside of a selection context) behaves as a button. |
 | `aria-label` | Provides an accessible name for the Chip. |
 | `aria-selected` | Indicates whether the chip is currently selected. |
 | `aria-disabled` | Indicates the element is perceivable but disabled. |

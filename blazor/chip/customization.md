@@ -174,7 +174,7 @@ Outline chips have a border with a transparent background. The `e-outline` class
 
 ## Template
 
-The Chips `Template` property allows the layout and design of each chip to be customized. Any custom HTML elements, icons, links, or additional content can be included through the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipItem.html#Syncfusion_Blazor_Buttons_ChipItem_Template) property or as direct child content inside the [ChipItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipItem.html) of the `SfChip` component. The Template property is available from Syncfusion Blazor Buttons `v19.4.0.50` and later.
+The Chips `Template` property allows the layout and design of each chip to be customized. Any custom HTML elements, icons, links, or additional content can be included through the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipItem.html#Syncfusion_Blazor_Buttons_ChipItem_Template) property or as direct child content inside the [ChipItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipItem.html) of the `SfChip` component.
 
 The following code example demonstrates how the layout and design of chips can be customized by adding direct child content inside the `ChipItem`.
 

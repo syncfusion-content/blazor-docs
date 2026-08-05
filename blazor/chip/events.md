@@ -13,17 +13,17 @@ This section lists the events triggered by the Chip component and their event ar
 
 | Event | Triggered when | Cancelable |
 | -- | -- | -- |
-| `Created` | The Chip component has finished rendering. | No |
-| `OnBeforeClick` | A chip is about to be clicked. | Yes |
-| `OnClick` | A chip is clicked. | No |
-| `OnDelete` | A chip is about to be removed. | Yes |
-| `Deleted` | A chip item is removed from the ChipList. | No |
-| `SelectionChanged` | The selection of chips changes. | No |
-| `Destroyed` | The Chip component is disposed. | No |
+| [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_Created) | The Chip component has finished rendering. | No |
+| [`OnBeforeClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_OnBeforeClick) | A chip is about to be clicked. | Yes |
+| [`OnClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_OnClick) | A chip is clicked. | No |
+| [`OnDelete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_OnDelete) | A chip is about to be removed. | Yes |
+| [`Deleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_Deleted) | A chip item is removed from the ChipList. | No |
+| [`SelectionChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_SelectionChanged) | The selection of chips changes. | No |
+| [`Destroyed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_Destroyed) | The Chip component is disposed. | No |
 
 ## Created
 
-The `Created` event fires after the Chip component finishes rendering.
+The [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_Created) event fires after the Chip component finishes rendering.
 
 | Event Argument | Type | Description |
 | -- | -- | -- |
@@ -32,7 +32,8 @@ The `Created` event fires after the Chip component finishes rendering.
 ```cshtml
 @using Syncfusion.Blazor.Buttons
 
-<SfChip Selection="SelectionType.Multiple" Created="@OnCreated">
+<SfChip Selection="SelectionType.Multiple">
+<ChipEvents Created="@OnCreated"></ChipEvents>
     <ChipItems>
         <ChipItem Text="Small"></ChipItem>
         <ChipItem Text="Medium"></ChipItem>
@@ -50,7 +51,7 @@ The `Created` event fires after the Chip component finishes rendering.
 ```
 ## Deleted
 
-The `Deleted` event fires after a chip item is removed from the ChipList. To cancel or intercept the deletion, handle `OnDelete` instead.
+The [`Deleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_Deleted) event fires after a chip item is removed from the ChipList. To cancel or intercept the deletion, handle [`OnDelete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_OnDelete) instead.
 
 | Event Argument | Type | Description |
 | -- | -- | -- |
@@ -78,7 +79,7 @@ The `Deleted` event fires after a chip item is removed from the ChipList. To can
 ```
 ## Destroyed
 
-The `Destroyed` event fires when the Chip component is disposed.
+The [`Destroyed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_Destroyed) event fires when the Chip component is disposed.
 
 | Event Argument | Type | Description |
 | -- | -- | -- |
@@ -87,25 +88,38 @@ The `Destroyed` event fires when the Chip component is disposed.
 ```cshtml
 @using Syncfusion.Blazor.Buttons
 
-<SfChip Selection="SelectionType.Multiple" Destroyed="@OnDestroyed">
-    <ChipItems>
-        <ChipItem Text="Small"></ChipItem>
-        <ChipItem Text="Medium"></ChipItem>
-        <ChipItem Text="Large"></ChipItem>
-        <ChipItem Text="Extra Large"></ChipItem>
-    </ChipItems>
-</SfChip>
+@if (isChipVisible)
+{
+    <SfChip Selection="SelectionType.Multiple">
+        <ChipEvents Destroyed="@OnDestroyed"></ChipEvents>
+        <ChipItems>
+            <ChipItem Text="Small"></ChipItem>
+            <ChipItem Text="Medium"></ChipItem>
+            <ChipItem Text="Large"></ChipItem>
+            <ChipItem Text="Extra Large"></ChipItem>
+        </ChipItems>
+    </SfChip>
+}
+
+<button class="e-control" @onclick="RemoveChip">Destroy Chip</button>
 
 @code {
+    private bool isChipVisible = true;
+
     private void OnDestroyed(object args)
     {
-        // Place the cleanup code here
+        // Destroyed event is triggered when the Chip component is disposed.
+    }
+
+    private void RemoveChip()
+    {
+        isChipVisible = false;
     }
 }
 ```
 ## OnBeforeClick
 
-The `OnBeforeClick` event fires before a chip is clicked. The action can be canceled by setting `args.Cancel` to `true`.
+The [`OnBeforeClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_OnBeforeClick) event fires before a chip is clicked. The action can be canceled by setting `args.Cancel` to `true`.
 
 | Event Argument | Type | Description |
 | -- | -- | -- |
@@ -134,7 +148,7 @@ The `OnBeforeClick` event fires before a chip is clicked. The action can be canc
 
 ## OnClick
 
-The `OnClick` event fires when a chip is clicked.
+The [`OnClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_OnClick) event fires when a chip is clicked.
 
 | Event Argument | Type | Description |
 | -- | -- | -- |
@@ -162,7 +176,7 @@ The `OnClick` event fires when a chip is clicked.
 ```
 ## OnDelete
 
-The `OnDelete` event fires before a chip is removed. The deletion can be canceled by setting `args.Cancel` to `true`. To handle the action after the chip is removed, the `Deleted` event is used.
+The [`OnDelete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_OnDelete) event fires before a chip is removed. The deletion can be canceled by setting `args.Cancel` to `true`. To handle the action after the chip is removed, the [`Deleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_Deleted) event is used.
 
 | Event Argument | Type | Description |
 | -- | -- | -- |
@@ -190,7 +204,7 @@ The `OnDelete` event fires before a chip is removed. The deletion can be cancele
 ```
 ## SelectionChanged
 
-The `SelectionChanged` event fires when the selected chips are changed.
+The [`SelectionChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_SelectionChanged) event fires when the selected chips are changed.
 
 | Event Argument | Type | Description |
 | -- | -- | -- |
@@ -216,9 +230,7 @@ The `SelectionChanged` event fires when the selected chips are changed.
     }
 }
 
-N> The `OnBeforeClick` and `OnDelete` events are cancelable. The `Deleted` event is the post-removal counterpart of `OnDelete` and is not cancelable.
-
-N> Component-level events such as `Created` and `Destroyed` are wired directly on the `SfChip` tag. Chip-item-level events such as `OnBeforeClick`, `OnClick`, `OnDelete`, `Deleted`, and `SelectionChanged` are wired inside the `ChipEvents` child tag.
+N> The [`OnBeforeClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_OnBeforeClick) and [`OnDelete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_OnDelete) events are cancelable. The [`Deleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_Deleted) event is the post-removal counterpart of [`OnDelete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_OnDelete) and is not cancelable.
 
 ## See also
 

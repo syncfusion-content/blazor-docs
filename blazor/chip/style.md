@@ -18,7 +18,6 @@ Use the following CSS to customize the appearance of the Blazor Chip component.
 | `.e-chip-text` | The text inside a chip. | Customize font and color. |
 | `.e-chip-icon` | The leading or trailing icon element. | Customize icon background and opacity. |
 | `.e-chip-delete` | The delete (X) button. | Customize the delete button. |
-| `.e-dlt-btn` | Alias of the delete button. | Same target as `.e-chip-delete`. |
 | `.e-outline` | Outline chips. | Add a border with a transparent background. |
 | `.e-active` | The selected chip. | Customize the active/selected appearance. |
 | `.e-selection` | A ChipList in single-selection mode. | Differentiate single-selection styling. |
@@ -49,7 +48,7 @@ The `.e-chip-icon` element renders the leading or trailing icon set via the `Lea
 
 ## Customizing the chip delete button
 
-The `.e-chip-delete` (or `.e-dlt-btn`) element renders the delete icon shown when `EnableDelete` is `true`. Use the following CSS to customize the delete button.
+The `.e-chip-delete` element renders the delete icon shown when `EnableDelete` is `true`. Use the following CSS to customize the delete button.
 
 ```css
 .e-chip-list .e-chip .e-chip-delete.e-dlt-btn {
