@@ -9,11 +9,11 @@ documentation: ug
 
 # Horizontal Card in Blazor Card Component
 
-The [Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card) component lays out its child elements vertically by default. You can switch the layout to horizontal by setting the `Orientation` property to `CardOrientation.Horizontal` on the `SfCard`.
+The [Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card) component lays out its child elements vertically by default. You can switch the layout to horizontal by setting the [`Orientation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.SfCard.html#Syncfusion_Blazor_Cards_SfCard_Orientation) property to [`CardOrientation.Horizontal`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardOrientation.html) on the [`SfCard`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.SfCard.html).
 
 ## Stacked cards
 
-Within a horizontal card, you can group a set of child elements into a vertical column by wrapping them in the `CardStacked` component. This is useful when one section of the card should remain vertical (for example, a header stacked above the content) while the rest of the card is horizontal.
+Within a horizontal card, you can group a set of child elements into a vertical column by wrapping them in the [`CardStacked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardStacked.html) component. This is useful when one section of the card should remain vertical (for example, a header stacked above the content) while the rest of the card is horizontal.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
@@ -47,3 +47,4 @@ Within a horizontal card, you can group a set of child elements into a vertical 
 * [Header and Content in Blazor Card](header-content.md)
 * [Image and Divider in Blazor Card](card-image.md)
 * [Action Buttons in Blazor Card](action-buttons.md)
+* [SfCard API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.SfCard.html)

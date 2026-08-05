@@ -13,18 +13,18 @@ documentation: ug
 
 ## Header
 
-The Card can be created with a header that contains a title, a sub-title, and an optional image. To add a header, use the `CardHeader` component. The Card provides the following elements and corresponding CSS classes for building a header.
+The Card can be created with a header that contains a title, a sub-title, and an optional image. To add a header, use the [`CardHeader`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html) component. The Card provides the following elements and corresponding CSS classes for building a header.
 
 | Element | Description |
 | --- | --- |
-| Caption | Wrapper element that includes the title and sub-title. |
-| Image | Includes a header image with the specified dimensions. |
+| [Caption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html) | Wrapper element that includes the title and sub-title. |
+| [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardImage.html) | Includes a header image with the specified dimensions. |
 
 | Parameter | Description |
 | --- | --- |
-| `Title` | Main title text within the header. |
-| `SubTitle` | A sub-title within the header. |
-| `CardImage` | To include heading image within the header. |
+| [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html#Syncfusion_Blazor_Cards_CardHeader_Title) | Main title text within the header. |
+| [`SubTitle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html#Syncfusion_Blazor_Cards_CardHeader_SubTitle) | A sub-title within the header. |
+| [`CardImage`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardImage.html) | To include heading image within the header. |
 
 
 ### Title and Subtitle
@@ -37,7 +37,7 @@ To add a header to the Card, use the `CardHeader` component and set the `Title` 
 
 ### Image
 
-The Card header supports an optional image set via the `ImageUrl` parameter on `CardHeader`. The image is rendered either before or after the caption, depending on the value of the `ImagePosition` parameter (default: `Before`).
+The Card header supports an optional image set via the [`ImageUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html#Syncfusion_Blazor_Cards_CardHeader_ImageUrl) parameter on [`CardHeader`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html). The image is rendered either before or after the caption, depending on the value of the [`ImagePosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.ImagePosition.html) parameter (default: `Before`).
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
@@ -55,7 +55,7 @@ The Card header supports an optional image set via the `ImageUrl` parameter on `
 
 Content in the Card holds text, images, links, and all possible HTML elements. It renders anywhere inside the Card root element.
 
-* Create a `Content` component.
+* Create a [`CardContent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardContent.html) component.
 * Place content `div` element in the Card root element or within any Card inner elements.
 
 ```cshtml
@@ -103,3 +103,4 @@ You can place a raw `<img>` element inside `CardContent` to render an image with
 * [Image and Divider in Blazor Card](card-image.md)
 * [Action Buttons in Blazor Card](action-buttons.md)
 * [Horizontal Card in Blazor Card](horizontal.md)
+* [Card API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.SfCard.html)
