@@ -926,7 +926,7 @@ For current component behavior, see the [Pivot Table editing documentation](http
 
 ## Complete Sample Repository
 
-A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/syncfusion-blazor-pivot-table-mongodb-database-binding-sample/tree/master).
+A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/syncfusion-blazor-pivot-table-mongodb/tree/master).
 
 ## Summary
 
