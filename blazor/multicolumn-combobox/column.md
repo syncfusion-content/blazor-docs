@@ -104,14 +104,7 @@ The following example demonstrates how to customize the appearance of MultiColum
 
 ## Setting the Format
 
-Use the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.MultiColumnComboboxColumn.html#Syncfusion_Blazor_MultiColumnComboBox_MultiColumnComboboxColumn_Format) property on a column of the `SfMultiColumnComboBox` to apply a standard or custom format string that matches the column's data type. For example, you can apply currency formatting to a price field by using the format `"C2"`.
-
-Supported format types include:
-- Numeric: `C` (currency), `N` (number with separators), `P` (percent), `D` (decimal).
-- Date/time: `d`, `D`, `M`, `Y`, `t`, `T`, and custom patterns.
-- Custom strings for specific cultures.
-
-In the following example, the `Price` column uses `"C2"` to display values in a currency format.
+The [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.MultiColumnComboboxColumn.html#Syncfusion_Blazor_MultiColumnComboBox_MultiColumnComboboxColumn_Format) property to a column in the SfMultiColumnComboBox, specify a valid format string that matches the data type of the column, such as numeric or date formats. For example, you can apply currency formatting to a price field by using the format "C2".
 
 {% highlight cshtml %}
 

@@ -74,8 +74,6 @@ The following example uses `string` as the `TValue`, so clearing sets the value 
 
 `TItem` can be changed dynamically by wrapping the MultiColumn ComboBox in a generic component that declares `@typeparam` parameters for `TValue` and `TItem`, and exposes parameters for the data source and bound value. The following sample demonstrates using a generic component to switch data types.
 
-> The generic component file must be placed in the Blazor project's `Components/` (or `Shared/`) folder and registered with an `@using` directive in `_Imports.razor` (for example, `@using MyApp.Components`) so that the `<MultiColumnComboBox>` element resolves correctly in the consuming Razor page.
-
 ### Creating a Generic MultiColumn ComboBox Component
 
 Create a `MultiColumnComboBox.razor` file that defines `@typeparam` for `TValue` and `TItem`, and exposes parameters for `customData` and `ComboBoxValue`.

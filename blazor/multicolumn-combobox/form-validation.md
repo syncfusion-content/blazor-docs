@@ -11,8 +11,6 @@ documentation: ug
 
 This article demonstrates how to use the Blazor MultiColumn ComboBox in a validated form with Blazor's `EditForm`. It covers binding to a model, applying data annotations, and showing validation messages so the form submits only when required fields are valid.
 
-> The `EditForm` and `DataAnnotationsValidator` components require an interactive render mode (for example, `InteractiveServer`, `InteractiveWebAssembly`, or `InteractiveAuto`). Confirm that the form's hosting page has the appropriate render mode applied.
-
 ## MultiColumn ComboBox Inside an EditForm
 
 The MultiColumn ComboBox component can be used inside an `EditForm` to create a form that includes a list for selecting an option. The `EditForm` component validates all data annotation rules using the `DataAnnotationsValidator` component.

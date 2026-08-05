@@ -115,7 +115,7 @@ Get the entire object belonging to the value selected in the component using the
 
 ## Focus the Component Programmatically
 
-Programmatically move focus to the Blazor MultiColumn ComboBox using the [FocusAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_FocusAsync) method. After the MultiColumn ComboBox receives focus (for example, on a value change), call `FocusAsync` on the next interactive element in the page to advance focus there.
+Programmatically move focus to the Blazor MultiColumn ComboBox using the [FocusAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_FocusAsync) method.
 
 {% highlight cshtml %}
 

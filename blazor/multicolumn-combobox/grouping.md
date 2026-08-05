@@ -21,8 +21,3 @@ In the following example, product names are grouped by their category using the 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXLftOhUpZaoRSjs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with Grouping](./images/grouping/blazor_multicolumn_combobox_grouping.gif)" %}
 
-## Limitations
-
-* Only one grouping level is supported. The `GroupByField` property accepts a single field name; multi-level grouping (for example, Category then SubCategory) is not supported in the current version.
-* Grouping is supported only with local data. Remote data grouping must be performed on the server and the grouped result must be returned to the client.
-* Group headers display the underlying value as a label and do not support templating.
