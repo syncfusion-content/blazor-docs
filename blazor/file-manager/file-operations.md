@@ -1,13 +1,13 @@
 ---
 layout: post
-title: File Operations in Blazor File Manager Component | Syncfusion®
-description: Checkout and learn here all about File Operations in Blazor File Manager component and much more details.
-platform: Blazor
+title: File Operations in Blazor File Manager | Syncfusion
+description: Learn how to browse, create, rename, delete, copy, move, search, and download files and folders in the Blazor File Manager.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# File Operations in Blazor File Manager Component
+# File Operations in Blazor File Manager
 
 The File Manager component is used to browse, manage, and organize the files and folders in a file system through a web application. All basic file operations like creating a new folder, uploading and downloading of files in the file system, and deleting and renaming of existing files and folders are available in the File Manager component.  Additionally, previewing of image files is also provided in the File Manager component.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Google Drive provider in Blazor File Manager Component | Syncfusion®
-description: Checkout and learn here all about Google Drive file system provider in Blazor File Manager component and much more details.
-platform: Blazor
+title: Google Drive Provider in Blazor File Manager | Syncfusion
+description: Learn how to connect the Blazor File Manager to Google Drive using OAuth 2.0 to browse and manage files in a Drive account.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Google Drive file system provider
+# Google Drive Provider in Blazor File Manager
 
 The Google Drive file system provider allows the users to manage the files and folders in a Google Drive account. The Google Drive file system provider works on id basis where each file and folder have a unique ID. To get started, clone the [EJ2.ASP.NET Core Google Drive File Provider](https://github.com/SyncfusionExamples/google-drive-aspcore-file-provider) using the following command.
 
