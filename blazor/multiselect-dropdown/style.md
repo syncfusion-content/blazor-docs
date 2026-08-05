@@ -379,7 +379,7 @@ Clear the value programmatically by calling `ClearAsync()` on the component inst
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXLHDcXvfxtVhHBT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-![Blazor MultiSelect Dropdown with ClearAsync method](./images/style/blazor_multiselect_clearAsync-method.gif)
+![Blazor MultiSelect Dropdown with ClearAsync method](./images/style/blazor_multiselect_clearAsync-method.webp)
 
 ## Programmatically show and hide spinner
 
