@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Show or Hide Totals in Blazor Pivot Table | Syncfusion
-description: Learn how to show or hide grand totals and sub-totals in the Blazor Pivot Table through ShowGrandTotals, ShowRowGrandTotals, and ShowColumnGrandTotals properties.
+description: Learn how to show or hide grand totals and sub-totals in the Blazor Pivot Table via ShowGrandTotals, ShowRowGrandTotals, and ShowColumnGrandTotals.
 platform: Blazor
 control: Pivot Table
 documentation: ug

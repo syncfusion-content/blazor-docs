@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Compression in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table compresses unique raw records to reduce aggregation loops and speed up rendering of large datasets when paired with virtual scrolling.
+description: Learn how the Blazor Pivot Table compresses unique raw records to speed up rendering of large datasets when paired with virtual scrolling.
 platform: Blazor
 control: Pivot Table
 documentation: ug

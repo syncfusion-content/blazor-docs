@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSS Customization in Blazor Pivot Table | Syncfusion
-description: Learn how to style the Blazor Pivot Table with custom CSS to control row headers, column headers, value cells, summary cells, Field List, and Grouping Bar areas.
+description: Learn how to style the Blazor Pivot Table with custom CSS to control row headers, column headers, value cells, summary cells, and the Field List.
 platform: Blazor
 control: Pivot Table
 documentation: ug

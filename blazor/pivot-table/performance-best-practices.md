@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Performance Tips in Blazor Pivot Table | Syncfusion
-description: Learn performance tips for the Blazor Pivot Table, including referencing the individual NuGet package, virtual scrolling, paging, and a server-side aggregation engine.
+description: Learn performance tips for the Blazor Pivot Table, including the individual NuGet package, virtual scrolling, paging, and a server-side engine.
 platform: Blazor
 control: Pivot Table
 documentation: ug

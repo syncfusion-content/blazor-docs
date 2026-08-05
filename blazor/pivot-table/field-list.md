@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Field List in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table exposes a Field List to drag fields between columns, rows, values, and filters, available as a built-in popup or a stand-alone panel.
+description: Learn how the Blazor Pivot Table exposes a Field List to drag fields between columns, rows, values, and filters, as a popup or a fixed panel.
 platform: Blazor
 control: Pivot Table
 documentation: ug

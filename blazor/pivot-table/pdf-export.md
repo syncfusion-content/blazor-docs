@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PDF Export in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table exports data to a PDF document through ExportToPdfAsync when AllowPdfExport is true, with direct download or memory-stream output.
+description: Learn how the Blazor Pivot Table exports data to a PDF document through ExportToPdfAsync when AllowPdfExport is true, with direct download or memory stream.
 platform: Blazor
 control: Pivot Table
 documentation: ug

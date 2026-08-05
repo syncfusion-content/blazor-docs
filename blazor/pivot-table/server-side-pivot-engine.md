@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Server Side Engine in Blazor Pivot Table Component | Syncfusion®
-description: Learn how the Blazor Pivot Table uses a server-side Pivot Engine to aggregate, filter, sort, and group data on the server, streaming only the current viewport to the client.
+description: Learn how the Blazor Pivot Table uses a server-side Pivot Engine to aggregate, filter, sort, and group data, streaming only the current viewport to the client.
 platform: Blazor
 control: Pivot Table
 documentation: ug

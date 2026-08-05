@@ -2,7 +2,7 @@
 layout: post
 title: "Elasticsearch Data Binding in Blazor Pivot Table | Syncfusion"
 component: "Pivot Table"
-description: "Learn how to connect the Blazor Pivot Table to an Elasticsearch database with the NEST ElasticClient, either directly or through an intermediate Web API service."
+description: "Learn how to connect the Blazor Pivot Table to Elasticsearch using the NEST ElasticClient, either directly or through a Web API."
 platform: Blazor
 documentation: ug
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Calculated Field in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table lets users create custom value fields with mathematical formulas via the built-in dialog or the PivotViewCalculatedFieldSettings API.
+description: Learn how the Blazor Pivot Table creates custom value fields from existing fields with formulas via the built-in dialog or the API.
 platform: Blazor
 control: Pivot Table
 documentation: ug

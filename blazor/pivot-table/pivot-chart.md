@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pivot Chart in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table visualizes aggregated values with an integrated Pivot Chart, supporting 15+ chart types, drill down, and configurable grid or chart display.
+description: Learn how the Blazor Pivot Table visualizes aggregated values with an integrated Pivot Chart supporting 15+ chart types, drill down, and configurable display.
 platform: Blazor
 control: Pivot Table
 documentation: ug

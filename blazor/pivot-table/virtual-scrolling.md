@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Virtual Scrolling in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table renders only the rows and columns visible in the current viewport through EnableVirtualization, dynamically loading data during scroll.
+description: Learn how the Blazor Pivot Table renders only the rows and columns visible in the current viewport via EnableVirtualization, loading data on scroll.
 platform: Blazor
 control: Pivot Table
 documentation: ug

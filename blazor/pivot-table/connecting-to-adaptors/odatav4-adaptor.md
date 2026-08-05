@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ODataV4 Adaptor in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table binds to an OData V4 service through the ODataV4Adaptor, which loads the full data set for client-side aggregation and routes CRUD.
+description: Learn how the Blazor Pivot Table binds to an OData V4 service through the ODataV4Adaptor, which loads the full data set and routes CRUD.
 platform: Blazor
 control: Pivot Table
 keywords: adaptor, ODataV4adaptor, ODataV4 adaptor, remotedata, pivot, pivot table

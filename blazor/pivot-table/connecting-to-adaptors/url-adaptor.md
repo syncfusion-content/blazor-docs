@@ -1,7 +1,7 @@
 ---
 layout: post
 title: URL Adaptor in Blazor Pivot Table | Syncfusion
-description: Learn how to bind the Blazor Pivot Table to a custom REST API through the URL adaptor, which sends read and CRUD requests and aggregates the full result client-side.
+description: Learn how the Blazor Pivot Table binds to a custom REST API through the URL adaptor, sending read and CRUD requests and aggregating client-side.
 platform: Blazor
 control: Pivot Table
 keywords: adaptors, urladaptor, url adaptor, remotedata 

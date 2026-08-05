@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Paging in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table pages large datasets through PivotViewPageSettings and a built-in pager UI that supports separate page sizes for row and column axes.
+description: Learn how the Blazor Pivot Table pages large datasets through PivotViewPageSettings and a built-in pager UI with separate sizes for row and column axes.
 platform: Blazor
 control: Pivot Table
 documentation: ug

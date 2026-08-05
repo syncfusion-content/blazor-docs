@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Content Security Policy Limitations in Blazor Pivot Table | Syncfusion
-description: Learn which Blazor Pivot Table features run under strict Content Security Policy and which require style-src 'unsafe-inline' for chart and conditional formatting.
+description: Learn which Blazor Pivot Table features work under strict Content Security Policy and which need style-src 'unsafe-inline' for chart and formatting.
 platform: Blazor
 control: Pivot Table
 documentation: ug

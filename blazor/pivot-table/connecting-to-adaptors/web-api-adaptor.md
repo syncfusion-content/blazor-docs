@@ -1,7 +1,7 @@
 ---
 layout: post
 title: WebApi Adaptor in Blazor Pivot Table | Syncfusion
-description: Learn how to bind the Blazor Pivot Table to a Web API with OData endpoints through the WebApiAdaptor, which loads all records in a single request and aggregates client-side.
+description: Learn how the Blazor Pivot Table binds to a Web API through the WebApiAdaptor, which loads all records in one request and aggregates client-side.
 platform: Blazor
 keywords: adaptors, webapiadaptor, webapi adaptor, remotedata
 control: Pivot Table

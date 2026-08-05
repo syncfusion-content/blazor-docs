@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State Persistence in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table retains layout, fields, sorting, filters, and expand-collapse state in browser storage between sessions through EnablePersistence.
+description: Learn how the Blazor Pivot Table retains layout, fields, sorting, filters, and expand-collapse state in browser storage between sessions via EnablePersistence.
 platform: Blazor
 control: Pivot Table
 documentation: ug

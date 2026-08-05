@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Pivot Table in Blazor Server App | Syncfusion
+title: Getting Started with Blazor Pivot Table in Server App | Syncfusion
 description: Check out and learn about getting started with Blazor Pivot Table component in Blazor Server Application.
 platform: Blazor
 control: PivotTable
