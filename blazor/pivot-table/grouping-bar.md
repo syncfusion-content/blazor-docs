@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Grouping Bar in Blazor Pivot Table Component | Syncfusion®
-description: Learn about grouping bar in Blazor Pivot Table component for runtime report creation with examples and much more details.
+title: Grouping Bar in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table exposes a Grouping Bar to drag fields between row, column, value, and filter axes with built-in filter, sort, and remove icons.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Grouping Bar in Blazor Pivot Table Component
+# Grouping Bar in Blazor Pivot Table
 
 To have a quick glance about **Grouping Bar** in the Blazor Pivot Table, watch this video:
 

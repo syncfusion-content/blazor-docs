@@ -9,15 +9,15 @@ documentation: ug
 
 # Resize in Blazor Splitter Component
 
-By default, resizing will be enabled for split panes. Resizing gripper element will be added to the separator to make the resize easy.
+By default, resizing is enabled for split panes. A resizing gripper element is added to the separator to make resizing easier.
 
-N> Horizontal splitter allows to resize in horizontal directions. Vertical splitter allows to resize in vertical directions.
+N> The horizontal splitter allows resizing in horizontal directions. The vertical splitter allows resizing in vertical directions.
 
 While resizing, previous and next panes will adjust its dimensions automatically.
 
 ## Min and Max validation
 
-Splitter allows to set the minimum and maximum sizes for each pane. Resizing will not be occurred over the minimum and maximum values.
+Splitter allows to set the minimum and maximum sizes for each pane. Resizing will not occur beyond the minimum and maximum values.
 
 ```cshtml
 
