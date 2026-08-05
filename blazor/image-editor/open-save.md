@@ -713,7 +713,7 @@ The [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEdito
 
 ### Prevent default save option and save the image to specific location 
 
-The [Saving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Saving) event, which triggers just before the image is downloaded, can be used to override the default save option by setting `args.cancel` to true. Afterward, use the [GetImageDataUrlAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync_System_Boolean_) method to retrieve the current image data and convert it into a format like `byte[]`, `blob`, or `base64` for further processing.
+The [Saving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Saving) event, which triggers just before the image is downloaded, can be used to override the default save option by setting `args.Cancel` to true. Afterward, use the [GetImageDataUrlAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync_System_Boolean_) method to retrieve the current image data and convert it into a format like `byte[]`, `blob`, or `base64` for further processing.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
