@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Header styling and visibility in Blazor DataGrid | Syncfusion®
-description: Learn how to style and hide the Blazor DataGrid header using CSS—customize header bar, cells, text, with CSS isolation tips.
+title: Blazor Grid Header Styling and Visibility | Syncfusion
+description: Learn how to style and hide the Blazor Data Grid header using CSS, including header bars, cells, text customization, and CSS isolation techniques.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Header customization in Blazor DataGrid
+# Header Customization in Blazor Data Grid
 
 The appearance of header elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. Styling options are available for different parts of the header interface:
 

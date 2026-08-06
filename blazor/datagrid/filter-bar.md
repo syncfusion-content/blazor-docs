@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filter Bar in Blazor DataGrid | Syncfusion®
-description: Learn about the Filter Bar feature in Blazor DataGrid, including configuration, usage, and customization options.
+title: Blazor Grid Filter Bar | Syncfusion
+description: Learn how to use the Filter Bar in Blazor Data Grid with filter operators, immediate and OnEnter modes, templates, and advanced filtering options.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Filter Bar in Blazor DataGrid
+# Filter Bar in Blazor Data Grid
 
 The filter bar feature provides an efficient and intuitive way to filter data within the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component. This feature displays input fields below each column header, enabling straightforward data filtering based on column-specific criteria. The filter bar enhances data exploration by allowing users to narrow down large datasets to display only relevant records.
 
