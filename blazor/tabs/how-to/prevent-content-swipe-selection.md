@@ -24,6 +24,8 @@ The following are the available [`SwipeMode`](https://help.syncfusion.com/cr/bla
 * [`~TabSwipeMode.Touch & ~TabSwipeMode.Mouse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabSwipeMode.html) - This disables both touch and mouse swipe actions, preventing any unintended tab switches.
 
 ```cshtml
+@using Syncfusion.Blazor.Navigations
+
 <SfTab SwipeMode="~TabSwipeMode.Touch & ~TabSwipeMode.Mouse">
     <TabItems>
         <TabItem>
