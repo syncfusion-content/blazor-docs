@@ -7,7 +7,7 @@ control: Message
 documentation: ug
 ---
 
-# Variants in Blazor Message
+# Variants in Blazor Message Component
 
 The Message has predefined appearance variants for different visual representations. The variants of the message can be changed based on the [Variant](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_Variant) property.
 
