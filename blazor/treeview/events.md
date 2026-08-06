@@ -13,8 +13,6 @@ The Blazor TreeView component has a list of events that can be triggered for cer
 
 N> All the events should be provided in a single **TreeViewEvents** component.
 
-## Created 
-
 ## Created Event
 
 The [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_Created) event is triggered once the TreeView component has been successfully created and rendered.

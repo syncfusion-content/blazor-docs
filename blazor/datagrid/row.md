@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Row in Blazor DataGrid | Syncfusion®
-description: Learn how to set row styles, heights, hover effects, pinning, and more in the Blazor DataGrid component for enhanced row customization.
+title: Blazor Grid Row Customization | Syncfusion
+description: Learn how to customize rows in Blazor Data Grid with row styles, heights, hover effects, pinning, and advanced row settings.
 documentation: ug
 ---
 
-# Row in Blazor DataGrid
+# Row Customization in Blazor Data Grid
 
 Each row represents a single record from a data source and displays values for the fields of that record in a tabular format. Rows in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) support interaction such as selection, editing, sorting, filtering, and event-driven behaviors.
 
