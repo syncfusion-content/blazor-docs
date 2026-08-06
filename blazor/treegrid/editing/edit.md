@@ -377,7 +377,6 @@ public class TreeData
 
 {% endtabs %}
 
-The following example shows how to set the new row position to **Child** in the TreeGrid.
 
 ## Confirmation messages
 
