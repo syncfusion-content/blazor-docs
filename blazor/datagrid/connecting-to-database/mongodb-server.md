@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Data Grid connected to MongoDB | Syncfusion®
-description: Bind MongoDB data to Blazor Data Grid using MongoDB.Driver with complete CRUD, filtering, sorting, paging, and advanced data operations.
+title: Blazor Grid MongoDB | Syncfusion
+description: Learn how to connect MongoDB with Blazor Data Grid using MongoDB.Driver for CRUD operations, filtering, sorting, paging, and advanced data management.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Connecting MongoDB to Blazor Data Grid Using MongoDB.Driver
+# MongoDB in Blazor Data Grid.
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a MongoDB database using the MongoDB.Driver library. This approach provides a flexible and scalable solution for working with NoSQL document databases.
 
