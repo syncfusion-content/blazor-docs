@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all about selection in Blazor ListBox component and much more details.
+description: Checkout and learn here all the features about selection in Blazor ListBox component and much more.
 platform: Blazor
 control: List Box
 documentation: ug
