@@ -11,7 +11,7 @@ documentation: ug
 
 In this section, the list of events of the Tree Grid component is provided which will be triggered for appropriate Tree Grid actions.
 
-The events should be provided to the Tree Grid using **TreeGridEvents** component. When using events of Tree Grid, **TValue** must be provided in the **TreeGridEvents** component.
+The events should be provided to the Tree Grid using [TreeGridEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html) component. When using events of Tree Grid, **TValue** must be provided in the `TreeGridEvents` component.
 
 ## OnActionBegin
 
@@ -127,7 +127,7 @@ The events should be provided to the Tree Grid using **TreeGridEvents** componen
 
 ## OnActionFailure
 
-[OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionFailure) event triggers when any Tree Grid action fails to achieve the desired results. By using this event the error details and its cause are achieved. In the below sample, the wrong field name is provided for the IdMapping property. So that it will throw the OnActionFailure event.
+[OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionFailure) event triggers when any Tree Grid action fails to achieve the desired results. By using this event the error details and its cause are achieved. In the below sample, the wrong field name is provided for the [IdMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_IdMapping) property. So that it will throw the OnActionFailure event.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -3224,15 +3224,15 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ```
 
-## OnRowEditStart
+## BeforeRowEditing
 
-[OnRowEditStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeRowEditing) event is raised before when the editing action of a row begins in the Tree Grid.
+[BeforeRowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeRowEditing) event is raised before when the editing action of a row begins in the Tree Grid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
 
 <SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
-    <TreeGridEvents OnRowEditStart="OnRowEditStartHandler" TValue="BusinessObject"></TreeGridEvents>
+    <TreeGridEvents BeforeRowEditing="OnRowEditStartHandler" TValue="BusinessObject"></TreeGridEvents>
     <TreeGridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Row"></TreeGridEditSettings>
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
@@ -3780,16 +3780,17 @@ N> This event is raised specifically for the `Excel` [FilterType](https://help.s
 }
 ```
 
-## ColumnVisibilityChanging
+## ColumnsStateChanging
 
-[ColumnVisibilityChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ColumnsStateChanging) event is raised before the Tree Grid's column visibility is changing.
+[ColumnsStateChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ColumnsStateChanging) event is raised before the Tree Grid's column visibility is changing.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
 
 <SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" AllowFiltering="true" AllowReordering="true" ShowColumnChooser="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update", "ColumnChooser"})">
-    <TreeGridEvents ColumnVisibilityChanging="ColumnVisibilityChangingHandler" TValue="BusinessObject"></TreeGridEvents>
-    <TreeGridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Row"></TreeGridEditSettings>
+    <TreeGridEvents ColumnsStateChanging="ColumnVisibilityChangingHandler" TValue="BusinessObject"></TreeGridEvents>
+    <TreeGridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Row"></TreeGridEditSettings>
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn>
@@ -3835,15 +3836,15 @@ N> This event is raised specifically for the `Excel` [FilterType](https://help.s
 }
 ```
 
-## ColumnVisibilityChanged
+## ColumnsStateChanged
 
-[ColumnVisibilityChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ColumnsStateChanged) event is raised after the Tree Grid's column visibility is changed.
+[ColumnsStateChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ColumnsStateChanged) event is raised after the Tree Grid's column visibility is changed.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
 
 <SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" AllowFiltering="true" AllowReordering="true" ShowColumnChooser="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update", "ColumnChooser"})">
-    <TreeGridEvents ColumnVisibilityChanged="ColumnVisibilityChangedHandler" TValue="BusinessObject"></TreeGridEvents>
+    <TreeGridEvents ColumnsStateChanged="ColumnVisibilityChangedHandler" TValue="BusinessObject"></TreeGridEvents>
     <TreeGridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Row"></TreeGridEditSettings>
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>

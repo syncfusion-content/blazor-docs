@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Grouping in Blazor Pivot Table Component | Syncfusion®
-description: Learn about grouping feature in Blazor Pivot Table component for date, number, and custom grouping with examples and much more details.
+title: Grouping in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table groups date, number, and custom fields into categories such as year, quarter, or numeric ranges through the Group Field dialog.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Grouping in Blazor Pivot Table Component
+# Grouping in Blazor Pivot Table
 
 Grouping is one of the most useful features in the Pivot Table component, automatically organizing date, time, number, and string data types into meaningful categories. For example, date fields can be formatted and displayed based on year, quarter, month, and other time periods. Similarly, number fields can be grouped into ranges, such as 1-5, 6-10, and so on. These grouped fields function as individual fields, allowing users to drag them between different axes including columns, rows, values, and filters to create dynamic Pivot Tables at runtime.
 
