@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Templates in Blazor Inline AI Assist | Syncfusion®
-description: Customize Blazor Inline AI Assist appearance using EditorTemplate and ResponseTemplate to design unique footer areas and response layouts meeting application needs.
+description: Customize Blazor Inline AI Assist appearance using EditorTemplate and ResponseTemplate to design custom footer and response layouts.
 platform: Blazor
 control: Inline AI Assist
 documentation: ug

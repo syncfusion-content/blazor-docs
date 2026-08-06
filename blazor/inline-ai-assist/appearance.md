@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and Appearance in Blazor Inline AI Assist | Syncfusion®
-description: Style and customize Blazor Inline AI Assist popup appearance by configuring dimensions (PopupWidth, PopupHeight), Z-index, and CSS classes for consistent branding.
+description: Customize Blazor Inline AI Assist popup appearance with PopupWidth, PopupHeight, Z-index, and CSS classes.
 platform: Blazor
 control: Inline AI Assist
 documentation: ug

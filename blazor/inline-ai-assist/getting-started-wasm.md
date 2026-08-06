@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Inline AI Assist in Blazor WASM | Syncfusion®
+title: Getting Started with Blazor Inline AI Assist in WASM | Syncfusion®
 description: Check out and learn about getting started with Blazor Inline AI Assist Component in Blazor WebAssembly App.
 platform: Blazor
 control: Inline AI Assist
