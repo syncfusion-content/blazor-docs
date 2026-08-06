@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Technical Indicators in Blazor Stock Chart | Syncfusion®
-description: Add any of 10 technical indicators to the Blazor Stock Chart — Accumulation Distribution, ATR, EMA, SMA, TMA, Momentum, MACD, RSI, Stochastic, or Bollinger Band.
+description: Add any of 10 technical indicators to the Syncfusion Blazor Stock Chart, including EMA, SMA, ATR, MACD, RSI, Momentum, Stochastic, and Bollinger Band.
 platform: Blazor
 control: Stock Chart
 documentation: ug
