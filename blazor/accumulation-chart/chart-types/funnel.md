@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Funnel in Blazor Accumulation Chart Component | Syncfusion®
-description: Checkout and learn here all about Funnel in Blazor Accumulation Chart component and much more details.
+title: Funnel in Blazor Accumulation Chart | Syncfusion®
+description: Render a Blazor Funnel Chart to visualize sales stages, and customize its size, neck width, and neck height for clearer comparison.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Funnel in Blazor Accumulation Chart Component
+# Funnel in Blazor Accumulation Chart
 
 [Funnel Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/funnel-chart) is often used to represent stages in a sales process and to show the amount of potential revenue for each stage. To render the [Funnel Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/funnel-chart), set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Type) as [Funnel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationType.html#Syncfusion_Blazor_Charts_AccumulationType_Funnel).
 

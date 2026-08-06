@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pie and Doughnut in Blazor Accumulation Chart Component | SyncfusionÂ®
-description: Checkout and learn here all about Pie and Doughnut in Blazor Accumulation Chart component and much more details.
+title: Pie and Doughnut in Blazor Accumulation Chart | Syncfusion®
+description: Render a Blazor Pie or Doughnut chart from numeric proportional data, and customize radius, center position, and inner radius for a donut.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Pie and Doughnut in Blazor Accumulation Chart Component
+# Pie and Doughnut in Blazor Accumulation Chart
 
 ## Pie Chart
 

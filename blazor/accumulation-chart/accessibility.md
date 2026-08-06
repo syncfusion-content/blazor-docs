@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Accumulation Chart Component | Syncfusion®
-description: Checkout and learn here all about Accessibility using Keyboard navigation in Blazor Accumulation Chart component and much more details.
+title: Accessibility in Blazor Accumulation Chart | Syncfusion®
+description: Build accessible Blazor Accumulation Chart apps with full keyboard navigation, WAI-ARIA roles, and WCAG 2.2, Section 508, and ADA compliance support.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Accessibility in Blazor Accumulation Chart Component
+# Accessibility in Blazor Accumulation Chart
 
 The Blazor Accumulation Chart component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

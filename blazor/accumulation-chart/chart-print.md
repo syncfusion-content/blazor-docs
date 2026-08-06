@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Print and Export in Blazor Accumulation Chart Component | SyncfusionÂ®
-description: Checkout and learn here all about Print and Export in Blazor Accumulation Chart component and much more details.
+title: Print and Export in Blazor Accumulation Chart | Syncfusion®
+description: Print the rendered Blazor Accumulation Chart from the browser or export it to JPEG, PNG, SVG, PDF, XLSX, or CSV formats.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Print and Export in Blazor Accumulation Chart Component
+# Print and Export in Blazor Accumulation Chart
 
 ## Print
 
