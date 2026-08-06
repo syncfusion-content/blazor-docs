@@ -47,7 +47,7 @@ The TextArea triggers the [Input](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ## ValueChange event
 
-The TextArea triggers the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_ValueChange) event when the content is committed (typically when the component loses focus). Use this event to react to finalized value changes rather than per-keystroke updates. The [TextAreaValueChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.TextAreaValueChangeEventArgs.html) argument provides details about the change.
+The TextArea triggers the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_ValueChange) event when the bound value changes (each keystroke when used with `@bind-Value` and on commit when used one-way). Use this event to react to value updates; for the Input event (which fires on every keystroke regardless of binding), see the previous section. The [TextAreaValueChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.TextAreaValueChangeEventArgs.html) argument provides details about the change.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
