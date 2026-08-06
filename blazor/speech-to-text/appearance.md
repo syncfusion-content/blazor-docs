@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and Appearance in Blazor SpeechToText Component | Syncfusion®
-description: Checkout and learn about Style and Appearance in Blazor SpeechToText component in Blazor Server App and Blazor WebAssembly App.
+title: Style and Appearance in Blazor Speech To Text | Syncfusion®
+description: Customize the Speech To Text button appearance, text, icons, and position using ButtonSettings properties for both start and stop states.
 platform: Blazor
 control: SpeechToText
 documentation: ug
 ---
 
-# Style and Appearance in Blazor SpeechToText component
+# Style and Appearance in Blazor Speech To Text
 
 ## Customizing the button
 

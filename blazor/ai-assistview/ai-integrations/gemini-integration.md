@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Gemini Integration with Blazor AI AssistView Component | Syncfusion®
-description: Checkout and learn about gemini integration with Blazor AI AssistView component in Blazor WebAssembly Application.
+title: Integrate Gemini With Blazor AI AssistView | Syncfusion®
+description: Checkout and learn about gemini integration with Blazor AI AssistView component in Blazor Application.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 ---
 
-# Integrate Gemini AI With Blazor AI AssistView component
+# Integrate Gemini With Blazor AI AssistView
 
 The AI AssistView component integrates with Google’s [Gemini](https://ai.google.dev/gemini-api/docs/get-started) API to deliver intelligent conversational interfaces. It leverages advanced natural language understanding to interpret user input, maintain context throughout interactions, and provide accurate, relevant responses. By configuring secure authentication and data handling, developers can unlock powerful AI-driven communication features that elevate user engagement and streamline support experiences.
 
