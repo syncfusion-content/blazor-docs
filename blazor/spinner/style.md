@@ -20,7 +20,7 @@ Use the following CSS to customize the spinner stroke color.
 ```css
 
 .e-spinner-pane .e-spinner-inner .e-spin-material {
-  stroke: green;
+    stroke: green;
 }
 
 ```
@@ -30,7 +30,7 @@ Use the following CSS to customize the spinner stroke color.
 ```css
 
 .e-spinner-pane .e-spinner-inner .e-spin-fabric {
-  stroke: green;
+    stroke: green;
 }
 
 ```

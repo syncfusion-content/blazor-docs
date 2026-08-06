@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Timeline component
 
-The Blazor Timeline component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards. It incorporates [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) commonly used for accessibility evaluation.
+The Blazor Timeline component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards. It incorporates [ARIA roles](https://www.w3.org/TR/wai-aria/#roles) commonly used for accessibility evaluation.
 
 The accessibility compliance for the Blazor Timeline component is outlined below.
 
@@ -43,8 +43,8 @@ The following ARIA attributes are used in the Timeline component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `role=navigation` | Specified its purpose as a navigational element. |
-| `aria-label` | Provides an accessibile name for an element when a visible label is not present |
+| `role="navigation"` | Specifies its purpose as a navigational element. |
+| `aria-label` | Provides an accessible name for an element when a visible label is not present. |
 
 ## Ensuring Accessibility
 

@@ -68,7 +68,7 @@ The Blazor SplitButton component’s accessibility is validated using [axe-core]
 
 The accessibility compliance of the Blazor SplitButton component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/split-button) in a new window to evaluate the accessibility of the Blazor SplitButton component with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/split-button.html" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/split-button" %}
 
 ## See also
 
