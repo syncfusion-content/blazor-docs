@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Trendlines in Blazor Stock Chart Component | Syncfusion®
-description: Check out and learn how to configure and customize trendlines in the Blazor Stock Chart component and much more details.
+title: Trendlines in Blazor Stock Chart | Syncfusion®
+description: Add any of six trendline types to the Blazor Stock Chart — Linear, Exponential, Logarithmic, Polynomial, Power, or Moving Average — to show price direction.
 platform: Blazor
-control: Stock Chart 
+control: Stock Chart
 documentation: ug
 ---
 
-# Trendlines in Blazor Stock Chart Component
+# Trendlines in Blazor Stock Chart
 
 Trendlines illustrate the direction and speed of price movement. The Stock Chart supports six trendline types: `Linear`, `Exponential`, `Logarithmic`, `Polynomial`, `Power`, and `Moving Average`. Using the trendline dropdown button, the required trendline type can be added or removed.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Stock Chart Component | Syncfusion®
-description: Check out and learn here all about Accessibility using Keyboard navigation in Blazor Stock Chart component and much more details.
+title: Accessibility in Blazor Stock Chart | Syncfusion®
+description: Learn how the Syncfusion Blazor Stock Chart meets WCAG 2.2 AA, Section 508, screen reader, RTL, and keyboard navigation, validated with axe-core.
 platform: Blazor
 control: Stock Chart
 documentation: ug
 ---
 
-# Accessibility in Blazor Stock Chart Component
+# Accessibility in Blazor Stock Chart
 
 The Blazor Stock Chart component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
