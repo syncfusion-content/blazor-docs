@@ -11,7 +11,7 @@ documentation: ug
 
 The [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs) component supports custom animations for both previous and next actions from the provided animation option of `Animation` library. The animation property also allows to set `Easing`, `Duration` and various other effects.
 
-Default animation is given as `SlideLeftIn` for previous tab animation and `SlideRightIn` for next tab animation. Disable the animation by setting the animation `Effect` as `None`. Also, use the following CSS to disable indicator animation for animation `Effect` as `None`.
+By default, the previous tab transition uses the `SlideLeftIn` effect and the next tab transition uses the `SlideRightIn` effect. Disable the animation by setting `Effect` to `None` on both `TabAnimationPrevious` and `TabAnimationNext`. When `Effect` is `None`, add the following CSS to also disable the header indicator animation.
 
 ```CSS
 
@@ -21,7 +21,7 @@ Default animation is given as `SlideLeftIn` for previous tab animation and `Slid
 
 ```
 
-The sample demonstrates some types of animation that suits our Tabs. Check all the animation effects here.
+The following sample demonstrates the available animation effects for the Tab transitions. Use the dropdowns to change the previous and next animation effects at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor
