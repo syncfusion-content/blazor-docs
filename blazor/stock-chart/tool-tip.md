@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in Blazor Stock Chart Component | Syncfusion®
-description: Check out and learn how to configure and customize tooltip in the Blazor Stock Chart component and much more details.
+title: Tooltip in Blazor Stock Chart | Syncfusion
+description: Show a hover tooltip on the Blazor Stock Chart that displays formatted data point details for the corresponding point or shared series values.
 platform: Blazor
-control: Stock Chart 
+control: Stock Chart
 documentation: ug
 ---
 
-# Tooltip in Blazor Stock Chart Component
+# Tooltip in Blazor Stock Chart
 
 <!-- markdownlint-disable MD036 -->
 

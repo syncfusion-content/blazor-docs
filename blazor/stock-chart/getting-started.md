@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Get Started with Blazor Stock Chart in Blazor WASM App | Syncfusion
-description: Check out and learn about getting started with Blazor Stock Chart component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Stock Chart | Syncfusion
+description: Add the Blazor Stock Chart to a Blazor WebAssembly App using Visual Studio, Visual Studio Code, or the .NET CLI with step-by-step setup.
 platform: Blazor
-component: Stock Chart
+control: Stock Chart
 documentation: ug
 ---
 
-# Getting Started with Blazor Stock Chart in Blazor WASM App
+# Getting Started with Blazor Stock Chart
 
 This section briefly explains how to include the [Blazor Stock Chart](https://www.syncfusion.com/blazor-components/blazor-stock-chart) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
