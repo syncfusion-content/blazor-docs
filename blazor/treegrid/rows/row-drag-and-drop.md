@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Row Drag and Drop in Blazor TreeGrid Component | Syncfusion®
-description: Learn how to enable and use row drag-and-drop in the Blazor TreeGrid component and more details.
+description: Learn how to enable and use row drag-and-drop in the Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug

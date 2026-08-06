@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Row Template in Blazor Tree Grid Component | Syncfusion®
-description: Check out here and learn more details about the Row Template in the Blazor Tree Grid component and much more details.
+title: Row Template in Blazor TreeGrid Component | Syncfusion®
+description: Check out here and learn more details about the Row Template in the Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Row Template in Blazor Tree Grid Component
+# Row Template in Blazor TreeGrid Component
 
-To know more about Row Template in the Blazor tree grid Component, you can check this video.
+The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_RowTemplate) has an option to customize the look and behavior of the treegrid rows. The `RowTemplate` property accepts either the **template** string or HTML elements. When defining a row template, use the [RowTemplateTreeColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.RowTemplateTreeColumn.html) component to configure the tree column content and preserve the tree hierarchy's expand/collapse functionality in the custom row template.
+
+Watch the following video to learn more about Row Templates.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=cB4NjwFya_U"%}
-
-The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_RowTemplate) has an option to customize the look and behavior of the tree grid rows. The `RowTemplate` property accepts either the **template** string or HTML elements.
 
 {% tabs %}
 
@@ -67,7 +67,6 @@ The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGr
 
 
 @code{
-    public Employee model = new Employee();
     public IEnumerable<Employee> TreeData { get; set; }
     protected override void OnInitialized()
     {
@@ -155,7 +154,7 @@ If [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGri
                 </div>
             </td>
             <td style='padding-left: 20px; border-bottom: 0.5px solid #e0e0e0;'>
-                <div>@Format((context as Employee).DOB))</div>
+                <div>@Format((context as Employee).DOB)</div>
             </td>
         </RowTemplate>
     </TreeGridTemplates>
@@ -168,7 +167,6 @@ If [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGri
 </SfTreeGrid>
 
 @code{
-    public Employee model = new Employee();
     public IEnumerable<Employee> TreeData { get; set; }
     protected override void OnInitialized()
     {
@@ -220,7 +218,7 @@ public class Employee
 
 ## Limitations
 
-Row template feature is not compatible with all the features which are available in the tree grid and it has limited features support. Here the features which are compatible with row template feature are listed out.
+Row template feature is not compatible with all the features which are available in the TreeGrid and it has limited features support. Here the features which are compatible with row template feature are listed out.
 
 * Filtering
 * Paging
