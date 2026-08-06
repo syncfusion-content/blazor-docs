@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pagination in Blazor File Manager Component | Syncfusion®
-description: Checkout and learn here all about Pagination in the Blazor File Manager component and much more details.
-platform: Blazor
+title: Pagination in Blazor File Manager | Syncfusion
+description: Learn how to enable pagination in the Blazor File Manager and customize page size, current page, and the items per page dropdown.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Pagination in Blazor File Manager Component
+# Pagination in Blazor File Manager
 
 Pagination provides an option to display files and folders in segmented pages, making it easier to navigate through large directories. This feature is particularly useful when dealing with extensive file systems in the File Manager component.
 
