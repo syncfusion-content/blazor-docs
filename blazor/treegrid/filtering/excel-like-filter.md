@@ -166,7 +166,7 @@ You can customize the height and width of each column’s filter dialog using th
 
 Before opening a filter dialog for each column, the `FilterDialogOpening` event will be triggered. At that point, we can set the height and width of filter popup dynamically using CSS.
 
-In the following sample we have set the height and width of the TaskId and TaskName column's filter dialog using the CSS style.
+In the following sample we have set the height and width of the **TaskId** and **TaskName** column's filter dialog using the CSS style.
 
 {% tabs %}
 
