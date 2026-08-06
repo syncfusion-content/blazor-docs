@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Optimize Blazor WebAssembly Performance with AOT Compilation | Syncfusion®
+title: Optimize Blazor WASM Performance with AOT Compilation | Syncfusion®
 description: Enable AOT compilation in Blazor WebAssembly to improve performance, understand trade-offs, and review size considerations.
 platform: Blazor
 control: Common

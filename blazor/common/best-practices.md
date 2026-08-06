@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Best practices for optimizing Syncfusion Blazor App performance | Syncfusion®
+title: Best Practices for Optimizing Blazor App Performance | Syncfusion®
 description: Learn practical ways to optimize Blazor Apps, including smaller packages, minimal scripts, optimized themes, lazy loading, and PreventRender.
 platform: Blazor
 control: Common
