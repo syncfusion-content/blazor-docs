@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Serialization | Blazor Chart Wizard Component | Syncfusion®
-description: Check out and learn here all the features about serialization in Blazor Chart Wizard component and much more.
+title: Serialization in Blazor Chart Wizard | Syncfusion®
+description: Save and restore a Blazor Chart Wizard's full configuration as JSON using SaveChart and LoadChartAsync to persist user settings.
 platform: Blazor
 control: Chart Wizard
 documentation: ug
 keywords: chart wizard, blazor, serialization
 ---
 
-# Serialization in Blazor Chart Wizard Component
+# Serialization in Blazor Chart Wizard
 
 The `Chart Wizard` component makes it simple to save and restore your entire chart wizard configuration. This is useful for persisting user settings, sharing chart setups, or restoring previous states.
 
