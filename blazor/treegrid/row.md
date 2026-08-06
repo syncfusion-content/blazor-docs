@@ -188,7 +188,7 @@ public class TreeData
 
 ## Accessing row model information programmatically
 
-The Blazor Tree Grid Component provides a method called [GetRowModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetRowModel) that can be used to obtain the values associated with row model details. These details include the level, expanded status, child records status of a record.
+The Blazor TreeGrid Component provides a method called [GetRowModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetRowModel) that can be used to obtain the values associated with row model details. These details include the level, expanded status, child records status of a record.
 
 The returned `ITreeGridRowModel<TValue>` object provides the following properties:
 
@@ -203,7 +203,6 @@ The returned `ITreeGridRowModel<TValue>` object provides the following propertie
 * **Data** — The original data object associated with the row.
 * **CheckboxState** — The current checkbox state of the row (if checkbox selection is enabled).
 
-This is demonstrated in the below sample code where the [GetRowModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetRowModel) method is called on button click which returns the value of the row model details of the passed record.
 
 {% tabs %}
 
