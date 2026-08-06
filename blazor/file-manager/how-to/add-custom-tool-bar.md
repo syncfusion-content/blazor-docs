@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Adding Custom Item to Toolbar in Blazor File Manager | Syncfusion®
-description: Learn here all about adding custom item to toolbar in Blazor File Manager component and much more details.
-platform: Blazor
+title: Add a custom item to the toolbar in Blazor File Manager | Syncfusion
+description: Learn how to add and customize a custom toolbar item in the Blazor File Manager with icons, tooltips, and click handlers.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Adding Custom Item to Toolbar in Blazor File Manager Component
+# How to Add a Custom Item to the Toolbar in Blazor File Manager
 
 To enhance the customization of toolbar items, the [FileManagerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerToolbarSettings.html) tag and [FileManagerCustomToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerCustomToolbarItem.html) property can be utilized. These features allow for easy addition, appearance, modification of custom toolbar items.
 

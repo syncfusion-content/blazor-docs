@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Physical provider in Blazor File Manager Component | Syncfusion®
-description: Checkout and learn here all about Physical file system provider in Blazor File Manager component and much more details.
-platform: Blazor
+title: Physical Provider in Blazor File Manager | Syncfusion
+description: Learn how to use the physical file system provider in the Blazor File Manager to browse and manage files on a local disk.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Physical file system provider
+# Physical Provider in Blazor File Manager
 
 The Physical file system provider allows the users to access and manage the physical file system. To get started, clone the [Physical file system provider](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider) using the following command.
 
