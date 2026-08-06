@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Commands in Blazor InlineAIAssist Control | Syncfusion
-description: Checkout and learn about Command items with Blazor Inline AI Assist component in Blazor Server App and Blazor WebAssembly App.
+title: Commands configuration in Blazor Inline AI Assist | Syncfusion
+description: Configure quick-action commands using CommandSettings to add custom items with prompts, labels, icons, and customize popup dimensions.
 platform: Blazor
 control: Inline AI Assist
 documentation: ug
 ---
 
-# Commands configuration in Blazor Inline AI Assist control
+# Commands configuration in Blazor Inline AI Assist
 
 You can render and use the command action popup by using the `Commands` property in the `CommandSettings` tag helper. This property helps to supply commands, control popup dimensions, and customize behavior.
 

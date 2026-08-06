@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Messages in Blazor Chat UI | Syncfusion®
-description: Manage and display messages in Blazor Chat UI with the Messages collection property, supporting message text, author identification via UserModel, and user differentiation.
+description: Manage and display messages in Blazor Chat UI with the Messages collection property, supporting message text, author identification, and user differentiation.
 platform: Blazor
 control: Chat UI
 documentation: ug
