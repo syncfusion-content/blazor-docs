@@ -9,9 +9,9 @@ documentation: ug
 
 # Tooltips in Blazor Stepper Component
 
-The Stepper component supports tooltip to show additional information in the steps by setting the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_ShowTooltip) property to `true`. 
+The Stepper component supports tooltips to show additional information on the steps by setting the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_ShowTooltip) property to `true`.
 
-The tooltip appears when the user hovers over the step, providing the information such as the label or text. By default, the `ShowTooltip` property is `false`.
+The tooltip appears when the user hovers over the step, providing information such as the step's label or text. By default, the `ShowTooltip` property is `false`.
 
 ```cshtml
 
@@ -139,3 +139,25 @@ When hovering over the step, the current step model is passed in the template co
 ```
 
 ![Blazor Stepper Component with Tooltip Template](./images/Blazor-tooltip-template.webp)
+
+## Customizing tooltip position and delay
+
+The Stepper renders tooltips using the underlying SfTooltip behavior. To customize the position or the open/close delay, set the corresponding properties on the Stepper's `TooltipSettings`.
+
+The following example positions the tooltip at the bottom and sets a 500 ms open delay:
+
+```cshtml
+
+@using Syncfusion.Blazor.Navigations
+
+<SfStepper ShowTooltip="true">
+    <StepperSteps>
+        <StepperStep IconCss="sf-icon-cart" Label="Cart"></StepperStep>
+        <StepperStep IconCss="sf-icon-transport" Label="Delivery"></StepperStep>
+        <StepperStep IconCss="sf-icon-payment" Label="Payment"></StepperStep>
+        <StepperStep IconCss="sf-icon-success" Label="Confirmation"></StepperStep>
+    </StepperSteps>
+    <TooltipSettings Position="TooltipPosition.Bottom" OpenDelay="500"></TooltipSettings>
+</SfStepper>
+
+```
