@@ -487,7 +487,7 @@ The Pivot Table is rendered in `Components/Pages/Home.razor`. It binds to the AP
 
 Add the Syncfusion namespaces required by the Pivot Table to `Components/_Imports.razor` so they are available across all components:
 
-```razor
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PivotView
 @using Syncfusion.Blazor.Data
@@ -507,7 +507,7 @@ Register the Syncfusion theme and client scripts in `Components/App.razor`:
 
 Configure the `SfPivotView` with `SfDataManager` bound to the API endpoints and the `UrlAdaptor`:
 
-```razor
+```cshtml
 <SfPivotView TValue="Order" Width="1000" Height="300" ShowFieldList="true">
     <PivotViewDataSourceSettings TValue="Order" ExpandAll="false" EnableSorting="true">
         <SfDataManager Url="/api/Order"
