@@ -9,7 +9,13 @@ documentation: ug
 
 # Tooltip in Blazor Rating Component
 
-The Blazor Rating component provides tooltip support to display additional information for rating items. Set the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ShowTooltip) property to control the visibility of tooltips. By default, this property is set to true, and a tooltip is displayed when the user hovers over a rating item. When set to false, tooltips are disabled and will not be shown for rating items.
+The Blazor Rating component provides tooltip support to display additional information for rating items. Use the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ShowTooltip) property to toggle tooltips. The default value is `true`. When `true`, a tooltip is shown for the item under the pointer; when `false`, tooltips are disabled.
+
+> **Prerequisites:** Install the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) NuGet package and add `@using Syncfusion.Blazor.Inputs` to your component.
+
+> **Supported versions:** Syncfusion Blazor `Syncfusion.Blazor` (compatible with .NET 6.0, .NET 7.0, .NET 8.0, and .NET 9.0).
+
+> **Mobile behavior:** On touch-only devices, the hover-based tooltip is replaced with a long-press interaction. Set `ShowTooltip="false"` if you want to suppress tooltips entirely on touch devices.
 
 ```cshtml
 
@@ -23,7 +29,7 @@ The Blazor Rating component provides tooltip support to display additional infor
 
 ## Tooltip template
 
-Use the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_TooltipTemplate) tag directive to define custom content for the tooltip. The current item’s value is passed to the template as the `context` (a double), allowing dynamic tooltip content based on the hovered item.
+Use the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_TooltipTemplate) tag directive to define custom content for the tooltip. The current item’s value is passed to the template as `@context` (a `double`), so you can render dynamic content based on the hovered item. Keep tooltip content concise (under ~80 characters) and avoid interactive elements inside the template.
 
 ```cshtml
 
@@ -31,7 +37,7 @@ Use the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 <SfRating Value=4 ShowTooltip=true>
     <TooltipTemplate>
-        <b>@((context == 1)?"Angry":(context == 2)?"Sad":(context == 3)?"Neutral":(context == 4)?"Good":"Happy")</b>
+        <b>@((context == 1) ? "Angry" : (context == 2) ? "Sad" : (context == 3) ? "Neutral" : (context == 4) ? "Good" : "Happy")</b>
     </TooltipTemplate>
 </SfRating>
 
@@ -41,9 +47,9 @@ Use the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## Tooltip customization
 
-Customize the appearance of tooltips by assigning a custom CSS class using the `CssClass` property on the Blazor Rating component and writing styles scoped to that class. The class is applied to the component’s root element, which lets you target the nested tooltip elements without affecting other tooltips.
+Use the `CssClass` property on the Rating component and write styles scoped to that class to customize the tooltip. The class is applied to the component's root element, so you can target the nested tooltip elements without affecting other tooltips on the page.
 
-N> For more details on styling options, refer to the [tooltip customization](https://blazor.syncfusion.com/documentation/tooltip/style) documentation. For accessibility, ensure tooltip text is concise, meaningful, and readable. Tooltips should supplement visible information.
+> For more details on styling options, refer to the [Tooltip styling documentation](https://blazor.syncfusion.com/documentation/tooltip/style). For accessibility, ensure tooltip text is concise, meaningful, and readable; tooltips should supplement visible information rather than replace it.
 
 ```cshtml
 
@@ -60,7 +66,7 @@ N> For more details on styling options, refer to the [tooltip customization](htt
 
     /* To change the size of the tooltip content. */
     .customtooltip .e-tooltip-wrap .e-tip-content {
-        font-size:14px;
+        font-size: 14px;
     }
 
     /* To change the border color and width for tooltip. */
@@ -68,9 +74,9 @@ N> For more details on styling options, refer to the [tooltip customization](htt
         border: 2px solid #969393;
     }
 
-    /* To change the color for arrow of the tooltip. */
+    /* To change the color for the arrow of the tooltip. */
     .customtooltip .e-tooltip-wrap .e-arrow-tip-inner.e-tip-bottom {
-        border: 12px solid #9693
+        border-top: 12px solid #969393;
     }
 
     /* To change the top border color for arrow of the tooltip. */
@@ -81,4 +87,15 @@ N> For more details on styling options, refer to the [tooltip customization](htt
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhxtmMopsEinSxW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "![Blazor Rating component with tooltip customization](./images/blazor-rating-custom-tooltip.webp)" %}
+
+![Blazor Rating component with tooltip customization](./images/blazor-rating-custom-tooltip.webp)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhxtmMopsEinSxW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+**Supported CSS variables**
+
+The Rating tooltip exposes the following CSS custom properties that can be overridden within the `customtooltip` scope:
+
+* `--e-tooltip-border-color` - Border color of the tooltip popup.
+* `--e-tooltip-bg-color` - Background color of the tooltip.
+* `--e-tooltip-color` - Text color of the tooltip content.
