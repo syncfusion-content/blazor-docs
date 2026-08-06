@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Firebase Firestore in Blazor Data Grid.
+# Firebase Firestore in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a Firebase Firestore database using the Google.Cloud.Firestore library. This approach provides a flexible and scalable solution for working with NoSQL cloud-based databases.
 

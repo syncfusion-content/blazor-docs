@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# SQL Server with Dapper in Blazor Data Grid.
+# SQL Server with Dapper in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from SQL Server using the lightweight Dapper micro‑ORM. This modern approach provides a simpler, more direct alternative where raw SQL control is preferred.
 
