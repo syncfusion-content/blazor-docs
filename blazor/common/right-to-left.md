@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Right-to-Left (RTL) Support in Blazor Common | Syncfusion®
+title: Implement Right-to-Left (RTL) Support in Blazor | Syncfusion®
 description: Learn how to enable RTL support globally or per component for Blazor components in Blazor Web App, Blazor WASM standalone, and Blazor Server App.
 platform: Blazor
 control: Common

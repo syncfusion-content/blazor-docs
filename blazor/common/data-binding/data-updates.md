@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data updates with Interface in Blazor Common | Syncfusion®
+title: Data updates with Interface in Blazor | Syncfusion®
 description: Learn how Blazor components react to changes from ObservableCollection and INotifyPropertyChanged without manual refresh. Explore to more details.
 platform: Blazor
 component: Common

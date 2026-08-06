@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Extend, Customize, and Reuse Components in Blazor Common | Syncfusion®
+title: Component Reusability and Customization in Blazor | Syncfusion®
 description: Learn how to extend, compose, and reuse Blazor components, including dynamic rendering patterns.
 platform: Blazor
 control: Common

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Default HTML Attributes and DOM Events in Blazor Common | Syncfusion®
+title: Default HTML Attributes and DOM Events in Blazor | Syncfusion®
 description: Learn how to use standard HTML attributes and DOM events with Blazor components on input and root elements.
 platform: Blazor
 control: Common
