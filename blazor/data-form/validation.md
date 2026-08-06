@@ -9,7 +9,7 @@ documentation: ug
 
 # Validation in DataForm component
 
-DataForm supports standard and custom validation compatible with the[EditForm](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.editform?view=aspnetcore-7.0) component. Such as [DataAnnotationsValidator](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.dataannotationsvalidator?view=aspnetcore-7.0) , [ObjectGraphDataAnnotationsValidator ](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/validation?view=aspnetcore-8.0#nested-models-collection-types-and-complex-types) etc...We can specify the required validation inside `FormValidator` RenderFragment of the DataForm component , The following examples illustrate the procedures for setting up the component with various validation.
+DataForm supports standard and custom validation compatible with the [EditForm](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.editform?view=aspnetcore-7.0) component, such as [DataAnnotationsValidator](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.dataannotationsvalidator?view=aspnetcore-7.0) and [ObjectGraphDataAnnotationsValidator](https://learn.microsoft.com/aspnet/core/blazor/forms/validation?view=aspnetcore-8.0#nested-models-collection-types-and-complex-types). You can specify the required validation inside the `FormValidator` RenderFragment of the DataForm component. The following examples illustrate the procedures for setting up the component with various validation approaches.
 
 ## Data annotations validation
 
