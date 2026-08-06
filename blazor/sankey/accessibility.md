@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Sankey Component | Syncfusion
-description: Checkout and learn here all about Accessibility using Keyboard navigation in Syncfusion Blazor Sankey component and more.
+title: Accessibility in Blazor Sankey Component | Syncfusion®
+description: Checkout and learn here all about Accessibility using Keyboard navigation in Blazor Sankey component and more.
 platform: Blazor
 control: Sankey
 documentation: ug
@@ -78,6 +78,6 @@ The accessibility compliance of the Blazor Sankey component is shown in the foll
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
 
-* [Accessibility Customization in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](./advanced-accessibility-configuration)
+* [Accessibility Customization in Blazor components](./advanced-accessibility-configuration)

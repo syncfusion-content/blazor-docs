@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Multiline in Blazor TextBox Component | Syncfusion
-description: Checkout and learn here all about Multiline in Syncfusion Blazor TextBox component and much more details.
+title: Multiline in Blazor TextBox Component | Syncfusion®
+description: Checkout and learn here all the features about Multiline in Blazor TextBox component and much more details.
 platform: Blazor
 control: TextBox
 documentation: ug

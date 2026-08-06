@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Fine-tune with Blazor Image Editor Component | Syncfusion
+title: Fine-tune with Blazor Image Editor Component | Syncfusion®
 description: Discover the Finetune feature available in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor

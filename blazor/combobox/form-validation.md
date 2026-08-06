@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Form Validation in Blazor ComboBox Component | Syncfusion
+title: Form Validation in Blazor ComboBox Component | Syncfusion®
 description: Checkout and learn about Form validation with Blazor ComboBox component in Blazor Sever App and Blazor WebAssembly App.
 platform: Blazor
 control: ComboBox
@@ -9,7 +9,7 @@ documentation: ug
 
 # Form Validation in ComboBox
 
-This article demonstrates how to use the Syncfusion ComboBox within a Blazor EditForm to validate user input with data annotations. The example shows a form where the user selects an item from the ComboBox, and validation ensures required fields are completed before submission.
+This article demonstrates how to use the Blazor ComboBox within a Blazor EditForm to validate user input with data annotations. The example shows a form where the user selects an item from the ComboBox, and validation ensures required fields are completed before submission.
 
 ## ComboBox inside edit form
 
@@ -29,4 +29,4 @@ When the ComboBox input is valid, the form is ready to be submitted. If the inpu
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrKWVrGUcRBhJQE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox inside editform](./images/form-validation/blazor_combobox_inside-editform.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLdDxhqUDbRLhul?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ComboBox inside editform](./images/form-validation/blazor_combobox_inside-editform.webp)" %}

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and Appearance in Blazor TreeMap Component | Syncfusion
-description: Check out and learn about Style and Appearance customization in the Syncfusion Blazor TreeMap component.
+title: Style and Appearance in Blazor TreeMap Component | Syncfusion®
+description: Check out and learn about Style and Appearance customization in the Blazor TreeMap component and more details.
 platform: Blazor
 control: TreeMap
 documentation: ug

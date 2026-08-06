@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Selection styling with CSS in Blazor TreeGrid | Syncfusion
-description: Learn how to style row and cell selection in Syncfusion Blazor TreeGrid using CSS, with tips on isolation and selector specificity.
+title: Selection styling with CSS in Blazor TreeGrid | Syncfusion®
+description: Learn how to style row and cell selection in Blazor TreeGrid using CSS, with tips on isolation and selector specificity.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Selection customization in Syncfusion Blazor TreeGrid
+# Selection customization in Blazor TreeGrid
 
-The appearance of selection elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid can be customized using CSS. Styling options are available for:
+The appearance of selection elements in the Blazor TreeGrid can be customized using CSS. Styling options are available for:
 
 - **Row selection background:** Highlights the entire row when selected.
 - **Cell selection background:** Highlights individual cells when selected.
@@ -171,7 +171,7 @@ public class ShipmentData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrxDphrTkisQobX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVxNGNFJsUcscbr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize cell selection background
 
@@ -329,4 +329,4 @@ public class ShipmentData
 
 {% endhighlight %}
 {% endtabs %}
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLxXzVVTuylwmnU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVHXGtFfWzibrqn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

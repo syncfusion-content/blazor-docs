@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Clear an Image with Blazor Image Editor Component | Syncfusion
+title: Clear an Image with Blazor Image Editor Component | Syncfusion®
 description: Learn how to clear an image in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor

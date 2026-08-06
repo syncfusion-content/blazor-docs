@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Native Events in Blazor DateRangePicker Component | Syncfusion
-description: Checkout and learn here all about Native Events in Syncfusion Blazor DateRangePicker component and more.
+title: Native Events in Blazor DateRangePicker Component | Syncfusion®
+description: Checkout and learn here all about Native Events in Blazor DateRangePicker component and much more details.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
@@ -77,4 +77,4 @@ Using Lambda expression also, you can pass the event data to the event handler.
 | ondblclick | onkeydown | onkeyup | onkeypress |
 | ontouchend | onfocusin | onmouseup | ontouchstart |
 
-N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap4) to understand how to present and manipulate data.
+N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=fluent2) to understand how to present and manipulate data.

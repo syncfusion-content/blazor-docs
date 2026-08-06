@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Sidebar Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Sidebar component and more details.
+title: Accessibility in Blazor Sidebar Component | Syncfusion®
+description: Checkout and learn here all the features about Accessibility in Blazor Sidebar component and more details.
 platform: Blazor
 control: Sidebar
 documentation: ug
@@ -39,7 +39,7 @@ The accessibility compliance for the Blazor Sidebar component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Blazor Sidebar component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet accessibility standards. By default, the Sidebar utilizes the [complementary](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role) role, with the option to modify the ARIA role based on provided attributes to the root element, depending on the specific use case.
+The Blazor Sidebar component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet accessibility standards. By default, the Sidebar utilizes the [complementary](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role) role, with the option to modify the ARIA role based on provided attributes to the root element, depending on the specific use case.
 
 If there are multiple complementary landmark roles or aside elements in a document, it is important to provide a label for each landmark using the `aria-label` attribute. Alternatively, if the aside has a descriptive title, it can be referenced using the `aria-labelledby` attribute. This label will help assistive technology users quickly understand the purpose of each landmark.
 
@@ -57,4 +57,4 @@ The accessibility compliance of the Sidebar component is shown in the following 
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

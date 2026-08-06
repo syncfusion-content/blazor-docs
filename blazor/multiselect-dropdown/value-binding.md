@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Value Binding in Blazor MultiSelect Component | Syncfusion
-description: Checkout and learn here all about Value Binding in Syncfusion Blazor MultiSelect component and more.
+title: Value Binding in Blazor MultiSelect Component | Syncfusion®
+description: Checkout and learn here all about Value Binding in Blazor MultiSelect component and much more details.
 platform: Blazor
 control: MultiSelect
 documentation: ug

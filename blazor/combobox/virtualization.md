@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Virtualization in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Virtualization in Syncfusion Blazor ComboBox component and much more.
+title: Virtualization in Blazor ComboBox Component | Syncfusion®
+description: Checkout and learn here all the features about Virtualization in Blazor ComboBox component and much more.
 platform: Blazor
 control: ComboBox
 documentation: ug
@@ -21,7 +21,7 @@ This feature is applicable to both local and remote data scenarios, providing fl
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBgCVBQqlgGofzc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with virtualization](./images/blazor_combobox_virtualization.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBnjxhKhVJevbJJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ComboBox with virtualization](./images/blazor_combobox_virtualization.webp)" %}
 
 ## Remote data
 

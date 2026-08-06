@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip in Blazor TreeMap Component | Syncfusion
-description: Checkout and learn here all about Tooltip in Syncfusion Blazor TreeMap component and much more details.
+title: Tooltip in Blazor TreeMap Component | Syncfusion®
+description: Checkout and learn here all the features about Tooltip in Blazor TreeMap component and much more details.
 platform: Blazor
 control: TreeMap
 documentation: ug
@@ -13,7 +13,7 @@ Tooltip is used to display details about the items in the TreeMap. When space co
 
 ## Default tooltip
 
-The tooltip is not visible by default, to make it visible, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Visible) property in the [TreeMapTooltipSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html) to **true**.
+The tooltip is not visible by default, to make it visible, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Visible) property in the [TreeMapTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html) to **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -87,7 +87,7 @@ N> Refer to the [code block](#default-tooltip) to know about the property value 
 
 ## Tooltip template
 
-Tooltip can be rendered as a custom component using the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_TooltipTemplate) property in the [TreeMapTooltipSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html) which accepts one or more UI elements as an input, that can be rendered as a part of the tooltip rendering.
+Tooltip can be rendered as a custom component using the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_TooltipTemplate) property in the [TreeMapTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html) which accepts one or more UI elements as an input, that can be rendered as a part of the tooltip rendering.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap

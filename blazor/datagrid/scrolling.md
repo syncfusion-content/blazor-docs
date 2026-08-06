@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Scrolling in Blazor DataGrid | Syncfusion
-description: Learn how to configure scrolling and explore various customization options in the Syncfusion Blazor DataGrid component for enhanced user experience.
+title: Blazor Grid Scrolling | Syncfusion
+description: Learn how to configure scrolling in Blazor Data Grid, customize horizontal and vertical scrolling, and improve navigation for large datasets.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Scrolling in Blazor DataGrid
+# Scrolling in Blazor Data Grid
 
 The scrolling feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables navigation through content that extends beyond the visible area of the Grid. Scrollbars appear automatically when content exceeds the specified **Width** or **Height** of the Grid element. This is useful for large datasets or when the Grid must fit within a constrained layout. The vertical and horizontal scrollbars are displayed based on the following criteria:
 
@@ -95,7 +95,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjryNWBTfUaCEgqf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVRZwNRhiDRsWyU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Responsive with parent container
 
@@ -162,7 +162,7 @@ public class LazyLoadDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLIjMBcAgEnKHGz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBRNwjdVMWBmbzB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Sticky header
 
@@ -241,7 +241,7 @@ public class LazyLoadDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLIZfLlyiVvXGhD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLnjwDRVWiHMBBS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Scroll to selected row
 
@@ -353,7 +353,7 @@ public class LazyLoadDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthyZpBboVNkPPvv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhRDGDHBiLtkUgW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize the appearance of scrollbar
 
@@ -446,6 +446,6 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLIjfVOsgWujwMH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBdNGjnhMVlqfgC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > A fully working sample is available [here](https://github.com/SyncfusionExamples/blazor-datagrid-customize-default-scrollbar).

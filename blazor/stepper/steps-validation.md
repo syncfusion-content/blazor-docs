@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Validation in Blazor Stepper Component | Syncfusion
+title: Validation in Blazor Stepper Component | Syncfusion®
 description: Checkout and learn about Validation with Blazor Stepper component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Stepper
@@ -68,7 +68,7 @@ The Stepper component allows you to set the validation state for each step, disp
 
 ```
 
-![Blazor Stepper Component with Validation](./images/Blazor-validation.png)
+![Blazor Stepper Component with Validation](./images/Blazor-validation.webp)
 
 ## Validating fields
 
@@ -378,4 +378,4 @@ You can validate the fields within the stepper component. In the below shared ex
 
 ```
 
-![Validation using editform](./images/edit-form.png)
+![Validation using editform](./images/edit-form.webp)

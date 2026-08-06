@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Styles and Appearances in Blazor Dropdown Menu Component | Syncfusion
-description: Checkout and learn here all about Styles and Appearances in Syncfusion Blazor Dropdown Menu component and more.
+title: Styles and Appearances in Blazor Dropdown Menu Component | Syncfusion®
+description: Checkout and learn here all about Styles and Appearances in Blazor Dropdown Menu component and more.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
@@ -10,8 +10,6 @@ documentation: ug
 # Styles and Appearances in Blazor Dropdown Menu Component
 
 To modify the appearance of the DropDownButton, override the component’s default CSS. The following CSS classes target the button and popup elements in different states. Custom styles can be added to the application’s stylesheet. Alternatively, create a custom theme using [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=bootstrap5).
-
-## CSS Classes for Customization
 
 | CSS class | Purpose |
 |-----|-----|
@@ -39,7 +37,7 @@ The Dropdown Menu component can be disabled by setting the [Disabled](https://he
 </SfDropDownButton>
 ```
 
-![Disabled state of Blazor DropDownMenu](./images/blazor-dropdownmenu-in-disable-state.webp)
+![Disabled state of Blazor DropDownMenu](.\images\blazor-dropdownmenu-in-disable-state.png)
 
 ## Create Dropdown Menu with Rounded Corner
 
@@ -66,4 +64,4 @@ In the following example, the `e-round-corner` class sets a `5px` `border-radius
 
 ```
 
-![Blazor DropDownMenu with Rounded Corner](./images/blazor-dropdownmenu-with-rounded-corner.webp)
+![Blazor DropDownMenu with Rounded Corner](.\images\blazor-dropdownmenu-with-rounded-corner.png)

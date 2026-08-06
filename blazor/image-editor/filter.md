@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Filter with Blazor Image Editor Component | Syncfusion
+title: Filter with Blazor Image Editor Component | Syncfusion®
 description: Explore image filter options in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor

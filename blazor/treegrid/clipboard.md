@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Clipboard in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about clipboard in Syncfusion Blazor TreeGrid component and much more details.
+title: Clipboard in Blazor TreeGrid Component | Syncfusion®
+description: Checkout and learn here all the features about clipboard in Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug

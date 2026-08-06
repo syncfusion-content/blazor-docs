@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column Resizing in Blazor DataGrid Component | Syncfusion
-description: Learn how to resize columns in the Syncfusion Blazor DataGrid, including programmatic resizing, stacked headers, touch support, and events.
+title: Blazor Grid Column Resizing | Syncfusion
+description: Learn how to resize columns in Blazor Data Grid using drag-and-drop, auto-fit, APIs, touch interactions, stacked headers, and resize events.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Column Resizing in Blazor DataGrid
+# Column Resizing in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides an intuitive interface for resizing columns to fit their content. This feature allows columns to be adjusted for improved readability and layout control.
 
@@ -86,7 +86,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVJWLXdfpEFruXA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVdNGjCpSesjhLc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * To disable resizing for a specific column, set the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
 > * In RTL mode, column resizing is performed by dragging the left edge of the header cell.
@@ -170,7 +170,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrJChtRfnLvXiTu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhxDGZCTSSpNZPl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * The `MinWidth` and `MaxWidth` properties are applied only during column resizing. These constraints are not enforced when resizing the browser window.
 > * Ensure that the values assigned to `MinWidth` and `MaxWidth` are suitable for the content and layout requirements.
@@ -245,7 +245,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhJsBsWiczvQVGx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBdDmNszyodmXvP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > Resizing can also be prevented dynamically by setting **args.Cancel** to **true** in the [OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnResizeStart) event.
 
@@ -329,7 +329,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhfWrWihrtoRpwi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhHDwZszeRsLVqJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Touch interaction
 
@@ -463,7 +463,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLzCrCWVoSJCfYw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrdZcNMfemtjwjl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Resizing events
 
@@ -589,4 +589,4 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBTWViiLnOofXge?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrnNcZiTemxmKLj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

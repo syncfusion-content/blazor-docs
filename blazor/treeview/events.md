@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor TreeView component and much more details.
+title: Events in Blazor TreeView Component | Syncfusion®
+description: Checkout and learn here all the features about Events in Blazor TreeView component and much more details.
 platform: Blazor
 control: TreeView
 documentation: ug

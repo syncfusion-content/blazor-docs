@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Excel Like Filter in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about Excel like filter in Syncfusion Blazor Tree Grid component and much more details.
+title: Excel Like Filter in Blazor Tree Grid Component | Syncfusion®
+description: Checkout and learn here all about Excel like filter in Blazor Tree Grid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Excel Like Filter in Blazor Tree Grid Component
 
-Excel like filter can be enabled by defining the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings~Type.html) of [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html) as **Excel**. The excel menu contains an option such as Sorting, Clear filter, Sub menu for advanced filtering.
+Excel like filter can be enabled by defining the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_Type) of [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html) as **Excel**. The excel menu contains an option such as Sorting, Clear filter, Sub menu for advanced filtering.
 
 {% tabs %}
 

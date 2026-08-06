@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Virtualization in Blazor TreeGrid Component | Syncfusion
-description: Learn how to optimize large data rendering using virtualization features in Syncfusion Blazor TreeGrid component.
+title: Virtualization in Blazor TreeGrid Component | Syncfusion®
+description: Learn how to optimize large data rendering using virtualization features in Blazor TreeGrid component.
 platform: Blazor
 control: TreeGrid
 documentation: ug
@@ -13,7 +13,7 @@ Virtualization enables the efficient rendering of large datasets in the TreeGrid
 
 ## Row Virtualization
 
-Row virtualization renders only the rows visible in the viewport, appending additional records as the user scrolls vertically. This technique serves as an alternative to paging and improves performance by reducing the number of DOM elements. Enable row virtualization by setting the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~EnableVirtualization.html) property to `true` and specifying the content height using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~Height.html) property.
+Row virtualization renders only the rows visible in the viewport, appending additional records as the user scrolls vertically. This technique serves as an alternative to paging and improves performance by reducing the number of DOM elements. Enable row virtualization by setting the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualization) property to `true` and specifying the content height using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Height) property.
 
 The number of records displayed is determined implicitly by the content area's height, with additional buffer records maintained for smooth scrolling. Expand and Collapse states of child records are persisted during virtualization.
 
@@ -335,7 +335,7 @@ By default, the TreeGrid renders twice as many records as the defined height per
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVHXBLThJiOQFnr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVdtctlpKXixSun?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 N> When the OverscanCount is set to 5, five buffer rows are rendered on the first and last pages. In between pages, a total of ten buffer rows (five before and five after) are rendered around the visible rows.
 

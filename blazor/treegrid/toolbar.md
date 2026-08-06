@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Toolbar in Blazor TreeGrid Component | Syncfusion
-description: Learn how to configure built-in and custom toolbar items in the Syncfusion Blazor TreeGrid component and much more details.
+title: Toolbar in Blazor TreeGrid Component | Syncfusion®
+description: Learn how to configure built-in and custom toolbar items in the Blazor TreeGrid component and much more details.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Toolbar in Syncfusion Blazor TreeGrid Component
+# Toolbar in Blazor TreeGrid Component
 
 The TreeGrid component supports a toolbar that facilitates various grid actions such as printing, searching, exporting, and editing.
 
@@ -100,7 +100,7 @@ public class TreeData
 
 ![Blazor TreeGrid with Built-in Toolbar](images/blazor-treegrid-built-in-toolbar.webp)
 
-N> The [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Toolbar.html) property supports both built-in and custom toolbar items.
+N> The [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar) property supports both built-in and custom toolbar items.
 
 ## Enable/Disable Toolbar Items
 

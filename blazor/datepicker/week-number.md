@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Week Numbers in Blazor DatePicker Component | Syncfusion
-description: Checkout and learn here all about Week Numbers in Syncfusion Blazor DatePicker component and more details.
+title: Week Numbers in Blazor DatePicker Component | Syncfusion®
+description: Checkout and learn here all the features about Week Numbers in Blazor DatePicker component and more details.
 platform: Blazor
 control: DatePicker
 documentation: ug
@@ -30,7 +30,7 @@ Types  |Description
 -----|-----
 FirstDay |Set the first week of the year's week number to be started from 1. Then it followed as 1, 2, 3 ...
 FirstFullWeek |Set the first week of the year's week number to be started from 52 or 53 (i.e December last week's week Number). Then it followed as 53, 1, 2 ...
-FirstFourDayWeek | Set the week number based on the majority of dates present in the week for the respected months. If January dates are presented in the week more than December, the first week of the year's week number will be started from 1. If December dates are presented in the week more than January, the first week of the year's week number will be started from 52 or 53.
+FirstFourDayWeek | Set the week number based on the majority of dates present in the week for the respective months. If January dates are presented in the week more than December, the first week of the year's week number will be started from 1. If December dates are presented in the week more than January, the first week of the year's week number will be started from 52 or 53.
 
 
 

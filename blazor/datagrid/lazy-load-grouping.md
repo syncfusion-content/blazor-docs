@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Lazy load grouping in Blazor DataGrid | Syncfusion
-description: Learn how to enable lazy load grouping in Syncfusion Blazor DataGrid with on-demand data loading, infinite scrolling, and virtual scrolling for large datasets.
+title: Blazor Grid Lazy Load Grouping for Large Data Performance | Syncfusion
+description: Learn how to enable lazy load grouping in Blazor Data Grid with on-demand loading and efficient handling of large datasets.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Lazy Load Grouping in Blazor DataGrid
+# Lazy Load Grouping for Large Data Performance in Blazor Data Grid
 
 In Blazor, lazy loading refers to loading data dynamically only when needed, rather than loading everything upfront. This approach reduces initial load time and improves application performance.
 
@@ -109,7 +109,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBfXWNvAIVdashy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVHjmXAorAdFMtg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
 ## Lazy load grouping with infinite scrolling
@@ -220,7 +220,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBfjiNqTFAghOTK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthHjmXUeBgYdpSj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * The [EnableInfiniteScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableInfiniteScrolling) property is optional and can be set based on the requirement.
 > * When `EnableLazyLoading` is enabled with `EnableInfiniteScrolling`, the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) and [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) properties must be defined.
@@ -315,7 +315,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVUsCMzgHLDLmbm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLHXwXUeVfqKOZj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * When `EnableLazyLoading` is enabled with `EnableVirtualization`, the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) property of [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html) and the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property must be defined.
 > * When enabling lazy load grouping with virtual scrolling, the [EnableVirtualMaskRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualMaskRow) property is enabled by default; there is no need to set it explicitly.
@@ -323,7 +323,7 @@ public class OrderData
 
 ## Lazy load grouping with custom adaptor
 
-Use a Custom Adaptor of DataManager when binding remote data. Along with the default server request, this feature sends additional details to handle lazy load grouping. On the server, these details are bound to the **LazyLoad** and **LazyExpandAllGroup** parameters in the [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataManagerRequest.html) model. For implementing server logic, extend the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataAdaptor.html) class.
+Use a Custom Adaptor of DataManager when binding remote data. Along with the default server request, this feature sends additional details to handle lazy load grouping. On the server, these details are bound to the **LazyLoad** and **LazyExpandAllGroup** parameters in the [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) model. For implementing server logic, extend the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) class.
 
 | Property Name | Description |
 |-------|---------|

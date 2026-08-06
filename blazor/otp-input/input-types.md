@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Input Types in Blazor OTP Input Component | Syncfusion
-description: Checkout and learn here all about Input Types with Syncfusion Blazor OTP Input component in Blazor Server App and Blazor WebAssembly App.
+title: Input Types in Blazor OTP Input Component | Syncfusion®
+description: Learn about input types in Blazor OTP Input component including Number, Text, and Password types with examples.
 platform: Blazor
 control: OTP Input
 documentation: ug

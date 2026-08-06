@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create Blazor TextBox component dynamically | Syncfusion
-description: Learn here all about how to create TextBox component dynamically in Syncfusion Blazor TextBox component and more.
+title: Create Blazor TextBox component dynamically | Syncfusion®
+description: Learn here all about how to create TextBox component dynamically in Blazor TextBox component and much more details.
 platform: Blazor
 control: TextBox
 documentation: ug

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Custom File Provider in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about Custom File System Provider in Syncfusion Blazor File Manager component and more.
-platform: Blazor
+title: Custom File Provider in Blazor File Manager | Syncfusion
+description: Learn how to build a custom file provider for the Blazor File Manager by following the standard request and response format for file actions.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Custom file provider for Blazor File Manager Component
+# Custom File Provider in Blazor File Manager
 
-You can also create a custom file provider specific to your needs to connect with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component, instead of relying on the above listed predefined providers offered by Syncfusion. Additionally, you need to ensure that the file actions requests and responses adhere to the same format used in the file system. Below are the details for each file action, to know more information about their request and response parameters.
+You can also create a custom file provider specific to your needs to connect with the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component, instead of relying on the above listed predefined providers offered by Syncfusion. Additionally, you need to ensure that the file actions requests and responses adhere to the same format used in the file system. Below are the details for each file action, to know more information about their request and response parameters.
 
 
 * **Read** - This action is used to read files and directories from the file system. It retrieves the list of files and subdirectories in a specified directory. Click this [link](https://blazor.syncfusion.com/documentation/file-manager/file-operations#reading-files-and-folders) to know about the request and response parameters of read operations.

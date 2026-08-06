@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Apply custom style to pivot cells in Blazor Pivot Table | Syncfusion
-description: Learn here all about Apply custom style to pivot cells in Syncfusion Blazor Pivot Table component and more.
+title: How to style pivot cells in Blazor Pivot Table | Syncfusion
+description: Step-by-step example showing how to style pivot cells in the Blazor Pivot Table, using the EnginePopulated event and the cellData.CssClass property.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Apply custom style to pivot cells in Blazor Pivot Table Component
+# How to style pivot cells in Blazor Pivot Table
 
 The [EnginePopulated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_EnginePopulated) event in the [PivotViewEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html) triggers each time the report changes and the engine updates. This event lets you add your own styles to row, column, and value cells in the Pivot Table.
 

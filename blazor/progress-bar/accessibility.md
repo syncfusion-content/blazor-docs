@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor ProgressBar Component | Syncfusion
-description: Checkout and learn here all about Accessibility using Keyboard navigation in Syncfusion Blazor ProgressBar component and more.
+title: Accessibility in Blazor ProgressBar Component | Syncfusion®
+description: Learn about accessibility and keyboard navigation in Blazor ProgressBar component with examples and much more details.
 platform: Blazor
 control: ProgressBar
 documentation: ug
@@ -54,4 +54,4 @@ The accessibility compliance of the Blazor ProgressBar component is shown in the
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

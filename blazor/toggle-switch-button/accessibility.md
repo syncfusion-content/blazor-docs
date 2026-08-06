@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Toggle Switch Button Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor Toggle Switch Button component and more.
+title: Accessibility in Blazor Toggle Switch Button Component | Syncfusion®
+description: Checkout and learn here all the features about accessibility in Blazor Toggle Switch Button component and more.
 platform: Blazor
 control: Toggle Switch Button
 documentation: ug
@@ -63,4 +63,4 @@ The accessibility compliance of the Blazor Toggle Switch Button component is sho
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

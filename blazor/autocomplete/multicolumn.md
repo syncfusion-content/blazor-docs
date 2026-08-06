@@ -9,7 +9,7 @@ documentation: ug
 
 # Multicolumn in AutoComplete
 
-Provide two or more visual columns in the popup by applying the `e-multi-column` CSS class through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-1.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_1_CssClass) property, and render the layout using an item template. This approach uses templates and CSS to display data in multiple columns; it is not a data grid and does not add grid features.
+Provide two or more visual columns in the popup by applying the `e-multi-column` CSS class through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property, and render the layout using an item template. This approach uses templates and CSS to display data in multiple columns; it is not a data grid and does not add grid features.
 
 * [ItemTemplate](https://blazor.syncfusion.com/documentation/autocomplete/templates#item-template) – Use `ItemTemplate` to define the content for each row and arrange fields into multiple visual columns in the popup.
 

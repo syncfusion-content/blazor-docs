@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Columns in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn here all about columns in Syncfusion Blazor QueryBuilder component and much more.
+title: Columns in Blazor QueryBuilder Component | Syncfusion®
+description: Checkout and learn here all about columns in Blazor QueryBuilder component with examples and much more details.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
@@ -9,13 +9,13 @@ documentation: ug
 
 # Columns in Blazor QueryBuilder Component
 
-Column definitions provide the schema used by the Query Builder’s [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DataSource). They determine how field values are rendered and how users create or delete conditions and groups. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Field) property in [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) is required to map data source fields to Query Builder columns.
+Column definitions provide the schema used by the Query Builder’s [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_DataSource). They determine how field values are rendered and how users create or delete conditions and groups. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Field) property in [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumns.html) is required to map data source fields to Query Builder columns.
 
 N> If the column field is not present in the data source, the column renders with empty values.
 
 ## Auto generation
 
-[Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) are automatically generated from the data source when the `Columns` declaration is empty or not provided at initialization. In this case, all fields in the `DataSource` are bound as Query Builder columns.
+[Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumns.html) are automatically generated from the data source when the `Columns` declaration is empty or not provided at initialization. In this case, all fields in the `DataSource` are bound as Query Builder columns.
 
 N> When columns are auto-generated, the column type is inferred from the first record of the data source. 
 
@@ -46,7 +46,7 @@ N> When columns are auto-generated, the column type is inferred from the first r
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVRNprwBwWoUTJX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor QueryBuilder AutoGeneration](./images/blazor-querybuilder-autogeneration.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrHDwjEBGLGyoum?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor QueryBuilder AutoGeneration](./images/blazor-querybuilder-autogeneration.webp)" %}
 
 ## Labels
 
@@ -56,7 +56,7 @@ N> If both the field and label are not defined for a column, it renders with `em
 
 ## Operators
 
-Define the allowed operators for a column in the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) collection. Custom operator sets can be configured using the column’s [OperatorsModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.OperatorsModel.html). The following built-in operators and their supported data types are available:
+Define the allowed operators for a column in the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumns.html) collection. Custom operator sets can be configured using the column’s [OperatorsModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.OperatorsModel.html). The following built-in operators and their supported data types are available:
 
 | Operators | Description | Supported Types |
 | ------------ | ----------------------- | ------------------ |
@@ -112,9 +112,9 @@ N> By default, the `Step` value is 1.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLxjzBwrwhqGCTx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor QueryBuilder Step](./images/blazor-querybuilder-step.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVnZctaVcTRZYhr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor QueryBuilder Step](./images/blazor-querybuilder-step.webp)" %}
 
-N> You can also explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to learn how to render and configure the Query Builder.
+N> You can also explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=fluent2) to learn how to render and configure the Query Builder.
 
 ## Format
 
@@ -157,13 +157,13 @@ In the following sample, the date field is formatted as `MM-yyyy-dd` and the num
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLxZJLcVwgXzpLf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor QueryBuilder Format](./images/blazor-querybuilder-format.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBntwZaLQxlXWnO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor QueryBuilder Format](./images/blazor-querybuilder-format.webp)" %}
 
-N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.
+N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=fluent2) to know how to render and configure the query builder.
 
 ## Validations
 
-Validation enables checking of rule inputs and displays errors for invalid fields. To enable validation, set [AllowValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AllowValidation) to `true`. After enabling, fields are validated based on the configured rules and column settings.
+Validation enables checking of rule inputs and displays errors for invalid fields. To enable validation, set [AllowValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_AllowValidation) to `true`. After enabling, fields are validated based on the configured rules and column settings.
 
 N> You can set `Min` and `Max` values for numeric fields using `QueryBuilderColumnValidation`.
 
@@ -198,4 +198,4 @@ N> You can set `Min` and `Max` values for numeric fields using `QueryBuilderColu
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVRDJBwLQUENnOY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor QueryBuilder AutoGeneration](./images/blazor-querybuilder-validation.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhRtmZarQFOEOLh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor QueryBuilder AutoGeneration](./images/blazor-querybuilder-validation.webp)" %}

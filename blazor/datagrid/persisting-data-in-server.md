@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Persisting data in the server in Blazor DataGrid | Syncfusion
-description: Learn how to persist Syncfusion Blazor DataGrid data to servers using adaptors like UrlAdaptor, ODataV4Adaptor, WebApiAdaptor, and GraphQLAdaptor.
+title: Blazor Grid Persisting Data on the Server | Syncfusion
+description: Learn how to persist Blazor Data Grid data in server-side applications using UrlAdaptor, OData, Web API, and GraphQL adaptors.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Persisting data in the server in Blazor DataGrid
+# Persisting Data to the Server in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports persisting data changes to a server or database using RESTful web services. All CRUD operations Create, Read, Update, and Delete are managed by the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which enables seamless communication with server-side data sources. This configuration ensures that changes made in the Grid UI are reliably synchronized with the backend.
 
 **Supported Adaptors**
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> provides multiple adaptors to integrate the DataGrid with various server protocols and APIs. Each adaptor works with [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to manage data operations and automatically trigger CRUD actions based on Grid interactions. Backend services must implement appropriate endpoints to handle these requests.
+The Syncfusion® provides multiple adaptors to integrate the DataGrid with various server protocols and APIs. Each adaptor works with [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to manage data operations and automatically trigger CRUD actions based on Grid interactions. Backend services must implement appropriate endpoints to handle these requests.
 
 **UrlAdaptor**
 

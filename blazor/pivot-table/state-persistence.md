@@ -1,13 +1,13 @@
 ---
 layout: post
-title: State Persistence in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about state persistence in Syncfusion Blazor Pivot Table component and more.
+title: State Persistence in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table retains layout, fields, sorting, filters, and expand-collapse state in browser storage between sessions via EnablePersistence.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# State Persistence in Blazor Pivot Table Component
+# State Persistence in Blazor Pivot Table
 
 State persistence enables users to automatically retain the entire configuration of the Pivot Table component in the browser's local storage (cookies). This includes the current layout, field arrangements, sorting, applied filters, and the expanded or collapsed states of fields. By enabling the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_EnablePersistence) property in the [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class, all these interactive states and settings are saved automatically. As a result, users can refresh the browser or navigate to different pages and return at any time, knowing that all modified report settings will be retained—ensuring a seamless and uninterrupted data analysis experience.
 
@@ -101,4 +101,4 @@ In addition to automatic state persistence, the Pivot Table component allows you
 
 ```
 
-N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the Pivot Table.
+N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the Pivot Table.

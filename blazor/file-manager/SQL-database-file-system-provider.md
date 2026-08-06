@@ -1,17 +1,17 @@
 ---
 layout: post
-title: SQL database provider in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about SQL database file system provider in Syncfusion Blazor File Manager component and more.
-platform: Blazor
+title: SQL Database Provider in Blazor File Manager | Syncfusion
+description: Learn how to use the SQL database file system provider in the Blazor File Manager to manage files stored in a SQL Server table.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# SQL database file system provider
+# SQL Database Provider in Blazor File Manager
 
 To get started with the SQL database file system provider, ensure that a SQL Server instance or LocalDB is available and properly configured. A database with the required schema to manage files and folders should be created, and a valid connection string must be defined in the application configuration to establish connectivity.
 
-The SQL database file system provider allows the users to manage the file system being maintained in a SQL database table. Unlike the other file system providers, the SQL database file system provider works on ID basis. Here, each file and folder have a unique ID based on which all the file operations will be performed. To get started, clone the [EJ2.ASP.NET Core SQL Server Database File Provider](https://github.com/SyncfusionExamples/ej2-sql-server-database-aspcore-file-provider) using the following command.
+The SQL database file system provider allows the users to manage the file system being maintained in a SQL database table. Unlike the other file system providers, the SQL database file system provider works on ID basis. Here, each file and folder have a unique ID based on which all the file operations will be performed. To get started, clone the [EJ2.ASP.NET Core SQL Server Database File Provider](https://github.com/SyncfusionExamples/sql-server-database-aspcore-file-provider) using the following command.
 
 ```json
 
@@ -45,7 +45,7 @@ operation.SetSQLConnection(connectionName, tableName, rootFolderID);
 
 ```
 
-N> Refer to this [FileManager.mdf](https://github.com/SyncfusionExamples/ej2-sql-server-database-aspcore-file-provider/blob/master/App_Data/FileManager.mdf) to learn about the pre-defined file system SQL database for the Blazor File Manager.
+N> Refer to this [FileManager.mdf](https://github.com/SyncfusionExamples/sql-server-database-aspcore-file-provider/blob/master/App_Data/FileManager.mdf) to learn about the pre-defined file system SQL database for the Blazor File Manager.
 
 After configuring the connection, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the [FileManagerAjaxSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html) property of the File Manager component to the appropriate controller methods allows to manage the files in the SQL database table.
 
@@ -65,8 +65,8 @@ After configuring the connection, just build and run the project. Now, the proje
 
 ```
 
-To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the SQL database file system provider, you need to initialize the SQL database file system provider in the controller.
+To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Blazor File Manager component using the SQL database file system provider, you need to initialize the SQL database file system provider in the controller.
 
 To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `SQLProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/sql-server-database-aspcore-file-provider/blob/master/Controllers/SQLProviderController.cs). Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
 
-N> To learn more about file actions that can be performed with SQL database file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-sql-server-database-aspcore-file-provider#key-features)
+N> To learn more about file actions that can be performed with SQL database file system provider, refer to this [link](https://github.com/SyncfusionExamples/sql-server-database-aspcore-file-provider#key-features)

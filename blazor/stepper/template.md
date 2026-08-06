@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Template in Blazor Stepper Component | Syncfusion
+title: Template in Blazor Stepper Component | Syncfusion®
 description: Checkout and learn about Template with Blazor Stepper component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Stepper
@@ -98,4 +98,4 @@ The `StepperStep` tag directive options and current step index are passed as `st
 
 ```
 
-![Blazor Stepper Component with Template](./images/Blazor-template.png)
+![Blazor Stepper Component with Template](./images/Blazor-template.webp)

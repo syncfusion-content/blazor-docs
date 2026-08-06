@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Dashboard Layout Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Dashboard Layout component and more.
+title: Accessibility in Blazor Dashboard Layout Component | Syncfusion®
+description: Checkout and learn here all the features about Accessibility in Blazor Dashboard Layout component and much more.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
@@ -45,8 +45,8 @@ The Blazor Dashboard Layout component integrates [WAI-ARIA](https://www.w3.org/W
 
 | **Attributes** | **Purpose** |
 | --- | --- |
-| role=presentation | Indicates the role as a presentation for the table when the `showGridLines` property is enabled. |
-| aria-grabbed | Indicates whether the attribute is set to `true`. It has been selected for dragging. If this attribute is set to `false`, the element can be grabbed for a drag-and-drop operation, but will not be currently grabbed.|
+| role=presentation | Indicates the role as a presentation for the table when the `ShowGridLines` property is enabled. |
+| aria-grabbed | Indicates the drag state of a panel. When set to `true`, the panel is currently selected for dragging. When set to `false`, the panel can be grabbed for a drag-and-drop operation but is not currently grabbed. |
 
 ## Keyboard Interaction
 
@@ -61,4 +61,4 @@ A sample demonstrating the accessibility compliance of the Dashboard Layout comp
 
 ## See Also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

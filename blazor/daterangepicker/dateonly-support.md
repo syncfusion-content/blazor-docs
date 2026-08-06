@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  DateOnly Support in Blazor DateRangePicker Component | Syncfusion
-description: Checkout and learn here all about DateOnly Support in Syncfusion Blazor DateRangePicker component and much more.
+title:  DateOnly Support in Blazor DateRangePicker Component | Syncfusion®
+description: Checkout and learn here all about the DateOnly Support in Blazor DateRangePicker component and much more.
 platform: Blazor
 control: DateRangePicker
 documentation: ug

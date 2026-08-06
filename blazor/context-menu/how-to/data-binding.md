@@ -9,7 +9,17 @@ documentation: ug
 
 # Data Binding in Blazor ContextMenu Component
 
-To bind local data source to the Context Menu, menu items are populated from data source and mapped to `Items` property. In the following example, custom data with different data type is mapped to `Items` property.
+To bind a local data source to the ContextMenu, menu items are populated from the data source and mapped to the `Items` property. In the following example, data of different types is mapped to the `Items` property.
+
+When using `MenuFieldSettings`, the following properties are available to map fields from your data model to the ContextMenu:
+
+| Property | Description |
+| --- | --- |
+| [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_Text) | Maps to the `Text` of the menu item. |
+| [ParentId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_ParentId) | Maps to the parent item identifier (used for hierarchical data). |
+| [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_IconCss) | Maps to the icon CSS class of the menu item. |
+| [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_Url) | Maps to the navigation URL of the menu item. |
+| [Children](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_Children) | Maps to the collection of child menu items. |
 
 ```cshtml
 
@@ -19,6 +29,18 @@ To bind local data source to the Context Menu, menu items are populated from dat
 <SfContextMenu Target="#target" Items="@menuItems">
     <MenuFieldSettings Text="Content"></MenuFieldSettings>
 </SfContextMenu>
+
+<style>
+    #target {
+        border: 1px dashed;
+        height: 150px;
+        padding: 10px;
+        position: relative;
+        text-align: justify;
+        color: gray;
+        user-select: none;
+    }
+</style>
 
 @code {
     private List<CustomItem> menuItems = new List<CustomItem>();
@@ -37,18 +59,7 @@ To bind local data source to the Context Menu, menu items are populated from dat
         public string Id { get; set; }
     }
 }
-<style>
-    #target {
-        border: 1px dashed;
-        height: 150px;
-        padding: 10px;
-        position: relative;
-        text-align: justify;
-        color: gray;
-        user-select: none;
-    }
-</style>
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLAWhrcKOGPagPi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor ContextMenu](./../images/blazor-contextmenu-databinding.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthxjRWETkHNUovq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Binding in Blazor ContextMenu](./../images/blazor-contextmenu-databinding.webp)" %}

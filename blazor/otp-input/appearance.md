@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Appearance in Blazor OTP Input Component | Syncfusion
-description: Checkout and learn here all about Appearance with Syncfusion Blazor OTP Input component in Blazor Server App and Blazor WebAssembly App.
+title: Appearance in Blazor OTP Input Component | Syncfusion®
+description: Learn how to customize the appearance of Blazor OTP Input component including length, disabled state, and visual styles.
 platform: Blazor
 control: OTP Input
 documentation: ug
@@ -679,4 +679,4 @@ Cell performs a subtle wiggle animation when hovered — adds playful feedback t
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBxDfrNIQOpmrvF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVRtmtCKFuWYLCi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

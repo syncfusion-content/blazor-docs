@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create right-to-left  Blazor Dropdown Menu Component | Syncfusion
-description: Learn here all about creating right-to-left Syncfusion Blazor Dropdown Menu component and much more.
+title: Create right-to-left  Blazor Dropdown Menu Component | Syncfusion®
+description: Learn here all about how to creating right-to-left Blazor Dropdown Menu component and much more details.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug

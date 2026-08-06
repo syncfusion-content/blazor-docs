@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize editing in Blazor DataGrid | Syncfusion
-description: Learn how to style and customize edited and added rows, input fields, the edit dialog header, and command buttons in the Syncfusion Blazor DataGrid using CSS.
+title: Blazor Grid Customize Editing Elements Using CSS | Syncfusion
+description: Learn how to customize Blazor Data Grid editing using CSS, including edited rows, added rows, input fields, edit dialog headers, and command buttons.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Editing customization in Syncfusion Blazor DataGrid
+# Editing Customization in Blazor Data Grid
 
 The appearance of editing elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. Styling options are available for different parts of the editing interface:
 
@@ -132,7 +132,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBIWNCxTcuUSDfi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBdtwDMLHDBMvAD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize the edit dialog header
 
@@ -232,7 +232,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLSMjiRTFXgRbNm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBxjwXsVxDdhWAx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize command column buttons
 
@@ -345,4 +345,4 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVSMNiHTPsZJUUc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrdNGtWBRtOxHoF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Mask Support in Blazor DateTimePicker Component | Syncfusion
-description: Checkout and learn here all about Mask Support in Syncfusion Blazor DateTimePicker component and much more.
+title: Mask Support in Blazor DateTimePicker Component | Syncfusion®
+description: Checkout and learn here all about Mask Support in Blazor DateTimePicker component and much more details.
 platform: Blazor
 control: DateTimePicker
 documentation: ug

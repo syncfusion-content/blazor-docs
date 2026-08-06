@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column Reorder in Blazor Tree Grid Component | Syncfusion
-description: Checkout here and learn more details about the column reorder in the Syncfusion Blazor Tree Grid component.
+title: Column Reorder in Blazor Tree Grid Component | Syncfusion®
+description: Checkout here and learn more details about the column reorder in the Blazor Tree Grid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -79,7 +79,7 @@ namespace TreeGridComponent.Data
 
 ![Reordering Columns in Blazor Tree Grid](../images/blazor-treegrid-column-reorder.webp)
 
-N> You can disable reordering a particular column by setting the `AllowReordering` property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) tag helper to false.
+N> You can disable reordering a particular column by setting the `AllowReordering` property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) tag helper to false.
 
 ## Reorder single column
 

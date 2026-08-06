@@ -1,7 +1,7 @@
 ---
 layout: post
-title: User Interactions in Blazor Maps Component | Syncfusion
-description: Check out and learn here all about user interactions with customization options in the Syncfusion Blazor Maps component.
+title: User Interactions in Blazor Maps Component | Syncfusion®
+description: Check out and learn here all about user interactions with customization options in the Blazor Maps component.
 platform: Blazor
 control: Maps
 documentation: ug

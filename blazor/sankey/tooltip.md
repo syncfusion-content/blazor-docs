@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltips for Blazor Sankey Diagram | Syncfusion
-description: Learn how to configure and customize tooltips in the Syncfusion Blazor Sankey Diagram to enhance data visualization and user interaction.
+title: Tooltips for Blazor Sankey Diagram | Syncfusion®
+description: Learn how to configure and customize tooltips in the Blazor Sankey Diagram to enhance data visualization and user interaction.
 platform: Blazor
 control: Sankey
 documentation: ug

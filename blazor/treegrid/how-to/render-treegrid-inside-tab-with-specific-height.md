@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor TreeGrid Component inside the Tab | Syncfusion
+title: Blazor TreeGrid Component inside the Tab | Syncfusion®
 description: Learn here all about rendering Blazor TreeGrid component inside the Tab with specific height and more.
 platform: Blazor
 control: Tree Grid

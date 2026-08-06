@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in Blazor Timeline Component | Syncfusion
-description: Checkout and learn here all about events section in Syncfusion Blazor Timeline component and more details.
+title: Events in Blazor Timeline Component | Syncfusion®
+description: Checkout and learn here the features all about events section in Blazor Timeline component and more details.
 platform: Blazor
 control: Timeline
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Types of Validation in Blazor DataForm Component | Syncfusion
+title: Types of Validation in Blazor DataForm | Syncfusion®
 description: Checkout and learn here about different types of validation that can be used in Blazor DataForm component.
 platform: Blazor
 control: DataForm
@@ -63,7 +63,7 @@ N> Install the [Microsoft.AspNetCore.Components.DataAnnotations.Validation](http
 
 ## Fluent validation 
 
-[FluentValidator](https://www.nuget.org/packages/Blazilla) is a custom validator that validates beyond standard data annotations. It supports rules such as credit card format checks, comparisons between fields, and range/threshold validations defined in FluentValidation rule classes.
+[FluentValidator](https://docs.fluentvalidation.net/en/latest/) is a custom validator that validates beyond standard data annotations. It supports rules such as credit card format checks, comparisons between fields, and range/threshold validations defined in FluentValidation rule classes.
 
 N> Install the [Blazilla](https://www.nuget.org/packages/Blazilla) NuGet package to use Fluent validation with the DataForm.
 

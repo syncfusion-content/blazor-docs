@@ -1,277 +1,639 @@
 ---
 layout: post
-title: "MySQL Data Binding in Blazor Pivot Table Component | Syncfusion"
-component: "Pivot Table"
-description: "Learn how to connect a MySQL database to the Syncfusion Blazor Pivot Table using the MySql.Data library."
+title: MySQL in Blazor Pivot Table | Syncfusion
+description: Learn how to load and edit MySQL data in the Blazor Pivot Table through an ASP.NET Core API using MySql.Data and the Syncfusion URL adaptor.
 platform: Blazor
+control: PivotTable
 documentation: ug
 ---
 
-# MySQL Data Binding in Blazor Pivot Table Component
+# MySQL in Blazor Pivot Table
 
-This guide explains how to connect a MySQL database to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using the [MySql.Data](https://www.nuget.org/packages/MySql.Data) library. It covers two methods: directly retrieving and binding data to the Pivot Table and using a Web API service to fetch and display MySQL data.
+The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) can load and edit MySQL data through an ASP.NET Core API and the Syncfusion URL Adaptor. The adaptor sends read and CRUD requests to controller endpoints; the controller uses `MySql.Data` to execute parameterized SQL against MySQL.
 
-## Connecting a MySQL Database to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table
+This tutorial is a small-data sample. Its read endpoint returns every raw order because the Pivot Table's built-in engine needs the complete raw dataset to calculate accurate aggregates. For large datasets, use the [Syncfusion server-side Pivot Engine](https://blazor.syncfusion.com/documentation/pivot-table/server-side-pivot-engine) instead of applying ordinary paging to this endpoint.
 
-This section describes how to connect the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) to a MySQL database by directly retrieving data using the [MySql.Data](https://www.nuget.org/packages/MySql.Data) library.
+## Prerequisites
 
-### Step 1: Set Up a Blazor Pivot Table
-1. Create a [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) by following the [Getting Started](../getting-started) guide.
+The sample was tested with the following versions:
 
-### Step 2: Install the MySql.Data NuGet Package
-1. Open the **NuGet Package Manager** in your project solution and search for **MySql.Data**.
-2. Install the **MySql.Data** package to add MySQL database support.
+| Software or package | Version |
+|---------------------|---------|
+| .NET SDK | 10.0 |
+| MySQL Server | 8.0 or later |
+| MySQL Workbench | 8.0 or later |
+| Syncfusion.Blazor.PivotTable | `{{site.blazorversion}}` |
+| Syncfusion.Blazor.Themes | `{{site.blazorversion}}` |
+| MySql.Data | 9.4.0 |
 
-![Add the NuGet package MySql.Data to the project](../images/MySQL-nuget-package-install-in-web-service-app.webp)
+Use the same version for all Syncfusion packages. Later compatible patch releases can be used, but verify the Syncfusion release notes before changing versions.
 
-### Step 3: Connect to MySQL
-In the **Index.razor** file, under the `OnInitialized` method, use the [MySql.Data](https://www.nuget.org/packages/MySql.Data) library to connect to a MySQL database and retrieve data for the Pivot Table.
+You also need:
 
-1. **Establish Connection**: Use **MySqlConnection** with a valid connection string (e.g., `Server=localhost;Database=mydb;Uid=myuser;Pwd=mypassword;`) to connect to the MySQL database.
-2. **Query and Fetch Data**: Execute a SQL query (e.g., `SELECT * FROM orders`) using **MySqlCommand** to retrieve data for the Pivot Table.
-3. **Structure the Data**: Use **MySqlDataAdapter**'s **Fill** method to populate the query results into a **DataTable**, which is then converted to a list for binding to the Pivot Table.
+- A MySQL account allowed to create the sample database and application user.
+- A valid Syncfusion license or trial key.
+- An available local HTTPS development certificate. Run `dotnet dev-certs https --trust` if the certificate is not already trusted.
 
-### Step 4: Bind Data to the Pivot Table
-1. Assign the retrieved list to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property of the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html).
-2. Configure the Pivot Table by defining fields in the [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Columns), [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Rows), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Values), and [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings) to organize and format the data.
+## MySQL Database Setup and Application Configuration
 
-The following code connects to a MySQL database, retrieves data, and binds it to the Pivot Table.
+### Step 1: Create the Blazor Web App
 
-```cshtml
-@using Syncfusion.Blazor.PivotView
-@using MySql.Data.MySqlClient;
-@using Newtonsoft.Json;
-@using System.Data;
-@using Syncfusion.Blazor.Data;
+Create an Interactive Server Blazor Web App:
 
-<SfPivotView TValue="OrderDetails" Width="800" Height="340">
-    <PivotViewDataSourceSettings TValue="OrderDetails" DataSource="@dataSource">
-        <PivotViewColumns>
-            <PivotViewColumn Name="ShipName"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="ShipCity"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Freight"></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Freight" Format="N2"></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-</SfPivotView>
+```powershell
+dotnet new blazor --name PivotTableMySQL --framework net10.0 --interactivity Server --all-interactive
+cd PivotTableMySQL
+```
 
-@code {
-    private List<OrderDetails> dataSource { get; set; }
+The remaining commands in this guide must be run from the `PivotTableMySQL` project directory.
 
-    protected override void OnInitialized()
-    {
-        MySqlConnection connection = new MySqlConnection("<Enter your valid connection string here>");
-        connection.Open();
-        MySqlCommand command = new MySqlCommand("SELECT * FROM orders", connection);
-        MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
-        DataTable dataTable = new DataTable();
-        dataAdapter.Fill(dataTable);
-        connection.Close();
-        dataSource = (from DataRow data in dataTable.Rows
-                       select new OrderDetails()
-                           {
-                               OrderID = Convert.ToInt32(data["OrderId"]),
-                               CustomerID = data["CustomerID"].ToString(),
-                               ShipCity = data["ShipCity"].ToString(),
-                               ShipName = data["ShipName"].ToString(),
-                               Freight = Convert.ToDouble(data["Freight"])
-                           }).ToList();
+### Step 2: Create the MySQL Database and User
 
-    }
+Open MySQL Workbench, connect with an administrative account, open a query tab, and run the following script. Replace `CHOOSE_A_STRONG_PASSWORD` before executing it.
 
-    public class OrderDetails
-    {
-        public int OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipName { get; set; }
-        public double Freight { get; set; }
-        }
-   
+```sql
+CREATE DATABASE IF NOT EXISTS Orders
+    CHARACTER SET utf8mb4
+    COLLATE utf8mb4_0900_ai_ci;
+
+CREATE USER IF NOT EXISTS 'pivotapp'@'localhost'
+    IDENTIFIED BY 'CHOOSE_A_STRONG_PASSWORD';
+
+ALTER USER 'pivotapp'@'localhost'
+    IDENTIFIED BY 'CHOOSE_A_STRONG_PASSWORD';
+
+USE Orders;
+
+CREATE TABLE IF NOT EXISTS orders (
+    orderid INT NOT NULL AUTO_INCREMENT,
+    customername VARCHAR(100) NOT NULL,
+    employeeid INT NOT NULL,
+    shipcity VARCHAR(100) NULL,
+    freight DECIMAL(12, 2) NULL,
+    PRIMARY KEY (orderid)
+);
+
+GRANT SELECT, INSERT, UPDATE, DELETE
+    ON Orders.orders
+    TO 'pivotapp'@'localhost';
+
+INSERT INTO orders (customername, employeeid, shipcity, freight)
+VALUES
+    ('Alice Johnson', 1, 'New York', 120.50),
+    ('Bob Smith', 2, 'London', 85.20),
+    ('Carol Davis', 1, 'New York', 210.75),
+    ('David Brown', 3, 'Berlin', 95.00),
+    ('Eve Wilson', 2, 'London', 150.25),
+    ('Frank Moore', 4, 'Tokyo', 60.80),
+    ('Grace Taylor', 1, 'New York', 180.40),
+    ('Henry Anderson', 3, 'Berlin', 220.60),
+    ('Ivy Thomas', 2, 'London', 75.10),
+    ('Jack White', 4, 'Tokyo', 130.90);
+```
+
+The host portion of a MySQL account is significant. The account above is for an application running on the same computer as MySQL. Use the appropriate restricted host value when the application runs elsewhere.
+
+Verify the setup:
+
+```sql
+SELECT * FROM Orders.orders ORDER BY orderid;
+SHOW GRANTS FOR 'pivotapp'@'localhost';
+```
+
+### Step 3: Install the NuGet Packages
+
+Install the tested package versions:
+
+```powershell
+dotnet add package Syncfusion.Blazor.PivotTable --version {{site.blazorversion}}
+dotnet add package Syncfusion.Blazor.Themes --version {{site.blazorversion}}
+dotnet add package MySql.Data --version 9.4.0
+```
+
+The resulting package references are:
+
+```xml
+<ItemGroup>
+  <PackageReference Include="MySql.Data" Version="9.4.0" />
+  <PackageReference Include="Syncfusion.Blazor.PivotTable" Version="{{site.blazorversion}}" />
+  <PackageReference Include="Syncfusion.Blazor.Themes" Version="{{site.blazorversion}}" />
+</ItemGroup>
+```
+
+This sample uses `System.Text.Json`, which is included with ASP.NET Core. `Newtonsoft.Json` is not required.
+
+### Step 4: Store the Connection String and License Key
+
+Do not put database passwords or license keys in `appsettings.json`. Initialize .NET user secrets and store both values outside the project files:
+
+```powershell
+dotnet user-secrets init
+dotnet user-secrets set "ConnectionStrings:MySQL" "Server=localhost;Port=3306;Database=Orders;Uid=pivotapp;Pwd=CHOOSE_A_STRONG_PASSWORD;SslMode=Preferred;"
+dotnet user-secrets set "SyncfusionLicenseKey" "YOUR_SYNCFUSION_LICENSE_KEY"
+```
+
+Replace both placeholder values. For deployment, set `ConnectionStrings__MySQL` and `SyncfusionLicenseKey` through the hosting platform's secret store.
+
+The connection-string components used by the sample are:
+
+| Component | Description |
+|-----------|-------------|
+| `Server` | MySQL host name or IP address |
+| `Port` | MySQL port; the default is `3306` |
+| `Database` | Default database, `Orders` |
+| `Uid` | Dedicated application account, `pivotapp` |
+| `Pwd` | Application-account password |
+| `SslMode` | TLS behavior; use `Required` with a correctly configured production server |
+
+### Step 5: Create the Shared Order Model
+
+Create a `Models` folder and add `Models/Order.cs`:
+
+```csharp
+using System.ComponentModel.DataAnnotations;
+
+namespace PivotTableMySQL.Models;
+
+public class Order
+{
+    [Key]
+    public int OrderID { get; set; }
+
+    [Required]
+    [StringLength(100)]
+    public string CustomerName { get; set; } = string.Empty;
+
+    [Range(1, int.MaxValue)]
+    public int EmployeeID { get; set; }
+
+    [Range(typeof(decimal), "0", "9999999999.99")]
+    public decimal? Freight { get; set; }
+
+    [StringLength(100)]
+    public string? ShipCity { get; set; }
 }
 ```
 
-### Step 5: Run and Verify the Pivot Table
-1. Run the Blazor application.
-2. The Pivot Table will display the MySQL data, organized according to the defined configuration.
-3. The resulting Pivot Table will look like this:
+The same model is used by the controller and Razor component. The `[Key]` annotation identifies `OrderID` as the primary key when the Pivot Table creates its raw-item edit grid. Do not attempt to access `BeginDrillThroughEventArgs.GridObj`; the [current event documentation](https://blazor.syncfusion.com/documentation/pivot-table/events#begindrillthrough) states that this property is returned as null.
 
-![Blazor Pivot Table bound with MySQL data](../images/blazor-pivottable-MySQL-databinding.webp)
+### Step 6: Create the API Controller
 
-## Connecting a MySQL to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table via Web API service
-
-This section explains how to create a Web API service to fetch data from a MySQL database and connect it to the Blazor Pivot Table.
-
-### Create a Web API Service to Fetch MySQL Data
-
-Follow these steps to set up a Web API service that retrieves MySQL data for the Pivot Table.
-
-#### Step 1: Create an ASP.NET Core Web Application
-1. Open Visual Studio and create a new **ASP.NET Core Web App** project named **MyWebService**.
-2. Refer to the [Microsoft documentation](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022) for detailed setup instructions.
-
-![Create ASP.NET Core Web App project](../images/azure-asp-core-web-service-create.webp)
-
-#### Step 2: Install the MySql.Data NuGet Package
-1. Install the [MySql.Data](https://www.nuget.org/packages/MySql.Data) package using the **NuGet Package Manager** to enable MySQL connectivity.
-
-![Add the NuGet package MySql.Data to the project](../images/MySQL-nuget-package-install-in-web-service-app.webp)
-
-#### Step 3: Create a Web API Controller
-1. In the **Controllers** folder, create a new Web API controller named **PivotController.cs**.
-2. This controller manages data communication between the MySQL database and the Pivot Table.
-
-#### Step 4: Connect to MySQL and Retrieve Data
-In the **PivotController.cs** file, use the [MySql.Data](https://www.nuget.org/packages/MySql.Data) library to connect to a MySQL database and fetch data for the Pivot Table.
-
-1. **Establish Connection**: Use **MySqlConnection** with a valid connection string to access the MySQL database.
-2. **Fetch Data**: Run a SQL query (e.g., `SELECT * FROM orders`) using **MySqlCommand** to retrieve data.
-3. **Prepare Data**: Use **MySqlDataAdapter**'s **Fill** method to store the query results in a **DataTable** for JSON serialization.
+Create a `Controllers` folder and add `Controllers/OrderController.cs`:
 
 ```csharp
-    using Microsoft.AspNetCore.Mvc;
-    using MySql.Data.MySqlClient;
-    using Newtonsoft.Json;
-    using System.Data;
+using System.Data.Common;
+using Microsoft.AspNetCore.Mvc;
+using MySql.Data.MySqlClient;
+using PivotTableMySQL.Models;
+using Syncfusion.Blazor;
+using Syncfusion.Blazor.Data;
 
-    namespace MyWebService.Controllers
+namespace PivotTableMySQL.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class OrderController : ControllerBase
+{
+    private readonly string connectionString;
+
+    public OrderController(IConfiguration configuration)
     {
-        [ApiController]
-        [Route("[controller]")]
-        public class PivotController : ControllerBase
+        connectionString = configuration.GetConnectionString("MySQL")
+            ?? throw new InvalidOperationException(
+                "ConnectionStrings:MySQL is not configured.");
+
+        if (string.IsNullOrWhiteSpace(connectionString))
         {
-            public dynamic GetMySQLResult()
-            {
-                // Replace with your own connection string.
-                MySqlConnection connection = new MySqlConnection("<Enter your valid connection string here>");
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("SELECT * FROM orders", connection);
-                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
-                DataTable dataTable = new DataTable();
-                dataAdapter.Fill(dataTable);
-                connection.Close();
-                return dataTable;
-            }
+            throw new InvalidOperationException(
+                "ConnectionStrings:MySQL must not be empty.");
         }
     }
 
-```
-
-#### Step 5: Serialize Data to JSON
-1. In the **PivotController.cs** file, create a **Get** method that calls **FetchMySQLResult** to retrieve MySQL data.
-2. Use **JsonConvert.SerializeObject** from the [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json) library to serialize the **DataTable** into JSON format.
-
-> Ensure the **Newtonsoft.Json** NuGet package is installed in your project.
-
-The following code sets up the Web API controller to fetch and serialize MySQL data.
-
-```csharp
-    using Microsoft.AspNetCore.Mvc;
-    using MySql.Data.MySqlClient;
-    using Newtonsoft.Json;
-    using System.Data;
-
-    namespace MyWebService.Controllers
+    [HttpPost]
+    public async Task<ActionResult<object>> Read(
+        [FromBody] DataManagerRequest request,
+        CancellationToken cancellationToken)
     {
-        [ApiController]
-        [Route("[controller]")]
-        public class PivotController : ControllerBase
-        {
-            [HttpGet(Name = "GetMySQLResult")]
-            public object Get()
-            {
-                return JsonConvert.SerializeObject(GetMySQLResult());
-            }
+        // The built-in Pivot Table engine requires the complete raw dataset.
+        // DataManagerRequest paging must not be applied to this endpoint.
+        _ = request;
 
-            public dynamic GetMySQLResult()
+        List<Order> orders = [];
+
+        const string sql = """
+            SELECT orderid, customername, employeeid, shipcity, freight
+            FROM orders
+            ORDER BY orderid;
+            """;
+
+        await using MySqlConnection connection = new(connectionString);
+        await connection.OpenAsync(cancellationToken);
+
+        await using MySqlCommand command = new(sql, connection);
+        await using DbDataReader reader =
+            await command.ExecuteReaderAsync(cancellationToken);
+
+        int orderIdOrdinal = reader.GetOrdinal("orderid");
+        int customerNameOrdinal = reader.GetOrdinal("customername");
+        int employeeIdOrdinal = reader.GetOrdinal("employeeid");
+        int shipCityOrdinal = reader.GetOrdinal("shipcity");
+        int freightOrdinal = reader.GetOrdinal("freight");
+
+        while (await reader.ReadAsync(cancellationToken))
+        {
+            orders.Add(new Order
             {
-                // Replace with your own connection string.
-                MySqlConnection connection = new MySqlConnection("<Enter your valid connection string here>");
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("SELECT * FROM orders", connection);
-                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
-                DataTable dataTable = new DataTable();
-                dataAdapter.Fill(dataTable);
-                connection.Close();
-                return dataTable;
-            }
+                OrderID = reader.GetInt32(orderIdOrdinal),
+                CustomerName = reader.GetString(customerNameOrdinal),
+                EmployeeID = reader.GetInt32(employeeIdOrdinal),
+                ShipCity = reader.IsDBNull(shipCityOrdinal)
+                    ? null
+                    : reader.GetString(shipCityOrdinal),
+                Freight = reader.IsDBNull(freightOrdinal)
+                    ? null
+                    : reader.GetDecimal(freightOrdinal)
+            });
         }
+
+        return Ok(new
+        {
+            result = orders,
+            count = orders.Count
+        });
     }
 
+    [HttpPost("Insert")]
+    public async Task<ActionResult<Order>> Insert(
+        [FromBody] CRUDModel<Order> request,
+        CancellationToken cancellationToken)
+    {
+        if (request.Value is not Order order)
+        {
+            return BadRequest("The request must contain an order value.");
+        }
+
+        const string sql = """
+            INSERT INTO orders
+                (customername, employeeid, shipcity, freight)
+            VALUES
+                (@customername, @employeeid, @shipcity, @freight);
+            """;
+
+        await using MySqlConnection connection = new(connectionString);
+        await connection.OpenAsync(cancellationToken);
+
+        await using MySqlCommand command = new(sql, connection);
+        command.Parameters.Add("@customername", MySqlDbType.VarChar, 100)
+            .Value = order.CustomerName;
+        command.Parameters.Add("@employeeid", MySqlDbType.Int32)
+            .Value = order.EmployeeID;
+        command.Parameters.Add("@shipcity", MySqlDbType.VarChar, 100)
+            .Value = order.ShipCity ?? (object)DBNull.Value;
+        command.Parameters.Add("@freight", MySqlDbType.Decimal)
+            .Value = order.Freight ?? (object)DBNull.Value;
+
+        await command.ExecuteNonQueryAsync(cancellationToken);
+        order.OrderID = checked((int)command.LastInsertedId);
+
+        return Ok(order);
+    }
+
+    [HttpPost("Update")]
+    public async Task<ActionResult<Order>> Update(
+        [FromBody] CRUDModel<Order> request,
+        CancellationToken cancellationToken)
+    {
+        if (request.Value is not Order order || order.OrderID <= 0)
+        {
+            return BadRequest(
+                "The request must contain an order with a valid OrderID.");
+        }
+
+        const string sql = """
+            UPDATE orders
+            SET customername = @customername,
+                employeeid = @employeeid,
+                shipcity = @shipcity,
+                freight = @freight
+            WHERE orderid = @orderid;
+            """;
+
+        await using MySqlConnection connection = new(connectionString);
+        await connection.OpenAsync(cancellationToken);
+
+        await using MySqlCommand command = new(sql, connection);
+        command.Parameters.Add("@customername", MySqlDbType.VarChar, 100)
+            .Value = order.CustomerName;
+        command.Parameters.Add("@employeeid", MySqlDbType.Int32)
+            .Value = order.EmployeeID;
+        command.Parameters.Add("@shipcity", MySqlDbType.VarChar, 100)
+            .Value = order.ShipCity ?? (object)DBNull.Value;
+        command.Parameters.Add("@freight", MySqlDbType.Decimal)
+            .Value = order.Freight ?? (object)DBNull.Value;
+        command.Parameters.Add("@orderid", MySqlDbType.Int32)
+            .Value = order.OrderID;
+
+        int affectedRows =
+            await command.ExecuteNonQueryAsync(cancellationToken);
+
+        return affectedRows == 0 ? NotFound() : Ok(order);
+    }
+
+    [HttpPost("Delete")]
+    public async Task<IActionResult> Delete(
+        [FromBody] CRUDModel<Order> request,
+        CancellationToken cancellationToken)
+    {
+        if (!int.TryParse(request.Key?.ToString(), out int orderId)
+            || orderId <= 0)
+        {
+            return BadRequest("A positive numeric order key is required.");
+        }
+
+        const string sql =
+            "DELETE FROM orders WHERE orderid = @orderid;";
+
+        await using MySqlConnection connection = new(connectionString);
+        await connection.OpenAsync(cancellationToken);
+
+        await using MySqlCommand command = new(sql, connection);
+        command.Parameters.Add("@orderid", MySqlDbType.Int32)
+            .Value = orderId;
+
+        int affectedRows =
+            await command.ExecuteNonQueryAsync(cancellationToken);
+
+        return affectedRows == 0
+            ? NotFound()
+            : Ok(new { key = orderId });
+    }
+}
 ```
 
-#### Step 6: Run the Web API Service
-1. Build and run the application.
-2. The application will be hosted at `https://localhost:7146/` (the port number may vary).
+The controller uses the built-in `Syncfusion.Blazor.Data.CRUDModel<T>` request type. ASP.NET Core automatically returns validation responses for invalid annotated model values. Unhandled database exceptions are converted to Problem Details responses by the middleware configured in the next step.
 
-#### Step 7: Verify the JSON Data
-1. Access the Web API endpoint at `https://localhost:7146/Pivot` to view the JSON data retrieved from MySQL.
-2. The browser will display the JSON data, as shown below.
+### Step 7: Configure Program.cs
 
-![Hosted Web API URL](../images/mysql-data.webp)
+Replace `Program.cs` with:
 
-### Connecting the Pivot Table to MySQL Using the Web API Service
+```csharp
+using PivotTableMySQL.Components;
+using Syncfusion.Blazor;
+using Syncfusion.Licensing;
 
-This section explains how to connect the Blazor Pivot Table to MySQL data retrieved via the Web API service.
+var builder = WebApplication.CreateBuilder(args);
 
-#### Step 1: Set Up a Blazor Pivot Table
-1. Create a Blazor Pivot Table by following the [Getting Started](../getting-started) guide.
+string licenseKey = builder.Configuration["SyncfusionLicenseKey"]
+    ?? throw new InvalidOperationException(
+        "SyncfusionLicenseKey is not configured.");
 
-#### Step 2: Configure the Web API URL
-1. In the **Index.razor** file, map the Web API URL (`https://localhost:7146/Pivot`) to the Pivot Table using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property of [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html).
-2. The [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property facilitates deserializing MySQL data into instances of your model data class (i.e., TValue="OrderDetails") for binding to the Pivot Table.
+SyncfusionLicenseProvider.RegisterLicense(licenseKey);
 
-#### Step 3: Define the Pivot Table Report
-1. Configure the Pivot Table by defining fields in the [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Columns), [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Rows), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Values), and [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings) properties.
-2. Enable the field list by setting [ShowFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowFieldList) to **true** for interactive field management.
+builder.Services.AddSyncfusionBlazor();
+builder.Services.AddProblemDetails();
+builder.Services.AddControllers();
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
 
-The following code connects the Pivot Table to the Web API and configures the report.
+var app = builder.Build();
+
+app.UseExceptionHandler();
+
+if (!app.Environment.IsDevelopment())
+{
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+app.UseAntiforgery();
+
+app.MapStaticAssets();
+app.MapControllers();
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode();
+
+app.Run();
+```
+
+The sample API is same-origin and does not require CORS. If the API and Blazor application are deployed on different origins, configure a named CORS policy that allows only the Blazor application's origin.
+
+### Step 8: Add Imports, Theme, and Scripts
+
+Add these imports to `Components/_Imports.razor`:
 
 ```cshtml
+@using PivotTableMySQL.Models
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.PivotView
+```
 
-<SfPivotView TValue="OrderDetails" Width="1000" Height="300" ShowFieldList="true">
-    <PivotViewDataSourceSettings TValue="OrderDetails" Url="https://localhost:7146/Pivot" ExpandAll="false" EnableSorting="true">
+In the `<head>` element of `Components/App.razor`, add:
+
+```html
+<link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css"
+      rel="stylesheet" />
+```
+
+Before the closing `</body>` tag, add the Syncfusion script after the existing Blazor script:
+
+```html
+<script src="_framework/blazor.web.js"></script>
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"
+        type="text/javascript"></script>
+```
+
+Do not add a second `_framework/blazor.web.js` reference if the template already contains it.
+
+### Step 9: Configure the Pivot Table
+
+Replace `Components/Pages/Home.razor` with:
+
+```cshtml
+@page "/"
+
+<PageTitle>MySQL Pivot Table</PageTitle>
+
+<SfPivotView TValue="Order"
+             Width="100%"
+             Height="400"
+             ShowFieldList="true">
+    <PivotViewDataSourceSettings TValue="Order"
+                                 ExpandAll="false"
+                                 EnableSorting="true">
+        <SfDataManager Url="/api/Order"
+                       InsertUrl="/api/Order/Insert"
+                       UpdateUrl="/api/Order/Update"
+                       RemoveUrl="/api/Order/Delete"
+                       Adaptor="Adaptors.UrlAdaptor">
+        </SfDataManager>
         <PivotViewColumns>
-            <PivotViewColumn Name="ShipName"></PivotViewColumn>
+            <PivotViewColumn Name="@nameof(Order.EmployeeID)">
+            </PivotViewColumn>
         </PivotViewColumns>
         <PivotViewRows>
-            <PivotViewRow Name="ShipCity"></PivotViewRow>
+            <PivotViewRow Name="@nameof(Order.CustomerName)">
+            </PivotViewRow>
         </PivotViewRows>
         <PivotViewValues>
-            <PivotViewValue Name="Freight"></PivotViewValue>
+            <PivotViewValue Name="@nameof(Order.Freight)"
+                            Caption="Freight">
+            </PivotViewValue>
         </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Freight" Format="N2"></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
-    <PivotViewGridSettings ColumnWidth="120"></PivotViewGridSettings>
+    <PivotViewGridSettings ColumnWidth="120">
+    </PivotViewGridSettings>
+    <PivotViewCellEditSettings AllowEditing="true"
+                               AllowAdding="true"
+                               AllowDeleting="true"
+                               Mode="EditMode.Normal">
+    </PivotViewCellEditSettings>
 </SfPivotView>
+```
 
-@code {
-    public class OrderDetails
-    {
-        public int OrderID { get; set; }
-        public string ShipName { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public double Freight { get; set; }
-    }
+Relative URLs keep all requests on the application's current scheme, host, and port. They work with both the HTTP and HTTPS launch profiles and avoid mixed-content and CORS failures.
+
+The `[Key]` annotation on the shared `Order.OrderID` property supplies the raw-item grid's primary key. Current Blazor Pivot Table releases return `BeginDrillThroughEventArgs.GridObj` as null, so the component does not use a `BeginDrillThrough` handler to configure columns.
+
+## API Contract
+
+The URL Adaptor uses these endpoints:
+
+| Method | Route | Request body | Success response |
+|--------|-------|--------------|------------------|
+| `POST` | `/api/Order` | `DataManagerRequest` | `{ "result": [...], "count": n }` |
+| `POST` | `/api/Order/Insert` | `CRUDModel<Order>` | Inserted `Order`, including its generated `OrderID` |
+| `POST` | `/api/Order/Update` | `CRUDModel<Order>` | Updated `Order` |
+| `POST` | `/api/Order/Delete` | `CRUDModel<Order>` | `{ "key": orderId }` |
+
+Example insert request:
+
+```json
+{
+  "action": "add",
+  "keyColumn": "OrderID",
+  "value": {
+    "orderID": 0,
+    "customerName": "Karen Lee",
+    "employeeID": 3,
+    "shipCity": "Berlin",
+    "freight": 110.00
+  }
 }
 ```
 
-#### Step 4: Run and Verify the Pivot Table
-1. Run the Blazor application.
-2. The Pivot Table will display the MySQL data fetched via the Web API, structured according to the defined configuration.
-3. The resulting Pivot Table will look like this:
+Example update request:
 
-![Blazor Pivot Table bound with MySQL data](../images/blazor-pivottable-MySQL-databinding.webp)
+```json
+{
+  "action": "update",
+  "keyColumn": "OrderID",
+  "key": 1,
+  "value": {
+    "orderID": 1,
+    "customerName": "Alice Johnson",
+    "employeeID": 1,
+    "shipCity": "Boston",
+    "freight": 125.00
+  }
+}
+```
 
-### Additional Resources
-Explore a complete example of the Blazor Pivot Table integrated with MySQL using a Web API service in this [GitHub repository](https://github.com/SyncfusionExamples/web-bind-MySQL-database-to-pivot-table/tree/master/Blazor).
+Example delete request:
+
+```json
+{
+  "action": "remove",
+  "keyColumn": "OrderID",
+  "key": 1
+}
+```
+
+Property-name casing in captured requests can vary with the serializer settings used by a specific package release. ASP.NET Core's default web serializer matches property names case-insensitively.
+
+## Run and Verify the Application
+
+Restore, build, and run the project:
+
+```powershell
+dotnet restore
+dotnet build
+dotnet run
+```
+
+Open the HTTPS URL printed in the terminal. Then verify:
+
+- The Pivot Table displays the ten sample orders.
+- Adding a raw record creates a new row in `Orders.orders`.
+- Editing a raw record changes the matching `orderid`.
+- Deleting a raw record removes the matching `orderid`.
+- The browser Network panel shows `POST` requests to the four `/api/Order` endpoints.
+
+![Blazor Pivot Table](../images/blazor-pivot-table-MySQL.webp)
+
+Verify the database after CRUD testing:
+
+```sql
+SELECT * FROM Orders.orders ORDER BY orderid;
+```
+
+The read endpoint accepts only `POST`; navigating to `/api/Order` in the browser address bar sends `GET` and correctly returns `405 Method Not Allowed`.
+
+## Data Flow Diagram
+
+The following image illustrates how data flows between MySQL, the ASP.NET Core controller, and the Syncfusion Blazor Pivot Table.
+
+![Pivot Flow Diagram](../images/blazor-pivot-table-MySQL-FlowDiagram.webp)
+
+## Production Security
+
+This tutorial's CRUD endpoints are intentionally unauthenticated for local development. Do not expose them publicly in this form.
+
+Before deployment:
+
+1. Configure an ASP.NET Core authentication scheme appropriate for the application.
+2. Add `[Authorize]` to `OrderController` or an equivalent authorization policy.
+3. Restrict the MySQL application account to the required database, operations, and source host.
+4. Use `SslMode=Required` with a trusted MySQL server certificate.
+5. Keep the connection string and license key in the deployment platform's secret store.
+6. If cookie authentication protects the API, configure antiforgery tokens for adaptor write requests; otherwise use an appropriate non-cookie API authentication scheme.
+7. Restrict CORS to known origins if the client and API are hosted separately.
+
+## Large Datasets
+
+Do not apply `Skip`, `Take`, or ordinary DataManager paging to the read action in this sample. Doing so sends only part of the raw dataset to the built-in Pivot Table engine and produces incomplete aggregates.
+
+For large datasets, follow the [server-side Pivot Engine guide](https://blazor.syncfusion.com/documentation/pivot-table/server-side-pivot-engine). The server-side engine performs aggregation, filtering, grouping, and sorting on the server and sends only the required pivot results to the browser.
+
+## Troubleshooting
+
+| Symptom | Resolution |
+|---------|------------|
+| `ConnectionStrings:MySQL is not configured` | Run the `dotnet user-secrets set "ConnectionStrings:MySQL" "..."` command from the project directory or configure `ConnectionStrings__MySQL`. |
+| `SyncfusionLicenseKey is not configured` | Store a valid key with user secrets or the deployment secret store. |
+| `Unable to connect to any of the specified MySQL hosts` | Confirm that MySQL is running and verify `Server`, `Port`, TLS settings, and firewall access. |
+| `Access denied for user 'pivotapp'` | Verify the password, account host, and `SHOW GRANTS FOR 'pivotapp'@'localhost'`. |
+| `Table 'Orders.orders' doesn't exist` | Run the database script and preserve the lowercase `orders` table name, especially on Linux. |
+| `405 Method Not Allowed` for `/api/Order` | Test through the Pivot Table or send a `POST` request; an address-bar request is `GET`. |
+| CRUD returns `400 Bad Request` | Inspect the Problem Details response and confirm required fields, field lengths, numeric ranges, and request shape. |
+| Update or delete returns `404 Not Found` | Confirm that the request contains an existing positive `OrderID` key. |
+| Editing affects the wrong row | Confirm that the shared model includes `[Key]` on `OrderID` and that the client and controller both use that model. |
+| Browser reports mixed content or CORS | Keep the relative `/api/Order` URLs for same-origin hosting; otherwise configure HTTPS and a restricted CORS policy. |
+| Authentication plugin error | Keep MySQL's `caching_sha2_password` authentication and use the documented `MySql.Data` version or a later compatible release; do not switch to deprecated `mysql_native_password`. |
+| Pivot values are incomplete for a large dataset | Remove ordinary endpoint paging and migrate to the Syncfusion server-side Pivot Engine. |
+
+## Complete Sample Repository
+
+A complete, working sample implementation is available in the [GitHub repository](https://github.com/SyncfusionExamples/syncfusion-blazor-pivot-table-mysql-database-binding-sample).
+
+## Summary
+
+The application now:
+
+1. Connects to MySQL with a dedicated least-privilege account.
+2. Keeps credentials and the Syncfusion license key outside source control.
+3. Shares one annotated `Order` model between the controller and Pivot Table.
+4. Uses asynchronous, parameterized MySQL commands.
+5. Exposes documented URL Adaptor read and CRUD endpoints.
+6. Uses relative same-origin URLs and standardized Problem Details errors.
+7. Identifies the supported server-side approach for large datasets.

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Form Validation in Blazor MultiSelect Component | Syncfusion
-description: Checkout and learn here all about Form Validation in Syncfusion Blazor MultiSelect component and more.
+title: Form Validation in Blazor MultiSelect Component | Syncfusion®
+description: Checkout and learn here all about Form Validation in Blazor MultiSelect component and much more details.
 platform: Blazor
 control: MultiSelect
 documentation: ug

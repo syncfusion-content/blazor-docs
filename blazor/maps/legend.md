@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Legend in Blazor Maps Component | Syncfusion
-description: Check out and learn how to configure and customize legends in the Syncfusion Blazor Maps component for effective data visualization.
+title: Legend in Blazor Maps Component | Syncfusion®
+description: Check out and learn how to configure and customize legends in the Blazor Maps component for effective data visualization.
 platform: Blazor
 control: Maps
 documentation: ug
@@ -304,7 +304,7 @@ In the following example, color mapping is defined for ranges from **0** to **20
 
 ### Hiding desired legend items
 
-Use the [ShowLegend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_ShowLegend) property in [MapsShapeColorMapping](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html) to show or hide legend items. If [ShowLegend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_ShowLegend) is set to **false**, the legend item is hidden. Otherwise, it is visible.
+Use the [ShowLegend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_ShowLegend) property in [MapsShapeColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html) to show or hide legend items. If [ShowLegend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_ShowLegend) is set to **false**, the legend item is hidden. Otherwise, it is visible.
 
 ```cshtml
 

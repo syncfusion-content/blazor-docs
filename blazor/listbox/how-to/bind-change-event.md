@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bind Change Events in Blazor ListBox Component | Syncfusion
-description: Checkout and learn here all about bind change events in Syncfusion Blazor ListBox component and more.
+title: Bind Change Events in Blazor ListBox Component | Syncfusion®
+description: Checkout and learn here all about bind change events in Blazor ListBox component and much more details.
 platform: Blazor
 control: List Box
 documentation: ug
@@ -29,13 +29,13 @@ Bind the change event in the listbox [ValueChange](https://help.syncfusion.com/c
         new VehicleData { Text = "SSC Ultimate Aero", Id = "Vehicle-04" },
         new VehicleData { Text = "Koenigsegg CCR", Id = "Vehicle-05" },
         new VehicleData { Text = "McLaren F1", Id = "Vehicle-06" },
-        new VehicleData { Text = "Aston Martin One- 77", Id = "Vehicle-07" },
+        new VehicleData { Text = "Aston Martin One-77", Id = "Vehicle-07" },
         new VehicleData { Text = "Jaguar XJ220", Id = "Vehicle-08" }
         };
 
     public class VehicleData {
-        public string Text  { get; set; }
-        public string Id  { get; set; }
+        public string Text { get; set; }
+        public string Id { get; set; }
     }
 
     private void change(ListBoxChangeEventArgs<string[], VehicleData> args)

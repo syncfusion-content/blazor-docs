@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Layout customization in Blazor DataForm component | Syncfusion
+title: Layout customization in Blazor DataForm | Syncfusion®
 description: Checkout and learn here about layout customization such button and label positioning and validation message display with Blazor DataForm component.
 platform: Blazor
 control: DataForm

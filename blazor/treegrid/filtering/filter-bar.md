@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filter Bar in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about Filter Bar in Syncfusion Blazor Tree Grid component and much more details.
+title: Filter Bar in Blazor Tree Grid Component | Syncfusion®
+description: Checkout and learn here all the features about Filter Bar in Blazor Tree Grid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Filter Bar in Blazor Tree Grid Component
 
-By setting the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~AllowFiltering.html) to true, the filter bar row will render next to the header, which allows to filter data. The records can be filtered with different expressions depending upon the column type.
+By setting the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowFiltering) to true, the filter bar row will render next to the header, which allows to filter data. The records can be filtered with different expressions depending upon the column type.
 
  **Filter bar expressions:**
 

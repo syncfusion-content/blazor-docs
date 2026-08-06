@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and appearance in Blazor DropDown List Component | Syncfusion
-description: Checkout and learn here all about Style and appearance in Syncfusion Blazor DropDown List component and more.
+title: Style and appearance in Blazor DropDown List Component | Syncfusion®
+description: Checkout and learn here all about Style and appearance in Blazor DropDown List component and much more details.
 platform: Blazor
 control: DropDownList
 documentation: ug

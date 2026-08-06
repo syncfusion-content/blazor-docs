@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom AI Service Integration with Syncfusion Blazor AI | Syncfusion
-description: Learn how to configure and use Syncfusion Blazor AI with custom AI providers, such as DeepSeek, to enable AI-driven features in Blazor applications.
+title: Custom AI Service Integration with Syncfusion® Blazor AI | Syncfusion®
+description: Learn how to configure and use Syncfusion® Blazor AI with custom AI providers, such as DeepSeek, to enable AI-driven features in Blazor applications.
 platform: Blazor
 control: AI Integration
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom AI Service Integration with Syncfusion® Blazor AI
 
-The [Syncfusion Blazor AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) library enables integration with custom AI providers by implementing the `IChatInferenceService` interface, using DeepSeek as an example. This extensibility feature allows developers to connect Blazor applications to proprietary or specialized AI services, such as enterprise-specific models or local AI servers, enhancing Syncfusion Blazor components with tailored AI functionality like text generation or data processing.
+The [Blazor AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) library enables integration with custom AI providers by implementing the `IChatInferenceService` interface, using DeepSeek as an example. This extensibility feature allows developers to connect Blazor applications to proprietary or specialized AI services, such as enterprise-specific models or local AI servers, enhancing Blazor components with tailored AI functionality like text generation or data processing.
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
 {% endtabs %}
 
 - An API key is obtained from the chosen AI provider (e.g., DeepSeek via the [DeepSeek API documentation](https://platform.deepseek.com)).
-- The [Syncfusion Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements) are met.
+- The [Blazor system requirements](https://blazor.syncfusion.com/documentation/system-requirements) are met.
 - Familiarity with HTTP client usage and JSON serialization in .NET applications.
 
 ## Configuration Steps
@@ -92,15 +92,15 @@ builder.Services.AddSingleton<IChatInferenceService, DeepSeekAIService>();
 
 ## How It Works
 
-This example illustrates how the Syncfusion Blazor AI library integrates with a custom AI service (DeepSeek):
+This example illustrates how the Blazor AI library integrates with a custom AI service (DeepSeek):
 
 1. **Setup**: Implement and register the custom AI service in `Program.cs` using secure credentials.
-2. **Component integration**: Inject `IChatInferenceService` into components (for example, Smart TextArea or other Syncfusion controls) to send AI prompts and receive responses.
-3. **Request Formatting**: Convert Syncfusion AI parameters into the custom provider’s API format (e.g., DeepSeek’s JSON structure).
+2. **Component integration**: Inject `IChatInferenceService` into components (for example, Smart TextArea or other Blazor component) to send AI prompts and receive responses.
+3. **Request Formatting**: Convert AI parameters into the custom provider’s API format (e.g., DeepSeek’s JSON structure).
 4. **Response Processing**: Parse the provider’s response and update the component (e.g., displaying text suggestions).
 
 ### Key Components
-- `IChatInferenceService`: Interface used by Syncfusion Blazor AI to interact with custom AI providers through a unified contract.
+- `IChatInferenceService`: Interface used by Blazor AI to interact with custom AI providers through a unified contract.
 - `AIServiceCredentials`: Class for managing API keys, endpoints, and model names through configuration.
 - `GenerateResponseAsync`: Method that sends asynchronous requests to the custom AI provider and retrieves responses.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: SharePoint provider in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about SharePoint Provider in Syncfusion Blazor File Manager component and more.
-platform: Blazor
+title: SharePoint Provider in Blazor File Manager | Syncfusion
+description: Learn how to connect the Blazor File Manager to Microsoft SharePoint to browse and manage files in a document library.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# SharePoint file provider
+# SharePoint Provider in Blazor File Manager
 
 To get started with the SharePoint file system provider, ensure you have access to a Microsoft 365 account with the necessary SharePoint permissions. You must register an application in Azure Active Directory to obtain the required credentials, including the `Tenant ID`, `Client ID`, and `Client Secret`. These credentials are required to authenticate and interact with the Microsoft Graph API for accessing the SharePoint document library.
 
@@ -76,7 +76,7 @@ After configuring the SharePoint file provider, build and run the project. Now, 
 
 ```
 
-To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the SharePoint file provider, you need to initialize the SharePoint service in the controller.
+To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Blazor File Manager component using the SharePoint file provider, you need to initialize the SharePoint service in the controller.
 
 To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `SharePointController.cs` found at this [link](https://github.com/SyncfusionExamples/sharepoint-aspcore-file-provider/blob/master/Controllers/SharePointController.cs). Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
 

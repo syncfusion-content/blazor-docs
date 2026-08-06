@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Checkbox selection in Blazor DataGrid | Syncfusion
-description: Learn how to use checkbox selection in Syncfusion Blazor DataGrid for bulk actions, multiple selection, persist options, and programmatic control.
+title: Blazor Grid Checkbox Selection | Syncfusion
+description: Learn how to use checkbox selection in Blazor Data Grid for single and multiple row selection, persist selection, bulk actions, and programmatic control.
 platform: Blazor
 control: DataGrid 
 documentation: ug
 ---
 
-# Checkbox selection in Blazor DataGrid
+# Checkbox Selection in Blazor Data Grid
 
 Checkbox selection in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables to select multiple records using checkboxes rendered in each row. This feature is especially useful for performing bulk actions or operations on selected records.
 To display a checkbox in each Grid row, configure a column with its [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property set to [CheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_CheckBox).
@@ -82,7 +82,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBoNTicUWFQPhGN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrxNctsgcxgtyzG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * By default, selection is allowed by clicking either a Grid row or the checkbox in that row. To restrict selection to checkbox clicks only, set the [GridSelectionSettings.CheckboxOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CheckboxOnly) property to **true**.
 > * To persist selection across Grid operations, enable the [GridSelectionSettings.PersistSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_PersistSelection) property. Ensure that one of the columns is defined as a primary key using the **GridColumn.IsPrimaryKey** property.
@@ -189,7 +189,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLyXJimgruCiwDc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLRjcDWqwHwRgeb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Persist selection
 
@@ -232,7 +232,7 @@ The following example demonstrates how to persist checkbox selections when the G
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLSDxidsYqWFcdQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBRZctsTMiLOsSp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Hide selectall checkbox in column header 
 
@@ -314,7 +314,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhytpWmqAXcGldO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBHtmjMTsNHBoVw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Allow selection only through checkbox click
 
@@ -397,4 +397,4 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htretIZeoziROVCs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBdDwjCfNxFtqGD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize popup width in Blazor Dropdown Menu Component | Syncfusion
-description: Checkout and learn here all about Customize popup width in in Syncfusion Blazor Dropdown Menu component and more.
+title: Customize popup width in Blazor Dropdown Menu Component | Syncfusion®
+description: Checkout and learn here all about Customize popup width in in Blazor Dropdown Menu component and more.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug

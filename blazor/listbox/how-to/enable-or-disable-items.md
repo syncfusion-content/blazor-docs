@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Enable/Disable ListBox in Blazor ListBox Component | Syncfusion
-description: Checkout and learn here all about enable or disable ListBox in Syncfusion Blazor ListBox component and more.
+title: Enable or Disable Items in Blazor ListBox Component | Syncfusion®
+description: Checkout and learn here all about enable or disable Items in Blazor ListBox component and much more details.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Enable/Disable ListBox in Blazor ListBox Component
+# Enable or Disable Items in Blazor ListBox Component
 
-Enable or disable items in the listbox, [EnableItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_EnableItems_System_Object_System_Boolean_) method can be used. In the following example, the `Bugatti Veyron Super Sport` and `SSC Ultimate Aero` items are disabled by default and by clicking `Enable Items` buttons, the disabled items will be enabled.
+Enable or disable items in the listbox, [EnableItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_EnableItems__1___0_System_Boolean_) method can be used. In the following example, the `Bugatti Veyron Super Sport` and `SSC Ultimate Aero` items are disabled by default and by clicking `Enable Items` button, the disabled items will be enabled.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -20,6 +20,7 @@ Enable or disable items in the listbox, [EnableItems](https://help.syncfusion.co
     <ListBoxEvents TValue="string[]" Created="created" TItem="VehicleData"></ListBoxEvents>
 </SfListBox>
 <SfButton @onclick="enableData" Content="Enable Items"></SfButton>
+<SfButton @onclick="disableData" Content="Disable Items"></SfButton>
 
 @code {
     SfListBox<string[],VehicleData> ListBoxObj;
@@ -30,13 +31,13 @@ Enable or disable items in the listbox, [EnableItems](https://help.syncfusion.co
         new VehicleData { Text = "SSC Ultimate Aero", Id = "Vehicle-04" },
         new VehicleData { Text = "Koenigsegg CCR", Id = "Vehicle-05" },
         new VehicleData { Text = "McLaren F1", Id = "Vehicle-06" },
-        new VehicleData { Text = "Aston Martin One- 77", Id = "Vehicle-07" },
+        new VehicleData { Text = "Aston Martin One-77", Id = "Vehicle-07" },
         new VehicleData { Text = "Jaguar XJ220", Id = "Vehicle-08" }
     };
 
     public class VehicleData {
-      public string Text  { get; set; }
-      public string Id  { get; set; }
+      public string Text { get; set; }
+      public string Id { get; set; }
     }
     public string[] Value = new string[] { "Bugatti Veyron Super Sport", "SSC Ultimate Aero" };
     private void created(object args)
@@ -47,6 +48,11 @@ Enable or disable items in the listbox, [EnableItems](https://help.syncfusion.co
     private void enableData()
     {
         ListBoxObj.EnableItems(this.Value, true);
+    }
+
+    private void disableData()
+    {
+        ListBoxObj.EnableItems(this.Value, false);
     }
 }
 

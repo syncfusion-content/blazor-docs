@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization using CssClass in Blazor DateRangePicker | Syncfusion
-description: Learn here all about Customization using CssClass in Syncfusion Blazor DateRangePicker component and more.
+title: Customization using CssClass in Blazor DateRangePicker | Syncfusion®
+description: Learn here all about Customization using CssClass in Blazor DateRangePicker component and much more details.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
@@ -73,4 +73,4 @@ Following is the list of classes that provides flexible way to customize the Dat
 
 ![Customization using CssClass Blazor DateRangePicker](../images/blazor-daterangepicker-cssclass-customization.webp)
 
-N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap5) to understand how to present and manipulate data.
+N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=fluent2) to understand how to present and manipulate data.

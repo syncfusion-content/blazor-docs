@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about events in Syncfusion Blazor Pivot Table component and much more details.
+title: Events in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table exposes events for cell rendering, drill actions, member editing, save and load reports, and engine updates.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Events in Blazor Pivot Table Component
+# Events in Blazor Pivot Table
 
 ## AggregateMenuOpen
 
@@ -265,7 +265,7 @@ The event [ChartSeriesCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ## ConditionalFormatting
 
-The event [ConditionalFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ConditionalFormatting) is triggered initially while clicking the "ADD CONDITION" button inside the conditional formatting dialog in-order to fill user specific condition instead of default condition at runtime. To use this event, [AllowConditionalFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowConditionalFormatting) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class must be set to **true**. It has following parameters - [ApplyGrandTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.IConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_IConditionalFormatSettings_ApplyGrandTotals), [Conditions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.IConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_IConditionalFormatSettings_Conditions), [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.IConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_IConditionalFormatSettings_Label), [Measure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.IConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_IConditionalFormatSettings_Measure), [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.IConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_IConditionalFormatSettings_Style), [Value1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.IConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_IConditionalFormatSettings_Value1) and [Value2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.IConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_IConditionalFormatSettings_Value2).
+The event [ConditionalFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ConditionalFormatting) is triggered initially while clicking the "ADD CONDITION" button inside the conditional formatting dialog in-order to fill user specific condition instead of default condition at runtime. To use this event, [AllowConditionalFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowConditionalFormatting) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class must be set to **true**. It has following parameters - [ApplyGrandTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_ConditionalFormatSettings_ApplyGrandTotals), [Conditions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_ConditionalFormatSettings_Conditions), [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_ConditionalFormatSettings_Label), [Measure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_ConditionalFormatSettings_Measure), [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_ConditionalFormatSettings_Style), [Value1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_ConditionalFormatSettings_Value1) and [Value2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_ConditionalFormatSettings_Value2).
 
 ```cshtml
 
@@ -709,4 +709,4 @@ The event [ToolbarRendered](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ```
 
-N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
+N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

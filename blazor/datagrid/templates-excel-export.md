@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Exporting with Templates in Blazor Grid | Syncfusion
-description: Export Blazor DataGrid templates to Excel, preserving custom content like images, hyperlinks, and structured layouts for rich exported documents.
+title: Blazor Grid Excel Export with Templates | Syncfusion
+description: Learn how to export templates to Excel in Blazor Data Grid while preserving images, hyperlinks, and structured layouts for rich reports.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Exporting grid with templates in Syncfusion Blazor DataGrid
+# Excel Export with Templates in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports exporting template content to Excel, enabling rich formatting in exported documents. The following template types are supported:
 
@@ -139,7 +139,7 @@ public class EmployeeData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVeZpinSuMCxdjJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVHtQtHVxCOKVfd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Exporting with column template](./images/column-template.webp)
 
@@ -256,13 +256,13 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVejJMmrqlNTnoQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBHXQNRBxrmrVfn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Exporting with group caption template](./images/group-caption.webp)
 
 ## Customizing and Aligning Group Caption Templates in Excel Export
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports aligning exported grouped data along with a custom caption template in an Excel document. This capability enables the application of custom formatting and horizontal alignment to group captions, providing enhanced visual presentation and improved readability of exported hierarchical data in Excel spreadsheets.
+The Blazor DataGrid supports aligning exported grouped data along with a custom caption template in an Excel document. This capability enables the application of custom formatting and horizontal alignment to group captions, providing enhanced visual presentation and improved readability of exported hierarchical data in Excel spreadsheets.
 
 ### Steps to Customize and Align Group Caption Text in Excel Export
 
@@ -416,7 +416,7 @@ public class ProductInfo
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrdXKMYVbPmnvEo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhRNcDnBHKtGCqp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Exporting with group caption template by customizing the alignment](./images/group-caption-alignment.webp)
 
@@ -754,7 +754,7 @@ public class ProductData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBSNfWcLSCKHChU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBHNmjdVdAcTUKR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Exporting with detail template](./images/detail-template.webp)
 
@@ -1052,6 +1052,6 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBytpWQhgOCVmqd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLdNctHLxmRANOV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Exporting hierarchical Grid using detail template](./images/hierarchical-detail-template.webp)

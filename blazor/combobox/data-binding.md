@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor ComboBox component and much more.
+title: Data Binding in Blazor ComboBox Component | Syncfusion®
+description: Checkout and learn here all the features about Data Binding in Blazor ComboBox component and much more.
 platform: Blazor
 control: ComboBox
 documentation: ug
@@ -56,7 +56,7 @@ Bind by index using the `bind-Index` attribute (supports int and nullable int). 
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhqshBGgdWoItJf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLRjRBKrMMUsYzE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### DataBound event
 
@@ -230,7 +230,7 @@ Use the [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adapt
 
 ### Custom adaptor
 
-The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing customize data binding and editing operations in the ComboBox component.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing customize data binding and editing operations in the ComboBox component.
 
 For implementing custom data binding in the ComboBox, the `DataAdaptor` class is used. This abstract class acts as a base class for the custom adaptor.
 
@@ -273,7 +273,7 @@ To avoid a server request for every action, preloaded all data at initialization
 
 ### Entity Framework
 
-Follow these steps to consume data from [Entity Framework](https://blazor.syncfusion.com/documentation/common/data-binding/bind-entity-framework) in the ComboBox component.
+Follow these steps to consume data from [Entity Framework](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-orm/entityframework) in the ComboBox component.
 
 #### Create DBContext class
 

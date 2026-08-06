@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in Blazor Dropdown Tree Component | Syncfusion
-description: Checkout and learn here all about Selection in Syncfusion Blazor Dropdown Tree component and much more.
+title: Selection in Blazor Dropdown Tree Component | Syncfusion®
+description: Checkout and learn here all the features about Selection in Blazor Dropdown Tree component and much more.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
@@ -51,7 +51,7 @@ In the following example, you can select the single node only.
 }
 ```
 
-![Selection in Blazor Dropdown Tree.](./images/selection/blazor-dropdowntree-single-selection.png)
+![Selection in Blazor Dropdown Tree.](./images/selection/blazor-dropdowntree-single-selection.webp)
 
 ## Multi Selection 
 
@@ -93,4 +93,4 @@ In the following example, the [AllowMultiSelection](https://help.syncfusion.com/
 }
 ```
 
-![MultiSelection in Blazor Dropdown Tree.](./images/selection/blazor-dropdowntree-multi-selection.png)
+![MultiSelection in Blazor Dropdown Tree.](./images/selection/blazor-dropdowntree-multi-selection.webp)
