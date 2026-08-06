@@ -134,7 +134,7 @@ The test-mode ruleset allows unrestricted read and write access for 30 days. Bef
 }
 ```
 
-> **Note:** The `.read: true` / `.write: true` rules above still expose the database to anonymous clients and are only suitable for local development. For production, gate access behind an authentication provider (for example, Firebase Auth ID tokens) and restrict the rules to authenticated requests with the structure shown in the [Firebase Security Rules quickstart](https://firebase.google.com/docs/database/security). The `.indexOn` entry enables efficient `WhereEqualTo` queries against the `orderId` field once you switch to a query-based controller.
+> **Note:** The `.read: true` / `.write: true` rules above still expose the database to anonymous clients and are only suitable for local development. For production, gate access behind an authentication provider (for example, Firebase Auth ID tokens) and restrict the rules to authenticated requests with the structure shown in the [Firebase Security Rules guide](https://firebase.google.com/docs/database/security). The `.indexOn` entry enables efficient `WhereEqualTo` queries against the `orderId` field once you switch to a query-based controller.
 
 ### Step 5: Install the Required NuGet Packages
 
