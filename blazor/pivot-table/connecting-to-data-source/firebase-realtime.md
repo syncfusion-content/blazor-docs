@@ -143,6 +143,7 @@ Run these commands in the `PivotTableRealtimeDatabase` project directory:
 ```powershell
 dotnet add package Syncfusion.Blazor.PivotTable --version 34.1.33
 dotnet add package Syncfusion.Blazor.Themes --version 34.1.33
+dotnet add package Newtonsoft.Json --version 13.0.4
 dotnet restore
 ```
 
@@ -152,10 +153,11 @@ The project file should contain:
 <ItemGroup>
   <PackageReference Include="Syncfusion.Blazor.PivotTable" Version="34.1.33" />
   <PackageReference Include="Syncfusion.Blazor.Themes" Version="34.1.33" />
+  <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
 </ItemGroup>
 ```
 
-The sample accesses the Realtime Database directly through the REST API using `HttpClient`, so no Firebase client SDK package is required. The controller uses `System.Text.Json`, so no `Newtonsoft.Json` reference is needed.
+The sample accesses the Realtime Database directly through the REST API using `HttpClient`, so no Firebase client SDK package is required. The controller serializes and deserializes JSON with `System.Text.Json`; `Newtonsoft.Json` is referenced by the project for compatibility with the Syncfusion Blazor runtime dependencies but is not invoked directly by the controller code shown in this guide.
 
 > **Note:** If you are behind a corporate proxy or use an internal NuGet feed (for example, a Nexus or Artifactory mirror), pass `--source https://api.nuget.org/v3/index.json` to each `dotnet add package` command so the public Syncfusion packages are resolved from nuget.org. Confirm with `dotnet nuget list source` that the desired source appears first.
 
@@ -184,93 +186,26 @@ The required key is `FirebaseSettings:DatabaseUrl`. The other top-level keys (`L
 
 ### Step 7: Create the API Controller
 
-Create a `Controllers` folder and a `Models` folder at the project root. The `Order` model and the `CRUDModel<T>` wrapper live in `Models/Order.cs` and `Models/CRUDModel.cs` so the same types can be referenced from `OrderController` and the Pivot Table page. The controller uses `IHttpClientFactory` so the underlying `HttpClient` is properly pooled and disposed, applies a 30-second timeout, and sends an `Accept: application/json` header on every request.
+Create a `Controllers` folder at the project root and add `OrderController.cs`. The `Order` model and the `CRUDModel<T>` wrapper are declared as nested classes inside `OrderController` so the same types can be referenced from the controller and the Pivot Table page. The controller reads the Realtime Database URL from `IConfiguration` in its constructor and instantiates a single `HttpClient` field that is reused across requests.
 
-Before showing the full files, here is a summary of what each endpoint does:
+Before showing the full file, here is a summary of what each endpoint does:
 
 | Endpoint | HTTP verb | Firebase REST call | Action |
 |---|---|---|---|
 | `Post` | `POST /api/Order` | `GET {databaseUrl}/Orders.json` | Returns the entire `Orders` node as `{ result, count }`. The `DataManagerRequest` is intentionally ignored. |
 | `Insert` | `POST /api/Order/Insert` | `PUT {databaseUrl}/Orders/{nextOrderId}.json` | Computes the next `orderId` from the existing node, writes the new record, and returns it with the generated key. |
-| `Update` | `POST /api/Order/Update` | `PUT {databaseUrl}/Orders/{OrderID}.json` | Replaces the node at the supplied key path with the incoming record. |
+| `Update` | `POST /api/Order/Update` | `PUT {databaseUrl}/Orders/{order.OrderID}.json` | Replaces the node at the supplied key path with the incoming record. |
 | `Delete` | `POST /api/Order/Delete` | `DELETE {databaseUrl}/Orders/{orderId}.json` | Removes the node at the supplied key path. |
 
 The endpoint behavior is also described in the [API Contract](#api-contract) section; the table above is a quick reference.
 
-**Models/Order.cs**
-
-```csharp
-using System.ComponentModel.DataAnnotations;
-using System.Text.Json.Serialization;
-
-namespace PivotTableRealtimeDatabase.Models
-{
-    public class Order
-    {
-        [Key]
-        [JsonPropertyName("orderId")]
-        public int OrderID { get; set; }
-
-        [JsonPropertyName("customerName")]
-        public string? CustomerName { get; set; }
-
-        [JsonPropertyName("employeeId")]
-        public int EmployeeID { get; set; }
-
-        [JsonPropertyName("freight")]
-        public double Freight { get; set; }
-
-        [JsonPropertyName("shipCity")]
-        public string? ShipCity { get; set; }
-    }
-}
-```
-
-**Models/CRUDModel.cs**
-
-```csharp
-using System.Text.Json.Serialization;
-
-namespace PivotTableRealtimeDatabase.Models
-{
-    public class CRUDModel<T> where T : class
-    {
-        // One of "insert", "update", or "remove". The controller uses the
-        // route (Insert/Update/Delete) rather than this value, but the field
-        // is kept for compatibility with the UrlAdaptor payload shape.
-        [JsonPropertyName("action")]
-        public string? Action { get; set; }
-
-        [JsonPropertyName("keyColumn")]
-        public string? KeyColumn { get; set; }
-
-        [JsonPropertyName("key")]
-        public object? Key { get; set; }
-
-        [JsonPropertyName("value")]
-        public T? Value { get; set; }
-
-        [JsonPropertyName("added")]
-        public List<T>? Added { get; set; }
-
-        [JsonPropertyName("changed")]
-        public List<T>? Changed { get; set; }
-
-        [JsonPropertyName("deleted")]
-        public List<T>? Deleted { get; set; }
-
-        [JsonPropertyName("params")]
-        public IDictionary<string, object>? Params { get; set; }
-    }
-}
-```
-
 **Controllers/OrderController.cs**
 
 ```csharp
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Mvc;
-using PivotTableRealtimeDatabase.Models;
 using Syncfusion.Blazor;
 using Syncfusion.Blazor.Data;
 
@@ -278,46 +213,31 @@ namespace PivotTableRealtimeDatabase.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    // See the antiforgery note in Step 8: SfDataManager does not attach an
-    // antiforgery token, so bypass the global token check for these endpoints.
-    [IgnoreAntiforgeryToken]
     public class OrderController : ControllerBase
     {
-        private readonly IHttpClientFactory httpClientFactory;
+        private readonly HttpClient httpClient;
         private readonly string databaseUrl;
 
-        public OrderController(
-            IConfiguration configuration,
-            IHttpClientFactory httpClientFactory)
+        public OrderController(IConfiguration configuration)
         {
-            this.httpClientFactory = httpClientFactory;
-
             databaseUrl =
                 configuration["FirebaseSettings:DatabaseUrl"]
                 ?? throw new InvalidOperationException(
                     "Firebase Realtime Database URL is not configured.");
-        }
 
-        private HttpClient CreateClient()
-        {
-            HttpClient client = httpClientFactory.CreateClient();
-            client.Timeout = TimeSpan.FromSeconds(30);
-            client.DefaultRequestHeaders.Accept.Add(
-                new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue(
-                    "application/json"));
-            return client;
+            httpClient = new HttpClient();
         }
 
         [HttpPost]
-        public async Task<object> Post([FromBody] DataManagerRequest request)
+        public async Task<object> Post(
+            [FromBody] DataManagerRequest request)
         {
             _ = request;
 
-            HttpClient httpClient = CreateClient();
-
             string url = $"{databaseUrl}/Orders.json";
 
-            string json = await httpClient.GetStringAsync(url);
+            string json =
+                await httpClient.GetStringAsync(url);
 
             List<Order?>? firebaseData =
                 JsonSerializer.Deserialize<List<Order?>>(json);
@@ -325,7 +245,7 @@ namespace PivotTableRealtimeDatabase.Controllers
             List<Order> orders =
                 firebaseData?
                     .Where(x => x != null)
-                    .Select(x => x!)
+                    .Cast<Order>()
                     .OrderBy(x => x.OrderID)
                     .ToList()
                 ?? new();
@@ -338,33 +258,32 @@ namespace PivotTableRealtimeDatabase.Controllers
         }
 
         [HttpPost("Insert")]
-        public async Task<IActionResult> Insert([FromBody] CRUDModel<Order> value)
+        public async Task<IActionResult> Insert(
+            [FromBody] CRUDModel<Order> value)
         {
             if (value.Value is not Order order)
             {
                 return BadRequest();
             }
 
-            HttpClient httpClient = CreateClient();
-
             string url = $"{databaseUrl}/Orders.json";
 
-            string json = await httpClient.GetStringAsync(url);
+            string json =
+                await httpClient.GetStringAsync(url);
 
             List<Order?>? firebaseData =
                 JsonSerializer.Deserialize<List<Order?>>(json);
 
-            // Use DefaultIfEmpty so the Max call never throws on an empty
-            // collection. If the database has no records, the next id is 1.
-            int nextOrderId = (firebaseData ?? new List<Order?>())
-                .Where(x => x != null)
-                .Select(x => x!.OrderID)
-                .DefaultIfEmpty(0)
-                .Max() + 1;
+            int nextOrderId =
+                firebaseData?
+                    .Where(x => x != null)
+                    .Max(x => x!.OrderID ?? 0) + 1
+                ?? 1;
 
             order.OrderID = nextOrderId;
 
-            string orderJson = JsonSerializer.Serialize(order);
+            string orderJson =
+                JsonSerializer.Serialize(order);
 
             await httpClient.PutAsync(
                 $"{databaseUrl}/Orders/{nextOrderId}.json",
@@ -377,55 +296,111 @@ namespace PivotTableRealtimeDatabase.Controllers
         }
 
         [HttpPost("Update")]
-        public async Task<IActionResult> Update([FromBody] CRUDModel<Order> value)
+        public async Task<IActionResult> Update(
+            [FromBody] CRUDModel<Order> value)
         {
-            if (value.Value is not Order order)
+            if (value.Value is not Order order
+                || !order.OrderID.HasValue)
             {
                 return BadRequest();
             }
 
-            HttpClient httpClient = CreateClient();
+            string orderJson =
+                JsonSerializer.Serialize(order);
 
-            string orderJson = JsonSerializer.Serialize(order);
+            HttpResponseMessage response =
+                await httpClient.PutAsync(
+                    $"{databaseUrl}/Orders/{order.OrderID}.json",
+                    new StringContent(
+                        orderJson,
+                        System.Text.Encoding.UTF8,
+                        "application/json"));
 
-            HttpResponseMessage response = await httpClient.PutAsync(
-                $"{databaseUrl}/Orders/{order.OrderID}.json",
-                new StringContent(
-                    orderJson,
-                    System.Text.Encoding.UTF8,
-                    "application/json"));
-
-            return response.IsSuccessStatusCode ? Ok(order) : BadRequest();
+            return response.IsSuccessStatusCode
+                ? Ok(order)
+                : BadRequest();
         }
 
         [HttpPost("Delete")]
-        public async Task<IActionResult> Delete([FromBody] CRUDModel<Order> value)
+        public async Task<IActionResult> Delete(
+            [FromBody] CRUDModel<Order> value)
         {
-            if (!int.TryParse(value.Key?.ToString(), out int orderId))
+            if (!int.TryParse(
+                value.Key?.ToString(),
+                out int orderId))
             {
                 return BadRequest();
             }
 
-            HttpClient httpClient = CreateClient();
+            HttpResponseMessage response =
+                await httpClient.DeleteAsync(
+                    $"{databaseUrl}/Orders/{orderId}.json");
 
-            HttpResponseMessage response = await httpClient.DeleteAsync(
-                $"{databaseUrl}/Orders/{orderId}.json");
+            return response.IsSuccessStatusCode
+                ? NoContent()
+                : NotFound();
+        }
 
-            return response.IsSuccessStatusCode ? NoContent() : NotFound();
+        public class Order
+        {
+            [Key]
+            [JsonPropertyName("orderId")]
+            public int? OrderID { get; set; }
+
+            [JsonPropertyName("customerName")]
+            public string? CustomerName { get; set; }
+
+            [JsonPropertyName("employeeId")]
+            public int? EmployeeID { get; set; }
+
+            [JsonPropertyName("freight")]
+            public double? Freight { get; set; }
+
+            [JsonPropertyName("shipCity")]
+            public string? ShipCity { get; set; }
+        }
+
+        public class CRUDModel<T> where T : class
+        {
+            [JsonPropertyName("action")]
+            public string? Action { get; set; }
+
+            [JsonPropertyName("keyColumn")]
+            public string? KeyColumn { get; set; }
+
+            [JsonPropertyName("key")]
+            public object? Key { get; set; }
+
+            [JsonPropertyName("value")]
+            public T? Value { get; set; }
+
+            [JsonPropertyName("added")]
+            public List<T>? Added { get; set; }
+
+            [JsonPropertyName("changed")]
+            public List<T>? Changed { get; set; }
+
+            [JsonPropertyName("deleted")]
+            public List<T>? Deleted { get; set; }
+
+            [JsonPropertyName("params")]
+            public IDictionary<string, object>? Params { get; set; }
         }
     }
 }
 ```
 
-The controller exposes the read, insert, update, and delete endpoints described in the [API Contract](#api-contract). The exception middleware configured in the next step logs unhandled failures and returns generic problem responses without exposing Firebase URLs or request details.
+The controller exposes the read, insert, update, and delete endpoints described in the [API Contract](#api-contract).
 
-The `Post` action deserializes the REST response into `List<Order?>` so any missing numeric positions in the `Orders` node are represented as `null` and filtered out. The `Insert` action uses `DefaultIfEmpty(0).Max() + 1` so it is safe on an empty database (the first insert is assigned `orderId = 1`).
+The `Post` action discards the incoming `DataManagerRequest` with `_ = request;` and returns the full `Orders` collection. The UrlAdaptor sends a `DataManagerRequest` object, but this sample intentionally returns the complete `Orders` collection; filtering, sorting, paging, and aggregation are performed after the data is loaded on the client. The REST response is deserialized into `List<Order?>` so any missing numeric positions in the `Orders` node are represented as `null` and filtered out with `Cast<Order>()`.
+
+The `Insert` action uses `Max(x => x!.OrderID ?? 0) + 1` (falling back to `1` when the node is empty) so it is safe on an empty database — the first insert is assigned `orderId = 1`. The `Insert` and `Update` actions serialize the `Order` with `System.Text.Json` and issue a `PutAsync` to `{databaseUrl}/Orders/{orderId}.json`, replacing the node at that key path. The `Delete` action parses `value.Key` to an `int`, issues `DeleteAsync` to `{databaseUrl}/Orders/{orderId}.json`, and returns `NoContent()` on success or `NotFound()` when Firebase reports the key is absent.
 
 > The `Insert` action reads the entire `Orders` node on every insert to compute the next id. For large datasets, append `?shallow=true` to the read URL and count the keys client-side to avoid a full payload transfer.
 
 #### Order Model and CRUDModel
 
-The `Order` model maps .NET properties to Realtime Database JSON fields through `[JsonPropertyName]`, and `OrderID` carries `[Key]` so the Pivot Table can identify the primary key for update and delete requests. `OrderID` is declared as non-nullable `int`; the UrlAdaptor uses the key to target the correct document path and requires a value. `Freight` is declared as `double` to match the Realtime Database JSON values.
+The `Order` model maps .NET properties to Realtime Database JSON fields through `[JsonPropertyName]`, and `OrderID` carries `[Key]` so the Pivot Table can identify the primary key for update and delete requests. All value properties are declared nullable (`int?`, `double?`, `string?`) to mirror the optional-field shape of the Realtime Database JSON and to allow the `Update` action to validate `order.OrderID.HasValue` before issuing a `PUT`. `Freight` is declared as `double?` to match the Realtime Database JSON values. The `Order` and `CRUDModel<T>` types are declared as nested classes inside `OrderController` so they share one file and are visible to both the controller and the Pivot Table page.
 
 The `CRUDModel<T>.Action` field is one of `"insert"`, `"update"`, or `"remove"` and identifies the operation; this sample routes writes by controller route (`/Insert`, `/Update`, `/Delete`) rather than reading `Action`, so the field is preserved for compatibility with the UrlAdaptor payload shape. The other properties (`added`, `changed`, `deleted`, `params`) are used for batch editing, which this sample does not enable.
 
@@ -440,17 +415,9 @@ using Syncfusion.Blazor;
 var builder = WebApplication.CreateBuilder(args);
 
 // Register the Syncfusion license before builder.Build().
-// Load the license from configuration (or an environment variable) so the
-// key never lives in source control. Leave the line commented out if you
-// do not have a key yet — the app runs with a license banner only.
-string? syncfusionLicense =
-    builder.Configuration["Syncfusion:LicenseKey"]
-    ?? Environment.GetEnvironmentVariable("SYNCFUSION_LICENSE_KEY");
-if (!string.IsNullOrWhiteSpace(syncfusionLicense))
-{
-    Syncfusion.Licensing.SyncfusionLicenseProvider
-        .RegisterLicense(syncfusionLicense);
-}
+// Syncfusion packages require a valid license or trial key.
+// Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(
+//     "YOUR LICENSE KEY");
 
 builder.Services.AddSyncfusionBlazor();
 
@@ -460,11 +427,6 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddControllers();
 
-// IHttpClientFactory is consumed by OrderController to avoid socket
-// exhaustion under sustained load. Add a named client if you want to
-// centralize the base address and default headers for the Firebase REST
-// API in one place.
-builder.Services.AddHttpClient();
 builder.Services.AddProblemDetails();
 
 var app = builder.Build();
@@ -476,6 +438,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseExceptionHandler();
+
 app.UseHttpsRedirection();
 
 app.MapControllers();
@@ -495,16 +458,17 @@ Key registration points:
 - `AddSyncfusionBlazor()` registers the Syncfusion Blazor services required by the Pivot Table.
 - `AddRazorComponents().AddInteractiveServerComponents()` enables Interactive Server rendering.
 - `AddControllers()` registers the API controllers, including `OrderController`.
-- `AddHttpClient()` registers `IHttpClientFactory`, which `OrderController` resolves in its constructor. The factory pools underlying handlers, so a fresh client per request is safe.
 - `AddProblemDetails()` and `UseExceptionHandler()` log unhandled failures and return generic error responses.
 - `MapControllers()` routes requests to the API endpoints.
 - `MapStaticAssets()` is a .NET 9+ API; it maps the application's static web assets, including assets supplied by referenced component packages.
 
-> **Note:** Remove the comment markers and fill in your Syncfusion license or trial key in `Program.cs` before running the application. The recommended way is to store the key in `appsettings.json` (for example, `"Syncfusion": { "LicenseKey": "..." }`) or in the `SYNCFUSION_LICENSE_KEY` environment variable so the key never appears in source control. Follow the [license-key registration instructions](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application) for details.
+The controller instantiates its own `HttpClient` field, so `AddHttpClient()` / `IHttpClientFactory` are not registered in this sample. If you move to a higher-throughput deployment, register `IHttpClientFactory` and update the controller to resolve clients from the factory instead (see [Production Considerations](#production-considerations)).
+
+> **Note:** Uncomment the `SyncfusionLicenseProvider.RegisterLicense(...)` line and paste your Syncfusion license or trial key before running the application. Keep the key out of source control by loading it from `appsettings.json`, an environment variable, or a secrets manager. Follow the [license-key registration instructions](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application) for details.
 
 > **Note:** `app.UseHttpsRedirection()` requires `Properties/launchSettings.json` to define an HTTPS `applicationUrl` (for example, `"https://localhost:5001"`) and a trusted ASP.NET Core development certificate. On Windows, run `dotnet dev-certs https --trust` once after installing the SDK so the redirect does not fail with `ERR_CERT_AUTHORITY_INVALID` on first launch. The default `dotnet new blazor` launch profile already includes both, but confirm the file has not been edited away.
 
-> **Note:** `app.UseAntiforgery()` protects form posts and Razor component actions, but `SfDataManager` does not automatically attach an antiforgery token to its POSTs. For the API endpoints in this sample, leave the global antiforgery middleware in place and add an `[IgnoreAntiforgeryToken]` attribute on `OrderController` (or apply a named policy) so the controller actions remain callable from the Pivot Table. If you later authenticate the API with cookies, configure the adaptor to send the antiforgery token and remove the ignore attribute.
+> **Note:** `app.UseAntiforgery()` protects form posts and Razor component actions, but `SfDataManager` does not automatically attach an antiforgery token to its JSON POSTs. This sample leaves the controller without an antiforgery override and the UrlAdaptor requests are processed normally; if you observe `400` antiforgery failures when running the sample (depending on the .NET 10 template defaults), add an `[IgnoreAntiforgeryToken]` attribute on `OrderController` so the controller actions remain callable from the Pivot Table. If you later authenticate the API with cookies, configure the adaptor to send the antiforgery token and remove the ignore attribute.
 
 ### Step 9: Configure the Pivot Table
 
@@ -514,8 +478,9 @@ Add these namespaces to `Components/_Imports.razor`:
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.PivotView
-@using PivotTableRealtimeDatabase.Models
 ```
+
+`Order` is declared as a nested class inside `OrderController` and as a matching `Order` class in `Home.razor`, so no `Models` namespace import is required on the page.
 
 In `Components/App.razor`, add the Syncfusion stylesheet inside `<head>`:
 
@@ -563,7 +528,8 @@ Replace `Components/Pages/Home.razor` with the following markup. The `SfDataMana
 
 ```cshtml
 @page "/"
-@using PivotTableRealtimeDatabase.Models
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="Order" Width="1000" Height="300" ShowFieldList="true">
     <PivotViewDataSourceSettings TValue="Order" ExpandAll="false" EnableSorting="true">
@@ -593,12 +559,9 @@ Replace `Components/Pages/Home.razor` with the following markup. The `SfDataMana
 </SfPivotView>
 
 @code {
-    // The BeginDrillThrough event fires when the user double-clicks a
-    // summary value cell to open the drill-through editor. The handler
-    // marks the OrderID column as the primary key on the drill-through
-    // grid so the UrlAdaptor can target update and delete requests.
     private void BeginDrillThrough(BeginDrillThroughEventArgs args)
     {
+        // Identify the key used by URL Adaptor update and delete requests.
         for (int i = 0; i < args.GridObj.Columns.Count; i++)
         {
             if (args.GridObj.Columns[i].Field == "OrderID")
@@ -611,10 +574,19 @@ Replace `Components/Pages/Home.razor` with the following markup. The `SfDataMana
             }
         }
     }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string? CustomerName { get; set; }
+        public int? EmployeeID { get; set; }
+        public double? Freight { get; set; }
+        public string? ShipCity { get; set; }
+    }
 }
 ```
 
-The `BeginDrillThrough` event is used to mark `OrderID` as the primary key on the drill-through grid. This tells the DataManager which column uniquely identifies each record so that insert, update, and delete requests carry the correct key. Without this configuration, the write operations cannot target the intended row.
+The `BeginDrillThrough` event is used to mark `OrderID` as the primary key on the drill-through grid by setting `args.GridObj.Columns[i].IsPrimaryKey = true;` for the `OrderID` column. This tells the DataManager which column uniquely identifies each record so that insert, update, and delete requests carry the correct key. Without this configuration, the write operations cannot target the intended row. The `Order` class declared in the `@code` block mirrors the shape of the `Order` model on the server and is the type used by `SfPivotView` and the drill-through grid on the client.
 
 ## API Contract
 
@@ -749,7 +721,7 @@ Firebase Realtime Database is a JSON tree database suitable for real-time JSON s
 - **Security rules:** Test mode opens the database for 30 days. Configure [Firebase Security Rules](https://firebase.google.com/docs/database/security) that allow only the operations your application requires before deploying.
 - **Authentication and authorization:** This sample accesses the Realtime Database through anonymous REST requests that rely on test-mode rules. Production deployments should configure appropriate Firebase Realtime Database security rules, use a server-side authentication strategy appropriate for the application, protect the write endpoints with the application's authorization mechanism, and avoid exposing unrestricted write access.
 - **Server-side data operations:** The sample returns the entire `Orders` node. Apply `DataManagerRequest` `where`, `sorted`, `skip`, and `take` parameters on the server before using this design with large datasets.
-- **HTTP client lifetime:** The sample instantiates `HttpClient` per controller. For higher-throughput deployments, use `IHttpClientFactory` to avoid socket exhaustion and to centralize retry and timeout policies.
+- **HTTP client lifetime:** The sample instantiates a single `HttpClient` field per controller instance (effectively per request). For higher-throughput deployments, register `IHttpClientFactory` in `Program.cs` and resolve clients from the factory to avoid socket exhaustion and to centralize retry and timeout policies.
 - **Database URL:** Store the Realtime Database URL through the hosting environment or a secrets manager rather than committing production URLs to source control.
 - **Antiforgery:** If cookie-authenticated API actions require antiforgery validation, configure `SfDataManager` to send the request token expected by the server.
 - **Region and latency:** Select a Realtime Database region close to your application host to reduce REST API latency.
@@ -775,7 +747,7 @@ Firebase Realtime Database is a JSON tree database suitable for real-time JSON s
 | CRUD returns `500` | Check the server log and verify the Realtime Database URL and security rules. |
 | JSON deserialization errors | Confirm the `Orders` node uses sequential numeric keys. The controller deserializes the REST response into `List<Order?>`; non-sequential or string keys require a different deserialization strategy. |
 | **Auth, antiforgery, and performance** | |
-| Antiforgery validation fails | Configure the adaptor to send the expected request token, or use an appropriate non-cookie API authentication scheme. |
+| Antiforgery validation fails | This sample does not apply `[IgnoreAntiforgeryToken]`. If you observe `400` antiforgery failures under your template defaults, add the attribute to `OrderController`. For cookie-authenticated APIs, configure the adaptor to send the expected request token instead. |
 | Large datasets are slow | Process `DataManagerRequest` operations on the server instead of returning the entire `Orders` node. |
 
 For current component behavior, see the [Pivot Table editing documentation](https://blazor.syncfusion.com/documentation/pivot-table/editing) and [Pivot Table data-binding documentation](https://blazor.syncfusion.com/documentation/pivot-table/data-binding).
