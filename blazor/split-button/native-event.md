@@ -20,9 +20,9 @@ The Split Button component supports the following events and corresponding event
 * OnOpen - Raised before the popup opens. Argument type: BeforeOpenCloseMenuEventArgs
 * Opened - Raised after the popup opens. Argument type: OpenCloseMenuEventArgs
 * ItemSelected - Raised when a menu item is selected. Argument type: MenuEventArgs
-* OnClose – Raised before the popup closes. Argument type: BeforeOpenCloseMenuEventArgs
-* OnItemRender – Raised while rendering each menu item. Argument type: MenuEventArgs
-* Closed – Raised after the popup closes. Argument type: OpenCloseMenuEventArgs
+* OnClose - Raised before the popup closes. Argument type: BeforeOpenCloseMenuEventArgs
+* OnItemRender - Raised while rendering each menu item. Argument type: MenuEventArgs
+* Closed - Raised after the popup closes. Argument type: OpenCloseMenuEventArgs
 
 ## How to bind event to Split Button
 
