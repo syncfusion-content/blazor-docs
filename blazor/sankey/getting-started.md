@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Sankey Diagram | Syncfusion®
-description: Add the Blazor Sankey Diagram to a Blazor Server App by installing the Syncfusion.Blazor.Sankey NuGet package, importing namespaces, and registering services.
+description: Add the Blazor Sankey Diagram to a Blazor Server App by installing the Sankey NuGet package, importing namespaces, and registering services.
 platform: Blazor
 control: Sankey
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Labels in Blazor Sankey Diagram | Syncfusion®
-description: Configure Blazor Sankey Diagram labels with SankeyLabelSettings to set visibility, color, font family, size, weight, padding, and italic styling per node.
+description: Configure Blazor Sankey Diagram labels with SankeyLabelSettings to set visibility, color, font family, size, weight, padding, and italic style.
 platform: Blazor
 control: Sankey
 documentation: ug

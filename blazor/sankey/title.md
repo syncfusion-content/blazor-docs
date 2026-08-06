@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Title and Subtitle in Blazor Sankey Diagram | Syncfusion®
-description: Set the Blazor Sankey Diagram title and subtitle with Title and SubTitle, then style them with SankeyTitleStyle and SankeySubtitleStyle font properties.
+description: Add a title and subtitle to the Blazor Sankey Diagram with Title and SubTitle, then style them via SankeyTitleStyle and SankeySubtitleStyle fonts.
 platform: Blazor
 control: Sankey
 documentation: ug

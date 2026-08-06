@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Sankey Diagram | Syncfusion®
-description: The Blazor Sankey Diagram supports accessibility with WCAG 2.2, Section 508, screen readers, RTL, color contrast, and keyboard navigation via Tab and arrow keys.
+description: The Blazor Sankey Diagram supports WCAG 2.2, Section 508, screen readers, RTL, color contrast, and full keyboard navigation.
 platform: Blazor
 control: Sankey
 documentation: ug
