@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in Blazor Smith Chart Component | Syncfusion®
-description: Checkout and learn here all the features about tooltip in Blazor Smith Chart component and much more details.
+title: Tooltip in Blazor Smith Chart | Syncfusion®
+description: Show tooltips on Blazor Smith Chart points with custom fill, border, opacity, and templated content for resistance and reactance values.
 platform: Blazor
 control: Smith Chart
 documentation: ug
 ---
 
-# Tooltip in Blazor Smith Chart Component
+# Tooltip in Blazor Smith Chart
 
 When the mouse is moved over a point in the Smith Chart, a tooltip will appear displaying information about the point. By default, the tooltip is disabled. To enable the tooltip, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltip.html#Syncfusion_Blazor_Charts_SmithChartSeriesTooltip_Visible) property to **true** in the [SmithChartSeriesTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltip.html).
 

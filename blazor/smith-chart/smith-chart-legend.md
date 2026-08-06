@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Legend in Blazor Smith Chart Component | Syncfusion®
-description: Checkout and learn here all the features about Legend in Blazor Smith Chart component and much more details.
+title: Legend in Blazor Smith Chart | Syncfusion®
+description: Place and style the Blazor Smith Chart legend with custom positions, alignment, shapes, and size for clear series identification.
 platform: Blazor
 control: Smith Chart
 documentation: ug
 ---
 
-# Legend in Blazor Smith Chart Component
+# Legend in Blazor Smith Chart
 
 In the Smith Chart, a legend is a key containing symbols and descriptions. It can be interpreted in various colors, shapes, or other identifiers based on the data, and it provides valuable information for interpreting what the Smith Chart is displaying. In simple words, the legend is used to denote the series rendered in the Smith Chart.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Get Started with Blazor Smith Chart in Blazor Web App | Syncfusion
-description: Check out and learn the documentation for getting started with Blazor Smith Chart Component in Blazor Web App.
+title: Getting Started with Blazor Smith Chart in Blazor Web App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Smith Chart control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Smith Chart
 documentation: ug

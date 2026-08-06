@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Smith Chart Component | Syncfusion®
-description: Checkout and learn here all the features about events in Blazor Smith Chart component and much more details.
+title: Events in Blazor Smith Chart | Syncfusion®
+description: Handle Smith Chart lifecycle in Blazor with events like Loaded, OnPrintComplete, OnExportComplete, AxisLabelRendering, and LegendRendering.
 platform: Blazor
 control: Smith Chart
 documentation: ug
 ---
 
-# Events in Blazor Smith Chart Component
+# Events in Blazor Smith Chart
 
 This section describes about the Smith Chart component's events that will be triggered when appropriate actions are performed. The events should be provided to the Smith Chart through the **SmithChartEvents** component.
 
