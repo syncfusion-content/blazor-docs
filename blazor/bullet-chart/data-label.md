@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Labels in Blazor Bullet Chart Component | Syncfusion®
-description: Checkout and learn here all features about Data Labels in Blazor Bullet Chart component and much more.
+title: Data Labels in Blazor Bullet Chart | Syncfusion®
+description: Display Data Labels on the Blazor Bullet Chart to identify the actual bar value by enabling the BulletChartDataLabel child setting.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
 ---
 
-# Data Labels in Blazor Bullet Chart Component
+# Data Labels in Blazor Bullet Chart
 
 Data Labels are used to identify the value of actual bar in the [Blazor Bullet Chart](https://www.syncfusion.com/blazor-components/blazor-bullet-chart) component. The Data Labels will be shown by specifying the [BulletChartDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartDataLabel.html) setting.
 

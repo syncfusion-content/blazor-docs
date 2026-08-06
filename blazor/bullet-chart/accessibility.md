@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Bullet Chart Component | Syncfusion®
-description: Checkout and learn here all about Accessibility using Keyboard navigation in Blazor Bullet Chart component and more.
+title: Accessibility in Blazor Bullet Chart | Syncfusion®
+description: Discover how the Blazor Bullet Chart meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA roles and full keyboard navigation support.
 platform: Blazor
 control: Bullet Chart
 documentation: ug
 ---
 
-# Accessibility in Blazor Bullet Chart Component
+# Accessibility in Blazor Bullet Chart
 
 The Blazor Bullet chart component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
