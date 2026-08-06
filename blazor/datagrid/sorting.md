@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sorting in Blazor DataGrid | Syncfusion®
-description: Explore sorting in Blazor DataGrid including single/multi-column sort, initial sort, custom icons, foreign key sorting, and sorting events.
+title: Blazor Grid Sorting | Syncfusion
+description: Learn how to sort data in Blazor Data Grid using single and multi-column sorting, initial sorting, custom icons, and sorting events.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Sorting in Blazor DataGrid
+# Sorting in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) includes a built-in sorting feature that helps organize information within columns. This makes it easier to locate and analyze data efficiently. To turn on sorting, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to **true** in the Grid component.
 

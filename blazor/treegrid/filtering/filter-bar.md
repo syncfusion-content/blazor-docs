@@ -203,7 +203,7 @@ namespace TreeGridComponent.Data {
 
 You can change the default filter operator by extending [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterSettings) property in the column.
 
-In the following sample, we have changed the default operator for TaskName column as **contains** from **startswith**
+In the following sample, we have changed the default operator for **TaskName** column as **contains** from **startswith**
 
 {% tabs %}
 
