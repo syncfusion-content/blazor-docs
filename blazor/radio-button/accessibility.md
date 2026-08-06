@@ -38,7 +38,7 @@ The accessibility compliance for the Blazor RadioButton component is outlined be
 
 ## WAI-ARIA attributes
 
-The Blazor RadioButton component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/radio/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor RadioButton component:
+The Blazor RadioButton component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/radio/) patterns to meet accessibility requirements. The following ARIA attributes are used in the Blazor RadioButton component:
 
 | Attributes | Purpose |
 | --- | --- |
