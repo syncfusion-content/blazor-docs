@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Markers in Blazor Sparkline Component | Syncfusion®
-description: Check out and learn about marker options and customization in the Blazor Sparkline component and much more details.
+title: Markers in Blazor Sparkline Charts | Syncfusion®
+description: Add data markers to the Blazor Sparkline Charts for All, Start, End, High, Low, or Negative points, and customize their fill, border, size, and opacity.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Markers in Blazor Sparkline Component
+# Markers in Blazor Sparkline Charts
 
 Data markers provide information about data points in the Sparkline series.
 

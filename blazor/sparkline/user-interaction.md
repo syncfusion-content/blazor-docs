@@ -1,13 +1,13 @@
 ---
 layout: post
-title: User Interaction in Blazor Sparkline Component | Syncfusion®
-description: Check out and learn here all the features about user interaction in Blazor Sparkline component and much more details.
+title: User Interaction in Blazor Sparkline Charts | Syncfusion®
+description: Enable user interaction in the Blazor Sparkline Charts with a hover tooltip and a tracker line, and customize tooltip format, fill, and border.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# User Interaction in Blazor Sparkline Component
+# User Interaction in Blazor Sparkline Charts
 
 User interaction features in the Sparkline include the tooltip and the tracker line.
 

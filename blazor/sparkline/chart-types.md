@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Chart Types in Blazor Sparkline Component | Syncfusion®
-description: Check out and learn the features about the different chart types available in the Blazor Sparkline component.
+title: Chart Types in Blazor Sparkline Charts | Syncfusion®
+description: Render the Blazor Sparkline Charts as Line, Column, Area, Pie, or WinLoss shapes by setting the Type property to match your data story.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Chart Types in Blazor Sparkline Component
+# Chart Types in Blazor Sparkline Charts
 
 Different shapes can be used to represent the Sparkline Chart by specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) property.
 

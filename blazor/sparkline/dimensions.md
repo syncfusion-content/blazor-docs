@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Dimensions in Blazor Sparkline Component | Syncfusion®
-description: Check out and learn how to set and customize dimensions in the Blazor Sparkline component and much more details.
+title: Dimensions in Blazor Sparkline Charts | Syncfusion®
+description: Size the Blazor Sparkline Charts by its parent container, by inline Width and Height in pixels, or by percentage values to fit any layout.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Dimensions in Blazor Sparkline Component
+# Dimensions in Blazor Sparkline Charts
 
 ## Size for the Container
 
