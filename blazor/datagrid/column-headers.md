@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column Header in Blazor DataGrid Component | Syncfusion®
-description: Learn how to customize column headers in Blazor DataGrid, including text, templates, alignment, styles, tooltips, and orientation.
+title: Blazor Grid Column Header | Syncfusion
+description: Learn how to customize column headers in Blazor Data Grid, including header text, templates, alignment, styling, tooltips, and orientation settings.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Headers in Blazor DataGrid
+# Column Headers in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides options to customize and manage headers for better data organization and presentation. 
 

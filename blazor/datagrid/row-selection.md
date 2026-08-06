@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Row selection in Blazor DataGrid | Syncfusion®
-description: Learn how to use row selection in Blazor DataGrid including single/multiple selection, paging, initial selection, and programmatic control.
+title: Blazor Grid Row Selection | Syncfusion
+description: Learn how to use row selection in Blazor Data Grid with single and multiple selection, paging, initial selection, and programmatic control.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Row Selection in Blazor DataGrid
+# Row Selection in Blazor Data Grid
 
 Row selection in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables interactive selection of individual rows or ranges of rows. Selection can be performed using mouse clicks or keyboard navigation (arrow keys). This feature is useful for highlighting, manipulating, or performing actions on specific rows within the grid.
 
