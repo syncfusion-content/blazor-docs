@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Legends for Blazor Sankey Diagram | Syncfusion®
-description: Learn how to configure and customize legends in the Blazor Sankey Diagram to enhance data interpretation and user interaction.
+title: Legends in Blazor Sankey Diagram | Syncfusion®
+description: Show a Blazor Sankey Diagram legend with SankeyLegendSettings to set position, size, padding, background, highlight on hover, and a custom title.
 platform: Blazor
 control: Sankey
 documentation: ug
