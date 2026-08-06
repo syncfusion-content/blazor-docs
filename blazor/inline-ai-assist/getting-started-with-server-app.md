@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Inline AI Assist Server App | Syncfusion
+title: Getting Started with Blazor Inline AI Assist Server App | Syncfusion®
 description: Check out the documentation for getting started with Blazor Inline AI Assist Component in Blazor Server App.
 platform: Blazor
 control: Inline AI Assist
 documentation: ug
 ---
 
-# Getting Started with Inline AI Assist Component in Blazor Server App
+# Getting Started with Blazor Inline AI Assist in Blazor Server App
 
 This section briefly explains how to include the [Blazor Inline AI Assist](https://www.syncfusion.com/blazor-components/blazor-inline-ai-assist) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

@@ -11,7 +11,7 @@ documentation: ug
 
 The default Tree Grid actions can be prevented by canceling them in the [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowCreating) event.
 
-This is demonstrated in the below sample code where the `Add` operation is prevented by setting `Cancel` argument value of the [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowCreating) event to **false**.
+This is demonstrated in the below sample code where the `Add` operation is prevented by setting `Cancel` argument value of the `RowCreating` event to **false**.
 
 {% tabs %}
 
