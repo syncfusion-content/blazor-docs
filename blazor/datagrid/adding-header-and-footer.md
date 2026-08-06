@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize PDF headers and footers in the Blazor DataGrid | Syncfusion®
-description: Learn how to customize headers and footers in PDF export using Blazor DataGrid, including text, images, and page settings.
+title: Blazor Grid PDF Headers and Footers | Syncfusion
+description: Learn how to customize PDF headers and footers in Blazor Data Grid export, including text, images, page numbers, and page settings.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Adding header and footer in Blazor DataGrid 
+# PDF Headers and Footers in Blazor Data Grid.
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports customizing header and footer sections in PDF exports. These regions can include:
 

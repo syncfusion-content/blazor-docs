@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Data Grid connected to Firebase Firestore | Syncfusion®
-description: Bind Firebase Firestore data to Blazor Data Grid using Google.Cloud.Firestore with complete CRUD, filtering, sorting, paging, and advanced data operations.
+title: Blazor Grid Firebase Firestore | Syncfusion
+description: Learn how to connect Firebase Firestore with Blazor Data Grid for CRUD operations, filtering, sorting, paging, and data management.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Connecting Firebase Firestore to Blazor Data Grid
+# Firebase Firestore in Blazor Data Grid.
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a Firebase Firestore database using the Google.Cloud.Firestore library. This approach provides a flexible and scalable solution for working with NoSQL cloud-based databases.
 

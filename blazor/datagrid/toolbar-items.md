@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Toolbar Items in Blazor DataGrid Component | Syncfusion®
-description: Learn how to use built-in and custom toolbar items in Blazor DataGrid, including icons, alignment, tooltips, and handling toolbar actions.
+title: Blazor Grid Toolbar Items | Syncfusion
+description: Learn how to use built-in and custom toolbar items in Blazor Data Grid, including icons, alignment, tooltips, and toolbar actions.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Toolbar items in Blazor DataGrid
+# Toolbar Items in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) offers a flexible toolbar that enables the addition of custom toolbar items or modification of existing ones. The toolbar appears above the DataGrid, providing convenient access to common actions and custom functionality.
 
