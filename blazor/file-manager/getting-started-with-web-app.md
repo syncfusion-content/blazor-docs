@@ -2,12 +2,12 @@
 layout: post
 title: Getting Started with File Manager in Blazor Web App | Syncfusion
 description: Checkout and learn about how to get started with the Blazor File Manager Component in Blazor Web App.
-platform: Blazor
 component: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Getting Started with Blazor File Manager Component in Blazor Web App
+# Getting Started with Blazor File Manager in Blazor Web App
 
 This section briefly explains how to include the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
