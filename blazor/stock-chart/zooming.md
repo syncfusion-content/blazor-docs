@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Zooming in Blazor Stock Chart | Syncfusion
+title: Zooming in Blazor Stock Chart | Syncfusion®
 description: Zoom the Blazor Stock Chart using selection, mouse wheel, or pinch gestures with EnableSelectionZooming, EnableMouseWheelZooming, and EnablePinchZooming.
 platform: Blazor
 control: Stock Chart
