@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Grid Custom Binding | Syncfusion
-description: Learn Custom Data Binding in Blazor Data Grid using Syncfusion controls. It supports data operations, UI customization, and enterprise features.
+description: Learn custom data binding in Blazor Data Grid. Explore data operations, UI customization, and CRUD handling in this step-by-step guide.
 platform: Blazor
 control: DataGrid
 keywords: adaptors, CustomAdaptor, custom adaptor, remotedata, custombinding, custom binding

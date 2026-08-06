@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Blazor Grid Enable or Disable Blazor Data Grid | Syncfusion
-description: Learn how to enable or disable the entire Blazor Data Grid component to control user interactions, manage grid actions dynamically, and improve the overall user experience efficiently.
+description: Learn how to enable or disable the entire Blazor Data Grid component to control user interactions and improve the overall user experience efficiently.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Enable or Disable Blazor Data Grid in Blazor Data Grid
+# Enable or Disable Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be dynamically enabled or disabled by toggling a button. This is useful to restrict user interaction with the Grid during certain application states or processes. The approach below disables interaction at the UI level by applying a CSS class to a wrapper and setting an attribute for styling or accessibility.
 

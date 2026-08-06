@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Grid Virtualization | Syncfusion
+title: Blazor Grid Virtualization for Large Data Performance | Syncfusion
 description: Learn how to implement virtualization in Blazor Data Grid using virtual scrolling, paging, and performance optimization for large datasets.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Virtual scrolling in Blazor Data Grid
+# Virtual scrolling for Large Data Performance in Blazor Data Grid
 
 The virtual scrolling feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) efficiently handles large datasets by rendering only the rows currently visible in the viewport instead of the entire data source. This reduces DOM size, improves responsiveness, and lowers initial load time for datasets with thousands of records.
 

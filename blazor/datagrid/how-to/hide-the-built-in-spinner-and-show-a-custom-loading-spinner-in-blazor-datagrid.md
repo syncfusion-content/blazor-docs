@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Grid Custom Loading Spinner | Syncfusion
+title: Blazor Grid Custom Loading Spinner for Better UX | Syncfusion
 description: Learn how to use a custom loading spinner in Blazor Data Grid by replacing the built-in spinner with an overlay loader for improved user experience.
 platform: Blazor
 control: DataGrid

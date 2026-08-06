@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Grid GraphQL Custom Adaptor | Syncfusion
+title: Blazor Grid GraphQL Data Binding | Syncfusion
 description: Learn how to connect GraphQL with Blazor Data Grid for CRUD operations, filtering, sorting, paging, and grouping of data.
 control: DataGrid
 platform: blazor
 documentation: ug
 ---
 
-# GraphQL Custom Adaptor in Blazor Data Grid.
+# Connect GraphQL to Blazor Data Grid.
 
 GraphQL is a query language that allows applications to request exactly the data needed, nothing more and nothing less. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response.
 

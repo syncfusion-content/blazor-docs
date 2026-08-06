@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Grid Customize Aggregates | Syncfusion
+title: Blazor Grid Style Aggregate Rows Using CSS | Syncfusion
 description: Learn how to customize aggregate rows in Blazor Data Grid using CSS, including footer containers, summary cells, and aggregate styling options.
 platform: Blazor
 control: DataGrid

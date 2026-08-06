@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Grid Use Dictionary Values as Data Source | Syncfusion
+title: Blazor Grid Using Dictionary Values as a Data Source | Syncfusion
 description: Learn how to bind dictionary values to Blazor Data Grid using KeyValuePair mapping and column templates to display key-value data.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Using dictionary values as datasource in Blazor Data Grid
+# Using Dictionary Values as Data Source in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can display values from a dictionary by using a column [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template). Because a dictionary is not a scalar field, the column cannot bind directly to it. Instead, the template accesses the dictionary via the row item and renders the corresponding value by matching the row’s key with the dictionary key.
 

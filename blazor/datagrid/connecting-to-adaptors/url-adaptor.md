@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Blazor Grid UrlAdaptor | Syncfusion
-description: Learn how to use UrlAdaptor in Blazor Data Grid with Syncfusion to perform CRUD operations, remote data binding, sorting, filtering, and paging.
+title: Blazor Grid REST API Binding | Syncfusion
+description: Learn how to bind REST API data to Blazor Data Grid and perform CRUD operations, sorting, filtering, and paging.
 platform: Blazor
 control: DataGrid
 keywords: adaptors, urladaptor, url adaptor, remotedata 
 documentation: ug
 ---
 
-# URL Adaptor in Blazor Data Grid.
+# Bind REST API Data using UrlAdaptor in Blazor Data Grid
 
 The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) serves as the base adaptor for facilitating communication between remote data services and a UI component. It enables seamless data binding and interaction with custom API services or any remote service through URLs. The `UrlAdaptor` is particularly useful in scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data, with the resultant data returned in the `result` and `count` format for display in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid).
 
