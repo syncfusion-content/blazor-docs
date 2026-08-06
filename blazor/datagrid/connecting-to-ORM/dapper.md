@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Data Grid connected to SQL Server via Dapper | Syncfusion®
-description: Bind SQL Server data to Blazor Data Grid using Dapper with complete CRUD, filtering, sorting, paging, grouping, and advanced data operations.
+title: Blazor Grid SQL Server with Dapper | Syncfusion
+description: Learn how to connect SQL Server with Blazor Data Grid using Dapper for CRUD operations, filtering, sorting, paging, grouping, and data management.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Connecting SQL Server to Blazor Data Grid Using Dapper
+# SQL Server with Dapper in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from SQL Server using the lightweight Dapper micro‑ORM. This modern approach provides a simpler, more direct alternative where raw SQL control is preferred.
 
