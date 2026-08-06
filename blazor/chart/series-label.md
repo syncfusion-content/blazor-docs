@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Series Label in Blazor Charts | Syncfusion
-description: Display each series name directly inside the Blazor Charts plot area using SeriesLabelSettings. Supported for Line, Area, Column, Bar, Scatter, Polar, and Radar types.
+description: Display each series name directly inside the Blazor Charts plot area using SeriesLabelSettings, improving readability of multi-series charts.
 platform: Blazor
 control: Charts
 documentation: ug

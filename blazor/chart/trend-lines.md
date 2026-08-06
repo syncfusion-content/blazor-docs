@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Trendlines in Blazor Charts | Syncfusion®
-description: Add trendlines to Blazor Charts Cartesian series to show data direction. Six types are supported: Linear, Exponential, Logarithmic, Power, Polynomial, and MovingAverage.
+description: Show data direction in Blazor Charts with trendlines. Supports Linear, Exponential, Logarithmic, Power, Polynomial, and MovingAverage.
 platform: Blazor
 control: Charts
 documentation: ug
