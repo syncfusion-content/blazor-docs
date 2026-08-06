@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customizing loading indicator in Blazor Pivot Table | Syncfusion
-description: Learn here all about customizing loading indicator in Syncfusion Blazor Pivot Table component and more.
+title: How to style the loading indicator in Blazor Pivot Table | Syncfusion
+description: Step-by-step example showing how to customize the loading indicator in the Blazor Pivot Table by replacing the default spinner with a custom SpinnerTemplate.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Customizing loading indicator in Blazor Pivot Table Component
+# How to customize the loading indicator in Blazor Pivot Table
 
 The pivot table displays a loading indicator during data processing operations such as filtering, sorting, and aggregation calculations. The default loading spinner can be customized to match application design requirements using the [SpinnerTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_SpinnerTemplate) property.
 
@@ -56,4 +56,4 @@ N> You can also disable the loading indicator by setting [SpinnerTemplate](https
 
 ```
 
-N> You can refer to [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
+N> You can refer to [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

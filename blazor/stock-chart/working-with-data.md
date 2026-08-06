@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Working with Data in Blazor Stock Chart Component | Syncfusion
-description: Learn how to bind data to the Syncfusion Blazor Stock Chart using lists, Dynamic Objects, and much more.
+title: Working with Data in Blazor Stock Chart Component | Syncfusion®
+description: Checkout and learn how to bind data to the Blazor Stock Chart using lists, Dynamic Objects and much more details.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
@@ -203,7 +203,7 @@ Stock Chart supports **DynamicObject** as a data source when the model type is u
 
 ### Binding with OData v4 services
 
-The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) can retrieve and consume OData v4 services, an upgraded version of the OData protocol. Refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197) for additional information. To bind an OData v4 service, use **ODataV4Adaptor**.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) can retrieve and consume OData v4 services, an upgraded version of the OData protocol. Refer to the [OData documentation](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html) for additional information. To bind an OData v4 service, use **ODataV4Adaptor**.
 
 ```cshtml
 

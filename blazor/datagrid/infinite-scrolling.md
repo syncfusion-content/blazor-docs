@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Infinite Scrolling in Blazor DataGrid | Syncfusion
-description: Learn how to implement Infinite Scrolling in Syncfusion Blazor DataGrid and explore more advanced features and customization options.
+title: Blazor Grid Infinite Scrolling for Large Data Performance | Syncfusion
+description: Learn how to implement infinite scrolling in Blazor Data Grid to efficiently load large datasets and enhance scrolling performance.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Infinite scroll in Blazor DataGrid
+# Infinite Scrolling for Large Data Performance in Blazor Data Grid
 
 The infinite scrolling feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides load-on-demand data retrieval to handle large datasets without degrading performance. In default infinite scrolling, the Grid fetches the next block of data when the vertical scrollbar reaches the end of the scroller, creating a seamless browsing experience across extensive data.
 
@@ -78,7 +78,7 @@ public class TaskDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjreXMrOAPkHeOht?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLdZQDgIhNFteKy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Number of blocks rendered during initial loading
 
@@ -179,7 +179,7 @@ public class TaskDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDheZMAZCHNIhdIg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrxNcNUeLCWkTqi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Efficient data caching and DOM management in Grid cache mode
 
@@ -264,7 +264,7 @@ public class TaskDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZreNsUXVSieZxOY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBdNwDgIBWfxSsV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Limitations
 

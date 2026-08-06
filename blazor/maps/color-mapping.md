@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Color Mapping in Blazor Maps Component | Syncfusion
-description: Check out and learn here all about color mapping in the Syncfusion Blazor Maps component and much more details.
+title: Color Mapping in Blazor Maps Component | Syncfusion®
+description: Check out and learn here all about color mapping in the Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug

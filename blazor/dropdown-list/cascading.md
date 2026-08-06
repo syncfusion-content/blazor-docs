@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Cascading in Blazor DropDown List Component | Syncfusion
-description: Checkout and learn here all about Cascading in Syncfusion Blazor DropDown List component and much more.
+title: Cascading in Blazor DropDown List Component | Syncfusion®
+description: Checkout and learn here all about Cascading in Blazor DropDown List component and much more details.
 platform: Blazor
 control: DropDownList
 documentation: ug
@@ -27,4 +27,4 @@ In the following sample, selecting a country in the first DropDownList loads its
 
 ![Blazor DropdownList with cascading](./images/cascading/blazor_dropdown_cascading.gif)
 
-N> [View Sample in Demo](https://blazor.syncfusion.com/demos/dropdown-list/cascading?theme=bootstrap5).
+N> [View Sample in Demo](https://blazor.syncfusion.com/demos/dropdown-list/cascading?theme=fluent2).

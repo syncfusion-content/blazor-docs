@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Render Image Editor in a Dialog Component | Syncfusion
+title: Render Image Editor in a Dialog Component | Syncfusion®
 description: Render the Blazor Image Editor in a modal dialog for a focused, space-saving editing experience in Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor

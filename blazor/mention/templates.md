@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Templates in Blazor Mention Component | Syncfusion
-description: Checkout and learn here all about templates in Syncfusion Blazor Mention component and much more details.
+title: Templates in Blazor Mention Component | Syncfusion®
+description: Checkout and learn here all the features about templates in Blazor Mention component and much more details.
 platform: Blazor
 control: Mention
 documentation: ug

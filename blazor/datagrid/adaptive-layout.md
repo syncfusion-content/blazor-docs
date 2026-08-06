@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Adaptive Layout in Blazor DataGrid Component | Syncfusion
-description: Learn how to use adaptive layout in Syncfusion Blazor DataGrid to render filter, sort, and edit dialogs in full screen for better user experience.
+title: Blazor Grid Adaptive UI and Responsive Layout | Syncfusion
+description: Learn how to use Adaptive Layout in Blazor Data Grid to render filter, sort, and edit dialogs in fullscreen mode for responsive and mobile-friendly experiences.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Adaptive UI Layout in Blazor DataGrid
+# Adaptive and Responsive Layout in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) includes an adaptive user interface designed for optimal usability on small screens. When enabled, the Grid renders filter, sort, column chooser, column menu (supported only when [RowRenderingMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowRenderingMode) is **Horizontal**), and edit dialogs in a full-screen, mobile-friendly layout. It also provides an option to render Grid row elements vertically for improved readability on narrow viewport.
 
@@ -235,7 +235,7 @@ public static List<AdaptiveDetails> AdaptiveModels = new List<AdaptiveDetails>()
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrTCCMIipRSVeiy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrxjwZCLceflRsG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Vertical row rendering
 
@@ -496,7 +496,7 @@ public class AdaptiveDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVTCssyWfxDKTfT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLdjcDMVmntycTa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > [EnableAdaptiveUI](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAdaptiveUI) must be enabled for vertical row rendering.
 
@@ -746,6 +746,6 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhfsMCfznwypGTw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhxXQZMhmQidgML?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-render-adaptive-layout)

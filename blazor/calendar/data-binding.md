@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor Calendar Component | Syncfusion®
-description: Checkout and learn here all features about Data Binding in Blazor Calendar component and including one-way , two-way and dynamic value data binding.
+description: Checkout and learn here all features about Data Binding in Blazor Calendar component and including one-way, two-way and dynamic value data binding.
 platform: Blazor
 control: Calendar
 documentation: ug
@@ -35,7 +35,7 @@ In one-way binding, Bind the value to the Calendar component directly for `Value
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhKiVLVVoLNbXdK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrxjdMrVmaWCLQo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Two-Way data binding
 
@@ -52,7 +52,7 @@ Use `@bind-Value` to keep the Calendar and your data source in sync. The bound f
 public DateTime? DateValue { get; set; } = DateTime.Now;
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhgWLhrrSBqdcMZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBxNdMVLGOIHJQV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Dynamic value binding
 
@@ -82,4 +82,4 @@ private void onChange(Syncfusion.Blazor.Calendars.ChangedEventArgs<DateTime?> ar
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhKMBhBreLoYIse?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVRZdCLrbtMNMeE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

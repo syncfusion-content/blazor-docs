@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column Validation in Blazor DataGrid | Syncfusion
-description: Learn about Column Validation in Syncfusion Blazor DataGrid, including setup, validation types, and customization options.
+title: Blazor Grid Column Validation | Syncfusion
+description: Learn how to use column validation in Blazor Data Grid using built-in validation rules, custom validators, editing validation, and error message customization.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Validation in Blazor DataGrid
+# Column validation in Blazor Data Grid
 
 Validation is essential for maintaining data integrity in applications. The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides built-in support for reliable data validation. This feature ensures that entered or modified data adheres to predefined rules, helping prevent errors and maintain the accuracy of displayed information.
 
@@ -84,7 +84,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVyjCrhrHDetIYc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhdtQXiTPWUFndp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Data annotation
 
@@ -129,6 +129,8 @@ In this configuration, custom validation is applied to the **EmployeeID** and **
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderDetails.cs" %}
+using System.Reflection;
+using System.ComponentModel.DataAnnotations;
 public class OrderDetails
 {
     public static List<OrderDetails> Order = new List<OrderDetails>();
@@ -220,7 +222,7 @@ public class CustomValidationFreight : ValidationAttribute
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrojMBhUyZJfcXd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhxNmtMJPgbJPho?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Validate complex column using data annotation attribute
 
@@ -655,8 +657,8 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBoZChqfqyraNHa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBdtQNsJldNlFzC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > A fully working sample is available [here](https://github.com/SyncfusionExamples/blazor-datagrid-display-validation-message-in-dialog-template).
 
-N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand data presentation and manipulation.
+N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.

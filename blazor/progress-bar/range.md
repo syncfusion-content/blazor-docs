@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Range in Blazor ProgressBar Component | Syncfusion
-description: Checkout and learn here all about range in Syncfusion Blazor ProgressBar component and much more details.
+title: Range in Blazor ProgressBar Component | Syncfusion®
+description: Learn about range in Blazor ProgressBar component with examples for setting minimum and maximum values and much more details.
 platform: Blazor
 control: Progress Bar 
 documentation: ug

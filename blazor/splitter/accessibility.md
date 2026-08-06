@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Keyboard Shortcuts | Syncfusion
-description: Checkout and learn here all about keyboard shortcuts in Syncfusion Blazor Splitter component and more.
+title: Keyboard Shortcuts in Blazor Splitter Component | Syncfusion®
+description: Checkout and learn here all about keyboard shortcuts in Blazor Splitter component and much more details.
 platform: Blazor
 control: Splitter
 documentation: ug
@@ -59,4 +59,4 @@ The accessibility compliance of the Splitter component is shown in the following
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)

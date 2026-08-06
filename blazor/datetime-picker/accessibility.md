@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor DateTimePicker Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Datetime Picker component and more.
+title: Accessibility in Blazor DateTimePicker Component | Syncfusion®
+description: Checkout and learn here all about Accessibility in Blazor Datetime Picker component and much more details.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
@@ -129,4 +129,4 @@ The accessibility compliance of the DateTimePicker component is shown in the fol
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)

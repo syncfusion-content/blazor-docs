@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Grouping in Blazor DataGrid | Syncfusion
-description: Learn how to group data, manage drop area visibility, persist group state, and sort or format grouped columns in the Syncfusion Blazor DataGrid.
+title: Blazor Grid Grouping | Syncfusion
+description: Learn how to group data, manage group state, customize grouped columns, and improve data organization in Blazor Data Grid.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Grouping in Blazor DataGrid
+# Grouping in Blazor Data Grid
 
 The grouping feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) organizes rows into groups, enabling users to expand or collapse related records. Columns can be grouped by dragging the column header into the group drop area. Enable grouping by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to **true**. Configure behavior using [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings).
 
@@ -82,7 +82,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLqMCNQhjHRjNeQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBHDmjgAVhNueJF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > - Group and ungroup columns programmatically using [GroupColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupColumnAsync_System_String_) and [UngroupColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UngroupColumnAsync_System_String_).
 > - To prevent grouping for a specific column, set [GridColumn.AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowGrouping) to **false**.
@@ -165,7 +165,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBKsCNQBXkOKmSa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVnZcDqABVIDtaM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > Group multiple columns by listing their field names in the `Columns` property of `GridGroupSettings`.
 
@@ -243,7 +243,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthUWWNcBWKrghqe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhdjwjUKVKiZXsy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Hide drop area
 
@@ -347,7 +347,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhgiitwBBVMzKlC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBnjwDAKBAHAZyd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > By default, the group drop area is shown only if at least one column is available to group.
 
@@ -456,7 +456,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLqCCBPUOxoyWyr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLdDmXqqVJrpZAz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Persist grouped row expand or collapse state
  
@@ -556,7 +556,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVINYihrdGfllLS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhnjGZqzYIKunOa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Sort grouped columns in descending order during initial grouping
 
@@ -645,7 +645,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhUCMZGLoABNhxp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrRjwtgzYIcGPVT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Group by format
 
@@ -726,7 +726,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLUisZcqcKfqGvJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrRNQZATYxCLqnR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > Numeric columns can be grouped based on formats such as currency or percentage, and datetime columns can be grouped based on date or time formats.
 
@@ -824,7 +824,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrfDsjKqkAfFfop?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhxNQNAJOxQpgHl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > Collapsing every grouped record can take time on large datasets. For large data, use [lazy-load grouping](https://blazor.syncfusion.com/documentation/datagrid/lazy-load-grouping). The same consideration applies to [ExpandAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandAllGroupAsync).
 
@@ -947,7 +947,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBgCiNGTssPWSDl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLnNcZqfkcNAIdz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Expand or collapse externally
 
@@ -1052,7 +1052,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVgMWDwTMzdeJff?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhxZGtUpEGJBriu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Clear grouping 
 
@@ -1142,7 +1142,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhKsMDwJCOGDhcq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhdjGtKzEPkzdAk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Grouping events
 
@@ -1252,11 +1252,11 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLpNCtffrjjtSYQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVxDwZqfYuzxYmK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
 ## See Also
 
 - [Exporting grouped records](https://blazor.syncfusion.com/documentation/datagrid/excel-exporting#exporting-grouped-records)
 
-> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for an overview of capabilities. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to learn how to present and manipulate data.
+> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for an overview of capabilities. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to learn how to present and manipulate data.

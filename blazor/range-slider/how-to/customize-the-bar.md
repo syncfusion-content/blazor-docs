@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize the bar in Blazor Range Slider Component | Syncfusion
-description: Checkout and learn here all about customize the bar in Syncfusion Blazor Range Slider component and more.
+title: Customize the bar in Blazor Range Slider Component | Syncfusion®
+description: Checkout and learn here all about customize the bar in Blazor Range Slider component with examples and much more details.
 platform: Blazor
 control: Range Slider
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Methods in Blazor TreeMap Component | Syncfusion
-description: Checkout and learn here all about Methods in Syncfusion Blazor TreeMap component and much more details.
+title: Methods in Blazor TreeMap Component | Syncfusion®
+description: Checkout and learn here all the features about Methods in Blazor TreeMap component and much more details.
 platform: Blazor
 control: TreeMap
 documentation: ug

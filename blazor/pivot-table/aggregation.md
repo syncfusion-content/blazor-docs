@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Aggregation in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about aggregation in Syncfusion Blazor Pivot Table component and much more.
+title: Aggregation in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table performs value-axis aggregations such as Sum, Count, Min, Max, Average, running totals, and percentage comparisons.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Aggregation in Blazor Pivot Table Component
+# Aggregation in Blazor Pivot Table
 
 N> This feature is applicable only for the relational data source.
 
@@ -31,6 +31,7 @@ N> Numeric fields support all aggregation types listed below, except **Calculate
 | PopulationVar| Displays the variance of the population for the selected field.|
 | SampleVar| Displays the sample variance for the selected field.|
 | RunningTotals| Displays the running total for the selected field values.|
+| PercentageOfRunningTotals| Cumulative percentage of running totals (client-side engine only).|
 | DifferenceFrom| Displays the pivot table values with difference from the value of the base item in the base field.|
 | PercentageOfDifferenceFrom| Displays the pivot table values with percentage difference from the value of the base item in the base field.|
 | PercentageOfGrandTotal| Displays the pivot table values with percentage of grand total of all values.|
@@ -403,4 +404,4 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pi
 }
 ```
 
-N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
+N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

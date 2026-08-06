@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Layers in Blazor Maps Component | Syncfusion
-description: Check out and learn how to configure layers in the Syncfusion Blazor Maps component and much more details.
+title: Layers in Blazor Maps Component | Syncfusion®
+description: Check out and learn the features and how to configure layers in the Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug
@@ -77,7 +77,7 @@ Custom shapes (also known as custom maps) can be rendered in Maps to represent b
 
 Refer to the sample GeoJSON file for bus seat selection: [Seat selection GeoJSON](https://cdn.syncfusion.com/maps/map-data/seat.json).
 
-For a live demonstration, see [Bus seat selection demo](https://blazor.syncfusion.com/demos/maps/bus-seat-selection?theme=bootstrap5).
+For a live demonstration, see [Bus seat selection demo](https://blazor.syncfusion.com/demos/maps/bus-seat-selection?theme=fluent2).
 
 ## See also
 

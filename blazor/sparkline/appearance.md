@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Appearance in Blazor Sparkline Component | Syncfusion
-description: Check out and learn here all about appearance customization in the Syncfusion Blazor Sparkline component.
+title: Appearance in Blazor Sparkline Component | Syncfusion®
+description: Check out and learn here all the features about appearance customization in the Blazor Sparkline component.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
@@ -30,7 +30,7 @@ Right-to-left (RTL) rendering is supported and can be enabled by setting the [En
 
 ## Border
 
-The border can be enabled and customized by specifying the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderSettings.html#Syncfusion_Blazor_Charts_BorderSettings_Color) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderSettings.html#Syncfusion_Blazor_Charts_BorderSettings_Width) properties of [SparklineContainerAreaBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineContainerAreaBorder.html).
+The border can be enabled and customized by specifying the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderSettings.html#Syncfusion_Blazor_Charts_BorderSettings_Color) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderSettings.html#Syncfusion_Blazor_Charts_BorderSettings_Width) properties of [SparklineContainerAreaBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineContainerAreaBorder.html).
 
 ```cshtml
 

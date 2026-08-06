@@ -34,12 +34,11 @@ The Blazor Button has the following predefined styles that can be defined using 
 <SfButton CssClass="e-warning">Warning</SfButton>
 <SfButton CssClass="e-danger">Danger</SfButton>
 <SfButton CssClass="e-link">Link</SfButton>
-
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVgChrhiGfocEOi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Button Component with different Styles](./images/blazor-button-with-different-style.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhxDxMVVgeLgsiF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button Component with different Styles](./images/blazor-button-with-different-style.webp)" %}
 
-N> Predefined Button styles provide only the visual indication. So, Button content should define the Button style for the users of assistive technologies such as screen readers.
+N> Predefined Button styles provide only a visual indication; therefore, define the Button content to convey meaning to assistive technology users such as screen readers.
 
 ## Button types
 
@@ -77,7 +76,7 @@ A Round Button is circular in shape. Usually, it contains an icon representing i
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrUsBLBsQJYnPIv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Button with different Types](./images/blazor-button-types.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVxXRiVhUSIxYKT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button with different Types](./images/blazor-button-types.webp)" %}
 
 ### Primary Button
 
@@ -89,11 +88,11 @@ The primary button is styled with background color and it is used to represent a
 <SfButton IsPrimary="true">Primary</SfButton>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhgCVrLWmyJUodV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Primary Button](./images/blazor-primary-button.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVdtxiLhUevkqAx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Primary Button](./images/blazor-primary-button.webp)" %}
 
 ### Toggle Button
 
-A toggle Button allows you to change between the two states. The Button is active in toggled state and can be recognized through the `e-active class`. The functionality of the toggle Button is handled by [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick) event. To create a toggle Button, set the [IsToggle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IsToggle) property to true. In the following code snippet, the toggle Button text changes to play/pause based on the state of the Button with the use of OnClick event.
+A Toggle Button allows you to toggle between two states. The Button is active in the toggled state and can be recognized through the `e-active` CSS class. The functionality of the Toggle Button is handled by the [`@onclick`](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/event-handling) event. To create a Toggle Button, set the [IsToggle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IsToggle) property to `true`. In the following code snippet, the Toggle Button text changes to Play/Pause based on the state of the Button.
 
 ```csharp
 
@@ -123,7 +122,7 @@ A toggle Button allows you to change between the two states. The Button is activ
 <style>
 
     .e-play::before {
-        content: '\e324';
+        content: '\e70c';
     }
 
     .e-pause::before {
@@ -134,7 +133,7 @@ A toggle Button allows you to change between the two states. The Button is activ
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBAiVVrMGexGnCy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toggle Button](./images/blazor-toggle-button.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVHDHCLLAdhgrHC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Toggle Button](./images/blazor-toggle-button.webp)" %}
 
 ## Icons
 
@@ -150,27 +149,39 @@ The Button can have an icon to provide the visual representation of the action. 
 
 <style>
     .e-play-icon::before {
-        content: '\e324';
+        content: '\e70c';
     }
     .e-pause-icon::before {
-        content: '\e326';
+        content: '\e77b';
     }
 </style>
-
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBUCVrVscdsTwUD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Button with Icon](./images/blazor-button-icon.webp)" %}
+The [`IconPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconPosition) property accepts the following values from the [`IconPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconPosition) enum:
+
+* `Left` - Places the icon to the left of the Button content (default).
+* `Right` - Places the icon to the right of the Button content.
+* `Top` - Places the icon above the Button content.
+* `Bottom` - Places the icon below the Button content.
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrHDRCFrVtZElQa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button with Icon](./images/blazor-button-icon.webp)" %}
 
 ## Button size
 
-The two types of Button sizes are default and small. To change the size of the default Button to small Button, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property to `e-small`.
+The two types of Button sizes are default and small. To change the size of the default Button to a small Button, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property to `e-small`.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfButton CssClass="e-small">SMALL</SfButton>
 <SfButton>NORMAL</SfButton>
-
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLAWLVrWcxyVIJP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Button with different Size](./images/blazor-button-with-different-size.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrdNdMLLUHbxlMP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button with different Size](./images/blazor-button-with-different-size.webp)" %}
+
+## See also
+
+* [Styles and Appearances in Blazor Button](style-and-appearance.md)
+* [Native Events in Blazor Button](native-event.md)
+* [Accessibility in Blazor Button](accessibility.md)
+* [Blazor Button API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html)

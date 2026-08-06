@@ -9,9 +9,9 @@ documentation: ug
 
 # Set the Disabled State in Blazor Button Component
 
-Button component can be enabled/disabled by giving [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_Disabled) property. To disable Button component, the `Disabled` property can be set as `true`.
+The Blazor Button component can be enabled or disabled by setting the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_Disabled) property. To disable the Button component, set the `Disabled` property to `true`. The property is rendered as the standard HTML `disabled` attribute on the underlying button element.
 
-The following example demonstrates Button in `Disabled` state.
+The following example demonstrates a Button in the disabled state and a second Button that enables it on click.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -19,15 +19,20 @@ The following example demonstrates Button in `Disabled` state.
 <SfButton Disabled="@disable" @ref="ButtonObj">Disabled</SfButton>
 <SfButton OnClick="click">Enable</SfButton>
 
-@code{
+@code {
     SfButton ButtonObj;
-    private Boolean disable = true;
+    private bool disable = true;
     public void click()
     {
         disable = false;
     }
 }
-
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBqiBVhMGkwXmsI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Disable State in Blazor Button](./../images/blazor-button-disable-state.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBxjdCLhTjMClpL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Disable State in Blazor Button](./../images/blazor-button-disable-state.webp)" %}
+
+## See also
+
+* [Create a Block Button in Blazor Button](create-a-block-button.md)
+* [Styles and Appearances in Blazor Button](../style-and-appearance.md)
+* [Blazor Button API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html)

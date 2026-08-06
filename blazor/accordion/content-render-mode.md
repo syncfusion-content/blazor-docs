@@ -26,4 +26,4 @@ The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accor
 </SfAccordion>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLqCVMgAzIOTDDm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLdZdCssPiTKIXB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

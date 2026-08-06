@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Trendlines in Blazor Stock Chart Component | Syncfusion
-description: Check out and learn how to configure and customize trendlines in the Syncfusion Blazor Stock Chart component.
+title: Trendlines in Blazor Stock Chart Component | Syncfusion®
+description: Check out and learn how to configure and customize trendlines in the Blazor Stock Chart component and much more details.
 platform: Blazor
 control: Stock Chart 
 documentation: ug

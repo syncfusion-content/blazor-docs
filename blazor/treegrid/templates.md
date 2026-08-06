@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Templates in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about templates in Syncfusion Blazor TreeGrid component and much more details.
+title: Templates in Blazor TreeGrid Component | Syncfusion®
+description: Checkout and learn here all the features about templates in Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -281,7 +281,7 @@ public class Employee
 
 ## Customize the empty record template in Blazor TreeGrid
 
-The empty record template feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid allows displaying custom content such as images, text, or other components when the TreeGrid has no records to show. It replaces the default message of **No records to display.**
+The empty record template feature in the Blazor TreeGrid allows displaying custom content such as images, text, or other components when the TreeGrid has no records to show. It replaces the default message of **No records to display.**
 
 To activate this feature, set the `EmptyRecordTemplate` feature of the TreeGrid. The `EmptyRecordTemplate` feature expects the HTML element or a function that returns the HTML element.
 

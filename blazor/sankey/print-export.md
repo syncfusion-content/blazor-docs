@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Print and Export for Blazor Sankey Diagram | Syncfusion
-description: Learn how to configure print and export functionalities in the Syncfusion Blazor Sankey Diagram to generate high-quality outputs.
+title: Print and Export for Blazor Sankey Diagram | Syncfusion®
+description: Learn how to configure print and export functionalities in the Blazor Sankey Diagram to generate high-quality outputs.
 platform: Blazor
 control: Sankey
 documentation: ug

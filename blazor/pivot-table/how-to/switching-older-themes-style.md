@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Switching to older themes style in Blazor Pivot Table | Syncfusion
-description: Learn here all about switching to older themes style in Syncfusion Blazor Pivot Table component and more.
+title: How to switch to older themes in Blazor Pivot Table | Syncfusion
+description: Step-by-step example showing how to switch to older themes in the Blazor Pivot Table by overriding CSS for row, column, and header cell backgrounds.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -10,9 +10,9 @@ documentation: ug
 <!-- markdownlint-disable MD012 -->
 <!-- markdownlint-disable MD009 -->
 
-# Switching to older themes style in Blazor Pivot Table Component
+# How to switch to older themes in Blazor Pivot Table
 
-Since Volume 1, 2020, Syncfusion<sup style="font-size:70%">&reg;</sup> has revised the theming and layout of the Pivot Table. If you prefer the appearance of the earlier theme, you can revert to it by making specific changes. This guide explains how to restore the older theme's style by modifying the CSS to adjust cell background colors and set the row height to match the previous layout.
+Since Volume 1, 2020, the theming and layout of the Pivot Table. If you prefer the appearance of the earlier theme, you can revert to it by making specific changes. This guide explains how to restore the older theme's style by modifying the CSS to adjust cell background colors and set the row height to match the previous layout.
 
 ## CSS Selectors
 
@@ -100,4 +100,4 @@ In the current theme, the height of each Pivot Table row has been reduced to mak
 
 ![Switching Older Themes to Blazor Pivot Table](images/blazor-pivottable-with-old-theme.webp)
 
-N> You can refer to [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the Pivot Table.
+N> You can refer to [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the Pivot Table.

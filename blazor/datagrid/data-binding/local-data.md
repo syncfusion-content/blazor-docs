@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Local Data in Blazor DataGrid | Syncfusion
-description: Explore how to bind and display local data in the Syncfusion Blazor DataGrid using various approaches and customization options.
+title: Blazor Grid Local Data Binding | Syncfusion
+description: Bind and display local data in a Blazor Data Grid with Syncfusion. Learn how to configure data binding and present data efficiently.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Local data in Blazor DataGrid
+# Local Data in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides straightforward methods to bind and display data that is available within your Blazor application's memory. This is particularly useful for scenarios involving static datasets, pre-loaded information, or data that does not require server-side operations for common Grid features.
 
@@ -81,7 +81,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBeCstRzwuSLsxV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLRDxgXTvaPShWh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## List binding
 
@@ -175,7 +175,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLyCCtdzbJPootL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhntnqXpOZpRHNO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### ExpandoObject binding
 
@@ -1113,7 +1113,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhesWXxzzwnSnMm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBxDRKjpEDbTZBu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Change datasource dynamically
 
@@ -1208,7 +1208,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVICCDxpINPCgRu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrHXnqXTkMiQFDq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Changing datasource dynamically in Blazor DataGrid](../images/blazor-datagrid-dynamic-datasource.webp)
 

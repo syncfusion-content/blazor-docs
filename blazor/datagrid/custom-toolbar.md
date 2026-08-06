@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Custom Toolbar Items in Blazor DataGrid Component | Syncfusion
-description: Learn how to create and use custom toolbar items in the Syncfusion Blazor DataGrid, including templates, icons with text, dropdowns, and export actions.
+title: Blazor Grid Custom Toolbar Items | Syncfusion
+description: Learn how to create custom toolbar items in Blazor Data Grid using templates, icons, dropdowns, custom actions, and export commands.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
-# Custom toolbar in Blazor DataGrid
+# Custom Toolbar Items in Blazor Data Grid
 
 The custom toolbar in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables a distinctive toolbar layout, style, and behavior tailored to application requirements, delivering a personalized Grid experience.
 
@@ -111,7 +111,7 @@ This is implemented by using the `Template` property, which provides extensive c
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBUsZBuSRVoiYtS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhRXQZLBCsmUVxW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Render image with text in custom Toolbar
 
@@ -347,7 +347,7 @@ In the **OnChange** method, the selected item text determines the action. For ex
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrSMjjihtPwLWfl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhHZGZLhsrXKhyJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Render SfAutoComplete in custom toolbar
 
@@ -464,7 +464,7 @@ In the **OnSearch** method, the selected value from `SfAutoComplete` is used as 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthoNTLFzGxGrdMg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLntGDLBsLGXeDQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Render a component or element using the Toolbar Template
 
@@ -568,4 +568,4 @@ To render custom components within the toolbar, use the `Template` directive. Fo
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVysZtiBWCpVQjw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVHZGNhLCKdBRiw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

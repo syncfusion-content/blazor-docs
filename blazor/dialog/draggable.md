@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Draggable in Blazor Dialog Component | Syncfusion
-description: Checkout and learn here all about Draggable in Syncfusion Blazor Dialog component and much more details.
+title: Draggable in Blazor Dialog Component | Syncfusion®
+description: Checkout and learn here all the features about Draggable in Blazor Dialog component and much more details.
 platform: Blazor
 control: Dialog
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Templates in Blazor Dialog Component | Syncfusion
-description: Checkout and learn here all about Templates in Syncfusion Blazor Dialog component and much more details.
+title: Templates in Blazor Dialog Component | Syncfusion®
+description: Checkout and learn here all the features about Templates in Blazor Dialog component and much more details.
 platform: Blazor
 control: Dialog
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Syncfusion Blazor Server App in Visual Studio
+title: Getting started with Blazor Server App | Syncfusion
 description: Check out the documentation for getting started with Blazor Components in Visual Studio and much more.
 platform: Blazor
 component: Common
@@ -16,6 +16,40 @@ This article provides step-by-step instructions for building a Blazor Server App
 [Blazor Playground](https://blazor.syncfusion.com/documentation/common/playground/getting-started) allows interaction with Blazor components directly in a web browser without needing to install any NuGet packages.
 
 {% playground "https://blazorplayground.syncfusion.com/" %}
+
+## Using Templates
+
+Quickly set up a Blazor application using the preconfigured [Syncfusion Web App Template](https://help.syncfusion.com/extension/syncfusion-blazor-webapp-template-via-nuget/installation).
+
+First, install the template using the .NET CLI.
+
+{% tabs %}
+{% highlight razor tabtitle=".NET CLI" %}
+
+dotnet new install Syncfusion.Blazor.WebApp.Templates
+
+{% endhighlight %}
+{% endtabs %}
+
+Next, create a new project with the following command.
+
+{% tabs %}
+{% highlight razor tabtitle="Server" %}
+
+dotnet new syncfusionblazorwebapp --name MyApp --interactivity Server
+
+{% endhighlight %}
+
+{% endtabs %}
+
+After creating the project, navigate to the main project folder (for example, `MyApp`) and run the following command.
+
+{% highlight razor tabtitle=".NET CLI" %}
+
+cd MyApp
+dotnet run
+
+{% endhighlight %}
 
 ## Manually creating a project
 
@@ -38,7 +72,8 @@ Run the following command to create a new Blazor Server App.
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
-dotnet new blazor -o BlazorApp --interactivity Server
+dotnet new blazor -o BlazorServerApp --interactivity Server
+cd BlazorServerApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +89,8 @@ Run the following command to create a new Blazor Server App.
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
-dotnet new blazor -o BlazorApp --interactivity Server
+dotnet new blazor -o BlazorServerApp --interactivity Server
+cd BlazorServerApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -136,31 +172,37 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 
 ### Register the Blazor service
 
-Open the **Program.cs** file in Blazor Server App and register the Blazor service.
+Open the **Program.cs** file in Blazor Server App and register the Blazor service and include the required namespace reference `using Syncfusion.Blazor;` at the top.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
 
-....
-using Syncfusion.Blazor;
-....
 builder.Services.AddSyncfusionBlazor();
-....
 
 {% endhighlight %}
 {% endtabs %}
 
 ### Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) at the end of the `<head>` section in the **App.razor** file.
 
-```html
+{% tabs %}
+{% highlight razor tabtitle="App.razor" %}
 
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-...
+
+{% endhighlight %}
+{% endtabs %}
+
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **App.razor** file to enable DataGrid functionality.
+
+{% tabs %}
+{% highlight razor tabtitle="App.razor" %}
+
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Add Blazor DataGrid component
 
@@ -176,6 +218,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 <SfGrid DataSource="@Orders" />
 
 @code {
+    
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
@@ -211,13 +254,13 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 
 {% tabcontent Visual Studio %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor DataGrid component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor DataGrid component will render in your default web browser.
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-* Open the terminal and run the following command.
+Open the terminal and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -231,7 +274,7 @@ dotnet run
 
 {% tabcontent .NET CLI %}
 
-* Open the command prompt and run the following command.
+Open the command prompt and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}

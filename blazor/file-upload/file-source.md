@@ -1,7 +1,7 @@
 ---
 layout: post
-title: File Source in Blazor File Upload Component | Syncfusion
-description: Checkout and learn here all about File Source in Syncfusion Blazor File Upload component and much more.
+title: File Source in Blazor File Upload Component | Syncfusion®
+description: Checkout and learn here all about File Source in Blazor File Upload component and and much more details.
 platform: Blazor
 control: File Upload
 documentation: ug
@@ -141,4 +141,4 @@ public void Remove(IList<IFormFile> UploadFiles)
 }
 ```
 
-N> You can also explore our [Blazor File Upload example](https://blazor.syncfusion.com/demos/file-upload/default-functionalities?theme=bootstrap5) to understand how to browse the files that need to be uploaded to the server.
+N> You can also explore our [Blazor File Upload example](https://blazor.syncfusion.com/demos/file-upload/default-functionalities?theme=fluent2) to understand how to browse the files that need to be uploaded to the server.

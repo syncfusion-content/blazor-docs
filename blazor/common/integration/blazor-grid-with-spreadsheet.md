@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Spreadsheet and DataGrid Integration | Syncfusion
+title: Blazor Spreadsheet and DataGrid Integration | Syncfusion®
 description: Complete step-by-step guide to integrate Blazor DataGrid and Spreadsheet components for seamless data handling and interactive web applications.
 platform: Blazor
 control: Common

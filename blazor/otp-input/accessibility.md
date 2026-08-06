@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor OTP Input Component | Syncfusion
-description: Checkout and learn here all about Accessibility with Syncfusion Blazor OTP Input component in Blazor Server App and Blazor WebAssembly App.
+title: Accessibility in Blazor OTP Input Component | Syncfusion®
+description: Learn about accessibility features in Blazor OTP Input component including WAI-ARIA support, keyboard navigation, and assistive technology compatibility.
 platform: Blazor
 control: OTP Input
 documentation: ug
@@ -57,7 +57,7 @@ The following keyboard shortcuts are supported by the OTP Input component.
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
 
 ## HtmlAttributes
 

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Customize filtering in Blazor TreeGrid | Syncfusion
-description: Learn how to style and customize the Syncfusion Blazor TreeGrid filter UI using CSS—filter bar, dialog, icons, buttons, and menus.
+title: Customize filtering in Blazor TreeGrid | Syncfusion®
+description: Learn how to style and customize the Blazor TreeGrid filter UI using CSS—filter bar, dialog, icons, buttons, and menus.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Filtering customization in Syncfusion Blazor TreeGrid
+# Filtering customization in Blazor TreeGrid
 
-The appearance of filtering elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid can be customized using CSS. Styling options are available for different parts of the filtering interface:
+The appearance of filtering elements in the Blazor TreeGrid can be customized using CSS. Styling options are available for different parts of the filtering interface:
 
 - **Filter bar cell and input elements:** Used to enter filter values directly in the header row.
 - **Input focus styles:** Visual highlight applied when the filter input field is focused.
@@ -168,7 +168,7 @@ namespace TreeGridComponent.Data
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrnDzrfVMyBtkVY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVntwjvfXOiyGVq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize the filtering icon in the header
 
@@ -347,4 +347,4 @@ namespace TreeGridComponent.Data
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLntfVJBBQMQeiU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVdjwNPJjEaBEuc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

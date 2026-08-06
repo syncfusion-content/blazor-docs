@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about data binding in Syncfusion Blazor Pivot Table component and much more.
+title: Data Binding in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table binds to local JSON, remote services, and custom data sources via PivotViewDataSourceSettings with CRUD-enabled adaptors.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Data Binding in Blazor Pivot Table Component
+# Data Binding in Blazor Pivot Table
 
 ## JSON
 
@@ -419,7 +419,7 @@ The following example demonstrates how to bind the Pivot Table to an OData servi
 
 ### Binding with OData V4 services
 
-OData V4 services provide enhanced query capabilities and improved performance for data retrieval operations. The OData V4 is an improved version of OData protocols, and the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) can retrieve and consume OData V4 services. For more details on OData V4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData V4 service, use the [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors?no-cache=1#odatav4-adaptor).
+OData V4 services provide enhanced query capabilities and improved performance for data retrieval operations. The OData V4 is an improved version of OData protocols, and the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) can retrieve and consume OData V4 services. For more details on OData V4 services, refer to the [OData documentation](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData V4 service, use the [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors?no-cache=1#odatav4-adaptor).
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -1326,4 +1326,4 @@ The load event provides the following parameters:
 
 * [How to convert complex data to flat data and assign it to the Blazor Pivot Table](https://blazor.syncfusion.com/documentation/pivot-table/how-to/bind-complex-data-to-the-pivot-table)
 
-N> You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
+N> You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

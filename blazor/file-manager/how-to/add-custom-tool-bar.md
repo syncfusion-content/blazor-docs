@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Adding Custom Item to Toolbar in Blazor File Manager | Syncfusion
-description: Learn here all about adding custom item to toolbar in Syncfusion Blazor File Manager component and more.
-platform: Blazor
+title: Add a custom item to the toolbar in Blazor File Manager | Syncfusion
+description: Learn how to add and customize a custom toolbar item in the Blazor File Manager with icons, tooltips, and click handlers.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Adding Custom Item to Toolbar in Blazor File Manager Component
+# How to Add a Custom Item to the Toolbar in Blazor File Manager
 
 To enhance the customization of toolbar items, the [FileManagerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerToolbarSettings.html) tag and [FileManagerCustomToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerCustomToolbarItem.html) property can be utilized. These features allow for easy addition, appearance, modification of custom toolbar items.
 
@@ -47,7 +47,7 @@ To enhance the customization of toolbar items, the [FileManagerToolbarSettings](
 
 ```
 
-![Blazor FileManger displays Custom Item in Toolbar](../images/blazor-filemanager-custom-item.png)
+![Blazor FileManger displays Custom Item in Toolbar](../images/blazor-filemanager-custom-item.webp)
 
 
 **Case 2**: To include Blazor components in the File Manager toolbar, you can use the template tag. This enables you to seamlessly render additional components within the toolbar. By assigning the same `Name` property in the toolbar items list, you can determine the desired position of the template item within the toolbar.
@@ -95,4 +95,4 @@ To enhance the customization of toolbar items, the [FileManagerToolbarSettings](
 ```
 
 
-![Blazor FileManger displays Zoom button in Toolbar](../images/blazor-filemanager-zoom-button.png)
+![Blazor FileManger displays Zoom button in Toolbar](../images/blazor-filemanager-zoom-button.webp)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Model Binding in Blazor Input Mask Component | Syncfusion
-description: Checkout and learn here all about strongly typed validation of Syncfusion Blazor Input Mask component and more.
+title: Model Binding in Blazor Input Mask Component | Syncfusion®
+description: Checkout and learn here all about strongly typed validation of Blazor Input Mask component and more.
 platform: Blazor
 control: Input Mask
 documentation: ug

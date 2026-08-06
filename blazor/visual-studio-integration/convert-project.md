@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Convert a Blazor project to Syncfusion Blazor | Syncfusion
+title: Convert a Blazor project to Syncfusion Blazor | Syncfusion®
 description: Learn how to convert an existing Blazor application to a Blazor application using the Blazor Extension for VS 2022, including NuGet package installation.
 platform: Blazor
 control: Common
@@ -9,20 +9,25 @@ documentation: ug
 
 # Convert a Blazor Application to Syncfusion® Blazor
 
-This guide explains how to convert an existing Blazor application into a Syncfusion® Blazor application using the Syncfusion® Project Conversion wizard for Visual Studio. The conversion installs required Syncfusion® NuGet packages and applies your selected theme stylesheet.
+This guide explains how to convert an existing Blazor application into a Syncfusion® Blazor application using the Syncfusion® Project Conversion wizard for Visual Studio 2022 or 2026. The conversion installs the required Syncfusion® NuGet packages, registers component namespaces, and applies the selected theme stylesheet.
 
-N> Ensure the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Template Studio extension is installed in Visual Studio (Extensions → Manage Extensions → Installed). If not installed, follow the steps in the [download and installation](https://blazor.syncfusion.com/documentation/visual-studio-integration/download-and-installation) topic.
+## Prerequisites
 
-Supported project types
+- Visual Studio 2022 or 2026 with the Syncfusion® Blazor Template Studio extension installed. See [download and installation](https://blazor.syncfusion.com/documentation/visual-studio-integration/download-and-installation) if it is not installed.
+- .NET 8.0, .NET 9.0, or .NET 10.0 SDK matching the target Syncfusion® Blazor version.
+- An active internet connection to load the available Syncfusion® Blazor versions from NuGet.org.
+- If you are behind a proxy or firewall, ensure that `nuget.org` is reachable.
+
+## Supported project types
 
 - Blazor Web App (Server or WebAssembly rendering)
 - Blazor Server App
 - Blazor WebAssembly App (standalone or ASP.NET Core hosted)
 - Blazor WebAssembly App (Progressive Web Application)
 
-Steps
+## Steps
 
-1. Open your Blazor project in Visual Studio.
+1. Open your Blazor project in Visual Studio 2022 or 2026.
 
 2. Launch the Syncfusion® Project Conversion wizard by either:
 
@@ -34,15 +39,17 @@ Steps
 
       ![Open Convert Project from the Solution Explorer context menu](images/conversionaddin.webp)
 
-3. In the Project Conversion window, select the target Syncfusion® Blazor version and the theme to apply.
+3. In the Project Conversion window, select the target Syncfusion® Blazor version and the theme to apply. The default theme is `Bootstrap 5`. Available themes include `Material`, `Fabric`, `Bootstrap`, `Bootstrap 4`, `Tailwind`, `Fluent`, and `Material 3`.
 
      ![Syncfusion Blazor Project Conversion wizard with version and theme selection](images/conversion.webp)
 
      N> Versions are read from the Syncfusion® Blazor NuGet packages on [NuGet.org](https://www.nuget.org/) and require an internet connection.
 
-4. (Optional) Enable **Enable a backup before converting** to save a copy of your original project to a chosen backup location.
+4. (Optional) Select **Enable a backup before converting** and use the **Browse** button to choose a backup location. A copy of the original project is saved to the selected path before the conversion is applied.
 
-5. After conversion finishes, you will see a confirmation message.
+5. Review your selections and click **Convert**.
+
+6. After conversion finishes, you will see a confirmation message.
 
     ![Conversion succeeded message after completing the conversion](images/conversionsuccess.webp)
 
@@ -50,6 +57,12 @@ Steps
 
     ![Backup location for the original project created during conversion](images/backuplocation.webp)
 
-6. The conversion updates your project with the required Syncfusion® Blazor NuGet packages and adds the selected theme stylesheet.
+7. Close and reopen Visual Studio to ensure the theme stylesheet and namespace registrations are applied. The conversion updates the following:
 
-7. If you installed packages from `nuget.org` or the trial setup, register your Syncfusion® license key. Licensing was introduced in the 2018 Volume 2 (v16.2.0.41) release. See the [licensing overview and key generation guide](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) for details. For background, see the [2018 Volume 2 announcement](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2).
+    - The `Syncfusion.Blazor` NuGet package reference in the `.csproj` file.
+    - The `Syncfusion.Blazor.Themes` package reference for the selected theme.
+    - The theme stylesheet link in `wwwroot/index.html` (WebAssembly) or `Pages/_Host.cshtml` / `App.razor` (Server / Web App).
+    - Component namespaces in `_Imports.razor`.
+
+8. If you installed packages from `nuget.org` or the trial setup, register your Syncfusion® license key. Licensing was introduced in the 2018 Volume 2 (v16.2.0.41) release. See the [licensing overview and key generation guide](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) for details. For background, see the [2018 Volume 2 announcement](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2).
+

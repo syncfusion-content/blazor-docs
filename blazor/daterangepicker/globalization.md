@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Globalization in Blazor DateRangePicker Component | Syncfusion
-description: Checkout and learn here all about Globalization in Syncfusion Blazor DateRangePicker component and more.
+title: Globalization in Blazor DateRangePicker Component | Syncfusion®
+description: Checkout and learn here all about Globalization in Blazor DateRangePicker component and much more details.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization in Blazor DateRangePicker Component
 
-[Blazor DateRangePicker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+[Blazor DateRangePicker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Blazor components.
 
 ## Right-To-Left
 
@@ -36,4 +36,4 @@ The following code example initialize the DateRangePicker component in `Hebrew` 
 
 ![Right to Left in Blazor DateRangePicker with Hebrew Culture](./images/blazor-daterangepicker-right-to-left.webp)
 
-N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap5) to understand how to present and manipulate data.
+N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=fluent2) to understand how to present and manipulate data.

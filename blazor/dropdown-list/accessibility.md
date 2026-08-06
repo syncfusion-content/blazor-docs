@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor DropDown List Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor DropDown List component and more.
+title: Accessibility in Blazor DropDown List Component | Syncfusion®
+description: Checkout and learn here all about Accessibility in Blazor DropDown List component and much more details.
 platform: Blazor
 control: DropDownList
 documentation: ug
@@ -85,4 +85,4 @@ The accessibility compliance of the DropDownList component is shown in the follo
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)

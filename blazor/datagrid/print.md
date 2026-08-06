@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Print in Blazor DataGrid Component | Syncfusion
-description: Learn to print the Syncfusion Blazor DataGrid using the toolbar Print command or PrintAsync method, configure browser page setup, and handle large columns.
+title: Blazor Grid Print | Syncfusion
+description: Learn how to print Blazor Data Grid data using toolbar commands, PrintAsync, browser page setup, and large-column support.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD033 -->
 
-# Print in Blazor DataGrid
+# Print in Blazor Data Grid
 
 The **Print** feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) generates a print-ready view of DataGrid content for offline access and documentation. Initiate printing through the  built-in toolbar option or programmatically using the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method. The output reflects the DataGrid’s current state, including visible columns, sorting, and filtering, and opens the browser’s print dialog.
 
@@ -78,7 +78,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLoiXMfUGltKtYZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBHZcDgdBDMtdCy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Page Setup for Printing
 
@@ -166,7 +166,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVyCZsJTDndUnwJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLRZGNKHVjIqLIF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Print only the visible page
 
@@ -268,7 +268,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthAWMNUhrlcjXzc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBnNGZKnLXkdMwz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 <!-- Print the hierarchy datagrid
 
@@ -352,7 +352,7 @@ This is demonstrated in the below sample code,
 ```
 
 The following image represents Hierarchial Grid with print toolbar item,
-![Print Hierarchial Grid Content](./images/grid-hierarchial-print.png) -->
+![Print Hierarchial Grid Content](./images/grid-hierarchial-print.webp) -->
 
 ## Printing large number of Columns
 
@@ -364,7 +364,7 @@ To include more columns in the printable area:
 
 These adjustments ensure visibility of all columns for wide grids.
 
-![Printing large number of columns in Syncfusion Blazor DataGrid.](./images/blazor-datagrid-print-large-columns.webp)
+![Printing large number of columns in Blazor DataGrid](./images/blazor-datagrid-print-large-columns.webp)
 
 <!-- Show or hide columns while Printing
 
@@ -448,4 +448,4 @@ These formats can be printed using desktop applications, which offer better cont
 
 > The printed output reflects the current state of the DataGrid, including visible columns, sorting, and filtering at the time printing is initiated.
 
-N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand data presentation and manipulation.
+N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.

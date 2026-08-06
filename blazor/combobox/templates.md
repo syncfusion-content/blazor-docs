@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Templates in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Templates in the Syncfusion Blazor ComboBox component and much more.
+title: Templates in Blazor ComboBox Component | Syncfusion®
+description: Checkout and learn here all the features about Templates in the Blazor ComboBox component and much more.
 platform: Blazor
 control: ComboBox
 documentation: ug
@@ -27,7 +27,7 @@ In the following example, each list item is split into two columns to display re
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVAWhhQgcQzSVPf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with ItemTemplate](./images/blazor-combobox-item-template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBnDdhgBpiReAjj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ComboBox with ItemTemplate](./images/blazor-combobox-item-template.webp)" %}
 
 ## Group template
 
@@ -41,7 +41,7 @@ In the following example, employees are grouped by country.
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVKWBVmqQwncaKF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with GroupTemplate](./images/blazor-combobox-group-template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLHDHVqLprNHgDv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ComboBox with GroupTemplate](./images/blazor-combobox-group-template.webp)" %}
 
 ## Header template
 
@@ -55,7 +55,7 @@ In the following sample, the list items and its headers are designed and display
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVUsLhwAcwvaAlF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with HeaderTemplate](./images/blazor-combobox-header-template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLxDdhqLzLYYxMC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ComboBox with HeaderTemplate](./images/blazor-combobox-header-template.webp)" %}
 
 ## Footer template
 
@@ -69,7 +69,7 @@ In the following sample, footer element displays the total number of list items 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBKWVVwAcviULco?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with FooterTemplate](./images/blazor-combobox-footer-template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrntxhqBpErATei?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ComboBox with FooterTemplate](./images/blazor-combobox-footer-template.webp)" %}
 
 ## No records template
 
@@ -83,7 +83,7 @@ In the following sample, popup list content displays the notification of no data
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVgWBrwUQlgRDZE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox without Data](./images/blazor-combobox-without-data.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBnDHLArojDvqmu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ComboBox without Data](./images/blazor-combobox-without-data.webp)" %}
 
 ## Action failure template
 
@@ -97,7 +97,7 @@ In the following sample, when the data fetch request fails, the ComboBox display
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBUMrrcqQlwxTci?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with Action Failure Template](./images/blazor-combobox-action-failure-template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLxtRBAhSiBVkoY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ComboBox with Action Failure Template](./images/blazor-combobox-action-failure-template.webp)" %}
 
 ## Combine two fields without Templates
 
@@ -113,4 +113,4 @@ In the `GameFields` class, the `Name` property is defined with the `get` and `se
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLKMLBwAQaWEhfL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Text with firstName and lastName](./images/templates/blazor_combobox_firstname-lastname.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhHZnVAVSLMcXEb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Text with firstName and lastName](./images/templates/blazor_combobox_firstname-lastname.webp)" %}

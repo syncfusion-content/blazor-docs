@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Grouping in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about grouping in Syncfusion Blazor Pivot Table component and much more.
+title: Grouping in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table groups date, number, and custom fields into categories such as year, quarter, or numeric ranges through the Group Field dialog.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Grouping in Blazor Pivot Table Component
+# Grouping in Blazor Pivot Table
 
 Grouping is one of the most useful features in the Pivot Table component, automatically organizing date, time, number, and string data types into meaningful categories. For example, date fields can be formatted and displayed based on year, quarter, month, and other time periods. Similarly, number fields can be grouped into ranges, such as 1-5, 6-10, and so on. These grouped fields function as individual fields, allowing users to drag them between different axes including columns, rows, values, and filters to create dynamic Pivot Tables at runtime.
 
@@ -416,4 +416,4 @@ N> After ungrouping, if you remove the related field from the report, any custom
 
 ![Custom UnGrouping in Blazor PivotTable](images/blazor-pivottable-custom-ungroup.webp)
 
-N> Refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the Pivot Table.
+N> Refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the Pivot Table.

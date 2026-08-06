@@ -13,7 +13,7 @@ By default, the Circular Gauge will be displayed with an axis. Each axis contain
 
 ## Axis customization
 
-You can customize the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLineStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLineStyle_Width) and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLineStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLineStyle_Color) of an axis line using the [CircularGaugeAxisLineStyle](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLineStyle.html) tag. The background for an axis can be customized using the [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxis.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxis_Background) property.
+You can customize the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLineStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLineStyle_Width) and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLineStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLineStyle_Color) of an axis line using the [CircularGaugeAxisLineStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLineStyle.html) tag. The background for an axis can be customized using the [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxis.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxis_Background) property.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -21,13 +21,14 @@ You can customize the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis Background= "rgba(0, 128, 128, 0.3)">
+            <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
             <CircularGaugeAxisLineStyle Width="2" Color="red">
             </CircularGaugeAxisLineStyle>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhACVBmKWKyenGt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Blazor Circular Gauge Axis](./images/blazor-circulargauge-axis-customization.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLHjHBHLZmHWsvk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Blazor Circular Gauge Axis](./images/blazor-circulargauge-axis-customization.webp)" %}
 
 ## Minimum and maximum
 
@@ -39,11 +40,12 @@ The [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGa
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis Minimum= "50" Maximum= "250">
-        </CircularGaugeAxis>
+        <CircularGaugePointers><CircularGaugePointer Value="50"></CircularGaugePointer></CircularGaugePointers>
+         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVqWLVwgsAcbrhk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge Axis with Custom Value](./images/blazor-circulargauge-custom-value.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBxNnBxVqBQYNOy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge Axis with Custom Value](./images/blazor-circulargauge-custom-value.webp)" %}
 
 ## Start and end angle
 
@@ -55,11 +57,12 @@ You can sweep the Circular Gauge axis from 0 to 360 degrees. By default, the sta
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis StartAngle= "270" EndAngle= "90">
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrUWhLGKMTZNUsx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge with Custom Angle](./images/blazor-circulargauge-custom-angle.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVxjHLRBMYxMgmE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge with Custom Angle](./images/blazor-circulargauge-custom-angle.webp)" %}
 
 ## Axis radius
 
@@ -75,11 +78,12 @@ You can set the radius of the Circular Gauge in pixel as shown below.
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis Radius="150px">
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBqMBLwUiJBVDaN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge with Custom Radius](./images/blazor-circulargauge-custom-radius.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrxNHrRVrRslDrP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge with Custom Radius](./images/blazor-circulargauge-custom-radius.webp)" %}
 
 ### In percentage
 
@@ -90,17 +94,21 @@ By setting value in percentage, Circular Gauge gets its dimension with respect t
 
 <SfCircularGauge>
     <CircularGaugeAxes>
-        <CircularGaugeAxis Radius="50%"></CircularGaugeAxis>
+        <CircularGaugeAxis Radius="50%">
+        <CircularGaugePointers>
+                <CircularGaugePointer Value="0"></CircularGaugePointer>
+            </CircularGaugePointers>
+        </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrqWVhGAWzzitMZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor Circular Gauge Radius in Percentage](./images/blazor-circulargauge-percentage-radius.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrxDdLHrxAkBwIn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Blazor Circular Gauge Radius in Percentage](./images/blazor-circulargauge-percentage-radius.webp)" %}
 
 ## Ticks
 
-You can customize the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Height), [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Color), and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Width) of major ticks and minor ticks using the [CircularGaugeAxisMajorTicks](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMajorTicks.html) and [CircularGaugeAxisMinorTicks](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMinorTicks.html) tags.
+You can customize the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Height), [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Color), and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Width) of major ticks and minor ticks using the [CircularGaugeAxisMajorTicks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMajorTicks.html) and [CircularGaugeAxisMinorTicks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMinorTicks.html) tags.
 
-By default, [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Interval) for [CircularGaugeAxisMajorTicks](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMajorTicks.html) will be calculated automatically. You can customize the interval for major ticks and minor ticks using the [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Interval) property.
+By default, [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Interval) for [CircularGaugeAxisMajorTicks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMajorTicks.html) will be calculated automatically. You can customize the interval for major ticks and minor ticks using the [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Interval) property.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -108,6 +116,9 @@ By default, [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
+             <CircularGaugePointers>
+                <CircularGaugePointer Value="0"></CircularGaugePointer>
+            </CircularGaugePointers>
             <CircularGaugeAxisMajorTicks Interval="10" Color="red" Height="10" Width="3">
             </CircularGaugeAxisMajorTicks>
             <CircularGaugeAxisMinorTicks Interval="5" Color="green" Height="5" Width="2">
@@ -116,7 +127,7 @@ By default, [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhgWhVmKsJHpAUv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Major and Minor Ticks in Blazor Circular Gauge](./images/blazor-circulargauge-ticks-customization.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhHXdVdLcRpOKKZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Major and Minor Ticks in Blazor Circular Gauge](./images/blazor-circulargauge-ticks-customization.webp)" %}
 
 ### Tick position
 
@@ -124,7 +135,7 @@ The minor ticks and major ticks can be positioned using the [Offset](https://hel
 
 * The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Offset) defines the distance between the axis and ticks. By default, offset value is 0.
 
-* The [Position](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.Position.html) will place the ticks on the axis. By default, ticks will be placed inside the axis. Its possible values are 'Position.Inside', 'Position.Outside', and 'Position.Cross'.
+* The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.Position.html) will place the ticks on the axis. By default, ticks will be placed inside the axis. Its possible values are 'Position.Inside', 'Position.Outside', and 'Position.Cross'.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -132,6 +143,9 @@ The minor ticks and major ticks can be positioned using the [Offset](https://hel
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
+            <CircularGaugePointers>
+                <CircularGaugePointer Value="0"></CircularGaugePointer>
+            </CircularGaugePointers>
             <CircularGaugeAxisMajorTicks Color="red"
                                          Height="10" Width="3"
                                          Position = "Position.Inside"
@@ -146,11 +160,11 @@ The minor ticks and major ticks can be positioned using the [Offset](https://hel
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBgWVLQgCyNoNBa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge with Custom Tick Position](./images/blazor-circulargauge-tick-position.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBnZRBdrcIsFlDP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge with Custom Tick Position](./images/blazor-circulargauge-tick-position.webp)" %}
 
 ## Labels
 
-The labels of an axis can be customized using the [CircularGaugeAxisLabelFont](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelFont.html) tag in [CircularGaugeAxisLabelStyle](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html) option.
+The labels of an axis can be customized using the [CircularGaugeAxisLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelFont.html) tag in [CircularGaugeAxisLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html) option.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -158,6 +172,7 @@ The labels of an axis can be customized using the [CircularGaugeAxisLabelFont](h
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
             <CircularGaugeAxisLabelStyle>
                 <CircularGaugeAxisLabelFont Color="red" Size="20px" FontWeight="Bold">
                 </CircularGaugeAxisLabelFont>
@@ -166,7 +181,7 @@ The labels of an axis can be customized using the [CircularGaugeAxisLabelFont](h
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrgMVVGqsSBmTLZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Blazor Circular Gauge Label](./images/blazor-circulargauge-label.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVHXnBxLTinpzka?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Blazor Circular Gauge Label](./images/blazor-circulargauge-label.webp)" %}
 
 ### Label position
 
@@ -182,6 +197,7 @@ The labels can be moved using the [Offset](https://help.syncfusion.com/cr/blazor
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
             <CircularGaugeAxisLabelStyle Position="Position.Outside"
                                 Offset="5">
             </CircularGaugeAxisLabelStyle>
@@ -189,7 +205,7 @@ The labels can be moved using the [Offset](https://help.syncfusion.com/cr/blazor
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhAWBrwAWyyrioJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Label Position of Blazor Circular Gauge](./images/blazor-circulargauge-label-position.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBxtnLHBAvghyBn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Label Position of Blazor Circular Gauge](./images/blazor-circulargauge-label-position.webp)" %}
 
 ### Auto angle
 
@@ -201,16 +217,17 @@ The labels can be swept along the axis angle by enabling the [AutoAngle](https:/
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
+            <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
             <CircularGaugeAxisLabelStyle AutoAngle="true"></CircularGaugeAxisLabelStyle>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLKsLhcgsewVlDw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge Label in AutoAngle](./images/blazor-circulargauge-auto-angle.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrxjRhxhDdDgVGc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge Label in AutoAngle](./images/blazor-circulargauge-auto-angle.webp)" %}
 
 ### Smart labels
 
-When an axis makes a complete circle, then the first and last labels of the axis will overlap with each other. So, you need to either hide first or last label using the [HiddenLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLabelStyle_HiddenLabel) property. When 'HiddenLabel' value is [First](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.HiddenLabel.html), the first label will be hidden and when the 'HiddenLabel' value is [Last](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.HiddenLabel.html), the last label will be hidden.
+When an axis makes a complete circle, then the first and last labels of the axis will overlap with each other. So, you need to either hide first or last label using the [HiddenLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLabelStyle_HiddenLabel) property. When 'HiddenLabel' value is [First](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.HiddenLabel.html), the first label will be hidden and when the 'HiddenLabel' value is [Last](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLabelStyle_HiddenLabel), the last label will be hidden.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -221,6 +238,9 @@ When an axis makes a complete circle, then the first and last labels of the axis
                            Maximum="12"
                            EndAngle="360"
                            StartAngle="0">
+                           <CircularGaugePointers>
+                <CircularGaugePointer Value="0"></CircularGaugePointer>
+            </CircularGaugePointers>
             <CircularGaugeAxisLabelStyle Position="Position.Inside"
                                 HiddenLabel="HiddenLabel.First">
             </CircularGaugeAxisLabelStyle>
@@ -236,11 +256,11 @@ When an axis makes a complete circle, then the first and last labels of the axis
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLqMLVcqWSOwmqY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge with Smart Labels](./images/blazor-circulargauge-smart-label.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhHXnVRhwqeqUsV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge with Smart Labels](./images/blazor-circulargauge-smart-label.webp)" %}
 
 ### Label format
 
-The axis labels can be formatted using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLabelStyle_Format) property in [CircularGaugeAxisLabelStyle](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html), it supports all globalize format.
+The axis labels can be formatted using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLabelStyle_Format) property in [CircularGaugeAxisLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html), it supports all globalize format.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -248,12 +268,13 @@ The axis labels can be formatted using the [Format](https://help.syncfusion.com/
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
             <CircularGaugeAxisLabelStyle Format="p1"></CircularGaugeAxisLabelStyle>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLgsrBGKCdWFyxB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Label Format in Blazor Circular Gauge](./images/blazor-circulargauge-label-format.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBHDxVnhKIEELTS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Label Format in Blazor Circular Gauge](./images/blazor-circulargauge-label-format.webp)" %}
 
 The following table describes the result of applying some commonly used label formats on numeric values.
 
@@ -325,12 +346,13 @@ Axis labels support custom label format using placeholder like {value}°C, in 
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
             <CircularGaugeAxisLabelStyle Format="{value}°C"></CircularGaugeAxisLabelStyle>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrgirrcgsdzgNwu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge with Label in Degree Format](./images/blazor-circulargauge-label-in-degree-format.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLxDnrdhKQKLDDl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge with Label in Degree Format](./images/blazor-circulargauge-label-in-degree-format.webp)" %}
 
 ### Show last label
 
@@ -343,12 +365,13 @@ If the maximum value does not enter the interval of major ticks, the last label 
     <CircularGaugeAxes>
         <CircularGaugeAxis Maximum="100"
                            ShowLastLabel="true">
+            <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
             <CircularGaugeAxisMajorTicks Interval="30"></CircularGaugeAxisMajorTicks>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLqsLVmKCRxmzgP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying Last Label of Blazor Circular Gauge](./images/blazor-circulargauge-last-label.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVnDnVHBTVIJkUT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Displaying Last Label of Blazor Circular Gauge](./images/blazor-circulargauge-last-label.webp)" %}
 
 ### Hide intersecting axis labels
 
@@ -358,17 +381,18 @@ When the axis labels overlap with each other, you can hide the intersected label
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis Maximum="200" StartAngle="270" EndAngle="90" Minimum="0" HideIntersectingLabel="true">
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
             <CircularGaugeAxisMajorTicks Interval="4"></CircularGaugeAxisMajorTicks>
             <CircularGaugeAxisMinorTicks Interval="2"></CircularGaugeAxisMinorTicks>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhAMhrmUWnkrsge?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Hiding Intersecting Axis Labels in Blazor Circular Gauge](./images/blazor-circulargauge-hide-intersecting-label.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBxNdVRVUTKgQvf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Hiding Intersecting Axis Labels in Blazor Circular Gauge](./images/blazor-circulargauge-hide-intersecting-label.webp)" %}
 
 ## Axis direction
 
-You can change the axis direction of the circular gauge using [Direction](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.GaugeDirection.html) property. Following axis directions are available in the circular gauge.
+You can change the axis direction of the circular gauge using [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.GaugeDirection.html) property. Following axis directions are available in the circular gauge.
 
 * ClockWise
 * AntiClockWise
@@ -378,12 +402,13 @@ You can change the axis direction of the circular gauge using [Direction](https:
 
 <SfCircularGauge>
     <CircularGaugeAxes>
-        <CircularGaugeAxis Direction="GaugeDirection.AntiClockWise">
+           <CircularGaugeAxis Direction="GaugeDirection.AntiClockWise">
+                <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhqMVrmUWGVddDA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Axis Direction of Blazor Circular Gauge](./images/blazor-circulargauge-axis-direction.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrHtdhHVWGFwRlE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Axis Direction of Blazor Circular Gauge](./images/blazor-circulargauge-axis-direction.webp)" %}
 
 ## Multiple axes
 
@@ -420,4 +445,4 @@ In addition to the default axis, you can add n number of axis to a gauge. Each a
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVgWhhcqiQyCvQy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge with Multiple Axes](./images/blazor-circulargauge-multiple-axes.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBHNdrRVObawMlq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge with Multiple Axes](./images/blazor-circulargauge-multiple-axes.webp)" %}

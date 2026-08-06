@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Browser support for Syncfusion Blazor
-description: Supported browsers for Syncfusion Blazor components on Windows, Linux, and macOS for Blazor Server, Web App, and WebAssembly.
+title: Browser support for Blazor | Syncfusion®
+description: Supported browsers for Blazor components on Windows, Linux, and macOS for Blazor Server, Web App, and WebAssembly.
 platform: Blazor
 control: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Browser Compatibility in Blazor
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components are supported by modern web browsers on desktop and mobile devices running Windows, Linux, or macOS.
+Blazor UI components are supported by modern web browsers on desktop and mobile devices running Windows, Linux, or macOS.
 
 ## Blazor Web App
 

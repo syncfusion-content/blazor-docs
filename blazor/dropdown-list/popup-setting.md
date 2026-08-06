@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Popup Setting in Blazor DropDownList Component | Syncfusion
-description: Checkout and learn here all about Popup Setting in Syncfusion Blazor DropDown List component and much more.
+title: Popup Setting in Blazor DropDownList Component | Syncfusion®
+description: Checkout and learn here all about Popup Setting in Blazor DropDown List component and much more details.
 platform: Blazor
 control: DropDownList
 documentation: ug

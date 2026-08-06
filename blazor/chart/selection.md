@@ -372,7 +372,7 @@ A point or series can be selected programmatically on a chart using the [Selecte
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVJtgBxfkYWmfSE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Programmatically Selection in Blazor Column Chart](images/selection/blazor-column-chart-programmatic-selection.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhnDnCLItVmzuTx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Programmatically Selection in Blazor Column Chart](images/selection/blazor-column-chart-programmatic-selection.webp)" %}
 
 ## Legend Selection
 
@@ -493,7 +493,7 @@ The custom style can be applied to selected points or series using the [Selectio
 
 ![Blazor Column Chart with Custom Style Selection](images/selection/blazor-chart-custom-style-selection.webp)
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

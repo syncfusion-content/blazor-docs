@@ -1,15 +1,13 @@
 ---
 layout: post
-title: Excel Like Filter in Blazor DataGrid | Syncfusion
-description: Implement Excel-like filtering in Syncfusion Blazor DataGrid for efficient data management in Blazor applications.
+title: Blazor Grid Excel Like Filter | Syncfusion
+description: Learn how to implement Excel-like filtering in Blazor Data Grid with checkbox filters, search, sorting, custom filter choices, and advanced filtering options.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Excel-like Filter in Blazor DataGrid
-
-## Introduction
+# Excel-like Filter in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) includes an Excel-like filter feature that provides an easy-to-use interface for filtering data. This feature mirrors the filtering tools found in Microsoft Excel, making it intuitive for individuals already familiar with that application.
 
@@ -96,7 +94,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVfZVDQLqvKxcHI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrdZGZLqlQeiUbI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > **Key Features:**
 > * Supports multiple filter types: text, numbers, dates, and true/false values
@@ -185,7 +183,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBTZBNcrfDcFCUo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrnDwZhgbmvyADP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize the Number of Filter Options
 
@@ -305,7 +303,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVfXVjhBrOeigOb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBdNGtVUvPiyWQL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > **Performance Consideration:** Setting a high `FilterChoiceCount` may slow the filter dialog when it opens. Processing and displaying a large number of values requires additional time, potentially resulting in noticeable delays. To maintain smooth filtering, select a value that balances functional requirements with acceptable performance levels.
 
@@ -410,7 +408,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVzDrNsbrIRILzx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhdZGZLKvPRzQQQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Add Icons and Visual Elements to Filter Options
 
@@ -527,7 +525,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrJjVtQgjHtuqOK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrxDwjLUPYWYCQJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Style the Excel Filter Dialog with CSS
 
@@ -626,7 +624,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVJZhtsFqnfgvJa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrdDwXhJQDpSjFF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Changing Filter Dialog Size
 
@@ -749,7 +747,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBpZBDBCFDseVPP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrxZGtBTQoosiyI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Styling the filtered column icon
 
@@ -842,11 +840,11 @@ By default, when a filter is applied multiple times to the same column, the new 
 
 ![Add current selection to filter in Blazor DataGrid.](images/blazor-datagrid-add-current-selection-to-filter.webp)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBfNLDBsuTLPqvx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrRXGZVTwebipHI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## See Also
 
 Comprehensive information about the Blazor DataGrid and its features is available through the following resources:
 
 * **Feature Overview:** The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour provides a complete overview of available capabilities.
-* **Interactive Examples:** The [Blazor DataGrid examples](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) provide practical demonstrations of data presentation and manipulation.
+* **Interactive Examples:** The [Blazor DataGrid examples](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) provide practical demonstrations of data presentation and manipulation.

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Physical provider in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about Physical file system provider in Syncfusion Blazor File Manager component and more.
-platform: Blazor
+title: Physical Provider in Blazor File Manager | Syncfusion
+description: Learn how to use the physical file system provider in the Blazor File Manager to browse and manage files on a local disk.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Physical file system provider
+# Physical Provider in Blazor File Manager
 
 The Physical file system provider allows the users to access and manage the physical file system. To get started, clone the [Physical file system provider](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider) using the following command.
 
@@ -39,8 +39,8 @@ After setting the root directory of the file system, just build and run the proj
 
 ```
 
-To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the Physical file system provider, you need to initialize the physical service in the controller.
+To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Blazor File Manager component using the Physical file system provider, you need to initialize the physical service in the controller.
 
 To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `FileManagerController.cs` found at this [link](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/blob/master/Controllers/FileManagerController.cs). Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
 
-N> To learn more about file actions that can be performed with Physical file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider#key-features). When using a custom physical file provider in Syncfusion File Manager, installing a [PhysicalFileProvider](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager.PhysicalFileProvider) NuGet package is not required. The custom provider manages file operations independently, eliminating the need for additional dependencies.
+N> To learn more about file actions that can be performed with Physical file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider#key-features). When using a custom physical file provider in File Manager, installing a [PhysicalFileProvider](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager.PhysicalFileProvider) NuGet package is not required. The custom provider manages file operations independently, eliminating the need for additional dependencies.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linear Flow in Blazor Stepper Component | Syncfusion
+title: Linear Flow in Blazor Stepper Component | Syncfusion®
 description: Checkout and learn about Linear Flow with Blazor Stepper component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Stepper
@@ -67,4 +67,4 @@ The example demonstrates the functionality of both linear and non-linear flow in
 
 ```
 
-![Blazor Stepper Component with Linear Flow](./images/Blazor-linear.png)
+![Blazor Stepper Component with Linear Flow](./images/Blazor-linear.webp)

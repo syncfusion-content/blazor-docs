@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Panning in Blazor Stock Chart Component | Syncfusion
-description: Check out and learn here all about panning functionality in the Syncfusion Blazor Stock Chart component.
+title: Panning in Blazor Stock Chart Component | Syncfusion®
+description: Check out and learn here all about panning functionality in the Blazor Stock Chart component and much more details.
 platform: Blazor
 control: Stock Chart
 documentation: ug
@@ -66,4 +66,4 @@ else
 
 ![Blazor Stock Chart with Panning](images/panning.webp)
 
-N> Refer to the [Blazor Stock Chart](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for feature representations and explore the [Blazor Stock Chart example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=bootstrap5) to see various stock chart types and time-dependent data rendered at equal intervals.
+N> Refer to the [Blazor Stock Chart](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for feature representations and explore the [Blazor Stock Chart example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=fluent2) to see various stock chart types and time-dependent data rendered at equal intervals.

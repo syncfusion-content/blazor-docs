@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Native Events in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Native Events in Syncfusion Blazor ComboBox component and much more.
+title: Native Events in Blazor ComboBox Component | Syncfusion®
+description: Checkout and learn here all the features about Native Events in Blazor ComboBox component and much more.
 platform: Blazor
 control: ComboBox
 documentation: ug
@@ -46,7 +46,7 @@ In the following example, the `KeyPressed` method is invoked whenever a key is p
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVgiLrGUlddXtaX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhxDHhKKCZjWPnR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 Also, rewrite the previous code example as follows using Lambda expressions.
 
@@ -97,7 +97,7 @@ In the following example, the `KeyPressed` method receives `KeyboardEventArgs` a
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrKshBGqFwXkbUb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhnNRBAgCXrFmLn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 Using Lambda expression also, you can pass the event data to the event handler.
 

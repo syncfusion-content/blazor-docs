@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Number Formats in Blazor Numeric TextBox Component | Syncfusion
-description: Checkout and learn here all about number formats in Syncfusion Blazor Numeric TextBox component and more.
+title: Number Formats in Blazor Numeric TextBox Component | Syncfusion®
+description: Learn about number formats in Blazor Numeric TextBox including standard formats like N, P, C and custom format strings with detailed examples.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug

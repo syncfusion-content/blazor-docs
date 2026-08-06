@@ -1,6 +1,6 @@
 ---
 layout: post
-title: State Persistence in Blazor Sidebar Component | Syncfusion
+title: State Persistence in Blazor Sidebar Component | Syncfusion®
 description: Checkout and learn about State Persistence in Blazor Sidebar component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Sidebar

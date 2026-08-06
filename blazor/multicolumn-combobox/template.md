@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Templates in Syncfusion Blazor MultiColumn ComboBox
-description: Checkout and learn here all about Templates in the Syncfusion Blazor MultiColumn ComboBox component and much more.
+title: Templates in Blazor MultiColumn ComboBox Component | Syncfusion®
+description: Checkout and learn here all about Templates in the Blazor MultiColumn ComboBox component and much more.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug

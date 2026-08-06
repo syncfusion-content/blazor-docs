@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Authentication using AWS Cognito | Syncfusion
+title: Blazor Authentication using AWS Cognito | Syncfusion®
 description: Authenticate a Blazor Web App or Blazor Server App with AWS Cognito (OIDC Hosted UI) and secure Blazor components.
 platform: Blazor
 control: Common

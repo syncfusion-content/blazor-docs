@@ -19,7 +19,7 @@ In the following sample, items are disabled based on the `Disabled` field value 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrTZxiVzQacaXHw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLdZRMMAXDZstRg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Disable Item Method
 

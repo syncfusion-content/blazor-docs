@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Globalization in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about globalization in Syncfusion Blazor Pivot Table component and more.
+title: Globalization in Blazor Pivot Table | Syncfusion
+description: Learn how to localize the Blazor Pivot Table text and enable right-to-left rendering for Arabic, Farsi, and Urdu via the EnableRtl property.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Globalization in Blazor Pivot Table Component
+# Globalization in Blazor Pivot Table
 
 ## Localization
 
-[Blazor PivotTable](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+[Blazor PivotTable](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Blazor components.
 
 ## Right-to-left (RTL)
 
@@ -53,4 +53,4 @@ Right-to-left (RTL) support makes the Pivot Table more accessible and user-frien
 
 ![Right to Left in Blazor PivotChart](images/blazor-pivottable-right-to-left.webp)
 
-N> Refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
+N> Refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

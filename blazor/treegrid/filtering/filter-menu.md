@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filter Menu in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about Filter Menu in Syncfusion Blazor Tree Grid component and much more details.
+title: Filter Menu in Blazor Tree Grid Component | Syncfusion®
+description: Checkout and learn here all the features about Filter Menu in Blazor Tree Grid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Filter Menu in Blazor Tree Grid Component
 
-The filter menu can be enabled by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings~Type.html) of [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html) as **Menu**. The filter menu UI will be rendered based on its column type, which allows to filter data. The records can be filtered with different operators.
+The filter menu can be enabled by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_Type) of [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html) as **Menu**. The filter menu UI will be rendered based on its column type, which allows to filter data. The records can be filtered with different operators.
 
 {% tabs %}
 
@@ -327,7 +327,7 @@ namespace TreeGridComponent.Data {
 
 ## Enable different filter for a column
 
-Both the **Menu** and **Excel** filter can be used in a same Tree Grid. To do so, set the type as **Menu** or **Excel** using the [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterSettings) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html).
+Both the **Menu** and **Excel** filter can be used in a same Tree Grid. To do so, set the type as **Menu** or **Excel** using the [Filter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterColumn.html) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html).
 
 In the following sample menu filter is enabled by default and excel filter is enabled for the **TaskName** column using the `Filter` property of `TreeGridColumn`.
 

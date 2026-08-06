@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Grouping in Blazor DropDown List Component | Syncfusion
-description: Checkout and learn here all about Grouping in Syncfusion Blazor DropDown List component and much more.
+title: Grouping in Blazor DropDown List Component | Syncfusion®
+description: Checkout and learn here all the features about Grouping in Blazor DropDown List component and much more details.
 platform: Blazor
 control: DropDownList
 documentation: ug

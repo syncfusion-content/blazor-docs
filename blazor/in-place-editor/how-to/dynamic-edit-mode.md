@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Dynamically move In-place Editor to edit mode in Blazor | Syncfusion
-description: Learn here all about dynamically moving input to edit mode in Syncfusion Blazor In-place Editor component and more.
+title: Dynamically move In-place Editor to edit mode in Blazor | Syncfusion®
+description: Learn here all about dynamically moving input to edit mode in Blazor In-place Editor component and much more details.
 platform: Blazor
 control: In-place Editor
 documentation: ug

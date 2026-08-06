@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Disabled Items in Blazor DropDownList Component | Syncfusion
-description: Checkout and learn here all about Disabled Items in Syncfusion Blazor DropDownList component and much more.
+title: Disabled Items in Blazor DropDownList Component | Syncfusion®
+description: Checkout and learn here all about Disabled Items in Blazor DropDownList component and much more details.
 platform: Blazor
 control: DropDownList
 documentation: ug
@@ -19,7 +19,7 @@ In the following sample, items are rendered as disabled based on the value of th
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVfZRsLzvcQPnwt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVxjRraBxXQbElB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Disable Item Method
 

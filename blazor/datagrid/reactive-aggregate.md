@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  Reactive aggregates in Blazor DataGrid Component | Syncfusion
-description: Learn how reactive aggregates in the Syncfusion Blazor DataGrid auto-update summary values in the footer, group footer, and group caption during batch editing.
+title:  Blazor Grid Reactive Aggregates | Syncfusion
+description: Learn how reactive aggregates in Blazor Data Grid automatically update footer, group footer, and caption summaries during batch editing.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Reactive aggregates in Blazor DataGrid
+# Reactive Aggregates in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports reactive aggregates that update dynamically as data changes. Aggregate values are recalculated when underlying data is edited, providing real-time updates to footer, group footer, and group caption summaries.
 
@@ -121,6 +121,6 @@ When the DataGrid is in batch editing mode, aggregate values in the footer, grou
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLSNYqjWbvJQVPF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhHDwjKxLCmXMyp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > Aggregate values refresh after batch changes are saved (Update). Adding a new record does not update aggregates until the changes are saved.

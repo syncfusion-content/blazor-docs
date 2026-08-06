@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Data Grid connected to SQL via Entity Framework | Syncfusion
-description: Bind SQL Server data to Blazor Data Grid using Entity Framework Core with complete CRUD, filtering, sorting, paging, and advanced data operations.
+title: Blazor Grid SQL Server with Entity Framework | Syncfusion
+description: Learn how to connect SQL Server with Blazor Data Grid using Entity Framework Core for CRUD operations, filtering, sorting, paging, and data management.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Connecting SQL Server to Blazor Data Grid Using Entity Framework
+# SQL Server with Entity Framework in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a SQL Server database using Entity Framework Core (EF Core). This modern approach provides a more maintainable and type-safe alternative to raw SQL queries.
 
@@ -547,7 +547,7 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://learn.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-2.1&tabs=visual-studio#http-strict-transport-security-protocol-hsts.
     app.UseHsts();
 }
 
@@ -566,14 +566,14 @@ app.Run();
 - **`AddDbContext<TicketsDbContext>`**: Registers the DbContext with SQL Server as the database provider using `UseSqlServer()`.
 - **`EnableSensitiveDataLogging()`**: Enabled in development to log detailed information about database operations (useful for debugging).
 - **`AddScoped<TicketRepository>`**: Registers the repository as a scoped service, creating a new instance for each HTTP request.
-- **`AddSyncfusionBlazor()`**: Registers Syncfusion Blazor components.
+- **`AddSyncfusionBlazor()`**: Registers Blazor components.
 - **`AddRazorComponents()` and `AddInteractiveServerComponents()`**: Enables Blazor server-side rendering with interactive components.
 
 The service registration has been completed successfully.
 
 ---
 
-## Integrating Syncfusion Blazor DataGrid
+## Integrating Blazor DataGrid
 
 ### Step 1: Install and Configure Blazor DataGrid Components
 
@@ -592,18 +592,18 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 @using Grid_MSSQL.Data
 ```
 
-* Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+* Add the stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
-<!-- Syncfusion Blazor Stylesheet -->
+<!-- Blazor Stylesheet -->
 <link href="_content/Syncfusion.Blazor.Themes/tailwind3.css" rel="stylesheet" />
 
-<!-- Syncfusion Blazor Scripts -->
+<!-- Blazor Scripts -->
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
-For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
+For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
+Blazor components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
 ### Step 2: Update the Blazor DataGrid
 
@@ -626,7 +626,7 @@ The `Home.razor` component will display the ticket data in a Blazor DataGrid wit
         <h1 class="mb-4 text-3xl font-bold">Network Support Ticket System</h1>
         <p class="mb-3 text-gray-600">Manage and view all support tickets from the database.</p>
         
-        <!-- Syncfusion Blazor DataGrid Component -->
+        <!-- Blazor DataGrid Component -->
         <SfGrid TValue="Tickets" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
             <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
             

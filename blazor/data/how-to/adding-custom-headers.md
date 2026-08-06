@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Adding custom headers in Blazor DataManager Component | Syncfusion
+title: Adding custom headers in Blazor DataManager Component | Syncfusion®
 description: Checkout and learn here all about adding custom headers in Syncfusion Blazor DataManager component and more.
 platform: Blazor
 control: DataManager
@@ -11,7 +11,7 @@ documentation: ug
 
 # Adding Custom Headers in Blazor DataManager
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started-with-web-app) component supports adding **custom HTTP headers** to all outbound requests. This feature is essential when requests require additional metadata, such as **authentication tokens**, **tenant identifiers**, or **localization details**.
+The Blazor [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started-with-web-app) component supports adding **custom HTTP headers** to all outbound requests. This feature is essential when requests require additional metadata, such as **authentication tokens**, **tenant identifiers**, or **localization details**.
 
 The [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Headers) property is used to configure these headers by assigning **key–value** pairs through an **IDictionary<string, string>** collection. Each request automatically includes the specified headers, enabling secure and context-aware communication without repetitive code.
 

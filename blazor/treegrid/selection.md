@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about selection in Syncfusion Blazor TreeGrid component and much more details.
+title: Selection in Blazor TreeGrid Component | Syncfusion®
+description: Checkout and learn here all the features about selection in Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug

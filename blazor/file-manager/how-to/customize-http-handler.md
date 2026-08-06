@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Customize HTTP handler | Syncfusion
-description: Learn here all about customizing the HTTP handler in the Windows authenticated client application for Blazor FileManager.
-platform: Blazor
+title: How to customize the HTTP handler in Blazor File Manager | Syncfusion
+description: Learn how to attach authentication tokens to file operations, image requests, downloads, and uploads in the Blazor File Manager.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Customize HTTP handler
+# How to Customize the HTTP Handler in Blazor File Manager
 
-In secured applications, API operations including file management, image retrieval, uploads, and downloads often require authentication tokens. The Blazor File Manager component provides comprehensive support for adding authorization headers to all requests through various settings and events including [FileManagerUploadSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html), [OnSend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnSend), [BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeImageLoad), and [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload).
+In secured applications, API operations including file management, image retrieval, uploads, and downloads often require authentication tokens. The [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component provides comprehensive support for adding authorization headers to all requests through various settings and events including [FileManagerUploadSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html), [OnSend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnSend), [BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeImageLoad), and [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload).
 
 ## Understanding the Security Challenge
 
@@ -143,13 +143,13 @@ This section explains how to create a Blazor server application with Windows aut
 
 ### Create Windows Authenticated Blazor Server Application
 
-You can create a Blazor server application with Windows authentication using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a Blazor server application with Windows authentication using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-![Authentication](../images/customize-http-handler.png)
+![Authentication](../images/customize-http-handler.webp)
 
 Include the [Microsoft.AspNetCore.Authentication.JWTBearer](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer) package for generating user tokens.
 
-Initialize the File Manager component in the **~/Pages/Index.razor** file using the [Getting Started with Blazor File Manager Component](https://blazor.syncfusion.com/documentation/file-manager/getting-started) documentation.
+Initialize the File Manager component in the **~/Pages/Index.razor** file using the [Getting Started with Blazor File Manager Component](https://blazor.syncfusion.com/documentation/file-manager/getting-started-with-web-app) documentation.
 
 ### Implementing JWT Token Generation and Authorization
 
@@ -289,7 +289,7 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://learn.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-10.0&tabs=visual-studio%2Clinux-ubuntu.
     app.UseHsts();
 }
 
