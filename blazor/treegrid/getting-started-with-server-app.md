@@ -7,7 +7,7 @@ control: TreeGrid
 documentation: ug
 ---
 
-# Getting started with Blazor TreeGrid in Blazor Server App
+# Getting Started with Blazor TreeGrid in Blazor Server App
 
 This section briefly explains about how to include [Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component in your Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Dialog Dialog Editing | Syncfusion
-description: Learn how to implement dialog editing in Blazor TreeGrid Dialog, customize editing forms, validate input, and improve user interactions.
+title: Blazor TreeGrid Dialog Editing | Syncfusion
+description: Learn how to implement dialog editing in Blazor TreeGrid, customize editing forms, validate input, and improve user interactions.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Dialog Editing in Blazor Tree Grid Component
+# Dialog Editing in Blazor TreeGrid
 
 In Dialog edit mode, while editing the currently selected row, data will be shown on a dialog. The cell values and save edited data can be changed to the data source. To enable Dialog edit, set the [TreeGridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Mode) as **Dialog**.
 

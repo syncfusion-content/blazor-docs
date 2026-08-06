@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor TreeGrid Row Customization | Syncfusion
+title: Blazor TreeGrid Rows | Syncfusion
 description: Learn how to customize rows in Blazor TreeGrid with row styles, heights, hover effects, pinning, and advanced row settings.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Row Customization in Blazor TreeGrid
+# Rows in Blazor TreeGrid
 
 The row represents record details fetched from the data source.
 

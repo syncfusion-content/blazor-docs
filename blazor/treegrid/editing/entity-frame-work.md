@@ -7,7 +7,7 @@ control: Tree Grid
 documentation: ug
 ---
 
-# Entity Framework in Blazor Tree Grid
+# Entity Framework in Blazor TreeGrid
 
 This section uses and follows the code explained in the [Entity Framework data binding](https://blazor.syncfusion.com/documentation/treegrid/data-binding#entity-framework) section hence it is recommended to refer Entity Framework data binding section before continue this section.
 

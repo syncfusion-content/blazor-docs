@@ -7,7 +7,7 @@ control: Tree Grid
 documentation: ug
 ---
 
-# Template Editing in Blazor Tree Grid
+# Template Editing in Blazor TreeGrid
 
 ## Dialog template
 

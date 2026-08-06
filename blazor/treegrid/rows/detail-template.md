@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Tree Grid Detail Template | Syncfusion
+title: Blazor TreeGrid Detail Template | Syncfusion
 description: Learn how to use detail templates in Blazor TreeGrid to display expandable content, nested data, and additional row details.
 platform: Blazor
 control: Tree Grid

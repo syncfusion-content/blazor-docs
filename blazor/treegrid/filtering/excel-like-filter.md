@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor TreeGrid Excel Like Filter | Syncfusion
-description: Learn how to use Excel-like filtering in Blazor TreeGrid with advanced filtering, search, checkbox filters, and filter customization options.
+description: Learn how to use Excel like filtering in Blazor TreeGrid with advanced filtering, search, checkbox filters, and filter customization options.
 platform: Blazor
 control: Tree Grid
 documentation: ug

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor TreeGrid Virtualization | Syncfusion
+title: Blazor TreeGrid Virtualization for Large Data Performance | Syncfusion
 description: Learn how to use virtualization in Blazor TreeGrid to efficiently render large datasets, improve scrolling performance, and reduce load times.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Virtualization in Blazor TreeGrid
+# Virtualization for Large Data Performance in Blazor TreeGrid
 
 Virtualization enables the efficient rendering of large datasets in the TreeGrid component, minimizing performance degradation and improving responsiveness. It ensures only the visible rows and columns are rendered, significantly enhancing load times and user experience when working with extensive hierarchical data.
 

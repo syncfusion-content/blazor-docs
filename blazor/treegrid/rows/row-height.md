@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor TreeGrid Row Height | Syncfusion
-description: Learn how to customize row height in Blazor TreeGrid  to improve data readability, layout control, and user experience.
+description: Learn how to customize row height in Blazor TreeGrid to improve data readability, layout control, and user experience.
 platform: Blazor
 control: Tree Grid
 documentation: ug

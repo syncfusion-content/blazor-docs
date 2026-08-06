@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Blazor TreeGrid  Column Reordering | Syncfusion
-description: Learn how to reorder columns in Blazor TreeGrid , customize column positions, and improve data organization for users.
+title: Blazor TreeGrid Column Reordering | Syncfusion
+description: Learn how to reorder columns in Blazor TreeGrid, customize column positions, and improve data organization for users.
 platform: Blazor
 control: Tree Grid
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor TreeGrid Change Data Source Dynamically | Syncfusion
+title: Blazor TreeGrid Change Datasource Dynamically | Syncfusion
 description: Learn how to change data sources dynamically in Blazor TreeGrid, update data at runtime, and manage different datasets efficiently.
 platform: Blazor
 control: Tree Grid
