@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Column Resizing in Blazor Data Grid Component | Syncfusion
+title: Blazor Grid Column Resizing | Syncfusion
 description: Learn how to resize columns in Blazor Data Grid using drag-and-drop, auto-fit, APIs, touch interactions, stacked headers, and resize events.
 platform: Blazor
 control: DataGrid

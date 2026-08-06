@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Clipboard in Blazor Data Grid Component | Syncfusion
+title: Blazor Grid Clipboard | Syncfusion
 description: Learn how to use clipboard features in Blazor Data Grid, including copy, paste, autofill, keyboard shortcuts, toolbar actions, and batch editing support.
 platform: Blazor
 control: DataGrid

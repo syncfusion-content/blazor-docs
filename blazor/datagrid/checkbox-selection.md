@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Checkbox Selection in Blazor Data Grid | Syncfusion®
+title: Blazor Grid Checkbox Selection | Syncfusion
 description: Learn how to use checkbox selection in Blazor Data Grid for single and multiple row selection, persist selection, bulk actions, and programmatic control.
 platform: Blazor
 control: DataGrid 

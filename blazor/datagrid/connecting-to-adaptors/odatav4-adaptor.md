@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Configuring an OData V4 Service in Blazor Data Grid | Syncfusion
-description: Learn Configuring an OData V4 Service in Blazor Data Grid using Syncfusion controls. It supports data operations, UI customization, and enterprise features.
+title: Blazor Grid OData V4 Service | Syncfusion
+description: Learn how to bind OData V4 services to Blazor Data Grid and perform filtering, sorting, paging, and CRUD operations.
 platform: Blazor
 control: DataGrid
 keywords: adaptors, ODataV4adaptor, ODataV4 adaptor, remotedata 
 documentation: ug
 ---
 
-# Configuring an OData V4 Service in Blazor Data Grid
+# OData V4 Service in Blazor Data Grid
 
 The [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables seamless integration of the Grid with OData V4 services, facilitating efficient data fetching and manipulation. This guide provides detailed instructions for binding data and performing CRUD (Create, Read, Update, and Delete) actions using the `ODataV4Adaptor` in your Blazor DataGrid.
 

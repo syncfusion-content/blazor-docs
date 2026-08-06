@@ -1,13 +1,13 @@
 ---
 layout: post
-title: CSS Isolation for Blazor Data Grid Component | Syncfusion®
+title: Blazor Grid CSS Isolation | Syncfusion
 description: Learn how to apply CSS isolation in the Blazor Data Grid component using scoped styles, ::deep selectors, and wrapper-based customization techniques.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# CSS Isolation for Blazor Data Grid
+# CSS Isolation in Blazor Data Grid
 
 `CSS` isolation in Blazor enables defining component-specific styles by using a **.razor.css** file that matches the corresponding **.razor** component file. This approach ensures that styles are applied only to the intended component and do not affect other parts of the application. As a result, it helps prevent unintended side effects caused by global styling and makes it easier to manage styles in a controlled manner.
 

@@ -1,7 +1,6 @@
 ---
 layout: post
-
-title: Column Menu in Blazor Data Grid Component | Syncfusion®
+title: Blazor Grid Column Menu | Syncfusion
 description: Learn how to use and customize the Column Menu in Blazor Data Grid, including sorting, filtering, grouping, menu items, and event handling.
 platform: Blazor
 control: DataGrid

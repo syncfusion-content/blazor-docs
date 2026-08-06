@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Column Spanning in Blazor Data Grid Component | Syncfusion
+title: Blazor Grid Column Spanning | Syncfusion
 description: Learn how to use column spanning in Blazor Data Grid to merge adjacent cells, create custom layouts, and improve data presentation.
 platform: Blazor
 control: DataGrid

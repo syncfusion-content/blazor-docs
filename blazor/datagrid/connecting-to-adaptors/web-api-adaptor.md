@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Creating an WebApiAdaptor in Blazor Data Grid | Syncfusion®
-description: Learn Creating an WebApiAdaptor service in Blazor Data Grid using Syncfusion controls. It supports data operations, UI customization, and enterprise features.
+title: Blazor Grid Web API Binding | Syncfusion
+description: Learn how to use WebApiAdaptor in Blazor Data Grid to connect Web API data and perform server-side paging, sorting, filtering, and CRUD operations.
 platform: Blazor
-keywords: adaptors, webapiadaptor, webapi adaptor, remotedata
+keywords: adaptors, webapiadaptor, webapi adaptor, remotedata, webapi binding, web api
 control: DataGrid
 documentation: ug
 ---
 
-# Creating an WebApiAdaptor in Blazor Data Grid
+# Bind Web API Data using WebApiAdaptor in Blazor Data Grid
 
 The [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) is an extension of the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor), designed to interact with Web APIs created with OData endpoints. This adaptor ensures seamless communication between the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and OData-endpoint-based Web APIs, enabling efficient data retrieval and manipulation. For successful integration, the endpoint must be capable of understanding OData-formatted queries sent along with the request.
 

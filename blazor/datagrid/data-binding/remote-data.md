@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Remote Data in Blazor Data Grid | Syncfusion®
-description: Explore remote data integration in Blazor Data Grid, including setup, supported data sources, binding options, and advanced data operations.
+title: Blazor Grid Remote Data Integration and Binding | Syncfusion
+description: Learn how to integrate remote data in Blazor Data Grid, configure supported data sources, customize binding options, and advanced data operations efficiently.
 platform: Blazor
 control: DataGrid
 documentation: ug

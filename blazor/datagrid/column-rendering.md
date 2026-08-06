@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Column Rendering in Blazor Data Grid Component | Syncfusion
+title: Blazor Grid Column Rendering | Syncfusion
 description: Learn how column rendering works in Blazor Data Grid, including manual columns, auto-generated columns, dynamic rendering, and data-driven column generation.
 platform: Blazor
 control: DataGrid

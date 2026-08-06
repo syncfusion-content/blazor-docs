@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Local Data in Blazor Data Grid | Syncfusion®
-description: Explore how to bind and display local data in Blazor Data Grid using Syncfusion controls with various data binding approaches and customization options.
+title: Blazor Grid Local Data Binding | Syncfusion
+description: Bind and display local data in a Blazor Data Grid with Syncfusion. Learn how to configure data binding and present data efficiently.
 platform: Blazor
 control: DataGrid
 documentation: ug

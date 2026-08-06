@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sorting Icon Styling in Blazor Data Grid | Syncfusion
+title: Blazor Grid Sort Icon Styling | Syncfusion
 description: Learn how to style sorting icons in Blazor Data Grid using CSS, theme icon codes, and CSS isolation techniques for custom sorting indicators.
 platform: Blazor
 control: DataGrid

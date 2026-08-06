@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Filter Bar in Blazor Data Grid | Syncfusion®
+title: Blazor Grid Filter Bar | Syncfusion
 description: Learn how to use the Filter Bar in Blazor Data Grid with filter operators, immediate and OnEnter modes, templates, and advanced filtering options.
 platform: Blazor
 control: DataGrid

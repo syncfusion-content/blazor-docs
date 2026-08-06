@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Enable or Disable Blazor Data Grid | Syncfusion®
-description: Learn how to enable or disable the entire Blazor Data Grid component to control user interaction and grid actions dynamically.
+title: Blazor Grid Enable or Disable Blazor Data Grid | Syncfusion
+description: Learn how to enable or disable the entire Blazor Data Grid component to control user interactions and improve the overall user experience efficiently.
 platform: Blazor
 control: DataGrid
 documentation: ug

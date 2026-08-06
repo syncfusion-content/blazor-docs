@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Cell in Blazor Data Grid | Syncfusion
+title: Blazor Grid Cell Customization | Syncfusion
 description: Learn how to customize cells in Blazor Data Grid, including grid lines, tooltips, cell styling, HTML rendering, and other cell-level features.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Cell in Blazor Data Grid
+# Cell Customization in Blazor Data Grid
 
 In [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), a cell is a single data unit formed at the intersection of a row and a column. Each cell displays content based on its data record and column settings. Depending on configuration, cells can show text, numbers, or custom templated content.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Add Data Grid to Blazor Server App Using .NET CLI | Syncfusion®
-description: Learn how to add Data Grid to a Blazor Server app using .NET CLI on .NET 8/9, including project setup, themes, scripts, and basic grid features.
+title: Blazor Grid Server App Using .NET CLI | Syncfusion
+description: Learn how to add Blazor Data Grid to a Server app using .NET CLI with project setup, themes, scripts, configuration, and essential grid features.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Add Data Grid to Blazor Server App Using .NET CLI
+# Server App Using .NET CLI in Blazor Data Grid
 
 This article provides step-by-step instructions to build a standalone Blazor Server app with [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet). The guidance aligns with .NET 8/9 Blazor Server project standards.
 

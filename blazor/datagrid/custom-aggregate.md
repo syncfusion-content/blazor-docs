@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Custom Aggregate in Blazor Data Grid | Syncfusion®
+title: Blazor Grid Custom Aggregate | Syncfusion
 description: Learn how to create custom aggregates in Blazor Data Grid using CustomAggregate callbacks, template context, and custom summary calculations.
 platform: Blazor
 control: DataGrid

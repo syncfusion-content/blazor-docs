@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Detail Template in Blazor Data Grid Component | Syncfusion®
+title: Blazor Grid Detail Template & Hierarchical Grid | Syncfusion
 description: Learn how to use detail templates in Blazor Data Grid to display hierarchical data, nested grids, expandable content, template columns, and custom layouts.
 platform: Blazor
 control: DataGrid

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create a Custom Blazor Data Grid Component | Syncfusion®
+title: Blazor Grid:Create a Custom Blazor Data Grid Component | Syncfusion
 canonical_url: "https://www.syncfusion.com/blazor-components/blazor-datagrid"
 description: Learn how to create a reusable custom Blazor Data Grid component that wraps SfGrid and shares paging, sorting, and layout settings across applications.
 platform: Blazor
@@ -8,7 +8,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Create a Reusable Custom Blazor Data Grid Component
+# Creating a Reusable Custom Blazor Data Grid Component
 
 Creating a reusable custom Blazor DataGrid by wrapping the `SfGrid` inside a Razor component helps standardize configuration and improve maintainability across applications. This approach is particularly useful in modern web applications where multiple Grid instances are used across different pages or modules.
 

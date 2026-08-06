@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Caption Template in Blazor Data Grid | Syncfusion®
+title: Blazor Grid Caption Template | Syncfusion
 description: Learn how to customize group caption rows in Blazor Data Grid using CaptionTemplate and CaptionTemplateContext to display custom text and summaries.
 platform: Blazor
 control: DataGrid

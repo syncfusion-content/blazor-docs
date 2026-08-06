@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in Blazor Data Grid | Syncfusion®
+title: Blazor Grid Events | Syncfusion
 description: Learn how to handle Blazor Data Grid events, including lifecycle, data binding, selection, editing, filtering, grouping, exporting, and action events.
 platform: Blazor
 control: DataGrid

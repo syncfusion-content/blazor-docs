@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Data Grid with SQL Server Using Entity Framework | Syncfusion®
-description: Bind SQL Server data to Blazor Data Grid using Entity Framework Core with CRUD operations, filtering, sorting, and paging.
+title: Blazor Grid SQL Server with Entity Framework | Syncfusion
+description: Learn how to connect SQL Server with Blazor Data Grid using Entity Framework Core for CRUD operations, filtering, sorting, paging, and data management.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Connecting SQL Server to Blazor Data Grid via Entity Framework
+# SQL Server with Entity Framework in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from SQL Server using Entity Framework Core (EF Core) with REST API endpoints via UrlAdaptor. This approach enables clean separation of UI and data layers while supporting full data operations.
 

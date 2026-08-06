@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Batch Editing in Blazor Data Grid | Syncfusion®
+title: Blazor Grid Batch Editing | Syncfusion
 description: Learn how to use batch editing in Blazor Data Grid to update multiple cells at once with events, validations, dynamic columns, and bulk operations.
 platform: Blazor
 control: DataGrid

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Columns in Blazor Data Grid Component | Syncfusion
+title: Blazor Grid Columns | Syncfusion
 description: Learn how to configure and customize columns in Blazor Data Grid, including column types, formatting, visibility, freezing, responsiveness, and other options.
 platform: Blazor
 control: DataGrid

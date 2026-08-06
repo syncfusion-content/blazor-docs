@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cell Selection in Blazor Data Grid | Syncfusion®
+title: Blazor Grid Cell Selection | Syncfusion
 description: Learn how to use cell selection in Blazor Data Grid with single and multiple selection modes, external controls, keyboard navigation, and selection events.
 platform: Blazor
 control: DataGrid

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Column Reorder in Blazor Data Grid Component | Syncfusion
+title: Blazor Grid Column Reorder | Syncfusion
 description: Learn how to reorder columns in Blazor Data Grid using drag-and-drop, APIs, and events for single, multiple, and interactive column reordering.
 platform: Blazor
 control: DataGrid
