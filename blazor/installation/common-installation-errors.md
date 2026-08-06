@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Common installation errors in Blazor | Syncfusion®
+title: Common Installation Errors in Blazor | Syncfusion®
 description: Understand common Blazor installer errors, their causes, and solutions including unlock key issues, license expiration, concurrent installers.
-platform: common
+platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Common installation errors
+# Common Installation Errors in Blazor
 
 This article describes the most common installation errors, as well as the causes and solutions to those errors.
 

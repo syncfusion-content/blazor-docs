@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrating ASP.NET Core MVC to Blazor | Syncfusion
+title: Migrating ASP.NET Core MVC Controls to Blazor | Syncfusion®
 description: Learn how to migrate ASP.NET Core MVC controls to Blazor components, including key concepts and a detailed migration approach.
 platform: Blazor
 control: Common

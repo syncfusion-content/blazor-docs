@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Scaffolding in Blazor Applications | Syncfusion®
+title: Syncfusion Blazor Scaffolding in Visual Studio | Syncfusion®
 description: Learn how to use the Blazor extension for Visual Studio to scaffold pages and code, accelerating data-driven development. Explore to more details.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Syncfusion® Blazor scaffolding
+# Syncfusion® Blazor Scaffolding
 
 Use the Syncfusion<sup style="font-size:70%">&reg;</sup> Scaffolder to quickly create data-driven pages and services for Blazor. The Scaffolder generates controller/service classes and Razor pages wired to your project's data model and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components saving time on routine tasks like data binding, CRUD wiring, and component configuration.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Install the Blazor offline installer | Syncfusion®
+title: Install the Blazor Offline Installer | Syncfusion®
 description: Learn how to install the Blazor offline installer (EXE or ZIP), unlock with a key or account login, and perform silent installs and uninstalls.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Install the Syncfusion® Blazor offline installer
+# How to Install the Syncfusion® Blazor Offline Installer
 
 The Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor offline installer is available in EXE or ZIP format and can be installed either through the user interface or silently from the command line. The sections below cover both approaches, including how to unlock the installer and how to uninstall from the command line.
 

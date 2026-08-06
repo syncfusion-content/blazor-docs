@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Authentication and Authorization in Blazor Components | Syncfusion®
+title: Authentication and Authorization for Blazor Components | Syncfusion®
 description: Learn how to secure Blazor components with authentication and authorization in Blazor Server and WebAssembly applications.
 platform: blazor
 component: common

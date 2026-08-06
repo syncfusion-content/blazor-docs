@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Claude AI Integration with Blazor Smart TextArea | Syncfusion®
+title: Claude AI Service Integration in Blazor Smart TextArea | Syncfusion®
 description: Learn how to integrate the Blazor Smart TextArea with Claude AI services in a Blazor App and much more details.
 platform: Blazor
 control: Smart TextArea

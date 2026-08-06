@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create a Blazor WebAssembly App with prerendering | Syncfusion®
+title: Create a Blazor WebAssembly Application with Prerendering | Syncfusion®
 description: Learn how to enable prerendering for a hosted Blazor WebAssembly app, resolve HttpClient issues, and configure routing.
 platform: blazor
 control: Common

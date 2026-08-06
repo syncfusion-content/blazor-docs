@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Animation in Blazor components | Syncfusion®
+title: Animation in Syncfusion Blazor components | Syncfusion®
 description: Learn how to enable or disable animations globally for Blazor components using GlobalOptions.Animation in Program.cs.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Animation in Blazor components
+# Animation in Syncfusion Blazor components
 
 This section explains how to enable or disable animations globally for Blazor components. Global animation settings apply app-wide and can override individual component animation settings.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Port a Blazor Web App to a .NET MAUI Blazor Hybrid App | Syncfusion®
+title: Port Syncfusion® Blazor Web App to .NET MAUI Blazor Hybrid App | Syncfusion®
 description: Learn here about how to migrate a Blazor Web App to a .NET MAUI Blazor Hybrid app using a Razor Class Library (RCL) to reuse pages, assets, and services.
 platform: Blazor
 control: Common

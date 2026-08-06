@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Telemetry Usage Details in Blazor | Syncfusion
+title: Syncfusion Telemetry in Blazor | Syncfusion®
 description: Syncfusion® Telemetry collects anonymous usage data in Blazor to improve product quality, track feature adoption, and guide product planning.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# Syncfusion<sup>&reg;</sup> Telemetry  
+# Syncfusion® Telemetry  
 
 Syncfusion<sup>&reg;</sup> Telemetry library collects **anonymous usage data** to improve product quality and user experience. This data helps us better understand product usage, feature adoption, usage trends, and make informed decisions about future product planning. 
 

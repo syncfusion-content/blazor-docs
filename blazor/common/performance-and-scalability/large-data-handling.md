@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Efficient Large Data Handling in Blazor Components | Syncfusion®
+title: Handling Large Data in Blazor Components | Syncfusion®
 description: Learn how Blazor components efficiently handle large datasets using paging, virtualization, server side processing, and lazy loading. 
 platform: Blazor
 control: Common

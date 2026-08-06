@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Code snippets for Blazor Extension in VS code | Syncfusion®
+title: Add Blazor Components Using Code Snippets in VS Code | Syncfusion®
 description: Learn how to use the code snippet feature in the Blazor extension for Visual Studio Code to quickly insert Blazor component.
 platform: Blazor
 control: Common

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Upgrade a project to the latest version in VS Code | Syncfusion®
+title: Upgrade the Blazor Application to the Latest Version | Syncfusion®
 description: Learn here about how to upgrade a project to the latest version using the Syncfusion® Blazor extension for Visual Studio Code. 
 platform: Blazor
 control: Common

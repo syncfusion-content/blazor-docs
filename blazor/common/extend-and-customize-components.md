@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Extend and customize Blazor components | Syncfusion®
-description: Learn how to extend, compose, and reuse Blazor components, including dynamic rendering patterns and much more details.
+title: Extend, Customize, and Reuse Components in Blazor Common | Syncfusion®
+description: Learn how to extend, compose, and reuse Blazor components, including dynamic rendering patterns.
 platform: Blazor
 control: Common
 documentation: ug

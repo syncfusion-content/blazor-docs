@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with WPF Blazor App in Visual Studio | Syncfusion®
+title: Getting Started with WPF Blazor Application | Syncfusion®
 description: Check out the documentation for getting started with WPF Blazor App and Blazor Components in Visual Studio and much more.
 platform: Blazor
 component: Common

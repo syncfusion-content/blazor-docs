@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Convert a Blazor project to Syncfusion Blazor | Syncfusion®
+title: Convert a Blazor Application to Syncfusion Blazor | Syncfusion®
 description: Learn how to convert an existing Blazor application to a Blazor application using the Blazor Extension for VS 2022, including NuGet package installation.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Convert a Blazor Application to Syncfusion® Blazor
+# Convert a Blazor Application to Syncfusion Blazor
 
 This guide explains how to convert an existing Blazor application into a Syncfusion® Blazor application using the Syncfusion® Project Conversion wizard for Visual Studio 2022 or 2026. The conversion installs the required Syncfusion® NuGet packages, registers component namespaces, and applies the selected theme stylesheet.
 

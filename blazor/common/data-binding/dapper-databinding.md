@@ -1,11 +1,10 @@
 ---
 layout: post
-title: Bind data using Dapper and perform CRUD operations | Syncfusion
-component: "DataGrid component and DataManager"
+title: Bind Data Using Dapper and Perform CRUD Operations | Syncfusion®
 description: How to consume data from SQL database using Dapper, bind it to a Syncfusion Component, and perform CRUD operations.
-component: Common
-documentation: ug
 platform: Blazor
+control: DataGrid component and DataManager
+documentation: ug
 ---
 
 # How to Bind Data Using Dapper and Perform CRUD Operations

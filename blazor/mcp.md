@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion Blazor MCP Server | AI Coding Assistant
+title: Syncfusion Blazor MCP Server | AI Coding Assistant | Syncfusion®
 description: Accelerate Blazor development with Syncfusion MCP Server—access docs, APIs, code snippets, and release history in your AI IDE.
 platform: Blazor
 control: Syncfusion Blazor MCP Server
