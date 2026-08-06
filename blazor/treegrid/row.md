@@ -106,15 +106,13 @@ public class TreeData
 
 ## Styling alternate rows
 
-Apply consistent CSS styling to visually distinguish alternating rows throughout the entire Treegrid. The Treegrid's alternative rows' background color can be changed by overriding the **.e-altrow** class.
+Apply consistent CSS styling to visually distinguish alternating rows throughout the entire Treegrid. The Treegrid's alternative rows background color can be changed by overriding the **.e-altrow** class.
 
 ```css
 .e-treegrid .e-altrow {
     background-color: #fafafa;
 }
 ```
-
-Refer to the following example.
 
 {% tabs %}
 
@@ -188,7 +186,7 @@ public class TreeData
 
 ## Accessing row model information programmatically
 
-The Blazor TreeGrid Component provides a method called [GetRowModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetRowModel) that can be used to obtain the values associated with row model details. These details include the level, expanded status, child records status of a record.
+The Blazor TreeGrid Component provides a method called [GetRowModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetRowModel) that can be used to obtain the values associated with row model information. These details include the level, expanded status, child records status of a record.
 
 The returned `ITreeGridRowModel<TValue>` object provides the following properties:
 
