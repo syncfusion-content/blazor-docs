@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Amazon S3 cloud Provider in Blazor File Manager | Syncfusion®
-description: Check out and learn about the Amazon S3 cloud file provider in the Blazor File Manager component and much more details.
-platform: Blazor
+title: Amazon S3 Cloud Provider in Blazor File Manager | Syncfusion
+description: Learn how to connect the Blazor File Manager to Amazon S3 to browse and manage files stored in an S3 bucket.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Amazon S3 cloud file provider
+# Amazon S3 Cloud Provider in Blazor File Manager
 
 ## Introduction to Amazon S3
 
