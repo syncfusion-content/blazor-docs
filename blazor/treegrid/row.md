@@ -9,7 +9,7 @@ documentation: ug
 
 # Rows in Blazor TreeGrid Component
 
-The row represents record details fetched from the data source. Rows are the fundamental building blocks of the TreeGrid, displaying hierarchical data with parent-child relationships.
+A row represents a single record fetched from the data source. Rows are the fundamental building blocks of the TreeGrid and can display hierarchical data through parent-child relationships.
 
 ## Customize rows
 
