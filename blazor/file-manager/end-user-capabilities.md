@@ -1,13 +1,13 @@
 ---
 layout: post
-title: End User Capabilities in Blazor File Manager Component | Syncfusion®
-description: Checkout and learn here all about End User Capabilities in Blazor File Manager component and much more details.
-platform: Blazor
+title: End User Capabilities in Blazor File Manager | Syncfusion
+description: Learn about the Blazor File Manager user interface sections like toolbar, breadcrumb, navigation pane, context menu, and views.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# End User Capabilities in Blazor File Manager Component
+# End User Capabilities in Blazor File Manager
 
 The File Manager UI is comprised of several sections like View, Toolbar, Breadcrumb, Context Menu, and so on. The UI of the File Manager is enhanced with  `Details View` for browsing files and folders in a grid, `Navigation Pane` for folder navigation, and `Toolbar` for file operations. The File Manager with all features has the following sections in its UI.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Validation in Blazor TreeGrid
 
-Column validation allows to validate the edited or added row data and it displays errors for invalid fields before saving data. Tree Grid uses **Form Validator** component for column validation. The validation rules can be set by defining the [TreeGridColumn. ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ValidationRules).
+Column validation enables validation of edited or newly added row data and displays validation messages for invalid fields before saving. The Blazor TreeGrid component integrates with the Blazor editing and validation infrastructure and supports column validation through the [TreeGridColumn. ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ValidationRules) property, which can be used to define validation rules for individual columns. If validation fails, validation messages are displayed and the save operation is prevented until all validation errors are resolved.
 
 ```cshtml
 @using TreeGridComponent.Data; 
@@ -55,6 +55,7 @@ Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
             public int? Duration { get; set;}
             public int? Progress { get; set;}
             public int? ParentId { get; set;}
+            public bool IsParent { get; set; }
         }
 
         public static List<BusinessObject> GetSelfDataSource()
@@ -96,9 +97,9 @@ Custom validation can be used by overriding the IsValid method inside the class 
 The following sample code demonstrates custom validations implemented in the fields `Duration` and `Priority` .
 
 ```cshtml
-@using TreeGridComponent. Data; 
-@using Syncfusion. Blazor. TreeGrid; 
-@using System. ComponentModel. DataAnnotations; 
+@using TreeGridComponent.Data;
+@using Syncfusion.Blazor.TreeGrid;
+@using System.ComponentModel.DataAnnotations;
 
 <SfTreeGrid TValue="BusinessObject" DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="0"
 Toolbar="@(new List<string>() { "Edit", "Update", "Cancel" })">
@@ -181,7 +182,7 @@ Toolbar="@(new List<string>() { "Edit", "Update", "Cancel" })">
 
 ```cshtml
 
-namespace TreeGridComponent. Data
+namespace TreeGridComponent.Data
 {
 
     public class BusinessObject
@@ -206,24 +207,24 @@ namespace TreeGridComponent. Data
 
 ## Custom validator component
 
-Apart from using default validation and custom validation, there are cases where you might want to use your validator component to validate the tree grid edit form. Such cases can be achieved using the `Validator` property of the `TreeGridEditSettings` component which accepts a validation component and inject it inside the `EditForm` of the tree grid. Inside the `Validator` , you can access the data using the implicit named parameter context which is of type [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html).
+Apart from using default validation and custom validation, there are cases where you might want to use your validator component to validate the tree grid edit form. Such cases can be achieved using the [Validator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Validator) property of the [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) component which accepts a validation component and inject it inside the `EditForm` of the tree grid. Inside the `Validator` , you can access the data using the implicit named parameter context which is of type [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html).
 
-For creating a form validator component you can refer [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/?view=aspnetcore-8.0#validator-components).
+For creating a [FormValidator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormValidator.html) component you can refer [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/?view=aspnetcore-8.0#validator-components).
 
 In the below code example, the following things have been done.
 
-* Created a form validator component named `MyCustomValidator` which accepts [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html) value as parameter.
+* Created a form validator component named `MyCustomValidator` which accepts `ValidatorTemplateContext` value as parameter.
 * Used the `MyCustomValidator` component inside the `Validator` property.
 * This validator component will check whether Duration value is in between 0 to 30.
-* Displayed the validation error messages using `ValidationMessage` component.
+* Displayed the validation error messages using [ValidationMessage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.ValidationMessages.html) component.
 
 {% tabs %}
 
 {% highlight c# %}
 
-using Microsoft. AspNetCore. Components; 
-using Microsoft. AspNetCore. Components. Forms; 
-using Syncfusion. Blazor. Grids; 
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Forms;
+using Syncfusion.Blazor.Grids;
 
 public class MyCustomValidator : ComponentBase
 {
@@ -303,8 +304,8 @@ public class MyCustomValidator : ComponentBase
 
 {% highlight razor %}
 
-@using TreeGridComponent. Data; 
-@using Syncfusion. Blazor. TreeGrid; 
+@using TreeGridComponent.Data;
+@using Syncfusion.Blazor.TreeGrid;
 @inject WeatherForecastService ForecastService
 
 <SfTreeGrid @ref="TreeGrid" TValue="Tree" DataSource="GridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="0"
@@ -344,7 +345,7 @@ public class MyCustomValidator : ComponentBase
 
 {% highlight c# %}
 
-namespace TreeGridComponent. Data
+namespace TreeGridComponent.Data
 {
 
     public class Tree
@@ -438,13 +439,13 @@ The output will be as follows.
 
 {% highlight razor %}
 
-@using TreeGridComponent. Data; 
-@using Syncfusion. Blazor. TreeGrid; 
+@using TreeGridComponent.Data;
+@using Syncfusion.Blazor.TreeGrid; 
 
 <SfTreeGrid @ref="TreeGrid" TValue="Tree" DataSource="GridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="0" 
 Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel", "Delete" })">
 <TreeGridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"
-                          Mode="Syncfusion. Blazor. TreeGrid. EditMode. Dialog">
+                        Mode="Syncfusion.Blazor.TreeGrid.EditMode.Dialog">
         <Validator>
             <DataAnnotationsValidator></DataAnnotationsValidator>
         </Validator>
@@ -472,7 +473,7 @@ Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel", "Delete" })">
 
 {% highlight c# %}
 
-namespace TreeGridComponent. Data
+namespace TreeGridComponent.Data
 {
 
     public class Tree

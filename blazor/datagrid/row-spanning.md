@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Row Spanning in Blazor DataGrid Component | Syncfusion®
-description: Learn here all about row spanning in Blazor DataGrid component of Essential Studio and much more details.
+title: Blazor Grid Row Spanning | Syncfusion
+description: Learn how to use row spanning in Blazor Data Grid to merge adjacent rows, improve data presentation, and enhance grid readability.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Row Spanning in Blazor DataGrid
+# Row Spanning in Blazor Data Grid
 
 Row spanning in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) merges adjacent cells with identical values horizontally across columns within the same row. This feature reduces visual repetition and presents grouped data in a compact, readable format. It is particularly effective in scenarios where multiple columns share the same value, such as repeated product details or status indicators.
 
