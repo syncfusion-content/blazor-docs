@@ -13,13 +13,18 @@ The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.
 
 To enable and configure the `RowTemplate` feature in the Grid, follow these steps:
 
-1. **Set up the row template:** Define a custom row layout using the `RowTemplate`.
-2. **Define row layout using the GridTemplates component:** Wrap the `RowTemplate` content inside [GridTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates). Each row template must contain the same number of `<td>` elements as the Grid’s column count to ensure alignment.
+1. **Set up the row template:** Add the [GridTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html) component inside `SfGrid` and define a custom row layout using the `RowTemplate` property.
+2. **Define row layout structure:** Wrap the `RowTemplate` content inside [GridTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates). Each row template must contain the same number of `<td>` elements as the Grid's column count to ensure alignment.
+
 3. **Template configuration:** For more guidance on configuring templates, see the [templates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates) documentation.
 
-For an overview of `row templates` in the Grid, watch the following video.
+For a video demonstration of row template features and use cases, see below:
 
 {% youtube "youtube:https://www.youtube.com/watch?v=Dft0kerEGUQ" %}
+
+## Basic Row Template
+
+The following example demonstrates a basic row template that displays rich content including images and custom HTML:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -33,7 +38,7 @@ For an overview of `row templates` in the Grid, watch the following video.
                 var employee = (emp as EmployeeData);
 
                 <td class="photo">
-                    <img src="@($" Scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
+                    <img src="@($"Scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
                 </td>
                 <td class="details">
                     <table class="CardTable" cellpadding="3" cellspacing="2">
@@ -189,9 +194,9 @@ public class EmployeeData
 
 ![Rows in Blazor DataGrid](./images/blazor-datagrid-rows.webp)
 
-## Row template with formatting
+## Row Template with Formatting
 
-Typically, the Blazor DataGrid columns are formatted using [Columns.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format). When using row templates, values rendered inside the template are not affected by `Columns.Format`.
+Typically, the Blazor DataGrid columns are formatted using [Columns.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format). However, `Columns.Format` applies only to standard column rendering. When using row templates, Columns.Format is bypassed entirely because row templates override default column rendering. 
 
 To format values inside a row template, apply .NET formatting in the template (for example, using `ToString` with a format string) or invoke a helper method to produce the desired output such as dates, currency, or custom text.
 
@@ -207,7 +212,7 @@ To format values inside a row template, apply .NET formatting in the template (f
                 var employee = (emp as EmployeeData);
 
                 <td class="photo">
-                    <img src="@($" Scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
+                    <img src="@($"Scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
                 </td>
                 <td class="details">
                     <table class="CardTable" cellpadding="3" cellspacing="2">
@@ -375,11 +380,11 @@ public class EmployeeData
 
 ![Row Formatting in Blazor DataGrid](./images/blazor-datagrid-row-format.webp)
 
-## Render Blazor component in row template
+## Render Blazor Components in Row Templates
 
-The Blazor DataGrid can render Blazor components inside row templates, enabling interactive UI elements within rows.
+The Blazor DataGrid can render Blazor components inside row templates, enabling interactive UI elements such as inputs, date pickers, and dropdowns within rows.
 
-To render a Blazor component in a row template, set the `RowTemplate` property and provide the custom HTML that defines the row layout.
+To render a Blazor component in a row template, define the `<RowTemplate>` child tag inside `<GridTemplates>` and provide the custom HTML that defines the row layout.
 
 The following example renders a [Chip](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) for `OrderID`, a [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) for `Quantity`, a [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started) for `OrderDate`, and a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) for `OrderStatus` in a row template:
 
@@ -475,7 +480,6 @@ public class OrderData
     {
         if (Orders.Count == 0)
         {
-            int code = 10;
             for (int i = 1; i < 2; i++)
             {
                 Orders.Add(new OrderData(10248, "Nancy", 32.14, "Sales Representative", "Order Placed", 5, DateTime.Now.AddDays(-10), "123 Main St, City A"));
@@ -487,7 +491,6 @@ public class OrderData
                 Orders.Add(new OrderData(10254, "Robert", 78.99, "Vice President, Sales", "Delivered", 25, DateTime.Now.AddDays(1), "404 Cedar St, City G"));
                 Orders.Add(new OrderData(10255, "Anne", 46.66, "Inside Sales Coordinator", "Order Placed", 30, DateTime.Now.AddDays(2), "505 Walnut St, City H"));
                 Orders.Add(new OrderData(10256, "Laura", 98.76, "Sales Manager", "Delivered", 18, DateTime.Now.AddDays(3), "606 Ash Blvd, City I"));
-                code += 5;
             }
         }
         return Orders;
@@ -508,7 +511,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDVRDcZdikVPoDDp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Render Chart in row template
+## Embedding Charts in Row Templates
 
 The Blazor DataGrid supports embedding other Blazor components, such as Charts, in row templates to visualize data directly within rows.
 
@@ -582,13 +585,14 @@ To render a Blazor Chart in a row template, use the [RowTemplate](https://help.s
 @code {
     public List<Order> Orders { get; set; }
     SfGrid<Order> Grid;
+    private static Random random = new Random();
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 5).Select(x => new Order()
         {
             OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[random.Next(5)],
             Freight = 2.1 * x,
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
@@ -608,13 +612,14 @@ To render a Blazor Chart in a row template, use the [RowTemplate](https://help.s
 
     private List<ChartData> GetChartData(int orderId)
     {
-        // Simulated data per row (can vary by orderId if needed).
+        // Generate order-specific chart data by using the orderId to produce unique values.
+        // In a real application, you would query your database or API based on orderId.
         return new List<ChartData>
         {
-            new ChartData { Category = "Q1", Value = orderId % 10 + 10 },
-            new ChartData { Category = "Q2", Value = orderId % 5 + 15 },
-            new ChartData { Category = "Q3", Value = orderId % 7 + 5 },
-            new ChartData { Category = "Q4", Value = orderId % 9 + 20 },
+            new ChartData { Category = "Q1", Value = (orderId % 10) + 10 },      // Ranges from 10-19
+            new ChartData { Category = "Q2", Value = (orderId % 5) + 15 },       // Ranges from 15-19
+            new ChartData { Category = "Q3", Value = (orderId % 7) + 5 },        // Ranges from 5-11
+            new ChartData { Category = "Q4", Value = (orderId % 9) + 20 },       // Ranges from 20-28
         };
     }
 }
