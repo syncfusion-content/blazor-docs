@@ -1,13 +1,13 @@
 ---
 layout: post
-title: PDF Export Options in Blazor DataGrid | Syncfusion®
-description: Learn how to customize PDF export in Blazor DataGrid with filtered rows, hidden columns, page settings, and themes.
+title: Blazor Grid PDF Export Options | Syncfusion
+description: Learn how to customize PDF export in Blazor Data Grid with filtered rows, hidden columns, page settings, and export themes.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# PDF export options in Blazor DataGrid
+# PDF Export Options in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports extensive PDF export customization to control content and layout for reporting requirements. The export behavior is configured using the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class. This configuration enables:
 
