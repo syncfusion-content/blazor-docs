@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Messages in Blazor Chat UI Component | Syncfusion®
-description: Checkout and learn here all about Messages with Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Messages in Blazor Chat UI | Syncfusion®
+description: Manage and display messages in Blazor Chat UI with the Messages collection property, supporting message text, author identification via UserModel, and user differentiation.
 platform: Blazor
 control: Chat UI
 documentation: ug
 ---
 
-# Messages in the Blazor Chat UI Component
+# Messages in Blazor Chat UI
 
 The Blazor Chat UI component manages and displays a collection of messages through its [Messages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_Messages) property. This collection stores all messages sent and received in the conversation.
 
