@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Category Axis in Blazor 3D Chart Component | Syncfusion®
-description: Checkout and learn here all features about Category Axis in Blazor 3D Chart component and much more.
+title: Category Axis in Blazor 3D Charts | Syncfusion®
+description: Render a Syncfusion Blazor 3D Charts using a category axis to plot text values such as country names along the horizontal axis.
 platform: Blazor
-control: 3D Chart
+control: 3D Charts
 documentation: ug
 ---
 
-# Category Axis in Blazor 3D Chart Component
+# Category Axis in Blazor 3D Charts
 
 The category axis is the horizontal axis of a 3D chart that shows text values rather than numerical values. Compared to the vertical axis, this axis has fewer labels. The following sample shows to render the 3D chart using category axis.
 

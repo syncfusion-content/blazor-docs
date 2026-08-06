@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bar Chart in Blazor 3D Chart Component | Syncfusion®
-description: Checkout and learn here all features about the Bar Charts in Blazor 3D Chart component and much more.
+title: Bar Chart in Blazor 3D Charts | Syncfusion®
+description: Render horizontal bars in Syncfusion Blazor 3D Charts by setting the series Type to Bar to compare values across categories along the Y axis.
 platform: Blazor
-control: 3D Chart 
+control: 3D Charts
 documentation: ug
 ---
 
-# Bar Chart in Blazor 3D Chart control
+# Bar Chart in Blazor 3D Charts
 
 ## Bar chart
 

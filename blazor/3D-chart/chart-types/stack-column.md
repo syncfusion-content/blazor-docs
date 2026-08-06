@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 100% Stacked Column in Blazor 3D Chart Component | Syncfusion®
-description: Checkout and learn here all features about 100% Stacked Column Chart in Blazor 3D Chart component and more.
+title: 100% Stacked Column in Blazor 3D Charts | Syncfusion®
+description: Render 100% stacked columns in Syncfusion Blazor 3D Charts by setting the series Type to StackingColumn100 to compare percentage shares over categories.
 platform: Blazor
-control: 3D Chart
+control: 3D Charts
 documentation: ug
 ---
 
-# 100% Stacked Column in Blazor 3D Chart Component
+# 100% Stacked Column in Blazor 3D Charts
 
 ## 100% Stacked column chart
 
