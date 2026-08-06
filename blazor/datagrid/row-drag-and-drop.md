@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Row Drag and Drop in Blazor DataGrid | Syncfusion®
-description: Learn how to enable row drag and drop in Blazor DataGrid, including reordering, cross-grid dragging, custom drops, and event handling.
+title: Blazor Grid Row Drag and Drop | Syncfusion
+description: Learn how to enable row drag and drop in Blazor Data Grid, reorder rows, perform cross-grid dragging, and customize drop actions.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Row Drag and Drop in Blazor DataGrid
+# Row Drag and Drop in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports built-in row drag-and-drop functionality. Rows can be reordered within the grid, moved between grids, or dropped into custom components.
 
