@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor ProgressBar Component | Syncfusion®
-description: Learn about accessibility and keyboard navigation in Blazor ProgressBar component with examples and much more details.
+title: Accessibility in Blazor Progress Bar | Syncfusion®
+description: Learn about accessibility and keyboard navigation in the Syncfusion Blazor Progress Bar component.
 platform: Blazor
-control: ProgressBar
+control: Progress Bar
 documentation: ug
 ---
 
-# Accessibility in Blazor ProgressBar Component
+# Accessibility in Blazor Progress Bar
 
 The Blazor ProgressBar Component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

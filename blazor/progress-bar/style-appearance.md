@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and Appearance in Blazor ProgressBar Component | Syncfusion®
-description: Learn about style and appearance customization in Blazor ProgressBar component with examples and much more details.
+title: Style and Appearance in Blazor Progress Bar | Syncfusion®
+description: Learn how to style and customize the appearance of the Syncfusion Blazor Progress Bar with CSS selectors and ID-based styling.
 platform: Blazor
-control: Progress Bar 
+control: Progress Bar
 documentation: ug
 ---
 
-# Style and Appearance in Blazor ProgressBar Component
+# Style and Appearance in Blazor Progress Bar
 
 Style and Appearance provide options to customize the visual design of the **Blazor ProgressBar** component, ensuring consistency with your application’s branding and theme.
 

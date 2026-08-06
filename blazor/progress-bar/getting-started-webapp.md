@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor ProgressBar in Web App | Syncfusion
-description: Check out and learn the documentation for getting started with Blazor ProgressBar Components in Blazor Web App.
+title: Getting Started with Blazor Progress Bar in Web App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Progress Bar in a Blazor Web App, with setup, examples, and customization.
 platform: Blazor
-control: ProgressBar
+control: Progress Bar
 documentation: ug
 ---
 
-# Getting started with Blazor ProgressBar in Blazor Web App
+# Getting Started with Blazor Progress Bar in Web App
 
 This section briefly explains how to include [Blazor ProgressBar](https://www.syncfusion.com/blazor-components/blazor-progressbar) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

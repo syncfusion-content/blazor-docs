@@ -1,13 +1,13 @@
 ---
 layout: post
-title: States in Blazor ProgressBar Component | SyncfusionÂ®
-description: Learn about states in Blazor ProgressBar component with examples for different progress states and much more details.
+title: States in Blazor Progress Bar | Syncfusion®
+description: Learn about the Determinate, Indeterminate, and Buffer states of the Syncfusion Blazor Progress Bar.
 platform: Blazor
-control: Progress Bar 
+control: Progress Bar
 documentation: ug
 ---
 
-# States in Blazor ProgressBar Component
+# States in Blazor Progress Bar
 
 In this section, the progress can be visualized in different states.
 

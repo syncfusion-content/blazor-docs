@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor ProgressBar Component | SyncfusionÂ®
-description: Learn about events in Blazor ProgressBar component with examples for tracking progress changes and much more details.
+title: Events in Blazor Progress Bar | Syncfusion®
+description: Learn about the events in the Syncfusion Blazor Progress Bar, including ValueChanged and ProgressCompleted.
 platform: Blazor
-control: Progress Bar 
+control: Progress Bar
 documentation: ug
 ---
 
-# Events in Blazor ProgressBar Component
+# Events in Blazor Progress Bar
 
 This section describes the Progress Bar component's events that will be triggered when appropriate actions are performed. The events should be provided to the Progress Bar through the [ProgressBarEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html).
 
