@@ -7,7 +7,7 @@ platform: blazor
 documentation: ug
 ---
 
-# Connect GraphQL to Blazor Data Grid.
+# Connect GraphQL to Blazor Data Grid
 
 GraphQL is a query language that allows applications to request exactly the data needed, nothing more and nothing less. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response.
 

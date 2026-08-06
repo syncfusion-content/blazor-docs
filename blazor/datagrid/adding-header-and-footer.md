@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# PDF Headers and Footers in Blazor Data Grid.
+# PDF Headers and Footers in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports customizing header and footer sections in PDF exports. These regions can include:
 
