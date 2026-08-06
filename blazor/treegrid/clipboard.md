@@ -7,7 +7,7 @@ control: Tree Grid
 documentation: ug
 ---
 
-# Clipboard Features in Blazor TreeGrid
+# Clipboard in Blazor TreeGrid
 
 The clipboard provides an option to copy selected rows or cells data into the clipboard.
 
