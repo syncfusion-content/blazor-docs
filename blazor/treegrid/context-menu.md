@@ -131,11 +131,11 @@ The following sample code demonstrates defining custom context menu item and its
         TreeData.Add(new BusinessObject() { TaskId = 9, TaskName = "Child Task 8", Duration = 778907897, Progress = 70, ParentId = 7, Priority = "Low" });
     }
 
-    public void OnContextMenuClick(ContextMenuClickEventArgs args)
+    public async Task OnContextMenuClick(ContextMenuClickEventArgs<BusinessObject> args)
     {
         if (args.Item.Id == "copywithheader")
         {
-            this.TreeGrid.CopyAsync(true);
+            await this.TreeGrid.CopyAsync(true);
         }
     }
 }
