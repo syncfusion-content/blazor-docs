@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Crosshair in Blazor Stock Chart | Syncfusion
+title: Crosshair in Blazor Stock Chart | Syncfusion®
 description: Show axis-aligned crosshair lines on the Blazor Stock Chart with SnapToData, dash arrays, and per-axis tooltips for precise value reading.
 platform: Blazor
 control: Stock Chart

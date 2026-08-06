@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Legend in Blazor Stock Chart | Syncfusion
+title: Legend in Blazor Stock Chart | Syncfusion®
 description: Display a legend on the Blazor Stock Chart at Left, Right, Top, Bottom, or Custom position to identify each plotted series.
 platform: Blazor
 control: Stock Chart

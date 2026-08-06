@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gradient in Blazor Stock Chart | Syncfusion
+title: Gradient in Blazor Stock Chart | Syncfusion®
 description: Apply linear or radial gradients to Blazor Stock Chart series, trendlines, and technical indicators using configurable color stops and offsets.
 platform: Blazor
 control: Stock Chart

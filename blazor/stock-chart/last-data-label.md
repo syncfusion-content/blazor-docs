@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Last Data Label in Blazor Stock Chart | Syncfusion
+title: Last Data Label in Blazor Stock Chart | Syncfusion®
 description: Highlight the most recent data point on the Blazor Stock Chart with a last data label and indicator line for at-a-glance latest value reading.
 platform: Blazor
 control: Stock Chart

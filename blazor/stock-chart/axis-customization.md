@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Axis Customization in Blazor Stock Chart | Syncfusion
+title: Axis Customization in Blazor Stock Chart | Syncfusion®
 description: Customize Blazor Stock Chart axes with titles, tick lines, grid lines, multiple axis support, and inverted or opposed axis placement.
 platform: Blazor
 control: Stock Chart

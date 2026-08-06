@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility in Blazor Stock Chart | Syncfusion
+title: Accessibility in Blazor Stock Chart | Syncfusion®
 description: Make the Blazor Stock Chart accessible with WCAG 2.2 AA, Section 508, screen reader, right-to-left, and full keyboard navigation support. Validated with axe-core.
 platform: Blazor
 control: Stock Chart
