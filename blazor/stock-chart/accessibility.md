@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Stock Chart | Syncfusion®
-description: Learn how the Syncfusion Blazor Stock Chart meets WCAG 2.2 AA, Section 508, screen reader, RTL, color contrast, and keyboard navigation, validated with axe-core.
+description: Learn how the Syncfusion Blazor Stock Chart meets WCAG 2.2 AA, Section 508, screen reader, RTL, and keyboard navigation, validated with axe-core.
 platform: Blazor
 control: Stock Chart
 documentation: ug
