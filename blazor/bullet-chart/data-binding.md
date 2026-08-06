@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with Data in Blazor Bullet Chart Component | Syncfusion®
-description: Checkout and learn here all features about working with data in Blazor Bullet Chart component and much more.
+title: Working with Data in Blazor Bullet Chart | Syncfusion®
+description: Bind data to the Blazor Bullet Chart by setting the DataSource and mapping the ValueField and TargetField to display actual and target values.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
 ---
 
-# Working with Data in Blazor Bullet Chart Component
+# Working with Data in Blazor Bullet Chart
 
 The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_DataSource) property accepts a collection of values as input that helps to display measures, and compares them to a target bar. To display the actual and target bar, specify the property from the datasource into the [ValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_ValueField) and [TargetField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetField) respectively.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Legend in Blazor Bullet Chart Component | Syncfusion®
-description: Checkout and learn here all features about the Legend in Blazor Bullet Chart component and much more.
+title: Legend in Blazor Bullet Chart | Syncfusion®
+description: Display a Legend in the Blazor Bullet Chart to identify series by color, position, or shape using the Visible property in LegendSettings.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
 ---
 
-# Legend in Blazor Bullet Chart Component
+# Legend in Blazor Bullet Chart
 
 Legend is used to provide valuable information for interpreting what the Bullet Chart displays. The legends can be represented in various colors, positions, shapes or other identifiers based on the data and it can be enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartLegendSettings.html#Syncfusion_Blazor_Charts_BulletChartLegendSettings_Visible) property to **true** in the [BulletChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartLegendSettings.html).
 
