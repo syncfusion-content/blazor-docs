@@ -25,10 +25,10 @@ Interaction keys |Description
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
 
-<SfTreeGrids DataSource="@TreeData" IdMapping="TaskID" 
-ParentIdMapping="ParentID" TreeColumnIndex="1">
+<SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" 
+ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridColumns>
-        <TreeGridColumn Field="TaskID" HeaderText="Task ID" Width="60" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="60" TextAlign="TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="80">
         </TreeGridColumn>
         <TreeGridColumn Field="StartDate" HeaderText="Start Date" Format="d" Type=ColumnType.Date Width="90" TextAlign="TextAlign.Right">
@@ -37,14 +37,14 @@ ParentIdMapping="ParentID" TreeColumnIndex="1">
         <TreeGridColumn Field="Progress" HeaderText="Progress" Width="80">
         </TreeGridColumn>
     </TreeGridColumns>
-</SfTreeGrids>
+</SfTreeGrid>
 
 @code {
     
     public List<BusinessObject> TreeData { get; set; }
     protected override void OnInitialized()
     {
-        this.TreeGridData = BusinessObject.GetSelfDataSource().ToList();
+        this.TreeData = BusinessObject.GetSelfDataSource().ToList();
     }
 }
 
@@ -101,7 +101,7 @@ To copy the data of the selected rows or cells into the clipboard with help of e
 
 <SfButton OnClick="CopyHeader">Copy With Header</SfButton>
 
-<SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" AllowTextWrap="true">
+<SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" AllowTextWrap="true">
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="100"></TreeGridColumn>
@@ -118,15 +118,15 @@ To copy the data of the selected rows or cells into the clipboard with help of e
     public List<BusinessObject> TreeData { get; set; }
     protected override void OnInitialized()
     {
-        this.TreeGridData = BusinessObject.GetSelfDataSource().ToList();
+        this.TreeData = BusinessObject.GetSelfDataSource().ToList();
     }
 
-    public async void Copy()
+    public async Task Copy()
     {
         await this.TreeGrid.CopyAsync();
     }
 
-    public async void CopyHeader()
+    public async Task CopyHeader()
     {
         await this.TreeGrid.CopyAsync(true);
     }
@@ -206,25 +206,26 @@ Tree Grid provides support for a set of copy modes with [CopyHierarchyMode](http
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
 @using Syncfusion.Blazor.DropDowns;
+@using Syncfusion.Blazor.Grids
 
-<SfDropDownList TValue="string" TItem="DropdownData" @bind-Value="@CopyMode" DataSource="@CopyModes">
+<SfDropDownList TItem="DropdownData" TValue="string" TItem="DropdownData" @bind-Value="@CopyMode" DataSource="@CopyModes">
     <DropDownListEvents TValue="string" ValueChange="OnTypeChange"></DropDownListEvents>
     <DropDownListFieldSettings Text="Mode" Value="Id"></DropDownListFieldSettings>
 </SfDropDownList>
         
-<SfTreeGrids @ref="TreeGrid" CopyHierarchyMode="@CopyType" DataSource="@TreeData" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1">
+<SfTreeGrid @ref="TreeGrid" CopyHierarchyMode="@CopyType" DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridColumns>
-        <TreeGridColumn Field="TaskID" HeaderText="Task ID" Width="60" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="60" TextAlign="TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="80"></TreeGridColumn>
         <TreeGridColumn Field="StartDate" HeaderText="Start Date" Format="d" Type=ColumnType.Date Width="90" TextAlign="TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="Duration" HeaderText="Duration" Width="80" TextAlign="TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="Progress" HeaderText="Progress" Width="80"></TreeGridColumn>
     </TreeGridColumns>
-</SfTreeGrids>
+</SfTreeGrid>
 
 @code {    
 
-    SfTreeGrids<BusinessObject> TreeGrid;
+    SfTreeGrid<BusinessObject> TreeGrid;
 
     public string CopyMode { get; set; } = "Parent";
 
@@ -251,7 +252,7 @@ Tree Grid provides support for a set of copy modes with [CopyHierarchyMode](http
         this.CopyModes.Add(new DropdownData() { Id = "None", Mode = "None" });
     }
 
-    private async void OnTypeChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> Args)
+    private async Task OnTypeChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, DropdownData> Args)
     {
         if (Args.Value == "Parent")
         {

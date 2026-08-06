@@ -547,6 +547,7 @@ This can be achieved by initially defining an anchor tag inside the column templ
 ```cshtml
 @inject NavigationManager UriHelper
 @using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Grids
 
 <SfTreeGrid  DataSource="@Employees" IdMapping="EmployeeID" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridColumns>
