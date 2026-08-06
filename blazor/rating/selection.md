@@ -11,10 +11,6 @@ documentation: ug
 
 The Blazor Rating component lets users choose a value using a visual scale. Selection can be changed by clicking or tapping the icons, or programmatically. The key options are the current value, minimum value, single-selection behavior, and an optional reset button.
 
-> **Prerequisites:** Install the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) NuGet package and add `@using Syncfusion.Blazor.Inputs` to your component.
-
-> **Supported versions:** Syncfusion Blazor `Syncfusion.Blazor` (compatible with .NET 6.0, .NET 7.0, .NET 8.0, and .NET 9.0).
-
 **Properties overview**
 
 | Property | Type | Default | Description |
@@ -83,7 +79,7 @@ Use the [EnableSingleSelection](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ## Show or hide reset button
 
-Use the [AllowReset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_AllowReset) property to display a reset button. The default value is `false`. When `AllowReset` is `true`, a reset button is rendered; activating it (click or `Space`/`Enter` when focused) sets the rating to the `Min` value. The reset button is exposed with `role=button` and an `aria-label` of "Reset" to assistive technologies.
+Use the [AllowReset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_AllowReset) property to display a reset button. When `AllowReset` is `true`, a reset control appears that resets the rating to the `Min` value. By default, `AllowReset` is `false`.
 
 ```cshtml
 

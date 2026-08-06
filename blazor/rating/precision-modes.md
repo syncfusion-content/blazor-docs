@@ -9,11 +9,7 @@ documentation: ug
 
 # Precision Modes in Blazor Rating Component
 
-> **Prerequisites:** Install the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) NuGet package and add `@using Syncfusion.Blazor.Inputs` to your component.
-
-> **Supported versions:** Syncfusion Blazor `Syncfusion.Blazor` (compatible with .NET 6.0, .NET 7.0, .NET 8.0, and .NET 9.0).
-
-Use the [Precision](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Precision) property of the Blazor Rating component to control the step size users can select per item. The default precision is `Full`. Mouse clicks, touch taps, and keyboard arrow keys all increment the value by the selected precision step. When `Precision` is combined with `Min`, the resulting value snaps to the nearest valid step that is greater than or equal to `Min`.
+Use the [Precision](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Precision) property of the Blazor Rating component to control how finely users can select values. The default precision is `Full`. Interaction by mouse and keyboard follows the selected precision step.
 
 The Blazor Rating component supports the following precision modes:
 

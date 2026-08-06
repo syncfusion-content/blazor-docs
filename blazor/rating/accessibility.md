@@ -10,6 +10,7 @@ documentation: ug
 # Accessibility in Blazor Rating component
 
 The Blazor Rating component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+
 The accessibility compliance for the Blazor Rating component is outlined below.
 
 | Accessibility Criteria | Compatibility |
@@ -30,11 +31,11 @@ The accessibility compliance for the Blazor Rating component is outlined below.
     }
 </style>
 
-**Legend**
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Full support"> - All features of the component meet the requirement.</div>
 
-* ![Full support](https://cdn.syncfusion.com/content/images/documentation/full.png) - All features of the component meet the requirement.
-* ![Partial support](https://cdn.syncfusion.com/content/images/documentation/partial.png) - Some features of the component do not meet the requirement.
-* ![Not supported](https://cdn.syncfusion.com/content/images/documentation/not-supported.png) - The component does not meet the requirement.
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial support"> - Some features of the component do not meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="Not supported"> - The component does not meet the requirement.</div>
 
 ## WAI-ARIA attributes
 
@@ -44,18 +45,11 @@ The Blazor Rating component follows the [WAI-ARIA slider pattern](https://www.w3
 | ------------ | ----------------------- |
 | `role=slider` | Defines an input where the user selects a value from within a specified range. |
 | `role=button` | Indicates that the reset control is clickable and resets the rating to its minimum value. |
-| `aria-label` | Provides an accessible name for the Rating component. Set a custom label through the `LabelTemplate` or via the `aria-label` HTML attribute. |
+| `aria-label` | Provides an accessible name for the Rating component. |
 | `aria-valuemin` | Defines the minimum rating value. |
 | `aria-valuemax` | Defines the maximum rating value. |
 | `aria-valuenow` | Announces the current rating value. |
-| `aria-valuetext` | Provides a human-readable text alternative for the current value, especially useful for fractional values when `Half`, `Quarter`, or `Exact` precision is used. |
-| `aria-hidden` | Hides the element from assistive technologies when set to `true`. |
-
-```cshtml
-@using Syncfusion.Blazor.Inputs
-
-<SfRating Value="3" aria-label="Rate your experience"></SfRating>
-```
+| `aria-hidden` | Hides the element from assistive technologies when present. |
 
 ## Keyboard interaction
 
@@ -78,5 +72,3 @@ The accessibility compliance of the Blazor Rating component is demonstrated in t
 ## See also
 
 * [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
-* [Accessibility standards](../common/accessibility#accessibility-standards)
-* [WAI-ARIA slider pattern](https://www.w3.org/WAI/ARIA/apg/patterns/slider/)

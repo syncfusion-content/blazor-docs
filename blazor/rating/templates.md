@@ -261,7 +261,7 @@ Use webP images as rating symbols by specifying them as template content within 
 
 <SfRating Value="3">
     <FullTemplate>
-        <img src=@fullTemplateImage widht="25" height="25" />
+        <img src="@fullTemplateImage" alt="Filled star" width="25" height="25" />
     </FullTemplate>
     <EmptyTemplate>
         <img src="@emptyTemplateImage" alt="Empty star" width="25" height="25" />

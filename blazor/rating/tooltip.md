@@ -9,13 +9,7 @@ documentation: ug
 
 # Tooltip in Blazor Rating Component
 
-The Blazor Rating component provides tooltip support to display additional information for rating items. Use the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ShowTooltip) property to toggle tooltips. The default value is `true`. When `true`, a tooltip is shown for the item under the pointer; when `false`, tooltips are disabled.
-
-> **Prerequisites:** Install the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) NuGet package and add `@using Syncfusion.Blazor.Inputs` to your component.
-
-> **Supported versions:** Syncfusion Blazor `Syncfusion.Blazor` (compatible with .NET 6.0, .NET 7.0, .NET 8.0, and .NET 9.0).
-
-> **Mobile behavior:** On touch-only devices, the hover-based tooltip is replaced with a long-press interaction. Set `ShowTooltip="false"` if you want to suppress tooltips entirely on touch devices.
+The Blazor Rating component provides tooltip support to display additional information for rating items. Set the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ShowTooltip) property to control the visibility of tooltips. By default, this property is set to true, and a tooltip is displayed when the user hovers over a rating item. When set to false, tooltips are disabled and will not be shown for rating items.
 
 ```cshtml
 
@@ -29,7 +23,7 @@ The Blazor Rating component provides tooltip support to display additional infor
 
 ## Tooltip template
 
-Use the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_TooltipTemplate) tag directive to define custom content for the tooltip. The current item’s value is passed to the template as `@context` (a `double`), so you can render dynamic content based on the hovered item. Keep tooltip content concise (under ~80 characters) and avoid interactive elements inside the template.
+Use the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_TooltipTemplate) tag directive to define custom content for the tooltip. The current item’s value is passed to the template as the `context` (a double), allowing dynamic tooltip content based on the hovered item.
 
 ```cshtml
 
@@ -74,9 +68,9 @@ Use the `CssClass` property on the Rating component and write styles scoped to t
         border: 2px solid #969393;
     }
 
-    /* To change the color for the arrow of the tooltip. */
+    /* To change the color for arrow of the tooltip. */
     .customtooltip .e-tooltip-wrap .e-arrow-tip-inner.e-tip-bottom {
-        border-top: 12px solid #969393;
+        border: 12px solid #9693
     }
 
     /* To change the top border color for arrow of the tooltip. */
@@ -87,15 +81,4 @@ Use the `CssClass` property on the Rating component and write styles scoped to t
 </style>
 
 ```
-
-![Blazor Rating component with tooltip customization](./images/blazor-rating-custom-tooltip.webp)
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhxtmMopsEinSxW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
-
-**Supported CSS variables**
-
-The Rating tooltip exposes the following CSS custom properties that can be overridden within the `customtooltip` scope:
-
-* `--e-tooltip-border-color` - Border color of the tooltip popup.
-* `--e-tooltip-bg-color` - Background color of the tooltip.
-* `--e-tooltip-color` - Text color of the tooltip content.
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhxtmMopsEinSxW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "![Blazor Rating component with tooltip customization](./images/blazor-rating-custom-tooltip.webp)" %}
