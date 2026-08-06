@@ -613,13 +613,12 @@ To render a Blazor Chart in a row template, use the [RowTemplate](https://help.s
     private List<ChartData> GetChartData(int orderId)
     {
         // Generate order-specific chart data by using the orderId to produce unique values.
-        // In a real application, you would query your database or API based on orderId.
         return new List<ChartData>
         {
-            new ChartData { Category = "Q1", Value = (orderId % 10) + 10 },      // Ranges from 10-19
-            new ChartData { Category = "Q2", Value = (orderId % 5) + 15 },       // Ranges from 15-19
-            new ChartData { Category = "Q3", Value = (orderId % 7) + 5 },        // Ranges from 5-11
-            new ChartData { Category = "Q4", Value = (orderId % 9) + 20 },       // Ranges from 20-28
+            new ChartData { Category = "Q1", Value = (orderId % 10) + 10 }, 
+            new ChartData { Category = "Q2", Value = (orderId % 5) + 15 },
+            new ChartData { Category = "Q3", Value = (orderId % 7) + 5 },
+            new ChartData { Category = "Q4", Value = (orderId % 9) + 20 },
         };
     }
 }
