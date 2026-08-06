@@ -1,13 +1,13 @@
 ---
 layout: post
-title: QR Code generator in Blazor Barcode Component | Syncfusion®
-description: Checkout and learn here all features about QR Code generator in Blazor Barcode component and much more.
+title: QR Code Generator in Blazor Barcode Generator | Syncfusion®
+description: Generate QR codes in Blazor with adjustable error correction (L/M/Q/H) and optional logo, supporting versions 1-40 for numeric, alphanumeric, and JIS8 data.
 platform: Blazor
 control: Barcode
 documentation: ug
 ---
 
-# QR Code Generator in Blazor Barcode Component
+# QR Code Generator in Blazor Barcode Generator
 
 ## QR Code
 
