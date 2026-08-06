@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Type of Data in Blazor Range Selector Component | SyncfusionÂ®
-description: Checkout and learn here all about type of data in Blazor Range Selector component with examples and much more details.
+title: Type of Data in Blazor Range Selector | Syncfusion®
+description: Render numeric, DateTime, or logarithmic data in the Syncfusion Blazor Range Selector with configurable minimum, maximum, and interval.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Type of Data in Blazor Range Selector Component
+# Type of Data in Blazor Range Selector
 
 ## Numeric
 

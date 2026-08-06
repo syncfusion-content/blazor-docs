@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Grid Lines and Tick Lines in Blazor Range Selector | SyncfusionÂ®
-description: Learn here all about grid lines and tick lines in Blazor Range Selector component with examples and much more details.
+title: Grid Lines and Tick Lines in Blazor Range Selector | Syncfusion®
+description: Customize grid line and tick line width, color, dash array, and height in the Syncfusion Blazor Range Selector to match your design.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Grid Lines and Tick Lines in Blazor Range Selector Component
+# Grid Lines and Tick Lines in Blazor Range Selector
 
 ## Gridline Customization
 
