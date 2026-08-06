@@ -107,7 +107,7 @@ The following sample code demonstrates implementing custom data binding using cu
 
     protected override void OnInitialized()
     {
-        TreeData = SelfReferenceData.GetTree().ToList();
+        TreeData = new SelfReferenceData().GetTree().ToList();
     }
 
     // Implementing custom adaptor by extending the DataAdaptor class
@@ -495,7 +495,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
 
     protected override void OnInitialized()
     {
-        TreeData = SelfReferenceData.GetTree().ToList();
+        TreeData = new SelfReferenceData().GetTree().ToList();
     }
 
         // Implementing custom adaptor by extending the DataAdaptor class

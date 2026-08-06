@@ -98,19 +98,19 @@ namespace TreeGridComponent.Data {
 
  public class TreeData
     {     
-            public int TaskId { get; set; }
-            public string TaskName { get; set; }
-            public DateTime? StartDate { get; set; }
-            public int? Duration { get; set; }
-            public int? Progress { get; set; }
-            public bool Approved { get; set; }
-            public int? ParentId { get; set; }
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public int? Duration { get; set; }
+        public int? Progress { get; set; }
+        public bool Approved { get; set; }
+        public int? ParentId { get; set; }
         
         public static List<TreeData> GetSelfDataSource()
         {
             List<TreeData> TreeDataCollection = new List<TreeData>();
             TreeDataCollection.Add(new TreeData() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, Approved = true, ParentId = null });
-            TreeDataCollection.Add(new TreeData() { TaskId = 2, TaskName = "Child task 1", Duration = 4, Progress = 80, Approved = false, Duration = 50, ParentId = 1 });
+            TreeDataCollection.Add(new TreeData() { TaskId = 2, TaskName = "Child task 1", Duration = 4, Progress = 80, Approved = false, ParentId = 1 });
             TreeDataCollection.Add(new TreeData() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, Approved = true, ParentId = 2 });
             TreeDataCollection.Add(new TreeData() { TaskId = 4, TaskName = "Child task 3", Duration = 6, Approved = false, Progress = 77, ParentId = 3 });
             TreeDataCollection.Add(new TreeData() { TaskId = 5, TaskName = "Parent Task 2", Duration = 10, Progress = 70, Approved = true, ParentId = null });
@@ -172,8 +172,6 @@ The aggregate value result can be formatted by using the [Format](https://help.s
 @code{
     public List<TreeData> TreeGridData { get; set; }
 
-    public Syncfusion.Blazor.Grids.AggregateTemplateContext model = new Syncfusion.Blazor.Grids.AggregateTemplateContext();
-
     protected override void OnInitialized()
     {
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
@@ -188,19 +186,19 @@ namespace TreeGridComponent.Data {
 
  public class TreeData
     {     
-            public int TaskId { get; set; }
-            public string TaskName { get; set; }
-            public DateTime? StartDate { get; set; }
-            public int? Duration { get; set; }
-            public int? Progress { get; set; }
-            public bool Approved { get; set; }
-            public int? ParentId { get; set; }
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public int? Duration { get; set; }
+        public int? Progress { get; set; }
+        public bool Approved { get; set; }
+        public int? ParentId { get; set; }
         
         public static List<TreeData> GetSelfDataSource()
         {
             List<TreeData> TreeDataCollection = new List<TreeData>();
             TreeDataCollection.Add(new TreeData() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, Approved = true, ParentId = null });
-            TreeDataCollection.Add(new TreeData() { TaskId = 2, TaskName = "Child task 1",Duration = 4, Progress = 80, Approved = false, Duration = 50, ParentId = 1 });
+            TreeDataCollection.Add(new TreeData() { TaskId = 2, TaskName = "Child task 1",Duration = 4, Progress = 80, Approved = false, ParentId = 1 });
             TreeDataCollection.Add(new TreeData() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, Approved = true, ParentId = 2 });
             TreeDataCollection.Add(new TreeData() { TaskId = 4, TaskName = "Child task 3", Duration = 6, Approved = false, Progress = 77, ParentId = 3 });
             TreeDataCollection.Add(new TreeData() { TaskId = 5, TaskName = "Parent Task 2", Duration = 10, Progress = 70, Approved = true, ParentId = null });

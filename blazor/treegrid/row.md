@@ -21,6 +21,7 @@ Apply conditional styling and dynamic customization to individual rows based on 
 
 @using TreeGridComponent.Data
 @using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
 
  <SfTreeGrid DataSource="@TreeGridData" ParentIdMapping="ParentId" IdMapping="TaskId" TreeColumnIndex="1">
     <TreeGridEvents RowDataBound="OnRowDataBound" TValue="TreeData"></TreeGridEvents>
@@ -234,12 +235,13 @@ The returned `ITreeGridRowModel<TValue>` object provides the following propertie
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
 
-    public async Task TreeProps()
+    public Task TreeProps()
     {
-        var treeProps = await this.TreeGrid.GetRowModel(this.TreeGrid.GetCurrentViewRecords().ToList()[0]);
+        var treeProps = this.TreeGrid.GetRowModel(this.TreeGrid.GetCurrentViewRecords().ToList()[0]);
         var level = treeProps.Level;
         var expanded = treeProps.IsExpanded;
         var childRecords = treeProps.HasChildRecords;
+        return Task.CompletedTask;
     }
 }
 

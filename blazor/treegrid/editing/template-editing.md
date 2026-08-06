@@ -27,6 +27,8 @@ In some cases, the new field editors must be added in the dialog which are not p
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Inputs;
+@using Syncfusion.Blazor.Grids;
 @using Syncfusion.Blazor.DropDowns;
 
 <SfTreeGrid DataSource="@TreeGridData" AllowPaging="true" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
@@ -85,7 +87,7 @@ In some cases, the new field editors must be added in the dialog which are not p
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
 
-    public void RowCreatedHandler(RowCreatedEventArgs<TreeData.BusinessObject> args)
+    public void RowCreatedHandler(RowCreatedEventArgs<TreeData> args)
     {
         Check = true;
     }

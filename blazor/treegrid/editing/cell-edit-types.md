@@ -523,61 +523,105 @@ public class SelfReferenceData
         public SelfReferenceData() { }
         public static List<SelfReferenceData> GetTree()
         {
-                tree.Clear();
-                int root = -1;
-                int TaskNameID = 0;
-                int ChildCount = -1;
-                int SubTaskCount = -1;
-                for (var t = 1; t <= 60; t++)
+            tree.Clear();
+            int root = -1;
+            int TaskNameID = 0;
+            int ChildCount = -1;
+            int SubTaskCount = -1;
+
+            Random gen = new Random();
+            Random ran = new Random();
+
+            DateTime globalStart = new DateTime(2021, 01, 01);
+            DateTime globalEnd = new DateTime(2026, 12, 31);
+
+            int totalRange = (globalEnd - globalStart).Days;
+
+            
+            for (var t = 1; t <= 60; t++)
+            {
+                // ✅ Generate valid StartDate
+                DateTime startingDate = globalStart.AddDays(gen.Next(totalRange));
+
+                // ✅ Ensure EndDate is AFTER StartDate
+                int durationDays = gen.Next(5, 200); // realistic duration
+                DateTime endingDate = startingDate.AddDays(durationDays);
+
+                string math = (ran.Next(3) == 0) ? "High" : (ran.Next(2) == 0) ? "Low" : "Critical";
+                string progr = (ran.Next(3) == 0) ? "Started" : (ran.Next(2) == 0) ? "Open" : "In Progress";
+                bool appr = (ran.Next(3) == 0);
+
+                root++; TaskNameID++;
+                int rootItem = root + 1;
+
+                tree.Add(new SelfReferenceData()
                 {
-                Random gen = new Random();
-                Random ran = new Random();
-                DateTime start = new DateTime(2021, 06, 07);
-                int range = (DateTime.Today - start).Days;
-                DateTime startingDate = start.AddDays(gen.Next(range));
-                DateTime end = new DateTime(2023, 08, 25);
-                int endrange = (end - DateTime.Today).Days;
-                DateTime endingDate = end.AddDays(gen.Next(endrange));
-                string math = (ran.Next() % 3) == 0 ? "High" : (ran.Next() % 2) == 0 ? "Low" : "Critical";
-                    string progr = (ran.Next() % 3) == 0 ? "Started" : (ran.Next() % 2) == 0 ? "Open" : "In Progress";
-                    bool appr = (ran.Next() % 3) == 0 ? true : (ran.Next() % 2) == 0 ? false : true;
-                    root++; TaskNameID++;
-                    int rootItem = root + 1;
-                    tree.Add(new SelfReferenceData() { TaskID = rootItem, TaskName = "Parent task " + TaskNameID.ToString(), StartDate = startingDate, EndDate = endingDate, IsParent = true, ParentID = null, Progress = progr, Priority = math, Duration = ran.Next(1, 50)});
-                    int parent = tree.Count;
-                    for (var c = 0; c < 2; c++)
-                    {
-                    DateTime start1 = new DateTime(2021, 07, 09);
-                    int range1 = (DateTime.Today - start1).Days;
-                    DateTime startingDate1 = start1.AddDays(gen.Next(range1));
-                    DateTime end1 = new DateTime(2022, 08, 23);
-                    int endrange1 = (end1 - DateTime.Today).Days;
-                    DateTime endingDate1 = end1.AddDays(gen.Next(endrange1));
+                    TaskID = rootItem,
+                    TaskName = "Parent task " + TaskNameID,
+                    StartDate = startingDate,
+                    EndDate = endingDate,
+                    IsParent = true,
+                    ParentID = null,
+                    Progress = progr,
+                    Priority = math,
+                    Duration = durationDays
+                });
+
+                int parent = tree.Count;
+
+                for (var c = 0; c < 2; c++)
+                {
+                    // ✅ Child Start AFTER parent start
+                    DateTime childStart = startingDate.AddDays(gen.Next(1, 30));
+
+                    // ✅ Child End AFTER child start
+                    DateTime childEnd = childStart.AddDays(gen.Next(5, 100));
+
                     root++; ChildCount++;
-                        string val = ((parent + c + 1) % 3 == 0) ? "Low" : "Critical";
-                        int parn = parent + c + 1;
-                        progr = (ran.Next() % 3) == 0 ? "In Progress" : (ran.Next() % 2) == 0 ? "Open" : "Validated";
-                        appr = (ran.Next() % 3) == 0 ? true : (ran.Next() % 2) == 0 ? false : true;
-                        int iD = root + 1;
-                        tree.Add(new SelfReferenceData() { TaskID = iD, TaskName = "Child task " + (ChildCount + 1).ToString(), StartDate = startingDate1, EndDate = endingDate1, IsParent = (((parent + c + 1) % 3) == 0), ParentID = rootItem, Progress = progr, Priority = val, Duration = ran.Next(1, 50)});
-                        if ((((parent + c + 1) % 3) == 0))
+                    int iD = root + 1;
+
+                    string val = ((parent + c + 1) % 3 == 0) ? "Low" : "Critical";
+                    progr = (ran.Next(3) == 0) ? "In Progress" : (ran.Next(2) == 0) ? "Open" : "Validated";
+
+                    tree.Add(new SelfReferenceData()
+                    {
+                        TaskID = iD,
+                        TaskName = "Child task " + (ChildCount + 1),
+                        StartDate = childStart,
+                        EndDate = childEnd,
+                        IsParent = ((parent + c + 1) % 3 == 0),
+                        ParentID = rootItem,
+                        Progress = progr,
+                        Priority = val,
+                        Duration = (childEnd - childStart).Days
+                    });
+
+                    if (((parent + c + 1) % 3) == 0)
+                    {
+                        for (var s = 0; s < 3; s++)
                         {
-                        int immParent = tree.Count;
-                            for (var s = 0; s < 3; s++)
-                            {
-                            DateTime start2 = new DateTime(2021, 05, 05);
-                            int range2 = (DateTime.Today - start2).Days;
-                            DateTime startingDate2 = start2.AddDays(gen.Next(range2));
-                            DateTime end2 = new DateTime(2024, 06, 16);
-                            int endrange2 = (end2 - DateTime.Today).Days;
-                            DateTime endingDate2 = end2.AddDays(gen.Next(endrange2));
+                            // ✅ SubTask inside child range
+                            DateTime subStart = childStart.AddDays(gen.Next(1, 15));
+                            DateTime subEnd = subStart.AddDays(gen.Next(3, 50));
+
                             root++; SubTaskCount++;
-                                string Prior = (immParent % 2 == 0) ? "Validated" : "Normal";
-                                tree.Add(new SelfReferenceData() { TaskID = root + 1, TaskName = "Sub task " + (SubTaskCount + 1).ToString(), StartDate = startingDate2, EndDate = endingDate2, IsParent = false, ParentID = iD, Progress = (immParent % 2 == 0) ? "In Progress" : "Closed", Priority = Prior, Duration = ran.Next(1, 50)});
-                            }
+
+                            tree.Add(new SelfReferenceData()
+                            {
+                                TaskID = root + 1,
+                                TaskName = "Sub task " + (SubTaskCount + 1),
+                                StartDate = subStart,
+                                EndDate = subEnd,
+                                IsParent = false,
+                                ParentID = iD,
+                                Progress = (s % 2 == 0) ? "In Progress" : "Closed",
+                                Priority = (s % 2 == 0) ? "Validated" : "Normal",
+                                Duration = (subEnd - subStart).Days
+                            });
                         }
                     }
                 }
+            }
             return tree;
         }
     }
