@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize HTTP handler | Syncfusion®
-description: Learn here all about customizing the HTTP handler in the Windows authenticated client application for Blazor FileManager.
-platform: Blazor
+title: How to customize the HTTP handler in Blazor File Manager | Syncfusion
+description: Learn how to attach authentication tokens to file operations, image requests, downloads, and uploads in the Blazor File Manager.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Customize HTTP handler
+# How to Customize the HTTP Handler in Blazor File Manager
 
 In secured applications, API operations including file management, image retrieval, uploads, and downloads often require authentication tokens. The [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component provides comprehensive support for adding authorization headers to all requests through various settings and events including [FileManagerUploadSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html), [OnSend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnSend), [BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeImageLoad), and [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload).
 

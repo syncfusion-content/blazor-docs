@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Upload large file in Blazor File Manager Component | Syncfusion®
-description: Checkout and learn here all about uploading large files in Blazor File Manager component and much more details.
-platform: Blazor
+title: How to upload large files in Blazor File Manager | Syncfusion
+description: Learn how to enable large file uploads in the Blazor File Manager by configuring the maximum file size in upload settings.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Upload large files in Blazor File Manager Component
+# How to Upload Large Files in Blazor File Manager
 
 To enable large file uploads in the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component, you can set the [MaxFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_MaxFileSize) property in the [`FileManagerUploadSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html) class. This property allows you to specify the maximum file size that can be uploaded, in bytes.
 
