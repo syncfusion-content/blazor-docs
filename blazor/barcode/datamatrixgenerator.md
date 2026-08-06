@@ -7,7 +7,7 @@ control: Barcode
 documentation: ug
 ---
 
-# Data Matrix Generator in Blazor Barcode Generator
+# Data Matrix Generator in Blazor Barcode Component
 
 ## Data Matrix
 

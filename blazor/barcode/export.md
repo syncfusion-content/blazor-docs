@@ -7,7 +7,7 @@ control: Barcode
 documentation: ug
 ---
 
-# Export in Blazor Barcode Generator
+# Export in Blazor Barcode Component
 
 ## Export
 

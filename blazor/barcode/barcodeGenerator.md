@@ -7,7 +7,7 @@ control: Barcode
 documentation: ug
 ---
 
-# Barcode Generator in Blazor Barcode Generator
+# Barcode Generator in Blazor Barcode Component
 
 ## Code39
 
