@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Cell Edit Types in Blazor DataGrid Component | Syncfusion®
-description: Checkout and learn here all about Cell Edit Types in Blazor DataGrid component and much more details.
+title: Cell Edit Types in Blazor Data Grid Component | Syncfusion
+description: Learn about Cell Edit Types in Blazor Data Grid, including default editors, custom edit templates, numeric, date, dropdown, and boolean column editors.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Cell Edit Types in Blazor DataGrid Component
+# Cell Edit Types in Blazor Data Grid Component
 
 ## Default editors
 

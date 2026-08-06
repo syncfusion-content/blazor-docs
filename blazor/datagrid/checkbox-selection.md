@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Checkbox selection in Blazor DataGrid | Syncfusion®
-description: Learn how to use checkbox selection in Blazor DataGrid for bulk actions, multiple selection, persist options, and programmatic control.
+title: Checkbox Selection in Blazor Data Grid | Syncfusion®
+description: Learn how to use checkbox selection in Blazor Data Grid for single and multiple row selection, persist selection, bulk actions, and programmatic control.
 platform: Blazor
 control: DataGrid 
 documentation: ug
 ---
 
-# Checkbox selection in Blazor DataGrid
+# Checkbox Selection in Blazor Data Grid
 
 Checkbox selection in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables to select multiple records using checkboxes rendered in each row. This feature is especially useful for performing bulk actions or operations on selected records.
 To display a checkbox in each Grid row, configure a column with its [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property set to [CheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_CheckBox).

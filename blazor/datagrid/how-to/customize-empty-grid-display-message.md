@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize Empty Record Template in the Blazor DataGrid | Syncfusion®
-description: Learn how to customize the EmptyRecordTemplate in the Blazor DataGrid to show a custom message or content when no records are available.
+title: Customize Empty Record Template in Blazor Data Grid | Syncfusion®
+description: Learn how to customize the EmptyRecordTemplate in Blazor Data Grid to display custom messages or content when no records are available.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Customize the empty record template in Blazor DataGrid
+# Customize Empty Record Template in Blazor Data Grid
 
 The empty record template in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables rendering custom content such as images, text, or other components when the Grid has no records to display. This replaces the default “No records to display” message.
 Define the template using the [EmptyRecordTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_EmptyRecordTemplate) within `<GridTemplates>`. In Blazor, this is a Razor fragment (RenderFragment), allowing any valid Razor markup or components. The empty record template is shown whenever the data source results in zero rows, including initial load, after filtering or searching yields no matches, or after deletions remove all rows.

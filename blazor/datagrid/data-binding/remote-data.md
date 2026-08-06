@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Remote Data in Blazor DataGrid | Syncfusion®
-description: Explore remote data integration in Syncfusion® Blazor DataGrid, including setup, binding options, and advanced features.
+title: Remote Data in Blazor Data Grid | Syncfusion®
+description: Explore remote data integration in Blazor Data Grid, including setup, supported data sources, binding options, and advanced data operations.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Remote Data in Blazor DataGrid
+# Remote Data in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports remote data binding for seamless interaction with external services such as **OData**, **Web API**, **RESTful endpoints**, or **GraphQL**. Remote data binding is configured using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) by specifying the service endpoint and adaptor type.
 
