@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Links for Blazor Sankey Diagram | Syncfusion®
-description: Learn how to define and configure links in the Blazor Sankey Diagram to represent connections between nodes.
+title: Links in Blazor Sankey Diagram | Syncfusion®
+description: Define Blazor Sankey Diagram links with SankeyDataLink using SourceId, TargetId, and Value, then style color, gradient blending, and opacity.
 platform: Blazor
 control: Sankey
 documentation: ug
