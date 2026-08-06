@@ -9,13 +9,13 @@ documentation: ug
 
 # Globalization in Blazor Datetime Picker Component
 
-The [Blazor DateTimePicker](https://www.syncfusion.com/blazor-components/blazor-datetime-picker) component supports localization and culture-specific formatting. For configuration details, see the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic for Blazor components. When a Locale is set, the component reflects the culture’s date and time formats, month and day names, and other culture-specific settings. Ensure that the required culture data is loaded before rendering the component.
+ The [Blazor DateTimePicker](https://www.syncfusion.com/blazor-components/blazor-datetime-picker) component supports localization and culture-specific formatting. For configuration details, see the [Blazor Localization](../common/localization) topic. When a `Locale` is set, the component reflects the culture's date and time formats, month and day names, and other culture-specific settings. Ensure that the required culture data is loaded before rendering the component (typically inside `OnInitializedAsync`).
 
 ## Right-To-Left
 
-The DateTimePicker supports right-to-left (RTL) layout for languages such as Arabic and Hebrew. Use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_EnableRtl) property to render the component in RTL direction. RTL layout is independent of the Locale setting; both can be combined to achieve the desired language and layout.
+The DateTimePicker supports right-to-left (RTL) layout for languages such as Arabic and Hebrew. Set `EnableRtl="true"` to render the component right-to-left. The default value is `false`. RTL layout is independent of the `Locale` setting; both can be combined to achieve the desired language and layout.
 
-The following code example initializes the DateTimePicker component with the `ar` (Arabic) culture and RTL layout.
+The following example initializes the DateTimePicker with the `ar` (Arabic) culture and RTL layout. The locale JSON file is hosted under `wwwroot/blazor-locale/`.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

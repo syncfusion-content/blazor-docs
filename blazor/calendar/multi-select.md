@@ -9,7 +9,7 @@ documentation: ug
 
 # Multi Selection in Blazor Calendar Component
 
-A [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) provides an option to select **single** or **multiple dates** by using the [IsMultiSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfCalendar-1.html#Syncfusion_Blazor_Calendars_SfCalendar_1_IsMultiSelection) properties. By default, the IsMultiSelection property will be in disabled state.
+A [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) provides an option to select **single** or **multiple dates** by using the [IsMultiSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfCalendar-1.html#Syncfusion_Blazor_Calendars_SfCalendar_1_IsMultiSelection) property. By default, `IsMultiSelection` is `false` (single-selection mode).
 
 The following code demonstrates enabling multi-selection and preselecting multiple dates using the IsMultiSelection and Values properties.
 
