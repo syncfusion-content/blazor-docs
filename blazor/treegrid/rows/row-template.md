@@ -11,8 +11,6 @@ documentation: ug
 
 The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_RowTemplate) has an option to customize the look and behavior of the treegrid rows. The `RowTemplate` property accepts either the **template** string or HTML elements. When defining a row template, use the [RowTemplateTreeColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.RowTemplateTreeColumn.html) component to configure the tree column content and preserve the tree hierarchy's expand/collapse functionality in the custom row template.
 
-Watch the following video to learn more about Row Templates.
-
 {% youtube
 "youtube:https://www.youtube.com/watch?v=cB4NjwFya_U"%}
 
