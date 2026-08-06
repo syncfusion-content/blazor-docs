@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Rows in Blazor Tree Grid Component | Syncfusion®
-description: Check out here and learn more the features about rows in the Blazor Tree Grid component and much more details.
+title: Rows in Blazor TreeGrid Component | Syncfusion®
+description: Check out here and learn more the features about rows in the Blazor TreeGrid component and much more details.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
-# Rows in Blazor Tree Grid Component
+# Rows in Blazor TreeGrid Component
 
-The row represents record details fetched from the data source.
+The row represents record details fetched from the data source. Rows are the fundamental building blocks of the TreeGrid, displaying hierarchical data with parent-child relationships.
 
 ## Customize rows
 
-The appearance of a row can be customized by using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDataBound) event. The `RowDataBound` event triggers for every row. In the event handler, the **args** is achieved which contains the details of the row.
+Apply conditional styling and dynamic customization to individual rows based on data values or row conditions. The appearance of a row can be customized by using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDataBound) event. The `RowDataBound` event triggers for every row. In the event handler, the [args](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDataBoundEventArgs-1.html) is available which contains the details of the row.
 
 {% tabs %}
 
@@ -106,7 +106,7 @@ public class TreeData
 
 ## Styling alternate rows
 
- The tree grid's alternative rows' background color can be changed by overriding the **.e-altrow** class.
+Apply consistent CSS styling to visually distinguish alternating rows throughout the entire Treegrid. The Treegrid's alternative rows' background color can be changed by overriding the **.e-altrow** class.
 
 ```css
 .e-treegrid .e-altrow {
@@ -190,6 +190,19 @@ public class TreeData
 
 The Blazor Tree Grid Component provides a method called [GetRowModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetRowModel) that can be used to obtain the values associated with row model details. These details include the level, expanded status, child records status of a record.
 
+The returned `ITreeGridRowModel<TValue>` object provides the following properties:
+
+* **Level** — The hierarchical depth of the row in the tree structure. Root-level rows have a level of 0, their children have level 1, and so on. Useful for identifying hierarchical position.
+* **IsExpanded** — A boolean indicating whether the row is currently expanded (showing child records) or collapsed (hiding child records). Applies only to parent rows with child records.
+* **HasChildRecords** — A boolean indicating whether the row contains any child records. Helps distinguish between parent and child rows.
+* **UniqueID** — A unique identifier for the row within the TreeGrid, used internally to track row identity.
+* **Index** — The zero-based index position of the row in the flattened data list.
+* **ParentUniqueID** — The unique identifier of the parent row. Null for root-level rows.
+* **ParentRecord** — The row model object of the parent record for the current row. Null for root-level rows.
+* **ChildItems** — A collection of all descendant (child and grandchild) row models.
+* **Data** — The original data object associated with the row.
+* **CheckboxState** — The current checkbox state of the row (if checkbox selection is enabled).
+
 This is demonstrated in the below sample code where the [GetRowModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetRowModel) method is called on button click which returns the value of the row model details of the passed record.
 
 {% tabs %}
@@ -198,10 +211,10 @@ This is demonstrated in the below sample code where the [GetRowModel](https://he
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.Buttons
-@using  Syncfusion.Blazor.Grids;
-@using  Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
+@using Syncfusion.Blazor.TreeGrid;
 
-<SfButton OnClick="TreeProps" CssClass="e-primary" IsPrimary="true" Content="Get selected rowcell index"></SfButton>
+<SfButton OnClick="TreeProps" CssClass="e-primary" IsPrimary="true" Content="Get Row Model"></SfButton>
 
 <SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridSelectionSettings Mode=SelectionMode.Cell></TreeGridSelectionSettings>
