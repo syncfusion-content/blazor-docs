@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Header in Blazor Chat UI Component | Syncfusion®
-description: Checkout and learn here all about Header with Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Header in Blazor Chat UI | Syncfusion®
+description: Customize chat headers in Blazor Chat UI using ShowHeader, HeaderText, and HeaderIconCss properties to display custom branding and chat titles.
 platform: Blazor
 control: Chat UI
 documentation: ug
 ---
 
-# Header in Blazor Chat UI component
+# Header in Blazor Chat UI
 
 ## Show or hide header
 

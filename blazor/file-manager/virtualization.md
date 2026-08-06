@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Views in Blazor File Manager Component | Syncfusion®
-description: Checkout and learn here all about available Views module in Blazor File Manager component and much more details.
-platform: Blazor
+title: Virtualization in Blazor File Manager | Syncfusion
+description: Learn how to enable UI virtualization in the Blazor File Manager for smooth scrolling through large directories in Details and Large Icons views.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Virtualization in Blazor File Manager Component
+# Virtualization in Blazor File Manager
 
 File Manager’s UI virtualization allows you for the dynamic loading of a large number of directories and files in both the ViewType of [Details](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.ViewType.html#Syncfusion_Blazor_FileManager_ViewType_Details) and [LargeIcons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.ViewType.html#Syncfusion_Blazor_FileManager_ViewType_LargeIcons) without degrading its performance. The virtualization of the File Manager component is based on the height and width of the viewport. The items will be loaded in both **Details** and **LargeIcons** based on the viewport size.
 

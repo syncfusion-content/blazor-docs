@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Data Grid connected to MySQL via Entity Framework | Syncfusion®
-description: Bind MySQL data to Blazor Data Grid using Entity Framework Core with complete CRUD, filtering, sorting, paging, and advanced data operations.
+title: Blazor Grid MySQL Server with Entity Framework | Syncfusion
+description: Learn how to connect MySQL Server with Blazor Data Grid using Entity Framework Core for CRUD operations, filtering, sorting, paging, and data management.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Connecting MySQL Server to Blazor Data Grid Using Entity Framework
+# MySQL Server with Entity Framework in Blazor Data Grid.
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a MySQL Server database using Entity Framework Core (EF Core). This modern approach provides a more maintainable and type-safe alternative to raw SQL queries.
 

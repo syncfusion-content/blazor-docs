@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Toolbar styling in Blazor DataGrid using CSS | Syncfusion®
-description: Learn how to customize the Blazor DataGrid toolbar using CSS, including styling the toolbar container and buttons with CSS isolation tips.
+title: Blazor Grid Toolbar Styling | Syncfusion
+description: Learn how to customize the Blazor Data Grid toolbar using CSS, including toolbar containers, buttons, and CSS isolation styling techniques.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Toolbar customization in Blazor DataGrid
+# Toolbar Customization in Blazor Data Grid
 
 The appearance of toolbar elements in the Blazor DataGrid can be customized using CSS. Styling options are available for different parts of the toolbar interface:
 

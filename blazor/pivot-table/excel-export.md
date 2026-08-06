@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Export in Blazor Pivot Table Component | Syncfusion®
-description: Learn about Excel export feature in Blazor Pivot Table component with examples and much more details.
+title: Excel Export in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table exports data to an Excel document via ExportToExcelAsync, returning either a direct download or an in-memory stream.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Excel export in Blazor Pivot Table component
+# Excel Export in Blazor Pivot Table
 
 The Excel export feature allows you to export Pivot Table data as an Excel document for offline analysis and reporting. To enable Excel export functionality in the Pivot Table, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowExcelExport) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. Once enabled, use the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__System_Boolean_) method to perform the Excel export operation.
 
