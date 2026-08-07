@@ -19,7 +19,7 @@ The [DateOnly](https://learn.microsoft.com/en-us/dotnet/api/system.dateonly) typ
 
 {% endhighlight %}
 
-![Blazor DatePicker with DateOnly](./images/DatePickerDateOnly.gif)
+![Blazor DatePicker with DateOnly](./images/DatePicker.webp)
 
 ## See also
 

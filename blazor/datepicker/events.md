@@ -11,9 +11,6 @@ documentation: ug
 
 This section lists the events of the DatePicker component and the actions that trigger them. The events are exposed through the [DatePickerEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerEvents-1.html) child content and use the `Syncfusion.Blazor.Calendars` namespace for their event-argument types.
 
-N> Starting with `v17.2.*`, the DatePicker component exposes a limited set of events with new names. Several legacy events from `v17.1.*` were renamed or removed. The mapping is shown in the table below.
-
-Event Name(`v17.1.*`) |Event Name(`v17.2.*`)
 -----|-----
 change |[ValueChange](#valuechange)
 close |[OnClose](#onclose)
@@ -190,8 +187,6 @@ The [OnRenderDayCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ca
     }
 }
 ```
-
-N> The DatePicker is limited to the events listed on this page. New events will be added in future releases based on user feedback. If the event you need is not in the list, [submit a feature request](https://www.syncfusion.com/feedback/blazor-components).
 
 ## See also
 

@@ -17,7 +17,7 @@ This section briefly explains how to bind a value to the DatePicker component in
 
 ## One-way binding
 
-In one-way binding, you assign a value to the DatePicker's [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Value) property by passing a property or variable name prefixed with `@` (for example, `@DateValue`). The `TValue` parameter must match the type of the bound variable. Changes to the source variable are reflected in the component, but changes made in the component are not pushed back to the source.
+In one-way binding, you assign a value to the DatePicker's [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Value) property by passing a property or variable name prefixed with `@` (for example, `@DateValue`). The `TValue` parameter must match the type of the bound variable.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -38,7 +38,7 @@ In one-way binding, you assign a value to the DatePicker's [Value](https://help.
 
 ## Two-way binding
 
-Two-way binding can be achieved by using the `bind-Value` attribute. The bound variable's type must match the DatePicker's `TValue` parameter (for example, `DateTime`, `DateTime?`, `string`, or `int`).
+Two-way binding can be achieved by using the `bind-Value` attribute. The bound variable's type must match the DatePicker's `TValue` parameter — `DateTime` or `DateTime?`.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
