@@ -102,7 +102,7 @@ The default component rendered in the filter menu is determined by the column's 
 *   **Numeric**: [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started)
 *   **Boolean**: [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started)
 
-For example, the following code demonstrates how to replace the default `NumericTextBox` with a `DropDownList` for the numeric **OrderID** column. This customization allows filtering based on a selection from the dropdown list instead of manual input.
+For example, the following code demonstrates how to replace the default `NumericTextBox` with a `DropDownList` for the numeric **OrderID** column. This customization allows filtering based on a selection from the dropdown list instead of manual input. The `@bind-Value` binding connects the dropdown's selected value to the filter predicate model, automatically triggering the filter when a selection is made.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -654,7 +654,7 @@ public class OrderData
 
 By default, the [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started) component in the filter menu dialog is configured to automatically fill suggestions while typing. In scenarios requiring a more controlled user experience, this autofill behavior can be disabled.
 
-To prevent autofill, set the [Autofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_Autofill) parameter to **false** using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This property enables the use of custom components for specific columns.
+To prevent autofill for **String-type columns**, set the [Autofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_Autofill) parameter to **false** using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This property enables the use of custom components for specific columns. Autofill control is typically applied to columns that use AutoComplete (String columns), allowing you to selectively disable this feature on a per-column basis by using `FilterTemplate`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -738,9 +738,9 @@ To prevent autofill, set the [Autofill](https://help.syncfusion.com/cr/blazor/Sy
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDVxXwjryXLfbAFT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Hide the filter operator dropdownlist in the filter menu dialog
+### Hide the filter operator dropdown in the filter menu
 
-To hide the operator dropdown in the menu filter dialog of the Blazor DataGrid, apply the following CSS to override the styling of the **.e-flm_optrdiv** class. This customization simplifies the interface by applying a default filter behavior without displaying the operator selection.
+To hide the operator dropdown in the menu filter dialog, apply CSS to the **.e-flm_optrdiv** class. This simplifies the interface by applying a default filter behavior without displaying operator selection options.
 
 ```css
     .e-flm_optrdiv {
@@ -1050,7 +1050,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLxjmtLSZTSLAVH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Hide default filter icons while perform filtering through method
+## Hide default filter icons while performing filtering through a method
 
 When performing filtering programmatically using methods in the Blazor DataGrid, the default filter icons in the column headers can be hidden to simplify the interface.
 
