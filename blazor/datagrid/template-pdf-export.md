@@ -1,13 +1,13 @@
 ---
 layout: post
-title: PDF Export with Templates in Blazor DataGrid | Syncfusion®
-description: Learn how to export column, detail, and group caption templates to a PDF in the Blazor DataGrid, including images, hyperlinks, and custom text.
+title: Blazor Grid PDF Export with Templates | Syncfusion
+description: Learn how to export column, detail, and group caption templates to PDF in Blazor Data Grid, including images, hyperlinks, and custom text.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Exporting Blazor DataGrid with templates
+# PDF Export with Templates in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports exporting template content to a PDF document, enabling rich formatting in exported files. The following template types are supported:
 

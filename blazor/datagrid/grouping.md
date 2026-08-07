@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Grouping in Blazor DataGrid | Syncfusion®
-description: Learn how to group data, manage drop area visibility, persist group state, and sort or format grouped columns in the Blazor DataGrid.
+title: Blazor Grid Grouping | Syncfusion
+description: Learn how to group data, manage group state, customize grouped columns, and improve data organization in Blazor Data Grid.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Grouping in Blazor DataGrid
+# Grouping in Blazor Data Grid
 
 The grouping feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) organizes rows into groups, enabling users to expand or collapse related records. Columns can be grouped by dragging the column header into the group drop area. Enable grouping by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to **true**. Configure behavior using [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings).
 
