@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Maps in Blazor MAUI App | Syncfusion®
-description: Check out and learn about the documentation for getting started with Blazor Maps Component in Blazor MAUI App.
+title: Getting Started with Blazor Map in Blazor MAUI App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Map control in a Blazor MAUI hybrid app. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Maps
 documentation: ug
 ---
 
-# Getting Started with Blazor Maps Component in Blazor MAUI App
+# Getting Started with Blazor Map in Blazor MAUI App
 
 This section explains the step-by-step process of integrating the [Blazor Maps](https://www.syncfusion.com/blazor-components/blazor-map) component into your Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/) and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

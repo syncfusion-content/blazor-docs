@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor Maps Component | SyncfusionÂ®
-description: Check out and learn how to configure and apply globalization feature in the Blazor Maps component and much more details.
+title: Internationalization in Blazor Map | Syncfusion®
+description: Globalize data labels, tooltips, and number formats in the Syncfusion Blazor Map for Blazor Server and WebAssembly apps using the Format property.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Globalization in Blazor Maps Component
+# Internationalization in Blazor Map
 
 Maps support internationalization for the following elements:
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: State Persistence in Blazor Maps Component | SyncfusionÂ®
-description: Check out and learn how to enable and use state persistence in the Blazor Maps component.
+title: State Persistence in Blazor Map | Syncfusion®
+description: Retain Syncfusion Blazor Map model values across page refreshes by setting the EnablePersistence property to store state in browser storage.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# State Persistence in Blazor Maps Component
+# State Persistence in Blazor Map
 
 ## State Persistence
 

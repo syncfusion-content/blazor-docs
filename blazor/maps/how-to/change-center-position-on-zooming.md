@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Change center position on zooming in Blazor Maps | SyncfusionÂ®
-description: Check out and Learn how to change the map center during zooming in the Blazor Maps component and much more details.
+title: How to change center position on zooming in Blazor Map | Syncfusion®
+description: Learn how to change the Syncfusion Blazor Map center on zoom by setting MapsCenterPosition coordinates and the ZoomFactor in MapsZoomSettings.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Change center position on zooming in Blazor Maps Component
+# How to change center position on zooming in Blazor Map
 
 The Blazor Maps component supports changing the map's center position by specifying coordinates in the [MapsCenterPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsCenterPosition.html). The [ZoomFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ZoomFactor) property in the [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) focuses on the specified center position.
 

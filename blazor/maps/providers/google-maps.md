@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Google Maps in Blazor Maps Component | SyncfusionÂ®
-description: Check out and learn how to display Google Maps tiles in the Blazor Maps component and much more details.
+title: Google Maps in Blazor Map | Syncfusion®
+description: Display Google Maps tiles in the Syncfusion Blazor Map by setting UrlTemplate with an API key and session token from the Google Maps Tile API.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Google Maps in Blazor Maps component
+# Google Maps in Blazor Map
 
 Google Maps is an online map provider owned by Google. It provides map tile images based on requests. The Blazor Maps component composes these tiles into a single view to render the map. Google Maps tiles can be displayed by specifying the tile service URL in the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property.
 
