@@ -59,7 +59,7 @@ Change the button text and styles during the progress state by updating the Cont
 
 ![Changing Text Content and Style of Blazor ProgressButton](./images/blazor-progressbutton-change-text.webp)
 
-## Customize progress using cssClass in Blazor ProgressButton
+## Customize progress using CssClass in Blazor ProgressButton
 
 Customize the progress indicator (filler) by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) property.
 
@@ -88,7 +88,7 @@ Reverse progress can also be shown by adding a custom class through the [CssClas
 ![Customizing Progress in Blazor ProgressButton](./images/blazor-progressbutton-customization.webp)
 
 
-## Stop Progress Indicator in Blazor ProgressButton
+## Stop progress indicator in Blazor ProgressButton
 
 Stop the active progress programmatically by calling the [EndProgressAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_EndProgressAsync) method on the ProgressButton instance obtained via @ref. In the following example, clicking the Stop button invokes the handler that awaits EndProgressAsync to halt the current progress.
 
@@ -96,7 +96,7 @@ Stop the active progress programmatically by calling the [EndProgressAsync](http
 @using Syncfusion.Blazor.SplitButtons
 @using Syncfusion.Blazor.Buttons
 
-<SfProgressButton Content="Spin Left" IsPrimary="true" @ref="ProgressBtnObj"></SfProgressButton>
+<SfProgressButton Content="Spin Left" IsPrimary="true" EnableProgress="true" Duration="4000" @ref="ProgressBtnObj"></SfProgressButton>
 <SfButton Content="Stop" OnClick="clicked"></SfButton>
 
 @code {
