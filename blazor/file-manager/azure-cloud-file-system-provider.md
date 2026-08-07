@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Azure cloud provider in Blazor File Manager Component | Syncfusion®
-description: Check out and learn about the Azure cloud file system provider in the Blazor File Manager component and much more details.
-platform: Blazor
+title: Azure Cloud Provider in Blazor File Manager | Syncfusion
+description: Learn how to connect the Blazor File Manager to Azure Blob Storage to browse and manage files in the cloud.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Azure cloud file system provider
+# Azure Cloud Provider in Blazor File Manager
 
 ## Introduction to Azure Blob Storage
 

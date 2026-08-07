@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Views in Blazor File Manager Component | Syncfusion®
-description: Checkout and learn here all about available Views module in Blazor File Manager component and much more details.
-platform: Blazor
+title: Views in Blazor File Manager | Syncfusion
+description: Learn how to switch between Large Icons and Details views in the Blazor File Manager and customize the appearance of files and folders.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Views in Blazor File Manager component
+# Views in Blazor File Manager
 
 The [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component provides both the `Large Icons View` for visual recognition and the `Details View` for organized information.
 

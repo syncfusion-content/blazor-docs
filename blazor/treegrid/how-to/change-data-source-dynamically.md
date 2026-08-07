@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Change datasource dynamically in Blazor TreeGrid | Syncfusion®
-description: Learn here all about how to change datasource dynamically in Blazor TreeGrid component and much more details.
+title: Blazor TreeGrid Change Datasource Dynamically | Syncfusion
+description: Learn how to change data sources dynamically in Blazor TreeGrid, update data at runtime, and manage different datasets efficiently.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Change datasource dynamically in Blazor TreeGrid Component
+# Change Data Source Dynamically in Blazor TreeGrid
 
 The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) of the Tree Grid component can be changed dynamically through an external button.
 
-This is demonstrated in the below sample code where the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) is dynamically modified using the bounded property.
+This is demonstrated in the below sample code where the `DataSource` is dynamically modified using the bounded property.
 
 {% tabs %}
 

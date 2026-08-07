@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in Blazor DataGrid | Syncfusion®
-description: Learn how to use row, cell, multi, drag, toggle, and programmatic selection features in Blazor DataGrid.
+title: Blazor Grid Selection | Syncfusion
+description: Learn how to use row, cell, drag, toggle, multi, and programmatic selection features in Blazor Data Grid.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Selection in Blazor DataGrid
+# Selection in Blazor Data Grid
 
 Selection in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables interactive selection of specific cells and rows. Selection can be performed using mouse clicks, arrow keys (up, down, left, right), or touch gestures. This feature is useful for highlighting, manipulating, or executing actions on targeted Grid elements.
 
