@@ -9,9 +9,13 @@ documentation: ug
 
 # Row Drag and Drop in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports built-in row drag-and-drop functionality. Rows can be reordered within the grid, moved between grids, or dropped into custom components.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports built-in row drag and drop functionality. Rows can be reordered within the grid, moved between grids, or dropped into custom components.
 
 Enable row drag and drop by setting [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowRowDragAndDrop) to true. Configure the drop target using the [TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html#Syncfusion_Blazor_Grids_GridRowDropSettings_TargetID) property in [RowDropSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html).
+
+### Drag Handle UI
+
+When row drag and drop is enabled, a drag handle (icon) appears to the left of each row, allowing users to initiate the drag operation. The drag handle is **visible by default** when `AllowRowDragAndDrop` is set to true. Users can click and hold the drag handle to select and drag one or multiple selected rows.
 
 > - Row selection must be enabled to perform row drag and drop.  
 > - To drag multiple rows, set [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) to Multiple.
@@ -103,8 +107,15 @@ The drag and drop feature enables reordering of rows within the Blazor DataGrid 
 
 ## Drag and drop to DataGrid
 
-
 The Blazor DataGrid supports dragging rows from one grid and dropping them into another. Enable this feature by setting the [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowRowDragAndDrop) property to **true** on both grids. To specify the target grid, configure the [RowDropSettings.TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html#Syncfusion_Blazor_Grids_GridRowDropSettings_TargetID) property with the target grid's ID.
+
+### TargetID Property Behavior
+
+The `TargetID` property in `GridRowDropSettings` specifies the ID of the target component where rows can be dropped:
+
+- **When TargetID is set:** Rows can only be dropped on the specified target component (identified by its ID).
+- **When TargetID is not set or omitted:** Rows can only be reordered within the same grid; cross-grid dropping is disabled.
+- **When TargetID matches the grid's own ID:** Rows can be reordered within the same grid (within-grid drag and drop).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -201,9 +212,13 @@ The Blazor DataGrid supports dragging rows from one grid and dropping them into 
 
 ## Drag and drop in empty area
 
-The Blazor DataGrid supports dropping rows in empty content areas. By default, the `AllowEmptyAreaDrop` setting is enabled, allowing rows to be dropped anywhere within the grid content. Rows dropped in an empty area are appended to the end of the data. This applies to both within-grid and between-grid scenarios.
+The Blazor DataGrid supports dropping rows in empty content areas. By default, the `AllowEmptyAreaDrop` setting is **enabled** (`true`), allowing rows to be dropped anywhere within the grid content. Rows dropped in an empty area are appended to the end of the data source, regardless of the current paging, sorting, or filtering state. This applies to both within-grid and between-grid scenarios.
 
-To display the drop indicator only when hovering over rows, disable the AllowEmptyAreaDrop property in the RowDropSettings configuration.
+### Enabled (Default) vs. Disabled
+
+**Enabled (Default):**  Rows can be dropped in empty areas. A drop indicator appears when dragging over empty space, indicating the drop will be allowed.
+
+**Disabled:** To restrict drops only to row elements (and hide the drop indicator when hovering over empty areas), set `AllowEmptyAreaDrop` to `false` in the `RowDropSettings` configuration.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -670,7 +685,7 @@ public class WrapData
 
 ## Drag and drop events 
 
-The Blazor DataGrid exposes events to customize and track drag-and-drop operations:
+The Blazor DataGrid exposes events to customize and track drag and drop operations:
 
 - [RowDragStarting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDragStarting) – Triggered when dragging starts.
 - [RowDropping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDropping) – Triggered while dragged rows are being dropped on the target; can be canceled.
@@ -791,4 +806,4 @@ public class OrderData
 - A single row can be dragged and dropped within the same grid even if multiple selection is not enabled.
 - Row drag and drop does not have built-in support when combined with sorting, filtering, hierarchy grid, or row template features.
 - Row drag and drop with grouping does not support lazy-load grouping.
-- Dragging and dropping within the same group key is not supported. The grid does not allow drag-and-drop for multiple rows that belong to different grouped collections.
+- Dragging and dropping within the same group key is not supported. The grid does not allow drag and drop for multiple rows that belong to different grouped collections.
