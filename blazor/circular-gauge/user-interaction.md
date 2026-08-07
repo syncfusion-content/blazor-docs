@@ -1,13 +1,13 @@
 ---
 layout: post
-title: User Interaction in Blazor Circular Gauge Component | Syncfusion®
-description: Checkout and learn here all the features about User Interaction in Blazor Circular Gauge component and more.
+title: User Interaction in Blazor Circular Gauge | Syncfusion®
+description: Show pointer details on hover in the Blazor Circular Gauge by enabling the tooltip and customizing its fill, border, and text style.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
 ---
 
-# User Interaction in Blazor Circular Gauge Component
+# User Interaction in Blazor Circular Gauge
 
 ## Tooltip for pointers
 

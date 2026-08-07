@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor Circular Gauge Component | Syncfusion®
-description: Checkout and learn here all the features about Appearance in Blazor Circular Gauge component and more.
+title: Appearance in Blazor Circular Gauge | Syncfusion®
+description: Customize the Blazor Circular Gauge title, position, and background using properties like Title, CenterX, CenterY, and the Background style tag.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
 ---
 
-# Appearance in Blazor Circular Gauge Component
+# Appearance in Blazor Circular Gauge
 
 ## Circular gauge title
 
