@@ -13,7 +13,7 @@ The [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signa
 
 ## Open Signature
 
-The signature component opens a pre-drawn signature as either base64 or hosted/ online URL using the [`LoadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_LoadAsync_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__) method. It supports the PNG, JPEG, and SVG image's base64. The `width` and `height` parameters are optional and accept `int?` (nullable); if not specified, the loaded signature uses its original image dimensions.
+The signature component opens a pre-drawn signature as either base64 or hosted/ online URL using the [`LoadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_LoadAsync_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__) method. It supports the PNG, JPEG, and SVG image's base64.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
