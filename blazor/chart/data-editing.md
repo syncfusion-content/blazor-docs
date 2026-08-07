@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Editing in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Data Editing in Blazor Charts component and much more.
+title: Data Editing in Blazor Charts | Syncfusion®
+description: Enable runtime drag-and-drop editing of Blazor Charts data points by setting ChartDataEditSettings Enable to true, with MinY, MaxY, and Fill options.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Data Editing in Blazor Charts Component
+# Data Editing in Blazor Charts
 
 Data editing allows rendered data points to be dragged and dropped at run time. The position or value of a point can be adjusted based on its y‑value. To enable data editing, set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataEditSettings.html#Syncfusion_Blazor_Charts_ChartDataEditSettings_Enable) property in the [ChartDataEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ChartDataEditSettings) to **true**. Use the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataEditSettings.html#Syncfusion_Blazor_Charts_ChartDataEditSettings_Fill) property to specify the edited point color, and the [MinY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataEditSettings.html#Syncfusion_Blazor_Charts_ChartDataEditSettings_MinY) and [MaxY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataEditSettings.html#Syncfusion_Blazor_Charts_ChartDataEditSettings_MaxY) properties to determine data editing's minimum and maximum range.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Markers in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the available Markers in Blazor Charts component and much more.
+title: Markers in Blazor Charts | Syncfusion®
+description: Add data markers to Blazor Charts series by enabling ChartMarker Visible. Each data point can be adorned with a shape such as circle or square.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Markers in Blazor Charts Component
+# Markers in Blazor Charts
 
 [Data markers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html) are used to provide information about the data points in a series. Each data point can be adorned with a shape.
 

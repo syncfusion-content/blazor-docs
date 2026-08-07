@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Line Chart in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Line Chart in Blazor Charts component and much more.
+title: Line in Blazor Charts | Syncfusion®
+description: Render Blazor Charts Line series to visualize time-dependent data and trends at equal intervals using the Line series Type.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Line Chart in Blazor Charts Component
+# Line in Blazor Charts
 
 ## Line
 

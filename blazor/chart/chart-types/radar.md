@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Radar in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Radar Chart in Blazor Charts component and much more.
+title: Radar in Blazor Charts | Syncfusion®
+description: Render Blazor Charts Radar series to plot data by value and angle on a circular graph, with IsClosed joining the start and end points.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Radar in Blazor Charts Component
+# Radar in Blazor Charts
 
 ## Radar
  

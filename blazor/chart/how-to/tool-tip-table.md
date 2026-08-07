@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Table in Tooltip in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about Table in Tooltip in Blazor Charts component and much more.
+title: How to show a table in tooltip in Blazor Charts | Syncfusion®
+description: Render a custom HTML table inside a Blazor Charts tooltip by using the ChartTooltipSettings Template property with a Razor template.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Table in Tooltip in Blazor Charts Component
+# How to show a table in tooltip in Blazor Charts
 
 A table type tooltip can be created using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Template) property in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html). Follow the steps below to display a table inside the tooltip.
 

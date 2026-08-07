@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Axis Customization in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about Axis Customization in Blazor Charts component and much more.
+title: Axis Customization in Blazor Charts | Syncfusion®
+description: Customize Blazor Charts axis position and crossing using CrossesAt and CrossesInAxis properties for numeric, datetime, or logarithmic axes.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Axis Customization in Blazor Charts Component
+# Axis Customization in Blazor Charts
 
 This section provides a brief explanation on how to customize the Blazor Charts axis.
 

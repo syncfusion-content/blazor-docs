@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Charts in Blazor Web App | Syncfusion
-description: Check out and learn about the documentation for getting started with the Blazor Charts Component in Blazor Web App.
+title: Getting Started with Blazor Web App Charts | Syncfusion
+description: Step-by-step guide to add Syncfusion Blazor Charts to a Blazor Web App using Visual Studio, VS Code, or the .NET CLI, with both server and client setup.
 platform: Blazor
-component: Charts
+control: Charts
 documentation: ug
 ---
 
-# Getting Started with Blazor Charts Component in Blazor Web App
+# Getting Started with Blazor Web App Charts
 
 This section briefly explains how to include the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

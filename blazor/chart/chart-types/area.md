@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Area in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Area Chart in Blazor Charts component and much more details.
+title: Area in Blazor Charts | Syncfusion®
+description: Render Blazor Charts Area series by setting the series Type to Area, filling the region beneath a line to highlight magnitude over time.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Area in Blazor Charts Component
+# Area in Blazor Charts
 
 ## Area
 

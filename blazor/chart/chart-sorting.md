@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sorting in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about sorting functionality in Blazor Charts component and more
+title: Sorting in Blazor Charts | Syncfusion®
+description: Sort Blazor Charts data in ascending or descending order by setting the ChartSorting PropertyName to the Y-axis field.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Sorting in Blazor Chart Component
+# Sorting in Blazor Charts
 
 Sorting enables you to sort data in ascending or descending order. To sort the chart based on the y-axis value, set **Y** to the [PropertyName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_PropertyName) property.
 

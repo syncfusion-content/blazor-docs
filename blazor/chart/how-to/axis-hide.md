@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Hiding Axis in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about Hiding Axis in Blazor Charts component and much more details.
+title: How to hide axis in Blazor Charts | Syncfusion®
+description: Step-by-step guide to hide a measure axis in Blazor Charts by toggling the legend item of the series that uses it via YAxisName.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
 <!-- markdownlint-disable MD036 -->
 
-# Hiding Axis in Blazor Charts Component
+# How to hide axis in Blazor Charts
 
 The axis associated with the series can be hidden by toggling the legend item of the relevant series. Follow the steps below to hide the measure axis associated with the series.
 

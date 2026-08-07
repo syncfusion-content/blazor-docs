@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 100% Stacked Line in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about 100% Stacked Line Chart in Blazor Charts component and more.
+title: 100% Stacked Line in Blazor Charts | Syncfusion®
+description: Render Blazor Charts 100% stacked line series with StackingLine100 to show each series as a percentage of the total, with all lines summing to 100.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# 100% Stacked Line in Blazor Charts Component
+# 100% Stacked Line in Blazor Charts
 
 ## 100% Stacked Line
 

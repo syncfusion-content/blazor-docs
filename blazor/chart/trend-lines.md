@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Trendlines in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Trendlines in Blazor Charts component and much more.
+title: Trendlines in Blazor Charts | Syncfusion®
+description: Show data direction in Blazor Charts with trendlines. Supports Linear, Exponential, Logarithmic, Power, Polynomial, and MovingAverage.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
 <!-- markdownlint-disable MD036 -->
 
-# Trendlines in Blazor Charts Component
+# Trendlines in Blazor Charts
 
 Trendlines are used to show the price's direction and pace. Except for bar series, trendlines can be generated for Cartesian series like Line, Column, Scatter, Area, Candle, Hilo, and so on. In addition, a series can have multiple trendlines. There are six different types of trendlines that can be used on the chart. They are as follows:
 
