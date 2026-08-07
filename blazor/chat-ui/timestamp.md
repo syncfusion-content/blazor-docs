@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Timestamp in Blazor Chat UI Component | Syncfusion®
-description: Checkout and learn here all about Timestamp with Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Timestamp in Blazor Chat UI | Syncfusion®
+description: Display message timestamps in Blazor Chat UI with configurable formatting via ShowTimestamp and TimestampFormat properties for conversation tracking.
 platform: Blazor
 control: Chat UI
 documentation: ug
 ---
 
-# Timestamp in Blazor Chat UI component
+# Timestamp in Blazor Chat UI
 
 ## Show or hide timestamp
 

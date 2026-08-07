@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Context Menu in Blazor TreeGrid Component | Syncfusion®
-description: Checkout and learn here all the features about context menu in Blazor TreeGrid component and much more.
+title: Blazor TreeGrid Context Menu | Syncfusion
+description: Learn how to use the context menu in Blazor TreeGrid to access row actions, customize menu items, and improve user productivity.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Context Menu in Blazor TreeGrid Component
+# Context Menu in Blazor TreeGrid
 
 The Tree Grid has options to show the context menu when right clicked on it. To enable this feature, define either default or custom item in the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ContextMenuItems) property.
 
@@ -131,11 +131,11 @@ The following sample code demonstrates defining custom context menu item and its
         TreeData.Add(new BusinessObject() { TaskId = 9, TaskName = "Child Task 8", Duration = 778907897, Progress = 70, ParentId = 7, Priority = "Low" });
     }
 
-    public void OnContextMenuClick(ContextMenuClickEventArgs args)
+    public async Task OnContextMenuClick(ContextMenuClickEventArgs<BusinessObject> args)
     {
         if (args.Item.Id == "copywithheader")
         {
-            this.TreeGrid.CopyAsync(true);
+            await this.TreeGrid.CopyAsync(true);
         }
     }
 }

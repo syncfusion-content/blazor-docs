@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor Chat UI Component | Syncfusion®
-description: Checkout and learn about Globalization with Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Globalization in Blazor Chat UI | Syncfusion®
+description: Support localization and Right-to-Left (RTL) languages in Blazor Chat UI for global applications with cultural adaptation and text direction control.
 platform: Blazor
 control: Chat UI
 documentation: ug
 ---
 
-# Globalization in Blazor Chat UI Component
+# Globalization in Blazor Chat UI
 
 The Blazor Chat component supports globalization features like `Localization` and `Right-to-Left (RTL)` alignment, enabling it to be adapted for different cultures and languages.
 
