@@ -193,7 +193,7 @@ In the following code, CSS targets the `.e-list-item` elements within `.e-dropdo
 
 ![Blazor AutoComplete with customized selected item opacity](./images/style/blazor_autocomplete_opacity-style.webp)
 
-## Customizing the height
+## Customizing the height and width
 
 ### Height of AutoComplete
 
@@ -249,7 +249,7 @@ In the following code, a single list item is disabled using JavaScript interop.
 
 ![Blazor AutoComplete with a disabled list item](./images/style/blazor_autocomplete_disable-listitem.webp)
 
-## Adding search icon in the Blazor AutoComplete component.
+## Adding a search icon in the Blazor AutoComplete component
 
 Add a search icon to the AutoComplete by overriding the content of the existing icon. The following code demonstrates how to add a search icon.
 

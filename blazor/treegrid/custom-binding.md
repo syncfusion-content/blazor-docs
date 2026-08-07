@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Custom Binding in Blazor TreeGrid Component | Syncfusion®
-description: Checkout and learn here all the features about custom binding in Blazor TreeGrid component and much more.
+title: Blazor TreeGrid Custom Binding | Syncfusion
+description: Learn how to implement custom binding in Blazor TreeGrid to integrate custom data sources, control data operations, and improve flexibility.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Custom Binding in Blazor TreeGrid Component
+# Custom Binding in Blazor TreeGrid
 
 The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the Tree Grid component.
 
@@ -45,7 +45,7 @@ public abstract class DataAdaptor
     public virtual object Remove(DataManager dataManager, object data, string keyField, string key)
 
     /// <summary>
-    /// Performs Remove operation asynchronously..
+    /// Performs Remove operation asynchronously.
     /// </summary>
     public virtual Task<object> RemoveAsync(DataManager dataManager, object data, string keyField, string key)
 
@@ -107,7 +107,7 @@ The following sample code demonstrates implementing custom data binding using cu
 
     protected override void OnInitialized()
     {
-        TreeData = SelfReferenceData.GetTree().ToList();
+        TreeData = new SelfReferenceData().GetTree().ToList();
     }
 
     // Implementing custom adaptor by extending the DataAdaptor class
@@ -453,7 +453,7 @@ The following sample code demonstrates `DataAdaptor` extended from `OwningCompon
 
 ## CRUD operation
 
-The CRUD operations for the custom bounded data in the Tree Grid component can be implemented by overriding the following CRUD methods of the **DataAdaptor** abstract class,
+The CRUD operations for the custom bound data in the Tree Grid component can be implemented by overriding the following CRUD methods of the **DataAdaptor** abstract class,
 
 * **Insert/InsertAsync**
 * **Remove/RemoveAsync**
@@ -462,7 +462,7 @@ The CRUD operations for the custom bounded data in the Tree Grid component can b
 
 N> While using batch editing in tree grid, use BatchUpdate/BatchUpdateAsync method to handle the corresponding CRUD operation
 
-The following sample code demonstrates implementing CRUD operations for the custom bounded data,
+The following sample code demonstrates implementing CRUD operations for the custom bound data,
 
 {% tabs %}
 
@@ -495,7 +495,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
 
     protected override void OnInitialized()
     {
-        TreeData = SelfReferenceData.GetTree().ToList();
+        TreeData = new SelfReferenceData().GetTree().ToList();
     }
 
         // Implementing custom adaptor by extending the DataAdaptor class

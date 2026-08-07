@@ -59,12 +59,14 @@ The Spinner component is rendered with other Blazor components. For example, ren
 
     private async Task Selected(SelectEventArgs args)
     {
+        // Simulate a delay while the new tab content is being loaded.
         await Task.Delay(2000);
         this.VisibleProperty = false;
     }
 
     private void Selecting(SelectingEventArgs args)
     {
+        // Show the Spinner when the user starts switching to a different tab.
         this.VisibleProperty = true;
     }
 }
