@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Ranges in Blazor Circular Gauge Component | Syncfusion®
-description: Checkout and learn here all the features about Ranges in Blazor Circular Gauge component and much more.
+title: Ranges in Blazor Circular Gauge | Syncfusion®
+description: Highlight intervals on a Blazor Circular Gauge axis by adding ranges with custom start, end, start width, and end width values.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
 ---
 
-# Ranges in Blazor Circular Gauge Component
+# Ranges in Blazor Circular Gauge
 
 You can categorize certain interval on Circular Gauge axis using the [CircularGaugeRanges](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRanges.html) tag.
 

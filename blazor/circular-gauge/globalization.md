@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor Circular Gauge Component | SyncfusionÂ®
-description: Checkout and learn here all the features about Globalization in Blazor Circular Gauge component and more.
+title: Globalization in Blazor Circular Gauge | Syncfusion®
+description: Localize the Blazor Circular Gauge axis labels and tooltips by loading culture-specific CLDR data and applying the internationalization library.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
 ---
 
-# Globalization in Blazor Circular Gauge Component
+# Globalization in Blazor Circular Gauge
 
 The internationalization library provides support for formatting and parsing the number using the official [Unicode CLDR](http://cldr.unicode.org/) JSON data and also provides the `loadCldr` method to load the culture-specific CLDR JSON data. The Circular Gauge component comes with built-in internationalization support to adapt to different cultures.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Blazor Circular Gauge Component | SyncfusionÂ®
-description: Checkout and learn here all the features about Accessibility in Blazor Circular Gauge component and more.
+title: Accessibility in Blazor Circular Gauge | Syncfusion®
+description: Learn how the Blazor Circular Gauge meets accessibility standards, including WCAG 2.2 AA, Section 508, screen reader, RTL, and color contrast support.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
 ---
 
 
-# Accessibility in Blazor Circular Gauge Component
+# Accessibility in Blazor Circular Gauge
 
 The [Blazor Circular Gauge](https://www.syncfusion.com/blazor-components/blazor-circular-gauge) component follows commonly used accessibility guidelines and standards, such as [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 

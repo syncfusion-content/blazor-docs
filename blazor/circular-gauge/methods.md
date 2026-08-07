@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Methods in Blazor Circular Gauge Component | SyncfusionÂ®
-description: Checkout and learn here all about the Methods in Blazor Circular Gauge component and much more.
+title: Methods in Blazor Circular Gauge | Syncfusion®
+description: Call Blazor Circular Gauge methods such as SetAnnotationValueAsync to update annotation content dynamically from your application code.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
 ---
 
-# Methods in Blazor Circular Gauge Component
+# Methods in Blazor Circular Gauge
 
 The following methods are available in the Circular Gauge component.
 
