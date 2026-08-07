@@ -13,6 +13,19 @@ documentation: ug
 
 The Blazor DataGrid is a powerful and feature-rich UI component designed for displaying and managing tabular data with high performance and flexibility. It offers a comprehensive set of enterprise-grade capabilities, including advanced data operations, seamless integration with multiple data sources, and extensive customization options. Built for scalability, it enables developers to create responsive, data-intensive applications with ease.
 
+## Quick links
+
+**Getting Started:**
+- [Blazor Web App Guide](./getting-started-with-web-app)
+- [Blazor WebAssembly Guide](./getting-started)
+
+**Popular Features:**
+- [Filtering & Searching](./filtering) — Search and filter capabilities
+- [Sorting & Grouping](./sorting) — Data organization and analysis
+- [Editing & CRUD](./editing) — Create, read, update, delete operations
+- [Export & Reporting](./excel-exporting) — Excel, PDF, and print functionality
+- [Data Validation](./column-validation) — Built-in and custom validation rules
+
 ## Common use cases
 
 The Blazor DataGrid is ideal for a wide range of business scenarios:
@@ -136,9 +149,9 @@ The Blazor DataGrid offers extensive column and layout customization options for
 
 | Feature | Purpose | Key Benefit |
 |---------|---------|-------------|
-| **[Column Formatting](./columns.md)** | Apply predefined or custom formats (currency, dates, percentages, etc.) | Professional number and date display |
-| **[Column Resizing](./column-resizing.md)** | Manually adjust column widths with auto-fit and responsive options | Optimal content visibility |
-| **[Column Reordering](./column-reorder.md)** | Drag column headers to reorder display sequence | User-preferred column arrangement |
+| **[Column Formatting](./columns)** | Apply predefined or custom formats (currency, dates, percentages, etc.) | Professional number and date display |
+| **[Column Resizing](./column-resizing)** | Manually adjust column widths with auto-fit and responsive options | Optimal content visibility |
+| **[Column Reordering](./column-reorder)** | Drag column headers to reorder display sequence | User-preferred column arrangement |
 | **[Frozen Columns](./frozen-column)** | Keep key columns visible while scrolling horizontally | Always visible critical information |
 | **[Column Spanning](./column-spanning)** | Extend cells across multiple columns for merged display areas | Grouped or summary information |
 | **[Column Menu](./column-menu)** | Dropdown menu for visibility, filtering, sorting, grouping, autofit | Quick column management |
@@ -236,19 +249,6 @@ The Blazor DataGrid works with:
 - **Hosting Models**: Blazor Server, Blazor WebAssembly, Blazor Web App
 - **Browsers**: Chrome, Firefox, Safari, Edge (latest versions)
 - **Mobile**: iOS Safari, Android Chrome
-
-## Quick links
-
-**Getting Started:**
-- [Blazor Web App Guide](./getting-started-with-web-app.md)
-- [Blazor WebAssembly Guide](./getting-started.md)
-
-**Popular Features:**
-- [Filtering & Searching](./filtering) — Search and filter capabilities
-- [Sorting & Grouping](./sorting) — Data organization and analysis
-- [Editing & CRUD](./editing) — Create, read, update, delete operations
-- [Export & Reporting](./excel-exporting) — Excel, PDF, and print functionality
-- [Data Validation](./column-validation) — Built-in and custom validation rules
 
 ## Support & Resources
 
