@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotation in Blazor Accumulation Chart Component | SyncfusionÂ®
-description: Checkout and learn here all about Annotation in Blazor Accumulation Chart component and much more details.
+title: Annotation in Blazor Accumulation Chart | Syncfusion®
+description: Add text, shape, or image annotations to the Blazor Accumulation Chart and position them with respect to a series or the chart region.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Annotation in Blazor Accumulation Chart Component
+# Annotation in Blazor Accumulation Chart
 
 Annotations are texts, shapes, or images that are used to highlight a specific region of interest in a chart. The [AccumulationChartAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html) property allows to add annotations to the chart. Specify the element that needs to be displayed in the accumulation chart area by using the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_Content) property of the annotation.
 

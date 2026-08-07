@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Empty Points in Blazor Accumulation Chart Component | SyncfusionÂ®
-description: Checkout and learn here all about Empty Points in Blazor Accumulation Chart component and much more details.
+title: Empty Points in Blazor Accumulation Chart | Syncfusion®
+description: Handle missing or null values in the Blazor Accumulation Chart using EmptyPointSettings with Gap, Average, Drop, or Zero modes.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Empty Points in Blazor Accumulation Chart Component
+# Empty Points in Blazor Accumulation Chart
 
 Data points that contain **NaN** or **null** value are considered as empty points. The empty data points can be ignored or not plotted in the chart. Those points can be customized using the [AccumulationChartEmptyPointSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEmptyPointSettings.html) in series. 
 

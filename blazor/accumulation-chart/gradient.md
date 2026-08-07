@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Gradient in Blazor Accumulation Chart Component | SyncfusionÂ®
-description: Checkout and learn about applying linear and radial gradients to Accumulation Charts in Blazor Charts and much more details.
+title: Gradient in Blazor Accumulation Chart | Syncfusion®
+description: Apply linear or radial gradients to the Blazor Accumulation Chart series or per-point via OnPointRender, with configurable color stops.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Gradient in Blazor Accumulation Chart Component
+# Gradient in Blazor Accumulation Chart
 
 Gradients add depth and modern styling to charts by smoothly blending multiple colors. The Charts component supports two gradient types:
 
