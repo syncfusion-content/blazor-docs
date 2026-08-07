@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Dimensions in Blazor Linear Gauge Component | Syncfusion®
-description: Checkout and learn here all the features about dimensions in Blazor Linear Gauge component and much more.
+title: Dimensions in Blazor Linear Gauge | Syncfusion®
+description: Set the Blazor Linear Gauge dimensions in pixels or percentages using the Width and Height properties for responsive layout sizing.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Dimensions in Blazor Linear Gauge Component
+# Dimensions in Blazor Linear Gauge
 
 ## Size for Linear Gauge
 
