@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column Validation in Blazor TreeGrid Component | Syncfusion®
-description: Checkout and learn here all about column validation in Blazor TreeGrid component and much more details.
+title: Blazor TreeGrid Column Validation | Syncfusion
+description: Learn how to validate columns in Blazor TreeGrid using built-in rules, custom validation logic, and required field validation to ensure data accuracy.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Column validation in Blazor TreeGrid Component
+# Column validation in Blazor TreeGrid
 
 Column validation allows to validate the edited or added row data and it displays errors for invalid fields before saving data. Tree Grid uses **Form Validator** component for column validation. The validation rules can be set by defining the [TreeGridColumn. ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ValidationRules).
 

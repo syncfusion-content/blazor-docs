@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor TreeGrid Component | Syncfusion®
-description: Checkout and learn here all the features about events in Blazor TreeGrid component and much more details.
+title: Blazor TreeGrid Events | Syncfusion
+description: Learn how to handle events in Blazor TreeGrid, respond to user actions, customize behavior, and manage component interactions.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Events in Blazor TreeGrid Component
+# Events in Blazor TreeGrid
 
 In this section, the list of events of the Tree Grid component is provided which will be triggered for appropriate Tree Grid actions.
 
