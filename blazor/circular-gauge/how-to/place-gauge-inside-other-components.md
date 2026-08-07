@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Place gauge inside other components in Blazor Circular Gauge | Syncfusion®
+title: Place gauge in other components in Blazor Circular Gauge | SyncfusionÂ®
 description: Render the Blazor Circular Gauge inside Dashboard Layout, Tabs, Dialog, or other components using a boolean flag and RefreshAsync on resize.
 platform: Blazor
 control: Circular Gauge
