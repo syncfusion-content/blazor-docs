@@ -9,7 +9,9 @@ documentation: ug
 
 # Dialog Editing in Blazor TreeGrid
 
-In Dialog edit mode, while editing the currently selected row, data will be shown on a dialog. The cell values and save edited data can be changed to the data source. To enable Dialog edit, set the [TreeGridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Mode) as **Dialog**.
+Dialog editing in the Blazor TreeGrid displays row data in a popup dialog during editing. The edit dialog opens when a row is double-clicked or when the **Edit** toolbar button is clicked. Editable field values can be modified in the dialog and saved to update the data source.
+
+To enable dialog editing, set the [TreeGridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Mode) property to `EditMode.Dialog`.
 
 {% tabs %}
 
@@ -49,6 +51,7 @@ public class TreeData
         {
             public int TaskId { get; set;}
             public string TaskName { get; set;}
+            public DateTime? StartDate { get; set;}
             public int? Duration { get; set;}
             public int? Progress { get; set;}
             public string Priority { get; set;}
@@ -80,9 +83,8 @@ public class TreeData
 
 ## Customize the header and footer of edit dialog
 
-Use [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_HeaderTemplate) and [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_FooterTemplate) of the [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) component to customize the appearance of edit dialog.
+Use [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_HeaderTemplate) and [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_FooterTemplate) of the [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) component to customize the header and footer content of the edit dialog.
 
-In the following example, the dialog's header text and footer button content are changed for editing and adding records.
 
 {% tabs %}
 
