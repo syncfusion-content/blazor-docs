@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Batch Editing in Blazor TreeGrid Component | Syncfusion®
-description: Checkout and learn here all about Batch Editing in Blazor Tree Grid component and much more details.
+title: Blazor TreeGrid Batch Editing | Syncfusion
+description: Learn how to perform batch editing in Blazor TreeGrid, update multiple records at once, validate changes, and improve editing efficiency.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Batch Editing in Blazor TreeGrid Component
+# Batch Editing in Blazor TreeGrid
 
 Batch editing allows making multiple edits across cells and rows before committing changes to the data source. Double-click a cell to enter edit mode; edits are staged on the client and can be saved together or discarded. Save changes by clicking the toolbar **Update** button or by calling [EndEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EndEditAsync). To enable Batch editing, set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Mode) property of [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) to `EditMode.Batch`.
 
