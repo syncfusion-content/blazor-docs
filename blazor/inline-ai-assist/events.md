@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Inline AI Assist Control | Syncfusion
-description: Checkout and learn about Events with Blazor Inline AI Assist component in Blazor Server App and Blazor WebAssembly App.
+title: Events in Blazor Inline AI Assist | Syncfusion®
+description: Handle component events (Created, PromptRequested, Opened) to trigger custom logic when rendering completes or popup state changes.
 platform: Blazor
 control: Inline AI Assist
 documentation: ug
 ---
 
-# Events in Blazor Inline AI Assist control
+# Events in Blazor Inline AI Assist
 
 This section describes the Inline AI Assist events that will be triggered when appropriate actions are performed. The following events are available in the Inline AI Assist control.
 

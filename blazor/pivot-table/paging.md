@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Paging in Blazor Pivot Table Component | Syncfusion®
-description: Learn about paging feature in Blazor Pivot Table component for large datasets and much more details.
+title: Paging in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table pages large datasets through PivotViewPageSettings and a built-in pager UI with separate sizes for row and column axes.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Paging in Blazor Pivot Table Component
+# Paging in Blazor Pivot Table
 
 N> This feature is applicable only for relational data source.
 

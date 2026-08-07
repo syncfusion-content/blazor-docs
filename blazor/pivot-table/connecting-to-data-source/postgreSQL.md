@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Pivot Table with PostgreSQL via URL Adaptor | Syncfusion®
-description: Bind PostgreSQL data to a Blazor Pivot Table using Npgsql and the URL Adaptor, with CRUD, drill-through editing, and field list support.
+title: PostgreSQL in Blazor Pivot Table | Syncfusion
+description: Learn how to bind the Blazor Pivot Table to PostgreSQL through an ASP.NET Core API that uses Npgsql and the Syncfusion URL adaptor for read and CRUD operations.
 platform: Blazor
 control: PivotTable
 documentation: ug
 ---
 
-# Connecting PostgreSQL to Blazor Pivot Table Using URL Adaptor
+# PostgreSQL in Blazor Pivot Table
 
 The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) can bind to PostgreSQL data exposed by an ASP.NET Core controller. In this example, [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses `Adaptors.UrlAdaptor` to read and modify order records through HTTP endpoints.
 
