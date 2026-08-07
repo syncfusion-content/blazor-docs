@@ -73,7 +73,7 @@ The following example demonstrates how to configure the `LabelPosition` in the D
 {% endhighlight %}
 {% endtabs %}
 
-## Floating label 
+## Floating label
 
 Enable floating labels to move the label to the top of the input when focused by setting [EnableFloatingLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_EnableFloatingLabel) to true. The following code example and GIF demonstrate floating label behavior.
 

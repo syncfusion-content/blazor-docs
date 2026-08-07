@@ -15,8 +15,8 @@ This example demonstrates how to display dates in the Blazor Range Slider by for
 @using System.Globalization;
 @using Syncfusion.Blazor.Inputs
 
-<SfSlider TValue="int" Min="MinValue()" Max="@MaxValue()" @bind-Value="@value">
-    <SliderEvents TicksRendering="@TickesRendering" TValue="int" OnTooltipChange="@TooltipChange"></SliderEvents>
+<SfSlider TValue="int" Min="@MinValue()" Max="@MaxValue()" @bind-Value="@value">
+    <SliderEvents TicksRendering="@TicksRendering" TValue="int" OnTooltipChange="@TooltipChange"></SliderEvents>
     <SliderTicks LargeStep="1" ShowSmallTicks="true" Placement="Placement.Before"> </SliderTicks>
     <SliderTooltip Placement="TooltipPlacement.After" IsVisible="true"></SliderTooltip>
 </SfSlider>
@@ -34,9 +34,9 @@ This example demonstrates how to display dates in the Blazor Range Slider by for
         DateTime datetime = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 21);
         return datetime.Day;
     }
-    public void TickesRendering(SliderTickEventArgs args)
+    public void TicksRendering(SliderTickEventArgs args)
     {
-        args.Text = MonthName + " " +args.Value + ", " + DateTime.Now.Year;
+        args.Text = MonthName + " " + args.Value + ", " + DateTime.Now.Year;
     }
     public void TooltipChange(SliderTooltipEventArgs<int> args)
     {

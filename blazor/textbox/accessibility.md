@@ -36,9 +36,9 @@ The accessibility compliance for the Blazor TextBox component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Blazor TextBox is characterized with complete ARIA Accessibility support that helps to access through the on-screen readers and other assistive technology devices. This component is designed with the reference of the guidelines document given in [WAI ARAI Accessibility practices](https://www.w3.org/TR/wai-aria/#textbox).
+The Blazor TextBox provides complete ARIA support that helps to access through on-screen readers and other assistive technology devices. This component is designed with the reference of the guidelines document given in [WAI-ARIA Accessibility practices](https://www.w3.org/TR/wai-aria/#textbox).
 
-The TextBox uses the `textbox` role and following ARIA properties for its element based on its state.
+The TextBox uses the `textbox` role and the following ARIA properties for its element based on its state.
 
 | **Property** | **Functionality** |
 | --- | --- |

@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  Footer aggregates in Blazor DataGrid Component | Syncfusion®
-description: Learn how to configure and display footer aggregates in the Blazor DataGrid using FooterTemplate, AggregateTemplateContext, and formatting options.
+title: Blazor Grid Footer Aggregates | Syncfusion
+description: Learn how to display footer aggregates in Blazor Data Grid using FooterTemplate, AggregateTemplateContext, summary calculations, and custom formatting options.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Footer aggregates in Blazor DataGrid
+# Footer Aggregates in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports calculating and displaying aggregate values in footer cells. Footer aggregates summarize column values across rows and render in the DataGrid footer. Use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate) property to render aggregate values in footer cells.
 
