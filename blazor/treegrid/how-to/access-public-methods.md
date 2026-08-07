@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Access public methods in Blazor TreeGrid Component | Syncfusion®
-description: Learn how to access and invoke Syncfusion Blazor TreeGrid public methods for programmatic data, editing, selection, and export operations.
+description: Checkout and learn here all the details about accessing public methods in Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Access public methods in Blazor TreeGrid Component
 
-In many applications, TreeGrid actions need to be triggered from outside the TreeGrid user interface. For example, you may want to:
+In many applications, TreeGrid actions need to be triggered from outside the TreeGrid interface. Common scenarios include:
 
 - Print TreeGrid data from a custom button.
 - Refresh the TreeGrid after updating data from an API.
@@ -21,21 +21,14 @@ To support these scenarios, the Blazor TreeGrid provides public methods that can
 
 ## When to use public methods
 
-Use TreeGrid public methods when an operation needs to be performed programmatically instead of through the built-in TreeGrid user interface.
-
-### Common scenarios
-
-TreeGrid public methods are commonly used when you need to:
-
 - Trigger TreeGrid actions from custom buttons, toolbars, or menus.
 - Refresh the TreeGrid after updating data from an API or database.
 - Select, edit, or expand records based on actions performed in another component.
 - Synchronize TreeGrid behavior with dialogs, forms, dashboards, or custom workflows.
-- Perform TreeGrid operations programmatically instead of relying on built-in user interactions.
 
-## Access the TreeGrid instance
+**Access the TreeGrid instance**
 
-Before invoking a TreeGrid public method, you must obtain a reference to the TreeGrid component instance. The component instance provides access to TreeGrid properties and methods and can be accessed using the `@ref` directive.
+Before invoking a TreeGrid public method, a reference to the TreeGrid component instance must be obtained. The component instance provides access to TreeGrid properties and methods and can be accessed using the `@ref` directive.
 
 ```razor
 <SfTreeGrid @ref="TreeGrid"></SfTreeGrid>
@@ -47,13 +40,9 @@ private SfTreeGrid<TreeData> TreeGrid;
 
 The component reference becomes available after the TreeGrid has been rendered.
 
-> IMPORTANT
->
-> The component reference is available only after the TreeGrid has been rendered. If you need to access the TreeGrid instance during component initialization, use lifecycle methods such as `OnAfterRenderAsync`.
+N> To access the TreeGrid instance during component initialization, use lifecycle methods such as `OnAfterRenderAsync`.
 
-## Example: Print TreeGrid data using a custom button
-
-The following example demonstrates how to invoke the `PrintAsync` method from an external button.
+**Example: Print TreeGrid data using a custom button**
 
 {% tabs %}
 
@@ -135,7 +124,6 @@ The following example demonstrates how to invoke the `PrintAsync` method from an
 
 ## Frequently used public methods
 
-The following methods are commonly used when interacting with the TreeGrid programmatically.
 
 | Method | When to use |
 |----------|----------|
@@ -148,7 +136,7 @@ The following methods are commonly used when interacting with the TreeGrid progr
 | `AddRecordAsync()` | Open a new row or dialog to add a record programmatically. |
 | `EditCellAsync()` | Start editing a specific cell programmatically. |
 | `DeleteRecordAsync()` | Remove a selected record from a custom action. |
-| `FilterByColumnAsync()` | Apply filtering dynamically based on user interaction. |
+| `FilterByColumnAsync()` | Apply filtering dynamically based on interaction. |
 | `AutoFitColumnsAsync()` | Automatically resize columns based on their content. |
 | `ExportToExcelAsync()` | Export TreeGrid data to an Excel document. |
 | `ExportToCsvAsync()` | Export TreeGrid data to a CSV document. |
@@ -158,21 +146,7 @@ The following methods are commonly used when interacting with the TreeGrid progr
 | `GetCurrentViewRecords()` | Retrieve records displayed in the current view. |
 | `GetPersistDataAsync()` | Save the current TreeGrid state for later restoration. |
 
-For a complete list of available methods and overloads, refer to the API reference documentation.
 
-## Best practices
+## See Also
 
-- Use public methods when TreeGrid operations must be triggered programmatically.
-- Store the component reference in a field using the `@ref` directive.
-- Verify that the component reference is not `null` before invoking a method.
-- Trigger methods from user actions such as button clicks, toolbar items, or menu commands.
-- Access the TreeGrid instance only after component rendering is completed.
-- Await asynchronous TreeGrid methods to ensure operations complete successfully.
-- Refer to the API documentation for advanced methods and additional overloads.
-
-## See also
-
-For detailed information about the available TreeGrid APIs, refer to the following API reference documentation:
-- [SfTreeGrid Methods](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#methods)
-- [SfTreeGrid Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#properties)
-- [TreeGrid API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html)
+- For more detailed information about the available TreeGrid public methods and properties, refer to the [TreeGrid API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html) documentation.
