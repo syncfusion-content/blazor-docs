@@ -480,6 +480,7 @@ public class OrderData
     {
         if (Orders.Count == 0)
         {
+            int code = 10;
             for (int i = 1; i < 2; i++)
             {
                 Orders.Add(new OrderData(10248, "Nancy", 32.14, "Sales Representative", "Order Placed", 5, DateTime.Now.AddDays(-10), "123 Main St, City A"));
@@ -491,6 +492,7 @@ public class OrderData
                 Orders.Add(new OrderData(10254, "Robert", 78.99, "Vice President, Sales", "Delivered", 25, DateTime.Now.AddDays(1), "404 Cedar St, City G"));
                 Orders.Add(new OrderData(10255, "Anne", 46.66, "Inside Sales Coordinator", "Order Placed", 30, DateTime.Now.AddDays(2), "505 Walnut St, City H"));
                 Orders.Add(new OrderData(10256, "Laura", 98.76, "Sales Manager", "Delivered", 18, DateTime.Now.AddDays(3), "606 Ash Blvd, City I"));
+                code += 5;
             }
         }
         return Orders;
@@ -616,10 +618,10 @@ To render a Blazor Chart in a row template, use the [RowTemplate](https://help.s
         // In a real application, you would query your database or API based on orderId.
         return new List<ChartData>
         {
-            new ChartData { Category = "Q1", Value = (orderId % 10) + 10 },      // Ranges from 10-19
-            new ChartData { Category = "Q2", Value = (orderId % 5) + 15 },       // Ranges from 15-19
-            new ChartData { Category = "Q3", Value = (orderId % 7) + 5 },        // Ranges from 5-11
-            new ChartData { Category = "Q4", Value = (orderId % 9) + 20 },       // Ranges from 20-28
+            new ChartData { Category = "Q1", Value = (orderId % 10) + 10 },
+            new ChartData { Category = "Q2", Value = (orderId % 5) + 15 },
+            new ChartData { Category = "Q3", Value = (orderId % 7) + 5 },
+            new ChartData { Category = "Q4", Value = (orderId % 9) + 20 },
         };
     }
 }

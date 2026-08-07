@@ -984,16 +984,14 @@ The Blazor DataGrid exposes methods to retrieve row indexes for custom operation
 
 ```cs
 <SfButton id="GetRowIndexByPrimaryKey" @onclick="GetDataHandler">Get Row Index</SfButton>
-<div>Row Index: @rowIndex</div>
 <SfGrid @ref="grid" DataSource="@Orders">
  ........
 </SfGrid>
 @code{
    SfGrid<Order> grid;
-   int? rowIndex;
     private async Task GetDataHandler()
     {
-        rowIndex = await grid.GetRowIndexByPrimaryKeyAsync(10250);  // Retrieves the row index for OrderID 10250
+        var rowIndex = await Grid.GetRowIndexByPrimaryKeyAsync(10250);  // pass primary key value here.
     }
 }
 ```

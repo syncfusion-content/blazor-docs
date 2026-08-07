@@ -850,11 +850,12 @@ In the example, the `Expand` method validates the row index and then invokes `Ex
         <DetailTemplate>
             @{
                 var employee = (context as EmployeeData);
+                var Order = (context as OrderData);
                 <SfGrid DataSource="@Orders" Query="@(new Query().Where("EmployeeID", "equal", employee.EmployeeID))">
                     <GridColumns>
-                        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" Width="110"> </GridColumn>
-                        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="110"></GridColumn>
-                        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="110"></GridColumn>
+                        <GridColumn Field=@nameof(Order.OrderID) HeaderText="First Name" Width="110"> </GridColumn>
+                        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Last Name" Width="110"></GridColumn>
+                        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Title" Width="110"></GridColumn>
                     </GridColumns>
                 </SfGrid>
             }
