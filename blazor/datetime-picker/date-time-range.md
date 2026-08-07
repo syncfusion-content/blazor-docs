@@ -11,7 +11,7 @@ documentation: ug
 
 ## DateTime Restriction
 
-DateTimePicker provides an option to select a date and time within a specified range by using the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Max) properties. Both `Min` and `Max` accept the same `TValue` as the component (for example, `DateTime?`). The Min value must be less than the Max value.
+DateTimePicker provides an option to select a date and time within a specified range by using the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Max) properties. The Min value must be less than the Max value.
 
 The `Value` property is validated against Min/Max based on the [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_StrictMode) setting. For details, see the [Strict Mode](./strict-mode) section.
 
@@ -32,7 +32,7 @@ The following code allows selecting a date within the range from the 7th to the 
 ![DateTime Selection in Blazor DateTimePicker](./images/blazor-datetimepicker-selection.webp)
 
 When Min and Max are configured:
-- With StrictMode enabled, out-of-range input is clamped to the nearest boundary (Min/Max) in both typed entry and popup selection, and invalid input reverts to the previous valid value.
+- With StrictMode enabled, out-of-range input is clamped to the nearest boundary (Min/Max) and invalid input reverts to the previous valid value.
 - With StrictMode disabled, the textbox allows out-of-range input and invalid input results in `null`. The input is highlighted with an error style to indicate an invalid or out-of-range entry.
 
 ```cshtml

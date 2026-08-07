@@ -202,4 +202,4 @@ The `OnRenderDayCell` event is triggered when each day cell of the calendar is r
 }
 ```
 
-N> The DateTimePicker currently supports the events listed above. Calendar-level events from the inner SfCalendar are also raised when the popup is open. Additional events may be introduced in future releases based on user requests. If the required event is not listed, submit a request on the [Feedback](https://www.syncfusion.com/feedback/blazor-components) portal.
+N> The DateTimePicker currently supports the events listed above. Additional events may be introduced in future releases based on user requests. If the required event is not listed, submit a request on the [Feedback](https://www.syncfusion.com/feedback/blazor-components) portal.
