@@ -7,7 +7,7 @@ control: Split Button
 documentation: ug
 ---
 
-# Icons and separator in Blazor Split Button component
+# Icons and separator in Blazor SplitButton component
 
 ## Split Button icons
 

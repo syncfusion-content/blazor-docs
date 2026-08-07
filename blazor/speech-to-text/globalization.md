@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor SpeechToText Component | Syncfusion®
-description: Checkout and learn about Globalization in Blazor SpeechToText component in Blazor Server App and Blazor WebAssembly App.
+title: Globalization in Blazor Speech To Text | Syncfusion®
+description: Enable Speech To Text localization to any culture and set right-to-left layout for languages like Arabic and Hebrew.
 platform: Blazor
 control: SpeechToText
 documentation: ug
 ---
 
-# Globalization in Blazor SpeechToText Component
+# Globalization in Blazor Speech To Text
 
 ## Localization
 

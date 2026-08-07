@@ -17,7 +17,7 @@ This section explains how to bind a value to the Calendar component in the follo
 
 ## One-Way Binding
 
-In one-way binding, Bind the value to the Calendar component directly for `Value` property as mentioned in the following code example. In one-way binding, you need to pass property or variable name along with `@` (For Ex: "@DateValue").
+In one-way binding, bind the value to the Calendar component directly for `Value` property as mentioned in the following code example. In one-way binding, you need to pass property or variable name along with `@` (For Ex: "@DateValue").
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -57,7 +57,6 @@ public DateTime? DateValue { get; set; } = DateTime.Now;
 ## Dynamic value binding
 
 Change the property value dynamically by manually calling the `StateHasChanged()` method inside public event of **Blazor Calendar component** only. This method notifies the component that its state has changed and queues a re-render.
-
 
 There is no need to call this method for native events since it is called after any lifecycle method has been called. It can also be invoked manually to trigger a re-render. Refer to the following example.
 
