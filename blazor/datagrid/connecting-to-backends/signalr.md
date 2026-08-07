@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Real-time Updates using SignalR in Blazor Data Grid.
+# Real-time Updates using SignalR in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports real-time data binding using **SignalR**, a powerful library for bi-directional communication between servers and clients. This approach enables live data updates without page refreshes, making it ideal for applications that require instant information delivery such as stock tickers, live dashboards, and real-time notifications.
 
