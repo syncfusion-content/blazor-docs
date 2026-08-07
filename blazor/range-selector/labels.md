@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Labels in Blazor Range Selector Component | SyncfusionÂ®
-description: Checkout and learn here all about labels in Blazor Range Selector component with examples and much more details.
+title: Labels in Blazor Range Selector | Syncfusion®
+description: Display multi-level DateTime labels in the Syncfusion Blazor Range Selector with grouping by years, quarters, months, weeks, days, hours, or minutes.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Labels in Blazor Range Selector Component
+# Labels in Blazor Range Selector
 
 ## Multi-level labels
 

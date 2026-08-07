@@ -1,13 +1,13 @@
 ---
 layout: post
-title: RTL in Blazor Range Selector Component | SyncfusionÂ®
-description: Checkout and learn here all about RTL in Blazor Range Selector component with examples and much more details.
+title: RTL in Blazor Range Selector | Syncfusion®
+description: Enable right-to-left rendering in the Syncfusion Blazor Range Selector for RTL languages using the EnableRtl property on the chart.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# RTL in Blazor Range Selector Component
+# RTL in Blazor Range Selector
 
 The Range Selector supports right-to-left (RTL), which can be enabled with the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_EnableRtl) property.
 

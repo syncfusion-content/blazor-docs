@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Range Selector in Web App | Syncfusion
-description: Check out and learn the documentation for getting started with Blazor Range Selector component in Blazor Web App.
+description: Step-by-step guide to add the Syncfusion Blazor Range Selector to a Blazor Web App using Visual Studio, VS Code, or the .NET CLI.
 platform: Blazor
 control: Range Selector
 documentation: ug

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Range in Blazor Range Selector Component | SyncfusionÂ®
-description: Checkout and learn here all about range in Blazor Range Selector component with examples and much more details.
+title: Range in Blazor Range Selector | Syncfusion®
+description: Select a date range in the Syncfusion Blazor Range Selector by dragging the thumbs, tapping labels, or binding the Value one-way or two-way.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Range in Blazor Range Selector Component
+# Range in Blazor Range Selector
 
 The Range Selector's left and right thumbs are used to indicate the selected range in the large collection of data. A range can be selected in the following ways:
 

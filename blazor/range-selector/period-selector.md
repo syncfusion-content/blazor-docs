@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Period Selector in Blazor Range Selector Component | SyncfusionÂ®
-description: Checkout and learn here all about period selector in Blazor Range Selector component with examples and much more details.
+title: Period Selector in Blazor Range Selector | Syncfusion®
+description: Add predefined time-interval buttons like 1M, 6M, YTD, and 1Y to the Syncfusion Blazor Range Selector period selector at the top or bottom.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Period Selector in Blazor Range Selector Component
+# Period Selector in Blazor Range Selector
 
 The period selector allows to choose a time range with specific periods.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in Blazor Range Selector Component | Syncfusion®
-description: Checkout and learn here all about tooltip in Blazor Range Selector component with examples and much more details.
+title: Tooltip in Blazor Range Selector | Syncfusion®
+description: Show the start and end values of the selected range in the Syncfusion Blazor Range Selector tooltip with DisplayMode Always or OnDemand.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Tooltip in Blazor Range Selector Component
+# Tooltip in Blazor Range Selector
 
 <!-- markdownlint-disable MD036 -->
 

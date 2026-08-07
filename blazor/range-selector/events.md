@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Range Selector Component | Syncfusion®
-description: Checkout and learn here all about events in Blazor Range Selector component with examples and much more details.
+title: Events in Blazor Range Selector | Syncfusion®
+description: Handle Syncfusion Blazor Range Selector events — Loaded, Changed, Resized, LabelRender, TooltipRender, SelectorRender, and OnPrintCompleted.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Events in Blazor Range Selector Component
+# Events in Blazor Range Selector
 
 This section describes about the Range Selector component's events, that is triggered when appropriate actions are performed. The events should be provided to the Range Selector through the **RangeNavigatorEvents** component.
 
@@ -23,7 +23,7 @@ The Range Selector component supports the following events.
 
 ## Loaded
 
-The [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Loaded) event triggers, after the Range Selector is rendered.
+The [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Loaded) event triggers, after the Range Selector is rendered. 
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
