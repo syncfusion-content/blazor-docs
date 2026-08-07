@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor AI AssistView Component | Syncfusion®
-description: Checkout and learn here all about Events with Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
+title: Events in Blazor AI AssistView | Syncfusion®
+description: Handle Blazor AI AssistView events like Created and PromptRequested to trigger actions when component loads or user submits a prompt.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 ---
 
-# Events in Blazor AI AssistView component
+# Events in Blazor AI AssistView
 
 This section describes the AI AssistView events that will be triggered when appropriate actions are performed. The following events are available in the AI AssistView component.
 

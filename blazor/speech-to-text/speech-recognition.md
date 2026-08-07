@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Speech recognition in Blazor SpeechToText Component | Syncfusion®
-description: Checkout and learn about Speech recognition in Blazor SpeechToText component in Blazor Server App and Blazor WebAssembly App.
+title: Speech recognition in Blazor Speech To Text | Syncfusion®
+description: Retrieve transcribed text using the Transcript property, set language locales for recognition, and enable interim results in Speech To Text.
 platform: Blazor
 control: SpeechToText
 documentation: ug
 ---
 
-# Speech recognition in Blazor SpeechToText component
+# Speech recognition in Blazor Speech To Text
 
 ## Retrieving transcripts
 

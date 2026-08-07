@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column Spanning in Blazor Tree Grid Component | Syncfusion®
-description: Check out here and learn more details about the column spanning in the Blazor Tree Grid component and much more details.
+title: Blazor TreeGrid Column Spanning | Syncfusion
+description: Learn how to use column spanning in Blazor TreeGrid to merge adjacent cells, improve data presentation, and enhance grid readability.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -114,7 +114,7 @@ Spanning in the Blazor TreeGrid can be disabled at the column(s) level by settin
     <TreeGridColumn HeaderText="<b>Schedule</b>" DisableHtmlEncode="false">
         <TreeGridColumns>
             <TreeGridColumn Field=@nameof(ProjectTask.StartDate) HeaderText="<b>Start Date</b>" DisableHtmlEncode="false" Type="ColumnType.Date" Format="MM/dd/yyyy" Width="140" TextAlign="TextAlign.Right"></TreeGridColumn>
-            <TreeGridColumn Field=@nameof(ProjectTask.EndDate) HeaderText="<b>End Date<b>" DisableHtmlEncode="false" Type="ColumnType.Date" Format="MM/dd/yyyy" Width="140" TextAlign="TextAlign.Right"></TreeGridColumn>
+            <TreeGridColumn Field=@nameof(ProjectTask.EndDate) HeaderText="<b>End Date</b>" DisableHtmlEncode="false" Type="ColumnType.Date" Format="MM/dd/yyyy" Width="140" TextAlign="TextAlign.Right"></TreeGridColumn>
         </TreeGridColumns>
     </TreeGridColumn>
     <TreeGridColumn Field=@nameof(ProjectTask.Status) HeaderText="<b>Status</b>" TextAlign="TextAlign.Center" DisableHtmlEncode="false" Width="140"></TreeGridColumn>

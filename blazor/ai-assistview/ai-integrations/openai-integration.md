@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  Azure OpenAI with Blazor AI AssistView Component | Syncfusion®
-description: Checkout and learn about Azure OpenAI with Blazor AI AssistView component in Blazor WebAssembly Application.
+title: Integrate Azure OpenAI With Blazor AI AssistView | Syncfusion®
+description: Integrate Azure OpenAI with Blazor AI AssistView to enable advanced conversational AI and natural language understanding in blazor applications.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 ---
 
-# Integrate Azure OpenAI with Blazor AI AssistView component
+# Integrate Azure OpenAI With Blazor AI AssistView
 
 The AI AssistView component integrates with [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai) to enable advanced conversational AI features in your applications. The component acts as a user interface, where user prompts are sent to the Azure OpenAI service via API calls, providing natural language understanding and context-aware responses.
 
