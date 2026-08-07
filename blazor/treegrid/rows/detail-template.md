@@ -9,7 +9,7 @@ documentation: ug
 
 # Detail Template in Blazor TreeGrid
 
-The detail template provides additional information about a particular row. By expanding the parent row, the child rows are expanded along with their detail template. The [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DetailTemplate) property accepts either the template string or HTML elements.
+The detail template provides additional information about a particular row. When a parent row is expanded, its child rows are displayed along with their detail templates. The [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridTemplates.html#Syncfusion_Blazor_TreeGrid_TreeGridTemplates_DetailTemplate) property accepts either the template string or HTML elements.
 
 {% tabs %}
 
@@ -46,7 +46,6 @@ The detail template provides additional information about a particular row. By e
 
 
 @code{
-    public Employee model = new Employee();
     public IEnumerable<Employee> TreeData { get; set; }
     protected override void OnInitialized()
     {
@@ -91,4 +90,4 @@ public class Employee
 
 {% endtabs %}
 
-![Blazor Tree Grid with Detail Template](../images/blazor-treegrid-detail-template.webp)
+![Blazor TreeGrid with Detail Template](../images/blazor-treegrid-detail-template.webp)

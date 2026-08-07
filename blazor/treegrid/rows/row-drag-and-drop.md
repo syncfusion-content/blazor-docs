@@ -3,7 +3,7 @@ layout: post
 title: Blazor TreeGrid Row Drag and Drop | Syncfusion
 description: Learn how to enable row drag and drop in Blazor TreeGrid to reorder rows, manage hierarchical data, and improve user interactions.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
@@ -11,7 +11,7 @@ documentation: ug
 
 Rows can be reordered within a TreeGrid, or dragged and dropped to another TreeGrid or custom control, by setting [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowRowDragAndDrop) to true.
 
-## Drag and drop within Tree Grid
+## Drag and drop within TreeGrid
 
 Row drag-and-drop enables moving rows within the same TreeGrid using the drag icon. To enable this, set [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowRowDragAndDrop) to true. Rows can be dropped above, below, or as a child of the target row, based on the drop indicator.
 
@@ -532,11 +532,11 @@ public class WrapData
 
 ![Drag and Drop within Blazor TreeGrid Rows](../images/blazor-treegrid-drag-and-drop-rows.webp)
 
-N> - Enable selection to use row drag-and-drop.  
-- For multiple-row drag, set SelectionSettings.Type to Multiple.  
+N> - Enable selection to use row drag-and-drop.
+- For multiple-row drag, set SelectionSettings.Type to Multiple.
 - [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_IsPrimaryKey) must be set on a column to perform row drag-and-drop operations.
 
-## Drag and drop to another Tree Grid
+## Drag and drop to another TreeGrid
 
 To drag and drop between two TreeGrids, enable [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowRowDragAndDrop) on both grids and set the [TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridRowDropSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridRowDropSettings_TargetID) in [RowDropSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridRowDropSettings.html) to the other grid’s ID.
 
@@ -1072,8 +1072,77 @@ N> - Set [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 The following events are triggered while dragging and dropping TreeGrid rows.
 
-[RowDragStarting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDragStarting) - Triggers when a row drag operation starts.
+* **[RowDragStarting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDragStarting)** — Triggers when a row drag operation starts.
 
-[RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDropped) - Triggers when the dragged row is dropped on the target element.
+* **[RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDropped)** — Triggers when the dragged row is dropped on the target element.
 
 
+{% tabs %}
+
+{% highlight razor %}
+
+@using TreeGridComponent.Data;
+@using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
+
+<SfTreeGrid DataSource="@TreeGridData" AllowRowDragAndDrop="true" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
+    <TreeGridEvents RowDragStarting="OnRowDragStarting" RowDropped="OnRowDropped" TValue="TreeData"></TreeGridEvents>
+    <TreeGridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></TreeGridSelectionSettings>
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" IsPrimaryKey="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+@code{
+    public List<TreeData> TreeGridData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TreeGridData = TreeData.GetSelfDataSource().ToList();
+    }
+
+    private void OnRowDragStarting(RowDragStartingEventArgs<TreeData> args)
+    {
+
+    }
+
+    private void OnRowDropped(RowDroppedEventArgs<TreeData> args)
+    {
+
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public int? Duration { get; set; }
+        public int? Progress { get; set; }
+        public string Priority { get; set; }
+        public int? ParentId { get; set; }
+
+        public static List<TreeData> GetSelfDataSource()
+        {
+            List<TreeData> TreeDataCollection = new List<TreeData>();
+            TreeDataCollection.Add(new TreeData() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null });
+            TreeDataCollection.Add(new TreeData() { TaskId = 2, TaskName = "Child Task 1", Duration = 5, Progress = 80, Priority = "Low", ParentId = 1 });
+            TreeDataCollection.Add(new TreeData() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, Priority = "Critical", ParentId = 2 });
+            TreeDataCollection.Add(new TreeData() { TaskId = 4, TaskName = "Child Task 3", Duration = 6, Progress = 77, Priority = "High", ParentId = 3 });
+            TreeDataCollection.Add(new TreeData() { TaskId = 5, TaskName = "Parent Task 2", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null });
+            return TreeDataCollection;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
