@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Sparkline Component | Syncfusion®
-description: Check out and learn about available events and event handling in the Blazor Sparkline component and much more details.
+title: Events in Blazor Sparkline Charts | Syncfusion®
+description: Handle the Blazor Sparkline Charts events such as Loaded, OnPointRendering, and OnPointRegionMouseClick to react to load lifecycle and point interaction.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Events in Blazor Sparkline Component
+# Events in Blazor Sparkline Charts
 
 This section describes the Sparkline component's events that are triggered when actions are performed. Events are provided through the [SparklineEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html) component.
 

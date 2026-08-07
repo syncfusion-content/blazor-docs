@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started with Blazor Sparkline Charts in Web App | Syncfusion
-description: Check out and learn the documentation for getting started with Blazor Sparkline Charts component in Blazor Web App.
+description: Get started with Syncfusion Blazor Sparkline Charts in a Blazor Web App: install the NuGet package, register the script, and add SfSparkline.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Getting started with Blazor Sparkline Charts in Blazor Web App
+# Getting Started with Blazor Sparkline Charts in Web App
 
 This section briefly explains how to include [Blazor Sparkline Charts](https://www.syncfusion.com/blazor-components/blazor-sparkline) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

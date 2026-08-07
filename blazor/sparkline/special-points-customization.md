@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Special Points Customization in Blazor Sparkline | Syncfusion®
-description: Learn here all the features about special points customization in Blazor Sparkline component and much more details.
+title: Special Points Customization in Blazor Sparkline Charts | Syncfusion®
+description: Customize special points in the Blazor Sparkline Charts by setting StartPoint, EndPoint, HighPoint, LowPoint, NegativePoint, and TiePoint colors.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Special Points Customization in Blazor Sparkline Component
+# Special Points Customization in Blazor Sparkline Charts
 
 ## Add Custom Color for Special Points
 
