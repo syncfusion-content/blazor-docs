@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in Blazor Ribbon Component | Syncfusion®
-description: Checkout and learn about Tooltip in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
-platform: Blazor
+title: Tooltip in Blazor Ribbon | Syncfusion
+description: Learn how to show additional information in the Blazor Ribbon by adding tooltips that appear when the user hovers over a Ribbon item.
 control: Ribbon
+platform: Blazor
 documentation: ug
 ---
 
-# Tooltip in Blazor Ribbon component
+# Tooltip in Blazor Ribbon
 
 The Ribbon component supports tooltip to show additional information in the Ribbon items. The tooltip appears when the user hovers over a Ribbon item. The tooltip can be configured using the [TooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_TooltipSettings) property within the [RibbonItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html) directive.
 
