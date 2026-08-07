@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor Pivot Table Component | Syncfusion®
-description: Learn about globalization in Blazor Pivot Table component including localization and RTL support with examples and much more details.
+title: Globalization in Blazor Pivot Table | Syncfusion
+description: Learn how to localize the Blazor Pivot Table text and enable right-to-left rendering for Arabic, Farsi, and Urdu via the EnableRtl property.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Globalization in Blazor Pivot Table Component
+# Globalization in Blazor Pivot Table
 
 ## Localization
 

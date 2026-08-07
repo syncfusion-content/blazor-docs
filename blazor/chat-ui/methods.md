@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Methods in Blazor Chat UI Component | Syncfusion®
-description: Checkout and learn here all about Methods with Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Methods in Blazor Chat UI | Syncfusion®
+description: Use Blazor Chat UI methods like UpdateMessageAsync to edit messages and ScrollToBottomAsync to navigate to the latest message in conversations.
 platform: Blazor
 control: Chat UI
 documentation: ug
 ---
 
-# Methods in Blazor Chat UI component
+# Methods in Blazor Chat UI
 
 ## Edit message
 

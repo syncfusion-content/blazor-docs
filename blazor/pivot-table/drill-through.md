@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Drill Through in Blazor Pivot Table Component | Syncfusion®
-description: Learn about drill through feature in Blazor Pivot Table component to view raw data with examples and much more details.
+title: Drill Through in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table shows the raw, unaggregated records behind any aggregated value cell in a separate data grid when AllowDrillThrough is true.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Drill Through in Blazor Pivot Table Component
+# Drill Through in Blazor Pivot Table
 
 The drill-through feature in the Pivot Table component allows users to view the raw, unaggregated data behind any aggregated cell in the pivot table. To enable this feature, set the [AllowDrillThrough](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowDrillThrough) property to **true**. By double-clicking an aggregated cell, users can view its detailed raw data in a data grid displayed in a new window. The new window shows the row header, column header, and measure name of the selected cell at the top. Additionally, users can include or exclude fields available in the data grid using the column chooser option.
 

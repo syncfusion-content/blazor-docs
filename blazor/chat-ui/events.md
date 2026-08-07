@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Chat UI Component | Syncfusion®
-description: Checkout and learn here all about Events with Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Events in Blazor Chat UI | Syncfusion®
+description: Handle Blazor Chat UI events like Created (component ready), MessageSend (outgoing messages), and UserTyping (activity detection) for custom logic.
 platform: Blazor
 control: Chat UI
 documentation: ug
 ---
 
-# Events in Blazor Chat UI component
+# Events in Blazor Chat UI
 
 This section describes the Chat UI events that will be triggered when appropriate actions are performed. The following events are available in the Chat UI component.
 
