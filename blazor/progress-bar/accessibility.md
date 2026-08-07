@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Progress Bar | Syncfusion®
-description: Learn about accessibility and keyboard navigation in the Syncfusion Blazor Progress Bar component.
+description: Learn about accessibility, keyboard navigation, and WCAG 2.2 compliance in the Syncfusion Blazor Progress Bar.
 platform: Blazor
 control: Progress Bar
 documentation: ug
