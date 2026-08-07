@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Ribbon in Blazor Web App | Syncfusion®
-description: Check out the documentation for getting started with Blazor Ribbon Components in Blazor Web App with examples and much more details.
-platform: Blazor
+title: Getting Started with Blazor Ribbon in Web App | Syncfusion
+description: Learn how to get started with the Blazor Ribbon in Web App and explore setup, configuration, and core feature examples for building ribbon interfaces.
 control: Ribbon
+platform: Blazor
 documentation: ug
 ---
 
-# Getting Started with Blazor Ribbon in Blazor Web App
+# Getting Started with Blazor Ribbon in Web App
 
 This section explains how to add the [Blazor Ribbon](https://www.syncfusion.com/blazor-components/blazor-ribbon) component to your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
