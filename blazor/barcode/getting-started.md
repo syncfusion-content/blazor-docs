@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Barcode Generator in WASM App  | Syncfusion
-description: Check out and learn about getting started with Blazor Barcode Generator component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Barcode in WASM App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Barcode Generator control. Explore setup, features, examples, and customization options.
 platform: Blazor
 control: Barcode Generator
 documentation: ug
