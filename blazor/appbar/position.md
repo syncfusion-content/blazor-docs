@@ -9,15 +9,17 @@ documentation: ug
 
 # Positioning in Blazor AppBar Component
 
-The position of the AppBar can be set using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position) and [IsSticky](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_IsSticky) property. The AppBar provides the following options for setting its position:
+The position of the AppBar can be set using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position) and [IsSticky](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_IsSticky) properties. By default, the `Position` property is set to `AppBarPosition.Top` and the `IsSticky` property is set to `false`. The AppBar provides the following options for setting its position:
 
 * Top AppBar
 * Bottom AppBar
 * Sticky AppBar
 
+N> For the Sticky AppBar to behave as expected during scrolling, the parent container must be a scrollable element (for example, with `overflow-y: scroll`) and use `position: relative`.
+
 ### Top AppBar
 
-The top AppBar is the default one in which it positions the AppBar at the top of the content.
+The top AppBar is the default position, displaying the AppBar at the top of the content.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -149,3 +151,10 @@ This position can be set to the AppBar by setting `true` to the property [IsStic
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtVHXHCChwMUKDJV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Sticky Position](./images/sticky_appbar.webp)" %}
+
+## See Also
+
+* [Getting Started with Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/getting-started)
+* [Designing the User Interface in Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/design)
+* [Styles and Appearances in Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/style-and-appearance)
+* [Accessibility in Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/accessibility)

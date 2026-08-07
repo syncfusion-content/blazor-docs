@@ -7,9 +7,15 @@ control: Carousel
 documentation: ug
 ---
 
-# Load webp format image with Blazor Carousel Component
+# Load WebP images in Blazor Carousel component
 
-You can load the carousel image in the webp format, which aims to create smaller, better-looking images. Choosing webp as your image format can significantly improve your website's performance without sacrificing visual quality. webp images are significantly smaller in file size compared to formats like JPEG and PNG. This results in faster load times and less data usage. To achieve this, you can convert your image format to webp and pass them to Carousel items. The following sample illustrates how to load a carousel image in the webp format component.
+The Carousel can display images in [WebP](https://developers.google.com/speed/webp) format by setting the `src` attribute of each slide's `<img>` element to a WebP file. The Carousel component requires no special configuration for WebP; the browser handles the rendering natively.
+
+WebP produces smaller file sizes than formats like JPEG and PNG, resulting in faster load times and reduced data usage. To use WebP in the Carousel, convert your images to WebP using a tool such as [`cwebp`](https://developers.google.com/speed/webp/download), [Squoosh](https://squoosh.app/), or any image-editing application, and reference the resulting `.webp` files in your `CarouselItem` content.
+
+> WebP is supported by all modern browsers. If you need to support legacy browsers, provide a fallback using the `<picture>` element with a JPEG or PNG `<source>` and the WebP source.
+
+The following example demonstrates how to load Carousel images in WebP format. You can also add `loading="lazy"` to each `<img>` element to defer offscreen images and further improve performance.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -60,3 +66,10 @@ You can load the carousel image in the webp format, which aims to create smaller
 
 </style>
 ```
+
+## See also
+
+* [Getting started with Blazor Carousel](https://blazor.syncfusion.com/documentation/carousel/getting-started)
+* [Populating items in Blazor Carousel](https://blazor.syncfusion.com/documentation/carousel/populating-items)
+* [Animations and transitions in Blazor Carousel](https://blazor.syncfusion.com/documentation/carousel/animations-and-transitions)
+* [WebP image format](https://developers.google.com/speed/webp)
