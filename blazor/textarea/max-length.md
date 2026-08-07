@@ -14,7 +14,7 @@ Use the [MaxLength property](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 {% tabs %}
 {% highlight razor %}
 
-<SfTextArea Placeholder='Enter the Address' MaxLength="20" FloatLabelType='FloatLabelType.Auto'></SfTextArea>
+<SfTextArea Placeholder='Enter the Address' MaxLength="20" FloatLabelType='@FloatLabelType.Auto'></SfTextArea>
 
 {% endhighlight %}
 {% endtabs %}

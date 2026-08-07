@@ -83,7 +83,7 @@ When using the `Template` renderer, validation messages can be displayed using a
 
 ![Blazor DataForm showing validation messages in tooltips for templated editors](images/blazor_dataform_tooltip_with_templates.webp)
 
-## Validation summary 
+## Validation summary
 
 Use the [ValidationSummary](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.validationsummary?view=aspnetcore-8.0) tag to display a consolidated list of validation messages. It must be placed within the `FormValidator` tag to function correctly. The example below demonstrates its usage.
 

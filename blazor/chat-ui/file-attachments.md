@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Attachments in Blazor Chat UI Component | Syncfusion®
-description: Checkout and learn here all about Attachments with Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: File Attachments in Blazor Chat UI | Syncfusion®
+description: Enable file uploads in Blazor Chat UI with ChatUIAttachment tag, SaveUrl/RemoveUrl endpoints, and AllowedFileTypes filtering for shared documents.
 platform: Blazor
 control: Chat UI
 documentation: ug
 ---
 
-# File Attachments in Blazor Chat UI component
+# File Attachments in Blazor Chat UI
 
 The `Attachment` support in Chat UI enables the users to upload and send files (images, documents, and more) alongside messages for richer, more contextual conversations. This enhances the interaction by allowing users to provide additional context through files.
 

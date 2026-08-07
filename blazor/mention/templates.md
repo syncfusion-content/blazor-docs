@@ -9,7 +9,7 @@ documentation: ug
 
 # Templates in Blazor Mention Component
 
-The Mention is a templated blazor component, that allow you to customize various part of the UI using template parameters. It allows you to render custom components or content based on your own logic. The Mention has been provided with several options to customize each suggestion list items.
+The Mention is a templated Blazor component that allows you to customize various parts of the UI using template parameters. It allows you to render custom components or content based on your own logic. The Mention has been provided with several options to customize each suggestion list items.
 
 To get started quickly with templates in Blazor Mention Component, you can check the video below.
 
