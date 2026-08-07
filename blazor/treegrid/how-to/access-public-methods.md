@@ -17,18 +17,17 @@ In many applications, TreeGrid actions need to be triggered from outside the Tre
 - Select a row programmatically after a search operation.
 - Open an edit dialog based on custom business logic.
 
-To support these scenarios, the Blazor TreeGrid provides public methods that can be accessed through a component reference.
-
+To support these scenarios, the Blazor TreeGrid provides public methods that can be accessed programmatically through a component reference obtained using the `@ref` directive.
 ## When to use public methods
 
-- Trigger TreeGrid actions from custom buttons, toolbars, or menus.
+- Invoke TreeGrid actions such as print, refresh, or select from external UI controls.
 - Refresh the TreeGrid after updating data from an API or database.
 - Select, edit, or expand records based on actions performed in another component.
 - Synchronize TreeGrid behavior with dialogs, forms, dashboards, or custom workflows.
 
 **Access the TreeGrid instance**
 
-Before invoking a TreeGrid public method, a reference to the TreeGrid component instance must be obtained. The component instance provides access to TreeGrid properties and methods and can be accessed using the `@ref` directive.
+Before invoking a TreeGrid public method, obtain a reference to the TreeGrid component instance using the `@ref` directive. The component reference provides access to the TreeGrid's public properties and methods. The reference is assigned after the component is rendered and then can  be used to invoke public methods programmatically.
 
 ```razor
 <SfTreeGrid @ref="TreeGrid"></SfTreeGrid>
