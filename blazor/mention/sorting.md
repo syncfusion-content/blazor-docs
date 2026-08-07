@@ -13,7 +13,7 @@ The [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDown
 
 SortOrder     | Description
 ------------  | -------------
-  `Ascending` | The suggestion list items will be sorted in ascending order, from lowest to highest..
+  `Ascending` | The suggestion list items will be sorted in ascending order, from lowest to highest.
   `Descending`| The suggestion list items will be sorted in descending order, from highest to lowest.
   `None`      | The suggestion list items will not be sorted at all and will be displayed in their original order.
 

@@ -24,7 +24,7 @@ When the dialog is initially hidden, the Blazor Range Slider may be initialized 
     <DialogTemplates>
         <Header>Slider in Dialog Popup</Header>
         <Content>
-            <SfSlider @ref="sliderObj" Value=@RangeValue Type="SliderType.Range"></SfSlider>
+            <SfSlider @ref="sliderObj" TValue="int[]" Min="0" Max="100" Value="@RangeValue" Type="SliderType.Range"></SfSlider>
         </Content>
     </DialogTemplates>
 </SfDialog>
@@ -33,14 +33,18 @@ When the dialog is initially hidden, the Blazor Range Slider may be initialized 
     SfSlider<int[]>? sliderObj;
     public bool IsVisible { get; set; } = false;
     public int[] RangeValue = { 30, 70 };
-    public void Opened()
+    public async Task Opened()
     {
-       sliderObj?.RepositionAsync();
+       // Await the reposition so the dialog animation has completed and the slider
+       // can read the final container size before recomputing its layout.
+       if (sliderObj != null)
+       {
+           await sliderObj.RepositionAsync();
+       }
     }
     protected void ToggleDialog()
     {
         IsVisible = !IsVisible;
-        StateHasChanged();
     }
 }
 

@@ -44,22 +44,22 @@ The complete code for the numeric formatting examples is shown below.
 <div class="control-section">
     <div class="content-wrapper">
         <div class="sliderwrap">
-            <label class="labeltext userselect">Default Slider</label>
-            <SfSlider @bind-Value="@Value1">
+            <label class="labeltext userselect">Default Slider (unit suffix: km)</label>
+            <SfSlider TValue="int" @bind-Value="@Value1">
                 <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="##.##km"> </SliderTicks>
                 <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="##.##km"></SliderTooltip>
             </SfSlider>
         </div>
         <div class="sliderwrap">
-            <label class="labeltext userselect">MinRange Slider</label>
-            <SfSlider @bind-Value="@Value2" Type=SliderType.MinRange>
+            <label class="labeltext userselect">MinRange Slider (decimal places)</label>
+            <SfSlider TValue="int" @bind-Value="@Value2" Type="SliderType.MinRange">
                 <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="##.#00"> </SliderTicks>
-                    <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="##.#00"></SliderTooltip>
+                <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="##.#00"></SliderTooltip>
             </SfSlider>
         </div>
         <div class="sliderwrap">
-            <label class="labeltext userselect">Range Slider</label>
-            <SfSlider @bind-Value="@Value" Type=SliderType.Range>
+            <label class="labeltext userselect">Range Slider (leading zeros)</label>
+            <SfSlider TValue="int[]" @bind-Value="@Value" Type="SliderType.Range">
                 <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="0000#"> </SliderTicks>
                 <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="0000#"></SliderTooltip>
             </SfSlider>
