@@ -66,7 +66,7 @@ The following code demonstrates an array of int as the data source for the Combo
 
 ## Object binding
 
-Bind object data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_Value) attribute by setting TValue to the appropriate type. Ensure the field mapped to [ComboBoxFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_Value) corresponds to the bound value.
+Bind object data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute by setting `TValue` to the appropriate type. Ensure the field mapped to [ComboBoxFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_Value) corresponds to the bound value.
 
 In the following example, the Name column is mapped to the Value field.
 
@@ -80,7 +80,7 @@ In the following example, the Name column is mapped to the Value field.
 
 ## Enum binding
 
-Bind the enum data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of ComboBox component. The following code helps you to get a string value from the enumeration data.
+Bind the enum data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of the ComboBox component. The following code helps you to get a string value from the enumeration data.
 
 {% highlight cshtml %}
 
@@ -94,7 +94,7 @@ Bind the enum data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Sy
 
 Use the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowClearButton) property to specify whether to show or hide the clear button. When the clear button is clicked, the `Value`, `Text`, and `Index` properties are reset to null.
 
-N> If TValue is non-nullable, clearing sets the default value for the type. If TValue is nullable, clearing sets null. For example, if TValue is int, clearing sets 0; if TValue is int?, clearing sets null.
+N> If `TValue` is non-nullable, clearing sets the default value for the type. If `TValue` is nullable, clearing sets null. For example, if `TValue` is `int`, clearing sets 0; if `TValue` is `int?`, clearing sets null.
 
 The following sample demonstrates using string as TValue. Clearing the value sets it to null, which is the default for that type.
 

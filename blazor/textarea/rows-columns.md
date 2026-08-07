@@ -16,8 +16,8 @@ The TextArea size can be tailored for layout and readability using properties th
 {% tabs %}
 {% highlight razor %}
 
-<SfTextArea Placeholder='Enter your comments' RowCount= "3" ColumnCount = '35' ></SfTextArea>
-<SfTextArea Placeholder='Enter your comments' RowCount= "5" ColumnCount = '40' ></SfTextArea>
+<SfTextArea Placeholder='Enter your comments' RowCount="3" ColumnCount="35"></SfTextArea>
+<SfTextArea Placeholder='Enter your comments' RowCount="5" ColumnCount="40"></SfTextArea>
 
 {% endhighlight %}
 {% endtabs %}

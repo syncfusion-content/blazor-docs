@@ -1,13 +1,13 @@
 ---
 layout: post
-title: SQL database provider in Blazor File Manager Component | Syncfusion®
-description: Checkout and learn here all about SQL database file system provider in Blazor File Manager component and much more details. 
-platform: Blazor
+title: SQL Database Provider in Blazor File Manager | Syncfusion
+description: Learn how to use the SQL database file system provider in the Blazor File Manager to manage files stored in a SQL Server table.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# SQL database file system provider
+# SQL Database Provider in Blazor File Manager
 
 To get started with the SQL database file system provider, ensure that a SQL Server instance or LocalDB is available and properly configured. A database with the required schema to manage files and folders should be created, and a valid connection string must be defined in the application configuration to establish connectivity.
 
