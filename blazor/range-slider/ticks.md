@@ -65,12 +65,14 @@ Set the minimum (start) and maximum (end) values using the [`Min`](https://help.
 
 ## ValueChanged
 
-The [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_ValueChanged) property of the Blazor Range Slider component allows you to define a callback method that will be invoked whenever the value of the Slider changes. This property enables you to capture the updated value of the Slider and perform custom actions based on the new value. The callback method can be used to handle any logic associated with the Slider value change, such as updating other parts of the application, triggering events, or displaying notifications.
+The [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_ValueChanged) property of the Blazor Range Slider component allows you to define a callback method that is invoked whenever the value of the Slider changes. This property enables you to capture the updated value of the Slider and perform custom actions based on the new value. The callback method can be used to handle any logic associated with the Slider value change, such as updating other parts of the application, triggering events, or displaying notifications.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Inputs
 @inject IJSRuntime JSRuntime
+
+<p>Current value: @value</p>
 
 <SfSlider TValue="int" Step="1" Min="1" Max="20" Value="value" ValueChanged="OnValueChanged">
     <SliderTooltip IsVisible="true" ShowOn="TooltipShowOn.Always" Placement="TooltipPlacement.After"></SliderTooltip>
@@ -81,8 +83,9 @@ The [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Input
     public void OnValueChanged(int newValue)
     {
         // Update the value variable with the new value
-        value = newValue; 
-        // For example, you can display the new value using an alert:
+        value = newValue;
+        // For example, you can display the new value using an alert.
+        // Guard against pre-render (Blazor Server) by checking JSRuntime availability.
         JSRuntime.InvokeVoidAsync("alert", $"Slider value changed to: {value}");
     }
 }

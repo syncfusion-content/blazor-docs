@@ -1,52 +1,54 @@
 ---
 layout: post
-title: Getting Started with Blazor Inline AI Assist Component | Syncfusion®
-description: Check out and learn about getting started with Blazor Inline AI Assist Component in Blazor WebAssembly App.
+title: Getting started with Inline AI Assist in Blazor Web App | Syncfusion®
+description: Check out the documentation for getting started with Blazor Inline AI Assist Component in Blazor Web App.
 platform: Blazor
 control: Inline AI Assist
 documentation: ug
 ---
 
-# Getting Started with Blazor Inline AI Assist in Blazor WASM App
+# Getting Started with Blazor Inline AI Assist in Blazor Web App
 
-This section briefly explains how to include the [Blazor Inline AI Assist](https://www.syncfusion.com/blazor-components/blazor-inline-ai-assist) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Inline AI Assist](https://www.syncfusion.com/blazor-components/blazor-inline-ai-assist) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-## Create a new Blazor WebAssembly (Standalone) App
+## Create a new Blazor Web App
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-Run the following command to create a new Blazor WebAssembly App.
+Run the following command to create a new Blazor Web App.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
-dotnet new blazorwasm -o BlazorApp
-cd BlazorApp
+dotnet new blazor -o BlazorWebApp --interactivity Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
 
-Alternatively, create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
 {% endtabcontent %}
 
 {% tabcontent .NET CLI %}
 
-Run the following command to create a new Blazor WebAssembly App.
+Run the following command to create a new Blazor Web App.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
-dotnet new blazorwasm -o BlazorApp
-cd BlazorApp
+dotnet new blazor -o BlazorWebApp --interactivity Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
@@ -55,9 +57,11 @@ cd BlazorApp
 
 {% endtabcontents %}
 
+N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
+
 ## Install the required Blazor packages
 
-Install the [Syncfusion.Blazor.InteractiveChat](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+Install the [Syncfusion.Blazor.InteractiveChat](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project.
 
 {% tabcontents %}
 
@@ -113,7 +117,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.InteractiveChat` namespaces.
+After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.InteractiveChat` namespaces.
 
 {% tabs %}
 {% highlight C# tabtitle="_Imports.razor" %}
@@ -126,7 +130,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service and include the required namespace reference `using Syncfusion.Blazor;` at the top.
+Open the **Program.cs** file in Blazor Web App and register the Blazor service and include the required namespace reference `using Syncfusion.Blazor;` at the top. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -138,20 +142,20 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) at the end of the `<head>` section in the **~wwwroot/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) at the end of the `<head>` section in the **App.razor** file.
 
 {% tabs %}
-{% highlight html tabtitle="index.html" %}
+{% highlight razor tabtitle="App.razor" %}
 
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 
 {% endhighlight %}
 {% endtabs %}
 
-Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **~wwwroot/index.html** file to enable Inline AI Assist functionality.
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **App.razor** file to enable Inline AI Assist functionality.
 
 {% tabs %}
-{% highlight html tabtitle="index.html" %}
+{% highlight razor tabtitle="App.razor" %}
 
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
@@ -160,10 +164,14 @@ Include the required [script references](https://blazor.syncfusion.com/documenta
 
 ## Add Blazor Inline AI Assist component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Inline AI Assist](https://www.syncfusion.com/blazor-components/blazor-inline-ai-assist) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Inline AI Assist](https://www.syncfusion.com/blazor-components/blazor-inline-ai-assist) component inside the `.Client` project razor file.
+
+N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@rendermode InteractiveAuto
 
 @using Syncfusion.Blazor.InteractiveChat
 
@@ -196,10 +204,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
             popup-based interactions.
         </p>
     </div>
-    <SfInlineAIAssist @ref="inlineAssist"
-                      RelateTo="#summarizeButton"
-                      Target="#container"
-                      PromptRequested="PromptRequest">
+    <SfInlineAIAssist @ref="inlineAssist" RelateTo="#summarizeButton" Target="#container" PromptRequested="PromptRequest">
     </SfInlineAIAssist>
 </div>
 @code 
@@ -221,8 +226,6 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrRXQrXKASSLToH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Inline AI Assist sample](./images/inline-ai-assist-sample.webp)" %}
-
 ## Run the application
 
 {% tabcontents %}
@@ -235,11 +238,13 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 {% tabcontent Visual Studio Code %}
 
-Open the terminal and run the following command.
+Open the terminal and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
+cd ..
+cd BlazorWebApp
 dotnet run
 
 {% endhighlight %}
@@ -249,11 +254,13 @@ dotnet run
 
 {% tabcontent .NET CLI %}
 
-Open the command prompt and run the following command.
+Open the command prompt and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
+cd ..
+cd BlazorWebApp
 dotnet run
 
 {% endhighlight %}
@@ -262,6 +269,8 @@ dotnet run
 {% endtabcontent %}
 
 {% endtabcontents %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrRXQrXKASSLToH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Inline AI Assist sample](./images/inline-ai-assist-sample.webp)" %}
 
 ## Response display modes
 
@@ -272,7 +281,6 @@ Responses can be shown in two modes: `Inline` (updates content in-place) and `Po
 
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Buttons
-
 <style>
     #editableText {
         width: 100%;
@@ -332,6 +340,7 @@ Responses can be shown in two modes: `Inline` (updates content in-place) and `Po
     {
         await inlineAssist.ShowPopupAsync();
     }
+
     private async Task OnResponseModeChangeAsync(ChangeEventArgs args)
     {
         if (Enum.TryParse<ResponseDisplayMode>(args.Value?.ToString(), out var mode))
@@ -349,4 +358,3 @@ Responses can be shown in two modes: `Inline` (updates content in-place) and `Po
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htrdtwBjgTZSOjQm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Inline AI Assist response modes](./images/inline-ai-assist-response-modes.webp)" %}
 
 > **Note:** Starting from version 33.1x, when a user submits a prompt to the Inline AI Assist, the component automatically scrolls and focuses on the latest prompt and response. This behavior eliminates the need for users to manually scroll down to see the new response, ensuring they always view the most recent AI response without interruption. Prior to version 33.1x, the previous responses remained visible when new responses were added.
-

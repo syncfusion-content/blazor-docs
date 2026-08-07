@@ -13,7 +13,7 @@ This section lists the TextBox events and when they are triggered during user in
 
 ## Blur
 
-The [`Blur`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Blur) event triggers when the TextBox loses focus.
+The [`Blur`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Blur) event triggers when the TextBox loses focus. The event argument is [`BlurEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.BlurEventArgs.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -21,7 +21,7 @@ The [`Blur`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTe
 <SfTextBox Blur="@BlurHandler"></SfTextBox>
 
 @code {
-    private void BlurHandler(FocusOutEventArgs args)
+    private void BlurHandler(BlurEventArgs args)
     {
         // Here you can customize your code
     }
@@ -64,7 +64,7 @@ The [`Destroyed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs
 
 ## Focus
 
-The [`Focus`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Focus) event triggers when the TextBox receives focus.
+The [`Focus`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Focus) event triggers when the TextBox receives focus. The event argument is [`FocusEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FocusEventArgs.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -98,7 +98,7 @@ The [`Input`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfT
 
 ## ValueChange
 
-The [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_ValueChange) event triggers when the TextBox value is committed (typically on focus out) and has changed since it received focus.
+The [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_ValueChange) event triggers when the TextBox value is committed (typically on focus out) and has changed since it received focus. The event argument is [`ChangedEventArgs<TValue>`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.ChangeEventArgs-1.html), which exposes the previous and current values through its `PreviousValue` and `Value` properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -106,7 +106,7 @@ The [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inpu
 <SfTextBox ValueChange="@ValueChangeHandler"></SfTextBox>
 
 @code {
-    private void ValueChangeHandler(ChangedEventArgs args)
+    private void ValueChangeHandler(ChangedEventArgs<string> args)
     {
         // Here you can customize your code
     }
@@ -123,7 +123,7 @@ The `ValueChanged` event is the parameter callback that fires when the `Value` p
 <SfTextBox ValueChanged="@ValueChangedHandler"></SfTextBox>
 
 @code {
-    private void ValueChangedHandler(String args)
+    private void ValueChangedHandler(string value)
     {
         // Here you can customize your code
     }
