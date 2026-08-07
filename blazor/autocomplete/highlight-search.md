@@ -44,6 +44,6 @@ Customize the appearance of the highlighted text using the `.e-highlight` class.
 
 {% include_relative code-snippet/highlight-search/highlight-style.razor %}
 
-{% endhighlight %} 
+{% endhighlight %}
 
 ![Blazor AutoComplete custom highlight style using the e-highlight class](./images/highlight-search/blazor_autocomplete_highlight-style.webp)
