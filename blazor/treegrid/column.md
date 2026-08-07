@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Columns in Blazor TreeGrid Component | Syncfusion®
-description: Checkout and learn how to define and configure columns in the Blazor TreeGrid component and much more details.
+title: Blazor TreeGrid Columns | Syncfusion
+description: Learn how to define, configure, and customize columns in Blazor TreeGrid for improved data presentation and user experience.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Columns in Blazor TreeGrid Component
+# Columns in Blazor TreeGrid
 
 Column definitions act as the data source schema for the TreeGrid and determine how values render. TreeGrid operations such as sorting, filtering, and searching operate based on the column definitions. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component is required to map data source values to TreeGrid columns.
 

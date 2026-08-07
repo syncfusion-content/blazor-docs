@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Rows in Blazor TreeGrid Component | Syncfusion®
-description: Check out here and learn more the features about rows in the Blazor TreeGrid component and much more details.
+title: Blazor TreeGrid Rows | Syncfusion
+description: Learn how to customize rows in Blazor TreeGrid with row styles, heights, hover effects, pinning, and advanced row settings.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Rows in Blazor TreeGrid Component
+# Rows in Blazor TreeGrid
 
 A row represents a single record fetched from the data source. Rows are the fundamental building blocks of the TreeGrid and can display hierarchical data through parent-child relationships.
 

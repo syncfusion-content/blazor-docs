@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Detail Template in Blazor TreeGrid Component | Syncfusion®
-description: Check out here and learn more details about the Detail Template in the Blazor TreeGrid component and much more detail.
+title: Blazor TreeGrid Detail Template | Syncfusion
+description: Learn how to use detail templates in Blazor TreeGrid to display expandable content, nested data, and additional row details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Detail Template in Blazor TreeGrid Component
+# Detail Template in Blazor TreeGrid
 
 The detail template provides additional information about a particular row. When a parent row is expanded, its child rows are displayed along with their detail templates. The [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridTemplates.html#Syncfusion_Blazor_TreeGrid_TreeGridTemplates_DetailTemplate) property accepts either the template string or HTML elements.
 
