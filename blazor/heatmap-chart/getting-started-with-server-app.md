@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started with Blazor HeatMap Chart in Server App | Syncfusion
-description: Check out and learn about the documentation for getting started with Blazor HeatMap Chart Component in Blazor Server App.
+description: Learn how to get started with the Syncfusion Blazor HeatMap Chart control. Explore setup, features, examples, and customization options.
 platform: Blazor
-component: HeatMap Chart
+control: HeatMap Chart
 documentation: ug
 ---
 
-# Getting Started with Blazor HeatMap Chart in Blazor Server App
+# Getting Started with Blazor HeatMap Chart in Server App
 
 This section briefly explains how to include [Blazor HeatMap Chart](https://www.syncfusion.com/blazor-components/blazor-heatmap-chart) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

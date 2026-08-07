@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Palette in Blazor HeatMap Chart Component | Syncfusion®
-description: Checkout and learn here all the features about Palette in Blazor HeatMap Chart component and much more details.
+title: Palette in Blazor HeatMap Chart | Syncfusion®
+description: Apply gradient or fixed color palettes to Blazor HeatMap Chart cells to map data values to color ranges and stops.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
 ---
 
-# Palette in Blazor HeatMap Chart Component
+# Palette in Blazor HeatMap Chart
 
 In heat map, each data point is displayed as a cell with applied color based on the data value. The palette in the heat map is used to define the color range for cells and gradient type for colors. You can define the colors either in RGB or hex codes using the `Color` property in the `HeatMapPalette`. The defined colors are applied to the cell background based on the palette type and cell value.
 

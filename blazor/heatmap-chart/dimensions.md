@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Dimensions in Blazor HeatMap Chart Component | Syncfusion®
-description: Checkout and learn here all about Dimensions in Blazor HeatMap Chart component and much more details.
+title: Dimensions in Blazor HeatMap Chart | Syncfusion®
+description: Set the Blazor HeatMap Chart size in pixels or as a percentage of the container using the Width and Height properties.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
 ---
 
-# Dimensions in Blazor HeatMap Chart Component
+# Dimensions in Blazor HeatMap Chart
 
 ## Size for heat map
 

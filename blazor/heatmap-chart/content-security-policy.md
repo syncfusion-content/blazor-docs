@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Heatmap - Strict CSP Feature Limitations | Syncfusion®
-description: Details on features in Blazor Heatmap Chart that require Content Security Policy (CSP) relaxation and much more details.
+title: Content Security Policy in Blazor HeatMap Chart | Syncfusion®
+description: Learn which Blazor HeatMap Chart features work under strict Content Security Policy and which require unsafe-inline directives.
 platform: Blazor
-control: Heatmap
+control: HeatMap Chart
 documentation: ug
 ---
 
-# Heatmap - Content Security Policy Limitations
+# Content Security Policy in Blazor HeatMap Chart
 
 ## What's supported under strict CSP?
 

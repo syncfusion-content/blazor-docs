@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started with Blazor HeatMap Chart in WASM App | Syncfusion
-description: Check out and learn about getting started with Blazor HeatMap Chart component in Blazor WebAssembly Application.
+description: Learn how to get started with the Syncfusion Blazor HeatMap Chart control. Explore setup, features, examples, and customization options.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
 ---
 
-# Getting Started with Blazor HeatMap Chart in Blazor WASM App
+# Getting Started with Blazor HeatMap Chart in WASM App
 
 This section briefly explains how to include [Blazor HeatMap Chart](https://www.syncfusion.com/blazor-components/blazor-heatmap-chart) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
