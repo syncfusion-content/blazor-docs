@@ -86,4 +86,3 @@ The following example shows how to attach mouse and keyboard native events to ca
 ## See Also
 
 * [RadioButton API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html)
-* [Blazor event handling](https://learn.microsoft.com/aspnet/core/blazor/components/event-handling)
