@@ -61,7 +61,7 @@ Use the `onchange` attribute to bind the change event for a RadioButton. The fol
 
 ## How to Bind `onclick` and Keyboard Events
 
-The following example shows how to attach mouse and keyboard native events to capture user interaction. The `UIMouseEventArgs` types are imported from `Microsoft.AspNetCore.Components.Web` so the handler signatures are explicit.
+The following example shows how to attach mouse and keyboard native events to capture user interaction. The `MouseEventArgs` types are imported from `Microsoft.AspNetCore.Components.Web` so the handler signatures are explicit.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
