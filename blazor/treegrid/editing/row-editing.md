@@ -9,7 +9,11 @@ documentation: ug
 
 # Row Editing in Blazor TreeGrid
 
-In Row edit mode, when the currently selected record is edited, the entire row is changed to edit state. The cell values of the row can be changed and save edited data to the data source. To enable Row edit, set the [TreeGridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Mode) as **Row**.
+In row edit mode, the entire row enters edit mode when a row is double-clicked or when a row is selected and the **Edit** toolbar button is clicked. Cell values within the row can be modified and the updated data can be saved to the underlying data source.
+
+To enable row editing, set the [TreeGridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Mode) property to `EditMode.Row`.
+
+In row edit mode, use the **Tab** and **Shift+Tab** keys to navigate between editable cells within the row, enabling efficient data entry and modification.
 
 {% tabs %}
 
