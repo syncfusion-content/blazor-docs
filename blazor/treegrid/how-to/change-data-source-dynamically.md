@@ -11,7 +11,7 @@ documentation: ug
 
 The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) of the Tree Grid component can be changed dynamically through an external button.
 
-This is demonstrated in the below sample code where the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) is dynamically modified using the bounded property.
+This is demonstrated in the below sample code where the `DataSource` is dynamically modified using the bounded property.
 
 {% tabs %}
 

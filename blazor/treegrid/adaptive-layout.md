@@ -7,7 +7,7 @@ control: Tree Grid
 documentation: ug
 ---
 
-# Adaptive UI Layout in Blazor TreeGrid
+# Adaptive UI Layout in Blazor TreeGrid 
 
 The Tree Grid user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, and edit dialogs adaptively and have an option to render the Tree Grid row elements in the vertical direction.
 

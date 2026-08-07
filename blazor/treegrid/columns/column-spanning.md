@@ -114,7 +114,7 @@ Spanning in the Blazor TreeGrid can be disabled at the column(s) level by settin
     <TreeGridColumn HeaderText="<b>Schedule</b>" DisableHtmlEncode="false">
         <TreeGridColumns>
             <TreeGridColumn Field=@nameof(ProjectTask.StartDate) HeaderText="<b>Start Date</b>" DisableHtmlEncode="false" Type="ColumnType.Date" Format="MM/dd/yyyy" Width="140" TextAlign="TextAlign.Right"></TreeGridColumn>
-            <TreeGridColumn Field=@nameof(ProjectTask.EndDate) HeaderText="<b>End Date<b>" DisableHtmlEncode="false" Type="ColumnType.Date" Format="MM/dd/yyyy" Width="140" TextAlign="TextAlign.Right"></TreeGridColumn>
+            <TreeGridColumn Field=@nameof(ProjectTask.EndDate) HeaderText="<b>End Date</b>" DisableHtmlEncode="false" Type="ColumnType.Date" Format="MM/dd/yyyy" Width="140" TextAlign="TextAlign.Right"></TreeGridColumn>
         </TreeGridColumns>
     </TreeGridColumn>
     <TreeGridColumn Field=@nameof(ProjectTask.Status) HeaderText="<b>Status</b>" TextAlign="TextAlign.Center" DisableHtmlEncode="false" Width="140"></TreeGridColumn>

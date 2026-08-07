@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor Inline AI Assist Control | Syncfusion
-description: Checkout and learn about Globalization with Blazor Inline AI Assist component in Blazor Server App and Blazor WebAssembly App.
+title: Globalization in Blazor Inline AI Assist | Syncfusion®
+description: Localize component text to any culture and enable Right-to-Left (RTL) layout support for international applications and multiple languages.
 platform: Blazor
 control: Inline AI Assist
 documentation: ug
 ---
 
-# Globalization in Blazor Inline AI Assist control
+# Globalization in Blazor Inline AI Assist
 
 ## Localization
 
