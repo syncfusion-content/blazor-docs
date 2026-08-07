@@ -9,9 +9,9 @@ documentation: ug
 
 # Sorting in Blazor TreeGrid
 
-Sorting enables to sort data in the **Ascending** or **Descending** order. To sort a column, click the column header. To sort multiple columns, press and hold the CTRL key and click the column header. Sorting of any one of the multi-sorted columns can be cleared by pressing and holding the SHIFT key and clicking the specific column header.
+Sorting allows data to be sorted in the **Ascending** or **Descending** order. To sort a column, click the column header. To sort multiple columns, press and hold the CTRL key and click the column header. Sorting of any one of the multi-sorted columns can be cleared by pressing and holding the SHIFT key and clicking the specific column header.
 
-To enable sorting in the Tree Grid, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowSorting) to true. Sorting options can be configured through the [TreeGridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSortSettings.html).
+To enable sorting in the TreeGrid, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowSorting) to true. Sorting options can be configured through the [TreeGridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSortSettings.html).
 
 {% tabs %}
 {% highlight razor %}
@@ -160,7 +160,11 @@ public class TreeData
 
 ## Sorting events
 
-During the sort action, the tree grid component triggers two events. The [Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Sorting) event triggers before the sort action starts, and the [Sorted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Sorted) event triggers after the sort action is completed. Using these events the needed actions can be performed.
+During the sort action, the treegrid component triggers two events. The [Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Sorting) event triggers before the sort action starts, and the [Sorted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Sorted) event triggers after the sort action is completed. These events allow custom actions before and after sorting.
+
+**Event argument types:**
+- [SortingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SortingEventArgs.html): Provides information for the Sorting event, such as column name and cancel option.
+- [SortedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SortedEventArgs.html): Provides information for the Sorted event, such as sorted columns and direction.
 
 {% tabs %}
 
@@ -196,7 +200,6 @@ During the sort action, the tree grid component triggers two events. The [Sortin
         if (string.Equals(args?.ColumnName, "TaskId", StringComparison.OrdinalIgnoreCase))
         {
             args.Cancel = true;
-
             return;
         }
     }
@@ -246,9 +249,8 @@ public class TreeData
 
 ## Custom sorting 
 
-The Blazor TreeGrid provides a way to customize the default sort action for a column by defining the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_SortComparer) property of [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html). The `SortComparer` data type uses the [IComparer](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-7.0&viewFallbackFrom=net-5) interface, so the custom sort comparer class should be implemented in the interface `IComparer`.
 
-In this TreeGrid example, custom sorting enhances project management by allowing the **Priority** column to be sorted based on a predefined hierarchy (Low, Normal, High, Critical) instead of alphabetical order, and the **Story Points** column is defined as string, but it is sorted numerically so that string values are treated as numbers, producing the correct ascending sequence "3", "5", "30" rather than the alphabetical order "3", "30", "5". In descending order, the numeric order is reversed to "30", "5", "3", making larger story points appear at the top.
+The Blazor TreeGrid provides a way to customize the default sort action for a column by defining the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_SortComparer) property of [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html). The `SortComparer` data type uses the [IComparer](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-7.0&viewFallbackFrom=net-5) interface. Implement the custom sort comparer class using the IComparer interface.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
