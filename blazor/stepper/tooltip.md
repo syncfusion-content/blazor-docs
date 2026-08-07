@@ -139,25 +139,3 @@ When hovering over the step, the current step model is passed in the template co
 ```
 
 ![Blazor Stepper Component with Tooltip Template](./images/Blazor-tooltip-template.webp)
-
-## Customizing tooltip position and delay
-
-The Stepper renders tooltips using the underlying SfTooltip behavior. To customize the position or the open/close delay, set the corresponding properties on the Stepper's `TooltipSettings`.
-
-The following example positions the tooltip at the bottom and sets a 500 ms open delay:
-
-```cshtml
-
-@using Syncfusion.Blazor.Navigations
-
-<SfStepper ShowTooltip="true">
-    <StepperSteps>
-        <StepperStep IconCss="sf-icon-cart" Label="Cart"></StepperStep>
-        <StepperStep IconCss="sf-icon-transport" Label="Delivery"></StepperStep>
-        <StepperStep IconCss="sf-icon-payment" Label="Payment"></StepperStep>
-        <StepperStep IconCss="sf-icon-success" Label="Confirmation"></StepperStep>
-    </StepperSteps>
-    <TooltipSettings Position="TooltipPosition.Bottom" OpenDelay="500"></TooltipSettings>
-</SfStepper>
-
-```
