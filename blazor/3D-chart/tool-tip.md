@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in Blazor 3D Chart Component | Syncfusion®
-description: Checkout and learn here all features about Tooltip and its customization in Blazor 3D Chart component and much more.
+title: Tooltip in Blazor 3D Charts | Syncfusion®
+description: Display point details on hover in Syncfusion Blazor 3D Charts by setting the Enable property of Chart3DTooltipSettings to true.
 platform: Blazor
-control: 3D Chart
+control: 3D Charts
 documentation: ug
 ---
 
-# Tooltip in Blazor 3D Chart Component
+# Tooltip in Blazor 3D Charts
 
 <!-- markdownlint-disable MD036 -->
 

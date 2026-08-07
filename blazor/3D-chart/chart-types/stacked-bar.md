@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stacked Bar in Blazor 3D Chart Component | Syncfusion®
-description: Checkout and learn here all features about Stacked Bar Chart in Blazor 3D Chart component and much more.
+title: Stacked Bar in Blazor 3D Charts | Syncfusion®
+description: Render stacked bars in Syncfusion Blazor 3D Charts by setting the series Type to StackingBar to compare cumulative values across categories.
 platform: Blazor
-control: 3D Chart
+control: 3D Charts
 documentation: ug
 ---
 
-# Stacked Bar in Blazor 3D Chart Component
+# Stacked Bar in Blazor 3D Charts
 
 ## Stacked bar chart
 

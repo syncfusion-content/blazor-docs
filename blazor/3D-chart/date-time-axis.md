@@ -1,15 +1,15 @@
 ---
 layout: post
-title: DateTime Axis in Blazor 3D Chart Component | Syncfusion®
-description: Checkout and learn here all features about DateTime Axis in Blazor 3D Chart component and much more.
+title: DateTime Axis in Blazor 3D Charts | Syncfusion®
+description: Plot time-series data in Syncfusion Blazor 3D Charts by setting the axis ValueType to DateTime and formatting labels in a date time scale.
 platform: Blazor
-control: 3D Chart
+control: 3D Charts
 documentation: ug
 ---
 
 <!-- markdownlint-disable MD036 -->
 
-# DateTime Axis in Blazor 3D Chart Component
+# DateTime Axis in Blazor 3D Charts
 
 ## DateTime axis
 

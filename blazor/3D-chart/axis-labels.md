@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Axis Labels in Blazor 3D Chart Component Syncfusion®
-description: Checkout and learn here all features about the Axis Labels in Blazor 3D Chart component and much more.
+title: Axis Labels in Blazor 3D Charts | Syncfusion®
+description: Configure axis labels in Syncfusion Blazor 3D Charts using LabelIntersectAction to Hide, Rotate, Wrap, Trim, MultipleRows, or None to avoid overlap.
 platform: Blazor
-control: 3D Chart
+control: 3D Charts
 documentation: ug
 ---
 
-# Axis Labels in Blazor 3D Chart Component
+# Axis Labels in Blazor 3D Charts
 
 Axis labels are the labels that are positioned adjacent to the y-axis and beneath the x-axis. It provides descriptive information about the axis.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Multiple Panes in Blazor 3D Chart Component | Syncfusion®
-description: Checkout and learn here all features about Multiple Panes in Blazor 3D Chart component and much more.
+title: Multiple Panes in Blazor 3D Charts | Syncfusion®
+description: Split Syncfusion Blazor 3D Charts into multiple panes using Rows and Columns to compare metrics with separate axes in one chart.
 platform: Blazor
-control: 3D Chart
+control: 3D Charts
 documentation: ug
 ---
 
-# Multiple Panes in Blazor 3D Chart Component
+# Multiple Panes in Blazor 3D Charts
 
 The chart area can be divided into multiple panes using `Rows` and `Columns`.
 
