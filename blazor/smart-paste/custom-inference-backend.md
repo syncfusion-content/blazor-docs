@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom AI Service Integration with Smart Paste | Syncfusion®
+title: Custom AI Service Integration in Blazor Smart Paste Button | Syncfusion®
 description: Learn how to integrate custom AI services with the Blazor Smart Paste Button using the IChatInferenceService interface for AI-driven form filling.
 platform: Blazor
 control: Smart Paste Button

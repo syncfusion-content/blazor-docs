@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind data from web services to Blazor components | Syncfusion
+title: Connect RESTful APIs to Syncfusion Blazor Components | Syncfusion®
 description: Learn how to retrieve data from a RESTful service, bind it to Blazor DataGrid using SfDataManager with ODataV4Adaptor, and perform CRUD operations.
 platform: Blazor
 control: Common

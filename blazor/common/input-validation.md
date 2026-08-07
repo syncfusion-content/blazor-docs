@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Input form validation in Blazor - Syncfusion
+title: Blazor Input Form Validation with Data Annotations | Syncfusion®
 description: Learn how to validate Syncfusion Blazor input components using data annotations with EditForm, DataAnnotationsValidator, ValidationMessage, ValidationSummary.
 platform: Blazor
 control: Common

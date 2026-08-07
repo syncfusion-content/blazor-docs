@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Reference script files for Blazor | Syncfusion®
-description: Add Blazor script references via CDN, static web assets, or the Custom Resource Generator (CRG) and much more details.
+title: Reference Script Files for Blazor | Syncfusion®
+description: Add Blazor script references via CDN, static web assets, or the Custom Resource Generator (CRG).
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Reference scripts in Blazor applications
+# Reference Script Files for Blazor
 
 This page explains script isolation and how to reference Blazor scripts from the CDN, static web assets, and the Custom Resource Generator (CRG).
 

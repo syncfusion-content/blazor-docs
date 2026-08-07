@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Download the Blazor Linux installer | Syncfusion®
+title: Download the Blazor Linux Installer | Syncfusion®
 description: Learn how to download Blazor Linux installer for trial or licensed use from your account, including Start trials and License and Downloads options.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Download the Syncfusion® Blazor Linux installer
+# How to Download the Syncfusion® Blazor Linux Installer
 
 The Blazor Linux installer is available as a trial or a licensed installer, depending on your account status. The sections below describe both download paths. Trial downloads provide a 30‑day evaluation and only the latest version is available.
 

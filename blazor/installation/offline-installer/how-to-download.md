@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Download the Blazor offline installer | Syncfusion®
+title: Download the Blazor Offline Installer | Syncfusion®
 description: Learn here about how to download the Blazor offline installer for trial or licensed use, including Start trials and License & Downloads options.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Download the Syncfusion® Blazor offline installer
+# How to Download the Syncfusion® Blazor Offline Installer
 
 The Blazor offline installer is available as a trial or a licensed installer, depending on your account status. The sections below describe both download paths. Trial downloads provide a 30‑day evaluation and only the latest version is available.
 

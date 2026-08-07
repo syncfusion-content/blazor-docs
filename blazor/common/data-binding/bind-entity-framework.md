@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind data from SQL server in Blazor | Syncfusion
+title: Bind Data from SQL Server to Blazor Components | Syncfusion®
 description: Learn how to retrieve data from SQL server, bind it to Blazor DataGrid component using Entity Framework, and perform CRUD operations.
 platform: Blazor
 component: Common

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Render a Blazor Server app in IE11 | Syncfusion®
+title: Render a Blazor Server App in Internet Explorer 11 | Syncfusion®
 description: Learn how to run a Blazor Server app in Internet Explorer 11 (IE11) using polyfills for legacy .NET Core 3.1 apps, and understand current browser support.
 platform: Blazor
 control: Common

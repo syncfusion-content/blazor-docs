@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Creating a Blazor Desktop App with Electron | Syncfusion
+title: Creating a Blazor Desktop App with Electron | Syncfusion®
 description: Learn to build a cross-platform desktop app using a Blazor Web App (Server) with Electron integrating Blazor DataGrid.
 platform: Blazor
 component: Common

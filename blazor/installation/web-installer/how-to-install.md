@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Install the Syncfusion Blazor web installer | Syncfusion®
+title: Install the Syncfusion Blazor Web Installer | Syncfusion®
 description: Learn here about how to install the Blazor web installer, configure products, and manage the uninstall options. Explore here to more details.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Install the Syncfusion® Blazor web installer
+# How to Install the Syncfusion® Blazor Web Installer
 
 The Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor web installer lets you install, update, and uninstall Blazor products in a single wizard. The sections below cover both installation and uninstallation.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add Blazor component to an existing ASP.NET Core MVC App | Syncfusion®
-description: Learn how to integrate a Blazor component into an existing ASP.NET Core MVC application using the component tag helper and explore to more details.
+title: Integrate Blazor Components into an ASP.NET Core MVC App | Syncfusion®
+description: Learn how to integrate a Blazor component into an existing ASP.NET Core MVC application using the component tag helper.
 platform: Blazor
 control: Common
 documentation: ug

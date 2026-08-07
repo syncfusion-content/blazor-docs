@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Reduce size of Blazor WebAssembly Applications | Syncfusion®
+title: Reduce the Size of Blazor WebAssembly Applications | Syncfusion®
 description: Learn here all about how to reduce Blazor WebAssembly (WASM) App size using trimming and linker configuration. Explore here to more details.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Reduce size of Blazor WebAssembly Application
+# Reduce the Size of Blazor WebAssembly Applications
 
 This article explains how to reduce the size of **Blazor WebAssembly (WASM)** applications. Although [Ahead-of-Time (AOT) compilation](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-build-tools-and-aot#ahead-of-time-aot-compilation) improves performance, it also increases app size. To reduce size, enable code trimming options in projects. Trimming removes unused code from the final output, helping lower the bundle size without affecting functionality.
 

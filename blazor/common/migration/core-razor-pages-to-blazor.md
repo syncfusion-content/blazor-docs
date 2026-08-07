@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrating ASP.NET Core Razor Pages to Blazor | Syncfusion
+title: Migrating ASP.NET Core Razor Pages to Blazor | Syncfusion®
 description: Learn how to migrate ASP.NET Core Razor Pages controls to Blazor components, including key concepts and a detailed migration approach.
 platform: Blazor
 control: Common

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind data to Blazor components using WebApiAdaptor | CRUD | Syncfusion
+title: Data Binding in Blazor with WebApiAdaptor | Syncfusion®
 description: Learn how to retrieve data from a Web API, bind it to the Blazor DataGrid using SfDataManager with WebApiAdaptor, and perform CRUD operations.
 platform: Blazor
 control: Common

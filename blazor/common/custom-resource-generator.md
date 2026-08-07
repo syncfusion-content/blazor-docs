@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Custom Resource Generator (CRG) for Blazor | Syncfusion®
+title: Create Custom Resource Generator in Blazor | Syncfusion®
 description: Generate custom Blazor script and style bundles with CRG to optimize load time and include only required components.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Custom Resource Generator
+# Custom Resource Generator in Blazor Applications
 
 Syncfusion provides the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) web tool to generate component-specific interop scripts and styles for Blazor. Using CRG reduces bundle size and improves load performance by including only the required resources instead of the full library.
 

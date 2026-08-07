@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get Started with Blazor Smart Paste Button in Web App | Syncfusion
+title: Getting Started with Smart Paste Button in Blazor Web App | Syncfusion®
 description: Check out and learn here all about Getting started with Blazor Smart Paste Button component in Blazor Webapp and more.
 platform: Blazor
 control: Smart Paste Button

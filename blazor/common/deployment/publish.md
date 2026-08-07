@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Publish and Deploy in Blazor | AOT | Syncfusion®
+title: Publish and Deploy in Blazor | Syncfusion®
 description: Learn how to publish and deploy Blazor Web App, Blazor WASM, Blazor Server Apps with Blazor components, including self-contained deployment and AOT.
 platform: Blazor
 component: Common

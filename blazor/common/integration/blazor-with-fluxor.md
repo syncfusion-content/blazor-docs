@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor DataGrid with Fluxor State Management | Syncfusion
+title: Blazor DataGrid with Fluxor State Management | Syncfusion®
 description: Learn how to integrate the Blazor DataGrid with Fluxor state management in a .NET 10 Blazor Web App to perform full CRUD operations.
 platform: Blazor
 control: Common

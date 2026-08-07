@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Install Syncfusion Blazor NuGet packages | Syncfusion®
+title: Install Syncfusion Blazor NuGet Packages | Syncfusion®
 description: Learn here about how to install Syncfusion Blazor NuGet packages using the Package Manager UI, .NET CLI, and Package Manager Console. Explore to more details.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Install Syncfusion® Blazor NuGet packages
+# Install Syncfusion® Blazor NuGet Packages
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> publishes all Blazor components as NuGet packages on [nuget.org](https://www.nuget.org/packages?q=Tag%3A%22Blazor%22+Syncfusion). You can use the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages in your Blazor application without installing the Syncfusion<sup style="font-size:70%">&reg;</sup> installer. The sections below describe three ways to add the packages to your project: Package Manager UI, .NET CLI, and Package Manager Console.
 

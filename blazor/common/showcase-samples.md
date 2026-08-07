@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor components showcase samples | Syncfusion®
+title: Blazor Showcase Samples | Syncfusion®
 description: Explore showcase applications that demonstrate Blazor components for Blazor Server and Blazor WebAssembly (WASM).
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Blazor components showcase samples
+# Showcase Samples in Blazor Application
 
 The following showcase applications demonstrate Blazor components in real-world scenarios.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Notifications in Blazor | Syncfusion®
+title: Syncfusion Notifications in Blazor | Syncfusion®
 description: Configure and understand notifications in Blazor applications, including trial license alerts, newer NuGet package updates, ES build notifications.
 platform: Blazor
 control: Syncfusion Extensions
 documentation: ug
 ---
 
-# Syncfusion® notifications
+# Syncfusion® Notifications
 
 Syncfusion® enhances the user experience in Blazor applications through notification messages. These notifications cover various aspects, including alerts for trial applications when using Syncfusion® trial assemblies, updates about the availability of the latest Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages, and notifications about newer releases of Essential Studio®. By keeping users informed, Syncfusion® ensures that developers stay up to date with the latest features and enhancements.
 

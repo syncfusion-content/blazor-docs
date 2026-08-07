@@ -1,14 +1,14 @@
 ---
 layout: post
-title: AI and Smart Tooling for Blazor Development | Syncfusion®
+title: About Syncfusion Blazor MCP Server | Syncfusion®
 description: Accelerate Blazor development with MCP Server - instant access to component APIs, UI blocks, themes, and 600+ icons via MCP in your IDE.
-control: Blazor MCP Server Overview
-platform: blazor
+control: Syncfusion Blazor MCP Server
+platform: Blazor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Overview of MCP Server for Blazor Components
+# About Syncfusion Blazor MCP Server.
 
 Syncfusion's MCP Server accelerate Blazor application development by providing deep context-aware knowledge directly in your AI-powered IDE. Through Model Context Protocol (MCP) integration, you get instant access to component APIs, pre-built UI blocks, styling configurations, icon libraries, and code generation - all without leaving your development environment.
 

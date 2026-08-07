@@ -1,7 +1,7 @@
 ---
 layout: post
-title: HTML attributes and DOM events in Blazor | Syncfusion®
-description: Learn how to use standard HTML attributes and DOM events with Blazor components on input and root elements, and see equivalent component APIs.
+title: Default HTML Attributes and DOM Events in Blazor | Syncfusion®
+description: Learn how to use standard HTML attributes and DOM events with Blazor components on input and root elements.
 platform: Blazor
 control: Common
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Integrating Blazor DataGrid with GitHub Codespaces | Syncfusion
+title: Integrating Blazor DataGrid with GitHub Codespaces | Syncfusion®
 description: Step by step guide to integrate Blazor DataGrid in a Blazor Web App using GitHub Codespaces with development container setup and cloud based execution.
 platform: Blazor
 control: Common

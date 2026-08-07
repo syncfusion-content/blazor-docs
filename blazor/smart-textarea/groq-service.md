@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Groq AI Integration with Blazor Smart TextArea | Syncfusion®
+title: Groq AI Service Integration in Blazor Smart TextArea | Syncfusion®
 description: Learn how to implement a custom AI service using the Groq API with the Blazor Smart TextArea component in a Blazor App.
 platform: Blazor
 control: Smart TextArea

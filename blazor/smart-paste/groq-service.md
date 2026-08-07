@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Groq AI Integration with Blazor Smart Paste Button | Syncfusion®
+title: Groq AI Service Integration in Blazor Smart Paste Button | Syncfusion®
 description: Learn how to implement a custom AI service using the Groq API with the Blazor Smart Paste Button component in a Blazor App.
 platform: Blazor
 control: Smart Paste Button

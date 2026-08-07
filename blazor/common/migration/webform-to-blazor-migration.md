@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate ASP.NET Web Forms Controls to Blazor Components | Syncfusion
+title: Migrate ASP.NET Web Forms Controls to Blazor Components | Syncfusion®
 description: Step-by-step guide to migrate ASP.NET Web Forms controls including DataGrid, Scheduler, and Rich Text Editor to Blazor components targeting .NET 8 or later.
 platform: Blazor
 control: Common

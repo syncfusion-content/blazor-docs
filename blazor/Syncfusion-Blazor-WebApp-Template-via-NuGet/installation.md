@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Web App Template Installation | Syncfusion
+title: Syncfusion Blazor Web App Template Installation | Syncfusion®
 description: Learn here more about how to How to install and create a Syncfusion Blazor application using Syncfusion Web App Template.
 platform: extension
 control: Syncfusion Extensions
 documentation: ug
 ---
 
-# Syncfusion Web App Template Installation
+# Syncfusion Blazor Web App Template Installation
 
 ## Overview
 
