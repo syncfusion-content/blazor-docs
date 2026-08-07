@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Populate Data in Blazor Maps Component | SyncfusionÂ®
-description: Learn how to provide shape data, bind statistical data and fetch JSON data to populate the Blazor Maps component, with examples.
+title: Populate Data in Blazor Map | Syncfusion®
+description: Provide GeoJSON shape data and statistical data sources to the Syncfusion Blazor Map using ShapeData, DataSource, and ShapeDataPath properties.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Populate Data in Blazor Maps Component
+# Populate Data in Blazor Map
 
 This section describes how to provide data inputs and pass them to the Maps component.
 

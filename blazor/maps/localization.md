@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Blazor Maps Component | SyncfusionÂ®
-description: Check out and learn here all the features about Localization in the Blazor Maps component and much more details.
+title: Localization in Blazor Map | Syncfusion®
+description: Localize Syncfusion Blazor Map UI text such as zoom tooltips and image-not-found messages using .resx files for any language or culture.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Localization in Blazor Maps Component
+# Localization in Blazor Map
 
 The Blazor Maps component supports localization to display content in any language by integrating localized text resources. Static text elements, such as zoom toolbar tooltips and placeholder text for tile images that fail to load, can be translated into various languages (for example, Arabic, German, and French) by defining the appropriate locale value. To manage language-specific content efficiently, the localization process can use **.resx** files, enabling consistent maintenance of translations. This feature enhances accessibility by allowing interaction with the Maps component in the preferred language and supports integration in globally targeted applications.
 

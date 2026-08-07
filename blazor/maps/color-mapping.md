@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Color Mapping in Blazor Maps Component | SyncfusionÂ®
-description: Check out and learn here all about color mapping in the Blazor Maps component and much more details.
+title: Color Mapping in Blazor Map | Syncfusion®
+description: Apply Range, Equal, or Desaturation color mapping to Syncfusion Blazor Map shapes by binding a data source to ColorValuePath and StartRange/EndRange.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Color Mapping in Blazor Maps Component
+# Color Mapping in Blazor Map
 
 Color mapping customizes shape colors based on data values. It supports three types.
 

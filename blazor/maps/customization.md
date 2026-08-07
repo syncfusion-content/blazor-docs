@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Blazor Maps Component | Syncfusion®
-description: Check out and learn here all the features about customization in Blazor Maps component and much more details.
+title: Customization in Blazor Map | Syncfusion®
+description: Customize the Syncfusion Blazor Map with Width, Height, title, subtitle, and MapsTitleSettings for a tailored layout and branded map presentation.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Customization in Blazor Maps Component
+# Customization in Blazor Map
 
 ## Setting the size for Maps
 
