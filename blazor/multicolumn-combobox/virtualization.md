@@ -13,7 +13,7 @@ The Blazor MultiColumn ComboBox supports virtualization to improve performance w
 
 This feature is applicable to both local and remote data scenarios, providing flexibility in its implementation. For instance, consider a case where the MultiColumn ComboBox is bound to a dataset containing 2000 items. Upon opening the dropdown, only a few items are loaded initially, based on the height of the popup. As you scroll through the list, additional items are fetched and loaded on-demand, allowing you to effortlessly explore the complete dataset.
 
-## Local data
+## Local Data
 
 {% highlight cshtml %}
 
@@ -23,7 +23,7 @@ This feature is applicable to both local and remote data scenarios, providing fl
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXhJZahKTtSnegNR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with virtualization](./images/blazor_multicolumn_combobox_virtualization.gif)" %}
 
-## Remote data
+## Remote Data
 
 {% highlight cshtml %}
 
