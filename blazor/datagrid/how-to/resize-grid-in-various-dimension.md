@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Resize in Various Dimensions in Blazor Data Grid.
+# Resize in Various Dimensions in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) fills its parent container. Therefore, changing the parent’s dimensions adjusts the Grid size automatically. This example shows how to resize the Grid externally using inputs and a button to modify the parent container’s width and height.
 

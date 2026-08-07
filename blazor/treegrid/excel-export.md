@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Export in Blazor TreeGrid Component | Syncfusion®
-description: Checkout and learn how to export TreeGrid data to Excel in the Blazor TreeGrid component and much more.
+title: Blazor TreeGrid Excel Export | Syncfusion
+description: Learn how to export Blazor TreeGrid data to Excel, customize exported content, preserve formatting, and generate reports efficiently.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Excel Export in Blazor TreeGrid Component
+# Excel Export in Blazor TreeGrid
 
 The Excel export feature allows exporting TreeGrid data to an Excel document using the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ExportToExcelAsync) method. To enable Excel export, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowExcelExport) property to **true**.
 

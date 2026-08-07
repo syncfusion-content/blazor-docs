@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor TreeGrid Component | Syncfusion®
-description: Checkout and learn here all the features about Globalization in Blazor TreeGrid component and much more.
+title: Blazor TreeGrid Globalization | Syncfusion
+description: Learn how to implement globalization in Blazor TreeGrid with localization, culture settings, formatting, and multilingual support.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Globalization in Blazor TreeGrid Component
+# Globalization in Blazor TreeGrid
 
 ## Localization
 
