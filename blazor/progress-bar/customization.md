@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Blazor ProgressBar Component | SyncfusionÂ®
-description: Learn about customization options in Blazor ProgressBar component with examples and much more details.
+title: Customization in Blazor Progress Bar | Syncfusion®
+description: Learn how to customize the Syncfusion Blazor Progress Bar with segments, colors, thickness, and more.
 platform: Blazor
-control: Progress Bar 
+control: Progress Bar
 documentation: ug
 ---
 
-# Customization in Blazor ProgressBar Component
+# Customization in Blazor Progress Bar
 
 ## Segments
 

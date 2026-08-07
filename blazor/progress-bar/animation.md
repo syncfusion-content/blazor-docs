@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Animation in Blazor ProgressBar Component | SyncfusionÂ®
-description: Learn about animation in Blazor ProgressBar component with examples and much more details about progress animation.
+title: Animation in Blazor Progress Bar | Syncfusion®
+description: Learn how to animate the Syncfusion Blazor Progress Bar using the Enable, Duration, and Delay settings.
 platform: Blazor
-control: Progress Bar 
+control: Progress Bar
 documentation: ug
 ---
 
-# Animation in Blazor ProgressBar Component
+# Animation in Blazor Progress Bar
 
 The progress bar supports animation, which can be enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarAnimation.html#Syncfusion_Blazor_ProgressBar_ProgressBarAnimation_Enable) property to **true** in the [ProgressBarAnimation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarAnimation.html). The speed and the delay during an animation can be controlled using the [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarAnimation.html#Syncfusion_Blazor_ProgressBar_ProgressBarAnimation_Duration) and the [Delay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarAnimation.html#Syncfusion_Blazor_ProgressBar_ProgressBarAnimation_Delay) properties specified in milliseconds.
 
