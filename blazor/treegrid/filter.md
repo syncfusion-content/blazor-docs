@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filtering in Blazor TreeGrid Component | Syncfusion®
-description: Checkout and learn how to enable and configure filtering in the Blazor TreeGrid component and much more details.
+title: Blazor TreeGrid Filtering | Syncfusion
+description: Learn how to enable and configure filtering in Blazor TreeGrid, use hierarchy filter modes, and quickly find relevant data.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Filtering in Blazor Tree Grid Component
+# Filtering in Blazor TreeGrid
 
 Filtering displays specific or related records based on defined criteria. To enable filtering in the TreeGrid, set [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowFiltering) to true. Configure filtering behavior through [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings). For related filtering UIs, see the filter menu, Excel-like filter, and filter bar topics.
 
