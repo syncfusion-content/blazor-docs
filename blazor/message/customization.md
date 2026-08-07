@@ -7,7 +7,7 @@ control: Message
 documentation: ug
 ---
 
-# Customization in Blazor Message
+# Customization in Blazor Message Component
 
 The Message component allows the user to customize the content display positions and appearance. This section explains the details about changing the content alignments and border styles for messages.
 
