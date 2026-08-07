@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tree Grid customization in Blazor TreeGrid Component | Syncfusion®
-description: Checkout and learn here all about Tree Grid customization in Blazor TreeGrid component and much more details.
+title: Blazor TreeGrid Customization | Syncfusion
+description: Learn how to customize Blazor TreeGrid with styling, templates, column settings, and UI personalization to enhance user experience.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Tree Grid customization in Blazor TreeGrid Component
+# Customization in Blazor TreeGrid
 
 It is possible to customize the default styles of the Tree Grid component. This can be achieved by adding class dynamically to the columns using the `AddClass` method of the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_QueryCellInfo) event. Then the required styles are added to this class.
 

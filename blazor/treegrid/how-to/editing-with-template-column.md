@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Editing with template column in Blazor TreeGrid | Syncfusion®
-description: Checkout and learn here all about editing with template column in Blazor TreeGrid component and much more details.
+title: Blazor TreeGrid Template Column Editing | Syncfusion
+description: Learn how to edit data using template columns in Blazor TreeGrid with custom editors, input controls, and flexible editing workflows.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Editing with template column in Blazor TreeGrid Component
+# Template Column Editing in Blazor TreeGrid
 
 A template column value can be edited by defining the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) property for that particular [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component.
 

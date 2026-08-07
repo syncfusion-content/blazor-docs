@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# MongoDB in Blazor Data Grid.
+# MongoDB in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a MongoDB database using the MongoDB.Driver library. This approach provides a flexible and scalable solution for working with NoSQL document databases.
 

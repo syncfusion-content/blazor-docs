@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# SQLite with Entity Framework in Blazor Data Grid.
+# SQLite with Entity Framework in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a SQLite Server database using Entity Framework Core (EF Core). This approach provides a lightweight, server less database solution ideal for mobile applications, desktop applications, and small-to-medium scale web applications.
 

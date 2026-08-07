@@ -1,0 +1,96 @@
+@using Syncfusion.Blazor.InteractiveChat
+@using Syncfusion.Blazor.Buttons
+
+<style>
+    #editableText {
+        width: 100%;
+        min-height: 120px;
+        max-height: 300px;
+        overflow-y: auto;
+        font-size: 16px;
+        padding: 12px;
+        border-radius: 4px;
+        border: 1px solid;
+    }
+    .custom-footer {
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        background-color: transparent;
+    }
+    #promptTextArea {
+        width: 100%;
+        padding: 12px;
+        min-height: 46px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 0;
+    }
+    #sendPrompt {
+        padding: 5px 15px;
+        align-self: center;
+    }
+</style>
+<div class="container" style="height: 350px; width: 650px;">
+    <!-- Wrap the button in a span so RelateTo="#summarizeButton" targets the button precisely -->
+    <span id="summarizeButton" style="display: inline-block; margin-bottom: 10px;">
+        <SfButton IsPrimary="true" @onclick="OnSummarizeClickAsync"> Content Summarize </SfButton>
+    </span>
+    <div id="editableText" contenteditable="true" @ref="editableTextRef">
+        <p>Inline AI Assist component provides intelligent text processing capabilities that enhance user productivity.
+            It leverages advanced natural language processing to understand context and deliver precise suggestions.
+            Users can seamlessly integrate AI-powered features into their applications.</p>
+        <p>With real-time response streaming and customizable prompts, developers can create interactive experiences.
+            The component supports multiple response modes including inline editing and popup-based interactions.</p>
+    </div>
+    <SfInlineAIAssist @ref="inlineAssist" RelateTo="#summarizeButton" PopupWidth="500px" PromptRequested="OnPromptRequestAsync">
+        <EditorTemplate>
+            <div class="custom-footer">
+                <textarea id="promptTextArea" class="e-input" rows="2" placeholder="Enter your prompt here"
+                          @bind="promptText" @bind:event="oninput"></textarea>
+                <SfButton id="sendPrompt" IsPrimary="true" @onclick="OnGenerateClickAsync">Generate</SfButton> </div>
+        </EditorTemplate>
+        <ChildContent> <ResponseActions ItemSelect="OnResponseItemSelectAsync"></ResponseActions> </ChildContent>
+    </SfInlineAIAssist>
+</div>
+@code {
+    private SfInlineAIAssist inlineAssist = new();
+    private ElementReference editableTextRef;
+    private string promptText = string.Empty;
+    private async Task OnSummarizeClickAsync()
+    {
+        await inlineAssist.ShowPopupAsync();
+    }
+    private async Task OnGenerateClickAsync()
+    {
+        if (!string.IsNullOrWhiteSpace(promptText))
+        {
+            var prompt = promptText;
+            promptText = string.Empty;
+            await inlineAssist.ExecutePromptAsync(prompt);
+        }
+    }
+    private async Task OnPromptRequestAsync(PromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        var defaultResponse = "For real-time prompt processing, connect the Inline AI Assist component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+        await inlineAssist.UpdateResponseAsync(defaultResponse);
+    }
+    private async Task OnResponseItemSelectAsync(ResponseItemSelectEventArgs args)
+    {
+        if (args.Item.Label == "Accept")
+        {
+            var lastPrompt = inlineAssist.Prompts.LastOrDefault();
+            if (lastPrompt != null && !string.IsNullOrEmpty(lastPrompt.Response))
+            {
+                await JSRuntime.InvokeVoidAsync("eval",
+                    $"document.getElementById('editableText').innerHTML = '<p>{lastPrompt.Response}</p>'");
+            }
+            await inlineAssist.HidePopupAsync();
+        }
+        else if (args.Item.Label == "Discard")
+        {
+            await inlineAssist.HidePopupAsync();
+        }
+    }
+}

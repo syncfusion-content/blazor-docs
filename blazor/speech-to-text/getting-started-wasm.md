@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Get Started with Blazor Speech To Text in Blazor WASM App | Syncfusion
+title: Getting Started with Blazor Speech To Text in Blazor WASM | Syncfusion
 description: Check out and learn about getting started with Blazor Speech To Text in Blazor WASM App using Visual Studio and more.
 platform: Blazor
-component: Speech To Text
+control: Speech To Text
 documentation: ug
 ---
 
 <!-- markdownlint-disable MD040 -->
 
-# Getting Started with Blazor Speech To Text in Blazor WASM App
+# Getting Started with Blazor Speech To Text
 
 This section briefly explains how to include the [Blazor Speech To Text](https://www.syncfusion.com/blazor-components/blazor-speech-to-text) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
