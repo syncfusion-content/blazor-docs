@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Toolbar styling in Blazor TreeGrid using CSS | Syncfusion®
+title: Blazor TreeGrid Toolbar styling using CSS | Syncfusion
 description: Learn how to customize the Blazor TreeGrid toolbar using CSS, including styling the toolbar container and buttons with CSS isolation tips.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Toolbar customization in Blazor TreeGrid
+# Toolbar Customization in Blazor TreeGrid
 
 The appearance of toolbar elements in the Blazor TreeGrid can be customized using CSS. Styling options are available for different parts of the toolbar interface:
 
