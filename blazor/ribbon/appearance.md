@@ -1,13 +1,12 @@
 ---
 layout: post
-title: Style and Appearance in Blazor Ribbon | Syncfusion®
-description: Learn to configure Style and Appearance properties, dimensions, layout modes, minimization, and custom styling in Blazor Ribbon with examples.
+title: Appearance in Blazor Ribbon | Syncfusion®
+description: Learn how to configure Style and Appearance properties, dimensions, layout modes, minimization, and custom styling in Blazor Ribbon with examples.
 platform: Blazor
-control: Ribbon
 documentation: ug
 ---
 
-# Style and Appearance in Blazor Ribbon Component
+# Style and Appearance in Blazor Ribbon
 
 The Ribbon component provides several properties to customize its visual appearance, allowing control over dimensions, layout modes, styling, and behavior.
 
