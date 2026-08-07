@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Methods in Blazor Linear Gauge Component | SyncfusionÂ®
-description: Checkout and learn here all the features about methods in Blazor Linear Gauge component and much more.
+title: Methods in Blazor Linear Gauge | Syncfusion®
+description: Update the Blazor Linear Gauge dynamically using SetPointerValue, SetAnnotationValue, and RefreshAsync methods to change values and state at runtime.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Methods in Blazor Linear Gauge Component
+# Methods in Blazor Linear Gauge
 
 The following methods are available in the Linear Gauge component.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pointers in Blazor Linear Gauge Component | Syncfusion®
-description: Checkout and learn here all the features about pointers in Blazor Linear Gauge component and much more.
+title: Pointers in Blazor Linear Gauge | Syncfusion®
+description: Render Bar or Marker pointers in the Blazor Linear Gauge with shapes such as Circle, Triangle, Diamond, Image, or Text to indicate values.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Pointers in Blazor Linear Gauge Component
+# Pointers in Blazor Linear Gauge
 
 Pointers are used to indicate values on an axis. The value of the pointer can be modified using the [PointerValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html#Syncfusion_Blazor_LinearGauge_LinearGaugePointer_PointerValue) property in [LinearGaugePointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html).
 
