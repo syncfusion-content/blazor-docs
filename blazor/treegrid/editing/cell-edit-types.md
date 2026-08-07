@@ -285,7 +285,7 @@ public class TreeData
 
 ### Using ComboBox in EditTemplate
 
-Render the [SfComboBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html) component for the edit form field in treegrid using [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate).This functionality is useful when a drop-down selection with auto-complete suggestions is required for efficient data entry.
+Render the [SfComboBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html) component for the edit form field in treegrid using [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate). This functionality is useful when a drop-down selection with auto-complete suggestions is required for efficient data entry.
 
 To use an `SfComboBox` in the edit form, configure the `EditTemplate` property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html). The `EditTemplate` allows customization of the cell editor for a column.
 
