@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip in Blazor Range Selector | Syncfusion®
-description: Show slider start and end values in the Syncfusion Blazor Range Selector tooltip with DisplayMode Always or OnDemand enabled via RangeNavigatorRangeTooltipSettings.
+title: Tooltip in Blazor Range Selector | SyncfusionÂ®
+description: Show the start and end values of the selected range in the Syncfusion Blazor Range Selector tooltip with DisplayMode Always or OnDemand.
 platform: Blazor
 control: Range Selector
 documentation: ug
