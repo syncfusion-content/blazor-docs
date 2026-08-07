@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Leaf Item in Blazor TreeMap Component | Syncfusion®
-description: Checkout and learn here all the features Leaf Item in Blazor TreeMap component and much more details.
+title: Leaf Item in Blazor TreeMap | Syncfusion®
+description: Customize Blazor TreeMap leaf items using TreeMapLeafItemSettings — label, fill, border, padding, gap, and label template with custom position.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Leaf Item in Blazor TreeMap Component
+# Leaf Item in Blazor TreeMap
 
 A leaf item defines a visualized data element and does not contain child nodes but contains parent node if the levels are specified in the TreeMap.
 

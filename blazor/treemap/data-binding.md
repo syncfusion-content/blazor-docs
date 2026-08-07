@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor TreeMap Component | SyncfusionÂ®
-description: Checkout and learn here all the features about Data Binding in Blazor TreeMap component and much more details.
+title: Data Binding in Blazor TreeMap | Syncfusion®
+description: Bind flat, hierarchical, or remote data to the Blazor TreeMap by assigning a collection to the DataSource property and specifying a WeightValuePath.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Data Binding in Blazor TreeMap Component
+# Data Binding in Blazor TreeMap
 
 ## Populate data
 

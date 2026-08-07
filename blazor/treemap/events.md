@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor TreeMap Component | SyncfusionÂ®
-description: Checkout and learn here all the features about the Events in Blazor TreeMap component and much more details.
+title: Events in Blazor TreeMap | Syncfusion®
+description: Handle Blazor TreeMap lifecycle and interaction events such as Load, Loaded, ItemSelected, ItemRendering, OnClick, OnItemClick, DrillCompleted, and TooltipRendering.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Events in Blazor TreeMap Component
+# Events in Blazor TreeMap
 
 ## ItemHighlighted
 

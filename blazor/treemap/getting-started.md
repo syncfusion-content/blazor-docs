@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor TreeMap in Blazor WASM App | Syncfusion
-description: Check out and learn about getting started with Blazor TreeMap component in Blazor WebAssembly Application.
+title: Getting Started with Blazor TreeMap | Syncfusion
+description: Step-by-step guide to add the Syncfusion Blazor TreeMap to a Blazor WebAssembly App — install the NuGet package, register the service, and bind a DataSource.
 platform: Blazor
 component: TreeMap
 documentation: ug
 ---
 
-# Getting Started with Blazor TreeMap Component in Blazor WASM App
+# Getting Started with Blazor TreeMap
 
 This section briefly explains how to include the [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

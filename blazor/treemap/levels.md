@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Levels in Blazor TreeMap Component | SyncfusionÂ®
-description: Checkout and learn here all the features about Levels in Blazor TreeMap component and much more details.
+title: Levels in Blazor TreeMap | Syncfusion®
+description: Group Blazor TreeMap data into multiple hierarchical levels with TreeMapLevel GroupPath, set GroupGap, header height, and header style.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Levels in Blazor TreeMap Component
+# Levels in Blazor TreeMap
 
 TreeMap supports **n** number of levels and each level is separated by using the [GroupPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_GroupPath) property.
 

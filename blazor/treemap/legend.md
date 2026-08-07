@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Legend in Blazor TreeMap Component | SyncfusionÂ®
-description: Checkout and learn here all the features about Legend in Blazor TreeMap component and much more details.
+title: Legend in Blazor TreeMap | Syncfusion®
+description: Add a default or interactive legend to the Blazor TreeMap with custom position, alignment, and size, or enable paging for many items.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Legend in Blazor TreeMap Component
+# Legend in Blazor TreeMap
 
 Legend is used to provide valuable information for interpreting what the TreeMap displays. The legends can be represented in various colors, shapes or other identifiers based on the data.
 
