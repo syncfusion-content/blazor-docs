@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Methods in Blazor TreeMap Component | SyncfusionÂ®
-description: Checkout and learn here all the features about Methods in Blazor TreeMap component and much more details.
+title: Methods in Blazor TreeMap | Syncfusion®
+description: Call Blazor TreeMap methods like PrintAsync, ExportAsync, RefreshAsync, and SelectItemAsync through a @ref to programmatically control the component.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Methods in Blazor TreeMap Component
+# Methods in Blazor TreeMap
 
 Create an object for the TreeMap component using `@ref` property and call the desired TreeMap method.
 

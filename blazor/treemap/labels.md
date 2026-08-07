@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Labels in Blazor TreeMap Component | Syncfusion®
-description: Checkout and learn here all the features about the Labels in Blazor TreeMap component and much more details.
+title: Labels in Blazor TreeMap | Syncfusion®
+description: Display and format data labels on Blazor TreeMap items via LabelPath and LabelFormat, and position them with LabelPosition.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Labels in Blazor TreeMap Component
+# Labels in Blazor TreeMap
 
 Data Labels are used to identify the name of items or groups in the TreeMap component. Data Labels will be shown by specifying the data source properties in the [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_LabelPath) of the [TreeMapLeafItemSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html).
 

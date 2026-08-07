@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in Blazor TreeMap Component | SyncfusionÂ®
-description: Checkout and learn here all the features about Tooltip in Blazor TreeMap component and much more details.
+title: Tooltip in Blazor TreeMap | Syncfusion®
+description: Show and customize tooltips in the Blazor TreeMap via TreeMapTooltipSettings Visible property, format template, or a custom TooltipTemplate.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Tooltip in Blazor TreeMap Component
+# Tooltip in Blazor TreeMap
 
 Tooltip is used to display details about the items in the TreeMap. When space constraints prevents from displaying the information using Data Labels, the tooltip comes in handy.
 
