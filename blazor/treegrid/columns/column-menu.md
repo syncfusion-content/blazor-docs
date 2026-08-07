@@ -7,7 +7,7 @@ control: Tree Grid
 documentation: ug
 ---
 
-# Column menu in Blazor Tree Grid
+# Column menu in Blazor TreeGrid
 
 The column menu has options to integrate features like sorting, filtering, and autofit. It shows a menu with the integrated feature when users click on an icon in the column header. To enable column menu, define the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ShowColumnMenu) property as true.
 

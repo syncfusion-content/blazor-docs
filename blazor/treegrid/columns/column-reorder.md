@@ -7,7 +7,7 @@ control: Tree Grid
 documentation: ug
 ---
 
-# Column Reorder in Blazor Tree Grid
+# Column Reordering in Blazor TreeGrid 
 
 Reordering can be done by drag and drop of a particular column header from one index to another index within the tree grid. To enable reordering, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowReordering) property to true.
 
