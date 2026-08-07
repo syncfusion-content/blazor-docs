@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Print and Export in Blazor Smith Chart Component | Syncfusion®
-description: Checkout and learn here all the features about print and export in Blazor Smith Chart component and more.
+title: Print and Export in Blazor Smith Chart | Syncfusion®
+description: Print the Blazor Smith Chart from the browser or export it to JPEG, PNG, SVG, or PDF with optional landscape orientation.
 platform: Blazor
 control: Smith Chart
 documentation: ug
 ---
 
-# Print and Export in Blazor Smith Chart Component
+# Print and Export in Blazor Smith Chart
 
 ## Print
 
