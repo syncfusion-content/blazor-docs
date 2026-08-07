@@ -43,7 +43,7 @@ Disable the Blazor Rating component by using the [Disabled](https://help.syncfus
 
 ## Visible
 
-Use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Visible) property of the Blazor Rating component to control the visibility of the component. When the `Visible` property is set to `true`, the rating component will be visible on the page. When it is set to `false`, the component will be hidden.
+Use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Visible) property to toggle the component's visibility. The default value is `true`. When set to `false`, the component is hidden from the layout and the rendered value is not exposed to assistive technologies. The `Visible` property is one-way (component → UI).
 
 ```cshtml
 
@@ -57,7 +57,7 @@ Use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs
 
 ## Read only
 
-Use the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ReadOnly) property of the Blazor Rating component to make the component non-interactive and prevent changes to the rating value via mouse or keyboard.
+Use the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ReadOnly) property to make the component non-interactive and prevent changes to the rating value via mouse or keyboard. The default value is `false`.
 
 ```cshtml
 
@@ -86,7 +86,8 @@ Change the rating icon border color in Blazor Rating component, you can use the 
     .e-rating-container.custom-font .e-rating-item-list:hover .e-rating-item-container .e-rating-icon,
     .e-rating-container.custom-font .e-rating-item-container .e-rating-icon {
         /* To change rating symbol border color */
-        -webkit-text-stroke: 2px #ae9e9d;        
+        -webkit-text-stroke: 2px #ae9e9d;
+        text-stroke: 2px #ae9e9d;
     }
 
 </style>
@@ -95,9 +96,9 @@ Change the rating icon border color in Blazor Rating component, you can use the 
 
 ![Blazor Rating Component with rating symbol border color](images/blazor-rating-border-color.webp)
 
-### Changing rated/un-rated symbol fill color 
+### Changing rated/unrated symbol fill color 
 
-Customize the fill colors of rated and un-rated icons in the Rating component using the `CssClass` property and the `linear-gradient` color-stops in the `background` CSS property of `.e-rating-icon`. The **first** color-stop defines the rated fill color and the **second** defines the un-rated fill color.
+Customize the fill colors of rated and unrated icons in the Rating component using the `CssClass` property and the `linear-gradient` color-stops in the `background` CSS property of `.e-rating-icon`. The **first** color-stop defines the rated fill color and the **second** defines the unrated fill color.
 
 ```cshtml
 
@@ -123,7 +124,7 @@ This customizes the rated fill color to `#ffe814` and the unrated fill color to 
 
 ### Changing the item spacing
 
-To change the space between rating items in the Blazor Rating component, use the `CssClass` property and set the `margin` or `padding` of `.e-rating-item-container` to the desired size. 
+To change the space between rating items in the Blazor Rating component, use the `CssClass` property and set the `margin` or `padding` of `.e-rating-item-container` to the desired size.
 
 ```cshtml
 

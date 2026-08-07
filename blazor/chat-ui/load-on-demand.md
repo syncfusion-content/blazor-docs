@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Load on-demand in Blazor Chat UI Component | Syncfusion®
-description: Checkout and learn here all about Load on-demand with Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Load On-Demand in Blazor Chat UI | Syncfusion®
+description: Optimize performance in Blazor Chat UI by dynamically loading messages on scroll using the LoadOnDemand property for large conversation histories.
 platform: Blazor
 control: Chat UI
 documentation: ug
 ---
 
-# Load on-demand in Blazor Chat UI component
+# Load On-Demand in Blazor Chat UI
 
 You can use the [LoadOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_LoadOnDemand) property to load messages dynamically when the scroll reaches the top of the message list improving performance and reducing load times, particularly in long conversations. This ensures a smooth user experience by only fetching messages as needed rather than loading the entire conversation at once. 
 
@@ -39,4 +39,4 @@ You can use the [LoadOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ```
 
-![Blazor Chat UI LoadOnDemand](./images/load-on-demand.webp)
+![Blazor Chat UI Load On-Demand](./images/load-on-demand.webp)

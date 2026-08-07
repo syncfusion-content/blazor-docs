@@ -44,7 +44,7 @@ In the Range slider, both handles can be restricted and locked using the limits 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
-<SfSlider Value="@Value" Type="SliderType.Range">
+<SfSlider TValue="int[]" Min="0" Max="100" Value="@Value" Type="SliderType.Range">
     <SliderLimits Enabled="true" MinStart="10" MinEnd="40" MaxStart="60" MaxEnd="90"></SliderLimits>
 </SfSlider>
 
@@ -62,7 +62,7 @@ The movement of slider handles can be locked by enabling the [``StartHandleFixed
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
-<SfSlider Value="@Value" Type="SliderType.Range">
+<SfSlider TValue="int[]" Min="0" Max="100" Value="@Value" Type="SliderType.Range">
      <SliderLimits Enabled="true" StartHandleFixed="true" EndHandleFixed="true">
     </SliderLimits>
 </SfSlider>
