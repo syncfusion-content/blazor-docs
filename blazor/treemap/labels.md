@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Labels in Blazor TreeMap | Syncfusion®
-description: Display and format data labels on Blazor TreeMap items via LabelPath and LabelFormat, position them with LabelPosition, and handle overflow using InterSectAction.
+title: Labels in Blazor TreeMap | SyncfusionÂ®
+description: Display and format data labels on Blazor TreeMap items via LabelPath and LabelFormat, and position them with LabelPosition.
 platform: Blazor
 control: TreeMap
 documentation: ug
