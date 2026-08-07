@@ -11,7 +11,7 @@ documentation: ug
 
 The filter bar feature provides an efficient and intuitive way to filter data within the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component. This feature displays input fields below each column header, enabling straightforward data filtering based on column-specific criteria. The filter bar enhances data exploration by allowing users to narrow down large datasets to display only relevant records.
 
-To enable the filter bar, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true** on the grid component. This action adds a filter row beneath the column headers, allowing filtering through various expression operators based on the respective column data type.
+To enable the filter bar, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true** on the grid component. This action adds a filter row below the column headers, allowing filtering through various expression operators based on the respective column data type.
 
 **Supported filter expressions**
 
@@ -235,7 +235,7 @@ public class OrderData
 
 ### Display filter text in pager
 
-The Blazor DataGrid can display active filter information within the pager section. This visibility enhancement allows clear tracking of currently applied filters and their criteria.
+The Blazor DataGrid can display active filter information within the pager section, showing currently applied filters and their criteria.
 
 Enable this functionality by setting the [ShowFilterBarStatus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_ShowFilterBarStatus) property to **true** within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) configuration.
 
@@ -435,7 +435,7 @@ public class OrderData
 
 ### Hide filter bar for template column
 
-Template columns in the Blazor DataGrid do not display filter bars by default. To maintain or further customize the filter behavior for template columns, use the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property. This property defines a custom template for the filter bar area of the column.
+Template columns that contain custom content, such as buttons, usually do not require filtering. In such cases, you can use an empty    [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property to hide the filter bar content for that column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -735,13 +735,6 @@ When the **ShowFilterBarOperator** property is enabled, clicking the filter icon
 
 Each filter bar cell also includes a **clear filter icon** that reflects the filter state of its column. The icon is **enabled** when a filter is applied to the column and **disabled** otherwise, allowing active filters to be identified and removed quickly. This column-specific behavior improves control and visibility when managing filters across multiple columns.
 
-**Benefits of operator-based filtering**
-
-* Removes the need to enter operator expressions manually.
-* Provides type-safe input controls based on column data type.
-* Improves filtering accuracy and consistency across data types.
-* Offers a structured filtering interface with dedicated controls for each column.
-
 **Column-specific filter controls**
 
 When the **ShowFilterBarOperator** property is enabled, the filter bar dynamically generates input controls based on the data type of each column, ensuring a type-safe filtering experience.
@@ -754,6 +747,13 @@ When the **ShowFilterBarOperator** property is enabled, the filter bar dynamical
 | TimeOnly | Time picker |
 | DateTime | DateTime picker |
 | Boolean | Dropdown (True/False) |
+
+**Key features of operator-based filtering**
+
+* Displays an operator dropdown menu for selecting filtering conditions.
+* Provides column type-specific input controls (text, numeric, date, or dropdown).
+* Includes a clear filter icon to identify and remove active column filters.
+* Eliminates manual entry of operator expressions in the filter bar.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -835,4 +835,4 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-> The **ShowFilterBarOperator** feature is applicable only when the Grid uses the default **FilterType.FilterBar**. 
+>The **ShowFilterBarOperator** property works with **FilterType.FilterBar** (the default filter type). It is not applicable when using alternative filter types such as FilterType.FilterMenu or FilterType.Excel. 
