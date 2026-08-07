@@ -7,17 +7,29 @@ control: DataGrid
 documentation: ug
 ---
 
+
 # Clipboard in Blazor Data Grid
 
-The **clipboard** feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) allows copying selected rows or cells using keyboard shortcuts or programmatic methods. This helps transfer data to external applications such as spreadsheets or text editors.
+
+The **clipboard** feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) allows copying selected rows or cells using keyboard shortcuts or programmatic methods, which helps transfer data to external applications such as spreadsheets or text editors.
 To use keyboard shortcuts, selection must be enabled and the grid must be focused.
+
+
+## Copying Data
+
+Copy data from the DataGrid using either keyboard shortcuts or programmatic methods.
+
+### Keyboard Shortcuts
+
 
 | Windows | Mac | Actions |
 |---------|-----|---------|
 | <kbd>Ctrl + C</kbd> | <kbd>Command + C</kbd> | Copy selected rows or cells to the clipboard |
 | <kbd>Ctrl + Shift + H</kbd> | <kbd>Command + Shift + H</kbd> | Copy selected rows or cells with headers to the clipboard |
 
+
 To enable clipboard functionality, configure the DataGrid with the required [GridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html). If the selection mode is **Row**, entire rows are copied. If it is **Cell**, only the highlighted cells are copied.
+
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -90,18 +102,21 @@ internal sealed class OrderData
 }
 
 {% endhighlight %}
+
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhRNGZCfsUftPWT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Copy to clipboard using external buttons
+### Programmatic Copy
 
-Clipboard actions can be triggered using external buttons when using UI controls is preferred over shortcut keys.
+Clipboard actions can also be triggered using external buttons or programmatically, which is useful when UI controls are preferred over shortcut keys.
 
-The [CopyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method programmatically copies selected rows or cells:
+
+The [`CopyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method copies selected rows or cells:
 
 - Pass **true** to include column headers in the copied content.
 - Pass **false** or omit the parameter to copy without headers.
+
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -189,22 +204,26 @@ internal sealed class OrderData
 }
 
 {% endhighlight %}
+
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXhxjGXCTCUxIVsj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
+---
+
 ## AutoFill
 
-The AutoFill feature in the Blazor DataGrid allows quick data entry by copying values from selected cells and filling them into adjacent cells using a drag handle.
+The AutoFill feature enables quick data entry by dragging a handle to copy cell values into adjacent cells. When enabled, an autofill handle appears at the bottom-right corner of the selected cell range. Drag this handle to fill values into neighboring cells, similar to spreadsheet applications.
 
-**Steps to use AutoFill feature**
+### Steps to Use AutoFill
 
-1. Select the desired cells to copy.
-2. Hover over the bottom-right corner of the selection to display the autofill handle.
-3. Drag the handle to the target cells.
-4. Release the mouse to populate the target cells with the copied data.
+1. Select the desired cells to copy in the DataGrid.
+2. After selection, a small square (autofill handle) appears at the bottom-right corner of the selection border. Hover your mouse over this handle; the cursor will change to indicate the autofill action (usually a crosshair or plus icon).
+3. Click and drag the autofill handle to the target cells where you want to copy the values. As you drag, a highlighted area will show the target range.
+4. Release the mouse button to populate the target cells with the copied data.
 
 To enable AutoFill, set the [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAutoFill) property to **true** and use [Batch editing](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) to allow copying values across multiple cells.
+
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -278,12 +297,10 @@ internal sealed class OrderData
 }
 
 {% endhighlight %}
+
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrnDcXszsUECbja?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
-
-> * When [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAutoFill) is set to **true**, the autofill handle appears on cell selection.
-> * AutoFill requires selection [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) set to **Cell**, [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CellSelectionMode) set to **Box**, and [EditMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.EditMode.html#fields) set to `Batch`.
 
 ### Limitations
 
@@ -292,16 +309,23 @@ internal sealed class OrderData
 - **Virtualization**: AutoFill is not supported with virtual scrolling or column virtualization.
 - **Infinite Scrolling**: With infinite scrolling, AutoFill applies only to cells within the current viewport.
 
-## Paste
 
-The Paste feature in the Blazor DataGrid allows copying content from selected cells and pasting it into another range using <kbd>Ctrl + C</kbd> and <kbd>Ctrl + V</kbd>.
+---
 
-**To paste data within the grid:**
+## Pasting Data
+
+
+The **Paste** feature in the Blazor DataGrid lets you paste clipboard content into a selected range using <kbd>Ctrl + V</kbd>.
+
+To enable pasting, ensure `GridEditSettings` is configured with `Mode="EditMode.Batch"` and `AllowEditing="true"`.
+
+### Steps to Paste Data
 
 1. Select the cells to copy.
 2. Press <kbd>Ctrl + C</kbd> to copy the content.
 3. Select the target cells.
 4. Press <kbd>Ctrl + V</kbd> to paste the copied content.
+
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -375,12 +399,14 @@ internal sealed class OrderData
 }
 
 {% endhighlight %}
+
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDBdjwjMTCzMwQCj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> To paste content, set selection [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) to **Cell**, set [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CellSelectionMode) to **Box**, and enable [Batch editing](https://blazor.syncfusion.com/documentation/datagrid/batch-editing).
+
+> **Note:** To paste content, set selection [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) to **Cell**, set [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CellSelectionMode) to **Box**, and enable [Batch editing](https://blazor.syncfusion.com/documentation/datagrid/batch-editing).
 
 ### Limitations
 
-- **Data Type Conversion**: Pasting does not convert string values to numeric or date types. Pasting strings into numeric cells results in **NaN**, and pasting strings into date cells results in an **empty cell**. Ensure that the pasted values are compatible with the target column's data type.
+> **Data Type Conversion:** Pasting does not convert string values to numeric or date types. Pasting strings into numeric cells results in **NaN**, and pasting strings into date cells results in an **empty cell**. Ensure that the pasted values are compatible with the target column's data type.
