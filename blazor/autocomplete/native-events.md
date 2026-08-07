@@ -105,6 +105,6 @@ Common native events that can be bound to the component include:
 | List of Native events |  |  | |
 | --- | --- | --- | --- |
 | onclick | onblur | onfocus | onfocusout |
-| onmousemove | onmouseover | onmouseout | onmousedown | onmouseup |
+| onmousemove | onmouseover | onmouseout | onmousedown |
 | ondblclick | onkeydown | onkeyup | onkeypress |
 | ontouchend | onfocusin | onmouseup | ontouchstart |

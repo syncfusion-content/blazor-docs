@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize the Scrolling distance in Blazor Tabs Component
 
-The [ScrollStep](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_ScrollStep) property supports to customize the scrolling distance when you click the left and right side navigation icons. A required value can be passed through `ScrollStep` property to customize tab scrolling distance.
+Use the [ScrollStep](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_ScrollStep) property to customize the distance the Tab header scrolls when the left or right navigation icons are clicked. Pass the desired pixel value to `ScrollStep` to control the tab scrolling distance.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
