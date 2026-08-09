@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Blazor Grid Adaptive UI and Responsive Layout | Syncfusion
-description: Learn how to use Adaptive Layout in Blazor Data Grid to render filter, sort, and edit dialogs in fullscreen mode for responsive and mobile-friendly experiences.
+title: Blazor DataGrid Adaptive UI and Responsive Layout | Syncfusion
+description: Learn how to use Adaptive Layout in Blazor DataGrid to render filter, sort, and edit dialogs in fullscreen mode for responsive and mobile-friendly experiences.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Adaptive and Responsive Layout in Blazor Data Grid
+# Adaptive and Responsive Layout in Blazor DataGrid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) includes an adaptive user interface designed for optimal usability on small screens. When enabled, the Grid renders filter, sort, column chooser, column menu (supported only when [RowRenderingMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowRenderingMode) is **Horizontal**), and edit dialogs in a full-screen, mobile-friendly layout. It also provides an option to render Grid row elements vertically for improved readability on narrow viewport.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) includes an adaptive user interface designed for optimal usability on small screens. When enabled, the DataGrid renders filter, sort, column chooser, column menu (supported only when [RowRenderingMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowRenderingMode) is **Horizontal**), and edit dialogs in full-screen, mobile-friendly layout. Vertical row rendering is also available for improved readability on smaller viewports.
 
-To learn how **Adaptive UI Layout** works in the Grid, watch the following video.
+To understand how adaptive UI layout works in the Blazor DataGrid, watch the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=RFMGdOyEWFo"%}
 
-## Render adaptive dialogs
+## Rendering adaptive dialogs
 
 The Blazor DataGrid can render adaptive dialogs to enhance the user experience on smaller screens. Enable the [`EnableAdaptiveUI`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAdaptiveUI) property to display filter, sort, and edit dialogs in full-screen mode. This is especially helpful on devices with limited screen space.
 
@@ -186,7 +186,7 @@ The Blazor DataGrid can render adaptive dialogs to enhance the user experience o
 {% highlight cs tabtitle="AdaptiveDetails.cs" %}
 public class AdaptiveDetails
 {
-public static List<AdaptiveDetails> AdaptiveModels = new List<AdaptiveDetails>();
+    public static List<AdaptiveDetails> AdaptiveModels = new List<AdaptiveDetails>();
 
     public AdaptiveDetails() { }
 
@@ -239,7 +239,7 @@ public static List<AdaptiveDetails> AdaptiveModels = new List<AdaptiveDetails>()
 
 ## Vertical row rendering
 
-The Blazor DataGrid supports vertical row rendering, which displays row elements in a vertical order. This layout can improve data readability on smaller screens. Enable this by setting the [`RowRenderingMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowRenderingMode) property to **Vertical**.
+The Blazor DataGrid supports vertical row rendering, which displays row elements in a vertical order. This layout improves data readability on smaller screens.
 
 > The default row rendering mode is **Horizontal**.
 
@@ -248,7 +248,7 @@ The Blazor DataGrid supports vertical row rendering, which displays row elements
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Grids
 
-<label> Select row rendering mode: </label>
+<label>Select row rendering mode:</label>
 <SfDropDownList TValue="RowDirection" TItem="DropDownOrder" DataSource="@DropDownValue" Width="120px">
     <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
     <DropDownListEvents ValueChange="OnChange" TValue="RowDirection" TItem="DropDownOrder"></DropDownListEvents>
@@ -500,9 +500,9 @@ public class AdaptiveDetails
 
 > [EnableAdaptiveUI](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAdaptiveUI) must be enabled for vertical row rendering.
 
-### Supported features by vertical row rendering
+### Supported features in vertical row rendering
 
-The following features are supported in vertical row rendering:
+Vertical row rendering supports these features:
 
 * Paging, including page size dropdown
 * Sorting
@@ -511,13 +511,13 @@ The following features are supported in vertical row rendering:
 * Dialog editing
 * Aggregate
 * Infinite scroll
-* Toolbar – Options such as **Add**, **Filter**, **Sort**, **Edit**, **Delete**, **Search**, and toolbar template are available when the corresponding features are enabled. The toolbar dynamically shows an overflow menu (three-dot icon) that contains additional actions such as **ColumnChooser**, **Print**, **PdfExport**, **ExcelExport**, and **CsvExport** once these features are enabled. See the following animation.
+* Toolbar – Options such as **Add**, **Filter**, **Sort**, **Edit**, **Delete**, **Search**, and toolbar template are available when the corresponding features are enabled. The toolbar dynamically shows an overflow menu (three-dot icon) that contains additional actions such as **ColumnChooser**, **Print**, **PdfExport**, **ExcelExport**, and **CsvExport** once these features are enabled.
 
-![ColumnMenu in vertical mode](images/vertical-column-menu.webp)
+> The Column Menu feature (grouping, sorting, autofit, filter, and column chooser) is supported only when the DataGrid is in **Horizontal** [`RowRenderingMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowRenderingMode).
 
-![Adaptive Grid with pager dropdown on small screens](images/pager-dropdown.webp)
+![Column menu in vertical rendering mode](images/vertical-column-menu.webp)
 
-> The Column Menu feature (grouping, sorting, autofit, filter, and column chooser) is supported only when the Grid is in **Horizontal** [`RowRenderingMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowRenderingMode).
+![Adaptive Grid pager with dropdown menu on small screens](images/pager-dropdown.webp)
 
 ## Rendering an adaptive layout for smaller screens alone
 
@@ -747,5 +747,21 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDhxXQZMhmQidgML?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+## Choosing between horizontal and vertical rendering
+
+Select horizontal or vertical row rendering based on application requirements:
+
+**Horizontal rendering** works best for:
+* Desktop applications with ample screen space
+* Grids with few columns where traditional table layout is appropriate
+* Users familiar with standard spreadsheet-like interfaces
+* Complex column features like column menu, grouping, and autofit
+
+**Vertical rendering** works best for:
+* Mobile applications with limited screen width
+* Grids with many columns that would exceed viewport width
+* Touch-friendly interfaces where scrolling horizontally is challenging
+* Displaying detailed records with field-label pairs vertically
 
 > [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-render-adaptive-layout)
