@@ -1,19 +1,21 @@
 ---
 layout: post
-title: Blazor Grid Styling with Design Tokens & Theme Studio | Syncfusion
-description: Learn how to customize Blazor DataGrid appearance using Design Tokens, CSS, and Theme Studio, including headers, rows, alternate rows, and grid lines.
+title: Blazor DataGrid Styling with Design Tokens and Theme Studio | Syncfusion
+description: Learn how to customize Blazor DataGrid appearance using design tokens, CSS, and Theme Studio, including headers, rows, alternate rows, and grid lines.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Style and Appearance in Blazor Data Grid
+# Style and Appearance in Blazor DataGrid
 
-The Blazor Data Grid provides comprehensive styling and appearance customization capabilities to align grid designs with application requirements. Built-in themes enable rapid implementation, CSS customization allows visual element adjustment, and theme-based styling creates consistent user experiences.
+The Blazor DataGrid provides comprehensive styling and appearance customization capabilities to align grid designs with application requirements. Built-in themes enable rapid implementation, CSS customization allows visual element adjustment, and theme-based styling creates consistent user experiences.
 
 ## Built-in themes
 
-The Data Grid component provides multiple themes aligned with industry-standard design systems, available in both light and dark variants. Available themes include:
+The DataGrid component provides multiple themes aligned with industry-standard design systems, available in both light and dark variants. Use the Syncfusion.Blazor.Themes package and choose a theme that matches the supported Blazor version in the project. Add the selected stylesheet to the application by referencing the theme CSS file from the main HTML page used by the app.
+
+Available themes include:
 
 | Theme                         | Style Sheet Name                         |
 |------------------------------|------------------------------------------|
@@ -39,10 +41,10 @@ The Data Grid component provides multiple themes aligned with industry-standard 
 
 ## Size modes
 
-The Data Grid component provides two size modes designed for different interaction contexts and device types:
+The DataGrid component provides two size modes designed for different interaction contexts and device types:
 
 - **Normal mode** (default) — Standard sizing configured for mouse and keyboard interactions.
-- **Touch mode** (bigger) — Enlarged elements with increased padding, font sizes, and touch targets for touch-based interaction and improved accessibility. Apply the `e-bigger` CSS class to the `<body>` element to enable this mode.
+- **Touch mode** (bigger) — Enlarged elements with increased padding, font sizes, and touch targets for touch-based interaction and improved accessibility. Apply the `e-bigger` CSS class to a wrapper element around the grid, such as the body element or a container div, to enable this mode.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -130,15 +132,15 @@ internal sealed class OrderData
 
 ## Theme customization
 
-The Blazor Data Grid provides flexible theme customization options to align control appearance with application design requirements. Built-in themes can be customized by overriding default CSS variables or by creating completely customized themes using Syncfusion Theme Studio.
+The Blazor DataGrid provides flexible theme customization options to align control appearance with application design requirements. Built-in themes can be customized by overriding default CSS variables or by creating completely customized themes using Syncfusion Theme Studio.
 
 ### Default CSS override
 
-The Blazor Data Grid themes use CSS variables with the unified `–sf` naming convention. This ensures visual consistency, straightforward customization, and global updates. Centralized variables allow quick adjustments to **colors**, **backgrounds**, and **borders** across the grid.
+The Blazor DataGrid themes use CSS variables with the unified `--sf` naming convention. This ensures visual consistency, straightforward customization, and global updates. Centralized variables allow quick adjustments to **colors**, **backgrounds**, and **borders** across the grid.
 
 #### Material 3 theme color variables
 
-The **Material 3** theme applies scalable CSS custom properties to maintain consistency within the Blazor Data Grid. Variables are designed for straightforward theming and responsive behavior.
+The **Material 3** theme applies scalable CSS custom properties to maintain consistency within the Blazor DataGrid. Variables are designed for straightforward theming and responsive behavior.
 
 | Name | Purpose |
 |------|---------|
@@ -150,7 +152,7 @@ The **Material 3** theme applies scalable CSS custom properties to maintain cons
 
 #### Bootstrap 5.3 theme color variables
 
-The **Bootstrap 5.3** theme extends Bootstrap's framework with CSS custom properties for the Data Grid.
+The **Bootstrap 5.3** theme extends Bootstrap's framework with CSS custom properties for the Blazor DataGrid.
 
 | Name | Purpose |
 |------|---------|
@@ -283,7 +285,7 @@ The **.e-grid** class styles the root container of the Blazor DataGrid. Apply CS
 }
 ```
 
-Properties such as f **font-family**,**background-color**, and spacing-related styles can be adjusted to align with the grid design.
+Properties such as font family, background color, and spacing can be adjusted to match the grid design.
 
 ![Grid root element](../images/style-and-appearance/style-font-family.webp)
 
@@ -584,12 +586,12 @@ internal sealed class OrderData
 
 ### Using Theme Studio
 
-Syncfusion Theme Studio provides a unified approach to create custom themes for all controls, including the Blazor Data Grid. This advanced method defines a comprehensive set of styles to achieve consistent appearance across the application.
+Syncfusion Theme Studio provides a unified approach to create custom themes for all controls, including the Blazor DataGrid. This advanced method defines a comprehensive set of styles to achieve consistent appearance across the application.
 
-1. Navigate to the Syncfusion® [Theme Studio]((https://blazor.syncfusion.com/themestudio/?theme=material3)).
+1. Navigate to the Syncfusion® [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material3).
 2. Select the **Grid** control from the left panel.
 3. Customize **colors**, **typography**, **spacing**, and other **visual tokens**.
-4. Download the generated CSS file and integrate it into the Blazor project's site stylesheet or theme bundle.
+4. Download the generated CSS file and include it in the app stylesheet or the theme bundle used by the project.
 
 ## See Also
 
