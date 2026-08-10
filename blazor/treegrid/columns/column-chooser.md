@@ -82,7 +82,7 @@ N> The column names can be hidden in the column chooser by defining the [ShowInC
 
 ## Open column chooser by external button
 
-The column chooser has options to show or hide columns dynamically. It can be enabled by defining the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ShowInColumnChooser) as true.
+The Blazor TreeGrid allows opening the column chooser dialog programmatically using an external button. Use the [OpenColumnChooserAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_OpenColumnChooserAsync_System_Nullable_System_Double__System_Nullable_System_Double__) method to display the dialog at a specific position on the page.
 
 {% tabs %}
 
@@ -157,13 +157,11 @@ public class TreeData
 
 {% endtabs %}
 
-![Opening Column Chooser in Blazor Tree Grid](../images/blazor-treegrid-open-column-chooser.webp)
-
-N> The column names in column chooser can be hidden by defining the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ShowInColumnChooser) property as false.
+![Opening Column Chooser in Blazor TreeGrid](../images/blazor-treegrid-open-column-chooser.webp)
 
 ## Text wrapping in column chooser
 
-The Blazor TreeGrid includes a enhancement that improves readability within the column chooser dialog by allowing long column names to wrap across multiple lines. This behavior is enabled by setting the [`TreeGridColumnChooserSettings.AllowTextWrap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumnChooserSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridColumnChooserSettings_AllowTextWrap) property to **true**.
+The Blazor TreeGrid includes a enhancement that improves readability within the column chooser dialog by allowing long column names to wrap across multiple lines. This behavior is enabled by setting the [TreeGridColumnChooserSettings.AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumnChooserSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridColumnChooserSettings_AllowTextWrap) property to **true**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -205,7 +203,7 @@ namespace TreeGridComponent.Data {
         public string Description { get; set; }
         public string Origin { get; set; }
         public string Destination { get; set; }
-        public double? Weight { get; set; } // Weight in pounds=
+        public double? Weight { get; set; } // Weight in pounds
         public DateTime? DeliveryDate { get; set; }
         public string Status { get; set; }
         public string ParentId { get; set; }
@@ -242,11 +240,11 @@ namespace TreeGridComponent.Data {
 
 ## Template support in column chooser
 
-Template can be rendered in column chooser of tree grid by customizing the column chooser using **Template** and **FooterTemplate** of the [TreeGridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumnChooserSettings.html) Component.
+Templates can be rendered in the TreeGrid column chooser by customizing the column chooser using **Template** and **FooterTemplate** of the [TreeGridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumnChooserSettings.html) Component.
 
 Below example demonstrates simple column chooser template using [TreeGridColumnChooserItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumnChooserItem.html) inside the [TreeGridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumnChooserSettings.html) Component.
 
-`ColumnChooserTemplateContext` is accessible inside the `Template` from which we can access column details inside `Template` and handle template rendering of column chooser.
+The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumnChooserSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridColumnChooserSettings_Template) property of the `TreeGridColumnChooserSettings` is used to customize the content of the column chooser dialog. The context parameter can be typecast to `ColumnChooserTemplateContext` to access the list of columns within the template.
 
 {% tabs %}
 
@@ -256,7 +254,7 @@ Below example demonstrates simple column chooser template using [TreeGridColumnC
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.TreeGrid;
 
-<SfTreeGrid ID="TreeGrid" @ref="TreeGrid" DataSource="@GridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1"
+<SfTreeGrid ID="TreeGrid" @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1"
             ShowColumnChooser="true" Toolbar="@(new List<string>() {"ColumnChooser" })" AllowPaging="true">
     <TreeGridColumnChooserSettings>
         <Template>
@@ -292,10 +290,10 @@ Below example demonstrates simple column chooser template using [TreeGridColumnC
 @code
     {
     public SfTreeGrid<BusinessObject> TreeGrid { get; set; }
-    private List<BusinessObject> GridData;
+    private List<BusinessObject> TreeGridData;
     protected override void OnInitialized()
     {
-        GridData = new BusinessObject().GetTree1();
+        TreeGridData = new BusinessObject().GetTree1();
     }
 }
 
@@ -338,11 +336,11 @@ namespace TreeGridComponent.Data
 
 {% endtabs %}
 
-![Column Chooser Template with Blazor Tree Grid](../images/blazor-treegrid-column-chooser-template.webp)
+![Column Chooser Template with Blazor TreeGrid](../images/blazor-treegrid-column-chooser-template.webp)
 
 ### Custom component in column chooser template
 
-In below example, we have rendered ListView as custom component inside the Template of [TreeGridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumnChooserSettings.html) in tree grid. Inside the custom component, we have added image in ListView Template.
+The TreeGrid uses a custom ListView component inside the Template of [TreeGridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumnChooserSettings.html). This replaces the default column chooser list with a ListView, where each item can be customized. 
 
 {% tabs %}
 
@@ -353,7 +351,7 @@ In below example, we have rendered ListView as custom component inside the Templ
 @using Syncfusion.Blazor.Grids;
 
 
-<SfTreeGrid ID="TreeGrid" @ref="TreeGrid" DataSource="@GridData" IdMapping="TaskId" ParentIdMapping="ParentId"
+<SfTreeGrid ID="TreeGrid" @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId"
             TreeColumnIndex="1" ShowColumnChooser="true" Toolbar="@(new List<string>(){ "ColumnChooser" })" AllowPaging="true">
     <TreeGridColumnChooserSettings>
     <Template>
@@ -397,10 +395,10 @@ In below example, we have rendered ListView as custom component inside the Templ
 @code
 {
     public SfTreeGrid<BusinessObject> TreeGrid { get; set; }
-    private List<BusinessObject> GridData;
+    private List<BusinessObject> TreeGridData;
     protected override void OnInitialized()
     {  
-        GridData = new BusinessObject().GetTree1();
+        TreeGridData = new BusinessObject().GetTree1();
     }
 }
 
@@ -567,11 +565,18 @@ namespace TreeGridComponent.Data
 
 The following output is displayed as a result of the above code example.
 
-![Column Chooser Template with Blazor Tree Grid](../images/blazor-treegrid-column-with-chooser-template.webp)
+![Column Chooser Template with Blazor TreeGrid](../images/blazor-treegrid-column-with-chooser-template.webp)
 
 ### Column Chooser with group template
 
-We can also group the columns inside the column chooser template with the help of Group Template. To group columns we need to wrap [TreeGridColumnChooserItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumnChooserItem.html) inside [TreeGridColumnChooserItemGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumnChooserItemGroup.html)  as shown in the below example code.
+The Blazor TreeGrid supports grouping items in the column chooser dialog using the [TreeGridColumnChooserItemGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumnChooserItemGroup.html) component. This improves usability by organizing columns into logical sections. 
+
+To configure this:
+
+1. Set the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ShowColumnChooser)  property to **true** and include **"ColumnChooser"** in the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar) collection.
+2. Use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumnChooserSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridColumnChooserSettings_Template)  property of [TreeGridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumnChooserSettings.html) to define the layout of chooser items.
+3. Wrap columns in `TreeGridColumnChooserItemGroup` components to define logical groups.
+4. Use helper methods to filter and render columns dynamically within each group.
 
 {% tabs %}
 
@@ -581,7 +586,7 @@ We can also group the columns inside the column chooser template with the help o
 @using Syncfusion.Blazor.TreeGrid;
 @using Syncfusion.Blazor.Grids;
 
-<SfTreeGrid ID="TreeGrid" @ref="TreeGrid" DataSource="@GridData" IdMapping="TaskId" ParentIdMapping="ParentId"
+<SfTreeGrid ID="TreeGrid" @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId"
             TreeColumnIndex="1" ShowColumnChooser="true" Toolbar="@(new List<string>() {"ColumnChooser" })" AllowPaging="true">
     <TreeGridColumnChooserSettings>
         <Template>
@@ -625,10 +630,10 @@ We can also group the columns inside the column chooser template with the help o
 @code
 {
     public SfTreeGrid<BusinessObject> TreeGrid { get; set; }
-    private List<BusinessObject> GridData;
+    private List<BusinessObject> TreeGridData;
     protected override void OnInitialized()
     {
-        GridData = new BusinessObject().GetTree1();
+        TreeGridData = new BusinessObject().GetTree1();
     }
 }
 
@@ -673,4 +678,4 @@ namespace TreeGridComponent.Data
 
 The following output is displayed as a result of the above code example.
 
-![Column Chooser with Group in Blazor Tree Grid](../images/blazor-treegrid-column-chooser-group-template.webp)
+![Column Chooser with Group in Blazor TreeGrid](../images/blazor-treegrid-column-chooser-group-template.webp)
