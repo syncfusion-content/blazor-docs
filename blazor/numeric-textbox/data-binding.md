@@ -38,7 +38,7 @@ Bind the value to the NumericTextBox component directly for `Value` property as 
 
 ## Two-way data binding
 
-Two-way binding can be achieved by using `bind-Value` attribute and it supports string, int, Enum, DateTime, and bool types. If component value has been changed, it will affect all the places where the variable is bound for the **bind-value** attribute.
+Two-way binding can be achieved by using the `@bind-Value` attribute. The component supports numeric types such as `int`, `int?`, `long`, `float`, `double`, and `decimal`. If the component value changes, the change is reflected in all the places where the variable is bound to the `@bind-Value` attribute.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -54,9 +54,7 @@ Two-way binding can be achieved by using `bind-Value` attribute and it supports 
 
 ## Dynamic value binding
 
-Change the property value dynamically by manually calling the `StateHasChanged()` method inside public event of **Blazor NumericTextBox component** only. This method notifies the component that its state has changed and queues a re-render.
-
-There is no need to call this method for native events since it’s called after any lifecycle method has been called and can also be invoked manually to trigger a re-render.
+When you handle a component event and update a property that drives the input, call `StateHasChanged()` inside the handler to queue a re-render. This is not required for native DOM events, which automatically trigger a re-render after the event.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -72,7 +70,7 @@ There is no need to call this method for native events since it’s called after
 
     public void OnChange(Syncfusion.Blazor.Inputs.ChangeEventArgs<int?> args)
     {
-        NumericValue = (int)args.Value;
+        NumericValue = args.Value;
         StateHasChanged();
     }
 }
