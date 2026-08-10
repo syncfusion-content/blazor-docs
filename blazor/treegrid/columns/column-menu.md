@@ -145,7 +145,7 @@ The event uses the [ColumnMenuClickEventArgs](https://help.syncfusion.com/cr/bla
     }
 }
 {% endhighlight %}
-{% highlight c# tabtitle="OrderData.cs" %}
+{% highlight c# tabtitle="TreeData.cs" %}
 namespace TreeGridComponent.Data
 {
     public class TreeData
