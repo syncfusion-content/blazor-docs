@@ -15,7 +15,7 @@ N> Refer to Getting Started for configuration details: [Blazor Server DataGrid](
 
 ## Avoid unnecessary component renders
 
-During the Blazor diffing process, each DataGrid cell and child component is evaluated for re-rendering. `Event callbacks` can trigger additional renders across the component tree. Fine-grained control over DataGrid rendering helps avoid unnecessary work.
+During the Blazor diffing process, each DataGrid cell and child component is evaluated for re-rendering. Event callbacks typically trigger parent component re-renders, cascading to all child components.
 
 Use [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PreventRender_System_Boolean_) on the DataGrid instance to skip participation in the next render cycle. This method internally affects the DataGrid’s [ShouldRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShouldRender) behavior.
 
@@ -206,7 +206,7 @@ public class OrderData
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLRDGNxBEqcogXh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > - `args.PreventRender` affects rendering only for the event-triggered cycle and does not change component state beyond that cycle.
-> - Prefer setting `PreventRender` to **true** for user-interactive events (for example, [RowSelected](https://blazor.syncfusion.com/documentation/datagrid/events#rowselected), [RowSelecting](https://blazor.syncfusion.com/documentation/datagrid/events#rowselecting)) to reduce UI latency. For events without args (for example, [DataBound](https://blazor.syncfusion.com/documentation/datagrid/events#databound)), call the grid’s `PreventRender` method.
+> - Set `PreventRender` to **true** for user-interactive events (e.g., [RowSelected](https://blazor.syncfusion.com/documentation/datagrid/events#rowselected), [RowSelecting](https://blazor.syncfusion.com/documentation/datagrid/events#rowselecting)) to reduce UI latency. For events that do not provide event args (e.g., [DataBound](https://blazor.syncfusion.com/documentation/datagrid/events#databound)), use the grid instance method: `grid.PreventRender()`.
 
 ## Use paging or virtualization to load only visible rows
 
