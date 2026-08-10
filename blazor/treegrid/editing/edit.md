@@ -11,8 +11,6 @@ documentation: ug
 
 The TreeGrid supports dynamically inserting, updating, and deleting records. Enable editing using [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html), and define a primary key column to support CRUD operations.
 
-To know more about editing feature in Blazor TreeGrid component, you can check on this video.
-
 {% youtube
 "youtube:https://www.youtube.com/watch?v=5_g3yr8ASys"%}
 
@@ -83,7 +81,7 @@ public class TreeData
 
 {% endtabs %}
 
-N> For strong typing and validation, specify the model type via TValue on the TreeGrid or ensure the DataSource is a typed list (for example, List<TreeData.BusinessObject>).
+> **Note:** For strong typing and validation, specify the model type via TValue on the TreeGrid or ensure the DataSource is a typed list (for example, List<TreeData.BusinessObject>).
 
 ```csharp
 @code{
@@ -97,7 +95,9 @@ N> For strong typing and validation, specify the model type via TValue on the Tr
 
 ## Toolbar with edit option
 
-The TreeGrid toolbar includes built-in items to perform editing actions. Configure it using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar) property.
+The toolbar editing feature in the Blazor TreeGrid provides a built-in toolbar that includes predefined items for executing editing actions. This functionality enables efficient modification of TreeGrid data, including updating cell values, saving changes, and canceling edits.
+
+To activate this feature, configure the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar) property of the TreeGrid. This property defines the items displayed in the TreeGrid toolbar. Including items such as **Edit**, **Add**, **Delete**, **Update**, and **Cancel** within the Toolbar property enables the corresponding editing actions.
 
 {% tabs %}
 
@@ -167,9 +167,9 @@ public class TreeData
 
 ![TreeGrid toolbar with edit actions](../images/blazor-treegrid-edit-in-toolbar.webp)
 
-## Default column values on add new
+## Default Column Values on Add New
 
-Set default values for columns when adding new records using [TreeGridColumn.DefaultValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_DefaultValue).
+Default values for columns can be set when adding new records using [TreeGridColumn.DefaultValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_DefaultValue).
 
 {% tabs %}
 
@@ -237,11 +237,13 @@ public class TreeData
 
 {% endtabs %}
 
-## Disable editing for a particular column
+## Disable editing for particular column
 
-The editing feature can be disabled for a particular column by setting [TreeGridColumn.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowEditing) to **false**.
+In the Blazor TreeGrid, editing can be selectively disabled for individual columns. This capability is particularly useful for columns that contain calculated values or read-only data.
 
-In the following example, editing is disabled for the **Duration** column.
+To disable editing for a specific column, configure the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowEditing) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) object. Setting this property to **false** prevents editing for the targeted column.
+
+> When the [AllowAdding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowAdding) property is configured at the column level, it prevents value insertion into that specific column.
 
 {% tabs %}
 
@@ -310,7 +312,6 @@ public class TreeData
 
 Control where a new row is inserted using [TreeGridEditSettings.NewRowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_NewRowPosition). Options include Top, Bottom, Above, Below, and Child. The default is Top.
 
-In the following example, new rows are added as child rows.
 
 {% tabs %}
 
@@ -382,7 +383,7 @@ public class TreeData
 
 ### Delete confirmation
 
-Show a confirmation dialog before deleting a record by setting [ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_ShowDeleteConfirmDialog) to **true**.
+A confirmation dialog can be shown before deleting a record by setting [ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_ShowDeleteConfirmDialog) to **true**.
 
 {% tabs %}
 
@@ -453,9 +454,25 @@ N> **ShowDeleteConfirmDialog** applies to all edit modes.
 
 ## Troubleshooting: editing works only for the first row
 
-Editing relies on the primary key value. If [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_IsPrimaryKey) is not defined, edit or delete operations act on the first row.
+Editing relies on the primary key value. If [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_IsPrimaryKey) is not defined, edit or delete operations will act on the first row.
 
 ## Event trace while editing
+
+The Blazor TreeGrid provides granular control over editing workflows through dedicated events. These events enable monitoring and customization of actions such as editing, adding, deleting, and updating rows.
+
+Each editing operation in the TreeGrid triggers specific events. The following table outlines the available events and their descriptions:
+
+| **Event Name**       | **Description**                                                                 |
+|----------------------|---------------------------------------------------------------------------------|
+| [OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBeginEdit)        | Triggered when the edit operation begins.                                       |
+| [EditCanceling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_EditCanceling)      | Triggered when an edit operation is being canceled but not yet finalized.      |
+| [EditCanceled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_EditCanceled)       | Triggered after an edit operation has been canceled.                            |
+| [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating)        | Triggered before a new row is added to the data source.                         |
+| [RowCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreated)         | Triggered after a new row has been added to the data source.                    |
+| [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating)        | Triggered when an existing row is being updated but before changes are applied. |
+| [RowUpdated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdated)         | Triggered after an existing row has been successfully updated.                  |
+| [RowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeleting)        | Triggered before a row is removed from the data source.                         |
+| [RowDeleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeleted)         | Triggered after a row has been removed from the data source.            
 
 {% tabs %}
 
@@ -684,7 +701,6 @@ public class TreeData
 
 {% endtabs %}
 
-The following GIF shows Add, Update, and Delete operations in the TreeGrid.
 ![CRUD operations in Blazor TreeGrid](../images/blazor-treegrid-editing-in-crud-operation.webp)
 
 ## Cancel CRUD operations based on a condition
@@ -705,7 +721,7 @@ For Row or Dialog edit modes, use the `Canceling` event.
 
 <SfTreeGrid DataSource="@TreeGridData" IdMapping="TaskId" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" ParentIdMapping="ParentId" TreeColumnIndex="1" >
     <TreeGridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Row"></TreeGridEditSettings>
-    <TreeGridEvents BeforeRowEditing="BeforeRowEditingHandler" RowEditing="RowEditingHandler" RowCreating="RowCreatingHandler" RowDeleting="RowDeletingHandler" TValue="TreeData.BusinessObject"></TreeGridEvents>
+    <TreeGridEvents BeforeRowEditing="BeforeRowEditingHandler" RowEditing="RowEditingHandler" RowCreating="RowCreatingHandler" RowDeleting="RowDeletingHandler" Canceling="CancelingHandler" TValue="TreeData.BusinessObject"></TreeGridEvents>
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn>
@@ -750,6 +766,11 @@ For Row or Dialog edit modes, use the `Canceling` event.
     {
         args.Cancel = true;        
     }
+
+    public void CancelingHandler(EditCancelingEventArgs<TreeData.BusinessObject> args)
+    {
+        args.Cancel = true;
+    }
 }
 
 {% endhighlight %}
@@ -793,7 +814,7 @@ public class TreeData
 
 ## Custom external edit form
 
-Perform edit operations using a custom external form. Use the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowSelected) event to load the selected row’s data and call UpdateRowAsync to save changes.
+Edit operations can be performed using a custom external form. Use the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowSelected) event to load the selected row data and call UpdateRowAsync to save changes.
 
 {% tabs %}
 
@@ -919,14 +940,12 @@ public class TreeData
 
 {% endtabs %}
 
-The following GIF shows the TreeGrid with a custom external form for editing.
 ![Blazor TreeGrid with Custom External form Editing](../images/blazor-treegrid-custom-form-editing.webp)
 
 ## Edit enum column
 
-Edit enum type data in a TreeGrid column using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate).
+Enum type data can be edited in a TreeGrid column using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate).
 
-In the following example, the [SfDropDownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) component is rendered in the `EditTemplate` for the **Priority** column, and the enum values are bound using two-way binding (**@bind-Value**).
 
 {% tabs %}
 
