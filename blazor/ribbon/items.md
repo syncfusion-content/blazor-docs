@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Items in Blazor Ribbon Component | Syncfusion®
-description: Checkout and learn about Items in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
-platform: Blazor
+title: Items in Blazor Ribbon | Syncfusion
+description: Learn how to add and configure built-in and custom items in the Blazor Ribbon using item types like button, split button, drop-down, and more.
 control: Ribbon
+platform: Blazor
 documentation: ug
 ---
 
-# Items in Blazor Ribbon component
+# Items in Blazor Ribbon
 
 ## Button item
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Chat UI - Strict CSP Feature Limitations | Syncfusion®
-description: Details on features in Blazor Chat UI Component that require Content Security Policy (CSP) relaxation and much more details.
+title: Content Security Policy in Blazor Chat UI | Syncfusion®
+description: Learn which Blazor Chat UI features work under strict Content Security Policy (CSP) and when style-src 'unsafe-inline' is required for load-on-demand.
 platform: Blazor
 control: Chat UI
 documentation: ug
 ---
 
-# Chat UI - Content Security Policy Limitations
+# Content Security Policy in Blazor Chat UI
 
 ## What's supported under strict CSP ?
 

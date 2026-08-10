@@ -9,9 +9,9 @@ documentation: ug
 
 # Show/Hide Toolbar Item in Blazor Toolbar Component
 
-The `Visible` property of a Toolbar item controls its visibility by setting its value to `true` or `false`. In the following code example, the paste action is initially hidden. Clicking the 'Cut' button makes the 'Paste' button visible.
+The [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Visible) property of a Toolbar item controls its visibility by setting its value to `true` (visible) or `false` (hidden). In the following code example, the paste action is initially hidden. Clicking the 'Cut' button toggles the 'Paste' button between visible and hidden states.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 

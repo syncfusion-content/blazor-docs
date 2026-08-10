@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Backstage in Blazor Ribbon Component | Syncfusion®
-description: Checkout and learn about Backstage in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
-platform: Blazor
+title: Backstage in Blazor Ribbon | Syncfusion
+description: Learn how to add a Backstage view in the Blazor Ribbon to display application-level information and settings like user details and options pages.
 control: Ribbon
+platform: Blazor
 documentation: ug
 ---
 
-# Backstage in Blazor Ribbon component
+# Backstage in Blazor Ribbon
 
 The Ribbon component supports a backstage view as an enhancement to the traditional file menu. Backstage view can be used to display options like application settings, user details, and more. It can be configured using the [RibbonBackstageMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonBackstageMenuSettings.html) tag directive.
 
