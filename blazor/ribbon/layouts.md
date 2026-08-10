@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Layouts in Blazor Ribbon Component | Syncfusion®
-description: Checkout and learn about Layouts in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
-platform: Blazor
+title: Layouts in Blazor Ribbon | Syncfusion
+description: Learn how to customize the Blazor Ribbon layout using the activeLayout property, with support for Classic, Simplified, and other layout modes.
 control: Ribbon
+platform: Blazor
 documentation: ug
 ---
 
-# Layouts in Blazor Ribbon component
+# Layouts in Blazor Ribbon
 
 The Ribbon component allows customization of its layout through the [ActiveLayout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_ActiveLayout) property. It supports two primary layouts: `Classic` and `Simplified`.
 
