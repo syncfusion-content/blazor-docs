@@ -9,20 +9,18 @@ documentation: ug
 
 # Data Binding in Blazor TreeGrid
 
-The Tree Grid uses **SfDataManager**, which supports both RESTful Web Services binding and List binding. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) property can be assigned either using the **SfDataManager** as child component of the Tree Grid Blazor component or list of business objects.
+The TreeGrid uses **SfDataManager**, which supports both RESTful Web Services binding and List binding. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) property can be assigned either using the **SfDataManager** as child component of the TreeGrid Blazor component or list of business objects.
 It supports two kinds of data binding method:
 * List binding
 * Remote service binding
-
-To learn about how to bind local or remote data to Tree Grid, check out this video:
 
 {% youtube "https://www.youtube.com/watch?v=YgSRj7yTebI" %}
 
 ## List binding
 
-In List binding, data source for rendering the Tree Grid component is retrieved from the same application locally.
+In List binding, data source for rendering the TreeGrid component is retrieved from the same application locally.
 
-Two types of Data binding are possible with the Tree Grid component.
+Two types of Data binding are possible with the TreeGrid component.
 
 * Self-Referential Data binding (Flat Data)
 * Hierarchical Data binding
@@ -33,10 +31,10 @@ For Hierarchy Data binding, the data-source should be assigned as an object arra
 
 ### Self-Referential data binding/Flat Data
 
-Tree Grid is rendered from Self-Referential data structures by providing two fields, [IdMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_IdMapping) field and [ParentIdMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ParentIdMapping) field.
+TreeGrid is rendered from Self-Referential data structures by providing two fields, [IdMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_IdMapping) field and [ParentIdMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ParentIdMapping) field.
 
-* [IdMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_IdMapping): This field contains unique values used to identify nodes.
-* [ParentIdMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ParentIdMapping): This field contains values that indicate parent nodes.
+* `IdMapping`: This field contains unique values used to identify nodes.
+* `ParentIdMapping`: This field contains values that indicate parent nodes.
 
 ```cshtml
 
@@ -86,8 +84,6 @@ Tree Grid is rendered from Self-Referential data structures by providing two fie
 ### Hierarchy data binding
 
 The [ChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ChildMapping) property is used to map the child records in hierarchy data source.
-
-The following code example shows how to bind the hierarchical list data into the Tree Grid component.
 
 ```cshtml
 
@@ -147,9 +143,9 @@ N> * ExpandCollapse State maintenance is not supported for Hierarchy Data.
 
 ### DynamicObject binding
 
-Tree Grid is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases the data can be bound to the tree grid as list of  **DynamicObject**.
+TreeGrid is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile time. In such cases the data can be bound to the treegrid as list of **DynamicObject**.
 
-**DynamicObject** can be bound to tree grid by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) property. Tree Grid can also perform all kind of supported data operations and editing in DynamicObject.
+**DynamicObject** can be bound to treegrid by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) property. TreeGrid can also perform all kind of supported data operations and editing in DynamicObject.
 
 N> The [GetDynamicMemberNames](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=net-8.0) method of DynamicObject class must be overridden and return the property names to render and perform data operations, editing etc., while using DynamicObject.
 
@@ -251,9 +247,9 @@ N> The [GetDynamicMemberNames](https://learn.microsoft.com/en-us/dotnet/api/syst
 
 ### ExpandoObject binding
 
-Tree Grid is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases bind data to the tree grid as list of ExpandoObject.
+TreeGrid is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile time. In such cases bind data to the treegrid as list of ExpandoObject.
 
-ExpandoObject can be bound to Tree grid by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) property. Tree Grid can also perform all kind of supported data operations and editing in ExpandoObject.
+ExpandoObject can be bound to Treegrid by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) property. TreeGrid can also perform all kind of supported data operations and editing in ExpandoObject.
 
 ```cshtml
 
@@ -348,17 +344,15 @@ checkboxState | Specifies the checkbox state of a record
 
 ### Observable collection
 
-An Observable collection is a special type of collection in .NET that automatically notifies any subscribers (such as the UI or other components) when changes are made to the collection. This is particularly useful in data-binding scenarios, where you want the UI to reflect changes in the underlying data model without having to manually update the view.
+An **ObservableCollection** in .NET is a specialized collection that automatically notifies subscribers (such as the UI or other components) whenever changes occur. This makes it especially valuable in data-binding scenarios, ensuring the UI reflects updates in the underlying data model without requiring manual intervention.
 
-To achieve this, you can use the [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8), a dynamic data collection that:
+To achieve this, the [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8) can be used—a dynamic data collection that:
 
    * Provides notifications when items are added, removed, or moved.
 
    * Implements the [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) interface to notify subscribers about changes such as adding, removing, moving, or clearing items in the collection.
 
    * Implements the [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) interface to notify when a property value changes on the client side.
-
-The following sample demonstrates how the Order class implements the **INotifyPropertyChanged** interface and raises the event when the **TaskName** property value is changed.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -473,15 +467,13 @@ namespace BlazorApp1.Components.Data
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot represents the TreeGrid with **Observable Collection**.
-
 ![Blazor TreeGrid with ObservableCollection](images/observable_collection.webp)
 
-N> While using an Observable collection, the added, removed, and changed records are reflected in the UI. But while updating the Observable collection using external actions like timers, events, and other notifications, you need to call the `StateHasChanged` method to reflect the changes in the UI.
+When working with an ObservableCollection, added, removed, and modified records are automatically reflected in the UI. However, when the collection is updated through external actions such as timers, events, or other notifications, the `StateHasChanged` method must be called to ensure the changes are reflected in the UI.
 
 #### Add a range of items into ObservableCollection in Blazor TreeGrid
 
-The Blazor TreeGrid supports binding to an **ObservableCollection**, which allows the TreeGrid to automatically reflect changes made to the data source. This approach is particularly useful when you need to add a large batch of records to the TreeGrid at once, such as:
+The Blazor TreeGrid supports binding to an **ObservableCollection**, enabling the TreeGrid to automatically reflect changes made to the data source. This approach is particularly effective when adding a large batch of records to the TreeGrid at once, such as:
 
   * Loading or importing a large dataset dynamically.
 
@@ -495,17 +487,17 @@ The Blazor TreeGrid supports binding to an **ObservableCollection**, which allow
 
 By default, the `Add` method is used to insert a single item into the **ObservableCollection**. When multiple items are added one by one using a `foreach` loop, the TreeGrid refreshes after each addition. This can lead to performance issues and UI flickering, especially when adding a large number of items.
 
-To optimize performance when adding multiple items at once, you can extend the `ObservableCollection<T>` class by implementing an `AddRange` method. By using this method, you can add a range of items and ensure that the `OnCollectionChanged` event is triggered only once, updating the TreeGrid a single time for the entire batch operation.
+Performance can be optimized when adding multiple items at once by extending the `ObservableCollection<T>` class with an `AddRange` method. This method allows a range of items to be added while ensuring the `OnCollectionChanged` event is triggered only once, so the TreeGrid updates a single time for the entire batch operation.
 
 To implement this functionality, follow these steps:
 
 1. **Create a Custom Collection Class**
 
-    Define a new class **SmartObservableCollection<T>** that inherits from `ObservableCollection<T>`. This allows you to customize the behavior of the collection.
+    A new class **SmartObservableCollection<T>** can be defined to inherit from `ObservableCollection<T>`. This approach enables customization of the collection’s behavior.
 
 2. **Add a flag to control notifications**
 
-    Introduce a private boolean **flag _preventNotification** to temporarily disable collection change notifications while adding multiple items.
+    Add a private boolean flag **_preventNotification** to temporarily disable collection change notifications while adding multiple items.
 
 3. **Override the OnCollectionChanged method**
 
@@ -519,8 +511,6 @@ To implement this functionality, follow these steps:
       * Adding each item from the input list to the collection using the `Add` method within a `foreach` loop.
       * Resetting **_preventNotification** to **false**.
       * Raising a single **NotifyCollectionChangedAction.Reset** notification to inform the TreeGrid that the entire collection has changed.
-
-The following example demonstrates how to use this approach in a TreeGrid:  
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -648,28 +638,26 @@ namespace BlazorApp1.Components.Data
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot represents the TreeGrid with **Observable Collection**.
-
 ![Blazor TreeGrid With Range of Items ObservableCollection](images/adding_range_in_observable_collection.webp)
 
 ## Remote Service binding
 
-To bind remote data to Tree Grid component, assign service data as an instance of **SfDataManager** to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) property. To interact with remote data source,  provide the endpoint **url** and define the [HasChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_HasChildMapping) property of tree grid.
+To bind remote data to TreeGrid component, assign service data as an instance of **SfDataManager** to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) property. To interact with remote data source,  provide the endpoint **url** and define the [HasChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_HasChildMapping) property of treegrid.
 
 The [HasChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_HasChildMapping) property maps the field name in data source, that denotes whether current record holds any child records. This is useful internally to show expand icon while binding child data on demand.
 
-The Tree Grid provides **Load on Demand** support for rendering remote data. The Load on demand is considered in Tree Grid for the following actions.
+The TreeGrid provides **Load on Demand** support for rendering remote data. The Load on demand is considered in TreeGrid for the following actions.
 
 * Expanding root nodes.
-* Navigating pages, with paging enabled in Tree Grid.
+* Navigating pages, with paging enabled in TreeGrid.
 
 When load on demand is enabled, all the root nodes are rendered in collapsed state at initial load.
 
-When load on demand support is enabled in Tree Grid with paging, the current or active page’s root node alone will be rendered in collapsed state. On expanding the root node, the child nodes will be loaded from the remote server.
+When load on demand support is enabled in TreeGrid with paging, the current or active page’s root node alone will be rendered in collapsed state. On expanding the root node, the child nodes will be loaded from the remote server.
 
 When a root node is expanded, its child nodes are rendered and are cached locally, such that on consecutive expand/collapse actions on root node, the child nodes are loaded from the cache instead from the remote server.
 
-Similarly, if the user navigates to a new page, the root nodes of that specific page, will be rendered with request to the remote server.
+Similarly, when navigation occurs to a new page, the root nodes of that specific page are rendered with a request to the remote server.
 
 ```cshtml
 
@@ -950,11 +938,11 @@ namespace Sample.Controllers
 N> * By default, **SfDataManager** uses **ODataAdaptor** for remote data-binding.
 <br/> * Based on the RESTful web services, set the corresponding adaptor to SfDataManager. Refer [here](https://ej2.syncfusion.com/documentation/data/adaptors) for more details.
 <br/> * Filtering and searching server-side data operations are not supported in load on demand.
-<br/> * Only Self-Referential type data is supported with remote data binding in tree grid
+<br/> * Only Self-Referential type data is supported with remote data binding in treegrid
 
 ### Offline mode
 
-On remote data binding, all tree grid actions such as paging, loading child on-demand, will be processed on server-side. To avoid postback, set the tree grid to load all data on initialization and make the actions process in client-side. To enable this behavior, use the *offline* property of **SfDataManager**.
+On remote data binding, all treegrid actions such as paging, loading child on-demand, will be processed on server-side. To avoid postback, set the treegrid to load all data on initialization and make the actions process in client-side. To enable this behavior, use the **offline** property of **SfDataManager**.
 
 ```cshtml
 
@@ -992,15 +980,13 @@ On remote data binding, all tree grid actions such as paging, loading child on-d
 
 ### LoadChildOnDemand
 
-The Tree Grid component provides an option to load child records on demand when using remote data binding by setting [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_LoadChildOnDemand)  to **true**.The behavior of the `LoadChildOnDemand` feature of Tree Grid are described below.
+The TreeGrid component provides an option to load child records on demand when using remote data binding by setting [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_LoadChildOnDemand)  to **true**.The behavior of the `LoadChildOnDemand` feature of TreeGrid are described below.
 
 * The parent records are rendered in an **collapsed** state. 
 
 * Child records are loaded only when the corresponding parent records are **expanded**.
 
-This feature is particularly useful for applications that have a large number of child records. If we want the child records to be readily accessible without additional user interaction for expanding nodes, we need to set `LoadChildOnDemand` to **false**.
-
-The following code example describes the behavior of the `LoadChildOnDemand` feature of Tree Grid.
+This feature is particularly useful for applications with a large number of child records. To make child records readily accessible without requiring additional interaction for expanding nodes, set `LoadChildOnDemand` to **false**.
 
 {% tabs %}
 
@@ -1242,16 +1228,9 @@ namespace WebAPI.Controller
 N> The LoadChildOnDemand feature is not applicable for local data binding.
 <br/> The `LoadChildOnDemand` support is also available for virtualization.
 
-
-<!-- Custom Adaptor
-
-You can create your own adaptor by extending the built-in adaptors. The following demonstrates custom adaptor approach and how to add a serial number for the records by overriding the built-in response processing using the **processResponse** method of the **ODataAdaptor**.
-
--->
-
 ### Sending additional parameters to the Rest Web Services
 
-To add a custom parameter to the data request, use the **addParams** method of **Query**. Assign the **Query** object with additional parameters to the tree grid [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Query) property.
+To add a custom parameter to the data request, use the **addParams** method of **Query**. Assign the **Query** object with additional parameters to the treegrid [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Query) property.
 
 ```cshtml
 
@@ -1296,19 +1275,19 @@ To add a custom parameter to the data request, use the **addParams** method of *
 
 <!--Handling HTTP error
 
-During server interaction from the tree grid, some server-side exceptions may occur, and you can acquire those error messages or exception details
+During server interaction from the treegrid, some server-side exceptions may occur, and you can acquire those error messages or exception details
 in the client-side using the [`ActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionFailure) event.
 
 The argument passed to the [`ActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionFailure) event contains the error details returned from the server.
 
 > The [`ActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionFailure) event will be triggered not only for the server errors, but
-also when there is an exception while processing the tree grid actions.
+also when there is an exception while processing the treegrid actions.
 
 -->
 
 ## Entity Framework
 
-Follow the below steps to consume data from the **Entity Framework** in the Tree Grid component.
+Follow the below steps to consume data from the **Entity Framework** in the TreeGrid component.
 
 ### Create DBContext class
 
@@ -1374,7 +1353,7 @@ namespace TreeGridWebApiEFSample.Shared.DataAccess
 
 ### Creating Web API Controller
 
- A Web API Controller has to be created which allows Tree Grid directly to consume data from the Entity framework.
+ A Web API Controller has to be created which allows TreeGrid directly to consume data from the Entity framework.
 
 ```csharp
 using System;
@@ -1444,9 +1423,9 @@ namespace TreeGridWebApiEFSample.Controllers
 }
 ```
 
-### Configure Tree Grid component using Web API adaptor
+### Configure TreeGrid component using Web API adaptor
 
-Now, the Tree Grid can be configured using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with web API, use WebApiAdaptor.
+Now, the TreeGrid can be configured using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with web API, use WebApiAdaptor.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1475,6 +1454,6 @@ Now, the Tree Grid can be configured using the **'SfDataManager'** to interact w
 }
 ```
 
-To perform Tree Grid CRUD operation using Entity Framework. You can refer [here](https://blazor.syncfusion.com/documentation/treegrid/editing/entity-frame-work).
+TreeGrid CRUD operations with Entity Framework can be explored in detail [here](https://blazor.syncfusion.com/documentation/treegrid/editing/entity-frame-work).
 
-N> You can find the fully working sample [here](https://github.com/SyncfusionExamples/Blazor-TreeGrid-With-EntityFramework).
+N>A fully working sample is available [here](https://github.com/SyncfusionExamples/Blazor-TreeGrid-With-EntityFramework).
