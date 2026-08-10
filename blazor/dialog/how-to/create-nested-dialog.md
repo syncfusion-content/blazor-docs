@@ -30,20 +30,20 @@ Set the inner Dialog target as `#dialog`.
 
 <SfButton @onclick="@OpenParentDialog">Open Parent Dialog</SfButton>
 
-<SfDialog ID="innerDialog" Width="250px" MinHeight="150px" ShowCloseIcon="true" Target="@Target" @bind-Visible="@IsVisibleChild">
-    <DialogTemplates>
-        <Header> Inner Dialog </Header>
-        <Content> This is a Nested Dialog </Content>
-    </DialogTemplates>
-    <DialogPositionData X="center" Y="center"></DialogPositionData>
-</SfDialog>
-
 <SfDialog ID="dialog" Width="400px" Height="300px" ShowCloseIcon="true" @bind-Visible="@IsVisibleParent">
     <DialogTemplates>
         <Header> Outer Dialog </Header>
         <Content>
             <SfButton @onclick="@OpenChildDialog">Open Inner Dialog</SfButton>
         </Content>
+    </DialogTemplates>
+    <DialogPositionData X="center" Y="center"></DialogPositionData>
+</SfDialog>
+
+<SfDialog ID="innerDialog" Width="250px" MinHeight="150px" ShowCloseIcon="true" Target="@Target" @bind-Visible="@IsVisibleChild">
+    <DialogTemplates>
+        <Header> Inner Dialog </Header>
+        <Content> This is a Nested Dialog </Content>
     </DialogTemplates>
     <DialogPositionData X="center" Y="center"></DialogPositionData>
 </SfDialog>
@@ -72,7 +72,5 @@ Set the inner Dialog target as `#dialog`.
 }
 
 ```
-
-
 
 ![Creating Nested Blazor Dialog](../images/blazor-nested-dialog.webp)
