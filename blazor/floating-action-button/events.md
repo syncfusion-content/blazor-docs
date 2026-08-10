@@ -7,28 +7,9 @@ control: Floating Action Button
 documentation: ug
 ---
 
-# Events in Floating Action Button Component
+# Events in Blazor Floating Action Button Component
 
-This section explains the events available in the Floating Action Button component. The following events are covered: Created and OnClick.
-
-## Created
-
-Raised after the Floating Action Button has been created and its initial rendering is complete. Use this event to run setup logic or access the component once it is available in the UI.
-
-```cshtml
-
-@using Syncfusion.Blazor.Buttons
-
-<SfFab IconCss="e-icons e-edit" Content="Edit" Created="Created"></SfFab>
-
-@code{
-    public void Created()
-    {
-        // Your required action here
-    }
-}
-
-```
+The Floating Action Button component exposes the following events: `OnClick` and `Created`. Use these events to handle user interactions and component lifecycle.
 
 ## OnClick
 
@@ -53,3 +34,28 @@ Raised when the Floating Action Button is activated by a user action, including 
 }
 
 ```
+
+## Created
+
+Raised after the Floating Action Button has been created and its initial rendering is complete. Use this event to run setup logic or access the component once it is available in the UI.
+
+```cshtml
+
+@using Syncfusion.Blazor.Buttons
+
+<SfFab IconCss="e-icons e-edit" Content="Edit" Created="Created"></SfFab>
+
+@code{
+    public void Created()
+    {
+        // Your required action here
+    }
+}
+
+```
+
+## See also
+
+* [Getting started with Blazor Floating Action Button](./getting-started)
+* [Styles in Blazor Floating Action Button](./styles)
+* [Icons in Blazor Floating Action Button](./icons)
