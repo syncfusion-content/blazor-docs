@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize the up and down arrow in Blazor Numeric TextBox Component
 
-This section explains how to change or customize spin up and down icons. Customize spin button icons using `e-spin-up` and `e-spin-down` classes of those buttons.
+This section explains how to change or customize the spin up and down icons. Customize the spin button icons using the `e-spin-up` and `e-spin-down` classes on those buttons.
 
 The default icons of `e-spin-up` and `e-spin-down` classes using the following CSS code snippets.
 
