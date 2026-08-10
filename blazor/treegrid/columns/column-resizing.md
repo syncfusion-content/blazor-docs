@@ -73,8 +73,8 @@ namespace TreeGridComponent.Data
 
 ![Resizing Column in Blazor TreeGrid](../images/blazor-treegrid-column-resizing.webp)
 
-N> You can disable resizing for a particular column by setting the `AllowResizing` property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component to false.
-<br/> In RTL mode, you can click and drag the left edge of the header cell to resize the column.
+N> Resizing for a specific column can be disabled by setting the `AllowResizing` property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component to false.
+<br/> In RTL mode, the left edge of the header cell can be clicked and dragged to resize the column.
 
 ## Min and max width
 
@@ -148,7 +148,7 @@ namespace TreeGridComponent.Data
 
 ## Resize stacked column
 
-Stacked columns can be resized by clicking and dragging the right edge of the stacked column header. While dragging, the width of the respective child columns will be resized at the same time. You can disable resize for any particular stacked column by setting [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowResizing) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) as **false** to its columns.
+Stacked columns can be resized by clicking and dragging the right edge of the stacked column header. While dragging, the width of the respective child columns will be resized at the same time. Resizing for any specific stacked column can be disabled by setting the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowResizing) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) as **false** for that columns.
 
 {% tabs %}
 
@@ -242,7 +242,7 @@ namespace TreeGridComponent.Data
 
 ## Touch interaction
 
-On touch devices, when the right edge of the header cell is tapped, a floating handler will be visible over the right border of the column. To resize the column, tap and drag the floating handler as needed. You can AutoFit a column by using the Column menu of the treegrid.
+On touch devices, when the right edge of the header cell is tapped, a floating handler will be visible over the right border of the column. To resize the column, tap and drag the floating handler as needed. Columns can also be AutoFit using the TreeGrid’s column menu.
 
 The following screenshot represents the column resizing in touch device.
 
