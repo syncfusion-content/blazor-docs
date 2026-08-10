@@ -48,7 +48,7 @@ To enable RTL, configure the [EnableRtl](https://help.syncfusion.com/cr/blazor/S
 
 ## Enable RTL globally
 
-RTL rendering can be enabled globally for all Syncfusion Blazor components by configuring the Syncfusion service in `Program.cs`.
+RTL rendering can be enabled globally for all Syncfusion Blazor components by configuring the Syncfusion service in **Program.cs**.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Program.cs" %}
@@ -67,7 +67,7 @@ This configuration activates RTL rendering across supported Syncfusion component
 
 <SfPager TotalItemsCount="20" NumericItemsCount="5" PageSize="5"></SfPager>
 ```
-In this configuration, the Pager component automatically adopts RTL rendering when the global `EnableRtl` option is enabled. Navigation controls, numeric page items, tooltips, and related pager elements are displayed using right-to-left alignment without requiring component-level settings.
+In this configuration, the Pager component automatically adopts RTL rendering when the global **EnableRtl** option is enabled. Navigation controls, numeric page items, tooltips, and related pager elements are displayed using right-to-left alignment without requiring component-level settings.
 
 By combining localization and RTL capabilities, the Pager component delivers a flexible globalization solution suitable for multilingual and multicultural applications. Localized text improves clarity and accessibility, while RTL rendering ensures that navigation patterns align with cultural reading expectations. Together, these features help create a consistent, intuitive, and regionally appropriate paging experience across a wide range of languages and deployment scenarios.
 
