@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Methods in Blazor Inline AI Assist Control | Syncfusion
-description: Checkout and learn about Methods with Blazor Inline AI Assist component in Blazor Server App and Blazor WebAssembly App.
+title: Methods in Blazor Inline AI Assist | Syncfusion®
+description: Use public methods like AddResponse in Blazor Inline AI Assist to programmatically add AI-generated responses and manage component behavior dynamically.
 platform: Blazor
 control: Inline AI Assist
 documentation: ug
 ---
 
-# Methods in Blazor Inline AI Assist control
+# Methods in Blazor Inline AI Assist
 
 ## Adding response
 

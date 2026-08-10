@@ -35,13 +35,13 @@ Specify a boolean value for the [Enabled](https://help.syncfusion.com/cr/blazor/
 
 ![Blazor ComboBox in disabled state](./images/style/blazor_ComboBox_disabled-state.webp)
 
-## CssClass  
+## CssClass
 
-Specifies the CSS class name that can be appended to the root element of the ComboBox. One or more custom CSS classes can be added to a ComboBox.
+Use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property to specify a CSS class name that is appended to the root element of the ComboBox. One or more custom CSS classes can be added to a ComboBox, and built-in modifier classes are available for common states.
 
 Some of the possible values are:
 
--`e-success`: Denotes a success state, applying a green style to the input.
+- `e-success`: Denotes a success state, applying a green style to the input.
 - `e-warning`: Denotes a warning state, applying an orange style to the input.
 - `e-error`: Denotes an error state, applying a red style to the input.
 - `e-outline`:  Applies outline styles (supported in Material theme).

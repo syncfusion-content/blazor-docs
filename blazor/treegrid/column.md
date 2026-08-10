@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Columns in Blazor TreeGrid Component | Syncfusion®
-description: Checkout and learn how to define and configure columns in the Blazor TreeGrid component and much more details.
+title: Blazor TreeGrid Columns | Syncfusion
+description: Learn how to define, configure, and customize columns in Blazor TreeGrid for improved data presentation and user experience.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Columns in Blazor TreeGrid Component
+# Columns in Blazor TreeGrid
 
 Column definitions act as the data source schema for the TreeGrid and determine how values render. TreeGrid operations such as sorting, filtering, and searching operate based on the column definitions. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component is required to map data source values to TreeGrid columns.
 
@@ -162,7 +162,7 @@ Customize the header element using the [HeaderTemplate](https://help.syncfusion.
             </HeaderTemplate>
         </TreeGridColumn>
         <TreeGridColumn Field="Designation" HeaderText="Designation" Width="120"></TreeGridColumn>
-        <TreeGridColumn Field="EmpID" HeaderText="Progress" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="EmpID" HeaderText="Employee Name" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="Country" HeaderText="Priority" Width="100"></TreeGridColumn>
         </TreeGridColumns>
 </SfTreeGrid>
@@ -203,9 +203,10 @@ Customize the header element using the [HeaderTemplate](https://help.syncfusion.
 
 {% highlight c# %}
 
-namespace TreeGridComponent.Data {
+namespace TreeGridComponent.Data
+{
 
-public class Employee
+    public class Employee
     {
         public string Name { get; set; }
         public string? FullName { get; set; }
@@ -215,16 +216,17 @@ public class Employee
         public string? Country { get; set; }
         public int? ParentId { get; set; }
         public Employee Treedata { get; set; }
+        public int EmployeeID { get; set; }
 
         public static List<Employee> GetTemplateData()
         {
             List<Employee> DataCollection = new List<Employee>();
-            DataCollection.Add(new Employee { Name = "Robert King",Designation = "Chief Executive Officer",EmpID = "EMP001",Country = "USA",ParentId = null,Treedata = new TreeData() { ID = 21}});
-            DataCollection.Add(new Employee { Name = "David william",Designation = "Vice President",EmpID = "EMP004",Country = "USA",ParentId = 1,Treedata = new TreeData() { ID = 21 }});
-            DataCollection.Add(new Employee { Name = "Nancy Davolio",Designation = "Marketing Executive",EmpID = "EMP035",Country = "USA",ParentId = 1,Treedata = new TreeData() { ID = 21 }});
-            DataCollection.Add(new Employee { Name = "Andrew Fuller",Designation = "Sales Representative",EmpID = "EMP045",Country = "UK",ParentId = 1,Treedata = new TreeData() { ID = 21 }});
-            DataCollection.Add(new Employee { Name = "Anne Dodsworth",FullName = "AnneDodsworth",Designation = "Sales Representative",EmployeeID = 5,EmpID = "EMP091",Country = "USA",ParentId = null,Treedata = new TreeData() { ID = 21 }});
-            DataCollection.Add(new Employee { Name = "Michael Suyama",FullName = "MichaelSuyama",Designation = "Sales Representative",EmployeeID = 6,EmpID = "EMP110",Country = "UK",ParentId = 5,Treedata = new TreeData() { ID = 21 }});
+            DataCollection.Add(new Employee { Name = "Robert King", Designation = "Chief Executive Officer", EmployeeID= 1,  EmpID = "EMP001", Country = "USA", ParentId = null});
+            DataCollection.Add(new Employee { Name = "David william", Designation = "Vice President", EmployeeID = 2,  EmpID = "EMP004", Country = "USA", ParentId = 1 });
+            DataCollection.Add(new Employee { Name = "Nancy Davolio", Designation = "Marketing Executive", EmployeeID= 3, EmpID = "EMP035", Country = "USA", ParentId = 1 });
+            DataCollection.Add(new Employee { Name = "Andrew Fuller", Designation = "Sales Representative", EmployeeID = 4,EmpID = "EMP045", Country = "UK", ParentId = 1});
+            DataCollection.Add(new Employee { Name = "Anne Dodsworth", FullName = "AnneDodsworth", Designation = "Sales Representative", EmployeeID = 5, EmpID = "EMP091", Country = "USA", ParentId = null });
+            DataCollection.Add(new Employee { Name = "Michael Suyama", FullName = "MichaelSuyama", Designation = "Sales Representative", EmployeeID = 6, EmpID = "EMP110", Country = "UK", ParentId = 5 });
             return DataCollection;
         }
     }

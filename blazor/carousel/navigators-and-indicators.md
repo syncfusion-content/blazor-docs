@@ -7,26 +7,26 @@ control: Carousel
 documentation: ug
 ---
 
-# Navigators and Indicators with Blazor Carousel Component
+# Navigators and Indicators in Blazor Carousel component
 
 The navigators and indicators are used to transition the slides manually.
 
-To customize the appearance of indicators, and previous and next navigators, using a template with Blazor Carousel component, you can check on this video.
+To customize the appearance of indicators and the previous/next navigators using a template with the Blazor Carousel component, refer to this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=A5A9eM39nW0" %}
 
 ## Navigators
 
-### Show or hide previous and next button
+### Show or hide previous and next buttons
 
-In navigators, the previous and next slide transition buttons are used to perform slide transitions manually. You can show/hide the navigators using the [ButtonsVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_ButtonsVisibility) property. The possible property values are as follows:
+The previous and next slide transition buttons are used to perform slide transitions manually. You can show or hide the navigators using the [ButtonsVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_ButtonsVisibility) property (default: `Visible`). The possible values are:
 
-- `Hidden` – the navigator’s buttons are not visible.
-- `Visible` – the navigator’s buttons are visible.
-- `VisibleOnHover` – the navigator’s buttons are visible only when hovering over the carousel.
+- `Hidden` - the navigator buttons are not visible.
+- `Visible` - the navigator buttons are visible.
+- `VisibleOnHover` - the navigator buttons are visible only when hovering over the carousel.
 
-The following example depicts the code to hide the navigators in the carousel.
+The following example demonstrates how to hide the navigators.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -70,9 +70,9 @@ The following example depicts the code to hide the navigators in the carousel.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjrRXHMhgVvjpWIz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel Navigators](images/navigators_hidden.webp)" %}
 
-### Show previous and next button on hover
+### Show previous and next buttons on hover
 
-In the carousel, you can show the previous and next buttons only on mouse hover using the [ButtonsVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_ButtonsVisibility) property. The following example depicts the code to show the navigators on mouse hover in the carousel.
+You can show the previous and next buttons only on mouse hover by setting the [ButtonsVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_ButtonsVisibility) property to `CarouselButtonVisibility.VisibleOnHover`. The following example demonstrates how to show the navigators on mouse hover.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -118,7 +118,7 @@ In the carousel, you can show the previous and next buttons only on mouse hover 
 
 ### Previous and next button template
 
-Template options are provided to customize the previous button using [PreviousButtonTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_PreviousButtonTemplate) and the next button using [NextButtonTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_NextButtonTemplate). The following example depicts the code for applying the template to previous and next buttons in the carousel.
+You can customize the previous and next buttons using the [PreviousButtonTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_PreviousButtonTemplate) and [NextButtonTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_NextButtonTemplate) template properties. The following example demonstrates how to apply a template to the previous and next buttons.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -202,7 +202,7 @@ Template options are provided to customize the previous button using [PreviousBu
 
 ### Show or hide indicators
 
-In indicators, the total slides and current slide state have been depicted. You can show/hide the indicators using the [ShowIndicators](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_ShowIndicators) property. The following example depicts the code to hide the indicators in the carousel.
+Indicators display the total number of slides and the current slide position. You can show or hide the indicators using the [ShowIndicators](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_ShowIndicators) property (default: `true`). The following example demonstrates how to hide the indicators.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -248,7 +248,7 @@ In indicators, the total slides and current slide state have been depicted. You 
 
 ### Indicators template
 
-Template option is provided to customize the indicators by using the [IndicatorsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsTemplate) property. The following example depicts the code for applying a template to indicators in the carousel.
+You can customize the indicators using the [IndicatorsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsTemplate) property. The template receives an `IndicatorTemplateContext` whose `Index` property provides the zero-based index of the current indicator. The following example demonstrates how to apply a template to the indicators.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -324,7 +324,7 @@ Template option is provided to customize the indicators by using the [Indicators
 
 ### Showing preview of slide in indicator
 
-You can customize the indicators by showing the preview image of each slide using the [IndicatorsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsTemplate) property. The following example depicts the code for showing the preview image using a template for indicators in the carousel.
+You can display a preview image of each slide inside the indicator by combining the [IndicatorsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsTemplate) property with the `context.Index` value. The following example demonstrates how to show the preview image using an indicator template.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -397,9 +397,9 @@ You can customize the indicators by showing the preview image of each slide usin
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNrRZRMLgGRcEJmC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel Indicators](images/indicators_preview.webp)" %}
 
-### Indicators Types
+### Indicator types
 
-Choose different types of indicators available using the [`IndicatorsType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsType) property. The indicator types are categorized as follows:
+Choose the type of indicator using the [`IndicatorsType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsType) property (default: `Default`). The following indicator types are available:
 
 * [Default Indicator](#default-indicator)
 * [Dynamic Indicator](#dynamic-indicator)
@@ -408,13 +408,13 @@ Choose different types of indicators available using the [`IndicatorsType`](http
 
 #### Default Indicator
 
-A default indicator in a carousel is a set of dots that indicate the current position of the slide in the carousel. The Default indicator can be achieved by setting the [`IndicatorsType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsType) to `Default`.
+The Default indicator displays a set of dots that represent the current slide position. It is set by configuring the [`IndicatorsType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsType) property to `CarouselIndicatorType.Default`.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <div class="control-container">
-    <SfCarousel IndicatorsType="Default">
+    <SfCarousel IndicatorsType="CarouselIndicatorType.Default">
         <CarouselItem>
             <div class="slide-content">Slide 1</div>
         </CarouselItem>
@@ -454,13 +454,13 @@ A default indicator in a carousel is a set of dots that indicate the current pos
 
 #### Dynamic Indicator
 
-A dynamic indicator in a carousel provides visual cues or markers that dynamically change or update to indicate the current position. The Dynamic indicator can be achieved by setting the [`IndicatorsType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsType) to `Dynamic`.
+The Dynamic indicator provides visual cues that update to indicate the current slide position. It is set by configuring the [`IndicatorsType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsType) property to `CarouselIndicatorType.Dynamic`.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <div class="control-container">
-    <SfCarousel IndicatorsType="Dynamic">
+    <SfCarousel IndicatorsType="CarouselIndicatorType.Dynamic">
         <CarouselItem>
             <div class="slide-content">Slide 1</div>
         </CarouselItem>
@@ -500,13 +500,13 @@ A dynamic indicator in a carousel provides visual cues or markers that dynamical
 
 #### Fraction Indicator
 
-The fraction indicator type displays the current slide index and total slide count as a fraction. The Fraction indicator can be achieved by setting the [`IndicatorsType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsType) to `Fraction`.
+The Fraction indicator displays the current slide index and the total slide count as a fraction (for example, `1/5`). It is set by configuring the [`IndicatorsType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsType) property to `CarouselIndicatorType.Fraction`.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <div class="control-container">
-    <SfCarousel IndicatorsType="Fraction">
+    <SfCarousel IndicatorsType="CarouselIndicatorType.Fraction">
         <CarouselItem>
             <div class="slide-content">Slide 1</div>
         </CarouselItem>
@@ -546,13 +546,13 @@ The fraction indicator type displays the current slide index and total slide cou
 
 #### Progress Indicator
 
-The Progress Indicator type displays the current slide as a progress bar. The Progress indicator can be achieved by setting the [`IndicatorsType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsType) to `Progress`.
+The Progress indicator displays a progress bar that reflects the current slide's position within the total number of slides. It is set by configuring the [`IndicatorsType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsType) property to `CarouselIndicatorType.Progress`.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <div class="control-container">
-    <SfCarousel IndicatorsType="Progress">
+    <SfCarousel IndicatorsType="CarouselIndicatorType.Progress">
         <CarouselItem>
             <div class="slide-content">Slide 1</div>
         </CarouselItem>
@@ -594,7 +594,7 @@ The Progress Indicator type displays the current slide as a progress bar. The Pr
 
 ### Show or hide the play button
 
-In the carousel, [AutoPlay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_AutoPlay) actions have been controlled by using the [ShowPlayButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_ShowPlayButton) property in the user interface. When you enable this property, the slide transitions are controlled using this play and pause button. This property depends on the [ButtonsVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_ButtonsVisibility) property. The following example depicts the code to show the play button in the carousel.
+Use the [ShowPlayButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_ShowPlayButton) property (default: `false`) to display a play/pause button that controls [AutoPlay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_AutoPlay) actions in the user interface. The play button is only visible when [ButtonsVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_ButtonsVisibility) is set to `Visible` or `VisibleOnHover` (not `Hidden`). The following example demonstrates how to show the play button.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -640,7 +640,7 @@ In the carousel, [AutoPlay](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ### Play button template
 
-Template option is provided to customize the play button by using the [PlayButtonTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_PlayButtonTemplate) property. The following example depicts the code for applying a template to play Button in the carousel.
+You can customize the play button using the [PlayButtonTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_PlayButtonTemplate) property. The following example demonstrates how to apply a template to the play button. The `IsToggle="true"` attribute on `SfButton` keeps the button in a pressed state while the carousel is playing.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons

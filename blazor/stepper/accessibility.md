@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Stepper component
 
-The Blazor Stepper component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Stepper component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor Stepper component is outlined below.
 
@@ -51,7 +51,7 @@ The following ARIA attributes are used in the Stepper component:
 
 The following keyboard shortcuts are supported by the Stepper component.
 
-| Windows | Mac | **To do this** |
+| **Windows** | **Mac** | **To do this** |
 | --- | --- | --- |
 | <kbd>↑</kbd> | <kbd>↑</kbd> | Focuses the previous step in a vertical Stepper. |
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Focuses the next step in a vertical Stepper. |

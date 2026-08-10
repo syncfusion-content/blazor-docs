@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Optimizing Blazor DataGrid Performance | Syncfusion®
-description: Learn best practices to optimize Blazor DataGrid performance when handling large datasets and multiple columns.
+title: Blazor Grid Performance Optimization | Syncfusion
+description: Learn how to optimize Blazor Data Grid performance for large datasets, improve rendering efficiency, and enhance user experience.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Performance Optimization for Blazor DataGrid
+# Performance Optimization in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides advanced features for displaying and managing large collections of data. When working with extensive datasets or grids containing numerous columns, performance optimization becomes essential to ensure responsive rendering and smooth interactions. This guide outlines proven strategies and best practices for improving DataGrid performance during data binding and rendering operations.
 
