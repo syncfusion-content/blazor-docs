@@ -78,6 +78,7 @@ You can validate the fields within the stepper component. In the below shared ex
 
 @using Syncfusion.Blazor.Navigations
 @using System.ComponentModel.DataAnnotations
+@using Microsoft.AspNetCore.Components.Forms
 
 <SfStepper @ref="stepper" StepChanging="@handleStepChange" Linear=true>
     <StepperSteps>
@@ -96,14 +97,14 @@ You can validate the fields within the stepper component. In the below shared ex
             <div class="form-group">
                 <label for="name">Enter your name:</label>
                 <div class="validation-container">
-                    <InputText id="name" @bind-Value="@model.Name" width="350px" />
+                    <InputText id="name" @bind-Value="@model.Name" class="validation-input" />
                     <ValidationMessage For="@(() => model.Name)" />
                 </div>
             </div>
             <div class="form-group">
                 <label for="email">Enter your e-mail:</label>
                 <div class="validation-container">
-                    <InputText id="email" @bind-Value="@model.Email"/>
+                    <InputText id="email" @bind-Value="@model.Email" class="validation-input" />
                     <ValidationMessage For="@(() => model.Email)" />
                 </div>
             </div>
@@ -113,7 +114,7 @@ You can validate the fields within the stepper component. In the below shared ex
             <div class="feedback-form">
                 <p>Anything else you'd like to share?</p>
                 <div class="validation-container">
-                    <InputTextArea id="Feedback" @bind-Value="@model.Feedback"></InputTextArea>
+                    <InputTextArea id="Feedback" @bind-Value="@model.Feedback" class="validation-input"></InputTextArea>
                     @if (!string.IsNullOrEmpty(model.Feedback) && model.Feedback.Length < 5)
                     {
                         <div class="validation-message">Please enter at least 5 characters.</div>
@@ -136,7 +137,7 @@ You can validate the fields within the stepper component. In the below shared ex
     <h5 style="color: green; margin-top: 20px;">@content</h5>
     @if (currentStep == 3)
     {
-        if (showFeedBack)
+        if (showFeedback)
         {
             <h6><b>Please confirm to submit your feedback.</b></h6>
             <p>@model.Feedback</p>
@@ -162,8 +163,7 @@ You can validate the fields within the stepper component. In the below shared ex
     private int currentStep = 1;
     private bool isValid = false;
     private string content = "";
-    private bool isValidMsg = false;
-    private bool showFeedBack = false;
+    private bool showFeedback = false;
 
     private async void onNextStep()
     {
@@ -186,7 +186,7 @@ You can validate the fields within the stepper component. In the below shared ex
         if (isValid && currentStep == 3)
         {
             content = "Thanks! Feedback has been submitted successfully.";
-            showFeedBack = false;
+            showFeedback = false;
         }
     }
 
@@ -200,6 +200,7 @@ You can validate the fields within the stepper component. In the below shared ex
                 case 1:
                     if (ValidateCurrentStep() && !string.IsNullOrEmpty(model.Name))
                     {
+                        isValid = true;
                         stepperStep1.IsValid = true;
                         if (args.ActiveStep < args.PreviousStep)
                         {
@@ -235,7 +236,7 @@ You can validate the fields within the stepper component. In the below shared ex
                         else
                         {
                             currentStep++;
-                            showFeedBack = true;
+                            showFeedback = true;
                         }
                         args.Cancel = false;
                     }
@@ -250,7 +251,7 @@ You can validate the fields within the stepper component. In the below shared ex
                         else
                         {
                             stepperStep2.IsValid = isValid = false;
-                            args.Cancel = isValidMsg = true;
+                            args.Cancel = true;
                         }
                     }
                     break;
@@ -334,11 +335,13 @@ You can validate the fields within the stepper component. In the below shared ex
         min-width: 135px;
     }
 
-    .validation-container input {
+    .validation-container input,
+    .validation-input {
         width: 350px;
     }
 
-    .validation-container textarea {
+    .validation-container textarea,
+    .validation-input {
         width: 400px;
     }
 
