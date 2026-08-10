@@ -1,14 +1,14 @@
 ---
 layout: post
-title: LiteLLM Integration in Blazor Inline AI Assist | Syncfusion
-description: Checkout and learn about LiteLLM integration with Blazor Inline AI Assist component in Blazor WebAssembly Application.
+title: LiteLLM Integration in Blazor Inline AI Assist | Syncfusion®
+description: Integrate Blazor Inline AI Assist with LiteLLM proxy to connect multiple LLM providers (OpenAI, Azure OpenAI) via unified OpenAI-compatible API.
 platform: Blazor
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate Inline AI Assist with LiteLLM
+# LiteLLM Integration in Blazor Inline AI Assist
 
 The **Inline AI Assist** component can also be integrated with [LiteLLM](https://docs.litellm.ai/docs), an open-source proxy that provides a unified, OpenAI-compatible API for multiple LLM providers such as [OpenAI](https://openai.com) and [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai).
 

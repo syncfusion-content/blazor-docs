@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Batch Editing in Blazor TreeGrid Component | Syncfusion®
-description: Checkout and learn here all about Batch Editing in Blazor Tree Grid component and much more details.
+title: Blazor TreeGrid Batch Editing | Syncfusion
+description: Learn how to perform batch editing in Blazor TreeGrid, update multiple records at once, validate changes, and improve editing efficiency.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Batch Editing in Blazor TreeGrid Component
+# Batch Editing in Blazor TreeGrid
 
 Batch editing allows making multiple edits across cells and rows before committing changes to the data source. Double-click a cell to enter edit mode; edits are staged on the client and can be saved together or discarded. Save changes by clicking the toolbar **Update** button or by calling [EndEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EndEditAsync). To enable Batch editing, set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Mode) property of [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) to `EditMode.Batch`.
 
@@ -20,7 +20,7 @@ The following example shows how to enable Batch editing, including add, edit, an
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
 
-<SfTreeGrid DataSource="TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })">
+<SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })">
     <TreeGridPageSettings PageSize="2"></TreeGridPageSettings>
     <TreeGridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Batch" NewRowPosition="RowPosition.Below"></TreeGridEditSettings>
     <TreeGridColumns>
@@ -37,41 +37,39 @@ The following example shows how to enable Batch editing, including add, edit, an
     public List<BusinessObject> TreeData { get; set; }
     protected override void OnInitialized()
     {
-        this.TreeData = BusinessObject.GetSelfDataSource().ToList();
+        TreeData = BusinessObject.GetSelfDataSource().ToList();
     }
 }
 
 {% endhighlight %}
 
-{% highlight c# %}
-
+{% highlight c# tabtitle="BusinessObject.cs" %}
 namespace TreeGridComponent.Data {
-        public class BusinessObject
-        {
-            public int TaskId { get; set;}
-            public string TaskName { get; set;}
-            public DateTime? StartDate { get; set;}
-            public int? Duration { get; set;}
-            public int? Progress { get; set;}
-            public string Priority { get; set;}
-            public int? ParentId { get; set;}
+    public class BusinessObject
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public int? Duration { get; set; }
+        public int? Progress { get; set; }
+        public string Priority { get; set; }
+        public int? ParentId { get; set; }
 
         public static List<BusinessObject> GetSelfDataSource()
         {
             List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",StartDate = new DateTime(2017, 10, 23),Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",StartDate = new DateTime(2017, 10, 23),Duration = 5,Progress = 80,Priority = "Low",ParentId = 1 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",StartDate = new DateTime(2017, 10, 24),Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",StartDate = new DateTime(2017, 10, 25),Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5",StartDate = new DateTime(2017, 10, 26), Duration = 9, Progress = 25, ParentId = 4, Priority = "Normal" });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6, TaskName = "Child Task 6",StartDate = new DateTime(2017, 10, 27), Duration = 9, Progress = 7, ParentId = 5, Priority = "Normal" });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7, TaskName = "Parent Task 3",StartDate = new DateTime(2017, 10, 28), Duration = 4, Progress = 45, ParentId = null, Priority = "High" });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8, TaskName = "Child Task 7",StartDate = new DateTime(2017, 10, 29), Duration = 3, Progress = 38, ParentId = 7, Priority = "Critical" });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9, TaskName = "Child Task 8",StartDate = new DateTime(2017, 10, 30), Duration = 7, Progress = 70, ParentId = 7, Priority = "Low" });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", StartDate = new DateTime(2017, 10, 23), Duration = 10, Progress = 70, Priority = "Critical", ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", StartDate = new DateTime(2017, 10, 23), Duration = 5, Progress = 80, Priority = "Low", ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", StartDate = new DateTime(2017, 10, 24), Duration = 5, Progress = 65, Priority = "Critical", ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4, TaskName = "Child task 3", StartDate = new DateTime(2017, 10, 25), Duration = 6, Priority = "High", Progress = 77, ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5", StartDate = new DateTime(2017, 10, 26), Duration = 9, Progress = 25, ParentId = 4, Priority = "Normal" });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6, TaskName = "Child Task 6", StartDate = new DateTime(2017, 10, 27), Duration = 9, Progress = 7, ParentId = 5, Priority = "Normal" });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7, TaskName = "Parent Task 3", StartDate = new DateTime(2017, 10, 28), Duration = 4, Progress = 45, ParentId = null, Priority = "High" });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8, TaskName = "Child Task 7", StartDate = new DateTime(2017, 10, 29), Duration = 3, Progress = 38, ParentId = 7, Priority = "Critical" });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9, TaskName = "Child Task 8", StartDate = new DateTime(2017, 10, 30), Duration = 7, Progress = 70, ParentId = 7, Priority = "Low" });
             return BusinessObjectCollection;
         }
     }
-
 }
 
 {% endhighlight %}

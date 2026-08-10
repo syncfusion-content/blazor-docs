@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in Blazor TreeGrid Component | Syncfusion®
-description: Checkout and learn here all the features about selection in Blazor TreeGrid component and much more details.
+title: Blazor TreeGrid Selection | Syncfusion
+description: Learn how to use selection in Blazor TreeGrid with row, cell, checkbox, multi-selection, and programmatic selection features.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Selection in Blazor TreeGrid Component
+# Selection in Blazor TreeGrid
 
 Selection provides an option to highlight a row or a cell. It can be done through simple mouse down or arrow keys. To disable selection in the Tree Grid, set the [AllowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowSelection) to false.
 
@@ -398,6 +398,7 @@ The Toggle selection allows to perform selection and unselection of the particul
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
 
 <SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" AllowSelection="true" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridSelectionSettings  EnableToggle="true" Type="SelectionType.Multiple"></TreeGridSelectionSettings>
@@ -648,7 +649,7 @@ Retrieve selected row indexes using the [GetSelectedRowIndexesAsync](https://hel
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
 
-    private async void RowSelectHandler(RowSelectEventArgs<TreeData> Args)
+    private async Task RowSelectHandler(RowSelectEventArgs<TreeData> Args)
     {
         this.SelectedRowIndexes = await this.TreeGrid.GetSelectedRowIndexesAsync();   /// get the selected row indexes
 

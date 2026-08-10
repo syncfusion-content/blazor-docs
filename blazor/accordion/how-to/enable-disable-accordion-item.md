@@ -2,15 +2,16 @@
 layout: post
 title: Enable or Disable item in Blazor Accordion Component | Syncfusion®
 description: Checkout and learn here all features about Enable or Disable item in Blazor Accordion component and more.
+platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
 # Enable or Disable Item in Blazor Accordion Component
 
-The Accordion component provides support to enable or disable specific accordion items using the accordion item's [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Disabled) property.
+Enable or disable a specific [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) item by setting the [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Disabled) parameter on each [`AccordionItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html). A disabled item renders its header in a non-interactive state — the user cannot click it to expand or collapse the item.
 
-In the following example, the first accordion item is enabled or disabled dynamically when the **Enable/Disable First Item** button is clicked.
+The following example toggles the first item's `Disabled` state when you click the **Enable/Disable First Item** button.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -37,3 +38,10 @@ In the following example, the first accordion item is enabled or disabled dynami
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDLHjxMiCPEfbiEL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Enabling or Disabling Item in Blazor Accordion](../images/blazor-accordion-enable-disable-item.webp)" %}
+
+## See also
+
+* [Create Wizard in Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/how-to/create-wizard-using-accordion)
+* [Add/Remove Accordion Items](https://blazor.syncfusion.com/documentation/accordion/how-to/add-remove-accordion-items)
+* [Accessibility in Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/accessibility)
+* [AccordionItem API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html)

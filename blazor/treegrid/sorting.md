@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sorting in Blazor TreeGrid Component | Syncfusion®
-description: Checkout and learn here all the features about sorting in Blazor TreeGrid component and much more details.
+title: Blazor TreeGrid Sorting | Syncfusion
+description: Learn how to sort data in Blazor TreeGrid using single and multi-column sorting, custom sorting options, and efficient data organization.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Sorting in Blazor TreeGrid Component
+# Sorting in Blazor TreeGrid
 
 Sorting enables to sort data in the **Ascending** or **Descending** order. To sort a column, click the column header. To sort multiple columns, press and hold the CTRL key and click the column header. Sorting of any one of the multi-sorted columns can be cleared by pressing and holding the SHIFT key and clicking the specific column header.
 
@@ -168,19 +168,19 @@ During the sort action, the tree grid component triggers two events. The [Sortin
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
-@inject IJSRuntime  JsRuntime;
+@using Syncfusion.Blazor.Grids;
+@inject IJSRuntime JsRuntime;
 
 <SfTreeGrid DataSource="@TreeGridData" AllowSorting="true" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
-    <TreeGridEvents Sorting="SortingHandler" Sorted="SortedHandler" TValue="TreeData"></TreeGridEvents>
-    <TreeGridColumns>
-        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn>
+    <TreeGridEvents TValue="TreeData" Sorting="SortingHandler" Sorted="SortedHandler"></TreeGridEvents>
+    <TreeGridColumns> 
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
+        </TreeGridColumn> <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn> 
         <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80"></TreeGridColumn>
-    </TreeGridColumns>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn> 
+        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80"></TreeGridColumn> 
+    </TreeGridColumns> 
 </SfTreeGrid>
-
 @code {
 
     public List<TreeData> TreeGridData { get; set; }
@@ -192,12 +192,18 @@ During the sort action, the tree grid component triggers two events. The [Sortin
 
     private void SortingHandler(SortingEventArgs args)
     {
-        JsRuntime.InvokeAsync<string>("window.alert", args.RequestType.ToString());
+        // Example: prevent sorting on the TaskId column
+        if (string.Equals(args?.ColumnName, "TaskId", StringComparison.OrdinalIgnoreCase))
+        {
+            args.Cancel = true;
+
+            return;
+        }
     }
 
     private void SortedHandler(SortedEventArgs args)
     {
-        JsRuntime.InvokeAsync<string>("window.alert", args.RequestType.ToString());
+      // perform actions that needs to be done after sorting action
     }
 }
 
@@ -290,8 +296,11 @@ In this TreeGrid example, custom sorting enhances project management by allowing
         {
             var a = x as TaskData;
             var b = y as TaskData;
-            bool aHasValue = int.TryParse(a?.StoryPoints ?? "", out int valA);
-            bool bHasValue = int.TryParse(b?.StoryPoints ?? "", out int valB);
+            if (a is null && b is null) return 0;
+            if (a is null) return -1;
+            if (b is null) return 1;
+            bool aHasValue = int.TryParse(a.StoryPoints ?? "", out int valA);
+            bool bHasValue = int.TryParse(b.StoryPoints ?? "", out int valB);
             if (!aHasValue && !bHasValue) return 0;
             if (!aHasValue) return -1; // Empty comes first
             if (!bHasValue) return 1;
@@ -311,26 +320,13 @@ In this TreeGrid example, custom sorting enhances project management by allowing
         {
             var a = x as TaskData;
             var b = y as TaskData;
-            int pa = Order.GetValueOrDefault(a?.Priority ?? "", 0);
-            int pb = Order.GetValueOrDefault(b?.Priority ?? "", 0);
+            if (a is null && b is null) return 0;
+            if (a is null) return -1;
+            if (b is null) return 1;
+            int pa = Order.GetValueOrDefault(a.Priority ?? "", 0);
+            int pb = Order.GetValueOrDefault(b.Priority ?? "", 0);
             // Ascending order: Low → Normal → High → Critical
             return pa.CompareTo(pb);
-        }
-    }
-
-    public void ToolBarClick(Syncfusion.Blazor.Navigations.ClickEventArgs Args)
-    {
-        if (Args.Item.Id == "small")
-        {
-            RowHeightValue = 20;
-        }
-        if (Args.Item.Id == "medium")
-        {
-            RowHeightValue = 40;
-        }
-        if (Args.Item.Id == "big")
-        {
-            RowHeightValue = 60;
         }
     }
 
@@ -343,29 +339,21 @@ In this TreeGrid example, custom sorting enhances project management by allowing
             { "High", 3 },
             { "Critical", 4 }
         };
-
-        public int Compare(object XRowDataToCompare, object YRowDataToCompare)
+        public int Compare(object? XRowDataToCompare, object? YRowDataToCompare)
         {
             var xx = XRowDataToCompare as WrapData;
             var yy = YRowDataToCompare as WrapData;
-            string stringX = xx?.Priority.ToString() ?? string.Empty;
-            string stringY = yy?.Priority.ToString() ?? string.Empty;
+            if (xx is null && yy is null) return 0;
+            if (xx is null) return -1;
+            if (yy is null) return 1;
+            string stringX = xx.Priority ?? string.Empty;
+            string stringY = yy.Priority ?? string.Empty;
 
             int priorityX = PriorityOrder.GetValueOrDefault(stringX, 1);
             int priorityY = PriorityOrder.GetValueOrDefault(stringY, 1);
 
-            if (priorityX == priorityY)
-            {
-                return 0;
-            }
-            else if (priorityX > priorityY)
-            {
-                return 1;
-            }
-            else
-            {
-                return -1;
-            }
+            if (priorityX == priorityY) return 0;
+            return priorityX > priorityY ? 1 : -1;
         }
     }
 }

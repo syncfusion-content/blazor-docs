@@ -9,18 +9,22 @@ documentation: ug
 
 # Events in Blazor TimePicker Component
 
-This section explains the list of events of the TimePicker component which will be triggered for appropriate TimePicker actions.
+This section lists the events exposed by the Blazor TimePicker component and the actions that trigger them.
 
 | Event Name(`v17.1.*`) |Event Name(`v17.2.*`) |
 | ----- | ----- |
 | change | [ValueChange](events#valuechange) |
 | close | [OnClose](events#onclose) |
+| created | [Created](events#created) |
+| destroyed | [Destroyed](events#destroyed) |
+| focus | [Focus](events#focus) |
+| blur | [Blur](events#blur) |
 | itemRender | [OnItemRender](events#onitemrender) |
 | open | [OnOpen](events#onopen) |
 
 ## Blur
 
-`Blur` event triggers when the input loses the focus.
+The `Blur` event is triggered when the input loses focus.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -40,7 +44,7 @@ This section explains the list of events of the TimePicker component which will 
 
 ## ValueChange
 
-`ValueChange` event triggers when the Calendar value is changed.
+The `ValueChange` event is triggered when the TimePicker value is changed.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -60,7 +64,7 @@ This section explains the list of events of the TimePicker component which will 
 
 ## OnClose
 
-`OnClose` event triggers when popup is closed.
+The `OnClose` event is triggered when the popup is closed.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -80,7 +84,7 @@ This section explains the list of events of the TimePicker component which will 
 
 ## Created
 
-`Created` event triggers when the component is created.
+The `Created` event is triggered after the component is created.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -100,7 +104,7 @@ This section explains the list of events of the TimePicker component which will 
 
 ## Destroyed
 
-`Destroyed` event triggers when the component is destroyed.
+The `Destroyed` event is triggered when the component is destroyed.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -108,6 +112,7 @@ This section explains the list of events of the TimePicker component which will 
 <SfTimePicker TValue="DateTime?">
     <TimePickerEvents TValue="DateTime?" Destroyed="DestroyHandler"></TimePickerEvents>
 </SfTimePicker>
+
 @code{
 
     public void DestroyHandler(object args)
@@ -119,13 +124,13 @@ This section explains the list of events of the TimePicker component which will 
 
 ## Focus
 
-`Focus` event triggers when the input gets focus.
+The `Focus` event is triggered when the input receives focus.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfTimePicker TValue="DateTime?">
-    <TimePickerEvents TValue="DateTime" Focus="FocusHandler"></TimePickerEvents>
+    <TimePickerEvents TValue="DateTime?" Focus="FocusHandler"></TimePickerEvents>
 </SfTimePicker>
 
 @code{
@@ -135,12 +140,11 @@ This section explains the list of events of the TimePicker component which will 
         // Here you can customize your code
     }
 }
-
 ```
 
 ## OnItemRender
 
-`OnItemRender` event triggers while rendering the each popup list item.
+The `OnItemRender` event is triggered while rendering each popup list item.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -148,6 +152,7 @@ This section explains the list of events of the TimePicker component which will 
 <SfTimePicker TValue="DateTime?">
     <TimePickerEvents TValue="DateTime?" OnItemRender="OnItemRenderHandler"></TimePickerEvents>
 </SfTimePicker>
+
 @code{
 
     public void OnItemRenderHandler(Syncfusion.Blazor.Calendars.ItemEventArgs<DateTime?> args)
@@ -159,7 +164,7 @@ This section explains the list of events of the TimePicker component which will 
 
 ## OnOpen
 
-`OnOpen` event triggers when the popup is opened.
+The `OnOpen` event is triggered when the popup is opened.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -177,4 +182,10 @@ This section explains the list of events of the TimePicker component which will 
 }
 ```
 
-N> TimePicker will be limited with these events and new events will be added in future based on the user requests. If the event you are looking for is not in the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
+N> The TimePicker currently supports the events listed above. New events may be added in the future based on user requests. If the event you are looking for is not in the list, request it at the [Syncfusion Blazor feedback portal](https://www.syncfusion.com/feedback/blazor-components).
+
+## See also
+
+* [Data Binding in Blazor TimePicker](data-binding)
+* [Accessibility in Blazor TimePicker](accessibility)
+* [Time Format in Blazor TimePicker](time-format)
