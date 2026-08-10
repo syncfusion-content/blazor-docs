@@ -9,10 +9,7 @@ documentation: ug
 
 # Expand Mode in Blazor Accordion Component
 
- The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) supports the two listed types of expand modes while expanding or collapsing the item.
-
-* Single
-* Multiple
+The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) supports two expand modes that control how the items open and close: `Single` and `Multiple`. The mode is set with the [`ExpandMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html#Syncfusion_Blazor_Navigations_SfAccordion_ExpandMode) parameter on `SfAccordion`.
 
 ## Single
 
@@ -122,3 +119,12 @@ By default, accordion items were in collapsed state on initial load. To expand a
 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXrxXnWWWbNnuvlg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Accordion Component with Expanding Items](./images/blazor-accordion-expand-items.webp)" %}
+## See also
+
+* [Getting Started with Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/getting-started)
+* [Data Binding in Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/data-binding)
+* [Content Render Mode in Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/content-render-mode)
+* [Accessibility in Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/accessibility)
+* [SfAccordion API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html)
+* [AccordionItem API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html)
+* [AccordionEvents API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html)

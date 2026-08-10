@@ -45,8 +45,8 @@ Blazor provides argument types that map to native DOM events. Common event categ
 * Mouse events - MouseEventArgs
 * Keyboard events - KeyboardEventArgs
 * Input events - ChangeEventArgs/EventArgs
-* Touch events – TouchEventArgs
-* Pointer events – PointerEventArgs
+* Touch events - TouchEventArgs
+* Pointer events - PointerEventArgs
 
 In the following example, the `KeyPressed` method is invoked on each key press, and a message is written only when the "5" key is pressed.
 
@@ -66,13 +66,17 @@ In the following example, the `KeyPressed` method is invoked on each key press, 
 }
 ```
 
-Lambda expressions can also be used to pass the event data to the handler.
+Lambda expressions can also pass the event data to the handler.
 
 ## List of native events supported
 
-| List of Native events |  |  | |
-| --- | --- | --- | --- |
-| onclick | onblur | onfocus | onfocusout |
-| onmousemove | onmouseover | onmouseout | onmousedown | onmouseup |
-| ondblclick | onkeydown | onkeyup | onkeypress |
-| ontouchend | onfocusin | onmouseup | ontouchstart |
+| Event category | Native events |
+| --- | --- |
+| Focus | `onfocus`, `onblur`, `onfocusin`, `onfocusout` |
+| Mouse | `onclick`, `ondblclick`, `onmousedown`, `onmouseup`, `onmouseover`, `onmouseout`, `onmousemove` |
+| Keyboard | `onkeydown`, `onkeyup`, `onkeypress` |
+| Touch | `ontouchstart`, `ontouchend` |
+
+## See also
+
+* [Events in Blazor DateTimePicker](./events)
