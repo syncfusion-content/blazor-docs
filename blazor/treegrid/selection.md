@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in Blazor TreeGrid Component | Syncfusion®
-description: Checkout and learn here all the features about selection in Blazor TreeGrid component and much more details.
+title: Blazor TreeGrid Selection | Syncfusion
+description: Learn how to use selection in Blazor TreeGrid with row, cell, checkbox, multi-selection, and programmatic selection features.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Selection in Blazor TreeGrid Component
+# Selection in Blazor TreeGrid
 
 Selection provides an option to highlight a row or a cell. It can be done through simple mouse down or arrow keys. To disable selection in the Tree Grid, set the [AllowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowSelection) to false.
 
@@ -313,7 +313,7 @@ public class TreeData
 
 N> * By default, selection is allowed by clicking a tree grid row or checkbox in that row. To allow selection only through checkbox, set the
 [CheckboxOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_CheckboxOnly) property of [TreeGridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html) to true.
-<br/>* Selection can be persisted in all the operations using the [PersistSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_PersistSelection) property of [TreeGridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html).
+<br/>* Selection can be persisted in all the operations using the [PersistSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_PersistSelection) property of `TreeGridSelectionSettings`.
 For persisting selection on the tree grid, any one of the columns should be defined as a primary key using the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_IsPrimaryKey) property of [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html).
 
 ### Checkbox selection Mode
@@ -390,7 +390,7 @@ public class TreeData
 
 ## Toggle Selection
 
-The Toggle selection allows to perform selection and unselection of the particular row or cell. To enable toggle selection, set [EnableToggle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_EnableToggle) property of the TreeGridSelectionSettings as true. If the selected row or cell is clicked, then it will be unselected and vice versa.
+The Toggle selection allows to perform selection and unselection of the particular row or cell. To enable toggle selection, set [EnableToggle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_EnableToggle) property of the `TreeGridSelectionSettings` as true. If the selected row or cell is clicked, then it will be unselected and vice versa.
 
 {% tabs %}
 
@@ -398,6 +398,7 @@ The Toggle selection allows to perform selection and unselection of the particul
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
 
 <SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" AllowSelection="true" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridSelectionSettings  EnableToggle="true" Type="SelectionType.Multiple"></TreeGridSelectionSettings>
@@ -612,7 +613,7 @@ public class TreeData
 
 ## Get selected row indexes
 
-Retrieve selected row indexes using the `GetSelectedRowIndexesAsync` method.
+Retrieve selected row indexes using the [GetSelectedRowIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetSelectedRowIndexesAsync) method.
 
 {% tabs %}
 
@@ -648,7 +649,7 @@ Retrieve selected row indexes using the `GetSelectedRowIndexesAsync` method.
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
 
-    private async void RowSelectHandler(RowSelectEventArgs<TreeData> Args)
+    private async Task RowSelectHandler(RowSelectEventArgs<TreeData> Args)
     {
         this.SelectedRowIndexes = await this.TreeGrid.GetSelectedRowIndexesAsync();   /// get the selected row indexes
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Gemini AI in Blazor Inline AI Assist Control | Syncfusion
-description: Checkout and learn about Integration of Gemini AI with Blazor Inline AI Assist component in Blazor Server App and Blazor WebAssembly App.
+title: Gemini AI in Blazor Inline AI Assist | Syncfusion®
+description: Integrate Google Gemini API to deliver intelligent conversational interfaces with advanced natural language understanding and context-aware responses.
 platform: Blazor
 control: Inline AI Assist
 documentation: ug
 ---
  
-# Integrate Gemini AI with ASP.NET Core Inline AI Assist control
+# Gemini AI in Blazor Inline AI Assist
  
 The Inline AI Assist control integrates with Google’s [Gemini](https://ai.google.dev/gemini-api/docs) API to deliver intelligent conversational interfaces. It leverages advanced natural language understanding to interpret user input, maintain context throughout interactions, and provide accurate, relevant responses. By configuring secure authentication and data handling, developers can unlock powerful AI-driven communication features that elevate user engagement and streamline support experiences.
  

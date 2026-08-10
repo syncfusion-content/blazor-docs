@@ -251,4 +251,4 @@ Complex data binding allows you to work with nested objects and subfields. Bind 
 
 ![Complex Data Binding in Blazor QueryBuilder](./images/blazor-query-builder-complex-db.webp)
 
-N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the Query Builder.
+N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=fluent2) to know how to render and configure the Query Builder.

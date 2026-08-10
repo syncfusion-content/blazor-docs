@@ -39,7 +39,7 @@ The accessibility compliance for the Blazor Color Picker component is outlined b
 
 ## WAI-ARIA attributes
 
-The Blazor Color Picker component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/) practices to support assistive technologies. The following ARIA attributes are used in the Blazor Color Picker component:
+The Blazor Color Picker component follows [WAI-ARIA](https://www.w3.org/WAI/about/groups/ariawg/) practices to support assistive technologies. The following ARIA attributes are used in the Blazor Color Picker component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -53,7 +53,7 @@ The Blazor Color Picker component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA
 
 ## Keyboard interaction
 
-The Blazor Color Picker component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor ColorPicker component.
+The Blazor Color Picker component follows the WAI-ARIA [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/button/) guideline, making it easy to use with assistive technologies (AT) and for users who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Color Picker component.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
@@ -68,10 +68,12 @@ The Blazor Color Picker component followed the [keyboard interaction](https://ww
 
 The Blazor Color Picker component's accessibility levels are validated with [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) using Playwright-based tests.
 
-The accessibility compliance of the Blazor Color Picker component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/color-picker) in a new window to evaluate the component with accessibility tools.
+The accessibility compliance of the Blazor Color Picker component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/color-picker) in a new window to evaluate the component with accessibility tools such as the [Accessibility Insights extension](https://accessibilityinsights.io/) or the built-in browser developer tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/color-picker.html" %}
 
 ## See also
 
 * [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Blazor Color Picker Getting Started](https://blazor.syncfusion.com/documentation/color-picker/getting-started)
+* [Blazor Color Picker Events](https://blazor.syncfusion.com/documentation/color-picker/events)

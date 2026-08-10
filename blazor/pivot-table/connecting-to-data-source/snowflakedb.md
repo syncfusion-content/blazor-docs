@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Snowflake Data Binding in Blazor Pivot Table Component | Syncfusion®"
+title: "Snowflake Data Binding in Blazor Pivot Table | Syncfusion"
 component: "Pivot Table"
-description: "Learn how to connect a Snowflake database to the Blazor Pivot Table component using the Snowflake.Data NuGet package and much more details."
+description: "Learn how to connect the Blazor Pivot Table to a Snowflake database using the Snowflake.Data NuGet package, either directly or through a Web API service."
 platform: Blazor
 documentation: ug
 ---
 
-# Snowflake Data Binding in Blazor Pivot Table Component
+# Snowflake Data Binding in Blazor Pivot Table
 
 This guide explains how to connect a Snowflake database to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using the [Snowflake.Data](https://www.nuget.org/packages/Snowflake.Data) NuGet package. It covers two methods: directly retrieving and binding Snowflake data to the Pivot Table and using a Web API service to fetch and display Snowflake data.
 

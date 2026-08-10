@@ -7,7 +7,7 @@ control: Message
 documentation: ug
 ---
 
-# Customization in Blazor Message
+# Customization in Blazor Message Component
 
 The Message component allows the user to customize the content display positions and appearance. This section explains the details about changing the content alignments and border styles for messages.
 
@@ -57,6 +57,7 @@ The following example shows the rounded and squared appearance of the message, w
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Notifications
 
 <div class="msg-custom-section">
@@ -137,10 +138,8 @@ The following example shows the message which renders without any script referen
 {% tabs %}
 {% highlight razor %}
 
-@using Syncfusion.Blazor.Notifications
-
 <div class="msg-default">
-    <div id="msg" class="e-message" role="alert">
+    <div class="e-message" role="alert">
       <span class="e-msg-icon"></span>
       <div class="e-msg-content">Please read the comments carefully</div>
     </div>
