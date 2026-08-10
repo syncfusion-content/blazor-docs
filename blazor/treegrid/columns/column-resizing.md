@@ -248,7 +248,7 @@ The following screenshot represents the column resizing in touch device.
 
 ![Blazor TreeGrid Column Resizing in Touch Interaction](../images/blazor-treegrid-column-resizing-touch.webp)
 
-# Resizing events in TreeGrid
+## Resizing events in TreeGrid
 
 The Blazor TreeGrid provides events that are triggered during column resizing operations. These events allow execution of custom logic before and after a column is resized, enabling validation, customization, and UI updates or notifications.
 
@@ -257,7 +257,7 @@ The Blazor TreeGrid provides events that are triggered during column resizing op
 
 ---
 
-## OnResizeStart
+### OnResizeStart
 
 The `OnResizeStart` event is triggered before a column is resized. This event can be used to inspect or cancel the resizing operation based on custom logic.
 
@@ -272,7 +272,7 @@ The event uses the [ResizeArgs](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ---
 
-## ResizeStopped
+### ResizeStopped
 
 The `ResizeStopped` event is triggered after a column has been resized. This event provides details about the resized column and can be used to display messages or perform post-resize actions.
 

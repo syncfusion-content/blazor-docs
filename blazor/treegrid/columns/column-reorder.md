@@ -240,7 +240,7 @@ The Blazor TreeGrid provides events to handle column reordering interactions. Th
 
 ---
 
-## ColumnReordering
+### ColumnReordering
 
 The `ColumnReordering` event is triggered while a column header is being dragged during a reordering operation. This event can be used to inspect the column being moved and optionally cancel the reordering based on custom logic.
 
@@ -255,7 +255,7 @@ The event uses the [ColumnReorderingEventArgs](https://help.syncfusion.com/cr/bl
 
 ---
 
-## ColumnReordered
+### ColumnReordered
 
 The `ColumnReordered` event is triggered after a column header is dropped on the target column during a reordering operation. This event allows executing custom logic after the reordering is completed, such as updating UI elements or logging changes.
 
