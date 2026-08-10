@@ -9,9 +9,14 @@ documentation: ug
 
 # Data Binding in Blazor MultiColumn ComboBox Component
 
-The MultiColumn ComboBox can retrieve data from either local data sources or remote data services. To connect local data, use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_DataSource) property with an IEnumerable-compatible source. For remote data, create a [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) instance configured with an adaptor and assign it to DataSource.
+The MultiColumn ComboBox can retrieve data from either local data sources or remote data services. To connect local data, use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_DataSource) property with an `IEnumerable`-compatible source. For remote data, create a [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) instance configured with an adaptor and assign it to `DataSource`.
 
-* **TItem** - Specifies the data model type for items in the MultiColumn ComboBox.
+## Generic Type Parameters
+
+The `SfMultiColumnComboBox<TValue, TItem>` component uses the following generic type parameters:
+
+* **TValue**: Specifies the type of the selected value (for example, `string`, `int`, or a complex type matching the `ValueField`).
+* **TItem**: Specifies the data model type for items in the MultiColumn ComboBox.
 
 ## Binding local data
 
@@ -23,8 +28,10 @@ The MultiColumn ComboBox loads data from local sources through the [DataSource](
 - ObservableCollection
 - ExpandoObject
 - DynamicObject
+- Enum (see the [enum data binding](code-snippet/data-binding/enum-data-binding.razor) sample)
+- Complex types (see the [complex data type](code-snippet/data-binding/complex-data-type.razor) sample)
 
-Ensure [TextField] and [ValueField] are set appropriately for your data model so display text and values are mapped correctly.
+Ensure the [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_TextField) and [ValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ValueField) are set appropriately for your data model so display text and values are mapped correctly.
 
 {% highlight cshtml %}
 
@@ -36,7 +43,7 @@ Ensure [TextField] and [ValueField] are set appropriately for your data model so
 
 ## Index value binding
 
-Index value binding can be accomplished with the `bind-Index` attribute, which supports both integer and nullable integer types. This binds the selected item by its zero-based index in the current view. Sorting or filtering may change indices, which affects the bound value.
+Index value binding can be accomplished with the [`@bind-Index`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Index) attribute, which supports both integer and nullable integer types. This binds the selected item by its zero-based index in the current view. Sorting or filtering may change indices, which affects the bound value.
 
 ```cshtml
 
@@ -116,10 +123,10 @@ Bind the [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuet
 
 The MultiColumn ComboBox loads the data from remote data services through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_DataSource) property when it is assigned a [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started) instance.
 
-The MultiColumn ComboBox supports retrieving data from remote services with the [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started). Use the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property to shape requests and fetch data, then bind the results to the component.
+The MultiColumn ComboBox supports retrieving data from remote services with the [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started). Use the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property to shape requests and fetch data, then bind the results to the component.
 
 * [DataManager.Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) - Defines the service endpoint to fetch data.
-* [DataManager.Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) - Defines the adaptor used to communicate with the service. By default, the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) is used for remote binding. Choose the adaptor based on your API (for example, ODataV4Adaptor, WebApiAdaptor, UrlAdaptor).
+* [DataManager.Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) - Defines the adaptor used to communicate with the service. Choose the adaptor based on your API (for example, [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) for OData v4 endpoints, [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) for Web API endpoints, or [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) for custom REST endpoints).
 * [Syncfusion.Blazor.Data](https://www.nuget.org/packages/Syncfusion.Blazor.Data/) package provides predefined adaptors designed to interact with specific service endpoints.
 
 ### OnActionBegin event

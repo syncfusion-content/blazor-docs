@@ -13,15 +13,15 @@ This section describes the available ProgressButton types and how to configure i
 
 ## Types
 
-The types of Blazor Progress Button are as follows:
+The types of Blazor ProgressButton are as follows:
 
-* Outline Progress Button
-* Round Progress Button
-* Primary Progress Button
+* Outline ProgressButton
+* Round ProgressButton
+* Primary ProgressButton
 
-### Outline Progress Button
+### Outline ProgressButton
 
-An outline ProgressButton has a border with transparent background. To create an outline Progress Button, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) property to `e-outline`.
+An outline ProgressButton has a border with a transparent background. To create an outline ProgressButton, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) property to `e-outline`.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -31,7 +31,7 @@ An outline ProgressButton has a border with transparent background. To create an
 </SfProgressButton>
 ```
 
-### Round Progress Button
+### Round ProgressButton
 
 A round ProgressButton is circular and typically displays an icon representing its action. To create a round ProgressButton, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) property to `e-round`.
 
@@ -49,7 +49,7 @@ A round ProgressButton is circular and typically displays an icon representing i
 </style>
 ```
 
-### Primary Progress Button
+### Primary ProgressButton
 
 A primary ProgressButton uses a solid background to emphasize a primary action. To create a primary ProgressButton, set the [IsPrimary](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_IsPrimary) property to `true`.
 
@@ -63,9 +63,22 @@ A primary ProgressButton uses a solid background to emphasize a primary action. 
 
 ## Icons
 
-### Progress Button with font icons
+The `IconCss` property accepts any of the supported Syncfusion icon classes. See the [Syncfusion Blazor Icons reference](https://blazor.syncfusion.com/documentation/appearance/icons) for the full list of available built-in icons.
 
-The ProgressButton can display an icon to visually represent the action. Assign the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_IconCss) property to `e-icons` plus the desired icon class. By default, the icon is positioned on the left. Use [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_IconPosition) to change the icon placement.
+### IconPosition values
+
+The [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_IconPosition) property accepts the following values:
+
+| Value | Description |
+| --- | --- |
+| `Left` | Places the icon to the left of the content (default). |
+| `Right` | Places the icon to the right of the content. |
+| `Top` | Places the icon above the content. |
+| `Bottom` | Places the icon below the content. |
+
+### ProgressButton with font icons
+
+The ProgressButton can display an icon to visually represent the action. Assign the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_IconCss) property to `e-icons` plus the desired icon class. By default, the icon is positioned to the Left. Use [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_IconPosition) to change the icon placement.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons

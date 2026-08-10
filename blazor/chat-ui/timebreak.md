@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Time break in Blazor Chat UI Component | Syncfusion®
-description: Checkout and learn here all about Time break with Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Timebreak in Blazor Chat UI | Syncfusion®
+description: Display date-wise message separators in Blazor Chat UI using ShowTimeBreak property to organize conversations and enhance readability.
 platform: Blazor
 control: Chat UI
 documentation: ug
 ---
 
-# Time break in Blazor Chat UI component
+# Time break in Blazor Chat UI
 
 ## Show or hide time break
 

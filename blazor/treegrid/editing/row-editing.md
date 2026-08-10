@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Row Editing in Blazor Tree Grid Component | Syncfusion®
-description: Checkout and learn here all the features about Row Editing in Blazor Tree Grid component and much more details.
+title: Blazor TreeGrid Row Editing | Syncfusion
+description: Learn how to edit rows in Blazor TreeGrid, perform CRUD operations, validate data, and customize row editing workflows.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Row Editing in Blazor Tree Grid Component
+# Row Editing in Blazor TreeGrid
 
 In Row edit mode, when the currently selected record is edited, the entire row is changed to edit state. The cell values of the row can be changed and save edited data to the data source. To enable Row edit, set the [TreeGridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Mode) as **Row**.
 

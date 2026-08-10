@@ -11,7 +11,7 @@ documentation: ug
 
 In popup mode, the In-place Editor is rendered with the Blazor `Tooltip` component. You can use the tooltip properties and events to customize the popup by configuring properties using the `InPlaceEditorPopupSettings` tag.
 
-In the following example, the popup’s open animation is configured by passing an AnimationModel to the InPlaceEditorPopupSettings tag, and the animation effect is updated at runtime from a Blazor DropDownList ValueChange event. Supported effects include None, FadeIn, FadeZoomIn, and ZoomIn as shown. Close animations can also be customized by setting the Close property on TooltipAnimationSettings. If a selected value does not match a valid Effect, parsing will fail; ensure the dropdown values match the Effect enum exactly. Consider accessibility preferences such as reduced motion when applying animations.
+In the following example, the popup's open animation is configured by passing an `AnimationModel` to the `InPlaceEditorPopupSettings` tag, and the animation effect is updated at runtime from a Blazor `DropDownList` `ValueChange` event. The supported effects are `None`, `FadeIn`, `FadeZoomIn`, and `ZoomIn`.
 
 ```cshtml
 

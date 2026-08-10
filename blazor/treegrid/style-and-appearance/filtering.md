@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize filtering in Blazor TreeGrid | Syncfusion®
-description: Learn how to style and customize the Blazor TreeGrid filter UI using CSS—filter bar, dialog, icons, buttons, and menus.
+title: Blazor TreeGrid Filtering Customization | Syncfusion
+description: Learn how to customize the Blazor TreeGrid filter UI using CSS, including filter bars, dialogs, icons, buttons, and menus.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Filtering customization in Blazor TreeGrid
+# Filtering Customization in Blazor TreeGrid
 
 The appearance of filtering elements in the Blazor TreeGrid can be customized using CSS. Styling options are available for different parts of the filtering interface:
 

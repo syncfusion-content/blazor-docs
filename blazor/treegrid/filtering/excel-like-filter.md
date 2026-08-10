@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Like Filter in Blazor Tree Grid Component | Syncfusion®
-description: Checkout and learn here all about Excel like filter in Blazor Tree Grid component and much more details.
+title: Blazor TreeGrid Excel Like Filter | Syncfusion
+description: Learn how to use Excel like filtering in Blazor TreeGrid with advanced filtering, search, checkbox filters, and filter customization options.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Excel Like Filter in Blazor Tree Grid Component
+# Excel Like Filter in Blazor TreeGrid
 
 Excel like filter can be enabled by defining the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_Type) of [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html) as **Excel**. The excel menu contains an option such as Sorting, Clear filter, Sub menu for advanced filtering.
 
@@ -60,7 +60,7 @@ namespace TreeGridComponent.Data {
         {
             List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Duration = 4,,Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Low",ParentId = 1 });
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
@@ -141,7 +141,7 @@ namespace TreeGridComponent.Data {
         {
             List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Duration = 4,,Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Low",ParentId = 1 });
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
             BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
@@ -217,12 +217,12 @@ In the following sample we have set the height and width of the **TaskId** and *
 
     public void FilterDialogOpeningHandler(FilterDialogOpeningEventArgs args)
     {
-        if(Args.ColumnName == "TaskName")
+        if(args.ColumnName == "TaskName")
         {
             IsLarge = true;
             IsSmall = false;
         }
-        else if(Args.ColumnName == "TaskId")
+        else if(args.ColumnName == "TaskId")
         {
             IsSmall = true;
             IsLarge = false;

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Footer in Blazor Chat UI Component | Syncfusion®
-description: Checkout and learn here all about Footer with Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Footer in Blazor Chat UI | Syncfusion®
+description: Toggle and customize chat footers in Blazor Chat UI using ShowFooter property and FooterTemplate for input areas or action buttons.
 platform: Blazor
 control: Chat UI
 documentation: ug
 ---
 
-# Footer in Blazor Chat UI component
+# Footer in Blazor Chat UI
 
 ## Show or hide footer
 
