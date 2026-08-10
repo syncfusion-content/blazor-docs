@@ -51,7 +51,7 @@ The Blazor MultiColumn ComboBox uses the combobox pattern with an input (textbox
 | `aria-disabled` | Indicates whether the component is disabled. |
 | `aria-activedescendant` | Holds the ID of the active list item to convey focus within the popup list. |
 | `aria-owns` | Identifies the popup element associated with the input when it is not a DOM descendant. |
-| `aria-autocomplete`  | Indicates the autocomplete behavior (for example, “both” to show a list of options and inline completion). |
+| `aria-autocomplete`  | Indicates the autocomplete behavior. Supported values are `list`, `none`, `inline`, and `both`. |
 
 Screen readers announce expanded and collapsed states, the active option while navigating, and the selected value when committed.
 
@@ -79,7 +79,7 @@ Use the following key shortcuts to interact with the Blazor MultiColumn ComboBox
 
 The Blazor MultiColumn ComboBox component’s accessibility is validated with the [axe-core](https://www.npmjs.com/package/axe-core) tool during automated testing.
 
-The accessibility compliance of the MultiColumn ComboBox component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/combobox) in a new window to evaluate accessibility with your preferred tools. The component also supports right-to-left (RTL) rendering and high-contrast themes for improved readability and usability.
+The accessibility compliance of the MultiColumn ComboBox component is demonstrated in the following sample. Open the [MultiColumn ComboBox accessibility sample](https://blazor.syncfusion.com/accessibility/combobox) in a new window to evaluate accessibility with your preferred tools. The component also supports right-to-left (RTL) rendering and high-contrast themes for improved readability and usability.
 
 ## See also
 

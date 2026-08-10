@@ -11,19 +11,19 @@ documentation: ug
 
 ## Localization
 
-[Blazor TimePicker](https://www.syncfusion.com/blazor-components/blazor-timepicker) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Blazor components.
+The [Blazor TimePicker](https://www.syncfusion.com/blazor-components/blazor-timepicker) component can be localized by providing the appropriate locale data and culture. Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to learn how to localize Blazor components.
 
 ## Right-To-Left
 
-The TimePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew to display the text in the right-to-left direction. Use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_EnableRtl) property to set the RTL direction.
+The TimePicker supports right-to-left (RTL) functionality for languages such as Arabic and Hebrew. Use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfInputTextBase-1.html#Syncfusion_Blazor_Inputs_SfInputTextBase_1_EnableRtl) property to enable RTL direction.
 
-The following code example initializes the TimePicker component in `Arabic` culture.
+The following code example initializes the TimePicker component in the `Arabic` culture.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
 @inject HttpClient Http;
 
-<SfTimePicker TValue="DateTime?" Locale="ar" EnableRtl=true></SfTimePicker>
+<SfTimePicker TValue="DateTime?" Locale="ar" EnableRtl="true"></SfTimePicker>
 
 @code {
     [Inject]
@@ -37,3 +37,9 @@ The following code example initializes the TimePicker component in `Arabic` cult
 
 
 ![Right to Left in Blazor TimePicker](./images/blazor-timepicker-right-to-left.webp)
+
+## See also
+
+* [Accessibility in Blazor TimePicker](accessibility)
+* [Time Format in Blazor TimePicker](time-format)
+* [Events in Blazor TimePicker](events)
