@@ -9,31 +9,34 @@ documentation: ug
 
 # Aggregate in Blazor TreeGrid
 
-To know about Aggregate in Blazor tree grid Component, you can check this video.
+Aggregate values are displayed in the TreeGrid footer and in parent row footers (showing aggregates for child records). They are configured through [TreeGridAggregateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html) property. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridAggregateColumn_Field) and [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridAggregateColumn_Type) are the minimum properties required to represent an aggregate column.
+
+By default, aggregate values display in the TreeGrid footer and in child row footers. Use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridAggregateColumn_FooterTemplate) property to customize the aggregate display.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=h-yS0PTLaXk"%}
 
-Aggregate values are displayed in the Tree Grid footer and in parent row footer for child row aggregate values. It can be configured through [TreeGridAggregateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html) property. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridAggregateColumn_Field) and [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridAggregateColumn_Type) are the minimum properties required to represent an aggregate column.
+## Built-in Aggregate Types
 
-By default, the aggregate value can be displayed in the Tree Grid footer, and footer of child rows. To show the aggregate value in one of the cells, use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridAggregateColumn_FooterTemplate).
+Specify the aggregate type in the `Type` property to define how values are calculated.
 
-## Built-in aggregate types
+The built-in aggregate types are:
 
-The aggregate type should be specified in the `Type` property to configure an aggregate column.
+| Type | Description |
+|------|-------------|
+| **Sum** | Calculates the total of all values in the column. |
+| **Average** | Calculates the mean of all values in the column. |
+| **Min** | Finds the smallest value in the column. |
+| **Max** | Finds the largest value in the column. |
+| **Count** | Counts the total number of values in the column. |
+| **TrueCount** | Counts the number of true values in a boolean column. |
+| **FalseCount** | Counts the number of false values in a boolean column. |
 
-The built-in aggregates are,
-* Sum
-* Average
-* Min
-* Max
-* Count
-* Truecount
-* Falsecount
+## Footer Aggregate
 
-## Footer aggregate
+The footer aggregate calculates values for all rows and displays them in the TreeGrid footer. Use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridAggregateColumn_FooterTemplate) property to customize the aggregate display.
 
-Footer aggregate value is calculated for all the rows, and it is displayed in the footer cells. Use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridAggregateColumn_FooterTemplate) to render the aggregate value in footer cells.
+The [ShowChildSummary](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregate.html#Syncfusion_Blazor_TreeGrid_TreeGridAggregate_ShowChildSummary) property controls whether aggregate values are calculated and displayed in parent row footers. When set to `true`, child row aggregates are shown in parent footers; when `false`, only the TreeGrid footer displays aggregates.
 
 {% tabs %}
 
@@ -131,9 +134,9 @@ namespace TreeGridComponent.Data {
 
 N> The aggregate values must be accessed inside the template using their corresponding `AggregateType`.
 
-## How to format aggregate value
+## Format Aggregate Values
 
-The aggregate value result can be formatted by using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridAggregateColumn_Format) property.
+The aggregate value result is formatted using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridAggregateColumn_Format) property with standard .NET format strings (e.g., `C2` for currency with 2 decimals, `N2` for numbers with 2 decimals).
 
 {% tabs %}
 

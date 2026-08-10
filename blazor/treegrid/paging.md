@@ -9,7 +9,22 @@ documentation: ug
 
 # Paging in Blazor TreeGrid
 
-Paging provides an option to display Tree Grid data in page segments. To enable paging, set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowPaging) to true. When paging is enabled, pager component renders at the bottom of the tree grid. Paging options can be configured through the [TreeGridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html).
+Paging allows TreeGrid data to be displayed in pages. To enable paging, set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowPaging) property to true. When paging is enabled, the pager component renders at the bottom of the TreeGrid. Paging options are configured through the [TreeGridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html).
+
+### TreeGridPageSettings Properties
+
+The following table lists the key properties available in `TreeGridPageSettings`:
+
+| Property | Type | Default | Description |
+|----------|------|---------|-------------|
+| `AllowPaging` | bool | false | Enables or disables paging in the TreeGrid. |
+| `PageSize` | int | 12 | Number of records to display per page. |
+| `PageCount` | int | 8 | Number of pager items to display in the pager. |
+| `PageSizeMode` | PageSizeMode | Root | Defines whether page size calculation includes all records or root records only. |
+| `PageSizes` | List<int> | null | Displays a dropdown list of page sizes. Leave null to disable the dropdown. |
+| `CurrentPage` | int | 1 | Gets or sets the current page index. |
+| `Template` | RenderFragment<PagerTemplateContext> | null | Custom template for the pager UI. |
+
 
 {% tabs %}
 
@@ -80,16 +95,16 @@ public class TreeData
 
 ![Paging in Blazor TreeGrid](images/blazor-treegrid-paging.webp)
 
-N> Better performance can be achieved by using tree grid paging to fetch only a pre-defined number of records from the data source.
+N> Better performance can be achieved by using treegrid paging to fetch only a pre-defined number of records from the data source.
 
-## Page size mode
+## Page Size Mode
 
-The [`PageSizeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSizeMode) property of [`TreeGridPageSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html) defines two behaviors in TreeGrid paging to display a specific number of records on the current page.
+The [`PageSizeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSizeMode) property defines two behaviors for calculating page size in TreeGrid paging.
 
 * **All** : Page size is calculated using the entire hierarchy, including both root and child records. 
 * **Root** : This is the default mode. The number of root nodes or the **0th-level** records to be displayed per page is based on [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSize) property. With `PageSizeMode` property as **Root**, only the root level or the 0th level records are considered in records count.
 
-N> The **ALL** mode of **PageSizeMode** is not supported with remote data binding in the Tree Grid.
+N> The **ALL** mode of **PageSizeMode** is not supported with remote data binding in the TreeGrid.
 
 {% tabs %}
 
@@ -159,23 +174,13 @@ public class TreeData
 
 ![Changing Page Size Mode in Blazor TreeGrid](images/blazor-treegrid-page-size-mode.webp)
 
-<!-- Template
+## Pager Template
 
-You can use custom elements inside the pager instead of default elements.
-The custom elements can be defined by using the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_Template) property.
-Inside this template, you can access the [`CurrentPage`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_CurrentPage), [`PageSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSize), [`PageCount`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageCount), **TotalPage** and **TotalRecordCount** values.
+Custom pager templates enable personalization of the pager UI and behavior. Instead of using default pager controls, custom elements can be added to the pager area.
 
--->
+To create a custom pager template, set the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_Template) property of [TreeGridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html). In the pager template, access paging values using the `PagerTemplateContext` object, which exposes [CurrentPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_CurrentPage), [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSize), [PageCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageCount), **TotalPage**, and **TotalRecordCount**.
 
-## Pager template
-
-The pager template in the Syncfusion® TreeGrid component enables customization of the appearance and behavior of the pager element, which facilitates navigation across different pages of TreeGrid data. This feature is especially useful when custom elements are required inside the pager instead of the default controls.
-
-To use the pager template, you must specify the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_Template) property of the [TreeGridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html) component in your TreeGrid configuration. Within the pager `Template`, utilize the `PagerTemplateContext` context to retrieve vital paging values such as [CurrentPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_CurrentPage), [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSize), [PageCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageCount), **TotalPage**, and **TotalRecordCount** . These values provide the data necessary to display and manage the pager effectively.
-
-When implementing a custom pager template, you can design the layout of pager controls as desired. However, for actual paging functionality, you need to integrate the [GoToPageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GoToPageAsync_System_Int32_) method. This method handles navigation to a specific page based on the page number input.
-
-The following example demonstrates how to render a **NumericTextBox** component in the pager using the `Template` property
+For paging functionality to work, integrate the [GoToPageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GoToPageAsync_System_Int32_) method, which navigates to the specified page number.
 
 {% tabs %}
 
@@ -328,9 +333,9 @@ namespace TreeGridComponent.Data {
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjrxDcNPJVzhorwT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Pager with page size dropdown
+## Page Size Dropdown
 
-The pager Dropdown allows to change the number of records in the Tree Grid dynamically. It can be enabled by defining the [PageSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSizes) property of [TreeGridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html) as **true**.
+The pager dropdown enables dynamic changes to the number of records displayed per page. Configure it by setting the [PageSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSizes) property of [TreeGridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html) to a list of numeric values.
 
 {% tabs %}
 
@@ -398,14 +403,3 @@ public class TreeData
 {% endtabs %}
 
 ![Displaying Page Dropdown in Blazor TreeGrid](images/blazor-treegrid-page-drop-down.webp)
-
-<!--How to render Pager at the Top of the Tree Grid
-
-By default, Pager will be rendered at the bottom of the Tree Grid. You can also render the Pager at the top of the Tree Grid by using the [`DataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_DataBound) event.
-
-> During the paging action, the pager component triggers the below three events.
-> The **created** event triggers when Pager is created.
-> The **click** event triggers when the numeric items in the pager is clicked.
-> The **dropDownChanged** event triggers when pageSize DropDownList value is selected.
-
--->
