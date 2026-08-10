@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Export TreeGrid Data to PDF in Blazor | Syncfusion®
-description: Checkout and learn here all the features about PDF Export in Blazor TreeGrid component and much more details.
+title: Blazor TreeGrid PDF Export | Syncfusion
+description: Learn how to export Blazor TreeGrid data to PDF, customize export settings, preserve formatting, and generate professional reports.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# PDF Export in Blazor TreeGrid Component
+# PDF Export in Blazor TreeGrid
 
 The PDF export feature enables users to convert TreeGrid data into a downloadable PDF document. To perform the export, use the
  [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ExportToPdfAsync) method for exporting. To enable PDF export in the TreeGrid, set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowPdfExport) as true.

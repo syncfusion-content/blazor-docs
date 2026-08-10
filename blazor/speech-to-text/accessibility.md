@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor SpeechToText Component | Syncfusion®
-description: Checkout and learn about Accessibility in Blazor SpeechToText component in Blazor Server App and Blazor WebAssembly App.
+title: Accessibility in Blazor Speech To Text | Syncfusion®
+description: The Speech To Text component follows ADA, Section 508, and WCAG 2.2 accessibility standards with full support for screen readers and keyboard navigation.
 platform: Blazor
 control: SpeechToText
 documentation: ug
 ---
 
-# Accessibility in Blazor SpeechToText component
+# Accessibility in Blazor Speech To Text
 
 The SpeechToText component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

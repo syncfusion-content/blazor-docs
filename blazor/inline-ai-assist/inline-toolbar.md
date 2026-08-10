@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Inline toolbar in Blazor InlineAIAssist Control | Syncfusion
-description: Checkout and learn about inline toolbar with Blazor Inline AI Assist component in Blazor Server App and Blazor WebAssembly App.
+title: Inline toolbar in Blazor Inline AI Assist | Syncfusion®
+description: Configure toolbar items with customizable positioning (Inline or Bottom) to render footer buttons for enhanced user interactions and actions.
 platform: Blazor
 control: Inline AI Assist
 documentation: ug
 ---
 
-# Toolbar configuration in Blazor Inline AI Assist control
+# Inline toolbar in Blazor Inline AI Assist
 
 You can render the inline toolbar items by using the `Items` property in the `InlineToolbarItem` tag helper.
 
