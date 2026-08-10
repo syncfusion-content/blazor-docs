@@ -26,7 +26,7 @@ Interact with column headers to sort data directly. Clicking a column header tog
 |------------------------------|--------------------------------------------------|
 | Click header once            | Sorts in ascending order (↑ icon appears)        |
 | Click header again           | Sorts in descending order (↓ icon appears)       |
-| Click header a third time    | Clears sorting for that column(no icon)          |
+| Click header a third time    | Clears sorting for that column (no icon)         |
 
 
 {% tabs %}
@@ -103,7 +103,7 @@ public class OrderData
 
 ## Initial sorting
 
-By default, the Blazor DataGrid renders without any sorting applied. To arrange records in a desired order right from the initial load, configure initial sorting by setting the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Field) (the column's data field name) and [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Direction) properties (either **SortDirection.Ascending** for smallest to largest or **SortDirection.Descending** for largest to smallest) in the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_Columns) collection of [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html).
+By default, the Blazor DataGrid renders without any sorting applied. To arrange records in a desired order right from the initial load, configure initial sorting by setting the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Field) (the column's data field name) and [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Direction) properties (either **SortDirection.Ascending** for smallest to largest or **SortDirection.Descending** for largest to smallest) inside the [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html) block by defining one or more `GridSortColumn` entries.
 
 In this configuration, initial sorting is applied to the **OrderID** and **ShipCity** columns using the [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html).
 
@@ -180,7 +180,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNBdtmjnrLwcZoyG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> Initial sorting defined in the `GridSortSettings` of the Columns is applied on first render and overrides any sorting applied through interaction.
+> Initial sorting defined in the `GridSortSettings` block is applied on first render and overrides any sorting applied through interaction.
 
 ## Multi-column sorting
 
@@ -329,7 +329,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtVnjwXHLhvqqSie?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Controlling Unsort behavior in Blazor DataGrid
+## Controlling unsorted-state behavior in Blazor DataGrid
 
 The Blazor DataGrid provides control over whether a column can return to an unsorted state after sorting. This behavior is managed using the [AllowUnsort](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_AllowUnsort) property in [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html).
 When [AllowUnsort](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_AllowUnsort) is set to **false**, clicking a sorted column header does not revert the Grid to its original unsorted layout. Instead, the column remains sorted until a different sort action is applied. This ensures a consistent sorting state and prevents accidental removal of sorting.
@@ -1333,7 +1333,7 @@ public class OrderData
 
 ### Sorted
 
-The `Sorted` event is triggered after a column has been successfully sorted. It provides details about the sorted column and direction, enabling actions such as updating UI, logging, or showing notifications.
+The `Sorted` event is triggered after a column has been successfully sorted. It provides details about the sorted column and direction, enabling actions such as updating UI, logging, or showing notifications. Use this event to refresh a status message or update external UI state after the active sort order changes.
 
 **Event Arguments**
 
