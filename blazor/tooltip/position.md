@@ -50,13 +50,13 @@ Tooltips can be positioned relative to the mouse pointer. This behavior can be e
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
-<SfTooltip MouseTrail=true Content="@Content" Target="#target">
+<SfTooltip MouseTrail="true" Content="@Content" Target="#target">
     <SfButton ID="target" Content="Show Tooltip"></SfButton>
 </SfTooltip>
 
 @code
 {
-    string Content="Tooltip Content";
+    string Content = "Tooltip Content";
 }
 
 <style>
@@ -120,12 +120,12 @@ You can set the [WindowCollision](https://help.syncfusion.com/cr/blazor/Syncfusi
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
-<SfTooltip ID="Tooltip" Target="#btn" Content="@content" Position="Position.TopCenter" WindowCollision="true">
+<SfTooltip ID="Tooltip" Target="#btn" Content="@Content" Position="Position.TopCenter" WindowCollision="true">
      <SfButton ID="btn" Content="Show Tooltip"></SfButton>
 </SfTooltip>
 @code
 {
-    string content = "Lets go green & Save Earth !!";
+    string Content = "Lets go green & Save Earth !!";
 }
 
 ```
