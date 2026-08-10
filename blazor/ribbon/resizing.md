@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Resizing in Blazor Ribbon Component | Syncfusion®
-description: Checkout and learn about Resizing in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
-platform: Blazor
+title: Resizing in Blazor Ribbon | Syncfusion
+description: Learn how the Blazor Ribbon resizes elements automatically when space changes, with support for custom resize order in Classic and Simplified modes.
 control: Ribbon
+platform: Blazor
 documentation: ug
 ---
 
-# Resizing in Blazor Ribbon component
+# Resizing in Blazor Ribbon
 
 The Ribbon dynamically adjusts its elements during resizing. When the ribbon's size increases, elements expand, and when it decreases, elements collapse. Resizing is supported in both Classic and Simplified modes, with the flexibility to customize the order in which elements resize.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Ribbon Component | Syncfusion®
-description: Checkout and learn about getting started with Blazor Ribbon component in Blazor WebAssembly Application with examples and much more details.
-platform: Blazor
+title: Getting Started with Blazor Ribbon in WASM App | Syncfusion
+description: Learn how to get started with the Blazor Ribbon in WASM App and explore setup, configuration, and core feature examples for building ribbon interfaces.
 control: Ribbon
+platform: Blazor
 documentation: ug
 ---
 
-# Getting Started with Blazor Ribbon in Blazor WASM App
+# Getting Started with Blazor Ribbon in WASM App
 
 This guide explains how to include the [Blazor Ribbon](https://www.syncfusion.com/blazor-components/blazor-ribbon) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
