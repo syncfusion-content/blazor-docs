@@ -3,7 +3,7 @@ layout: post
 title: Blazor TreeGrid GraphQL Data Binding | Syncfusion
 description: Learn how to bind data from a GraphQL API to Blazor TreeGrid, perform queries and mutations, and integrate GraphQL data efficiently.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
@@ -11,13 +11,13 @@ documentation: ug
 
 GraphQL is a powerful query language for APIs, designed to provide a more efficient alternative to traditional REST APIs. It allows precise fetching of required data, reducing over-fetching and under-fetching. GraphQL provides a flexible and expressive syntax for querying, enabling clients to request only the specific data they require.
 
-Syncfusion’s Blazor TreeGrid  seamlessly integrates with GraphQL servers using the [GraphQLAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptor.html) in the [`SfDataManager`](https://blazor.syncfusion.com/documentation/data/getting-started-with-web-app). This specialized adaptor simplifies the interaction between the TreeGrid and GraphQL servers, allowing efficient data retrieval with support for data operations like CRUD (Create, Read, Update and Delete), paging, sorting, and filtering.
+Syncfusion® Blazor TreeGrid seamlessly integrates with GraphQL servers using the [GraphQLAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptor.html) in the [`SfDataManager`](https://blazor.syncfusion.com/documentation/data/getting-started-with-web-app). This specialized adaptor simplifies the interaction between the TreeGrid and GraphQL servers, allowing efficient data retrieval with support for data operations like CRUD (Create, Read, Update and Delete), paging, sorting, and filtering.
 
-This section describes a step-by-step process for retrieving data from a GraphQL service using `GraphQLAdaptor`, then binding it to the TreeGrid to facilitate data and CRUD operations.
+The following steps describe how to retrieve data from a GraphQL service using `GraphQLAdaptor` and bind it to the TreeGrid to facilitate data and CRUD operations.
 
 ## Configure a GraphQL server
 
-To configure a GraphQL server using Hot Chocolate with the Blazor TreeGrid, follow these steps:
+To configure a GraphQL server using Hot Chocolate for use with the Blazor TreeGrid, follow these steps:
 
 **Step 1: Create a new ASP.NET Core application**
 
@@ -307,7 +307,7 @@ namespace GraphQLServer.Models
 
 **Step 4: Define the GraphQL query**
 
-Create a **GraphQLQuery** class to define the query resolver for fetching employee data. This class will handle the logic for retrieving data from the **EmployeeData** model. The following code demonstrates the `DataManagerRequestInput` class, which is passed as an argument to the resolver function.
+Create a **GraphQLQuery** class to define the query resolver for fetching employee data. This class will handle the logic for retrieving data from the **EmployeeData** model.
 
 {% tabs %}
 {% highlight cs tabtitle="GraphQLQuery.cs" %}
@@ -678,6 +678,7 @@ To verify that the GraphQL server is functioning correctly, use the following ex
         salaryPerMonth
         email
       }
+    }
 }
 ```
 
@@ -687,7 +688,7 @@ For more details, refer to the [Hot Chocolate documentation](https://chillicream
 
 ## Connecting Blazor TreeGrid to an GraphQL service
  
-To integrate the Blazor TreeGrid into a project using Visual Studio, follow the steps below:
+The following steps describe how to integrate the Blazor TreeGrid into a project using Visual Studio.
 
 **Step 1: Create a Blazor Web App**
 
@@ -995,7 +996,7 @@ This configuration ensures that the Blazor application can communicate with the 
 
 **Step 7: Run the Application**
 
-After completing the setup, run the application. The TreeGrid will fetch and display data from the configured GraphQL API. Ensure that both the Blazor application and the GraphQL server are running and accessible.
+After completing the setup, run the application. The TreeGrid will fetch and display data from the configured GraphQL API. Both the Blazor application and the GraphQL server must be running and accessible.
  
 ![GraphQL Adaptor Data](./images/treegrid-graphql-paging.webp)
 
@@ -2983,7 +2984,6 @@ Define GraphQL mutation queries for Insert, Update, Delete, and Batch operations
 
 **Configuration in GraphQL server application**
 
-The following code is the configuration in GraphQL server application to set GraphQL query and mutation type and to enable CORS.
 
 ```cshtml
 
@@ -3016,7 +3016,6 @@ This mutation query is executed when a new row is added to the Blazor TreeGrid. 
 
 **Mutation query configuration**
 
-The Insert mutation should be configured as shown below:
 
 ```cs
 Mutation = new GraphQLMutation
@@ -3059,7 +3058,6 @@ The following variables are passed as a parameter to the mutation method written
 
 **Server-Side Mutation Implementation**
 
-The following example demonstrates how to implement the insert logic on the GraphQL server using C# with HotChocolate:
 
 ```cs
 
@@ -3126,7 +3124,6 @@ This mutation query is triggered when an existing row in the Blazor TreeGrid is 
 
 **Mutation query configuration**
 
-The Update mutation should be configured as shown below:
 
 ```cs
 Mutation = new GraphQLMutation
@@ -3170,7 +3167,6 @@ The following variables are passed as a parameter to the mutation method written
 
 **Server-Side Mutation Implementation**
 
-The following example demonstrates how to implement the update logic on the GraphQL server using C# with HotChocolate:
 
 ```cs
 using GraphQLServer.Models;
@@ -3251,7 +3247,6 @@ This mutation query is executed when a row is removed from the Blazor TreeGrid. 
 
 **Mutation query configuration**
 
-The Delete mutation should be configured as shown below:
 
 ```cs
 Mutation = new GraphQLMutation
@@ -3294,7 +3289,6 @@ The following variables are passed as a parameter to the mutation method written
 
 **Server-Side Mutation Implementation**
 
-The following example demonstrates how to implement the delete logic on the GraphQL server using C# with HotChocolate:
 
 ```cs
 using GraphQLServer.Models;
