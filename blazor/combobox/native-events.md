@@ -106,6 +106,6 @@ Using Lambda expression also, you can pass the event data to the event handler.
 | List of Native events |  |  | |
 | --- | --- | --- | --- |
 | onclick | onblur | onfocus | onfocusout |
-| onmousemove | onmouseover | onmouseout | onmousedown | onmouseup |
+| onmousemove | onmouseover | onmouseout | onmousedown |
 | ondblclick | onkeydown | oninput | onkeypress |
 | ontouchend | onfocusin | onmouseup | ontouchstart |

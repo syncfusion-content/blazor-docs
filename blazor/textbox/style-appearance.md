@@ -63,8 +63,9 @@ To align text in a specific TextBox only, set text-align via a custom class usin
 <SfTextBox CssClass="e-custom" Placeholder='Last Name'></SfTextBox>
 
 <style>
-.e-custom .e-textbox{
-text-align: right;
+.e-custom .e-textbox {
+    text-align: right;
+}
 </style>
 ```
 

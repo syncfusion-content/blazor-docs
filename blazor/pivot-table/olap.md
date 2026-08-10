@@ -1,7 +1,7 @@
 ---
 layout: post
-title: OLAP in Blazor Pivot Table Component | Syncfusion®
-description: Learn about OLAP data source support in Blazor Pivot Table component with examples and much more details.
+title: OLAP in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table connects to an OLAP cube such as SQL Server Analysis Services via ProviderType.SSAS, Catalog, Cube, and URL properties.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -10,7 +10,7 @@ documentation: ug
 <!-- markdownlint-disable MD024 -->
 <!-- markdownlint-disable MD012 -->
 
-# OLAP in Blazor Pivot Table component
+# OLAP in Blazor Pivot Table
 
 ## Getting started
 

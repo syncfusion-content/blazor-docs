@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Pivot Table with SQL Server Using EF Core | Syncfusion
-description: Bind SQL Server data to the Syncfusion Blazor Pivot Table using Entity Framework Core with CRUD operations, remote data binding, and URL adaptor support.
+title: Entity Framework in Blazor Pivot Table | Syncfusion
+description: Learn how to connect the Blazor Pivot Table to SQL Server with Entity Framework Core for strongly typed models and a maintainable DbContext-based data layer.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Connecting SQL Server to Blazor Pivot Table with EF Core
+# Entity Framework in Blazor Pivot Table
 
 The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivottable) can be connected to a Microsoft SQL Server database using Entity Framework Core. This approach provides a clean and maintainable data-access layer for Blazor applications while keeping the Pivot Table integration simple and scalable.
 

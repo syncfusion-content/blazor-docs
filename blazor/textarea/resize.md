@@ -23,7 +23,7 @@ N> In Razor, enums are typically referenced with the @ prefix (for example, @Res
 {% tabs %}
 {% highlight razor %}
 
-<SfTextArea Placeholder='Enter the Address' ResizeMode='Resize.Both'></SfTextArea>
+<SfTextArea Placeholder='Enter the Address' ResizeMode='@Resize.Both'></SfTextArea>
 
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +37,7 @@ Customize the width of the TextArea using the [Width](https://help.syncfusion.co
 {% tabs %}
 {% highlight razor %}
 
-<SfTextArea Placeholder='Enter the Address' Width="500" ResizeMode='Resize.Both'></SfTextArea>
+<SfTextArea Placeholder='Enter the Address' Width="500" ResizeMode='@Resize.Both'></SfTextArea>
 
 {% endhighlight %}
 {% endtabs %}

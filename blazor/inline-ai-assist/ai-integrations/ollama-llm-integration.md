@@ -1,13 +1,13 @@
 ---
 layout: post
-title: LLM Model with Blazor Inline AI Assist Component | Syncfusion®
-description: Checkout and learn about Integration of LLM Model with Blazor Inline AI Assist component in Blazor WebAssembly Application.
+title: Ollama LLM in Blazor Inline AI Assist | Syncfusion®
+description: Integrate LLM models via Ollama with Blazor Inline AI Assist to enable advanced conversational AI features in your Blazor application locally.
 platform: Blazor
 control: Inline AI Assist
 documentation: ug
 ---
 
-# Integrate LLM via Ollama with Blazor Inline AI Assist Component
+# Ollama LLM in Blazor Inline AI Assist
 
 The Inline AI Assist component integrates with [LLM via Ollama](https://ollama.com) to enable advanced conversational AI features in your Blazor application. The component acts as a user interface where user prompts are sent to the selected LLM model via API calls, providing natural language understanding and context-aware responses.
 
