@@ -73,5 +73,13 @@ The following example demonstrates how to initialize accordion items using `temp
 }
 ```
 
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDLnZxWMCmODAXOD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Accordion Data Binding](./images/blazor-accordion-data-binding.webp)" %}
+
+## See also
+
+* [Getting Started with Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/getting-started)
+* [Content Render Mode](https://blazor.syncfusion.com/documentation/accordion/content-render-mode)
+* [Accessibility in Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/accessibility)
+* [SfAccordion API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html)
+* [AccordionItem API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html)
+* [AccordionItemModel API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItemModel.html)

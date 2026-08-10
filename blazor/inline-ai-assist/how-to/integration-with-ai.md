@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Integration | Blazor Inline AI Assist component | Syncfusion®
-description: Checkout and learn about Integration with Microsoft.Extensions.AI and Keyboard interaction with Blazor Inline AI Assist component and more details.
+title: How to integrate AI with Blazor Inline AI Assist | Syncfusion®
+description: Integrate with Microsoft.Extensions.AI framework to connect seamlessly with Azure OpenAI, OpenAI, and LLMs with minimal configuration.
 platform: Blazor
 control: Inline AI Assist
 documentation: ug
 ---
 
-# Integration of Microsoft.Extensions.AI with Inline AI Assist component
+# How to integrate Microsoft.Extensions.AI with Blazor Inline AI Assist
 
 The Inline AI Assist component supports integration with the `Microsoft.Extensions.AI` framework, enabling seamless communication with various large language models (LLMs) such as `Azure OpenAI`, `OpenAI`, and more.
 

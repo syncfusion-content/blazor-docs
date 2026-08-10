@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Barcode Generator in Web App | Syncfusion
-description: Check out and learn about the documentation for getting started with Blazor Barcode Generator Component in Blazor Web App.
+title: Getting Started with Blazor Barcode Generator in Web App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Barcode Generator control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Barcode Generator
 documentation: ug

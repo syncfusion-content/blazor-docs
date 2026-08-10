@@ -9,7 +9,7 @@ documentation: ug
 
 # Integration Signature with Toolbar
 
-The Signature component integrates with the toolbar and the interaction performed using the `Changed` event of the toolbar. In that, [`CanUndoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanUndoAsync), [`CanRedoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanRedoAsync) and [`IsEmptyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_IsEmptyAsync) methods were used to enable/disable undo, redo, and clear buttons by checking the undo collection.
+The Signature component integrates with the toolbar and updates the toolbar button state using the [`Changed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_Changed) event of the Signature component. In this integration, [`CanUndoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanUndoAsync), [`CanRedoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanRedoAsync), and [`IsEmptyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_IsEmptyAsync) methods are used to enable or disable the undo, redo, and clear buttons based on the current state of the signature.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -38,9 +38,9 @@ The Signature component integrates with the toolbar and the interaction performe
                         <SfSplitButton Content="Save" IconCss="e-sign-icons e-save" Disabled="saveDisabled">
                             <SplitButtonEvents Clicked="onSaveClicked" ItemSelected="onSaveType" />
                             <DropDownMenuItems>
-                                <DropDownMenuItem Text="webp" />
-                                <DropDownMenuItem Text="JPEG" />
-                                <DropDownMenuItem Text="SVG" />
+                                <DropDownMenuItem Text="Png" />
+                                <DropDownMenuItem Text="Jpeg" />
+                                <DropDownMenuItem Text="Svg" />
                             </DropDownMenuItems>
                         </SfSplitButton>
                     </Template>
@@ -97,7 +97,7 @@ The Signature component integrates with the toolbar and the interaction performe
     private bool undoDisabled = true;
     private bool clearDisabled = true;
     private bool saveDisabled = true;
-    private SignatureFileType type = SignatureFileType.webp;
+    private SignatureFileType type = SignatureFileType.Png;
     private Dictionary<string, string[]> circlePaletteColors = new Dictionary<string, string[]>() {
         { "Custom", new string[] {"#000000", "#e91e63", "#9c27b0", "#673ab7", "#2196f3", "#03a9f4", "#00bcd4",
         "#009688", "#8bc34a", "#cddc39", "#ffeb3b", "#ffc107" } }
@@ -174,25 +174,25 @@ The Signature component integrates with the toolbar and the interaction performe
     {
         disabled = args.Checked;
     }
-    private void onSaveClicked(Syncfusion.Blazor.SplitButtons.ClickEventArgs args)
+    private async Task onSaveClicked(Syncfusion.Blazor.SplitButtons.ClickEventArgs args)
     {
-        signature.SaveAsync();
+        await signature.SaveAsync();
     }
-    private void onSaveType(MenuEventArgs args)
+    private async Task onSaveType(MenuEventArgs args)
     {
         switch (args.Item.Text)
         {
-            case "webp":
-                type = SignatureFileType.webp;
+            case "Png":
+                type = SignatureFileType.Png;
                 break;
-            case "JPEG":
+            case "Jpeg":
                 type = SignatureFileType.Jpeg;
                 break;
-            case "SVG":
+            case "Svg":
                 type = SignatureFileType.Svg;
                 break;
         }
-        signature.SaveAsync(type, "Signature");
+        await signature.SaveAsync(type, "Signature");
     }
 }
 <style>

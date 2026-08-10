@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Row Spanning in Blazor Tree Grid Component | Syncfusion®
-description: Check out here and learn more details about the row spanning in the Blazor Tree Grid component and much more details.
+title: Blazor TreeGrid Row Spanning | Syncfusion
+description: Learn how to use row spanning in Blazor TreeGrid to merge adjacent rows, improve data presentation, and enhance grid readability.
 platform: Blazor
 control: Tree Grid
 documentation: ug

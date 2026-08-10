@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Expand and collapse icon styling in Blazor TreeGrid | Syncfusion®
-description: Learn how to customize the expand and collapse icons in the Blazor TreeGrid using CSS, including changing icon appearance, colors, and sizes.
+title: Blazor TreeGrid Expand and Collapse Icon Styling | Syncfusion
+description: Learn how to customize expand and collapse icons in Blazor TreeGrid using CSS, including icon appearance, colors, and sizing options.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Expand and collapse icon customization in Blazor TreeGrid
+# Expand and Collapse Icon Customization in Blazor TreeGrid
 
 The appearance of expand and collapse icons in the Blazor TreeGrid can be customized using CSS. Styling options are available for different aspects of the expand/collapse interface:
 

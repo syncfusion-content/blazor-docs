@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Inline AI Assist Component | Syncfusion®
-description: Checkout and learn about Accessibility and Keyboard interaction with Blazor Inline AI Assist component and more details.
+title: Accessibility in Blazor Inline AI Assist | Syncfusion®
+description: Blazor Inline AI Assist meets WCAG 2.2 AA standards with screen reader support, keyboard navigation, ARIA attributes, and comprehensive accessibility features.
 platform: Blazor
 control: Inline AI Assist
 documentation: ug
