@@ -118,3 +118,12 @@ The following code example demonstrates how to prevent expand and collapse actio
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVnjnMWCYGBhotU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Expanding or Collapsing Item in Blazor Accordion](../images/blazor-accordion-prevent-expand-collapse.webp)" %}
+
+## See also
+
+* [Events in Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/events)
+* [Enable or Disable Item in Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/how-to/enable-disable-accordion-item)
+* [Add/Remove Accordion Items](https://blazor.syncfusion.com/documentation/accordion/how-to/add-remove-accordion-items)
+* [AccordionEvents API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html)
+* [ExpandEventArgs API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ExpandEventArgs.html)
+* [CollapseEventArgs API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CollapseEventArgs.html)
