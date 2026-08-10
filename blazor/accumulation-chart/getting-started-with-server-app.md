@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Accumulation Chart in Server App | Syncfusion®
+title: Getting Started with Blazor Accumulation Chart in Server | Syncfusion®
 description: Learn how to add the Syncfusion Blazor Accumulation Chart to a Blazor Server app using Visual Studio, VS Code, or the .NET CLI.
 platform: Blazor
 control: Accumulation Chart
