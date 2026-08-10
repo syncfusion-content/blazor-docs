@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Content Security Policy in Blazor Chat UI | Syncfusion®
-description: Understand Blazor Chat UI CSP compatibility: most features work under strict CSP; only load-on-demand requires style-src 'unsafe-inline' directive.
+description: Learn which Blazor Chat UI features work under strict Content Security Policy (CSP) and when style-src 'unsafe-inline' is required for load-on-demand.
 platform: Blazor
 control: Chat UI
 documentation: ug

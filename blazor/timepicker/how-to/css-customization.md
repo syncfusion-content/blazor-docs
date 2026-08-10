@@ -9,24 +9,24 @@ documentation: ug
 
 # CSS Customization in Blazor TimePicker Component
 
-TimePicker allows to customize the text box and popup list appearance to suit the application by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.TimePickerModel-1.html#Syncfusion_Blazor_Calendars_TimePickerModel_1_CssClass) property.
+TimePicker allows you to customize the text box and popup list appearance to suit the application by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfInputTextBase-1.html#Syncfusion_Blazor_Inputs_SfInputTextBase_1_CssClass) property.
 
-The following code demonstrates customization of text appearance in a text box, popup button, and popup list along with hover and active state by using the `e-custom-style` class. Following is the list of available classes used to customize the entire TimePicker component:
+The following code demonstrates customization of text appearance in a text box, popup button, and popup list along with hover and active state by using the `e-custom-style` class. The following table lists the available classes for customizing the TimePicker component:
 
 | **Class Name** | **Description** |
 | --- | --- |
-| e-time-wrapper | Applied to TimePicker wrapper element. |
-| e-timepicker |  Applied to input element and TimePicker popup element. |
-| e-time-wrapper.e-timepicker | Applied to input element only. |
-| e-input-group-icon.e-time-icon | Applied to popup button. |
-| e-float-text | Applied to floating label text element. |
-| e-popup | Applied to popup element. |
-| e-timepicker.e-popup | Applied to TimePicker popup element only. |
-| e-list-parent | Applied to popup UL element. |
-| e-timepicker.e-list-parent | Applied to TimePicker popup UL element only. |
-| e-list-item | Applied to LI elements. |
-| e-hover | Applied to LI element hovering time. |
-| e-active | Applied to active LI element. |
+| e-time-wrapper | Applied to the TimePicker wrapper element. |
+| e-timepicker |  Applied to the input element and the TimePicker popup element. |
+| e-time-wrapper.e-timepicker | Applied to the input element only. |
+| e-input-group-icon.e-time-icon | Applied to the popup button. |
+| e-float-text | Applied to the floating label text element. |
+| e-popup | Applied to the popup element. |
+| e-timepicker.e-popup | Applied to the TimePicker popup element only. |
+| e-list-parent | Applied to the popup `UL` element. |
+| e-timepicker.e-list-parent | Applied to the TimePicker popup `UL` element only. |
+| e-list-item | Applied to the `LI` elements. |
+| e-hover | Applied to the list item when hovered. |
+| e-active | Applied to the active list item. |
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -35,7 +35,7 @@ The following code demonstrates customization of text appearance in a text box, 
 
 <style>
      /*customize the input element text color*/
-    .e-time-wrapper.e-custom-style #element {
+    .e-time-wrapper.e-custom-style .e-input.e-timepicker {
         display: block;
         color: blue;
     }
@@ -75,3 +75,9 @@ The following code demonstrates customization of text appearance in a text box, 
 ```
 
 ![Blazor TimePicker with Custom Style](../images/blazor-timepicker-custom-style.webp)
+
+## See also
+
+* [Style and appearance in Blazor TimePicker](../style-appearance)
+* [Time Format in Blazor TimePicker](../time-format)
+* [Globalization in Blazor TimePicker](../globalization)
