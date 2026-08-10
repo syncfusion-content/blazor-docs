@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Resizing in Blazor TreeGrid 
 
-Column width can be resized by clicking and dragging the right edge of the column header. While dragging, the width of the respective column will be resized immediately. Each column can be auto resized by double-clicking the right edge of the column header to fit the width of that column based on the widest cell content. To enable column resize, set the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowResizing) property to true.
+Column width can be resized by clicking and dragging the right edge of the column header. The column resizes immediately during the drag operation. Each column can be auto resized by double-clicking the right edge of the column header to fit the width of that column based on the widest cell content. To enable column resizing, set the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowResizing) property to true.
 
 {% tabs %}
 
@@ -71,7 +71,7 @@ namespace TreeGridComponent.Data
 
 {% endtabs %}
 
-![Resizing Column in Blazor Tree Grid](../images/blazor-treegrid-column-resizing.webp)
+![Resizing Column in Blazor TreeGrid](../images/blazor-treegrid-column-resizing.webp)
 
 N> You can disable resizing for a particular column by setting the `AllowResizing` property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component to false.
 <br/> In RTL mode, you can click and drag the left edge of the header cell to resize the column.
@@ -176,7 +176,7 @@ Stacked columns can be resized by clicking and dragging the right edge of the st
             <TreeGridColumns>
                 <TreeGridColumn Field="UnitPrice" Width="180" HeaderText="Price per unit" Format="C2" Type="Syncfusion.Blazor.Grids.ColumnType.Integer" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
                 <TreeGridColumn Field="Price" Width="220" HeaderText="Price" Format="C" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Left"></TreeGridColumn>
-                <TreeGridColumn Field="OrderDate" Width="120" HeaderText="Total Price" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Type="Syncfusion.Blazor.Grids.ColumnType.Integer"></TreeGridColumn>
+                <TreeGridColumn Field="OrderDate" Width="120" HeaderText="Order Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Type="Syncfusion.Blazor.Grids.ColumnType.Integer"></TreeGridColumn>
             </TreeGridColumns>
         </TreeGridColumn>
     </TreeGridColumns>
@@ -238,13 +238,128 @@ namespace TreeGridComponent.Data
 
 {% endtabs %}
 
-Resizing of stacked header is shown below
-![Resizing Stacked Column in Blazor Tree Grid](../images/blazor-treegrid-resize-stacked-column.webp)
+![Resizing Stacked Column in Blazor TreeGrid](../images/blazor-treegrid-resize-stacked-column.webp)
 
 ## Touch interaction
 
-When the right edge of the header cell is tapped, a floating handler will be visible over the right border of the column. To resize the column, tap and drag the floating handler as needed. You can AutoFit a column by using the Column menu of the tree grid.
+On touch devices, when the right edge of the header cell is tapped, a floating handler will be visible over the right border of the column. To resize the column, tap and drag the floating handler as needed. You can AutoFit a column by using the Column menu of the treegrid.
 
 The following screenshot represents the column resizing in touch device.
 
-![Blazor Tree Grid Column Resizing in Touch Interaction](../images/blazor-treegrid-column-resizing-touch.webp)
+![Blazor TreeGrid Column Resizing in Touch Interaction](../images/blazor-treegrid-column-resizing-touch.webp)
+
+# Resizing events in TreeGrid
+
+The Blazor TreeGrid provides events that are triggered during column resizing operations. These events allow execution of custom logic before and after a column is resized, enabling validation, customization, and UI updates or notifications.
+
+1. [OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnResizeStart) – Triggered when column resizing begins.  
+2. [ResizeStopped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ResizeStopped) – Triggered when column resizing ends.
+
+---
+
+## OnResizeStart
+
+The `OnResizeStart` event is triggered before a column is resized. This event can be used to inspect or cancel the resizing operation based on custom logic.
+
+**Event Arguments**
+
+The event uses the [ResizeArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ResizeArgs.html) class, which includes:
+
+| Event Argument | Description                                                                 |
+|----------------|------------------------------------------------------------------------------|
+| Column         | Represents the column being resized.                                        |
+| Cancel         | Determines whether the resizing operation should be aborted. Setting this property to **true** prevents the resizing from being applied. |
+
+---
+
+## ResizeStopped
+
+The `ResizeStopped` event is triggered after a column has been resized. This event provides details about the resized column and can be used to display messages or perform post-resize actions.
+
+**Event Arguments**
+
+The event uses the [ResizeArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ResizeArgs.html) class, which includes:
+
+| Event Argument | Description                                                                 |
+|----------------|------------------------------------------------------------------------------|
+| Column         | Represents the column that was resized.                                     |
+| Cancel         | Indicates whether the resize operation was canceled. If **true**, the column was not resized. |
+
+---
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.TreeGrid
+@using TreeGridComponent.Data
+
+<div style="text-align: center; color: red">
+    <span>@ResizeMessage</span>
+</div>
+
+<SfTreeGrid IdMapping="TaskId" ParentIdMapping="ParentId" AllowResizing="true" DataSource="@TreeGridData" TreeColumnIndex="1">
+    <TreeGridEvents TValue="TreeData.BusinessObject" OnResizeStart="OnResizeStart" ResizeStopped="ResizeStopped"></TreeGridEvents>
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="180"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+@code {
+    public string ResizeMessage;
+    public List<TreeData.BusinessObject> TreeGridData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        TreeGridData = TreeData.GetSelfDataSource().ToList();
+    }
+
+    public void OnResizeStart(ResizeArgs args)
+    {
+        if (args.Column.Field == "TaskId")
+        {
+            args.Cancel = true;
+            ResizeMessage = "OnResizeStart event triggered. Resizing cancelled for " + args.Column.HeaderText + " column.";
+        }
+    }
+
+    public void ResizeStopped(ResizeArgs args)
+    {
+        ResizeMessage = "ResizeStopped event triggered. " + args.Column.HeaderText + " column resizing completed.";
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+namespace TreeGridComponent.Data
+{
+    public class TreeData
+    {
+        public class BusinessObject
+        {
+            public int TaskId { get; set; }
+            public string TaskName { get; set; }
+            public int? Duration { get; set; }
+            public int? Progress { get; set; }
+            public int? ParentId { get; set; }
+        }
+
+        public static List<BusinessObject> GetSelfDataSource()
+        {
+            return new List<BusinessObject>
+            {
+                new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, ParentId = null },
+                new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Duration = 4, Progress = 80, ParentId = 1 },
+                new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, ParentId = 2 },
+                new BusinessObject() { TaskId = 4, TaskName = "Child task 3", Duration = 6, Progress = 77, ParentId = 3 },
+                new BusinessObject() { TaskId = 5, TaskName = "Parent Task 2", Duration = 10, Progress = 70, ParentId = null },
+                new BusinessObject() { TaskId = 6, TaskName = "Child task 1", Duration = 4, Progress = 80, ParentId = 5 },
+                new BusinessObject() { TaskId = 7, TaskName = "Child Task 2", Duration = 5, Progress = 65, ParentId = 5 },
+                new BusinessObject() { TaskId = 8, TaskName = "Child task 3", Duration = 6, Progress = 77, ParentId = 5 },
+                new BusinessObject() { TaskId = 9, TaskName = "Child task 4", Duration = 6, Progress = 77, ParentId = 5 }
+            };
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
