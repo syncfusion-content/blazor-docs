@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Select Rows based on condition in Blazor TreeGrid | Syncfusion®
-description: Learn how to select rows based on specific conditions in the Blazor TreeGrid component using SelectRowsAsync and event hooks.
+title: Blazor TreeGrid Select Rows Based on Conditions | Syncfusion
+description: Learn how to select rows based on conditions in Blazor TreeGrid using SelectRowsAsync, event hooks, and custom selection logic.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Select Rows based on certain condition in Blazor TreeGrid Component
+# Select Rows Based on Conditions in Blazor TreeGrid
 
 Specific rows in the TreeGrid can be selected based on conditions using the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_SelectRowsAsync_System_Int32___) method inside the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_DataBound) event of the TreeGrid component.
 

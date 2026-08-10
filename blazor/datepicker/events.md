@@ -9,20 +9,17 @@ documentation: ug
 
 # Events in Blazor DatePicker Component
 
-This section explains the list of events of the DatePicker component which will be triggered for appropriate DatePicker actions.
+This section lists the events of the DatePicker component and the actions that trigger them. The events are exposed through the [DatePickerEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerEvents-1.html) child content and use the `Syncfusion.Blazor.Calendars` namespace for their event-argument types.
 
-N> From `v17.2.*` added only the limited number of events for the DatePicker component. The event names are different from the previous releases and also removed several events. The following are the event name changes from `v17.1.*` to `v17.2.*`
-
-Event Name(`v17.1.*`) |Event Name(`v17.2.*`)
 -----|-----
-change |[ValueChange](events#valuechange)
-close |[OnClose](events#onclose)
-open |[OnOpen](events#onopen)
-renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
+change |[ValueChange](#valuechange)
+close |[OnClose](#onclose)
+open |[OnOpen](#onopen)
+renderDayCell |[OnRenderDayCell](#onrenderdaycell)
 
 ## Blur
 
-`Blur` event triggers when the input loses the focus.
+The [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerEvents-1.html#Syncfusion_Blazor_Calendars_DatePickerEvents_1_Blur) event triggers when the input loses focus. It receives a [BlurEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.BlurEventArgs.html) parameter that contains the original browser event in `args.Event`.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -41,7 +38,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## ValueChange
 
-`ValueChange` event triggers when the Calendar value is changed.
+The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerEvents-1.html#Syncfusion_Blazor_Calendars_DatePickerEvents_1_ValueChange) event triggers when the Calendar value changes. It receives a [ChangedEventArgs<T>](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.ChangedEventArgs-1.html) parameter. Use `args.Value` to read the newly selected date.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -60,7 +57,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## OnClose
 
-`OnClose` event triggers when the popup is closed.
+The [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerEvents-1.html#Syncfusion_Blazor_Calendars_DatePickerEvents_1_OnClose) event triggers when the popup is closed. It receives a [PopupObjectArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.PopupObjectArgs.html) parameter that exposes the closing popup element and related metadata.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -79,7 +76,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## Created
 
-`Created` event triggers when the component is created.
+The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerEvents-1.html#Syncfusion_Blazor_Calendars_DatePickerEvents_1_Created) event triggers after the component finishes its initial render. It is typically used for one-time setup such as attaching JS interop callbacks.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -98,7 +95,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## Destroyed
 
-`Destroyed` event triggers when the component is destroyed.
+The [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerEvents-1.html#Syncfusion_Blazor_Calendars_DatePickerEvents_1_Destroyed) event triggers when the component is disposed. Use it to release any resources allocated in the `Created` handler.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -117,7 +114,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## Focus
 
-`Focus` event triggers when the input gets focus.
+The [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerEvents-1.html#Syncfusion_Blazor_Calendars_DatePickerEvents_1_Focus) event triggers when the input receives focus. It receives a [FocusEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.FocusEventArgs.html) parameter that contains the original browser event in `args.Event`.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -136,7 +133,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## Navigated
 
-`Navigated` event triggers when the Calendar is navigated to another level or within the same level of view.
+The [Navigated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerEvents-1.html#Syncfusion_Blazor_Calendars_DatePickerEvents_1_Navigated) event triggers when the Calendar navigates to another level (for example, from month to year) or within the same level. It receives a [NavigatedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.NavigatedEventArgs.html) parameter with `args.View` and `args.Date` properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -155,7 +152,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## OnOpen
 
-`OnOpen` event triggers when the popup is opened.
+The [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerEvents-1.html#Syncfusion_Blazor_Calendars_DatePickerEvents_1_OnOpen) event triggers when the popup is opened. It receives a [PopupObjectArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.PopupObjectArgs.html) parameter that exposes the opening popup element and related metadata.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -174,7 +171,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## OnRenderDayCell
 
-`OnRenderDayCell` event triggers when each day cell of the Calendar is rendered.
+The [OnRenderDayCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerEvents-1.html#Syncfusion_Blazor_Calendars_DatePickerEvents_1_OnRenderDayCell) event triggers when each day cell of the Calendar is rendered. It receives a [RenderDayCellEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.RenderDayCellEventArgs.html) parameter that you can use to add custom classes or attributes to the cell via `args.Cell.AddClass(...)` or to set `args.IsDisabled` and other properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -191,4 +188,7 @@ renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 }
 ```
 
-N> Datepicker will be limited with these events and new events will be added in future based on the user requests. If the event you are looking for is not in the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
+## See also
+
+* [DatePickerEvents API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerEvents-1.html)
+* [Data Binding](data-binding)

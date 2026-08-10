@@ -38,7 +38,7 @@ The progress bar value in the Stepper component automatically increases as each 
 
 
 ```
-![Stepper progress bar](./images/blazor-progressbar.webp)
+![Stepper progress bar](./images/Blazor-progressbar.webp)
 
 ## Customizing stepper label content
 
@@ -133,7 +133,7 @@ Use the following CSS to customize the hover state of step indicators when the S
 
 ![Stepper hover state](./images/blazor-stepper-hover.webp)
 
-## Customize each step item
+## Customizing each step item
 
 You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_CssClass) property to customize the appearance of each step.
 
