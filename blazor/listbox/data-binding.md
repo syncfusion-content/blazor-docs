@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor ListBox Component
 
-The ListBox loads data from local or remote sources using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property.
+The Blazor ListBox loads data from local or remote sources using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property, which accepts an `IEnumerable<TItem>`. The fields used to display each item and to map it to a unique value are configured through the [ListBoxFieldSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxFieldSettings.html) child component.
 
 | Fields | Type | Description |
 |------|------|-------------|
@@ -18,6 +18,7 @@ The ListBox loads data from local or remote sources using the [DataSource](https
 | [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_GroupBy) | `string` | Specifies the category under which each list item is grouped. |
 | [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_IconCss) | `string` | Specifies the CSS class for an icon to display with the item. |
 | [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_HtmlAttributes) | `object` | Specifies additional HTML attributes to configure item elements. |
+| [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Disabled) | `string` | Specifies the boolean property (or a property returning `"true"`/`"false"`) that indicates whether the item is disabled. |
 
 N> When binding complex data to the ListBox, map fields correctly. If the mapping is incorrect, selection and value binding may not work as expected.
 
@@ -27,7 +28,7 @@ Local data can be provided in the following ways.
 
 ### Array of string
 
-The ListBox supports arrays of primitive values such as strings or numbers. In this case, both the Text and Value fields resolve to the same value.
+The ListBox supports arrays of primitive values such as strings or numbers. In this case, both the `Text` and `Value` fields resolve to the same value.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -41,9 +42,9 @@ public string[] Games = new string[] { "Badminton", "Cricket", "Football", "Golf
 
 ### Array of object
 
-The ListBox can generate its list items through an array of object data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property.
+The ListBox can generate its list items from an array of objects. Map the `Text` and `Value` properties of the objects to the corresponding fields in `ListBoxFieldSettings`.
 
-In the following example, the `Text` property is mapped to the Text field and the `Id` property is mapped to the Value field.
+In the following example, the `Text` property is mapped to the `Text` field and the `Id` property is mapped to the `Value` field.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -75,9 +76,9 @@ In the following example, the `Text` property is mapped to the Text field and th
 
 ### Array of complex object
 
-The ListBox can generate items from an array of complex objects. Map nested properties to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property as needed.
+The ListBox can generate items from an array of complex objects. Map nested properties (using dot notation) to the corresponding fields in `ListBoxFieldSettings`.
 
-In the following example, the `Sports.Name` property from the complex data is mapped to the Text field.
+In the following example, the `Sports.Name` property from the complex data is mapped to the `Text` field.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -102,6 +103,7 @@ In the following example, the `Sports.Name` property from the complex data is ma
     public class GameData {
         public string Name { get; set; }
     }
+
     public class SportsData {
         public string Id { get; set; }
         public GameData Sports { get; set; }
@@ -113,11 +115,11 @@ In the following example, the `Sports.Name` property from the complex data is ma
 
 ## Remote Data
 
-The ListBox supports retrieving data from remote services using the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
+The ListBox supports retrieving data from remote services by setting the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component as a child of `SfListBox`. 
 
 The following example displays customer IDs from the `Orders` table.
-```csharp
 
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
@@ -147,3 +149,10 @@ The following example displays customer IDs from the `Orders` table.
 ```
 
 ![Blazor ListBox bound to remote data using DataManager](images/blazor-listbox-with-data-binding.webp)
+
+## See also
+
+* [Sorting and Grouping in Blazor ListBox](./sorting-grouping.md)
+* [Filtering in Blazor ListBox](./filtering.md)
+* [Selection in Blazor ListBox](./selection.md)
+* [Getting Started with Blazor ListBox](./getting-started.md)

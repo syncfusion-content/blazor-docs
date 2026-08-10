@@ -47,7 +47,7 @@ Blazor provides strongly typed event argument classes that map to native events.
 - Touch events: TouchEventArgs
 - Pointer events: PointerEventArgs
 
-In the following example, the KeyPressed method is called every time any key is pressed inside input. But the message will be printed when you press "n" key.
+In the following example, the `KeyPressed` method is called every time any key is pressed inside the input. The message is printed when the `5` key is pressed.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
