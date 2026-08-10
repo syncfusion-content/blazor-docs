@@ -101,7 +101,7 @@ In the following sample, the popup displays a “no data available” message.
 
 ## Action failure template
 
-Customize the popup content shown when a remote data request fails using the [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ActionFailureTemplate) property.
+Customize the popup content shown when a remote data request fails by using the [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ActionFailureTemplate) property.
 
 In the following sample, the DropDownList displays a notification when data retrieval fails.
 
