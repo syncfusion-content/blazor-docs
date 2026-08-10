@@ -190,9 +190,10 @@ The supported keyboard shortcuts are listed below.
 
 <b>Sorting</b>
 
-| Windows                                       | Mac                                        | Actions                                                 |
-|-----------------------------------------------|--------------------------------------------|---------------------------------------------------------|
-| <kbd>Ctrl</kbd> + <kbd>←</kbd> / <kbd>→</kbd> | <kbd>⌘</kbd> + <kbd>←</kbd> / <kbd>→</kbd> | Reorder the focused header column to the left or right. |
+| Windows | Mac | Actions |
+| ----- | ----- | ----- |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Sort the focused header column |
+
 <br>
 
 > On Mac, Command and Control keys may be interchangeable based on system preferences. When this switch is active, use the <kbd>Command</kbd> key in place of <kbd>Control</kbd>, and <kbd>Control</kbd> in place of <kbd>Command</kbd> for keyboard interactions.
