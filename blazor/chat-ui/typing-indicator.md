@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Typing indicator in Blazor Chat UI Component | Syncfusion®
-description: Checkout and learn here all about Typing indicator with Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Typing Indicator in Blazor Chat UI | Syncfusion®
+description: Show active typing indicators in Blazor Chat UI using the TypingUsers property with UserModel list to display real-time user activity.
 platform: Blazor
 control: Chat UI
 documentation: ug
 ---
 
-# Typing indicator in Blazor Chat UI component
+# Typing Indicator in Blazor Chat UI
 
 ## Show or hide typing indicator
 

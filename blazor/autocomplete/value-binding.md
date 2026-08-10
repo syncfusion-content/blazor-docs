@@ -215,7 +215,7 @@ Here, the AutoComplete component uses `TValue` as `string` in `/Index.razor` and
 {% endhighlight %}
 {% endtabs %}
 
-## Two way binding
+## Two-way binding
 
 Two-way is having a bi-directional data flow, i.e., passing the value from the property to the UI and then from the view (UI) to the property as well. The synchronization of data flow between model and view is achieved using the bind attribute in Blazor. To enable two-way binding for the Blazor AutoComplete component, Use the @bind-Value directive to bind the value of the AutoComplete
 
@@ -235,6 +235,6 @@ Clear the value programmatically by calling [ClearAsync()](https://help.syncfusi
 
 {% include_relative code-snippet/value-binding/clearAsync-method.razor %}
 
-{% endhighlight %} 
+{% endhighlight %}
 
 ![Blazor AutoComplete with clear button](./images/value-binding/blazor-autocomplete-clearAsync-method.gif)

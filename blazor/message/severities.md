@@ -7,7 +7,7 @@ control: Message
 documentation: ug
 ---
 
-# Severities in Blazor Message
+# Severities in Blazor Message Component
 
 The severity denotes the importance and context of the message to the user. The message contains different severity types. Use the [Severity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_Severity) property to display the messages with different severity levels.
 
