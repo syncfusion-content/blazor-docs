@@ -7,11 +7,9 @@ control: Signature
 documentation: ug
 ---
 
-# Draw a Signature in Blazor Signature component
+# Draw Text as a Signature in Blazor Signature component
 
-## Draw
-
-The text can be drawn as [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) using the [`DrawAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_DrawAsync_System_String_System_String_System_Int32_) method with different font families like Arial, Serif, with different font sizes. This method accepts signature text, font family, font size as its parameters. The default font family is "Arial" and the default font size is "30".
+Text can be drawn as a [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) using the [`DrawAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_DrawAsync_System_String_System_String_System_Int32_System_Nullable_System_Double__System_Nullable_System_Double__) method with different font families such as Arial and Serif, and with different font sizes. This method accepts the signature text, font family, font size, and optional x/y coordinates as its parameters. The default font family is "Arial" and the default font size is "30".
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -34,7 +32,7 @@ The text can be drawn as [Blazor Signature](https://www.syncfusion.com/blazor-co
             </SfDropDownList>
         </div>
         <span class="e-btn-options">
-            <SfButton IsPrimary="true" @onclick="OnDraw">Draw</SfButton>
+            <SfButton CssClass="e-primary" @onclick="OnDraw">Draw</SfButton>
         </span>
     </div>
     <div class='e-sign-content'>
