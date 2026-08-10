@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Claude AI Service Integration in Blazor Smart Paste Button | Syncfusion®
-description: Learn how to integrate the Blazor Smart Paste Button with Claude AI services in a Blazor App and much more details.
+title: Claude AI Integration in Blazor Smart Paste | Syncfusion®
+description: Learn how to connect Anthropic Claude AI services with the Syncfusion Blazor Smart Paste Button for AI-powered form filling.
 platform: Blazor
 control: Smart Paste Button
 documentation: ug

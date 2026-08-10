@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor WebAssembly App with Authentication Library | Syncfusion®
-description: Check out the documentation for getting started with Blazor WebAssembly App and Blazor Components with Authentication Library.
+title: Blazor WebAssembly Authentication Guide | Syncfusion®
+description: Learn how to create a Syncfusion Blazor WebAssembly application with authentication and configure secure user access.
 platform: Blazor
 component: Common
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create Blazor WebAssembly App Projects in Visual Studio Code | Syncfusion®
-description: Learn here about how to create syncfusion blazor application using Syncfusion Blazor WebAssembly App Template nuget for Visual Studio Code.
+title: Blazor WebAssembly App in Visual Studio Code | Syncfusion®
+description: Learn how to create and run a Syncfusion Blazor WebAssembly application in Visual Studio Code using the NuGet package template.
 platform: extension
 control: Syncfusion Extensions
 documentation: ug
