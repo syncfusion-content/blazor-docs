@@ -7,7 +7,7 @@ control: Range Slider
 documentation: ug
 ---
 
-# Tooltip in Blazor Range Slider Component
+# Tooltip and Buttons in Blazor Range Slider Component
 
 The slider can display a tooltip that shows the current value when interacting with the control. Configure the tooltip position using the [`Placement`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTooltip.html#Syncfusion_Blazor_Inputs_SliderTooltip_Placement) property. Also decides the tooltip display mode on a page, i.e., on hovering, focusing, or clicking on the Slider handle and it always remains/displays on the page.
 
@@ -27,7 +27,7 @@ The slider can display a tooltip that shows the current value when interacting w
 
 ## Buttons
 
-Change the slider value using the [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_ShowButtons) property, which renders increment and decrement buttons. In a range slider, button clicks change the first handle by default. To change the other handle, move focus to it and then use the buttons.
+Use the [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_ShowButtons) property to render increment and decrement buttons next to the slider. In a range slider, button clicks change the first handle by default. To change the other handle, move focus to it and then use the buttons.
 
 N> After enabling slider buttons, pressing the Tab key moves focus to the handle, not the buttons.
 

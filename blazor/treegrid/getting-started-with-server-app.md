@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with TreeGrid in Blazor Server App | Syncfusion®
-description: Check out and learn about getting started with Blazor TreeGrid component in Blazor Server Application.
+title: Blazor TreeGrid Getting Started with Server App | Syncfusion
+description: Learn how to get started with Blazor TreeGrid in a Blazor Server app, configure components, and build hierarchical data applications.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Getting started with Blazor TreeGrid in Blazor Server App
+# Getting Started with Blazor TreeGrid in Blazor Server App
 
 This section briefly explains about how to include [Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component in your Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
