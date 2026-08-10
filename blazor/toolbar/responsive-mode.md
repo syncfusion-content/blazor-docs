@@ -106,21 +106,21 @@ N> If the popup content exceeds the height of the page, overflowing items will n
 
 Default popup priority is `None`. When Toolbar items overflow, those listed last are moved to the popup.
 
-The priority of items for display on the Toolbar and in the popup can be customized using the `Overflow` property.
+The priority of items for display on the Toolbar and in the popup can be customized using the [`Overflow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Overflow) property.
 
 Property     | Description
 ------------ | -------------
-  Show       | Always shows items on the `Toolbar with primary` priority.
-  Hide       | Always shows items in the `popup with secondary` priority.
-  None       | No priority display, and as per the `normal order` Items are moved to popup when content exceeds viewing area.
+  [`Show`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.OverflowOption.html#Syncfusion_Blazor_Navigations_OverflowOption_Show)       | Always shows items on the `Toolbar with primary` priority.
+  [`Hide`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.OverflowOption.html#Syncfusion_Blazor_Navigations_OverflowOption_Hide)       | Always shows items in the `popup with secondary` priority.
+  [`None`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.OverflowOption.html#Syncfusion_Blazor_Navigations_OverflowOption_None)       | No priority; items move to the popup in their natural order when content overflows the viewing area.
 
 If primary priority Items also exceed the available space, they are moved to the popup container at the top order position and placed before the secondary priority Items.
 
-N> The toolbar item can be maintained on popup always by using the [ShowAlwaysInPopup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_ShowAlwaysInPopup) property, and this behavior is not applicable for toolbar items with [Overflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Overflow) property as 'Show'.
+N> The toolbar item can be maintained on popup always by using the [`ShowAlwaysInPopup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_ShowAlwaysInPopup) property, and this behavior is not applicable for toolbar items with `Overflow` property as 'Show'.
 
 ### Text mode for buttons
 
-The `ShowTextOn` property is used to decide button text display area on the Toolbar, popup, or both. This is useful for customization of both text and image representation of Items.
+The [`ShowTextOn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_ShowTextOn) property is used to decide button text display area on the Toolbar, popup, or both. This is useful for customization of both text and image representation of Items.
 
 For example, display icon-only buttons on the Toolbar, and in the popup container, display more information about the items, including both icon and text.
 
@@ -128,9 +128,9 @@ Possible values are,
 
   Property   | Description
 ------------ | -------------
-  Both     | Button text is visible in both `Toolbar` and `Popup`.
-  Overflow | Button text is only visible in `Popup`.
-  Toolbar  | Button text is only visible on the `Toolbar`.
+  [`Both`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DisplayMode.html#Syncfusion_Blazor_Navigations_DisplayMode_Both)     | Button text is visible in both `Toolbar` and `Popup`.
+  [`Overflow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DisplayMode.html#Syncfusion_Blazor_Navigations_DisplayMode_Overflow) | Button text is only visible in `Popup`.
+  [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DisplayMode.html#Syncfusion_Blazor_Navigations_DisplayMode_Toolbar)  | Button text is only visible on the `Toolbar`.
 
 In the following code sample, text is only visible in the popup container and not in the Toolbar container.
 

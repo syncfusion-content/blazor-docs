@@ -42,7 +42,7 @@ The `Created` event fires after the NumericTextBox component has been initialize
 </SfNumericTextBox>
 
 @code {
-    private void CreatedHandler(Object args)
+    private void CreatedHandler(object args)
     {
         // Here you can customize your code
     }
@@ -61,14 +61,14 @@ The `Destroyed` event fires when the NumericTextBox component is disposed.
 </SfNumericTextBox>
 
 @code {
-    private void DestroyedHandler(Object args)
+    private void DestroyedHandler(object args)
     {
         // Here you can customize your code
     }
 }
 ```
 
-## Focus 
+## Focus
 
 The `Focus` event occurs when the NumericTextBox receives focus.
 
