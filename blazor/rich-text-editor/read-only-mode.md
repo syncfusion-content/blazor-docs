@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Controlling Editor Access in Blazor Rich Text Editor Component | Syncfusion
+title: Control Read-Only Behavior in Blazor Rich Text Editor | Syncfusion
 description: Checkout and learn here all about Controlling Editor Access in Syncfusion Blazor Rich Text Editor component and more.
 platform: Blazor
 control: RichTextEditor
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Read-only mode
 
-The Rich Text Editor control offers a read-only mode that prevents you from editing the content while still allowing them to view it. This feature is particularly useful when you want to display formatted content without permitting modifications.
+The Rich Text Editor component offers a read-only mode that prevents you from editing the content while still allowing them to view it. This feature is particularly useful when you want to display formatted content without permitting modifications.
 
 To enable the read-only mode, set the [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Readonly) property to `true`. 
 
