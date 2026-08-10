@@ -11,7 +11,7 @@ documentation: ug
 
 ## Icons
 
-Popup action items can display an icon or image to visually represent the action. To add an icon to a popup item, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_IconCss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the popup action item.
+Popup action items can display an icon or image to visually represent the action. To add an icon to a popup item, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_IconCss) property to `e-icons` with the required icon CSS. By default, the icon appears on the left of the popup action item.
 
 In the following sample, the icons for edit, delete, mark as read and like message menu items are added using the `IconCss` property.
 
@@ -74,7 +74,7 @@ In the following sample, cut, copy, and paste popup items are grouped using the 
 
 ![Blazor dropdown menu with separator](./images/blazor-dropdownmenu-separator.webp)
 
-## Navigations
+## Navigation
 
 Actions in Dropdown Menu can navigate to another web page when an action item is clicked. This can be achieved by providing a link to the action item using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownMenuItem.html#Syncfusion_Blazor_SplitButtons_DropDownMenuItem_Url) property.
 
