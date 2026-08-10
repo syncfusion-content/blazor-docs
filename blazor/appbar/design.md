@@ -9,9 +9,11 @@ documentation: ug
 
 # Design User Interface with Blazor AppBar Component
 
+The Blazor AppBar can host a variety of child components to build a fully functional application header. This section covers the common UI design patterns available with the AppBar component, including spacers, separators, media queries, menus, buttons, and integration with the Sidebar component.
+
 ## Spacer
 
-[AppBarSpacer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AppBarSpacer.html)  is used to provide spacing between the AppBar contents which gives additional space to the content layout.
+[AppBarSpacer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AppBarSpacer.html) is used to provide spacing between the AppBar contents, which gives additional space to the content layout.
 
 The following example depicts the code to provide spacing between the home and pan buttons in the AppBar:
 
@@ -69,7 +71,7 @@ The following example depicts the code to provide a vertical line between a grou
 
 ## Media Query
 
-Media Query is used to adjusting the AppBar for different screen sizes. Resize the screen to observe the responsive layout of the AppBar.
+Media Query is used to adjust the AppBar for different screen sizes. Resize the screen to observe the responsive layout of the AppBar.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -112,9 +114,10 @@ Media Query is used to adjusting the AppBar for different screen sizes. Resize t
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjrnDnWsrQVIhsPP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Media Query.](./images/blazor-appbar-media-quary.webp)" %}
+
 ## Designing AppBar with Menu
 
-**SfMenu** component can be rendered as a child content of AppBar. You can inherit the AppBar component styles by setting CSS class as `e-inherit` to SfMenu component.
+The **SfMenu** component can be rendered as a child content of the AppBar. You can inherit the AppBar component styles by setting the CSS class as `e-inherit` on the SfMenu component. 
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -173,7 +176,7 @@ Media Query is used to adjusting the AppBar for different screen sizes. Resize t
 
 ## Designing AppBar with Buttons
 
-**SfButton** and **SfDropDownButton** component can be rendered as a child content of AppBar. You can inherit the AppBar component styles by setting CSS class as `e-inherit` to SfButton and SfDropDownButton component.
+The **SfButton** and **SfDropDownButton** components can be rendered as a child content of the AppBar. You can inherit the AppBar component styles by setting the CSS class as `e-inherit` on the SfButton and SfDropDownButton components.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -208,7 +211,7 @@ Media Query is used to adjusting the AppBar for different screen sizes. Resize t
 
 ## Designing AppBar with SideBar
 
-AppBar toggle button used to control the expand and collapse state of **SfSidebar** component. Click on the menu icon to expand/collapse the Sidebar. In the following sample, the `IsOpen` property has been used to show or hide the Sidebar on the AppBar button click.
+The AppBar toggle button is used to control the expand and collapse state of the **SfSidebar** component. Click on the menu icon to expand/collapse the Sidebar. In the following sample, the `IsOpen` property has been used to show or hide the Sidebar on the AppBar button click.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -365,3 +368,10 @@ AppBar toggle button used to control the expand and collapse state of **SfSideba
 </style>
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhntHiCBcgmiPLM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with SideBar.](./images/blazor-appbar-sidebar.webp)" %}
+
+## See Also
+
+* [Getting Started with Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/getting-started)
+* [Positioning in Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/position)
+* [Styles and Appearances in Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/style-and-appearance)
+* [Accessibility in Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/accessibility)
