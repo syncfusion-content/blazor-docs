@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor Chat UI Component | Syncfusion®
-description: Checkout and learn here all about Templates with Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Templates in Blazor Chat UI | Syncfusion®
+description: Customize message rendering in Blazor Chat UI using EmptyChatTemplate, MessageTemplate, and footer templates for tailored UI presentation.
 platform: Blazor
 control: Chat UI
 documentation: ug
 ---
 
-# Templates in Blazor Chat UI component
+# Templates in Blazor Chat UI
 
 The Chat UI component provides several templates for customizing the appearance of the empty conversation area, messages, typing indicator, and more. These templates provide flexibility for users to create a unique, personalized chat experience. 
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Gallery in Blazor Ribbon Component | Syncfusion®
-description: Checkout and learn about Gallery in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
-platform: Blazor
+title: Gallery Items in Blazor Ribbon | Syncfusion
+description: Learn how to add a gallery in the Blazor Ribbon to display a collection of related items such as icons, content, or images for quick user actions.
 control: Ribbon
+platform: Blazor
 documentation: ug
 ---
 
-# Gallery Items in Blazor Ribbon component
+# Gallery Items in Blazor Ribbon
 
 The Ribbon supports a gallery view, allowing users to interact with a collection of related items such as icons, text, or images. You can render gallery items by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_Type) property of a Ribbon item to `RibbonItemType.Gallery` and customize it using the [RibbonGallerySettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html) tag directive. The settings provide options like `Groups`, `ItemCount`, `PopupHeight`, `PopupWidth`, and more.
 

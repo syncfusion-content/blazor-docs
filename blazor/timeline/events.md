@@ -9,11 +9,11 @@ documentation: ug
 
 # Events in Blazor Timeline component
 
-This section describes the Blazor Timeline events, which are triggered when appropriate actions are performed. The following events are available in the Timeline component.
+This section describes the Blazor Timeline events, which are triggered when specific actions are performed. The following events are available in the Timeline component.
 
 ## Created
 
-The Timeline component triggers the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_Created) event when its rendering is completed.
+The Timeline component triggers the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_Created) event when its rendering is complete.
 
 ```cshtml
 

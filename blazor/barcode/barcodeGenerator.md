@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Barcode Generator in Blazor Barcode Component | Syncfusion®
-description: Checkout and learn here all features about Barcode Generator in Blazor Barcode component and much more.
+title: Barcode Generator in Blazor Barcode Generator | Syncfusion®
+description: Generate linear 1D barcodes in Blazor using Code39, Code128, Codabar, Code93, and other symbologies with customizable color, size, and display text.
 platform: Blazor
 control: Barcode
 documentation: ug

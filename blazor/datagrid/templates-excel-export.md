@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Exporting with Templates in Blazor Grid | Syncfusion®
-description: Export Blazor DataGrid templates to Excel, preserving custom content like images, hyperlinks, and structured layouts for rich exported documents.
+title: Blazor Grid Excel Export with Templates | Syncfusion
+description: Learn how to export templates to Excel in Blazor Data Grid while preserving images, hyperlinks, and structured layouts for rich reports.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Exporting grid with templates in Blazor DataGrid
+# Excel Export with Templates in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports exporting template content to Excel, enabling rich formatting in exported documents. The following template types are supported:
 
