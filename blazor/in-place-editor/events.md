@@ -13,7 +13,7 @@ This section describes the events available in the In-place Editor component and
 
 ## Created
 
-`Created` event is raised after the component has completed rendering.
+The `Created` event is raised after the component has completed rendering.
 
 ```cshtml
 
@@ -34,7 +34,7 @@ This section describes the events available in the In-place Editor component and
 
 ## OnActionBegin
 
-`OnActionBegin` event is raised before data is submitted to the server as part of a save/update action. Use this event for preprocessing tasks such as validation or modifying the request.
+The `OnActionBegin` event is raised before data is submitted to the server as part of a save or update action. Use this event for preprocessing tasks such as validation or modifying the request.
 
 ```cshtml
 
@@ -55,7 +55,7 @@ This section describes the events available in the In-place Editor component and
 
 ## OnActionSuccess
 
-`OnActionSuccess` event is raised when data is successfully submitted to the server and a successful response is received.
+The `OnActionSuccess` event is raised when data is successfully submitted to the server and a successful response is received.
 
 ```cshtml
 
@@ -76,7 +76,7 @@ This section describes the events available in the In-place Editor component and
 
 ## OnActionFailure
 
-`OnActionFailure` event is raised when a data submission fails.
+The `OnActionFailure` event is raised when a data submission fails.
 
 ```cshtml
 
@@ -97,7 +97,7 @@ This section describes the events available in the In-place Editor component and
 
 ## ValueChange
 
-`ValueChange` event is raised when the value of the integrated editor changes, regardless of the editor rendered via the `Type` property.
+The `ValueChange` event is raised when the value of the integrated editor changes, regardless of the editor rendered via the `Type` property.
 
 ```cshtml
 
@@ -118,7 +118,7 @@ This section describes the events available in the In-place Editor component and
 
 ## Destroyed
 
-`Destroyed` event is raised when the component is disposed.
+The `Destroyed` event is raised when the component is disposed.
 
 ```cshtml
 
