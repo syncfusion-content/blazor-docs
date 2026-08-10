@@ -20,7 +20,7 @@ N> The following arguments are sent to the server when a submit action is perfor
 | Value      | The edited value used for updating the data store.       |
 | PrimaryKey | The unique identifier used to map the edited value to a record. |
 
-Find the following sample server code for defining models and controller functions to configure processing data.
+The following sample shows server-side model and controller code for processing the data.
 
 ```csharp
 public class SubmitModel
@@ -42,7 +42,7 @@ public IEnumerable<SubmitModel> UpdateData([FromBody]SubmitModel value)
 ```
 
 - When the server action completes successfully, the `OnActionSuccess` event is triggered with the returned server data.
-- If the server request fails (for example, network error or non-success status code), the `OnActionFailure` event is triggered. In this case, the value in the editor is not updated.
+- If the server request fails (for example, a network error or a non-success status code), the `OnActionFailure` event is triggered. In this case, the value in the editor is not updated.
 
 In the following sample, the `OnActionSuccess` event is triggered after the value is successfully submitted to the server.
 
