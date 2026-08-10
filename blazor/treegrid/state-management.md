@@ -11,7 +11,7 @@ documentation: ug
 
 The TreeGrid component automatically retains state in browser local storage when the page is reloaded. Additionally, TreeGrid state can be manually saved and loaded using built-in methods. When state is restored, the TreeGrid renders with the saved state instead of relying solely on declaratively provided properties.
 
-## Persistable Properties
+## Persist Properties
 
 The following properties can be saved and restored when state persistence is enabled:
 
