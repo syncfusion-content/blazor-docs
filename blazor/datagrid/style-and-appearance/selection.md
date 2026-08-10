@@ -24,10 +24,10 @@ The **.e-selectionbackground** class styles the background of selected rows in t
 }
 ```
 
-Properties such as **background-color**, **color**, and **font-weight** can be adjusted to match the grid’s design.
+Adjust properties such as `background-color`, `color`, and `font-weight` to match the application design.
+
 
 ![Row selection](../images/style-and-appearance/row-selection.webp)
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -106,7 +106,7 @@ internal sealed class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZVRNctCLdcmuGit?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Customize cell selection background
+## Customize Cell Selection Background
 
 The **.e-cellselectionbackground** class styles the background of selected cells in the DataGrid. Apply CSS to customize its appearance:
 
@@ -140,7 +140,6 @@ Modify visual properties to align with the overall layout and improve clarity.
     .e-grid td.e-cellselectionbackground {
         background-color: #00b7ea;
     }
-    /* Optional: visible focus for cell mode */
     .e-grid td.e-focused {
         outline: 2px solid #005a9e;
         outline-offset: -2px;

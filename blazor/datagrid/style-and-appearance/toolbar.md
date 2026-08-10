@@ -29,7 +29,9 @@ Properties such as **background-color**, **padding**, **border**, and **box-shad
 
 ## Customize the toolbar button elements
 
-The **.e-btn** class inside **.e-toolbar** defines the appearance of toolbar buttons in the Blazor DataGrid. Apply CSS to customize their styling:
+The **.e-btn** class inside **.e-toolbar** defines the appearance of toolbar buttons in the Blazor DataGrid. Apply CSS to customize button styling for different states.
+
+**Default button styling:**
 ```css
 .e-grid .e-toolbar .e-btn {
     background-color: #deecf9;
