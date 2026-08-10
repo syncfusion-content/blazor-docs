@@ -9,7 +9,7 @@ documentation: ug
 
 # State Management in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports state management to preserve grid configuration across browser reloads and page navigation within the same session. Persisted settings include **paging**, **sorting**, **filtering**, **grouping**, **column visibility**, and similar configurations. State persistence applies only to grid settings; the underlying data must be reloaded when the page refreshes.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports state management to preserve grid configuration across browser reloads and page navigation within the same session. Persisted settings include **paging**, **sorting**, **filtering**, **grouping**, **column visibility**, and similar configurations. Persistence saves grid settings, such as sorting and filtering, only; data must be reloaded on page refresh.
 
 Enable state persistence by setting the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence) property to **true**. When enabled, the grid stores its state in the browser’s [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), retaining settings until cleared.
 
@@ -23,7 +23,7 @@ Enable state persistence by setting the [EnablePersistence](https://help.syncfus
 
 When state persistence is enabled, the Grid saves the following settings in local storage:
 
-| **Feature**         | **Persisted Properties**                                                                                     | **Ignored Properties**                     |
+| **Feature**         | **Persisted Properties**                                                                                     | **Properties Not Persisted**               |
 |----------------------|-------------------------------------------------------------------------------------------------------------|--------------------------------------------|
 | **PageSettings**     | CurrentPage<br>PageCount<br>PageSize<br>EnableQueryString<br>EnableExternalMessage                         | Template                  |
 | **GroupSettings**    | AllowReordering<br>DisablePageWiseAggregates<br>ShowDropArea<br>ShowGroupedColumn<br>ShowToggleButton<br>ShowUngroupButton<br>EnableLazyLoading | CaptionTemplate<br>ExpandAllGroups<br>PersistGroupState |
@@ -123,13 +123,13 @@ public class OrderData
 
 ## Restore initial Blazor DataGrid state
 
-The Blazor DataGrid includes an option to revert to its original configuration by clearing all applied changes. This process resets **filters**, **sorting**, **grouping**, and **column customizations** to the initial state.
+The Blazor DataGrid can revert to its original configuration by clearing persisted changes, including **filters**, **sorting**, and **grouping**.
 
 **Ways to Restore**
 
 1. **Using ResetPersistDataAsync Method**
 
-    Clears the persisted state from local storage and restores the grid to its original property values.
+    The `ResetPersistDataAsync` method clears persisted state from localStorage and restores original property values.
 
 2. **Clearing Local Storage**
 
@@ -302,11 +302,13 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjLdNcDHrINGCDHf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
+> `location.reload()` ensures that data is reloaded and the Grid reflects its initial state. Without a page reload, stale data may be displayed.
+
 ## Restore to specific state version
 
 The Blazor DataGrid supports state persistence, enabling saving and restoring grid configurations such as **column settings**, **filters**, **sorting**, **grouping**, and **paging**. This example demonstrates version-based state persistence using **localStorage**.
 
-Each version represents a unique grid configuration. When a version button is clicked:
+Each version represents a unique grid configuration. When a version button is clicked, the following occurs:
 
 1. The current grid state is saved to localStorage under the active version key.
 2. The grid switches to the selected version.
@@ -437,7 +439,7 @@ The Blazor DataGrid supports saving and restoring the current state using local 
 
 **How It Works**
 
-* The [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync) method retrieves the current state of the Grid as a string. This string can be stored in local storage or transmitted to a server.
+* [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync) retrieves the Grid’s current state as a JSON string, suitable for storage or server transmission.
 * The [SetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetPersistDataAsync_System_String_) method applies a previously saved state to the Grid.
 * If no saved state exists, the Grid remains in the current configuration.
 
@@ -561,7 +563,7 @@ public class OrderDetails
 
 ## Maintaining custom query in a persistent state
 
-The Blazor DataGrid persists configuration when [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence) is **true**. Custom query parameters can be re-applied after persistence during data binding by using the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event. Re-applying parameters in `DataBound` ensures the query remains consistent across reloads and navigation when persistence is enabled.
+The Blazor DataGrid persists configuration when [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence) is **true**. Custom query parameters can be re-applied after persistence during data binding by using the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event. Re-apply query parameters in the `DataBound` event to ensure custom filters persist across reloads.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
