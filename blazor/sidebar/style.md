@@ -11,7 +11,7 @@ documentation: ug
 
 The following content provides the exact CSS structure that can be used to modify the component's appearance based on the user's preference.
 
-## Customizing the sidebar
+## Customizing the Sidebar
 
 Use the below CSS to customize the Sidebar root element.
 
