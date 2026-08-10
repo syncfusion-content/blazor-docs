@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Help Pane in Blazor Ribbon Component | Syncfusion®
-description: Checkout and learn about Help Pane in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
-platform: Blazor
+title: Help Pane Template in Blazor Ribbon | Syncfusion
+description: Learn how to customize the help pane in the Blazor Ribbon to display custom content such as document permissions, sharing options, or user information.
 control: Ribbon
+platform: Blazor
 documentation: ug
 ---
 
 [SfRibbon]: https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html
 [HelpPaneTemplate]: https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.HelpPaneTemplate.html
 
-# Help Pane in Blazor Ribbon component
+# Help Pane Template in Blazor Ribbon
 
 The help pane is dedicated area where the users can define help contents like controlling document permissions, sharing features, and more which appears on the right side of the Ribbon. You can use the [HelpPaneTemplate][HelpPaneTemplate] tag directive within the [SfRibbon][SfRibbon] to set the help pane contents.
 
