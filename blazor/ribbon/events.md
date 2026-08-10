@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Ribbon Component | Syncfusion®
-description: Checkout and learn about Events in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
-platform: Blazor
+title: Events in Blazor Ribbon | Syncfusion
+description: Learn about the events triggered by the Blazor Ribbon in response to user interactions such as tab selection, item clicks, and ribbon expansion.
 control: Ribbon
+platform: Blazor
 documentation: ug
 ---
 
-# Events in Blazor Ribbon component
+# Events in Blazor Ribbon
 
 This section describes the Ribbon events that will be triggered when appropriate actions are performed. The following events are available in the Ribbon component.
 
