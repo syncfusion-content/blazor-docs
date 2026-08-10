@@ -283,7 +283,7 @@ To customize Menu Bar items in your application, set a custom template using [Me
     {
                 new CategoryModel {
                     Id = "about",
-                    About = "We are on a mission to provide world-class best software solutions for web, mobile and desktop platforms. Around 900+ applications are desgined and delivered to our customers to make digital & strengthen their businesses."
+                    About = "We are on a mission to provide world-class best software solutions for web, mobile and desktop platforms. Around 900+ applications are designed and delivered to our customers to make digital & strengthen their businesses."
                 }
             }
         },

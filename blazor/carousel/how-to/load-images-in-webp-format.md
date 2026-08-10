@@ -15,7 +15,7 @@ WebP produces smaller file sizes than formats like JPEG and PNG, resulting in fa
 
 > WebP is supported by all modern browsers. If you need to support legacy browsers, provide a fallback using the `<picture>` element with a JPEG or PNG `<source>` and the WebP source.
 
-The following example demonstrates how to load Carousel images in WebP format. You can also add `loading="lazy"` to each `<img>` element to defer offscreen images and further improve performance.
+The following example demonstrates how to load Carousel images in WebP format. You can also add `loading="lazy"` to each `<img>` element to defer off screen images and further improve performance.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

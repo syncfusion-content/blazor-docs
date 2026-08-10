@@ -77,7 +77,7 @@ The Menu Bar component supports horizontal and vertical scrolling to render larg
 
 ## Hamburger Menu
 
-The following example demonstrates the [Hamburger mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu-1.html#Syncfusion_Blazor_Navigations_SfMenu_1_HamburgerMode) of the Menu Bar. When `HamburgerMode="true"` is set, the top-level items collapse behind a hamburger icon on narrow viewports and expand when the icon is clicked. The `ShowItemOnClick="true"` property keeps the menu open after a leaf item is selected, which is the typical mobile / responsive UX.
+The following example demonstrates the [Hamburger mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu-1.html#Syncfusion_Blazor_Navigations_SfMenu_1_HamburgerMode) of the Menu Bar. When `HamburgerMode="true"` is set, the top-level items collapse behind a hamburger icon on narrow view ports and expand when the icon is clicked. The `ShowItemOnClick="true"` property keeps the menu open after a leaf item is selected, which is the typical mobile / responsive UX.
 
 ```cshtml
 
