@@ -11,15 +11,15 @@ documentation: ug
 
 The appearance of paging elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. Styling options are available for different parts of the pager interface:
 
-- **Root container:** The outermost wrapper that holds all pager content.
-- **Pager container:** The inner layout that positions the controls.
-- **Navigation buttons:** Commands for first, previous, next, and last page navigation.
-- **Numeric page indicators:** Indicators that jump directly to specific pages.
-- **Current page indicator:** The highlight that marks the active numeric page button.
+- **Pager root element:** The outermost wrapper that holds all pager content.
+- **Pager container element:** The inner layout that positions the controls.
+- **Pager navigation buttons:** Commands for first, previous, next, and last page navigation.
+- **Pager numeric buttons:** Buttons that jump directly to specific pages.
+- **Current page indicator:** The highlighting that marks the active numeric page button.
 
 ## Customize the pager root element
 
-The **.e-gridpager** class styles the pager root element in the Blazor DataGrid. Use CSS to adjust its appearance:
+The **.e-gridpager** class styles the pager root element in the Blazor DataGrid. The following example applies custom styling to the pager root:
 
 ```css
 .e-grid .e-gridpager {
@@ -28,13 +28,13 @@ The **.e-gridpager** class styles the pager root element in the Blazor DataGrid.
 }
 ```
 
-Properties like **font-family**, **background-color**, and spacing-related styles can be changed to fit the grid layout design.
+Modify properties such as **font-family**, **background-color**, and spacing-related styles to match the design requirements. When overriding theme defaults, add `!important` to the property if the rule does not apply.
 
 ![Pager root element](../images/style-and-appearance/grid-pager-root-element.webp)
 
 ## Customize the pager container element
 
-The **.e-pagercontainer** class styles the pager container in the Blazor DataGrid. Apply CSS to modify its look:
+The **.e-pagercontainer** class styles the pager container element in the Blazor DataGrid. The following example applies custom styling:
 
 ```css
 .e-grid .e-pagercontainer {
@@ -43,13 +43,13 @@ The **.e-pagercontainer** class styles the pager container in the Blazor DataGri
 }
 ```
 
-Properties such as **font-family**, **background-color**, and spacing-related styles can be adjusted to align with the grid design.
+Modify properties such as **font-family**, **background-color**, and spacing-related styles to match the design requirements. When overriding theme defaults, add `!important` to the property if the rule does not apply.
 
 ![Pager container element](../images/style-and-appearance/grid-pager-container-element.webp)
 
-## Customize the pager navigation elements
+## Customize the pager navigation buttons
 
-The **.e-prevpagedisabled**, **.e-prevpage**, **.e-nextpage**, **.e-nextpagedisabled**, **.e-lastpagedisabled**, **.e-lastpage**, **.e-firstpage**, and **.e-firstpagedisabled** classes define the appearance of the pager navigation buttons in the Blazor DataGrid. Apply CSS to customize their styling:
+The **.e-prevpagedisabled**, **.e-prevpage**, **.e-nextpage**, **.e-nextpagedisabled**, **.e-lastpagedisabled**, **.e-lastpage**, **.e-firstpage**, and **.e-firstpagedisabled** classes define the appearance of the pager navigation buttons in the Blazor DataGrid. The following example applies custom styling:
 
 ```css
 .e-grid .e-gridpager .e-prevpagedisabled,
@@ -68,9 +68,9 @@ Adjust properties like **background-color** to match the design, while keeping c
 
 ![Pager navigation elements](../images/style-and-appearance/grid-pager-navigation-element.webp)
 
-## Customize the pager numeric button elements
+## Customize the pager numeric buttons
 
-The **.e-numericitem** class styles the numeric page buttons in the Blazor DataGrid. Apply CSS to change their appearance:
+The **.e-numericitem** class styles the numeric page buttons in the Blazor DataGrid. The following example applies custom styling:
 
 ```css
 .e-grid .e-gridpager .e-numericitem {
@@ -83,15 +83,16 @@ The **.e-numericitem** class styles the numeric page buttons in the Blazor DataG
     background-color: white;
     color: #007bff;
 }
+
 ```
 
-Modify properties such as **background-color**, **color**, and **hover** effects to improve clarity and interaction.
+Modify properties such as **background-color**, **color**, and **hover** effects to match design requirements. Include `:focus`, `:active`, and `:disabled` states for accessibility and user feedback.
 
 ![Pager numeric button elements](../images/style-and-appearance/pager-page-numeric-link-elements.webp)
 
-## Customize the current page numeric element
+## Customize the current page indicator
 
-The **.e-currentitem** class styles the current page indicator in the Blazor DataGrid pager. Use CSS to adjust it:
+The **.e-currentitem** class styles the current page indicator in the Blazor DataGrid pager. The following example applies custom styling:
 
 ```css
 .e-grid .e-gridpager .e-currentitem {
