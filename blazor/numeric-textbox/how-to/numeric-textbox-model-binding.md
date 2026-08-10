@@ -11,7 +11,7 @@ documentation: ug
 
 This section demonstrates binding the SfNumericTextBox value to a model using EditForm, along with data annotation–based validation. The example binds to a nullable integer (int?) model property to allow an empty state and shows how validation messages are displayed for the bound field.
 
-In this sample, select a value in the Numeric TextBox and click Submit to trigger form validation. When the bound value is null, a validation error message is displayed below the Numeric TextBox based on the Required attribute. The form uses EditForm with DataAnnotationsValidator to enable validation, and ValidationMessage to display field-specific errors.
+In this sample, select a value in the Numeric TextBox and click Submit to trigger form validation. When the bound value is null, a validation error message is displayed below the Numeric TextBox based on the `Required` attribute. The form uses `EditForm` with `DataAnnotationsValidator` to enable validation, and `ValidationMessage` to display field-specific errors.
 
 ```cshtml
 @using System.ComponentModel.DataAnnotations
@@ -19,9 +19,9 @@ In this sample, select a value in the Numeric TextBox and click Submit to trigge
 
 <EditForm Model="@User">
     <DataAnnotationsValidator />
-    <div asp-validation-summary="All" class="text-danger"></div>
+    <ValidationSummary />
     <div class="form-group">
-        <SfNumericTextBox Placeholder='Enter value' @bind-Value="@User.ID"></SfNumericTextBox>
+        <SfNumericTextBox TValue="int?" Placeholder='Enter value' @bind-Value="@User.ID"></SfNumericTextBox>
         <ValidationMessage For="@(() => User.ID)" />
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
@@ -29,14 +29,17 @@ In this sample, select a value in the Numeric TextBox and click Submit to trigge
 
 @code {
 
-    public Customer User = new Customer();
+    public UserForm User = new UserForm();
 
-    public class Customer
+    public class UserForm
     {
         [Required(ErrorMessage = "Value is required")]
-
         public int? ID { get; set; }
+    }
 
+    private void HandleValidSubmit()
+    {
+        // Handle a successful submission here.
     }
 }
 ```

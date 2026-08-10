@@ -1,14 +1,14 @@
 ---
 layout: post
-title: LiteLLM Integration with Blazor AI AssistView Component | Syncfusion®
-description: Checkout and learn about LiteLLM integration with Blazor AI AssistView component in Blazor WebAssembly Application.
+title: Integrate LiteLLM With Blazor AI AssistView | Syncfusion®
+description: Checkout and learn about LiteLLM integration with Blazor AI AssistView component in Blazor Application.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate AI AssistView with LiteLLM
+# Integrate LiteLLM With Blazor AI AssistView
 
 The **AI AssistView** component can also be integrated with [LiteLLM](https://docs.litellm.ai/docs), an open-source proxy that provides a unified, OpenAI-compatible API for multiple LLM providers such as [OpenAI](https://openai.com) and [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai).
 

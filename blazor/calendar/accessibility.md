@@ -38,8 +38,7 @@ The accessibility compliance for the Blazor Calendar component is outlined below
 
 ## WAI-ARIA attributes 
 
-
-Blazor Calendar provides built-in compliance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) specifications. WAI-ARIA support is achieved through attributes like `aria-label`, `aria-selected`, `aria-disabled`, and `aria-activedescendant` applied for navigation buttons, and disable and active day cells.
+Blazor Calendar provides built-in compliance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) specifications. WAI-ARIA support is achieved through attributes like `aria-label`, `aria-selected`, `aria-disabled`, and `aria-activedescendant` applied for navigation buttons, and disabled and active day cells.
 
 It helps disabled persons by providing information about the widget for assistive technology in the screen readers. Calendar component contains grid role and grid cell for each day cell.
 
@@ -49,7 +48,7 @@ It helps disabled persons by providing information about the widget for assistiv
 
 * **aria-disabled**: Indicates the disabled state of the Calendar component.
 
-* **aria-activedescendent**: Helps in managing the current active child of the Calendar component.
+* **aria-activedescendant**: Helps in managing the current active child of the Calendar component.
 
 * **role**: Gives information to assistive technologies about how to handle each element in a widget.
 

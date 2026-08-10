@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Attachments in Blazor AI AssistView Component | Syncfusion®
-description: Checkout and learn here all about Attachments with Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
+title: File Attachments in Blazor AI AssistView | Syncfusion®
+description: Enable file attachments in Blazor AI AssistView with configurable upload URLs, allowed file types, and max file size restrictions.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 ---
 
-# Attachments in Blazor AI AssistView component
+# File Attachments in Blazor AI AssistView
 
 The `Attachment` support in AI AssistView specifies user to include file attachments along with their prompts in the AI AssistView. This enhances the interaction by allowing users to provide additional context through files. You can enable and customize this feature and its behavior using the `AttachmentSettings` configuration.
 
