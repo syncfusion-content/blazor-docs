@@ -22,11 +22,13 @@ These features help organizations develop multilingual applications and ensure t
 
 Localization is the process of adapting user interface elements to a specific language or regional setting. The Syncfusion Blazor Pager component supports localization, allowing you to customize the text displayed within the pager according to the active culture of the application.
 
-For example, default text like **First Page**, **Previous Page**, **Next Page**,**Last Page**, **Current Page** or **Items per page** can be replaced with localized equivalents based on the user’s language. This ensures that users can interact with the application more intuitively, without needing to interpret unfamiliar terminology. Localization is especially important in enterprise applications that serve users across multiple regions, as it enhances accessibility and improves user satisfaction.
+Several pager elements can be localized, including text and tooltip content associated with navigation controls such as  **First Page**, **Previous Page**, **Next Page**,**Last Page**, **Current Page** or **Items per page**. Replacing default English text with translated equivalents improves readability and reduces ambiguity within multilingual applications.
 
-The Syncfusion Blazor localization framework integrates with ASP.NET Core localization, making it possible to provide culture-specific translations and dynamically switch languages based on user preferences or application settings. Once localization is configured for the application, the Pager component automatically displays the corresponding translated text.
+Localization is particularly beneficial for enterprise applications deployed across multiple geographical regions. Consistent language presentation throughout the interface helps improve accessibility and promotes a familiar user experience for audiences with different native languages. Since pagination controls are frequently used for navigating large datasets, localized content enables quicker interpretation of navigation options and page-related information.
 
-Using localization also helps maintain consistency across an application because all user-facing content follows the same language and cultural conventions. This reduces the likelihood of confusion and contributes to a more professional and user-friendly experience.
+The Syncfusion localization framework integrates with ASP.NET Core localization infrastructure, allowing culture-specific resources to be loaded based on the active culture setting of the application. Once localization is configured, the Pager component automatically displays translated content that corresponds to the selected language. This approach simplifies application maintenance while ensuring consistency across all localized components.
+
+In addition to language translation, localization supports regional formatting conventions and cultural expectations, helping maintain a professional and polished interface within globally distributed applications. As a result, applications can provide a seamless experience regardless of language preference or geographical location.
 
 > Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) guide for detailed configuration steps.
 
@@ -46,7 +48,7 @@ To enable RTL, configure the [EnableRtl](https://help.syncfusion.com/cr/blazor/S
 
 ## Enable RTL globally
 
-You can enable RTL rendering globally for all Syncfusion Blazor components by configuring the Syncfusion service in Program.cs.
+RTL rendering can be enabled globally for all Syncfusion Blazor components by configuring the Syncfusion service in `Program.cs`.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Program.cs" %}
@@ -56,7 +58,8 @@ builder.Services.AddSyncfusionBlazor(options => { options.EnableRtl = true; });
 {% endhighlight %}
 {% endtabs %}
 
-Once RTL support is enabled, the Pager component automatically renders its content using right-to-left alignment.
+This configuration activates RTL rendering across supported Syncfusion components, ensuring a consistent interface throughout the application.
+
 ## Pager component
 
 ```cshtml
@@ -64,8 +67,8 @@ Once RTL support is enabled, the Pager component automatically renders its conte
 
 <SfPager TotalItemsCount="20" NumericItemsCount="5" PageSize="5"></SfPager>
 ```
-In the preceding example, the pager is rendered with RTL support when the global `EnableRtl` option is enabled. Navigation controls, page numbers, and related pager elements automatically follow the RTL layout without requiring additional component-level configuration.
+In this configuration, the Pager component automatically adopts RTL rendering when the global `EnableRtl` option is enabled. Navigation controls, numeric page items, tooltips, and related pager elements are displayed using right-to-left alignment without requiring component-level settings.
 
-RTL support helps ensure that users who read content from right to left can navigate paged data naturally and efficiently. This improves accessibility and provides a consistent experience across different languages and regions.
+By combining localization and RTL capabilities, the Pager component delivers a flexible globalization solution suitable for multilingual and multicultural applications. Localized text improves clarity and accessibility, while RTL rendering ensures that navigation patterns align with cultural reading expectations. Together, these features help create a consistent, intuitive, and regionally appropriate paging experience across a wide range of languages and deployment scenarios.
 
 > For more details, refer to the [Right-to-Left](https://blazor.syncfusion.com/documentation/common/right-to-left) guide for detailed configuration steps.
