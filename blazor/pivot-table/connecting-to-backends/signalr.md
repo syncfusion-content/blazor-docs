@@ -461,7 +461,7 @@ Syncfusion provides the `SfPivotView` component used to display aggregated data 
 
 For this project, the **Fluent2** theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Blazor components are now configured and ready to use. For additional guidance, refer to the Pivot Table component's [getting‑started](https://blazor.syncfusion.com/documentation/pivot-table/getting-started-with-web-app) documentation.
+Blazor components are now configured and ready to use. For additional guidance, refer to the Pivot Table component's [getting‑started](https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp) documentation.
 
 ### Step 2: Create the Custom Adaptor for the Pivot Table
 
