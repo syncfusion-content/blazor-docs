@@ -9,9 +9,9 @@ documentation: ug
 
 # Excel-like Filter in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) includes an Excel-like filter feature that provides an easy-to-use interface for filtering data. This feature mirrors the filtering tools found in Microsoft Excel, making it intuitive for individuals already familiar with that application.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) includes an Excel-like filter feature that provides an easy-to-use interface for filtering data. This feature mirrors the filtering tools found in Microsoft Excel, making it intuitive for users already familiar with that application.
 
-Excel-like filtering proves especially valuable when working with large datasets or when complex filtering operations are required for specific columns. This feature enables rapid data refinement to locate required information.
+Excel-like filtering is particularly valuable for large datasets and complex filtering operations. This feature enables rapid data refinement to locate required information.
 
 ## Getting Started with Excel-like Filter
 
