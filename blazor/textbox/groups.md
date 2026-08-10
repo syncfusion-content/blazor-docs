@@ -11,7 +11,7 @@ documentation: ug
 
 This section demonstrates how to enhance the TextBox component by combining multiple features such as icons, floating labels, clear buttons, and multiline input. These combinations create rich, user-friendly input experiences that improve usability and visual appeal. Each configuration uses specific APIs to achieve the desired functionality.
 
-**TextBox**
+## TextBox
 
 A basic TextBox component provides a simple text input field.
 
@@ -21,7 +21,7 @@ A basic TextBox component provides a simple text input field.
 <SfTextBox Placeholder="Enter your name"></SfTextBox>
 ```
 
-**Floating label**
+## Floating label
 
 Enable floating labels by setting the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_FloatLabelType) API. Floating labels move above the input field when focused or filled, providing a clean interface that saves vertical space.
 
@@ -35,7 +35,7 @@ The following sections demonstrate how to add icons to the TextBox for enhanced 
 
 ## TextBox with icon and floating label
 
-Add icons to the TextBox to provide visual context or indicate the input purpose. The [AddIconAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_AddIconAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__) method appends or prepends icons to the input field. The position argument (`append` or `prepend`) determines whether the icon appears as a suffix or prefix. When invoking AddIconAsync inside lifecycle events such as `Created`, ensure the method is awaited within an asynchronous handler to maintain proper component initialization.
+Add icons to the TextBox to provide visual context or indicate the input purpose. The [AddIconAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_AddIconAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__) method appends or prepends icons to the input field. The position argument (`prepend` or `append`) determines whether the icon appears as a prefix or suffix. When invoking `AddIconAsync` inside lifecycle events such as `Created`, ensure the method is awaited within an asynchronous handler to maintain proper component initialization.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -64,21 +64,21 @@ Add icons to the TextBox to provide visual context or indicate the input purpose
     SfTextBox FloatTextBoxDateObj;
     SfTextBox FloatTextBoxSearchObj;
 
-    public void OnCreateDate()
+    public async Task OnCreateDate()
     {
-        this.TextBoxDateObj.AddIconAsync("append", "e-date-icon");
+        await TextBoxDateObj.AddIconAsync("append", "e-date-icon");
     }
-    public void OnCreateSearch()
+    public async Task OnCreateSearch()
     {
-        this.TextBoxSearchObj.AddIconAsync("prepend", "e-icons e-search");
+        await TextBoxSearchObj.AddIconAsync("prepend", "e-icons e-search");
     }
-    public void OnFloatCreateDate()
+    public async Task OnFloatCreateDate()
     {
-        this.FloatTextBoxDateObj.AddIconAsync("append", "e-date-icon");
+        await FloatTextBoxDateObj.AddIconAsync("append", "e-date-icon");
     }
-    public void OnFloatCreateSearch()
+    public async Task OnFloatCreateSearch()
     {
-        this.FloatTextBoxSearchObj.AddIconAsync("prepend", "e-icons e-search");
+        await FloatTextBoxSearchObj.AddIconAsync("prepend", "e-icons e-search");
     }
 }
 ```
@@ -87,7 +87,7 @@ Add icons to the TextBox to provide visual context or indicate the input purpose
 
 ### Binding events to icons
 
-Attach event handlers to icons by passing event attributes as a parameter to the [AddIconAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_AddIconAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__) method. This enables interactive icons that respond to user actions such as clicks or mouse events. Multiple event handlers can be associated with a single icon by providing a dictionary of event names and their corresponding callbacks. Ensure callbacks are created using EventCallback to maintain component lifecycle integrity and proper event propagation.
+Attach event handlers to icons by passing event attributes as a parameter to the [AddIconAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_AddIconAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__) method. This enables interactive icons that respond to user actions such as clicks or mouse events. Multiple event handlers can be associated with a single icon by providing a dictionary of event names and their corresponding callbacks. Ensure callbacks are created using `EventCallback` to maintain component lifecycle integrity and proper event propagation.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -116,7 +116,7 @@ Attach event handlers to icons by passing event attributes as a parameter to the
         await TextBoxSearchObj.AddIconAsync("append", "e-icons e-search", new Dictionary<string, object>() { { "onclick", Click } });
     }
 
-    public void SearchClick()
+    public void SearchClick(MouseEventArgs args)
     {
         // Icon Click event triggered
     }
@@ -129,11 +129,11 @@ Attach event handlers to icons by passing event attributes as a parameter to the
         await TextBoxDateObj.AddIconAsync("prepend", "e-date-icon", new Dictionary<string, object>() { { "onmouseup", MouseUp }, { "onmousedown", MouseDown } });
     }
 
-    public void DateMouseDown()
+    public void DateMouseDown(MouseEventArgs args)
     {
         // Icon mouse down event triggered
     }
-    public void DateMouseUp()
+    public void DateMouseUp(MouseEventArgs args)
     {
         // Icon mouse up event triggered
     }
@@ -143,7 +143,7 @@ Attach event handlers to icons by passing event attributes as a parameter to the
 
 ## TextBox with clear button and floating label
 
-Add a clear button to allow users to quickly remove the current input value. The clear button appears only when the TextBox contains text, providing a convenient way to reset the field. Enable the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_ShowClearButton) API to display the clear icon. This feature can be combined with FloatLabelType to maintain the floating label behavior while offering the clear functionality.
+Add a clear button to allow users to quickly remove the current input value. The clear button appears only when the TextBox contains text, providing a convenient way to reset the field. Enable the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_ShowClearButton) API to display the clear icon. This feature can be combined with `FloatLabelType` to maintain the floating label behavior while offering the clear functionality.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -165,7 +165,7 @@ Add a clear button to allow users to quickly remove the current input value. The
 
 ## Multiline input with floating label
 
-Enable [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Multiline) to transform the TextBox into a multi-line text editor, ideal for longer text input such as comments, descriptions, or messages. This feature can be combined with FloatLabelType to maintain the floating label behavior, ensuring consistent styling across single-line and multi-line inputs.
+Enable [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Multiline) to transform the TextBox into a multi-line text editor, ideal for longer text input such as comments, descriptions, or messages. This feature can be combined with `FloatLabelType` to maintain the floating label behavior, ensuring consistent styling across single-line and multi-line inputs.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

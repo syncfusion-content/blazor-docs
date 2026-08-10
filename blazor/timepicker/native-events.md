@@ -9,13 +9,13 @@ documentation: ug
 
 # Native Events in Blazor TimePicker Component
 
-The following section explains steps to include native events and pass data to event handler in TimePicker component.
+The following sections explain how to bind native HTML events to the Blazor TimePicker component and how to pass event data to the handler.
 
 ## Bind native events to TimePicker
 
-Any native event can be accessed by using on `<event>` attribute with a component. The attribute's value is treated as an event handler.
+Any native event can be bound to the TimePicker by using an `on<event>` attribute on the component. The attribute's value is treated as an event handler.
 
-In the following example, the KeyPressed method is called every time the key is pressed on input.
+In the following example, the `KeyPressed` method is invoked every time a key is pressed inside the input.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -23,32 +23,33 @@ In the following example, the KeyPressed method is called every time the key is 
 <SfTimePicker TValue="DateTime?" @onkeypress='@KeyPressed'></SfTimePicker>
 
 @code {
-    public void KeyPressed(){
-      Console.WriteLine("Key Pressed!");
-  }
+    public void KeyPressed()
+    {
+        Console.WriteLine("Key Pressed!");
+    }
 }
 ```
 
-Also, the above example code can be rewritten as follows using Lambda expressions.
+The same example can also be written using a lambda expression, as shown below.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
 
-<SfTimePicker TValue="DateTime?" @onkeypress="@(() => Console.WriteLine("Key Pressed!"))"></SfTimePicker>
+<SfTimePicker TValue="DateTime?" @onkeypress="@(e => Console.WriteLine($"Key Pressed: {e.Key}"))"></SfTimePicker>
 ```
 
-## Pass event data to event handler
+## Pass event data to the event handler
 
-Blazor provides set of argument types for map to native events. The list of event types and event arguments are:
+Blazor provides a set of argument types that map to native events. The list of event categories and their corresponding argument types is:
 
-* Focus Events - FocusEventArgs
-* Mouse Events - MouseEventArgs
-* Keyboard Events - KeyboardEventArgs
-* Input Events - ChangeEventArgs/EventArgs
-* Touch Events – TouchEventArgs
-* Pointer Events – PointerEventArgs
+* Focus Events – `FocusEventArgs`
+* Mouse Events – `MouseEventArgs`
+* Keyboard Events – `KeyboardEventArgs`
+* Input Events – `ChangeEventArgs` / `EventArgs`
+* Touch Events – `TouchEventArgs`
+* Pointer Events – `PointerEventArgs`
 
-In the following example, the KeyPressed method is called every time any key is pressed inside input. But the message will be printed when you press "5" key.
+In the following example, the `KeyPressed` method is invoked every time any key is pressed inside the input, but the message is printed only when the `5` key is pressed.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -66,13 +67,19 @@ In the following example, the KeyPressed method is called every time any key is 
 }
 ```
 
-Using Lambda expression also, the event data can be passed to the event handler.
+A lambda expression can also be used to pass the event data to the event handler.
 
 ## List of Native events supported
 
-| List of Native events |  |  | |
+| List of Native events |  |  |  |
 | --- | --- | --- | --- |
 | onclick | onblur | onfocus | onfocusout |
-| onmousemove | onmouseover | onmouseout | onmousedown | onmouseup |
-| ondblclick | onkeydown | onkeyup | onkeypress |
-| ontouchend | onfocusin | onmouseup | ontouchstart |
+| onmousemove | onmouseover | onmouseout | onmousedown |
+| onmouseup | ondblclick | onkeydown | onkeyup |
+| onkeypress | ontouchend | onfocusin | ontouchstart |
+
+## See also
+
+* [Events in Blazor TimePicker](events)
+* [Data Binding in Blazor TimePicker](data-binding)
+* [Accessibility in Blazor TimePicker](accessibility)

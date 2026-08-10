@@ -118,4 +118,44 @@ The `Navigated` event is triggered after navigating to another view level or wit
 }
 ```
 
+## Selected
+
+The [`Selected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SelectedEventArgs-1.html) event is triggered after one or more date values are selected in the Calendar. Use the `args.Value` to read the selected date.
+
+```cshtml
+@using Syncfusion.Blazor.Calendars
+
+<SfCalendar TValue="DateTime?">
+    <CalendarEvents TValue="DateTime?" Selected="SelectedHandler"></CalendarEvents>
+</SfCalendar>
+
+@code{
+
+    public void SelectedHandler(SelectedEventArgs<DateTime?> args)
+    {
+        // Here, you can customize your code.
+    }
+}
+```
+
+## DeSelected
+
+The [`DeSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DeSelectedEventArgs-1.html) event is triggered when a value is deselected in the Calendar. This event fires only when [IsMultiSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfCalendar-1.html#Syncfusion_Blazor_Calendars_SfCalendar_1_IsMultiSelection) is enabled.
+
+```cshtml
+@using Syncfusion.Blazor.Calendars
+
+<SfCalendar TValue="DateTime?" IsMultiSelection="true">
+    <CalendarEvents TValue="DateTime?" DeSelected="DeSelectedHandler"></CalendarEvents>
+</SfCalendar>
+
+@code{
+
+    public void DeSelectedHandler(DeSelectedEventArgs<DateTime?> args)
+    {
+        // Here, you can customize your code.
+    }
+}
+```
+
 N> The Calendar is currently limited to these events. Additional events may be introduced in future versions based on user feedback. If a required event is missing, submit a request on the Syncfusion feedback portal: [Request a feature](https://www.syncfusion.com/feedback/blazor-components).
