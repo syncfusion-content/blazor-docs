@@ -30,32 +30,45 @@ Default styles such as **colors**, **typography**, **spacing**, and **borders** 
 Properties like **background-color**, **color**, **font-family**, and **padding** can be changed to match the TreeGrid layout design and improve visual consistency.
 
 ![Change header background](../images/style-and-appearance/header-background.webp)
-**Using Theme Studio:**
+
+## Using Theme Studio
+
+The [Syncfusion Theme Studio](https://www.syncfusion.com/products/feedback/blazor-theme-studio) is a web-based tool for creating custom themes for Syncfusion Blazor components. Use Theme Studio to generate custom CSS themes for the TreeGrid without writing CSS manually.
+
+**Steps to use Theme Studio:**
+
+1. Navigate to the [Syncfusion Theme Studio](https://www.syncfusion.com/products/feedback/blazor-theme-studio).
+2. Select **TreeGrid** from the available components.
+3. Customize colors, fonts, and spacing using the interactive theme builder.
+4. Download the generated CSS file containing the custom theme.
+5. Include the downloaded CSS file in the Blazor application's layout or component.
+
+Custom themes generated through Theme Studio ensure consistent styling across all components and reduce manual CSS maintenance.
 
 ## CSS classes and their purposes
 
 The following table lists all CSS classes available in the TreeGrid for styling different sections:
 
-| Section |CSS class | Purpose of CSS class |
+| **Section** | **CSS class** | **Purpose** |
 | ----- | ----- | ----- |
-| **Root** | e-treegrid | Styles applied to the root element div of the TreeGrid control. |
-| **Header** | e-gridheader | Styles for the root element of the header. The thin line between header and content can be overridden here. |
-| | e-table | Styles applied to the table element of the TreeGrid header. Makes table width 100%. |
-| | e-columnheader | Styles for the **tr** element in the TreeGrid header. |
-| | e-headercell | Styles for **th** elements in the TreeGrid header. Override header background color and border color here. |
-| | e-headercelldiv | Styles for div elements within **th** elements in the header. Use to override header skeleton styling. |
-| **Body** | e-gridcontent | Styles for the root of the body content. Use to override background color of the body. |
-| | e-table | Styles for the table of the content. Makes table width 100%. |
-| | e-altrow | Styles for alternate rows of the TreeGrid. Override alternate row colors here. |
-| | e-rowcell | Styles for all cells in the TreeGrid. Override cell appearance and styling. |
-| | e-selectionbackground | Styles for selected rowcells of the TreeGrid. Override selection appearance. |
-| | e-hover | Styles added to rows when hovering over TreeGrid rows. |
-| **Pager** | e-pager | Styles for the root element of the pager. Change appearance, background color, and font color. |
-| | e-pagercontainer | Styles for numeric items of the pager. |
-| | e-parentmsgbar | Styles for pager information. |
-| **Summary** | e-gridfooter | Styles for the root of the summary div. |
-| | e-summaryrow | Styles for rows in TreeGrid summary. |
-| | e-summarycell | Styles for cells in summary rows. Override background color of summary cells. |
+| **Root** | e-treegrid | Applies styles to the root element div of the TreeGrid control. |
+| **Header** | e-gridheader | Applies styles to the root element of the header. The thin line between header and content can be overridden here. |
+| | e-table | Applies styles to the table element of the TreeGrid header. Sets table width to 100%. |
+| | e-columnheader | Applies styles to the **tr** element in the TreeGrid header. |
+| | e-headercell | Applies styles to **th** elements in the TreeGrid header. Override header background color and border color here. |
+| | e-headercelldiv | Applies styles to div elements within **th** elements in the header. Override header skeleton styling. |
+| **Body** | e-gridcontent | Applies styles to the root of the body content. Override background color of the body. |
+| | e-table | Applies styles to the table of the content. Sets table width to 100%. |
+| | e-altrow | Applies styles to alternate rows of the TreeGrid. Override alternate row colors here. |
+| | e-rowcell | Applies styles to all cells in the TreeGrid. Override cell appearance and styling. |
+| | e-selectionbackground | Applies styles to selected rowcells of the TreeGrid. Override selection appearance. |
+| | e-hover | Applies styles to rows when hovering over TreeGrid rows. |
+| **Pager** | e-pager | Applies styles to the root element of the pager. Customize appearance, background color, and font color. |
+| | e-pagercontainer | Applies styles to numeric items of the pager. |
+| | e-parentmsgbar | Applies styles to pager information. |
+| **Summary** | e-gridfooter | Applies styles to the root of the summary div. |
+| | e-summaryrow | Applies styles to rows in TreeGrid summary. |
+| | e-summarycell | Applies styles to cells in summary rows. Override background color of summary cells. |
 
 ## Customize the TreeGrid root element
 
@@ -253,7 +266,7 @@ The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid
     </TreeGridColumns>
 </SfTreeGrid>
 <style>
-    .e-grid .e-gridheader, .e-grid .e-headercell, .e-grid .e-rowcell, .e-grid {
+    .e-treegrid .e-gridheader, .e-treegrid .e-headercell, .e-treegrid .e-rowcell, .e-treegrid {
         border-color: yellow;
         border-style: solid;
         border-width: 2px;
