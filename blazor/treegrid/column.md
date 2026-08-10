@@ -3,7 +3,7 @@ layout: post
 title: Blazor TreeGrid Columns | Syncfusion
 description: Learn how to define, configure, and customize columns in Blazor TreeGrid for improved data presentation and user experience.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
@@ -15,7 +15,7 @@ N> If the column `Field` does not match a property in the data source, the colum
 
 ## Complex data binding
 
-Complex data binding can be achieved by using the dot (.) operator in the column `Field`. In the following example, **Task.TaskName** and **Task.Duration** are complex data fields.
+Complex data binding uses the dot (.) operator to access nested object properties.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid
@@ -68,7 +68,9 @@ Complex data binding can be achieved by using the dot (.) operator in the column
 
 ### Expando data binding
 
-TreeGrid supports complex data binding with ExpandoObject. In the following example, **Task.TaskName** and **Task.Duration** are complex data fields using ExpandoObject.
+The Blazor TreeGrid is a strongly-typed generic component that typically binds to a predefined data model. However, in scenarios where the structure of the data is not known at compile time—such as metadata-driven applications or dynamic user-generated content—the TreeGrid can be bound to a collection of ExpandoObject instances.
+
+This approach allows dynamic rendering of both data and columns, making it possible to work with flexible or evolving data structures.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -138,12 +140,12 @@ TreeGrid supports complex data binding with ExpandoObject. In the following exam
 
 ## Header template
 
-To learn about header templates in the Blazor TreeGrid, refer to the following video.
+Customize the header element using the  property.
+
+The Blazor TreeGrid allows customizing the header element of a column using the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_HeaderTemplate) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html). This property enables rendering custom HTML elements or Blazor components in the header cell, allowing additional functionality such as icons, dropdowns, or switches.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=PnM11O-BPVU"%}
-
-Customize the header element using the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_HeaderTemplate) property.
 
 {% tabs %}
 
@@ -388,9 +390,9 @@ Use the following format strings for number and integer values.
 
 Format |Description |Remarks
 -----|-----|-----
-N | Denotes numeric type. | Follow with a precision specifier, such as N2 or N3, to control decimal places.
-C | Denotes currency type. | Follow with a precision specifier, such as C2 or C3, to control decimal places.
-P | Denotes percentage type. | Expects input from 0 to 1. For example, 0.2 formats as 20%. Follow with a precision specifier such as P2 or P3.
+N | Denotes a numeric format type. | Follow with a precision specifier, such as N2 or N3, to control decimal places.
+C | Denotes a currency format type. | Follow with a precision specifier, such as C2 or C3, to control decimal places.
+P | Denotes a percentage format type. | Expects input from 0 to 1. For example, 0.2 formats as 20%. Follow with a precision specifier such as P2 or P3.
 
 
 ### Date formatting
@@ -468,7 +470,7 @@ public class TreeDataFormat
 
 ## AutoFit specific columns
 
-The **AutoFitColumnsAsync** method resizes the column to fit the widest cell's content without wrapping. A specific column can be autofitted at initial rendering by invoking the [AutoFitColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AutoFitColumnsAsync_System_String___) method in [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_DataBound) event.
+The `AutoFitColumnsAsync` method resizes the column to fit the widest cell's content without wrapping. A specific column can be autofitted at initial rendering by invoking the [AutoFitColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AutoFitColumnsAsync_System_String___) method in [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_DataBound) event.
 
 {% tabs %}
 
@@ -542,15 +544,13 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor Tree Grid with AutoFit Columns](../images/blazor-treegrid-autofit-column.webp)
+![Blazor TreeGrid with AutoFit Columns](../images/blazor-treegrid-autofit-column.webp)
 
 N> All the columns can be autofitted by invoking the **AutoFitColumnsAsync** method without column names.
 
 ## Lock columns
 
 Columns can be locked by using the [LockColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_LockColumn) property. The locked columns will be moved to the first position. Also this position can’t be reordered.
-
-In the below example, Duration column is locked and its reordering functionality is disabled.
 
 {% tabs %}
 
@@ -624,7 +624,7 @@ Column type can be specified using the [Type](https://help.syncfusion.com/cr/bla
 
 If the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Format)  is defined for a column, the column uses `Type` to select the appropriate format option (**number** or **date**).
 
-Tree Grid column supports the following types:
+TreeGrid column supports the following types:
 * string
 * number
 * boolean
@@ -639,7 +639,7 @@ N> If the `Type` is not defined, it will be determined from the first record of 
 
 To render checkboxes in the existing column, set the [ShowCheckbox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ShowCheckbox) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) as **true**.
 
-It is also possible to select the rows hierarchically using checkboxes in the Tree Grid by enabling [AutoCheckHierarchy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AutoCheckHierarchy) property. When we check on any parent record checkbox, the child record checkboxes will get checked.
+It is also possible to select the rows hierarchically using checkboxes in the TreeGrid by enabling [AutoCheckHierarchy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AutoCheckHierarchy) property. When we check on any parent record checkbox, the child record checkboxes will get checked.
 
 {% tabs %}
 
@@ -705,7 +705,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor Tree Grid with CheckBox Column](../images/blazor-treegrid-checkbox-column.webp)
+![Blazor TreeGrid with CheckBox Column](../images/blazor-treegrid-checkbox-column.webp)
 
 ## Responsive columns
 
@@ -773,11 +773,11 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor Tree Grid displays Responsive Columns](../images/blazor-treegrid-responsive-column.webp)
+![Blazor TreeGrid displays Responsive Columns](../images/blazor-treegrid-responsive-column.webp)
 
 ## Controlling treegrid actions
 
-The tree grid action can be enabled or disabled for a particular column by setting the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowFiltering), and [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowSorting) properties of [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) tag helper.
+The treegrid action can be enabled or disabled for a particular column by setting the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowFiltering), and [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowSorting) properties of [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) tag helper.
 
 {% tabs %}
 
@@ -843,7 +843,7 @@ public class TreeData
 
 ## Show or Hide Columns by external button
 
-The tree grid columns can be shown or hidden dynamically using the external buttons by invoking the [ShowColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ShowColumnsAsync_System_String___System_String_) or [HideColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_HideColumnsAsync_System_String___System_String_) method.
+The treegrid columns can be shown or hidden dynamically using the external buttons by invoking the [ShowColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ShowColumnsAsync_System_String___System_String_) or [HideColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_HideColumnsAsync_System_String___System_String_) method.
 
 {% tabs %}
 
@@ -991,4 +991,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor Tree Grid Column with CheckBox](../images/blazor-treegrid-column-with-checkbox.webp)
+![Blazor TreeGrid Column with CheckBox](../images/blazor-treegrid-column-with-checkbox.webp)
