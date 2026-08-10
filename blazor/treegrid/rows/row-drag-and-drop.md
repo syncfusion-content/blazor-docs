@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Row Drag and Drop in Blazor TreeGrid Component | Syncfusion®
-description: Learn how to enable and use row drag-and-drop in the Blazor TreeGrid component and much more details.
+title: Blazor TreeGrid Row Drag and Drop | Syncfusion
+description: Learn how to enable row drag and drop in Blazor TreeGrid to reorder rows, manage hierarchical data, and improve user interactions.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Row Drag and Drop in Blazor Tree Grid Component
+# Row Drag and Drop in Blazor TreeGrid
 
 Rows can be reordered within a TreeGrid, or dragged and dropped to another TreeGrid or custom control, by setting [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowRowDragAndDrop) to true.
 

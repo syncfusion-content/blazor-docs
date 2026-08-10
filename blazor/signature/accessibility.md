@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Signature Component
 
-The Blazor Signature component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Signature component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor Signature component is outlined below.
 
@@ -38,22 +38,22 @@ The accessibility compliance for the Blazor Signature component is outlined belo
 
 ## Keyboard interaction
 
-The Blazor Signature component followed the [keyboard interaction] guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Signature component.
+The Blazor Signature component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/) guideline, making it easy for people who use assistive technologies (AT) and people who rely entirely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Signature component.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
 | <kbd>Ctrl + Z</kbd> | <kbd>⌘</kbd> + <kbd>Z</kbd> | Undo the last action. |
 | <kbd>Ctrl + Y</kbd> | <kbd>⌘</kbd> + <kbd>Y</kbd> | Redo the last action. |
 | <kbd>Ctrl + S</kbd> | <kbd>⌘</kbd> + <kbd>S</kbd> | To save the signature. |
-| <kbd>delete</kbd> | <kbd>delete</kbd> | Erases all the signature strokes signed by user. |
+| <kbd>delete</kbd> | <kbd>delete</kbd> | Erases all the signature strokes signed by the user. |
 
 ## Ensuring accessibility
 
-The Blazor Signature component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The Blazor Signature component's accessibility levels are ensured through [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
 
 The accessibility compliance of the Blazor Signature component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/signature) in a new window to evaluate the accessibility of the Blazor Signature component with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/signature.html" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/signature" %}
 
 ## See also
 

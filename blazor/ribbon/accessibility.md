@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Ribbon Component | Syncfusion®
-description: Checkout and learn about Accessibility in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
-platform: Blazor
+title: Accessibility in Blazor Ribbon | Syncfusion
+description: Learn how the Blazor Ribbon supports accessibility with WCAG 2.2, ADA, and Section 508 standards, including ARIA roles and keyboard navigation.
 control: Ribbon
+platform: Blazor
 documentation: ug
 ---
 
-# Accessibility in Blazor Ribbon component
+# Accessibility in Blazor Ribbon
 
 The Ribbon component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

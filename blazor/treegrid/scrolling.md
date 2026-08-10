@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Scrolling in Blazor TreeGrid Component | Syncfusion®
-description: Checkout and learn here all the features about scrolling in Blazor TreeGrid component and much more details.
+title: Blazor TreeGrid Scrolling | Syncfusion
+description: Learn how to configure scrolling in Blazor TreeGrid, customize horizontal and vertical scrolling, and improve navigation for large datasets.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Scrolling in Blazor TreeGrid Component
+# Scrolling in Blazor TreeGrid
 
 The scrollbar will be displayed in the tree grid when the content exceeds the element [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Width) or [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Height). The vertical and horizontal scrollbars will be displayed based on the following criteria:
 
