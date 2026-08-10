@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with TreeGrid in Blazor WASM App | Syncfusion®
-description: Check out and learn about getting started with Blazor TreeGrid component in Blazor WebAssembly Application.
+title: Blazor TreeGrid Getting Started with WASM App | Syncfusion
+description: Learn how to get started with Blazor TreeGrid in a Blazor WebAssembly app, configure components, and build hierarchical data applications.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting started with Blazor TreeGrid in Blazor WASM App
+# Getting Started with Blazor TreeGrid in WASM App
 
 This section briefly explains about how to include [Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

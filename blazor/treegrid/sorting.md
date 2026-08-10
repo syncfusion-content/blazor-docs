@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sorting in Blazor TreeGrid Component | Syncfusion®
-description: Checkout and learn here all the features about sorting in Blazor TreeGrid component and much more details.
+title: Blazor TreeGrid Sorting | Syncfusion
+description: Learn how to sort data in Blazor TreeGrid using single and multi-column sorting, custom sorting options, and efficient data organization.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Sorting in Blazor TreeGrid Component
+# Sorting in Blazor TreeGrid
 
 Sorting enables to sort data in the **Ascending** or **Descending** order. To sort a column, click the column header. To sort multiple columns, press and hold the CTRL key and click the column header. Sorting of any one of the multi-sorted columns can be cleared by pressing and holding the SHIFT key and clicking the specific column header.
 
