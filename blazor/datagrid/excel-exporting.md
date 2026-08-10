@@ -103,6 +103,8 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
+Toolbar item IDs follow the pattern {GridID}_{itemNameInLowercase}. For an ExcelExport toolbar item, the generated ID is Grid_excelexport.
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtLHjGZVUmSbgRKo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Show spinner while exporting 
@@ -115,7 +117,6 @@ To show a spinner during export:
 2. Call [ShowSpinnerAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowSpinnerAsync) before invoking export to display the spinner.
 3. Use [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_System_Boolean_Syncfusion_Blazor_Grids_ExcelExportProperties_) to perform export.
 4. Handle the [ExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExportComplete) event to call [HideSpinnerAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideSpinnerAsync) to hide the spinner.
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -213,9 +214,11 @@ The Blazor DataGrid supports exporting data to Excel or CSV format using a custo
 To export using a custom data source:
 
 1. Create a custom data collection to be exported.
-2. Define the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_DataSource) property within an [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html)  object.
-3. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick)  event.
+2. Define the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_DataSource) property within an [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) object.
+3. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event.
 4. Pass the `ExcelExportProperties` object to the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
+
+Hidden columns with `Visible="false"` are not included in the export output.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -309,11 +312,12 @@ public class OrderData
 ## Exporting with custom aggregate
 
 Exporting Blazor DataGrid data with custom aggregates enables inclusion of calculated values in the exported file based on specific conditions. This feature supports enhanced reporting and analysis by incorporating tailored aggregate information.
+
 To export with a custom aggregate:
 
-1. Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property of the aggregate column to **Custom**.
+1. Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property of the [GridAggregateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html) to **Custom**.
 2. Assign a function to the `CustomAggregate` property to calculate the required value.
-3. Display the calculated value in the Grid using a [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate).
+3. Display the calculated value in the Blazor DataGrid using a [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate).
 4. Handle the [ExcelAggregateTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelAggregateTemplateInfo) event.
 5. Assign the calculated value to **args.Cell.Value** inside the event handler to include it in the exported Excel file.
 6. Trigger export using the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
