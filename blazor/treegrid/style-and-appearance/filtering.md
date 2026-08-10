@@ -9,7 +9,7 @@ documentation: ug
 
 # Filtering Customization in Blazor TreeGrid
 
-The appearance of filtering elements in the Blazor TreeGrid can be customized using CSS. Styling options are available for different parts of the filtering interface:
+Customize the appearance of filtering elements in the Blazor TreeGrid using CSS. Filtering can be enabled using `AllowFiltering="true"` on the `<SfTreeGrid>` component. Styling options are available for different parts of the filtering interface:
 
 - **Filter bar cell and input elements:** Used to enter filter values directly in the header row.
 - **Input focus styles:** Visual highlight applied when the filter input field is focused.
@@ -20,7 +20,7 @@ The appearance of filtering elements in the Blazor TreeGrid can be customized us
 
 ## Customize the filter bar cell element
 
-The **.e-filterbarcell** class styles the filter bar cells in the header row. Use CSS to adjust its appearance:
+Use the **.e-filterbarcell** class to style the filter bar cells in the header row. Apply the following CSS to adjust appearance:
 
 ```css
 .e-treegrid .e-filterbarcell {
@@ -28,13 +28,13 @@ The **.e-filterbarcell** class styles the filter bar cells in the header row. Us
 }
 ```
 
-Properties like **background-color**, **padding**, and **border** can be changed to visually distinguish the filter row from header cells.
+Modify properties such as **background-color**, **padding**, and **border** to visually distinguish the filter row from header cells.
 
 ![Filter bar cell with custom background](../images/style-and-appearance/filter-bar-cell-element.webp)
 
 ## Customize the filter bar input element
 
-The **.e-input** class inside **.e-filterbarcell** styles the input field in the filter bar. Apply CSS to modify its look:
+Use the **.e-input** class inside **.e-filterbarcell** to style the input field in the filter bar. Apply the following CSS:
 
 ```css
 .e-treegrid .e-filterbarcell .e-input-group input.e-input {
@@ -42,13 +42,13 @@ The **.e-input** class inside **.e-filterbarcell** styles the input field in the
 }
 ```
 
-Adjust properties such as **font-family**, **font-size**, and **border** can be adjusted to improve readability and match the TreeGrid design.
+Modify properties such as **font-family**, **font-size**, and **border** to improve readability and match the TreeGrid design.
 
 ![Filter bar input with custom font](../images/style-and-appearance/filter-bar-input-element.webp)
 
 ## Customize the input focus
 
-The **.e-input-focus** class styles the filter bar input group when focused. Apply CSS to change its appearance:
+Use the **.e-input-focus** class to style the filter bar input group when focused. Apply the following CSS:
 
 ```css
 .e-treegrid .e-filterbarcell .e-input-group.e-input-focus {
@@ -56,13 +56,13 @@ The **.e-input-focus** class styles the filter bar input group when focused. App
 }
 ```
 
-Change properties like **background-color** and **border** to enhance focus visibility and support keyboard navigation.
+Modify properties such as **background-color** and **border** to enhance focus visibility and support keyboard navigation.
 
 ![Filter bar input focus](../images/style-and-appearance/filter-bar-input-element-focus.webp)
 
 ## Customize the filter bar input clear icon
 
-The **.e-clear-icon::before** class defines the clear icon in the filter bar input. Apply CSS to change its appearance:
+Use the **.e-clear-icon::before** class to style the clear icon in the filter bar input. Apply the following CSS:
 
 ```css
 .e-treegrid .e-filterbarcell .e-input-group .e-clear-icon::before {
@@ -70,7 +70,7 @@ The **.e-clear-icon::before** class defines the clear icon in the filter bar inp
 }
 ```
 
-The `content` property can be updated to use a different glyph from the icon set.
+Update the `content` property to use a different glyph from the icon set.
 
 ![Filter bar input with customized clear icon](../images/style-and-appearance/filter-bar-input-clear-icon.webp)
 
@@ -172,7 +172,7 @@ namespace TreeGridComponent.Data
 
 ## Customize the filtering icon in the header
 
-The **.e-icon-filter::before** class styles the filter icon in column headers. Apply CSS to modify its look:
+Use the **.e-icon-filter::before** class to style the filter icon in column headers. Apply the following CSS:
 
 ```css
 .e-treegrid .e-icon-filter::before {
@@ -186,7 +186,7 @@ Update the `content` value to match the desired icon glyph.
 
 ## Customize the filter dialog content
 
-The **.e-filter-popup .e-dlg-content** class styles the content area of the filter dialog. Apply CSS to change its appearance:
+Use the **.e-filter-popup .e-dlg-content** class to style the content area of the filter dialog. Apply the following CSS:
 
 ```css
 .e-treegrid .e-filter-popup .e-dlg-content {
@@ -200,7 +200,7 @@ Modify properties such as **background-color**, **padding**, and **border** to m
 
 ## Customize the filter dialog footer
 
-The **.e-filter-popup .e-footer-content** class styles the footer section of the filter dialog. Apply CSS to adjust its appearance:
+Use the **.e-filter-popup .e-footer-content** class to style the footer section of the filter dialog. Apply the following CSS:
 
 ```css
 .e-treegrid .e-filter-popup .e-footer-content {
@@ -208,13 +208,13 @@ The **.e-filter-popup .e-footer-content** class styles the footer section of the
 }
 ```
 
-Properties like **background-color**, **text-align**, and **border** can be changed to align with the layout design.
+Modify properties such as **background-color**, **text-align**, and **border** to align with the layout design.
 
 ![Filter dialog footer](../images/style-and-appearance/filter-dialog-footer.webp)
 
 ## Customize the filter dialog input field
 
-The **.e-input** class inside **.e-filter-popup** targets input fields in the filter dialog. Use CSS to adjust its appearance:
+Use the **.e-input** class inside **.e-filter-popup** to style input fields in the filter dialog. Apply the following CSS:
 
 ```css
 .e-treegrid .e-filter-popup .e-input-group input.e-input {
@@ -222,13 +222,13 @@ The **.e-input** class inside **.e-filter-popup** targets input fields in the fi
 }
 ```
 
-Adjust properties such as **font-family**, **color**, and **border** to improve clarity and consistency.
+Modify properties such as **font-family**, **color**, and **border** to improve clarity and consistency.
 
 ![Filter dialog input](../images/style-and-appearance/filter-dialog-input-element.webp)
 
 ## Customize the filter dialog button element
 
-The **.e-filter-popup .e-btn** class styles buttons inside the filter dialog. Apply CSS to modify their appearance:
+Use the **.e-filter-popup .e-btn** class to style buttons inside the filter dialog. Apply the following CSS:
 
 ```css
 .e-treegrid .e-filter-popup .e-btn {
@@ -236,13 +236,13 @@ The **.e-filter-popup .e-btn** class styles buttons inside the filter dialog. Ap
 }
 ```
 
-Change properties like **font-family**, **background-color**, and **border** to match the design.
+Modify properties such as **font-family**, **background-color**, and **border** to match the design.
 
 ![Filter dialog buttons](../images/style-and-appearance/filter-dialog-button-element.webp)
 
 ## Customize the Excel-style filter menu
 
-The **.e-contextmenu-container ul** class inside **.e-filter-popup** styles the filter list in the Excel-style filter dialog. Apply CSS to change its appearance:
+Use the **.e-contextmenu-container ul** class inside **.e-filter-popup** to style the filter list in the Excel-style filter dialog. Apply the following CSS:
 
 ```css
 .e-treegrid .e-filter-popup .e-contextmenu-container ul {
@@ -250,7 +250,7 @@ The **.e-contextmenu-container ul** class inside **.e-filter-popup** styles the 
 }
 ```
 
-Properties such as **background-color**, **color**, and **text-align** can be adjusted to match the required design.
+Modify properties such as **background-color**, **color**, and **text-align** to match the required design.
 
 ![Excel-style filter menu](../images/style-and-appearance/excel-filter-dialog-number-filters-element.webp)
 
