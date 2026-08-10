@@ -1,13 +1,13 @@
 ---
 layout: post
-title: SharePoint provider in Blazor File Manager Component | Syncfusion®
-description: Checkout and learn here all about SharePoint Provider in Blazor File Manager component and much more details.
-platform: Blazor
+title: SharePoint Provider in Blazor File Manager | Syncfusion
+description: Learn how to connect the Blazor File Manager to Microsoft SharePoint to browse and manage files in a document library.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# SharePoint file provider
+# SharePoint Provider in Blazor File Manager
 
 To get started with the SharePoint file system provider, ensure you have access to a Microsoft 365 account with the necessary SharePoint permissions. You must register an application in Azure Active Directory to obtain the required credentials, including the `Tenant ID`, `Client ID`, and `Client Secret`. These credentials are required to authenticate and interact with the Microsoft Graph API for accessing the SharePoint document library.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize the Navigation Pane in Blazor File Manager | Syncfusion®
-description: Checkout and learn how to customize the Navigation Pane in the Blazor File Manager component and more.
-platform: Blazor
+title: How to customize navigation items in Blazor File Manager | Syncfusion
+description: Learn how to customize the layout of folder nodes in the Blazor File Manager navigation pane with a custom template.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Customize Navigation Pane in Blazor File Manager Component
+# How to Customize Navigation Pane in Blazor File Manager
 
 The navigation pane in the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component displays the folder hierarchy in a tree-like structure. You can customize the layout of each folder node in the navigation pane using the `NavigationPaneTemplate` property. This allows you to modify the appearance of folders based on your application's requirements.
 

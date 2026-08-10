@@ -25,7 +25,7 @@ The following code demonstrates the filtering functionality with local data in t
 
 ## Remote data
 
-For remote data, every key press and filter action request is processed on the server side.
+For remote data, each keystroke triggers a server-side filter request that returns only matching records.
 
 The following code illustrates the filtering capabilities using the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) in the MultiColumn ComboBox component, utilizing the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
 
