@@ -9,9 +9,26 @@ documentation: ug
 
 # Get Items in Blazor ListBox Component
 
-The [GetDataByValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_GetDataByValue__0_) method returns the data item or items corresponding to the value or values provided, based on the field mapped to Value in ListBoxFieldSettings. If a provided value does not match any item, it is ignored and not included in the result.
+The [GetDataByValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_GetDataByValue__0_) method returns the data item or items corresponding to the value or values provided, based on the field mapped to `Value` in `ListBoxFieldSettings`. If a provided value does not match any item, that value is ignored and is not included in the result.
 
-The following example demonstrates the `GetDataByValue` method. In this sample, the Value field is mapped to `Text`, so the input array must contain the item Text values. The `TValue` is `string[]`, which indicates a multiple-selection context.
+**Signature:**
+
+```csharp
+// For single value
+TValue GetDataByValue(TValue value)
+
+// For array of values
+TValue[] GetDataByValue(TValue[] value)
+```
+
+**Parameters:**
+- `value` (`TValue` or `TValue[]`) — The value or array of values to look up in the data source.
+
+**Returns:**
+- Single value form: `TValue` — the matching data item, or `default` if no match is found.
+- Array form: `TValue[]` — the matching data items. Values that do not match any item are ignored and excluded from the result.
+
+In the following example, the `Value` field in `ListBoxFieldSettings` is mapped to `Text`, so the input array must contain the item `Text` values. The `TValue` is `string[]`, which enables multiple selection.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -52,3 +69,10 @@ The following example demonstrates the `GetDataByValue` method. In this sample, 
 ```
 
 ![Get items by value in Blazor ListBox](./../images/blazor-listbox-item-selection.webp)
+
+## See also
+
+* [Select Items in Blazor ListBox](./select-items.md)
+* [Add or Remove Items in Blazor ListBox](./add-items.md)
+* [Enable or Disable Items in Blazor ListBox](./enable-or-disable-items.md)
+* [Data Binding in Blazor ListBox](./../data-binding.md)
