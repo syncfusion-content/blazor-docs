@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Upgrade NuGet Package to Latest Version in Blazor Data Grid.
+# Upgrade NuGet Package to Latest Version in Blazor Data Grid
 
 **Step 1:** Update to the latest Blazor [NuGet](https://www.nuget.org/packages/Syncfusion.Blazor/) package using the NuGet Package Manager in the application.
 

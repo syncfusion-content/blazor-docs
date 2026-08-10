@@ -15,7 +15,7 @@ Customize the Timeline item's dot size, connectors, dot borders, and dot outer s
 
 ### Common Styling
 
-Define styles applicable to all Timeline item connectors. The CSS selector `.e-timeline-item.e-connector::after` targets the pseudo-element representing the connector line for each item.
+Define styles to apply to all Timeline item connectors. The CSS selector `.e-timeline-item.e-connector::after` targets the pseudo-element representing the connector line for each item.
 
 ```cshtml
 
@@ -241,7 +241,7 @@ Adjust the dot size using the `--dot-size` CSS variable, making it larger or sma
 
 ### Dot Shadow
 
-Add shadow effects to Timeline dots for visual engagement using the `--dot-outer-space` and `--dot-border` CSS variables. These variables define the spacing and border around the dot, contributing to the shadow effect.
+Add shadow effects to Timeline dots for visual engagement using the `--dot-outer-space` and `--dot-border` CSS variables to control the spacing and border around the dot, along with the `box-shadow` CSS property to define the shadow.
 
 ```cshtml
 
@@ -296,7 +296,7 @@ Add shadow effects to Timeline dots for visual engagement using the `--dot-outer
 
 ### Dot Variant
 
-Achieve desired dot variants by customizing the border, outline, and background colors of Timeline dots. This example demonstrates using pseudo-elements with `content` for visual differentiation, combined with styling of `--dot-size`, `--dot-radius`, and background/outline colors.
+Achieve desired dot variants by customizing the outline and background colors of Timeline dots. This example demonstrates using pseudo-elements with `content` for visual differentiation, combined with styling of `--dot-size`, `--dot-radius`, and background/outline colors.
 
 ```cshtml
 

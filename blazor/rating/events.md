@@ -9,7 +9,13 @@ documentation: ug
 
 # Events in Rating Component
 
-This section describes the rating events that will be triggered when appropriate actions are performed. The following events are available in the rating component.
+This section describes the rating events that are triggered when appropriate actions are performed. The following events are available in the rating component.
+
+| Event | Triggered when | Argument type |
+| -- | -- | -- |
+| [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Created) | Component rendering is completed. | `EventCallback` (no arguments) |
+| [`ValueChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ValueChanged) | The rating value changes. | `EventCallback<double>` |
+| [`OnItemHover`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_OnItemHover) | A rating item is hovered. | `RatingHoverEventArgs` |
 
 ## Created
 
@@ -24,7 +30,7 @@ The rating component triggers the [Created](https://help.syncfusion.com/cr/blazo
 @code{
     public void Created()
     {
-        // Here, you can customize your code.
+        // Add initialization logic that depends on the rendered UI.
     }
 }
 
@@ -43,7 +49,7 @@ The rating component triggers the [ValueChanged](https://help.syncfusion.com/cr/
 @code{
     public void ValueChanged(double args)
     {
-        // Here, you can customize your code.
+        // Handle the new rating value (args) here.
     }
 }
 
@@ -62,7 +68,7 @@ The rating component triggers the [OnItemHover](https://help.syncfusion.com/cr/b
 @code{
     public void OnItemHovered(RatingHoverEventArgs args)
     {
-        // Here, you can customize your code.
+        // Inspect args.Index and args.Value, then perform custom logic.
     }
 }
 

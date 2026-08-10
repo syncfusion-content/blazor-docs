@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Contextual Tabs in Blazor Ribbon Component | Syncfusion®
-description: Checkout and learn about Contextual Tabs in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
-platform: Blazor
+title: Contextual Tabs in Blazor Ribbon | Syncfusion
+description: Learn how to add contextual tabs in the Blazor Ribbon that appear contextually for the selected item, with built-in and custom Ribbon item support.
 control: Ribbon
+platform: Blazor
 documentation: ug
 ---
 
-# Contextual tabs in Blazor Ribbon component
+# Contextual Tabs in Blazor Ribbon
 
 The Ribbon Contextual tabs are similar to the Ribbon tabs that are displayed on demand based on their needs, such as an image or a table tabs. It supports adding all built-in and custom Ribbon items to perform specific actions.
 

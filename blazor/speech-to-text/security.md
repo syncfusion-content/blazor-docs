@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Security concerns in Blazor SpeechToText Component | Syncfusion®
-description: Checkout and learn about Security concerns in Blazor SpeechToText component in Blazor Server App and Blazor WebAssembly App.
+title: Security concerns in Blazor Speech To Text | Syncfusion®
+description: Understand Speech To Text security risks including data transmission, privacy, MITM attacks, and implement mitigation strategies using HTTPS.
 platform: Blazor
 control: SpeechToText
 documentation: ug
 ---
 
-# Security concerns in Blazor SpeechToText component
+# Security concerns in Blazor Speech To Text
 
 ## Online dependency
 

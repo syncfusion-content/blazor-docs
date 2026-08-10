@@ -9,9 +9,9 @@ documentation: ug
 
 # Align Items Using Spacer in Blazor Toolbar Component
 
-A Toolbar [`Spacer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Type) manages the alignment of toolbar items. It creates an adjustable empty space within the toolbar, providing clear separation between different items. The spacer dynamically adapts to the toolbar's width.
+A Toolbar [`Spacer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemType.html#Syncfusion_Blazor_Navigations_ItemType_Spacer) manages the alignment of toolbar items. It creates an adjustable empty space within the toolbar whose size adapts to the available width.
 
-To achieve different alignment styles, strategically place spacers within the toolbar items:
+To achieve different alignment styles, strategically place Spacer items within the toolbar items:
 
 ## Left, Center, and Right alignment
 
@@ -81,4 +81,4 @@ Insert a spacer as the first item in the toolbar. This pushes all other items to
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDVnXcXhAOUWIMkE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Toolbar Spacer](./images/blazor-toolbar-spacer-right-item.webp)" %}
 
 
-N> Avoid using the `Align` property in toolbar items when `Spacer` is utilized.
+N> Avoid using the [`Align`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Align) property in toolbar items when `Spacer` is used.

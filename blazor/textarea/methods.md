@@ -27,9 +27,9 @@ By calling `FocusAsync`, the TextArea receives focus so the user can immediately
 @code {
     private SfTextArea textArea { get; set; }
 
-    private void AddFocus()
+    private async Task AddFocus()
     {
-        textArea.FocusAsync();
+        await textArea.FocusAsync();
     }
 }
 ```
@@ -48,9 +48,9 @@ The [FocusOutAsync method](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 @code {
     private SfTextArea textArea { get; set; }
 
-    private void RemoveFocus()
+    private async Task RemoveFocus()
     {
-        textArea.FocusOutAsync();
+        await textArea.FocusOutAsync();
     }
 }
 ```
