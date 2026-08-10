@@ -9,9 +9,9 @@ documentation: ug
 
 # Events in Blazor Accordion Component
 
-This section lists the events available in the Blazor Accordion and when they are triggered for various Accordion actions.
+This section lists the events raised by the [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) and when each is triggered.
 
-Events are assigned to the Accordion by using a single `<AccordionEvents>` component inside `<SfAccordion>`.
+Configure events by adding an `<AccordionEvents>` child component to `<SfAccordion>`. 
 
 N> All events should be configured within a single **AccordionEvents** component.
 
@@ -191,3 +191,12 @@ The [`Collapsed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Naviga
     }
 }
 ```
+
+## See also
+
+* [Getting Started with Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/getting-started)
+* [Expand Mode in Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/expand-mode)
+* [Data Binding in Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/data-binding)
+* [Content Render Mode in Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/content-render-mode)
+* [AccordionEvents API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html)
+* [SfAccordion API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html)

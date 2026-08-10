@@ -9,7 +9,7 @@ documentation: ug
 
 # Style and Appearance in Blazor In-place Editor Component
 
-The following guidance shows the CSS selectors that can be used to customize the control’s appearance to match application branding and user preferences.
+The following sections describe the CSS selectors that can be used to customize the component's appearance to match application branding and user preferences.
 
 To get started quickly with customizing the Blazor In-place Editor, watch the following video or explore the [GitHub sample for customizing the Blazor In-place Editor](https://github.com/SyncfusionExamples/how-to-customize-the-blazor-in-place-editor-component):
 
