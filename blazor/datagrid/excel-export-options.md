@@ -502,7 +502,6 @@ Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
         {
             isCustomerIDVisible = true;
             isShipCityVisible = false;
-            StateHasChanged();
             await Grid.ExportToExcelAsync();
         }
     }
