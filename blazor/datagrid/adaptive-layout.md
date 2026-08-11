@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor DataGrid Adaptive UI and Responsive Layout | Syncfusion
-description: Learn how to use Adaptive Layout in Blazor DataGrid to render filter, sort, and edit dialogs in fullscreen mode for responsive and mobile-friendly experiences.
+title: Blazor Grid Adaptive UI and Responsive Layout | Syncfusion
+description: Learn how to use Adaptive Layout in Blazor Data Grid to render filter, sort, and edit dialogs in fullscreen mode for responsive and mobile-friendly experiences.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Adaptive and Responsive Layout in Blazor DataGrid
+# Adaptive and Responsive Layout in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) includes an adaptive user interface designed for optimal usability on small screens. When enabled, the DataGrid renders filter, sort, column chooser, column menu (supported only when [RowRenderingMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowRenderingMode) is **Horizontal**), and edit dialogs in full-screen, mobile-friendly layout. Vertical row rendering is also available for improved readability on smaller viewports.
 
