@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor HeatMap Chart | Syncfusion®
-description: Learn how the Blazor HeatMap Chart meets WCAG 2.2, Section 508, and ADA accessibility standards, with WAI-ARIA support and screen-reader integration.
+title: Blazor HeatMap Chart Accessibility | SyncfusionÂ®
+description: Learn how to use the Blazor HeatMap Chart with WCAG 2.2, Section 508, and ADA accessibility standards, including WAI-ARIA support and screen-reader integration.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
 ---
 
-# Accessibility in Blazor HeatMap Chart
+# Blazor HeatMap Chart Accessibility
 
 The [Blazor HeatMap Chart](https://www.syncfusion.com/blazor-components/blazor-heatmap-chart) component follows commonly used accessibility guidelines and standards, such as [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 

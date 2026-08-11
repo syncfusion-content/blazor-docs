@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with Data in Blazor HeatMap Chart | Syncfusion®
-description: Bind Blazor HeatMap Chart data using one- or two-dimensional arrays or JSON, with table or cell adaptor mapping.
+title: Blazor HeatMap Chart Working with Data | SyncfusionÂ®
+description: Learn how to bind Blazor HeatMap Chart data using one- or two-dimensional arrays or JSON, with table or cell adaptor mapping.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
 ---
 
-# Working with Data in Blazor HeatMap Chart
+# Blazor HeatMap Chart Working with Data
 
 This section shows how to bind data to the HeatMap component. The below video demonstrates the same.
 

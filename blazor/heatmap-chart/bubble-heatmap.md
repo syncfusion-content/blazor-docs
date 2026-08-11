@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bubble HeatMap in Blazor HeatMap Chart | Syncfusion®
-description: Render Blazor HeatMap Chart cells as bubbles that encode values by size, color, sector, or a combination of size and color.
+title: Blazor HeatMap Chart Bubble HeatMap | SyncfusionÂ®
+description: Learn how to render Bubble HeatMap visualizations in the Blazor HeatMap Chart using bubble size, color, sectors, and combined size-color encoding.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
 ---
 
-# Bubble HeatMap in Blazor HeatMap Chart
+# Blazor HeatMap Chart Bubble HeatMap
 
 This section shows how to customize the appearance of the HeatMap cells as bubbles. The below video demonstrates the same.
 

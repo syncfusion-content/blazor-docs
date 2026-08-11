@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor HeatMap Chart | Syncfusion®
-description: Customize the Blazor HeatMap Chart look with cell border styling, hover highlighting, margins, titles, and data label visibility.
+title: Blazor HeatMap Chart Appearance | SyncfusionÂ®
+description: Learn how to customize the Blazor HeatMap Chart appearance with cell borders, hover highlighting, margins, titles, and data labels.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
 ---
 
-# Appearance in Blazor HeatMap Chart
+# Blazor HeatMap Chart Appearance
 
 ## Cell customizations
 
