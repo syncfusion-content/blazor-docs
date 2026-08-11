@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Area Chart Examples and Documentation | Syncfusion®
+title: Blazor Area Chart Examples and Documentation | SyncfusionÂ®
 description: Learn how to create and customize Blazor Area Charts using Syncfusion. Display trends with filled area series, data labels, markers, and legends.
 platform: Blazor
 control: Charts
@@ -8,10 +8,6 @@ documentation: ug
 ---
 
 # Area Chart in Blazor
-
-The Blazor Area Chart is used to visualize quantitative data over time by filling the area beneath a line series. Syncfusion Blazor Charts support customization options such as markers, data labels, legends, tooltips, animations, and multiple area series. Commonly used for trend analysis and time series data, the filled line chart makes it easy to compare magnitude across categories for clear data visualization.
-
-## Create an Area Chart
 
 The [Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/area-chart) visualizes time-dependent data, highlighting trends at regular intervals by filling the area beneath a line connecting data points. To create an area series, set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) property to [Area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Area). Area charts are effective for illustrating changes over time or categories, as the filled area accentuates the magnitude of values. Supported axis [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType) options include [Category](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Category), [DateTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_DateTime), [DateTimeCategory](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_DateTimeCategory), [Double](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Double) and [Logarithmic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Logarithmic).
 
@@ -83,11 +79,11 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDrRZRWrzFGykRIF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Customize Area Series
+## Series customization
 
 The following properties can be used to customize the [Area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Area) series.
 
-### Customize the Area Series Fill
+**Fill**
 
 The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property specifies the color applied to the series.
 
@@ -164,7 +160,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVxNHirpPlnWvIg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Set the Area Series Opacity
+**Opacity**
 
 The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) property determines the area [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) transparency for the area series.
 
@@ -199,7 +195,7 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrRNRshJPONSIqi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Customize the Area Series DashArray
+**DashArray**
 
 The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) property specifies the pattern of dashes and gaps in the series border.
 
@@ -235,7 +231,7 @@ The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLnNRMBpluIrFPj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Customize the Area Series Border in Blazor Charts
+## Area Border
 
 The following properties in the [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesBorder.html) can be used to customize the border of the Area Chart.
 
@@ -274,7 +270,7 @@ The following properties in the [ChartSeriesBorder](https://help.syncfusion.com/
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBnDRMrfuXDswUx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Multicolored Area Series
+## Multicolored area
 
 To render a multicolored area series in a chart, a few configuration steps must be followed to ensure it is set up correctly. Below is a concise guide outlining the process.
 
@@ -325,11 +321,11 @@ To render a multicolored area series in a chart, a few configuration steps must 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLHZRsrJYZeXCET?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Handle Empty Data Points in Blazor Area Charts
+## Empty points
 
 Data points with `null`, `double.NaN` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
 
-### Set the Empty Point Mode
+**Mode**
 
 Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Mode) property to define how empty or missing data points are handled in the series. The default mode for empty points is [`Gap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EmptyPointMode.html#Syncfusion_Blazor_Charts_EmptyPointMode_Gap).
 
@@ -365,7 +361,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hthnNRMLpkMNiZaB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Set the Empty Point Fill Color
+**Fill**
 
 Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Fill) property to specify the fill color for empty points in the series.
 
@@ -402,7 +398,7 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrxXRMVfuMpwPRv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Customize the Empty Point Border
+**Border**
 
 Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Border) property to customize the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Width) and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Color) of the border for empty points.
 
@@ -443,7 +439,7 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 ## Events
 
-### Customize the Area Series with OnSeriesRender
+### Series render
 
 The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSeriesRender) event allows you to customize series properties, such as [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Data), [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Fill), and [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Series), before rendering the chart.
 
@@ -484,7 +480,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjVxXdWVTkLgMpAG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Customize Area Data Points with OnPointRender
+### Point render
 
 The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event allows for customization of data points before they render on the chart.
 
@@ -531,21 +527,5 @@ N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/bla
 
 ## See also
 
-* [Line Chart](line.md)
-* [Spline Chart](spline.md)
-* [Stacked Area Chart](stacked-area.md)
-* [Range Area Chart](range-area.md)
 * [Data Label](../data-labels)
-* [Tooltip Customization](../tool-tip)
-* [Legend Customization](../legend)
-
-## FAQ
-
-### What is an Area Chart in Blazor?
-A Blazor Area Chart is a filled line chart used for trend analysis and time series data visualization. It plots a series of values and shades the region between the line and the axis to emphasize the magnitude of change, making it ideal for showing how quantitative data evolves over time.
-
-### When should I use an Area Chart instead of a Line Chart?
-Use an Area Chart in Blazor when the visual emphasis on volume or magnitude is as important as the trend itself, such as when comparing cumulative totals or stacked category contributions. For pure line comparison without filled regions, a [Line Chart](line.md) is more appropriate.
-
-### How do I customize an Area Series in Syncfusion Blazor Charts?
-You can customize the Area Series by setting properties such as `Fill`, `Opacity`, `DashArray`, and `ChartSeriesBorder` on the `ChartSeries` component. Syncfusion Blazor Charts also support markers, data labels, tooltips, legends, and animations to tailor the area series to your data visualization needs.
+* [Tooltip](../tool-tip)
