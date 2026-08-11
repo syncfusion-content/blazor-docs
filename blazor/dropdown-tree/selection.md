@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in Blazor Dropdown Tree Component
 
-The Dropdown Tree has been provided with single and multi-selection support. Selection provides an interactive support and highlights the node that is selected. Selection can be done through simple mouse down or keyboard interaction.
+The Dropdown Tree has been provided with single and multi-selection support. Selection provides interactive support and highlights the node that is selected. Selection can be done through simple mouse down or keyboard interaction.
 
 ## Single Selection 
 
