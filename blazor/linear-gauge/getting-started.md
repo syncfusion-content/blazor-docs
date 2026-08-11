@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor LinearGauge Component | Syncfusion
-description: Checkout and learn about getting started with Blazor LinearGauge component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Linear Gauge in WASM App | Syncfusion®
+description: Learn how to add the Blazor Linear Gauge to a Blazor WebAssembly App using Visual Studio, VS Code, or the .NET CLI to render your first gauge.
 platform: Blazor
-control: LinearGauge
+control: Linear Gauge
 documentation: ug
 ---
 
-# Getting Started with Blazor LinearGauge Component (SfLinearGauge)
+# Getting Started with Blazor Linear Gauge in WASM App
 
 The Blazor LinearGauge is an ideal component for visualizing numeric values in a linear scale with features like multiple axes, different orientations, and more.
 
