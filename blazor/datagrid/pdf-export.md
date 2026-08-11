@@ -9,7 +9,8 @@ documentation: ug
 
 # PDF Export in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides a built-in feature to export grid data to a **PDF document**. This functionality is useful for generating printable reports or sharing data in a standardized format.
+
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides a built-in feature to export grid data to a **PDF**. Exporting data helps generate printable reports or share data in a standardized format.
 To enable PDF export:
 
 * Set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPdfExport) property to **true**.
@@ -330,9 +331,9 @@ public class ChangeData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVxXwXgdCwHqKIg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Exporting with custom aggregate
+## Exporting with a custom aggregate
 
-The Blazor DataGrid supports exporting grid data with custom aggregates. This feature enables including calculated values in the exported PDF, providing a comprehensive view for reporting or analysis.
+The Blazor DataGrid supports exporting grid data with custom aggregates. Custom aggregates enable including calculated values in the exported PDF to provide a comprehensive view for reporting or analysis.
 
 To apply a custom aggregate during export:
 
@@ -449,15 +450,15 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZVHDmZqHWvMdUHS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Exporting with custom date format
+## Exporting with a custom date format
 
-The Blazor DataGrid supports applying custom date formats when exporting data to PDF. This feature ensures that dates in the exported document follow a specific presentation format required for reporting or compliance.
+The Blazor DataGrid supports applying custom date formats when exporting data to PDF. Custom date formats ensure that dates in the exported PDF match a specific format required for reporting or compliance.
 
 To apply a custom date format:
 
 1. Configure the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property on the target column.
 2. Specify a valid .NET date format string to define the desired output.
-3. Invoke the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method within the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event to export the data to a PDF document.
+3. Invoke the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method within the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event to export the data to a PDF.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
