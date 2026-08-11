@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Logarithmic Axis in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about Logarithmic Axis in Blazor Charts component and much more.
+title: Blazor Charts Logarithmic Axis Examples | Syncfusion®
+description: Learn how to use the logarithmic axis in Syncfusion Blazor Charts. Visualize data spanning many orders of magnitude in a single readable view.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Logarithmic Axis in Blazor Charts Component
+# Blazor Charts Logarithmic Axis
 
 <!-- markdownlint-disable MD033 -->
 

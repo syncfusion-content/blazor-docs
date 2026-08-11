@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Toggle Switch Button Component
 
-The Blazor Toggle Switch Button component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Toggle Switch Button component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor Toggle Switch Button component is outlined below.
 
@@ -38,16 +38,16 @@ The accessibility compliance for the Blazor Toggle Switch Button component is ou
 
 ## WAI-ARIA attributes
 
-The Blazor Toggle Switch Button component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/switch/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Toggle Switch Button component:
+The Blazor Toggle Switch Button component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/switch/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Toggle Switch Button component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `role` | Indicates the Toggle Switch Button component. |
+| `role` | Indicates the switch role (`role="switch"`) on the Toggle Switch Button component. |
 | `aria-disabled` | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable. |
 
 ## Keyboard interaction
 
-The Blazor Toggle Switch Button component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/switch/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Toggle Switch Button component.
+The Blazor Toggle Switch Button component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/switch/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Toggle Switch Button component.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
@@ -55,9 +55,9 @@ The Blazor Toggle Switch Button component followed the [keyboard interaction](ht
 
 ## Ensuring accessibility
 
-The Blazor Toggle Switch Button component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The Blazor Toggle Switch Button component's accessibility compliance is verified using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
 
-The accessibility compliance of the Blazor Toggle Switch Button component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/switch) in a new window to evaluate the accessibility of the Blazor Toggle Switch Button component with accessibility tools.
+The following sample demonstrates the accessibility compliance of the Blazor Toggle Switch Button component. Open the [sample](https://blazor.syncfusion.com/accessibility/switch) in a new window to evaluate the accessibility of the Blazor Toggle Switch Button component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/switch.html" %}
 
