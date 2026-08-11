@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Stock Chart Range Selector | Syncfusion®
-description: Learn how to select a date range in the Blazor Stock Chart. Drag the range selector thumbs, tap labels, use the Date Range button, or the EnableSelector property.
+description: Learn how to select a date range in the Blazor Stock Chart by dragging the range selector thumbs, tapping labels, or using the Date Range button.
 platform: Blazor
 control: Stock Chart
 documentation: ug
