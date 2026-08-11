@@ -111,7 +111,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endtabcontents %}
 
-## Add import namespaces
+## Import namespaces
 
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.BarcodeGenerator` namespaces.
 
@@ -140,7 +140,7 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet and script resources
+## Add the stylesheet and script resources
  
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
 
@@ -211,7 +211,9 @@ dotnet run
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Barcode).
 
-## Adding QR Generator control
+## Additional Examples
+
+### Add the QR Code Generator component
 
 Add a QR code to the Barcode Generator component.
 
@@ -225,14 +227,14 @@ Add a QR code to the Barcode Generator component.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhdZHiCAkFGfEhf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[QR Code Generator in Blazor Barcode Generator Component](images/blazor-barcode-with-qr-code.webp)" %}
 
-## Adding Data Matrix Generator control
+### Add the Data Matrix Generator component
 
 Add a Data Matrix code to the Barcode Generator component.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-<SfDataMatrixGenerator Width="200" Height="150" Value="SYNCFUSION"></SfDataMatrixGenerator>
+<SfDataMatrixGenerator Width="200px" Height="150px" Value="SYNCFUSION"></SfDataMatrixGenerator>
 
 {% endhighlight %}
 {% endtabs %}
