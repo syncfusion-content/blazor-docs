@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Title and Subtitle in Blazor Accumulation Chart | Syncfusion®
-description: Add a title and subtitle to the Blazor Accumulation Chart and style their font, color, weight, and position with AccumulationChartTitleStyle.
+title: Blazor Accumulation Chart Title and Subtitle Examples | Syncfusion®
+description: Learn how to add a title and subtitle in Syncfusion Blazor Accumulation Chart, including text, alignment, and font styling.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Title and Subtitle in Blazor Accumulation Chart
+# Blazor Accumulation Chart Title and Subtitle
 
 The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_Title) property can be used to give the accumulation chart a title in-order to provide information about the data displayed.
 

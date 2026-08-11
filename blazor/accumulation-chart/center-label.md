@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Center Label in Blazor Accumulation Chart | Syncfusion®
-description: Place custom text in the middle of a Blazor Accumulation Chart donut with dynamic hover text, font, and offset customization.
+title: Blazor Accumulation Chart Center Label Examples | SyncfusionÂ®
+description: Learn how to use center labels in Syncfusion Blazor Accumulation Chart. Display custom text, totals, or percentages at the center of pie and donut charts.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Center Label in Blazor Accumulation Chart
+# Blazor Pie and Donut Chart Center Label
 
 The center label feature allows you to place custom text in the middle of pie and donut charts using the [AccumulationChartCenterLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartCenterLabel.html). This is especially useful for displaying the chart's title, percentage distribution, or other key metrics pertinent to the visualized data.
 

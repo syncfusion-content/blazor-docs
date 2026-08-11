@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in Blazor Accumulation Chart | Syncfusion®
-description: Enable tooltips on the Blazor Accumulation Chart to show point data, with custom header text and a configurable format string for x and y values.
+title: Blazor Accumulation Chart Tooltip Examples | Syncfusion®
+description: Learn how to enable and customize tooltips in Syncfusion Blazor Accumulation Chart, including format, template, and styling.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Tooltip in Blazor Accumulation Chart
+# Blazor Accumulation Chart Tooltip
 
 The [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Enable) property in [AccumulationChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html) can be set to **true** to enable the tooltip.
 

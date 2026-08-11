@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pyramid in Blazor Accumulation Chart | Syncfusion®
-description: Render a Blazor Pyramid Chart in Linear or Surface mode to visualize hierarchical data as an upside-down triangle of divided sections.
+title: Blazor Pyramid Chart Examples and Documentation | Syncfusion®
+description: Learn how to render a Pyramid Chart in Syncfusion Blazor Accumulation Chart to visualize hierarchical data in a triangle with divided sections.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Pyramid in Blazor Accumulation Chart
+# Pyramid Chart in Blazor
 
 The [Pyramid Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/pyramid-chart) is used to visualize the hierarchical data in upside triangle shape with horizontally divided section. To render the `Pyramid Chart`, set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Type) as `Pyramid`.
 

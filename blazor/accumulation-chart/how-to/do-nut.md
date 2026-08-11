@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to add center text in Blazor Accumulation Chart | Syncfusion®
-description: Add custom text to the center of a Blazor Doughnut Chart by using AccumulationChartAnnotation with a ContentTemplate and Region set to Chart.
+title: How to Add Text at the Center of Blazor Doughnut Chart | SyncfusionÂ®
+description: Learn how to place text in the center of a Blazor Doughnut Chart using Syncfusion annotation to display labels at the doughnut center.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# How to add center text in Blazor Accumulation Chart
+# How to Place Text in the Center of Doughnut Chart
 
 The annotation is used to place text, shapes or images in the center of the doughnut chart.
 

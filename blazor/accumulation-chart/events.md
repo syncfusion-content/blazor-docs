@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Accumulation Chart | Syncfusion®
-description: Hook into the Blazor Accumulation Chart with events like OnDataLabelRender, OnPointRender, OnLegendItemRender, OnExportComplete, and more.
+title: Blazor Accumulation Chart Events Examples and Reference | Syncfusion®
+description: Learn how to subscribe to Syncfusion Blazor Accumulation Chart events such as OnDataLabelRender, OnPointRender, and OnLegendItemRender.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Events in Blazor Accumulation Chart
+# Blazor Accumulation Chart Events
 
 In this section, the list of events of Accumulation Chart component is provided which will be triggered for appropriate accumulation chart actions.
 
