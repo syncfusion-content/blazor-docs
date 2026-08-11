@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pointers in Blazor Circular Gauge | Syncfusion®
-description: Indicate values on a Blazor Circular Gauge axis with Needle, RangeBar, or Marker pointers, then customize value, type, and animation.
+title: Blazor Circular Gauge Pointers | Syncfusion®
+description: Learn how to indicate values on a Blazor Circular Gauge axis with Needle, RangeBar, or Marker pointers, then customize value, type, and animation.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
 ---
 
-# Pointers in Blazor Circular Gauge
+# Blazor Circular Gauge Pointers
 
 Pointers are used to indicate values on an axis. The value of a pointer can be modified using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Value) property.
 

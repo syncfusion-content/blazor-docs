@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Circular Gauge in Web App | Syncfusion
-description: Step-by-step guide to add the Blazor Circular Gauge to a new Blazor Web App using Visual Studio, VS Code, or the .NET CLI.
+description: Learn how to add the Blazor Circular Gauge to a new Blazor Web App using Visual Studio, VS Code, or the .NET CLI.
 platform: Blazor
 control: Circular Gauge
 documentation: ug

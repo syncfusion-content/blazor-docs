@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Dimensions in Blazor Circular Gauge | Syncfusion®
-description: Set the Blazor Circular Gauge size in pixels or as a percentage of the container using the Width and Height properties.
+title: Blazor Circular Gauge Dimensions | Syncfusion®
+description: Learn how to set the Blazor Circular Gauge size in pixels or as a percentage of the container using the Width and Height properties.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
 ---
 
-# Dimensions in Blazor Circular Gauge
+# Blazor Circular Gauge Dimensions
 
 ## Size for Circular Gauge
 

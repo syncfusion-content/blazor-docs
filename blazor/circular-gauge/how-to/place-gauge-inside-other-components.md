@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Place gauge in other components in Blazor Circular Gauge | Syncfusion®
-description: Render the Blazor Circular Gauge inside Dashboard Layout, Tabs, Dialog, or other components using a boolean flag and RefreshAsync on resize.
+description: Learn how to render the Blazor Circular Gauge inside Dashboard Layout, Tabs, Dialog, or other components using a boolean flag and RefreshAsync on resize.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
 ---
 
-# How to place gauge inside other components in Blazor Circular Gauge
+# How to place gauge in other components in Blazor Circular Gauge
 
 The Circular Gauge can be rendered within components such as the Dashboard Layout, Tabs, Dialog, and others. In general, the Circular Gauge component renders before other components, so a boolean variable (i.e. boolean flag) is used to determine when to begin rendering the Circular Gauge component.
 
