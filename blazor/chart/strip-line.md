@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Stripline in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Stripline in Blazor Charts component and much more.
+title: Blazor Charts Stripline Examples | Syncfusion®
+description: Learn how to add striplines in Syncfusion Blazor Charts. Use ChartStripline to mark thresholds, ranges, or notable value bands.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
 <!-- markdownlint-disable MD036 -->
 
-# Stripline in Blazor Charts Component
+# Blazor Charts Stripline
 
 <!-- markdownlint-disable MD036 -->
 
