@@ -87,7 +87,7 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 
 The following properties can be used to customize the [Area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Area) series.
 
-**Fill**
+### Customize the Area Series Fill
 
 The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property specifies the color applied to the series.
 
@@ -164,7 +164,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVxNHirpPlnWvIg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-**Opacity**
+### Set the Area Series Opacity
 
 The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) property determines the area [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) transparency for the area series.
 
@@ -199,7 +199,7 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrRNRshJPONSIqi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-**DashArray**
+### Customize the Area Series DashArray
 
 The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) property specifies the pattern of dashes and gaps in the series border.
 
@@ -235,7 +235,7 @@ The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLnNRMBpluIrFPj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Area Border
+## Customize the Area Series Border in Blazor Charts
 
 The following properties in the [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesBorder.html) can be used to customize the border of the Area Chart.
 
@@ -325,11 +325,11 @@ To render a multicolored area series in a chart, a few configuration steps must 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLHZRsrJYZeXCET?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Empty points
+## Handle Empty Data Points in Blazor Area Charts
 
 Data points with `null`, `double.NaN` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
 
-**Mode**
+### Set the Empty Point Mode
 
 Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Mode) property to define how empty or missing data points are handled in the series. The default mode for empty points is [`Gap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EmptyPointMode.html#Syncfusion_Blazor_Charts_EmptyPointMode_Gap).
 
@@ -365,7 +365,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hthnNRMLpkMNiZaB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-**Fill**
+### Set the Empty Point Fill Color
 
 Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Fill) property to specify the fill color for empty points in the series.
 
@@ -402,7 +402,7 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrxXRMVfuMpwPRv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-**Border**
+### Customize the Empty Point Border
 
 Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Border) property to customize the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Width) and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Color) of the border for empty points.
 
@@ -443,7 +443,7 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 ## Events
 
-### Series render
+### Customize the Area Series with OnSeriesRender
 
 The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSeriesRender) event allows you to customize series properties, such as [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Data), [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Fill), and [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Series), before rendering the chart.
 
@@ -484,7 +484,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjVxXdWVTkLgMpAG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Point render
+### Customize Area Data Points with OnPointRender
 
 The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event allows for customization of data points before they render on the chart.
 
