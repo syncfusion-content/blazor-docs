@@ -9,9 +9,8 @@ documentation: ug
 
 # Clipboard in Blazor TreeGrid
 
-The clipboard provides an option to copy selected rows or cells data into the clipboard.
-
-The following list of keyboard shortcuts is supported in the Tree Grid to copy selected rows or cells data into the clipboard.
+The **clipboard** feature in the Blazor TreeGrid allows copying selected rows or cells using keyboard shortcuts or programmatic methods. This helps transfer data to external applications such as spreadsheets or text editors.
+To use keyboard shortcuts, selection must be enabled and the grid must be focused.
 
 Interaction keys |Description
 -----|-----
@@ -189,9 +188,9 @@ namespace TreeGridComponent.Data {
 
 ## Copy Hierarchy Modes
 
-Tree Grid provides support for a set of copy modes with [CopyHierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.CopyHierarchyType.html) property. The below are the type of filter mode available in the Tree Grid.
+TreeGrid provides support for a set of copy modes with [CopyHierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.CopyHierarchyType.html) property. The below are the type of filter mode available in the TreeGrid.
 
-* **Parent** : This is the default copy hierarchy mode in the Tree Grid. Clipboard value will have the selected records with its parent records, if the selected records does not have any parent record then the selected record will be in clipboard.
+* **Parent** : This is the default copy hierarchy mode in the TreeGrid. Clipboard will contain the selected records along with their parent records, if the selected records does not have any parent record then the selected record will be in clipboard.
 
 * **Child** : Clipboard value will have the selected records with its child record. If the selected records do not have any child record then the selected records will be in clipboard.
 
@@ -208,7 +207,7 @@ Tree Grid provides support for a set of copy modes with [CopyHierarchyMode](http
 @using Syncfusion.Blazor.DropDowns;
 @using Syncfusion.Blazor.Grids
 
-<SfDropDownList TItem="DropdownData" TValue="string" TItem="DropdownData" @bind-Value="@CopyMode" DataSource="@CopyModes">
+<SfDropDownList TItem="DropdownData" TValue="string" @bind-Value="@CopyMode" DataSource="@CopyModes">
     <DropDownListEvents TValue="string" ValueChange="OnTypeChange"></DropDownListEvents>
     <DropDownListFieldSettings Text="Mode" Value="Id"></DropDownListFieldSettings>
 </SfDropDownList>
@@ -313,7 +312,7 @@ namespace TreeGridComponent.Data {
 
 ## Paste
 
-The content of a cell or a group of cells can be copied by selecting the cells and pressing <kbd>Ctrl + C</kbd> shortcut key and paste it to another set of cells by selecting the cells, and pressing <kbd>Ctrl + V</kbd> shortcut key.
+The content of a cell or a group of cells can be copied by selecting the cells and pressing <kbd>Ctrl + C</kbd> shortcut key. It can then be pasted into another set of cells by selecting the target cells and pressing <kbd>Ctrl + V</kbd> shortcut key.
 
 {% tabs %}
 
@@ -322,7 +321,7 @@ The content of a cell or a group of cells can be copied by selecting the cells a
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
 
-<SfTreeGrid DataSource="TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })">
+<SfTreeGrid DataSource="TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })">
     <TreeGridPageSettings PageSize="2"></TreeGridPageSettings>
     <TreeGridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple" Mode="Syncfusion.Blazor.Grids.SelectionMode.Cell" CellSelectionMode="Syncfusion.Blazor.Grids.CellSelectionMode.Box"></TreeGridSelectionSettings>
     <TreeGridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Batch"></TreeGridEditSettings>
@@ -389,10 +388,10 @@ namespace TreeGridComponent.Data {
 
 ## Clipboard events
 
-Events are triggered when performing a copy or paste action on TreeGrid.
+Clipboard events are used to control or validate clipboard operations in a TreeGrid before completion. They are useful for canceling copy/paste actions, preventing invalid data from being pasted, or modifying pasted values on a per‑cell basis.
 
-* [BeforeCopyPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCopyPaste) : This event is triggered before the cell is copied or pasted in the tree grid cell, and you can cancel the entire copy or paste action by using this event.
+* [BeforeCopyPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCopyPaste) :  Triggered before a cell is copied or pasted in the TreeGrid. The entire copy or paste action can be canceled using this event.
 
-* [BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCellPaste) : This event is triggered before pasting the copied cell value for each cell, and you can cancel the pasting action for a particular cell or change the value by using this event.
+* [BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCellPaste) : Triggered before pasting the copied value into each cell. The paste action for a specific cell can be canceled, or the value can be modified before insertion.
 
-> To know more, you can refer the `BeforeCopyPaste` and `BeforeCellPaste` events.
+> For more details, refer to the `BeforeCopyPaste` and `BeforeCellPaste` events.
