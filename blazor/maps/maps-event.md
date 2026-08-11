@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Maps Events | Syncfusion®
+title: Blazor Maps Events Support | Syncfusion®
 description: Learn how to handle Blazor Maps events such as AnimationCompleted, AnnotationRendering, and shape selection for user interactions.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Blazor Maps Events
+# Blazor Maps Events Support
  
 This section explains the list of events that will be triggered for appropriate actions in Maps. The events are configured using the [MapsEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html).
 
