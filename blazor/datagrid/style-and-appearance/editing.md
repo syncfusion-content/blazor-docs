@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor DataGrid Customize Editing Elements Using CSS | Syncfusion
-description: Learn how to customize Blazor DataGrid editing using CSS, including edited rows, added rows, input fields, edit dialog headers, and command buttons.
+title: Blazor Grid Customize Editing Elements Using CSS | Syncfusion
+description: Learn how to customize Blazor Data Grid editing using CSS, including edited rows, added rows, input fields, edit dialog headers, and command buttons.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Editing Customization in Blazor DataGrid
+# Editing Customization in Blazor Data Grid
 
 The appearance of editing elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS.
 
