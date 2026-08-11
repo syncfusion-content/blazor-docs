@@ -11,7 +11,7 @@ documentation: ug
 
 Specific rows in the TreeGrid can be selected based on conditions using the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_SelectRowsAsync_System_Int32___) method inside the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_DataBound) event of the TreeGrid component.
 
-The following example demonstrates how to select rows where the **Duration** column value is greater than 6. The row indexes are collected in the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDataBound) event and selected during the `DataBound` event.
+The following example demonstrates selecting rows where the **Duration** column value is greater than 6. Matching row indexes are collected in the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDataBound) event and selected in the `DataBound` event.
 
 {% tabs %}
 
@@ -46,15 +46,15 @@ The following example demonstrates how to select rows where the **Duration** col
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
 
-    public void OnDataBound(object args)
+    public async void OnDataBound(object args)
     {
         // The filtered index values are selected
-        this.TreeGrid.SelectRowsAsync(SelectedNodeIndex);
+        await this.TreeGrid.SelectRowsAsync(SelectedNodeIndex);
     }
 
     public void OnRowDataBound(RowDataBoundEventArgs<TreeData> args)
     {
-        // Freight values greater than 10 are filtered by comparing the primary column values
+        // Duration values greater than 6 are collected for selection
         if (args.Data.Duration > 6)
         {
             var dataSource = this.TreeGrid.DataSource;

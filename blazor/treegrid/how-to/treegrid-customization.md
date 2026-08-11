@@ -9,7 +9,9 @@ documentation: ug
 
 # Customization in Blazor TreeGrid
 
-It is possible to customize the default styles of the Tree Grid component. This can be achieved by adding class dynamically to the columns using the `AddClass` method of the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_QueryCellInfo) event. Then the required styles are added to this class.
+The TreeGrid default styles can be customized by dynamically adding CSS classes to cells using the `AddClass` method in the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_QueryCellInfo) event handler. The `QueryCellInfo` event fires for each cell during rendering, allowing conditional styling based on cell data. The [QueryCellInfoEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.QueryCellInfoEventArgs-1.html) parameter provides access to the `Data` (row data) and `Cell` (cell element), enabling conditional class application.
+
+Define the CSS styles for these classes in a `<style>` block or in a separate stylesheet.
 
 {% tabs %}
 
@@ -60,6 +62,7 @@ It is possible to customize the default styles of the Tree Grid component. This 
     }
     public void QueryCellInfoHandler(QueryCellInfoEventArgs<TreeData> args)
     {
+        // Apply CSS class based on Duration value (green > 10, blue 5-10, red < 5)
         if (args.Data.Duration > 10)
         {
             args.Cell.AddClass(new string[] { "above-10" });

@@ -9,7 +9,9 @@ documentation: ug
 
 # Customize Column Menu Icon in Blazor TreeGrid
 
-The column menu icon can be customized by overriding the default icon class `.e-icons.e-columnmenu` with the `content` property.
+The column menu icon displayed in the column header can be customized by overriding the default icon class `.e-icons.e-columnmenu` with the `content` property.
+
+> **Prerequisite:** The [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ShowColumnMenu) property must be set to **true** to display the column menu icon in the TreeGrid column headers.
 
 ```css
 .e-grid .e-columnheader .e-icons.e-columnmenu::before {
@@ -17,7 +19,7 @@ The column menu icon can be customized by overriding the default icon class `.e-
 }
 ```
 
-This is demonstrated in the below sample code,
+
 
 {% tabs %}
 
@@ -533,6 +535,7 @@ public class WrapData
             return BusinessObjectCollection;
         }
     }
+}
 
 {% endhighlight %}
 

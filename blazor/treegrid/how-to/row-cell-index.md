@@ -11,7 +11,7 @@ documentation: ug
 
 The index value of a selected row or cell in the Blazor TreeGrid component can be retrieved using the [GetSelectedRowCellIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetSelectedRowCellIndexesAsync) method of the TreeGrid component.
 
-The following example demonstrates how to use the `GetSelectedRowCellIndexesAsync` method on a button click to return the selected row cell indexes.
+> Note: The [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_Mode) property of the [TreeGridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html) component must be set to **Cell** to retrieve the row cell index value.
 
 {% tabs %}
 
@@ -22,7 +22,7 @@ The following example demonstrates how to use the `GetSelectedRowCellIndexesAsyn
 @using Syncfusion.Blazor.Grids;
 @using Syncfusion.Blazor.TreeGrid;
 
-<SfButton OnClick="SelectedRowCellIndex" CssClass="e-primary" IsPrimary="true" Content="Get selected rowcell index"></SfButton>
+<SfButton OnClick="SelectedRowCellIndex" CssClass="e-primary" IsPrimary="true" Content="Get Selected Row Cell Index"></SfButton>
 
 <SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridSelectionSettings Mode=SelectionMode.Cell></TreeGridSelectionSettings>
@@ -47,7 +47,18 @@ The following example demonstrates how to use the `GetSelectedRowCellIndexesAsyn
 
     public async Task SelectedRowCellIndex()
     {
-        var value = await this.TreeGrid.GetSelectedRowCellIndexesAsync();
+        var indexes = await this.TreeGrid.GetSelectedRowCellIndexesAsync();
+        if (indexes != null && indexes.Length > 0)
+        {
+            foreach (var index in indexes)
+            {
+                System.Diagnostics.Debug.WriteLine($"Selected Row Cell Index: RowIndex = {index.RowIndex}, CellIndex = {index.CellIndex}");
+            }
+        }
+        else
+        {
+            System.Diagnostics.Debug.WriteLine("No cell or row selected (returns -1 when no selection exists)");
+        }
     }
 }
 
@@ -86,5 +97,3 @@ public class TreeData
 {% endhighlight %}
 
 {% endtabs %}
-
-> Note: To retrieve the row cell index value, the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_Mode) property of the [TreeGridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html) component must be set to **Cell**.
