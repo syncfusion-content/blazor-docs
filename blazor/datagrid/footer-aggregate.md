@@ -116,12 +116,12 @@ Access aggregate values inside `FooterTemplate` through the implicit template pa
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNBdtmjgrKMuuXxh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > Data source behavior:
-> - With local data, footer aggregates are calculated over the entire bound dataset.
-> - With remote data and paging, footer aggregates typically reflect only the current page unless the adaptor or server provides total summaries.
+> - With local data, footer aggregates are calculated over the complete bound dataset.
+> - With remote data and paging, footer aggregates usually reflect the current page unless the adaptor or server returns total summaries.
 
 ## Format aggregate values
 
-To format footer aggregate results in the Blazor DataGrid, use the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Format) property of the aggregate column. The Format string determines how the aggregate value is displayed and supports culture-aware currency, numeric, and date formats.
+To format footer aggregate results, use the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Format) property of the aggregate column. The Format value controls the display of the aggregate output and supports culture-aware numeric, currency, and date formats.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

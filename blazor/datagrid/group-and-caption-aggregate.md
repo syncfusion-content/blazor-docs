@@ -15,7 +15,9 @@ Group footer and group caption aggregates in the [Blazor DataGrid](https://www.s
 
 ## Group footer aggregates
 
-Group footer aggregates appear in the footer cells of each group and provide per-group summary values. To display group footer aggregates, define a template with the [GroupFooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupFooterTemplate) property. The template renders the aggregate value for each group’s footer row. Apply the Format property to present currency or date values using culture-aware formatting as needed.
+Group footer aggregates appear in the footer cells of each group and provide per-group summary values. To display group footer aggregates, define a template with the [GroupFooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupFooterTemplate) property. The template renders the aggregate value for each group's footer row. 
+
+To format aggregate values in the footer cells (such as currency or date formatting), apply the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Format) property on the **GridAggregateColumn**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -43,7 +45,7 @@ Group footer aggregates appear in the footer cells of each group and provide per
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Coutry" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
         <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
        
@@ -108,11 +110,27 @@ Group footer aggregates appear in the footer cells of each group and provide per
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVnDcZUqicUluNN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLRNlMXpeHPuJAU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+## AggregateTemplateContext properties
+
+The **AggregateTemplateContext** object provides access to aggregate values within templates. The following properties are available:
+
+| Property | Description |
+|----------|-------------|
+| Sum | Displays the sum of values in the aggregate column |
+| Average | Displays the average of values in the aggregate column |
+| Min | Displays the minimum value in the aggregate column |
+| Max | Displays the maximum value in the aggregate column |
+| Count | Displays the total count of records in the aggregate column |
+
+Refer to the [AggregateTemplateContext documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateTemplateContext.html) for additional details on available properties.
 
 ## Group caption aggregates
 
-Group caption aggregates appear in the caption cells at the top of each group and provide a concise summary. To display group caption aggregates, define a template using the [GroupCaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupCaptionTemplate) property. The template renders the aggregate value in the caption area of each group. Apply the Format property to aggregate values to present culture-aware currency or date results.
+Group caption aggregates appear in the caption cells at the top of each group and provide a concise summary. To display group caption aggregates, define a template using the [GroupCaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupCaptionTemplate) property. The template renders the aggregate value in the caption area of each group. 
+
+To format aggregate values in the caption cells (such as currency or date formatting), apply the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Format) property on the **GridAggregateColumn**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -142,7 +160,7 @@ Group caption aggregates appear in the caption cells at the top of each group an
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
         <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Coutry" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -205,6 +223,6 @@ Group caption aggregates appear in the caption cells at the top of each group an
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrnZctUqCmlLwsy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLnXbCjTyKgMduR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > The group total summary in Grid is calculated based on the current page records for each group by default.
