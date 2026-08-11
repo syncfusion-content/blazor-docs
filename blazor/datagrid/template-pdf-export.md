@@ -29,9 +29,8 @@ To export template columns to a PDF document:
 2. Pass the configured `PdfExportProperties` to the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method inside the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event.
 3. Handle the [PdfQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfQueryCellInfoEvent) event to customize the exported content of template columns.
 
-
-> To customize template column content during PDF export, use the `PdfQueryCellInfoEvent` event.
-> PDF export supports Base64 strings for image content.
+> * To customize template column content during PDF export, use the `PdfQueryCellInfoEvent` event.
+> * PDF export supports Base64 strings for image content.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
