@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Marker and Data labels in Blazor Smith Chart | Syncfusion®
-description: Add markers and data labels to Blazor Smith Chart points with custom shapes, fills, borders, text styles, and smart-label connector lines.
+title: Blazor Smith Chart Markers and Data Labels Examples | Syncfusion®
+description: Learn how to add and customize markers and data labels in Syncfusion Blazor Smith Chart, including shape, size, position, and label format.
 platform: Blazor
 control: Smith Chart
 documentation: ug
 ---
 
-# Marker and Data labels in Blazor Smith Chart
+# Blazor Smith Chart Markers and Data Labels
 
 Markers and data labels are used to provide information about the data points in the series. Both the marker and the datalabel are disabled by default in the Smith Chart. Both can be enabled by making the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesMarker.html#Syncfusion_Blazor_Charts_SmithChartSeriesMarker_Visible) property in the marker and the datalabel settings to **true**.
 

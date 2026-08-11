@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Axis in Blazor Smith Chart | Syncfusion®
-description: Customize horizontal and radial axes in the Blazor Smith Chart with label positioning, major and minor gridlines, and styled axis lines.
+title: Blazor Smith Chart Axis Examples | Syncfusion®
+description: Learn how to configure and customize the axis in Syncfusion Blazor Smith Chart, including horizontal and radial axis labels and tick lines.
 platform: Blazor
 control: Smith Chart
 documentation: ug
 ---
 
-# Axis in Blazor Smith Chart
+# Blazor Smith Chart Axis
 
 Smith Chart supports two different types of axes. They are:
 * **Horizontal Axis** - The axis is drawn as a straight line in the horizontal direction of the Smith Chart.

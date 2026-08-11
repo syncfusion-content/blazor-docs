@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Smith Chart | Syncfusion®
-description: Discover how the Blazor Smith Chart meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA roles, keyboard navigation, and axe-core validation.
+title: Blazor Smith Chart Accessibility Examples | Syncfusion®
+description: Learn how to enable accessibility in Syncfusion Blazor Smith Chart with keyboard navigation, screen reader support, and WCAG 2.2 compliance.
 platform: Blazor
 control: Smith Chart
 documentation: ug
 ---
 
-# Accessibility in Blazor Smith Chart
+# Blazor Smith Chart Accessibility
 
 The Blazor Smith Chart component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

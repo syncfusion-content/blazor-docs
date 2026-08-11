@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Dimensions in Blazor Smith Chart | Syncfusion®
-description: Resize the Blazor Smith Chart using CSS, the Width and Height API in pixels, or percentage values relative to the container.
+title: Blazor Smith Chart Dimensions and Sizing | Syncfusion®
+description: Learn how to set the size of Syncfusion Blazor Smith Chart using CSS or the Width and Height API with code samples.
 platform: Blazor
 control: Smith Chart
 documentation: ug
 ---
 
-# Dimensions in Blazor Smith Chart
+# Blazor Smith Chart Dimensions
 
 The dimensions of the Smith Chart can be modified in the following ways.
 
