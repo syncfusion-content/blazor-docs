@@ -9,11 +9,11 @@ documentation: ug
 
 # Entity Framework in Blazor TreeGrid
 
-This section uses and follows the code explained in the [Entity Framework data binding](https://blazor.syncfusion.com/documentation/treegrid/data-binding#entity-framework) section hence it is recommended to refer Entity Framework data binding section before continue this section.
+This section builds on the code explained in the [Entity Framework data binding](https://blazor.syncfusion.com/documentation/treegrid/data-binding#entity-framework) section. It is recommended to review that section before continuing.
 
-### Handle CRUD in data access layer class
+### Implement CRUD Methods in the Data Access Layer
 
-Now add methods **AddTask**, **UpdateTask**, **DeleteTask** in the **"TasksDataAccessLayer.cs"** to handle the insert, update and remove operations respectively.**CRUD** record details are bound to the **Tasks** parameter.
+Add methods **AddTask**, **UpdateTask**, **DeleteTask** in the **"TasksDataAccessLayer.cs"** to handle insert, update, and delete operations. CRUD operations use a **Tasks** parameter to pass record details.
 
 ```csharp
 using System;
@@ -103,7 +103,7 @@ namespace TreeGridWebApiEFSample.Shared.DataAccess
 
 ### Enable CRUD in Web API
 
-Now, create a new **Post**, **Put**, **Delete** method in the Web API controller which will perform the CRUD operations and returns the appropriate resultant data. The **'SfDataManager'** will make requests to this action based on route name.
+Create **Post**, **Put**, and **Delete** methods in the Web API controller to handle CRUD operations and return the appropriate data. The **SfDataManager** component sends requests to these action methods based on the route configuration.
 
 ```csharp
 using System;
@@ -237,7 +237,9 @@ namespace TreeGridWebApiEFSample.Controllers
 }
 ```
 
-### Configure the Tree Grid to perform CRUD operations
+### Configure the TreeGrid to perform CRUD Operations
+
+Bind the TreeGrid to the Web API using **SfDataManager** and enable the editing features through **TreeGridEditSettings**. The toolbar provides buttons for adding, editing, and deleting records.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
