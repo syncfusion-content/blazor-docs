@@ -16,7 +16,7 @@ The appearance of expand and collapse icons in the Blazor TreeGrid can be custom
 
 ## Customize the expand/collapse icon element
 
-The **.e-icons** class combined with **.e-treegridexpand** or **.e-treegridcollapse** class styles the expand and collapse icons in the Blazor TreeGrid. Apply CSS to customize the icon appearance:
+The **.e-icons** class combined with **.e-treegridexpand** or **.e-treegridcollapse** class styles the expand and collapse icons in the Blazor TreeGrid. Apply the following CSS to customize icon appearance:
 
 ```css
 .e-treegrid .e-icons.e-treegridexpand::before,
@@ -26,13 +26,13 @@ The **.e-icons** class combined with **.e-treegridexpand** or **.e-treegridcolla
 }
 ```
 
-Properties such as **color**, **font-size**, **width**, and **height** can be adjusted to match the TreeGrid design. Ensure that custom icons remain clearly visible and maintain adequate contrast for accessibility.
+Properties such as **color**, **font-size**, **width**, and **height** can be adjusted to match the TreeGrid design. Custom icons must remain clearly visible and maintain adequate contrast for accessibility.
 
 ![TreeGrid expand/collapse icon](../images/style-and-appearance/expand-collapse-icon.webp)
 
-## Change the expand and collapse icon
+## Replace the expand/collapse icon glyphs
 
-The expand and collapse icons can be customized by changing the icon glyph using the `::before` pseudo-element content property:
+Replace the expand and collapse icons by changing the icon glyph using the `::before` pseudo-element content property:
 
 ```css
 .e-treegrid .e-icons.e-treegridexpand::before {
@@ -52,7 +52,7 @@ Modify the `content` value to use different glyphs from the icon font. Confirm t
 
 ## Customize the expand/collapse icon on hover
 
-Apply hover styles to expand/collapse icons for better user interaction:
+Apply hover styles to expand/collapse icons for better interaction:
 
 ```css
 .e-treegrid .e-icons.e-treegridexpand:hover::before,
@@ -62,7 +62,7 @@ Apply hover styles to expand/collapse icons for better user interaction:
 }
 ```
 
-This allows users to see visual feedback when interacting with expand/collapse controls.
+The hover state provides visual feedback when interacting with expand/collapse controls.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
