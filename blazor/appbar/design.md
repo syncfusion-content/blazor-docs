@@ -9,6 +9,8 @@ documentation: ug
 
 # Design in Blazor AppBar
 
+The Blazor AppBar can host a variety of child components to build a fully functional application header. This section covers the common UI design patterns available with the AppBar component, including spacers, separators, media queries, menus, buttons, and integration with the Sidebar component.
+
 ## Spacer
 
 [AppBarSpacer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AppBarSpacer.html) is used to provide spacing between the AppBar contents, which gives additional space to the content layout.

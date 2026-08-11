@@ -9,9 +9,7 @@ documentation: ug
 
 # How to set the Placeholder in Blazor DateTime Picker
 
-The following example demonstrates how to set the `Placeholder` in the DateTimePicker component.
-
-Using the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Placeholder) property, a short hint can be displayed in the input element to guide users before a value is selected.
+Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Placeholder) property to display a short hint in the input that guides users before a value is selected.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -20,3 +18,8 @@ Using the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```
 
 ![Blazor DateTimePicker displays hint text using the Placeholder property](../images/blazor-datetimepicker-hint-element.webp)
+
+## See also
+
+* [Disable the Blazor DateTimePicker component](./disable-the-datetimepicker-component)
+* [Open the Blazor DateTimePicker popup on focus](./open-popup-on-input-click)
