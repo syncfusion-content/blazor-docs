@@ -9,9 +9,7 @@ documentation: ug
 
 # Calculate Column Values Based on Other Columns in Blazor TreeGrid
 
-The values for a Tree Grid column can be calculated based on other column values by using the **context** parameter in the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component. Inside the `Template`, the column values can be accessed using the implicit named parameter **context** and then calculate the values for the new column as required.
-
-This is demonstrated in the following sample code where the value for **Resources** column is calculated based on the values of **Duration** and **Progress** columns.
+Column values can be calculated based on other column values by using the **context** parameter in the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component. Use the **context** parameter to access the current row's column values and calculate the new column value.
 
 {% tabs %}
 
