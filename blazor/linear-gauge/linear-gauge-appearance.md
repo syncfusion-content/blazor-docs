@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor Linear Gauge | Syncfusion®
-description: Customize the Blazor Linear Gauge appearance with background, border, margin, title styling, and Normal, Rounded Rectangle, or Thermometer containers.
+title: Blazor Linear Gauge Appearance | SyncfusionÂ®
+description: Learn how to customize the Blazor Linear Gauge appearance with background, border, margin, title styling, and container shapes.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Appearance in Blazor Linear Gauge
+# Blazor Linear Gauge Appearance
 
 ## Customizing the Linear Gauge area
 

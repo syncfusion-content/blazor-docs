@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Print and Export in Blazor Linear Gauge | Syncfusion®
-description: Print the Blazor Linear Gauge from the browser or export it to JPEG, PNG, SVG, or PDF formats, including as a base64 string.
+title: Blazor Linear Gauge Print and Export | SyncfusionÂ®
+description: Learn how to print the Blazor Linear Gauge from the browser or export it to JPEG, PNG, SVG, or PDF formats, including as a base64 string.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Print and Export in Blazor Linear Gauge
+# Blazor Linear Gauge Print and Export
 
 ## Print
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Place Linear Gauge in other components | Syncfusion®
-description: Render the Blazor Linear Gauge inside Dashboard Layout, Tab, Dialog, or Accordion by deferring initialization until the host component fires its Created event.
+title: How to Place Blazor Linear Gauge inside Other Components | SyncfusionÂ®
+description: Learn how to place the Blazor Linear Gauge inside Dashboard Layout, Tabs, Dialog, or Accordion by deferring initialization until the host fires Created.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# How to place Linear Gauge in other components in Blazor Linear Gauge
+# How to Place Blazor Linear Gauge inside Other Components
 
 The Linear Gauge can be rendered within components such as the Dashboard Layout, Tabs, Dialog, and others. In general, the Linear Gauge component renders before other components, so a boolean variable (i.e. boolean flag) is used to determine when to begin rendering the Linear Gauge component.
 

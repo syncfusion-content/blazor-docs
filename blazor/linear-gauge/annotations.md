@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotations in Blazor Linear Gauge | Syncfusion®
-description: Add text, HTML, or image annotations to the Blazor Linear Gauge with custom positioning, z-index, and horizontal or vertical alignment.
+title: Blazor Linear Gauge Annotations | SyncfusionÂ®
+description: Learn how to add text, HTML, or image annotations to the Blazor Linear Gauge with custom positioning, z-index, and alignment.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Annotations in Blazor Linear Gauge
+# Blazor Linear Gauge Annotations
 
 Annotations are used to mark the specific area of interest in the Linear Gauge with text, HTML elements, or images. Any number of annotations can be added to the Linear Gauge component.
 

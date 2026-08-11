@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Axis in Blazor Linear Gauge | Syncfusion®
-description: Configure axes in the Blazor Linear Gauge by setting minimum, maximum, ticks, labels, and custom formats for numeric scales.
+title: Blazor Linear Gauge Axis | Syncfusion®
+description: Learn how to configure the Blazor Linear Gauge axis with minimum, maximum, ticks, labels, and custom formats for numeric scales.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Axis in Blazor Linear Gauge
+# Blazor Linear Gauge Axis
 
 Axis is used to indicate the numeric values in the linear scale. The Linear Gauge component can have any number of axes. The sub-elements of an axis are line, ticks, labels, ranges, and pointers.
 
