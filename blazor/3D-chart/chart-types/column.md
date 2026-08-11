@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column Chart in Blazor 3D Chart Component | Syncfusion®
-description: Checkout and learn here all features about the Column Chart in Blazor 3D Chart component and much more.
+title: Blazor 3D Column Chart Examples and Documentation | Syncfusion®
+description: Learn how to render a Column Chart in Syncfusion Blazor 3D Chart by setting the series Type to Column with code samples.
 platform: Blazor
 control: 3D Chart
 documentation: ug
 ---
 
-# Column Chart in Blazor 3D Chart Component
+# Blazor 3D Column Chart
 
 ## Column
 
