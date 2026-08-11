@@ -7,7 +7,7 @@ control: Linear Gauge
 documentation: ug
 ---
 
-# Getting Started with Blazor Linear Gauge in WASM App
+# Blazor Linear Gauge Getting Started in WASM App
 
 The [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) is an ideal component for visualizing numeric values in a linear scale with features like multiple axes, different orientations, and more.
 
