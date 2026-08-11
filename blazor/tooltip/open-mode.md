@@ -44,7 +44,7 @@ N> `Auto` value cannot be used with any combination for multiple values.
 
 @code
 {
-    string Content="Tooltip content";
+    string Content = "Tooltip content";
 }
 
 <style>
