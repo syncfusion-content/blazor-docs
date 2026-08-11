@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Methods in Blazor Map | Syncfusion®
-description: Use Syncfusion Blazor Map methods like ShapeSelectionAsync, PrintAsync, ExportAsync, and Refresh to programmatically control selection, output, and rendering.
+title: Blazor Maps Methods | SyncfusionÂ®
+description: Learn how to use Blazor Maps methods like ShapeSelectionAsync, PrintAsync, ExportAsync, and Refresh to control the map programmatically.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Methods in Blazor Map
+# Blazor Maps Methods
 
 This section describes the available methods in the Blazor Maps component.
 

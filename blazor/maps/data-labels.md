@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Labels in Blazor Map | Syncfusion®
-description: Display shape names or data source fields as labels on the Syncfusion Blazor Map by setting LabelPath and Visible in MapsDataLabelSettings.
+title: Blazor Maps Data Labels | Syncfusion®
+description: Learn how to display shape names or data source fields as labels in Blazor Maps by setting LabelPath and Visible in MapsDataLabelSettings.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Data Labels in Blazor Map
+# Blazor Maps Data Labels
 
 Data labels display text for shapes in the Maps component. Enable them by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_Visible) property of [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html) to **true**.
 

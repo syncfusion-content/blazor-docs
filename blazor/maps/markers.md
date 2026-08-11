@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Markers in Blazor Map | Syncfusion®
-description: Add and customize data-driven markers on the Syncfusion Blazor Map by binding latitude and longitude values to MapsMarker for location annotations.
+title: Blazor Maps Markers | Syncfusion®
+description: Learn how to add and customize data-driven markers in Blazor Maps by binding latitude and longitude values to MapsMarker.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Markers in Blazor Map
+# Blazor Maps Markers
 
 Markers annotate locations on Maps with symbols. Enable markers by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_Visible) property of [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) to **true**.
 

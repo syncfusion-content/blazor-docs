@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Shapefile in Blazor Map | Syncfusion®
-description: Import remotely hosted shapefiles into the Syncfusion Blazor Map via the ShapeData property to render vector shape maps with markers and clusters.
+title: Blazor Maps Shapefile | SyncfusionÂ®
+description: Learn how to import remotely hosted shapefiles into Blazor Maps via the ShapeData property to render vector shape maps.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Shapefile in Blazor Map
+# Blazor Maps Shapefile
 
 A shapefile is a widely used geospatial vector data format for storing geographic features, their spatial locations, and associated attribute data.
 

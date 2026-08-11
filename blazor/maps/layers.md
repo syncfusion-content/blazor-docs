@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Layers in Blazor Map | Syncfusion®
-description: Stack multiple shape files and tile providers in the Syncfusion Blazor Map using main layers, sublayers, and BaseLayerIndex for drill-down.
+title: Blazor Maps Layers | SyncfusionÂ®
+description: Learn how to stack multiple shape files and tile providers in Blazor Maps using main layers, sublayers, and BaseLayerIndex.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Layers in Blazor Map
+# Blazor Maps Layers
 
 The Maps component is rendered through [MapsLayers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayers.html), and any number of layers can be added to Maps.
 

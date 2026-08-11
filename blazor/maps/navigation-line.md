@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Navigation Lines in Blazor Map | Syncfusion®
-description: Draw flight or sea routes on the Syncfusion Blazor Map with MapsNavigationLine using start and end latitude and longitude coordinates and arrows.
+title: Blazor Maps Navigation Lines | Syncfusion®
+description: Learn how to draw flight or sea routes in Blazor Maps with MapsNavigationLine using start and end latitude and longitude coordinates.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Navigation Lines in Blazor Map
+# Blazor Maps Navigation Lines
 
 Navigation lines denote the path between two locations and can represent flight or sea routes. Enable navigation lines by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Visible) property of [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html) to **true**.
 

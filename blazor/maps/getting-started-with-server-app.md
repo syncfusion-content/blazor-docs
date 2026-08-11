@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Map in Blazor Server App | Syncfusion®
-description: Learn how to get started with the Syncfusion Blazor Map control in a Blazor Server app. Explore setup, features, examples, and customization options.
+title: Getting Started with Blazor Maps in Blazor Server App | Syncfusion®
+description: Learn how to get started with Blazor Maps in a Blazor Server app. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Maps
 documentation: ug
 ---
 
-# Getting Started with Blazor Map in Blazor Server App
+# Getting Started with Blazor Maps in Blazor Server App
 
 This section briefly explains how to include [Blazor Maps](https://www.syncfusion.com/blazor-components/blazor-map) component in your Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

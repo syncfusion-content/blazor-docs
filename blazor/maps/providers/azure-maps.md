@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Azure Maps in Blazor Map | Syncfusion®
-description: Render Microsoft Azure Maps tiles in the Syncfusion Blazor Map by setting UrlTemplate with a subscription key for satellite and road map imagery.
+title: Blazor Maps Azure Maps Provider | SyncfusionÂ®
+description: Learn how to render Microsoft Azure Maps tiles in Blazor Maps by setting UrlTemplate with a subscription key for satellite imagery.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Azure Maps in Blazor Map
+# Blazor Maps Azure Maps Provider
 
 Azure Maps is an online map tile provider from Microsoft. Similar to OSM and Bing Maps, it serves map tile images on request and composites them to display the map area.
 

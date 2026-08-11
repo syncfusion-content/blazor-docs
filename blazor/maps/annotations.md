@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotations in Blazor Map | Syncfusion®
-description: Mark areas of interest on the Syncfusion Blazor Map with text, shapes, or images using the ContentTemplate and MapsAnnotation tag in any layer.
+title: Blazor Maps Annotations | SyncfusionÂ®
+description: Learn how to mark areas of interest on Blazor Maps with text, shapes, or images using ContentTemplate and MapsAnnotation in any layer.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Annotations in Blazor Map
+# Blazor Maps Annotations
 
 Annotations mark areas of interest on the map using text, shapes, or images. Any number of annotations can be added to the Maps component.
 

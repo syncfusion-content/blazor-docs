@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Print and Export in Blazor Map | Syncfusion®
-description: Print the rendered Syncfusion Blazor Map or export it as JPEG, PNG, or SVG using PrintAsync and ExportAsync with AllowPrint and AllowImageExport.
+title: Blazor Maps Print and Export | SyncfusionÂ®
+description: Learn how to print Blazor Maps or export as JPEG, PNG, or SVG using PrintAsync and ExportAsync with AllowPrint and AllowImageExport.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Print and Export in Blazor Map
+# Blazor Maps Print and Export
 
 ## Print
 

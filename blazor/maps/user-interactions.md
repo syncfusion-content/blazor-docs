@@ -1,13 +1,13 @@
 ---
 layout: post
-title: User Interactions in Blazor Map | Syncfusion®
-description: Enable zooming, panning, and selection on the Syncfusion Blazor Map through MapsZoomSettings with linear ZoomFactor and configurable EnablePanning.
+title: Blazor Maps User Interactions | Syncfusion®
+description: Learn how to enable zooming, panning, and selection in Blazor Maps through MapsZoomSettings with linear ZoomFactor and EnablePanning.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# User Interactions in Blazor Map
+# Blazor Maps User Interactions
 
 ## Zooming
 

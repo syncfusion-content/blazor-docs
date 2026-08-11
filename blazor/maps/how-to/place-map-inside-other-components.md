@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to place map in other components in Blazor Map | Syncfusion®
-description: Learn how to render the Syncfusion Blazor Map inside Dashboard Layout, Tab, Dialog, or Accordion with a boolean flag and Refresh on resize.
+title: How to Place Maps Inside Other Components in Blazor Maps | SyncfusionÂ®
+description: Learn how to render Blazor Maps inside Dashboard Layout, Tab, Dialog, or Accordion with a boolean flag and Refresh on resize.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# How to place map in other components in Blazor Map
+# How to Place Maps Inside Other Components in Blazor Maps
 
 The Maps component can be rendered within other components such as Dashboard Layout, Tab, Dialog, and Accordion. Because Maps often initializes before its container finishes rendering, use a boolean flag to control when the Maps component starts rendering.
 

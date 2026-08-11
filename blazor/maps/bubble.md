@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bubble in Blazor Map | Syncfusion®
-description: Render data-driven bubbles on the Syncfusion Blazor Map by binding a data source to MapsBubble and configuring ValuePath, color, and shape options.
+title: Blazor Maps Bubble Visualization | Syncfusion®
+description: Learn how to render data-driven bubbles on Blazor Maps by binding a data source to MapsBubble and configuring ValuePath, color, and shape.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Bubble in Blazor Map
+# Blazor Maps Bubble Visualization
 
 Bubbles in the Maps control represent underlying data values. They render over map shapes that have corresponding data in the data source. Enable bubbles by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_Visible) property of [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) to **true**. To add bubbles, bind the data source to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_DataSource) property of [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) and set the numeric field name in the [ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_ValuePath) property.
 
