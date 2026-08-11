@@ -3,19 +3,19 @@ layout: post
 title: Blazor TreeGrid Virtualization for Large Data Performance | Syncfusion
 description: Learn how to use virtualization in Blazor TreeGrid to efficiently render large datasets, improve scrolling performance, and reduce load times.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
 # Virtualization for Large Data Performance in Blazor TreeGrid
 
-Virtualization enables the efficient rendering of large datasets in the TreeGrid component, minimizing performance degradation and improving responsiveness. It ensures only the visible rows and columns are rendered, significantly enhancing load times and user experience when working with extensive hierarchical data.
+Virtualization efficiently renders large datasets in the TreeGrid component, minimizing performance degradation and improving responsiveness. It ensures only the visible rows and columns are rendered, significantly enhancing load times and user experience when working with extensive hierarchical data.
 
 ## Row Virtualization
 
-Row virtualization renders only the rows visible in the viewport, appending additional records as the user scrolls vertically. This technique serves as an alternative to paging and improves performance by reducing the number of DOM elements. Enable row virtualization by setting the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualization) property to `true` and specifying the content height using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Height) property.
+Row virtualization renders only the rows visible in the viewport, while additional records are appended as scrolling occurs vertically. This technique serves as an alternative to paging and improves performance by reducing the number of DOM elements. Enable row virtualization by setting the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualization) property to `true` and specifying the content height using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Height) property.
 
-The number of records displayed is determined implicitly by the content area's height, with additional buffer records maintained for smooth scrolling. Expand and Collapse states of child records are persisted during virtualization.
+The number of records displayed is determined implicitly by the content area's height dynamically, with additional buffer records maintained for smooth scrolling. Expand and Collapse states of child records are persisted during virtualization.
 
 {% tabs %}
 
@@ -347,8 +347,6 @@ With hierarchical data, parent rows may contain nested child rows. Virtual scrol
 
 To resolve this, flatten hierarchical data using a recursive method such as **HierarchyToFlatData**. This method traverses all parent-child relationships and flattens them into a single-level collection for efficient binding to TreeGrid with virtualization enabled.
 
-Use the following method in your component (e.g., **Index.razor**) and call it during initialization:
-
 ```ts
 
 protected override void OnInitialized()
@@ -655,7 +653,7 @@ The following GIF represent a TreeGrid with Column virtualization.
 
 ## Enable Cell placeholder during Virtualization
 
-Displays placeholder in cells while data is loading in scrolling action. Also, the same set of DOM elements is reused to enhance performance.
+Display placeholders in cells during scrolling while data loads. Also, the same set of DOM elements is reused to enhance performance.
 
 To set up the enable cell placeholder during virtualization, define the [EnableVirtualMaskRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualMaskRow) as true along with the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualization)/[EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableColumnVirtualization) property.
 
@@ -756,7 +754,6 @@ To set up the enable cell placeholder during virtualization, define the [EnableV
 }
 ```
 
-The following image represents a TreeGrid with the mask row virtualization.
 ![Blazor TreeGrid with Mask Row virtualization](./images/blazor-treegrid-mask-row-virtualization.webp)
 
 > For a better experience, the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSize) property of the [TreeGridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html) class and the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_RowHeight) property should be defined.
