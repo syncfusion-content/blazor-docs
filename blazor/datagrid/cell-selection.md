@@ -13,6 +13,14 @@ Cell selection in the [Blazor DataGrid](https://www.syncfusion.com/blazor-compon
 
 > To enable cell selection, set the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property to either **Cell** or **Both**. This determines the selection mode of the Grid.
 
+## Keyboard Navigation
+
+Cell selection supports keyboard navigation for easy interaction:
+
+- **Arrow Keys**: Navigate between cells using the up, down, left, and right arrow keys
+- **Shift + Arrow Keys**: Extend selection to multiple cells (when in multiple selection mode)
+- **Ctrl + Click**: Add or remove individual cells to the selection (when in multiple selection mode)
+
 ## Single cell selection
 
 Single cell selection allows selecting one cell at a time within the Blazor DataGrid. This is useful for focusing on a specific cell or performing actions on individual cell values.
@@ -189,11 +197,15 @@ public class OrderDetails
 
 The cell selection mode in the Blazor DataGrid enables interactive selection of specific cells or ranges of cells. This feature is particularly useful for performing actions on selected cells or retrieving data from targeted areas within the Grid.
 
-The Grid supports three types of cell selection modes, configurable via the [GridSelectionSettings.CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CellSelectionMode) property:
+The Grid supports three types of cell selection modes, configurable via the [GridSelectionSettings.CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CellSelectionMode) property.
 
-1. **Flow:** This is the default mode. It allows selection of a continuous range of cells between the start and end indexes, including all cells across rows in that range.
-2. **Box:** Enables selection of a rectangular range of cells between specified start and end column indexes, including all rows within the defined range. Useful for column-specific selections.
-3. **BoxWithBorder:** Similar to Box, but adds a visual border around the selected cell range for easier identification.
+### Cell Selection Mode Comparison
+
+| Selection Mode | Behavior | Best Use Case |
+| --- | --- | --- |
+| **Flow** (Default) | Selects a continuous range of cells between start and end indexes. Spans all rows in the range. | When selecting cells across multiple rows in sequence |
+| **Box** | Selects a rectangular region of cells within specified column boundaries. Includes all rows within the range. | When selecting cells within specific columns |
+| **BoxWithBorder** | Similar to Box mode, but displays a visual border around the selected cell range. | When visual emphasis on the selection boundary is needed |
 
 Cell selection requires the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) to be set to **Cell** or **Both**, and the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) to be **Multiple**.
 
@@ -296,9 +308,9 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhxXQXiAdhruSzH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Select cells via programmatically
+## Programmatic cell selection
 
-Single cell selection, multiple cell selection, and range-based cell selection can be performed externally in the Blazor DataGrid using built-in methods. These API's allow programmatic interaction with specific cells in the Grid.
+Single cell selection, multiple cell selection, and range-based cell selection can be performed programmatically in the Blazor DataGrid using built-in methods. These APIs allow programmatic interaction with specific cells in the Grid.
 
 ### Single cell selection
 

@@ -104,7 +104,7 @@ The checkbox selection mode in the Blazor DataGrid allows to select rows either 
     <label style="margin: 5px 5px 0 0"> Choose checkbox selection mode:</label>
     <SfDropDownList TValue="CheckboxSelectionType" TItem="DropDownOrder" Width="150px" DataSource="@DropDownValue" @bind-Value="@CheckboxModeValue">
         <DropDownListEvents TItem="DropDownOrder" TValue="CheckboxSelectionType" ValueChange="OnChange"></DropDownListEvents>
-        <DropDownListFieldSettings Value="Text" Text="Value"></DropDownListFieldSettings>
+        <DropDownListFieldSettings Value="Value" Text="Text"></DropDownListFieldSettings>
     </SfDropDownList>
 </div>
 <SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true" Height="315">
@@ -316,9 +316,9 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtBHtmjMTsNHBoVw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Allow selection only through checkbox click
+## Restrict selection to checkbox clicks only
 
-By default, the Blazor DataGrid allows selection by clicking either a Grid row or the checkbox within that row. To restrict selection so that it can only be performed through checkbox clicks, set the  [GridSelectionSettings.CheckboxOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CheckboxOnly) property to **true**.
+By default, the Blazor DataGrid allows selection by clicking either a Grid row or the checkbox within that row. To restrict selection to checkbox clicks only, set the [GridSelectionSettings.CheckboxOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CheckboxOnly) property to **true**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
