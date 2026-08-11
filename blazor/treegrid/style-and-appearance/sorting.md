@@ -14,9 +14,11 @@ The appearance of sorting indicators in the Blazor TreeGrid can be customized us
 - **Ascending and descending sort icons:** Show the current sort direction in column headers.
 - **Multi-sorting order indicators:** Display the order of sorting when multiple columns are sorted.
 
+CSS can be added inline in a `<style>` block or in a separate stylesheet. Ensure `AllowSorting="true"` is set on the TreeGrid component. For multi-column sorting, set `AllowMultiSorting="true"`. Refer to [Sorting configuration](../sorting.md) for more information on sorting options.
+
 ## Customize sorting icons
 
-The **.e-icon-ascending** and **.e-icon-descending** classes define the icons shown in the TreeGrid header when a column is sorted in `ascending` or `descending` order. Use CSS to adjust its appearance:
+The **.e-icon-ascending** and **.e-icon-descending** classes define the icons shown in the TreeGrid header when a column is sorted in `ascending` or `descending` order. Apply CSS styling with the `.e-icon-ascending` and `.e-icon-descending` classes to customize sort icons:
 
 ```css
 .e-treegrid .e-gridheader .e-icon-ascending::before {
@@ -30,7 +32,7 @@ The **.e-icon-ascending** and **.e-icon-descending** classes define the icons sh
 
 Adjust properties such as **content**, **color**, **font-size**, and **margin** to match the TreeGrid design. Ensure the correct icon font family is loaded to display the icons properly.
 
-![Grid sorting icon](../images/style-and-appearance/sort1.webp)
+![TreeGrid sorting icon](../images/style-and-appearance/sort1.webp)
 
 ## Customize multi-sorting indicators
 
@@ -45,7 +47,7 @@ The **.e-sortnumber** class styles the numeric indicator shown when multiple col
 
 Modify properties such as **background-color**, **font-family**, **font-size**, and **border-radius** to align with the TreeGrid layout. Ensure accessibility by maintaining clear contrast and focus styles.
 
-![Grid multi sorting icon](../images/style-and-appearance/sort2.webp)
+![TreeGrid multi sorting icon](../images/style-and-appearance/sort2.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -80,7 +82,7 @@ Modify properties such as **background-color**, **font-family**, **font-size**, 
     }
 
     /* Override sorting icons (ensure correct icon font family) */
-    ..e-treegrid .e-gridheader .e-icon-ascending::before,
+    .e-treegrid .e-gridheader .e-icon-ascending::before,
     .e-treegrid .e-gridheader .e-icon-descending::before {
         font-family: 'e-icons' !important; /* required for glyphs to render */
         font-weight: normal;

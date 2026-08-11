@@ -14,37 +14,39 @@ The appearance of toolbar elements in the Blazor TreeGrid can be customized usin
 - **Toolbar root container:** The outer wrapper that contains all toolbar items.
 - **Toolbar buttons:**  Shows interactive elements used for actions such as Add, Edit, Delete, Update, and Cancel.
 
+CSS can be added inline in a `<style>` block or in a separate stylesheet. Common toolbar items include Add, Edit, Delete, Update, Cancel, ExpandAll, and CollapseAll. For complete toolbar configuration options and the Toolbar property reference, see [Toolbar documentation](../toolbar.md).
+
 ## Customize the toolbar root element
 
-The **.e-toolbar-items** class styles the toolbar root container in the Blazor TreeGrid. This container holds all toolbar items and can be styled using CSS:
+The **.e-toolbar-items** class styles the toolbar root container in the Blazor TreeGrid. This container holds all toolbar items. Apply CSS styling to the `.e-toolbar-items` class to customize the toolbar root container:
 
 ```css
 .e-treegrid .e-toolbar .e-toolbar-items {
      background-color: #deecf9;
  }
 ```
-Properties such as **background-color**, **padding**, **border**, and **box-shadow** can be modified to suit the layout design.
+CSS properties such as **background-color**, **padding**, **border**, and **box-shadow** can customize the toolbar appearance.
 
-![Grid toolbar root element](../images/style-and-appearance/toolbar1.webp)
+![TreeGrid toolbar root element](../images/style-and-appearance/toolbar1.webp)
 
 ## Customize the toolbar button elements
 
-The **.e-btn** class inside **.e-toolbar** defines the appearance of toolbar buttons in the Blazor TreeGrid. Apply CSS to customize their styling:
+The **.e-btn** class inside **.e-toolbar** defines the appearance of toolbar buttons in the Blazor TreeGrid. Apply CSS styling with the `.e-btn` class to customize toolbar buttons:
 ```css
 .e-treegrid .e-toolbar .e-btn {
     background-color: #deecf9;
  }
 ```
-Properties such as **background-color**, **color**, **border**, **font-size**, and **padding** can be adjusted to align with the design. Ensure that customized colors meet WCAG contrast guidelines and that focus indicators remain visible for keyboard navigation.
+CSS properties such as **background-color**, **color**, **border**, **font-size**, and **padding** can customize button appearance. Customized colors must meet WCAG contrast guidelines, and focus indicators must remain visible for keyboard navigation.
 
-![Grid toolbar button element](../images/style-and-appearance/toolbar2.webp)
+![TreeGrid toolbar button element](../images/style-and-appearance/toolbar2.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.TreeGrid;
 
-<SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" Toolbar="@(new List<string> { "Add", "Edit" , "ExpandAll", "CollaspeAll" })">
+<SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" Toolbar="@(new List<string> { "Add", "Edit" , "ExpandAll", "CollapseAll" })">
     <TreeGridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Row"></TreeGridEditSettings>
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
