@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Other Maps in Blazor Maps Component | Syncfusion®
-description: Check out and learn here all about other maps in Blazor Maps component and much more details.
+title: Blazor Maps Other Tile Providers | Syncfusion®
+description: Learn how to render tile maps from any provider such as TomTom in Blazor Maps by assigning a z, x, y URL pattern to UrlTemplate.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Other Maps in Blazor Maps Component
+# Blazor Maps Other Tile Providers
 
 Apart from OpenStreetMap and Bing Maps, maps from other online providers can be rendered by assigning the provider’s tile URL to the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property. The URL template design supports any provider that follows the standard tile format shown below.
 
