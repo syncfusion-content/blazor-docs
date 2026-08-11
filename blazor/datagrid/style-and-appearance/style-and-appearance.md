@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor DataGrid Styling with Design Tokens & Theme Studio | Syncfusion
-description: Learn how to customize Blazor DataGrid appearance using design tokens, CSS, and Theme Studio, including headers, rows, alternate rows, and grid lines.
+title: Blazor Grid Styling with Design Tokens & Theme Studio | Syncfusion
+description: Learn how to customize Blazor DataGrid appearance using Design Tokens, CSS, and Theme Studio, including headers, rows, alternate rows, and grid lines.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Style and Appearance in Blazor DataGrid
+# Style and Appearance in Blazor Data Grid
 
 The Blazor DataGrid provides comprehensive styling and appearance customization capabilities to align grid designs with application requirements. Built-in themes enable rapid implementation, CSS customization allows visual element adjustment, and theme-based styling creates consistent user experiences.
 
