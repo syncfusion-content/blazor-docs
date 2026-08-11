@@ -7,20 +7,16 @@ control: DataGrid
 documentation: ug
 ---
 
-
 # Clipboard in Blazor Data Grid
-
 
 The **clipboard** feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) allows copying selected rows or cells using keyboard shortcuts or programmatic methods, which helps transfer data to external applications such as spreadsheets or text editors.
 To use keyboard shortcuts, selection must be enabled and the grid must be focused.
-
 
 ## Copying Data
 
 Copy data from the DataGrid using either keyboard shortcuts or programmatic methods.
 
 ### Keyboard Shortcuts
-
 
 | Windows | Mac | Actions |
 |---------|-----|---------|
@@ -29,7 +25,6 @@ Copy data from the DataGrid using either keyboard shortcuts or programmatic meth
 
 
 To enable clipboard functionality, configure the DataGrid with the required [GridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html). If the selection mode is **Row**, entire rows are copied. If it is **Cell**, only the highlighted cells are copied.
-
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -102,7 +97,6 @@ internal sealed class OrderData
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhRNGZCfsUftPWT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
@@ -111,12 +105,10 @@ internal sealed class OrderData
 
 Clipboard actions can also be triggered using external buttons or programmatically, which is useful when UI controls are preferred over shortcut keys.
 
-
 The [`CopyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method copies selected rows or cells:
 
 - Pass **true** to include column headers in the copied content.
 - Pass **false** or omit the parameter to copy without headers.
-
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -158,7 +150,6 @@ The [`CopyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.
 }
 
 {% endhighlight %}
-
 {% highlight c# tabtitle="OrderData.cs" %}
 
 internal sealed class OrderData
@@ -204,7 +195,6 @@ internal sealed class OrderData
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXhxjGXCTCUxIVsj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
@@ -314,7 +304,6 @@ internal sealed class OrderData
 
 ## Pasting Data
 
-
 The **Paste** feature in the Blazor DataGrid lets you paste clipboard content into a selected range using <kbd>Ctrl + V</kbd>.
 
 To enable pasting, ensure `GridEditSettings` is configured with `Mode="EditMode.Batch"` and `AllowEditing="true"`.
@@ -325,7 +314,6 @@ To enable pasting, ensure `GridEditSettings` is configured with `Mode="EditMode.
 2. Press <kbd>Ctrl + C</kbd> to copy the content.
 3. Select the target cells.
 4. Press <kbd>Ctrl + V</kbd> to paste the copied content.
-
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -399,7 +387,6 @@ internal sealed class OrderData
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDBdjwjMTCzMwQCj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
