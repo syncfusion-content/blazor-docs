@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor TreeMap in Blazor Web App | Syncfusion
-description: Check out and learn the documentation for getting started with Blazor TreeMap Component in Blazor Web Application.
+title: Getting Started with Blazor TreeMap in Web App | Syncfusion®
+description: Learn how to set up the Blazor TreeMap in a Blazor Web App - install the NuGet package, register AddSyncfusionBlazor, and render the component.
 platform: Blazor
 component: TreeMap
 documentation: ug
 ---
 
-# Getting Started with Blazor TreeMap Component in Blazor Web App
+# Getting Started with Blazor TreeMap in Blazor Web App
 
 This section briefly explains how to include the [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
