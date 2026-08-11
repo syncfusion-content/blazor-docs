@@ -153,7 +153,7 @@ public class TreeData
 
 ## Internationalization
 
-The **Internationalization** library globalizes number, date, and time values in the TreeGrid component using format strings in the **Format** property.
+The **Internationalization** library globalize number, date, and time values in the TreeGrid component using format strings in the **Format** property.
 
 {% tabs %}
 
