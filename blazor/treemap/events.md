@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor TreeMap | Syncfusion®
-description: Handle Blazor TreeMap events such as Load, Loaded, ItemSelected, ItemRendering, OnClick, OnItemClick, DrillCompleted, and TooltipRendering.
+title: Blazor TreeMap Events | Syncfusion®
+description: Learn how to handle Blazor TreeMap events such as Load, Loaded, ItemSelected, ItemRendering, OnClick, DrillCompleted, and TooltipRendering.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Events in Blazor TreeMap
+# Blazor TreeMap Events
 
 ## ItemHighlighted
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Color Mapping in Blazor TreeMap | Syncfusion®
-description: Apply Range, Equal, Desaturation, Palette, or data-bound color mapping to Blazor TreeMap items using TreeMapLeafColorMapping to differentiate values visually.
+title: Blazor TreeMap Color Mapping | SyncfusionÂ®
+description: Learn how to apply Range, Equal, Desaturation, Palette, and data-bound color mapping to Blazor TreeMap items using TreeMapLeafColorMapping.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Color Mapping in Blazor TreeMap
+# Blazor TreeMap Color Mapping
 
 Color mapping is used to customize the color for each group or item based on the specified types. The following options are available to customize the group and leaf items in the TreeMap component.
 

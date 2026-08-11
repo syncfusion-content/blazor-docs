@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Layout in Blazor TreeMap | Syncfusion®
-description: Choose Squarified, SliceAndDiceVertical, SliceAndDiceHorizontal, or SliceAndDiceAuto layout in the Blazor TreeMap, and set the rendering direction.
+title: Blazor TreeMap Layout | SyncfusionÂ®
+description: Learn how to choose Squarified, SliceAndDiceVertical, SliceAndDiceHorizontal, or SliceAndDiceAuto layout in the Blazor TreeMap with rendering direction.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Layout in Blazor TreeMap
+# Blazor TreeMap Layout
 
 Determine the visual representation of nodes belonging to all the TreeMap levels using the [LayoutType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_LayoutType) property.
 

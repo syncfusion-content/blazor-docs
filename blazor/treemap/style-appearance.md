@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and Appearance in Blazor TreeMap | Syncfusion®
-description: Style the Blazor TreeMap with CSS by targeting SVG IDs such as RectPath, Text, and Level/Item index selectors for per-item customization.
+title: Blazor TreeMap Style and Appearance | Syncfusion®
+description: Learn how to style the Blazor TreeMap with CSS by targeting SVG IDs such as RectPath, Text, and Level/Item index selectors for per-item customization.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Style and Appearance in Blazor TreeMap
+# Blazor TreeMap Style and Appearance
 
 Style and Appearance provide options to customize the visual design of the **Syncfusion Blazor TreeMap** component, ensuring consistency with your application’s branding and theme.
 

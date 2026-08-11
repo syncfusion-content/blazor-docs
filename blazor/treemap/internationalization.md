@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Internationalization in Blazor TreeMap | Syncfusion®
-description: Format numbers, dates, and times in the Blazor TreeMap for different cultures using the Format property to localize data labels and tooltips.
+title: Blazor TreeMap Internationalization | SyncfusionÂ®
+description: Learn how to localize the Blazor TreeMap by formatting numbers, dates, and times for different cultures using the Format property.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Internationalization in Blazor TreeMap
+# Blazor TreeMap Internationalization
 
 The [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component supports globalization for the following elements:
 

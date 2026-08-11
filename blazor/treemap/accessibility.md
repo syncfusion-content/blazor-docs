@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor TreeMap | Syncfusion®
-description: Make the Blazor TreeMap accessible with WAI-ARIA roles for regions and buttons, screen-reader support for data labels and legends, and full keyboard navigation.
+title: Blazor TreeMap Accessibility | Syncfusion®
+description: Learn how to make the Blazor TreeMap accessible with WAI-ARIA roles, screen-reader support for labels and legends, and full keyboard navigation.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Accessibility in Blazor TreeMap
+# Blazor TreeMap Accessibility
 
 The [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component follows commonly used accessibility guidelines and standards, such as [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 

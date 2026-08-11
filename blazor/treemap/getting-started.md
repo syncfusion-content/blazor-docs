@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor TreeMap | Syncfusion
-description: Step-by-step guide to add the Syncfusion Blazor TreeMap to a Blazor WebAssembly App — install the NuGet package, register the service, and bind a DataSource.
+title: Getting Started with Blazor TreeMap | Syncfusion®
+description: Learn how to add the Blazor TreeMap to a Blazor WebAssembly App: install the NuGet package, register services, and bind a DataSource.
 platform: Blazor
 component: TreeMap
 documentation: ug
