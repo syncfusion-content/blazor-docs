@@ -138,8 +138,8 @@ For this guide, a Blazor application named **Grid_ElasticSearch** has been creat
 3. Run the following commands:
 
 ```powershell
-Install-Package Elastic.Clients.Elasticsearch -Version 9.3.0; 
-Install-Package Syncfusion.Blazor.Grid -Version {{site.blazorversion}}; 
+Install-Package Elastic.Clients.Elasticsearch -Version 9.3.0;
+Install-Package Syncfusion.Blazor.Grid -Version {{site.blazorversion}};
 Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 ```
 
@@ -709,7 +709,7 @@ builder.Services.AddScoped<ElasticSearchInitializationService>();
 var app = builder.Build();
 
 // ========== INITIALIZE ELASTICSEARCH INDEXES ==========
-// Create indexes on application startup if they don't exist
+// Create indexes on application startup if they do not exist
 using (var scope = app.Services.CreateScope())
 {
     var initializationService = scope.ServiceProvider.GetRequiredService<ElasticSearchInitializationService>();
@@ -1981,7 +1981,7 @@ This guide demonstrates how to:
 
 1. Download and initialize Elasticsearch with proper credentials and cluster configuration. [🔗](#step-1-download-and-extract-elasticsearch)
 2. Install required NuGet packages for Elasticsearch and Syncfusion integration. [🔗](#step-4-install-required-nuget-packages)
-3. Create data models, DbContext, and repository pattern for Elasticsearch data access. [🔗](#step-5-create-the-data-model)
+3. Create data models and repository pattern for Elasticsearch data access. [🔗](#step-5-create-the-data-model)
 4. Configure connection strings and register services in the application. [🔗](#step-6-configure-elasticsearch-connection-settings)
 5. Create a Blazor DataGrid component with a CustomAdaptor that supports searching, filtering, sorting, paging, and CRUD operations. [🔗](#step-1-install-and-configure-blazor-datagrid-components)
 6. Implement aggregations for calculated values such as sum, average, count, min, max, and cardinality. [🔗](#step-9-implement-aggregations-feature)
