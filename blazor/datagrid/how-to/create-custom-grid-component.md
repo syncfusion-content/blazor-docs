@@ -33,7 +33,7 @@ The custom component internally renders the `SfGrid` and applies predefined sett
 * Child content projection using **ChildContent** allows column definitions, templates, and other markup to be passed into the Grid.
 * Attribute forwarding ensures that additional parameters, properties, or events passed to the custom component are automatically applied to the underlying `SfGrid`.
 
-This design approach provides a balance between reusability and flexibility. Developers can rely on the default configuration while still having the option to extend or override behavior when needed.
+This design approach provides a balance between reusable and flexibility. Developers can rely on the default configuration while still having the option to extend or override behavior when needed.
 
 ## When to use a custom Blazor DataGrid
 
