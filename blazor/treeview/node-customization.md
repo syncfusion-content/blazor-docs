@@ -419,7 +419,7 @@ To show or hide particular TreeView nodes on initial rendering, add or remove th
                 ParentId = "2",
                 FolderName = "Social"
             });
-        //To hide the Social node during initial rendering, comment out the below line to remove it from the data source. 
+        //To hide the Social node during initial rendering, comment out the below line to remove it from the data source.
         MyFolder.Add(showHideItem);
         MyFolder.Add(new MailItem
             {
@@ -580,8 +580,8 @@ The TreeView component provides a straightforward way to enable tooltips for tre
                 },
                 new DriveData { NodeId = "02-02", NodeText = "Projects", Tooltip = "Projects"
                 },
-                new DriveData { NodeId = "02-02", NodeText = "Office", Tooltip = "Office"
-            }
+                new DriveData { NodeId = "02-03", NodeText = "Office", Tooltip = "Office"
+                }
                 }
             });
         Drive.Add(new DriveData
@@ -613,7 +613,7 @@ The TreeView component provides a straightforward way to enable tooltips for tre
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBHDcijqPSbLuUI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[ToolTip in Blazor TreeView](./images/tooltip.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLnjvtyfYwwlnDB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[ToolTip in Blazor TreeView](./images/tooltip.webp)" %}
 
 ## Customize Nodes Tooltip in Blazor TreeView Component
 
