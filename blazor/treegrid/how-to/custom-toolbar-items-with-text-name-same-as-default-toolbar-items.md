@@ -9,9 +9,9 @@ documentation: ug
 
 # Custom Toolbar Items in Blazor TreeGrid
 
-The Custom toolbar items can be created with text name same as default toolbar items (Add,Edit,Delete,etc.). But while creating them, they will be considered as default toolbar items which will cause some issues while clicking on it. To overcome this behavior, it is suggested to define the `Id` property for custom toolbar items.
+Custom toolbar items can be created with text matching default toolbar items (Add, Edit, Delete, etc.). However, without proper configuration, they will be treated as default toolbar items, causing unintended behavior such as unwanted enable/disable state changes. To prevent this behavior, define the `Id` property for custom toolbar items.
 
-This is demonstrated in the below sample code where there are custom toolbar items with text same as **Add** and **Delete** buttons. These toolbar buttons will be enabled only when [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) is defined in TreeGrid. So custom toolbar will be in disabled state considering it as default toolbar item. That behavior must be overcome by defining the `Id` property.
+The following sample demonstrates creating custom toolbar items with text matching **Add** and **Delete** buttons. When [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) is defined in the TreeGrid, default toolbar items are automatically managed (enabled/disabled based on selection state). By assigning unique `Id` values, custom toolbar items maintain independent behavior.
 
 {% tabs %}
 
@@ -28,6 +28,7 @@ This is demonstrated in the below sample code where there are custom toolbar ite
 }
 <SfTreeGrid DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" AllowPaging="true"
             TreeColumnIndex="1" Toolbar="Toolbaritems">
+    <TreeGridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></TreeGridEditSettings>
     <TreeGridEvents OnToolbarClick="ToolbarClickHandler" TValue="TreeData"></TreeGridEvents>
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true" Width="70" TextAlign="TextAlign.Right"></TreeGridColumn>
@@ -48,13 +49,16 @@ This is demonstrated in the below sample code where there are custom toolbar ite
     }
     public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Text == "Add")
+        // Check the custom toolbar item Id to handle custom actions
+        if (args.Item.Id == "add")
         {
-            //perform your actions here
+            // Custom Add action - e.g., open a dialog, show a notification
+            System.Diagnostics.Debug.WriteLine("Custom Add button clicked");
         }
-        if (args.Item.Text == "Delete")
+        else if (args.Item.Id == "delete")
         {
-            //perform your actions here
+            // Custom Delete action - e.g., delete with confirmation
+            System.Diagnostics.Debug.WriteLine("Custom Delete button clicked");
         }
     }
 }
