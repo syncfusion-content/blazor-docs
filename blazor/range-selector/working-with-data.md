@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Working with Data in Blazor Range Selector | Syncfusion®
-description: Bind data to the Syncfusion Blazor Range Selector from a list, ExpandoObject, or remote REST service using SfDataManager and IEnumerable sources.
+title: Blazor Range Selector Working with Data Examples | SyncfusionÂ®
+description: Learn how to bind data to Syncfusion Blazor Range Selector using SfDataManager, RESTful JSON services, or IEnumerable with code samples.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Working with Data in Blazor Range Selector
+# Blazor Range Selector Working with Data
 
 The Range Selector uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) value can be set using either [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) property value or a list of business objects.
 

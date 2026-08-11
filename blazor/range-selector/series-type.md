@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Series Type in Blazor Range Selector | Syncfusion®
-description: Render Line, Area, or StepLine series in the Syncfusion Blazor Range Selector to visualize DateTime or numeric data trends at a glance.
+title: Blazor Range Selector Series Type Examples | SyncfusionÂ®
+description: Learn about the supported series types in Syncfusion Blazor Range Selector, including Line, Area, and StepLine series.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Series Type in Blazor Range Selector
+# Blazor Range Selector Series Type
 
 To render the data, the Range Selector supports three types of series.
 

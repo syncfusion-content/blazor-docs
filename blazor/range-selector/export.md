@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Print and Export in Blazor Range Selector | Syncfusion®
-description: Print the Syncfusion Blazor Range Selector or export it to JPEG, PNG, SVG, PDF, XLSX, or CSV with custom file name and orientation.
+title: Blazor Range Selector Print and Export Examples | SyncfusionÂ®
+description: Learn how to print and export Syncfusion Blazor Range Selector using PrintAsync, or export to image, SVG, and PDF formats.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Print and Export in Blazor Range Selector
+# Blazor Range Selector Print and Export
 
 ## Print
 

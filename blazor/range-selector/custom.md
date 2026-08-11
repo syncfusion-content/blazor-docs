@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Blazor Range Selector | Syncfusion®
-description: Customize the Syncfusion Blazor Range Selector appearance — selected and unselected region colors, thumb shape, fill, and border.
+title: Blazor Range Selector Customization Examples | Syncfusion®
+description: Learn how to customize Syncfusion Blazor Range Selector appearance using RangeNavigatorStyleSettings, SelectedRegionColor, and UnselectedRegionColor.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Customization in Blazor Range Selector
+# Blazor Range Selector Customization
 
 ## Navigator Appearance
 

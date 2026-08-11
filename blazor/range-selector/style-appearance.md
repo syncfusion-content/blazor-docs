@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and Appearance in Blazor Range Selector | Syncfusion®
-description: Style the Syncfusion Blazor Range Selector with CSS — customize background, borders, selected and unselected region fills, and label colors.
+title: Blazor Range Selector Style and Appearance Examples | Syncfusion®
+description: Learn how to customize the style and appearance of Syncfusion Blazor Range Selector using CSS selectors and ID-based styling examples.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Style and Appearance in Blazor Range Selector
+# Blazor Range Selector Style and Appearance
 
 Style and Appearance provide options to customize the visual design of the **Syncfusion Blazor Range Navigator** component, ensuring consistency with your application’s branding and theme.
 

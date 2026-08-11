@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Range Selector | Syncfusion®
-description: Discover how the Syncfusion Blazor Range Selector meets WCAG 2.2, Section 508, ADA, and WAI-ARIA standards with full keyboard navigation.
+title: Blazor Range Selector Accessibility Examples | Syncfusion®
+description: Learn about accessibility in Syncfusion Blazor Range Selector with keyboard navigation, screen reader support, and WCAG 2.2 compliance.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Accessibility in Blazor Range Selector
+# Blazor Range Selector Accessibility
 
 The Blazor Range Selector component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
