@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis Labels in Blazor Charts Component | Syncfusion®
-description: Learn how to customize, position, format, trim, and template axis labels in the Syncfusion Blazor Charts component.
+description: Checkout and learn here all the features about the Axis Labels in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -14,8 +14,6 @@ This section explains how to customize the Blazor Charts axis labels, including 
 A detailed walkthrough for customizing the chart axis labels is provided in the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=FzH0Pl_LnvQ" %}
-
-N> **Prerequisites:** Syncfusion Blazor Charts (NuGet `Syncfusion.Blazor.Charts`) is required. The examples on this page apply to Blazor Server, Blazor WebAssembly, and Blazor Web App (Server/Global) hosting models.
 
 ## Smart Axis Labels
 
@@ -626,7 +624,7 @@ The `<br>` tag can be used to separate a long axis label into multiple lines.
 
 ## Label format
 
-The [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelFormat) property controls how numeric, logarithmic, and date-time axis labels are rendered. It supports standard format strings (for example, `C`, `N`, `P`, `d`, `D`, `t`) and custom placeholders such as `{value}K`. It is not applicable to category axis labels.
+The [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelFormat) property controls how numeric, logarithmic, and date-time axis labels are rendered. It supports standard format strings (for example, `C`, `N`, `P`, `d`, `D`, `t`) and custom placeholders such as `{value}K`. It is primarily used for value-based axes and is not typically used to format Category axis text labels.
 
 For details on label formatting for specific axis types, see:
 
