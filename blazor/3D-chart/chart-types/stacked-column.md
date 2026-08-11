@@ -7,7 +7,7 @@ control: 3D Chart
 documentation: ug
 ---
 
-# Blazor 3D Stacked Column Chart
+# Stacked Column 3D Chart in Blazor
 
 ## Stacked column chart
 

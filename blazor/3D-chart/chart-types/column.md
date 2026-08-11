@@ -7,7 +7,7 @@ control: 3D Chart
 documentation: ug
 ---
 
-# Blazor 3D Column Chart
+# 3D Column Chart in Blazor
 
 ## Column
 
