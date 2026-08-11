@@ -3,13 +3,15 @@ layout: post
 title: Blazor TreeGrid Searching | Syncfusion
 description: Learn how to search data in Blazor TreeGrid using toolbar integration, external triggers, and advanced search customization options.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
 # Searching in Blazor TreeGrid
 
-In a TreeGrid, records can be searched using the [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_SearchAsync_System_String_) method by passing a search key as a parameter. A search textbox can also be integrated into the TreeGrid toolbar by adding the **Search** item to the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar).
+The Blazor TreeGrid includes a built-in search feature that helps locate records quickly across grid data. Users can filter displayed records by entering a search key, which is especially useful for large datasets.
+
+To provide a search box in the UI, add the **Search** item to the toolbar using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar) property. Searching can also be performed programmatically using [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_SearchAsync_System_String_) method.
 
 {% tabs %}
 
@@ -552,5 +554,5 @@ namespace TreeGridComponent.Data {
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVdtcZPzLSoruAK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> * This feature ignores accents for both searching and filtering operations in the Blazor TreeGrid when using an `IEnumerable` data source.
+> * When enabled, accent-insensitive search applies to both searching and filtering operations in the Blazor TreeGrid when using an `IEnumerable` data source.
 > * This feature works only for characters outside the ASCII range.
