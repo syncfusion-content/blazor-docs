@@ -9,18 +9,18 @@ documentation: ug
 
 # Buttons in Blazor In-place Editor Component
 
-The In-place Editor has an option to save and cancel using buttons. The `InPlaceEditorSaveButton` and `InPlaceEditorCancelButton` tags accept the button properties for customizing the save and cancel button.
+The In-place Editor provides options to save and cancel using buttons. The `InPlaceEditorSaveButton` and `InPlaceEditorCancelButton` tags accept button properties for customizing the save and cancel buttons.
 
 Buttons can be shown or hidden by setting a Boolean value to the `ShowButtons` property.
 
-N> Without buttons, the value will be processed in the following ways.
+N> Without buttons, the value is processed in the following ways.
 
-* **ActionOnBlur**: By clicking outside, the editor component gets focus out and do an action based on this property value.
+* **ActionOnBlur**: By clicking outside, the editor component gets focused out and performs an action based on this property value.
 * **SubmitOnEnter**: Pressing the `Enter` key performs the submit action if this property is set to `true`.
 
-In the following sample, the `Content` and `CssClass` properties of the `Button` value are assigned to the `InPlaceEditorSaveButton` and `InPlaceEditorCancelButton` properties to customize its appearance. Also, check or uncheck the checkbox buttons rendered or removed from the editor.
+In the following sample, the `Content` and `CssClass` properties of the Button are assigned to the `InPlaceEditorSaveButton` and `InPlaceEditorCancelButton` to customize their appearance. Check or uncheck the checkbox to render or remove the buttons from the editor.
 
-N> For more details about buttons, refer this documentation [section](../button/getting-started-with-web-app).
+N> For more details about buttons, refer to the [Button documentation](../button/getting-started-with-web-app).
 
 ```cshtml
 
@@ -85,6 +85,6 @@ N> For more details about buttons, refer this documentation [section](../button/
 
 ![Blazor In-place Editor with Buttons](./images/blazor-inplace-editor-with-buttons.webp)
 
-## See Also
+## See also
 
-* [In-place editor buttons](./how-to/dynamic-edit-mode)
+- [Dynamically move In-place Editor to edit mode in Blazor](./how-to/dynamic-edit-mode)

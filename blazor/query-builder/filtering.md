@@ -69,8 +69,6 @@ Creation and deletion can be done through the UI or programmatically.
         }
     };
 
-    public string[] GroupID = new string[] { "group1" };
-
     private void addRule()
     {
         QuerybuilderObj.AddRule(SampRule, "group0");

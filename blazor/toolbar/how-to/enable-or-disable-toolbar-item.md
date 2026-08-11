@@ -9,9 +9,9 @@ documentation: ug
 
 # Enable/Disable Toolbar Item in Blazor Toolbar Component
 
-The `Disabled` property of a Toolbar item enables or disables the item by setting its value to `false` or `true` respectively. In the following code example, the paste action is initially disabled. Clicking the 'Cut' button enables the 'Paste' button.
+The [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Disabled) property of a Toolbar item enables or disables the item by setting its value to `false` or `true`, respectively. In the following code example, the paste action is initially disabled. Clicking the 'Cut' button toggles the 'Paste' button between enabled and disabled states.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
