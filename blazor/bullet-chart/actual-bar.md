@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Actual Bar in Blazor Bullet Chart | Syncfusion®
-description: Render the Actual Bar in Blazor Bullet Chart to display the current value or feature measure by binding a field to the ValueField property.
+title: Blazor Bullet Chart Actual Bar Examples | Syncfusion®
+description: Learn how to render the actual bar (feature measure) in Syncfusion Blazor Bullet Chart by mapping ValueField to your data source.
 platform: Blazor
-control: Bullet Chart 
+control: Bullet Chart
 documentation: ug
 ---
 
-# Actual Bar in Blazor Bullet Chart
+# Blazor Bullet Chart Actual Bar
 
 To display the primary data or the current value of the data being measured known as the **Feature Measure** that should be encoded as a bar. This is called as the **Actual Bar** or the **Feature Bar** in the Bullet Chart, and to display the actual bar the [ValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_ValueField) should be mapped to the appropriate field from the data source.
 

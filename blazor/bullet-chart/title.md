@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Title and Subtitle in Blazor Bullet Chart | Syncfusion®
-description: Add a Title and Subtitle to the Blazor Bullet Chart to describe the plotted data using the Title and Subtitle text properties.
+title: Blazor Bullet Chart Title and Subtitle Examples | Syncfusion®
+description: Learn how to add a title and subtitle to Syncfusion Blazor Bullet Chart, including text, alignment, and font styling options.
 platform: Blazor
-control: Bullet Chart 
+control: Bullet Chart
 documentation: ug
 ---
 
-# Title and Subtitle in Blazor Bullet Chart
+# Blazor Bullet Chart Title and Subtitle
 
 ## Title
 

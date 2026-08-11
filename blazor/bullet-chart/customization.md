@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Blazor Bullet Chart | Syncfusion®
-description: Customize the Blazor Bullet Chart by switching between Horizontal and Vertical orientations and configuring labels, ranges, and styling.
+title: Blazor Bullet Chart Customization Examples | Syncfusion®
+description: Learn how to customize Syncfusion Blazor Bullet Chart, including orientation, flow direction, and overall appearance of the chart.
 platform: Blazor
-control: Bullet Chart 
+control: Bullet Chart
 documentation: ug
 ---
 
-# Customization in Blazor Bullet Chart
+# Blazor Bullet Chart Customization
 
 ## Orientation
 

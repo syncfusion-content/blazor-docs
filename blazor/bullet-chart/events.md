@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Bullet Chart | Syncfusion®
-description: Handle Blazor Bullet Chart events such as Loaded and other actions by wiring up BulletChartEvents to respond to component lifecycle triggers.
+title: Blazor Bullet Chart Events Examples and Reference | Syncfusion®
+description: Learn about events in Syncfusion Blazor Bullet Chart such as Loaded, OnLegendItemRender, and TooltipRender with usage examples.
 platform: Blazor
-control: Bullet Chart 
+control: Bullet Chart
 documentation: ug
 ---
 
-# Events in Blazor Bullet Chart
+# Blazor Bullet Chart Events
 
 This section describes about the [Blazor Bullet](https://www.syncfusion.com/blazor-components/blazor-bullet-chart) Chart component's events that will be triggered when appropriate actions are performed. The events should be provided to the Bullet Chart through the [BulletChartEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html).
 
