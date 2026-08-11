@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Print and Export in Blazor Stock Chart | Syncfusion®
-description: Export the Blazor Stock Chart to JPEG, PNG, SVG, PDF, XLSX, or CSV and print it directly using the period selector toolbar buttons.
+title: Blazor Stock Chart Print and Export | Syncfusion®
+description: Learn how to export the Blazor Stock Chart to JPEG, PNG, SVG, PDF, XLSX, or CSV and print it from the toolbar.
 platform: Blazor
 control: Stock Chart
 documentation: ug
 ---
 
-# Print and Export in Blazor Stock Chart
+# Blazor Stock Chart Print and Export
 
 The rendered stock chart supports exporting to JPEG, PNG, SVG, PDF, XLSX, and CSV through the export dropdown in the period selector toolbar. The required format can be selected from the export dropdown in the stock chart toolbar.
 

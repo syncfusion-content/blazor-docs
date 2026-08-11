@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Stock Chart | Syncfusion®
-description: Add the Blazor Stock Chart to a Blazor Web App using Visual Studio, Visual Studio Code, or the .NET CLI with step-by-step setup.
+title: Getting Started with Blazor Stock Chart in Web App | Syncfusion
+description: Learn how to add the Blazor Stock Chart to a Blazor Web App using Visual Studio, VS Code, or the .NET CLI.
 platform: Blazor
 control: Stock Chart
 documentation: ug
 ---
 
-# Getting Started with Blazor Stock Chart
+# Getting Started with Blazor Stock Chart in Web App
 
 This section briefly explains how to include the [Blazor Stock Chart](https://www.syncfusion.com/blazor-components/blazor-stock-chart) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

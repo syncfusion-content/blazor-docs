@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor Stock Chart | Syncfusion®
-description: Customize the Blazor Stock Chart title font, color, and theme to control background, gridlines, tooltip, and overall visual styling.
+title: Blazor Stock Chart Appearance | Syncfusion®
+description: Learn how to customize the Blazor Stock Chart's title font, color, theme, background, gridlines, tooltip, and overall styling.
 platform: Blazor
 control: Stock Chart
 documentation: ug
 ---
 
-# Appearance in Blazor Stock Chart
+# Blazor Stock Chart Appearance
 
 ## Stock Chart Title
 

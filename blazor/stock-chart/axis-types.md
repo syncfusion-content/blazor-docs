@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Axis Types in Blazor Stock Chart | Syncfusion®
-description: Plot financial data on the Blazor Stock Chart using DateTime, DateTimeCategory, or Logarithmic axis types for time-series and multi-scale series.
+title: Blazor Stock Chart Axis Types | Syncfusion®
+description: Learn how to plot the Blazor Stock Chart with DateTime, DateTimeCategory, or Logarithmic axis types for time-series and multi-scale data.
 platform: Blazor
 control: Stock Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Axis Types in Blazor Stock Chart
+# Blazor Stock Chart Axis Types
 
 ## DateTime Axis
 
