@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pareto in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Pareto chart in Blazor Charts component and much more.
+title: Blazor Pareto Chart Examples and Documentation | Syncfusion®
+description: Learn how to create Blazor Pareto Charts using Syncfusion. Combine column and line series to show individual values and their cumulative totals.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Pareto in Blazor Charts Component
+# Pareto Chart in Blazor
 
 ## Pareto
 

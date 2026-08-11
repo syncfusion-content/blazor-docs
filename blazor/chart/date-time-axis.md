@@ -1,15 +1,15 @@
 ---
 layout: post
-title: DateTime Axis in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about DateTime Axis in Blazor Charts component and much more.
+title: Blazor Charts DateTime Axis Examples | Syncfusion®
+description: Learn how to use the DateTime axis in Syncfusion Blazor Charts. Plot date-time values with a configurable label format such as yyyy or MMM.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
 <!-- markdownlint-disable MD036 -->
 
-# DateTime Axis in Blazor Charts Component
+# Blazor Charts DateTime Axis
 
 ## DateTime axis
 
