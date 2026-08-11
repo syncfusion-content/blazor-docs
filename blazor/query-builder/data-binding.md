@@ -189,7 +189,7 @@ Complex data binding allows you to work with nested objects and subfields. Bind 
         <QueryBuilderColumn Field="Name" Label="Name" Type="ColumnType.Object">
             <QueryBuilderColumns>
                 <QueryBuilderColumn Field="FirstName" Label="First Name" Type="ColumnType.String"></QueryBuilderColumn>
-                <QueryBuilderColumn Field="LasttName" Label="Last Name" Type="ColumnType.String"></QueryBuilderColumn>
+                <QueryBuilderColumn Field="LastName" Label="Last Name" Type="ColumnType.String"></QueryBuilderColumn>
             </QueryBuilderColumns>
         </QueryBuilderColumn>
         <QueryBuilderColumn Field="Country" Label="Country" Type="ColumnType.Object">
@@ -197,7 +197,7 @@ Complex data binding allows you to work with nested objects and subfields. Bind 
                 <QueryBuilderColumn Field="State" Label="State" Type="ColumnType.Object">
                     <QueryBuilderColumns>
                         <QueryBuilderColumn Field="City" Label="City" Type="ColumnType.String"></QueryBuilderColumn>
-                        <QueryBuilderColumn Field="ZipCode" Label="Zip Code" Type="ColumnType.String"></QueryBuilderColumn>
+                        <QueryBuilderColumn Field="Zipcode" Label="Zip Code" Type="ColumnType.String"></QueryBuilderColumn>
                     </QueryBuilderColumns>
                 </QueryBuilderColumn>
                 <QueryBuilderColumn Field="Region" Label="Region" Type="ColumnType.String"></QueryBuilderColumn>

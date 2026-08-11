@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Legend in Blazor Stock Chart Component | Syncfusion®
-description: Check out and learn how to configure and customize the Legends in the Blazor Stock Chart component and much more details.
+title: Blazor Stock Chart Legend | Syncfusion®
+description: Learn how to show a legend on the Blazor Stock Chart at Left, Right, Top, Bottom, or Custom position to identify each series.
 platform: Blazor
-control: Stock Chart 
+control: Stock Chart
 documentation: ug
 ---
 
-# Legend in Blazor Stock Chart Component
+# Blazor Stock Chart Legend
 
 The legend describes the series rendered in the Stock Chart. Enable the legend by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_Visible) option in [StockChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html).
 
