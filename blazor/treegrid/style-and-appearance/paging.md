@@ -17,9 +17,11 @@ The appearance of paging elements in the Blazor TreeGrid can be customized using
 - **Numeric page indicators:** Indicators that jump directly to specific pages.
 - **Current page indicator:** The highlight that marks the active numeric page button.
 
+CSS can be added inline in a `<style>` block or in a separate stylesheet.
+
 ## Customize the pager root element
 
-The **.e-gridpager** class styles the pager root element in the Blazor TreeGrid. Use CSS to adjust its appearance:
+The **.e-gridpager** class styles the pager root element in the Blazor TreeGrid. Apply CSS styling with the `.e-gridpager` class as shown below:
 
 ```css
 .e-treegrid .e-gridpager {
@@ -34,7 +36,7 @@ Properties like **font-family**, **background-color**, and spacing-related style
 
 ## Customize the pager container element
 
-The **.e-pagercontainer** class styles the pager container in the Blazor TreeGrid. Apply CSS to modify its look:
+The **.e-pagercontainer** class styles the pager container in the Blazor TreeGrid. Customize this element with CSS using the `.e-pagercontainer` class:
 
 ```css
 .e-treegrid .e-pagercontainer {
@@ -49,7 +51,7 @@ Properties such as **font-family**, **background-color**, and spacing-related st
 
 ## Customize the pager navigation elements
 
-The **.e-prevpagedisabled**, **.e-prevpage**, **.e-nextpage**, **.e-nextpagedisabled**, **.e-lastpagedisabled**, **.e-lastpage**, **.e-firstpage**, and **.e-firstpagedisabled** classes define the appearance of the pager navigation buttons in the Blazor TreeGrid. Apply CSS to customize their styling:
+The **.e-prevpagedisabled**, **.e-prevpage**, **.e-nextpage**, **.e-nextpagedisabled**, **.e-lastpagedisabled**, **.e-lastpage**, **.e-firstpage**, and **.e-firstpagedisabled** classes define the appearance of the pager navigation buttons in the Blazor TreeGrid. CSS customization of navigation buttons uses the following classes (the `-disabled` suffix applies when navigation is unavailable, such as on the first or last page):
 
 ```css
 .e-treegrid .e-gridpager .e-prevpagedisabled,
@@ -70,7 +72,7 @@ Adjust properties like **background-color** to match the design, while keeping c
 
 ## Customize the pager numeric button elements
 
-The **.e-numericitem** class styles the numeric page buttons in the Blazor TreeGrid. Apply CSS to change their appearance:
+The **.e-numericitem** class styles the numeric page buttons in the Blazor TreeGrid. The `.e-numericitem` class enables styling of numeric page buttons:
 
 ```css
 .e-treegrid .e-gridpager .e-numericitem {
@@ -91,7 +93,7 @@ Modify properties such as **background-color**, **color**, and **hover** effects
 
 ## Customize the current page numeric element
 
-The **.e-currentitem** class styles the current page indicator in the Blazor TreeGrid pager. Use CSS to adjust it:
+The **.e-currentitem** class styles the current page indicator in the Blazor TreeGrid pager. Apply CSS styling to the `.e-currentitem` class to customize the active page indicator:
 
 ```css
 .e-treegrid .e-gridpager .e-currentitem {
