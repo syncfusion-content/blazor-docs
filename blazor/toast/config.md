@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Configuring options in Blazor Toast Component | Syncfusion®
-description: Checkout and learn here all the features about configuring options in Blazor Toast component and more.
+title: Configuring Options in Blazor Toast | Syncfusion
+description: Configure Blazor Toast title, content, templates, progress bar, and built-in styling options.
 platform: Blazor
 control: Toast
 documentation: ug
 ---
 
-# Configuring options in Blazor Toast Component
+# Configuring Options in Blazor Toast
 
 This section explains the steps required to customize the appearance of the toast using built-in APIs.
 

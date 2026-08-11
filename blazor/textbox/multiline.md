@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Multiline in Blazor TextBox Component | Syncfusion®
-description: Checkout and learn here all the features about Multiline in Blazor TextBox component and much more details.
+title: Multiline in Blazor TextBox | Syncfusion
+description: Convert Blazor TextBox into a multiline input using the Multiline property and a textarea element.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Multiline in Blazor TextBox Component
+# Multiline in Blazor TextBox
 
 This feature enables the TextBox to accept multiple lines of text for scenarios such as addresses, descriptions, and comments. When Multiline is enabled, the component renders an HTML textarea element under the hood and supports vertical resizing by default.
 

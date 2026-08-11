@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styling Modes in Blazor OTP Input Component | Syncfusion®
-description: Learn about styling modes in Blazor OTP Input component including Outline, Filled, and Underline styles.
+title: Styling Modes in Blazor OTP Input | Syncfusion
+description: Apply Outlined, Filled, or Underline styling modes to Blazor OTP Input fields.
 platform: Blazor
 control: OTP Input
 documentation: ug
 ---
 
-# Styling Modes in Blazor OTP Input component
+# Styling Modes in Blazor OTP Input
 
 Styling modes specify the visual variants for the input fields in the OTP input component. These modes allow customization of the inputs’ appearance to match application design.
 

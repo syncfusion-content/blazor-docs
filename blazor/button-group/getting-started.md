@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Button Group in WASM App | Syncfusion
-description: Check out and learn here all about getting started with Blazor Button Group component in Blazor WebAssembly App.
+title: Getting Started with Blazor Button Group in Blazor WASM App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Button Group control. Explore setup, features, examples, and customization options.
 platform: Blazor
 control: Button Group
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting started with Blazor Button Group component in Blazor WASM App
+# Getting Started with Blazor Button Group in Blazor WASM App
 
 This section briefly explains how to include [Blazor Button Group](https://www.syncfusion.com/blazor-components/blazor-button-group) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Alignment in Blazor Timeline Component | Syncfusion®
-description: Checkout and learn here all the features about alignment in Blazor Timeline component and more details.
+title: Alignment in Blazor Timeline | Syncfusion
+description: Align Blazor Timeline items to Before, After, Alternate, or AlternateReverse with parallel opposite content support.
 platform: Blazor
 control: Timeline
 documentation: ug
 ---
 
-# Alignment in Blazor Timeline component
+# Alignment in Blazor Timeline
 
 Control the display of timeline content using the [`Alignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_Alignment) property, with options such as [`Before`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html#Syncfusion_Blazor_Layouts_TimelineAlignment_Before), [`After`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html#Syncfusion_Blazor_Layouts_TimelineAlignment_After), [`Alternate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html#Syncfusion_Blazor_Layouts_TimelineAlignment_Alternate), and [`AlternateReverse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html#Syncfusion_Blazor_Layouts_TimelineAlignment_AlternateReverse). The [`oppositeContent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_OppositeContent) is displayed parallel to the main content when configured within the [`TimelineItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html) directive.
 

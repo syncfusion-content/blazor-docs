@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Groups in Blazor TextBox Component | Syncfusion®
-description: Learn how to customize Blazor TextBox by combining icons, floating labels, clear buttons, and multiline features to create enhanced input experiences.
+title: Groups in Blazor TextBox | Syncfusion
+description: Combine Blazor TextBox features such as icons, floating labels, clear buttons, and multiline input.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Groups in Blazor TextBox Component
+# Groups in Blazor TextBox
 
 This section demonstrates how to enhance the TextBox component by combining multiple features such as icons, floating labels, clear buttons, and multiline input. These combinations create rich, user-friendly input experiences that improve usability and visual appeal. Each configuration uses specific APIs to achieve the desired functionality.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Render Week Numbers in Blazor Calendar Component | Syncfusion®
-description: Checkout and learn here all features about rendering week numbers in Blazor Calendar component and much more.
+title: How to render the Calendar with week numbers in Blazor Calendar | Syncfusion®
+description: Render the Blazor Calendar with a leading week-number column to show ISO or culture-specific week numbers for each row of dates.
 platform: Blazor
 control: Calendar
 documentation: ug
 ---
 
-# Week Number in Blazor Calendar Component
+# How to render the Calendar with week numbers in Blazor Calendar
 
 Enable week numbers in the Blazor Calendar to display a leading column with the week number for each row. Week numbering behavior is influenced by the `WeekRule` setting and the first day of the week (culture-specific by default or overridden via `FirstDayOfWeek`).
 

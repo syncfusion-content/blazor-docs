@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles and Appearances in Blazor Toggle Switch Button | Syncfusion®
-description: Learn here all the features about styles and appearances in Blazor Toggle Switch Button component and more.
+title: Style and Appearance in Blazor Toggle Switch Button | Syncfusion
+description: Override default CSS classes to customize Blazor Toggle Switch Button bar, handle, and active states.
 platform: Blazor
 control: Toggle Switch Button 
 documentation: ug
 ---
 
-# Styles and Appearances in Blazor Toggle Switch Button Component
+# Style and Appearance in Blazor Toggle Switch Button
 
 To modify the Switch appearance, the default CSS of Switch component has to be overridden. Find the list of CSS classes and their corresponding sections in the Switch. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 

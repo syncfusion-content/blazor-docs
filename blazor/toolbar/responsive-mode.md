@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Responsive Mode in Blazor Toolbar Component | Syncfusion®
-description: Checkout and learn here all the features about responsive mode in Blazor Toolbar component and much more.
+title: Responsive Mode in Blazor Toolbar | Syncfusion
+description: Handle overflowing Blazor Toolbar items using Scrollable, Popup, MultiRow, or Extended responsive modes.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Responsive Mode in Blazor Toolbar Component
+# Responsive Mode in Blazor Toolbar
 
 This section explains the supported display modes of the Toolbar when the content exceeds the viewing area. Possible modes are:
 

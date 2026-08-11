@@ -1,13 +1,13 @@
 ---
 layout: post
-title: RefreshDataAsync in Blazor MultiSelect Dropdown | Syncfusion®
-description: Checkout and learn here all about RefreshDataAsync method in Blazor MultiSelect Dropdown component and much more details.
+title: RefreshDataAsync in Blazor MultiSelect Dropdown | Syncfusion
+description: Refresh Blazor MultiSelect Dropdown remote data dynamically using the RefreshDataAsync method.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# RefreshDataAsync in Blazor MultiSelect Dropdown Component
+# RefreshDataAsync in Blazor MultiSelect Dropdown
 
 Use the [RefreshDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_RefreshDataAsync) method to refresh the remote data source dynamically without changing the configured [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query). This method re-requests data from the configured endpoint (URL) and updates the popup list.
 

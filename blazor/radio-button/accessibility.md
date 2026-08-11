@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor RadioButton Component | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor RadioButton component with examples and much more details.
+title: Accessibility in Blazor Radio Button | Syncfusion
+description: Learn how Blazor Radio Button supports accessibility with ARIA roles and keyboard navigation.
 platform: Blazor
 control: RadioButton
 documentation: ug
 ---
 
-# Accessibility in Blazor RadioButton component
+# Accessibility in Blazor Radio Button
 
 The Blazor RadioButton component follows established accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/). It also adheres to applicable [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) used to evaluate accessibility.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Numeric TextBox Component | Syncfusion®
-description: Learn about accessibility features in the Blazor Numeric TextBox component including WAI-ARIA support, keyboard navigation, and more.
+title: Accessibility in Blazor Numeric Textbox | Syncfusion
+description: Learn how Blazor Numeric TextBox supports accessibility with WAI-ARIA roles, keyboard navigation, and screen readers.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
 ---
 
-# Accessibility in Blazor Numeric TextBox Component
+# Accessibility in Blazor Numeric Textbox
 
 The [Blazor NumericTextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

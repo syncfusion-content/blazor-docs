@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor TimePicker Component | Syncfusion®
-description: Checkout and learn here all the features about events in Blazor TimePicker component and much more details.
+title: Events in Blazor TimePicker | Syncfusion
+description: Handle Blazor TimePicker events such as ValueChange, OnOpen, OnClose, and OnItemRender.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# Events in Blazor TimePicker Component
+# Events in Blazor TimePicker
 
 This section lists the events exposed by the Blazor TimePicker component and the actions that trigger them.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open the Blazor DateTimePicker popup on Focus | Syncfusion®
-description: Learn how to open the Blazor DateTimePicker popup when the input receives focus by enabling the OpenOnFocus property.
+title: How to open popup on input click in Blazor DateTime Picker | Syncfusion®
+description: Open the Blazor DateTime Picker popup automatically when the input receives focus by enabling the OpenOnFocus property.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 Open the DateTimePicker popup when the input receives focus by setting the [OpenOnFocus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_OpenOnFocus) property to `true`.
 
-The following example opens the DateTimePicker popup on focus.
+The following example demonstrates how to open the DateTimePicker popup when the input is focused.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -19,10 +19,4 @@ The following example opens the DateTimePicker popup on focus.
 <SfDateTimePicker TValue="DateTime?"  OpenOnFocus="true" ShowClearButton="true"></SfDateTimePicker>
 
 ```
-
 ![Opening the Blazor DateTimePicker popup when the input is focused](../images/blazor-datetimepicker-open-focus.gif)
-
-## See also
-
-* [Events in Blazor DateTimePicker](../events)
-* [Disable the Blazor DateTimePicker component](./disable-the-datetimepicker-component)

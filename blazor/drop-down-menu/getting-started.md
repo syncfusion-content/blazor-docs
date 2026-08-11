@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Dropdown Menu in WASM App | Syncfusion
-description: Check out and learn about how to get started with the Blazor Dropdown Menu component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Dropdown Menu in Blazor WASM App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Dropdown Menu control. Explore setup, features, examples, and customization options.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting started with Blazor Dropdown Menu in Blazor WASM App
+# Getting Started with Blazor Dropdown Menu in Blazor WASM App
 
 This guide briefly explains how to add the [Blazor Dropdown Menu](https://www.syncfusion.com/blazor-components/blazor-dropdown-menu) component to a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

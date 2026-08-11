@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Set Tooltip to the Items in Blazor Toolbar Component | Syncfusion®
-description: Learn here all about how to set Blazor Tooltip to the Items in Blazor Toolbar component and much more details.
+title: How to set tooltip to the commands in Blazor Toolbar | Syncfusion
+description: Show tooltips on Blazor Toolbar commands by setting TooltipText on each ToolbarItem.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Set Tooltip to the Items in Blazor Toolbar Component
+# How to set tooltip to the commands in Blazor Toolbar
 
 The [`TooltipText`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TooltipText) property of a Toolbar item sets the hint text that appears on mouse hover.
 

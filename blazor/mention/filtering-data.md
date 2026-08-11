@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filtering data in Blazor Mention Component | Syncfusion®
-description: Checkout and learn here all the features about filtering data in Blazor Mention component and much more details.  
+title: Filtering Data in Blazor Mention | Syncfusion
+description: Filter Blazor Mention suggestions as users type with MinLength control and remote data support.
 platform: Blazor
 control: Mention
 documentation: ug
 ---
 
-# Filtering data in Blazor Mention Component
+# Filtering Data in Blazor Mention
 
 The Mention component has built-in support for filtering data items, which allows you to easily narrow down the list of mention suggestions based on user input. The filter operation begins as soon as the user starts typing characters in the Mention element, and it is designed to quickly and efficiently search through the available data items to find matches based on the entered characters.
 

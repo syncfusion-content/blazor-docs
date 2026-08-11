@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles and Appearances in Blazor Dropdown Menu Component | Syncfusion®
-description: Checkout and learn here all about Styles and Appearances in Blazor Dropdown Menu component and more.
+title: Style and Appearance in Blazor Dropdown Menu | Syncfusion®
+description: Customize the Blazor Dropdown Menu appearance by overriding its default CSS classes or by building a custom theme with the Syncfusion Theme Studio.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
 ---
 
-# Styles and Appearances in Blazor Dropdown Menu Component
+# Style and Appearance in Blazor Dropdown Menu
 
 To modify the appearance of the DropDownButton, override the component’s default CSS. The following CSS classes target the button and popup elements in different states. Custom styles can be added to the application’s stylesheet. Alternatively, create a custom theme using [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=bootstrap5).
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Show/Hide Toolbar Item in Blazor Toolbar Component | Syncfusion®
-description: Checkout and learn here all the features about how to show or hide toolbar item in Blazor Toolbar component and more.
+title: How to show or hide toolbar item in Blazor Toolbar | Syncfusion
+description: Show or hide individual Blazor Toolbar items dynamically using the Visible property of ToolbarItem.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Show/Hide Toolbar Item in Blazor Toolbar Component
+# How to show or hide toolbar item in Blazor Toolbar
 
 The [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Visible) property of a Toolbar item controls its visibility by setting its value to `true` (visible) or `false` (hidden). In the following code example, the paste action is initially hidden. Clicking the 'Cut' button toggles the 'Paste' button between visible and hidden states.
 

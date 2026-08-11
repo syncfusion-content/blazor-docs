@@ -1,23 +1,19 @@
 ---
 layout: post
-title: Icons and submenu Items in Blazor Menu Bar Component | Syncfusion®
-description: Checkout and learn here all about icons and submenu items in Blazor Menu Bar component and much more details.
+title: Icons and Submenu Items in Blazor Menu Bar | Syncfusion
+description: Add icons to Blazor Menu Bar items and submenus using IconCss for clear visual representation of actions.
 platform: Blazor
-control: Menu Bar
+control: Menu Bar 
 documentation: ug
 ---
 
-# Icons and Submenu Items in Blazor Menu Bar Component
+# Icons and Submenu Items in Blazor Menu Bar
 
 ## Icons
 
-A menu item can show an icon to provide a visual representation of its action. To place an icon on a menu item, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_IconCss) property with the required icon CSS. By default, the icon is positioned at the left of the menu item. 
-
-In the following sample, the icons of `File` and `Edit` menu items and the `Open`, `Save`, `Cut`, `Copy`, and `Paste` submenu items are added using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_IconCss) property. The `<MenuItem Separator="true">` element renders a horizontal divider between sibling items.
+The menu item contains an icon/image in it to provide a visual representation of an action. To place the icon on a menu item, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_IconCss) property with the required icon CSS. By default, the icon is positioned at the left of the menu item. In the following sample, the icons of `File` and `Edit` menu items and `Open`, `Save`, `Cut`, `Copy`,and `Paste` sub menu items are added using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_IconCss) property.
 
 ```cshtml
-@using Syncfusion.Blazor.Navigations
-
 <SfMenu TValue="MenuItem">
     <MenuItems>
         <MenuItem Text="File" IconCss="e-icons e-file">

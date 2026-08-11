@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization with Blazor Message Component | Syncfusion®
-description: Checkout and learn about Customization with Blazor Message component in Blazor Server App and Blazor WebAssembly App.
+title: Customization in Blazor Message | Syncfusion
+description: Customize Blazor Message content alignment and border styles to match your application design.
 platform: Blazor
 control: Message
 documentation: ug
 ---
 
-# Customization in Blazor Message Component
+# Customization in Blazor Message
 
 The Message component allows the user to customize the content display positions and appearance. This section explains the details about changing the content alignments and border styles for messages.
 

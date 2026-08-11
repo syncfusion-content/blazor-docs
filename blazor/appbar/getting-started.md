@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor AppBar in Blazor WASM App | Syncfusion 
-description: Check out and learn about getting started with Blazor AppBar component in Blazor WebAssembly Application.
+title: Getting Started with Blazor AppBar in Blazor WASM App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor AppBar control. Explore setup, features, examples, and customization options.
 platform: Blazor
 control: AppBar
 documentation: ug
 ---
 
-# Getting Started with Blazor AppBar Component in Blazor WASM App
+# Getting Started with Blazor AppBar in Blazor WASM App
 
 This section briefly explains how to include [Blazor AppBar](https://www.syncfusion.com/blazor-components/blazor-appbar) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

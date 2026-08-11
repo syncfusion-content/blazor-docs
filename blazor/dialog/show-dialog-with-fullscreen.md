@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Show Dialog with full screen in Blazor Dialog Component | Syncfusion®
-description: Checkout and learn here all about Show Dialog with full screen in Blazor Dialog component and much more details.
+title: Full Screen in Blazor Dialog | Syncfusion®
+description: Open the Blazor Dialog in full-screen mode to maximize the content area, useful for editors, previews, and immersive workflows.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Show Dialog with full screen in Blazor Dialog Component
+# Full Screen in Blazor Dialog
 
 You can show the dialog in full screen by passing `true` as argument to the dialog [`ShowAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_ShowAsync_System_Nullable_System_Boolean__) method. By using the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Visible) property, you can prevent the dialog from showing initially.
 

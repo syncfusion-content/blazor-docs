@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Query Builder in Server App | Syncfusion
-description: Check out and learn the documentation for getting started with Blazor Query Builder Components in Blazor Server App.
+title: Getting Started with Blazor Query Builder in Blazor Server App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Query Builder in a Blazor Server app with setup steps.
 platform: Blazor
 component: Query Builder
 documentation: ug
 ---
 
-# Getting Started with Blazor Query Builder in Server App
+# Getting Started with Blazor Query Builder in Blazor Server App
 
 This section briefly explains how to include the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

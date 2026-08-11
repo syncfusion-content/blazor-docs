@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open the Blazor DatePicker popup on Focus | Syncfusion®
-description: Learn here all the features about opening the Blazor DatePicker popup upon focusing input and much more.
+title: How to open the DatePicker popup on Focus in Blazor DatePicker | Syncfusion®
+description: Open the Blazor DatePicker popup automatically when the user focuses the input, with the ShowPopupOnFocus property for keyboard-only interaction.
 platform: Blazor
 control: DatePicker
 documentation: ug

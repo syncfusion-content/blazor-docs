@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Nested list in Blazor ListView Component | Syncfusion®
-description: Checkout and learn here all the features about nested list in Blazor ListView component and much more details.
+title: Nested List in Blazor ListView | Syncfusion
+description: Render hierarchical lists in Blazor ListView by mapping the Child field to nested data collections.
 platform: Blazor
 control: Listview
 documentation: ug
 ---
 
-# Nested list in Blazor ListView Component
+# Nested List in Blazor ListView
 
 The ListView component supports Nested list. For that, the [`Child`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html#Syncfusion_Blazor_Lists_ListViewFieldSettings_1_Child) property should be defined for the nested list in the array of JSON.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Group dropdown listview items in Blazor Dropdown Menu| Syncfusion®
-description: Learn here all about grouping dropdown listview items in Blazor Dropdown Menu component and much more details.
+title: How to group popup items with ListView in Blazor Dropdown Menu | Syncfusion®
+description: Group popup items in the Blazor Dropdown Menu by combining it with a ListView component to display categorized actions.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
 ---
 
-# Group dropdown listview items in Blazor Dropdown Menu Component
+# How to group popup items with ListView in Blazor Dropdown Menu
 
 Header sections within the Dropdown Menu popup can be created by templating the popup with the ListView component. Assign a ListView instance (identified by its [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_ID)) to the [PopupContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_PopupContent) property of the Dropdown Menu component, and configure field mappings to group the items.
 

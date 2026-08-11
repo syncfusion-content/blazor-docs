@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor DateTime Picker in Web App | Syncfusion
-description: Check out and learn how to get started with the Blazor DateTime Picker component in a Blazor Web App.
+title: Getting Started with Blazor DateTime Picker in Blazor Web App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor DateTime Picker control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: DateTime Picker
 documentation: ug

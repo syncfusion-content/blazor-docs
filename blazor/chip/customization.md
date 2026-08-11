@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Blazor Chip Component | Syncfusion®
-description: Checkout and learn here all the features about Customization in the Blazor Chip component and much more.
+title: Style and Appearance in Blazor Chips | Syncfusion®
+description: Customize the Blazor Chips appearance, including leading and trailing icons, avatar, and custom CSS styles for selected and default states.
 platform: Blazor
-control: Chip
+control: Chips
 documentation: ug
 ---
 
-# Customization in Blazor Chip Component
+# Style and Appearance in Blazor Chips
 
 This section explains how to customize styles, leading icons, avatars, trailing icons, outline chips, and templates in the Chip component.
 

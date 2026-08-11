@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Form Integration in Blazor File Upload Component | Syncfusion®
-description: Learn how to integrate the Blazor File Upload component with Blazor's EditForm and DataForm for seamless form-based file management.
+title: Form Integration in Blazor File Upload | Syncfusion
+description: Integrate Blazor File Upload with EditForm and DataForm for validated, model-bound file uploads.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# Form Integration in Blazor File Upload Component
+# Form Integration in Blazor File Upload
 
 The Blazor File Upload component seamlessly integrates with Blazor's [EditForm](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/?view=aspnetcore-9.0) and the [DataForm](https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app), enabling you to build robust forms with file upload functionality. This integration associates the uploaded file information with a data model, leveraging the form's built-in validation.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Toast in Blazor Web App | Syncfusion®
-description: Check out and learn the documentation for getting started with Blazor Toast Components in Blazor Web App.
+title: Getting Started with Blazor Toast in Blazor Web App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Toast in a Blazor Web App with setup steps.
 platform: Blazor
 control: Toast
 documentation: ug
 ---
 
-# Getting Started with Blazor Toast Component in Blazor Web App
+# Getting Started with Blazor Toast in Blazor Web App
 
 This section explains how to add the [Blazor Toast](https://www.syncfusion.com/blazor-components/blazor-toast) component to a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

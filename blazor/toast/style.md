@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and appearance in Blazor Toast Component | Syncfusion®
-description: Checkout and learn here all the features about style and appearance in Blazor Toast component and more.
+title: Style and Appearance in Blazor Toast | Syncfusion
+description: Customize Blazor Toast title, content, icon, and container styles using CSS selectors.
 platform: Blazor
 control: Toast
 documentation: ug
 ---
 
-# Style and appearance in Blazor Toast Component
+# Style and Appearance in Blazor Toast
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Value Binding in Blazor MultiColumn ComboBox Component | Syncfusion®
-description: Checkout and learn here all the features about value binding in Blazor MultiColumn ComboBox component and much more details.
+title: Value Binding in Blazor MultiColumn ComboBox | Syncfusion
+description: Bind selected values and indexes in Blazor MultiColumn ComboBox with @bind-Value and @bind-Index.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
 ---
 
-# Value Binding in MultiColumn ComboBox
+# Value Binding in Blazor MultiColumn ComboBox
 
 Value binding synchronizes the selected value between the Blazor MultiColumn ComboBox and the parent component. The control supports two binding approaches:
 - `@bind-Value` to bind the selected value

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and appearance in Blazor Splitter Component | Syncfusion®
-description: Checkout and learn here all about style and appearance in Blazor Splitter component much more details.
+title: Style and Appearance in Blazor Splitter | Syncfusion
+description: Customize Blazor Splitter split bars, panes, and icons using CSS variables and class overrides.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# Style and appearance in Blazor Splitter Component
+# Style and Appearance in Blazor Splitter
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

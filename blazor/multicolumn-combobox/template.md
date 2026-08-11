@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor MultiColumn ComboBox Component | Syncfusion®
-description: Checkout and learn here all about Templates in the Blazor MultiColumn ComboBox component and much more.
+title: Templates in Blazor MultiColumn ComboBox | Syncfusion
+description: Customize Blazor MultiColumn ComboBox header and popup content using HeaderTemplate and templates.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
 ---
 
-# Templates in Blazor MultiColumn ComboBox Component
+# Templates in Blazor MultiColumn ComboBox
 
 The Blazor MultiColumn ComboBox supports templating options to customize specific UI elements without altering core behavior. Templates enable adding custom content and layout to improve clarity, branding, or usability.
 

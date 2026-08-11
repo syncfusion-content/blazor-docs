@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize Blazor TreeView nodes based on levels | Syncfusion®
-description: Learn here all about how to customize the tree nodes based on levels in Blazor TreeView component and much more details.
+title: How to customize tree nodes by level in Blazor TreeView | Syncfusion
+description: Style Blazor TreeView nodes by depth using built-in e-level CSS classes.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Customize Tree Nodes Based on Levels in Blazor TreeView Component
+# How to customize tree nodes by level in Blazor TreeView
 
 The tree nodes can be customized level wise by adding custom [**CssClass**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CssClass) to the component and enabling styles. The Blazor TreeView automatically applies CSS classes like `e-level-0`, `e-level-1`, `e-level-2`, and so on, to nodes at different depths, allowing for precise styling.
 

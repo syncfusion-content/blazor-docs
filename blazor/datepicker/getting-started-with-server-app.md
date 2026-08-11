@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor DatePicker in Server App | Syncfusion
-description: Check out and learn about how to get started with the Blazor DatePicker component in a Blazor Server App.
+title: Getting Started with Blazor DatePicker in Blazor Server App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor DatePicker control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: DatePicker
 documentation: ug
 ---
 
-# Getting Started with Blazor DatePicker Component in Blazor Server App
+# Getting Started with Blazor DatePicker in Blazor Server App
 
 This section briefly explains how to include the [Blazor DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

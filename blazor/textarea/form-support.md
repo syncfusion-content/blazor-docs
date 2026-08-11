@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Form Support in Blazor TextArea Component | Syncfusion®
-description: Checkout and learn the features about the Form support of the Blazor Textarea component and much more details.
+title: Form Support in Blazor TextArea | Syncfusion
+description: Use Blazor TextArea inside HTML forms and EditForm to capture and submit multiline text.
 platform: Blazor
 control: TextArea
 documentation: ug
 ---
 
-# Form Support in Blazor TextArea Component
+# Form Support in Blazor TextArea
 
 The TextArea component integrates with HTML forms and Blazor’s EditForm to capture and submit multiline text efficiently. Common scenarios include collecting detailed feedback, descriptions, and other long-form inputs as part of a form submission. For a Working example, see the TextArea forms and validation demo for a working example: TextArea forms and validation demo.
 

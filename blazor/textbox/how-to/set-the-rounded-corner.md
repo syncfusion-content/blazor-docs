@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Set the Rounded Corner in Blazor TextBox Component | Syncfusion®
-description: Checkout and learn here all about how to set the rounded corner in Blazor TextBox component and much more details.
+title: How to set the rounded corner in Blazor TextBox | Syncfusion
+description: Apply rounded corners to Blazor TextBox using a custom CSS class with the CssClass property.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Set the Rounded Corner in Blazor TextBox Component
+# How to set the rounded corner in Blazor TextBox
 
 Render the TextBox with rounded corners by applying a custom CSS class via the component’s [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_CssClass) property and styling the input wrapper.
 

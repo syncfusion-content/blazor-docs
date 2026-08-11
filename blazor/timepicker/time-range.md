@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Time Range in Blazor TimePicker Component | Syncfusion®
-description: Checkout and learn here all the features about Time Range in Blazor TimePicker component and much more.
+title: Time Range in Blazor TimePicker | Syncfusion
+description: Limit selectable Blazor TimePicker values using the Min and Max properties.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# Time Range in Blazor TimePicker Component
+# Time Range in Blazor TimePicker
 
 TimePicker provides an option to select a time value within a specified range by using the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_Max) properties. The Min value should always be lesser than the Max value. The `Value` property depends on the Min/Max with respect to [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_StrictMode) property. 
 

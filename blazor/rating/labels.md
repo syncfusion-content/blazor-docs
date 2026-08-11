@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Labels in Blazor Rating Component | Syncfusion®
-description: Checkout and learn here all about Labels with Blazor Rating component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
+title: Labels in Blazor Rating | Syncfusion
+description: Display the current value label in Blazor Rating using the ShowLabel property.
 platform: Blazor
 control: Rating
 documentation: ug
 ---
 
-# Labels in Blazor Rating Component
+# Labels in Blazor Rating
 
 Use the [ShowLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ShowLabel) property to display a label that shows the current rating value. By default, `ShowLabel` is `false`. When set to `true`, the label is rendered.
 

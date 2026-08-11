@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Value Binding in Blazor MultiSelect Component | Syncfusion®
-description: Checkout and learn here all about Value Binding in Blazor MultiSelect component and much more details.
+title: Value Binding in Blazor MultiSelect Dropdown | Syncfusion
+description: Bind single or multiple selected values in Blazor MultiSelect Dropdown using @bind-Value.
 platform: Blazor
-control: MultiSelect
+control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Value Binding in MultiSelect
+# Value Binding in Blazor MultiSelect Dropdown
 
 Value binding is the process of passing values between a component and its parent. There are two methods for binding values. These are:
 

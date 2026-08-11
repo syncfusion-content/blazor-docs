@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Context Menu in WASM App | Syncfusion
-description: Check out and learn about getting started with Blazor Context Menu component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Context Menu in Blazor WASM App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Context Menu control. Explore setup, features, examples, and customization options.
 platform: Blazor
 control: Context Menu
 documentation: ug

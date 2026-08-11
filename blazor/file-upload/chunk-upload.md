@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Chunk Upload in Blazor File Upload Component | Syncfusion®
-description: Checkout and learn here all about Chunk Upload in Blazor File Upload component and and much more details.
+title: Chunk Upload in Blazor File Upload | Syncfusion
+description: Upload large files reliably in Blazor File Upload by splitting them into chunks with pause, resume, and retry support.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# Chunk Upload in Blazor File Upload Component 
+# Chunk Upload in Blazor File Upload
 
 ### Description 
 

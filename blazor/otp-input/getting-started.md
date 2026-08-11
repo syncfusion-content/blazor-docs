@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor OTP Input in Blazor WASM App | Syncfusion
-description: Check out and learn about getting started with Blazor OTP Input component in Blazor WebAssembly Application.
+description: Learn how to get started with the Syncfusion Blazor OTP Input in a Blazor WebAssembly app with installation and setup steps.
 platform: Blazor
 control: OTP Input
 documentation: ug

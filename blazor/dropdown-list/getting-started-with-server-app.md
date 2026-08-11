@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Blazor Dropdown List in Server App | Syncfusion
-description: Check out and learn about how to get started with the Blazor Dropdown List component in Blazor Server Application.
+title: Getting Started with Blazor Dropdown List in Blazor Server App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Dropdown List in a Blazor Server app with installation and configuration steps.
 platform: Blazor
 control: Dropdown List
 documentation: ug

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles and Appearances in Blazor QueryBuilder Component | Syncfusion®
-description: Checkout and learn here all about Styles and Appearances in Blazor QueryBuilder component with examples and much more details.
+title: Style and Appearance in Blazor Query Builder | Syncfusion
+description: Customize Blazor Query Builder appearance with CSS selectors and custom themes using Theme Studio.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Styles and Appearances in Blazor QueryBuilder Component
+# Style and Appearance in Blazor Query Builder
 
 Customize the appearance of the Query Builder by overriding the component’s default CSS. The following table lists commonly used CSS selectors and the corresponding UI areas they affect. For consistent theming across applications, consider generating a custom theme with [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 

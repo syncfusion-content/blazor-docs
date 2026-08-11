@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Set disabled state in Blazor Toggle Switch Button | Syncfusion®
-description: Learn here all about how to set disabled state in Blazor Toggle Switch Button component and much more details.
+title: How to set disabled state in Blazor Toggle Switch Button | Syncfusion
+description: Disable Blazor Toggle Switch Button interaction by setting the Disabled property to true.
 platform: Blazor
 control: Toggle Switch Button 
 documentation: ug
 ---
 
-# Set disabled state in Blazor Toggle Switch Button Component
+# How to set disabled state in Blazor Toggle Switch Button
 
 The Toggle Switch Button can be disabled by setting the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfInputBase-1.html#Syncfusion_Blazor_Buttons_SfInputBase_1_Disabled) property to `true`.
 

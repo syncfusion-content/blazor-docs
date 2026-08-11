@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Integration in Blazor TreeView Component | Syncfusion®
-description: Checkout and learn here all the features about Integration in Blazor TreeView component and much more.
+title: Integration in Blazor TreeView | Syncfusion
+description: Integrate Context Menu, Badge, Sidebar, and icon libraries with Blazor TreeView.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Integration in Blazor TreeView Component
+# Integration in Blazor TreeView
 
 A Context Menu, Badge, Sidebar, Error boundary components, and Icon library can all be integrated into the Blazor TreeView component.
 

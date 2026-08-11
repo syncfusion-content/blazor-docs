@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sorting in Blazor MultiSelect Component | Syncfusion®
-description: Checkout and learn here all about Sorting functionality in Blazor MultiSelect component and much more details.
+title: Sorting in Blazor MultiSelect Dropdown | Syncfusion
+description: Sort Blazor MultiSelect Dropdown items in ascending, descending, or original order with SortOrder.
 platform: Blazor
-control: MultiSelect
+control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Sorting in Blazor MultiSelect Component
+# Sorting in Blazor MultiSelect Dropdown
 
 Enable sorting of items in ascending or descending order by setting the [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_SortOrder) property.
 

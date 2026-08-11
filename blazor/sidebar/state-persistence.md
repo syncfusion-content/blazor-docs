@@ -1,13 +1,13 @@
 ---
 layout: post
-title: State Persistence in Blazor Sidebar Component | Syncfusion®
-description: Checkout and learn about State Persistence in Blazor Sidebar component in Blazor Server App and Blazor WebAssembly App.
+title: State Persistence in Blazor Sidebar | Syncfusion
+description: Persist Blazor Sidebar open or close state in localStorage using the EnablePersistence property.
 platform: Blazor
 control: Sidebar
 documentation: ug
 ---
 
-# State Persistence in Blazor Sidebar Component
+# State Persistence in Blazor Sidebar
 
 State persistence allows the Sidebar component to retain the [`IsOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_IsOpen) property value in [`localStorage`](https://www.w3schools.com/html/html5_webstorage.asp) for maintaining its state, even when the browser is refreshed or when navigating to a different page within the same browser session.
 

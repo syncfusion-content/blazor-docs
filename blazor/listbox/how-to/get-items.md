@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Get Items in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all about getting items by value using a method in the Blazor ListBox component and much more details.
+title: How to get items in Blazor ListBox | Syncfusion
+description: Retrieve matching data items from Blazor ListBox by value using the GetDataByValue method.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Get Items in Blazor ListBox Component
+# How to get items in Blazor ListBox
 
 The [GetDataByValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_GetDataByValue__0_) method returns the data item or items corresponding to the value or values provided, based on the field mapped to `Value` in `ListBoxFieldSettings`. If a provided value does not match any item, that value is ignored and is not included in the result.
 

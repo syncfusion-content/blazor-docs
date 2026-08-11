@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility with Blazor Carousel Component | Syncfusion®
-description: Checkout and learn about accessibility with Blazor Carousel component in Blazor Server App and Blazor WebAssembly App.
+title: Accessibility in Blazor Carousel | Syncfusion®
+description: Learn how Blazor Carousel meets WAI-ARIA standards with aria-label, aria-current, aria-live, and full keyboard navigation for screen readers.
 platform: Blazor
 control: Carousel
 documentation: ug
 ---
 
-# Accessibility in Blazor Carousel component
+# Accessibility in Blazor Carousel
 
 The [Blazor Carousel](https://www.syncfusion.com/blazor-components/blazor-carousel) component is designed in accordance with the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/carousel/) specification, applying the appropriate roles, states, and properties along with keyboard support. This makes it usable for people who rely on assistive technologies. The accessibility support is achieved through attributes like `aria-label`, `aria-current`, `aria-live`, `role`, and `aria-hidden`, which provide information about the elements in a document to assistive technology. The component implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/) and has been tested with major screen readers, including NVDA, JAWS, and VoiceOver.
 

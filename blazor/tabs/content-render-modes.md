@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Content Render Modes in Blazor Tabs Component | Syncfusion®
-description: Checkout and learn here all the features about content render modes in Blazor Tabs component and more.
+title: Content Render Modes in Blazor Tabs | Syncfusion
+description: Choose dynamic, on-demand, or initial render modes to control how Blazor Tabs content loads in the DOM.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Content Render Modes in Blazor Tabs Component
+# Content Render Modes in Blazor Tabs
 
 In [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs), the content of the Tabs can be rendered based on the scenario. The content rendering of tabs can be done by the following three different ways.
 

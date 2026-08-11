@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Timeline Component | Syncfusion®
-description: Checkout and learn here the features all about events section in Blazor Timeline component and more details.
+title: Events in Blazor Timeline | Syncfusion
+description: Handle Blazor Timeline events such as Created when rendering completes and item interactions fire.
 platform: Blazor
 control: Timeline
 documentation: ug
 ---
 
-# Events in Blazor Timeline component
+# Events in Blazor Timeline
 
 This section describes the Blazor Timeline events, which are triggered when specific actions are performed. The following events are available in the Timeline component.
 

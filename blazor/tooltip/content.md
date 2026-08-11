@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Content in Blazor Tooltip Component | Syncfusion®
-description: Checkout and learn here all the features about content in Blazor Tooltip component and much more details.
+title: Content in Blazor Tooltip | Syncfusion
+description: Display simple text, HTML, or template content in Blazor Tooltip based on target interaction.
 platform: Blazor
 control: Tooltip
 documentation: ug
 ---
 
-# Content in Blazor Tooltip Component
+# Content in Blazor Tooltip
 
 The Blazor Tooltip component allows you to display additional information when users hover over or interact with elements on your web page. Here's how you can explore and implement various content within your Tooltip to enhance its functionality and appearance.
 

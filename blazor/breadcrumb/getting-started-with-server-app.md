@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Breadcrumb in Server App | Syncfusion
-description: Check out and learn about the documentation for getting started with Blazor Breadcrumb Component in Blazor Server App.
+title: Getting Started with Blazor Breadcrumb in Blazor Server App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Breadcrumb control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Breadcrumb
 documentation: ug
 ---
 
-# Getting started with Blazor Breadcrumb component in Blazor Server App
+# Getting Started with Blazor Breadcrumb in Blazor Server App
 
 This section briefly explains how to include [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

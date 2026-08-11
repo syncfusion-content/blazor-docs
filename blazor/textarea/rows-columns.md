@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Rows and Columns count in Blazor TextArea Component | Syncfusion®
-description: Learn about adjusting the rows and columns of the Blazor TextArea component. Explore features like resizing, auto-expand, and text formatting options.
+title: Rows and Columns in Blazor TextArea | Syncfusion
+description: Set Blazor TextArea dimensions with RowCount and ColumnCount for initial visible lines and width.
 platform: Blazor
 control: TextArea
 documentation: ug
 ---
 
-# Rows and Columns in Blazor TextArea Component
+# Rows and Columns in Blazor TextArea
 
 The TextArea size can be tailored for layout and readability using properties that map to native textarea behavior. The rows setting controls the initial visible number of lines (vertical size), and the columns setting represents the initial visible width in characters per line (approximate, depending on font and CSS). These settings affect only the initial visible area; content can still exceed the view, and scrollbars may appear based on overflow settings.
 

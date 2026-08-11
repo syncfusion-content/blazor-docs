@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Grid Settings in Blazor MultiColumn ComboBox | Syncfusion®
-description: Checkout and learn here all about Gridlines in Blazor MultiColumn ComboBox component and much more details.
+title: Grid Settings in Blazor MultiColumn ComboBox | Syncfusion
+description: Customize Blazor MultiColumn ComboBox popup gridlines and alternate row styling using GridSettings.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
 ---
 
-# Grid Settings in Blazor MultiColumn ComboBox Component
+# Grid Settings in Blazor MultiColumn ComboBox
 
 ## Setting the Gridlines
 

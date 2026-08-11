@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Enable Scroller in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all about enable scroller in Blazor ListBox component and and much more details.
+title: How to enable scroller in Blazor ListBox | Syncfusion
+description: Enable scrolling in Blazor ListBox by setting the Height property on the component.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Enable Scroller in Blazor ListBox Component
+# How to enable scroller in Blazor ListBox
 
 The Blazor ListBox supports scrolling when its visible height is restricted. By default, the ListBox auto-calculates its height to fit all items, so the scroller does not appear. Use the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_Height) property to set a fixed height and enable the scroller. In the following example, the `Height` of the ListBox is set to `250px`, which is smaller than the combined height of the eight items and causes the scrollbar to appear.
 

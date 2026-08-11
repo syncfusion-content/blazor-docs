@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor In-place Editor Component | Syncfusion®
-description: Checkout and learn here all about Native Events in Blazor In-place Editor component and much more details.
+title: Native Events in Blazor In-place Editor | Syncfusion
+description: Bind native mouse and keyboard events such as onmousedown and onkeydown to Blazor In-place Editor.
 platform: Blazor
 control: In-place Editor  
 documentation: ug
 ---
 
-# Overview of Native Events
+# Native Events in Blazor In-place Editor
 
 You can define a native event by using the `on<event>` attribute on a component. The value of the attribute is treated as an event handler. The event-specific data is available in the event arguments.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Floating Label in Blazor TextArea Component | Syncfusion®
-description: Checkout and learn the features about the Floating Label of the Blazor Textarea component and much more details.
+title: Floating Label in Blazor TextArea | Syncfusion
+description: Use FloatLabelType in Blazor TextArea to float the placeholder above the input on focus or always.
 platform: Blazor
 control: TextArea
 documentation: ug
 ---
 
-# Floating Label in Blazor TextArea Component
+# Floating Label in Blazor TextArea
 
 The floating label displays the placeholder as a label above the TextArea while the user interacts with it, improving readability and saving space in forms. Control this behavior using the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_FloatLabelType) property. By default, the floating label is disabled (Never).
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Dashboard Layout in WASM App | Syncfusion
-description: Check out and learn about getting started with Blazor Dashboard Layout component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Dashboard Layout in Blazor WASM App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Dashboard Layout control. Explore setup, features, examples, and customization options.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
 ---
 
-# Getting Started with Blazor Dashboard Layout component in WASM App
+# Getting Started with Blazor Dashboard Layout in Blazor WASM App
 
 This section briefly explains how to include the [Blazor Dashboard Layout](https://www.syncfusion.com/blazor-components/blazor-dashboard) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

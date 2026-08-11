@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor Rating Component | Syncfusion®
-description: Checkout and learn here all about Appearance with Blazor Rating component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
+title: Style and Appearance in Blazor Rating | Syncfusion
+description: Customize Blazor Rating appearance including item count, colors, and shapes to match your design.
 platform: Blazor
 control: Rating
 documentation: ug
 ---
 
-# Appearance in Blazor Rating Component
+# Style and Appearance in Blazor Rating
 
 The appearance of the Blazor Rating component can be customized to match application design requirements.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sorting and Grouping in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all the features about sorting and grouping in Blazor ListBox component and much more.
+title: Sorting and Grouping in Blazor ListBox | Syncfusion
+description: Sort and group Blazor ListBox items by category using SortOrder and the GroupBy field mapping.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Sorting and Grouping in Blazor ListBox Component
+# Sorting and Grouping in Blazor ListBox
 
 ## Sorting
 

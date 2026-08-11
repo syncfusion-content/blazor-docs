@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Query Builder Component | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor Query Builder component with examples and much more details.
+title: Accessibility in Blazor Query Builder | Syncfusion
+description: Learn how Blazor Query Builder supports accessibility with ARIA roles and keyboard navigation.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Accessibility in Blazor Query Builder component
+# Accessibility in Blazor Query Builder
 
 The Blazor Query Builder follows widely accepted accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

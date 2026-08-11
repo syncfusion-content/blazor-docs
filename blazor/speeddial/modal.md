@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Modal in Blazor SpeedDial Component | Syncfusion®
-description: Checkout and learn about how to use modal in Blazor SpeedDial component to add overlay to prevent interaction. 
+title: Modal in Blazor Speed Dial | Syncfusion
+description: Enable modal overlay in Blazor Speed Dial to block background interaction while action items are open.
 platform: Blazor
 control: SpeedDial
 documentation: ug
 ---
 
-# Modal in Blazor SpeedDial Component
+# Modal in Blazor Speed Dial
 
 Use the [IsModal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_IsModal) property to enable modal behavior for the SpeedDial. When enabled, the component displays an overlay while the action items are open, preventing interaction with background content and keeping focus on the speed dial actions.
 

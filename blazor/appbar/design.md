@@ -1,15 +1,13 @@
 ---
 layout: post
-title: Design User Interface with Blazor AppBar Component | Syncfusion®
-description: Check out and learn about Design User Interface with the Blazor AppBar component in the Blazor Server App and the Blazor WebAssembly App.
+title: Design in Blazor AppBar | Syncfusion®
+description: Compose Blazor AppBar layouts using AppBarSpacer to add variable spacing between buttons and content for flexible app-bar layouts.
 platform: Blazor
 control: AppBar
 documentation: ug
 ---
 
-# Design User Interface with Blazor AppBar Component
-
-The Blazor AppBar can host a variety of child components to build a fully functional application header. This section covers the common UI design patterns available with the AppBar component, including spacers, separators, media queries, menus, buttons, and integration with the Sidebar component.
+# Design in Blazor AppBar
 
 ## Spacer
 

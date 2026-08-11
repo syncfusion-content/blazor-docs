@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open Numeric Keyboard in Numeric TextBox | Syncfusion®
-description: Learn how to configure Blazor Numeric TextBox to display the numeric keyboard on mobile and touch devices.
+title: How to open numeric keyboard in Blazor Numeric Textbox | Syncfusion
+description: Configure Blazor Numeric TextBox to show a numeric keyboard on mobile and touch devices.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
 ---
 
-# Open Numeric Keyboard in Numeric TextBox Component
+# How to open numeric keyboard in Blazor Numeric Textbox
 
 On mobile and touch devices, providing a numeric keyboard improves data entry for number inputs. This topic explains how to hint supported browsers to show a numeric keypad while keeping the Numeric TextBox behavior intact.
 

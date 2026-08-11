@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles and Appearance in Blazor Sidebar Component | Syncfusion®
-description: Checkout and learn here all the features about styles and appearance in Blazor Sidebar component and more.
+title: Styles and Appearance in Blazor Sidebar | Syncfusion
+description: Customize Blazor Sidebar appearance using CSS selectors and custom themes.
 platform: Blazor
 control: Sidebar
 documentation: ug
 ---
 
-# Styles and Appearance in Blazor Sidebar Component
+# Styles and Appearance in Blazor Sidebar
 
 The following content provides the exact CSS structure that can be used to modify the component's appearance based on the user's preference.
 

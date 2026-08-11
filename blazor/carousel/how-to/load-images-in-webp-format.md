@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Load webp format image with Blazor Carousel Component | Syncfusion®
-description: Checkout and learn about how to load webp format image with Blazor Carousel component in Blazor Server App and Blazor WebAssembly App.
+title: How to load images in webp format in Blazor Carousel | Syncfusion®
+description: Load webp-format images in the Blazor Carousel to reduce file size and improve page-load performance compared to JPEG and PNG.
 platform: Blazor
 control: Carousel
 documentation: ug
 ---
 
-# Load WebP images in Blazor Carousel component
+# How to load images in webp format in Blazor Carousel
 
 The Carousel can display images in [WebP](https://developers.google.com/speed/webp) format by setting the `src` attribute of each slide's `<img>` element to a WebP file. The Carousel component requires no special configuration for WebP; the browser handles the rendering natively.
 

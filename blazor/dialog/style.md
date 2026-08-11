@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and appearance in Blazor Dialog Component | Syncfusion®
-description: Checkout and learn here all the features about Style and appearance in Blazor Dialog component and much more details.
+title: Dialog Customization in Blazor Dialog | Syncfusion®
+description: Customize the Blazor Dialog appearance and behavior, including header, content, footer, overlay, and animation styles.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Dialog Customization
+# Dialog Customization in Blazor Dialog
 
 The Blazor Dialog component allows extensive customization options to enhance its appearance and behavior. You can modify its dimensions, support RTL layouts, apply custom styles, and animate its display.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles in Blazor Skeleton Component | Syncfusion®
-description: Checkout and learn here all about styles and how to use them in Blazor Skeleton component and much more.
+title: Styles in Blazor Skeleton | Syncfusion
+description: Customize Blazor Skeleton colors, dimensions, and wave animation using CssClass and theme variables.
 platform: Blazor
 control: Skeleton
 documentation: ug
 ---
 
-# Styles in Blazor Skeleton Component
+# Styles in Blazor Skeleton
 
 You can customize the skeleton component in the below ways.
 

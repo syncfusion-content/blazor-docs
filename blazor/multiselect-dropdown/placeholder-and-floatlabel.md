@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Placeholder/FloatLabel in Blazor MultiSelect Component | Syncfusion®
-description: Checkout and learn here all about Placeholder and FloatLabel in Blazor MultiSelect component and much more details.
+title: Placeholder and Float Label in Blazor MultiSelect Dropdown | Syncfusion
+description: Add placeholder hints and floating labels to Blazor MultiSelect Dropdown input fields.
 platform: Blazor
-control: MultiSelect
+control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Placeholder and Float Label in MultiSelect
+# Placeholder and Float Label in Blazor MultiSelect Dropdown
 
 ## Placeholder
 

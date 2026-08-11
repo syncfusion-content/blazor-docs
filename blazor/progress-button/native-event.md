@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor Progress Button Component | Syncfusion
-description: Checkout and learn here all about native events in Syncfusion Blazor Progress Button component and more.
+title: Native Events in Blazor Progress Button | Syncfusion
+description: Bind native DOM events such as focus, mouse, keyboard, and touch to Blazor ProgressButton.
 platform: Blazor
 control: Progress Button
 documentation: ug
 ---
 
-# Native Events in Blazor ProgressButton Component
+# Native Events in Blazor Progress Button
 
 Define native DOM events on the component by using Blazor’s @on{event} attributes. The attribute value is an event handler method, and event-specific data is provided through strongly typed event argument objects.
 

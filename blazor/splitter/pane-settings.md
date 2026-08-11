@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pane Settings in Blazor Splitter Component | Syncfusion®
-description: Checkout and learn here all the features about Pane Settings in Blazor Splitter component much more details.
+title: Pane Settings in Blazor Splitter | Syncfusion
+description: Configure Blazor Splitter pane visibility, min/max sizes, resizable, and collapsible behaviors.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# Pane Settings in the Blazor Splitter Component
+# Pane Settings in Blazor Splitter
 
 This section explains the pane settings behavior.
 

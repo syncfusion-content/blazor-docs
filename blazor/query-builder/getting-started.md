@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Query Builder in WASM App | Syncfusion
-description: Check out and learn about getting started with Blazor Query Builder component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Query Builder in Blazor WASM App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Query Builder in a Blazor WebAssembly app with setup steps.
 platform: Blazor
 component: Query Builder
 documentation: ug
 ---
 
-# Getting Started with Blazor Query Builder in Blazor WASM App 
+# Getting Started with Blazor Query Builder in Blazor WASM App
 
 This section briefly explains about how to include [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

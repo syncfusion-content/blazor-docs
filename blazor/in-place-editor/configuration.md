@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Configuration in Blazor In-place Editor Component | Syncfusion®
-description: Checkout and learn here all about Configuration in Blazor In-place Editor component and much more details.
+title: Configuration in Blazor In-place Editor | Syncfusion
+description: Configure Blazor In-place Editor rendering modes, including Inline and Popup display options.
 platform: Blazor
 control: In-place Editor
 documentation: ug
 ---
 
-# Configuration in Blazor In-place Editor Component
+# Configuration in Blazor In-place Editor
 
 ## Rendering modes
 

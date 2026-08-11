@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Node Editing in Blazor TreeView Component | Syncfusion®
-description: Checkout and learn here all the features about Node Editing in Blazor TreeView component and much more.
+title: Node Editing in Blazor TreeView | Syncfusion
+description: Edit node text inline with double-click, F2, or programmatic BeginEditAsync in TreeView.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Node Editing in Blazor TreeView Component
+# Node Editing in Blazor TreeView
 
 The Blazor TreeView allows node editing by setting the [`AllowEditing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowEditing) property to `true`. Nodes are directly edited in place by **double-clicking** the TreeView node or by **selecting** the node and pressing the <kbd>F2</kbd> key.
 

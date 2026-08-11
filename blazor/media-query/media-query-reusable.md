@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Reuse of Blazor Media Query component | Syncfusion®
-description: Checkout and learn here all about how to use the Media Query component at the global level reuse on all pages and much more.
+title: Global Reuse in Blazor Media Query | Syncfusion
+description: Reuse Blazor Media Query globally across pages by cascading the active breakpoint from the main layout.
 platform: Blazor
 control: Media Query
 documentation: ug
 ---
 
-# Global-level reuse of Blazor Media Query component
+# Global Reuse in Blazor Media Query
 
 You can globally reuse the Media Query component across any `.razor` page in the web application to achieve a flexible and responsive layout design.
 

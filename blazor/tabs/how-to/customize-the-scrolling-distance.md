@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize the Scrolling distance in Blazor Tabs | Syncfusion®
-description: Checkout and learn here all about how to customize the scrolling distance in Blazor Tabs component and more.
+title: How to customize the scrolling distance in Blazor Tabs | Syncfusion
+description: Control how far Blazor Tabs scroll when navigation icons are clicked using the ScrollStep property.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Customize the Scrolling distance in Blazor Tabs Component
+# How to customize the scrolling distance in Blazor Tabs
 
 Use the [ScrollStep](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_ScrollStep) property to customize the distance the Tab header scrolls when the left or right navigation icons are clicked. Pass the desired pixel value to `ScrollStep` to control the tab scrolling distance.
 

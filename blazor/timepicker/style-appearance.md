@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and appearance in Blazor TimePicker Component | Syncfusion®
-description: Checkout and learn here all the features about Style and appearance in Blazor TimePicker component and more.
+title: Style and Appearance in Blazor TimePicker | Syncfusion
+description: Customize Blazor TimePicker height, font size, and theme styles using CSS selectors.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# Style and appearance in Blazor TimePicker Component
+# Style and Appearance in Blazor TimePicker
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

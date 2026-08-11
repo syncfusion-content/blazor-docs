@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Align Items Using Spacer in Blazor Toolbar Component | Syncfusion®
-description: Checkout and learn here all the features about align the items using spacer in Blazor Toolbar component and more.
+title: Align Items Using Spacer in Blazor Toolbar | Syncfusion
+description: Align Blazor Toolbar items to the left, center, or right using Spacer items for flexible layout.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Align Items Using Spacer in Blazor Toolbar Component
+# Align Items Using Spacer in Blazor Toolbar
 
 A Toolbar [`Spacer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemType.html#Syncfusion_Blazor_Navigations_ItemType_Spacer) manages the alignment of toolbar items. It creates an adjustable empty space within the toolbar whose size adapts to the available width.
 

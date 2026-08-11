@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Model Binding in Blazor Input Mask Component | Syncfusion®
-description: Checkout and learn here all about strongly typed validation of Blazor Input Mask component and more.
+title: How to Use MaskedTextBoxFor in Blazor Input Mask | Syncfusion
+description: Use model binding and data annotations to validate Blazor Input Mask values inside a Blazor EditForm.
 platform: Blazor
 control: Input Mask
 documentation: ug
 ---
 
-# Model Binding in Blazor Input Mask Component
+# How to Use MaskedTextBoxFor in Blazor Input Mask
 
 This section demonstrates how to use model binding and validation with the MaskedTextBox in a Blazor `EditForm`. Bind a model to the form, annotate its properties with data annotations, bind the component’s `Value` parameter to a model property, and display validation messages when the form is submitted.
 

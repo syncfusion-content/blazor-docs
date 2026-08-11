@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in Blazor MultiColumn ComboBox Component | Syncfusion®
-description: Checkout and learn here all about the Selection feature in Blazor MultiColumn ComboBox component and more.
+title: Selection in Blazor MultiColumn ComboBox | Syncfusion
+description: Retrieve selected values and item data in Blazor MultiColumn ComboBox using ValueChange events.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
 ---
 
-# Selection in MultiColumn ComboBox
+# Selection in Blazor MultiColumn ComboBox
 
 ## Get selected value
 

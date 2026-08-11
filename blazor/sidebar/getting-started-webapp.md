@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Sidebar in Blazor Web App | Syncfusion
-description: Check out and learn about how to get started with the Blazor Sidebar Components in Blazor Web App and much more details.
+description: Learn how to get started with the Syncfusion Blazor Sidebar in a Blazor Web App with setup steps.
 platform: Blazor
 control: Sidebar
 documentation: ug

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Header in Blazor Tabs Component | Syncfusion®
-description: Checkout and learn here all the features about header in Blazor Tabs component and much more details.
+title: Header in Blazor Tabs | Syncfusion
+description: Customize Blazor Tabs header styles with predefined CSS classes for fill and accent backgrounds.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Header in Blazor Tabs Component
+# Header in Blazor Tabs
 
 This section explains about modifying the style of Tab header.
 

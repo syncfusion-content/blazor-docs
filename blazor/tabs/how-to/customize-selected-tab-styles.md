@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style Customization for active item in Blazor Tabs | Syncfusion®
-description: Learn here all about style customization for active item in Blazor Tabs component, it's elements and much more details.
+title: How to customize selected tab styles in Blazor Tabs | Syncfusion
+description: Customize active tab styles in Blazor Tabs using CSS and HeaderTemplate with custom HTML content.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Style Customization for active Item in Blazor Tabs Component
+# How to customize selected tab styles in Blazor Tabs
 
 The style of the active tab can be customized by overriding the active tab CSS classes. You can also use a `HeaderTemplate` to add custom HTML (such as images and styled text) to each tab header, and then override the related CSS classes to control how the active tab is displayed.
 

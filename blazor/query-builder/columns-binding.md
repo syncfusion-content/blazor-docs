@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Columns in Blazor QueryBuilder Component | Syncfusion®
-description: Checkout and learn here all about columns in Blazor QueryBuilder component with examples and much more details.
+title: Columns in Blazor Query Builder | Syncfusion
+description: Define Blazor Query Builder columns with required field mappings and auto-generation support.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Columns in Blazor QueryBuilder Component
+# Columns in Blazor Query Builder
 
 Column definitions provide the schema used by the Query Builder’s [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_DataSource). They determine how field values are rendered and how users create or delete conditions and groups. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Field) property in [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumns.html) is required to map data source fields to Query Builder columns.
 

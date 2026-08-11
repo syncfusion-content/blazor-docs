@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Sidebar Component | Syncfusion®
-description: Checkout and learn here all the features about Accessibility in Blazor Sidebar component and more details.
+title: Accessibility in Blazor Sidebar | Syncfusion
+description: Learn how Blazor Sidebar supports accessibility with keyboard navigation and screen reader support.
 platform: Blazor
 control: Sidebar
 documentation: ug
 ---
 
-# Accessibility in Blazor Sidebar Component
+# Accessibility in Blazor Sidebar
 
 The [Blazor Sidebar](https://www.syncfusion.com/blazor-components/blazor-sidebar) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

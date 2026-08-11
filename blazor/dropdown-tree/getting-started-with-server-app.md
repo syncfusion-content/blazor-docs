@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Dropdown Tree in Server App | Syncfusion
-description: Check out and learn about the documentation for getting started with Blazor Dropdown Tree Component in Blazor Server App.
+title: Getting Started with Blazor Dropdown Tree in Blazor Server App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Dropdown Tree in a Blazor Server app with installation and configuration steps.
 platform: Blazor
 component: Dropdown Tree
 documentation: ug

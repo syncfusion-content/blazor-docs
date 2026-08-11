@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Positioning in Blazor AppBar Component | Syncfusion®
-description: Check out and learn about Positioning in the Blazor AppBar component in the Blazor Server App and the Blazor WebAssembly App.
+title: Position in Blazor AppBar | Syncfusion®
+description: Place the Blazor AppBar at the Top, Bottom, or as a Sticky element using the Position and IsSticky properties for fixed or scrolling layouts.
 platform: Blazor
 control: AppBar
 documentation: ug
 ---
 
-# Positioning in Blazor AppBar Component
+# Position in Blazor AppBar
 
 The position of the AppBar can be set using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position) and [IsSticky](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_IsSticky) properties. By default, the `Position` property is set to `AppBarPosition.Top` and the `IsSticky` property is set to `false`. The AppBar provides the following options for setting its position:
 

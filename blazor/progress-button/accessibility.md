@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor ProgressButton Component | Syncfusion®
-description: Learn about accessibility in Blazor ProgressButton component with WAI-ARIA support and keyboard navigation examples.
+title: Accessibility in Blazor Progress Button | Syncfusion
+description: Learn how Blazor ProgressButton supports accessibility with ARIA roles and keyboard navigation.
 platform: Blazor
 control: Progress Button
 documentation: ug
 ---
 
-# Accessibility in Blazor ProgressButton Component
+# Accessibility in Blazor Progress Button
 
 The Blazor ProgressButton component follows established accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

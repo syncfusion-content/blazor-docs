@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Template in Blazor SpeedDial Component | Syncfusion®
-description: Checkout and learn here all about templates and how to use them in Blazor Speed Dial component and much more.
+title: Templates in Blazor Speed Dial | Syncfusion
+description: Use ItemTemplate and popup templates to customize Blazor Speed Dial item content and container.
 platform: Blazor
 control: SpeedDial
 documentation: ug
 ---
 
-# Template in Blazor SpeedDial Component
+# Templates in Blazor Speed Dial
 
 This section describes the available templates in the SpeedDial component and how to use them to customize item content and the popup container.
 

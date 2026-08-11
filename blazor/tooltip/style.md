@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles and Appearance in Blazor Tooltip Component | Syncfusion®
-description: Checkout and learn here all the features about styles and appearance in Blazor Tooltip component and more.
+title: Styles and Appearance in Blazor Tooltip | Syncfusion
+description: Customize Blazor Tooltip styling with CSS for border radius, padding, colors, and font properties.
 platform: Blazor
 control: Tooltip
 documentation: ug
 ---
 
-# Styles and Appearance in Blazor Tooltip Component
+# Styles and Appearance in Blazor Tooltip
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

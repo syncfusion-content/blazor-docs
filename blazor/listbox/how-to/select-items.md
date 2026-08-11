@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Select Items in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all about selecting items programmatically using a method in the Blazor ListBox component and much more details.
+title: How to select items in Blazor ListBox | Syncfusion
+description: Select or deselect items programmatically in Blazor ListBox using the SelectItemsAsync method.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Select Items in Blazor ListBox Component
+# How to select items in Blazor ListBox
 
 Use the [SelectItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_SelectItemsAsync__1___0_System_Boolean_) method to programmatically select or deselect items in the Blazor ListBox. The first parameter accepts the value or values to act on, and the second parameter specifies the selection state: set it to `true` to select the items, or `false` to deselect them.
 

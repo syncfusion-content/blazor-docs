@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize Blazor TreeView as Accordion | Syncfusion®
-description: Learn here all the features about how to Customize TreeView as accordion in Blazor TreeView component and more.
+title: How to create an accordion tree in Blazor TreeView | Syncfusion
+description: Build an accordion-style TreeView that keeps only one node expanded at a time in Blazor.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Customize TreeView as Accordion in Blazor TreeView Component
+# How to create an accordion tree in Blazor TreeView
 
 An accordion is a UI pattern where a list of items allows one item to be expanded at a time, while others remain collapsed. Customize the TreeView to behave as an accordion. The following code sample demonstrates how to create an accordion tree.
 
