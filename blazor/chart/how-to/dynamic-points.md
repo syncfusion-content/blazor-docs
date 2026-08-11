@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to add dynamic points in Blazor Charts | Syncfusion®
-description: Use the ChartMouseClick event in Blazor Charts to dynamically add or remove data points from an existing data source by clicking within the chart area.
+title: How to Add Dynamic Points in Blazor Charts | Syncfusion®
+description: Learn how to add dynamic data points in Blazor Charts using Syncfusion. Use the ChartMouseClick event to add or remove points on click.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# How to add dynamic points in Blazor Charts
+# How to Add Dynamic Points in Blazor Charts
 
 We can use chart mouse/touch events to dynamically add or remove points from an existing data source by clicking within the chart area. These events allow us to obtain the location of the current cursor as X and Y values in the event arguments. The point's X and Y values can then be updated with new data from the existing data source. To achieve dynamic points, follow the steps outlined below.
 

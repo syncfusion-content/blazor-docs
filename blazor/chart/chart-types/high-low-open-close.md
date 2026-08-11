@@ -1,13 +1,13 @@
 ---
 layout: post
-title: High Low Open Close in Blazor Charts | Syncfusion®
-description: Render Blazor Charts HiloOpenClose series to show stock Open, High, Low, and Close values with a five-field data source per point.
+title: Blazor High Low Open Close Chart Examples | Syncfusion®
+description: Learn how to render Blazor High Low Open Close Charts using Syncfusion. Show stock open, high, low, and close values with a five-field data source.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# High Low Open Close in Blazor Charts
+# High Low Open Close Chart in Blazor
 
 ## High Low Open Close
 

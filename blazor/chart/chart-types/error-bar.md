@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Error Bar in Blazor Charts | Syncfusion®
-description: Add error bars to Blazor Charts series to indicate measurement uncertainty by setting ChartErrorBarSettings Visible to true.
+title: Blazor Error Bar Chart Examples and Documentation | Syncfusion®
+description: Learn how to add error bars to Blazor Charts using Syncfusion. Show measurement uncertainty on series by enabling ChartErrorBarSettings.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# Error Bar in Blazor Charts
+# Error Bar Chart in Blazor
 
 ## Error bar
 

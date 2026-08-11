@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Legend in Blazor Charts | Syncfusion®
-description: Display and customize the Blazor Charts legend by enabling ChartLegendSettings Visible. Configure position, alignment, and item styling.
+title: Blazor Charts Legend Configuration Examples | Syncfusion®
+description: Learn how to display and customize legends in Syncfusion Blazor Charts. Enable ChartLegendSettings Visible and configure position and alignment.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# Legend in Blazor Charts
+# Blazor Charts Legend
 
 The [legend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html) provides information on the series shown in the chart.
 

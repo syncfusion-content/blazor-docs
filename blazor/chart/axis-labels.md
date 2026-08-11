@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Axis Labels in Blazor Charts | Syncfusion®
-description: Configure Blazor Charts axis labels with LabelIntersectAction to Hide, Rotate, or Trim overlapping text on category axes.
+title: Blazor Charts Axis Labels Configuration | Syncfusion®
+description: Learn how to configure axis labels in Syncfusion Blazor Charts. Use LabelIntersectAction to hide, rotate, or trim overlapping text.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# Axis Labels in Blazor Charts
+# Blazor Charts Axis Labels
 
 This section provides a brief explanation on how to customize the Blazor Charts axis labels.
 

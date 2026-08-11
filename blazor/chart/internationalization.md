@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Internationalization in Blazor Charts | Syncfusion®
-description: Globalize Blazor Charts axis labels, data labels, and tooltips with the LabelFormat property to support cultures such as EUR or ja-JP.
+title: Blazor Charts Internationalization Examples | Syncfusion®
+description: Learn how to globalize Syncfusion Blazor Charts. Configure LabelFormat for axis labels, data labels, and tooltips for cultures such as EUR or ja-JP.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# Internationalization in Blazor Charts
+# Blazor Charts Internationalization
 
 Internationalization is the process of designing and developing a component that can be easily adapted for users from any culture, region, or language. Below elements in the [Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html) display content based on the internationalization configuration.
 

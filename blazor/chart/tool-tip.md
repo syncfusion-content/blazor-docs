@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in Blazor Charts | Syncfusion®
-description: Enable tooltips in Blazor Charts to show point details on hover by setting ChartTooltipSettings Enable to true. Supports templates and formatting.
+title: Blazor Charts Tooltip Examples | Syncfusion®
+description: Learn how to enable tooltips in Syncfusion Blazor Charts. Set ChartTooltipSettings Enable to true. Supports templates and custom formatting.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# Tooltip in Blazor Charts
+# Blazor Charts Tooltip
 
 <!-- markdownlint-disable MD036 -->
 

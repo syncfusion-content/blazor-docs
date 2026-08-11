@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stacked Bar in Blazor Charts | Syncfusion®
-description: Render Blazor Charts StackedBar series with horizontal bars to show individual Y values contributing to a total per category in series order.
+title: Blazor Stacked Bar Chart Examples and Documentation | Syncfusion®
+description: Learn how to create Blazor Stacked Bar Charts using Syncfusion. Show individual Y values contributing to a total per category as horizontal bars.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# Stacked Bar in Blazor Charts
+# Stacked Bar Chart in Blazor
 
 ## Stacked Bar
 

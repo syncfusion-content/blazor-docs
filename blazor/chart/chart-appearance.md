@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor Charts | Syncfusion®
-description: Customize Blazor Charts appearance by providing a custom color palette to the Palettes property to change default series colors.
+title: Blazor Charts Appearance Customization | Syncfusion®
+description: Learn how to customize appearance in Syncfusion Blazor Charts. Apply a custom color palette via the Palettes property to change series colors.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# Appearance in Blazor Charts
+# Blazor Charts Appearance
 
 ## Custom color palette
 

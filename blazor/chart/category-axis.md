@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Category Axis in Blazor Charts | Syncfusion®
-description: Use the category axis in Blazor Charts to plot string-typed X values for comparing discrete data such as months or product names.
+title: Blazor Charts Category Axis Examples | Syncfusion®
+description: Learn how to use the category axis in Syncfusion Blazor Charts. Plot string-typed X values such as months or product names.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# Category Axis in Blazor Charts
+# Blazor Charts Category Axis
 
 The category axis is used to represent string values instead of integers.
 

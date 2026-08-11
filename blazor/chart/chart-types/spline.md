@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Spline in Blazor Charts | Syncfusion®
-description: Render Blazor Charts Spline series to connect data points with smooth curves instead of straight lines for visually continuous trends.
+title: Blazor Spline Chart Examples and Documentation | Syncfusion®
+description: Learn how to create Blazor Spline Charts using Syncfusion. Connect data points with smooth curves for visually continuous trends over time.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# Spline in Blazor Charts
+# Spline Chart in Blazor
 
 ## Spline
 

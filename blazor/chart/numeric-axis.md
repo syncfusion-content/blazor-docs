@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Numeric Axis in Blazor Charts | Syncfusion®
-description: Use the numeric (Double) axis in Blazor Charts to represent continuous numeric values. Set ValueType to Double and customize range, interval, and format.
+title: Blazor Charts Numeric Axis Examples | Syncfusion®
+description: Learn how to use the numeric axis in Syncfusion Blazor Charts. Set ValueType to Double and customize range, interval, and label format.
 platform: Blazor
 control: Charts
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Numeric Axis in Blazor Charts
+# Blazor Charts Numeric Axis
 
 Numeric axis can be used to represent numeric values in a chart. The [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_ValueType) of an axis is [Double](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Double) by default.
 

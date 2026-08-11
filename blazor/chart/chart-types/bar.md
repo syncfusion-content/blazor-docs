@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bar in Blazor Charts | Syncfusion®
-description: Render Blazor Charts Bar series horizontally to compare Frequency, Count, Total, or Average across categories with the Bar series Type.
+title: Blazor Bar Chart Examples and Documentation | Syncfusion®
+description: Learn how to create and customize Blazor Bar Charts using Syncfusion. Compare frequency, count, total, or average across categories with horizontal bars.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# Bar in Blazor Charts
+# Bar Chart Series in Blazor
 
 ## Bar
 

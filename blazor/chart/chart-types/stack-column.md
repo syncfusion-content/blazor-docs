@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 100% Stacked Column in Blazor Charts | Syncfusion®
-description: Render Blazor Charts 100% stacked column series with StackingColumn100 to show each segment as a percentage contribution to the total.
+title: Blazor 100% Stacked Column Chart Examples | Syncfusion®
+description: Learn how to render 100% Stacked Column Charts in Blazor using Syncfusion. Each segment is shown as a percentage contribution to the total.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# 100% Stacked Column in Blazor Charts
+# 100% Stacked Column Chart in Blazor
 
 ## 100% Stacked Column
 

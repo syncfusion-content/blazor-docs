@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to enable lazy loading in Blazor Charts | Syncfusion®
-description: Implement lazy loading in Blazor Charts using the OnScrollChanged event to fetch data on demand for the visible axis range and call StateHasChanged.
+title: How to Enable Lazy Loading in Blazor Charts | Syncfusion®
+description: Learn how to enable lazy loading in Blazor Charts using Syncfusion. Use the OnScrollChanged event to fetch data on demand for the visible range.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# How to enable lazy loading in Blazor Charts
+# How to Enable Lazy Loading in Blazor Charts
 
 The lazy loading loads data for the chart on demand. The  [OnScrollChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnScrollChanged) event will be fired by the chart, allowing us to get the minimum and maximum ranges of the axes and then upload the data to the chart.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bubble in Blazor Charts | Syncfusion®
-description: Render Blazor Charts Bubble series with three parameters—X, Y, and Size—where point size encodes a third dimension beyond scatter.
+title: Blazor Bubble Chart Examples and Documentation | Syncfusion®
+description: Learn how to create Blazor Bubble Charts using Syncfusion. Visualize three parameters—X, Y, and Size—where point size encodes an extra dimension.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# Bubble in Blazor Charts
+# Bubble Chart in Blazor
 
 ## Bubble
 

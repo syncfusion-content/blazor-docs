@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Gradient in Blazor Charts | Syncfusion®
-description: Apply linear or radial gradients to Blazor Charts series, trendlines, and technical indicators using ChartLinearGradient and color stops.
+title: Blazor Charts Gradient Fill Examples | Syncfusion®
+description: Learn how to apply linear or radial gradients in Syncfusion Blazor Charts. Use ChartLinearGradient and color stops on series, trendlines, and indicators.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# Gradient in Blazor Charts
+# Blazor Charts Gradient
 
 Gradients add depth and modern styling to charts by smoothly blending multiple colors. The Charts component supports two gradient types:
 

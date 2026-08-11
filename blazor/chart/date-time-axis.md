@@ -1,7 +1,7 @@
 ---
 layout: post
-title: DateTime Axis in Blazor Charts | Syncfusion®
-description: Use the DateTime axis in Blazor Charts to plot date-time values with a configurable label format such as y, MMM, or full timestamp.
+title: Blazor Charts DateTime Axis Examples | Syncfusion®
+description: Learn how to use the DateTime axis in Syncfusion Blazor Charts. Plot date-time values with a configurable label format such as yyyy or MMM.
 platform: Blazor
 control: Charts
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# DateTime Axis in Blazor Charts
+# Blazor Charts DateTime Axis
 
 ## DateTime axis
 

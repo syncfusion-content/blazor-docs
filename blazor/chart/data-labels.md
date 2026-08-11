@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Labels in Blazor Charts | Syncfusion®
-description: Show data labels on Blazor Charts points by enabling ChartDataLabel Visible. Labels auto-arrange to avoid overlap with each other.
+title: Blazor Charts Data Labels Examples | Syncfusion®
+description: Learn how to show data labels on Syncfusion Blazor Charts. Enable ChartDataLabel Visible to display point values with auto-arrange.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# Data Labels in Blazor Charts
+# Blazor Charts Data Labels
 
 [Data label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html) can be added to a [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) by enabling the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Visible) option in the data label settings. By default, the labels will organize themselves intelligently without overlapping.
 

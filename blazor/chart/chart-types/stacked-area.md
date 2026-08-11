@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stacked Area in Blazor Charts | Syncfusion®
-description: Render Blazor Charts StackedArea series to show individual contributions to a total over time by stacking Y values in series order.
+title: Blazor Stacked Area Chart Examples and Documentation | Syncfusion®
+description: Learn how to create Blazor Stacked Area Charts using Syncfusion. Show individual contributions to a total over time by stacking Y values.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# Stacked Area in Blazor Charts
+# Stacked Area Chart in Blazor
 
 ## Stacked Area
 

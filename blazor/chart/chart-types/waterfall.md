@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Waterfall in Blazor Charts | Syncfusion®
-description: Render Blazor Charts Waterfall series to show the cumulative effect of sequential positive and negative values with IntermediateSumIndexes and SumIndexes.
+title: Blazor Waterfall Chart Examples and Documentation | Syncfusion®
+description: Learn how to create Blazor Waterfall Charts using Syncfusion. Show the cumulative effect of sequential positive and negative values.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# Waterfall in Blazor Charts
+# Waterfall Chart in Blazor
 
 ## Waterfall
 

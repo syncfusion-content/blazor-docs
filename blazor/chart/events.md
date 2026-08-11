@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Charts | Syncfusion®
-description: Subscribe to Blazor Charts events like OnZoomStart, OnZoomEnd, OnDataLabelRender, and OnPointRender using the ChartEvents component.
+title: Blazor Charts Events Examples and Reference | Syncfusion®
+description: Learn how to subscribe to Syncfusion Blazor Charts events. Use ChartEvents for OnZoomStart, OnZoomEnd, OnDataLabelRender, and OnPointRender.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# Events in Blazor Charts
+# Blazor Charts Events
 
 This section provides a list of chart component events that are triggered by corresponding chart actions.
 

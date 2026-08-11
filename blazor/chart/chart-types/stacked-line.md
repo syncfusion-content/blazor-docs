@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stacked Line in Blazor Charts | Syncfusion®
-description: Render Blazor Charts StackedLine series to compare each series' contribution to the total over time by stacking lines in series order.
+title: Blazor Stacked Line Chart Examples and Documentation | Syncfusion®
+description: Learn how to create Blazor Stacked Line Charts using Syncfusion. Compare each series contribution to the total over time by stacking lines.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# Stacked Line in Blazor Charts
+# Stacked Line Chart in Blazor
 
 ## Stacked Line
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Line in Blazor Charts | Syncfusion®
-description: Render Blazor Charts Line series to visualize time-dependent data and trends at equal intervals using the Line series Type.
+title: Blazor Line Chart Examples and Documentation | Syncfusion®
+description: Learn how to create Blazor Line Charts using Syncfusion. Visualize time-dependent data and trends at equal intervals with markers and tooltips.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# Line in Blazor Charts
+# Line Chart in Blazor
 
 ## Line
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Histogram in Blazor Charts | Syncfusion®
-description: Render Blazor Charts Histogram series to display large data distributions visually by setting the series Type to Histogram.
+title: Blazor Histogram Chart Examples and Documentation | Syncfusion®
+description: Learn how to render Blazor Histogram Charts using Syncfusion. Display large data distributions visually with bin-based frequency aggregation.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# Histogram in Blazor Charts
+# Histogram Chart in Blazor
 
 ## Histogram
 

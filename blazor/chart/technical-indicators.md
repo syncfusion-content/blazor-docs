@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Technical Indicators in Blazor Charts | Syncfusion®
-description: Add technical indicators to Blazor Charts for financial analysis, including Accumulation Distribution, RSI, MACD, Bollinger, and seven more types.
+title: Blazor Charts Technical Indicators Examples | Syncfusion®
+description: Learn how to add technical indicators in Syncfusion Blazor Charts. Use RSI, MACD, Bollinger, Accumulation Distribution, and seven more types.
 platform: Blazor
 control: Charts
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Technical Indicators in Blazor Charts
+# Blazor Charts Technical Indicators
 
 A technical indicator is a mathematical calculation that forecasts financial market direction using historical price, volume, or open interest data. There are 10 different types of technical indicators that can be used with the chart.
 

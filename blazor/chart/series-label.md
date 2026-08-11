@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Series Label in Blazor Charts | Syncfusion
-description: Display each series name directly inside the Blazor Charts plot area using SeriesLabelSettings, improving readability of multi-series charts.
+title: Blazor Charts Series Label Examples | Syncfusion®
+description: Learn how to display series names inline in Syncfusion Blazor Charts. Use SeriesLabelSettings to improve readability of multi-series charts.
 platform: Blazor
 control: Charts
 documentation: ug
 keywords: Blazor Chart series label, series label, chart labels, inline series labels, chart series customization, SeriesLabelSettings
 ---
 
-# Series Label in Blazor Charts
+# Blazor Charts Series Label
 
 The series label feature displays the name of each series directly within the chart area. This improves readability by helping users identify series inline and reduces reliance on the legend.
 

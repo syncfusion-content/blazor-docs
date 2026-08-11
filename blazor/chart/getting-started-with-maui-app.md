@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor MAUI App Charts | Syncfusion
-description: Step-by-step guide to integrate Syncfusion Blazor Charts into a Blazor MAUI hybrid app for Windows and Android using Visual Studio or VS Code.
+title: Getting Started with Blazor Charts in MAUI App | Syncfusion®
+description: Learn how to get started with Syncfusion Blazor Charts in a Blazor MAUI hybrid app. Explore setup, packages, and first chart example.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# Getting Started with Blazor MAUI App Charts
+# Getting Started with Blazor Charts in MAUI App
 
 This section explains the step-by-step process of integrating the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-Charts) component in your Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

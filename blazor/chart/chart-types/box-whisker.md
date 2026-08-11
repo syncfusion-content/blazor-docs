@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Box and Whisker in Blazor Charts | Syncfusion®
-description: Render Blazor Charts Box and Whisker series to visualize statistical distribution with Type BoxAndWhisker, requiring at least five Y values per point.
+title: Blazor Box and Whisker Chart Examples and Documentation | Syncfusion®
+description: Learn how to visualize statistical distributions in Blazor Box and Whisker Charts using Syncfusion. Plot min, Q1, median, Q3, and max with five Y values.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# Box and Whisker in Blazor Charts
+# Box and Whisker Chart in Blazor
 
 ## Box and Whisker
 

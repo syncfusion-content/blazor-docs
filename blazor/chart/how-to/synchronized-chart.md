@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to synchronize charts in Blazor Charts | Syncfusion®
-description: Synchronize tooltip, cursor, and selection across two or more Blazor Charts by sharing X-Y coordinates and calling ShowTooltip and HideTooltip.
+title: How to Synchronize Charts in Blazor Charts | Syncfusion®
+description: Learn how to synchronize Blazor Charts using Syncfusion. Share tooltip, cursor, and selection across charts by sharing X-Y coordinates.
 platform: Blazor
 control: Charts
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# How to synchronize charts in Blazor Charts
+# How to Synchronize Charts in Blazor Charts
 
 A synchronized chart has the ability to access and interact with two or more charts at the same time. This means that actions performed on one chart, such as positioning a cursor, clicking on a specific point, or activating a tooltip, are reflected simultaneously on corresponding positions or data points across other synchronized charts based on their X-Y coordinates. 
 
