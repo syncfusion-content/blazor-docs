@@ -7,7 +7,7 @@ component: Maps
 documentation: ug
 ---
 
-# Getting Started with Blazor Maps in Blazor WASM App
+# Blazor Maps Getting Started in WASM App
 
 This section briefly explains how to include [Blazor Maps](https://www.syncfusion.com/blazor-components/blazor-map) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
