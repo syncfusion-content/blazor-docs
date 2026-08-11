@@ -7,9 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-
 # Context Menu in Blazor Data Grid
-
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports a context menu that appears when right-clicking anywhere within the grid. This menu provides quick access to actions related to the grid’s data and layout, improving usability.
 
@@ -19,11 +17,9 @@ To enable the context menu, configure the Grid `ContextMenuItems` property. Use 
 * **Content:** Shows row-related options.
 * **Pager:** Offers navigation controls.
 
-
 ## Built-in context menu items
 
 The default context menu items include:
-
 
 **Header**
 
@@ -149,7 +145,6 @@ Blazor DataGrid supports adding custom context menu items along with default opt
 
 To configure custom context menu items:
 
-
 1. Define the `ContextMenuItems` property as a collection of [ContextMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) objects.
 2. Set properties for each custom item:
     - **Text**: Display text for the menu item.
@@ -245,7 +240,6 @@ public class EmployeeData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXrRtcXhVDfnDiDa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
-
 
 ## Built-in and custom context menu items
 
@@ -343,7 +337,6 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXrHtQNLBtpYwkYC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
-
 
 
 ## Sub-context menu items in DataGrid
@@ -569,7 +562,6 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZVRNQZhVDHOvQCI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
-
 
 ## Enable or disable context menu items (Disable action)
 
@@ -884,4 +876,4 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htVHZwXrrDvZZIqC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a detailed overview of available capabilities. See the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) for data presentation and manipulation.
+Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a detailed overview of available capabilities. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) for data presentation and manipulation.
