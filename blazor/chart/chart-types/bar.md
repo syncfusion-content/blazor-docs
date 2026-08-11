@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bar Charts in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Bar Charts in Blazor Charts component and much more.
+title: Blazor Bar Chart Examples and Documentation | Syncfusion®
+description: Learn how to create and customize Blazor Bar Charts using Syncfusion. Compare frequency, count, total, or average across categories with horizontal bars.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Bar Charts in Blazor Charts Component
+# Bar Chart Series in Blazor
 
 ## Bar
 
