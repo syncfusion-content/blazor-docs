@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Animation in Blazor Linear Gauge Component | Syncfusion
-description: Checkout and learn here all about animation in Syncfusion Blazor Linear Gauge component and much more details.
+title: Blazor Linear Gauge Animation | Syncfusion®
+description: Learn how to animate axis, ticks, labels, ranges, pointers, and annotations in the Blazor Linear Gauge by setting the AnimationDuration property.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Animation in Blazor Linear Gauge Component
+# Blazor Linear Gauge Animation
 
 All of the elements in the Linear Gauge, such as the axis lines, ticks, labels, ranges, pointers, and annotations, can be animated sequentially by using the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_AnimationDuration) property. The animation for the Linear Gauge is enabled when the `AnimationDuration` property is set to an appropriate value in milliseconds, providing a smooth rendering effect for the component. If the `AnimationDuration` property is set to **0**, which is the default value, the animation effect is disabled. If the animation is enabled, the component will behave in the following order.
 

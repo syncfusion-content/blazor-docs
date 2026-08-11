@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Linear Gauge Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor Linear Gauge component and more.
+title: Accessibility in Blazor Linear Gauge | Syncfusion�
+description: Discover the Blazor Linear Gauge accessibility compliance for WCAG 2.2, Section 508, WAI-ARIA roles, screen reader support, and axe-core validation.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Accessibility in Blazor Linear Gauge Component
+# Accessibility in Blazor Linear Gauge
 
 The [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) component follows commonly used accessibility guidelines and standards, such as [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 
