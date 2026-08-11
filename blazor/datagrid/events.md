@@ -17,7 +17,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnActionBegin
 
-[OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) triggers when a Grid action starts ([sorting](https://blazor.syncfusion.com/documentation/datagrid/sorting), [filtering](https://blazor.syncfusion.com/documentation/datagrid/filtering), [paging](https://blazor.syncfusion.com/documentation/datagrid/paging), [grouping](https://blazor.syncfusion.com/documentation/datagrid/grouping), [editing](https://blazor.syncfusion.com/documentation/datagrid/editing), and more). Use this to inspect or adjust action parameters before execution.
+[OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) triggers when a Grid action starts ([sorting](https://blazor.syncfusion.com/documentation/datagrid/sorting), [filtering](https://blazor.syncfusion.com/documentation/datagrid/filtering), [paging](https://blazor.syncfusion.com/documentation/datagrid/paging), [grouping](https://blazor.syncfusion.com/documentation/datagrid/grouping), [editing](https://blazor.syncfusion.com/documentation/datagrid/editing), and more). Use OnActionBegin to inspect or adjust action parameters before execution.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -64,7 +64,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnActionComplete
 
-[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) triggers after Grid actions ([sorting](https://blazor.syncfusion.com/documentation/datagrid/sorting), [filtering](https://blazor.syncfusion.com/documentation/datagrid/filtering), [paging](https://blazor.syncfusion.com/documentation/datagrid/paging), [grouping](https://blazor.syncfusion.com/documentation/datagrid/grouping), [editing](https://blazor.syncfusion.com/documentation/datagrid/editing), etc.) finish. Use it for post-processing or UI updates.
+[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) triggers after Grid actions ([sorting](https://blazor.syncfusion.com/documentation/datagrid/sorting), [filtering](https://blazor.syncfusion.com/documentation/datagrid/filtering), [paging](https://blazor.syncfusion.com/documentation/datagrid/paging), [grouping](https://blazor.syncfusion.com/documentation/datagrid/grouping), [editing](https://blazor.syncfusion.com/documentation/datagrid/editing), etc.) finish. Use OnActionComplete for post-processing or UI updates.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -109,7 +109,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnActionFailure
 
-[OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) triggers when a Grid action fails. Use it to log or display error details. In the following example, an invalid URL is configured to demonstrate the failure event.
+[OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) triggers when a Grid action fails. Use OnActionFailure to log or display error details.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -144,7 +144,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## BeforeOpenColumnChooser
 
-[BeforeOpenColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeOpenColumnChooser) triggers before the Column Chooser dialog opens. Use it to customize behavior or cancel opening.
+[BeforeOpenColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeOpenColumnChooser) triggers before the Column Chooser dialog opens. Use BeforeOpenColumnChooser to customize behavior or cancel opening.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -195,7 +195,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## Created
 
-[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Created) triggers once the Grid is created. Use it for one-time initialization that depends on the Grid being ready.
+[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Created) triggers once the Grid is created. Use Created for one-time initialization after the DataGrid is ready.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -240,7 +240,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnLoad
 
-[OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnLoad) triggers before the Grid rendering starts, allowing customization of Grid properties prior to rendering.
+[OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnLoad) triggers before the Grid rendering starts, allowing customization of Grid properties before rendering.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -285,7 +285,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## Destroyed
 
-[Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Destroyed) event triggers when the Grid is destroyed. Use it to confirm that the Grid gets completely destroyed.
+[Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Destroyed) event triggers when the Grid is destroyed. Use Destroyed to confirm the DataGrid is completely destroyed.
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
@@ -329,7 +329,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnDataBound
 
-[OnDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnDataBound) triggers before data is bound to the Grid. Use it to adjust query/columns based on incoming data.
+[OnDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnDataBound) triggers before data is bound to the Grid. Use OnDataBound to adjust query or columns based on incoming data.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -374,7 +374,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## DataBound
 
-[DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) triggers after the data source is populated in the Grid. Use it for final UI adjustments after binding.
+[DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) triggers after the data source is populated in the DataGrid. Use DataBound for final UI adjustments after binding.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -419,7 +419,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## RowDataBound
 
-[RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) triggers before each row element is appended to the Grid. Use it to style or transform row content.
+[RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) triggers before each row element is appended to the DataGrid. Use RowDataBound to style or transform row content.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -464,7 +464,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## DetailDataBound
 
-[DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailDataBound) triggers after a detail row expands. Use it to modify the expanded content or perform related actions.
+[DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailDataBound) triggers after a detail row expands. Use DetailDataBound to modify expanded content or perform related actions.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -576,7 +576,7 @@ N> All events should be configured within a single **GridEvents** component.
 ```
 ## DetailsExpanding
 
-[DetailsExpanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsExpanding) triggers when a detail template row is clicked to expand. Use it to control expanding row or prevent it in specific cases.
+[DetailsExpanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsExpanding) triggers when a detail template row is clicked to expand. Use DetailsExpanding to control row expansion or prevent it in specific cases.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -683,7 +683,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## DetailsExpanded
 
-[DetailsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsExpanded) triggers after a detail template row has finished expanding. Use it to run logic that depends on the expanded detail view.
+[DetailsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsExpanded) triggers after a detail template row has finished expanding. Use DetailsExpanded to run logic that depends on the expanded detail view.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -790,7 +790,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## DetailsCollapsing
 
-[DetailsCollapsing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsCollapsing) triggers when a detail template row is clicked to collapse. Use it to control collapsing row or prevent it in specific cases.
+[DetailsCollapsing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsCollapsing) triggers when a detail template row is clicked to collapse. Use DetailsCollapsing to control row collapse or prevent it in specific cases.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -897,7 +897,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## DetailsCollapsed
 
-[DetailsCollapsed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsCollapsed) triggers after a detail template row has fully collapsed. Use it to clean up resources, stop timers, or update the UI after the detail content is hidden.
+[DetailsCollapsed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsCollapsed) triggers after a detail template row has fully collapsed. Use DetailsCollapsed to clean up resources, stop timers, or update the UI after detail content is hidden.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1004,7 +1004,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## QueryCellInfo
 
-[QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) triggers before a cell element is appended to the Grid. Use it to customize cell content, attributes, or styles.
+[QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) triggers before a cell element is appended to the Grid. Use QueryCellInfo to customize cell content, attributes, or styles.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1049,7 +1049,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnBeginEdit
 
-[OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBeginEdit) triggers before a record enters edit mode. Use it to set defaults or cancel editing.
+[OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBeginEdit) triggers before a record enters edit mode. Use OnBeginEdit to set defaults or cancel editing.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1095,7 +1095,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnBatchAdd
 
-[OnBatchAdd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchAdd) triggers before records are added in batch mode. Use it to validate or preset values.
+[OnBatchAdd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchAdd) triggers before records are added in batch mode. Use OnBatchAdd to validate or preset values.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1141,7 +1141,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnBatchSave
 
-[OnBatchSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchSave) triggers before batch changes are committed. Use it to validate or cancel save.
+[OnBatchSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchSave) triggers before batch changes are committed. Use OnBatchSave to validate or cancel save.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1188,7 +1188,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnBatchDelete
 
-[OnBatchDelete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchDelete) triggers before records are deleted in batch mode. Use it to confirm or cancel deletion.
+[OnBatchDelete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchDelete) triggers before records are deleted in batch mode. Use OnBatchDelete to confirm or cancel deletion.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1234,7 +1234,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnCellEdit
 
-[OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) triggers when a cell enters edit mode. Use it to configure the editor or apply validation.
+[OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) triggers when a cell enters edit mode. Use OnCellEdit to configure the editor or apply validation.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1281,7 +1281,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnCellSave
 
-[OnCellSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellSave) triggers before a cell value is saved. Use it to validate and optionally cancel the save.
+[OnCellSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellSave) triggers before a cell value is saved. Use OnCellSave to validate and optionally cancel the save.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1328,7 +1328,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## CellSaved
 
-[CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSaved) triggers after a cell value is saved. Use it to perform follow-up actions.
+[CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSaved) triggers after a cell value is saved. Use CellSaved to perform follow-up actions.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1374,7 +1374,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## RowSelecting
 
-[RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelecting) triggers before a row is selected. Use it to control selection or prevent it in specific cases.
+[RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelecting) triggers before a row is selected. Use the event to control selection or prevent it in specific cases.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1419,7 +1419,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## RowSelected
 
-[RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) triggers after a row is selected. Use it to respond to selection changes.
+[RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) triggers after a row is selected. Use the event to respond to selection changes.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1464,7 +1464,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## RowDeselecting
 
-[RowDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeselecting) triggers before a selected row is deselected. Use it to prevent deselection in specific scenarios.
+[RowDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeselecting) triggers before a selected row is deselected. Use the event to prevent deselection in specific scenarios.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1510,7 +1510,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## RowDeselected
 
-[RowDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeselected) triggers after a selected row is deselected. Use it to handle deselection logic.
+[RowDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeselected) triggers after a selected row is deselected. Use the event to handle deselection logic.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1555,7 +1555,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## CellSelecting
 
-[CellSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSelecting) triggers before a cell is selected. Use it to control or cancel cell selection.
+[CellSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSelecting) triggers before a cell is selected. Use the event to control or cancel cell selection.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1602,7 +1602,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## CellSelected
 
-[CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSelected) triggers after a cell is selected. Use it for responding to cell-level selection changes.
+[CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSelected) triggers after a cell is selected. Use the event for responding to cell-level selection changes.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1648,7 +1648,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## CellDeselecting
 
-[CellDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellDeselecting) triggers before a selected cell is deselected. Use it to prevent deselection when needed.
+[CellDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellDeselecting) triggers before a selected cell is deselected. Use the event to prevent deselection when needed.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1696,7 +1696,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## CellDeselected
 
-[CellDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellDeselected) triggers after a cell is deselected. Use it to react to deselection changes.
+[CellDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Celldeselected) triggers after a cell is deselected. Use the event to react to deselection changes.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1744,7 +1744,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnRecordClick
 
-[OnRecordClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRecordClick) triggers when a record is clicked. Use it for row-level navigation or actions.
+[OnRecordClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRecordClick) triggers when a record is clicked. Use the event for row-level navigation or actions.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1791,7 +1791,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnRecordDoubleClick
 
-[OnRecordDoubleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRecordDoubleClick) triggers when a record is double-clicked. Use it to open detail views or toggle editing.
+[OnRecordDoubleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRecordDoubleClick) triggers when a record is double-clicked. Use the event to open detail views or toggle editing.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2390,7 +2390,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnExcelExport
 
-[OnExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnExcelExport) triggers before Grid data is exported to an Excel document. Use this event to modify export settings (such as file name, columns, or formatting) before the export begins.
+[OnExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnExcelExport) triggers before Grid data is exported to an Excel document. Use the event to modify export settings (such as file name, columns, or formatting) before the export begins.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
