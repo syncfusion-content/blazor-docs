@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Chart Dimensions in Blazor 3D Charts | Syncfusion®
-description: Set the size of Syncfusion Blazor 3D Charts by configuring the container width and height using inline styles or CSS for responsive layouts.
+title: Blazor 3D Chart Dimensions and Sizing | Syncfusion®
+description: Learn how to set the dimensions of Syncfusion Blazor 3D Chart using container size, inline width and height, or CSS with code samples.
 platform: Blazor
-control: 3D Charts
+control: 3D Chart
 documentation: ug
 ---
 
-# Chart Dimensions in Blazor 3D Charts
+# Blazor 3D Chart Dimensions
 
 ## Size for container
 

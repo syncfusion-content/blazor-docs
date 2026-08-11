@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column Chart in Blazor 3D Charts | Syncfusion®
-description: Render vertical columns in Syncfusion Blazor 3D Charts by setting the series Type to Column to compare values across categories along the X axis.
+title: Blazor 3D Column Chart Examples and Documentation | Syncfusion®
+description: Learn how to render a Column Chart in Syncfusion Blazor 3D Chart by setting the series Type to Column with code samples.
 platform: Blazor
-control: 3D Charts
+control: 3D Chart
 documentation: ug
 ---
 
-# Column Chart in Blazor 3D Charts
+# Blazor 3D Column Chart
 
 ## Column
 

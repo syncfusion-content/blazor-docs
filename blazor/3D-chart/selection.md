@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Selection in Blazor 3D Charts | Syncfusion®
-description: Enable mouse-click selection in Syncfusion Blazor 3D Charts by setting SelectionMode to None, Point, Series, or Cluster for data points.
+title: Blazor 3D Chart Selection Examples | Syncfusion®
+description: Learn about selection in Syncfusion Blazor 3D Chart, including Point, Series, and Cluster selection modes with code samples.
 platform: Blazor
-control: 3D Charts
+control: 3D Chart
 documentation: ug
 ---
 
 <!-- markdownlint-disable MD036 -->
 
-# Selection in Blazor 3D Charts
+# Blazor 3D Chart Selection
 
 The 3D chart provides selection support for the series and its data points on mouse click.
 

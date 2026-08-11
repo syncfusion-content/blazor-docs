@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Legend in Blazor 3D Charts | Syncfusion®
-description: Show or hide series in Syncfusion Blazor 3D Charts by placing the legend at the top, bottom, left, or right of the chart area.
+title: Blazor 3D Chart Legend Configuration Examples | Syncfusion®
+description: Learn how to enable and customize the legend in Syncfusion Blazor 3D Chart, including position, alignment, and styling options.
 platform: Blazor
-control: 3D Charts
+control: 3D Chart
 documentation: ug
 ---
 
-# Legend in Blazor 3D Charts
+# Blazor 3D Chart Legend
 
 Legend provides information about the series rendered in the 3D chart.
 

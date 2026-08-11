@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor 3D Charts | Syncfusion®
-description: Learn how the Syncfusion Blazor 3D Charts meets WCAG 2.2, Section 508, ADA, and WAI-ARIA standards with full keyboard navigation and screen reader support.
+title: Blazor 3D Chart Accessibility Examples | Syncfusion®
+description: Learn about accessibility in Syncfusion Blazor 3D Chart, including keyboard navigation, screen reader support, and WCAG 2.2 compliance.
 platform: Blazor
-control: 3D Charts
+control: 3D Chart
 documentation: ug
 ---
 
-# Accessibility in Blazor 3D Charts
+# Blazor 3D Chart Accessibility
 
 The Blazor 3D Chart component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

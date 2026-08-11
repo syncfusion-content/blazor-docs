@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Print and Export in Blazor 3D Charts | Syncfusion®
-description: Print or export Syncfusion Blazor 3D Charts from the browser by calling the PrintAsync method or using the built-in export menu.
+title: Blazor 3D Chart Print and Export Examples | Syncfusion®
+description: Learn how to print and export Syncfusion Blazor 3D Chart using PrintAsync, or export to image, SVG, and PDF formats.
 platform: Blazor
-control: 3D Charts
+control: 3D Chart
 documentation: ug
 ---
 
-# Print and Export in Blazor 3D Charts
+# Blazor 3D Chart Print and Export
 
 ## Print
 
