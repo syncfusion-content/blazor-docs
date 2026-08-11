@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Range Column in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about Range Column Chart in Blazor Charts component and more.
+title: Blazor Range Column Chart Examples and Documentation | Syncfusion®
+description: Learn how to create Blazor Range Column Charts using Syncfusion. Visualize min and max values per category as vertical bars with two Y values.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Range Column in Blazor Charts Component
+# Range Column Chart in Blazor
 
 ## Range Column
 

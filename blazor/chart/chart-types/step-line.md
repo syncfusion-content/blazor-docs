@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Step Line Chart in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about Step Line Chart in Blazor Charts component and much more.
+title: Blazor Step Line Chart Examples and Documentation | Syncfusion®
+description: Learn how to create Blazor Step Line Charts using Syncfusion. Connect data points with horizontal and vertical lines for a staircase effect.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Step Line Chart in Blazor Charts Component
+# Step Line Chart in Blazor
 
 ## Step Line
 
