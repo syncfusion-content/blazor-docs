@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Technical Indicators in Blazor Stock Chart Component | Syncfusion®
-description: Check out and learn about technical indicators available in the Blazor Stock Chart component and much more details.
+title: Blazor Stock Chart Technical Indicators | Syncfusion®
+description: Learn how to add 10 technical indicators to the Blazor Stock Chart. Includes EMA, SMA, ATR, MACD, RSI, Momentum, Stochastic, and Bollinger Band.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Technical Indicators in Blazor Stock Chart Component
+# Blazor Stock Chart Technical Indicators
 
 A technical indicator is a mathematical calculation based on historical price, volume, or open interest information that aims to forecast financial market direction.
 
