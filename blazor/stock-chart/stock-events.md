@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stock Events in Blazor Stock Chart Component | Syncfusion®
-description: Check out and learn how to configure and customize stock events in the Blazor Stock Chart component and much more details.
+title: Blazor Stock Chart Stock Events | Syncfusion®
+description: Learn how to mark notable dates on the Blazor Stock Chart with stock events using custom text, flag shapes, colors, and descriptions.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
 ---
 
-# Stock Events in Blazor Stock Chart Component
+# Blazor Stock Chart Stock Events
 
 Stock events mark notable occurrences such as market open and close, highest or lowest price, and quarter or year boundaries on specific dates. In this section, **SplineSeries** is used to represent selected data values. Specific data values can be customized using `StockEvents`.
 
