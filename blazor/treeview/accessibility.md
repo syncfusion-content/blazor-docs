@@ -67,7 +67,7 @@ The Blazor TreeView component adheres to the [WAI-ARIA keyboard interaction guid
 | <kbd>Esc</kbd> | <kbd>Esc</kbd> | Focuses out the edit state without saving the edited text. |
 | <kbd>Enter</kbd> |<kbd>return</kbd> | Selects the focused node/saves the edited text. |
 | <kbd>Space</kbd> | <kbd>space</kbd> | Checks the current node. |
-| <kbd>Ctrl + A</kbd> | <kbd>⌘</kbd> + <kbb>A</kbd> | Selects all nodes. |
+| <kbd>Ctrl</kbd> + <kbd>A</kbd> | <kbd>⌘</kbd> + <kbd>A</kbd> | Selects all nodes. |
 
 ## Ensuring Accessibility
 
