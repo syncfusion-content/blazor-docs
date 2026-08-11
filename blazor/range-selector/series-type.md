@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Series Type in Blazor Range Selector Component | Syncfusion®
-description: Checkout and learn here all about Series Type in Blazor Range Selector component with examples and much more details.
+title: Blazor Range Selector Series Type Examples | Syncfusion®
+description: Learn about the supported series types in Syncfusion Blazor Range Selector, including Line, Area, and StepLine series.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Series Type in Blazor Range Selector Component
+# Blazor Range Selector Series Type
 
 To render the data, the Range Selector supports three types of series.
 
