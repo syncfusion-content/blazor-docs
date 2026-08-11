@@ -9,7 +9,6 @@ documentation: ug
 
 # PDF Export in Blazor Data Grid
 
-
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides a built-in feature to export grid data to a **PDF**. Exporting data helps generate printable reports or share data in a standardized format.
 To enable PDF export:
 
