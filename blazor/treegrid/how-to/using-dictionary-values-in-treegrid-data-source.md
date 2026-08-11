@@ -9,11 +9,15 @@ documentation: ug
 
 # Using Dictionary Values as Data Source in Blazor TreeGrid
 
-The dictionary values can be assigned in the Tree Grid's data source by accessing them using **KeyValuePair** data type inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumns.html) component
+Dictionary values can be displayed in the TreeGrid by accessing them inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumns.html) component. This approach is useful when displaying lookup values or dynamic data stored as dictionary entries.
 
-This is demonstrated in the below sample code where **Designation** is defined as Dictionary value and it is accessed inside the template property of the `TreeGridColumn` using **KeyValuePair** data type. The key value is compared with the **TaskId** column value and based on that the value is displayed.
+**Steps to implement:**
 
-
+1. **Create a Dictionary** — Define a dictionary property in the data class (e.g., `Dictionary<int, string> Designation`)
+2. **Initialize Dictionary values** — Populate the dictionary with key-value pairs (e.g., `{ 1, "Level1" }`)
+3. **Assign to Data Objects** — Assign the dictionary to each data item in the list
+4. **Bind TreeGrid** — Assign the data list to the TreeGrid's `DataSource` property
+5. **Access in Template** — Use the template to retrieve dictionary values using `TryGetValue()` for safe lookup
 
 ```cshtml
 
@@ -33,8 +37,14 @@ This is demonstrated in the below sample code where **Designation** is defined a
             <Template>
                 @{
                     var Details = context as TaskDetails;
-                    var level = Details.Designation.Select(kvp => (kvp.Key == Details.TaskId) ? kvp.Value.ToString() : "");
-                    <p>@string.Join("", level)</p>
+                    string designationValue = "";
+                    // Use TryGetValue to safely retrieve dictionary value by key
+                    // This returns true if the key exists, and outputs the value through the 'value' parameter
+                    if (Details?.Designation != null && Details.Designation.TryGetValue(Details.TaskId, out var value))
+                    {
+                        designationValue = value;
+                    }
+                    <p>@designationValue</p>
                 }
             </Template>
         </TreeGridColumn>
