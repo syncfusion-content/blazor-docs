@@ -9,9 +9,9 @@ documentation: ug
 
 # Custom Toolbar Controls in Blazor TreeGrid
 
-The custom controls can be rendered inside the Tree Grid's toolbar area. This can be achieved by initializing the custom controls within the Template property of the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfToolbar.html) component. This toolbar component is defined inside the Tree Grid component.
+Custom controls are added to the TreeGrid toolbar by defining them in the Template property of the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfToolbar.html) component. The Toolbar component is defined inside the TreeGrid component.
 
-This is demonstrated in the below sample code where [Autocomplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) component is rendered inside the Tree Grid's toolbar and is used for performing search operation on the Tree Grid.
+The following example demonstrates an [AutoComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) component in the toolbar that performs search operations on the TreeGrid. When a value is selected in the AutoComplete, the `ValueChange` event triggers [`SearchAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_SearchAsync_System_String_) to filter the TreeGrid data. The [AutoCompleteFieldSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html) specifies the `Value` property, which determines which property is bound to the search input.
 
 {% tabs %}
 
@@ -78,6 +78,7 @@ This is demonstrated in the below sample code where [Autocomplete](https://help.
         }
         public void OnSearch(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, TaskDetails> args)
         {
+            // SearchAsync filters the TreeGrid based on the selected AutoComplete value
             this.TreeGrid.SearchAsync(args.Value);
         }
     }

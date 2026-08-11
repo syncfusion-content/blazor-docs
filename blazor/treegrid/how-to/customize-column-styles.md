@@ -9,13 +9,11 @@ documentation: ug
 
 # Column Styles Customization in Blazor TreeGrid
 
- The appearance of the header and content of a particular column can be customized using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_CustomAttributes) property.
+Column headers and content can be customized using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_CustomAttributes) property. To apply custom styling to a column:
 
-To customize the Tree Grid column, follow the given steps:
+**Step 1: Create a CSS Class**
 
-**Step 1**:
-
-Create a CSS class with custom style to override the default style for row cell and header cell.
+Create a CSS class that overrides the default styles for both header and data cells. CSS can be added inline in a `<style>` block or in a separate stylesheet.
 
 ```css
 .e-attr{
@@ -26,9 +24,9 @@ Create a CSS class with custom style to override the default style for row cell 
     }
 ```
 
-**Step 2**:
+**Step 2: Apply the CSS Class to a Column**
 
-Add the custom CSS class to the specified column by using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_CustomAttributes) property.
+Apply the CSS class to the column using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_CustomAttributes) property. The `CustomAttributes` property accepts a dictionary where the key is the attribute name (e.g., `class`) and the value is the attribute value.
 
 {% tabs %}
 
@@ -53,7 +51,7 @@ Add the custom CSS class to the specified column by using the [CustomAttributes]
         background: #5DADE2;
         font-family: "Bell MT";
         color: red;
-        font-size: 5px;
+        font-size: 14px;
     }
 </style>
 

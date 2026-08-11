@@ -9,9 +9,8 @@ documentation: ug
 
 # Change Data Source Dynamically in Blazor TreeGrid
 
-The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) of the Tree Grid component can be changed dynamically through an external button.
+The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) property of the TreeGrid can be updated dynamically by reassigning the bound data property. When a bound property is reassigned, Blazor automatically detects the change and re-renders the component.
 
-This is demonstrated in the below sample code where the `DataSource` is dynamically modified using the bounded property.
 
 {% tabs %}
 
@@ -49,7 +48,7 @@ This is demonstrated in the below sample code where the `DataSource` is dynamica
 
     public void Change()
     {
-        // Data source is modified dynamically
+        // Reassign the TreeGridData property to update the TreeGrid with new data
         this.TreeGridData = TreeData.GetSelfChangedDataSource().ToList();
     }
 }

@@ -3,17 +3,17 @@ layout: post
 title: Blazor TreeGrid Custom Toolbar with Drop-Down List | Syncfusion
 description: Learn how to create a custom toolbar with a drop-down list in Blazor TreeGrid to execute actions, filter data, and enhance user interactions.
 platform: Blazor
-control: Tree Grid
+control: TreeGrid
 documentation: ug
 ---
 
 # Custom Toolbar with Drop-Down List in Blazor TreeGrid
 
- ToolBar items can be created in the Tree Grid. It can be added by defining the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar). Actions for this ToolBar template items are defined in the `ToolbarClick`.
+Custom toolbar items are added by defining the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar) property. Component-specific events, such as [DropDownListEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html), handle user interactions. In this example, a dropdown is added to the toolbar that allows users to select TreeGrid rows by index.
 
-**Step 1**:
+## Create the Dropdown Template
 
-Initialize the template for the custom component. Using the following code add the [SfDropDownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) component to the ToolBar.
+Add the [SfDropDownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) component to the toolbar template as shown in the following code:
 
 ```cshtml
 <SfToolbar>
@@ -21,7 +21,7 @@ Initialize the template for the custom component. Using the following code add t
         <ToolbarItem Type="ItemType.Input">
             <Template>
                 <SfDropDownList TValue="string" TItem="Select" DataSource=@LocalData Width="200">
-                    <DropDownListFieldSettings Text="text" Value="text"> </DropDownListFieldSettings>
+                    <DropDownListFieldSettings Text="Text" Value="Text"> </DropDownListFieldSettings>
                     <DropDownListEvents TValue="string" ValueChange="OnChange" TItem="Select"> </DropDownListEvents>
                 </SfDropDownList>
             </Template>
@@ -30,9 +30,9 @@ Initialize the template for the custom component. Using the following code add t
 </SfToolbar>
 ```
 
-**Step 2**:
+## Handle Dropdown Value Changes
 
-To render the `SfDropDownList` component, use the [DropDownListEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html). The Tree Grid row index can be selected based on the selected data in the DropDownList.
+The [DropDownListEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html) handle dropdown value changes. When the dropdown value changes, the corresponding row is selected by index using `SelectRowAsync`.
 
 {% tabs %}
 
@@ -50,7 +50,7 @@ To render the `SfDropDownList` component, use the [DropDownListEvents](https://h
             <ToolbarItem Type="ItemType.Input">
                 <Template>
                     <SfDropDownList TValue="string" TItem="Select" DataSource=@LocalData Width="200">
-                        <DropDownListFieldSettings Text="text" Value="text"> </DropDownListFieldSettings>
+                        <DropDownListFieldSettings Text="Text" Value="Text"> </DropDownListFieldSettings>
                         <DropDownListEvents TValue="string" ValueChange="OnChange" TItem="Select"> </DropDownListEvents>
                     </SfDropDownList>
                 </Template>
@@ -73,20 +73,20 @@ To render the `SfDropDownList` component, use the [DropDownListEvents](https://h
 
     public class Select
     {
-        public string text { get; set; }
+        public string Text { get; set; }
     }
     List<Select> LocalData = new List<Select>
     {
-            new Select() { text = "0"},
-            new Select() { text = "1"},
-            new Select() { text = "2"},
-            new Select() { text = "3"},
-            new Select() { text = "4"},
-            new Select() { text = "5"},
-            new Select() { text = "6"},
-            new Select() { text = "7"},
-            new Select() { text = "8"},
-            new Select() { text = "9"},
+            new Select() { Text = "0"},
+            new Select() { Text = "1"},
+            new Select() { Text = "2"},
+            new Select() { Text = "3"},
+            new Select() { Text = "4"},
+            new Select() { Text = "5"},
+            new Select() { Text = "6"},
+            new Select() { Text = "7"},
+            new Select() { Text = "8"},
+            new Select() { Text = "9"},
     };
     protected override void OnInitialized()
     {
