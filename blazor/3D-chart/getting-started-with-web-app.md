@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor 3D Charts in Blazor Web App | Syncfusion
-description: Check out and learn about the documentation for getting started with Blazor 3D Charts Component in Blazor Web App.
+title: Getting Started with Blazor 3D Charts in Web App | Syncfusion®
+description: Learn how to get started with Syncfusion Blazor 3D Charts in a Blazor Web App, including server and client setup, packages, and first chart.
 platform: Blazor
-component: 3D Charts
+control: 3D Charts
 documentation: ug
 ---
 
-# Getting Started with Blazor 3D Charts Component in Blazor Web App
+# Blazor 3D Chart Getting Started in Web App
 
 This section briefly explains how to include the [Blazor 3D Charts](https://www.syncfusion.com/blazor-components/blazor-3d-charts) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

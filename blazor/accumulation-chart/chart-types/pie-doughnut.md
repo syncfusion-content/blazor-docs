@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pie and Doughnut in Blazor Accumulation Chart Component | Syncfusion®
-description: Checkout and learn here all about Pie and Doughnut in Blazor Accumulation Chart component and much more details.
+title: Blazor Pie and Doughnut Chart Examples | Syncfusion®
+description: Learn how to create Pie and Doughnut Charts in Syncfusion Blazor Accumulation Chart to display proportional data and percentage distribution.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Pie and Doughnut in Blazor Accumulation Chart Component
+# Pie and Doughnut Chart in Blazor
 
 ## Pie Chart
 
