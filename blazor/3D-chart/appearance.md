@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor 3D Chart Component | Syncfusion®
-description: Checkout and learn here all about Appearance Customization in Blazor 3D Chart component and much more.
+title: Blazor 3D Chart Appearance Examples | Syncfusion®
+description: Learn how to customize the appearance of Syncfusion Blazor 3D Chart, including custom color palettes via the Palettes property.
 platform: Blazor
 control: 3D Chart
 documentation: ug
 ---
 
-# Appearance in Blazor 3D Chart Component
+# Blazor 3D Chart Appearance
 
 ## Custom color palette
 
