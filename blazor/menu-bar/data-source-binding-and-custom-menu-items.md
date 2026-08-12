@@ -245,8 +245,8 @@ To customize Menu Bar items in your application, set a custom template using [Me
                                 @MenuItems.About
                             </div>
                             <div class="e-card-actions">
-                                <input type="button" class="e-btn e-outline" style="pointer-events: auto;" value="Read More" />
-                            </divbutton type="button" class="e-btn e-outline" style="pointer-events: auto;">Read More</button
+                                <button type="button" class="e-btn e-outline" style="pointer-events: auto;">Read More</button>
+                            </div>
                         </div>
                     }
                 }

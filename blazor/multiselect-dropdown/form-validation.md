@@ -11,7 +11,7 @@ documentation: ug
 
 ## Edit form validation
 
-The MultiSelect component can be used inside an EditForm to build a form that supports selecting multiple values. The `EditForm` component validates data annotation rules via the `DataAnnotationsValidator` component.
+The MultiSelect component can be used inside an `EditForm` to build a form that supports selecting multiple values. The `EditForm` component validates data annotation rules via the `DataAnnotationsValidator` component.
 
 When the MultiSelect input is valid, the form can be submitted. If the input is invalid, a validation message is displayed until a valid value is provided.
 

@@ -11,10 +11,22 @@ documentation: ug
 
 The [GetDataByValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_GetDataByValue__0_) method returns the data item or items corresponding to the value or values provided, based on the field mapped to `Value` in `ListBoxFieldSettings`. If a provided value does not match any item, that value is ignored and is not included in the result.
 
-**Parameters:**
-- `value` (`TValue` / `TValue[]`) — The value or values to look up in the data source.
+**Signature:**
 
-**Returns:** `TValue` for a single value or `TValue[]` for an array of values containing the matching data items. Returns `default` (or array with ignored values) when no match is found.
+```csharp
+// For single value
+TValue GetDataByValue(TValue value)
+
+// For array of values
+TValue[] GetDataByValue(TValue[] value)
+```
+
+**Parameters:**
+- `value` (`TValue` or `TValue[]`) — The value or array of values to look up in the data source.
+
+**Returns:**
+- Single value form: `TValue` — the matching data item, or `default` if no match is found.
+- Array form: `TValue[]` — the matching data items. Values that do not match any item are ignored and excluded from the result.
 
 In the following example, the `Value` field in `ListBoxFieldSettings` is mapped to `Text`, so the input array must contain the item `Text` values. The `TValue` is `string[]`, which enables multiple selection.
 
