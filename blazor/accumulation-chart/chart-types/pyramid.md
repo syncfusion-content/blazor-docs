@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Pyramid Chart Examples and Documentation | Syncfusion®
+title: Blazor Pyramid Chart Examples | Syncfusion®
 description: Learn how to render a Pyramid Chart in Syncfusion Blazor Accumulation Chart to visualize hierarchical data in a triangle with divided sections.
 platform: Blazor
 control: Accumulation Chart
