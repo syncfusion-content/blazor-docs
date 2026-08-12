@@ -1,13 +1,13 @@
 ---
 layout: post
-title: States in Blazor Progress Bar | Syncfusion®
-description: Learn about the Determinate, Indeterminate, and Buffer states of the Syncfusion Blazor Progress Bar.
+title: Blazor ProgressBar States Examples | SyncfusionÂ®
+description: Learn about the different progress states in Syncfusion Blazor ProgressBar, including Determinate and Indeterminate modes.
 platform: Blazor
-control: Progress Bar
+control: ProgressBar
 documentation: ug
 ---
 
-# States in Blazor Progress Bar
+# Blazor ProgressBar States
 
 In this section, the progress can be visualized in different states.
 

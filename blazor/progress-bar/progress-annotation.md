@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotations and Label in Blazor Progress Bar | Syncfusion®
-description: Learn how to add text, shape, and image annotations and customize labels in the Syncfusion Blazor Progress Bar.
+title: Blazor ProgressBar Annotations and Label Examples | SyncfusionÂ®
+description: Learn how to add annotations and labels in Syncfusion Blazor ProgressBar using ProgressBarAnnotations collection and ContentTemplate.
 platform: Blazor
-control: Progress Bar
+control: ProgressBar
 documentation: ug
 ---
 
-# Annotations and Label in Blazor Progress Bar
+# Blazor ProgressBar Annotations and Label
 
 ## Annotations
 
