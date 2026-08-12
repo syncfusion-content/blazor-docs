@@ -373,4 +373,3 @@ N> You can also explore our [Blazor TreeMap example](https://blazor.syncfusion.c
 
 1. [Getting Started with Blazor for Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 2. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-
