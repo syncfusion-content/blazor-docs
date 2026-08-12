@@ -73,8 +73,6 @@ Cloning is available via the user interface and programmatically:
         }
         };
 
-    public string[] GroupID = new string[] { "group1" };
-
     private void cloneGroup()
     {
         QuerybuilderObj.CloneGroup("group1", 2);

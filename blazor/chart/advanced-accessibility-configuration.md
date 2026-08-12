@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility Customization in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about Accessibility Customization in Blazor Charts component and much more.
+title: Blazor Charts Accessibility Customization | Syncfusion®
+description: Learn how to configure accessibility in Syncfusion Blazor Charts. Set AccessibilityDescription, AccessibilityRole, and Focusable for screen readers.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Accessibility Customization in Blazor Chart Component
+# Blazor Charts Accessibility Customization
 
 The [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) component is structured to visualize data in a graphical manner. It provides robust customization options for accessibility, allowing you to enhance the user experience for those with disabilities. The main attributes of the Blazor Chart component's accessibility customization are briefly explained in this section.
 

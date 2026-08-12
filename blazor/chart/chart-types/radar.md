@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Radar in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Radar Chart in Blazor Charts component and much more.
+title: Blazor Radar Chart Examples and Documentation | Syncfusion®
+description: Learn how to create Blazor Radar Charts using Syncfusion. Plot data by value and angle on a circular graph to compare qualitative aspects.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Radar in Blazor Charts Component
+# Radar Chart in Blazor
 
 ## Radar
  

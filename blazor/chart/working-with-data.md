@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Working with Data in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about working with data in Blazor Charts component, it's elements and more.
+title: Blazor Charts Working with Data Examples | Syncfusion®
+description: Learn how to bind data to Syncfusion Blazor Charts. Use IEnumerable via DataSource or SfDataManager for RESTful and remote data binding.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
 <!-- markdownlint-disable MD036 -->
 
-# Working with Data in Blazor Charts Component
+# Blazor Charts Working with Data
 
 The Chart uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) value can be set using either [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) property values or a list of business objects.
 

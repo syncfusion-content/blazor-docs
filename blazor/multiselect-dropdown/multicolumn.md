@@ -28,7 +28,7 @@ Use the built-in utility classes below to control text alignment within each col
 
 ![Blazor MultiSelect with multicolumn](./images/multicolumn/blazor_multiselect_multicolumn.webp)
 
-## How to display multicolumn item and CheckBox inline
+## How to display the multicolumn item and checkbox inline
 
 To align the checkbox and item details on the same line within a templated item, apply the following CSS. These styles position the checkbox so it appears inline with the item content:
 
