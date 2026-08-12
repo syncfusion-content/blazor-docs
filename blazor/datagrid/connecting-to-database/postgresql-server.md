@@ -9,11 +9,11 @@ documentation: ug
 
 # PostgreSQL with Entity Framework in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a PostgreSQL database using Entity Framework Core (EF Core). This modern approach provides a more maintainable and type-safe alternative to raw SQL queries.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a PostgreSQL database using Entity Framework Core (EF Core). Modern Entity Framework Core provides a more maintainable and type-safe alternative to raw SQL queries.
 
 **What is Entity Framework Core?**
 
-Entity Framework Core (EF Core) is a software tool that simplifies database operations in .NET applications. It serves as a bridge between C# code and databases like PostgreSQL.
+Entity Framework Core (EF Core) is a software tool that simplifies database operations in .NET applications. EF Core functions as a bridge between C# code and databases like PostgreSQL.
 
 **Key Benefits of Entity Framework Core**
 
@@ -25,7 +25,7 @@ Entity Framework Core (EF Core) is a software tool that simplifies database oper
 
 **What is Npgsql Entity Framework Core Provider?**
 
-The **Npgsql.EntityFrameworkCore.PostgreSQL** package is the official Entity Framework Core provider for PostgreSQL. It acts as a bridge between Entity Framework Core and PostgreSQL, allowing applications to read, write, update, and delete data in a PostgreSQL database.
+The **Npgsql.EntityFrameworkCore.PostgreSQL** package is the official Entity Framework Core provider for PostgreSQL. Npgsql functions as a bridge between Entity Framework Core and PostgreSQL, enabling applications to read, write, update, and delete data in PostgreSQL databases.
 
 ## Prerequisites
 
@@ -100,16 +100,15 @@ VALUES
 ('PO-2025-0002', 'VEN-9002', 'Fibre Cables', 'Networking', 100, 15.50, 1550.00, 'Approved', 'Bob Smith', 'Alice Johnson', '2025-01-09', '2025-01-17', NOW(), NOW());
 ```
 
-After executing this script, the purchase order records are stored in the `PurchaseOrder` table within the `PurchaseOrderDB` database. The database is now ready for integration with the Blazor application.
+After executing the script, the purchase order records are stored in the `PurchaseOrder` table within the `PurchaseOrderDB` database. The database is ready for integration with the Blazor application.
 
 ---
 
 ### Step 2: Install Required NuGet Packages
 
-Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template.
-This template automatically generates essential starter files—such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
+Before installing necessary NuGet packages, create a new Blazor Web Application using the default template. The default template automatically generates essential starter files—such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
 
-For this guide, a Blazor application named **Grid_PostgreSQL** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the application. These packages enable Entity Framework Core and PostgreSQL integration.
+Create a Blazor application named **Grid_PostgreSQL**. After the project setup, install the required NuGet packages. NuGet packages are software libraries that add functionality to applications. Packages enable Entity Framework Core and PostgreSQL integration.
 
 **Method 1: Using Package Manager Console**
 
@@ -150,7 +149,7 @@ All required packages are now installed.
 
 ### Step 3: Create the Data Model
 
-A data model is a C# class that represents the structure of a database table. This model defines the properties that correspond to the columns in the `PurchaseOrder` table.
+A data model is a C# class that represents database table structure. Model classes define properties that correspond to database columns in the `PurchaseOrder` table.
 
 **Instructions:**
 
@@ -258,13 +257,11 @@ namespace Grid_PostgreSQL.Data
 ```
 
 **Explanation:**
-- The `[Key]` attribute marks the `PurchaseOrderId` property as the primary key (a unique identifier for each record).
+- The `[Key]` attribute marks the `PurchaseOrderId` property as the primary key.
 - Each property represents a column in the database table.
-- The `?` symbol indicates that a property is nullable (can be empty).
-- The model includes comprehensive XML documentation for each property.
+- The `?` symbol indicates nullable properties.
+- Model includes comprehensive XML documentation for each property.
 - Decimal properties use `decimal` type for accurate monetary calculations.
-
-The data model has been successfully created.
 
 ### Step 4: Configure the DbContext
 
@@ -494,7 +491,7 @@ The database connection string has been configured successfully.
 
 ### Step 6: Create the Repository Class
 
-A repository class is an intermediary layer that handles all database operations. This class uses Entity Framework Core to communicate with the PostgreSQL database.
+A repository class is an intermediary layer that handles all database operations. Repository classes use Entity Framework Core to communicate with PostgreSQL databases.
 
 **Instructions:**
 
@@ -609,7 +606,7 @@ The repository class has been created.
 
 ### Step 7: Register Services in Program.cs
 
-The `Program.cs` file is where application services are registered and configured. This file must be updated to enable Entity Framework Core with PostgreSQL and the repository pattern.
+The `Program.cs` file registers and configures application services. Update this file to enable Entity Framework Core with PostgreSQL and the repository pattern.
 
 **Instructions:**
 
@@ -677,14 +674,12 @@ app.Run();
 **Explanation:**
 
 - **`AddSyncfusionBlazor()`**: Registers Blazor components (DataGrid, themes, etc.).
-- **`AddDbContext<PurchaseOrderDbContext>`**: Registers the DbContext with PostgreSQL as the database provider using `UseNpgsql()`.
-- **Connection String Validation**: Ensures the connection string is configured before attempting to connect.
-- **`EnableSensitiveDataLogging()`**: Enabled in development to log detailed information about database operations (useful for debugging).
-- **`EnableDetailedErrors()`**: Provides more detailed error messages during development.
-- **`AddScoped<PurchaseOrderRepository>`**: Registers the repository as a scoped service, creating a new instance for each HTTP request.
+- **`AddDbContext<PurchaseOrderDbContext>`**: Registers DbContext with PostgreSQL using `UseNpgsql()`.
+- **Connection String Validation**: Ensures connection string configuration before connection attempts.
+- **`EnableSensitiveDataLogging()`**: Logs detailed database operation information during development.
+- **`EnableDetailedErrors()`**: Provides detailed error messages during development.
+- **`AddScoped<PurchaseOrderRepository>`**: Registers repository as scoped service, creating new instance per HTTP request.
 - **`AddRazorComponents()` and `AddInteractiveServerComponents()`**: Enables Blazor server-side rendering with interactive components.
-
-The service registration has been completed successfully.
 
 ---
 
@@ -716,13 +711,14 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 <!-- Blazor Scripts -->
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
+
 For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
 Blazor components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting-started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
 ### Step 2: Update the Blazor DataGrid
 
-The `Home.razor` component will display the purchase order data in a Blazor DataGrid with search, filter, sort, and pagination capabilities.
+The `Home.razor` component displays purchase order data in a Blazor DataGrid with search, filter, sort, and pagination capabilities.
 
 **Instructions:**
 
@@ -760,12 +756,10 @@ The `Home.razor` component will display the purchase order data in a Blazor Data
 
 **Component Explanation:**
 
-- **`@inject PurchaseOrderRepository`**: Injects the repository to access database methods.
-- **`<SfGrid>`**: The DataGrid component that displays data in rows and columns.
-- **`<GridColumns>`**: Defines individual columns in the DataGrid.
+- **`@inject PurchaseOrderRepository`**: Injects repository to access database methods.
+- **`<SfGrid>`**: DataGrid component that displays data in rows and columns.
+- **`<GridColumns>`**: Defines individual columns in DataGrid.
 - **`<GridPageSettings>`**: Configures pagination with 10 records per page.
-
-The Home component has been updated successfully with DataGrid.
 
 ---
 
@@ -793,7 +787,7 @@ The `CustomAdaptor` is a bridge between the DataGrid and the PostgreSQL database
 
     /// <summary>
     /// CustomAdaptor class bridges DataGrid interactions with database operations.
-    /// This adaptor handles all data retrieval and manipulation for the DataGrid.
+    /// Adaptor handles all data retrieval and manipulation for the DataGrid.
     /// </summary>
     public class CustomAdaptor : DataAdaptor
     {
@@ -863,8 +857,6 @@ The `CustomAdaptor` is a bridge between the DataGrid and the PostgreSQL database
 }
 ```
 
-The `CustomAdaptor` class has been successfully implemented with all data operations.
-
 **Common methods in data operations**
 
 * [ReadAsync(DataManagerRequest)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) - Retrieve and process records (search, filter, sort, page, group)
@@ -920,17 +912,15 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
 | `Cancel` | Cancels the current edit or add operation. |
 | `Search` | Displays a search box to find records. |
 
-The toolbar has been successfully added.
-
 ---
 
 ### Step 5: Running the Application
 
 **Build the Application**
 
-1. Open the terminal or Package Manager Console in Visual Studio.
-2. Navigate to the project directory.
-3. Run the following command to restore packages and build:
+1. Open terminal or Package Manager Console in Visual Studio.
+2. Navigate to project directory.
+3. Execute the build command:
 
 ```powershell
 dotnet build
@@ -938,7 +928,7 @@ dotnet build
 
 **Run the Application**
 
-Execute the following command:
+Execute the run command:
 
 ```powershell
 dotnet run
@@ -946,9 +936,9 @@ dotnet run
 
 **Access the Application**
 
-1. Open a web browser.
-2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
-3. The Purchase Order Management System is now running and ready to use.
+1. Open web browser.
+2. Navigate to `https://localhost:5001` (or the port shown in terminal).
+3. Purchase Order Management System is running and ready for use.
 
 ![Basic DataGrid displaying purchase orders from the PostgreSQL Server database](../images/blazor-datagrid-postgresql.webp)
 
@@ -1030,7 +1020,7 @@ Paging feature is now active with 10 records per page.
 
 ### Step 7: Implement Searching feature
 
-Searching allows the user to find purchase order records by entering keywords in the search box.
+Searching enables users to find purchase order records by entering keywords in search box.
 
 **Instructions:**
 
@@ -1103,7 +1093,7 @@ Searching feature is now active.
 
 ### Step 8: Implement Filtering feature
 
-Filtering allows the user to restrict purchase order data based on column values using a menu interface.
+Filtering restricts purchase order data based on column values using menu interface.
 
 **Instructions:**
 
@@ -1189,7 +1179,7 @@ Filtering feature is now active.
 
 ### Step 9: Implement Sorting feature
 
-Sorting enables the user to arrange purchase order records in ascending or descending order based on column values.
+Sorting arranges purchase order records in ascending or descending order based on column values.
 
 **Instructions:**
 
@@ -1277,7 +1267,7 @@ Sorting feature is now active.
 
 ### Step 10: Implement Grouping feature
 
-Grouping organizes purchase order records into hierarchical groups based on column values, providing a structured view of the data.
+Grouping organizes purchase order records into hierarchical groups based on column values for structured data view.
 
 **Instructions:**
 
@@ -1596,7 +1586,7 @@ Now modifications are synchronized to the database and reflected in the grid UI.
 
 **Delete**
 
-Record deletion allows purchase orders to be removed directly from the DataGrid. The adaptor captures the delete request, executes the corresponding **PostgreSQL DELETE** operation, and updates both the database and the grid to reflect the removal.
+Record deletion enables purchase order removal directly from DataGrid. Adaptor captures delete request, executes corresponding **PostgreSQL DELETE** operation, and updates database and grid to reflect removal.
 
 In **Home.razor**, implement the `RemoveAsync` method within the `CustomAdaptor` class:
 
@@ -1605,7 +1595,7 @@ public class CustomAdaptor : DataAdaptor
 {
     public override async Task<object> RemoveAsync(DataManager dataManager, object value, string? keyField, string key)
     {
-        // This method will be invoked when deleting existing records from the Blazor DataGrid component.
+        // Method is invoked when deleting existing records from Blazor DataGrid component.
         int? recordId = null;
         if (value is int intValue)
         {
@@ -1714,13 +1704,13 @@ public class CustomAdaptor : DataAdaptor
 }
 ```
 
-> This method is triggered when the DataGrid is operating in [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) Edit mode.
+> Method is triggered when DataGrid operates in [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) Edit mode.
 
 ---
 
 ## Complete Code
 
-Now that all the CustomAdaptor methods are implemented for CRUD operations, the complete Home.razor component includes GridColumns for all purchase order fields. The following is the complete Home.razor implementation that integrates all steps and features:
+All CustomAdaptor methods for CRUD operations are implemented. Complete Home.razor component includes GridColumns for all purchase order fields. Following code shows complete Home.razor implementation that integrates all steps and features:
 
 ```cshtml
 @page "/"
@@ -1780,7 +1770,7 @@ Now that all the CustomAdaptor methods are implemented for CRUD operations, the 
 
     /// <summary>
     /// CustomAdaptor class bridges DataGrid interactions with database operations.
-    /// This adaptor handles all data retrieval and manipulation for the DataGrid,
+    /// Adaptor handles all data retrieval and manipulation for DataGrid,
     /// including Search, Filter, Sort, Group, Paging, and CRUD operations.
     /// </summary>
     public class CustomAdaptor : DataAdaptor
@@ -1935,17 +1925,17 @@ Now that all the CustomAdaptor methods are implemented for CRUD operations, the 
 }
 ```
 
-**Key Features of the Complete Implementation:**
+**Key Features of Complete Implementation:**
 
-1. **GridColumns**: Defines 15 columns for all purchase order fields with appropriate data types and formatting.
+1. **GridColumns**: Defines 15 columns for purchase order fields with appropriate data types and formatting.
 2. **Toolbar**: Provides Add, Edit, Delete, Update, Cancel, and Search buttons for CRUD operations.
-3. **Search**: Users can search across all columns using the search box.
+3. **Search**: Search across all columns using search box.
 4. **Filter**: Click column headers to apply menu-based filters (Status, Category, VendorID, etc.).
 5. **Sort**: Click column headers to sort ascending or descending.
-6. **Grouping**: Drag column headers to the group area to organize data by Status or Category.
-7. **Paging**: Data is displayed in pages of 10 records each.
+6. **Grouping**: Drag column headers to group area to organize data by Status or Category.
+7. **Paging**: Data displays in pages of 10 records each.
 8. **CRUD Operations**: Add, Edit, Update, and Delete records with automatic timestamps and PoNumber generation.
-9. **Batch Editing**: Multiple changes can be made and saved atomically.
+9. **Batch Editing**: Multiple changes are made and saved atomically.
 10. **Error Handling**: Comprehensive exception handling with meaningful error messages.
 
 ---
@@ -1958,15 +1948,15 @@ A complete, working sample implementation is available in the [GitHub repository
 
 ## Summary
 
-This guide demonstrates how to:
+Guide demonstrates:
 
-1. Create a PostgreSQL database with purchase order records using pgAdmin 4. [🔗](#step-1-create-the-database-and-table-in-postgresql)
+1. Create PostgreSQL database with purchase order records using pgAdmin 4. [🔗](#step-1-create-the-database-and-table-in-postgresql)
 2. Install necessary NuGet packages for Entity Framework Core with Npgsql and Syncfusion. [🔗](#step-2-install-required-nuget-packages)
 3. Create data models and DbContext for database communication with PostgreSQL-specific configuration. [🔗](#step-3-create-the-data-model)
 4. Configure connection strings and register services. [🔗](#step-5-configure-the-connection-string)
-5. Implement the repository pattern for data access with helper methods. [🔗](#step-6-create-the-repository-class)
-6. Create a Blazor component with a DataGrid that supports searching, filtering, sorting, paging, and CRUD operations. [🔗](#step-1-install-and-configure-blazor-datagrid-components)
+5. Implement repository pattern for data access with helper methods. [🔗](#step-6-create-the-repository-class)
+6. Create Blazor component with DataGrid supporting search, filter, sort, paging, and CRUD operations. [🔗](#step-1-install-and-configure-blazor-datagrid-components)
 7. Handle bulk operations and batch updates. [🔗](#step-10-perform-crud-operations)
 
-The application now provides a complete solution for managing purchase orders with a modern, user-friendly interface integrated with PostgreSQL.
+Application provides complete purchase order management solution with modern, user-friendly interface integrated with PostgreSQL.
 

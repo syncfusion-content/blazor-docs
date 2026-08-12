@@ -9,11 +9,11 @@ documentation: ug
 
 # Firebase Realtime Database in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a Firebase Realtime Database using the REST API. This approach provides a lightweight, language-agnostic solution for working with cloud-hosted JSON databases without requiring external SDKs.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a Firebase Realtime Database using the REST API. The approach provides a lightweight, language-agnostic solution for working with cloud-hosted JSON databases without requiring external SDKs.
 
 **What is Firebase Realtime Database?**
 
-Firebase Realtime Database is a cloud-hosted, NoSQL database that stores data as JSON. Unlike Firestore which uses collections and documents, the Realtime Database organizes data in a hierarchical JSON structure with nodes and keys, making it ideal for applications requiring simple setup, direct JSON manipulation, and real-time synchronization across multiple clients.
+Firebase Realtime Database is a cloud-hosted, NoSQL database that stores data as JSON. Unlike Firestore, which uses collections and documents, Realtime Database organizes data in a hierarchical JSON structure with nodes and keys. The structure works well for applications that require simple setup, direct JSON operations, and real-time synchronization across multiple clients.
 
 **Key Benefits of Firebase Realtime Database**
 
@@ -75,7 +75,7 @@ Firebase projects host the Realtime Database and manage authentication, storage,
 5. **Create the Database Structure**
    - In the Realtime Database Console, an empty root node appears.
    - Click the **"+" (Add)** button to create a new node named **"Books"**.
-   - This creates the hierarchical structure: `root/Books/`.
+   - Creates the hierarchical structure: `root/Books/`.
 
 6. **Add Sample Data (Using Data Import or Manual Entry)**
    - The database structure will be populated with sample data in **Step 3** using the JSON file
@@ -98,7 +98,7 @@ Database secrets enable secure REST API access to the Realtime Database.
 2. **Generate Database Secret**
    - Scroll down to **"Realtime Database Secrets"** section.
    - Click the **"Show"** button next to the database secret.
-   - Copy the secret key (this is the authentication token).
+   - Copy the secret key. The secret key is the authentication token.
    - **Important**: Save this secret securely—it grants full access to the database.
 
 3. **Store the Database Secret**
@@ -172,7 +172,7 @@ Initial data seeding adds sample book records to the Realtime Database for devel
 2. **Import Data Using Firebase Console**
    - In Realtime Database Console, click the **three-dot menu** (⋮) at the top
    - Select **"Import JSON"**
-   - Upload or paste the contents of JSON file.
+   - Upload or paste the JSON file contents.
    - Click **"Import"** to load the sample data into the database
 
 3. **Verify Data Import**
@@ -222,7 +222,7 @@ Security rules control read/write access to the Realtime Database paths.
 }
 ```
 
-   - This restricts access to authenticated users only
+   - Restricts access to authenticated users only.
    - Click **"Publish"** to apply the rules
 
 ---
@@ -281,7 +281,7 @@ namespace Grid_Firebase_Realtime.Models
     {
         /// <summary>
         /// Gets or sets the unique identifier for the book.
-        /// Example: "BOOK001"
+        /// Sample value: "BOOK001"
         /// </summary>
         public string BookId { get; set; }
 
@@ -302,7 +302,7 @@ namespace Grid_Firebase_Realtime.Models
 
         /// <summary>
         /// Gets or sets the category or genre of the book.
-        /// Example: "Fiction", "Non-Fiction", "Science"
+        /// Sample values: "Fiction", "Non-Fiction", "Science"
         /// </summary>
         public string Category { get; set; }
 
@@ -314,7 +314,7 @@ namespace Grid_Firebase_Realtime.Models
 
         /// <summary>
         /// Gets or sets the language of the book.
-        /// Example: "English", "Spanish", "French"
+        /// Sample values: "English", "Spanish", "French"
         /// </summary>
         public string Language { get; set; }
 
@@ -330,7 +330,7 @@ namespace Grid_Firebase_Realtime.Models
 
         /// <summary>
         /// Gets or sets the location or shelf where the book is stored.
-        /// Example: "Section A-1"
+        /// Sample value: "Section A-1"
         /// </summary>
         public string Location { get; set; }
 
@@ -364,7 +364,7 @@ The data model has been successfully created in `Models/Book.cs`.
 
 ### Step 7: Configure the Firebase Connection String
 
-A Firebase Realtime Database connection requires the database URL and authentication secret. This configuration is managed in the `appsettings.json` file.
+A Firebase Realtime Database connection requires the database URL and authentication secret. Configure these settings in `appsettings.json`.
 
 **Instructions:**
 
@@ -403,7 +403,7 @@ A Firebase Realtime Database connection requires the database URL and authentica
   - Environment variables
 - **Never Commit**: Add `appsettings.*.json` with secrets to `.gitignore`.
 
-**Example .gitignore entry:**
+**Sample .gitignore entry:**
 
 ```
 # Firebase configuration and credentials
@@ -418,7 +418,7 @@ The Firebase connection configuration is now in place in `appsettings.json`.
 
 ### Step 8: Create the Firebase Service Class
 
-The Firebase service class manages REST API calls to the Realtime Database. It handles all interactions via standard HTTP requests without requiring any external SDKs.
+The Firebase service class manages REST API calls to the Realtime Database and handles all interactions via standard HTTP requests without requiring external SDKs.
 
 **Instructions:**
 
@@ -588,7 +588,7 @@ The Firebase service class has been successfully created in `Services/FirebaseSe
 
 ### Step 9: Register Services in Program.cs
 
-The `Program.cs` file is where application services are registered and configured. This file must be updated to enable HttpClient, Firebase service, and Blazor components.
+The `Program.cs` file is where application services are registered and configured. Update it to enable HttpClient, Firebase service, and Blazor components.
 
 **Instructions:**
 
@@ -736,7 +736,7 @@ The Home component has been successfully updated with the DataGrid and CustomAda
 
 The Blazor DataGrid can bind data from a **Firebase Realtime** database using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to `CustomAdaptor` for scenarios that require full control over data operations.
 
-The `CustomAdaptor` is a bridge between the DataGrid and the database. It handles all data operations including reading, searching, filtering, sorting, paging, and CRUD operations. Each operation in the CustomAdaptor's `ReadAsync` method handles specific grid functionality. The Blazor DataGrid sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
+The `CustomAdaptor` is a bridge between the DataGrid and the database. The adaptor handles all data operations including reading, searching, filtering, sorting, paging, and CRUD operations. Each operation in the CustomAdaptor's `ReadAsync` method handles specific grid functionality. The Blazor DataGrid sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
 
 **Instructions:**
 
@@ -750,7 +750,7 @@ The `CustomAdaptor` is a bridge between the DataGrid and the database. It handle
 
    /// <summary>
    /// CustomAdaptor class bridges DataGrid interactions with database operations.
-   /// This adaptor handles all data retrieval and manipulation for the DataGrid.
+   /// The adaptor handles all data retrieval and manipulation for the DataGrid.
    /// </summary>
    public class CustomAdaptor : DataAdaptor
    {
@@ -1746,7 +1746,7 @@ public class CustomAdaptor : DataAdaptor
 }
 ```
 
-> This method is triggered when the DataGrid is operating in [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) Edit mode.
+> The method is triggered when the DataGrid operates in [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) Edit mode.
 
 **What happens behind the scenes:**
 
@@ -2111,7 +2111,7 @@ A complete, working sample implementation is available in the [GitHub repository
 
 ## Summary
 
-This guide demonstrates how to:
+The guide shows how to:
 1. Create a Firebase Project and Realtime Database. [🔗](#step-1-create-a-firebase-project-and-realtime-database)
 2. Generate Database Secret for Authentication. [🔗](#step-2-generate-database-secret-for-authentication)
 3. Configure Initial Data Import. [🔗](#step-3-configure-initial-data-import)

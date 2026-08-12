@@ -34,7 +34,7 @@ Ensure the following software, accounts, and packages are in place before procee
 | Software/Package | Version | Purpose |
 |-----------------|---------|---------|
 | Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
-| .NET SDK | net10.0 or compatible | Runtime and build tools |
+| .NET SDK | NET 10.0 or compatible | Runtime and build tools |
 | Firebase Account | Active account | Cloud project hosting and Firestore database |
 | Google Cloud Project | Active project | Required for Firebase services and API credentials |
 | Google.Cloud.Firestore | 3.7.0 or later | Official .NET client library for Firestore |
@@ -51,7 +51,7 @@ Firebase projects host Firestore databases and handle authentication, storage, a
 
 1. **Access Firebase Console**
    - Navigate to [Firebase Console](https://console.firebase.google.com/?pli=1).
-   - Sign in with your Google account.
+   - Sign in using a Google account.
 
 2. **Create a New Firebase Project**
    - Click **"Add Project"** button.
@@ -149,10 +149,10 @@ Required APIs are now enabled for the application.
 
 ### Step 4: Install Required NuGet Packages
 
-Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template.
+First, create a new Blazor Web Application using the default template.
 This template automatically generates essential starter files—such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
 
-For this guide, a Blazor application named **Grid_Firebase_Firestore** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the Blazor application. These packages enable Firebase Firestore integration and DataGrid components.
+A Blazor application named **Grid_Firebase_Firestore** is used as an example. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the Blazor application. These packages enable Firebase Firestore integration and DataGrid components.
 
 **Method 1: Using Package Manager Console**
 
@@ -342,7 +342,7 @@ A Firebase connection requires the path to the service account key file. This co
 {
   "Firebase": {
     "ServiceAccountPath": "serviceAccountKey.json",
-    "ProjectId": "your-project-id"
+    "ProjectId": "PROJECT_ID"
   },
   "Logging": {
     "LogLevel": {
@@ -511,14 +511,14 @@ Bulk import allows to:
 - **Testing**: Load test data for development environments.
 
 **Firestore Limits:**
-- **Batch Size**: Maximum 500 documents per batch write.
+- **Batch Size**: Up to 500 write operations per batch.
 - **Document Size**: Up to 1 MB per document.
 - **Rate Limits**: 25,000 writes per second per database.
 - **Atomicity**: All-or-nothing semantics per batch using transactions.
 
 **How Bulk Import Works:**
 
-1. **Data Chunking**: Split large datasets into 500-document batches (Firestore limit).
+1. **Data Chunking**: Split large datasets into 500-operation batches (Firestore limit).
 2. **Validation**: Validate each document before import.
 3. **Atomic Transactions**: Use transactions to ensure consistency (all-or-nothing).
 4. **Error Handling**: Continue processing batches even if one fails.
