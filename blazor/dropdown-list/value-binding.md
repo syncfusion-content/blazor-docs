@@ -123,7 +123,7 @@ The following example uses `string` as `TValue`, so clearing sets the value to `
 
 Change `TItem` dynamically by defining a generic DropDownList using the `@typeparam` directive and passing different data source types.
 
-### Creating generic dropdownList component
+### Creating a generic DropDownList component
 
 Create a reusable `DropDownList.razor` component that exposes `customData` (`List<TItem>`) and `DDLValue` (`TValue`) as parameters.
 
@@ -219,7 +219,7 @@ In the example below, `TValue` is `string` in `Index.razor`, and `TValue` is `in
 {% endhighlight %}
 {% endtabs %}
 
-## Two way binding
+## Two-way binding
 
 Two-way binding synchronizes data between the UI and the model using the Blazor `@bind-Value` directive. Use `@bind-Value` on the DropDownList to enable two-way binding.
 

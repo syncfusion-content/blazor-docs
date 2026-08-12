@@ -15,7 +15,7 @@ This feature works with both local and remote data. For example, when the MultiS
 
 ## Binding local data
 
-The MultiSelect component can generate list items from an array of complex data. For this, the appropriate properties should be mapped to the [fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html) property. With virtual scrolling enabled, the list is updated based on the scroll offset and loads additional items from the in-memory data source.
+The MultiSelect component can generate list items from an array of complex data. For this, the appropriate properties should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html) property. With virtual scrolling enabled, the list is updated based on the scroll offset and loads additional items from the in-memory data source.
 
 In the following example, the ID and Text properties from the complex data are mapped to the Value and Text fields, respectively.
 
@@ -41,7 +41,7 @@ The following sample displays the EmployeeID from the `VirtualDropdownData` Data
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXhxXmDbAdXbNoub?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Customizing items count in virtualization 
+## Customizing items count in virtualization
 
 When the `EnableVirtualization` property is enabled, the `Take` property provided by the user within the Query parameter at the initial state or during the `ActionBegin` event will be considered. Internally, it calculates the items that fit onto the current page (i.e., probably twice the amount of the popup's height). If the user-provided take value is less than the minimum number of items that fit into the popup, the user-provided take value will not be considered.
 

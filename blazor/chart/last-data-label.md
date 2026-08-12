@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Last Data Label in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Last Data Label in Blazor Charts component and much more.
+title: Blazor Charts Last Data Label Examples | Syncfusion®
+description: Learn how to highlight the most recent data point in Syncfusion Blazor Charts. Use ChartLastDataLabel ShowLabel with an indicator line.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Last Data Label in Blazor Charts Component
+# Blazor Charts Last Data Label
 
 The last data label feature highlights the most recent data point in a series by displaying a label along with an indicator line. This enhancement improves visibility and makes it easier to identify the latest value in the chart. The label can be enabled and customized using the [ChartLastDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLastDataLabel.html) property.
 

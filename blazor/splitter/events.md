@@ -13,7 +13,7 @@ This section explains the list of events of the splitter component which will be
 
 ## Created
 
-`Created` event triggers after creating the splitter component with its panes.
+The `Created` event triggers after the Splitter component is created with its panes.
 
 ```cshtml
 
