@@ -28,14 +28,13 @@ A template column value can be edited by setting the [Field](https://help.syncfu
                 <Template>
                     @{
                         var data = context as TreeData;
-                        <a href="#">@data.TaskName</a>
+                        <a href="#" aria-label="Task link for @data.TaskName">@data.TaskName</a>
                     }
                 </Template>
             </TreeGridColumn>
             <TreeGridColumn Field="Priority" HeaderText="Priority" Width="60"></TreeGridColumn>
             <TreeGridColumn Field="Duration" HeaderText="Duration" Width="70" Format="C2" TextAlign="TextAlign.Right"></TreeGridColumn>
             <TreeGridColumn Field="Progress" HeaderText="Progress" Width="70" Format="C2" TextAlign="TextAlign.Right"></TreeGridColumn>
-
         </TreeGridColumns>
     </SfTreeGrid>
 
