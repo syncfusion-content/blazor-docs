@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Mention Component
 
-Web accessibility makes web content and web applications more accessible for people with disabilities. Blazor Mention component provides built-in compliance with `WAI-ARIA` specifications. The `WAI-ARIA` support is achieved using the attributes such as `aria-selected` and `aria-activedescendent`.
+Web accessibility makes web content and web applications more accessible for people with disabilities. Blazor Mention component provides built-in compliance with `WAI-ARIA` specifications. The `WAI-ARIA` support is achieved using the attributes such as `aria-selected` and `aria-activedescendant`.
 
 The [Blazor Mention](https://www.syncfusion.com/blazor-components/blazor-mention) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -40,7 +40,7 @@ The accessibility compliance for the Blazor Mention component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Blazor Mention component is designed to be compliant with `WAI-ARIA` (Web Accessibility Initiative - Accessible Rich Internet Applications) specifications, which provide guidelines and standards for making web content more accessible to people with disabilities. To achieve `WAI-ARIA` support, the Mention uses attributes such as `aria-selected` and `aria-activedescendent`. 
+The Blazor Mention component is designed to be compliant with `WAI-ARIA` (Web Accessibility Initiative - Accessible Rich Internet Applications) specifications, which provide guidelines and standards for making web content more accessible to people with disabilities. To achieve `WAI-ARIA` support, the Mention uses attributes such as `aria-selected` and `aria-activedescendant`. 
 
 The `aria-selected` attribute is used to indicate that an element is currently selected or has been selected in the past, while the `aria-activedescendent` attribute is used to indicate the currently active descendant element of a composite widget.
 
@@ -51,7 +51,7 @@ Here are some of the `ARIA attributes` that might be used to denote the state of
 | **Properties** | **Functionalities** |
 | --- | --- |
 | `aria-selected` | Indicates the currently selected option in the list of mention suggestions |
-| `aria-activedescendent` | This attribute holds the ID of the active list item to focus its descendant child element. |
+| `aria-activedescendant` | This attribute holds the ID of the active list item to focus its descendant child element. |
 | `aria-owns` | Indicate that the Mention component owns or controls the popup list of mention suggestions. |
 
 ## Keyboard interaction

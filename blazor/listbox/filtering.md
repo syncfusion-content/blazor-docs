@@ -9,9 +9,9 @@ documentation: ug
 
 # Filtering in ListBox
 
-The ListBox provides built-in filtering when the [AllowFiltering property](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_AllowFiltering) is enabled. A search box is rendered automatically, and filtering begins as the user types. The default value of AllowFiltering is `false`. Filtering is case-insensitive by default and affects only the visible items; existing selections remain unchanged.
+The Blazor ListBox provides built-in filtering when the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_AllowFiltering) property is set to `true`. A search box is rendered automatically, and filtering begins as the user types. The default value of `AllowFiltering` is `false`. Filtering is case-insensitive by default and affects only the visible items; existing selections remain unchanged.
 
-The following code demonstrates the filtering functionality in the ListBox component.
+The following example demonstrates the built-in filtering functionality. Set `AllowFiltering="true"` to render the search box.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -37,7 +37,6 @@ The following code demonstrates the filtering functionality in the ListBox compo
       public string Code { get; set; }
     }
 }
-
 ```
 
 ![Blazor ListBox with filtering enabled](images/blazor-listbox-filtering.webp)
@@ -45,13 +44,13 @@ The following code demonstrates the filtering functionality in the ListBox compo
 
 ## Filter type
 
-Use the [FilterType property](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_FilterType) to specify the matching behavior used during search. The available options are:
+Use the [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_FilterType) property to specify the matching behavior used during search. The default value is `StartsWith`. The available options are:
 
-FilterType     | Description
------------- | -------------
-  [StartsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_StartsWith)       | Checks whether the item text begins with the specified value.
-  [EndsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_EndsWith)     | Checks whether the item text ends with the specified value.
-  [Contains](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_Contains)      | Checks whether the item text contains the specified value.
+| FilterType | Description |
+|------------|-------------|
+| [StartsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_StartsWith) | Checks whether the item text begins with the specified value. |
+| [EndsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_EndsWith) | Checks whether the item text ends with the specified value. |
+| [Contains](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_Contains) | Checks whether the item text contains the specified value. |
 
 In the following example, the `EndsWith` filter type is assigned to the `FilterType` property.
 
@@ -143,3 +142,9 @@ In the following example, the filtering action is customized by using the [`Filt
 ```
 
 ![Blazor ListBox with custom filtering](images/blazor-listbox-custom-filtering.webp)
+## See also
+
+* [Filter ListBox Data Using HTML Input Element](./how-to/filter-listbox.md)
+* [Data Binding in Blazor ListBox](./data-binding.md)
+* [Selection in Blazor ListBox](./selection.md)
+* [Getting Started with Blazor ListBox](./getting-started.md)

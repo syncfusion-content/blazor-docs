@@ -243,7 +243,7 @@ The following code explains how to initialize Blazor Accordion using header and 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhRtdCisHGggBvI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Accordion with header and content Template](images/blazor-accordion-header-template.webp)" %}
 
-N> You can refer to the [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) feature tour to explore its key features and capabilities. You can also browse the [Blazor Accordion examples](https://blazor.syncfusion.com/demos/accordion/default-functionalities?theme=bootstrap5) to learn how to render and configure the component.
+N> You can refer to the [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) feature tour to explore its key features and capabilities. You can also browse the [Blazor Accordion examples](https://blazor.syncfusion.com/demos/accordion/default-functionalities?theme=fluent2) to learn how to render and configure the component.
 
 ## See also
 

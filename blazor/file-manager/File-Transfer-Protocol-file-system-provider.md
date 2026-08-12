@@ -1,19 +1,19 @@
 ---
 layout: post
-title: File Transfer Protocol in Blazor File Manager Component | Syncfusion®
-description: Checkout and learn here all about File Transfer Protocol file system provider in Blazor File Manager component and much more details.
-platform: Blazor
+title: FTP Provider in Blazor File Manager | Syncfusion
+description: Learn how to use the FTP file system provider in the Blazor File Manager to browse and manage files on an FTP server.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# File Transfer Protocol file system provider
+# FTP Provider in Blazor File Manager
 
-In ASP.NET Core, File Transfer Protocol file system provider allows the users to access to the hosted file system as collection of objects stored in the file storage using File Transfer Protocol. To get started, clone the [EJ2.ASP.NET Core FTP File Provider](https://github.com/SyncfusionExamples/ej2-ftp-aspcore-file-provider) using the following command
+In ASP.NET Core, File Transfer Protocol file system provider allows the users to access to the hosted file system as collection of objects stored in the file storage using File Transfer Protocol. To get started, clone the [EJ2.ASP.NET Core FTP File Provider](https://github.com/SyncfusionExamples/ftp-aspcore-file-provider) using the following command
 
 ```
 
-git clone https://github.com/SyncfusionExamples/ej2-ftp-aspcore-file-provider.git  ej2-ftp-aspcore-file-provider.git
+git clone https://github.com/SyncfusionExamples/ftp-aspcore-file-provider.git ej2-ftp-aspcore-file-provider.git
 
 ```
 
@@ -47,4 +47,4 @@ To perform file operations (Read, Create, Rename, Delete, Get file details, Sear
 
 To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `FTPProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/ftp-aspcore-file-provider/blob/master/Controllers/FTPProviderController.cs). Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
 
-N> To learn more about the file actions that can be performed with File Transfer Protocol file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-ftp-aspcore-file-provider.git#key-features)
+N> To learn more about the file actions that can be performed with File Transfer Protocol file system provider, refer to this [link](https://github.com/SyncfusionExamples/ftp-aspcore-file-provider#key-features)

@@ -9,7 +9,7 @@ documentation: ug
 
 # Disable the Blazor DateRangePicker Component
 
-DateRangePicker can be deactivated on a page. Setting [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_Enabled) value to false will disable the component completely from all user interactions, including form post. The following code demonstrates the disabled component.
+The DateRangePicker can be deactivated on a page. Setting the [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_Enabled) property to `false` will disable the component completely from all user interactions, including form submission. The default value of the `Enabled` property is `true`. To allow users to view the value without editing it, use the `Readonly` property instead. The following sample demonstrates the disabled DateRangePicker.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -25,4 +25,4 @@ DateRangePicker can be deactivated on a page. Setting [Enabled](https://help.syn
 
 ![Disable State in Blazor DateRangePicker](../images/blazor-daterangepicker-disable-state.webp)
 
-N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap5) to understand how to present and manipulate data.
+N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=fluent2) to understand how to present and manipulate data.

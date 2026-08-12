@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Assist view in Blazor AI AssistView Component | Syncfusion®
-description: Checkout and learn here all about Assist view with Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
+title: Assist View in Blazor AI AssistView | Syncfusion®
+description: Configure prompts in Blazor AI AssistView using Prompt property, placeholder text, and collection-based prompt-response pairs. Supports Markdown rendering.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 ---
 
-# Assist view in Blazor AI AssistView component
+# Assist View in Blazor AI AssistView
 
 ## Setting prompt text
 

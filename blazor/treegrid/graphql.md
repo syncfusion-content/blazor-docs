@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bind GraphQL Adaptor in Blazor TreeGrid | Syncfusion®
-description: Learn how to bind data from a GraphQL API to the Blazor TreeGrid, including querying, mutation, and integration techniques.
+title: Blazor TreeGrid GraphQL Data Binding | Syncfusion
+description: Learn how to bind data from a GraphQL API to Blazor TreeGrid, perform queries and mutations, and integrate GraphQL data efficiently.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# GraphQL Adaptor in Blazor TreeGrid
+# Connect GraphQL to Blazor TreeGrid
 
 GraphQL is a powerful query language for APIs, designed to provide a more efficient alternative to traditional REST APIs. It allows precise fetching of required data, reducing over-fetching and under-fetching. GraphQL provides a flexible and expressive syntax for querying, enabling clients to request only the specific data they require.
 

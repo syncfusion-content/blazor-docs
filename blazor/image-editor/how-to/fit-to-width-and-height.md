@@ -9,7 +9,7 @@ documentation: ug
 
 # Fit Image to Editor Width and Height
 
-The Image Editor's [ZoomAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ZoomAsync_System_Double_Syncfusion_Blazor_ImageEditor_ImageEditorPoint_)  method to fit an image to the editor by width or height. Programmatically increase the zoom level until the image dimension matches the editor container's width or height.
+The Image Editor uses the [ZoomAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ZoomAsync_System_Double_Syncfusion_Blazor_ImageEditor_ImageEditorPoint_) method to fit an image to the editor by width or height. Programmatically increase the zoom level until the image dimension matches the editor container's width or height.
 
 This example demonstrates scenarios that include buttons for fitting the image to its width (Fit Width) or height (Fit Height).
 

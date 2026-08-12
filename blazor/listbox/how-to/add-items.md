@@ -9,7 +9,7 @@ documentation: ug
 
 # Add/Remove Items in Blazor ListBox Component
 
-Use the [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_AddItemsAsync_System_Collections_Generic_IEnumerable__0__System_Nullable_System_Int32__) method to add items to the ListBox. In the following example, the `Ferrari LaFerrari` and `McLaren P1` items are added when clicking the `Add Items` button. Items should conform to the TItem type and field mappings (Text and Value) configured in ListBoxFieldSettings. AddItemsAsync also supports an optional index parameter to insert items at a specific position; when omitted, items are appended.
+This section explains how to programmatically add and remove items in the Syncfusion Blazor ListBox component using the [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_AddItemsAsync_System_Collections_Generic_IEnumerable__0__System_Nullable_System_Int32__) and [RemoveItemAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_RemoveItemAsync_System_Collections_Generic_IEnumerable__1__System_Nullable_System_Int32__) methods.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -53,7 +53,7 @@ Use the [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ## Remove items from the listbox
 
-Use the [RemoveItemAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_RemoveItemAsync_System_Collections_Generic_IEnumerable__1__System_Nullable_System_Int32__) method to remove items from the ListBox. In the following example, the `Ferrari LaFerrari` and `McLaren P1` items are removed when clicking the `Remove Items` button. Removed items must match the TItem type and the field mappings used by the ListBox. RemoveItemAsync also supports an optional index parameter to target positions when needed.
+Use the [RemoveItemAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_RemoveItemAsync_System_Collections_Generic_IEnumerable__1__System_Nullable_System_Int32__) method to remove items from the ListBox. In the following example, the `Ferrari LaFerrari` and `McLaren P1` items are removed when clicking the **REMOVE ITEMS** button.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -96,3 +96,9 @@ Use the [RemoveItemAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 ```
 
 ![Removing Items in Blazor ListBox](./../images/blazor-listbox-remove-items.webp)
+
+## See also
+
+* [Get Items in Blazor ListBox](./get-items.md)
+* [Select Items in Blazor ListBox](./select-items.md)
+* [Data Binding in Blazor ListBox](./../data-binding.md)

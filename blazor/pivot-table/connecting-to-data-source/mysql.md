@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Pivot Table with MySQL via URL Adaptor | Syncfusion®
-description: Bind MySQL data to the Blazor Pivot Table through an ASP.NET Core API and the Syncfusion URL Adaptor, with create, read, update, and delete support.
+title: MySQL in Blazor Pivot Table | Syncfusion
+description: Learn how to load and edit MySQL data in the Blazor Pivot Table through an ASP.NET Core API using MySql.Data and the Syncfusion URL adaptor.
 platform: Blazor
 control: PivotTable
 documentation: ug
 ---
 
-# Connecting MySQL to Blazor Pivot Table Using URL Adaptor
+# MySQL in Blazor Pivot Table
 
 The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) can load and edit MySQL data through an ASP.NET Core API and the Syncfusion URL Adaptor. The adaptor sends read and CRUD requests to controller endpoints; the controller uses `MySql.Data` to execute parameterized SQL against MySQL.
 
@@ -34,7 +34,9 @@ You also need:
 - A valid Syncfusion license or trial key.
 - An available local HTTPS development certificate. Run `dotnet dev-certs https --trust` if the certificate is not already trusted.
 
-## Step 1: Create the Blazor Web App
+## MySQL Database Setup and Application Configuration
+
+### Step 1: Create the Blazor Web App
 
 Create an Interactive Server Blazor Web App:
 
@@ -45,7 +47,7 @@ cd PivotTableMySQL
 
 The remaining commands in this guide must be run from the `PivotTableMySQL` project directory.
 
-## Step 2: Create the MySQL Database and User
+### Step 2: Create the MySQL Database and User
 
 Open MySQL Workbench, connect with an administrative account, open a query tab, and run the following script. Replace `CHOOSE_A_STRONG_PASSWORD` before executing it.
 
@@ -98,7 +100,7 @@ SELECT * FROM Orders.orders ORDER BY orderid;
 SHOW GRANTS FOR 'pivotapp'@'localhost';
 ```
 
-## Step 3: Install the NuGet Packages
+### Step 3: Install the NuGet Packages
 
 Install the tested package versions:
 
@@ -120,7 +122,7 @@ The resulting package references are:
 
 This sample uses `System.Text.Json`, which is included with ASP.NET Core. `Newtonsoft.Json` is not required.
 
-## Step 4: Store the Connection String and License Key
+### Step 4: Store the Connection String and License Key
 
 Do not put database passwords or license keys in `appsettings.json`. Initialize .NET user secrets and store both values outside the project files:
 
@@ -143,7 +145,7 @@ The connection-string components used by the sample are:
 | `Pwd` | Application-account password |
 | `SslMode` | TLS behavior; use `Required` with a correctly configured production server |
 
-## Step 5: Create the Shared Order Model
+### Step 5: Create the Shared Order Model
 
 Create a `Models` folder and add `Models/Order.cs`:
 
@@ -174,7 +176,7 @@ public class Order
 
 The same model is used by the controller and Razor component. The `[Key]` annotation identifies `OrderID` as the primary key when the Pivot Table creates its raw-item edit grid. Do not attempt to access `BeginDrillThroughEventArgs.GridObj`; the [current event documentation](https://blazor.syncfusion.com/documentation/pivot-table/events#begindrillthrough) states that this property is returned as null.
 
-## Step 6: Create the API Controller
+### Step 6: Create the API Controller
 
 Create a `Controllers` folder and add `Controllers/OrderController.cs`:
 
@@ -370,7 +372,7 @@ public class OrderController : ControllerBase
 
 The controller uses the built-in `Syncfusion.Blazor.Data.CRUDModel<T>` request type. ASP.NET Core automatically returns validation responses for invalid annotated model values. Unhandled database exceptions are converted to Problem Details responses by the middleware configured in the next step.
 
-## Step 7: Configure Program.cs
+### Step 7: Configure Program.cs
 
 Replace `Program.cs` with:
 
@@ -415,7 +417,7 @@ app.Run();
 
 The sample API is same-origin and does not require CORS. If the API and Blazor application are deployed on different origins, configure a named CORS policy that allows only the Blazor application's origin.
 
-## Step 8: Add Imports, Theme, and Scripts
+### Step 8: Add Imports, Theme, and Scripts
 
 Add these imports to `Components/_Imports.razor`:
 
@@ -443,7 +445,7 @@ Before the closing `</body>` tag, add the Syncfusion script after the existing B
 
 Do not add a second `_framework/blazor.web.js` reference if the template already contains it.
 
-## Step 9: Configure the Pivot Table
+### Step 9: Configure the Pivot Table
 
 Replace `Components/Pages/Home.razor` with:
 

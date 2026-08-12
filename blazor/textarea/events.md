@@ -47,7 +47,7 @@ The TextArea triggers the [Input](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ## ValueChange event
 
-The TextArea triggers the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_ValueChange) event when the content is committed (typically when the component loses focus). Use this event to react to finalized value changes rather than per-keystroke updates. The [TextAreaValueChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.TextAreaValueChangeEventArgs.html) argument provides details about the change.
+The TextArea triggers the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_ValueChange) event when the bound value changes (each keystroke when used with `@bind-Value` and on commit when used one-way). Use this event to react to value updates; for the Input event (which fires on every keystroke regardless of binding), see the previous section. The [TextAreaValueChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.TextAreaValueChangeEventArgs.html) argument provides details about the change.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -80,7 +80,7 @@ The TextArea triggers the [Focus](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ## Blur event
 
-The TextArea triggers the [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Blur) event when focus leaves the component. Use this event to handle actions when focus moves away. The [TextAreaFocusOutEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextAreaFocusOutEventArgs.html) argument provides details about the blur event.
+The TextArea triggers the [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Blur) event when focus leaves the component. Use this event to handle actions when focus moves away. The [TextAreaFocusOutEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.TextAreaFocusOutEventArgs.html) argument provides details about the blur event.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

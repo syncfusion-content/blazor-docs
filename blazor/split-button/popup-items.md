@@ -50,7 +50,7 @@ The following image shows Split Button popup items with icons.
 
 ### Item Templating
 
-Popup items can be customized using the `CssClass` property. Customize the items using CSS style.
+Popup items can be customized using the `CssClass` property. Apply custom styles to change the appearance of each item.
 
 ```cshtml
 

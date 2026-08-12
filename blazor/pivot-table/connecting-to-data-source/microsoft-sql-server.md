@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Pivot Table with SQL Server via URL Adaptor | Syncfusion®
-description: Bind Microsoft SQL Server data to the Blazor Pivot Table through an ASP.NET Core API and the Syncfusion URL Adaptor.
+title: Microsoft SQL Server in Blazor Pivot Table | Syncfusion
+description: Learn how to load and edit Microsoft SQL Server data in the Blazor Pivot Table through an ASP.NET Core API using Microsoft.Data.SqlClient.
 platform: Blazor
 control: PivotTable
 documentation: ug
 ---
 
-# Connect SQL Server to a Blazor Pivot Table Using the URL Adaptor
+# Microsoft SQL Server in Blazor Pivot Table
 
 The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) can load and edit SQL Server data through an ASP.NET Core API. [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) sends HTTP requests to the API, and the API uses [`Microsoft.Data.SqlClient`](https://www.nuget.org/packages/Microsoft.Data.SqlClient/) to access SQL Server.
 
@@ -29,7 +29,9 @@ The sample was tested with the following versions and configuration:
 
 The application uses the Blazor Web App template with Interactive Server rendering. Syncfusion packages from NuGet.org require a valid license or trial key; follow the [license-key registration instructions](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application).
 
-## Step 1: Create the Blazor Web App
+## Microsoft SQL Server Database Setup and Application Configuration
+
+### Step 1: Create the Blazor Web App
 
 Create an Interactive Server Blazor Web App:
 
@@ -40,7 +42,7 @@ cd PivotTableMsSQL
 
 In Visual Studio, the equivalent choices are **Blazor Web App**, **.NET 10**, **Interactive render mode: Server**, and **Interactivity location: Global**.
 
-## Step 2: Create the Database
+### Step 2: Create the Database
 
 Start SQL Server and connect with an account that can create a database. Run:
 
@@ -97,7 +99,7 @@ GO
 
 Use an account appropriate for your environment. Do not use a highly privileged login such as `sa` for the application.
 
-## Step 3: Install the Packages
+### Step 3: Install the Packages
 
 Run these commands in the `PivotTableMsSQL` project directory:
 
@@ -117,7 +119,7 @@ The project file should contain:
 </ItemGroup>
 ```
 
-## Step 4: Configure the Connection String
+### Step 4: Configure the Connection String
 
 For local development, store the connection string with .NET user secrets:
 
@@ -141,7 +143,7 @@ Server=localhost;Database=OrderDB;User Id=YOUR_USER;Password=YOUR_PASSWORD;Trust
 
 `TrustServerCertificate=True` is suitable for local development with an untrusted development certificate. Use a trusted server certificate in production. For deployment, provide `ConnectionStrings__SQLServer` through the hosting environment or a secrets manager rather than committing credentials to source control.
 
-## Step 5: Create the API Controller
+### Step 5: Create the API Controller
 
 Create a `Controllers` folder at the project root, and then create `Controllers/OrderController.cs`:
 
@@ -406,7 +408,7 @@ public sealed class OrderController : ControllerBase
 
 The `Added`, `Changed`, and `Deleted` collections support batch requests; `Params` carries custom adaptor parameters. This sample uses Normal edit mode and therefore handles the single-record `Value` and `Key` properties.
 
-## Step 6: Register Services and Endpoints
+### Step 6: Register Services and Endpoints
 
 Replace `Program.cs` with:
 
@@ -447,7 +449,7 @@ The API is same-origin, so CORS configuration is not required. If the API is lat
 
 Protect the write endpoints with the authentication and authorization mechanism used by your application before production deployment. If cookie-authenticated API actions require antiforgery validation, configure `SfDataManager` to send the request token expected by the server.
 
-## Step 7: Add Imports and Theme Resources
+### Step 7: Add Imports and Theme Resources
 
 Add these namespaces to `Components/_Imports.razor`:
 
@@ -474,7 +476,7 @@ Add the Syncfusion script immediately before `</body>`, after the template's exi
 
 Do not add a second `_framework/blazor.web.js` reference if the template already contains one.
 
-## Step 8: Configure the Pivot Table
+### Step 8: Configure the Pivot Table
 
 Replace `Components/Pages/Home.razor` with:
 
@@ -533,7 +535,7 @@ The `[Key]` attribute identifies `OrderID` as the record key. Do not configure t
 
 The relative URLs follow the active scheme, host, port, and path base, avoiding hard-coded development ports and HTTP-to-HTTPS mixed-content failures.
 
-## Step 9: Run and Verify the Application
+### Step 9: Run and Verify the Application
 
 Restore, build, and run the project:
 

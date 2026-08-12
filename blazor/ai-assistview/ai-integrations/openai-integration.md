@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  Azure OpenAI with Blazor AI AssistView Component | Syncfusion®
-description: Checkout and learn about Azure OpenAI with Blazor AI AssistView component in Blazor WebAssembly Application.
+title: Integrate Azure OpenAI With Blazor AI AssistView | Syncfusion®
+description: Integrate Azure OpenAI with Blazor AI AssistView to enable advanced conversational AI and natural language understanding in blazor applications.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 ---
 
-# Integrate Azure OpenAI with Blazor AI AssistView component
+# Integrate Azure OpenAI With Blazor AI AssistView
 
 The AI AssistView component integrates with [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai) to enable advanced conversational AI features in your applications. The component acts as a user interface, where user prompts are sent to the Azure OpenAI service via API calls, providing natural language understanding and context-aware responses.
 
@@ -18,8 +18,6 @@ Before starting, ensure you have the following:
 * **An Azure account**: with access to [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai) services and a generated API key.
 
 * **Syncfusion AI AssistView**: Package [Syncfusion Blazor package](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed.
-
-* [Markdig](https://www.nuget.org/packages/Markdig) package available in the project for Markdown-to-HTML conversion (required by the sample code).
 
 ## Set Up the AI AssistView Component
 
@@ -36,14 +34,6 @@ Install the required packages:
 NuGet\Install-Package OpenAI
 NuGet\Install-Package Azure.AI.OpenAI
 NuGet\Install-Package Azure.Core
-
-```
-
-* Install the `Markdig` nuget packages in the application.
-
-```bash
-
-Nuget\Install-Package Markdig
 
 ```
 
@@ -155,7 +145,6 @@ Modify the razor file to integrate the Azure OpenAI with the AI AssistView compo
 {% highlight c# tabtitle="cs" %}
 
 using System.Text.Json;
-using Markdig;
 using System.Text.RegularExpressions;
 
 namespace AIAssistView_AzureAI.Components.Services
@@ -201,7 +190,7 @@ namespace AIAssistView_AzureAI.Components.Services
                     if (choices.GetArrayLength() > 0)
                     {
                         var content = choices[0].GetProperty("message").GetProperty("content").GetString();
-                        var htmlContent = Markdown.ToHtml(content);
+                        var htmlContent = content;
                         htmlContent = Regex.Replace(htmlContent, @"\s+", " ").Trim();
                         // Collect each character to the results list before yielding
                         foreach (var chunk in htmlContent)

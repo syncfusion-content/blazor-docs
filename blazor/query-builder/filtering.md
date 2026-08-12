@@ -69,8 +69,6 @@ Creation and deletion can be done through the UI or programmatically.
         }
     };
 
-    public string[] GroupID = new string[] { "group1" };
-
     private void addRule()
     {
         QuerybuilderObj.AddRule(SampRule, "group0");
@@ -101,4 +99,4 @@ Creation and deletion can be done through the UI or programmatically.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDrdZwXuBFsbVQDk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Filtering in Blazor Query Builder](./images/blazor-querybuilder-filtering.webp)" %}
 
-N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.
+N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=fluent2) to know how to render and configure the query builder.
