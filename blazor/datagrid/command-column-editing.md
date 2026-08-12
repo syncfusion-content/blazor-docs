@@ -13,7 +13,6 @@ The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagr
 
 To enable command column editing, configure the [GridColumn.Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Commands) property. This property defines which command buttons **Edit**, **Delete**, **Save**, and **Cancel** should appear in the command column.
 
-
 | Command Button | Action                      |
 |---------------|-----------------------------|
 | Edit          | Edit the current row.       |
@@ -100,7 +99,7 @@ public class OrderDetails
 
 The Blazor DataGrid supports adding custom command buttons in a column to perform specific actions on individual rows. This feature is suitable for implementing customized functionality such as editing, deleting, or executing other operations.
 
-To add custom command buttons, configure the [GridColumn.Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Commands) property. Define the actions for these buttons using the [CommandClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CommandClicked) event.
+To enable command column editing,  configure the [GridColumn.Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Commands) property. Define the actions for these buttons using the [CommandClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CommandClicked) event.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -201,7 +200,7 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZVHDwDBiEFgGUVy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> The Blazor DataGrid does not support **adding new records** using the command column. This limitation exists because the command column and its buttons are rendered only after a record is created. Therefore, the command column supports only **edit**, **delete**, **cancel**, and **update** operations.
+> The Blazor DataGrid does not support adding new records using the command column. This limitation exists because the command column and its buttons are rendered only after a record is created. Therefore, the command column supports only **edit**, **delete**, **cancel**, and **update** operations.
 
 ## Hide command column button in specific records
 
@@ -209,7 +208,7 @@ The Blazor DataGrid supports conditionally hiding command buttons for specific r
 
 To implement this behavior, use the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event, which is triggered whenever a row is created or updated in the Grid.
 
-The following steps outline how to conditionally hide command buttons:
+Use the following approach to conditionally hide command buttons:
 
 * Use the `RowDataBound` event to access each row's data during rendering.
 * Check the value of the **Verified** column for the current record.

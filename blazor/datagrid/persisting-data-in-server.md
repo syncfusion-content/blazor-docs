@@ -51,8 +51,6 @@ The [GraphQLAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#g
 
 For implementation details, refer to the [GraphQLAdaptor documentation](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/graphql-adaptor).
 
-
-N> 
-* All adaptors work with [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to manage data operations.
-* CRUD operations are automatically triggered based on Grid interactions.
-* Backend services must implement appropriate endpoints to handle requests.
+> * All adapters work with [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to manage data operations.
+> * Grid interactions trigger CRUD operations when editing is enabled.
+> * Backend services must implement REST endpoints (`GET`, `POST`, `PUT`, and `DELETE`) or protocol-specific equivalents.
