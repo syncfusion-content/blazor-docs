@@ -7,7 +7,7 @@ component: Maps
 documentation: ug
 ---
 
-# Blazor Maps Getting Started in Web App
+# Getting Started with Blazor Maps in Web App
 
 This section briefly explains how to include [Blazor Maps](https://www.syncfusion.com/blazor-components/blazor-map) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
