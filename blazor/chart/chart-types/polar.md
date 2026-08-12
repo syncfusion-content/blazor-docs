@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Polar in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Polar Chart in Blazor Charts component and much more.
+title: Blazor Polar Chart Examples and Documentation | Syncfusion®
+description: Learn how to create Blazor Polar Charts using Syncfusion. Plot data by value and angle on a circular graph to compare quantitative aspects.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Polar in Blazor Charts Component
+# Polar Chart in Blazor
 
 ## Polar
 
