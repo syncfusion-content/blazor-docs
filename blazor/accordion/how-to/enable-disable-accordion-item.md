@@ -1,7 +1,8 @@
 ---
 layout: post
-title: How to enable or disable an item in Blazor Accordion | Syncfusion®
-description: Enable or disable a Blazor Accordion item at runtime by toggling its Disabled property from true to false using a bound boolean value.
+title: Enable or Disable item in Blazor Accordion Component | Syncfusion®
+description: Checkout and learn here all features about Enable or Disable item in Blazor Accordion component and more.
+platform: Blazor
 control: Accordion
 documentation: ug
 ---
