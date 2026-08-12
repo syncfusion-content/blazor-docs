@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Access public methods in Blazor TreeGrid Component | Syncfusion®
+title: Access public methods in Blazor TreeGrid | Syncfusion
 description: Checkout and learn here all the details about accessing public methods in Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
