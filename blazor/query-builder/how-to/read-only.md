@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to make Query Builder read-only in Blazor | Syncfusion
-description: Make Blazor Query Builder read-only to disable adding, removing, and editing rules and groups.
+description: Make Blazor Query Builder read-only to disable adding, removing, and editing rules and groups for a secure, view-only query mode.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Radio Button | Syncfusion
-description: Learn how Blazor Radio Button supports accessibility with ARIA roles and keyboard navigation.
+description: Learn how Blazor Radio Button supports accessibility using ARIA roles, keyboard navigation, and screen reader support for inclusive form controls.
 platform: Blazor
 control: RadioButton
 documentation: ug

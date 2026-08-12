@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grouping in Blazor ListView | Syncfusion
-description: Group Blazor ListView items by category using the GroupBy field in ListViewFieldSettings.
+description: Group Blazor ListView items by category using the GroupBy field in ListViewFieldSettings for clear organization today.
 platform: Blazor
 control: Listview
 documentation: ug

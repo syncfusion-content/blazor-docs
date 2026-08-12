@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Toast | Syncfusion
-description: Handle Blazor Toast events including Created, OnOpen, OnClose, Destroyed, and Clicked event types.
+description: Handle Blazor Toast events including Created, OnOpen, OnClose, Destroyed, and Clicked event types for custom behavior.
 platform: Blazor
 control: Toast
 documentation: ug

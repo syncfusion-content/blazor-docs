@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and Appearance in Blazor TextBox | Syncfusion
-description: Customize Blazor TextBox appearance using CSS selectors for height, font size, and theme overrides.
+description: Customize Blazor TextBox appearance using CSS selectors for height, font size, and theme overrides for branding.
 platform: Blazor
 control: TextBox
 documentation: ug

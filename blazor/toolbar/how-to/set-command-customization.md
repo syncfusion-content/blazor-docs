@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to set command customization in Blazor Toolbar | Syncfusion
-description: Customize Blazor Toolbar item commands using HtmlAttributes and CssClass for styling and behavior.
+description: Customize Blazor Toolbar item commands using HtmlAttributes and CssClass for styling, behavior, and accessibility.
 platform: Blazor
 control: Toolbar
 documentation: ug

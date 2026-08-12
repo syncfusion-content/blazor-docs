@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Numeric Textbox | Syncfusion
-description: Handle Blazor Numeric TextBox events such as Blur, Focus, Created, Destroyed, and ValueChange.
+description: Handle Blazor Numeric TextBox events such as Blur, Focus, Created, Destroyed, and ValueChange in code today.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug

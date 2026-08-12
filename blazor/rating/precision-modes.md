@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Precision Modes in Blazor Rating | Syncfusion
-description: Set Blazor Rating precision to Full, Half, Quarter, or Exact for fine-grained value selection.
+description: Set Blazor Rating precision to Full, Half, Quarter, or Exact for fine-grained value selection and more accurate user ratings.
 platform: Blazor
 control: Rating
 documentation: ug

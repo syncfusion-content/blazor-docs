@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering in Blazor Dropdown Tree | Syncfusion®
-description: Filter tree nodes dynamically in Blazor Dropdown Tree with local or remote data as users type.
+description: Filter Blazor Dropdown Tree nodes dynamically as users type using local or remote data sources today.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug

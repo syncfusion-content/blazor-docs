@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to show Not operator in Blazor Query Builder | Syncfusion
-description: Enable the logical NOT operator in Blazor Query Builder groups using EnableNotCondition.
+description: Enable the logical NOT operator in Blazor Query Builder groups using EnableNotCondition to create complex, negated filter conditions.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

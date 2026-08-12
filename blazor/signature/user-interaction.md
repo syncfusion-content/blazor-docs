@@ -1,7 +1,7 @@
 ---
 layout: post
 title: User Interaction in Blazor Signature | Syncfusion
-description: Perform undo, redo, clear, and read-only actions in Blazor Signature with built-in async methods.
+description: Perform undo, redo, clear, and read-only actions in Blazor Signature with built-in async methods for signature editing control.
 platform: Blazor
 control: Signature
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Split Panes in Blazor Splitter | Syncfusion
-description: Create horizontal or vertical Blazor Splitter panes and nest splitters for complex layouts.
+description: Create horizontal or vertical Blazor Splitter panes and nest splitters for complex, flexible layout structures.
 platform: Blazor
 control: Splitter
 documentation: ug

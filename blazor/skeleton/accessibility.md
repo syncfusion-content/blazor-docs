@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Skeleton | Syncfusion
-description: Learn how Blazor Skeleton supports accessibility standards and screen reader compatibility.
+description: Learn how Blazor Skeleton supports accessibility standards, ARIA attributes, and screen reader compatibility for inclusive loading placeholders.
 platform: Blazor
 control: Skeleton
 documentation: ug

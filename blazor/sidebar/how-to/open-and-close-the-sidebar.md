@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to open and close the Blazor Sidebar | Syncfusion
-description: Open and close Blazor Sidebar programmatically using the IsOpen property and button click handlers.
+description: Open and close Blazor Sidebar programmatically using the IsOpen property and button click handlers for dynamic, user-driven control.
 platform: Blazor
 control: Sidebar
 documentation: ug

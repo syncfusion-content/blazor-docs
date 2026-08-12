@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Template in Blazor Toast | Syncfusion
-description: Use header, content, and footer templates to customize Blazor Toast notification layouts.
+description: Use header, content, and footer templates to customize Blazor Toast notification layouts and structures.
 platform: Blazor
 control: Toast
 documentation: ug

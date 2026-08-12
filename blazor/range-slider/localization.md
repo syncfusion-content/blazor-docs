@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Blazor Range Slider | Syncfusion
-description: Localize Blazor Range Slider UI text and formatting for different cultures and languages.
+description: Localize Blazor Range Slider UI text and formatting for different cultures and languages, ensuring a consistent and accessible experience for global users.
 platform: Blazor
 control: Range Slider
 documentation: ug

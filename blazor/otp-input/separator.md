@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Separator in Blazor OTP Input | Syncfusion
-description: Add separators between Blazor OTP Input fields to visually group the one-time password input.
+description: Add separators between Blazor OTP Input fields to visually group input, improving clarity when entering secure one-time passwords.
 platform: Blazor
 control: OTP Input
 documentation: ug

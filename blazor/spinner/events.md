@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Spinner | Syncfusion
-description: Handle lifecycle events such as Created, OnShow, and OnHide in Blazor Spinner with event arguments.
+description: Handle lifecycle events such as Created, OnShow, and OnHide in Blazor Spinner with event arguments for custom behavior.
 platform: Blazor
 control: Spinner
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Value Binding in Blazor MultiSelect Dropdown | Syncfusion
-description: Bind single or multiple selected values in Blazor MultiSelect Dropdown using @bind-Value.
+description: Bind single or multiple selected values in Blazor MultiSelect Dropdown using @bind-Value for selection today.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug

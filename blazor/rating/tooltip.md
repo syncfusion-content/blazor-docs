@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor Rating | Syncfusion
-description: Show tooltips on Blazor Rating items and control visibility with the ShowTooltip property.
+description: Show tooltips on Blazor Rating items and control visibility with ShowTooltip for helpful, accessible, context-aware rating feedback.
 platform: Blazor
 control: Rating
 documentation: ug

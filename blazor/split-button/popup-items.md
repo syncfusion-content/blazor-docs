@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Popup Items in Blazor Split Button | Syncfusion
-description: Configure Blazor Split Button popup items with icons, separators, URL navigation, and click events.
+description: Configure Blazor Split Button popup items with icons, separators, URL navigation, and click events for rich menus.
 platform: Blazor
 control: Split Button
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to customize the limits in Blazor Range Slider | Syncfusion
-description: Style the Blazor Range Slider limits bar with CSS to match application design requirements.
+description: Style the Blazor Range Slider limits bar with CSS to match application design and ensure consistent branding for range selection.
 platform: Blazor
 control: Range Slider
 documentation: ug

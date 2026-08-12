@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Progress Button | Syncfusion
-description: Learn how Blazor ProgressButton supports accessibility with ARIA roles and keyboard navigation.
+description: Learn how Blazor ProgressButton supports accessibility using ARIA roles, keyboard navigation, and screen reader support for inclusive experiences.
 platform: Blazor
 control: Progress Button
 documentation: ug

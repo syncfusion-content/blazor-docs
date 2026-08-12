@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Placeholder and Float Label in Blazor MultiColumn | Syncfusion
-description: Add placeholder hints and floating labels to Blazor MultiColumn ComboBox input fields and inputs.
+description: Add placeholder hints and floating labels to Blazor MultiColumn ComboBox input fields and input controls today.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug

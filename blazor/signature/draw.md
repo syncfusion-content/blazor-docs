@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Draw in Blazor Signature | Syncfusion
-description: Draw text as a signature in Blazor Signature with custom font family and size using DrawAsync.
+description: Draw text as a signature in Blazor Signature with custom font family and size using DrawAsync for personalized, accessible capture.
 platform: Blazor
 control: Signature
 documentation: ug

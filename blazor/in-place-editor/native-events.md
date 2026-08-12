@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Native Events in Blazor In-place Editor | Syncfusion
-description: Bind native mouse and keyboard events such as onmousedown and onkeydown to Blazor In-place Editor.
+description: Bind native mouse and keyboard events such as onmousedown and onkeydown to Blazor In-place Editor input field.
 platform: Blazor
 control: In-place Editor  
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Node Selection in Blazor TreeView | Syncfusion
-description: Select nodes through data binding or the SelectedNodes property with two-way binding support.
+description: Select nodes through data binding or the SelectedNodes property with two-way binding support in TreeView.
 platform: Blazor
 control: TreeView
 documentation: ug

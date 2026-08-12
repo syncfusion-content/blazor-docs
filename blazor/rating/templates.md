@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Templates in Blazor Rating | Syncfusion
-description: Customize Blazor Rating items with EmptyTemplate and FullTemplate for unique visual styles.
+description: Customize Blazor Rating items with EmptyTemplate and FullTemplate for unique, branded, and accessible rating displays.
 platform: Blazor
 control: Rating
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Value Binding in Blazor MultiColumn ComboBox | Syncfusion
-description: Bind selected values and indexes in Blazor MultiColumn ComboBox with @bind-Value and @bind-Index.
+description: Bind selected values and indexes in Blazor MultiColumn ComboBox with @bind-Value and @bind-Index for selection today.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug

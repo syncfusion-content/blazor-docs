@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in Blazor Rating | Syncfusion
-description: Control Blazor Rating selection with Value, Min, EnableSingleSelection, and reset button options.
+description: Control Blazor Rating selection with Value, Min, EnableSingleSelection, and reset options for flexible, user-friendly rating experiences.
 platform: Blazor
 control: Rating
 documentation: ug

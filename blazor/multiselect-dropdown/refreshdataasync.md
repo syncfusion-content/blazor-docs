@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RefreshDataAsync in Blazor MultiSelect Dropdown | Syncfusion
-description: Refresh Blazor MultiSelect Dropdown remote data dynamically using the RefreshDataAsync method.
+description: Refresh Blazor MultiSelect Dropdown remote data dynamically using the RefreshDataAsync method at runtime today.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug

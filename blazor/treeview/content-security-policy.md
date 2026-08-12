@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Content Security Policy in Blazor TreeView | Syncfusion
-description: Use Blazor TreeView features under strict Content Security Policy without unsafe-inline.
+description: Use Blazor TreeView features under strict Content Security Policy without unsafe-inline scripts or styles.
 platform: Blazor
 control: TreeView
 documentation: ug

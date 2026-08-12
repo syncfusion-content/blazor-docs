@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Align Items Using Spacer in Blazor Toolbar | Syncfusion
-description: Align Blazor Toolbar items to the left, center, or right using Spacer items for flexible layout.
+description: Align Blazor Toolbar items to the left, center, or right using Spacer items for flexible, organized layouts.
 platform: Blazor
 control: Toolbar
 documentation: ug

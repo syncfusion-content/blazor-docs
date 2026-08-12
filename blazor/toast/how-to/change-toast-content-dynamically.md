@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to show toast content dynamically in Blazor Toast | Syncfusion
-description: Update Blazor Toast content dynamically before showing new toast notifications on the page.
+description: Update Blazor Toast content dynamically before showing new toast notifications on the page for real-time UI.
 platform: Blazor
 control: Toast
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to customize the scrolling distance in Blazor Tabs | Syncfusion
-description: Control how far Blazor Tabs scroll when navigation icons are clicked using the ScrollStep property.
+description: Control how far Blazor Tabs scroll when navigation icons are clicked using the ScrollStep property for navigation.
 platform: Blazor
 control: Tabs
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Columns in Blazor Query Builder | Syncfusion
-description: Define Blazor Query Builder columns with required field mappings and auto-generation support.
+description: Define Blazor Query Builder columns with field mappings, auto-generation, and data types to build dynamic, robust query interfaces.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

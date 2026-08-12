@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and Appearance in Blazor MultiColumn ComboBox | Syncfusion
-description: Customize Blazor MultiColumn ComboBox appearance with CSS hooks, read-only mode, and Theme Studio.
+description: Customize Blazor MultiColumn ComboBox appearance with CSS hooks, read-only mode, and Theme Studio support today.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to get items in Blazor ListBox | Syncfusion
-description: Retrieve matching data items from Blazor ListBox by value using the GetDataByValue method.
+description: Retrieve matching data items from Blazor ListBox by value using the GetDataByValue method easily today.
 platform: Blazor
 control: List Box
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to change the floating label color in Blazor TextBox | Syncfusion
-description: Change Blazor TextBox floating label color for success, warning, or focus states using CSS.
+description: Change Blazor TextBox floating label color for success, warning, or focus states using custom CSS rules.
 platform: Blazor
 control: TextBox
 documentation: ug

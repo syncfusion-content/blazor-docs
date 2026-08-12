@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styles in Blazor Speed Dial | Syncfusion
-description: Style Blazor Speed Dial button icons, text, colors, and states with CSS and built-in properties.
+description: Style Blazor Speed Dial button icons, text, colors, and states with CSS and built-in properties for branded appearance.
 platform: Blazor
 control: SpeedDial
 documentation: ug

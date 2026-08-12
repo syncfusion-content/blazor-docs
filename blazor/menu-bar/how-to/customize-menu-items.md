@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to customize menu bar items in Blazor Menu Bar | Syncfusion
-description: Add or remove Blazor Menu Bar items dynamically using built-in methods and field settings.
+description: Add or remove Blazor Menu Bar items dynamically using built-in methods and field settings at runtime today.
 platform: Blazor
 control: Menu Bar 
 documentation: ug

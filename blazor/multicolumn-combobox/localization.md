@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Blazor MultiColumn ComboBox | Syncfusion
-description: Localize UI strings and globalize culture-sensitive values in Blazor MultiColumn ComboBox.
+description: Localize UI strings and globalize culture-sensitive values in Blazor MultiColumn ComboBox for global users today.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and Appearance in Blazor MultiSelect | Syncfusion
-description: Customize Blazor MultiSelect Dropdown appearance, including read-only state and CSS classes.
+description: Customize Blazor MultiSelect Dropdown appearance, including read-only state and CSS classes for styling today.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug

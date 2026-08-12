@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering in Blazor MultiColumn ComboBox | Syncfusion
-description: Filter Blazor MultiColumn ComboBox data items interactively as users type with AllowFiltering.
+description: Filter Blazor MultiColumn ComboBox data items interactively as users type with AllowFiltering enabled today easily.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug

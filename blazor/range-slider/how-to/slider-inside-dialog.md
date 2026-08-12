@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to render range slider inside a dialog in Blazor | Syncfusion
-description: Render Blazor Range Slider inside a dialog and call RepositionAsync when the dialog opens.
+description: Render Blazor Range Slider inside a dialog and call RepositionAsync on open to ensure correct positioning and accessibility in modals.
 platform: Blazor
 control: Range Slider
 documentation: ug

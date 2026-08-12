@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to add nested tabs in Blazor Tabs | Syncfusion
-description: Render nested Blazor Tabs inside a parent tab ContentTemplate for hierarchical navigation.
+description: Render nested Blazor Tabs inside a parent tab ContentTemplate for hierarchical navigation and structured content.
 platform: Blazor
 control: Tabs
 documentation: ug

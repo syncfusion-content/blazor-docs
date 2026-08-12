@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to set tooltip to the commands in Blazor Toolbar | Syncfusion
-description: Show tooltips on Blazor Toolbar commands by setting the TooltipText on each ToolbarItem.
+description: Show tooltips on Blazor Toolbar commands by setting the TooltipText property on each ToolbarItem for helpful guidance.
 platform: Blazor
 control: Toolbar
 documentation: ug

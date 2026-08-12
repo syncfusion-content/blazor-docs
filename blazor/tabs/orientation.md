@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Orientation in Blazor Tabs | Syncfusion
-description: Position Blazor Tabs header at the top, bottom, left, or right using HeaderPlacement values.
+description: Position Blazor Tabs header at the top, bottom, left, or right using HeaderPlacement values for flexible layouts.
 platform: Blazor
 control: Tabs
 documentation: ug

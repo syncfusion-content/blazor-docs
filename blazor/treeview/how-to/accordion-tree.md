@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to create an accordion tree in Blazor TreeView | Syncfusion
-description: Build an accordion-style TreeView that keeps only one node expanded at a time in Blazor.
+description: Build an accordion-style TreeView that keeps only one node expanded at a time in Blazor applications.
 platform: Blazor
 control: TreeView
 documentation: ug

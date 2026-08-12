@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to show or hide tab item in Blazor Tabs | Syncfusion
-description: Show or hide individual Blazor Tabs items dynamically using the Visible property of TabItem.
+description: Show or hide individual Blazor Tabs items dynamically using the Visible property of TabItem for dynamic UI.
 platform: Blazor
 control: Tabs
 documentation: ug

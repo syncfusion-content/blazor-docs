@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animation in Blazor Toast | Syncfusion
-description: Customize show and hide animations for Blazor Toast using animation settings and easing effects.
+description: Customize show and hide animations for Blazor Toast using animation settings and easing effects for transitions.
 platform: Blazor
 control: Toast
 documentation: ug

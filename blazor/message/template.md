@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Template in Blazor Message | Syncfusion
-description: Customize Blazor Message content with HTML elements and Blazor components using templates.
+description: Customize Blazor Message content with HTML elements and Blazor components using templates for rich content today.
 platform: Blazor
 control: Message
 documentation: ug

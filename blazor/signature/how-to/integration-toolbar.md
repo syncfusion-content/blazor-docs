@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to integrate Blazor Signature with Toolbar | Syncfusion
-description: Integrate Blazor Signature with Toolbar to enable undo, redo, save, clear, and color actions.
+description: Integrate Blazor Signature with Toolbar to enable undo, redo, save, clear, and color actions for a comprehensive editing experience.
 platform: Blazor
 control: Signature
 documentation: ug

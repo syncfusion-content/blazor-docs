@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Component with Validation in Blazor TextBox | Syncfusion
-description: Create a reusable custom Blazor component that wraps TextBox with validation and tooltip messages.
+description: Create a reusable custom Blazor component that wraps TextBox with validation and tooltip messages for forms.
 platform: Blazor
 control: TextBox
 documentation: ug

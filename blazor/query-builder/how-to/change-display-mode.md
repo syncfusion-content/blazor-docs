@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to change display mode in Blazor Query Builder | Syncfusion
-description: Switch Blazor Query Builder layout between horizontal and vertical using the DisplayMode property.
+description: Switch Blazor Query Builder layout between horizontal and vertical using DisplayMode to create adaptive, user-friendly query interfaces.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

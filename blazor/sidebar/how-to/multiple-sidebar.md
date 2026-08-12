@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to use multiple Blazor Sidebars | Syncfusion
-description: Use multiple Blazor Sidebars on the same page and position them on the left or right side.
+description: Use multiple Blazor Sidebars on the same page and position them left or right to create advanced, multi-panel layouts for users.
 platform: Blazor
 control: Sidebar
 documentation: ug

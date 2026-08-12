@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to show or hide toolbar item in Blazor Toolbar | Syncfusion
-description: Show or hide individual Blazor Toolbar items dynamically using the Visible property of ToolbarItem.
+description: Show or hide individual Blazor Toolbar items dynamically using the Visible property of ToolbarItem at runtime.
 platform: Blazor
 control: Toolbar
 documentation: ug

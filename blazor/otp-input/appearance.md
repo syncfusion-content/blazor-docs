@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appearance in Blazor OTP Input | Syncfusion
-description: Customize Blazor OTP Input length, disabled state, styling, and overall visual appearance.
+description: Customize Blazor OTP Input length, disabled state, border, and visual appearance to match your application's design and improve secure entry usability.
 platform: Blazor
 control: OTP Input
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Configuring Options in Blazor Toast | Syncfusion
-description: Configure Blazor Toast title, content, templates, progress bar, and built-in styling options.
+description: Configure Blazor Toast title, content, templates, progress bar, and built-in styling options for custom notifications.
 platform: Blazor
 control: Toast
 documentation: ug

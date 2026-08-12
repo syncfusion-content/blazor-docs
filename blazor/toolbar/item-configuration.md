@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Item Configuration in Blazor Toolbar | Syncfusion
-description: Configure Blazor Toolbar items with align, icon, template, overflow, disabled, and HTML attributes.
+description: Configure Blazor Toolbar items with align, icon, template, overflow, disabled, and HTML attributes for full control.
 platform: Blazor
 control: Toolbar
 documentation: ug

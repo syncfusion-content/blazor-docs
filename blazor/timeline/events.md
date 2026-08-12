@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Timeline | Syncfusion
-description: Handle Blazor Timeline events such as Created when rendering completes and item interactions fire.
+description: Handle Blazor Timeline events such as Created when rendering completes and item interactions fire for custom behavior.
 platform: Blazor
 control: Timeline
 documentation: ug

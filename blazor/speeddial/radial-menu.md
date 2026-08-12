@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Radial Menu in Blazor Speed Dial | Syncfusion
-description: Arrange Blazor Speed Dial items in a radial menu with customizable angles, direction, and offset.
+description: Arrange Blazor Speed Dial items in a radial menu with customizable angles, direction, and offset for unique layouts.
 platform: Blazor
 control: SpeedDial
 documentation: ug

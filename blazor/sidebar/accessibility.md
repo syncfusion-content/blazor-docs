@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Sidebar | Syncfusion
-description: Learn how Blazor Sidebar supports accessibility with keyboard navigation and screen reader support.
+description: Learn how Blazor Sidebar supports accessibility using keyboard navigation and screen reader support for inclusive navigation in your app.
 platform: Blazor
 control: Sidebar
 documentation: ug

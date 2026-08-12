@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to set state persistence in Blazor Tabs | Syncfusion
-description: Persist the selected Blazor Tabs item in browser cookies using EnablePersistence properties.
+description: Persist the selected Blazor Tabs item in browser cookies using the EnablePersistence property across user sessions.
 platform: Blazor
 control: Tabs
 documentation: ug

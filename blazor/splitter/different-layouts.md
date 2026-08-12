@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Different Layouts in Blazor Splitter | Syncfusion
-description: Create code editor and Outlook-style layouts using nested and multiple Blazor Splitter panes.
+description: Create code editor and Outlook-style layouts using nested and multiple Blazor Splitter panes for flexible interfaces.
 platform: Blazor
 control: Splitter
 documentation: ug

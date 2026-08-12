@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Toast in Blazor Web App | Syncfusion
-description: Learn how to get started with the Syncfusion Blazor Toast in a Blazor Web App with setup steps.
+description: Learn how to get started with the Syncfusion Blazor Toast in a Blazor Web App using setup steps and code examples.
 platform: Blazor
 control: Toast
 documentation: ug

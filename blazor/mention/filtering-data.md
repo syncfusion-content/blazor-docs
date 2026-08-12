@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering Data in Blazor Mention | Syncfusion
-description: Filter Blazor Mention suggestions as users type with MinLength control and remote data support.
+description: Filter Blazor Mention suggestions as users type with MinLength control and remote data support enabled today.
 platform: Blazor
 control: Mention
 documentation: ug

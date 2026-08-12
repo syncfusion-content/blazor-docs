@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in Blazor MultiColumn ComboBox | Syncfusion
-description: Retrieve selected values and item data in Blazor MultiColumn ComboBox using ValueChange events.
+description: Retrieve selected values and item data in Blazor MultiColumn ComboBox using ValueChange events in code today.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug

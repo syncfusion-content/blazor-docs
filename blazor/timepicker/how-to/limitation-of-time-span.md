@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to handle TimeSpan limitations in Blazor TimePicker | Syncfusion
-description: Learn how Blazor TimePicker handles TimeSpan custom format limitations for separators and literals.
+description: Learn how Blazor TimePicker handles TimeSpan custom format limitations for separators and literals in display.
 platform: Blazor
 control: TimePicker
 documentation: ug

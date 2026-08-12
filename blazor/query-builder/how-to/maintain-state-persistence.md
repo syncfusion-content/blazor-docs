@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Maintain State Persistence in Blazor Query | Syncfusion
-description: Persist Blazor Query Builder state in browser local storage using the EnablePersistence property.
+description: Persist Blazor Query Builder state in browser local storage using EnablePersistence to retain user queries and settings across sessions.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

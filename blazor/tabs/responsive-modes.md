@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Responsive Modes in Blazor Tabs | Syncfusion
-description: Handle overflowing tab items in Blazor Tabs using Scrollable or Popup responsive modes.
+description: Handle overflowing tab items in Blazor Tabs using Scrollable or Popup responsive modes for various screen sizes.
 platform: Blazor
 control: Tabs
 documentation: ug

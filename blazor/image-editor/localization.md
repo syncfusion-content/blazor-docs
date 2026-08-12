@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Blazor Image Editor | Syncfusion
-description: Localize Blazor Image Editor UI strings and labels to support different languages and cultures.
+description: Localize Blazor Image Editor UI strings and labels to support different languages and cultures globally.
 platform: Blazor
 control: Image Editor
 documentation: ug

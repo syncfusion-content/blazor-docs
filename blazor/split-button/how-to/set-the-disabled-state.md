@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to set the disabled state of Blazor Split Button | Syncfusion
-description: Disable the Blazor Split Button by setting the Disabled property to true for the whole component.
+description: Disable the Blazor Split Button by setting the Disabled property to true, preventing user interaction with the whole component.
 platform: Blazor
 control: Split Button
 documentation: ug

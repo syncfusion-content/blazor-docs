@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sidebar for specific content in Blazor Sidebar | Syncfusion
-description: Set a custom target element and choose Auto, Over, Push, or Slide types for Blazor Sidebar.
+description: Set a custom target element and choose Auto, Over, Push, or Slide types for Blazor Sidebar to create flexible, adaptive layouts.
 platform: Blazor
 control: Sidebar
 documentation: ug

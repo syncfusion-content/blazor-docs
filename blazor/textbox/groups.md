@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Groups in Blazor TextBox | Syncfusion
-description: Combine Blazor TextBox features such as icons, floating labels, clear buttons, and multiline input.
+description: Combine Blazor TextBox features such as icons, floating labels, clear buttons, and multiline input in your forms.
 platform: Blazor
 control: TextBox
 documentation: ug

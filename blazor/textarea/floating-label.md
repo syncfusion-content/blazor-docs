@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Floating Label in Blazor TextArea | Syncfusion
-description: Use FloatLabelType in Blazor TextArea to float the placeholder above the input on focus or always.
+description: Use FloatLabelType in Blazor TextArea to float the placeholder above the input on focus or always for better UX.
 platform: Blazor
 control: TextArea
 documentation: ug

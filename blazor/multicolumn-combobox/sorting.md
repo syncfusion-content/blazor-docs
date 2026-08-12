@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in Blazor MultiColumn ComboBox | Syncfusion
-description: Sort Blazor MultiColumn ComboBox columns in ascending or descending order with AllowSorting.
+description: Sort Blazor MultiColumn ComboBox columns in ascending or descending order with AllowSorting enabled today easily.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug

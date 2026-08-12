@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animations in Blazor Tabs | Syncfusion
-description: Customize previous and next tab transition effects, easing, and duration in Blazor Tabs.
+description: Customize previous and next tab transition effects, easing, and duration in Blazor Tabs for smooth navigation.
 platform: Blazor
 control: Tabs
 documentation: ug

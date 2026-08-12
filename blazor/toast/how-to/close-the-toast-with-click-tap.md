@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to close the toast on click or tap in Blazor Toast | Syncfusion
-description: Close Blazor Toast notifications on click or tap by handling ToastClickEventArgs in the event.
+description: Close Blazor Toast notifications on click or tap by handling ToastClickEventArgs in the click event handler.
 platform: Blazor
 control: Toast
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to set disabled state in Blazor Toggle Switch Button | Syncfusion
-description: Disable Blazor Toggle Switch Button interaction by setting the Disabled property to true.
+description: Disable Blazor Toggle Switch Button interaction by setting the Disabled property to true for read-only mode.
 platform: Blazor
 control: Toggle Switch Button 
 documentation: ug

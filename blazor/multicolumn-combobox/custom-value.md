@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Value in Blazor MultiColumn ComboBox | Syncfusion
-description: Allow users to add custom values to Blazor MultiColumn ComboBox using the AllowCustom property.
+description: Allow users to add custom values to Blazor MultiColumn ComboBox using the AllowCustom property at runtime today.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug

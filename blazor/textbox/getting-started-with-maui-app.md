@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor TextBox in MAUI App | Syncfusion
-description: Learn how to get started with the Syncfusion Blazor TextBox in a Blazor MAUI app with setup steps.
+description: Learn how to get started with the Syncfusion Blazor TextBox in a Blazor MAUI app using setup steps and code examples.
 platform: Blazor
 control: TextBox
 documentation: ug

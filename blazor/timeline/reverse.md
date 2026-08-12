@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Reverse in Blazor Timeline | Syncfusion
-description: Reverse the display order of Blazor Timeline items using the Reverse property for display.
+description: Reverse the display order of Blazor Timeline items using the Reverse property for inverted chronological display.
 platform: Blazor
 control: Timeline
 documentation: ug

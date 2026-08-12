@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Get Filtered Records in Blazor Query Builder | Syncfusion
-description: Retrieve filtered records from Blazor Query Builder using the GetFilteredRecordsAsync method.
+description: Retrieve filtered records from Blazor Query Builder using GetFilteredRecordsAsync to efficiently process and display user-defined query results.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

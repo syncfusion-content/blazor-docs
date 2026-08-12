@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Popup Setting in Blazor Dropdown Tree | Syncfusion®
-description: Customize the Blazor Dropdown Tree popup width, height, and dimensions to fit your UI layout.
+description: Customize the Blazor Dropdown Tree popup with width, height, and dimension settings to fit your layout.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug

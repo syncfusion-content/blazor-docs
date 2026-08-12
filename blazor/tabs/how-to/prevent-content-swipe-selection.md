@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to prevent content swipe selection in Blazor Tabs | Syncfusion
-description: Control or prevent swipe-based tab switching in Blazor Tabs using the SwipeMode property.
+description: Control or prevent swipe-based tab switching in Blazor Tabs using the SwipeMode property for touch interfaces.
 platform: Blazor
 control: Tabs
 documentation: ug

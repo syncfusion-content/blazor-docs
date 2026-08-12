@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form Support in Blazor TextArea | Syncfusion
-description: Use Blazor TextArea inside HTML forms and EditForm to capture and submit multiline text.
+description: Use Blazor TextArea inside HTML forms and EditForm to capture and submit multiline text with validation.
 platform: Blazor
 control: TextArea
 documentation: ug

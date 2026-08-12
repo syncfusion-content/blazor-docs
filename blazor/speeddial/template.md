@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Templates in Blazor Speed Dial | Syncfusion
-description: Use ItemTemplate and popup templates to customize Blazor Speed Dial item content and container.
+description: Use ItemTemplate and popup templates to customize Blazor Speed Dial item content, icons, and the popup container.
 platform: Blazor
 control: SpeedDial
 documentation: ug

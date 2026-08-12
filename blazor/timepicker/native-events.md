@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Native Events in Blazor TimePicker | Syncfusion
-description: Bind native DOM events like keypress to Blazor TimePicker using on-event attributes handlers.
+description: Bind native DOM events like keypress to Blazor TimePicker using on-event attributes and event handlers.
 platform: Blazor
 control: TimePicker
 documentation: ug

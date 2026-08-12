@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Range Slider | Syncfusion
-description: Learn how Blazor Range Slider supports accessibility with WAI-ARIA roles and keyboard interaction.
+description: Learn how Blazor Range Slider supports accessibility with WAI-ARIA roles, keyboard interaction, and screen reader compatibility for user-friendly sliders.
 platform: Blazor
 control: Range Slider
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to show rounded corner in Blazor Menu Bar | Syncfusion
-description: Apply rounded corners to Blazor Menu Bar using CssClass and the border-radius CSS property.
+description: Apply rounded corners to Blazor Menu Bar using CssClass and the border-radius CSS property for styling today.
 platform: Blazor
 control: Menu Bar 
 documentation: ug

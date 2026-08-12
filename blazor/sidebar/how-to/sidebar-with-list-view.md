@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to initialize the Blazor Sidebar with ListView | Syncfusion
-description: Render a Blazor Sidebar with a ListView inside its content area for navigation menus and items.
+description: Render a Blazor Sidebar with a ListView inside its content area for navigation menus, enabling rich and accessible sidebar content.
 platform: Blazor
 control: Sidebar
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and Appearance in Blazor Rating | Syncfusion
-description: Customize Blazor Rating appearance including item count, colors, and shapes to match your design.
+description: Customize Blazor Rating appearance including item count, colors, and shapes for a visually engaging, consistent rating experience.
 platform: Blazor
 control: Rating
 documentation: ug

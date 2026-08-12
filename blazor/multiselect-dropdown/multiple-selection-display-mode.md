@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Multiple Selection Modes in Blazor MultiSelect | Syncfusion
-description: Configure Blazor MultiSelect Dropdown selection display as Default, Box, Delimiter, or Chip modes.
+description: Configure Blazor MultiSelect Dropdown selection display as Default, Box, Delimiter, or Chip display modes today.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug

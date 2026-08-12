@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resize in Blazor Splitter | Syncfusion
-description: Resize Blazor Splitter panes using separators with minimum and maximum size validation.
+description: Resize Blazor Splitter panes using separators with minimum and maximum size validation for controlled layout changes.
 platform: Blazor
 control: Splitter
 documentation: ug

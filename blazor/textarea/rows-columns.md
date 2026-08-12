@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rows and Columns in Blazor TextArea | Syncfusion
-description: Set Blazor TextArea dimensions with RowCount and ColumnCount for initial visible lines and width.
+description: Set Blazor TextArea dimensions with RowCount and ColumnCount for initial visible lines and width in your UI.
 platform: Blazor
 control: TextArea
 documentation: ug

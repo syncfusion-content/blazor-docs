@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Target Support in Blazor Tooltip | Syncfusion
-description: Attach Blazor Tooltip to specific target DOM elements using the Target property and CSS selectors.
+description: Attach Blazor Tooltip to specific target DOM elements using the Target property and CSS selectors for placement.
 platform: Blazor
 control: Tooltip
 documentation: ug

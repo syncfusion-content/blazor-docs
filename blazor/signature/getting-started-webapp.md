@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Signature in Blazor Web App | Syncfusion
-description: Learn how to get started with the Syncfusion Blazor Signature in a Blazor Web App with setup steps.
+description: Get started with the Syncfusion Blazor Signature in a Blazor Web App using setup steps, configuration guidance, and code examples.
 platform: Blazor
 control: Signature
 documentation: ug

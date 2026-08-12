@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Content in Blazor Tooltip | Syncfusion
-description: Display simple text, HTML, or template content in Blazor Tooltip based on target interaction.
+description: Display simple text, HTML, or template content in Blazor Tooltip based on target interaction for rich content.
 platform: Blazor
 control: Tooltip
 documentation: ug

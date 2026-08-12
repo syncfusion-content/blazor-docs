@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State Persistence in Blazor Sidebar | Syncfusion
-description: Persist Blazor Sidebar open or close state in localStorage using the EnablePersistence property.
+description: Persist Blazor Sidebar open or close state in localStorage using EnablePersistence to maintain user preferences across sessions.
 platform: Blazor
 control: Sidebar
 documentation: ug

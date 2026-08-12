@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Setting Dimension in Blazor Tooltip | Syncfusion
-description: Set Blazor Tooltip width and height to fixed pixel values or leave them auto sized for layouts.
+description: Set Blazor Tooltip width and height to fixed pixel values or leave them auto-sized for responsive layouts.
 platform: Blazor
 control: Tooltip
 documentation: ug

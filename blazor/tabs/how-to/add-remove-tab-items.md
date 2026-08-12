@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to add or remove tab items in Blazor Tabs | Syncfusion
-description: Add or remove Blazor Tabs items dynamically using conditional rendering or public methods.
+description: Add or remove Blazor Tabs items dynamically using conditional rendering or public methods for dynamic interfaces.
 platform: Blazor
 control: Tabs
 documentation: ug

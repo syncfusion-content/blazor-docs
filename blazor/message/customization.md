@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in Blazor Message | Syncfusion
-description: Customize Blazor Message content alignment and border styles to match your application design.
+description: Customize Blazor Message content alignment and border styles to match your application design perfectly today.
 platform: Blazor
 control: Message
 documentation: ug

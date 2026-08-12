@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Speed Dial | Syncfusion
-description: Learn how Blazor Speed Dial supports accessibility and keyboard navigation for action items.
+description: Learn how Blazor Speed Dial supports accessibility, ARIA roles, and keyboard navigation for quick access to action items.
 platform: Blazor
 control: SpeedDial
 documentation: ug

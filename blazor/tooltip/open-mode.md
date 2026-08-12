@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open Mode in Blazor Tooltip | Syncfusion
-description: Control how Blazor Tooltip opens on hover, focus, click, or custom interactions using OpensOn.
+description: Control how Blazor Tooltip opens on hover, focus, click, or custom interactions using the OpensOn property.
 platform: Blazor
 control: Tooltip
 documentation: ug

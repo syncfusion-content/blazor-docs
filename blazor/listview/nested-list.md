@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Nested List in Blazor ListView | Syncfusion
-description: Render hierarchical lists in Blazor ListView by mapping the Child field to nested data collections.
+description: Render hierarchical lists in Blazor ListView by mapping the Child field to nested data collections today easily.
 platform: Blazor
 control: Listview
 documentation: ug

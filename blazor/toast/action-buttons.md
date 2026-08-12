@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Action Buttons in Blazor Toast | Syncfusion
-description: Add action buttons to Blazor Toast notifications and handle click events for user responses.
+description: Add action buttons to Blazor Toast notifications and handle click events for interactive user responses.
 platform: Blazor
 control: Toast
 documentation: ug

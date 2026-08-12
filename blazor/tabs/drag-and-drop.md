@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Drag and Drop in Blazor Tabs | Syncfusion
-description: Enable drag and drop in Blazor Tabs to reorder tab items within a configurable drag area.
+description: Enable drag and drop in Blazor Tabs to reorder tab items within a configurable drag area for custom ordering.
 platform: Blazor
 control: Tabs
 documentation: ug

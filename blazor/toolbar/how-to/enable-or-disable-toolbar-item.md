@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to enable or disable toolbar item in Blazor Toolbar | Syncfusion
-description: Enable or disable individual Blazor Toolbar items using the Disabled property of ToolbarItem.
+description: Enable or disable individual Blazor Toolbar items using the Disabled property of ToolbarItem for interactive control.
 platform: Blazor
 control: Toolbar
 documentation: ug

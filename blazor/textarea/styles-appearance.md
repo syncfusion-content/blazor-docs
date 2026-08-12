@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and Appearance in Blazor TextArea | Syncfusion
-description: Style Blazor TextArea sizing and borders by applying e-small or e-bigger CSS density classes.
+description: Style Blazor TextArea sizing and borders by applying e-small or e-bigger CSS density classes for layouts.
 platform: Blazor
 control: TextArea
 documentation: ug

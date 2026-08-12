@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resize in Blazor TextArea | Syncfusion
-description: Control Blazor TextArea resizing with ResizeMode options for vertical, horizontal, both, or none.
+description: Control Blazor TextArea resizing with ResizeMode options for vertical, horizontal, both, or none directions.
 platform: Blazor
 control: TextArea
 documentation: ug

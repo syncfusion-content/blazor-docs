@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and Appearance in Blazor Menu Bar | Syncfusion
-description: Customize Blazor Menu Bar appearance by overriding default CSS classes and using Theme Studio.
+description: Customize Blazor Menu Bar appearance by overriding default CSS classes and using Theme Studio for design today.
 platform: Blazor
 control: Menu Bar 
 documentation: ug

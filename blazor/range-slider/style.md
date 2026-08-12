@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and Appearance in Blazor Range Slider | Syncfusion
-description: Customize Blazor Range Slider track, thumb, and limits appearance with CSS and custom themes.
+description: Customize Blazor Range Slider track, thumb, and limits with CSS and custom themes to match your application's branding and visual consistency.
 platform: Blazor
 control: Range Slider
 documentation: ug

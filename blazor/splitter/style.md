@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and Appearance in Blazor Splitter | Syncfusion
-description: Customize Blazor Splitter split bars, panes, and icons using CSS variables and class overrides.
+description: Customize Blazor Splitter split bars, panes, and icons using CSS variables and class overrides for branded styling.
 platform: Blazor
 control: Splitter
 documentation: ug

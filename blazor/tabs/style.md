@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and Appearance in Blazor Tabs | Syncfusion
-description: Customize Blazor Tabs appearance using CSS selectors for headers, content, and active indicators.
+description: Customize Blazor Tabs appearance using CSS selectors for headers, content, and active indicators for branding.
 platform: Blazor
 control: Tabs
 documentation: ug

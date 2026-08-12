@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Header in Blazor Tabs | Syncfusion
-description: Customize Blazor Tabs header styles with predefined CSS classes for fill and accent backgrounds.
+description: Customize Blazor Tabs header styles with predefined CSS classes for fill and accent backgrounds for visual variety.
 platform: Blazor
 control: Tabs
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Icons in Blazor Message | Syncfusion
-description: Show or hide severity and close icons in Blazor Message and add custom icons for visual context.
+description: Show or hide severity and close icons in Blazor Message and add custom icons for visual context clarity today.
 platform: Blazor
 control: Message
 documentation: ug

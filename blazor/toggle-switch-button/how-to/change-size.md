@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to change size in Blazor Toggle Switch Button | Syncfusion
-description: Change Blazor Toggle Switch Button size to small using the e-small CSS class via CssClass.
+description: Change Blazor Toggle Switch Button size to small using the e-small CSS class via the CssClass property.
 platform: Blazor
 control: Toggle Switch Button 
 documentation: ug

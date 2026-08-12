@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to change submenu position in Blazor Menu Bar | Syncfusion
-description: Customize Blazor Menu Bar submenu position by setting Top and Left values in the OnOpen event.
+description: Customize Blazor Menu Bar submenu position by setting Top and Left values in the OnOpen event handler today.
 platform: Blazor
 control: Menu Bar 
 documentation: ug

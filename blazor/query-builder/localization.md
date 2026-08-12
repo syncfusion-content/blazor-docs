@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Blazor Query Builder | Syncfusion
-description: Localize Blazor Query Builder UI text and honor application culture for dates and numbers.
+description: Localize Blazor Query Builder UI text and honor application culture for dates and numbers, ensuring a consistent experience across regions.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

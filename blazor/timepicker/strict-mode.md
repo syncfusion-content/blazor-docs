@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Strict Mode in Blazor TimePicker | Syncfusion
-description: Restrict Blazor TimePicker values to the specified Min and Max range using StrictMode property.
+description: Restrict Blazor TimePicker values to the specified Min and Max range using the StrictMode property for validation.
 platform: Blazor
 control: TimePicker
 documentation: ug

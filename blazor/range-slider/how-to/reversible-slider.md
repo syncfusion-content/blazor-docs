@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to create a reversible range slider in Blazor | Syncfusion
-description: Create a reversible Blazor Range Slider with descending values using Min and Max settings.
+description: Create a reversible Blazor Range Slider with descending values using Min and Max settings to support flexible data entry scenarios.
 platform: Blazor
 control: Range Slider
 documentation: ug

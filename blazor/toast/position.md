@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Positioning in Blazor Toast | Syncfusion
-description: Position Blazor Toast notifications using predefined X and Y values or custom coordinates.
+description: Position Blazor Toast notifications using predefined X and Y values or custom coordinates on the screen.
 platform: Blazor
 control: Toast
 documentation: ug

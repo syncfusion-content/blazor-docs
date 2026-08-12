@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to set the disabled state in Blazor TextBox | Syncfusion
-description: Disable interaction and focus in Blazor TextBox by setting the Enabled property to false.
+description: Disable interaction and focus in Blazor TextBox by setting the Enabled property to false for read-only fields.
 platform: Blazor
 control: TextBox
 documentation: ug

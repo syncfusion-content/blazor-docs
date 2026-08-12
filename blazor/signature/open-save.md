@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open and Save in Blazor Signature | Syncfusion
-description: Open and save Blazor Signature content as base64, image, or blob using LoadAsync and Save methods.
+description: Open and save Blazor Signature content as base64, image, or blob using LoadAsync and Save methods for flexible signature data handling.
 platform: Blazor
 control: Signature
 documentation: ug

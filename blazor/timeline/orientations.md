@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Orientations in Blazor Timeline | Syncfusion
-description: Set Blazor Timeline orientation to Vertical or Horizontal to control item layout direction.
+description: Set Blazor Timeline orientation to Vertical or Horizontal to control the item layout direction in your UI.
 platform: Blazor
 control: Timeline
 documentation: ug

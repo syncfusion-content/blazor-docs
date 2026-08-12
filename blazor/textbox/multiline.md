@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Multiline in Blazor TextBox | Syncfusion
-description: Convert Blazor TextBox into a multiline input using the Multiline property and a textarea element.
+description: Convert Blazor TextBox into a multiline input using the Multiline property and render it as a textarea element.
 platform: Blazor
 control: TextBox
 documentation: ug

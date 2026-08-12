@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and Appearance in Blazor Query Builder | Syncfusion
-description: Customize Blazor Query Builder appearance with CSS selectors and custom themes using Theme Studio.
+description: Customize Blazor Query Builder appearance with CSS selectors and custom themes to match your application's branding and visual consistency.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

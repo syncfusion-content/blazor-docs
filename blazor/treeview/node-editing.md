@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Node Editing in Blazor TreeView | Syncfusion
-description: Edit node text inline with double-click, F2, or programmatic BeginEditAsync in TreeView.
+description: Edit Blazor TreeView node text inline using double-click, F2, or the programmatic BeginEditAsync method.
 platform: Blazor
 control: TreeView
 documentation: ug

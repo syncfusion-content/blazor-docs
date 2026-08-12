@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to customize the thumb in Blazor Range Slider | Syncfusion
-description: Customize Blazor Range Slider thumb shape, size, and image using CSS overrides and properties.
+description: Customize Blazor Range Slider thumb shape, size, and image using CSS overrides and properties to create unique, accessible slider handles.
 platform: Blazor
 control: Range Slider
 documentation: ug

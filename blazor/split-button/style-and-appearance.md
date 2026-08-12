@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and Appearance in Blazor Split Button | Syncfusion
-description: Customize Blazor Split Button appearance using CssClass and built-in theme CSS class overrides.
+description: Customize Blazor Split Button appearance using CssClass and built-in theme CSS class overrides for branded styling.
 platform: Blazor
 control: Split Button
 documentation: ug

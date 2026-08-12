@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to prevent reorder of active tab in Blazor Tabs | Syncfusion
-description: Prevent the active tab from moving out of the popup in Blazor Tabs using ReorderActiveTab.
+description: Prevent the active tab from moving out of the popup in Blazor Tabs using ReorderActiveTab for better usability.
 platform: Blazor
 control: Tabs
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to customize the bar in Blazor Range Slider | Syncfusion
-description: Style the Blazor Range Slider track and selected range with CSS classes for track and range.
+description: Style the Blazor Range Slider track and selected range with CSS classes for custom colors, gradients, and enhanced visual feedback.
 platform: Blazor
 control: Range Slider
 documentation: ug

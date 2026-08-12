@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to customize slider tick label in Blazor Range Slider | Syncfusion
-description: Customize Blazor Range Slider tick labels with CSS classes and the TicksRendering event.
+description: Customize Blazor Range Slider tick labels with CSS classes and the TicksRendering event for visually distinct, accessible tick marks.
 platform: Blazor
 control: Range Slider
 documentation: ug

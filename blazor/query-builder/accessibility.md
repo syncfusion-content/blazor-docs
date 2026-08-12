@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Query Builder | Syncfusion
-description: Learn how Blazor Query Builder supports accessibility with ARIA roles and keyboard navigation.
+description: Learn how Blazor Query Builder supports accessibility using ARIA roles, keyboard navigation, and screen reader support for inclusive query building.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

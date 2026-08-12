@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor Range Slider | Syncfusion
-description: Show and position tooltips in Blazor Range Slider using Placement, ShowOn, and IsVisible settings.
+description: Show and position tooltips in Blazor Range Slider using Placement, ShowOn, and IsVisible for clear, customizable value feedback.
 platform: Blazor
 control: Range Slider
 documentation: ug

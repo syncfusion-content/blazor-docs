@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mask Support in Blazor TimePicker | Syncfusion
-description: Use EnableMask in Blazor TimePicker to guide users to enter time values in the correct format.
+description: Use EnableMask in Blazor TimePicker to guide users to enter time values in the correct format with masking.
 platform: Blazor
 control: TimePicker
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to enable RTL in Blazor Toggle Switch Button | Syncfusion
-description: Enable right-to-left layout for Blazor Toggle Switch Button using the EnableRtl property.
+description: Enable right-to-left layout for Blazor Toggle Switch Button using the EnableRtl property for RTL languages.
 platform: Blazor
 control: Toggle Switch Button 
 documentation: ug

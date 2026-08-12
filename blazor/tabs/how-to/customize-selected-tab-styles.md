@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to customize selected tab styles in Blazor Tabs | Syncfusion
-description: Customize active tab styles in Blazor Tabs using CSS and HeaderTemplate with custom HTML content.
+description: Customize active tab styles in Blazor Tabs using CSS and HeaderTemplate with custom HTML content for branding.
 platform: Blazor
 control: Tabs
 documentation: ug

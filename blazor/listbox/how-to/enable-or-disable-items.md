@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to enable or disable items in Blazor ListBox | Syncfusion
-description: Enable or disable specific items in Blazor ListBox at runtime using the EnableItems method.
+description: Enable or disable specific items in Blazor ListBox at runtime using the EnableItems method dynamically.
 platform: Blazor
 control: List Box
 documentation: ug

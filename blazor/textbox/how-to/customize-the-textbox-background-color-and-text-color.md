@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Background and Text Color in Blazor TextBox | Syncfusion
-description: Customize Blazor TextBox background and text colors using custom CSS with the CssClass property.
+description: Customize Blazor TextBox background and text colors using custom CSS applied through the CssClass property.
 platform: Blazor
 control: TextBox
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to format numeric range slider in Blazor Range Slider | Syncfusion
-description: Format Blazor Range Slider numeric values with units, decimal places, and leading zeros.
+description: Format Blazor Range Slider numeric values with units, decimal places, and leading zeros to ensure precise, readable, and context-aware numeric input for users.
 platform: Blazor
 control: Range Slider
 documentation: ug

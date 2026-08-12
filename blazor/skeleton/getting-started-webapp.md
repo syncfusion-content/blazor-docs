@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Skeleton in Blazor Web App | Syncfusion
-description: Learn how to get started with the Syncfusion Blazor Skeleton in a Blazor Web App with setup steps.
+description: Learn how to get started with the Syncfusion Blazor Skeleton in a Blazor Web App using setup steps, configuration, and code examples.
 platform: Blazor
 control: Skeleton
 documentation: ug

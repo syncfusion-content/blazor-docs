@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Time Format in Blazor TimePicker | Syncfusion
-description: Set custom or standard display formats for Blazor TimePicker values using the Format property.
+description: Set custom or standard display formats for Blazor TimePicker values using the Format property for localization.
 platform: Blazor
 control: TimePicker
 documentation: ug

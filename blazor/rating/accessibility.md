@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Rating | Syncfusion
-description: Learn how Blazor Rating supports accessibility with ARIA roles and keyboard navigation.
+description: Learn how Blazor Rating supports accessibility using ARIA roles, keyboard navigation, and screen reader support for inclusive rating controls.
 platform: Blazor
 control: Rating
 documentation: ug
