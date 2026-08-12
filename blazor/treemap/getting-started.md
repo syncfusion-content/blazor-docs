@@ -7,7 +7,7 @@ component: TreeMap
 documentation: ug
 ---
 
-# Getting Started with Blazor TreeMap
+# Blazor TreeMap Getting Started in Web App
 
 This section briefly explains how to include the [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -373,3 +373,4 @@ N> You can also explore our [Blazor TreeMap example](https://blazor.syncfusion.c
 
 1. [Getting Started with Blazor for Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 2. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+
