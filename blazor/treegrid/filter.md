@@ -79,7 +79,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Filtering in Blazor TreeGrid](/images/blazor-treegrid-filtering.webp)
+![Filtering in Blazor TreeGrid](images/blazor-treegrid-filtering.webp)
 Filtering enabled in the TreeGrid with basic column configurations.
 
 N> Use [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_String_System_String_) to apply a filter programmatically and [ClearFilteringAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ClearFilteringAsync) to clear filters. To disable filtering for a specific column, set the column’s `AllowFiltering` to false.
@@ -226,9 +226,7 @@ a* |Values that start with “a”.
 *a* |Values that contain “a”.
 *a*b* |Values that contain “a”, followed by anything, then “b”, followed by anything.
 
-The following image illustrates the **Wildcard** operator in action.
-
-![WildcardFilter](/images/blazor-treegrid-wildcard-search.webp) 
+![WildcardFilter](images/blazor-treegrid-wildcard-search.webp) 
 
 > When using the **Wildcard** operator, records are displayed according to the selected filter [HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_HierarchyMode) in [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings). For details, see the filter hierarchy modes [section](https://blazor.syncfusion.com/documentation/treegrid/filter#filter-hierarchy-modes).
 
@@ -255,9 +253,9 @@ The following image illustrates the **LIKE** operator in action.
 
 ## Filter enum column
 
-Filter enum-type data in a TreeGrid column using a filter template.
+Filter enum-type data in a TreeGrid column using a filter template. 
 
-In the following example, an enumerated list is bound to the Priority column, and the `SfDropDownList` component is rendered in the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterTemplate) of that column.  
+An enumerated list is bound to the Priority column, and the `SfDropDownList` component is rendered within the column’s [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterTemplate).
 
 In the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of `SfDropDownList`, the Priority column is filtered programmatically using [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_String_System_String_).
 
