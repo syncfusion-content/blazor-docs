@@ -18,7 +18,7 @@ To get started quickly with templates in the Blazor MultiSelect Dropdown compone
 
 Customize how the currently selected value is displayed in the input by using the [ValueTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_ValueTemplate) property.
 
-In the following sample, the selected value displays combined text from `FirstName` and `Designation`, separated by a hyphen.
+In the following sample, the selected value displays combined text from `FirstName` and `Designation` separated by a hyphen.
 
 {% highlight cshtml %}
 

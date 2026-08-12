@@ -218,3 +218,5 @@ N> The `DialogButton` and `FooterTemplate` properties cannot be used together. C
 
 * [How to add an icon to dialog buttons](./how-to/add-an-icons-to-dialog-buttons)
 * [How to customize the dialog appearance](./how-to/customize-the-dialog-appearance)
+* [Dialog Buttons in Blazor Dialog Component](./dialogbuttons)
+* [Visibility in Blazor Dialog Component](./visibility)
