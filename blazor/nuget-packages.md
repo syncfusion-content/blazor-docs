@@ -1243,7 +1243,7 @@ A package of Blazor navigation components such as Accordion, Context Menu, Tabs,
 <li><a href="https://blazor.syncfusion.com/documentation/stepper/getting-started-webapp">Stepper</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/tabs/getting-started-webapp">Tabs</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/toolbar/getting-started-webapp">Toolbar</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/treeview">TreeView</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/treeview/getting-started-webapp">TreeView</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/pager/getting-started-webapp">Pager</a></li>
 </ul>
 </td>
@@ -1640,7 +1640,7 @@ The Blazor Scheduler component is an event calendar that facilitates users with 
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/scheduler/getting-started-webapp">Scheduler</a></li>
+<li><a href="https://help.syncfusion.com/scheduler-sdk/blazor/schedule/getting-started-webapp">Scheduler</a></li>
 <li>Recurrence Editor</li>
 </ul>
 </td>
