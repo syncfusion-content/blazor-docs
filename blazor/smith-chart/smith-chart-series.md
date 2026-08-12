@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Series in Blazor Smith Chart Component | Syncfusion®
-description: Checkout and learn here all the features about series in Blazor Smith Chart component and much more details.
+title: Blazor Smith Chart Series Examples | Syncfusion®
+description: Learn how to add and customize series in Syncfusion Blazor Smith Chart, including Fill, Width, Opacity, and Visibility properties.
 platform: Blazor
 control: Smith Chart
 documentation: ug
 ---
 
-# Series in Blazor Smith Chart Component
+# Smith Chart Series in Blazor
 
 The [SmithChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#properties) is the visual representation of the data. Using the following options in the [SmithChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#properties), each series can be customized in the Smith Chart.
 
