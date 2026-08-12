@@ -3,15 +3,17 @@ layout: post
 title: Blazor TreeGrid Toolbar | Syncfusion
 description: Learn how to configure built-in and custom toolbar items in Blazor TreeGrid, manage toolbar actions, and customize user interactions.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
 # Toolbar in Blazor TreeGrid
 
-The TreeGrid component supports a toolbar that facilitates various grid actions such as printing, searching, exporting, and editing.
+The toolbar in the Blazor TreeGrid provides quick access to common actions such as adding, editing, deleting, printing, and exporting data (Excel, CSV, PDF).
 
-To learn more about toolbar templates in the Blazor TreeGrid component, refer to the following video:
+The toolbar can be configured with built-in toolbar items or custom items using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar) property. The `Toolbar` property accepts:
+- An array of strings for built-in items
+- An array of [ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor) objects for custom items (text, icon, id, tooltip)
 
 {% youtube "youtube:https://www.youtube.com/watch?v=yqp_Ukr_aQs" %}
 
@@ -32,7 +34,7 @@ Built-in toolbar items perform standard TreeGrid actions and can be added by def
 | Print                 | Prints the TreeGrid              |
 | ExcelExport           | Exports TreeGrid to Excel        |
 | PdfExport             | Exports TreeGrid to PDF          |
-| WordExport            | Exports TreeGrid to Word         |
+| CsvExport             | Exports TreeGrid to CSV          |
 
 {% tabs %}
 
@@ -104,7 +106,9 @@ N> The [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGri
 
 ## Enable/Disable Toolbar Items
 
-Toolbar items can be enabled or disabled using the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method.
+Enable or disable toolbar items dynamically to control which actions are available based on application logic or user interactions.
+
+Toolbar items in the Blazor TreeGrid can be enabled or disabled dynamically using the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method. This provides programmatic control over the availability of specific items by their IDs.
 
 {% tabs %}
 
@@ -193,8 +197,6 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-
-The following screenshots represent a TreeGrid with Enable/disable toolbar items,
 ![Enabling or Disabling Toolbar Items in Blazor TreeGrid](images/blazor-treegrid-enable-disable-toolbar-items.webp)
 
 <!--
