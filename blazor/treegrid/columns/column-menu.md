@@ -92,7 +92,7 @@ namespace TreeGridComponent.Data
 
 N> The column menu can be disabled for a particular column by defining the `ShowColumnMenu` property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) tag helper as false.
 
-# Column menu events in TreeGrid
+## Column menu events in TreeGrid
 
 The Blazor TreeGrid provides the [ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ColumnMenuItemClicked) event, which is triggered when a column menu item is clicked. This event can be used to perform actions based on the selected menu item.
 
