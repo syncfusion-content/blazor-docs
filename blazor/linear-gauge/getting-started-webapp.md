@@ -11,7 +11,7 @@ documentation: ug
 
 The [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) is an ideal component for visualizing numeric values in a linear scale with features like multiple axes, different orientations, and more.
 
-This section briefly explains how to include the [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/download/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
