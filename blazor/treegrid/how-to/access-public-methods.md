@@ -7,7 +7,7 @@ control: Tree Grid
 documentation: ug
 ---
 
-# Access public methods in Blazor TreeGrid Component
+# Access Public Methods in Blazor TreeGrid Component
 
 In many applications, TreeGrid actions need to be triggered from outside the TreeGrid interface. Common scenarios include:
 
@@ -18,7 +18,7 @@ In many applications, TreeGrid actions need to be triggered from outside the Tre
 - Open an edit dialog based on custom business logic.
 
 To support these scenarios, the Blazor TreeGrid provides public methods that can be accessed programmatically through a component reference obtained using the `@ref` directive.
-## When to use public methods
+## When to use Public Methods
 
 - Invoke TreeGrid actions such as print, refresh, or select from external UI controls.
 - Refresh the TreeGrid after updating data from an API or database.
@@ -153,7 +153,7 @@ public class TreeData
 {% endhighlight %}
 {% endtabs %}
 
-## Frequently used public methods
+## Frequently used Public Methods
 
 
 | Method | When to use |
