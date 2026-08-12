@@ -3,7 +3,7 @@ layout: post
 title: Blazor Stock Chart Period Selector | Syncfusion®
 description: Learn how to add a period selector to the Blazor Stock Chart toolbar with intervals in Years, Months, Weeks, Days, Hours, or Minutes.
 platform: Blazor
-control: Stock Chart 
+control: Stock Chart
 documentation: ug
 ---
 
