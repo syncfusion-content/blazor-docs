@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Hilo in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Hilo Chart in Blazor Charts component and much more.
+title: Blazor Hilo Chart Examples and Documentation | Syncfusion®
+description: Learn how to render Blazor Hilo Charts using Syncfusion. Plot stock high and low price movements over time for each data point.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Hilo in Blazor Charts Component
+# Hilo Chart in Blazor
 
 ## Hilo
 
