@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor ListBox Component
 
-The Blazor ListBox component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/). It also implements appropriate  [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) to support assistive technologies.
+The Blazor ListBox component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/). It also implements appropriate [WAI-ARIA](https://www.w3.org/TR/wai-aria/#roles) roles to support users of assistive technologies.
 
 The following table summarizes the accessibility compliance of the Blazor ListBox component.
 
@@ -43,7 +43,7 @@ The Blazor ListBox component follows the [WAI-ARIA listbox pattern](https://www.
 
 | Attributes | Purpose |
 | --- | --- |
-| `role` | Indicates the ListBox component wrapper element as `listbox`, the `ul` element as `presentation`, and each list item as `option`. |
+| `role` | Sets the ListBox container to `listbox`, the inner `ul` element to `presentation`, and each list item to `option`. |
 | `aria-label` | Provides an accessible name for the ListBox component. |
 | `aria-multiselectable` | Applied to the element with the `listbox` role to indicate that multiple selection is supported. This is applied when multiple selection is enabled (default behavior). |
 | `aria-selected` | Applied to elements with the `option` role that are visually styled as selected to inform assistive technologies that the options are selected. |
@@ -51,6 +51,7 @@ The Blazor ListBox component follows the [WAI-ARIA listbox pattern](https://www.
 ## Keyboard interaction
 
 The Blazor ListBox component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboardinteraction) guidelines, supporting users of assistive technologies and those who rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor ListBox component.
+
 | Windows | Mac| Actions |
 | --- | --- | --- |
 | <kbd>↑</kbd> | <kbd>↑</kbd> | Moves focus to the previous option. |
@@ -73,4 +74,4 @@ The accessibility compliance of the Blazor ListBox component is demonstrated in 
 
 ## See also
 
-* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility.md)

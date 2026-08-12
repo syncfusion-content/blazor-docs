@@ -55,7 +55,7 @@ This section explains the list of events of the Toast component which will be tr
 
 ## Opened
 
-`Opened` event triggers after the Toast shown on the target container.
+`Opened` event triggers after the Toast is shown on the target container.
 
 ```cshtml
 
@@ -76,7 +76,7 @@ This section explains the list of events of the Toast component which will be tr
 
 ## OnOpen
 
-`OnOpen` event triggers before the toast shown.
+`OnOpen` event triggers before the Toast is shown.
 
 ```cshtml
 

@@ -21,7 +21,7 @@ The undo action reverts the most recent editing action or a series of actions to
 
 The redo action reapplies previously undone actions or modifications to the image. When the redo command is triggered, the image editor reapplies the last action that was undone, returning the image to the state it was in after the action was initially applied. The redo action is useful for repeating an action that was previously undone or restoring changes that were temporarily reversed.
 
-Here is an example of undoing and redoing the action using the [UndoAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_UndoAsync) and [RedoAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_RedoAsync) method.
+Here is an example of undoing and redoing an action using the [UndoAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_UndoAsync) and [RedoAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_RedoAsync) methods.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor

@@ -63,7 +63,7 @@ The following example demonstrates binding an array of integer values to the Mul
 
 The MultiSelect can generate list items from an array of complex objects. Map the appropriate fields to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html) property.
 
-In the following example, the `Code.ID` field and `Country.CountryID` field from the complex data are mapped to the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_Value) and [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_Text) fields, respectively.
+In the following example, the `Code.ID` field and the `Country.CountryID` field from the complex data are mapped to the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_Value) and [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_Text) fields, respectively.
 
 {% highlight cshtml %}
 
@@ -99,7 +99,7 @@ Bind [ObservableCollection](https://blazor.syncfusion.com/documentation/common/d
 
 ### Dynamic object binding
 
-Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-10.0) data to the MultiSelect component. In the following example, the `DynamicObject` is bound to  collection of customer data.
+Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-10.0) data to the MultiSelect component. In the following example, the `DynamicObject` is bound to a collection of customer data.
 
 {% highlight cshtml %}
 
@@ -134,7 +134,7 @@ Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple
 ![Blazor MultiSelect Dropdown ValueTuple data](./images/blazor-multiselect-dropdown-valuetuple.webp)
 
 
-## Binding remote data 
+## Binding remote data
 
 The MultiSelect supports retrieving data from remote services by using the [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started) component. Use the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property to fetch data from the server and bind it to the MultiSelect.
 

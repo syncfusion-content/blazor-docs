@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Stock Chart Component | Syncfusion®
-description: Check out and learn here all the features about events in Blazor Stock Chart component and much more details.
+title: Blazor Stock Chart Events | Syncfusion®
+description: Learn how to handle Blazor Stock Chart events, including Loaded, OnPointClick, PointMoved, RangeChange, and mouse-event hooks.
 platform: Blazor
-control: Stock Chart 
+control: Stock Chart
 documentation: ug
 ---
 
-# Events in Blazor Stock Chart Component
+# Blazor Stock Chart Events
 
 This section lists the events of the Stock Chart component that are triggered for corresponding actions. Configure events using the **StockChartEvents** component.
 
