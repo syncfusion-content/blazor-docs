@@ -67,7 +67,7 @@ The Blazor ContextMenu component's accessibility levels are ensured through [axe
 
 The accessibility compliance of the Blazor ContextMenu component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/context-menu) in a new window to evaluate the accessibility of the Blazor ContextMenu component with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/context-menu.html" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/context-menu"%}
 
 ## See also
 
