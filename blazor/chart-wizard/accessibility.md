@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Blazor Chart Wizard | Syncfusion®
-description: Learn how the Blazor Chart Wizard meets WCAG 2.2 AA and Section 508 standards, with WAI-ARIA roles and full keyboard navigation support.
+title: Blazor Chart Wizard Accessibility Examples | Syncfusion®
+description: Learn about accessibility in Syncfusion Blazor Chart Wizard with keyboard navigation, screen reader support, and WCAG 2.2 compliance.
 platform: Blazor
 control: Chart Wizard
 documentation: ug
 keywords: chart wizard, blazor, accessibility
 ---
 
-# Accessibility in Blazor Chart Wizard
+# Blazor Chart Wizard Accessibility
 
 The Blazor Chart Wizard component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

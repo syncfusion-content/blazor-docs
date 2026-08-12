@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Chart Wizard in Server App | Syncfusion
-description: Step-by-step guide to add the Syncfusion Blazor Chart Wizard to a Blazor Server App, from package install to rendering the component.
+title: Getting Started with Blazor Chart Wizard in Server App | Syncfusion®
+description: Learn how to get started with Syncfusion Blazor Chart Wizard in a Blazor Server app, including setup, packages, and first chart.
 platform: Blazor
 control: Chart Wizard
 documentation: ug
@@ -10,7 +10,7 @@ keywords: chart wizard, blazor, chart
 
 <!-- markdownlint-disable MD040 -->
 
-# Getting Started with Blazor Chart Wizard in Server App
+# Getting Started with Blazor Chart Wizard in Blazor Server App
 
 This section briefly explains how to include the [Blazor Chart Wizard](https://www.syncfusion.com/blazor-components/blazor-chart-wizard) component in your Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

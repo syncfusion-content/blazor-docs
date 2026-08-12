@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print and Export in Blazor Chart Wizard | Syncfusion®
-description: Export Blazor Chart Wizard visualizations to PNG, JPEG, SVG, PDF, CSV, XLSX, or print directly with custom file name and dimensions.
+title: Blazor Chart Wizard Print and Export Examples | Syncfusion®
+description: Learn how to print and export Syncfusion Blazor Chart Wizard to PNG, JPEG, SVG, PDF, CSV, and XLSX using ChartExportSettings.
 platform: Blazor
 control: Chart Wizard
 documentation: ug
 keywords: chart wizard, blazor, chart
 ---
 
-# Print and Export in Blazor Chart Wizard
+# Blazor Chart Wizard Print and Export
 
 The Chart Wizard support the export of current chart to a variety of popular file formats. Supported export options include: `PNG`, `JPEG`, `SVG`, `PDF`, `CSV`, `XLSX`, and `PRINT`.
 
