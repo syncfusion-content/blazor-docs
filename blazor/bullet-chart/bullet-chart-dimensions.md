@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Bullet Chart Dimensions in Blazor Bullet Chart Component | Syncfusion®
-description: Checkout and learn here all about Bullet Chart Dimensions in Blazor Bullet Chart component and more.
+title: Blazor Bullet Chart Dimensions and Sizing | Syncfusion®
+description: Learn how to set the size of Syncfusion Blazor Bullet Chart using container width, height, and inline CSS or Size for container.
 platform: Blazor
-control: Bullet Chart 
+control: Bullet Chart
 documentation: ug
 ---
 
 
 
-# Bullet Chart Dimensions in Blazor Bullet Chart Component
+# Blazor Bullet Chart Dimensions
 
 ## Size for container
 
