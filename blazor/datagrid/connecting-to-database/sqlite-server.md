@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Blazor Grid SQLite with Entity Framework | Syncfusion
 description: Learn how to connect SQLite with Blazor Data Grid using Entity Framework Core for CRUD operations, filtering, sorting, paging, and data management.
@@ -9,7 +9,7 @@ documentation: ug
 
 # SQLite with Entity Framework in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a SQLite Server database using Entity Framework Core (EF Core). This approach provides a lightweight, server less database solution ideal for mobile applications, desktop applications, and small-to-medium scale web applications.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a SQLite database using Entity Framework Core (EF Core). This approach provides a lightweight, serverless database solution ideal for mobile applications, desktop applications, and small-to-medium-scale web applications.
 
 **What is Entity Framework Core?**
 
@@ -35,7 +35,7 @@ Ensure the following software and packages are installed before proceeding:
 |-----------------|---------|---------|
 | Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
 | .NET SDK | net9.0 or compatible | Runtime and build tools |
-| SQLite Server | 3.0 or later | Embedded Database engine |
+| SQLite | 3.0 or later | Embedded database engine |
 | Syncfusion.Blazor.Grid | {{site.blazorversion}} | DataGrid and UI components |
 | Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for DataGrid components |
 | Microsoft.EntityFrameworkCore | 9.0.0 or later | Core framework for database operations |
@@ -46,7 +46,7 @@ Ensure the following software and packages are installed before proceeding:
 
 ### Step 1: Create the database and Table in SQLite
 
-First, the **SQLite database** structure must be created to store asset records. Unlike server-based databases, a SQLite database is a single file on disk.
+First, create the **SQLite database** structure to store asset records. Unlike server-based databases, a SQLite database is a single file on disk.
 
 **Instructions:**
 1. To view or edit the database, use **DB Browser for SQLite** or the `sqlite3` command-line tool.
@@ -90,7 +90,7 @@ After executing this script, the asset records are stored in the `asset` table w
 ### Step 2: Install Required NuGet Packages
 
 Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template.
-This template automatically generates essential starter files—such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
+This template automatically generates essential starter files, such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
 
 For this guide, a Blazor application named **Grid_SQLite** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the application. These packages enable Entity Framework Core and SQLite integration.
 
@@ -720,7 +720,7 @@ The `CustomAdaptor` class has been successfully implemented with all data operat
 
 ### Step 4: Add Toolbar with CRUD and search options
 
-The toolbar provides buttons for adding, editing, deleting records, and searching the data.
+The toolbar provides buttons for adding, editing, deleting, and searching records.
 
 **Instructions:**
 
@@ -790,7 +790,7 @@ dotnet run
 2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
 3. The IT Asset Management application is now running and ready to use.
 
-![Basic DataGrid displaying asstes from the SQLite Server database](../images/blazor-datagrid-sqlite.webp)
+![Basic DataGrid displaying assets from the SQLite database](../images/blazor-datagrid-sqlite.webp)
 
 ### Step 6: Implement Paging Feature
 
@@ -1384,7 +1384,7 @@ private string GenerateSerialNumber(string assetType, DateTime? purchaseDate, st
 
 **Helper methods explanation:**
 - `GenerateTemporaryAssetId()`: Creates a placeholder asset ID (AST-99999) for initial database insertion before it's replaced with the final ID.
--  `GenerateAssetId()`: Generates the final unique asset ID in format AST-XXX by combining the "AST-" prefix with the zero-padded database primary key.
+- `GenerateAssetId()`: Generates the final unique asset ID in the format AST-XXX by combining the "AST-" prefix with the zero-padded database primary key.
 - `GenerateSerialNumber()`: Creates a unique serial number using the asset type prefix, purchase year, and asset ID number.
 
 **What happens behind the scenes:**
@@ -1395,7 +1395,7 @@ private string GenerateSerialNumber(string assetType, DateTime? purchaseDate, st
 4. `SaveChangesAsync()` persists the record to the SQLite database.
 5. The DataGrid automatically refreshes to display the new record.
 
-Now the new asset is persisted to the database and reflected in the grid.
+The new asset is now persisted to the database and reflected in the grid.
 
 **Update**
 
@@ -1454,7 +1454,7 @@ public async Task UpdateAssetAsync(Asset? asset)
 6. `SaveChangesAsync()` persists the changes to the SQLite database.
 7. The DataGrid refreshes to display the updated record.
 
-Now modifications are synchronized to the database and reflected in the grid UI.
+Modifications are now synchronized to the database and reflected in the grid UI.
 
 
 **Delete**
@@ -1514,11 +1514,11 @@ In **Data/AssetRepository.cs**, implement the delete method:
 7. `SaveChangesAsync()` executes the DELETE statement in SQLite.
 8. The DataGrid refreshes to remove the deleted record from the UI.
 
-Now Assets are removed from the database and the grid UI reflects the changes immediately.
+Assets are now removed from the database and the grid UI reflects the changes immediately.
 
 **Batch Update**
 
-Batch operations combine multiple insert, update, and delete actions into a single request, minimizing network overhead and ensuring asset consistency by applying all changes atomically to the SQLite Server.
+Batch operations combine multiple insert, update, and delete actions into a single request, minimizing network overhead and ensuring asset consistency by applying all changes atomically to the SQLite database.
 
 In **Home.razor**, implement the `BatchUpdateAsync` method within the `CustomAdaptor` class:
 
@@ -1561,15 +1561,15 @@ public class CustomAdaptor : DataAdaptor
 - Each modified record is processed using `AssetRepository.UpdateAssetAsync()`.
 - Each newly added record is saved using `AssetRepository.AddAssetAsync()`.
 - Each deleted record is removed using `AssetRepository.RemoveAssetAsync()`.
-- All repository operations persist changes to the SQLite Server database.
+- All repository operations persist changes to the SQLite database.
 - The DataGrid refreshes to display the updated, added, and removed records in a single response.
 
-Now the adaptor supports bulk modifications with atomic database synchronization. All CRUD operations are now fully implemented, enabling comprehensive data management capabilities within the Blazor DataGrid.
+The adaptor now supports bulk modifications with atomic database synchronization. All CRUD operations are now fully implemented, enabling comprehensive data management capabilities within the Blazor DataGrid.
 
 **Reference links**
-- [InsertAsync(DataManager, object)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_) - Create new records in SQLite Server
-- [UpdateAsync(DataManager, object, string, string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) - Edit existing records in SQLite Server
-- [RemoveAsync(DataManager, object, string, string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) - Delete records from SQLite Server
+- [InsertAsync(DataManager, object)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_) - Create new records in the SQLite database
+- [UpdateAsync(DataManager, object, string, string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) - Edit existing records in the SQLite database
+- [RemoveAsync(DataManager, object, string, string)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) - Delete records from the SQLite database
 - [BatchUpdateAsync(DataManager, object, object, object, string, string, int?)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) - Handle bulk operations
 
 ---
@@ -1581,6 +1581,8 @@ Here is the complete and final `Home.razor` component with all features integrat
 @page "/"
 @rendermode InteractiveServer
 @using System.Collections
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
 @inject AssetRepository AssetService
 
 <SfGrid TValue="Asset" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" AllowPaging="true"
@@ -1666,7 +1668,7 @@ Here is the complete and final `Home.razor` component with all features integrat
 > * If the database includes an **auto-generated column**, set [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) for that column to disable editing during **add** or **update** operations.
 > * The [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.EditType.html?_gl=1*4kxqtd*_gcl_au*ODcxNTU4MzMyLjE3Njc1ODkwOTk.*_ga*NjA2MTg0NzMuMTc1OTc1MDUyNg..*_ga_41J4HFMX1J*czE3Njk1MzE3NTAkbzY1JGcxJHQxNzY5NTMyOTMwJGo2MCRsMCRoMA..) property can be used to specify the desired editor for each column. [🔗](https://blazor.syncfusion.com/documentation/datagrid/edit-types)
 > * The behavior of default editors can be customized using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of the `GridColumn` component. [🔗](https://blazor.syncfusion.com/documentation/datagrid/edit-types#customizing-the-default-editors)
-> * [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property of the `GridColumn` component  specifies the data type of a grid column.
+> * [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property of the `GridColumn` component specifies the data type of a grid column.
 > * The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html?_gl=1*8q6kap*_gcl_au*ODcxNTU4MzMyLjE3Njc1ODkwOTk.*_ga*NjA2MTg0NzMuMTc1OTc1MDUyNg..*_ga_41J4HFMX1J*czE3Njk1MzE3NTAkbzY1JGcxJHQxNzY5NTMzMDg0JGozMCRsMCRoMA..#Syncfusion_Blazor_Grids_GridColumn_Template) property that allows rendering custom elements in a column instead of the default field value. [🔗](https://blazor.syncfusion.com/documentation/datagrid/column-template)
 
 ```csharp
