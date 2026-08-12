@@ -9,7 +9,7 @@ documentation: ug
 
 # Hide Header in Blazor TreeGrid
 
- The Tree Grid header can be hidden by applying the below styles to Tree Grid component.
+ The TreeGrid header can be hidden by applying the below styles to TreeGrid component.
 
 ```html
 <style>
@@ -19,6 +19,6 @@ documentation: ug
 </style>
 ```
 
-N> If you want to hide the header for particular Tree Grid, then apply the above styles to that Tree Grid using the ID (#TreeGrid.e-treegrid .e-gridheader .e-columnheader) property value.
+N> To hide the header for a particular TreeGrid, apply the above styles to that TreeGrid using the ID selector (#TreeGrid.e-treegrid .e-gridheader .e-columnheader).
 
 ![Hiding Header in Blazor TreeGrid](../images/blazor-treegrid-hide-header.webp)

@@ -3,7 +3,7 @@ layout: post
 title: Blazor TreeGrid Single-Click Editing with Batch Mode | Syncfusion
 description: Learn how to enable single-click editing in Blazor TreeGrid using batch mode and EditCellAsync to streamline data entry and editing workflows.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
@@ -95,7 +95,5 @@ public class TreeData
 
 {% endhighlight %}
 {% endtabs %}
-
-The following GIF represents the single-click edit performed on the TreeGrid with Edit Mode set to "Batch":
 
 ![Single Click Editing in Blazor TreeGrid](../images/blazor-treegrid-single-click-editing.webp)
