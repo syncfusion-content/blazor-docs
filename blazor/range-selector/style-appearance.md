@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Range Selector Style and Appearance Examples | Syncfusion®
-description: Learn how to customize the style and appearance of Syncfusion Blazor Range Selector using CSS selectors and ID-based styling examples.
+description: Customize the visual style of Syncfusion Blazor Range Selector with CSS selectors, theme variables, and ID-based styling for full control.
 platform: Blazor
 control: Range Selector
 documentation: ug
