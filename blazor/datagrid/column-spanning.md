@@ -9,11 +9,16 @@ documentation: ug
 
 # Column Spanning in Blazor Data Grid
 
-Column spanning in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides automatic vertical merging of adjacent cells within the same column when identical values are detected. This feature enhances data readability by consolidating repeated values into a single, taller cell, making it particularly effective for scenarios where the same value appears across consecutive rows.
+Column spanning consolidates repeated values in the same column into a single, taller merged cell, reducing visual redundancy and improving readability in time-sheet and schedule grids. Enable automatic spanning by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoSpan) property of the [SfGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **AutoSpanMode.Column**, or merge specific regions programmatically with [MergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_MergeCellsAsync_Syncfusion_Blazor_Grids_MergeCellInfo_).
 
-The functionality is enabled by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoSpan) property of the [SfGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **AutoSpanMode.Column**. Once applied, the grid evaluates each column and merges stacked cells that share identical values, thereby reducing visual redundancy and presenting a cleaner, more structured layout. The merging process is fully declarative and requires no additional code or preprocessing.
+The [AutoSpanMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AutoSpanMode.html) enumeration provides multiple options for customizing cell merging behavior. The available modes include **None**, **Row**, **Column**, and **HorizontalAndVertical**.
 
-Column spanning is part of the broader [AutoSpanMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AutoSpanMode.html) enumeration, which provides multiple options for customizing cell merging behavior in the Blazor DataGrid. The available modes include **None**, **Row**, **Column**, and **HorizontalAndVertical**. 
+| AutoSpanMode Value | Controls | When to Use |
+|---|---|---|
+| `AutoSpanMode.None` | Disables merging on all columns (default) | Standalone cells required; no spanning |
+| `AutoSpanMode.Row` | Merges cells horizontally across columns | Consolidate identical values in the same row |
+| `AutoSpanMode.Column` | Merges cells vertically in the same column | Consolidate identical values in consecutive rows |
+| `AutoSpanMode.HorizontalAndVertical` | Merges both directions (row first, then column) | Maximum consolidation across both axes | 
 
 | Enum Value | Description |
 |---------|-----|
@@ -25,7 +30,11 @@ Column spanning is part of the broader [AutoSpanMode](https://help.syncfusion.co
 
 ## Enable column spanning
 
-Vertical cell merging in the Blazor DataGrid is enabled by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoSpan) property of the [SfGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **AutoSpanMode.Column**. In this mode, the grid automatically merges stacked cells that share identical values within the same column. This reduces redundancy across consecutive rows and provides a cleaner, more structured layout for repeated data.
+Set the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoSpan) property of the [SfGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **AutoSpanMode.Column** to automatically merge stacked cells that share identical values within the same column. The grid evaluates each column and consolidates consecutive identical values into taller merged cells without requiring additional code or preprocessing.
+
+**When to Use** — Enable automatic column spanning when a grid displays time-sheets, schedules, or lookup tables where the same value repeats across consecutive rows. Setting `AutoSpan="AutoSpanMode.Column"` instantly improves readability by merging those cells.
+
+**Where to Apply** — An employee time-sheet grid listing the same task ("Development", "Testing") across ten consecutive rows automatically merges those cells into one taller cell. See the sample below for the setup.
 
 
 {% tabs %}
@@ -352,7 +361,11 @@ public class EmployeeDetails
 
 ## Disable column spanning for specific column
 
-Column spanning in Blazor DataGrid can be disabled for a specific column(s) by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoSpan) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to **AutoSpanMode.None**. This configuration provides precise control, enabling automatic spanning across the grid while excluding column(s) where merging is not required.
+Disable spanning on individual columns by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoSpan) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to **AutoSpanMode.None**. This lets the grid span most columns while keeping specific columns (such as counters or status indicators) unmerged.
+
+**When to Use** — When automatic spanning suits most columns but one column must display every row separately, set `AutoSpan="AutoSpanMode.None"` on that column alone while the grid-level spanning remains active.
+
+**Where to Apply** — A department roster enables column spanning globally to consolidate department names, but the Employee ID column must stay separate for data accuracy. Set `AutoSpan="AutoSpanMode.None"` on the ID column only.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -705,9 +718,11 @@ The effective spanning behavior in the Blazor DataGrid is determined by the inte
 
 ## Apply column spanning via programmatically
 
-In addition to automatic cell merging, the Blazor DataGrid provides API support for manually merging cells when custom layout behavior is required. This functionality is available through the [MergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_MergeCellsAsync_Syncfusion_Blazor_Grids_MergeCellInfo_) method, which enables the definition of rectangular regions of cells to be merged programmatically.
+Use the [MergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_MergeCellsAsync_Syncfusion_Blazor_Grids_MergeCellInfo_) method to manually merge specific rectangular regions of cells. This method accepts single or batch merge definitions, enabling precise control over layout customization when automatic spanning is insufficient.
 
-Use [MergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_MergeCellsAsync_Syncfusion_Blazor_Grids_MergeCellInfo_) method to manually merge cells by defining rectangular regions. This method supports both single and batch merging, allowing precise control over layout customization when automatic spanning is insufficient.
+**When to Use** — When automatic spanning does not meet layout requirements, call `MergeCellsAsync` to merge specific cell regions based on runtime logic, user input, or custom business rules. Batch merging via an array of `MergeCellInfo` objects improves performance for multiple regions.
+
+**Where to Apply** — A sales dashboard lets users click "Consolidate Q3" to programmatically merge all Q3 revenue cells across rows. Loop through the Q3 columns and call `MergeCellsAsync` with an array of `MergeCellInfo` objects defining each region to merge in one operation.
 
 The [MergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_MergeCellsAsync_Syncfusion_Blazor_Grids_MergeCellInfo_) method is overloaded, meaning multiple versions of the same method name exist, but each accepts different parameter types to handle different use cases. This approach provides flexibility while maintaining a consistent API design.
 
@@ -1076,7 +1091,11 @@ public class EmployeeDetails
 
 ## Clear spanning via programmatically
 
-The Blazor DataGrid provides API support to manually remove merged regions when restoration of individual cells is required. This functionality is achieved using the [UnmergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UnmergeCellsAsync_Syncfusion_Blazor_Grids_UnmergeCellInfo_) methods, which allow specific merged areas to be unmerged programmatically. For scenarios where all merged regions in the current view need to be reset, the [UnmergeAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UnmergeAllAsync) method can be used to restore every cell to its original state.
+Restore individual cells after merging by calling [UnmergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UnmergeCellsAsync_Syncfusion_Blazor_Grids_UnmergeCellInfo_) to remove specific merged regions, or [UnmergeAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UnmergeAllAsync) to reset all merged cells in the current view back to their original state.
+
+**When to Use** — Call `UnmergeCellsAsync` when removing specific merged regions is sufficient, or `UnmergeAllAsync` when the entire grid must return to unmerged state. Batch unmerging via an array of `UnmergeCellInfo` objects improves performance over multiple individual calls.
+
+**Where to Apply** — A report grid merges cells to show grouped quarters. When the user clicks "Restore Detail", call `UnmergeAllAsync` to unmerge all regions and display every row separately. See the sample below for all three unmerge patterns.
 
 The [UnmergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UnmergeCellsAsync_Syncfusion_Blazor_Grids_UnmergeCellInfo_) method is overloaded to provide flexibility for different scenarios. Both overloads share the same method name but accept different parameter types, allowing removal of either a single merged region or multiple merged regions in one operation.
 
@@ -1467,6 +1486,16 @@ public class EmployeeDetails
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVnXcZizdXJhdRE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+---
+
+## Open Questions
+
+> **Open question:** The code samples in this topic (constructor in EmployeeDetails.cs) contain the line `this.Time_9_00 = time_9_30;`, which assigns the wrong parameter to the property. Verify against the actual codebase before publishing, as this may be test-data scaffolding or a bug.
+
+> **Open question:** The supported render modes (Server, WebAssembly, Auto, Static SSR) for column spanning and the merge/unmerge API methods are not confirmed. Verify whether all modes are supported or if there are render-mode differences. If all are supported, add this fact to the introduction. If differences exist, state them as plain prose without a render-mode table.
+
+---
 
 ## Limitations
 
