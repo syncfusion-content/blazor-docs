@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Sankey Diagram in Blazor Web App | Syncfusion®
-description: Learn how to add the Blazor Sankey Diagram to a Blazor Web App with Auto interactivity by installing the Sankey NuGet package and configuring the client project.
+title: Getting Started with Blazor Sankey Diagram in Web App | Syncfusion®
+description: Learn how to add the Blazor Sankey Diagram to a Blazor Web App by installing the Sankey NuGet package and configuring the client project.
 platform: Blazor
 control: Sankey
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD040 -->
 
-# Getting Started with Blazor Sankey Diagram in Blazor Web App
+# Getting Started with Blazor Sankey Diagram in Web App
 
 This section briefly explains how to include the [Blazor Sankey Diagram](https://www.syncfusion.com/blazor-components/blazor-sankey) in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
