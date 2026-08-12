@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Nodes in Blazor Sankey Diagram | Syncfusion®
-description: Define Blazor Sankey Diagram nodes with SankeyDataNode using a unique Id and label, then style width, alignment, and spacing.
+title: Blazor Sankey Diagram Nodes | Syncfusion®
+description: Learn how to define Blazor Sankey Diagram nodes with SankeyDataNode using unique Id, label, width, alignment, and spacing.
 platform: Blazor
 control: Sankey
 documentation: ug
 ---
 
-# Nodes in Blazor Sankey Diagram
+# Blazor Sankey Diagram Nodes
 
 ## Overview
 

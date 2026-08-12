@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltips in Blazor Sankey Diagram | Syncfusion®
-description: Enable Blazor Sankey Diagram tooltips with SankeyTooltipSettings to show node and link details, with custom templates, fill, opacity, and fade.
+title: Blazor Sankey Diagram Tooltip | Syncfusion®
+description: Learn how to enable Blazor Sankey Diagram tooltips with SankeyTooltipSettings to show node and link details using templates, fill, opacity, and fade.
 platform: Blazor
 control: Sankey
 documentation: ug
 ---
 
-# Tooltips in Blazor Sankey Diagram
+# Blazor Sankey Diagram Tooltip
 
 The Blazor Sankey Diagram visualizes flows between nodes and links. Tooltips surface contextual details for hovered elements without cluttering the diagram.
 

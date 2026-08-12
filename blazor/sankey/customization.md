@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Blazor Sankey Diagram | Syncfusion®
-description: Customize the Blazor Sankey Diagram with background colors, images, width and height in pixels or percentages, RTL layout, and orientation.
+title: Blazor Sankey Diagram Appearance | Syncfusion®
+description: Learn how to customize the Blazor Sankey Diagram with background colors, images, dimensions, RTL layout, and orientation for any use case.
 platform: Blazor
 control: Sankey
 documentation: ug
 ---
 
-# Customization in Blazor Sankey Diagram
+# Blazor Sankey Diagram Appearance
 
 The Blazor Sankey Diagram includes extensive options to tailor appearance and behavior. This guide covers background styling, dimensions, right-to-left (RTL) layout, and orientation.
 

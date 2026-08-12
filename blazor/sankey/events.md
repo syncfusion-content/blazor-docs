@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Sankey Diagram | Syncfusion®
-description: The Blazor Sankey Diagram exposes 16 events for rendering, hover, click, resize, print, and export of nodes, links, labels, and tooltips.
+title: Blazor Sankey Diagram Events | Syncfusion®
+description: Learn how the Blazor Sankey Diagram exposes events for rendering, hover, click, resize, print, and export of nodes, links, labels, and tooltips.
 platform: Blazor
 control: Sankey
 documentation: ug
 ---
 
-# Events in Blazor Sankey Diagram
+# Blazor Sankey Diagram Events
 
 ## Overview
 
