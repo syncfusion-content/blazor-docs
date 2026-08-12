@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Blazor Bullet Chart Component | Syncfusion®
-description: Checkout and learn here all features about Customization in Blazor Bullet Chart component and more more.
+title: Blazor Bullet Chart Customization Examples | Syncfusion®
+description: Learn how to customize Syncfusion Blazor Bullet Chart, including orientation, flow direction, and overall appearance of the chart.
 platform: Blazor
-control: Bullet Chart 
+control: Bullet Chart
 documentation: ug
 ---
 
-# Customization in Blazor Bullet Chart Component
+# Blazor Bullet Chart Customization
 
 ## Orientation
 

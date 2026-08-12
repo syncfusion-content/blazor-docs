@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Bullet Chart in Server App | Syncfusion
-description: Check out and learn about the documentation for getting started with Blazor Bullet Chart Component in Blazor Server App.
+title: Getting Started with Blazor Bullet Chart in Server App | Syncfusion®
+description: Learn how to get started with Syncfusion Blazor Bullet Chart in a Blazor Server app, including setup, packages, and first chart.
 platform: Blazor
-component: Bullet Chart
+control: Bullet Chart
 documentation: ug
 ---
 
-# Getting Started with Blazor Bullet Chart in Blazor Server App
+# Blazor Bullet Chart Getting Started in Server App
 
 This section briefly explains how to include [Blazor Bullet Chart](https://www.syncfusion.com/blazor-components/blazor-bullet-chart) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
