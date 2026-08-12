@@ -44,7 +44,7 @@ Ensure the following software and packages are installed before proceeding:
 
 ## Setting Up the SQL Server Environment for Entity Framework Core
 
-### Step 1: Create the database and Table in SQL Server
+### Step 1: Create the Database and Table in SQL Server
 
 First, the **SQL Server database** structure must be created to store ticket records.
 
@@ -103,8 +103,8 @@ After executing this script, the ticket records are stored in the `Tickets` tabl
 
 ### Step 2: Install Required NuGet Packages
 
-Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template.
-This template automatically generates essential starter files—such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
+Before installing the necessary NuGet packages, create a new Blazor Web App using the default template.
+This template automatically generates essential starter files such as **Program.cs**, **appsettings.json**, and the **wwwroot** and **Components** folders.
 
 For this guide, a Blazor application named **Grid_MSSQL** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the application. These packages enable Entity Framework Core and SQL Server integration.
 
@@ -501,7 +501,7 @@ The `Program.cs` file is where application services are registered and configure
 **Instructions:**
 
 1. Open the `Program.cs` file at the project root.
-2. Add the following code after the line `var builder = WebApplication.CreateBuilder(args);`:
+2. Add the following code after the line `var builder = WebApplication.CreateBuilder(args);` to register EF Core and the repository services.
 
 ```csharp
 using Grid_MSSQL.Components;
@@ -547,7 +547,7 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://learn.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-2.1&tabs=visual-studio#http-strict-transport-security-protocol-hsts.
+    // The default HSTS value is 30 days. A different value may be required for production scenarios. For more information, see https://learn.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-2.1&tabs=visual-studio#http-strict-transport-security-protocol-hsts.
     app.UseHsts();
 }
 
@@ -775,7 +775,7 @@ The `CustomAdaptor` class has been successfully implemented with all data operat
 
 ---
 
-### Step 4: Add Toolbar with CRUD and search options
+### Step 4: Add Toolbar with CRUD and Search Options
 
 The toolbar provides buttons for adding, editing, deleting records, and searching the data.
 
@@ -821,7 +821,7 @@ The toolbar has been successfully added.
 
 ---
 
-### Step 5: Running the Application
+### Step 5: Run the Application
 
 **Build the Application**
 
@@ -945,7 +945,7 @@ Paging feature is now active with 10 records per page.
 
 ---
 
-### Step 7: Implement Searching feature
+### Step 7: Implement Searching Feature
 
 Searching allows the user to find records by entering keywords in the search box.
 
@@ -1018,7 +1018,7 @@ Searching feature is now active.
 
 ---
 
-### Step 8: Implement Filtering feature
+### Step 8: Implement Filtering Feature
 
 Filtering allows the user to restrict data based on column values using a menu interface.
 
@@ -1103,7 +1103,7 @@ Filtering feature is now active.
 
 ---
 
-### Step 9: Implement Sorting feature
+### Step 9: Implement Sorting Feature
 
 Sorting enables the user to arrange records in ascending or descending order based on column values.
 
@@ -1190,7 +1190,7 @@ Sorting feature is now active.
 
 ---
 
-### Step 10: Implement Grouping feature
+### Step 10: Implement Grouping Feature
 
 Grouping organizes records into hierarchical groups based on column values.
 
@@ -1209,7 +1209,7 @@ Grouping organizes records into hierarchical groups based on column values.
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
      <GridPageSettings PageSize="10"></GridPageSettings>
      <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
-    <!-- Grid columns  -->
+    <!-- Grid columns -->
 </SfGrid>
 ```
 
@@ -1286,7 +1286,7 @@ Grouping feature is now active.
 
 ---
 
-### Step 11: Perform CRUD operations
+### Step 11: Perform CRUD Operations
 
 CustomAdaptor methods enable users to create, read, update, and delete records directly from the DataGrid. Each operation calls corresponding data layer methods in **TicketRepository.cs** to execute SQL Server commands.
 
@@ -1303,7 +1303,7 @@ Add the Grid **EditSettings** and **Toolbar** configuration to enable create, re
      <GridPageSettings PageSize="10"></GridPageSettings>
      <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
      <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" Mode="EditMode.Batch"></GridEditSettings>
-    <!-- Grid columns  -->
+    <!-- Grid columns -->
 </SfGrid>
 ```
 
@@ -1745,7 +1745,7 @@ Here is the complete and final `Home.razor` component with all features integrat
 > * Set [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) to **true** for auto-generated columns to disable editing during add or update operations.
 > * The [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.EditType.html?_gl=1*4kxqtd*_gcl_au*ODcxNTU4MzMyLjE3Njc1ODkwOTk.*_ga*NjA2MTg0NzMuMTc1OTc1MDUyNg..*_ga_41J4HFMX1J*czE3Njk1MzE3NTAkbzY1JGcxJHQxNzY5NTMyOTMwJGo2MCRsMCRoMA..) property can be used to specify the desired editor for each column. [🔗](https://blazor.syncfusion.com/documentation/datagrid/edit-types)
 > * The behavior of default editors can be customized using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of the `GridColumn` component. [🔗](https://blazor.syncfusion.com/documentation/datagrid/edit-types#customizing-the-default-editors)
-> * [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property of the `GridColumn` component  specifies the data type of a grid column.
+> * [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property of the `GridColumn` component specifies the data type of a grid column.
 > * The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html?_gl=1*8q6kap*_gcl_au*ODcxNTU4MzMyLjE3Njc1ODkwOTk.*_ga*NjA2MTg0NzMuMTc1OTc1MDUyNg..*_ga_41J4HFMX1J*czE3Njk1MzE3NTAkbzY1JGcxJHQxNzY5NTMzMDg0JGozMCRsMCRoMA..#Syncfusion_Blazor_Grids_GridColumn_Template) property that allows rendering custom elements in a column instead of the default field value. [🔗](https://blazor.syncfusion.com/documentation/datagrid/column-template)
 
 
@@ -2146,8 +2146,6 @@ Here is the complete and final `Home.razor` component with all features integrat
 > * Set [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) to **true** for auto-generated columns to disable editing during add or update operations.
 
 ---
-
-
 
 ## Complete Sample Repository
 

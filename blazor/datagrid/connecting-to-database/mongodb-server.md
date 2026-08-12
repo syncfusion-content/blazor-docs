@@ -127,7 +127,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
 1. Open **Visual Studio 2026 → Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
 2. Search for and install each package individually:
    - **MongoDB.Driver** (version 2.23.0 or later)
-   - **[Syncfusion.Blazor.Grid]((https://www.nuget.org/packages/Syncfusion.Blazor.Grid/))** (version {{site.blazorversion}})
+   - **[Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)** (version {{site.blazorversion}})
    - **[Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)** (version {{site.blazorversion}})
 
 All required packages are now installed.
@@ -346,7 +346,7 @@ namespace Grid_MongoDB.Services
 
 **Explanation:**
 - The `MongoDbService` class manages all MongoDB operations without requiring a DbContext (unlike Entity Framework Core).
-- The `IMongoClient` represents the connection to MongoDB server.
+- The `IMongoClient` represents the connection to the MongoDB server.
 - The `IMongoDatabase` represents a specific database (`ProjectManagementDB`).
 - The `IMongoCollection<Project>` represents the `Projects` collection.
 - MongoDB uses **filter builders** to construct queries instead of LINQ expressions.
@@ -409,7 +409,7 @@ The database connection string has been configured successfully.
 
 ### Step 6: Register Services in Program.cs
 
-The `Program.cs` file is where application services are registered and configured. This file must be updated to enable MongoDB service and Blazor components.
+The `Program.cs` file is where application services are registered and configured. This file must be updated to enable the MongoDB service and Blazor components.
 
 **Instructions:**
 
@@ -486,9 +486,9 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
 
-For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
+For this project, the Tailwind 3 theme is used. A different theme can be selected, or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Blazor components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
+Blazor components are configured and ready to use. For additional guidance, refer to the [DataGrid getting started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
 ---
 
@@ -551,7 +551,7 @@ The `Home.razor` component will display the project data in a Blazor DataGrid wi
 - **`<GridColumns>`**: Defines individual columns in the DataGrid.
 - **`<GridPageSettings>`**: Configures pagination with 10 records per page.
 
-The Home component has been updated successfully with DataGrid.
+The Home component has been updated successfully with the DataGrid.
 
 ---
 
@@ -668,7 +668,7 @@ The `CustomAdaptor` class has been successfully implemented with all data operat
 
 ### Step 4: Add Toolbar with CRUD and Search Options
 
-The toolbar provides buttons for adding, editing, deleting records, and searching the data.
+The toolbar provides buttons for adding, editing, deleting, and searching records.
 
 **Instructions:**
 
@@ -748,9 +748,9 @@ Paging divides large datasets into smaller pages to improve performance and usab
 
 **Instructions:**
 
-* The paging feature is already partially enabled in the `<SfGrid>` component with [AllowPaging="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging).
+* The paging feature is enabled in the `<SfGrid>` component with [AllowPaging="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging).
 * The page size is configured with [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
-* No additional code changes are required from the previous steps.
+* The `ReadAsync` method receives the skip and take values from the grid during paging requests.
 
 ```cshtml
 <SfGrid TValue="Project" 
@@ -926,8 +926,8 @@ Filtering allows the user to restrict data based on column values using a menu i
 * Add the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
 
 ```cshtml
-<SfGrid TValue="Project" 
-        AllowPaging="true"         
+<SfGrid TValue="Project"
+        AllowPaging="true"
         AllowFiltering="true"
         Toolbar="@ToolbarItems">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
@@ -993,8 +993,8 @@ public class CustomAdaptor : DataAdaptor
 
 **How Filtering Works:**
 
-- Click on the dropdown arrow in any column header to open the filter menu.
-- Select filtering criteria (equals, contains, greater than, less than, etc.).
+- Click the dropdown arrow in any column header to open the filter menu.
+- Select the filtering criteria (equals, contains, greater than, less than, etc.).
 - Click the "Filter" button to apply the filter.
 - The `ReadAsync` method receives the filter criteria in `dataManagerRequest.Where`.
 - Results are filtered accordingly and displayed in the DataGrid.
@@ -1793,7 +1793,7 @@ A complete, working sample implementation is available in the [GitHub repository
 
 This guide demonstrates how to:
 1. Create a MongoDB database with project records. [🔗](#step-1-create-the-database-and-collection-in-mongodb)
-2. Install necessary NuGet packages for MongoDB.Driver and Syncfusion. [🔗](#step-2-install-required-nuget-packages)
+2. Install the necessary NuGet packages for MongoDB.Driver and Syncfusion. [🔗](#step-2-install-required-nuget-packages)
 3. Create data models with MongoDB attributes for document mapping. [🔗](#step-3-create-the-data-model)
 4. Implement the MongoDB service class for data access. [🔗](#step-4-create-the-mongodb-service-class)
 5. Configure connection strings and register services. [🔗](#step-5-configure-the-connection-string)

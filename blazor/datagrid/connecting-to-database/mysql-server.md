@@ -386,8 +386,8 @@ using Microsoft.EntityFrameworkCore;
 namespace Grid_MySQL.Data
 {
     /// <summary>
-    /// Repository pattern implementation for Transaction entity using Entity Framework Core
-    /// Handles all CRUD operations and business logic for transactions
+    /// Repository pattern implementation for Transaction entity using Entity Framework Core.
+    /// Handles all CRUD operations and business logic for transactions.
     /// </summary>
     public class TransactionRepository
     {
@@ -399,7 +399,7 @@ namespace Grid_MySQL.Data
         }
 
         /// <summary>
-        /// Retrieves all transactions from the database ordered by ID in descending order
+        /// Retrieves all transactions from the database ordered by ID in descending order.
         /// </summary>
         /// <returns>List of all transactions</returns>
         public async Task<List<TransactionModel>> GetTransactionsAsync()
@@ -418,19 +418,19 @@ namespace Grid_MySQL.Data
         }
 
         /// <summary>
-        /// Updates an existing transaction in the database
+        /// Updates an existing transaction in the database.
         /// </summary>
         public async Task UpdateTransactionAsync(TransactionModel? transaction)
         {
-            // Handle logic to update an existing transaction to the database
+            // Handle logic to update an existing transaction in the database
         }
 
         /// <summary>
-        /// Deletes a transaction from the database
+        /// Deletes a transaction from the database.
         /// </summary>
         public async Task RemoveTransactionAsync(int? transactionId)
         {
-            // Handle logic to delete an existing transaction to the database
+            // Handle logic to delete an existing transaction from the database
         }
     }
 }
@@ -948,7 +948,7 @@ Filtering allows the user to restrict data based on column values using a menu i
 **Instructions:**
 
 * Open the `Components/Pages/Home.razor` file.
-* Add the [AllowFiltering]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering)) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
+* Add the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property and [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) to the `<SfGrid>` component:
 
 ```cshtml
 <SfGrid TValue="TransactionModel" 
@@ -1258,9 +1258,9 @@ Add the toolbar items list in the `@code` block:
 ```
 **Insert**
 
-Record insertion allows new transactions to be added directly through the DataGrid component. The adaptor processes the insertion request, performs any required business‑logic validation, and saves the newly created record to the MySQL Server database.
+Record insertion allows new transactions to be added directly through the Blazor DataGrid component. The adaptor processes the insertion request, performs required validation, and saves the new record to the MySQL Server database.
 
-In **Home.razor**, implement the `InsertAsync` method to handle record deletion within the `CustomAdaptor` class:
+In **Home.razor**, implement the `InsertAsync` method to handle record insertion within the `CustomAdaptor` class:
 
 ```csharp
 public class CustomAdaptor : DataAdaptor
@@ -1329,10 +1329,9 @@ Now the new transaction is persisted to the database and reflected in the grid.
 
 **Update**
 
-Record modification allows transaction details to be updated directly within the DataGrid. The adaptor processes the edited row, validates the updated values, and applies the changes to the **MySQL Server database** while ensuring data integrity is preserved.
+Record modification allows transaction details to be updated directly within the Blazor DataGrid. The adaptor processes the edited row, validates the updated values, and applies the changes to the **MySQL Server database** while preserving data integrity.
 
-In **Home.razor**, implement the `UpdateAsync` method to handle record deletion within the `CustomAdaptor` class:
-
+In **Home.razor**, implement the `UpdateAsync` method to handle record update within the `CustomAdaptor` class:
 
 ```csharp
 public class CustomAdaptor : DataAdaptor
@@ -1362,7 +1361,7 @@ public async Task UpdateTransactionAsync(TransactionModel? transaction)
     existingTransaction.InvoiceNumber = transaction.InvoiceNumber;
     existingTransaction.Description = transaction.Description;
     existingTransaction.Amount = transaction.Amount;
-    existingTransaction.CurrencyCode = transaction  .CurrencyCode;
+    existingTransaction.CurrencyCode = transaction.CurrencyCode;
     existingTransaction.TransactionType = transaction.TransactionType;
     existingTransaction.PaymentGateway = transaction.PaymentGateway;
     existingTransaction.CompletedOn = transaction.CompletedOn;
@@ -1388,7 +1387,7 @@ Now modifications are synchronized to the database and reflected in the grid UI.
 
 **Delete**
 
-Record deletion allows transactions to be removed directly from the DataGrid. The adaptor captures the delete request, executes the corresponding **MySQL DELETE** operation, and updates both the database and the grid to reflect the removal.
+Record deletion allows transactions to be removed directly from the Blazor DataGrid. The adaptor captures the delete request, executes the corresponding **MySQL DELETE** operation, and updates both the database and the grid to reflect the removal.
 
 In **Home.razor**, implement the `RemoveAsync` method to handle record deletion within the `CustomAdaptor` class:
 
