@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Sparkline Charts | Syncfusion
-description: Get started with Syncfusion Blazor Sparkline Charts in a Blazor WebAssembly App: install the NuGet package, register the script, and add SfSparkline.
+title: Getting Started with Blazor Sparkline Charts in WASM App | Syncfusion®
+description: Learn how to get started with Syncfusion Blazor Sparkline in a Blazor WebAssembly app, including setup, packages, and first chart.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Getting Started with Blazor Sparkline Charts
+# Blazor Sparkline Charts Getting Started in WASM App
 
 This section briefly explains how to include [Blazor Sparkline Charts](https://www.syncfusion.com/blazor-components/blazor-sparkline) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

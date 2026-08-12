@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Labels in Blazor Sparkline Charts | Syncfusion®
-description: Show data labels in the Blazor Sparkline Charts for All, Start, End, High, Low, or Negative points, and customize fill, font, border, and edge-label mode.
+title: Blazor Sparkline Charts Data Labels Examples | Syncfusion®
+description: Learn how to enable and customize data labels in Syncfusion Blazor Sparkline, including special points, format, and label position.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Data Labels in Blazor Sparkline Charts
+# Blazor Sparkline Charts Data Labels
 
 To improve readability, data labels display the value of data points.
 

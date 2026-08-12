@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor Sparkline Charts | Syncfusion®
-description: Customize the Blazor Sparkline Charts appearance with RTL direction, container border color and width, and configurable top, bottom, left, and right padding.
+title: Blazor Sparkline Charts Appearance Examples | Syncfusion®
+description: Learn how to customize the appearance of Syncfusion Blazor Sparkline, including RTL, padding, border, and background options.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Appearance in Blazor Sparkline Charts
+# Blazor Sparkline Charts Appearance
 
 The rendering direction, padding, border, and background appearance of the Sparkline can be customized.
 

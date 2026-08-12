@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Axis Customization in Blazor Sparkline Charts | Syncfusion®
-description: Set the Blazor Sparkline Charts axis to Numeric, Category, or DateTime value type and define min and max bounds to control how X and Y data are rendered.
+title: Blazor Sparkline Charts Axis Customization Examples | Syncfusion®
+description: Learn how to customize the axis in Syncfusion Blazor Sparkline, including ValueType, Numeric, Category, and DateTime axis options.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Axis Customization in Blazor Sparkline Charts
+# Blazor Sparkline Charts Axis Customization
 
 ## Change the Value Type of the Sparkline Chart
 

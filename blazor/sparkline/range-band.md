@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Range Band in Blazor Sparkline Charts | Syncfusion®
-description: Highlight value ranges in the Blazor Sparkline Charts by adding SparklineRangeBand entries with StartRange, EndRange, Color, and Opacity on the y-axis.
+title: Blazor Sparkline Charts Range Band Examples | Syncfusion®
+description: Learn how to customize range bands in Syncfusion Blazor Sparkline to highlight y-axis ranges with StartRange, EndRange, color, and opacity.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Range Band in Blazor Sparkline Charts
+# Blazor Sparkline Charts Range Band
 
 A range band represents a specific range on the Sparkline y-axis, improving readability or highlighting quality by specifying the [StartRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBand.html#Syncfusion_Blazor_Charts_SparklineRangeBand_StartRange) and [EndRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBand.html#Syncfusion_Blazor_Charts_SparklineRangeBand_EndRange) properties in the [SparklineRangeBand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBand.html) within [SparklineRangeBandSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBandSettings.html).
 

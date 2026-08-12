@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Sparkline Charts | Syncfusion®
-description: The Blazor Sparkline Charts meets WCAG 2.2 (AA), Section 508, and ADA accessibility standards with full keyboard navigation and screen reader support.
+title: Blazor Sparkline Charts Accessibility Examples | Syncfusion®
+description: Learn about accessibility in Syncfusion Blazor Sparkline, including keyboard navigation, screen reader support, and WCAG 2.2 compliance.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Accessibility in Blazor Sparkline Charts
+# Blazor Sparkline Charts Accessibility
 
 The Blazor Sparkline component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 
