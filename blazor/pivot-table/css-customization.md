@@ -121,7 +121,7 @@ The CSS selectors target the following Pivot Table elements:
 
 ## Text Alignment
 
-The alignment of text inside row headers, column headers, value cells, and summary cells can be customized using CSS styling. The following example demonstrates how to center-align text in value cells:
+The alignment of text inside row headers, column headers, value cells, and summary cells can be customized using CSS styling. The following example demonstrates how to center-align text in value cells (additional selectors for column headers, row headers, and summary cells are included as commented CSS in the sample):
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -182,7 +182,7 @@ The alignment of text inside row headers, column headers, value cells, and summa
 
 ![Text Alignment in Blazor PivotGrid](images/blazor-pivotgrid-text-alignment.webp)
 
-## Customize header, value and summary cell styles
+## Customize header, value, and summary cell styles
 
 The Pivot Table component elements including header cells, value cells, and summary cells can be styled using built-in CSS class names. This enables comprehensive visual customization of the component's appearance to match application themes and design requirements.
 
