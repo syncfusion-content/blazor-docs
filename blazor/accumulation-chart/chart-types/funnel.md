@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Funnel Chart Examples and Documentation | Syncfusion®
+title: Blazor Funnel Chart Examples | Syncfusion®
 description: Learn how to create a Funnel Chart in Syncfusion Blazor Accumulation Chart to visualize stages in a sales process and potential revenue.
 platform: Blazor
 control: Accumulation Chart
