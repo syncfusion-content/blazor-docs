@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor TextBox | Syncfusion
-description: Bind values to Blazor TextBox with one-way, two-way, dynamic, or complex data binding.
+description: Bind values to Blazor TextBox with one-way, two-way, dynamic, or complex data binding options.
 platform: Blazor
 control: TextBox
 documentation: ug

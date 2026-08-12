@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grouping in Blazor MultiColumn ComboBox | Syncfusion
-description: Group Blazor MultiColumn ComboBox items by category using the GroupByField property.
+description: Group Blazor MultiColumn ComboBox items by category using the GroupByField property for grouped display.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Query Builder in Blazor Web App | Syncfusion
+title: Blazor Query Builder Web App Getting Started | Syncfusion
 description: Learn how to get started with the Syncfusion Blazor Query Builder in a Blazor Web App with setup steps.
 platform: Blazor
 component: Query Builder

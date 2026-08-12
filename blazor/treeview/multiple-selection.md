@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Multiple Selection in Blazor TreeView | Syncfusion
-description: Select multiple tree nodes with Ctrl and Shift key actions in Blazor TreeView.
+description: Select multiple tree nodes with Ctrl and Shift key actions in Blazor TreeView for selection support.
 platform: Blazor
 control: TreeView
 documentation: ug

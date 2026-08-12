@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Methods in Blazor TextArea | Syncfusion
-description: Use Blazor TextArea async methods such as FocusAsync to move focus programmatically.
+description: Use Blazor TextArea async methods such as FocusAsync to move input focus programmatically.
 platform: Blazor
 control: TextArea
 documentation: ug

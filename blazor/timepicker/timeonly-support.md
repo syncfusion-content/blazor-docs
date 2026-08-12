@@ -1,7 +1,7 @@
 ---
 layout: post
 title: TimeOnly Support in Blazor TimePicker | Syncfusion
-description: Bind the .NET TimeOnly type to Blazor TimePicker in .NET 7 and later applications.
+description: Bind the .NET TimeOnly type to Blazor TimePicker in .NET 7 and later applications and projects.
 platform: Blazor
 control: TimePicker
 documentation: ug

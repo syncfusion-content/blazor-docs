@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to enable right-to-left in Blazor Query Builder | Syncfusion
-description: Enable right-to-left layout in Blazor Query Builder using EnableRtl for RTL languages.
+title: Enable Right-to-Left in Blazor Query Builder | Syncfusion
+description: Enable right-to-left layout in Blazor Query Builder using the EnableRtl property for RTL languages.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

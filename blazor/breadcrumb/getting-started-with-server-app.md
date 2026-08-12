@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Breadcrumb in Blazor Server App | Syncfusion®
+title: Blazor Breadcrumb Server App Getting Started | Syncfusion®
 description: Learn how to get started with the Syncfusion Blazor Breadcrumb control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Breadcrumb

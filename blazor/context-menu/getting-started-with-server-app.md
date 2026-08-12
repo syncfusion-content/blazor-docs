@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Context Menu in Blazor Server App | Syncfusion®
+title: Blazor Context Menu Server App Getting Started | Syncfusion®
 description: Learn how to get started with the Syncfusion Blazor Context Menu control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Context Menu

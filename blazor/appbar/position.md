@@ -17,7 +17,7 @@ The position of the AppBar can be set using the [Position](https://help.syncfusi
 
 N> For the Sticky AppBar to behave as expected during scrolling, the parent container must be a scrollable element (for example, with `overflow-y: scroll`) and use `position: relative`.
 
-### Top AppBar
+## Top AppBar
 
 The top AppBar is the default position, displaying the AppBar at the top of the content.
 
@@ -62,7 +62,7 @@ The top AppBar is the default position, displaying the AppBar at the top of the 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjVHXHMWVctxDwjJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Top Position](./images/top_appbar.webp)" %}
 
-### Bottom AppBar
+## Bottom AppBar
 
 This position can be set to the AppBar by setting `AppBarPosition.Bottom` to the property [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position). The bottom AppBar positions the AppBar at the bottom of the content.
 
@@ -107,7 +107,7 @@ This position can be set to the AppBar by setting `AppBarPosition.Bottom` to the
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXrxNRWWVcDasDHw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Bottom Position](./images/bottom_appbar.webp)" %}
 
-### Sticky AppBar
+## Sticky AppBar
 
 This position can be set to the AppBar by setting `true` to the property [IsSticky](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_IsSticky). AppBar will be sticky while scrolling the AppBar content.
 

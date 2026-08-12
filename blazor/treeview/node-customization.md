@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Node Customization in Blazor TreeView | Syncfusion
-description: Customize node images, text wrap, tooltips, and visibility in Blazor TreeView.
+description: Customize node images, text wrap, tooltips, and visibility in Blazor TreeView using field mappings.
 platform: Blazor
 control: TreeView
 documentation: ug

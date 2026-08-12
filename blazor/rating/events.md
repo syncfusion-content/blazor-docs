@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Rating | Syncfusion
-description: Handle Blazor Rating events such as Created, ValueChanged, and OnItemHover.
+description: Handle Blazor Rating events such as Created, ValueChanged, and OnItemHover for interactions.
 platform: Blazor
 control: Rating
 documentation: ug

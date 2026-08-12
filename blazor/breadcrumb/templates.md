@@ -90,7 +90,7 @@ Customize a single Breadcrumb item by providing custom content as the `Breadcrum
         <BreadcrumbItem>
             <span class="e-searchfor-text">
                 <span style="margin-right: 5px">Search for:</span>
-                <a class="e-breadcrumb-text" href="./breadcrumb/default-functionalities" onclick="return false">Breadcrumb</a>
+                <a class="e-breadcrumb-text" href="./breadcrumb/default-functionalities" aria-label="Breadcrumb" onclick="return false">Breadcrumb</a>
             </span>
         </BreadcrumbItem>
     </BreadcrumbItems>

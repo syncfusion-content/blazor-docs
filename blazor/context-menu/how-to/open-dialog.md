@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to open a dialog on item click in Blazor Context Menu | Syncfusion®
+title: Open a Dialog on Item Click in Blazor Context Menu | Syncfusion®
 description: Open a Blazor Dialog when a Context Menu item is selected by handling the ItemSelected event and invoking the Dialog's Show method.
 platform: Blazor
 control: Context Menu

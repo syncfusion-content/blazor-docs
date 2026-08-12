@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to validate text on rename in Blazor TreeView | Syncfusion
-description: Validate edited node text and cancel invalid renames with the NodeEdited event.
+description: Validate edited node text and cancel invalid renames with the NodeEdited event for input handling.
 platform: Blazor
 control: TreeView
 documentation: ug

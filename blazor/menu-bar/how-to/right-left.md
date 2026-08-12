@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to enable right to left in Blazor Menu Bar | Syncfusion
-description: Enable right-to-left layout for Blazor Menu Bar by setting EnableRtl to true.
+description: Enable right-to-left layout for Blazor Menu Bar by setting the EnableRtl property to true for RTL language support.
 platform: Blazor
 control: Menu Bar 
 documentation: ug

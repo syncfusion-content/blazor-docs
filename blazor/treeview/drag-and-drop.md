@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Drag and Drop in Blazor TreeView | Syncfusion
-description: Reorder tree nodes with drag-and-drop indicators in Blazor TreeView.
+description: Reorder tree nodes with drag-and-drop indicators in Blazor TreeView for interactive tree management.
 platform: Blazor
 control: TreeView
 documentation: ug

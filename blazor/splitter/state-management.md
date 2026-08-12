@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State Management in Blazor Splitter | Syncfusion
-description: Save and load Blazor Splitter pane state such as collapsed, size, and min/max values.
+description: Save and load Blazor Splitter pane state such as collapsed, size, and min/max sizes for state persistence.
 platform: Blazor
 control: Splitter
 documentation: ug

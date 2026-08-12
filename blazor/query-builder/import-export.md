@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Importing and Exporting in Blazor Query Builder | Syncfusion
-description: Import and export Blazor Query Builder rules in JSON, SQL, or MongoDB formats.
+description: Import and export Blazor Query Builder rules in JSON, SQL, or MongoDB formats for data persistence.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

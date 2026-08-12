@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to customize switch appearance in Blazor Toggle Switch Button | Syncfusion
+title: Customize Switch Appearance in Blazor Toggle | Syncfusion
 description: Customize Blazor Toggle Switch Button bar and handle appearance using custom CSS with CssClass.
 platform: Blazor
 control: Toggle Switch Button 

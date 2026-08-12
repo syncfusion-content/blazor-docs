@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Breadcrumb in Blazor WASM App | Syncfusion®
+title: Getting Started with Blazor Breadcrumb WASM App | Syncfusion®
 description: Learn how to get started with the Syncfusion Blazor Breadcrumb control. Explore setup, features, examples, and customization options.
 platform: Blazor
 control: Breadcrumb

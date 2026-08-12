@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor AutoComplete in Blazor Web App | Syncfusion®
+title: Getting Started with Blazor AutoComplete Web App | Syncfusion®
 description: Learn how to get started with the Syncfusion Blazor AutoComplete control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: AutoComplete

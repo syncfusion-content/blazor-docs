@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to create TextBox dynamically in Blazor TextBox | Syncfusion
-description: Render Blazor TextBox at runtime using RenderTreeBuilder or RenderFragment in code.
+description: Render Blazor TextBox at runtime using RenderTreeBuilder or RenderFragment in dynamic code.
 platform: Blazor
 control: TextBox
 documentation: ug

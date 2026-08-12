@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to enable tab key navigation in Blazor Tabs | Syncfusion
-description: Enable standard Tab key navigation for Blazor Tabs items using the TabIndex property.
+description: Enable standard Tab key navigation for Blazor Tabs items using the TabIndex property values.
 platform: Blazor
 control: Tabs
 documentation: ug

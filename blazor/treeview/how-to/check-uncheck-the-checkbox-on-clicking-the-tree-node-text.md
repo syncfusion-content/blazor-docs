@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to toggle checkbox on node text click in Blazor TreeView | Syncfusion
-description: Toggle checkboxes by clicking tree node text in Blazor TreeView.
+title: Toggle Checkbox on Node Click in Blazor TreeView | Syncfusion
+description: Toggle checkboxes by clicking tree node text in Blazor TreeView for interactive selection support.
 platform: Blazor
 control: TreeView
 documentation: ug

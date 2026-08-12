@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor TimePicker | Syncfusion
-description: Localize Blazor TimePicker text and enable RTL layout for right-to-left languages.
+description: Localize Blazor TimePicker text and enable RTL layout for right-to-left languages support.
 platform: Blazor
 control: TimePicker
 documentation: ug

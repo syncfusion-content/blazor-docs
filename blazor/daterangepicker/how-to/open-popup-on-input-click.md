@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to open popup on input click in Blazor DateRangePicker | Syncfusion®
+title: Open Blazor DateRangePicker Popup on Input Click | Syncfusion®
 description: Open the Blazor DateRangePicker popup automatically when the input receives focus, with the ShowPopupOnFocus property for keyboard-friendly interaction.
 platform: Blazor
 control: DateRangePicker

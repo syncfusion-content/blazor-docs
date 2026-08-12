@@ -11,7 +11,7 @@ documentation: ug
 
 The Blazor File Upload component allows for the customization of the file list items by using a template. This provides the flexibility to define the structure and styling of individual file elements, such as the file name, size, and status. A custom template can create a tailored and visually appealing file upload interface that aligns with an application's design and user experience requirements.
 
-### With server-side API endpoint
+## With server-side API endpoint
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -30,7 +30,7 @@ The Blazor File Upload component allows for the customization of the file list i
     </UploaderTemplates>
 </SfUploader>
 ```
-### Without server-side API endpoint
+## Without server-side API endpoint
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

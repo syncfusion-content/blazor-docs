@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to enable tab key navigation in Blazor Toolbar | Syncfusion
-description: Enable Tab key navigation between Blazor Toolbar items using the TabIndex property.
+description: Enable Tab key navigation between Blazor Toolbar items using the TabIndex property value.
 platform: Blazor
 control: Toolbar
 documentation: ug

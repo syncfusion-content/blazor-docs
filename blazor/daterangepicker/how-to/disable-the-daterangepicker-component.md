@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to disable the DateRangePicker in Blazor DateRangePicker | Syncfusion®
+title: Disable the DateRangePicker in Blazor | Syncfusion®
 description: Disable the Blazor DateRangePicker so users cannot change the range, by setting the Enabled property to false on the component.
 platform: Blazor
 control: DateRangePicker

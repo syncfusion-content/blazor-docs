@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Maximum Length in Blazor TextArea | Syncfusion
-description: Limit user input length in Blazor TextArea using the MaxLength property.
+description: Limit user input length in Blazor TextArea using the MaxLength property and validation rules.
 platform: Blazor
 control: TextArea
 documentation: ug

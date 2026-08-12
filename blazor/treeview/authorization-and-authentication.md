@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Authorization and Authentication in Blazor TreeView | Syncfusion
-description: Restrict Blazor TreeView access to authenticated users with ASP.NET Core Identity.
+description: Restrict Blazor TreeView access to authenticated users with ASP.NET Core Identity framework support.
 platform: Blazor
 control: TreeView
 documentation: ug
@@ -22,7 +22,7 @@ The following example demonstrates a Blazor Server App configured with authentic
 
 <AuthorizeView>
     <Authorized>
-        <a href="Identity/Account/Manage">Hello, @context.User.Identity?.Name!</a>
+        <a href="Identity/Account/Manage" aria-label="Manage your account">Hello, @context.User.Identity?.Name!</a>
 
         <SfTreeView TValue="MailItem">
             <TreeViewFieldsSettings TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
@@ -81,8 +81,8 @@ The following example demonstrates a Blazor Server App configured with authentic
     </Authorized>
     <NotAuthorized>
         <p>Please log in or Register to view the TreeView component.</p>
-        <a href="Identity/Account/Register">Register</a>
-        <a href="Identity/Account/Login">Log in</a>
+        <a href="Identity/Account/Register" aria-label="Register a new account">Register</a>
+        <a href="Identity/Account/Login" aria-label="Log in to your account">Log in</a>
     </NotAuthorized>
 </AuthorizeView>
 

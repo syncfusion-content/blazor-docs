@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to prevent focus on the first element in Blazor Dialog | Syncfusion®
+title: Prevent Focus on First Element in Blazor Dialog | Syncfusion®
 description: Prevent the Blazor Dialog from automatically focusing the first focusable element when it opens, using the Open event or focus settings.
 platform: Blazor
 control: Dialog

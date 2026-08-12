@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to enable scroller in Blazor ListBox | Syncfusion
-description: Enable scrolling in Blazor ListBox by setting the Height property on the component.
+description: Enable scrolling in Blazor ListBox by setting the Height property on the component to control vertical overflow.
 platform: Blazor
 control: List Box
 documentation: ug

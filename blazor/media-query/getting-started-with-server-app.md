@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Media Query in Blazor Server App | Syncfusion
+title: Blazor Media Query Server App Getting Started | Syncfusion
 description: Learn how to get started with the Syncfusion Blazor Media Query in a Blazor Server app with installation and setup steps.
 platform: Blazor
 control: Media Query

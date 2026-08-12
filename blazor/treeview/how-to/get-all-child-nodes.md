@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to get all child nodes in Blazor TreeView | Syncfusion
-description: Retrieve child node data by parent ID using GetTreeData in Blazor TreeView.
+description: Retrieve child node data by parent ID using GetTreeData method in Blazor TreeView for dynamic data access.
 platform: Blazor
 control: TreeView
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to customize tree nodes by level in Blazor TreeView | Syncfusion
-description: Style Blazor TreeView nodes by depth using built-in e-level CSS classes.
+description: Style Blazor TreeView nodes by depth using built-in e-level CSS classes for visual hierarchy styles.
 platform: Blazor
 control: TreeView
 documentation: ug

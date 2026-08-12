@@ -247,7 +247,7 @@ The following example demonstrates remote data binding with offline mode enabled
 
 Follow these steps to consume data from [Entity Framework](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-orm/entityframework) in the MultiSelect component.
 
-#### Create DBContext class
+### Create DBContext class
 
 Create a DbContext class named `OrderContext` to connect to a Microsoft SQL Server database.
 

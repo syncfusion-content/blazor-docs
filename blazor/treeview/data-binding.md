@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor TreeView | Syncfusion
-description: Bind local lists or remote services with load-on-demand support in Blazor TreeView.
+description: Bind local lists or remote services with load-on-demand support in Blazor TreeView using adapters.
 platform: Blazor
 control: TreeView
 documentation: ug

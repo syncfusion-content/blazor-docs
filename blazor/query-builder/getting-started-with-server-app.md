@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Query Builder in Blazor Server App | Syncfusion
+title: Blazor Query Builder Server App Getting Started | Syncfusion
 description: Learn how to get started with the Syncfusion Blazor Query Builder in a Blazor Server app with setup steps.
 platform: Blazor
 component: Query Builder

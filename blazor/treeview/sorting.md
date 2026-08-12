@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in Blazor TreeView | Syncfusion
-description: Sort TreeView nodes in ascending or descending order using the SortOrder property.
+description: Sort TreeView nodes in ascending or descending order using the SortOrder property for sort order options.
 platform: Blazor
 control: TreeView
 documentation: ug

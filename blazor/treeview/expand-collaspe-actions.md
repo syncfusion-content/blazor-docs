@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Expand and Collapse Actions in Blazor TreeView | Syncfusion
-description: Control node expand and collapse behavior programmatically in Blazor TreeView.
+description: Control node expand and collapse behavior programmatically in Blazor TreeView using built-in methods.
 platform: Blazor
 control: TreeView
 documentation: ug

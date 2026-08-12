@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Dashboard Layout in Blazor Server App | Syncfusion®
+title: Blazor Dashboard Layout Server App | Syncfusion®
 description: Learn how to get started with the Syncfusion Blazor Dashboard Layout control. Explore setup, features, examples, and customization options.
 platform: Blazor
 control: Dashboard Layout

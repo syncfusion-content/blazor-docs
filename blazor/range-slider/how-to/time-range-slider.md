@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to format time range slider in Blazor Range Slider | Syncfusion
-description: Format Blazor Range Slider tick labels and tooltips to display time values.
+description: Format Blazor Range Slider tick labels and tooltips to display time values in user-friendly format.
 platform: Blazor
 control: Range Slider
 documentation: ug

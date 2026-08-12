@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Color Picker in Blazor WASM App | Syncfusion®
+title: Blazor Color Picker WASM App Getting Started | Syncfusion®
 description: Learn how to get started with the Syncfusion Blazor Color Picker control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Color Picker

@@ -23,7 +23,7 @@ In the following example, the initial render loads five items without using Quer
 
 N> When using `RefreshDataAsync` with filtering enabled, prevent the component’s default filtering action in the `Filtering` event (set the cancel flag) before invoking the endpoint and calling `RefreshDataAsync`. This ensures that custom refresh logic runs without conflicting with the built-in behavior.
 
-### Web API adaptor
+## Web API adaptor
 
 When using `WebApiAdaptor`, implement a custom controller that handles OData-style query parameters for both initial loads and refresh requests. In this scenario, the endpoint URL is used for both rendering and refreshing the data source.
 

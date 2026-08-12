@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styles and Appearance in Blazor Sidebar | Syncfusion
-description: Customize Blazor Sidebar appearance using CSS selectors and custom themes.
+description: Customize Blazor Sidebar appearance using CSS selectors, custom properties, and theme overrides.
 platform: Blazor
 control: Sidebar
 documentation: ug

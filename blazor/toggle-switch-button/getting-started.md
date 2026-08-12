@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Toggle Switch Button in Blazor WASM App | Syncfusion
+title: Toggle Switch Button in Blazor WASM App | Syncfusion
 description: Learn how to get started with the Syncfusion Blazor Toggle Switch Button in a Blazor WebAssembly app with setup steps.
 platform: Blazor
 control: Toggle Switch Button

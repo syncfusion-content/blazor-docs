@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor TreeView | Syncfusion
-description: Attach lifecycle and interaction events to Blazor TreeView using TreeViewEvents.
+description: Attach lifecycle and interaction events to Blazor TreeView using TreeViewEvents component arguments.
 platform: Blazor
 control: TreeView
 documentation: ug

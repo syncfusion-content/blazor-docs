@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shimmer Effect in Blazor Skeleton | Syncfusion
-description: Apply shimmer effects like Wave, Pulse, Fade, or None to Blazor Skeleton placeholders.
+description: Apply shimmer effects like Wave, Pulse, Fade, or None to Blazor Skeleton placeholders to show.
 platform: Blazor
 control: Skeleton
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Virtualization in Blazor TreeView | Syncfusion
-description: Virtualize large TreeView data sets and render items while scrolling in Blazor.
+description: Virtualize large TreeView data sets and render items while scrolling in Blazor for performance optimization.
 platform: Blazor
 control: TreeView
 documentation: ug

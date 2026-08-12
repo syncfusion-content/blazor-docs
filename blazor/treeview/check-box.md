@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CheckBox in Blazor TreeView | Syncfusion
-description: Show checkboxes and enable parent-child auto check states in Blazor TreeView.
+description: Show checkboxes and enable parent-child auto check states in Blazor TreeView with built-in properties.
 platform: Blazor
 control: TreeView
 documentation: ug

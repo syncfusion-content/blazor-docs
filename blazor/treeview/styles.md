@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styles and Appearance in Blazor TreeView | Syncfusion
-description: Style Blazor TreeView nodes, lines, and icons with custom CSS selectors.
+description: Style Blazor TreeView nodes, lines, and icons with custom CSS selectors for full visual customization.
 platform: Blazor
 control: TreeView
 documentation: ug

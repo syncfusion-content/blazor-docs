@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor TextBox | Syncfusion
-description: Handle Blazor TextBox events including Blur, Focus, Input, ValueChange, and Created.
+description: Handle Blazor TextBox events including Blur, Focus, Input, ValueChange, and Created event types.
 platform: Blazor
 control: TextBox
 documentation: ug

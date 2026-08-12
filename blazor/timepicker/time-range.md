@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Time Range in Blazor TimePicker | Syncfusion
-description: Limit selectable Blazor TimePicker values using the Min and Max properties.
+description: Limit selectable Blazor TimePicker values using the Min and Max time range properties and value range.
 platform: Blazor
 control: TimePicker
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to render scrollable Context Menu in Blazor Context Menu | Syncfusion®
+title: Render Scrollable Context Menu in Blazor | Syncfusion®
 description: Enable scrolling for the Blazor Context Menu by setting the EnableScrolling property to manage overflow when there are many menu items.
 platform: Blazor
 control: Context Menu

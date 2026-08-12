@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in Blazor Radio Button | Syncfusion
-description: Customize Blazor Radio Button appearance with CSS selectors and Theme Studio themes.
+description: Customize Blazor Radio Button appearance with CSS selectors and themes using Theme Studio integration.
 platform: Blazor
 control: Radio Button
 documentation: ug

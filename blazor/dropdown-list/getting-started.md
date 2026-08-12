@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Dropdown List in Blazor WASM App | Syncfusion®
+title: Blazor Dropdown List WASM App Getting Started | Syncfusion®
 description: Learn how to get started with the Syncfusion Blazor Dropdown List in a Blazor WebAssembly app with installation and setup steps.
 platform: Blazor
 control: Dropdown List

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Responsive and Adaptive Layout in Blazor Dashboard Layout | Syncfusion®
+title: Responsive and Adaptive Layout in Blazor | Syncfusion®
 description: Use the Blazor Dashboard Layout built-in responsive support to auto-adjust panels based on the parent element's dimensions across resolutions.
 platform: Blazor
 control: Dashboard Layout

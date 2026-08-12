@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and Appearance in Blazor Toolbar | Syncfusion
-description: Customize Blazor Toolbar background, border, and item styles using CSS selectors.
+description: Customize Blazor Toolbar background, border, and item styles using CSS selectors and properties.
 platform: Blazor
 control: Toolbar
 documentation: ug

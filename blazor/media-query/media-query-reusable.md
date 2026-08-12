@@ -25,7 +25,7 @@ Place the Media Query component along with the layout's `@Body` parameter inside
     </div>
     <main>
         <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/en-gb/aspnet/core/?view=aspnetcore-10.0" target="_blank">About</a>
+            <a href="https://learn.microsoft.com/en-gb/aspnet/core/?view=aspnetcore-10.0" target="_blank" aria-label="About ASP.NET Core">About</a>
         </div>
         <article class="content px-4">
             <CascadingValue Value="@activeBreakPoint">

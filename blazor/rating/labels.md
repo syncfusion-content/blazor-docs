@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Labels in Blazor Rating | Syncfusion
-description: Display the current value label in Blazor Rating using the ShowLabel property.
+description: Display the current value label in Blazor Rating using the ShowLabel property for the user.
 platform: Blazor
 control: Rating
 documentation: ug

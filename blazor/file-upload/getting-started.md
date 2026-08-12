@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor File Upload in Blazor WASM App | Syncfusion
+title: Getting Started with Blazor File Upload WASM App | Syncfusion
 description: Learn how to get started with the Syncfusion Blazor File Upload in a Blazor WebAssembly app with installation and setup steps.
 platform: Blazor
 control: File Upload

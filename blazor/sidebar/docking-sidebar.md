@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dock in Blazor Sidebar | Syncfusion
-description: Enable Blazor Sidebar dock state to keep icons visible when the sidebar is collapsed.
+description: Enable Blazor Sidebar dock state to keep icons visible when the sidebar is collapsed to a narrow state.
 platform: Blazor
 control: Sidebar
 documentation: ug

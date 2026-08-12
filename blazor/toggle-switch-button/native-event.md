@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Native Event in Blazor Toggle Switch Button | Syncfusion
-description: Handle ValueChange and native DOM events for Blazor Toggle Switch Button interactions.
+description: Handle ValueChange and native DOM events for Blazor Toggle Switch Button interactions and triggers.
 platform: Blazor
 control: Toggle Switch Button 
 documentation: ug

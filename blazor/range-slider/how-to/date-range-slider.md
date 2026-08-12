@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to format date range slider in Blazor Range Slider | Syncfusion
-description: Format Blazor Range Slider tick labels and tooltips to display date values.
+description: Format Blazor Range Slider tick labels and tooltips to display date values in user-friendly format.
 platform: Blazor
 control: Range Slider
 documentation: ug

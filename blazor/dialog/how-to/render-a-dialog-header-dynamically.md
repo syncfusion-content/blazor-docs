@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to render a dialog header dynamically in Blazor Dialog | Syncfusion®
+title: Render Dialog Header Dynamically in Blazor | Syncfusion®
 description: Render the Blazor Dialog header dynamically by binding the Header content to a variable that changes in response to user input or events.
 platform: Blazor
 control: Dialog

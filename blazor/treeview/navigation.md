@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Navigation in Blazor TreeView | Syncfusion
-description: Navigate pages on node selection using the NavigateUrl field in Blazor TreeView.
+description: Navigate pages on node selection using the NavigateUrl field in Blazor TreeView for navigation support.
 platform: Blazor
 control: TreeView
 documentation: ug

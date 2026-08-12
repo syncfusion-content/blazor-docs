@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Template in Blazor TreeView | Syncfusion
-description: Customize node UI with NodeTemplate and CssClass in Blazor TreeView.
+description: Customize node UI with NodeTemplate and CssClass in Blazor TreeView for custom item rendering templates.
 platform: Blazor
 control: TreeView
 documentation: ug

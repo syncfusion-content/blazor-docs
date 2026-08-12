@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Button Group in Blazor Server App | Syncfusion®
+title: Blazor Button Group Server App Getting Started | Syncfusion®
 description: Learn how to get started with the Syncfusion Blazor Button Group control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Button Group
