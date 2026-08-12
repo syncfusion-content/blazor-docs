@@ -56,7 +56,7 @@ The Blazor Dropdown Tree component's [Created](https://help.syncfusion.com/cr/bl
 
 ## Destroyed
 
-The Blazor Dropdown Tree's [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Destroyed) event is triggered when the Dropdown Tree component is completely destroyed, allowing you to confirm its destruction.
+The Blazor Dropdown Tree's [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Destroyed) event fires after the component is destroyed.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -269,7 +269,7 @@ The Blazor Dropdown Tree component's [ValueChanging](https://help.syncfusion.com
 
 ## ValueChanged 
 
-The Blazor Dropdown Tree component's [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ValueChanged) event is triggered  when the value changed in the Dropdown Tree component.
+The Blazor Dropdown Tree component's [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ValueChanged) event is triggered when the value changed in the Dropdown Tree component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -312,7 +312,7 @@ The Blazor Dropdown Tree component's [ValueChanged](https://help.syncfusion.com/
 
 ## Filtering
 
-The Blazor Dropdown Tree component's [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Filtering) event is triggered when user types a text in search box.
+The Blazor Dropdown Tree component's [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Filtering) event is triggered when the user types text in the search box.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -356,7 +356,7 @@ The Blazor Dropdown Tree component's [Filtering](https://help.syncfusion.com/cr/
 
 ## OnActionFailure
 
-The Blazor Dropdown Tree component's [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_OnActionFailure) event is triggered when any Dropdown Tree action fails to produce the desired outcome. By utilizing this event, one can obtain information about the error and its root cause. In the sample provided, an incorrect URL has been given, causing the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_OnActionFailure) event to be thrown.
+The Blazor Dropdown Tree component's [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_OnActionFailure) event is triggered when any Dropdown Tree action fails to produce the desired outcome. Use this event to get error information and identify the root cause. In the sample provided, an incorrect URL has been given, causing the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_OnActionFailure) event to be thrown.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -367,8 +367,8 @@ The Blazor Dropdown Tree component's [OnActionFailure](https://help.syncfusion.c
         <DropDownTreeField TItem="TreeData" Query="@employeeQuery" ID="EmployeeID" Text="FirstName" HasChildren="EmployeeID">
             <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
         </DropDownTreeField>
-        <DropDownTreeField TItem="TreeData" Query="@orderQuery" Id="OrderID" Text="ShipName" ParentID="EmployeeID">
-            <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svs" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
+        <DropDownTreeField TItem="TreeData" Query="@orderQuery" ID="OrderID" Text="ShipName" ParentID="EmployeeID">
+            <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
         </DropDownTreeField>
     </ChildContent>
     <ActionFailureTemplate>

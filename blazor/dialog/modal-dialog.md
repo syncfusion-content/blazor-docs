@@ -88,3 +88,9 @@ The following example demonstrates how to close a modal dialog when the user cli
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjLetFiJJHqtzBdm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog with Modal Overlay](./images/blazor-dialog-modal-closes.gif)" %}
+
+## See also
+
+* [Prevent Closing of Modal Dialog in Blazor Dialog Component](./how-to/prevent-closing-of-modal-dialog)
+* [Create Nested Dialog in Blazor Dialog Component](./how-to/create-nested-dialog)
+* [Positioning in Blazor Dialog Component](./positioning)

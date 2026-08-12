@@ -22,7 +22,7 @@ In the following code, toast buttons are configured using `ToastButton` property
     <ToastPosition X="Right" Y="Bottom"></ToastPosition>
     <ToastButtons>
         <ToastButton  Content = "Ignore" OnClick="@HideToast"></ToastButton>
-        <ToastButton  Content = "reply" OnClick="@HideToast"></ToastButton>
+        <ToastButton  Content = "Reply" OnClick="@HideToast"></ToastButton>
     </ToastButtons>
 </SfToast>
 

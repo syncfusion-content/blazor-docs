@@ -13,12 +13,12 @@ State management allows users to save and load Splitter state. The splitter will
 
 The following properties can be saved and loaded into each **SplitterPane** later.
 
-Property|
------|
-Collapsed |
-Min |
-Max |
-Size |
+| Property | Description |
+| -------- | ----------- |
+| Collapsed | Indicates whether the pane is collapsed. |
+| Min | Minimum size of the pane. |
+| Max | Maximum size of the pane. |
+| Size | Current size of the pane. |
 
 ## Enabling persistence in Splitter
 

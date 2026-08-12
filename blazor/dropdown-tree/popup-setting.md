@@ -93,9 +93,7 @@ Customize the height of the popup using the [PopupHeight](https://help.syncfusio
 
 ## Change the popup ZIndex
 
-Customize the [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ZIndex) value of the component popup element.
-
-Defaults to `1000`
+Customize the [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ZIndex) of the component popup element. The default ZIndex is `1000`.
 
 ## Popup height based on available space
 
