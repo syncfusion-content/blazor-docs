@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor Sparkline Component | Syncfusion®
-description: Check out and learn here all the features about appearance customization in the Blazor Sparkline component.
+title: Blazor Sparkline Charts Appearance Examples | Syncfusion®
+description: Learn how to customize the appearance of Syncfusion Blazor Sparkline, including RTL, padding, border, and background options.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Appearance in Blazor Sparkline Component
+# Blazor Sparkline Charts Appearance
 
 The rendering direction, padding, border, and background appearance of the Sparkline can be customized.
 
