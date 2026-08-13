@@ -11,7 +11,7 @@ documentation: ug
 
 ## QR Code
 
-The [Blazor QR Code](https://www.syncfusion.com/blazor-components/blazor-barcode) is a two-dimensional barcode composed of a grid of dark and light dots or blocks that form a square. The data encoded in the barcode can be numeric, alphanumeric, or Shift Japanese Industrial Standards (JIS8) characters. The QR Code uses version from **1 to 40**. Version 1 measures 21 modules x 21 modules, Version 2 measures 25 modules x 25 modules, and so on. The number of modules increases in steps of 4 modules per side up to Version 40, which measures 177 modules x 177 modules. Each version has its own capacity. By default, the barcode control automatically sets the version according to the length of the input text. The QR Barcodes are designed for industrial uses and are also commonly used in consumer advertising.
+The [Blazor QR Code](https://www.syncfusion.com/blazor-components/blazor-barcode) is a two-dimensional barcode composed of a grid of dark and light dots or blocks that form a square. The data encoded in the barcode can be numeric, alphanumeric, or Shift Japanese Industrial Standards (JIS8) characters. The QR Code uses versions **1 to 40**. Version 1 measures 21 x 21 modules, Version 2 measures 25 x 25 modules, and so on. The number of modules increases in steps of 4 modules per side up to Version 40, which measures 177 x 177 modules. Each version has its own capacity. By default, the barcode control automatically sets the version according to the length of the input text. The QR Barcodes are designed for industrial uses and are also commonly used in consumer advertising.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -23,7 +23,7 @@ The [Blazor QR Code](https://www.syncfusion.com/blazor-components/blazor-barcode
 
 ## Customizing the Barcode color
 
-A page or printed media containing a barcode often appears colorful in the background and surrounding region with other contents. In such cases, the barcode can also be customized to meet the needs. Achieve this using [ForeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfQRCodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfQRCodeGenerator_ForeColor) property.
+A page or printed media containing a barcode often appears colorful in the background and surrounding area, along with other content. In such cases, the barcode can also be customized to meet the needs. Achieve this using [ForeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfQRCodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfQRCodeGenerator_ForeColor) property.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -61,7 +61,7 @@ In barcode generators, customize the barcode text by using the display [Text](ht
 
 ## Error Correction Level
 
-The QR Barcode employs error correction to generate a series of error correction codewords which are added to the data code word sequence in order to enable the symbol to withstand damage without data loss. There are four user–selectable levels of error correction, as shown in the table, that offer the capability of recovery from the following amounts of damage. By default, the [Error correction level](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.ErrorCorrectionLevel.html) is **Low**.
+The QR Barcode employs error correction to generate a series of error correction codewords which are added to the data code word sequence in order to enable the symbol to withstand damage without data loss. There are four user-selectable levels of error correction, as shown in the table, that offer the capability of recovery from the following amounts of damage. By default, the [Error correction level](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.ErrorCorrectionLevel.html) is **Low**.
 
 Error Correction Level Table
 
@@ -73,7 +73,7 @@ Error Correction Level Table
 |H	|30|
 
 ```cshtml
-<SfQRCodeGenerator Width="200px" Height="200px" ErrorCorrectionLevel="ErrorCorrectionLevel.Low" Value=https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.ErrorCorrectionLevel.html>
+<SfQRCodeGenerator Width="200px" Height="200px" ErrorCorrectionLevel="ErrorCorrectionLevel.Low" Value="https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.ErrorCorrectionLevel.html">
     <QRCodeGeneratorDisplayText Visibility="false"></QRCodeGeneratorDisplayText>
 </SfQRCodeGenerator>
 ```
@@ -137,6 +137,7 @@ The size of the logo can be changed using the [Height](https://help.syncfusion.c
 {
     public void OnValidationFailed(ValidationFailedEventArgs args)
     {
+        // Action to be performed
     }
 }
 
@@ -146,3 +147,5 @@ The size of the logo can be changed using the [Height](https://help.syncfusion.c
 * [How can I adjust the margin of the QR code and handle text positioning when using the QRCodeGenerator in Syncfusion?](https://support.syncfusion.com/kb/article/18734/how-can-i-adjust-the-margin-of-the-qr-code-and-handle-text-positioning-when-using-the-qrcodegenerator-in-syncfusion)
 
 * [How to export the QR code in a Blazor Server project to a desired location using a memory stream?](https://support.syncfusion.com/kb/article/17216/how-to-export-the-qr-code-in-a-blazor-server-project-to-a-desired-location-using-a-memory-stream)
+
+* [How to generate a QR Code in (2FA) Application in Blazor Diagram?](https://support.syncfusion.com/kb/article/16295/how-to-generate-a-qr-code-in-2fa-application-in-blazor-diagram)
