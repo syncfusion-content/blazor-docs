@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor ProgressBar in Web App | Syncfusion
-description: Check out and learn the documentation for getting started with Blazor ProgressBar Components in Blazor Web App.
+title: Getting Started with Blazor ProgressBar in Web App | Syncfusion®
+description: Learn how to get started with Syncfusion Blazor ProgressBar in a Blazor Web App, including server and client setup, packages, and first chart.
 platform: Blazor
 control: ProgressBar
 documentation: ug
