@@ -79,11 +79,11 @@ public class OrderDetails
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBxtGNqSDqQFUdl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * **Normal** is the default editing mode.
-> * To enable editing, set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property must be set to **true** for the unique column.
+> * To enable editing, set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property to **true** for the unique column.
 
 ## Automatically update a specific column based on another column edited value
 
-Blazor DataGrid supports automatic updates to a column value based on changes made to another related column during in-line editing. This behavior is enabled using the Cell Edit Template feature.
+Blazor DataGrid supports automatic updates to a column value based on changes made to another related column during in-line editing. Use the Cell Edit Template feature to enable this behavior.
 
 To configure this functionality in normal edit mode, use the [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) and [RowEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEdited) events, along with the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) property of the Grid.
 
@@ -197,9 +197,15 @@ public class ProductDetails
 
 ## Cancel edit based on condition
 
-The Blazor DataGrid canceling edit operations for specific rows or cells based on defined conditions. This functionality provides control over whether editing is permitted or restricted for particular rows or cells within the Grid.
+The Blazor DataGrid supports canceling edit operations for specific rows or cells based on defined conditions. This functionality provides control over whether editing is permitted or restricted for particular rows or cells within the Grid.
 
 To cancel an edit operation based on a specific condition, handle the following Grid events. These events are triggered during CRUD (Create, Read, Update, and Delete) operations in the Grid:
+
+| Event | Recommended use |
+| --- | --- |
+| [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating) | Triggered before an add action is executed in the Grid. |
+| [RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing) | Triggered before an edit action is executed in the Grid. |
+| [RowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeleting) | Triggered before a delete action is executed in the Grid. |
 
 1. [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating): Triggered before an add action is executed in the Grid.
 
@@ -310,15 +316,15 @@ public class EmployeeDetails
 
 CRUD operations—Create, Read, Update, and Delete—can be executed programmatically in Blazor DataGrid using built-in methods, without manual interaction.
 
-* To add a new record, use the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AddRecordAsync__0_System_Nullable_System_Int32__) method. Pass the **data** parameter to insert a new record and the **index** parameter to specify the position. If no parameters are provided, an empty row is created at index **0**.
+* **AddRecordAsync:** Use [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AddRecordAsync__0_System_Nullable_System_Int32__) to insert a new record. Pass **data** to insert a record and **index** to specify its position. Without parameters, an empty row is created at index **0**.
 
-* To switch a selected row to edit mode, use the [StartEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_StartEditAsync) method. A row must be selected before invoking this method.
+* **StartEditAsync:** Use [StartEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_StartEditAsync) to switch a selected row to edit mode. Select a row before calling `StartEditAsync()`.
 
-* To update row data in the Grid’s data source, use the [UpdateRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UpdateRowAsync_System_Int32__0_) method. Provide the **index** of the row and the updated **data**.
+* **UpdateRowAsync:** Use [UpdateRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UpdateRowAsync_System_Int32__0_) to replace row data. Provide the row **index** and updated **data**.
 
-* To update a specific cell value, use the [SetCellValueAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetCellValueAsync_System_Object_System_String_System_Object_) method. Specify the primary key value, field name, and new value. This method updates the Grid UI but does not persist changes to the underlying data source. Commonly used for unbound columns such as calculated or formula-based fields.
+* **SetCellValueAsync:** Use [SetCellValueAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetCellValueAsync_System_Object_System_String_System_Object_) to update one cell. Specify the primary key value, field name, and new value. This method updates the Grid UI without persisting changes. It is commonly used for unbound columns such as calculated or formula-based fields.
 
-* To delete a selected row, use the [DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DeleteRecordAsync) method. A row must be selected before performing delete operations.
+* **DeleteRecordAsync:** Use [DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DeleteRecordAsync) to delete selected records. Select one or more rows before calling `DeleteRecordAsync()`.
 
 > These methods are supported in both normal and dialog editing modes.
 
@@ -448,7 +454,7 @@ public class OrderDetails
 
 ## Show confirmation dialog while deleting
 
-Blazor DataGrid supports displaying a confirmation dialog before deleting a record. This dialog provides an additional safeguard to prevent accidental or unintended deletions. Deletion proceeds only after confirmation is received.
+Blazor DataGrid supports displaying a confirmation dialog before deleting a record. This dialog helps prevent accidental deletions. Deletion proceeds only after confirmation is received.
 
 To enable the confirmation dialog for delete operations, set the [ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowDeleteConfirmDialog) property of the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) configuration to **true**. The default value of this property is **false**.
 
@@ -861,7 +867,7 @@ public class OrderDetails
 
 > The `NewRowPosition` property is supported for **Normal** and **Batch** editing modes.
 
-## Saving a new row at a particular index
+## Save a new row at a particular index
 
 Blazor DataGrid supports saving newly added rows at a specific index within the data source. By default, new rows are inserted and saved at the top of the Grid’s data source. Certain scenarios may require saving the new row at a custom position, such as at the end of the current page or a specific index based on business logic.
 
