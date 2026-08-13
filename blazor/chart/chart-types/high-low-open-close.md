@@ -1,13 +1,13 @@
 ---
 layout: post
-title: High Low Open Close in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about High Low Open Close Chart in Blazor Charts component and more.
+title: Blazor High Low Open Close Chart Examples | Syncfusion®
+description: Learn how to render Blazor High Low Open Close Charts using Syncfusion. Show stock open, high, low, and close values with a five-field data source.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# High Low Open Close in Blazor Charts Component
+# High Low Open Close Chart in Blazor
 
 ## High Low Open Close
 

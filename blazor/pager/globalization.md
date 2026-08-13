@@ -72,3 +72,4 @@ In this configuration, the Pager component automatically adopts RTL rendering wh
 By combining localization and RTL capabilities, the Pager component delivers a flexible globalization solution suitable for multilingual and multicultural applications. Localized text improves clarity and accessibility, while RTL rendering ensures that navigation patterns align with cultural reading expectations. Together, these features help create a consistent, intuitive, and regionally appropriate paging experience across a wide range of languages and deployment scenarios.
 
 > For more details, refer to the [Right-to-Left](https://blazor.syncfusion.com/documentation/common/right-to-left) guide for detailed configuration steps.
+

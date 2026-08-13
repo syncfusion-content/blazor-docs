@@ -13,7 +13,7 @@ N> This feature is applicable only for the relational data source.
 
 End users can perform calculations on groups of values (specifically for value fields placed in the value axis) by using different aggregation types. By default, values are combined by summing them. Additional aggregation types are described below.
 
-N> Numeric fields support all aggregation types listed below, except **CalculatedField**. Fields of type string, date, datetime, boolean, and similar types support only **Count** and **DistinctCount** aggregation.
+N> Numeric fields support all aggregation types listed below. Fields of type string, date, datetime, boolean, and similar types support only **Count** and **DistinctCount** aggregation.
 
 | Operator | Description |
 |------|-------------|
@@ -25,13 +25,13 @@ N> Numeric fields support all aggregation types listed below, except **Calculate
 | Max| Displays the maximum value for the selected field.|
 | Avg| Displays the average (mean) of the selected field values.|
 | Median| Displays the median value for the selected field.|
-| Index| Displays the index value for the selected field data.|
+| Index| Displays a sequential index number (1, 2, 3, …) for the selected field values in the pivot result.|
 | PopulationStDev| Displays the standard deviation of the population for the selected field.|
 | SampleStDev| Displays the sample standard deviation for the selected field.|
 | PopulationVar| Displays the variance of the population for the selected field.|
 | SampleVar| Displays the sample variance for the selected field.|
 | RunningTotals| Displays the running total for the selected field values.|
-| PercentageOfRunningTotals| Cumulative percentage of running totals (client-side engine only).|
+| PercentageOfRunningTotals| Displays the cumulative percentage of running totals (client-side engine only).|
 | DifferenceFrom| Displays the pivot table values with difference from the value of the base item in the base field.|
 | PercentageOfDifferenceFrom| Displays the pivot table values with percentage difference from the value of the base item in the base field.|
 | PercentageOfGrandTotal| Displays the pivot table values with percentage of grand total of all values.|
@@ -40,7 +40,8 @@ N> Numeric fields support all aggregation types listed below, except **Calculate
 | PercentageOfParentTotal| Displays the pivot table values with percentage of total of all values based on selected field.|
 | PercentageOfParentColumnTotal| Displays the pivot table values with percentage of its parent total in each column.|
 | PercentageOfParentRowTotal| Displays the pivot table values with percentage of its parent total in each row.|
-| CalculatedField| Displays the pivot table with calculated field values. It allows user to create a new calculated field alone.|
+
+N> **CalculatedField** is not an aggregation type. It enables you to create a new calculated field that is derived from existing fields using a formula. See the [Calculated Field](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field) section for details.
 
 ## Assigning aggregation type for value fields through API
 
@@ -88,6 +89,16 @@ For each value field, the aggregation type can be set using the property [Type](
 
 N> By default, the aggregation will be considered as [SummaryTypes.Sum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_Sum) to the value fields which had number type and for the value fields which had non-number type values such as string, date, datetime, boolean, etc., the aggregation type will be considered as [SummaryTypes.Count](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_Count).
 
+## Modifying aggregation type for value fields at runtime
+
+You can dynamically modify the aggregation type for value fields in the Pivot Table component through the UI at runtime. Value fields, displayed in the grouping bar and field list, include a dropdown icon that allows you to select from various aggregation types (e.g., **Sum**, **Average**, **Count**). Once you select a new aggregation type, the pivot table updates instantly to reflect the change, providing a seamless experience for data analysis.
+
+<!-- markdownlint-disable MD012 -->
+![Modifying Aggregation Types via FieldList in Blazor PivotTable](images/blazor-pivottable-aggregation-fieldlist-menu.webp)
+<br/>
+
+![Modifying Aggregation Types via GroupBar in Blazor PivotTable](images/blazor-pivottable-aggregation-groupbar-menu.webp)
+
 ## Show desired aggregation types in its dropdown menu
 
 By default, the dropdown menu for value fields includes all available aggregation types. However, you can customize this menu to display only specific aggregation types relevant to your application using the [AggregateTypes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AggregateTypes) property. This allows you to tailor the user experience by limiting the options to those that best fit your use case.
@@ -134,16 +145,6 @@ The following code demonstrates how to configure the pivot table component to di
 ```
 
 ![Displaying Aggregation in Blazor PivotTable DropDown Menu](images/blazor-pivottable-aggregation-in-dropdown-menu.webp)
-
-## Modifying aggregation type for value fields at runtime
-
-You can dynamically modify the aggregation type for value fields in the Pivot Table component through the UI at runtime. Value fields, displayed in the grouping bar and field list, include a dropdown icon that allows you to select from various aggregation types (e.g., **Sum**, **Average**, **Count**). Once you select a new aggregation type, the pivot table updates instantly to reflect the change, providing a seamless experience for data analysis.
-
-<!-- markdownlint-disable MD012 -->
-![Modifying Aggregation Types via FieldList in Blazor PivotTable](images/blazor-pivottable-aggregation-fieldlist-menu.webp)
-<br/>
-
-![Modifying Aggregation Types via GroupBar in Blazor PivotTable](images/blazor-pivottable-aggregation-groupbar-menu.webp)
 
 ## Hiding aggregation type from button text
 
