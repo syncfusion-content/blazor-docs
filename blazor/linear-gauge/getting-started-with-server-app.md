@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting started with Blazor Linear Gauge in Server App | Syncfusion
-description: Check out the documentation for getting started with Blazor Linear Gauge Component in Blazor Server App.
+title: Getting Started with Blazor Linear Gauge in Server App | Syncfusion®
+description: Learn how to add the Blazor Linear Gauge to a Blazor Server App using Visual Studio, VS Code, or the .NET CLI to render your first gauge.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Getting Started with Blazor Linear Gauge in Blazor Server App
+# Getting Started with Blazor Linear Gauge in Server App
 
-This section briefly explains about how to include the [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include the [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/Download/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Server App 
 
