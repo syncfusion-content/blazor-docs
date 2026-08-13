@@ -104,7 +104,7 @@ The MultiSelect filtering feature supports case-insensitive and accent-insensiti
 
 ### Case-Insensitive Filtering
 
-The [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_IgnoreCase) property controls whether the filter operation is case-sensitive.
+The [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_IgnoreCase) property controls whether the filter operation is case-sensitive.
 
 ```cshtml
 <SfMultiSelect TItem="string" TValue="string[]" AllowFiltering="true" IgnoreCase="true" DataSource="@countries" Placeholder="Search (case-insensitive)">
@@ -296,7 +296,7 @@ When filtering is applied with a custom query:
 
 ## Filtering Events
 
-The MultiSelect component provides several events for handling filtering operations at different stages.
+The MultiSelect component provides events for handling filtering operations at different stages.
 
 ### Filtering Event
 

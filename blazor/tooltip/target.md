@@ -7,11 +7,14 @@ control: Tooltip
 documentation: ug
 ---
 
-# Target support in Blazor Tooltip Component 
+# Target support in Blazor Tooltip Component
 
 The [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Target) property specifies the target selector where the Tooltip needs to be displayed. It enables Tooltip activation on specific DOM elements based on user interactions like hover or focus.
 
 ```cshtml
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+
 <SfTooltip Content="Let's go green to save the planet!!" Target="#btn" >
  <SfButton ID="btn" Content="Show Tooltip"></SfButton>
 </SfTooltip>
@@ -33,7 +36,7 @@ Set the [`TargetContainer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 </SfTooltip>
 <div class="tooltip-container">
         <span title="Static tooltip">Static Element</span>
-        <SfButton @onclick="AddElement">Add Dynamic Element<SfButton>
+        <SfButton @onclick="AddElement">Add Dynamic Element</SfButton>
         @if (ShowElement)
         {
             <span title="Dynamic tooltip">Dynamic Element</span>
