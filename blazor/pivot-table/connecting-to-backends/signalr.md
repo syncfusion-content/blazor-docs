@@ -933,5 +933,5 @@ A complete, working sample implementation is available in the [GitHub repository
 
 ## See also
 
-- [ASP.NET Core SignalR .NET client](https://learn.microsoft.com/aspnet/core/signalr/dotnet-client)
+- [ASP.NET Core SignalR .NET client](https://learn.microsoft.com/en-us/aspnet/core/signalr/dotnet-client?view=aspnetcore-10.0&tabs=visual-studio)
 - [Getting Started with Pivot Table in a Blazor Web App](https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp)
