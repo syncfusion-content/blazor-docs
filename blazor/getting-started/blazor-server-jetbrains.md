@@ -158,4 +158,4 @@ The app launches and renders the **[Blazor DataGrid](https://www.syncfusion.com/
 - [Getting Started with Blazor WASM App in JetBrains Rider](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-jetbrains)
 - [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 - [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
--[Getting Started with Blazor WebAssembly Standalone App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+- [Getting Started with Blazor WebAssembly Standalone App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
