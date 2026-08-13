@@ -223,7 +223,7 @@ dotnet run
 
 ## Setting the Value and Min and Max dates
 
-The following example demonstrates how to set the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Value), [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Min), and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Max) dates when initializing the DatePicker. In this example, a date can be selected within the range from the 5th to the 27th of the current month. `TValue` specifies the type of the DatePicker component.
+The following example demonstrates how to set the [Value](hhttps://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_Value), [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Min), and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Max) dates when initializing the DatePicker. In this example, a date can be selected within the range from the 5th to the 27th of the current month. `TValue` specifies the type of the DatePicker component.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
