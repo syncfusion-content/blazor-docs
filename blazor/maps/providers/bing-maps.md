@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bing Maps in Blazor Maps Component | Syncfusion®
-description: Checkout and learn here all the features about Bing Maps in Blazor Maps component and much more details.
+title: Blazor Maps Bing Maps Provider | Syncfusion®
+description: Learn how to render Bing Maps tiles in Blazor Maps via GetBingUrlTemplate and UrlTemplate for satellite, aerial, and street maps.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Bing Maps in Blazor Maps Component
+# Blazor Maps Bing Maps Provider
 
 Bing Maps is an online map provider from Microsoft that offers external geospatial imagery services for deep-zoom satellite views supported by the Blazor Maps component. It enables visualization of satellite, aerial, and street maps without external shapefiles. Similar to OSM, it supplies map tile images based on requests and combines them to display the required map area.
 

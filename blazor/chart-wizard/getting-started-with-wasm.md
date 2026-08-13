@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Chart Wizard in WASM App | Syncfusion
-description: Check out and learn about getting started with Blazor Chart Wizard in Blazor WebAssembly (WASM) App using Visual Studio and more.
+title: Getting Started with Blazor Chart Wizard in WASM App | Syncfusion®
+description: Learn how to get started with Syncfusion Blazor Chart Wizard in a Blazor WebAssembly app, including setup, packages, and first chart.
 platform: Blazor
 control: Chart Wizard
 documentation: ug

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor TreeMap Component | Syncfusion®
-description: Checkout and learn here all the features about Globalization in Blazor TreeMap component and much more details.
+title: Blazor TreeMap Internationalization | Syncfusion®
+description: Learn how to localize the Blazor TreeMap by formatting numbers, dates, and times for different cultures using the Format property.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Globalization in Blazor TreeMap Component
+# Blazor TreeMap Internationalization
 
 The [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component supports globalization for the following elements:
 
