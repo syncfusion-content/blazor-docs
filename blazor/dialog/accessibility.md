@@ -46,7 +46,7 @@ The Blazor Dialog component uses the `Dialog` role and following ARIA properties
 | --- | --- |
 | aria-describedby | Indicates that the Dialog content description is notified to the users through assistive technologies. |
 | aria-labelledby | The Dialog title is notified to the users through assistive technologies. |
-| aria-modal | For modal dialog, it's value is true and non-modal dialog its value is false |
+| aria-modal | For modal dialog, it's value is true and for non-modal dialog its value is false. |
 | aria-grabbed | Enables the draggable Dialog and starts dragging if its value is true and stops dragging if its value is false. |
 
 ## Keyboard interaction
@@ -57,8 +57,9 @@ Keyboard interaction of Blazor Dialog component has been designed based on [WAI-
 <table>
 <tr>
 <td><b>Windows</b></td>
-<td><b>Mac</b</td>
-<td><b>Actions</b></td></tr>
+<td><b>Mac</b></td>
+<td><b>Actions</b></td>
+</tr>
 <tr>
 <td>
 <kbd>Esc</kbd></td>

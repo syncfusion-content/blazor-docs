@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stacked Area in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about Stacked Area Chart in Blazor Charts component and more.
+title: Blazor Stacked Area Chart Examples and Documentation | Syncfusion®
+description: Learn how to create Blazor Stacked Area Charts using Syncfusion. Show individual contributions to a total over time by stacking Y values.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Stacked Area in Blazor Charts Component
+# Stacked Area Chart in Blazor
 
 ## Stacked Area
 

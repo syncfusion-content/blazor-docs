@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Box and Whisker in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Box and Whisker Chart in Blazor Charts component and much more.
+title: Blazor Box and Whisker Chart Examples and Documentation | Syncfusion®
+description: Learn how to visualize statistical distributions in Blazor Box and Whisker Charts using Syncfusion. Plot min, Q1, median, Q3, and max with five Y values.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Box and Whisker in Blazor Charts Component
+# Box and Whisker Chart in Blazor
 
 ## Box and Whisker
 
