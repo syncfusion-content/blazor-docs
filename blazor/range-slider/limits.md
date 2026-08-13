@@ -39,7 +39,7 @@ Refer to the following snippet to enable limits in the slider.
 
 ## Range slider limits
 
-When using the Range slider type, both handles are enabled, and you can limit their movement within specified limits using the limits object. In this example, the first handle is limited between 10 and 40, and the second handle is limited between 60 and 90.
+In the Range slider, both handles can be restricted and locked using the limits object. In this example, the first handle is limited between 10 and 40, and the second handle is limited between 60 and 90.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
