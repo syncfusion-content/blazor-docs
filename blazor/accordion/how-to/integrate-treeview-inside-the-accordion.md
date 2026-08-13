@@ -14,14 +14,6 @@ The Accordion component allows you to embed other Blazor components within its p
 You can integrate a TreeView component inside an Accordion panel by placing the TreeView component within the ContentTemplate as shown below:
 
 ```cshtml
-<ContentTemplate>
-    <SfTreeView TValue="TreeviewItem"></SfTreeView>
-</ContentTemplate>
-```
-
-The following example shows how to render a TreeView within the Accordion.
-
-```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfAccordion>
@@ -182,3 +174,12 @@ The following example shows how to render a TreeView within the Accordion.
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXhRZdMsMYZuIXKE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Treeview Integration in Blazor Accordion](../images/blazor-accordion-treeview-integration.webp)" %}
+
+## See also
+
+* [Getting Started with Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/getting-started)
+* [Data Binding in Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/data-binding)
+* [Content Render Mode in Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/content-render-mode)
+* [AccordionItem API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html)
+* [SfTreeView API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html)
+* [TreeViewFieldsSettings API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldsSettings-1.html)

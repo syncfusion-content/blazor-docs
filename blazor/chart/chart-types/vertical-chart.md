@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Vertical Chart in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Vertical Chart in Blazor Charts component and much more.
+title: Blazor Vertical Chart Examples and Documentation | Syncfusion®
+description: Learn how to render a Blazor Vertical Chart using Syncfusion. Swap X and Y axis orientation by setting SfChart IsTransposed to true.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Vertical Chart in Blazor Charts Component
+# Vertical Chart in Blazor
 
 ## Vertical chart
 

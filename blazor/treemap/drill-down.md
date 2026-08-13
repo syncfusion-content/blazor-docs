@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Drill-down in Blazor TreeMap Component | Syncfusion®
-description: Checkout and learn here all the features about Drill-down in Blazor TreeMap component and much more details.
+title: Blazor TreeMap Drill-down | Syncfusion®
+description: Learn how to enable drill-down in the Blazor TreeMap with on-demand child loading, breadcrumb navigation, and an initial drill-in path.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Drill-down in Blazor TreeMap Component
+# Blazor TreeMap Drill-down
 
 The [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component supports drill-down to expose the hierarchy, achieved by clicking a node. If an item is clicked in the TreeMap, it will be moved to the next level or sub level hierarchy and returned back to the previous level by clicking the node.
 
