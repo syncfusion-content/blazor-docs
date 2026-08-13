@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Working with data in Blazor Chart Wizard Component | Syncfusion®
-description: Check out and learn here all about working with data in Blazor Chart Wizard component, it's elements and more.
+title: Blazor Chart Wizard Working with Data Examples | Syncfusion®
+description: Learn how to configure data sources, category fields, series fields, and chart types in Syncfusion Blazor Chart Wizard using ChartSettings.
 platform: Blazor
 control: Chart Wizard
 documentation: ug
 keywords: chart wizard, blazor, chart
 ---
 
-# Working with Data in Blazor Chart Wizard Component
+# Blazor Chart Wizard Working with Data
 
 The primary configuration for the chart wizard is provided via the `ChartSettings`. Key properties:
 
