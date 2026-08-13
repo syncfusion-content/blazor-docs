@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Accumulation Chart in Server App | Syncfusion
-description: Learn how to get started with the Blazor Accumulation Chart component in a Blazor Server app and create interactive data visualizations.
+title: Getting Started with Accumulation Chart in Server App | Syncfusion®
+description: Learn how to get started with Syncfusion Blazor Accumulation Chart in a Blazor Server app, including setup, NuGet packages, and first chart example.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Getting Started with Blazor Accumulation Chart in Blazor Server App
+# Getting Started with Blazor Accumulation Chart in Server App
 
 This section briefly explains how to include the [Blazor Accumulation Chart](https://www.syncfusion.com/blazor-components/blazor-charts) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
