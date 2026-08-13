@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Labels for Blazor Sankey Diagram | Syncfusion®
-description: Learn how to configure and customize labels in the Blazor Sankey Diagram to enhance data visualization.
+title: Blazor Sankey Diagram Labels | Syncfusion®
+description: Learn how to configure Blazor Sankey Diagram labels with SankeyLabelSettings to set visibility, color, font, size, weight, padding, and italic style.
 platform: Blazor
 control: Sankey
 documentation: ug
 ---
 
-# Labels in Blazor Sankey Diagram
+# Blazor Sankey Diagram Labels
 
 ## Overview
 
