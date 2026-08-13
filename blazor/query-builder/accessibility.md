@@ -60,7 +60,7 @@ The Blazor Query Builder’s accessibility levels are verified using [axe-core](
 
 The accessibility compliance of the Blazor Query Builder is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/querybuilder) in a new window to evaluate the accessibility of the Blazor Query Builder with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/query-builder.html" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/querybuilder" %}
 
 ## See also
 

@@ -135,12 +135,12 @@ Customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearanc
 
 Specifies the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_CssClass) name that can be appended with the root element of the MultiSelect. One or more custom CSS classes can be added to a MultiSelect.
 
-Some of the possible values are
+Some of the possible values are:
 
-* `e-success`, which denotes the component in success state that is added green color to the multiselect's input field.
-* `e-warning`, which denotes the component in warning state that is added orange color to the multiselect's input field.
-* `e-error`, which denotes the component in error state that is added red color to the multiselect's input field.
-* `e-outline`, which supports only in material theme.
+* `e-success`: applies a green color to the MultiSelect input field, indicating a success state.
+* `e-warning`: applies an orange color to the MultiSelect input field, indicating a warning state.
+* `e-error`: applies a red color to the MultiSelect input field, indicating an error state.
+* `e-outline`: supported only in the Material theme.
 
 {% highlight Razor %}
 
@@ -379,7 +379,7 @@ Clear the value programmatically by calling `ClearAsync()` on the component inst
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXLHDcXvfxtVhHBT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-![Blazor MultiSelect Dropdown with ClearAsync method](./images/style/blazor_multiselect_clearAsync-method.gif)
+![Blazor MultiSelect Dropdown with ClearAsync method](./images/style/blazor_multiselect_clearAsync-method.webp)
 
 ## Programmatically show and hide spinner
 
@@ -409,7 +409,7 @@ Move focus in and out programmatically by calling `FocusAsync()` and `FocusOutAs
 
 ## Popup opening on click
 
-Use the `OpenOnClick` property to control whether clicking the component opens the popup automatically. The default value is true.
+The dropdown popup opens automatically when the user clicks inside the input. To disable this behavior, set the [OpenOnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_OpenOnClick) property to `false`. The default value is `true`.
 
 {% highlight Razor %}
 

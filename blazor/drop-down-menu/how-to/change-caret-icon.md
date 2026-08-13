@@ -11,7 +11,7 @@ documentation: ug
 
 The caret icon in the Dropdown Menu component can be customized when the popup opens and closes by handling the [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_OnOpen) and [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_OnClose) events. These callbacks trigger before the popup is displayed or hidden, providing a convenient place to toggle CSS classes that adjust the caret appearance.
 
-In the following example, the up arrow is updated on popup close and down arrow is updated on popup open using the `OnOpen` and `OnClose` events by adding and removing `e-caret-up` class.
+In the following example, the `e-caret-up` class is added to the button on popup open and removed on popup close, rotating the caret icon 180° to point up while the popup is visible.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons

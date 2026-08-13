@@ -7,22 +7,23 @@ control: Toggle Switch Button
 documentation: ug
 ---
 
-# Change Blazor Toggle Switch Button state using toggle method
+# Change Blazor Toggle Switch Button state
 
-This section explains about how to toggle between the Toggle Switch Button states using [Toggle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) method.
+This section explains how to programmatically toggle the state of the Toggle Switch Button by flipping the value bound to the [Checked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfInputBase-1.html#Syncfusion_Blazor_Buttons_SfInputBase_1_Checked) property.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Buttons
 
-<SfSwitch @bind-Checked="isChecked" OffLabel="OFF" OnLabel="ON" Created="create" @ref="SwitchObj" TChecked="bool"></SfSwitch>
+<SfSwitch @bind-Checked="isChecked" OffLabel="OFF" OnLabel="ON" TChecked="bool"></SfSwitch>
+<br />
+<SfButton Content="Toggle Switch State" OnClick="ToggleState"></SfButton>
 
 @code{
     private bool isChecked = false;
-    SfSwitch<bool> SwitchObj;
-    private void create(object obj)
+    private void ToggleState()
     {
-        //SwitchObj.Toggle();
+        isChecked = !isChecked;
     }
 }
 
@@ -30,4 +31,4 @@ This section explains about how to toggle between the Toggle Switch Button state
 
 ![Changing Blazor Toggle Switch Button State](./../images/blazor-toggle-switch-button-state.webp)
 
-N> Switch triggers [OnChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) event on every state stage to perform custom operations.
+N> The Switch triggers the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event on every state change to perform custom operations.
