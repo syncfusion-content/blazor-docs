@@ -3,7 +3,7 @@ layout: post
 title: Blazor Stock Chart Series Types | Syncfusion®
 description: Learn how to render the Blazor Stock Chart with six series types — Line, Spline, Hilo, HiloOpenClose, Hollow Candle, and Candle — and switch them at runtime.
 platform: Blazor
-control: Stock Chart 
+control: Stock Chart
 documentation: ug
 ---
 

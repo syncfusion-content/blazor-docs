@@ -3,7 +3,7 @@ layout: post
 title: Blazor Stock Chart Events | Syncfusion®
 description: Learn how to handle Blazor Stock Chart events, including Loaded, OnPointClick, PointMoved, RangeChange, and mouse-event hooks.
 platform: Blazor
-control: Stock Chart 
+control: Stock Chart
 documentation: ug
 ---
 

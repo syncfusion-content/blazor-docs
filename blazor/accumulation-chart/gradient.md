@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Gradient in Blazor Accumulation Chart Component | Syncfusion®
-description: Checkout and learn about applying linear and radial gradients to Accumulation Charts in Blazor Charts and much more details.
+title: Blazor Accumulation Chart Gradient Fill Examples | Syncfusion®
+description: Learn how to apply linear or radial gradients in Syncfusion Blazor Accumulation Chart to add depth and modern color blending to series.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Gradient in Blazor Accumulation Chart Component
+# Blazor Accumulation Chart Gradient
 
 Gradients add depth and modern styling to charts by smoothly blending multiple colors. The Charts component supports two gradient types:
 
