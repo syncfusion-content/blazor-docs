@@ -10,7 +10,7 @@ documentation: ug
 
 # OData V4 Service in Blazor Data Grid
 
-The [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables seamless integration of the Grid with OData V4 services, facilitating efficient data fetching and manipulation. This guide provides detailed instructions for binding data and performing CRUD (Create, Read, Update, and Delete) actions using the `ODataV4Adaptor` in your Blazor DataGrid.
+The [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables seamless integration of the Grid with OData V4 services and supports efficient data fetching and manipulation. The guide provides detailed instructions for binding data and performing CRUD (Create, Read, Update, and Delete) operations with the `ODataV4Adaptor` in a Blazor DataGrid.
 
 ## Configuring an OData V4 Service
 
@@ -103,7 +103,7 @@ builder.Services.AddControllers().AddOData(
  
 **6. Create an API controller**
  
-Create an API controller (aka, **GridController.cs**) file under the **Controllers** folder within the `ODataV4Adaptor` project. This controller facilitates data communication with the Blazor DataGrid.
+Create an API controller file named **GridController.cs** under the **Controllers** folder in the `ODataV4Adaptor` project. The controller facilitates data communication with the Blazor DataGrid.
  
 ```csharp
  
@@ -149,9 +149,9 @@ app.MapControllers();
 
 **8. Run the application:**
 
-Run the application in Visual Studio. It will be hosted at the URL **https://localhost:xxxx**. 
+Run the application in Visual Studio. The app is hosted at a URL such as **https://localhost:xxxx**. The port number is reported in the Output window when the app starts and varies for each run.
 
-After running the application, you can verify that the server-side API controller successfully returns the order data at the URL **https://localhost:xxxx/odata/grid** (where **xxxx** represents the port number).
+After the app starts, verify that the server-side API controller returns the order data at **https://localhost:xxxx/odata/grid**. The value of **xxxx** matches the port shown in the Output window during startup.
 
 ![ODataV4Adaptor Data](../images/odatav4-adaptors-data.webp)
 
@@ -212,7 +212,7 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 
 To connect the Blazor DataGrid to an OData V4 service, use the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property to `Adaptors.ODataV4Adaptor`. Update the **Index.razor** file as follows.
 
-The `SfDataManager` offer multiple adaptor options to connect with remote databases based on an API service. Below is an example of the [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor), which works with an OData V4 API that returns data in the expected `value` and `@odata.context` format.
+The `SfDataManager` offers multiple adaptor options to connect with remote databases based on an API service. The following example shows the [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor), which works with an OData V4 API that returns data in the expected `value` and `@odata.context` format.
  
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -268,7 +268,7 @@ namespace ODataV4Adaptor.Controllers
  
 **5. Run the application**
  
-When you run the application, the Blazor DataGrid will display data fetched from the OData V4 service.
+When the application runs, the Blazor DataGrid displays data fetched from the OData V4 service.
 
 ![ODataV4Adaptor Data](../images/blazor-odatav4-adaptors.webp)
 
@@ -448,7 +448,7 @@ builder.Services.AddControllers().AddOData(
 
 ## Handling paging operation
 
-To implement paging operations in your web application using OData, you can utilize the `SetMaxTop` method within your OData setup to limit the maximum number of records that can be returned per request. While you configure the maximum limit, clients can utilize the **$skip** and **$top** query options in their requests to specify the number of records to skip and the number of records to take, respectively.
+To implement paging operations in an OData web application, use the `SetMaxTop` method to limit the number of records returned per request. After the limit is configured, clients can use the **$skip** and **$top** query options to specify the number of records to skip and the number of records to take.
 
 {% tabs %}
 {% highlight cs tabtitle="program.cs" %}
@@ -471,7 +471,7 @@ builder.Services.AddControllers().AddOData(
     options => options
     // Enables $count query option to retrieve total record count.
     .Count()
-    // Limits the maximum number of records returned using $top.
+    // Limits the number of records returned using $top.
     .SetMaxTop(recordCount)
     .AddRouteComponents(
         "odata",
@@ -505,7 +505,7 @@ builder.Services.AddControllers().AddOData(
 
 To manage CRUD (Create, Read, Update, and Delete) operations using the ODataV4Adaptor, follow the provided guide for configuring the DataGrid for [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) and utilize the sample implementation of the `GridController` in your server application. This controller handles HTTP requests for CRUD operations, including GET, POST, PATCH, and DELETE.
 
-To enable CRUD operations in the Grid within your application, follow these steps. In the example below, the inline edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) is enabled, and the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property is configured to display toolbar items for editing.
+To enable CRUD operations in the Grid within the application, follow these steps. In the example below, the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) is set to `EditMode.Inline`, and the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property displays the editing actions.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -528,7 +528,7 @@ To enable CRUD operations in the Grid within your application, follow these step
 {% endhighlight %}
 {% endtabs %}
 
-> Normal/Inline editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Grid. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
+> Normal/inline editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Grid. To enable CRUD operations, set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property to **true** for a specific Grid column and ensure that the database enforces uniqueness on that column.
 
 **Insert Record:**
 
@@ -576,7 +576,7 @@ Updating a record in the DataGrid can be achieved by utilizing the `HttpPatch` m
 /// </summary>
 /// <param name="key">The unique identifier of the order to be updated.</param>
 /// <param name="updateRecord">The object containing updated order values.</param>
-/// <returns>It returns the updated order details.</returns>
+/// <returns>Returns the updated order details.</returns>
 [HttpPatch("{key}")]
 public IActionResult Patch(int key, [FromBody] OrdersDetails updateRecord)
 {
