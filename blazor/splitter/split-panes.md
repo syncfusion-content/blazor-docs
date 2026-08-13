@@ -13,7 +13,7 @@ This section explains split-panes behaviors.
 
 ## Horizontal layout
 
-By default, splitter will be rendered in horizontal orientation. Splitter container will be split as panes in horizontal flow direction with vertical separator.
+By default, the Splitter is rendered in horizontal orientation. The Splitter container is split into panes in a horizontal flow direction with a vertical separator.
 
 ```cshtml
 

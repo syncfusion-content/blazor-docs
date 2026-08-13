@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Charts in Blazor WASM App | Syncfusion
-description: Check out and learn about getting started with the Blazor Charts in Blazor WebAssembly (WASM) App using Visual Studio and more.
+title: Getting Started with Blazor Charts in WASM App | Syncfusion®
+description: Learn how to get started with Syncfusion Blazor Charts in a Blazor WebAssembly standalone app. Explore setup, packages, and first chart example.
 platform: Blazor
 control: Charts
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD040 -->
 
-# Getting Started with Blazor Charts Component in Blazor WASM App
+# Getting Started with Blazor Charts in WASM App
 
 This section briefly explains how to include the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
