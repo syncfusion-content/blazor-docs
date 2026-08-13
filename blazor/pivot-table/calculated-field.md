@@ -208,7 +208,7 @@ To format calculated field values in your code, use the [PivotViewFormatSettings
 
 To apply formatting to calculated field values via the user interface, use the built-in "Format" dropdown available in the calculated field dialog. This dropdown provides the following predefined format options:
 
-* **Standard** - Displays numbers in their basic numeric form.
+* **Standard** - Displays numbers using the default numeric format (equivalent to the `N` format).
 * **Currency** - Displays numbers as currency values.
 * **Percentage** - Displays numbers as percentage values.
 * **Custom** - Denotes the custom format. For example: "C2". This shows the value "9584.3" as "$9584.30."
@@ -255,7 +255,7 @@ Syntax: X / Y
 * `^` – power operator.
 
 ```typescript
-Syntax: X^2
+Syntax: X^Y
 ```
 
 * `<` - less than operator.
@@ -309,7 +309,7 @@ Syntax: X & Y
 * `?` – conditional operator.
 
 ```typescript
-Syntax: condition ? then : else
+Syntax: condition ? valueIfTrue : valueIfFalse
 ```
 
 * `Min` – function that returns the minimum value.
@@ -367,6 +367,8 @@ Syntax: Max(number1, number2)
 ![Blazor PivotTable woth Conditional Calculate Field](images/blazor-pivottable-conditional-calculated-field.webp)
 
 ## Event
+
+The Pivot Table provides the following events to monitor calculated field operations. Each event lets you track, validate, or intercept a specific stage of the user interaction lifecycle.
 
 ### CalculatedFieldCreate
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Pivot Table
 
-The pivot table component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The pivot table component follows accessibility guidelines, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the pivot table component is outlined below.
 
@@ -43,10 +43,11 @@ The pivot table component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/ap
 | Attributes | Purpose |
 | --- | --- |
 | `role=grid` | Attribute added to identify the grid component element within the pivot table element. |
-| `role=region` | Attribute added to identify the chart component element within the pivot table element. |
+| `role=region` | Attribute added to identify the chart component element within the pivot table element. The region must have an accessible name (for example, via `aria-label`) to be exposed as a landmark. |
 | `role=button` | This attribute is added to the pager navigation buttons as well as the buttons in the dialog popup such as field list, calculated field, member editor, conditional formatting of pivot table component to indicate that it is a clickable element. |
 | `role=table` | This attribute is added to each conditional formatting style container element to denote it as a table. |
 | `role=tableItems` | This attribute is added to the container element that appears inside the number formatting popup to indicate it as a table. |
+| `role=rowgroup` | This attribute is added to the container element that appears inside the number formatting popup to indicate it as a row group. |
 | `aria-disabled` | The buttons within the dialog popups, such as field list, calculated field and member editor, will be disabled based on their usability. To indicate its disabled state, we will add this attribute with the values `true`. By default, the attribute value is set to `false`. |
 | `aria-label` | This attribute is added to label elements that are placed inside the pager, member editor popup, and calculated field popup to identify them as label elements. |
 | `aria-selected` | This attribute is added to the selected treeview item in the calculated field popup with the value as `true` to denote that it is a selected element. |
@@ -63,11 +64,25 @@ The pivot table component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/ap
 | `data-formatString` | This attribute is added to the treeview item in the calculated field popup. It denotes the format string used for the specified calculated field. |
 | `data-customformatstring` | This attribute is added to the treeview item in the calculated field popup. It denotes the custom format string used for the specified calculated field. |
 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table internally uses the Syncfusion Grid component, which follows a two‑table structure for header and content rendering. This improves screen reader interpretation but may trigger warnings in automated accessibility tools. These issues occur due to the underlying grid rendering. These warnings do not necessarily affect actual assistive-technology usability. The following categories of warnings have been observed in [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) reports:
+
+* **aria-required-children** *(axe-core)*: Triggered when the grid renders certain feature elements (for example, textarea or toolbar content). It may be reported when toolbar or grouping features are enabled.
+
+* **color-contrast** *(axe-core)*: Triggered when the toolbar search item or custom styles reduce text contrast below WCAG thresholds.
+
+* **Content not within a landmark element** *(axe-core)*: Major page regions should be wrapped in landmark roles (for example, `region` with an accessible name).
+
+* **Multiple elements with `role="search"` without unique labels** *(axe-core)*: Each `search` landmark must have a unique accessible name.
+
+* **Interactive component with `role="grid"` missing an accessible name** *(axe-core)*: The grid must have a programmatically associated name (for example, via `aria-label` or `aria-labelledby`).
+
 ## Keyboard Navigation
 
 The pivot table component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the pivot table component.
 
 ### Pivot Table
+
+> **Prerequisites:** Cell-selection shortcuts (`Ctrl + A`, `Esc`, `Shift + Arrow`) require `AllowSelection` to be enabled. Drill-through requires `AllowDrillThrough` to be enabled. Hyperlink activation requires `PivotViewHyperlinkSettings` to be configured. The context-menu shortcut requires the context menu to be enabled. By default, the WAI-ARIA grid pattern uses `Tab` to leave the grid and arrow keys for in-grid navigation; the Syncfusion Pivot Table extends this behavior so `Tab` and `Shift + Tab` also move between cells when no cells are focused.
 
 | Windows | Mac | Actions |
 | ----- | ----- | ----- |
@@ -210,7 +225,9 @@ The pivot table component followed the [keyboard interaction](https://www.w3.org
 | <kbd>Insert</kbd> | <kbd>Insert</kbd> | Adds a new row/cell in the data grid. |
 | <kbd>Delete</kbd> | <kbd>Delete</kbd> | Removes the selected row in the data grid. |
 
-Some commonly used applicable key combinations and their relative functionalities in all dialogs are listed below.
+### Common keyboard combinations for dialogs
+
+The following shortcuts apply to all Pivot Table dialogs (filter, calculated field, formatting, drill-through, and so on).
 
 | Windows | Mac | Actions |
 | ----- | ----- | --- |
@@ -228,4 +245,5 @@ The accessibility compliance of the pivot table component is shown in the follow
 
 ## See also
 
-* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility) — Cross-component accessibility guidance that applies to all Syncfusion Blazor controls.
+* [Globalization in Blazor Pivot Table](https://blazor.syncfusion.com/documentation/common/globalization) — Configure RTL, culture, and localization settings, which affect accessibility for non-English users.

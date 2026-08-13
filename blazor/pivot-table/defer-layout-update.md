@@ -59,7 +59,7 @@ To enable deferred updates in the pivot table, set the property [AllowDeferLayou
 
 The field list can be rendered in a static position anywhere in the web page layout, functioning as a separate component. To achieve this, set the [RenderMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html#Syncfusion_Blazor_PivotView_SfPivotFieldList_1_RenderMode) property to [Mode.Fixed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Mode.html) in [SfPivotFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html).
 
-To enable deferred updates in the static fieldlist, set the [AllowDeferLayoutUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html#Syncfusion_Blazor_PivotView_SfPivotFieldList_1_AllowDeferLayoutUpdate) property to **true** in [SfPivotFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html). Note that the defer update option can be controlled only via Field List during runtime.
+To enable deferred updates in the static field list, set the [AllowDeferLayoutUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html#Syncfusion_Blazor_PivotView_SfPivotFieldList_1_AllowDeferLayoutUpdate) property to **true** in [SfPivotFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html). Note that the defer update option can be controlled only via Field List during runtime.
 
 N> To make the field list interact with the pivot table, use the **UpdateViewAsync** and **UpdateAsync** methods to synchronize data source updates between both the field list and pivot table components simultaneously.
 
@@ -118,5 +118,11 @@ N> To make the field list interact with the pivot table, use the **UpdateViewAsy
 ```
 
 ![Blazor PivotTable with Defer Static Update](images/blazor-pivottable-defer-static-update.webp)
+
+## See also
+
+* [Field List](https://blazor.syncfusion.com/documentation/pivot-table/field-list)
+* [Grouping Bar](https://blazor.syncfusion.com/documentation/pivot-table/grouping-bar)
+* [Data binding](https://blazor.syncfusion.com/documentation/pivot-table/data-binding)
 
 N> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.
