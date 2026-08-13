@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Blazor Chart Wizard Component | Syncfusion®
-description: Check out and learn here all about accessibility using keyboard navigation in Blazor Chart Wizard component and more.
+title: Blazor Chart Wizard Accessibility Examples | Syncfusion®
+description: Learn about accessibility in Syncfusion Blazor Chart Wizard with keyboard navigation, screen reader support, and WCAG 2.2 compliance.
 platform: Blazor
 control: Chart Wizard
 documentation: ug
 keywords: chart wizard, blazor, accessibility
 ---
 
-# Accessibility in Blazor Chart Wizard Component
+# Blazor Chart Wizard Accessibility
 
 The Blazor Chart Wizard component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
