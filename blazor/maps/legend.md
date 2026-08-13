@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Legend in Blazor Maps Component | Syncfusion®
-description: Check out and learn how to configure and customize legends in the Blazor Maps component for effective data visualization.
+title: Blazor Maps Legend Support | Syncfusion®
+description: Learn how to add Default or Interactive legends to Blazor Maps to identify shape, bubble, or marker colors and surface exact range values on hover.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Legend in Blazor Maps Component
+# Blazor Maps Legend Support
 
 A legend visually explains the symbols used on Maps. It uses colors, shapes, or other identifiers based on the data and helps interpret what the Maps display. Enable legends by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) to **true**.
 
