@@ -3,7 +3,7 @@ layout: post
 title: Getting Started with Blazor Stock Chart in WebAssembly | Syncfusion
 description: Learn how to add the Blazor Stock Chart to a Blazor WebAssembly App using Visual Studio, VS Code, or the .NET CLI.
 platform: Blazor
-component: Stock Chart
+control: Stock Chart
 documentation: ug
 ---
 
