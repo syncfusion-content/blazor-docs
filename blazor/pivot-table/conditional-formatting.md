@@ -249,7 +249,7 @@ To apply conditional formatting exclusively to a particular value field, set the
 
 ## Editing and removing existing conditional format
 
-Editing and removing existing conditional format can be done through the UI at runtime. To do so, open the conditional formatting dialog and edit the "Value", "Condition" and "Format" options based on user requirement and click "OK". To remove a conditional format, click the "Delete" icon besides the respective condition.
+Editing and removing existing conditional format can be done through the UI at runtime. To do so, open the conditional formatting dialog and edit the **Value**, **Condition** and **Format** options based on user requirement and click **OK**. To remove a conditional format, click the **Delete** icon besides the respective condition.
 
 ![Editing Existed Conditional Format in Blazor Pivot Table](images/blazor-pivottable-edit-conditional-format.webp)
 
