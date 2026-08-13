@@ -389,4 +389,10 @@ The [`OnActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 ```
 
+## See also
+
+* [Drill through](https://blazor.syncfusion.com/documentation/pivot-table/drill-through)
+* [Row and column](https://blazor.syncfusion.com/documentation/pivot-table/row-and-column)
+* [Aggregation](https://blazor.syncfusion.com/documentation/pivot-table/aggregation)
+
 N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.
