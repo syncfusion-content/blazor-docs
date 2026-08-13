@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Spline in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Spline Chart in Blazor Charts component and much more.
+title: Blazor Spline Chart Examples and Documentation | Syncfusion®
+description: Learn how to create Blazor Spline Charts using Syncfusion. Connect data points with smooth curves for visually continuous trends over time.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Spline in Blazor Charts Component
+# Spline Chart in Blazor
 
 ## Spline
 

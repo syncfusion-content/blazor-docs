@@ -11,7 +11,7 @@ documentation: ug
 
 ## Collapsible panes
 
-The Splitter panes can be configured with built-in expand and collapse functionalities. By default, the collapsible behavior is disabled. Enable the `Collapsible` behavior in the SplitterPane property to show or hide the expand or collapse icons in the panes. The panes can be dynamically expanded and collapsed by the corresponding icons.
+The Splitter panes can be configured with built-in expand and collapse functionalities. By default, the collapsible behavior is disabled. Enable the `Collapsible` behavior on the `SplitterPane` to show or hide the expand or collapse icons in the panes. The panes can be dynamically expanded and collapsed by the corresponding icons.
 
 The following code shows how to enable collapsible behavior.
 

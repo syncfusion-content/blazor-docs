@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Axis Customization in Blazor 3D Chart Component | Syncfusion®
-description: Checkout and learn here all features about Axis Customization in Blazor 3D Chart component and more.
+title: Blazor 3D Chart Axis Customization Examples | Syncfusion®
+description: Learn how to customize axes in Syncfusion Blazor 3D Chart, including Title, Chart3DAxisTitleStyle, and axis label styling options.
 platform: Blazor
 control: 3D Chart
 documentation: ug
 ---
 
-# Axis Customization in Blazor 3D Chart Component
+# Blazor 3D Chart Axis Customization
 
 ## Title
 

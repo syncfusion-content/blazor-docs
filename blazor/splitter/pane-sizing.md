@@ -9,7 +9,7 @@ documentation: ug
 
 # Pane Sizing in Blazor Splitter Component
 
-Splitter allows to provide pane sizes either in `Pixel` or `Percentage` formats.
+The Splitter allows you to provide pane sizes in either `Pixel` or `Percentage` formats.
 
 ## Auto size panes
 
@@ -17,7 +17,7 @@ The splitter's panes are adjusted automatically during resizing if the size is n
 
 ```cshtml
 
-using Syncfusion.Blazor.Layouts
+@using Syncfusion.Blazor.Layouts
 
 <SfSplitter Height="200px" Width="600px">
     <SplitterPanes>
