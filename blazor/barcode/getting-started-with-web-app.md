@@ -183,7 +183,7 @@ N> Register your Syncfusion license key before calling `AddSyncfusionBlazor()` b
 
 ## Add Script Resources
  
-The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~/Components/App.razor** file.
+Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~/Components/App.razor** file.
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
