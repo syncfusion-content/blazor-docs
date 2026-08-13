@@ -44,7 +44,7 @@ The steps below will assist you to create your **Syncfusion® Blazor Application
     <tbody>
     <tr>
     <td>
-    <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes" rel="nofollow">Interactivity type</a>
+    <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes" rel="nofollow" aria-label="Interactive render mode">Interactivity type</a>
     </td>
     <td>
     Server, WebAssembly, Auto (Server and WebAssembly)
@@ -52,7 +52,7 @@ The steps below will assist you to create your **Syncfusion® Blazor Application
     </tr>
     <tr>
     <td>
-    <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows" rel="nofollow">Interactivity location</a>
+    <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows" rel="nofollow" aria-label="Interactive render mode">Interactivity location</a>
     </td>
     <td>
     Global, Per page/component

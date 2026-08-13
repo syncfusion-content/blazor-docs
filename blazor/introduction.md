@@ -418,8 +418,8 @@ padding-top: 20px;
 <tr>
     <td>
         <div><p class="controlcategory-topics">GRIDS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/datagrid/getting-started"><span class="sf-home-icon sf-icon-datagrid"></span>DataGrid</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/pivot-table/getting-started"><span class="sf-home-icon sf-icon-pivottable"></span>Pivot Table</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/datagrid/getting-started" aria-label="Blazor DataGrid Component"><span class="sf-home-icon sf-icon-datagrid"></span>DataGrid</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/pivot-table/getting-started" aria-label="Blazor Pivot Table Component"><span class="sf-home-icon sf-icon-pivottable"></span>Pivot Table</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treegrid/getting-started"><span class="sf-home-icon sf-icon-treegrid"></span>TreeGrid</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/multicolumn-combobox/getting-started"><span class="sf-home-icon sf-icon-multicolumn-combobox"></span>Multicolumn ComboBox</a></div>
         <div><p class="controlcategory">FILE VIEWERS & EDITORS</p></div>
