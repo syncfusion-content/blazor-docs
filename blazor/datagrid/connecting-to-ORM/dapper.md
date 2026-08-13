@@ -95,7 +95,7 @@ After executing this script, the reservation records are stored in the `Rooms` t
 
 ### Step 2: Install Required NuGet Packages
 
-Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template.
+Create a new Blazor Web Application using the default template before installing the NuGet packages.
 This template automatically generates essential starter files—such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
 
 For this guide, a Blazor application named **Grid_Dapper** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the application. These packages enable Dapper and SQL Server integration.
@@ -215,7 +215,7 @@ namespace Grid_Dapper.Data
 ```
 
 **Explanation:**
-- The `[Key]` attribute marks the `Id` property as the primary key (a unique identifier for each record).
+- The `[Key]` attribute (from `System.ComponentModel.DataAnnotations`) marks the `Id` property as the primary key.
 - Each property represents a column in the database table.
 - The `?` symbol indicates that a property is nullable (can be empty).
 - XML documentation comments describe each property's purpose.
@@ -254,7 +254,7 @@ A connection string contains the information needed to connect the application t
 | Initial Catalog | The database name (in this case, `HotelBookingDB`) |
 | Integrated Security | Set to `True` for Windows Authentication; use `False` with Username/Password for SQL Authentication |
 | Connect Timeout | Connection timeout in seconds (default is 15) |
-| Encrypt | Enables encryption for the connection (set to `True` for production environments) |
+| Encrypt | Enables encryption for the connection. For production environments, set to `True` with a valid certificate. |
 | Trust Server Certificate | Whether to trust the server certificate (set to `False` for security) |
 | Application Intent | Set to `ReadWrite` for normal operations or `ReadOnly` for read-only scenarios |
 | Multi Subnet Failover | Used in failover clustering scenarios (typically `False`) |
@@ -349,7 +349,7 @@ The repository class manages all interactions with the database and is now ready
 
 ### Step 6: Register Services in Program.cs
 
-The `Program.cs` file is where application services are registered and configured. This file must be updated to enable Dapper and the repository pattern.
+The `Program.cs` file registers and configures application services. Update this file to enable Dapper and the repository pattern.
 
 **Instructions:**
 
