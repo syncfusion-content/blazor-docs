@@ -193,13 +193,11 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 
 <body>
     ....
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    <script src="_content/Syncfusion.Blazor.BarcodeGenerator/scripts/sf-barcode.min.js" type="text/javascript"></script>
 </body>
 
 {% endhighlight %}
 {% endtabs %}
-
-N> After adding the stylesheet and script references, rebuild the project so that the static web assets from the NuGet packages are restored to the `wwwroot/_content/` folder.
 
 ## Add Blazor Barcode Generator component
 
