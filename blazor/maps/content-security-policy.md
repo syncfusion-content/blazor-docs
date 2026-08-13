@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Maps - Strict CSP Feature Limitations | Syncfusion®
-description: Details on features in Blazor Maps Component that require Content Security Policy (CSP) relaxation and much more details.
+title: Blazor Maps Content Security Policy | Syncfusion®
+description: Learn how Blazor Maps features interact with strict Content Security Policy and which features require style-src 'unsafe-inline'.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Maps - Content Security Policy Limitations
+# Blazor Maps Content Security Policy
 
 ## What's supported under strict CSP ?
 
