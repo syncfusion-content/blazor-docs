@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Get Started with Sankey Diagram in Blazor Server App | Syncfusion
-description: Check out and learn about getting started with Blazor Sankey diagram in Blazor Server App using Visual Studio and more.
+title: Getting Started with Blazor Sankey Diagram | Syncfusion®
+description: Learn how to add the Blazor Sankey Diagram to a Blazor Server App by installing the Sankey NuGet package, importing namespaces, and registering services.
 platform: Blazor
 control: Sankey
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD040 -->
 
-# Getting Started with Blazor Sankey Diagram in Blazor Server App
+# Getting Started with Blazor Sankey Diagram in Server App
 
 This section briefly explains about how to include [Blazor Sankey Diagram](https://www.syncfusion.com/blazor-components/blazor-sankey) in your Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
