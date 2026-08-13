@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Polygon shape in Blazor Maps Component | Syncfusion®
-description: Check out and learn how to add, configure and customize polygon shape in the Blazor Maps component and much more details.
+title: Blazor Maps Polygon Support | Syncfusion®
+description: Learn how to render polygon shapes over geometry or online maps in Blazor Maps using MapsPolygon points, fill, border, and opacity.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Polygon shape in Blazor Maps Component
+# Blazor Maps Polygon Support
 
 The Maps component supports adding polygon shapes to a geometry map or an online map using the properties of the [MapsPolygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html) tag. This section explains how to add polygon shapes to the map and customize them.
 
