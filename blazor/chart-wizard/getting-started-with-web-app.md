@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Chart Wizard in Web App | Syncfusion
-description: Check out and learn about the documentation for getting started with Blazor Chart Wizard Component in Blazor Web App.
+title: Getting Started with Blazor Chart Wizard in Web App | Syncfusion®
+description: Learn how to get started with Syncfusion Blazor Chart Wizard in a Blazor Web App, including server and client setup, packages, and first chart.
 platform: Blazor
 control: Chart Wizard
 documentation: ug
