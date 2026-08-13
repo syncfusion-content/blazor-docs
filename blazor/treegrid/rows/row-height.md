@@ -9,9 +9,8 @@ documentation: ug
 
 # Row Height in Blazor TreeGrid
 
-The row height of tree grid rows can be customized through the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_RowHeight) property. The `RowHeight` property changes the row height of the entire tree grid rows.
+The row height of treegrid rows can be customized through the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_RowHeight) property. The `RowHeight` property changes the row height of the entire treegrid rows.
 
-In the below example, the **RowHeight** is set as *60px*.
 
 {% tabs %}
 
@@ -79,9 +78,8 @@ public class TreeData
 
 ## Customize row height for particular row
 
-The row height for a particular row can be customized using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDataBound) event by adding `row-height` custom class in required row element.
+The row height for a particular row can be customized using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDataBound) event by adding `row-height` custom class in required row element. The `RowDataBound` event fires after each row is bound to data during component rendering, enabling dynamic styles to be applied to individual rows based on row data.
 
-In the below example, the row height for the row with TaskId as '3' is set as '90px' using the `RowDataBound` event.
 
 {% tabs %}
 
@@ -108,7 +106,6 @@ In the below example, the row height for the row with TaskId as '3' is set as '9
 
 @code{
     public List<TreeData.BusinessObject> TreeGridData { get; set; }
-    public EventCallback<RowDataBoundEventArgs<TreeData.BusinessObject>> RowDataBound { get; set; }
     protected override void OnInitialized()
     {
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
@@ -160,4 +157,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Customizing Specific Row Height in Blazor Tree Grid](../images/blazor-treegrid-specific-row-height-customization.webp)
+![Customizing Specific Row Height in Blazor TreeGrid](../images/blazor-treegrid-specific-row-height-customization.webp)
