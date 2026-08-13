@@ -1,13 +1,13 @@
 ---
 layout: post
-title: OpenStreetMap in Blazor Maps Component | Syncfusion®
-description: Check out and learn here all the features about OpenStreetMap in Blazor Maps component and much more details.
+title: Blazor Maps OpenStreetMap Provider | Syncfusion®
+description: Learn how to render free OpenStreetMap tiles in Blazor Maps by setting UrlTemplate to the OSM tile server URL with markers and lines.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# OpenStreetMap in Blazor Maps Component
+# Blazor Maps OpenStreetMap Provider
 
 OpenStreetMap (OSM) is a collaborative map provider that offers free, openly licensed map tiles. It serves small tile images based on requests and combines them to render the visible map area in the Maps component.
 
