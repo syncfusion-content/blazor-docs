@@ -3,7 +3,7 @@ layout: post
 title: Blazor Stock Chart Legend | Syncfusion®
 description: Learn how to show a legend on the Blazor Stock Chart at Left, Right, Top, Bottom, or Custom position to identify each series.
 platform: Blazor
-control: Stock Chart 
+control: Stock Chart
 documentation: ug
 ---
 

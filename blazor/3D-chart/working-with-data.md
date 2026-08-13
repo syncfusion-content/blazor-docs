@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Working with Data in Blazor 3D Chart Component | Syncfusion®
-description: Checkout and learn here all features about working with data in Blazor 3D Chart component, it's elements and more.
+title: Blazor 3D Chart Working with Data Examples | Syncfusion®
+description: Learn how to bind data to Syncfusion Blazor 3D Chart using SfDataManager, RESTful JSON services, or IEnumerable with code samples.
 platform: Blazor
 control: 3D Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Working with Data in Blazor 3D Chart Component
+# Blazor 3D Chart Working with Data
 
 The 3D Chart uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart3D.Chart3DSeries.html#Syncfusion_Blazor_Chart3D_Chart3DSeries_DataSource) value can be set using either [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) property values or a list of business objects.
 
