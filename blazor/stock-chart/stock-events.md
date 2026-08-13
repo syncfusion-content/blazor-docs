@@ -3,7 +3,7 @@ layout: post
 title: Blazor Stock Chart Stock Events | Syncfusion®
 description: Learn how to mark notable dates on the Blazor Stock Chart with stock events using custom text, flag shapes, colors, and descriptions.
 platform: Blazor
-control: Stock Chart 
+control: Stock Chart
 documentation: ug
 ---
 

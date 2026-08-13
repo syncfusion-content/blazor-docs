@@ -3,7 +3,7 @@ layout: post
 title: Blazor Stock Chart Trendlines | Syncfusion®
 description: Learn how to add trendlines to the Blazor Stock Chart — Linear, Exponential, Logarithmic, Polynomial, Power, or Moving Average.
 platform: Blazor
-control: Stock Chart 
+control: Stock Chart
 documentation: ug
 ---
 

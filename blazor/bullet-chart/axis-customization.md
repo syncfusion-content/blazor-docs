@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Axis Customization in Blazor Bullet Chart Component | Syncfusion®
-description: Checkout and learn here all features about Axis Customization in Blazor Bullet Chart component and more.
+title: Blazor Bullet Chart Axis Customization Examples | Syncfusion®
+description: Learn how to customize the axis in Syncfusion Blazor Bullet Chart, including major and minor tick lines, labels, and range colors.
 platform: Blazor
-control: Bullet Chart 
+control: Bullet Chart
 documentation: ug
 ---
 
-# Axis Customization in Blazor Bullet Chart Component
+# Blazor Bullet Chart Axis Customization
 
 ## MajorTickLines and MinorTickLines Customization
 
