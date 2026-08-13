@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor Sparkline Component | Syncfusion®
-description: Check out and learn about globalization support in the Blazor Sparkline component for better adaptability.
+title: Blazor Sparkline Charts Globalization Examples | Syncfusion®
+description: Learn how to use globalization in Syncfusion Blazor Sparkline to format numbers, dates, and times for different cultures.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Globalization in Blazor Sparkline Component
+# Blazor Sparkline Charts Globalization
 
 Globalization is the process of designing and developing a component to work in different cultures or locations. In the Sparkline component, the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Format) property is used to globalize number, date, and time values. The following example shows the tooltip globalized to currency format in the Deutsch culture.
 
