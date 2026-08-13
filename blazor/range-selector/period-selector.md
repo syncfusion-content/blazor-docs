@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Range Selector Period Selector Examples | Syncfusion®
+title: Blazor Range Selector Period Selector Guide | Syncfusion®
 description: Learn how to configure the period selector in Syncfusion Blazor Range Selector to let users choose time ranges with pre-defined intervals.
 platform: Blazor
 control: Range Selector
