@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Grouping in Blazor Accumulation Chart Component | Syncfusion®
-description: Checkout and learn here all about Grouping in Blazor Accumulation Chart component and much more details.
+title: Blazor Accumulation Chart Grouping Examples | Syncfusion®
+description: Learn how to group small slices in Syncfusion Blazor Accumulation Chart with GroupMode and GroupTo properties.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Grouping in Blazor Accumulation Chart Component
+# Blazor Accumulation Chart Grouping
 
 The value set to the [GroupTo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GroupTo) property can be used to club/group a few points in the series. Points with a value less than [GroupTo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GroupTo) are grouped together and displayed as a single point with the label **Others**. In addition, the property value can be set in percentage (percentage of total data points value).
 

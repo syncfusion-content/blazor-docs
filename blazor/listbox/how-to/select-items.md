@@ -9,7 +9,9 @@ documentation: ug
 
 # Select Items in Blazor ListBox Component
 
-This example shows how to programmatically select items using the [SelectItemsAsync method](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_SelectItemsAsync__1___0_System_Boolean_). The first parameter accepts the value or values to select, and the second parameter specifies the selection state: set it to true to select the specified items, or false to deselect them. Selection is triggered in the Created event to ensure the component is initialized. The `TValue` is `string[]`, which enables multiple selection. Values that do not match any items are ignored.
+Use the [SelectItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_SelectItemsAsync__1___0_System_Boolean_) method to programmatically select or deselect items in the Blazor ListBox. The first parameter accepts the value or values to act on, and the second parameter specifies the selection state: set it to `true` to select the items, or `false` to deselect them.
+
+In the following example, selection is triggered from the `Created` event to ensure the component is fully initialized before the method is called. The `TValue` is `string[]`, which enables multiple selection. Values that do not match any item are silently ignored and no exception is thrown.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -46,3 +48,10 @@ This example shows how to programmatically select items using the [SelectItemsAs
 ```
 
 ![Selecting items in the Blazor ListBox](./../images/blazor-listbox-item-selection.webp)
+
+## See also
+
+* [Get Items in Blazor ListBox](./get-items.md)
+* [Bind Change Events in Blazor ListBox](./bind-change-event.md)
+* [Add or Remove Items in Blazor ListBox](./add-items.md)
+* [Data Binding in Blazor ListBox](./../data-binding.md)
