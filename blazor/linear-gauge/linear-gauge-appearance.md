@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor Linear Gauge Component | Syncfusion®
-description: Checkout and learn here all the features about appearance in Blazor Linear Gauge component and much more.
+title: Blazor Linear Gauge Appearance | Syncfusion®
+description: Learn how to customize the Blazor Linear Gauge appearance with background, border, margin, title styling, and container shapes.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Appearance in Blazor Linear Gauge Component
+# Blazor Linear Gauge Appearance
 
 ## Customizing the Linear Gauge area
 

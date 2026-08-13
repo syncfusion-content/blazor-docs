@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor ProgressBar in WASM App | Syncfusion
-description: Check out and learn here all about getting started with Blazor ProgressBar in Blazor WebAssembly Application.
+title: Getting Started with Blazor ProgressBar in WASM App | Syncfusion®
+description: Learn how to get started with Syncfusion Blazor ProgressBar in a Blazor WebAssembly app, including setup, packages, and first chart.
 platform: Blazor
 control: ProgressBar
 documentation: ug
