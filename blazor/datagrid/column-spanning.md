@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Blazor Grid Column Spanning | Syncfusion
 description: Learn how to use column spanning in Blazor Data Grid to merge adjacent cells, create custom layouts, and improve data presentation.
@@ -81,7 +81,7 @@ public class EmployeeDetails
         this.EmployeeID = employeeid;
         this.EmployeeName = employeename;
         this.Time_9_00 = time_9_00;
-        this.Time_9_00 = time_9_30;
+        this.Time_9_30 = time_9_30;
         this.Time_10_00 = time_10_00;
         this.Time_10_30 = time_10_30;
         this.Time_11_00 = time_11_00;
@@ -350,9 +350,9 @@ public class EmployeeDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtrxjctipobPdORK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Disable column spanning for specific column
+## Disable column spanning for specific columns
 
-Column spanning in Blazor DataGrid can be disabled for a specific column(s) by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoSpan) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to **AutoSpanMode.None**. This configuration provides precise control, enabling automatic spanning across the grid while excluding column(s) where merging is not required.
+Column spanning in Blazor DataGrid can be disabled for specific columns by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoSpan) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to **AutoSpanMode.None**. This configuration provides precise control, enabling automatic spanning across the grid while excluding columns where merging is not required.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -410,7 +410,7 @@ public class EmployeeDetails
         this.EmployeeID = employeeid;
         this.EmployeeName = employeename;
         this.Time_9_00 = time_9_00;
-        this.Time_9_00 = time_9_30;
+        this.Time_9_30 = time_9_30;
         this.Time_10_00 = time_10_00;
         this.Time_10_30 = time_10_30;
         this.Time_11_00 = time_11_00;
@@ -707,16 +707,15 @@ The effective spanning behavior in the Blazor DataGrid is determined by the inte
 
 In addition to automatic cell merging, the Blazor DataGrid provides API support for manually merging cells when custom layout behavior is required. This functionality is available through the [MergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_MergeCellsAsync_Syncfusion_Blazor_Grids_MergeCellInfo_) method, which enables the definition of rectangular regions of cells to be merged programmatically.
 
-Use [MergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_MergeCellsAsync_Syncfusion_Blazor_Grids_MergeCellInfo_) method to manually merge cells by defining rectangular regions. This method supports both single and batch merging, allowing precise control over layout customization when automatic spanning is insufficient.
+Use [MergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_MergeCellsAsync_Syncfusion_Blazor_Grids_MergeCellInfo_) to manually merge cells by defining rectangular regions. This method supports both single and batch merging, allowing precise control over layout customization when automatic spanning is insufficient.
 
 The [MergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_MergeCellsAsync_Syncfusion_Blazor_Grids_MergeCellInfo_) method is overloaded, meaning multiple versions of the same method name exist, but each accepts different parameter types to handle different use cases. This approach provides flexibility while maintaining a consistent API design.
-
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | info | [MergeCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.MergeCellInfo.html) | Defines a single rectangular cell region to be merged. |
 | infos | [IEnumerable&lt;MergeCellInfo&gt;](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_MergeCellsAsync_System_Collections_Generic_IEnumerable_Syncfusion_Blazor_Grids_MergeCellInfo__) | Specifies multiple cell regions to be merged in a batch operation. Each region is defined by a [MergeCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.MergeCellInfo.html) instance. |
 
-To define a merged region, use the following properties of the [MergeCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.MergeCellInfo.html) class,
+To define a merged region, use the following properties of the [MergeCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.MergeCellInfo.html) class:
 
 | Property     | Type | Description                                                                 |
 |--------------|------|-----------------------------------------------------------------------------|
@@ -805,7 +804,7 @@ public class EmployeeDetails
         this.EmployeeID = employeeid;
         this.EmployeeName = employeename;
         this.Time_9_00 = time_9_00;
-        this.Time_9_00 = time_9_30;
+        this.Time_9_30 = time_9_30;
         this.Time_10_00 = time_10_00;
         this.Time_10_30 = time_10_30;
         this.Time_11_00 = time_11_00;
@@ -1199,7 +1198,7 @@ public class EmployeeDetails
         this.EmployeeID = employeeid;
         this.EmployeeName = employeename;
         this.Time_9_00 = time_9_00;
-        this.Time_9_00 = time_9_30;
+        this.Time_9_30 = time_9_30;
         this.Time_10_00 = time_10_00;
         this.Time_10_30 = time_10_30;
         this.Time_11_00 = time_11_00;
@@ -1470,7 +1469,7 @@ public class EmployeeDetails
 
 ## Limitations
 
-The Column spanning is not compatible with the following features:
+Column spanning is not compatible with the following features:
 
 1. AutoFill.
 2. Detail-Template.
