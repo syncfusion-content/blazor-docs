@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Mention Component | Syncfusion®
-description: Checkout and learn here all the features about accessibility in Blazor Mention component and much more details. 
+title: Accessibility in Blazor Mention | Syncfusion
+description: Learn how Blazor Mention supports accessibility standards including ARIA attributes, keyboard navigation, and screen readers.
 platform: Blazor
 control: Mention
 documentation: ug
 ---
 
-# Accessibility in Blazor Mention Component
+# Accessibility in Blazor Mention
 
 Web accessibility makes web content and web applications more accessible for people with disabilities. Blazor Mention component provides built-in compliance with `WAI-ARIA` specifications. The `WAI-ARIA` support is achieved using the attributes such as `aria-selected` and `aria-activedescendant`.
 

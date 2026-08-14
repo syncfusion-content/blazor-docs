@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor MultiColumn ComboBox Component | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor MultiColumn ComboBox component and much more.
+title: Accessibility in Blazor MultiColumn ComboBox | Syncfusion
+description: Learn how Blazor MultiColumn ComboBox supports accessibility with ARIA roles, states, and full keyboard navigation.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
 ---
 
-# Accessibility in Blazor MultiColumn ComboBox Component
+# Accessibility in Blazor MultiColumn ComboBox
 
 The [Blazor MultiColumn ComboBox](https://www.syncfusion.com/blazor-components/blazor-multicolumn-combobox) is designed in accordance with WAI-ARIA specifications and applies appropriate roles, states, and properties, along with robust keyboard support. The component offers complete keyboard interaction and ARIA support to assist users who rely on assistive technologies (AT) or keyboard navigation.
 

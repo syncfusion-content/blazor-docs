@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Message in Blazor Web App | Syncfusion
-description: Check out and learn the documentation for getting started with Blazor Message Components in Web App.
+title: Getting Started with Blazor Message | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Message in a Blazor Web App with installation and setup steps.
 platform: Blazor
 control: Message
 documentation: ug
 ---
 
-# Getting Started with Blazor Message in Blazor Web App
+# Getting Started with Blazor Message
 
 This section briefly explains about how to include [Blazor Message](https://www.syncfusion.com/blazor-components/blazor-message) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

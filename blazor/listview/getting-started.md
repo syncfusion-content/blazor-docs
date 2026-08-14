@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with ListView in Blazor WASM App | Syncfusion®
-description: Checkout and learn about getting started with Blazor ListView component in Blazor WebAssembly Application.
+title: Getting Started with Blazor ListView in Blazor WASM App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor ListView in a Blazor WebAssembly app with installation and setup steps.
 platform: Blazor
 control: ListView
 documentation: ug

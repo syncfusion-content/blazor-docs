@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Columns in Blazor MultiColumn ComboBox Component | Syncfusion®
-description: Checkout and learn here the features all about columns in Blazor MultiColumn ComboBox component and much more details.
+title: Columns in Blazor MultiColumn ComboBox | Syncfusion
+description: Configure Blazor MultiColumn ComboBox columns with text wrapping, headers, and data templates for display today.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
 ---
 
-# Configuring the Columns
+# Columns in Blazor MultiColumn ComboBox
 
 ## TextWrap for a Column
 
