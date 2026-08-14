@@ -253,7 +253,7 @@ The pivot table component's accessibility levels are ensured through an [axe-cor
 
 The accessibility compliance of the pivot table component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/pivot-table) in a new window to evaluate the accessibility of the pivot table component with accessibility tools.
 
-## See Also
+## See also
 
 * [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility) — Cross-component accessibility guidance that applies to all Syncfusion Blazor controls.
 * [Globalization in Blazor Pivot Table](https://blazor.syncfusion.com/documentation/common/globalization) — Configure culture-specific y, and regional settings. (last verified: August 2026)
