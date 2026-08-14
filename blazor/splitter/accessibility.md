@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Keyboard Shortcuts in Blazor Splitter Component | Syncfusion®
-description: Checkout and learn here all about keyboard shortcuts in Blazor Splitter component and much more details.
+title: Accessibility in Blazor Splitter | Syncfusion
+description: Learn how Blazor Splitter supports accessibility with keyboard navigation and screen reader support.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# Accessibility in Blazor Splitter Component
+# Accessibility in Blazor Splitter
 
 The [Blazor Splitter](https://www.syncfusion.com/blazor-components/blazor-splitter) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
