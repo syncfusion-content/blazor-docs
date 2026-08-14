@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles and Appearances in Blazor Menu Bar Component | Syncfusion®
-description: Checkout and learn here all the features about styles and appearances in Blazor Menu Bar component and much more details.
+title: Style and Appearance in Blazor Menu Bar | Syncfusion
+description: Customize Blazor Menu Bar appearance by overriding default CSS classes and using Theme Studio for design today.
 platform: Blazor
 control: Menu Bar 
 documentation: ug
 ---
 
-# Styles and Appearances in Blazor Menu Bar Component
+# Style and Appearance in Blazor Menu Bar
 
 To modify the Menu Bar appearance, override the default CSS of the component. The table below lists the CSS classes used by the Menu Bar and the element each class targets. You can also create a custom theme using the Syncfusion [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material), which lets you generate a downloadable theme that overrides the default Syncfusion styles for the entire app.
 

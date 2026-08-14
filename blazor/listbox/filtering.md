@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filtering in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all about Filtering in Blazor ListBox component in Blazor Server App and Blazor WebAssembly App.
+title: Filtering in Blazor ListBox | Syncfusion
+description: Filter Blazor ListBox items with AllowFiltering and choose matching behavior via StartsWith, EndsWith, or Contains.
 platform: Blazor
 control: ListBox
 documentation: ug
 ---
 
-# Filtering in ListBox
+# Filtering in Blazor ListBox
 
 The Blazor ListBox provides built-in filtering when the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_AllowFiltering) property is set to `true`. A search box is rendered automatically, and filtering begins as the user types. The default value of `AllowFiltering` is `false`. Filtering is case-insensitive by default and affects only the visible items; existing selections remain unchanged.
 

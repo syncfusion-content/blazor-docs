@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Drag And Drop in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all the features about drag and drop in Blazor ListBox component and much more.
+title: Drag and Drop in Blazor ListBox | Syncfusion
+description: Enable drag and drop within or across Blazor ListBox controls using AllowDragAndDrop, Scope, and related events.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Drag And Drop in Blazor ListBox Component
+# Drag and Drop in Blazor ListBox
 
 The Blazor ListBox supports dragging a single item or a group of selected items and dropping them within the same ListBox or into another ListBox.
 
