@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Orientation in Blazor Tabs Component | Syncfusion®
-description: Checkout and learn here all the features about orientation in Blazor Tabs component and much more details.
+title: Orientation in Blazor Tabs | Syncfusion
+description: Position Blazor Tabs header at the top, bottom, left, or right using HeaderPlacement values for flexible layouts.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Orientation in Blazor Tabs Component
+# Orientation in Blazor Tabs
 
 This section explains how to modify the position and overflow mode of the Tab header.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor TimePicker Component | Syncfusion®
-description: Checkout and learn here all the features about native events in Blazor TimePicker component and much more.
+title: Native Events in Blazor TimePicker | Syncfusion
+description: Bind native DOM events like keypress to Blazor TimePicker using on-event attributes and event handlers.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# Native Events in Blazor TimePicker Component
+# Native Events in Blazor TimePicker
 
 The following sections explain how to bind native HTML events to the Blazor TimePicker component and how to pass event data to the handler.
 

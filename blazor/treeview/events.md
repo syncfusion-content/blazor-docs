@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor TreeView Component | Syncfusion®
-description: Checkout and learn here all the features about Events in Blazor TreeView component and much more details.
+title: Events in Blazor TreeView | Syncfusion
+description: Attach lifecycle and interaction events to Blazor TreeView using TreeViewEvents component arguments.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Events in Blazor TreeView Component
+# Events in Blazor TreeView
 
 The Blazor TreeView component has a list of events that can be triggered for certain actions. These events can be attached to the TreeView using the **TreeViewEvents** component, which requires the **TValue** to be provided.
 

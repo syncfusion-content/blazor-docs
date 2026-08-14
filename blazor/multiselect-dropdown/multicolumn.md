@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Multicolumn in Blazor MultiSelect Component | Syncfusion®
-description: Checkout and learn here all about Multicolumn in Blazor MultiSelect component and much more details.
+title: Multicolumn in Blazor MultiSelect Dropdown | Syncfusion
+description: Display multiple columns in Blazor MultiSelect Dropdown popup with CSS classes and ItemTemplate customization.
 platform: Blazor
-control: MultiSelect
+control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Multicolumn MultiSelect Dropdown
+# Multicolumn in Blazor MultiSelect Dropdown
 
 Display two or more columns in the popup by applying the `e-multi-column` class through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_CssClass) property. This organizes item content into a grid-like layout within each list item.
 
