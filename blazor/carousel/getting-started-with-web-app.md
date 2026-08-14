@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Carousel in Blazor Web App | Syncfusion
-description: Check out and learn about how to get started with the Blazor Carousel component in a Blazor Web App.
+title: Getting Started with Blazor Carousel in Blazor Web App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Carousel control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Carousel
 documentation: ug
 ---
 
-# Getting Started with Blazor Carousel Component in Blazor Web App
+# Getting Started with Blazor Carousel in Blazor Web App
 
 This section briefly explains how to include the [Blazor Carousel](https://www.syncfusion.com/blazor-components/blazor-carousel) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
