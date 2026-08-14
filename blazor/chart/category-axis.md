@@ -9,9 +9,9 @@ documentation: ug
 
 # Blazor Charts Category Axis
 
-The category axis is used to represent string values instead of integers.
+The category axis is used to plot string-typed X values such as months or product names.
 
-A detailed walkthrough for customizing the category axis is provided in the video below.
+Watch this walkthrough of axis customization in Blazor Charts.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=Mv6MS6fbcNE" %}
 
@@ -41,7 +41,7 @@ A detailed walkthrough for customizing the category axis is provided in the vide
         new ChartData { X= "USA", YValue= 46 },
         new ChartData { X= "GBR", YValue= 27 },
         new ChartData { X= "CHN", YValue= 26 },
-        new ChartData { X= "UK", YValue= 23 },
+        new ChartData { X= "FRA", YValue= 23 },
         new ChartData { X= "AUS", YValue= 16 },
         new ChartData { X= "IND", YValue= 36 },
         new ChartData { X= "DEN", YValue= 12 },
@@ -52,9 +52,9 @@ A detailed walkthrough for customizing the category axis is provided in the vide
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBRNnWLJtOKpNdh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column Chart with Default Axis](images/category-axis/blazor-chart-default-axis.webp)" %}
 
-## Labels placement
+## Label placement
 
-The category labels are positioned between ticks by default, but the [LabelPlacement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelPlacement) property allows them to be placed on the ticks as well. The available options are [BetweenTicks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelPlacement.html#Syncfusion_Blazor_Charts_LabelPlacement_BetweenTicks) (default) and [OnTicks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelPlacement.html#Syncfusion_Blazor_Charts_LabelPlacement_OnTicks).
+The category labels are positioned between ticks by default, but the [LabelPlacement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelPlacement) property allows them to be placed on the ticks as well. The available options are [BetweenTicks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelPlacement.html#Syncfusion_Blazor_Charts_LabelPlacement_BetweenTicks) (the default) and [OnTicks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelPlacement.html#Syncfusion_Blazor_Charts_LabelPlacement_OnTicks).
 
 ```cshtml
 
@@ -82,7 +82,7 @@ The category labels are positioned between ticks by default, but the [LabelPlace
         new ChartData { X= "USA", YValue= 46 },
         new ChartData { X= "GBR", YValue= 27 },
         new ChartData { X= "CHN", YValue= 26 },
-        new ChartData { X= "UK", YValue= 23 },
+        new ChartData { X= "FRA", YValue= 23 },
         new ChartData { X= "AUS", YValue= 16 },
         new ChartData { X= "IND", YValue= 36 },
         new ChartData { X= "DEN", YValue= 12 },
@@ -95,7 +95,7 @@ The category labels are positioned between ticks by default, but the [LabelPlace
 
 ## Range and interval
 
-The [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Maximum), and [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Interval) properties can be used to customize the range of the [Category](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Category) axis.
+The [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Maximum), and [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Interval) properties can be used to customize the range of the [Category](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Category) axis. On a category axis, these values are **1-based index positions** of the categories, not the string labels themselves. For example, with the sample data below, `Minimum="1"`, `Maximum="5"`, and `Interval="2"` displays **USA, CHN, AUS** and hides the others.
 
 ```cshtml
 
@@ -123,7 +123,7 @@ The [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
         new ChartData { X= "USA", YValue= 46 },
         new ChartData { X= "GBR", YValue= 27 },
         new ChartData { X= "CHN", YValue= 26 },
-        new ChartData { X= "UK", YValue= 23 },
+        new ChartData { X= "FRA", YValue= 23 },
         new ChartData { X= "AUS", YValue= 16 },
         new ChartData { X= "IND", YValue= 36 },
         new ChartData { X= "DEN", YValue= 12 },
@@ -136,7 +136,7 @@ The [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 
 ## Indexed category axis
 
-The category axis can also be rendered using the data source index values. This can be achieved by setting the [IsIndexed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_IsIndexed) property in the axis to **true**.
+By default, the category axis aligns each series by matching the X values. Set [IsIndexed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_IsIndexed) to **true** to render categories by their position in the data source instead. Use this when series have different or non-overlapping category sets, as in the following example.
 
 ```cshtml
 
@@ -183,11 +183,9 @@ The category axis can also be rendered using the data source index values. This 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjLnjHiLTCXlIRxD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chart with Indexed Category Axis](images/category-axis/blazor-chart-index-category-axis.webp)" %}
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
-
 ## See also
 
-* [Data Label](./data-labels)
-* [Tooltip](./tool-tip)
-* [Marker](./data-markers)
+* [Axis Labels](./axis-labels)
+* [Chart Sorting](./chart-sorting)
+* [Multiple Panes](./multiple-panes)
 * [Sort Series Points on Category Axis](https://support.syncfusion.com/kb/article/21383/how-to-sort-series-points-on-category-axis-in-blazor-chart-component)
