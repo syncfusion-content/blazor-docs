@@ -256,5 +256,4 @@ The accessibility compliance of the pivot table component is shown in the follow
 ## See also
 
 * [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility) — Cross-component accessibility guidance that applies to all Syncfusion Blazor controls.
-* [Globalization in Blazor Pivot Table](https://blazor.syncfusion.com/documentation/common/globalization) — Configure culture-specific y, and regional settings. (last verified: August 2026)
-* [Localization in Blazor Pivot Table](https://blazor.syncfusion.com/documentation/common/localization) — Customize UI text, messages, languages. (last verified: August 2026)
+* [Globalization](https://blazor.syncfusion.com/documentation/common/globalization) and [localization](https://blazor.syncfusion.com/documentation/common/localization) in Blazor Pivot Table — Configure RTL, culture, and localization settings, which affect accessibility for non-English users.
