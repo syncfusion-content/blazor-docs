@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open and Save with Blazor Signature Component | Syncfusion®
-description: Checkout and learn about loading and saving the signature with Blazor Signature component in Blazor Server App and Blazor WebAssembly App.
+title: Open and Save in Blazor Signature | Syncfusion
+description: Open and save Blazor Signature content as base64, image, or blob using LoadAsync and Save methods for flexible signature data handling.
 platform: Blazor
 control: Signature
 documentation: ug
 ---
 
-# Open and Save Signature
+# Open and Save in Blazor Signature
 
 The [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) component supports opening the signature by using a hosted/online URL or base64. It also supports various save options such as image, base64, and blob.
 

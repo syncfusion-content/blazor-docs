@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Responsive Sidebar in Blazor Sidebar Component | Syncfusion®
-description: Checkout and learn here the features all about responsive Sidebar in Blazor Sidebar component and more.
+title: Responsive Sidebar in Blazor Sidebar | Syncfusion
+description: Make Blazor Sidebar respond to screen size using the MediaQuery property for responsive open or close behavior.
 platform: Blazor
 control: Sidebar
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD009 -->
 
-# Responsive Sidebar in Blazor Sidebar Component
+# Responsive Sidebar in Blazor Sidebar
 
 [Blazor Sidebar](https://www.syncfusion.com/blazor-components/blazor-sidebar) often behaves differently on a mobile versus a desktop display. It provides a feature that allows you to set the Sidebar to an opened or closed state based on the specified screen resolution. This is achieved through the [`MediaQuery`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_MediaQuery) property, which allows you to set the Sidebar in an expanded or collapsed state only at a user-defined resolution.
 

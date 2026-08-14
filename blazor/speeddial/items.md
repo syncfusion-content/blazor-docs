@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Items in Blazor SpeedDial Component | Syncfusion®
-description: Checkout and learn here all about items and how to configure action items in Blazor Speed Dial component and much more.
+title: Items in Blazor Speed Dial | Syncfusion
+description: Configure Blazor Speed Dial action items with text, icons, disabled states, tooltips, and templates.
 platform: Blazor
 control: SpeedDial
 documentation: ug
 ---
 
-# Items in Blazor SpeedDial Component
+# Items in Blazor Speed Dial
 
 Add action items to the Blazor SpeedDial via the [SpeedDialItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html) tag directive. Items can display text, icons, or both, and support being disabled, tooltips, animation, and templating.
 
