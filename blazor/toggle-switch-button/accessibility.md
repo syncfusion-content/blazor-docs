@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Toggle Switch Button Component | Syncfusion®
-description: Checkout and learn here all the features about accessibility in Blazor Toggle Switch Button component and more.
+title: Accessibility in Blazor Toggle Switch Button | Syncfusion
+description: Learn how Blazor Toggle Switch Button supports accessibility with keyboard and screen reader support.
 platform: Blazor
 control: Toggle Switch Button
 documentation: ug
 ---
 
-# Accessibility in Blazor Toggle Switch Button Component
+# Accessibility in Blazor Toggle Switch Button
 
 The Blazor Toggle Switch Button component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

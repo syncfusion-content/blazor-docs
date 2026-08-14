@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Toolbar in Blazor WASM App | Syncfusion®
-description: Check out and learn about getting started with Blazor Toolbar component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Toolbar in Blazor WASM App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Toolbar in a Blazor WebAssembly app with setup steps.
 platform: Blazor
 control: Toolbar
 documentation: ug

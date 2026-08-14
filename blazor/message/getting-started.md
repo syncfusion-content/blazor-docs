@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Message in Blazor WASM App | Syncfusion
-description: Check out and learn about getting started with the Blazor Message component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Message | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Message in a Blazor WebAssembly app with installation and setup steps.
 platform: Blazor
 control: Message
 documentation: ug
 ---
 
-# Getting Started with Blazor Message in Blazor WASM App
+# Getting Started with Blazor Message
 
 This section briefly explains how to include [Blazor Message](https://www.syncfusion.com/blazor-components/blazor-message) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

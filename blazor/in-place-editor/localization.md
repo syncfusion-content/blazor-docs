@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor In-place Editor Component | Syncfusion®
-description: Checkout and learn here all about Globalization in Blazor In-place Editor component and much more details.
+title: Globalization in Blazor In-place Editor | Syncfusion
+description: Localize UI text, enable RTL layout, and apply culture-specific formats in Blazor In-place Editor for global use.
 platform: Blazor
 control: In-place Editor 
 documentation: ug
 ---
 
-# Globalization in Blazor In-place Editor Component
+# Globalization in Blazor In-place Editor
 
 This topic explains how to globalize the In-place Editor, including localizing UI text, enabling right-to-left (RTL) layout, and applying culture-aware formatting.
 

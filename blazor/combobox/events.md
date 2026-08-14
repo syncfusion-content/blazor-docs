@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn here all about the features and events in Blazor ComboBox component and much more details.
+title: Events in Blazor ComboBox | Syncfusion®
+description: Handle Blazor ComboBox lifecycle and user actions through events such as ValueChange, OnOpen, OnClose, DataBound, Filtering, and selection callbacks.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Events in Blazor ComboBox Component
+# Events in Blazor ComboBox
 
 This section lists the events available in the ComboBox component and when they are triggered during typical interactions.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Timeline in Blazor WASM App | Syncfusion
-description: Check out and learn about getting started with Blazor Timeline component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Timeline in Blazor WASM App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Timeline in a Blazor WebAssembly app with setup steps.
 platform: Blazor
 control: Timeline
 documentation: ug
 ---
 
-# Getting started with Blazor Timeline in Blazor WASM App
+# Getting Started with Blazor Timeline in Blazor WASM App
 
 This section briefly explains how to include [Blazor Timeline](https://www.syncfusion.com/blazor-components/blazor-timeline) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

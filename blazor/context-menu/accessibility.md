@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor ContextMenu Component | Syncfusion®
-description: Checkout and learn here all the featurescabout Accessibility in Blazor ContextMenu component and more.
+title: Accessibility in Blazor Context Menu | Syncfusion®
+description: Learn how Blazor Context Menu meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA roles, keyboard navigation, and screen reader support.
 platform: Blazor
 control: Context Menu
 documentation: ug
 ---
 
-# Accessibility in Blazor ContextMenu Component
+# Accessibility in Blazor Context Menu
 
 The Blazor ContextMenu component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

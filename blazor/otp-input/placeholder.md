@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Placeholder in Blazor OTP Input Component | Syncfusion®
-description: Learn how to use placeholder in Blazor OTP Input component to display hint text for guiding users on expected input.
+title: Placeholder in Blazor OTP Input | Syncfusion
+description: Display placeholder hints in Blazor OTP Input fields using single characters or input-specific strings.
 platform: Blazor
 control: OTP Input
 documentation: ug
 ---
 
-# Placeholder in Blazor OTP Input component
+# Placeholder in Blazor OTP Input
 
 The placeholder in OTP Input specifies the text that is shown as a hint or placeholder until the user enters a value in the input field. It acts as guidance for the users regarding the expected input format or purpose of the input field.
 

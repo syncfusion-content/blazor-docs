@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Source in Blazor AutoComplete Component | Syncfusion®
-description: Learn how to bind data sources in the Blazor AutoComplete component using local collections or remote services with DataManager and adaptors.
+title: Data Source in Blazor AutoComplete | Syncfusion®
+description: Load Blazor AutoComplete data from local arrays or remote services through the DataSource property or DataManager with OData, Web API, and URL adaptors.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Data Source in Blazor AutoComplete Component
+# Data Source in Blazor AutoComplete
 
 The AutoComplete loads data from local sources or remote services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports an array or the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 

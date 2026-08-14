@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table binds to local JSON, remote services, and custom data sources via PivotViewDataSourceSettings with CRUD-enabled adaptors.
+description: Learn how the Blazor Pivot Table binds local JSON arrays, remote services, and OLAP cubes for data visualization and analysis.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## JSON
 
-For JSON data binding, the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Type) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) needs to be set as `DataSourceType.JSON`. Since JSON is the default data type, you can bind JSON data without setting this property.
+The Pivot Table supports JSON data binding by setting the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Type) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) needs to be set as `DataSourceType.JSON`. Since JSON is the default data type, you can bind JSON data without setting this property.
 
 ### Binding JSON data via local
 

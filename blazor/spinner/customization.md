@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize the Spinner in Blazor Spinner Component | Syncfusion®
-description: Checkout and learn here all about how to customize the Spinner in Blazor Spinner component and more.
+title: Customization in Blazor Spinner | Syncfusion
+description: Customize Blazor Spinner label, type, size, and color using CssClass, Label, Type, and spinner CSS variables.
 platform: Blazor
 control: Spinner
 documentation: ug
 ---
 
-# Customizing the Blazor Spinner Component
+# Customization in Blazor Spinner
 
 The Blazor Spinner component can be customized when initializing it or after it is rendered.
 
