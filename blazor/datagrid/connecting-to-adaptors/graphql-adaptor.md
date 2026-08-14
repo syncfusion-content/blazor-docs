@@ -9,9 +9,9 @@ documentation: ug
 
 # Connect GraphQL to Blazor Data Grid
 
-GraphQL is a query language that allows applications to request exactly the data needed, nothing more and nothing less. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response.
+GraphQL is a query language that allows applications to request exactly the data needed. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response.
 
-**Traditional REST APIs** and **GraphQL** differ mainly in how data is requested and returned: **REST APIs expose** multiple endpoints that return fixed data structures, often including unnecessary fields and requiring several requests to fetch related data, while **GraphQL** uses a single endpoint where queries define the exact fields needed, enabling precise responses and allowing related data to be retrieved efficiently in one request. This makes **GraphQL** especially useful for **Blazor DataGrid integration**, the **reason** is data‑centric UI components require well‑structured and selective datasets to support efficient filtering, reduce network calls, and improve overall performance.
+**Traditional REST APIs** and **GraphQL** differ mainly in how data is requested and returned: **REST APIs expose** multiple endpoints that return fixed data structures, often including unnecessary fields and requiring several requests to fetch related data, while **GraphQL** uses a single endpoint where queries define the exact fields needed, enabling precise responses and allowing related data to be retrieved efficiently in one request. This benefits data-centric UI components that require well-structured datasets for efficient filtering, fewer network calls, and improved overall performance.
 
 **Key GraphQL Concepts**
 
@@ -164,7 +164,7 @@ The **launchsettings.json** file controls the port number where the application 
 
 - Port numbers must be between 1024 and 65535.
 - Avoid using ports already in use by other applications.
-- The GraphQL endpoint will be accessible at the configured HTTPS URL (e.g., `https://localhost:7777/graphql`).
+- The GraphQL endpoint will be accessible at the configured HTTPS URL (for example, `https://localhost:5272/graphql`).
 
 All configuration steps are now complete.
 
@@ -232,7 +232,7 @@ namespace Grid_GraphQLAdaptor.Models
         /// <summary>
         /// Total amount including tax (calculated: Amount + (Amount * TaxPct / 100)).
         /// </summary>
-        public decimal TotalAmount { get; set; }        
+        public decimal TotalAmount { get; set; }
     }
 }
 ```
@@ -255,13 +255,13 @@ The following table shows how C# properties map to database columns and GraphQL 
 
 **Hot Chocolate GraphQL** automatically converts C# property names (**PascalCase**) to GraphQL field names (**camelCase**). This convention ensures consistent naming in the GraphQL schema:
 
-- C# Property: `EmployeeName` → GraphQL Field: `employeeName`
-- C# Property: `ExpenseId` → GraphQL Field: `expenseId`
-- C# Property: `TotalAmount` → GraphQL Field: `totalAmount`
+- C# property: `EmployeeName` → GraphQL field: `employeeName`
+- C# property: `ExpenseId` → GraphQL field: `expenseId`
+- C# property: `TotalAmount` → GraphQL field: `totalAmount`
 
 **Explanation**:
 
-- The [Key] attribute marks the `ExpenseId` property as the primary key (a unique identifier for each record).
+- The `[Key]` attribute marks the `ExpenseId` property as the primary key.
 - Each property represents a column in the database table.
 - The model provides the data structure that GraphQL uses to process queries and mutations.
 
@@ -271,10 +271,9 @@ The expense data model has been successfully created.
 
 ### Step 5: GraphQL Query Resolvers
 
-A query resolver is a method in the backend that handles read requests from the client. When the Blazor DataGrid needs to fetch data, it sends a GraphQL query to the server. The query resolver receives this request, processes it, and returns the appropriate data. Query resolvers do not modify data; they only retrieve and return it.
+A query resolver is a method in the backend that handles read requests from the client. When the Blazor DataGrid needs to fetch data, it sends a GraphQL query to the server. The query resolver receives this request, processes it, and returns the response. Query resolvers do not modify data; they only retrieve and return it.
 
-In simple terms, a **GraphQL query** asks a question,
-and a **resolver** is the one who answers it.
+In simple terms, a **GraphQL query** requests data, and the **resolver** processes and responds to that request.
 
 **Instructions:**
 
@@ -381,7 +380,6 @@ public class DataManagerRequestInput
     public List<SearchFilter>? Search { get; set; }
 
     // Add other parameters
-
 }
 
 /// <summary>
@@ -547,7 +545,8 @@ public class WhereFilter
 | `Group` | Grouping configuration | `List<string>` | Field names to group by |
 
 **Key Attributes Explained**
-[GraphQLName]: Maps C# property names to GraphQL schema field names. **Hot Chocolate** automatically converts PascalCase to camelCase.
+
+`[GraphQLName]` maps C# property names to GraphQL schema field names. Hot Chocolate automatically converts PascalCase to camelCase.
 
 Example: **RequiresCounts → requiresCounts**
 [GraphQLType(typeof(AnyType))]: Allows flexible typing for complex nested structures that can contain various data types.
@@ -556,7 +555,7 @@ Example: **RequiresCounts → requiresCounts**
 
 A **GraphQL mutation resolver** is a method in the backend that handles write requests (data modifications) from the client. While queries only read data, mutations create, update, or delete records. When the Blazor DataGrid performs add, edit, or delete operations, it sends a GraphQL mutation to the server. The mutation resolver receives this request, processes it, and persists the changes to the data source.
 
-In simple terms, a **GraphQL mutation** asks for a change, and a **resolver** is the one who makes it.
+In simple terms, a **GraphQL mutation** requests a change, and the **resolver** applies that change and returns the result.
 
 **Instructions:**
 1. Inside the Models folder, create a new file named **GraphQLMutation.cs**.
@@ -688,7 +687,7 @@ The `Home.razor` component will display the expense data in a Blazor DataGrid wi
         
         <!-- Blazor DataGrid Component -->
         <SfGrid TValue="ExpenseRecord" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
-            <SfDataManager Url="http://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
+            <SfDataManager Url="https://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
             <GridPageSettings PageSize="10"></GridPageSettings>
             <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Dialog">
                 <Template>
@@ -719,7 +718,7 @@ The `Home.razor` component will display the expense data in a Blazor DataGrid wi
 The `SfDataManager` component connects the DataGrid to the GraphQL backend using the adaptor options configured below:
 
 ```cshtml
-<SfDataManager Url="http://localhost:5272/graphql" 
+<SfDataManager Url="https://localhost:5272/graphql" 
                GraphQLAdaptorOptions="@adaptorOptions" 
                Adaptor="Adaptors.GraphQLAdaptor">
 </SfDataManager>
@@ -729,15 +728,15 @@ The `SfDataManager` component connects the DataGrid to the GraphQL backend using
 
 | Attribute | Purpose | Value |
 |-----------|---------|-------|
-| `Url` | GraphQL endpoint location | `http://localhost:5272/graphql` (must match backend port) |
-| `GraphQLAdaptorOptions` | References the adaptor configuration object | `@adaptorOptions` (defined in next heading) |
-| `Adaptor` | Specifies adaptor type to use | `Adaptors.GraphQLAdaptor` (tells Syncfusion to use GraphQL adaptor) |
+| `Url` | GraphQL endpoint location | `https://localhost:5272/graphql` (must match the backend port) |
+| `GraphQLAdaptorOptions` | References the adaptor configuration object | `@adaptorOptions` (defined in the next section) |
+| `Adaptor` | Specifies the adaptor type to use | `Adaptors.GraphQLAdaptor` |
 
 **Important Notes:**
 
 - The `Url` must match the port configured in `launchSettings.json`.
-- If backend runs on port 5272, then URL must be `https://localhost:5272/graphql`.
-- The `/graphql` path is set by `app.MapGraphQL()` in Program.cs.
+- If the backend runs on port `5272`, the URL must be `https://localhost:5272/graphql`.
+- The `/graphql` path is set by `app.MapGraphQL()` in `Program.cs`.
 
 ---
 
@@ -964,7 +963,7 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
         AllowSorting="true" 
         AllowFiltering="true" 
         Toolbar="@ToolbarItems">
-    <SfDataManager Url="http://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
+    <SfDataManager Url="https://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
     
     <!-- Grid columns configuration -->
 </SfGrid>
@@ -1022,7 +1021,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 ```cshtml
 <SfGrid TValue="ExpenseRecord" 
         AllowPaging="true">
-    <SfDataManager Url="http://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
+    <SfDataManager Url="https://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
     <GridPageSettings PageSize="10"></GridPageSettings>
     <!-- Grid columns configuration -->
 </SfGrid>
@@ -1107,7 +1106,7 @@ Searching provides the capability to find specific records by entering keywords 
 <SfGrid TValue="ExpenseRecord"
         AllowPaging="true"
         Toolbar="@ToolbarItems">
-    <SfDataManager Url="http://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
+    <SfDataManager Url="https://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
     <GridPageSettings PageSize="10"></GridPageSettings>
     <!-- Grid columns configuration -->
 </SfGrid>
@@ -1194,7 +1193,7 @@ Sorting enables organizing records by selecting column headers, arranging the da
         AllowPaging="true"
         AllowSorting="true"
         Toolbar="@ToolbarItems">
-    <SfDataManager Url="http://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
+    <SfDataManager Url="https://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
     <GridPageSettings PageSize="10"></GridPageSettings>
     <!-- Grid columns configuration -->
 </SfGrid>
@@ -1281,7 +1280,7 @@ The backend resolver receives this and processes the sort specification in the `
          AllowPaging="true"
          AllowFiltering="true"
          Toolbar="@ToolbarItems">
-     <SfDataManager Url="http://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
+     <SfDataManager Url="https://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
      <GridFilterSettings Type="FilterType.Excel"></GridFilterSettings>
      <GridPageSettings PageSize="10"></GridPageSettings>
      <!-- Grid columns configuration -->
@@ -1482,7 +1481,7 @@ Grouping enables organizing and displaying records based on column values. This 
         AllowPaging="true"
         AllowGrouping="true"
         Toolbar="@ToolbarItems">
-    <SfDataManager Url="http://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
+    <SfDataManager Url="https://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
     <GridGroupSettings>
         <CaptionTemplate>
             @{
@@ -1607,7 +1606,7 @@ The backend resolver receives the group specifications in the `GetExpenseRecordD
          AllowPaging="true"
          AllowFiltering="true"
          Toolbar="@ToolbarItems">
-     <SfDataManager Url="http://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
+     <SfDataManager Url="https://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
      <GridPageSettings PageSize="10"></GridPageSettings>
      <GridEditSettings AllowAdding="true" Mode="EditMode.Dialog"></GridEditSettings>
      <!-- Grid columns configuration -->
