@@ -20,7 +20,7 @@ The Field List can be displayed in two different ways to work with your Pivot Ta
 
 The built-in field list provides quick access to modify your Pivot Table report settings without taking up permanent space on your webpage. To enable this option, set the [ShowFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowFieldList) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) to **true**. A field list icon will then appear in the top-left corner of the Pivot Table. When you click this icon, the field list dialog opens.
 
-N> he field list icon appears in the top right corner of the Pivot Table when the grouping bar is enabled.
+N> The field list icon appears in the top right corner of the Pivot Table when the grouping bar is enabled.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
