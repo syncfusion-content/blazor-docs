@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor Input Mask Component | Syncfusion®
-description: Checkout and learn here all about the Data Binding in Blazor Input Mask component and much more details.
+title: Data Binding in Blazor Input Mask | Syncfusion
+description: Bind string values with two-way data binding in Blazor Input Mask using the @bind-Value attribute and update values programmatically.
 platform: Blazor
 control: Input Mask
 documentation: ug
 ---
 
-# Data Binding in Blazor Input Mask Component
+# Data Binding in Blazor Input Mask
 
 Use the `@bind-Value` directive to enable two-way data binding with the MaskedTextBox. The Value parameter is of type string. When the user edits the input, the bound field is updated; when the bound field changes in code, the component reflects the new value.
 
