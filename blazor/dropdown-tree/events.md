@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Dropdown Tree Component | Syncfusion®
-description: Checkout and learn here all the features and Events in Blazor Dropdown Tree component and much more details.
+title: Events in Blazor Dropdown Tree | Syncfusion®
+description: Explore Blazor Dropdown Tree events including Created, Destroyed, ValueChange, OnValueSelect, and other lifecycle hooks.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
 ---
 
-# Events in Blazor Dropdown Tree Component
+# Events in Blazor Dropdown Tree
 
 The Blazor Dropdown Tree component has a list of events that can be triggered for certain actions.
 

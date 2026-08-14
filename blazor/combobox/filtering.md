@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filtering in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn here all the features about Filtering in the Blazor ComboBox component and much more.
+title: Filtering in Blazor ComboBox | Syncfusion®
+description: Filter Blazor ComboBox suggestions as the user types using StartsWith, EndsWith, or Contains match modes, with case sensitivity and diacritic options.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Filtering in Blazor ComboBox Component
+# Filtering in Blazor ComboBox
 
 The ComboBox has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is enabled. The filter operation starts as soon as characters are typed in the input. The default value of AllowFiltering is `false`.
 

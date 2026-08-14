@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with In-place Editor in Server App | Syncfusion®
-description: Check out and learn about the documentation for getting started with Blazor In-place Editor component in Blazor Server App.
+title: Getting Started with Blazor In-place Editor in Server App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor In-place Editor in a Blazor Server app with installation and setup steps.
 platform: Blazor
 component: In-place Editor
 documentation: ug

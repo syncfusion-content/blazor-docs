@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all the features about selection in Blazor ListBox component and much more details.
+title: Selection in Blazor ListBox | Syncfusion
+description: Configure single or multiple selection in Blazor ListBox using SelectionSettings and keyboard shortcuts.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Selection in Blazor ListBox Component
+# Selection in Blazor ListBox
 
 The Blazor ListBox supports selecting a single item or multiple items using the mouse or the keyboard. There are two selection modes available in the ListBox:
 

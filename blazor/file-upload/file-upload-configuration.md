@@ -1,7 +1,7 @@
 ---
 layout: post
-title: File Upload Configuration in Blazor File Upload | Syncfusion®
-description: Checkout and learn here all about File Upload Configuration in Blazor File Upload component and and much more details.
+title: File Upload Configuration in Blazor File Upload | Syncfusion
+description: Configure Blazor File Upload behavior with properties for extensions, multiple files, auto upload, and sequential upload.
 platform: Blazor
 control: File Upload
 documentation: ug

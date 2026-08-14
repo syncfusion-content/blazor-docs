@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and appearance in Blazor DateRangePicker Component | Syncfusion®
-description: Checkout and learn here all about style and appearance in Blazor DateRangePicker component and much more details.
+title: Style and Appearance in Blazor DateRangePicker | Syncfusion®
+description: Customize the Blazor DateRangePicker appearance by overriding its default CSS structure to adjust input, popup, and range selection styles.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
 ---
 
-# Style and Appearance in Blazor DateRangePicker Component
+# Style and Appearance in Blazor DateRangePicker
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

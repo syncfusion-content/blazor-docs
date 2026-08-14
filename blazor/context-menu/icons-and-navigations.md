@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Icons and Navigation in Blazor ContextMenu Component | Syncfusion®
-description: Checkout and learn here all the features about Icons and Navigation in Blazor ContextMenu component and more.
+title: Icons and Navigation in Blazor Context Menu | Syncfusion®
+description: Add icons to Blazor Context Menu items and configure navigation to URLs or click handlers, supporting external and in-app links.
 platform: Blazor
 control: Context Menu
 documentation: ug
 ---
 
-# Icons and Navigation in Blazor ContextMenu Component
+# Icons and Navigation in Blazor Context Menu
 
 ## Icons
 

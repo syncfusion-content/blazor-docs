@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Button in Blazor Server App | Syncfusion
-description: Check out and learn about the documentation for getting started with Blazor Button Component in Blazor Server App.
+title: Getting Started with Blazor Button in Blazor Server App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Button control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Button
 documentation: ug
 ---
 
-# Getting started with Blazor Button component in Blazor Server App
+# Getting Started with Blazor Button in Blazor Server App
 
 This section briefly explains how to include [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

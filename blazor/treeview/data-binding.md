@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor TreeView Component | Syncfusion®
-description: Checkout and learn here all the features about data binding support in Blazor TreeView component, it's elements and more.
+title: Data Binding in Blazor TreeView | Syncfusion
+description: Bind local lists or remote services with load-on-demand support in Blazor TreeView using data adapters.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Data Binding in Blazor TreeView Component
+# Data Binding in Blazor TreeView
 
 The Blazor TreeView component provides the option to load data either from the local data sources or from remote data services. This can be done through [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property that is a member of the [`TreeViewFieldsSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldsSettings-1.html) property. The `DataSource` property supports list of objects and `DataManager`. It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 

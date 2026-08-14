@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in Blazor Dropdown Tree Component | Syncfusion®
-description: Checkout and learn here all the features about Selection in Blazor Dropdown Tree component and much more.
+title: Selection in Blazor Dropdown Tree | Syncfusion®
+description: Configure single and multi-selection behavior in Blazor Dropdown Tree with keyboard and mouse interaction.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
 ---
 
-# Selection in Blazor Dropdown Tree Component
+# Selection in Blazor Dropdown Tree
 
 The Dropdown Tree has been provided with single and multi-selection support. Selection provides interactive support and highlights the node that is selected. Selection can be done through simple mouse down or keyboard interaction.
 

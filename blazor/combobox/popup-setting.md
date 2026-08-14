@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup Setting in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn here all the features about Popup Setting in BlazorComboBox component and much more.
+title: Popup Setting in Blazor ComboBox | Syncfusion®
+description: Configure the Blazor ComboBox popup with resizing, custom width and height, z-index, and showPopupOnFocus behavior, plus open and close events.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Popup Setting in ComboBox
+# Popup Setting in Blazor ComboBox
 
 ## Popup resize
 
