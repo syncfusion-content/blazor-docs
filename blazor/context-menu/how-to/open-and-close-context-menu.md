@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open and close Context Menu in Blazor ContextMenu | Syncfusion®
-description: Checkout and learn here all about Open and close Context Menu in Blazor ContextMenu component and more.
+title: How to open and close Context Menu in Blazor | Syncfusion®
+description: Open and close the Blazor Context Menu manually by calling the Open and Close methods with ClientX and ClientY coordinates.
 platform: Blazor
 control: Context Menu
 documentation: ug
 ---
 
-# Open and Close the ContextMenu in Blazor ContextMenu Component
+# How to open and close Context Menu in Blazor
 
 Open and close the Context Menu manually whenever required by using the Open and Close methods. In the following sample, the Context Menu manually opens while clicking the button using [Open](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_Open_System_Nullable_System_Double__System_Nullable_System_Double__) method with `ClientX` and `ClientY` coordinates.
 

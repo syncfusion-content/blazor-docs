@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started with Blazor FAB in Blazor Server App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor Floating Action Button Component in Blazor Server App.
+description: Learn how to get started with the Syncfusion Blazor Floating Action Button in a Blazor Server app with installation steps.
 platform: Blazor
 component: Floating Action Button
 documentation: ug
 ---
 
-# Getting Started with Floating Action Button in Blazor Server App
+# Getting Started with Blazor FAB in Blazor Server App
 
 This section briefly explains how to include the [Blazor Floating Action Button](https://www.syncfusion.com/blazor-components/blazor-fab) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

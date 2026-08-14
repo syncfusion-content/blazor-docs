@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Property Customizations in Blazor Color Picker Component | Syncfusion
-description: Checkout and learn here all about Property Customizations in Syncfusion Blazor Color Picker component and more.
+title: Property Customizations in Blazor Color Picker | Syncfusion®
+description: Configure inline rendering, mode switcher, custom palettes, value formats, and other properties to customize the Blazor Color Picker behavior.
 platform: Blazor
 control: Color Picker
 documentation: ug
 ---
 
-# Property Customizations in Blazor Color Picker Component
+# Property Customizations in Blazor Color Picker
 
 ## Inline rendering in Blazor Color Picker Component
 

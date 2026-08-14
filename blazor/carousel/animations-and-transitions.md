@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Animations and Transitions with Blazor Carousel | Syncfusion®
-description: Checkout and learn about Animations and Transitions with Blazor Carousel component in Blazor Server App and Blazor WebAssembly App.
+title: Animations and Transitions in Blazor Carousel | Syncfusion®
+description: Apply slide, fade, and custom animations and transitions between Blazor Carousel slides with configurable duration and easing.
 platform: Blazor
 control: Carousel
 documentation: ug
 ---
 
-# Animations and Transitions in Blazor Carousel component
+# Animations and Transitions in Blazor Carousel
 
 ## Animations
 

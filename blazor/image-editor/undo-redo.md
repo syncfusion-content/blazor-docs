@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Undo and Redo with Blazor Image Editor Component | Syncfusion®
-description: Explore undo and redo features in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
+title: Undo and Redo in Blazor Image Editor | Syncfusion
+description: Reverse and reapply editing actions in Blazor Image Editor using undo and redo with a tracked history of recent changes.
 platform: Blazor
 control: Image Editor
 documentation: ug
 ---
 
-# Undo and redo in the Blazor Image Editor component
+# Undo and Redo in Blazor Image Editor
 
 The undo and redo functionalities enable reversing and reapplying editing actions performed on an image. These capabilities are essential for maintaining control and flexibility during the editing process.
 

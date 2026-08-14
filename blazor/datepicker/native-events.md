@@ -1,13 +1,13 @@
-﻿---
+---
 layout: post
-title: Native Events in Blazor DatePicker Component | Syncfusion®
-description: Checkout and learn here all the features about native events in Blazor DatePicker component and much more.
+title: Native Events in Blazor DatePicker | Syncfusion®
+description: Attach native DOM events to the Blazor DatePicker using the on{event} attribute, and pass event argument data to the handler.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Native Events in Blazor DatePicker Component
+# Native Events in Blazor DatePicker
 
 This section explains how to bind native DOM events to the DatePicker component and how to pass event data to the event handler. The DatePicker component supports the standard Blazor event-binding syntax (`@on<event>`) on its root input element.
 

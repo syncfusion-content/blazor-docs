@@ -1,13 +1,13 @@
-﻿---
+---
 layout: post
-title: Special Dates in Blazor DatePicker Component | Syncfusion®
-description: Checkout and learn here all the features about Special Dates in Blazor DatePicker component and more details.
+title: Special Dates in Blazor DatePicker | Syncfusion®
+description: Customize specific dates in the Blazor DatePicker by handling the OnRenderDayCell event to add CSS classes or disable particular days.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Special Dates in Blazor DatePicker Component
+# Special Dates in Blazor DatePicker
 
 You can customize specific dates in the DatePicker by handling the [OnRenderDayCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerEvents-1.html#Syncfusion_Blazor_Calendars_DatePickerEvents_1_OnRenderDayCell) event. This event fires when each day cell is rendered, allowing you to highlight, restyle, or disable specific dates.
 

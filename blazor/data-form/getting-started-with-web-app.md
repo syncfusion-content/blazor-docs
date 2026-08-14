@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Data Form in Blazor Web App | Syncfusion
-description: Check out and learn about the how to get started with the Blazor Data Form component in a Blazor Web App.
+title: Getting Started with Blazor Data Form in Blazor Web App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Data Form control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Data Form
 documentation: ug
 ---
 
-# Getting Started with Blazor Data Form Component in Blazor Web App
+# Getting Started with Blazor Data Form in Blazor Web App
 
 This section briefly explains how to include the [Blazor Data Form](https://www.syncfusion.com/blazor-components/blazor-data-form) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
