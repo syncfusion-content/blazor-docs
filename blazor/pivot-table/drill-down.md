@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Drill Down in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table expands and collapses hierarchical row and column members for drill down and drill up, including drill position and Expand All.
+description: Learn how the Blazor Pivot Table expands and collapses row and column members for hierarchical data exploration using built-in drill down and drill up.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -166,7 +166,7 @@ The Pivot Table component enables users to programmatically expand or collapse s
 * [`Items`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDrilledMember.html#Syncfusion_Blazor_PivotView_PivotViewDrilledMember_Items): Defines the exact members to be expanded or collapsed within the specified field.
 * [`Delimiter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDrilledMember.html#Syncfusion_Blazor_PivotView_PivotViewDrilledMember_Delimiter): Sets the character used to separate a child member from its parent when specifying hierarchical members.
 
-The following code demonstrates how to configure the Pivot Table to expand specific members by using the [`PivotViewDrilledMember`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDrilledMember.html) property. In this example, the **FY 2015** and **FY 2016** members in the **Year** field, and the **Q1** member under **FY 2015** in the **Quarter** field, are expanded, while other members remain collapsed.
+The following code demonstrates how to configure the Pivot Table to expand specific members using the [`PivotViewDrilledMember`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDrilledMember.html) property. In this example, only the **FY 2015** and **FY 2016** members in the **Year** field, and the **Q1** member under **FY 2015** in the **Quarter** field are expanded, while other members remain collapsed. The [`delimiter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDrilledMember.html#Syncfusion_Blazor_PivotView_PivotViewDrilledMember_Delimiter) property is used for the **Quarter** field to specify the separator (`~~`) for hierarchical member items.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -216,14 +216,14 @@ The [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pi
 - [`DataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_DataSourceSettings): Contains the current pivot table report settings, including the data source, rows, columns, values, filters, and format settings.
 - [`ActionName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_ActionName): Indicates the name of the action being performed. The table below lists the UI actions and their corresponding names:
 
-| Action | Action Name|
+| Action | Action Name |
 |----------------|---------------|
-| [Expand](./drill-down#drill-down-and-drill-up)| Drill down|
-| [Collapse](./drill-down#drill-down-and-drill-up)| Drill up|
+| [Expand](./drill-down#drill-down-and-drill-up)| Drill down |
+| [Collapse](./drill-down#drill-down-and-drill-up)| Drill up |
 
 - [`Cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_Cancel): Allows you to block the current action by setting it to `true`.
 
-In the below sample, drill down and drill up action can be restricted by setting the **args.Cancel** option to **true** in the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) event.
+In the following sample, the drill down and drill up actions can be restricted by setting the **args.Cancel** option to **true** in the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) event.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -269,11 +269,11 @@ In the below sample, drill down and drill up action can be restricted by setting
 
 ### OnActionComplete
 
-The event [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionComplete) triggers when a UI action such as drill down or drill up, is completed. This allows user to identify the current UI actions being completed at runtime. It has the following parameters:
+The event [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionComplete) triggers when a UI action such as drill down or drill up is completed. This allows users to identify the UI actions being completed at runtime. It has the following parameters:
 
 * [`DataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_DataSourceSettings): It holds the current data source settings such as input data source, rows, columns, values, filters, format settings and so on.
 
-* [`ActionName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionName): It holds the name of the current action completed. The following are the UI actions and their names:
+* [`ActionName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionName): It holds the name of the completed action. The following are the UI actions and their names:
 
 | Action | Action Name|
 |----------------|---------------|
@@ -394,5 +394,3 @@ The [`OnActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 * [Drill through](https://blazor.syncfusion.com/documentation/pivot-table/drill-through)
 * [Row and column](https://blazor.syncfusion.com/documentation/pivot-table/row-and-column)
 * [Aggregation](https://blazor.syncfusion.com/documentation/pivot-table/aggregation)
-
-N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.
