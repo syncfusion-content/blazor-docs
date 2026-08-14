@@ -64,7 +64,7 @@ The accessibility compliance for the pivot table component is outlined below.
 | `data-formatString` | This attribute is added to the treeview item in the calculated field popup. It denotes the format string used for the specified calculated field. |
 | `data-customformatstring` | This attribute is added to the treeview item in the calculated field popup. It denotes the custom format string used for the specified calculated field. |
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table internally uses the Syncfusion Grid component, which follows a two‑table structure for header and content rendering. This improves screen reader interpretation but may trigger warnings in automated accessibility tools. These issues occur due to the underlying grid rendering. These warnings do not necessarily affect actual assistive-technology usability. The following categories of warnings have been observed in [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright)  and [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) reports:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table internally uses the Syncfusion Grid component, which follows a two‑table structure for header and content rendering. This improves screen reader interpretation but may trigger warnings in automated accessibility tools. These issues occur due to the underlying grid rendering. These warnings do not necessarily affect actual assistive-technology usability. The following categories of warnings have been observed in [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) report:
 
 * **aria-required-children** *(axe-core)*: Triggered when the grid renders certain feature elements (for example, textarea or toolbar content). It may be reported when toolbar or grouping features are enabled.
 
@@ -256,5 +256,4 @@ The accessibility compliance of the pivot table component is shown in the follow
 ## See also
 
 * [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility) — Cross-component accessibility guidance that applies to all Syncfusion Blazor controls.
-* [Globalization in Blazor Pivot Table](https://blazor.syncfusion.com/documentation/common/globalization) — Configure culture-specific y, and regional settings. (last verified: August 2026)
-* [Localization in Blazor Pivot Table](https://blazor.syncfusion.com/documentation/common/localization) — Customize UI text, messages, languages. (last verified: August 2026)
+* [Globalization](https://blazor.syncfusion.com/documentation/common/globalization) and [localization](https://blazor.syncfusion.com/documentation/common/localization) in Blazor Pivot Table — Configure RTL, culture, and localization settings, which affect accessibility for non-English users.

@@ -86,7 +86,7 @@ For each value field, the aggregation type can be set using the property [Type](
 
 ![Aggregation in Blazor PivotTable](images/blazor-pivottable-aggregation.webp)
 
-N> By default, the aggregation is set to[SummaryTypes.Sum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_Sum) for value fields that have a number type, and to [SummaryTypes.Count](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_Count) for value fields that have non-number type values such as string, date, datetime, boolean, and so on.
+N> By default, the aggregation is set to [SummaryTypes.Sum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_Sum) for value fields that have a number type, and to [SummaryTypes.Count](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_Count) for value fields that have non-number type values such as string, date, datetime, boolean, and so on.
 
 ## Modifying aggregation type for value fields at runtime
 
@@ -235,6 +235,7 @@ N> The aggregation type icon can only be hidden in the Grouping Bar, not in the 
 ## Events
 
 The Pivot Table provides the following events to monitor aggregation-related UI actions. Each event lets you track or intercept a specific stage of the user interaction lifecycle.
+
 ### OnActionBegin
 
 The event [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) triggers when clicking and selecting the aggregate type via the dropdown icon in the value field button, which is present in both grouping bar and field list UI. This allows the user to identify the current action being performed at runtime. It has the following parameters:
@@ -404,3 +405,5 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pi
     }
 }
 ```
+
+N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.
