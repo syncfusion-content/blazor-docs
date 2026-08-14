@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Card in Blazor WASM App | Syncfusion
-description: Check out and learn about how to get started with the Blazor Card component in a Blazor WebAssembly App.
+title: Getting Started with Blazor Card in Blazor WASM App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Card control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Card
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD040 -->
 
-# Getting Started with Blazor Card Component in Blazor WASM App
+# Getting Started with Blazor Card in Blazor WASM App
 
 This section briefly explains how to include the [Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

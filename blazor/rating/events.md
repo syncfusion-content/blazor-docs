@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Rating Component | Syncfusion®
-description: Checkout and learn here all about Events with Blazor Rating component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
+title: Events in Blazor Rating | Syncfusion
+description: Handle Blazor Rating events such as Created, ValueChanged, and OnItemHover for dynamic feedback and custom rating logic.
 platform: Blazor
 control: Rating
 documentation: ug
 ---
 
-# Events in Rating Component
+# Events in Blazor Rating
 
 This section describes the rating events that are triggered when appropriate actions are performed. The following events are available in the rating component.
 

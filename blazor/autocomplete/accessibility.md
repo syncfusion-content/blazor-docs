@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor AutoComplete Component | Syncfusion®
-description: Checkout and learn here all features about Accessibility in Blazor AutoComplete component and much more.
+title: Accessibility in Blazor AutoComplete | Syncfusion®
+description: Learn how Blazor AutoComplete applies WAI-ARIA roles, states, and properties with comprehensive keyboard support for assistive technology users.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Accessibility in Blazor AutoComplete Component
+# Accessibility in Blazor AutoComplete
 
 The [Blazor AutoComplete](https://www.syncfusion.com/blazor-components/blazor-autocomplete) component is designed with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) guidance in mind and applies semantic roles, states, and properties along with comprehensive keyboard support. It provides strong screen reader and keyboard navigation support to assist users of assistive technologies (AT) and those who rely on the keyboard.
 

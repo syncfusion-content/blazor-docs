@@ -21,7 +21,7 @@ The most recent version of Syncfusion<sup style="font-size:70%">&reg;</sup> Blaz
 
 ![Syncfusion Blazor Control Panel showing Latest Version link](images/installer-upgrade.webp)
 
-You can also upgrade by downloading and installing the required products directly from the Latest version downloads [page](https://www.syncfusion.com/downloads/latest-version). Uninstalling existing versions is not required.
+You can also upgrade by downloading and installing the required products directly from the Latest version downloads [page](https://www.syncfusion.com/account/downloads). Uninstalling existing versions is not required.
 
 It is not necessary to install a volume release before installing a Service Pack. Volume and Service Pack releases are independent; install the latest Service Pack directly to receive the most recent fixes.
 

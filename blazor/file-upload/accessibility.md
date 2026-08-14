@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor File Upload Component | Syncfusion®
-description: Learn about accessibility features in the Blazor File Upload component, including support for WCAG 2.2, Section 508, and ARIA standards.
+title: Accessibility in Blazor File Upload | Syncfusion
+description: Learn how Blazor File Upload supports accessibility standards, keyboard navigation, screen readers, and ARIA attributes.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# Accessibility in Blazor File Upload Component
+# Accessibility in Blazor File Upload
 
 The [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload) component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/). It offers built-in ARIA accessibility support, making it compatible with screen readers and other assistive technologies.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with FileUpload in Blazor MAUI App | Syncfusion®
-description: Checkout and learn about the documentation for getting started with Blazor FileUpload Component in Blazor MAUI App.
+title: Getting Started with Blazor File Upload in MAUI App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor File Upload in a .NET MAUI Blazor Hybrid app with step-by-step setup.
 platform: Blazor
 control: FileUpload
 documentation: ug
 ---
 
-# Getting Started with Blazor File Upload Component
+# Getting Started with Blazor File Upload in MAUI App
 
 This section walks you through the step-by-step process of integrating the [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload) component into your Blazor MAUI application using both Visual Studio and Visual Studio Code.
 

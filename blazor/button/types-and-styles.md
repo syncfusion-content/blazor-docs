@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Types and Styles in Blazor Button Component | Syncfusion®
-description: Checkout and learn here all features about Types and Styles in Blazor Button component and much more.
+title: Types and Styles in Blazor Button | Syncfusion®
+description: Choose the Blazor Button style and type (primary, outline, flat, toggle, icon, or rounded) to match the action and visual hierarchy of your UI.
 platform: Blazor
 control: Button
 documentation: ug
 ---
 
-# Types and Styles in Blazor Button Component
+# Types and Styles in Blazor Button
 
 This section explains the different styles and types of Buttons.
 

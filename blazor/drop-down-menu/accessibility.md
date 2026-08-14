@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Dropdown Menu Component | Syncfusion®
-description: Checkout and learn here all the features about Accessibility in Blazor Dropdown Menu component and more.
+title: Accessibility in Blazor Dropdown Menu | Syncfusion®
+description: Learn how Blazor Dropdown Menu meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA roles, keyboard navigation, and screen reader support.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
 ---
 
-# Accessibility in Blazor Dropdown Menu Component
+# Accessibility in Blazor Dropdown Menu
 
 The Blazor Dropdown Menu component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

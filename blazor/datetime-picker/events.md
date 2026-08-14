@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor DateTimePicker Component | Syncfusion®
-description: Learn about events in the Blazor DateTimePicker component, including ValueChange, OnOpen, OnClose, OnRenderDayCell, and more.
+title: Events in Blazor DateTime Picker | Syncfusion®
+description: Handle Blazor DateTime Picker events such as ValueChange, OnOpen, OnClose, OnRenderDayCell, and Navigated to react to user input and rendering.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
 ---
 
-# Events in Blazor Datetime Picker Component
+# Events in Blazor DateTime Picker
 
 This section lists and describes the events raised by the DateTimePicker component for user interactions and lifecycle actions.
 
