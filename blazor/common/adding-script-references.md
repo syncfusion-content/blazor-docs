@@ -17,10 +17,10 @@ N> JavaScript interop files are required for features that cannot be implemented
 
 You can refer the Blazor scripts using the CDN resources.
 
-* For **.NET 8, .NET 9 and .NET 10** Blazor Web App (any render mode: Server, WebAssembly, or Auto), add scripts in `~/Components/App.razor`.
+* For **.NET 8, .NET 9, and .NET 10** Blazor Web App (any render mode: Server, WebAssembly, or Auto), add scripts in `~/Components/App.razor`.
 * For a **Blazor WebAssembly (standalone) App**, add scripts in `~/wwwroot/index.html`.
 
-Blazor components are available on the CDN per version. Ensure the version in the URLs matches the NuGet package version used in the application.
+Blazor components are available on the CDN per version. Ensure that the version in the URLs matches the NuGet package version used in the application.
 
 <table>
 <tr>
@@ -42,26 +42,26 @@ https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min
 
 ```html
 <head>
-    ....
+    ...
     <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
 ```
 
-Additionally, Blazor components provides latest scripts in CDN without versioning. You can use this in development environment if you want to always use the latest version of scripts. It is not recommended to use this in production environment.
+Additionally, Blazor components provide the latest scripts on the CDN without versioning. You can use this in a development environment if you want to always use the latest version of the scripts. It is not recommended to use this in a production environment.
 
 | Component | CDN Script Reference |
 | --- | --- |
-|  All Blazor UI Components | https://cdn.syncfusion.com/blazor/syncfusion-blazor.min.js |
+| All Blazor UI Components | https://cdn.syncfusion.com/blazor/syncfusion-blazor.min.js |
 
 ## Static web assets
 
-You can refer the Blazor scripts from NuGet packages using static web assets.
+You can refer to the Blazor scripts from NuGet packages by using static web assets.
 
 ### Enable static web assets usage
 
-To use static web assets, call [UseStaticFiles](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles?view=aspnetcore-9.0) in the app's **~/Program.cs** file.
+To use static web assets, call [UseStaticFiles](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles?view=aspnetcore-10.0) in the app's **~/Program.cs** file.
 
-N> For a **Blazor Web App** (interaction mode: Auto) and **Blazor WebAssembly App**, call `UseStaticFiles` in the **Server** project.
+N> For a **Blazor Web App** (render mode: Auto) and a **Blazor WebAssembly App**, call `UseStaticFiles` in the **Server** project.
 
 ### Reference scripts from static web assets
 
@@ -70,15 +70,15 @@ N> For a **Blazor Web App** (interaction mode: Auto) and **Blazor WebAssembly Ap
     ```html
     <head>
         ...
-        <script  src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"  type="text/javascript"></script>
+        <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
     </head>
     ```
 
 ## Individual component script references
 
-Blazor components provides component-wise scripts which can be referenced externally in application. If you are using minimal components, then you can import the selected components scripts via CDN or Static web assets directly without using [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) instead of referencing single script with all components.
+Blazor components provide component-wise scripts that can be referenced externally in the application. If you are using only a few components, you can directly reference the required component scripts from the CDN or static web assets without using the [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator), instead of referencing the single script that includes all components.
 
-You can add a component script reference in one of the following ways based on usage,
+You can add a component script reference in one of the following ways based on usage:
 
 <table>
 <tr>
@@ -87,7 +87,7 @@ You can add a component script reference in one of the following ways based on u
 </tr>
 
 <tr>
-<td><p>Refer from Static web assets</p></td>
+<td><p>Refer from static web assets</p></td>
 <td>
 
 {% highlight cshtml %}
@@ -102,7 +102,7 @@ You can add a component script reference in one of the following ways based on u
 </tr>
 
 <tr>
-<td><p>Refer scripts from CDN</p></td>
+<td><p>Refer from CDN</p></td>
 <td>
 
 {% highlight cshtml %}
@@ -117,7 +117,7 @@ You can add a component script reference in one of the following ways based on u
 </tr>
 </table>
 
-The following table lists components and their script file names.
+The following table lists the components and their script file names.
 
 <table>
     <tr>
@@ -129,12 +129,20 @@ The following table lists components and their script file names.
         <td>sf-textbox.min.js</td>
     </tr>
     <tr>
+        <td>TextArea</td>
+        <td>sf-textarea.min.js</td>
+    </tr>
+    <tr>
         <td>NumericTextBox</td>
         <td>sf-numerictextbox.min.js</td>
     </tr>
     <tr>
         <td>MaskedTextBox</td>
         <td>sf-maskedtextbox.min.js</td>
+    </tr>
+    <tr>
+        <td>OtpInput</td>
+        <td>sf-otp-input.min.js</td>
     </tr>
     <tr>
         <td>Uploader</td>
@@ -173,8 +181,16 @@ The following table lists components and their script file names.
         <td>sf-dropdownlist.min.js</td>
     </tr>
     <tr>
+        <td>MultiColumnComboBox</td>
+        <td>sf-multicolumn-combobox.min.js</td>
+    </tr>
+    <tr>
         <td>MultiSelect</td>
         <td>sf-multiselect.min.js</td>
+    </tr>
+    <tr>
+        <td>Mention</td>
+        <td>sf-mention.min.js</td>
     </tr>
     <tr>
         <td>DropDownButton</td>
@@ -201,6 +217,14 @@ The following table lists components and their script file names.
         <td>sf-signature.min.js</td>
     </tr>
     <tr>
+        <td>Rating</td>
+        <td>sf-rating.min.js</td>
+    </tr>
+    <tr>
+        <td>SpeechToText</td>
+        <td>sf-speechtotext.min.js</td>
+    </tr>
+    <tr>
         <td>ContextMenu</td>
         <td>sf-contextmenu.min.js</td>
     </tr>
@@ -211,6 +235,22 @@ The following table lists components and their script file names.
     <tr>
         <td>Breadcrumb</td>
         <td>sf-breadcrumb.min.js</td>
+    </tr>
+    <tr>
+        <td>Carousel</td>
+        <td>sf-carousel.min.js</td>
+    </tr>
+    <tr>
+        <td>DropDownTree</td>
+        <td>sf-dropdowntree.min.js</td>
+    </tr>
+    <tr>
+        <td>Stepper</td>
+        <td>sf-stepper.min.js</td>
+    </tr>
+    <tr>
+        <td>Timeline</td>
+        <td>sf-timeline.min.js</td>
     </tr>
     <tr>
         <td>QueryBuilder</td>
@@ -297,6 +337,10 @@ The following table lists components and their script file names.
         <td>sf-heatmap.min.js</td>
     </tr>
     <tr>
+        <td>Sankey</td>
+        <td>sf-sankey.min.js</td>
+    </tr>
+    <tr>
         <td>FileManager</td>
         <td>sf-filemanager.min.js</td>
     </tr>
@@ -345,6 +389,14 @@ The following table lists components and their script file names.
         <td>sf-switch.min.js</td>
     </tr>
     <tr>
+        <td>FloatingActionButton</td>
+        <td>sf-floating-action-button.min.js</td>
+    </tr>
+    <tr>
+        <td>SpeedDial</td>
+        <td>sf-speeddial.min.js</td>
+    </tr>
+    <tr>
         <td>Toast</td>
         <td>sf-toast.min.js</td>
     </tr>
@@ -357,10 +409,6 @@ The following table lists components and their script file names.
         <td>sf-inplaceeditor.min.js</td>
     </tr>
     <tr>
-        <td>Kanban</td>
-        <td>sf-kanban.min.js</td>
-    </tr>
-    <tr>
         <td>ImageEditor</td>
         <td>sf-image-editor.min.js</td>
     </tr>
@@ -368,11 +416,43 @@ The following table lists components and their script file names.
         <td>Pager</td>
         <td>sf-pager.min.js</td>
     </tr>
+    <tr>
+        <td>Diagram</td>
+        <td>sf-diagramcomponent.min.js</td>
+    </tr>
+    <tr>
+        <td>Gantt</td>
+        <td>sf-gantt.min.js</td>
+    </tr>
+    <tr>
+        <td>Ribbon</td>
+        <td>sf-ribbon.min.js</td>
+    </tr>
+    <tr>
+        <td>RichTextEditor</td>
+        <td>sf-richtexteditor.min.js</td>
+    </tr>
+    <tr>
+        <td>Skeleton</td>
+        <td>sf-skeleton.min.js</td>
+    </tr>
+    <tr>
+        <td>AIAssistView</td>
+        <td>sf-ai-assistview.min.js</td>
+    </tr>
+    <tr>
+        <td>ChatUI</td>
+        <td>sf-chat-ui.min.js</td>
+    </tr>
+    <tr>
+        <td>DataForm</td>
+        <td>sf-data-form.min.js</td>
+    </tr>
 </table>
 
 ## Custom Resource Generator
 
-Blazor provides an option to generate component interop scripts using the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) tool. Learn how to [generate component-wise scripts using CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
+Blazor provides an option to generate component interop scripts by using the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) tool. Learn how to [generate component-wise scripts using CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
 
 ## See also
 
