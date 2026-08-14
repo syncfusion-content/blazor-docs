@@ -235,6 +235,7 @@ N> The aggregation type icon can only be hidden in the Grouping Bar, not in the 
 ## Events
 
 The Pivot Table provides the following events to monitor aggregation-related UI actions. Each event lets you track or intercept a specific stage of the user interaction lifecycle.
+
 ### OnActionBegin
 
 The event [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) triggers when clicking and selecting the aggregate type via the dropdown icon in the value field button, which is present in both grouping bar and field list UI. This allows the user to identify the current action being performed at runtime. It has the following parameters:
