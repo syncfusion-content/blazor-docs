@@ -11,7 +11,7 @@ documentation: ug
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides straightforward methods to bind and display data that is available within your Blazor application's memory. This is particularly useful for scenarios involving static datasets, pre-loaded information, or data that does not require server-side operations for common Grid features.
 
-Local data can be bound by assigning an **IEnumerable collection**—such as `List<T>,` `ObservableCollection<T>`, or collections of `ExpandoObject`, `DynamicObject`, or `DataTable`—directly to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property of the Grid. 
+Local data can be bound by assigning an **IEnumerable collection**—such as `List<T>,` `ObservableCollection<T>`, or collections of `ExpandoObject`, `DynamicObject`, or `DataTable`—directly to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property of the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -254,7 +254,7 @@ Please find the sample in this [GitHub location](https://github.com/SyncfusionEx
 
 ### ExpandoObject complex data binding
 
-When working with complex or nested data structures using [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-9.0), the Blazor DataGrid allows binding of nested fields using dot (.) notation. This is helpful when **ExpandoObject** contains sub-objects or hierarchical data, and specific properties of those nested objects need display in individual Grid columns.
+When working with complex or nested data structures using [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-9.0), the Blazor DataGrid allows binding of nested fields using dot (.) notation. This is helpful when **ExpandoObject** contains sub-objects or hierarchical data, and specific properties of those nested objects need to be displayed in individual Grid columns.
 
 In this sample, **CustomerID.Name** and **ShipCountry.Country** represent nested fields from the underlying dynamic object, and they are individually bound to display in their respective columns:
 
@@ -328,7 +328,7 @@ This binding approach provides flexibility for rendering data and columns dynami
 
 DynamicObject binding is suitable for use cases such as:
 
-- Applications where data models are generated or modified at runtime.
+- When data models are generated or modified at runtime.
 - Metadata-driven Grid layouts that adapt based on configuration or external input.
 - Integration with external systems or APIs that return data with unpredictable or evolving schemas.
 
@@ -336,7 +336,7 @@ DynamicObject binding is suitable for use cases such as:
 
 ExpandoObject binding is recommended in the following cases:
 
-- hen data models are generated at runtime.
+- When data models are generated at runtime.
 - When columns and data need to be created dynamically based on metadata or user input.
 - When integrating with external systems that provide data with non-static or unpredictable schemas.
 
@@ -416,7 +416,7 @@ Please find the sample in this [GitHub location](https://github.com/SyncfusionEx
 
 ### DynamicObject complex data binding
 
-When working with complex or nested data structures using [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject), the Blazor DataGrid allows binding of nested fields using dot (.) notation. This is helpful when **DynamicObject** contains sub-objects or hierarchical data, and specific properties of those nested objects need display in individual Grid columns.
+When working with complex or nested data structures using [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject), the Blazor DataGrid allows binding of nested fields using dot (.) notation. This is helpful when **DynamicObject** contains sub-objects or hierarchical data, and specific properties of those nested objects need to be displayed in individual Grid columns.
 
 In this sample, **CustomerID.Name** and **ShipCountry.Country** represent nested fields from the underlying dynamic object, and they are individually bound to display in their respective columns:
 
@@ -503,9 +503,9 @@ Please find the sample in this [GitHub location](https://github.com/SyncfusionEx
 
 ### DataTable binding
 
-The Blazor DataGrid supports binding data from a `System.Data.DataTable` using a custom adaptor, enabling dynamic generation of rows and columns based on backend data. This approach is useful for scenarios where data is retrieved or processed in a DataTable format, and it provides full support for built-in data operations like paging, filtering, sorting, and searching. 
+The Blazor DataGrid supports binding data from a `System.Data.DataTable` using a custom adaptor, enabling dynamic generation of rows and columns based on backend data. This approach is useful for scenarios where data is retrieved or processed in a DataTable format, and it provides full support for built-in data operations like paging, filtering, sorting, and searching.
 
-To bind a **DataTable** to Grid, set `TValue` to **ExpandoObject**, convert it into an **IQueryable&lt;ExpandoObject&gt;** collection, and supply it through a custom adaptor that extends DataAdaptor.
+To bind a **DataTable** to the Grid, set `TValue` to **ExpandoObject**, convert it into an **IQueryable&lt;ExpandoObject&gt;** collection, and supply it through a custom adaptor that extends DataAdaptor.
 
 **Steps to bind DataTable to Grid:**
 
@@ -880,7 +880,7 @@ When using batch editing in the Grid, use the `BatchUpdate`/`BatchUpdateAsync` m
         for (int i = 1; i <= 15; i++)
         {
             table.Rows.Add(code + 1, "ALFKI", id + 1, new DateTime(1991, 05, 15));
-            table.Rows.Add(code + 2, "ANATR", id + 2, new DateTime(1990, 04, 04));
+            table.Rows.Add(code + 2, "ANANTR", id + 2, new DateTime(1990, 04, 04));
             table.Rows.Add(code + 3, "ANTON", id + 3, new DateTime(1957, 11, 30));
             table.Rows.Add(code + 4, "BLONP", id + 4, new DateTime(1930, 10, 22));
             table.Rows.Add(code + 5, "BOLID", id + 5, new DateTime(1953, 02, 18));
@@ -1024,7 +1024,7 @@ Please find the sample in this [GitHub location](https://github.com/SyncfusionEx
 
 ## Managing spinner visibility during data loading
 
-Showing a spinner during data loading in the Blazor DataGrid enhances the UX by providing a visual indication of the loading progress. This feature helps to understand that data is being fetched or processed.
+Showing a spinner during data loading in the Blazor DataGrid enhances the UX by providing a visual indication of the loading progress. This feature helps indicate that data is being fetched or processed.
 
 To show or hide a spinner during data loading in the Grid, utilize the [ShowSpinnerAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowSpinnerAsync) and [HideSpinnerAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideSpinnerAsync) methods provided by the Grid.
 
@@ -1212,9 +1212,9 @@ public class OrderData
 
 ![Changing datasource dynamically in Blazor DataGrid](../images/blazor-datagrid-dynamic-datasource.webp)
 
-## Data binding with SignalR 
+## Data binding with SignalR
 
-The Blazor DataGrid provides support for real-time data binding using SignalR, allowing update of the Grid automatically as data changes on the server-side. This feature is particularly useful for applications requiring live updates and synchronization across multiple clients.
+The Blazor DataGrid provides support for real-time data binding using SignalR, allowing the Grid to update automatically as data changes on the server-side. This feature is particularly useful for applications requiring live updates and synchronization across multiple clients.
 
 To achieve real-time data binding with SignalR in the Blazor DataGrid, follow the steps:
 
@@ -1261,7 +1261,7 @@ app.Run();
 
 **Step 4:** Create a simple Blazor DataGrid by following the [Getting Started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation link.
 
-**Step 5:** Create a **Data** folder and add Data Controller (**OrderDetails.cs**) in your project to handle CRUD operations for the Grid: 
+**Step 5:** Create a **Data** folder and add Data Controller (**OrderDetails.cs**) in your project to handle CRUD operations for the Grid:
 
 {% tabs %}
 {% highlight cs tabtitle="OrderDetails.cs" %}
@@ -1328,7 +1328,7 @@ namespace SignalRDataGrid.Data
 {% endhighlight %}
 {% endtabs %}
 
-**Step 5:** In your **Home.razor** file, establish a connection to the SignalR hub and configure the Grid data.
+**Step 6:** In your **Home.razor** file, establish a connection to the SignalR hub and configure the Grid data.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -1417,7 +1417,7 @@ namespace SignalRDataGrid.Data
 
 The above code demonstrates establishment of a connection to a SignalR hub and refresh of the Grid data in real time when updates are received.
 
-**Step 6:** Adding the **OrderService** reference:
+**Step 7:** Adding the **OrderService** reference:
 
 To include the **OrderService** reference, update the following line in your **Program.cs** file:
 
@@ -1687,12 +1687,12 @@ To achieve this, use the [ObservableCollection](https://learn.microsoft.com/en-u
                     new DateTime(1991, 5, 15), "Berlin", "Simons bistro", "Denmark",
                     new DateTime(1996, 7, 16), "Kirchgasse 6"));
 
-                orders.Add(new OrdersDetailsObserveData(code + 2, "ANATR", i + 2, 3.3 * i, true,
+                orders.Add(new OrdersDetailsObserveData(code + 2, "ANANTR", i + 2, 3.3 * i, true,
                     new DateTime(1990, 4, 4), "Madrid", "Queen Cozinha", "Brazil",
                     new DateTime(1996, 9, 11), "Avda. Azteca 123"));
 
                 orders.Add(new OrdersDetailsObserveData(code + 3, "ANTON", i + 1, 4.3 * i, true,
-                    new DateTime(1957, 11, 30), "Cholchester", "Frankenversand", "Germany",
+                    new DateTime(1957, 11, 30), "Colchester", "Frankenversand", "Germany",
                     new DateTime(1996, 10, 7), "Carrera 52 con Ave. Bolívar #65-98 Llano Largo"));
 
                 orders.Add(new OrdersDetailsObserveData(code + 4, "BLONP", i + 3, 5.3 * i, false,
@@ -1752,7 +1752,7 @@ N> * The Grid automatically reflects changes when records are added, removed, or
 
 ### Add a range of items into ObservableCollection in Blazor DataGrid
 
-The Blazor DataGrid supports binding to an ObservableCollection, which allows the Grid to automatically reflect changes made to the data source. This approach is particularly useful when you need to add a large batch of records to the Grid at once, such as:
+The Blazor DataGrid supports binding to an ObservableCollection, allowing the Grid to automatically reflect changes made to the data source. This approach is particularly useful when a large batch of records needs to be added to the Grid at once, such as:
 
   * Loading or importing a large dataset dynamically.
 

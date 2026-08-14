@@ -327,9 +327,9 @@ public class StockHub : Hub
 
 **How SignalR Methods are Called:**
 
-The hub methods are invoked from the Blazor component using the HubConnection object. When the component calls `await hubConnection.SendAsync("SubscribeToStocks")`, the `SubscribeToStocks()` method on the hub is executed server-side.
+Hub methods are invoked from the Blazor component using the HubConnection object. When executing `await hubConnection.SendAsync("SubscribeToStocks")`, the `SubscribeToStocks()` method on the server-side hub is triggered for execution.
 
-The hub is now ready to manage real-time connections.
+The SignalR hub is now configured to manage real-time connections and broadcast updates to all connected clients.
 
 ### Step 5: Create the Background Service
 
@@ -684,7 +684,7 @@ The adaptor is now ready to provide data operations for the DataGrid.
 
 ### Step 4: Establish SignalR Connection
 
-The `OnInitializedAsync()` method is a Blazor lifecycle method that executes when the component is initialized. This is where the SignalR connection is established and configured. Here's a detailed breakdown of each step:
+The `OnInitializedAsync()` method is a Blazor lifecycle method that executes when the component is initialized. This is where the SignalR connection is established and configured. Here is a detailed breakdown of each step:
 
 **Step 1: Build the Hub URL**
 
