@@ -1013,7 +1013,7 @@ Below table lists the importing theme path for the individual components.
 
 ### Download customized styles using Custom Resource Generator (CRG)
 
-1. Download the minified styles for the required components from the [CRG](https://blazor.syncfusion.com/crg) site. Learn more about CRG in the [help documentation](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
+1. Download the minified styles for the required components from the [CRG](https://blazor.syncfusion.com/crg/) site. Learn more about CRG in the [help documentation](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
 
 2. Unzip the downloaded file. It contains the styles of the selected components and an `import.json` file that stores the current settings.
    

@@ -158,5 +158,5 @@ The app launches and renders the **[Blazor DataGrid](https://www.syncfusion.com/
 
 - [Getting started with Blazor DataGrid in WASM App](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
 - [Integrating Blazor Components with Azure Functions](https://blazor.syncfusion.com/documentation/common/integration/blazor-azure-functions)
-- [Blazor WebAssembly with JetBrains Rider](https://www.syncfusion.com/webinars/blazor-webassembly-with-jetbrains-rider-and-syncfusion)
+- [Blazor WebAssembly with JetBrains Rider](https://www.syncfusion.com/webinars/blazor-webassembly-with-jetbrains-rider-and-syncfusion/)
 
