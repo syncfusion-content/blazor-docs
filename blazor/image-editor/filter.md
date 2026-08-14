@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filter with Blazor Image Editor Component | Syncfusion®
-description: Explore image filter options in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
+title: Filter in Blazor Image Editor | Syncfusion
+description: Apply predefined filters such as chrome, sepia, invert, and grayscale to images in Blazor Image Editor.
 platform: Blazor
 control: Image Editor
 documentation: ug
 ---
 
-# Filters in the Blazor Image Editor component
+# Filter in Blazor Image Editor
 
 Filters are predefined effects that modify an image’s appearance or mood. They can add visual emphasis or enhance specific elements of an image. Common filters include cold, warm, chrome, sepia, and invert.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Week Numbers in Blazor DateTimePicker Component | Syncfusion®
-description: Checkout and learn here all about Week Numbers in Blazor DateTimePicker component and much more details.
+title: Week Number in Blazor DateTime Picker | Syncfusion®
+description: Display ISO or culture-specific week numbers in the Blazor DateTime Picker with a leading column, configurable via WeekRule and FirstDayOfWeek.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
 ---
 
-# Week Number in Blazor DateTimePicker Component
+# Week Number in Blazor DateTime Picker
 
 Display the week index in the calendar's left column by setting `WeekNumber="true"` (default is `false`). The `Width` is increased to make room for the new column.
 

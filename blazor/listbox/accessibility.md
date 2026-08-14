@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all the features about accessibility in Blazor ListBox component and much more.
+title: Accessibility in Blazor ListBox | Syncfusion
+description: Learn how Blazor ListBox supports accessibility standards, keyboard navigation, screen readers, and ARIA attributes.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Accessibility in Blazor ListBox Component
+# Accessibility in Blazor ListBox
 
 The Blazor ListBox component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/). It also implements appropriate [WAI-ARIA](https://www.w3.org/TR/wai-aria/#roles) roles to support users of assistive technologies.
 

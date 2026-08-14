@@ -51,7 +51,7 @@ The following ARIA attributes are used in the Stepper component:
 
 The following keyboard shortcuts are supported by the Stepper component.
 
-| **Windows** | **Mac** | **To do this** |
+| Windows | Mac | **To do this** |
 | --- | --- | --- |
 | <kbd>↑</kbd> | <kbd>↑</kbd> | Focuses the previous step in a vertical Stepper. |
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Focuses the next step in a vertical Stepper. |

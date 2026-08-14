@@ -1,13 +1,13 @@
 ---
 layout: post
-title: List of Components in Blazor In-place Editor Component | Syncfusion®
-description: Checkout and learn here all about List of Components in Blazor In-place Editor component and much more details.
+title: List of Components in Blazor In-place Editor | Syncfusion
+description: Explore the built-in editor components supported by Blazor In-place Editor such as TextBox, DropDownList, DatePicker, and more.
 platform: Blazor
 control: In-place Editor 
 documentation: ug
 ---
 
-# List of Components in Blazor In-place Editor Component
+# List of Components in Blazor In-place Editor
 
 The In-place Editor renders different editor components based on the `Type` property. Each editor component must be placed inside the In-place Editor and configured with two-way data binding between the In-place Editor and the embedded editor component to keep values in sync.
 

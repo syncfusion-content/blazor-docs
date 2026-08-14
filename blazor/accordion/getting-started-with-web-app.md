@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Accordion in Blazor Web App | Syncfusion
-description: Check out and learn about the documentation for getting started with Blazor Accordion Component in Blazor Web App.
+title: Getting Started with Blazor Accordion in Blazor Web App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Accordion control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Accordion
 documentation: ug

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filtering in Blazor DropDown List Component | Syncfusion®
-description: Checkout and learn here all about Filtering in Blazor DropDown List component and much more details.
+title: Filtering in Blazor Dropdown List | Syncfusion®
+description: Enable filtering, debounce delay, case sensitivity, and match types like StartsWith, EndsWith, and Contains in Blazor Dropdown List.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Filtering in Dropdown List
+# Filtering in Blazor Dropdown List
 
 The DropDown List component supports built-in filtering when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is enabled. Filtering begins as the user types in the search box. The default value of AllowFiltering is `false`.
 

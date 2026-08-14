@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Range Slider in Web App | Syncfusion
-description: Check out the documentation for getting started with Blazor Range Slider Components in Blazor Web Application.
+title: Blazor Range Slider Web App Getting Started | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Range Slider in a Blazor Web App with setup steps.
 platform: Blazor
 control: Range Slider
 documentation: ug

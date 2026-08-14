@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Variants with Blazor Message Component | Syncfusion®
-description: Checkout and learn about Variants with Blazor Message component in Blazor Server App and Blazor WebAssembly App.
+title: Variants in Blazor Message | Syncfusion
+description: Switch Blazor Message visual styles between Text, Outlined, and Filled variants using the Variant property.
 platform: Blazor
 control: Message
 documentation: ug
 ---
 
-# Variants in Blazor Message Component
+# Variants in Blazor Message
 
 The Message has predefined appearance variants for different visual representations. The variants of the message can be changed based on the [Variant](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_Variant) property.
 

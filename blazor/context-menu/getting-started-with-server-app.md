@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Context Menu in Server App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor Context Menu Component in Blazor Server App.
+title: Blazor Context Menu Server App Getting Started | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Context Menu control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Context Menu
 documentation: ug
 ---
 
-# Getting started with Blazor Context Menu in Blazor Server App
+# Getting Started with Blazor Context Menu in Blazor Server App
 
 This section briefly explains how to include [Blazor Context Menu](https://www.syncfusion.com/blazor-components/blazor-context-menu) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
