@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup settings in Blazor AutoComplete component | Syncfusion®
-description: Check out popup settings in the Blazor AutoComplete component, including resize, width, height, z-index, initial display, and open/close events.
+title: Popup Setting in Blazor AutoComplete | Syncfusion®
+description: Configure the Blazor AutoComplete popup with resizing, custom width and height, z-index, and showPopupOnFocus behavior, plus open and close events.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Popup Setting in AutoComplete
+# Popup Setting in Blazor AutoComplete
 
 ## Popup resize 
 
