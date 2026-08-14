@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Types and Styles in Blazor ButtonGroup Component | Syncfusion®
-description: Checkout and learn here all features about Types and Styles in Blazor ButtonGroup component and more.
+title: Types and Styles in Blazor Button Group | Syncfusion®
+description: Explore the available types and styles for Blazor Button Group, including outline, flat, rounded, and toggle variants for different UI contexts.
 platform: Blazor
-control: ButtonGroup
+control: Button Group
 documentation: ug
 ---
 
-# Types and Styles in Blazor Button Group Component
+# Types and Styles in Blazor Button Group
 
 This section explains the different types and styles available for the Button Group component.
 

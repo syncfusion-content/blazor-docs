@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Breadcrumb Overflow with Blazor Breadcrumb component | Syncfusion®
-description: Overflow section in Blazor Breadcrumb explains how to limit the number of Breadcrumb items to be displayed.
+title: Overflow in Blazor Breadcrumb | Syncfusion®
+description: Limit the number of visible Blazor Breadcrumb items using MaxItems and OverflowMode, with options to collapse the middle or end items.
 platform: Blazor
 control: Breadcrumb
 documentation: ug
 ---
 
-# Overflow Mode in Blazor Breadcrumb
+# Overflow in Blazor Breadcrumb
 
 In the [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) component, the [MaxItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_MaxItems) and [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_OverflowMode) properties are used to limit the number of Breadcrumb items to be displayed. By default, `MaxItems` is `0` (unlimited) and `OverflowMode` is `Default`.
 
