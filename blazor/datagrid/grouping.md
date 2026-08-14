@@ -345,7 +345,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrnDlWTznnIdhnF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBnjwDAKBAHAZyd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > By default, the group drop area is shown only if at least one column is available to group.
 
@@ -1042,7 +1042,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhxZGtUpEGJBriu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVHNPMJSLRrMRSC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Clear grouping
 
