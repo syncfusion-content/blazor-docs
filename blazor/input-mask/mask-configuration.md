@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mask Configuration in Blazor Input Mask Component | Syncfusion®
-description: Checkout and learn here all about Mask Configuration in Blazor Input Mask component and much more details.
+title: Mask Configuration in Blazor Input Mask | Syncfusion
+description: Define standard and custom mask elements in Blazor Input Mask to validate formatted user input such as dates, phones, and IDs.
 platform: Blazor
 control: Input Mask
 documentation: ug
 ---
 
-# Mask Configuration in Blazor Input Mask Component
+# Mask Configuration in Blazor Input Mask
 
 The [Mask](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_Mask) is a set of standard and custom elements that validate user input based on defined rules.
 

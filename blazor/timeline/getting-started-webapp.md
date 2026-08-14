@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Timeline in Blazor Web App | Syncfusion
-description: Check out and learn the documentation for getting started with Blazor Timeline Component in Blazor Web App.
+title: Getting Started with Blazor Timeline in Blazor Web App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Timeline in a Blazor Web App using setup steps and examples.
 platform: Blazor
 control: Timeline
 documentation: ug
 ---
 
-# Getting started with Blazor Timeline in Blazor Web App
+# Getting Started with Blazor Timeline in Blazor Web App
 
 This section explains how to integrate the [Blazor Timeline](https://www.syncfusion.com/blazor-components/blazor-timeline) component into a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Navigations and Indicators with Blazor Carousel | Syncfusion®
-description: Checkout and learn about Navigations and Indicators with Blazor Carousel component in Blazor Server App and Blazor WebAssembly App.
+title: Navigators and Indicators in Blazor Carousel | Syncfusion®
+description: Show previous and next navigation arrows and clickable page indicators on the Blazor Carousel to let users manually move between slides.
 platform: Blazor
 control: Carousel
 documentation: ug
 ---
 
-# Navigators and Indicators in Blazor Carousel component
+# Navigators and Indicators in Blazor Carousel
 
 The navigators and indicators are used to transition the slides manually.
 

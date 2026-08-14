@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in Blazor DropDownList component | Syncfusion®
-description: Checkout and learn here all about the Selection feature in Blazor DropDownList component and much more details.
+title: Selection in Blazor Dropdown List | Syncfusion®
+description: Get, set, and handle selected values in Blazor Dropdown List using value binding, index binding, and selection events.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Selection in Dropdown List
+# Selection in Blazor Dropdown List
 
 ## Get selected value
 

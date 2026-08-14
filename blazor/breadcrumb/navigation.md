@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Navigation with Blazor Breadcrumb component | Syncfusion®
-description: Checkout and learn here all features about Navigation with Blazor Breadcrumb component and much more.
+title: Navigation in Blazor Breadcrumb | Syncfusion®
+description: Enable or disable built-in navigation for Blazor Breadcrumb items via the EnableNavigation property, or wire up custom navigation handlers.
 platform: Blazor
 control: Breadcrumb
 documentation: ug

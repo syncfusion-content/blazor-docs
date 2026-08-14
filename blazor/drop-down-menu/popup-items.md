@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup Items in Blazor Dropdown Menu Component | Syncfusion®
-description: Checkout and learn here all the features about Popup Items in Blazor Dropdown Menu component and more.
+title: Popup Items in Blazor Dropdown Menu | Syncfusion®
+description: Configure the Blazor Dropdown Menu popup items with text, icons, URLs, separators, and child items for hierarchical actions.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
 ---
 
-# Popup Items in Blazor Dropdown Menu Component
+# Popup Items in Blazor Dropdown Menu
 
 ## Icons
 

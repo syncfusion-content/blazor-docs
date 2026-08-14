@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor In-place Editor Component | Syncfusion®
-description: Checkout and learn here all about keyboard shortcuts in Blazor In-place Editor component and much more details.
+title: Accessibility in Blazor In-place Editor | Syncfusion
+description: Learn how Blazor In-place Editor supports accessibility standards, keyboard navigation, screen readers, and ARIA attributes.
 platform: Blazor
 control: In-place Editor
 documentation: ug
 ---
 
-# Accessibility in Blazor In-place editor component
+# Accessibility in Blazor In-place Editor
 
 The [Blazor In-place editor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI‑ARIA](https://www.w3.org/TR/wai-aria/) specifications that are commonly used to evaluate accessibility.
 

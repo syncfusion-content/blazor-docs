@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor DatePicker Component | Syncfusion®
-description: Checkout and learn here all the features about Accessibility in Blazor DatePicker component and much more.
+title: Accessibility in Blazor DatePicker | Syncfusion®
+description: Learn how Blazor DatePicker meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA attributes, keyboard navigation, and screen reader support.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Accessibility in Blazor DatePicker Component
+# Accessibility in Blazor DatePicker
 
 The web accessibility defines a way to make web content and web applications more accessible to disabled people. It especially helps the dynamic content change and advanced user interface components developed with Ajax, HTML, JavaScript, and related technologies.
 
