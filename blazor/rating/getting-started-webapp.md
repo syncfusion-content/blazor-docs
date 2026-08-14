@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Rating in Blazor Web App | Syncfusion
-description: Check out and learn the documentation for getting started with Blazor Rating component in Blazor Web Application.
+description: Get started with the Syncfusion Blazor Rating in a Blazor Web App using setup steps, configuration guidance, and code examples.
 platform: Blazor
 control: Rating
 documentation: ug

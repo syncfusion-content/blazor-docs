@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Dropdown List in Web App | Syncfusion
-description: Check out and learn about how to get started with the Blazor Dropdown List Component in Blazor Web App.
+title: Blazor Dropdown List Web App Getting Started | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Dropdown List in a Blazor Web App with installation and setup steps.
 platform: Blazor
 component: Dropdown List
 documentation: ug
 ---
 
-# Getting Started with Blazor Dropdown List Component in Blazor Web App
+# Getting Started with Blazor Dropdown List in Blazor Web App
 
 This section briefly explains how to include the [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

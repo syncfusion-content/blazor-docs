@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Mention in Blazor WASM App | Syncfusion
-description: Check out and learn about getting started with Blazor Mention component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Mention | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Mention in a Blazor WebAssembly app with installation and setup steps.
 platform: Blazor
 control: Mention
 documentation: ug
 ---
 
-# Getting Started with Blazor Mention in Blazor WASM App
+# Getting Started with Blazor Mention
 
 This section briefly explains about how to include [Blazor Mention](https://www.syncfusion.com/blazor-components/blazor-mention) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

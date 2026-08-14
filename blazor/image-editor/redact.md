@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Redact with Blazor Image Editor Component | Syncfusion®
-description: Explore the Redact support in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
+title: Redact in Blazor Image Editor | Syncfusion
+description: Conceal sensitive image areas in Blazor Image Editor with blur or pixelate redaction effects and manage redactions programmatically.
 platform: Blazor
 control: Image Editor
 documentation: ug
 ---
 
-# Redact in the Blazor Image Editor component
+# Redact in Blazor Image Editor
 
 The redact feature conceals sensitive content by applying blur or pixel effects to selected regions of an image. It supports privacy protection and regulatory compliance, enabling secure image sharing without exposing confidential information.
 

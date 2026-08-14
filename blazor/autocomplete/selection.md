@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in Blazor AutoComplete Component | Syncfusion®
-description: Checkout and learn here all features about the Selection feature in Blazor AutoComplete component and much more.
+title: Selection in Blazor AutoComplete | Syncfusion®
+description: Read and set the selected text and value in the Blazor AutoComplete using Value, Text, or Index binding, and react to user selection with the ValueChange event.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Selection in AutoComplete
+# Selection in Blazor AutoComplete
 
 ## Get selected value
 

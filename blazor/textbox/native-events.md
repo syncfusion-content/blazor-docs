@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor TextBox Component | Syncfusion®
-description: Checkout and learn here all the features about Native Events in Blazor TextBox component and much more details.
+title: Native Events in Blazor TextBox | Syncfusion
+description: Bind native DOM events to Blazor TextBox using on-event attributes and event handlers for custom logic.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Native Events in Blazor TextBox Component
+# Native Events in Blazor TextBox
 
 The following section explains how to bind native DOM events and pass event data to an event handler in the TextBox component.
 
