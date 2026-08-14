@@ -242,12 +242,11 @@ Here, the Calendar allows selecting a date from the 5th through the 27th of the 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrdZHsVVmcdCwgj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Selection in Blazor Calendar Component](./images/blazor-calendar-selection.webp)" %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Calendar).
+N> Explore the [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) feature tour to learn about its key features and capabilities. You can also browse the [Blazor Calendar examples](https://blazor.syncfusion.com/demos/calendar/default-functionalities?theme=fluent2) to see how to render and configure the component. Additionally, sample projects are available on [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Calendar) for reference and further exploration.
 
 ## See also
 
-1. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-2. [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-3. [Getting Started with Blazor Calendar Events](https://blazor.syncfusion.com/documentation/calendar/events)
-
-
+1. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+2. [Getting Started with Blazor Server App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor WebAssembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+4. [Getting Started with Blazor Calendar Events](https://blazor.syncfusion.com/documentation/calendar/events)
