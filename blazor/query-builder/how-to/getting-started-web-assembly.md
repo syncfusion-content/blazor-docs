@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor QueryBuilder in WebAssembly | Syncfusion®
-description: Checkout and learn about getting started with Blazor WebAssembly and Blazor QueryBuilder Component in Visual Studio with examples.
+description: Set up Blazor Query Builder in a Blazor WebAssembly app using Visual Studio and Syncfusion NuGet packages.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles and Appearances in Blazor ProgressButton Component | Syncfusion
-description: Checkout and learn here all about Styles and Appearances in Syncfusion Blazor ProgressButton component and more.
+title: Style and Appearance in Blazor Progress Button | Syncfusion
+description: Customize Blazor ProgressButton appearance with built-in themes, scoped CSS, and CSS class overrides.
 platform: Blazor
 control: Progress Button
 documentation: ug
 ---
 
-# Styles and Appearances in Blazor ProgressButton Component
+# Style and Appearance in Blazor Progress Button
 
 Customize the appearance of the ProgressButton by overriding the built-in CSS selectors of the component. Use scoped styles (for example, by adding a custom class via the CssClass parameter) to limit changes to specific instances. To create a consistent look-and-feel across the application, consider using built-in themes or generating a custom theme with the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 

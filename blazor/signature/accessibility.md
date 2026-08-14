@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility with Blazor Signature Component | Syncfusion®
-description: Explore Blazor Signature accessibility with WCAG 2.2 support, screen readers, keyboard navigation, and mobile device compatibility.
+title: Accessibility in Blazor Signature | Syncfusion
+description: Learn how Blazor Signature supports accessibility with WCAG 2.2, keyboard navigation, and screen readers.
 platform: Blazor
 control: Signature
 documentation: ug
 ---
 
-# Accessibility in Blazor Signature Component
+# Accessibility in Blazor Signature
 
 The Blazor Signature component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

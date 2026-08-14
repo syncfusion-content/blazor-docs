@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor QueryBuilder Component | Syncfusion®
-description: Checkout and learn here all about templates in Blazor QueryBuilder component with examples and much more details.
+title: Templates in Blazor Query Builder | Syncfusion
+description: Customize Blazor Query Builder value editors and layout using ValueTemplate and other template options.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Templates in Blazor QueryBuilder Component
+# Templates in Blazor Query Builder
 
 This section describes the template options available in the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) to customize editors and layout.
 
