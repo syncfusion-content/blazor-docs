@@ -1,20 +1,15 @@
 ---
 layout: post
-title: Getting Started with Blazor WASM App in JetBrains Rider | Syncfusion
-description: Step-by-step guide to integrate Blazor DataGrid in Blazor WASM applications in JetBrains Rider and much more details.
+title: Getting Started with Blazor Server App in JetBrains Rider | Syncfusion
+description: Step-by-step guide to create a Blazor Server application in JetBrains Rider and integrate Syncfusion Blazor DataGrid.
 platform: Blazor
 control: common
 documentation: ug
 ---
 
-# Getting Started with Blazor WASM App in JetBrains Rider 
+# Getting Started with Blazor Server App in JetBrains Rider 
 
-This guide explains how to create a Blazor WebAssembly application and integrate [Blazor components](https://www.syncfusion.com/blazor-components) in [JetBrains Rider](https://www.jetbrains.com/rider/).
-
-To quickly get started with a Blazor WebAssembly application in JetBrains Rider with Blazor components, watch the following video:
-
-{% youtube
-"youtube:https://www.youtube.com/watch?v=hLBBg-mkC2Y" %}
+This guide explains how to create a Blazor Server application and integrate [Blazor components](https://www.syncfusion.com/blazor-components) in [JetBrains Rider](https://www.jetbrains.com/rider/).
 
 ## Install JetBrains Rider
 
@@ -25,16 +20,19 @@ To quickly get started with a Blazor WebAssembly application in JetBrains Rider 
 
 ## Creating a Blazor application
 
-This section explains how to create a new **Blazor WebAssembly Standalone App** in **JetBrains Rider**.
+This section explains how to create a new **Blazor Server App** in **JetBrains Rider**.
 
 Follow these steps to create a Blazor application in Rider:
 
 - Open **JetBrains Rider**.
 - On the welcome screen, click **New Solution**.
-- Select the **.NET SDK version** that you want to use.
-- From the available project templates, select **Blazor WebAssembly Standalone App**.
 - Enter your project name.
+- Select the **.NET SDK version** that you want to use.
+- From the available project templates, select **Blazor Web App**.
+- Set the interactive render mode as **Server**.
 - Click **Create** to generate the project.
+
+![Jetbrains project creation](images/project-creation.webp)
 
 Once the project is created, Rider opens the solution and restores the required dependencies automatically.
 
@@ -58,17 +56,16 @@ Once the installation is complete, the Blazor components are ready to be used in
 Add the Blazor service to the `Program.cs` file to enable Blazor components in the application.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" hl_lines="3 9" %}
+{% highlight c# tabtitle="Program.cs" hl_lines="1 6" %}
 
-using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Syncfusion.Blazor;
 
-var builder =  WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add<App>("#app");
-builder.RootComponents.Add<HeadOutlet>("head::after");
-
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
 builder.Services.AddSyncfusionBlazor();
+
+var app = builder.Build();
 ....
 
 {% endhighlight %}
@@ -76,10 +73,10 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-To apply styles and enable features, reference the theme CSS and scripts within the `wwwroot/index.html` file.
+To apply styles and enable features, reference the theme CSS and scripts within the `App.razor` file.
 
 {% tabs %}
-{% highlight html  %}
+{% highlight razor tabtitle="App.razor"  %}
 
 <head>
     ....
@@ -98,6 +95,8 @@ To apply styles and enable features, reference the theme CSS and scripts within 
 {% endhighlight %}
 {% endtabs %}
 
+N>If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file. (For example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
+
 ## Connect the Blazor DataGrid
 
 Add the **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** components to a `.razor` file within your app. 
@@ -106,7 +105,7 @@ Add the **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-
 {% highlight razor tabtitle="Pages/Home.razor"  %}
 
 @page "/"
-
+@rendermode InteractiveServer
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -156,7 +155,7 @@ The app launches and renders the **[Blazor DataGrid](https://www.syncfusion.com/
 
 ## See also
 
-- [Getting started with Blazor DataGrid in WASM App](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
-- [Integrating Blazor Components with Azure Functions](https://blazor.syncfusion.com/documentation/common/integration/blazor-azure-functions)
-- [Blazor WebAssembly with JetBrains Rider](https://www.syncfusion.com/webinars/blazor-webassembly-with-jetbrains-rider-and-syncfusion/)
-
+- [Getting Started with Blazor WASM App in JetBrains Rider](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-jetbrains)
+- [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+- [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+- [Getting Started with Blazor WebAssembly Standalone App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
