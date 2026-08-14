@@ -86,7 +86,7 @@ For each value field, the aggregation type can be set using the property [Type](
 
 ![Aggregation in Blazor PivotTable](images/blazor-pivottable-aggregation.webp)
 
-N> By default, the aggregation is set to[SummaryTypes.Sum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_Sum) for value fields that have a number type, and to [SummaryTypes.Count](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_Count) for value fields that have non-number type values such as string, date, datetime, boolean, and so on.
+N> By default, the aggregation is set to [SummaryTypes.Sum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_Sum) for value fields that have a number type, and to [SummaryTypes.Count](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_Count) for value fields that have non-number type values such as string, date, datetime, boolean, and so on.
 
 ## Modifying aggregation type for value fields at runtime
 
