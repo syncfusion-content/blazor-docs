@@ -34,8 +34,13 @@ Follow these steps to configure localization for label text and validation error
 {% include_relative code-snippet/localization/localization.razor %}
 
 {% endhighlight %}
+{% highlight C# tabtitle="C#"  %}
+
+{% include_relative code-snippet/localization/localization.cs %}
+
+{% endhighlight %}
 {% endtabs %}
 
-4. Run the application to view the DataForm with localized labels and validation messages.
+1. Run the application to view the DataForm with localized labels and validation messages.
 
 ![Localization applied in the DataForm component](./images/blazor_dataform_localization.webp)
