@@ -539,7 +539,7 @@ The event provides the following parameters to help you handle completed operati
 
 | User Action | Action Name |
 |-------------|-------------|
-| [Creating calculated fiel](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field) | Calculated field applied|
+| [Creating calculated field](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field) | Calculated field applied|
 | [Editing calculated field](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field#editing-through-the-field-list-and-the-groupingbar) | Calculated field edited |
 
 - [FieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_FieldInfo): Provides information about the selected field when the action involves a specific field.
