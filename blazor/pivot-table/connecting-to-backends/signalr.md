@@ -535,7 +535,7 @@ The `Home.razor` component markup in this step displays the order data and live 
 * Open the file named `Home.razor` in the `Components/Pages` folder.
 * Add the following markup for the live update controls, the Pivot Table, and the data source configuration:
 
-```razor
+```cshtml
 @page "/"
 
 @using Microsoft.AspNetCore.SignalR.Client
