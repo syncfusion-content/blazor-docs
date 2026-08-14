@@ -133,20 +133,28 @@ The following table lists the components and their script file names.
         <td>sf-textarea.min.js</td>
     </tr>
     <tr>
-        <td>NumericTextBox</td>
+        <td>Toggle Switch Button</td>
+        <td>sf-switch.min.js</td>
+    </tr>
+    <tr>
+        <td>Numeric TextBox</td>
         <td>sf-numerictextbox.min.js</td>
     </tr>
     <tr>
-        <td>MaskedTextBox</td>
+        <td>Input Mask</td>
         <td>sf-maskedtextbox.min.js</td>
     </tr>
     <tr>
-        <td>OtpInput</td>
+        <td>OTP Input</td>
         <td>sf-otp-input.min.js</td>
     </tr>
     <tr>
-        <td>Uploader</td>
+        <td>File Upload</td>
         <td>sf-uploader.min.js</td>
+    </tr>
+    <tr>
+        <td>Range Slider</td>
+        <td>sf-slider.min.js</td>
     </tr>
     <tr>
         <td>Calendar</td>
@@ -157,7 +165,7 @@ The following table lists the components and their script file names.
         <td>sf-datepicker.min.js</td>
     </tr>
     <tr>
-        <td>DateTimePicker</td>
+        <td>DateTime Picker</td>
         <td>sf-datepicker.min.js</td>
     </tr>
     <tr>
@@ -177,15 +185,15 @@ The following table lists the components and their script file names.
         <td>sf-dropdownlist.min.js</td>
     </tr>
     <tr>
-        <td>DropDownList</td>
+        <td>Dropdown List</td>
         <td>sf-dropdownlist.min.js</td>
     </tr>
     <tr>
-        <td>MultiColumnComboBox</td>
-        <td>sf-multicolumn-combobox.min.js</td>
+        <td>Multicolumn ComboBox</td>
+        <td>sf-multicolumncombobox.min.js</td>
     </tr>
     <tr>
-        <td>MultiSelect</td>
+        <td>MultiSelect Dropdown</td>
         <td>sf-multiselect.min.js</td>
     </tr>
     <tr>
@@ -193,15 +201,15 @@ The following table lists the components and their script file names.
         <td>sf-mention.min.js</td>
     </tr>
     <tr>
-        <td>DropDownButton</td>
+        <td>Dropdown Menu</td>
         <td>sf-drop-down-button.min.js</td>
     </tr>
     <tr>
-        <td>SplitButton</td>
+        <td>Split Button</td>
         <td>sf-drop-down-button.min.js</td>
     </tr>
     <tr>
-        <td>ProgressButton</td>
+        <td>Progress Button</td>
         <td>sf-spinner.min.js</td>
     </tr>
     <tr>
@@ -209,7 +217,7 @@ The following table lists the components and their script file names.
         <td>sf-listbox.min.js</td>
     </tr>
     <tr>
-        <td>ColorPicker</td>
+        <td>Color Picker</td>
         <td>sf-colorpicker.min.js</td>
     </tr>
     <tr>
@@ -221,15 +229,15 @@ The following table lists the components and their script file names.
         <td>sf-rating.min.js</td>
     </tr>
     <tr>
-        <td>SpeechToText</td>
+        <td>Speech to Text</td>
         <td>sf-speechtotext.min.js</td>
     </tr>
     <tr>
-        <td>ContextMenu</td>
+        <td>Context Menu</td>
         <td>sf-contextmenu.min.js</td>
     </tr>
     <tr>
-        <td>Menu</td>
+        <td>Menu Bar</td>
         <td>sf-menu.min.js</td>
     </tr>
     <tr>
@@ -241,7 +249,7 @@ The following table lists the components and their script file names.
         <td>sf-carousel.min.js</td>
     </tr>
     <tr>
-        <td>DropDownTree</td>
+        <td>Dropdown Tree</td>
         <td>sf-dropdowntree.min.js</td>
     </tr>
     <tr>
@@ -249,11 +257,7 @@ The following table lists the components and their script file names.
         <td>sf-stepper.min.js</td>
     </tr>
     <tr>
-        <td>Timeline</td>
-        <td>sf-timeline.min.js</td>
-    </tr>
-    <tr>
-        <td>QueryBuilder</td>
+        <td>Query Builder</td>
         <td>sf-querybuilder.min.js</td>
     </tr>
     <tr>
@@ -265,7 +269,7 @@ The following table lists the components and their script file names.
         <td>sf-accordion.min.js</td>
     </tr>
     <tr>
-        <td>Tab</td>
+        <td>Tabs</td>
         <td>sf-tab.min.js</td>
     </tr>
     <tr>
@@ -273,11 +277,11 @@ The following table lists the components and their script file names.
         <td>sf-toolbar.min.js</td>
     </tr>
     <tr>
-        <td>Schedule</td>
+        <td>Scheduler</td>
         <td>sf-schedule.min.js</td>
     </tr>
     <tr>
-        <td>BarcodeGenerator</td>
+        <td>Barcode Generator</td>
         <td>sf-barcode.min.js</td>
     </tr>
     <tr>
@@ -285,31 +289,43 @@ The following table lists the components and their script file names.
         <td>sf-maps.min.js</td>
     </tr>
     <tr>
-        <td>CircularGauge</td>
+        <td>Circular Gauge</td>
         <td>sf-circulargauge.min.js</td>
     </tr>
     <tr>
-        <td>LinearGauge</td>
+        <td>Linear Gauge</td>
         <td>sf-lineargauge.min.js</td>
+    </tr>
+    <tr>
+        <td>HeatMap</td>
+        <td>sf-heatmap.min.js</td>
     </tr>
     <tr>
         <td>Chart</td>
         <td>sf-chart.min.js</td>
     </tr>
     <tr>
+        <td>3D Chart</td>
+        <td>sf-chart3d.min.js</td>
+    </tr>
+    <tr>
+        <td>Chart Wizard</td>
+        <td>sf-chart-wizard.min.js</td>
+    </tr>
+    <tr>
         <td>CheckBox</td>
         <td>sf-checkbox.min.js</td>
     </tr>
     <tr>
-        <td>AccumulationChart</td>
+        <td>Accumulation Chart</td>
         <td>sf-accumulation-chart.min.js</td>
     </tr>
     <tr>
-        <td>StockChart</td>
+        <td>Stock Chart</td>
         <td>sf-stock-chart.min.js</td>
     </tr>
     <tr>
-        <td>BulletChart</td>
+        <td>Bullet Chart</td>
         <td>sf-bullet-chart.min.js</td>
     </tr>
     <tr>
@@ -325,28 +341,20 @@ The following table lists the components and their script file names.
         <td>sf-progressbar.min.js</td>
     </tr>
     <tr>
-        <td>SmithChart</td>
+        <td>Smith Chart</td>
         <td>sf-smith-chart.min.js</td>
     </tr>
     <tr>
-        <td>RangeNavigator</td>
+        <td>Range Selector</td>
         <td>sf-range-navigator.min.js</td>
-    </tr>
-    <tr>
-        <td>HeatMap</td>
-        <td>sf-heatmap.min.js</td>
     </tr>
     <tr>
         <td>Sankey</td>
         <td>sf-sankey.min.js</td>
     </tr>
     <tr>
-        <td>FileManager</td>
+        <td>File Manager</td>
         <td>sf-filemanager.min.js</td>
-    </tr>
-    <tr>
-        <td>Slider</td>
-        <td>sf-slider.min.js</td>
     </tr>
     <tr>
         <td>Tooltip</td>
@@ -357,7 +365,7 @@ The following table lists the components and their script file names.
         <td>sf-listview.min.js</td>
     </tr>
     <tr>
-        <td>DashboardLayout</td>
+        <td>Dashboard Layout</td>
         <td>sf-dashboard-layout.min.js</td>
     </tr>
     <tr>
@@ -369,7 +377,7 @@ The following table lists the components and their script file names.
         <td>sf-treeview.min.js</td>
     </tr>
     <tr>
-        <td>PivotView</td>
+        <td>Pivot Table</td>
         <td>sf-pivotview.min.js</td>
     </tr>
     <tr>
@@ -385,15 +393,11 @@ The following table lists the components and their script file names.
         <td>sf-splitter.min.js</td>
     </tr>
     <tr>
-        <td>Switch</td>
-        <td>sf-switch.min.js</td>
-    </tr>
-    <tr>
-        <td>FloatingActionButton</td>
+        <td>Floating Action Button</td>
         <td>sf-floating-action-button.min.js</td>
     </tr>
     <tr>
-        <td>SpeedDial</td>
+        <td>Speed Dial</td>
         <td>sf-speeddial.min.js</td>
     </tr>
     <tr>
@@ -405,11 +409,15 @@ The following table lists the components and their script file names.
         <td>sf-dialog.min.js</td>
     </tr>
     <tr>
-        <td>InPlaceEditor</td>
+        <td>In-Place Editor</td>
         <td>sf-inplaceeditor.min.js</td>
     </tr>
     <tr>
-        <td>ImageEditor</td>
+        <td>Kanban</td>
+        <td>sf-kanban.min.js</td>
+    </tr>
+    <tr>
+        <td>Image Editor</td>
         <td>sf-image-editor.min.js</td>
     </tr>
     <tr>
@@ -421,7 +429,7 @@ The following table lists the components and their script file names.
         <td>sf-diagramcomponent.min.js</td>
     </tr>
     <tr>
-        <td>Gantt</td>
+        <td>Gantt Chart</td>
         <td>sf-gantt.min.js</td>
     </tr>
     <tr>
@@ -429,24 +437,20 @@ The following table lists the components and their script file names.
         <td>sf-ribbon.min.js</td>
     </tr>
     <tr>
-        <td>RichTextEditor</td>
+        <td>Rich Text Editor</td>
         <td>sf-richtexteditor.min.js</td>
     </tr>
     <tr>
-        <td>Skeleton</td>
-        <td>sf-skeleton.min.js</td>
+        <td>Block Editor</td>
+        <td>sf-blockeditor.min.js</td>
     </tr>
     <tr>
-        <td>AIAssistView</td>
+        <td>AI AssistView</td>
         <td>sf-ai-assistview.min.js</td>
     </tr>
     <tr>
-        <td>ChatUI</td>
+        <td>Chat UI</td>
         <td>sf-chat-ui.min.js</td>
-    </tr>
-    <tr>
-        <td>DataForm</td>
-        <td>sf-data-form.min.js</td>
     </tr>
 </table>
 
