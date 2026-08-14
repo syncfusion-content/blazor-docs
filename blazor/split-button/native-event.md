@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor SplitButton Component | Syncfusion®
-description: Checkout and learn here all the features about events in Blazor SplitButton component and much more details.
+title: Events in Blazor Split Button | Syncfusion
+description: Handle Blazor Split Button native events using @onxxx attributes with explicit event binding support.
 platform: Blazor
 control: Split Button
 documentation: ug
 ---
 
-# Events in Blazor SplitButton Component
+# Events in Blazor Split Button
 
 Handle Split Button events by defining handlers in the [SplitButtonEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SplitButtonEvents.html) tag. The assigned method names act as event handlers, and event-specific data is provided through strongly typed event argument classes.
 
