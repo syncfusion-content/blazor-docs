@@ -1,13 +1,13 @@
 ---
 layout: post
-title: CSS Structure in Blazor Range Slider Component | Syncfusion®
-description: Checkout and learn here all about CSS Structure in Blazor Range Slider component with examples and much more details.
+title: Style and Appearance in Blazor Range Slider | Syncfusion
+description: Customize Blazor Range Slider track, thumb, and limits with CSS and custom themes to match your application's branding and visual consistency.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# CSS Structure in Blazor Range Slider Component
+# Style and Appearance in Blazor Range Slider
 
 The following content outlines the CSS structure that can be used to modify the control’s appearance according to application requirements.
 

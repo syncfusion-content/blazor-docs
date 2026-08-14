@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Progress Button in Server App | Syncfusion
-description: Check out and learn about the documentation for getting started with Blazor Progress Button Components in Blazor Server App.
+description: Learn how to get started with the Syncfusion Blazor Progress Button in a Blazor Server app with setup steps.
 platform: Blazor
 control: Progress Button
 documentation: ug

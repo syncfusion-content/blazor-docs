@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize the tick label in Blazor Range Slider | Syncfusion®
-description: Checkout and learn here all about how to customize the tick label in Blazor Range Slider component with examples and much more details.
+title: How to customize slider tick label in Blazor Range Slider | Syncfusion
+description: Customize Blazor Range Slider tick labels with CSS classes and the TicksRendering event for visually distinct, accessible tick marks.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Customize the tick label in Blazor Range Slider Component
+# How to customize slider tick label in Blazor Range Slider
 
 The slider’s tick appearance can be customized with CSS. By overriding the slider’s CSS classes, the tick marks (icons) and their styles can be tailored. Ticks help users identify current values on the slider. Tick generation is controlled by the [`SmallStep`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_SmallStep) and [`LargeStep`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_LargeStep) settings. By default, the slider uses the `e-tick` class for ticks. The example below appends a custom class during the `TicksRendering` event and injects a glyph via CSS to render custom tick icons.
 
