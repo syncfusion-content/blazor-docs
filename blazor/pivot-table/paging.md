@@ -88,7 +88,7 @@ You can change the position, visibility, compact view, and template of the row a
 
 ### Show pager UI at top or bottom
 
-The Pivot Table component lets you place the pager UI at the top or bottom of the Pivot Table by setting the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewPagerSettings.html#Syncfusion_Blazor_PivotView_PivotViewPagerSettings_Position) property within the [PivotViewPagerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewPagerSettings.html) configuration. By default the pager UI appears at the bottom; set **sition** to **Top** to place it above the Pivot Table.
+The Pivot Table component lets you place the pager UI at the top or bottom of the Pivot Table by setting the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewPagerSettings.html#Syncfusion_Blazor_PivotView_PivotViewPagerSettings_Position) property within the [PivotViewPagerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewPagerSettings.html) configuration. By default the pager UI appears at the bottom; set **Position** to **Top** to place it above the Pivot Table.
 
 The following example demonstrates how to configure the pager UI to appear at the top of the Pivot Table:
 
