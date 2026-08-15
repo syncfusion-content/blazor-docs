@@ -82,7 +82,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table internal
 
 * **`rowgroup` not contained in a `grid`, `table`, or `treegrid`** *(accessibility-checker)*: A `rowgroup` must be owned by an element with one of these parent roles.
 
-## Keyboard Navigation
+## Keyboard interaction
 
 The pivot table component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the pivot table component.
 
