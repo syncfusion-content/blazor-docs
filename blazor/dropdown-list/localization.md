@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Blazor DropDownList Component | Syncfusion®
-description: Checkout and learn here all about Localization in Blazor DropDown List component and much more details.
+title: Localization in Blazor Dropdown List | Syncfusion®
+description: Localize UI text and enable right-to-left rendering in Blazor Dropdown List for globalized applications.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Globalization and Localization in Dropdown List
+# Localization in Blazor Dropdown List
 
 ## Localization
 

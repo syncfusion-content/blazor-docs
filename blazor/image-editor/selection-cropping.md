@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Selection cropping with Blazor Image Editor Component | Syncfusion®
-description: Explore selection cropping in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
+title: Selection and Cropping in Blazor Image Editor | Syncfusion
+description: Select and crop image regions in Blazor Image Editor using custom shapes, circles, squares, and preset aspect ratios.
 platform: Blazor
 control: Image Editor
 documentation: ug
 ---
 
 
-# Selection cropping in the Blazor Image Editor Component
+# Selection and Cropping in Blazor Image Editor
 
 The cropping feature in the Blazor Image Editor enables selection and cropping of specific regions of an image. It supports custom shapes, squares, circles, and preset aspect ratios, including 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 5:7, 7:5, 9:16, and 16:9.
 

@@ -124,3 +124,5 @@ N> To make the field list interact with the pivot table, use the **UpdateViewAsy
 * [Field List](https://blazor.syncfusion.com/documentation/pivot-table/field-list)
 * [Grouping Bar](https://blazor.syncfusion.com/documentation/pivot-table/grouping-bar)
 * [Data binding](https://blazor.syncfusion.com/documentation/pivot-table/data-binding)
+
+N> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

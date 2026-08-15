@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor Numeric TextBox Component | Syncfusion®
-description: Learn how to bind native DOM events to the Blazor Numeric TextBox component and pass event data to handlers with examples.
+title: Native Events in Blazor Numeric Textbox | Syncfusion
+description: Attach native DOM events such as keypress and input to Blazor Numeric TextBox and pass event data to handlers.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
 ---
 
-# Native Events in Blazor Numeric TextBox Component
+# Native Events in Blazor Numeric Textbox
 
 This section explains how to attach native DOM events to the Numeric TextBox and how to pass event data to handlers.
 

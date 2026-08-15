@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and Appearance in Blazor Accordion Component | Syncfusion®
-description: Checkout and learn here all features about Style and Appearance in Blazor Accordion component and more.
+title: Style and Appearance in Blazor Accordion | Syncfusion®
+description: Customize the Blazor Accordion appearance by overriding the default CSS classes for the component, items, and content based on user preference.
 platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
-# Style and Appearance in Blazor Accordion Component
+# Style and Appearance in Blazor Accordion
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on the user preference.
 

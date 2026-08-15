@@ -1,13 +1,13 @@
 ---
 layout: post
-title: File Upload Customization in Blazor File Upload | Syncfusion®
-description: Learn how to style the Blazor File Upload component using CSS to customize its container, buttons, file list, content area, and progress bar.
+title: File Upload Customization in Blazor File Upload | Syncfusion
+description: Customize Blazor File Upload appearance with CSS classes for the container, buttons, drop area, file list, and progress bar.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# File Uploader Customization in Blazor
+# File Upload Customization in Blazor File Upload
 
 The visual appearance of the Blazor File Upload component can be extensively customized using CSS to align with your application's theme and style. This document provides a detailed guide to the component's CSS structure, enabling you to tailor its look and feel. By targeting specific CSS classes, you can modify elements such as the container, buttons, drop area, file list, and progress bar. For best results, it is recommended to use the CssClass property to apply a custom class, which helps scope your styles and prevent them from affecting other components.
 

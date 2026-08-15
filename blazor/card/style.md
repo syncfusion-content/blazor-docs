@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and Appearance in Blazor Card Component | Syncfusion®
-description: Checkout and learn here all feature about Style and Appearance in Blazor Card component and much more details.
+title: Style and Appearance in Blazor Card | Syncfusion®
+description: Customize the Blazor Card appearance by overriding its default CSS structure to adjust header, content, footer, image, and divider styles.
 platform: Blazor
 control: Card
 documentation: ug
 ---
 
-# Style and Appearance in Blazor Card Component
+# Style and Appearance in Blazor Card
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.
 

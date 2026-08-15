@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor Button Component | Syncfusion®
-description: Checkout and learn here all features about native events support in Blazor Button component, it's elements and more.
+title: Native Events in Blazor Button | Syncfusion®
+description: Attach native DOM events to the Blazor Button using the @on{event} directive and pass event argument data to the handler.
 platform: Blazor
 control: Button
 documentation: ug
 ---
 
-# Native Events in Blazor Button Component
+# Native Events in Blazor Button
 
 You can bind native Blazor events to the Button component using the `@on{event}` directive. The event-specific data is available through the event arguments.
 

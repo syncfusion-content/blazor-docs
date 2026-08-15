@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor DatePicker Component | Syncfusion®
-description: Checkout and learn here all the features about globalization support in Blazor DatePicker component, it's elements and more.
+title: Globalization in Blazor DatePicker | Syncfusion®
+description: Globalize the Blazor DatePicker for different cultures, including right-to-left rendering, localized names, and culture-specific date formats.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Globalization in Blazor DatePicker Component
+# Globalization in Blazor DatePicker
 
 The [Blazor DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker) supports globalization so that the calendar can render in different cultures and layouts. For localizing Syncfusion Blazor component strings (such as button labels), refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic.
 

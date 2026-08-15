@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Calendar Views in Blazor Calendar Component | Syncfusion®
-description: Checkout and learn here all features about Calendar Views in Blazor Calendar component and much more.
+title: Calendar Views in Blazor Calendar | Syncfusion®
+description: Switch between Month, Year, and Decade views in the Blazor Calendar to navigate and select dates across different time scales.
 platform: Blazor
 control: Calendar
 documentation: ug
 ---
 
-# Calendar Views in Blazor Calendar Component
+# Calendar Views in Blazor Calendar
 
 A [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) has the following predefined views that provide a flexible way to navigate back and forth when selecting dates.
 

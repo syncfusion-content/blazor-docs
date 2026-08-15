@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization with Blazor Signature Component | Syncfusion®
-description: Checkout the customization available in Blazor Signature component in Blazor Server App and Blazor WebAssembly App.
+title: Customization in Blazor Signature | Syncfusion
+description: Customize Blazor Signature stroke color, width, and background color or image for tailored signatures.
 platform: Blazor
 control: Signature
 documentation: ug
 ---
 
-# Customization of Signature component
+# Customization in Blazor Signature
 
 The [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) component draws a stroke/path to connect one or more points while drawing on the canvas. This path is drawn using the `moveTo()` and `lineTo()` methods. You can customize the stroke by modifying its color and width. The background of the signature is also customizable by using its color and image. Customization allows you to match the Signature component to your application's branding and visual style.
 
