@@ -9,9 +9,9 @@ documentation: ug
 
 # Context Menu in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports a context menu that appears when right-clicking anywhere within the grid. This menu provides quick access to actions related to the grid’s data and layout, improving usability.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports a context menu that appears when right-clicking within the DataGrid. Quick access to actions related to DataGrid data and layout improves usability.
 
-To enable the context menu, configure the Grid `ContextMenuItems` property. Use default items for built-in menu options or add custom items for tailored functionality. The context menu appears when right-clicking in these Grid areas:
+To enable the context menu, configure the `ContextMenuItems` property of the DataGrid. Use built-in items for standard menu options or add custom items for application-specific functionality. The context menu appears when right-clicking in these DataGrid areas:
 
 * **Header:** Displays column-specific actions.
 * **Content:** Shows row-related options.
@@ -20,6 +20,13 @@ To enable the context menu, configure the Grid `ContextMenuItems` property. Use 
 ## Built-in context menu items
 
 The default context menu items include:
+
+**Requires**
+
+- **Header:** `Group` and `Ungroup` require `AllowGrouping = true`. `SortAscending` and `SortDescending` require `AllowSorting = true`.
+- **Content:** `Edit`, `Delete`, `Save`, and `Cancel` require edit settings such as `GridEditSettings`. `PdfExport`, `ExcelExport`, and `CsvExport` require the corresponding export permission flags such as `AllowPdfExport`, `AllowExcelExport`, and `AllowCsvExport`.
+- **Pager:** `FirstPage`, `PrevPage`, `LastPage`, and `NextPage` require `AllowPaging = true`.
+- **Copy:** `Copy` appears when the grid supports clipboard operations and the target area is applicable.
 
 **Header**
 
@@ -32,6 +39,8 @@ The default context menu items include:
 | `SortAscending`  | Sort current column in ascending order.                      |
 | `SortDescending` | Sort current column in descending order.                     |
 
+> Requires: `Group` and `Ungroup` are available only when `AllowGrouping` is enabled. `SortAscending` and `SortDescending` are available only when `AllowSorting` is enabled.
+
 **Content**
 
 | Items         | Description                                                         |
@@ -41,9 +50,11 @@ The default context menu items include:
 | `Save`        | Save changes to edited record.                                      |
 | `Cancel`      | Cancel edit state and revert changes.                               |
 | `Copy`        | Copy selected records to clipboard.                                 |
-| `PdfExport`   | Export Grid data as PDF document.                                   |
-| `ExcelExport` | Export Grid data as Excel document.                                 |
-| `CsvExport`   | Export Grid data as CSV document.                                   |
+| `PdfExport`   | Export DataGrid data as a PDF document.                             |
+| `ExcelExport` | Export DataGrid data as an Excel document.                          |
+| `CsvExport`   | Export DataGrid data as a CSV document.                            |
+
+> Requires: `Edit`, `Delete`, `Save`, and `Cancel` require edit settings in `GridEditSettings`.
 
 **Pager**
 
@@ -51,9 +62,10 @@ The default context menu items include:
 | ----------- | ------------------------------------------ |
 | `FirstPage` | Navigate to first page.                    |
 | `PrevPage`  | Navigate to previous page.                 |
-| `LastPage`  | Navigate to last page.                     |
 | `NextPage`  | Navigate to next page.                     |
+| `LastPage`  | Navigate to last page.                     |
 
+> Requires: pager actions are available only when `AllowPaging` is enabled.
 
 
 {% tabs %}
@@ -141,18 +153,18 @@ public class OrderData
 
 ## Custom context menu items
 
-Blazor DataGrid supports adding custom context menu items along with default options.
+The DataGrid supports custom context menu items along with default options.
 
 To configure custom context menu items:
 
 1. Define the `ContextMenuItems` property as a collection of [ContextMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) objects.
-2. Set properties for each custom item:
-    - **Text**: Display text for the menu item.
-    - **Id**: Unique identifier for the menu item (used in event handlers).
-    - **Target**: CSS selector for the grid area where the item appears (for example, `.e-content`).
-    - **IconCss**: CSS class for an icon (optional).
-    - **Items**: List of sub-menu items (for hierarchical menus).
-    - For a full list, see [ContextMenuItemModel API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html).
+2. Set the properties for each custom item:
+   - **Text**: Display text for the menu item.
+   - **Id**: Unique identifier for the menu item used in event handlers.
+   - **Target**: CSS selector for the DataGrid area where the item appears, such as `.e-content`.
+   - **IconCss**: CSS class for an icon, if required.
+   - **Items**: List of sub-menu items for hierarchical menus.
+   - For a full list, see the [ContextMenuItemModel API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html).
 3. Handle actions using the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event.
 
 The [CopyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method copies selected rows or cells, including headers, to the clipboard.
@@ -243,7 +255,7 @@ public class EmployeeData
 
 ## Built-in and custom context menu items
 
-Blazor DataGrid supports using both built-in and custom context menu items together. This is helpful when extending default actions such as **Copy**, **Delete**, or **Edit** with application-specific commands like **Copy with headers** or **Export row**.
+The DataGrid supports both built-in and custom context menu items together. This combination supports extension of default actions such as **Copy**, **Delete**, or **Edit** with application-specific commands like **Copy with headers** or **Export row**.
 
 To configure built-in and custom context menu items:
 
@@ -341,7 +353,7 @@ public class OrderData
 
 ## Sub-context menu items in DataGrid
 
-Blazor DataGrid supports hierarchical context menus. Sub-items can be grouped under a parent menu item for better organization.
+The DataGrid supports hierarchical context menus. Sub-items can be grouped under a parent menu item for better organization.
 
 To configure sub-context menu items:
 
@@ -349,7 +361,7 @@ To configure sub-context menu items:
 2. Add sub-items by specifying the `Items` property in `ContextMenuItemModel`.
 3. Handle actions using the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event.
 
-This example creates a sub-context menu titled **Clipboard**, which includes the sub-items **Copy** and **Copy With Header**. When the `ContextMenuItemClicked` event is triggered, the [CopyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method runs to copy data with or without headers.
+The sample creates a sub-context menu titled **Clipboard**, with sub-items **Copy** and **Copy With Header**. When the `ContextMenuItemClicked` event is triggered, the [CopyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method runs to copy data with or without headers.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -466,7 +478,7 @@ To disable the context menu for a specific column:
 2. Use the **args.Column.Field** property to identify the target column.
 3. Set **args.Cancel = true** to prevent the context menu from opening for that column.
 
-In this example:
+In the sample below:
 - The context menu is disabled for the **Freight** column.
 - The [CopyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method executes for all other columns when the **Copy with headers** option is selected.
 
@@ -563,7 +575,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZVRNQZhVDHOvQCI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Enable or disable context menu items (Disable action)
+## Enable or disable context menu items (Disabled state)
 
 Blazor DataGrid allows dynamic control over the availability of context menu items using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Disabled) property. This feature allows conditional restriction of actions such as **Edit** or **Delete** based on column, row data, or custom logic. The item appears in the menu but cannot be selected.
 
@@ -573,7 +585,7 @@ To achieve this, handle the [ContextMenuOpen](https://blazor.syncfusion.com/docu
 2. Use the **args.ContextMenu.Items** collection to access the menu items.
 3. Set the **Disabled** property of the required item(s) to **true** or **false** based on the defined logic.
 
-The **Copy** menu item is disabled for the **ShipCity** column and remains enabled for all other columns.
+The **Copy** menu item is disabled for the **ShipCity** column. For other content columns, the default state remains enabled.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -669,7 +681,7 @@ public class OrderData
 
 ## Show or hide context menu items (Visibility)
 
-The Blazor DataGrid allows dynamically showing or hiding specific context menu items using the [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property. This feature allows conditional restriction of actions such as **Edit** or **Delete** based on column, row data, or custom logic. The item is completely removed from the menu when hidden.
+The Blazor DataGrid allows dynamically showing or hiding specific context menu items using the [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property. This feature supports conditional visibility based on column, row data, or custom logic. The item is completely removed from the menu when hidden.
 
 To control the visibility of context menu items:
 
@@ -767,7 +779,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZVHDGDBhXcQqxzV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Access specific row details on context menu click
+## Access specific row details on context menu click
 
 The Blazor DataGrid allows retrieving details of a specific row when a context menu item is clicked. This feature is useful for displaying or processing the selected row’s data.
 
@@ -784,7 +796,7 @@ To access row data on context menu click:
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true" ContextMenuItems="@(new List<ContextMenuItemModel>() { new ContextMenuItemModel { Text = "Fetch Data", Id = "fetch data" } })">
+<SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true" ContextMenuItems="@(new List<ContextMenuItemModel>() { new ContextMenuItemModel { Text = "Fetch Data", Id = "fetchdata" } })">
     <GridEvents ContextMenuItemClicked="OnContextMenuClick" TValue="OrderData"></GridEvents>
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridColumns>
@@ -818,7 +830,7 @@ To access row data on context menu click:
 
     private void OnContextMenuClick(ContextMenuClickEventArgs<OrderData> args)
     {
-        if (args.Item.Id == "fetch data")
+        if (args.Item.Id == "fetchdata")
         {
             rowData = args.RowInfo.RowData;
         }
