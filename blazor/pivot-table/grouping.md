@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grouping in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table groups date, number, and custom fields into categories such as year, quarter, or numeric ranges through the Group Field dialog.
+description: Learn how the Blazor Pivot Table groups date, number, and string fields into categories such as years, quarters, and value ranges for easier analysis.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -9,12 +9,13 @@ documentation: ug
 
 # Grouping in Blazor Pivot Table
 
-Grouping is one of the most useful features in the Pivot Table component, automatically organizing date, time, number, and string data types into meaningful categories. For example, date fields can be formatted and displayed based on year, quarter, month, and other time periods. Similarly, number fields can be grouped into ranges, such as 1-5, 6-10, and so on. These grouped fields function as individual fields, allowing users to drag them between different axes including columns, rows, values, and filters to create dynamic Pivot Tables at runtime.
-
 N> This feature is applicable only for relational data source.
 
-The grouping feature can be enabled by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowGrouping) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. To perform grouping actions through the user interface, right-click on the Pivot Table's row or column header and select **Group**. A dialog will appear where you can configure the appropriate options to group the data. To ungroup data, right-click on the Pivot Table's row or column header and select **Ungroup**.
+Grouping is one of the most useful features in the Pivot Table component, automatically organizing date, time, number, and string data types into meaningful categories. For example, date fields can be formatted and displayed based on year, quarter, month, and other time periods. Similarly, number fields can be grouped into ranges, such as 1-5, 6-10, and so on. These grouped fields function as individual fields, allowing users to drag them between different axes including columns, rows, values, and filters to create dynamic Pivot Tables at runtime.
 
+The grouping feature can be enabled by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowGrouping) property to **true** in the Pivot Table component. The default value is `false`.
+
+To perform grouping actions through the user interface, right-click on the Pivot Table's row or column header and select **Group**. A dialog will appear where you can configure the appropriate options to group the data. To ungroup data, right-click on the Pivot Table's row or column header and select **Ungroup**.
 The following are the three different types of grouping:
 
 * Number Grouping
@@ -101,13 +102,13 @@ Number grouping allows users to organize numerical data into different ranges, s
 
 ### Range selection
 
-The "**Starting at**" and "**Ending at**" options are used to set the number range depending on which the headers will be grouped. For example, if the "Product_ID" field holds the number from "1001" to "1010" and the user chooses to group the number range by setting "**1004**" to "**Starting at**" and "**1008**" to "**Ending at**" options on their own, then the specified number range will be used for number grouping and the rest will be grouped as "**Out of Range**".
+The "**Starting at**" and "**Ending at**" options are used to set the number range on which the headers will be grouped. For example, if the "Product_ID" field holds the numbers from "1001" to "1010" and the user chooses to group the number range by setting "**1004**" as "**Starting at**" and "**1008**" as "**Ending at**", then the specified number range is used for number grouping and the rest are grouped as "**Out of Range**".
 
 ![Number Grouping within Range in Blazor PivotTable](images/blazor-pivottable-number-group-within-range.webp)
 
 ### Range interval
 
-The "**Interval by**" option is used to separate the selected number data type field into range-wise such as 1-5, 6-10, etc. For example, if the user wants to display the "Product_ID" data field with a group interval of "**2**" by setting the "**Interval by**" option on their own, the "Product_ID" field will then be grouped by the specified range of intervals, such as "**1004-1005**", "**1006-1007**", etc.
+The "**Interval by**" option is used to separate the selected number data type field into ranges such as 1-5, 6-10, etc. For example, if the user wants to display the "Product_ID" data field with a group interval of "**2**" by setting the "**Interval by**" option, the "Product_ID" field is then grouped by the specified range of intervals, such as "**1004-1005**", "**1006-1007**", and so on.
 
 ![Grouping with Blazor PivotTable Range Interval](images/blazor-pivottable-group-within-range-interval.webp)
 <br/>
@@ -115,15 +116,15 @@ The "**Interval by**" option is used to separate the selected number data type f
 
 ### Configuring Number Grouping Programmatically
 
-You can configure number grouping through code-behind using the [PivotViewGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupSetting.html) class. This allows you to define how numbers are grouped without relying on the UI. Below are the key settings you need:
+You can configure number grouping programmatically using the [PivotViewGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupSetting.html) class. This allows you to define how numbers are grouped without relying on the UI. Below are the key settings you need:
 
-* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_Name): Allows user to set the field name.
-* [RangeInterval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_RangeInterval): Allows user to set the interval between two numbers.
-* [StartingAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_StartingAt): Allows user to set the starting number.
-* [EndingAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_EndingAt): Allows user to set the ending number.
-* [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_Type): Allows user to set the group type. For number grouping, [GroupType.Number](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.GroupType.html#Syncfusion_Blazor_PivotView_GroupType_Number) is set.
+* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_Name): Sets the field name.
+* [RangeInterval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_RangeInterval): Sets the interval between two numbers.
+* [StartingAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_StartingAt): Sets the starting number.
+* [EndingAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_EndingAt): Sets the ending number.
+* [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_Type):Sets the group type. For number grouping, [GroupType.Number](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.GroupType.html#Syncfusion_Blazor_PivotView_GroupType_Number) is set.
 
-N> If starting and ending numbers specified in [StartingAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_StartingAt) and [EndingAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_EndingAt) properties are in-between the number range, then the rest of the numbers will be grouped and placed in “Out of Range” section introduced specifically to this feature.
+N> If the starting and ending numbers specified in [StartingAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_StartingAt) and [EndingAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_EndingAt) are within the number range, the rest of the numbers are grouped and placed in the “Out of Range” section introduced specifically for this feature.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -164,13 +165,15 @@ N> If starting and ending numbers specified in [StartingAt](https://help.syncfus
 
 ### Ungrouping the existing number groups
 
-To remove an applied number grouping, simply right-click on the grouped header in the Pivot Table and select **Ungroup** option from the context menu. This action will break apart the grouped ranges and display the original, ungrouped values in the table.
+To remove an applied number grouping, right-click on the grouped header in the Pivot Table and select **Ungroup** from the context menu. This action breaks apart the grouped ranges and displays the original, ungrouped values in the table.
 
 ![UnGrouping in Blazor PivotTable](images/blazor-pivottable-ungroup.webp)
 
 ## Date Grouping
 
-Date grouping organizes date and time data into hierarchical segments, such as years, quarters, months, days, hours, minutes, or seconds. Users can configure date grouping through the UI by right-clicking a date or time-based header in the Pivot Table and selecting **Group** option from the context menu. A dialog will appear, allowing users to choose the desired grouping intervals.
+Date grouping organizes date and time data into hierarchical segments, such as years, quarters, months, days, hours, minutes, or seconds. Users can configure date grouping through the UI by right-clicking a date- or time-based header in the Pivot Table and selecting the **Group** option from the context menu. A dialog will appear, allowing users to choose the desired grouping intervals.
+
+N> The selected field must contain date or time data; otherwise, the **Group** option is not available in the context menu.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -210,9 +213,9 @@ Date grouping organizes date and time data into hierarchical segments, such as y
 
 ![Date Grouping in Blazor PivotTable](images/blazor-pivottable-date-grouping.webp)
 
-### Range Selection
+### Range selection
 
-The **Starting at** and **Ending at** options allow users to define the date range for grouping headers. For example, if the "Date" field contains data from "01/01/2015" to "02/12/2018" and the user sets **Starting at** to "**01/07/2015**" and **Ending at** to "**31/07/2017**", only records within this range will be grouped according to the selected settings. Dates outside this range are labeled as **Out of Range**.
+The **Starting at** and **Ending at** options allow users to define the date range for grouping headers. For example, if the "Date" field contains data from "01/01/2015" to "02/12/2018" and the user sets **Starting at** to "**01/07/2015**" and **Ending at** to "**31/07/2017**", only records within this range are grouped according to the selected settings. Dates outside this range are labeled as **Out of Range**.
 
 ![Range Selection in Blazor PivotTable](images/blazor-pivottable-range-selection.webp)
 
@@ -232,11 +235,11 @@ N> If no options are selected in the **Interval by** section, the **OK** button 
 
 You can configure date grouping programmatically using the [PivotViewGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupSetting.html) class. This allows you to define how dates are grouped without using the UI. The key settings are:
 
-* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_Name): Allows user to set the field name.
-* [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_Type): Allows user to set the group type. For date grouping, [GroupType.Date](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.GroupType.html#Syncfusion_Blazor_PivotView_GroupType_Date) is set.
-* [StartingAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_StartingAt): Allows user to set starting date.
-* [EndingAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_EndingAt): Allows user to set ending date.
-* [GroupInterval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_GroupInterval): Allows user to set interval in year, quarter, month, day, hour, minute, or second pattern.
+* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_Name): Sets the field name.
+* [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_Type): Sets the group type. For date grouping, [GroupType.Date](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.GroupType.html#Syncfusion_Blazor_PivotView_GroupType_Date) is set.
+* [StartingAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_StartingAt): Sets the starting date.
+* [EndingAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_EndingAt): Sets the ending date.
+* [GroupInterval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_GroupInterval): Sets the interval in year, quarter, month, day, hour, minute, or second pattern.
 
 N> For example, if your date format is "YYYY-DD-MM HH:MM:SS" and you want to group only by year and month, set the [GroupInterval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_GroupInterval) property with just [DateGroup.Years](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DateGroup.html#Syncfusion_Blazor_PivotView_DateGroup_Years) and [DateGroup.Months](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DateGroup.html#Syncfusion_Blazor_PivotView_DateGroup_Months). You can also rearrange the order of the intervals (Year, Quarter, Month, Day, etc.) as needed—this order will reflect in the Pivot Table display.
 
@@ -283,7 +286,7 @@ N> For example, if your date format is "YYYY-DD-MM HH:MM:SS" and you want to gro
 
 ### Ungrouping the existing date groups
 
-To remove a previously applied date grouping, simply right-click the relevant date-based header within the Pivot Table and select the **Ungroup** option from the context menu. This action will revert the grouped dates back to their original, ungrouped state, allowing you to view and analyze the raw date values in the Pivot Table component.
+To remove a previously applied date grouping, right-click the relevant date-based header within the Pivot Table and select the **Ungroup** option from the context menu. This action reverts the grouped dates back to their original, ungrouped state, allowing you to view and analyze the raw date values in the Pivot Table component.
 
 ![UnGrouping Date Groups in Blazor PivotTable](images/blazor-pivottable-date-ungroup.webp)
 
@@ -325,7 +328,7 @@ Custom grouping is an option that enables users to group data types (date, time,
 
 ### Creating a Custom Group
 
-To create a custom group in the Pivot Table, select at least two headers from the same field. Hold the **CTRL** key to select multiple headers individually or the **SHIFT** key to select a range of headers. Then, right-click and choose **Group** from the context menu.
+To create a custom group in the Pivot Table, select at least two headers from the same field. Hold the **CTRL** key to select multiple headers individually, or hold the **SHIFT** key to select a range of headers. Then, right-click and choose **Group** from the context menu.
 
 ![Custom Grouping in Blazor PivotTable](images/blazor-pivottable-custom-grouping.webp)
 
@@ -343,7 +346,7 @@ For example, to group the headers "Gloves," "Jerseys," and "Shorts" in the "Prod
 
 ### Nested Custom Grouping
 
-Users can also apply new custom grouping options to an existing custom field by right-clicking on the custom group header in the Pivot Table. For example, if the user wants to create a new custom group for the current custom group headers such as "**Bottles and Cages**", "**Cleaners**" and "**Fenders**" by setting the top level name as "**Accessories**" to "**Group Name**" on their own. The selected headers will then be grouped in the Pivot Table under the name "**Accessories**" with a new custom field called "**Product category 1**".
+Users can also apply new custom grouping options to an existing custom field by right-clicking the custom group header in the Pivot Table. For example, if the user wants to create a new custom group for the current custom group headers such as "**Bottles and Cages**", "**Cleaners**", and "**Fenders**" by setting the top-level name as "**Accessories**" in "**Group Name**", the selected headers are then grouped in the Pivot Table under the name "**Accessories**" with a new custom field called "**Product category 1**".
 
 ![Nested Custom Grouping in Blazor PivotTable](images/blazor-pivottable-nested-custom-group.webp)
 <br/>
@@ -355,17 +358,19 @@ Users can also apply new custom grouping options to an existing custom field by 
 
 You can configure custom grouping programmatically using the [PivotViewGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupSetting.html) class in the Pivot Table component. This property allows you to define how fields are grouped in the Pivot Table without using the UI. The available properties are:
 
-* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_Name): Allows user to set the field name.
-* [Caption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_Caption): Allows user to set the caption name for custom grouping field.
+* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_Name): Sets the field name.
+* [Caption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_Caption): Sets the caption name for custom grouping field.
 * [PivotViewCustomGroups](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCustomGroups.html): Allows user to set the custom groups.
-* [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_Type): Allows user to set the group type. For custom grouping, [GroupType.Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.GroupType.html#Syncfusion_Blazor_PivotView_GroupType_Custom) is set.
+* [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotGroupSetting.html#Syncfusion_Blazor_PivotView_PivotGroupSetting_Type): Sets the group type. For custom grouping, [GroupType.Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.GroupType.html#Syncfusion_Blazor_PivotView_GroupType_Custom) is set.
 
 The available custom group properties in [PivotViewCustomGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCustomGroup.html) in [PivotViewCustomGroups](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCustomGroups.html) class are:
 
-* [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCustomGroupSettings.html#Syncfusion_Blazor_PivotView_PivotCustomGroupSettings_GroupName): Allows user to set the group name (or title) for selected headers.
-* [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCustomGroupSettings.html#Syncfusion_Blazor_PivotView_PivotCustomGroupSettings_Items): Allows to set the headers which needs to be grouped from display.
+* [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCustomGroupSettings.html#Syncfusion_Blazor_PivotView_PivotCustomGroupSettings_GroupName): Sets the group name (or title) for selected headers.
+* [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCustomGroupSettings.html#Syncfusion_Blazor_PivotView_PivotCustomGroupSettings_Items): Sets the headers that need to be grouped together for display.
 
 N> Headers listed in [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCustomGroupSettings.html#Syncfusion_Blazor_PivotView_PivotCustomGroupSettings_Items) are grouped under the specified [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCustomGroupSettings.html#Syncfusion_Blazor_PivotView_PivotCustomGroupSettings_GroupName) in the Pivot Table. Headers not included in [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCustomGroupSettings.html#Syncfusion_Blazor_PivotView_PivotCustomGroupSettings_Items) are displayed under their original names.
+
+Here’s an example of configuring custom grouping programmatically:
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -410,9 +415,9 @@ N> Headers listed in [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 ### Ungrouping Existing Custom Groups
 
-To remove a custom group in the Pivot Table, simply right-click on the grouped header and select the "**Ungroup**" option from the context menu. This action will separate the grouped items back into their individual headers within the Pivot Table.
+To remove a custom group in the Pivot Table, right-click on the grouped header and select the **Ungroup** option from the context menu. This action separates the grouped items back into their individual headers within the Pivot Table.
 
-N> After ungrouping, if you remove the related field from the report, any custom group fields associated with it will also be removed from the Pivot Table.
+N> After ungrouping, if you remove the related field from the report, any custom group fields associated with it are also removed from the Pivot Table.
 
 ![Custom UnGrouping in Blazor PivotTable](images/blazor-pivottable-custom-ungroup.webp)
 
