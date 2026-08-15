@@ -9,29 +9,28 @@ documentation: ug
 
 # Clipboard in Blazor Data Grid
 
-The **clipboard** feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) allows copying selected rows or cells using keyboard shortcuts or programmatic methods, which helps transfer data to external applications such as spreadsheets or text editors.
+The **clipboard** feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports copying selected rows or cells with keyboard shortcuts or programmatic methods. Data can be sent to external applications such as spreadsheets or text editors.
 To use keyboard shortcuts, selection must be enabled and the grid must be focused.
 
 ## Copying Data
 
-Copy data from the DataGrid using either keyboard shortcuts or programmatic methods.
+Copy data from the DataGrid with keyboard shortcuts or programmatic methods.
 
-### Keyboard Shortcuts
+### Keyboard shortcuts
 
-| Windows | Mac | Actions |
-|---------|-----|---------|
+To enable clipboard functionality, configure the DataGrid with the required [GridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html). If the selection mode is **Row**, entire rows are copied. If the selection mode is **Cell**, only the highlighted cells are copied.
+
+| Windows | Mac | Action |
+|---------|-----|----------|
 | <kbd>Ctrl + C</kbd> | <kbd>Command + C</kbd> | Copy selected rows or cells to the clipboard |
 | <kbd>Ctrl + Shift + H</kbd> | <kbd>Command + Shift + H</kbd> | Copy selected rows or cells with headers to the clipboard |
-
-
-To enable clipboard functionality, configure the DataGrid with the required [GridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html). If the selection mode is **Row**, entire rows are copied. If it is **Cell**, only the highlighted cells are copied.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" Height="348">
+<SfGrid DataSource="@Orders" AllowSelection="true" Height="348">
     <GridSelectionSettings Type="SelectionType.Multiple"></GridSelectionSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
@@ -101,9 +100,9 @@ internal sealed class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhRNGZCfsUftPWT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Programmatic Copy
+### Programmatic copy
 
-Clipboard actions can also be triggered using external buttons or programmatically, which is useful when UI controls are preferred over shortcut keys.
+Clipboard actions can also be triggered with external buttons or programmatic methods when UI controls are preferred over shortcut keys.
 
 The [`CopyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method copies selected rows or cells:
 
@@ -121,6 +120,7 @@ The [`CopyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.
     <SfButton OnClick="CopyHeader" Content="Copy With Header" CssClass="e-outline" Style="margin-left: 10px;"></SfButton>
 </div>
 <SfGrid @ref="Grid" DataSource="@Orders" Height="348">
+    <GridSelectionSettings Type="SelectionType.Multiple"></GridSelectionSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150" />
@@ -203,17 +203,16 @@ internal sealed class OrderData
 
 ## AutoFill
 
-The AutoFill feature enables quick data entry by dragging a handle to copy cell values into adjacent cells. When enabled, an autofill handle appears at the bottom-right corner of the selected cell range. Drag this handle to fill values into neighboring cells, similar to spreadsheet applications.
+The AutoFill feature supports quick data entry by dragging a handle to copy cell values into adjacent cells. When enabled, the AutoFill handle appears in the bottom-right corner of the selected cell range. Drag the handle to fill values into neighboring cells, similar to spreadsheet applications.
 
-### Steps to Use AutoFill
+To enable AutoFill, set the [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAutoFill) property to **true** and use [Batch editing](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) to copy values across multiple cells. Copied values remain in batch mode until the **Update** button is clicked to apply changes to the data source.
 
-1. Select the desired cells to copy in the DataGrid.
-2. After selection, a small square (autofill handle) appears at the bottom-right corner of the selection border. Hover your mouse over this handle; the cursor will change to indicate the autofill action (usually a crosshair or plus icon).
-3. Click and drag the autofill handle to the target cells where you want to copy the values. As you drag, a highlighted area will show the target range.
+### Steps to use AutoFill
+
+1. Select the cells to copy in the DataGrid.
+2. After selection, a small square appears in the bottom-right corner of the selection border. When the pointer hovers over the handle, the cursor changes to a crosshair.
+3. Click and drag the AutoFill handle to the target cells where the values must be copied. A highlighted area displays the target range while dragging.
 4. Release the mouse button to populate the target cells with the copied data.
-
-To enable AutoFill, set the [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAutoFill) property to **true** and use [Batch editing](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) to allow copying values across multiple cells.
-
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -248,7 +247,7 @@ internal sealed class OrderData
 {
     private static readonly List<OrderData> Data = new List<OrderData>();
 
-    public OrderData(int orderID, string customerID, string shipCity, string shipName)
+    internal OrderData(int orderID, string customerID, string shipCity, string shipName)
     {
         OrderID = orderID;
         CustomerID = customerID;
@@ -292,7 +291,7 @@ internal sealed class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrnDcXszsUECbja?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Limitations
+### Clipboard limitations
 
 - **Data Type Conversion**: AutoFill does not convert string values to numeric or date types. Copying strings into numeric cells results in **NaN**, and copying strings into date cells results in an **empty cell**.
 - **Value Copying**: AutoFill copies values directly from the source range without generating non-linear or sequential series.
@@ -304,11 +303,11 @@ internal sealed class OrderData
 
 ## Pasting Data
 
-The **Paste** feature in the Blazor DataGrid lets you paste clipboard content into a selected range using <kbd>Ctrl + V</kbd>.
+The **Paste** feature in the Blazor DataGrid pastes grid-copied data into a selected range using <kbd>Ctrl + V</kbd>.
 
-To enable pasting, ensure `GridEditSettings` is configured with `Mode="EditMode.Batch"` and `AllowEditing="true"`.
+To enable pasting, ensure `GridEditSettings` is configured with `Mode="EditMode.Batch"` and `AllowEditing="true"`. Pasted values remain in batch mode until the **Update** button is clicked to apply changes to the data source.
 
-### Steps to Paste Data
+### Steps to paste data
 
 1. Select the cells to copy.
 2. Press <kbd>Ctrl + C</kbd> to copy the content.
@@ -320,11 +319,11 @@ To enable pasting, ensure `GridEditSettings` is configured with `Mode="EditMode.
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" EnableAutoFill="true" AllowSelection="true" Toolbar="@(new List<string>() { "Add", "Update", "Cancel" })" Height="348">
+<SfGrid DataSource="@Orders" AllowSelection="true" Toolbar="@(new List<string>() { "Add", "Update", "Cancel" })" Height="348">
     <GridSelectionSettings CellSelectionMode="CellSelectionMode.Box" Mode="SelectionMode.Cell" Type="SelectionType.Multiple"></GridSelectionSettings>
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Batch"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Visible="false" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150" />
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
         <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150" />
@@ -348,7 +347,7 @@ internal sealed class OrderData
 {
     private static readonly List<OrderData> Data = new List<OrderData>();
 
-    public OrderData(int orderID, string customerID, string shipCity, string shipName)
+    internal OrderData(int orderID, string customerID, string shipCity, string shipName)
     {
         OrderID = orderID;
         CustomerID = customerID;
@@ -389,10 +388,10 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBdjwjMTCzMwQCj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrRjlWeSzwPgceN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
-> **Note:** To paste content, set selection [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) to **Cell**, set [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CellSelectionMode) to **Box**, and enable [Batch editing](https://blazor.syncfusion.com/documentation/datagrid/batch-editing).
+> **Note:** To paste DataGrid content, set selection [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) to **Cell**, set [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CellSelectionMode) to **Box**, and enable [Batch editing](https://blazor.syncfusion.com/documentation/datagrid/batch-editing).
 
 ### Limitations
 
