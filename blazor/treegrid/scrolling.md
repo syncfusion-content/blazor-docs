@@ -11,7 +11,7 @@ documentation: ug
 
 The scrollbar will be displayed in the treegrid when the content exceeds the element [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Width) or [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Height). The vertical and horizontal scrollbars will be displayed based on the following criteria:
 
-The vertical scrollbar appears when the total height of rows present in the treegrid exceeds its element height. The horizontal scrollbar appears when the sum of the columns' width exceeds the treegrid element width. The `Height` and `Width` properties are used to set the treegrid height and width, respectively.
+The vertical scrollbar appears when the total height of rows present in the treegrid exceeds its element height. The horizontal scrollbar appears when he sum of the columns' widths exceeds the treegrid element width. The `Height` and `Width` properties are used to set the treegrid height and width, respectively.
 
 N> The default value for `Height` and `Width` is **auto**.
 
@@ -297,7 +297,7 @@ namespace TreeGridComponent.Data
 
 ## Frozen rows and columns
 
-Frozen rows and columns provides an option to make rows and columns always visible in the top and left side of the treegrid while scrolling.
+Frozen rows and columns provides an option to make rows and columns always visible at the top and left of the treegrid while scrolling.
 
 Frozen columns and rows in the Blazor TreeGrid can be enabled by configuring the [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FrozenColumns) and [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FrozenRows) properties. This ensures specific columns and rows remain visible while scrolling.
 

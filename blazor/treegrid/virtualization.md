@@ -9,7 +9,7 @@ documentation: ug
 
 # Virtualization for Large Data Performance in Blazor TreeGrid
 
-Virtualization efficiently renders large datasets in the TreeGrid component, minimizing performance degradation and improving responsiveness. It ensures only the visible rows and columns are rendered, significantly enhancing load times and user experience when working with extensive hierarchical data.
+Virtualization efficiently renders large datasets in the TreeGrid component, minimizing performance degradation and improving responsiveness. The TreeGrid ensures that only the visible rows and columns are rendered, significantly enhancing load times and user experience when working with extensive hierarchical data.
 
 ## Row Virtualization
 
@@ -395,7 +395,7 @@ public List<VirtualData> HierarchyToFlatData(List<VirtualData> dataSource, strin
 
 ``` 
 
-The following example demonstrates binding hierarchical data using the [ChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ChildMapping) property, enabling virtualization by setting [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualization) to **true** and convert hierarchical data into a flat list using a recursive method (**HierarchyToFlatData**) before binding it to the TreeGrid:
+Binding hierarchical data in the TreeGrid is done using the [ChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ChildMapping) property. Virtualization can be enabled by setting [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualization) to true, and hierarchical data may be converted into a flat list with a recursive method such as HierarchyToFlatData before binding it to the TreeGrid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -564,9 +564,9 @@ Set [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
         <TreeGridColumn Field="FIELD4" HeaderText="TMID" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
         <TreeGridColumn Field="FIELD5" HeaderText="LGID" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
         <TreeGridColumn Field="FIELD6" HeaderText="GP" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
-        <TreeGridColumn Field="Field7" HeaderText="GS" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
-        <TreeGridColumn Field="Field8" HeaderText="Minutes" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
-        <TreeGridColumn Field="Field9" HeaderText="Points" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
+        <TreeGridColumn Field="FIELD7" HeaderText="GS" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
+        <TreeGridColumn Field="FIELD8" HeaderText="Minutes" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
+        <TreeGridColumn Field="FIELD9" HeaderText="Points" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
     </TreeGridColumns>
 </SfTreeGrid>
 
@@ -586,9 +586,9 @@ Set [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
         public int FIELD4 { get; set; }
         public int FIELD5 { get; set; }
         public int FIELD6 { get; set; }
-        public int Field7 { get; set; }
-        public int Field8 { get; set; }
-        public int Field9 { get; set; }
+        public int FIELD7 { get; set; }
+        public int FIELD8 { get; set; }
+        public int FIELD9 { get; set; }
         public int? ParentID { get; set; }
         public static List<VirtualData> GetTreeVirtualData()
         {
