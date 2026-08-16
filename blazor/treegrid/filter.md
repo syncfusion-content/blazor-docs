@@ -9,7 +9,7 @@ documentation: ug
 
 # Filtering in Blazor TreeGrid
 
-Filtering displays specific or related records based on defined criteria. To enable filtering in the TreeGrid, set [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowFiltering) to true. Configure filtering behavior through [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings). For related filtering UIs, see the filter menu, Excel-like filter, and filter bar topics.
+Filtering displays specific or related records based on defined criteria. To enable filtering in the TreeGrid, set [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowFiltering) to true. Configure filtering behavior through [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings). For related filtering UIs, see the filter menu, Excel-like filter, and filter bar topics. The default filter type in TreeGrid is FilterBar.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=7lhP9qa-UqY"%}
@@ -88,7 +88,7 @@ N> Use [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 TreeGrid supports multiple hierarchy modes through the [HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_HierarchyMode) property of [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings). The following modes are available:
 
-* **Parent** : This is the default filter hierarchy mode in the TreeGrid. The filtered records are displayed their its parent records, if the filtered records not have any parent record then the filtered records are only displayed.
+* **Parent** : This is the default filter hierarchy mode in the TreeGrid. The filtered records are displayed their its parent records, if the filtered records do not have a parent record then the filtered records are only displayed.
 
 * **Child** : The filtered records are displayed with its child record, if the filtered records do not have any child record then the filtered records are only displayed.
 
@@ -244,8 +244,6 @@ Operator |Description
 %ab% |Values that contain “ab”.
 ab% |Values that start with “ab”.
 %ab |Values that end with “ab”.
-
-The following image illustrates the **LIKE** operator in action.
 
 ![LIKEFilter](../images/blazor-treegrid-like_filter.webp)
 
@@ -546,7 +544,7 @@ The Blazor TreeGrid filtering functionality can be configured to ignore diacriti
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 <div class="container mt-4">
-    <<SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowFiltering="true">
+    <SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowFiltering="true">
     <TreeGridFilterSettings Type="Syncfusion.Blazor.TreeGrid.FilterType.FilterBar" IgnoreAccent="true"> </TreeGridFilterSettings>
     <TreeGridColumns>
         <TreeGridColumn Field=@nameof(TreeTask.TaskID) HeaderText="Task ID" TextAlign="TextAlign.Right" Width="90"  IsPrimaryKey />

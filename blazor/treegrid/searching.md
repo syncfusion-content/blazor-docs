@@ -447,7 +447,7 @@ The Blazor TreeGrid search functionality can ignore diacritic characters or acce
 <div class="container mt-4">
     <SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowFiltering="true" AllowSorting="true" AllowReordering AllowResizing
                 Toolbar="@(new List<string>() { "Search" })">
-        <TreeGridSearchSettings IgnoreAccent="false"></TreeGridSearchSettings>
+        <TreeGridSearchSettings IgnoreAccent="true"></TreeGridSearchSettings>
         <TreeGridColumns>
             <TreeGridColumn Field=@nameof(TreeTask.TaskID) HeaderText="Task ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90" IsPrimaryKey />
             <TreeGridColumn Field=@nameof(TreeTask.TaskName) HeaderText="Task Name" Width="200" />
