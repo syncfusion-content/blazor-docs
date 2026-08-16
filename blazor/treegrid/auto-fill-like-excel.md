@@ -9,7 +9,14 @@ documentation: ug
 
 # AutoFill Feature in Blazor TreeGrid
 
-AutoFill Feature allows to copy the data of the selected cells and paste it to another cells by just dragging the autofill icon of the selected cells up to the required cells. This feature is enabled by defining [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableAutoFill) property as true.
+AutoFill Feature allows copying the data of the selected cells and paste it to another cells by dragging the autofill icon of the selected cells up to the required cells. This feature is enabled by defining [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableAutoFill) property as true.
+
+**Steps to use AutoFill feature**
+
+1. Select the desired cells to copy.
+2. Hover over the bottom-right corner of the selection to display the autofill handle.
+3. Drag the handle to the target cells.
+4. Release the mouse to populate the target cells with the copied data.
 
 {% tabs %}
 
