@@ -15,6 +15,8 @@ The toolbar can be configured with built-in toolbar items or custom items using 
 - An array of strings for built-in items
 - An array of [ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor) objects for custom items (text, icon, id, tooltip)
 
+Toolbar configuration supports three common patterns: built-in items, custom items, and state-based behavior. Built-in items use string values such as Add, Edit, Delete, Print, Search, and ExcelExport. Custom items use ItemModel objects and an Id value. State-based behavior uses toolbar item IDs with `EnableToolbarItemsAsync` to enable or disable items during runtime.
+
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
@@ -399,4 +401,4 @@ The following example demonstrates changing the background color of the `Add`, `
 
 N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.
 
-N> Styling tips: when using CSS isolation, place styles in the component’s **.razor.css** file. To target inner elements from isolated CSS, use the **::deep** selector where appropriate. Consider additional state styles (hover, active, focus-visible, disabled) and high-contrast themes to improve accessibility.
+N> Styling tips: for CSS isolation, place styles in a component stylesheet such as **.razor.css**. To target inner elements, use the **::deep** selector where appropriate. Add state styles for hover, active, focus-visible, and disabled states, and maintain high-contrast support for accessibility.
