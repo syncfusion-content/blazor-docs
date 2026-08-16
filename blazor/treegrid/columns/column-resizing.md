@@ -80,8 +80,6 @@ N> Resizing for a specific column can be disabled by setting the `AllowResizing`
 
 Column resize can be restricted between minimum and maximum width by defining the [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_MinWidth) and [MaxWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_MaxWidth) properties in [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component.
 
-In the following sample, minimum and maximum width are defined for **TaskName** and **Duration** columns.
-
 {% tabs %}
 
 {% highlight razor tabtitle="Index.razor" %}
@@ -145,6 +143,8 @@ namespace TreeGridComponent.Data
 {% endhighlight %}
 
 {% endtabs %}
+
+N> The `MinWidth` and `MaxWidth` properties accept values in pixels (e.g., "120") or percentages (e.g., "30%"). These values restrict column resizing so that the width cannot shrink below `MinWidth` or expand beyond `MaxWidth`.
 
 ## Resize stacked column
 
@@ -242,9 +242,7 @@ namespace TreeGridComponent.Data
 
 ## Touch interaction
 
-On touch devices, when the right edge of the header cell is tapped, a floating handler will be visible over the right border of the column. To resize the column, tap and drag the floating handler as needed. Columns can also be AutoFit using the TreeGrid’s column menu.
-
-The following screenshot represents the column resizing in touch device.
+On touch devices, when the right edge of the header cell is tapped, a floating resize handle will appear on the right border.. To resize the column, tap and drag the floating handler as needed. Columns can also be auto-fitted through the TreeGrid's column menu. To enable column menu, define the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ShowColumnMenu) property as true.
 
 ![Blazor TreeGrid Column Resizing in Touch Interaction](../images/blazor-treegrid-column-resizing-touch.webp)
 
@@ -330,7 +328,7 @@ The event uses the [ResizeArgs](https://help.syncfusion.com/cr/blazor/Syncfusion
     }
 }
 {% endhighlight %}
-{% highlight c# tabtitle="OrderDetails.cs" %}
+{% highlight c# tabtitle="TreeData.cs" %}
 namespace TreeGridComponent.Data
 {
     public class TreeData

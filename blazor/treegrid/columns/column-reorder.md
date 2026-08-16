@@ -79,7 +79,7 @@ namespace TreeGridComponent.Data
 
 ![Reordering Columns in Blazor TreeGrid](../images/blazor-treegrid-column-reorder.webp)
 
-N> Reordering for a specific column can be disabled by setting the `AllowReordering` property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) tag helper to false. 
+N> To prevent reordering of a specific column, set the `AllowReordering` property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) to false.
 
 ## Reorder single column
 
@@ -94,7 +94,7 @@ TreeGrid has option to reorder a column either by interaction or by using the [R
 @using Syncfusion.Blazor.Buttons;
 
 <SfButton OnClick="ReorderColumn" CssClass="e-primary" IsPrimary="true" Content="Reorder TaskName Column"></SfButton>
-<SfTreeGrid IdMapping="TaskId" ParentIdMapping="ParentId" AllowReordering="true" DataSource="@TreeGridData" TreeColumnIndex="1">
+<SfTreeGrid @ref="TreeGrid" IdMapping="TaskId" ParentIdMapping="ParentId" AllowReordering="true" DataSource="@TreeGridData" TreeColumnIndex="1">
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" MinWidth="170" MaxWidth="250" Width="180"></TreeGridColumn>
@@ -105,6 +105,7 @@ TreeGrid has option to reorder a column either by interaction or by using the [R
 
 @code{
     public List<TreeData.BusinessObject> TreeGridData { get; set; }
+    private SfTreeGrid<TreeData.BusinessObject> TreeGrid;
     protected override void OnInitialized()
     {
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
@@ -230,6 +231,8 @@ public class TreeData
 {% endtabs %}
 
 ![Reordering Multiple Columns in Blazor TreeGrid](../images/blazor-treegrid-reorder-multiple-columns.webp)
+
+N>  In the `ReorderColumnsAsync` method, the second parameter specifies the destination column, and the reordered columns will always be placed before this column in the TreeGrid.
 
 ## Reorder events in TreeGrid
 

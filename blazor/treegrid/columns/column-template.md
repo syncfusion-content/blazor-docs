@@ -226,7 +226,7 @@ N> The column template feature renders customized element values in the UI for a
 
 N> * TreeGrid actions such as editing, filtering and sorting etc. will depend upon the column [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field). If the `Field` is not specified in the
 template column, the treegrid actions cannot be performed.
-<br/> * For Templated treegrid component, [ModelType](../templates.md#template-modeltype) property of treegrid should be defined.
+<br/> * For Templated TreeGrid component, [ModelType](../templates.md#template-modeltype) property of treegrid should be defined.
 
 ## Using conditions inside template
 
@@ -345,12 +345,12 @@ Custom image content can be specified by using the [Template](https://help.syncf
                             @{
                                 var employee = (context as Employee);
                                 <div class="image">
-                                    <img src="@UriHelper.ToAbsoluteUri($"images/TreeGrid/{employee.Name}.png")" alt="@employee.EmployeeID" />
+                                    <img src="@UriHelper.ToAbsoluteUri($"images/TreeGrid/{employee.FullName}.png")" alt="@employee.EmployeeID" />
                                 </div>
                             }
                         </Template>
                     </TreeGridColumn>
-                    <TreeGridColumn Field="DOB" HeaderText="DOB" Width="90" TextAlign=" Syncfusion.Blazor.Grids.TextAlign.Right" Type=ColumnType.Date Format="d"></TreeGridColumn>
+                    <TreeGridColumn Field="DOB" HeaderText="DOB" Width="90" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Type=ColumnType.Date Format="d"></TreeGridColumn>
                     <TreeGridColumn Field="Designation" HeaderText="Designation" Width="170"></TreeGridColumn>
                     <TreeGridColumn Field="EmpID" HeaderText="Employee ID" Width="120"></TreeGridColumn>
                     <TreeGridColumn Field="Country" HeaderText="Priority" Width="100"></TreeGridColumn>
@@ -608,7 +608,7 @@ An anchor tag can be defined inside the column template with a click event bound
 <br>
 <div><b>Employee ID:</b><div class="details">@EmpID</div></div>
 <div><b>Position:</b><div class="details">@Title</div></div>
-<div>
+</div>
 
 <style>
     .center {
