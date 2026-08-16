@@ -84,6 +84,13 @@ N> The column names can be hidden in the column chooser by defining the [ShowInC
 
 The Blazor TreeGrid allows opening the column chooser dialog programmatically using an external button. Use the [OpenColumnChooserAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_OpenColumnChooserAsync_System_Nullable_System_Double__System_Nullable_System_Double__) method to display the dialog at a specific position on the page.
 
+The [OpenColumnChooserAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_OpenColumnChooserAsync_System_Nullable_System_Double__System_Nullable_System_Double__) method accepts the following parameters:
+
+* `x` - Defines the X-coordinate (horizontal position) in pixels where the column chooser dialog will appear on the screen.
+* `y` - Defines the Y-coordinate (vertical position) in pixels where the column chooser dialog will appear on the screen.
+
+Both `x` and `y` parameters are optional nullable `double` values. When these values are not provided, the column chooser dialog is displayed at the default position on the page.
+
 {% tabs %}
 
 {% highlight razor %}
