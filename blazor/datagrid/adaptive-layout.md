@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Blazor Grid Adaptive UI and Responsive Layout | Syncfusion
 description: Learn how to use Adaptive Layout in Blazor Data Grid to render filter, sort, and edit dialogs in fullscreen mode for responsive and mobile-friendly experiences.
@@ -9,7 +9,7 @@ documentation: ug
 
 # Adaptive and Responsive Layout in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) includes an adaptive user interface designed for optimal usability on small screens. When enabled, the DataGrid renders filter, sort, column chooser, column menu (supported only when [RowRenderingMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowRenderingMode) is **Horizontal**), and edit dialogs in full-screen, mobile-friendly layout. Vertical row rendering is also available for improved readability on smaller viewports.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) includes an adaptive user interface designed for optimal usability on small screens. When enabled, the DataGrid renders filter, sort, column chooser, column menu (supported only when [RowRenderingMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowRenderingMode) is **Horizontal**), and edit dialogs in full-screen, mobile-friendly layout. Vertical row rendering is also available for improved readability on smaller viewports, configured through the [`RowDirection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDirection.html) enum assigned to the [`RowRenderingMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowRenderingMode) property.
 
 To understand how adaptive UI layout works in the Blazor DataGrid, watch the video below.
 
@@ -17,7 +17,9 @@ To understand how adaptive UI layout works in the Blazor DataGrid, watch the vid
 
 ## Rendering adaptive dialogs
 
-The Blazor DataGrid can render adaptive dialogs to enhance the user experience on smaller screens. Enable the [`EnableAdaptiveUI`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAdaptiveUI) property to display filter, sort, and edit dialogs in full-screen mode. This is especially helpful on devices with limited screen space.
+The Blazor DataGrid can render adaptive dialogs to enhance the user experience on smaller screens. Enable the [`EnableAdaptiveUI`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAdaptiveUI) property to display filter, sort, column chooser, column menu, and edit dialogs in full-screen mode. This is especially helpful on devices with limited screen space.
+
+> The `e-mobile-layout`, `e-mobile-content`, and `e-adaptive-demo` wrapper classes in the samples are used together with the accompanying CSS to simulate a mobile viewport inside the page, so the adaptive behavior of the DataGrid can be visualized on a desktop browser during development.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -45,8 +47,6 @@ The Blazor DataGrid can render adaptive dialogs to enhance the user experience o
     private FilterSettings VersionFilterSettings = new FilterSettings { Type = Syncfusion.Blazor.Grids.FilterType.CheckBox };
     
     private FilterSettings DeveloperFilterSettings = new FilterSettings { Type = Syncfusion.Blazor.Grids.FilterType.Menu };
-
-    public SfGrid<AdaptiveDetails> Grid { get; set; }
 
     public List<AdaptiveDetails> AdaptiveData { get; set; }
 
@@ -242,6 +242,8 @@ public class AdaptiveDetails
 The Blazor DataGrid supports vertical row rendering, which displays row elements in a vertical order. This layout improves data readability on smaller screens.
 
 > The default row rendering mode is **Horizontal**.
+>
+> [EnableAdaptiveUI](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAdaptiveUI) must be enabled for vertical row rendering.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -263,7 +265,7 @@ The Blazor DataGrid supports vertical row rendering, which displays row elements
                 <GridAggregates>
                     <GridAggregate>
                         <GridAggregateColumns>
-                            <GridAggregateColumn Field=@nameof(AdaptiveDetails.Model) Type="AggregateType.Count" Format="C2">
+                            <GridAggregateColumn Field=@nameof(AdaptiveDetails.Model) Type="AggregateType.Count">
                                 <FooterTemplate>
                                     @{
                                         var aggregate = (context as AggregateTemplateContext);
@@ -318,8 +320,8 @@ The Blazor DataGrid supports vertical row rendering, which displays row elements
 }
 
 <style>
-    /* Mobile Layout Styles */
-    .e-mobile-layout {
+     /* Mobile Layout Styles */
+	.e-mobile-layout {
         position: relative;
         width: 360px;
         height: 640px;
@@ -498,20 +500,18 @@ public class AdaptiveDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXLdjcDMVmntycTa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> [EnableAdaptiveUI](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAdaptiveUI) must be enabled for vertical row rendering.
-
 ### Supported features in vertical row rendering
 
 Vertical row rendering supports these features:
 
-* Paging, including page size dropdown
-* Sorting
-* Filtering
-* Selection
-* Dialog editing
-* Aggregate
-* Infinite scroll
-* Toolbar – Options such as **Add**, **Filter**, **Sort**, **Edit**, **Delete**, **Search**, and toolbar template are available when the corresponding features are enabled. The toolbar dynamically shows an overflow menu (three-dot icon) that contains additional actions such as **ColumnChooser**, **Print**, **PdfExport**, **ExcelExport**, and **CsvExport** once these features are enabled.
+* [Paging](paging.md), including the page size dropdown
+* [Sorting](sorting.md)
+* [Filtering](filtering.md)
+* [Selection](selection.md)
+* [Dialog editing](dialog-editing.md)
+* [Aggregate](aggregates.md)
+* [Infinite scroll](infinite-scrolling.md)
+* [Toolbar](toolbar-items.md): Options such as **Add**, **Filter**, **Sort**, **Edit**, **Delete**, **Search**, and toolbar template are available when the corresponding features are enabled. The toolbar dynamically shows an overflow menu (three-dot icon) that contains additional actions such as **ColumnChooser**, **Print**, **PdfExport**, **ExcelExport**, and **CsvExport** once these features are enabled.
 
 > The Column Menu feature (grouping, sorting, autofit, filter, and column chooser) is supported only when the DataGrid is in **Horizontal** [`RowRenderingMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowRenderingMode).
 
@@ -519,7 +519,7 @@ Vertical row rendering supports these features:
 
 ![Adaptive Grid pager with dropdown menu on small screens](images/pager-dropdown.webp)
 
-## Rendering an adaptive layout for smaller screens alone
+## Rendering adaptive layout on small screens only
 
 By default, the adaptive UI layout is rendered on both mobile devices and desktop when [`EnableAdaptiveUI`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAdaptiveUI) is set to **true**. To limit the adaptive layout to mobile screen sizes only, set the [`AdaptiveUIMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AdaptiveUIMode) property to **Mobile**. The default value of **AdaptiveUIMode** is **Both**.
 
@@ -541,33 +541,33 @@ By default, the adaptive UI layout is rendered on both mobile devices and deskto
                     <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules{ Required= true })" Width="130"></GridColumn>
                     <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules{ Required= true })" MinWidth="50" MaxWidth="300" Width="200"></GridColumn>
                     <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules{ Required= true })" EditType="EditType.NumericEdit" Format="C2" MinWidth="50" MaxWidth="300" Width="160"></GridColumn>
-                    <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="MM/dd/yyyy hh:mm tt" Type="Syncfusion.Blazor.Grids.ColumnType.DateTime" EditType="EditType.DateTimePickerEdit" Width="200"></GridColumn>
-                    <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="ShipCountry" Width="170"></GridColumn>
+                    <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="MM/dd/yyyy hh:mm tt" Type="Syncfusion.Blazor.Grids.ColumnType.DateTime" EditType="EditType.DateTimePickerEdit" Width="200"></GridColumn>
+                    <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="170"></GridColumn>
                 </GridColumns>
             </SfGrid>
         </div>
     </div>
 </div>
 
-    @code {
-        private SfGrid<OrderData> Grid;      
-        public List<OrderData> Orders { get; set; }
-        protected override void OnInitialized()
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_pdfexport")  // Id is a combination of the grid's ID and the item name.
         {
-            Orders = OrderData.GetAllRecords();
+            await this.Grid.ExportToPdfAsync();
         }
-        public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+        if (args.Item.Id == "Grid_excelexport")  // Id is a combination of the grid's ID and the item name.
         {
-            if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname
-            {
-                await this.Grid.ExportToPdfAsync();
-            }
-            if (args.Item.Id == "Grid_excelexport")  //Id is combination of Grid's ID and itemname
-            {
-                await this.Grid.ExportToExcelAsync();
-            }
+            await this.Grid.ExportToExcelAsync();
         }
     }
+}
 
 <style>
     /* Mobile Layout Styles */
@@ -697,29 +697,29 @@ By default, the adaptive UI layout is rendered on both mobile devices and deskto
 {% highlight cs tabtitle="OrderData.cs" %}
 public class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+	public static List<OrderData> Orders = new List<OrderData>();
 
-    public OrderData() { }
+	public OrderData() { }
 
-    public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, int employeeID)
-    {
-        this.OrderID = OrderID;
-        this.CustomerID = CustomerID;
-        this.ShipName = ShipName;
-        this.Freight = Freight;
-        this.OrderDate = OrderDate;
-        this.ShippedDate = ShippedDate;
-        this.IsVerified = IsVerified;
-        this.ShipCity = ShipCity;
-        this.ShipCountry = ShipCountry;
-        this.EmployeeID = employeeID; 
-    }
+	public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, int employeeID)
+	{
+	    this.OrderID = OrderID;
+	    this.CustomerID = CustomerID;
+	    this.ShipName = ShipName;
+	    this.Freight = Freight;
+	    this.OrderDate = OrderDate;
+	    this.ShippedDate = ShippedDate;
+	    this.IsVerified = IsVerified;
+	    this.ShipCity = ShipCity;
+	    this.ShipCountry = ShipCountry;
+	    this.EmployeeID = employeeID; 
+	}
 
-    public static List<OrderData> GetAllRecords()
-    {
-        if (Orders.Count == 0)
-        {
-            Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", 1));
+	public static List<OrderData> GetAllRecords()
+	{
+	    if (Orders.Count == 0)
+	    {
+	        Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", 1));
             Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Germany", 2));
             Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "Brazil", 3));
             Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", 1));
@@ -728,21 +728,21 @@ public class OrderData
             Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", 2));
             Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "Brazil", 1));
             Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", 3));
-        }
-        return Orders;
-    }
+	    }
+	    return Orders;
+	}
 
-    public int OrderID { get; set; }
-    public string CustomerID { get; set; }
-    public string ShipName { get; set; }
-    public double? Freight { get; set; }
-    public DateTime? OrderDate { get; set; }
-    public DateTime? ShippedDate { get; set; }
-    public bool? IsVerified { get; set; }
-    public string ShipCity { get; set; }
-    public string ShipCountry { get; set; }
-    public int EmployeeID { get; set; } 
-}
+	public int OrderID { get; set; }
+	public string CustomerID { get; set; }
+	public string ShipName { get; set; }
+	public double? Freight { get; set; }
+	public DateTime? OrderDate { get; set; }
+	public DateTime? ShippedDate { get; set; }
+	public bool? IsVerified { get; set; }
+	public string ShipCity { get; set; }
+	public string ShipCountry { get; set; }
+	public int EmployeeID { get; set; } 
+	}
 {% endhighlight %}
 {% endtabs %}
 
