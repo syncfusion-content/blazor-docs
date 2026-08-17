@@ -16,6 +16,7 @@ Grouping is one of the most useful features in the Pivot Table component, automa
 The grouping feature can be enabled by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowGrouping) property to **true** in the Pivot Table component. The default value is `false`.
 
 To perform grouping actions through the user interface, right-click on the Pivot Table's row or column header and select **Group**. A dialog will appear where you can configure the appropriate options to group the data. To ungroup data, right-click on the Pivot Table's row or column header and select **Ungroup**.
+
 The following are the three different types of grouping:
 
 * Number Grouping
