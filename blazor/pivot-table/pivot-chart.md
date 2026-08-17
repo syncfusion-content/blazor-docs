@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pivot Chart in Blazor Pivot Table | Syncfusion
-description: Learn how the React Pivot Table visualizes aggregated values with a Pivot Chart that supports bar, line, pie, and other chart types, with drill and export.
+description: Learn how the Blazor Pivot Table visualizes aggregated values with a Pivot Chart that supports bar, line, pie, and other chart types, with drill and export.
 platform: Blazor
 control: Pivot Table
 documentation: ug
