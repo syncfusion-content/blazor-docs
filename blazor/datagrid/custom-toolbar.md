@@ -10,7 +10,7 @@ documentation: ug
 
 The custom toolbar in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables a distinctive toolbar layout, style, and behavior tailored to application requirements, delivering a personalized Grid experience.
 
-This is implemented by using the `Template` property, which provides extensive customization options for the toolbar. Define a custom template for the toolbar and handle toolbar item actions in the **OnClick** event.
+This is implemented by using the `Template` property, which provides extensive customization options for the toolbar. Define a custom template for the toolbar and handle toolbar item actions in the **Clicked** event.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -50,19 +50,15 @@ This is implemented by using the `Template` property, which provides extensive c
     {
         if (args.Item.Text == "Collapse All")
         {
-            this.Grid.CollapseAllGroupAsync();
+            await this.Grid.CollapseAllGroupAsync();
         }
         if (args.Item.Text == "Expand All")
         {
-            this.Grid.ExpandAllGroupAsync();
+            await this.Grid.ExpandAllGroupAsync();
         }
     }
 }
-<style>
-    .e-collapse::before {
-        content: '\e834';
-    }
-</style>
+
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
     public class OrderData
@@ -85,7 +81,6 @@ This is implemented by using the `Template` property, which provides extensive c
         {
             if (Orders.Count() == 0)
             {
-                int code = 10;
                 for (int? i = 1; i < 2; i++)
                 {
                     Orders.Add(new OrderData(1, "Nancy", "Lyon", "Victuailles en stock"));
@@ -97,7 +92,6 @@ This is implemented by using the `Template` property, which provides extensive c
                     Orders.Add(new OrderData(7, "Nancy", "Rio de Janeiro", "Suprêmes délices"));
                     Orders.Add(new OrderData(8, "Margaret", "Bern", "Victuailles en stock"));
                     Orders.Add(new OrderData(9, "Janet", "Lyon", "Hanari Carnes"));
-                    code += 5;
                 }
             }
             return Orders;
@@ -113,11 +107,11 @@ This is implemented by using the `Template` property, which provides extensive c
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDhRXQZLBCsmUVxW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Render image with text in custom Toolbar
+## Render Image With Text in Custom Toolbar
 
-Rendering an image with text in the custom toolbar of the Blazor DataGrid helps provide context and improves visual clarity for actions.
+Rendering an image with text in the custom toolbar of the Blazor DataGrid adds context and improves visual clarity for actions.
 
-To render an image with text in the custom toolbar, use the `Template` in [SfToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfToolbar.html).
+To render an image with text in the custom toolbar, use the `Template` property in [SfToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfToolbar.html).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -190,19 +184,17 @@ To render an image with text in the custom toolbar, use the `Template` in [SfToo
         {
             if (Orders.Count() == 0)
             {
-                int code = 10;
                 for (int? i = 1; i < 2; i++)
                 {
                     Orders.Add(new OrderData(1, "Nancy", new DateTime(1993, 09, 15), 98));
                     Orders.Add(new OrderData(2, "Andrew", new DateTime(1997, 06, 01), 46));
                     Orders.Add(new OrderData(3, "Steven", new DateTime(2000, 04, 04), 56));
-                    Orders.Add(new OrderData(4, "Margaret", new DateTime(1895, 11, 11), 74));
+                    Orders.Add(new OrderData(4, "Margaret", new DateTime(1995, 11, 11), 74));
                     Orders.Add(new OrderData(5, "Janet", new DateTime(2001, 08, 04), 83));
                     Orders.Add(new OrderData(6, "Andrew", new DateTime(2022, 04, 09), 51));
                     Orders.Add(new OrderData(7, "Nancy", new DateTime(2023, 06, 06), 23));
                     Orders.Add(new OrderData(8, "Margaret", new DateTime(2011, 12, 30), 87));
                     Orders.Add(new OrderData(9, "Janet", new DateTime(2012, 07, 07), 34));
-                    code += 5;
                 }
             }
             return Orders;
@@ -220,11 +212,12 @@ To render an image with text in the custom toolbar, use the `Template` in [SfToo
 
 ## Render SfDropDownList in Custom Toolbar
 
-Rendering an [SfDropdownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) in the custom toolbar of the Blazor DataGrid extends toolbar functionality and enables actions based on user selection.
+Rendering an [SfDropDownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) in the custom toolbar of the Blazor DataGrid extends toolbar functionality and enables actions based on user selection.
 
-This is achieved by using the `Template`. The example below shows how to render the `SfDropDownList` in the custom toolbar, where the toolbar template binds the [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ValueChanged) event to the **OnChange** method.
+This is achieved by using the `Template` property. The example below shows how to render the `SfDropDownList` in the custom toolbar and bind the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ValueChanged) event to the **OnChange** method.
 
-In the **OnChange** method, the selected item text determines the action. For example, if **Update** is chosen, the [EndEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EndEditAsync) method exits edit mode. If **Edit** is selected, the selected record is passed to [StartEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_StartEditAsync) to start editing dynamically. Similarly, if **Delete** is chosen, the selected record is passed to [DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DeleteRecordAsync) to remove it from the Grid.
+In the **OnChange** method, the selected item text determines the action. When **Update** is selected, [EndEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EndEditAsync) exits edit mode. When **Edit** is selected, the selected record is passed to [StartEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_StartEditAsync) to start editing. When **Delete** is selected, the selected record is passed to [DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DeleteRecordAsync) to remove it from the Grid.
+
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -233,20 +226,24 @@ In the **OnChange** method, the selected item text determines the action. For ex
 @using Syncfusion.Blazor.DropDowns
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Height="200" @ref="Grid">
-    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>    
-    <SfToolbar>
-        <ToolbarItems>
-            <ToolbarItem Type="ItemType.Input">
-                <Template>
-                    <label>Change the value: </label>
-                    <SfDropDownList @ref="Dropdown" TValue="string" TItem="Select" DataSource=@LocalData Width="200">
-                        <DropDownListFieldSettings Text="text" Value="text"> </DropDownListFieldSettings>
-                        <DropDownListEvents TValue="string" TItem="Select" ValueChange="OnChange"> </DropDownListEvents>
-                    </SfDropDownList>
-                </Template>
-            </ToolbarItem>
-        </ToolbarItems>
-    </SfToolbar>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+    <GridTemplates>
+        <ToolbarTemplate>
+            <SfToolbar>
+                <ToolbarItems>
+                    <ToolbarItem Type="ItemType.Input">
+                        <Template>
+                            <label>Change the value: </label>
+                            <SfDropDownList @ref="Dropdown" TValue="string" TItem="Select" DataSource=@LocalData Width="200">
+                                <DropDownListFieldSettings Text="text" Value="text"> </DropDownListFieldSettings>
+                                <DropDownListEvents TValue="string" TItem="Select" ValueChange="OnChange"> </DropDownListEvents>
+                            </SfDropDownList>
+                        </Template>
+                    </ToolbarItem>
+                </ToolbarItems>
+            </SfToolbar>
+        </ToolbarTemplate>
+    </GridTemplates>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
@@ -274,17 +271,8 @@ In the **OnChange** method, the selected item text determines the action. For ex
     {
         Orders = OrderData.GetAllRecords();
     }
-    public async Task AddButton()
-    {
-        await this.Grid.AddRecordAsync();
-    }
-    public async Task DeleteButton()
-    {
-        await this.Grid.DeleteRecordAsync();
-    }
     public async Task OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, Select> args)
     {
-        var selectedRow = this.Grid.GetSelectedRecordsAsync();
         if (args.ItemData.text == "Edit")
         {
             await this.Grid.StartEditAsync();
@@ -321,19 +309,17 @@ In the **OnChange** method, the selected item text determines the action. For ex
         {
             if (Orders.Count() == 0)
             {
-                int code = 10;
                 for (int? i = 1; i < 2; i++)
                 {
                     Orders.Add(new OrderData(1, "Nancy", new DateTime(1993, 09, 15), 98));
                     Orders.Add(new OrderData(2, "Andrew", new DateTime(1997, 06, 01), 46));
                     Orders.Add(new OrderData(3, "Steven", new DateTime(2000, 04, 04), 56));
-                    Orders.Add(new OrderData(4, "Margaret", new DateTime(1895, 11, 11), 74));
+                    Orders.Add(new OrderData(4, "Margaret", new DateTime(1995, 11, 11), 74));
                     Orders.Add(new OrderData(5, "Janet", new DateTime(2001, 08, 04), 83));
                     Orders.Add(new OrderData(6, "Andrew", new DateTime(2022, 04, 09), 51));
                     Orders.Add(new OrderData(7, "Nancy", new DateTime(2023, 06, 06), 23));
                     Orders.Add(new OrderData(8, "Margaret", new DateTime(2011, 12, 30), 87));
                     Orders.Add(new OrderData(9, "Janet", new DateTime(2012, 07, 07), 34));
-                    code += 5;
                 }
             }
             return Orders;
@@ -349,7 +335,7 @@ In the **OnChange** method, the selected item text determines the action. For ex
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNhHZGZLhsrXKhyJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Render SfAutoComplete in custom toolbar
+## Render SfAutoComplete in the Custom Toolbar
 
 Rendering the [SfAutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started-with-web-app) in the custom toolbar of the Blazor DataGrid enhances usability by enabling dynamic search based on user input.
 
@@ -366,19 +352,22 @@ In the **OnSearch** method, the selected value from `SfAutoComplete` is used as 
 
 <SfGrid DataSource="@Orders" AllowPaging="true" @ref="Grid">
     <GridPageSettings PageSize="8"></GridPageSettings>
-    <GridEvents TValue="Order"></GridEvents>
-    <SfToolbar>
-        <ToolbarItems>
-            <ToolbarItem Type="ItemType.Input">
-                <Template>
-                    <SfAutoComplete Placeholder="Search Customer Name" TItem="CustomerDetails" TValue="string" DataSource="@Customers">
-                        <AutoCompleteEvents ValueChange="OnSearch" TValue="string" TItem="CustomerDetails"></AutoCompleteEvents>
-                        <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
-                    </SfAutoComplete>
-                </Template>
-            </ToolbarItem>
-        </ToolbarItems>
-    </SfToolbar>
+    <GridTemplates>
+        <ToolbarTemplate>
+            <SfToolbar>
+                <ToolbarItems>
+                    <ToolbarItem Type="ItemType.Input">
+                        <Template>
+                            <SfAutoComplete Placeholder="Search Customer Name" TItem="CustomerDetails" TValue="string" DataSource="@Customers">
+                                <AutoCompleteEvents ValueChange="OnSearch" TValue="string" TItem="CustomerDetails"></AutoCompleteEvents>
+                                <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
+                            </SfAutoComplete>
+                        </Template>
+                    </ToolbarItem>
+                </ToolbarItems>
+            </SfToolbar>
+        </ToolbarTemplate>
+    </GridTemplates>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
@@ -447,7 +436,6 @@ In the **OnSearch** method, the selected value from `SfAutoComplete` is used as 
              Orders.Add(new Order(10255, "TOMSP", 148.33, "Genève", "Richter Supermarkt", "Switzerland"));
              Orders.Add(new Order(10256, "HANAR", 13.97, "Resende", "Wellington Import Export", "Brazil"));
              Orders.Add(new Order(10257, "VINET", 81.91, "San Cristóbal", "Hila Alimentos", "Venezuela"));
-            
          }
 
          return Orders;
@@ -466,11 +454,11 @@ In the **OnSearch** method, the selected value from `SfAutoComplete` is used as 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjLntGDLBsLGXeDQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Render a component or element using the Toolbar Template
+## Render a Custom Component Using the Toolbar Template
 
-Rendering a component or element by using the toolbar template in the Blazor DataGrid extends the toolbar with custom components such as buttons, dropdowns, input fields, icons, or other UI elements. Event handlers can be bound within the template to enable actions for the added components.
+Custom components can be rendered within the toolbar template of the Blazor DataGrid to add buttons, dropdowns, input fields, icons, and other UI elements. Event handlers bound within the template enable actions on these components.
 
-To render custom components within the toolbar, use the `Template` directive. For example, include an [SfButton](https://help.syncfusion.com/cr/blazor/syncfusion.blazor.buttons.sfbutton.html) and perform specific Grid actions based on button clicks. When the **ExcelExport** button is clicked, [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) exports the Grid to Excel. When the **PdfExport** button is clicked, [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) exports the Grid to PDF. Likewise, when the Print button is clicked, [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) is triggered to print the Grid.
+To render custom components within the toolbar, use the `Template` directive with [SfButton](https://help.syncfusion.com/cr/blazor/syncfusion.blazor.buttons.sfbutton.html) to perform Grid actions based on clicks. When **ExcelExport** is clicked, [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) exports the Grid to Excel. When **PdfExport** is clicked, [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) exports to PDF. When **Print** is clicked, [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) triggers print.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -479,19 +467,23 @@ To render custom components within the toolbar, use the `Template` directive. Fo
 @using Syncfusion.Blazor.Buttons
 
 <SfGrid DataSource="@Orders" AllowPaging="true" AllowExcelExport="true" AllowPdfExport="true" Height="200" @ref="Grid">
-    <SfToolbar>
-        <ToolbarItems>
-            <ToolbarItem Type="ItemType.Input">
-                <Template>
-                    <div>
-                        <SfButton id="addButton" OnClick="ExcelExport">Excel Export</SfButton>
-                        <SfButton id="addButton" OnClick="PdfExport">Pdf Export</SfButton>
-                        <SfButton id="addButton" OnClick="Print">Print</SfButton>
-                    </div>
-                </Template>
-            </ToolbarItem>
-        </ToolbarItems>
-    </SfToolbar>
+    <GridTemplates>
+        <ToolbarTemplate>
+            <SfToolbar>
+                <ToolbarItems>
+                    <ToolbarItem Type="ItemType.Input">
+                        <Template>
+                            <div>
+                                <SfButton id="excelExportButton" OnClick="ExcelExport">Excel Export</SfButton>
+                                <SfButton id="pdfExportButton" OnClick="PdfExport">Pdf Export</SfButton>
+                                <SfButton id="printButton" OnClick="Print">Print</SfButton>
+                            </div>
+                        </Template>
+                    </ToolbarItem>
+                </ToolbarItems>
+            </SfToolbar>
+        </ToolbarTemplate>
+    </GridTemplates>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
@@ -542,7 +534,6 @@ To render custom components within the toolbar, use the `Template` directive. Fo
         {
             if (Orders.Count() == 0)
             {
-                int code = 10;
                 for (int i = 1; i < 2; i++)
                 {
                     Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Cheval"));
@@ -554,7 +545,6 @@ To render custom components within the toolbar, use the `Template` directive. Fo
                     Orders.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
                     Orders.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt"));
                     Orders.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Importado"));
-                    code += 5;
                 }
             }
             return Orders;
