@@ -84,7 +84,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-## Copy to clipboard by external buttons
+## Copy to Clipboard Using External Buttons
 
 To copy the data of the selected rows or cells into the clipboard with help of external buttons, invoke the [copyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_CopyAsync_System_Nullable_System_Boolean__) method.
 
@@ -188,7 +188,7 @@ namespace TreeGridComponent.Data {
 
 ## Copy Hierarchy Modes
 
-TreeGrid provides support for a set of copy modes with [CopyHierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.CopyHierarchyType.html) property. The below are the type of filter mode available in the TreeGrid.
+TreeGrid provides support for a set of copy modes with [CopyHierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.CopyHierarchyType.html) property. The below are the type of copy hierarchy mode available in the TreeGrid.
 
 * **Parent** : This is the default copy hierarchy mode in the TreeGrid. Clipboard will contain the selected records along with their parent records, if the selected records does not have any parent record then the selected record will be in clipboard.
 

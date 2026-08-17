@@ -41,7 +41,7 @@ Items |Description
 @using System.ComponentModel.DataAnnotations
 
 
-<SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" Height="312" IdMapping="TaskID" AllowExcelExport="true" AllowPdfExport="true" AllowSorting="true" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowPaging="true" ContextMenuItems="@(new List<object>() { "AutoFit", "AutoFitAll", "SortAscending", "SortDescending", "Copy", "Edit", "Delete", "Save", "Cancel", "PdfExport", "ExcelExport", "CsvExport", "FirstPage", "PrevPage", "LastPage", "NextPage" })">
+<SfTreeGrid DataSource="@TreeData" Height="312" IdMapping="TaskID" AllowExcelExport="true" AllowPdfExport="true" AllowSorting="true" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowPaging="true" ContextMenuItems="@(new List<object>() { "AutoFit", "AutoFitAll", "SortAscending", "SortDescending", "Copy", "Edit", "Delete", "Save", "Cancel", "PdfExport", "ExcelExport", "CsvExport", "FirstPage", "PrevPage", "LastPage", "NextPage" })">
     <TreeGridPageSettings PageSize="2">
         
     </TreeGridPageSettings>
@@ -57,7 +57,6 @@ Items |Description
 
 @code {
     private List<SelfReferenceData> TreeData { get; set; }
-    SfTreeGrid<SelfReferenceData> TreeGrid;
 
     protected override void OnInitialized()
     {
@@ -141,6 +140,8 @@ Items |Description
     }
 }
 ```
+
+N>  For context menu items such as **ExcelExport**, **PdfExport**, or **CsvExport** to work, the corresponding export properties ([AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowExcelExport), [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowPdfExport)) must be enabled on the TreeGrid.
 
 ![Blazor TreeGrid with Context Menu](images/blazor-treegrid-context-menu.webp)
 
