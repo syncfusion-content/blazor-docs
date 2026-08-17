@@ -198,9 +198,9 @@ TreeGrid records can be searched from an external button by invoking the [Search
         this.TreeGridData = BusinessObject.GetSelfDataSource().ToList();
     }
 
-    private void search()
+    private async Task search()
     {
-        this.TreeGrid.SearchAsync("Child Task 1");
+        await this.TreeGrid.SearchAsync("Child Task 1");
     }
 }
 

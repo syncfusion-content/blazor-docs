@@ -88,13 +88,13 @@ N> Use [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 TreeGrid supports multiple hierarchy modes through the [HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_HierarchyMode) property of [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings). The following modes are available:
 
-* **Parent** : This is the default filter hierarchy mode in the TreeGrid. The filtered records are displayed their its parent records, if the filtered records do not have a parent record then the filtered records are only displayed.
+* **Parent** : This is the default filter hierarchy mode in the TreeGrid. Shows the filtered record along with its parent if one exists. If the record has no parent, only the filtered record is shown.
 
-* **Child** : The filtered records are displayed with its child record, if the filtered records do not have any child record then the filtered records are only displayed.
+* **Child** : Shows the filtered record along with its child records if any exist. If the record has no child, only the filtered record is shown.
 
-* **Both** : The filtered records are displayed with its both parent and child record, if the filtered records does not have any parent and child record then the filtered records are only displayed.
+* **Both** : Shows the filtered record along with both its parent and child records if they exist. If the record has neither parent nor child, only the filtered record is shown.
 
-* **None** : The filtered records are only displayed.
+* **None** : Shows only the filtered record itself, without including any parent or child records.
 
 ## Initial filter
 
@@ -176,6 +176,8 @@ namespace TreeGridComponent.Data {
 {% endtabs %}
 
 ![Blazor TreeGrid with Initial Filter](../images/blazor-treegrid-initial-filter.webp)
+
+N> [MatchCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridFilterColumn_MatchCase) specifies whether filtering should respect case sensitivity. When set to **true**, records are matched with exact case; when set to **false**, case differences are ignored.
 
 ## Filter operators
 
@@ -294,12 +296,6 @@ In the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dro
     protected override void OnInitialized()
     {
         this.TreeData = SelfReferenceData.GetTree().Take(50).ToList();
-    }
-    public enum Prioritize : short
-    {
-        High = 1,
-        Low = 2,
-        Critical = 3
     }
     public class Data
     {
