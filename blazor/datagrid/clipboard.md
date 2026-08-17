@@ -291,7 +291,7 @@ internal sealed class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrnDcXszsUECbja?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Clipboard limitations
+### Autofill limitations
 
 - **Data Type Conversion**: AutoFill does not convert string values to numeric or date types. Copying strings into numeric cells results in **NaN**, and copying strings into date cells results in an **empty cell**.
 - **Value Copying**: AutoFill copies values directly from the source range without generating non-linear or sequential series.
@@ -303,15 +303,15 @@ internal sealed class OrderData
 
 ## Pasting Data
 
-The **Paste** feature in the Blazor DataGrid pastes grid-copied data into a selected range using <kbd>Ctrl + V</kbd>.
+The **Paste** feature in the Blazor DataGrid pastes grid-copied data into the grid using<kbd>Ctrl + V</kbd>.
 
 To enable pasting, ensure `GridEditSettings` is configured with `Mode="EditMode.Batch"` and `AllowEditing="true"`. Pasted values remain in batch mode until the **Update** button is clicked to apply changes to the data source.
 
 ### Steps to paste data
 
-1. Select the cells to copy.
+1. Select the cell to copy.
 2. Press <kbd>Ctrl + C</kbd> to copy the content.
-3. Select the target cells.
+3. Select the target cell.
 4. Press <kbd>Ctrl + V</kbd> to paste the copied content.
 
 {% tabs %}
@@ -320,7 +320,7 @@ To enable pasting, ensure `GridEditSettings` is configured with `Mode="EditMode.
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowSelection="true" Toolbar="@(new List<string>() { "Add", "Update", "Cancel" })" Height="348">
-    <GridSelectionSettings CellSelectionMode="CellSelectionMode.Box" Mode="SelectionMode.Cell" Type="SelectionType.Multiple"></GridSelectionSettings>
+    <GridSelectionSettings CellSelectionMode="CellSelectionMode.Box" Mode="SelectionMode.Cell"></GridSelectionSettings>
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Batch"></GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
@@ -392,6 +392,6 @@ internal sealed class OrderData
 
 > To paste DataGrid content, set selection [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) to **Cell**, set [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CellSelectionMode) to **Box**, and enable [Batch editing](https://blazor.syncfusion.com/documentation/datagrid/batch-editing).
 
-### Limitations
+### Paste Limitations
 
 - **Data Type Conversion:** Pasting does not convert string values to numeric or date types. Pasting strings into numeric cells results in **NaN**, and pasting strings into date cells results in an **empty cell**. Ensure that the pasted values are compatible with the target column's data type.
