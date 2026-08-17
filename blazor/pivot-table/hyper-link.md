@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hyperlink in Blazor Pivot Table | Syncfusion
-description: Learn how the React Pivot Table adds hyperlinks to row, column, and value cells through hyperlinkSettings for interactive navigation and drill-through.
+description: Learn how the Blazor Pivot Table adds hyperlinks to row, column, and value cells through hyperlinkSettings for interactive navigation and drill-through.
 platform: Blazor
 control: Pivot Table
 documentation: ug
