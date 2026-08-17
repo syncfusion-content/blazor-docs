@@ -9,7 +9,7 @@ documentation: ug
 
 # Filtering in Blazor TreeGrid
 
-Filtering displays specific or related records based on defined criteria. To enable filtering in the TreeGrid, set [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowFiltering) to true. Configure filtering behavior through [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings). For related filtering UIs, see the filter menu, Excel-like filter, and filter bar topics. The default filter type in TreeGrid is FilterBar.
+Filtering displays specific or related records based on defined criteria. To enable filtering in the TreeGrid, set [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowFiltering) to **true**. Configure filtering behavior through [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings). For related filtering UIs, see the filter menu, Excel-like filter, and filter bar topics. The default filter type in TreeGrid is FilterBar.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=7lhP9qa-UqY"%}
