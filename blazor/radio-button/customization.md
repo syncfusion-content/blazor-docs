@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Blazor RadioButton Component | Syncfusion®
-description: Checkout and learn here all about Customization in Syncfusion Blazor RadioButton component with examples and much more details.
+title: Customization in Blazor Radio Button | Syncfusion
+description: Customize Blazor Radio Button appearance with CSS selectors and themes using Theme Studio integration.
 platform: Blazor
 control: Radio Button
 documentation: ug
 ---
 
-# Styles and Appearances in Blazor RadioButton Component
+# Customization in Blazor Radio Button
 
 To modify the RadioButton appearance, override the component's default CSS. The following table lists common CSS selectors and their purposes within the RadioButton.
 

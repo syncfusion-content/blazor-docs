@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup Setting in Blazor MultiSelect Component | Syncfusion®
-description: Checkout and learn here all about Popup Setting in Blazor MultiSelect component and much more details.
+title: Popup Setting in Blazor MultiSelect Dropdown | Syncfusion
+description: Allow users to resize and configure the Blazor MultiSelect Dropdown popup for better visibility today easily.
 platform: Blazor
-control: MultiSelect
+control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Popup Setting in MultiSelect
+# Popup Setting in Blazor MultiSelect Dropdown
 
 ## Popup resize
 

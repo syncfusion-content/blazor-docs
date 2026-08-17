@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles and Appearances in Blazor Breadcrumb Component | Syncfusion®
-description: Checkout and learn here all features about Styles and Appearances in Blazor Breadcrumb component and much more.
+title: Style and Appearance in Blazor Breadcrumb | Syncfusion®
+description: Customize the Blazor Breadcrumb appearance by overriding its default CSS classes or by building a custom theme with the Syncfusion Theme Studio.
 platform: Blazor
 control: Breadcrumb
 documentation: ug
 ---
 
-# Styles and Appearance in Blazor Breadcrumb
+# Style and Appearance in Blazor Breadcrumb
 
 To modify the Breadcrumb appearance, override the default CSS classes of the component. The table below lists the available CSS classes and the section of the Breadcrumb each one targets. You can also create a custom theme for the component using the [Theme Studio](https://blazor.syncfusion.com/themestudio/).
 

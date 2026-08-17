@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Drag and Drop in Blazor File Upload Component | Syncfusion®
-description: Learn about drag-and-drop file selection, configuring an external drop area, and related behaviors in the Blazor File Upload component.
+title: Drag and Drop in Blazor File Upload | Syncfusion
+description: Enable drag-and-drop file selection and configure custom drop areas and effects in Blazor File Upload.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# Drag and drop in Blazor File Upload Component
+# Drag and Drop in Blazor File Upload
 
 The File Upload component supports drag-and-drop file selection. Users can drag files from the file explorer and drop them into the drop area. By default, the File Upload component acts as the drop area. The drop area is highlighted when files are dragged over it to indicate that dropping is supported.
 

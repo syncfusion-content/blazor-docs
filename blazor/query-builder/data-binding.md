@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor QueryBuilder Component | Syncfusion®
-description: Checkout and learn here all about data binding in Blazor QueryBuilder component with examples and much more details.
+title: Data Binding in Blazor Query Builder | Syncfusion
+description: Bind local collections or remote services to Blazor Query Builder using SfDataManager and DataSource.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Data Binding in Blazor QueryBuilder Component
+# Data Binding in Blazor Query Builder
 
 The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) uses `SfDataManager` to bind the data source and supports both RESTful JSON data services and `IEnumerable` collections. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_DataSource) property accepts either an instance of `SfDataManager` or a list of objects. It supports the following data binding methods:
 

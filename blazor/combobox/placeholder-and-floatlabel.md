@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Placeholder/FloatLabel in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn here all the features about Placeholder and FloatLabel in Blazor ComboBox component and more.
+title: Placeholder and Float Label in Blazor ComboBox | Syncfusion®
+description: Configure the Blazor ComboBox Placeholder and choose Auto, Always, or Never float label behavior with custom CSS styling.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Placeholder and Float Label in ComboBox
+# Placeholder and Float Label in Blazor ComboBox
 
 ## Placeholder
 

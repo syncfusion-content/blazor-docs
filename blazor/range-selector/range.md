@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Range Selector: Selecting a Range | Syncfusion®
+title: Blazor Range Selector | Selecting a Range | Syncfusion®
 description: Learn how to select a range in Syncfusion Blazor Range Selector using thumbs, label taps, or the Value property for one-way and two-way binding.
 platform: Blazor
 control: Range Selector

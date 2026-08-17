@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Floating Action Button Component | Syncfusion®
-description: Checkout and learn here all about Native Events in Floating Action Button component and much more details.
+title: Events in Blazor Floating Action Button | Syncfusion
+description: Use Blazor Floating Action Button events such as Created and OnClick to respond to component lifecycle and user actions.
 platform: Blazor
 control: Floating Action Button
 documentation: ug
 ---
 
-# Events in Blazor Floating Action Button Component
+# Events in Blazor Floating Action Button
 
 The Floating Action Button component exposes the following events: `OnClick` and `Created`. Use these events to handle user interactions and component lifecycle.
 
