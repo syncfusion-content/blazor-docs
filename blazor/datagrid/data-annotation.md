@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Data Annotation in Blazor Data Grid
+# Data annotation in Blazor Data Grid
 
 Data annotations define validation and display rules for model classes or properties in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid). These attributes ensure that input values follow specific formats and constraints while providing clear error messages during editing operations.
 
@@ -15,17 +15,24 @@ When the DataGrid is bound to a model, data annotations automatically map to cor
 
 To enable data annotation in the Blazor DataGrid:
 
-1. Add the **System.ComponentModel.DataAnnotations** namespace in the Blazor application.
+1. Add the **System.ComponentModel.DataAnnotations** namespace to the Blazor application.
 2. Bind the DataGrid to a model using `TValue` and [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource).
 3. Apply annotation attributes to model properties to enforce validation and display rules during CRUD operations.
 
-### Supported Data Annotation Attributes
+### Supported data annotation attributes
 
-The tables categorize supported attributes by display, formatting, metadata, and validation functionality.
+Data annotation attributes control four key aspects of DataGrid column behavior:
 
-### Display Attributes
+- **Display attributes** manage how column headers and metadata appear in the DataGrid interface
+- **Format attributes** define how data values are displayed and formatted in cells and edit dialogs
+- **Metadata attributes** control column visibility, editing behavior, and primary key identification
+- **Validation attributes** enforce data validation rules and display error messages during data entry
 
-Use **Display** attributes to control how column headers, ordering, and metadata appear in the grid interface.
+The following tables describe each category:
+
+### Display attributes
+
+Use **Display** attributes to control how column headers, ordering, and metadata appear in the DataGrid interface.
 
 | Attribute Name | Properties | Functionality |
 |----------------|------------|---------------|
@@ -33,10 +40,12 @@ Use **Display** attributes to control how column headers, ordering, and metadata
 | Display | ShortName | Sets a shorter version of the header text |
 | Display | AutoGenerateField | Prevents the column from being auto-generated |
 | Display | AutoGenerateFilter | Disables filtering for the column |
-| Display | Description | Sets tooltip text shown on column ellipsis hover |
+| Display | Description | Sets tooltip text shown when hovering the column's ellipsis |
 | Display | Order | Defines the display order of the column |
 
-### DisplayFormat Attributes
+> When the `Display` attribute's `Name` and the column's `HeaderText` property are both defined, the `HeaderText` value takes precedence and is shown in the column header.
+
+### DisplayFormat attributes
 
 Apply **DisplayFormat** attributes when column values require specific formatting or null-handling behavior.
 
@@ -48,30 +57,34 @@ Apply **DisplayFormat** attributes when column values require specific formattin
 | DisplayFormat | ConvertEmptyStringToNull | Converts empty strings to null in the UI |
 | DisplayFormat | HtmlEncode | Enables or disables HTML encoding for display |
 
-### Other Metadata Attributes
+### Metadata attributes
 
-Use these attributes to manage column visibility, editing behavior, and key definitions.
+Metadata attributes control column visibility, editing capabilities, and key identification in the DataGrid.
 
 | Attribute Name | Properties | Functionality |
 |----------------|------------|---------------|
 | ScaffoldColumnAttribute | Scaffold | Controls column visibility in the UI |
 | ReadOnlyAttribute | IsReadOnly | Prevents editing of the column |
-| Key | Key | Marks the column as the primary key |
+| Key | Key | Marks the column as the primary key. Pair with `IsPrimaryKey="true"` on the `GridColumn` to enable add, edit, and delete operations. |
 
-### Validation Attributes
+### Validation attributes
 
-Add validation attributes to enforce rules that display inline Blazor DataGrid validation messages during CRUD operations.
+Add validation attributes to enforce rules that display inline validation messages in the Blazor DataGrid during CRUD operations.
 
-- RequiredAttribute
-- StringLengthAttribute
-- RangeAttribute
-- RegularExpressionAttribute
-- MinLengthAttribute
-- MaxLengthAttribute
-- EmailAddressAttribute
-- CompareAttribute
+N> Validation messages appear only in the add and edit forms. Enable CRUD operations by setting `AllowAdding="true"` and `AllowEditing="true"` on `GridEditSettings` so the edit dialog can render the validation errors.
 
-> When both the `Display` attribute’s `Name` and the column’s `HeaderText` property are defined, the `HeaderText` value takes precedence and is shown in the column header.
+| Attribute Name | Key Parameters | Functionality |
+|----------------|----------------|---------------|
+| RequiredAttribute | (none) | Marks a property as required and blocks empty values |
+| StringLengthAttribute | MaximumLength, MinimumLength | Sets the maximum (and optional minimum) number of characters allowed |
+| RangeAttribute | Minimum, Maximum | Restricts numeric values to a minimum and maximum range |
+| RegularExpressionAttribute | Pattern | Validates the value against a regular expression pattern |
+| MinLengthAttribute | Length | Sets the minimum number of characters or items required |
+| MaxLengthAttribute | Length | Sets the maximum number of characters or items allowed |
+| EmailAddressAttribute | (none) | Validates that the value matches an email address format |
+| CompareAttribute | OtherProperty | Compares the value with another property on the same model |
+
+### Displaying enum values
 
 The `Display` attribute can be used to show user-friendly labels for enum values. This improves readability by replacing raw enum values with descriptive names.
 
@@ -164,26 +177,31 @@ The `Display` attribute can be used to show user-friendly labels for enum values
         [Key]
         // Sets column as required and error message to be displayed when empty.
         [Required(ErrorMessage = "Order ID should not be empty")]
-        // Sets header text to the column.
+        // Provides a compact label (ShortName) for the column header.
         [Display(ShortName = "ID")]
         public int OrderID { get; set; }
 
+        // Sets the header text and description for the column.
         [Display(Name = "CustomerID", Description ="List of Customers")]
         // Sets column as required and error message to be displayed when empty.
         [Required(ErrorMessage = "Field should not be empty")]
+        // Displays custom text for null values and converts empty strings to null.
         [DisplayFormat(NullDisplayText = "Empty", ConvertEmptyStringToNull = true)]
         public string CustomerID { get; set; }
 
-        // Sets data type of column as Date.
+        // Specifies the data type as Date for formatting and editor selection.
         [DataType(DataType.Date)]
+        // Sets the header text for the column.
         [Display(Name = "Order Date")]
         // Sets column as read only.
         [Editable(false)]
         public DateTime? OrderDate { get; set; }
 
+        // Sets the header text and disables filtering for the column.
         [Display(Name = "Freight", AutoGenerateFilter = false)]
         public double? Freight { get; set; }
 
+        // Hides the column from the DataGrid UI.
         [ScaffoldColumn(false)]
         public string ShipCity { get; set; }
 
@@ -198,4 +216,7 @@ The following image shows how Data Annotations are applied to Grid columns in a 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZrRXQDrLszxRyQn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Annotation in Grid](./images/blazor-datagrid-data-annotation.webp)" %}
 
-N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for an overview of available features. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to see how data is presented and managed within an application.
+N> The `EditType` property on each `GridColumn` controls which editor renders during editing (for example, `DataType.Date` maps to a date picker by default). For the full list of available editors and how to map a `DataType` to a specific `EditType`, see [Edit Types in Blazor Data Grid](edit-types).
+
+
+N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for an overview of available features. Explore the [Blazor DataGrid documentation](https://help.syncfusion.com/blazor/datagrid/getting-started) for more information about data binding and configuration options.
