@@ -19,7 +19,7 @@ The toolbar can be configured with built-in toolbar items or custom items using 
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" Height="200" Toolbar=@ToolbarItems>
+<SfGrid DataSource="@Orders" Height="200" Toolbar="@ToolbarItems">
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID"  Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
@@ -84,11 +84,19 @@ The toolbar can be configured with built-in toolbar items or custom items using 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDLntwtxBRubEXyl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
+N> For custom toolbar actions, use [ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html). Explore the [custom toolbar items documentation](https://blazor.syncfusion.com/documentation/datagrid/toolbar-items#custom-toolbar-items) to understand how to configure custom toolbar items using ItemModel.
+
 ## Enable or disable toolbar items
 
 Enable or disable toolbar items dynamically to control which actions are available based on application logic or user interactions.
 
-Toolbar items in the Blazor DataGrid can be enabled or disabled dynamically using the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method. This provides programmatic control over the availability of specific items by their IDs. For built-in toolbar items specified with strings, the Grid generates IDs (for example, **Grid_Add, Grid_Edit**). For custom items created with ItemModel, set the Id property explicitly and use it when enabling or disabling items.
+Toolbar items in the Blazor DataGrid can be enabled or disabled dynamically using the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method. This provides programmatic control over the availability of specific items by their IDs.
+
+For built-in toolbar items, the Grid generates IDs using the format `Grid_<ItemText>`. For example, `Add`, `Edit`, and `Delete` receive IDs such as `Grid_Add`, `Grid_Edit`, and `Grid_Delete`.
+
+For custom toolbar items specified as strings, the Grid also generates IDs in the same format. For example, custom items such as `Expand` and `Collapse` receive IDs like `Grid_Expand` and `Grid_Collapse`.
+
+For custom items created with [`ItemModel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html), set the `Id` property explicitly and use that value when enabling or disabling the toolbar item.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -97,7 +105,7 @@ Toolbar items in the Blazor DataGrid can be enabled or disabled dynamically usin
 
 <label>Enable or disable toolbar items</label>
 <SfSwitch ValueChange="Change" TChecked="bool"></SfSwitch>
-<SfGrid id="Grid" DataSource="@Orders" AllowPaging="true" Height="200" @ref="Grid" AllowGrouping="true" Toolbar=@ToolbarItems>
+<SfGrid ID="Grid" DataSource="@Orders" AllowPaging="true" Height="200" @ref="Grid" AllowGrouping="true" Toolbar="@ToolbarItems">
 <GridGroupSettings Columns=@GroupColumn></GridGroupSettings>
   <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
@@ -205,7 +213,7 @@ Toolbar items in the Blazor DataGrid can be enabled or disabled dynamically usin
 
 Enable or disable toolbar items based on the selected row so that actions are available only when relevant to the current selection.
 
-Use the [RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelecting) event with the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method to toggle specific items by id during selection. For built-in items, refer to the generated toolbar item IDs (for example, Grid_Add, Grid_Edit, Grid_Delete). For custom items, use the ItemModel Id value. Ensure that the IDs used match the rendered toolbar item IDs in the target version.
+Use the [RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelecting) and [RowDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeselecting) events with the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method. Handle selection and deselection together to keep toolbar state aligned with row state. For built-in items, use generated IDs such as Grid_Add, Grid_Edit, and Grid_Delete. For custom toolbar items, use the [ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html) `Id` value. Match IDs with rendered toolbar item IDs in the target version.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -214,7 +222,7 @@ Use the [RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 <SfGrid ID="Grid" @ref="grid" DataSource="@GridData" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Width="700" Height="315">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowEditOnDblClick="false" Mode="Syncfusion.Blazor.Grids.EditMode.Normal"></GridEditSettings>
-    <GridEvents RowSelecting="RowSelectingHandler" TValue="OrderData"></GridEvents>
+    <GridEvents RowSelecting="RowSelectingHandler" RowDeselecting="RowDeselectingHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" IsPrimaryKey="true" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
@@ -231,7 +239,7 @@ Use the [RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
-    }   
+    }
 
     public async Task RowSelectingHandler(RowSelectingEventArgs<OrderData> args)
     {
@@ -240,6 +248,14 @@ Use the [RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
             await this.grid.EnableToolbarItemsAsync(new List<string>() { "Grid_Add", "Grid_Edit", "Grid_Delete" }, false);
         }
         else
+        {
+            await this.grid.EnableToolbarItemsAsync(new List<string>() { "Grid_Add", "Grid_Edit", "Grid_Delete" }, true);
+        }
+    }
+
+    public async Task RowDeselectingHandler(RowDeselectEventArgs<OrderData> args)
+    {
+        if (args.Data.OrderID == 10249 || args.Data.OrderID == 10252 || args.Data.OrderID == 10256)
         {
             await this.grid.EnableToolbarItemsAsync(new List<string>() { "Grid_Add", "Grid_Edit", "Grid_Delete" }, true);
         }
@@ -302,7 +318,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}      
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhxtmjxrcErMecu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhxDPMdSWbmINPG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize Toolbar buttons using CSS
 
@@ -322,7 +338,7 @@ The following example demonstrates changing the background color of the `Add`, `
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowPaging="true" Height="200" @ref="Grid"  Toolbar=@ToolbarItems>
+<SfGrid DataSource="@Orders" AllowPaging="true" Height="200" @ref="Grid"  Toolbar="@ToolbarItems">
 <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" Width="120"></GridColumn>
@@ -399,4 +415,4 @@ The following example demonstrates changing the background color of the `Add`, `
 
 N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.
 
-N> Styling tips: when using CSS isolation, place styles in the component’s **.razor.css** file. To target inner elements from isolated CSS, use the **::deep** selector where appropriate. Consider additional state styles (hover, active, focus-visible, disabled) and high-contrast themes to improve accessibility.
+N> Styling tips: for CSS isolation, place styles in a component stylesheet such as **.razor.css**. To target inner elements, use the **::deep** selector where appropriate. Add state styles for hover, active, focus-visible, and disabled states, and maintain high-contrast support for accessibility.
