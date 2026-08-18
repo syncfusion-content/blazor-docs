@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) is built to support widely accepted accessibility standards. These standards help ensure that the component is usable by individuals with varying abilities, including those using assistive technologies.
+Blazor DataGrid supports widely accepted accessibility standards. These standards help ensure that the component is usable by individuals with varying abilities, including those using assistive technologies.
 Supported guidelines include:
 
 - [Americans with Disabilities Act (ADA)]((https://www.ada.gov/))
@@ -36,7 +36,7 @@ Supported guidelines include:
 </style>
 **Support Level Indicators:**
 
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features meet the accessibility requirement..</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features meet the accessibility requirement.</div>
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features meet the requirement; others may need improvement.</div>
 
@@ -44,7 +44,7 @@ Supported guidelines include:
 
 ## WAI-ARIA attributes
 
-The Blazor DataGrid implements the [WAI-ARIA grid pattern](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) to support accessibility requirements. This ensures compatibility with assistive technologies such as screen readers, including **JAWS** and **NVDA**. WAI-ARIA (Web Accessibility Initiative – Accessible Rich Internet Applications) attributes define roles, states, and properties that make the DataGrid accessible to individuals with disabilities.
+The Blazor DataGrid implements the [WAI-ARIA grid pattern](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) to support accessibility requirements. This ensures compatibility with assistive technologies such as screen readers, including **JAWS** and **NVDA**. WAI-ARIA attributes define roles, states, and properties for DataGrid accessibility.
 
 | Attribute | Purpose |
 |-----------|---------|
@@ -69,9 +69,9 @@ The Blazor DataGrid implements the [WAI-ARIA grid pattern](https://www.w3.org/WA
 | `aria-labelledby` | Provides accessible names for elements like checkboxes in filters or dialogs. |
 | `aria-describedby` | Describes features enabled in a header cell when it receives focus. |
 
-The Grid uses a two-table structure for header and content. ARIA roles and attributes are applied to parent and child elements to enhance screen reader support. This structure may trigger warnings in automated accessibility tools, but it does not affect how screen readers interpret the content.
+The Grid uses a two-table structure for header and content. ARIA roles and attributes are applied to parent and child elements to enhance screen reader support. Automated tools may flag this structure, but screen readers interpret it correctly.
 
-Accessibility checker tools may report the following known issues:
+Automated accessibility checkers may report these known issues:
 
 * **aria-required-children:** Appears when rendering the Grid without certain features or when toolbar and grouping are enabled. Ensure required child roles are present and suppress false positives if the structure is intentional.
 * **color-contrast:** Can occur when the search item is enabled in the toolbar. Adjust theme variables or apply custom CSS to meet WCAG 2.2 AA contrast requirements.
@@ -83,11 +83,11 @@ Accessibility checker tools may report the following known issues:
 *** Grid lacks a programmatic name:** Set aria-label or aria-labelledby on the main Grid container.
 * **role="rowgroup" not owned by a grid:** Ensure grouped content remains within the element that has role="grid".
 
-To improve accessibility, apply page landmarks, assign unique labels to search regions, and verify that color contrast meets WCAG 2.2 AA standards. When customizing styles, maintain visible focus indicators and a logical focus order.
+To improve accessibility, apply page landmarks and assign unique labels to search regions. Verify that color contrast meets WCAG 2.2 AA standards. When customizing styles, maintain visible focus indicators and a logical focus order.
 
 ## Keyboard interaction
 
-The Blazor DataGrid supports keyboard navigation based on the ARIA grid [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/grid/#keyboard-interaction) guidelines. This enables efficient navigation for scenarios involving keyboard input or assistive technologies.
+Blazor DataGrid follows ARIA grid [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/grid/#keyboard-interaction) guidelines. This enables navigation for keyboard users and assistive technologies.
 
 The supported keyboard shortcuts are listed below.
 
@@ -190,12 +190,13 @@ The supported keyboard shortcuts are listed below.
 
 <b>Sorting</b>
 
-| Windows                                       | Mac                                        | Actions                                                 |
-|-----------------------------------------------|--------------------------------------------|---------------------------------------------------------|
-| <kbd>Ctrl</kbd> + <kbd>←</kbd> / <kbd>→</kbd> | <kbd>⌘</kbd> + <kbd>←</kbd> / <kbd>→</kbd> | Reorder the focused header column to the left or right. |
+| Windows | Mac | Actions |
+| ----- | ----- | ----- |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Sort the focused header column |
+
 <br>
 
-> On Mac devices, the <kbd>Command</kbd> and <kbd>Control</kbd> keys can be interchanged based on system settings. When this switch is active, use the <kbd>Command</kbd> key in place of <kbd>Control</kbd>, and <kbd>Control</kbd> in place of <kbd>Command</kbd> for keyboard interactions.
+> On Mac, Command and Control keys may be interchangeable based on system preferences. When this switch is active, use the <kbd>Command</kbd> key in place of <kbd>Control</kbd>, and <kbd>Control</kbd> in place of <kbd>Command</kbd> for keyboard interactions.
 For example:
 
 - To group columns when a header is focused, use <kbd>Command + Space</kbd>.
