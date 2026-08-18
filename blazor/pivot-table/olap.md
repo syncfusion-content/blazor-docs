@@ -14,7 +14,7 @@ documentation: ug
 
 ## Getting Started
 
-This section explains how to create a simple [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using an OLAP data source. For details on setting up a Blazor application, refer to the [Getting started with Blazor for client-side in Visual Studio 2022](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) guide, which covers the initial setup and configuration steps.
+This section explains the steps to create a simple[Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) with an OLAP data source in a Blazor environment.
 
 ### Adding the Blazor component package
 
@@ -34,7 +34,7 @@ You can add the Pivot Table component to any Razor page in the `~/Pages` folder.
 
 To enable users to perform meaningful analysis with OLAP data, the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component requires a properly configured OLAP data source. This data source connects to an OLAP cube, such as Microsoft SQL Server Analysis Services (SSAS), to fetch multidimensional data for analysis.
 
-For demonstration purposes, we'll use the **Adventure Works** cube. The OLAP data source is assigned to the Pivot Table component through the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class. Refer [here](#data-binding) to know more details about OLAP data binding.
+For demonstration purposes, we'll use the **Adventure Works** cube. The OLAP data source is assigned to the Pivot Table component through the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class. For more details on OLAP data binding, refer [here](#data-binding).
 
 ```cshtml
 

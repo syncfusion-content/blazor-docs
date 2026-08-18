@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to hide empty headers in Blazor Pivot Table | Syncfusion
-description: Step-by-step example showing how to hide empty headers in the Blazor Pivot Table by setting ShowHeaderWhenEmpty to false to suppress null field labels.
+description: Step-by-step example showing how to hide empty headers in the Blazor Pivot Table by setting showHeaderWhenEmpty to false.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # How to hide empty headers in Blazor Pivot Table
 
-When the raw data for a particular field is not defined, it will be shown as 'null' in the pivot table headers. You can hide those headers by setting the [ShowHeaderWhenEmpty](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowHeaderWhenEmpty) property to **false** in the pivot table.
+When the raw data for a particular field is not defined, it will be shown as 'null' in the pivot table headers. You can hide those headers by setting the [`ShowHeaderWhenEmpty`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowHeaderWhenEmpty) property to **false** in the pivot table.
 
-For example, when the raw data contains **"United Kingdom"** for the 'Country' field but the **"State"** field is null, the header displays as **"United Kingdom >> null"**. Here, you can hide those 'null' headers using the [ShowHeaderWhenEmpty](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowHeaderWhenEmpty) property.
+For example, when the raw data contains **"United Kingdom"** for the 'Country' field but the **"State"** field is null, the header displays as **"United Kingdom >> null"**. Here, you can hide those 'null' headers using the [`ShowHeaderWhenEmpty`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowHeaderWhenEmpty) property.
 
 N> By default, this property is set to **true**.
 

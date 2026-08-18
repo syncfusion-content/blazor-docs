@@ -1,19 +1,19 @@
 ---
 layout: post
-title: How to show tooltips for headers in Blazor Pivot Table | Syncfusion
-description: Step-by-step example showing how to show tooltips for headers in the Blazor Pivot Table, binding SfTooltip to header cells via OnRender and ContentTemplate.
+title: How to add custom tooltips to Pivot Table headers | Syncfusion
+description: Step-by-step example showing how to add custom tooltips to headers in the Blazor Pivot Table using the tooltipText event.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# How to show tooltips for headers in Blazor Pivot Table
+# How to add custom tooltips to Pivot Table headers
 
-This guide explains how to display tooltips for row and column headers in the Blazor Pivot Table using an external tooltip component. By leveraging the tooltip component, users can view additional details about headers when hovering over them, enhancing the interactivity of the Pivot Table. The example below demonstrates how to achieve this with clear and concise code.
+You can display custom tooltips for row and column headers to provide additional context and information. This approach enhances the user experience by showing detailed field information when hovering over header cells in the pivot table.
 
 ## Implementation
 
-To show tooltips for row and column headers, use the [SfTooltip](https://blazor.syncfusion.com/documentation/tooltip/getting-started) component. The [OnRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_OnRender) event retrieves header cell information, which is displayed within the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_ContentTemplate) of the tooltip. This setup ensures tooltips appear when users hover over row or column headers, providing relevant details like field names or header text.
+To display tooltips for row and column headers, initialize an external [`SfTooltip`](https://blazor.syncfusion.com/documentation/tooltip/getting-started) component. The [OnRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_OnRender) event retrieves header cell information, which is displayed within the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_ContentTemplate) of the tooltip. This setup ensures tooltips appear when users hover over row or column headers, providing relevant details like field names or header text.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
