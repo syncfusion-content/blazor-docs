@@ -291,7 +291,7 @@ internal sealed class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrnDcXszsUECbja?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Autofill limitations
+### Autofill Limitations
 
 - **Data Type Conversion**: AutoFill does not convert string values to numeric or date types. Copying strings into numeric cells results in **NaN**, and copying strings into date cells results in an **empty cell**.
 - **Value Copying**: AutoFill copies values directly from the source range without generating non-linear or sequential series.
@@ -303,7 +303,7 @@ internal sealed class OrderData
 
 ## Pasting Data
 
-The **Paste** feature in the Blazor DataGrid pastes grid-copied data into the grid using<kbd>Ctrl + V</kbd>.
+The **Paste** feature in the Blazor DataGrid pastes grid-copied data into the grid using <kbd>Ctrl + V</kbd>.
 
 To enable pasting, ensure `GridEditSettings` is configured with `Mode="EditMode.Batch"` and `AllowEditing="true"`. Pasted values remain in batch mode until the **Update** button is clicked to apply changes to the data source.
 
