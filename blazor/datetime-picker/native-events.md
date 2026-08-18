@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor DateTimePicker Component | Syncfusion®
-description: Checkout and learn here all about Native Events in Blazor Datetime Picker component and much more details.
+title: Native Events in Blazor DateTime Picker | Syncfusion®
+description: Attach native DOM events to the Blazor DateTime Picker using the on{event} attribute, and pass event argument data to the handler.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
 ---
 
-# Native Events in Blazor DateTimePicker Component
+# Native Events in Blazor DateTime Picker
 
 The following section explains how to attach native DOM events to the DateTimePicker component and pass event data to the handler.
 

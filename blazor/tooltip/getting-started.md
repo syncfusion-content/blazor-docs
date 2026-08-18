@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Tooltip Component | Syncfusion
-description: Check out and learn about getting started with Blazor Tooltip component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Tooltip in Blazor WASM App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Tooltip in a Blazor WebAssembly app with setup steps.
 platform: Blazor
 control: Tooltip
 documentation: ug
 ---
 
-# Getting started with Blazor Tooltip component
+# Getting Started with Blazor Tooltip in Blazor WASM App
 
 This section briefly explains how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tooltip](https://www.syncfusion.com/blazor-components/blazor-tooltip) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

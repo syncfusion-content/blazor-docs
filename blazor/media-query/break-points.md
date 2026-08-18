@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Breakpoints in Blazor Media Query Component | Syncfusion®
-description: Checkout and learn here all about Breakpoints in Blazor Media Query component and much more details.
+title: Breakpoints in Blazor Media Query | Syncfusion
+description: Configure built-in or custom breakpoints in Blazor Media Query to adapt layouts for small, medium, and large screens.
 platform: Blazor
 control: Media Query
 documentation: ug
 ---
 
-# Breakpoints in Blazor Media Query Component
+# Breakpoints in Blazor Media Query
 
 Blazor Media Query breakpoints let you build responsive and adaptive layouts by defining screen-size thresholds at which the layout and styling of the web application adjust for the best user experience.
 

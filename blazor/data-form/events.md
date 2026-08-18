@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Event handlers in Blazor DataForm Component | Syncfusion®
-description: Checkout and learn here about how to bound event handlers and recieve necessary arguments in Blazor DataForm component.
+title: Events in Blazor Data Form | Syncfusion®
+description: Bind form-level and field-level Blazor Data Form events such as OnSubmit, OnValidSubmit, and field changes to react to user actions.
 platform: Blazor
 control: DataForm
 documentation: ug
 ---
 
-# Event handlers in DataForm component
+# Events in Blazor Data Form
 
 This section describes the available DataForm events and when to use them. The form-level submit events mirror the Blazor EditForm pipeline, and a field-level update event helps react to per-field edits.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: CSS Customization in Blazor TimePicker Component | Syncfusion®
-description: Checkout and learn here all the features about CSS customization in Blazor TimePicker component and more.
+title: How to customize CSS in Blazor TimePicker | Syncfusion
+description: Customize Blazor TimePicker input and popup appearance using the CssClass property with custom styles.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# CSS Customization in Blazor TimePicker Component
+# How to customize CSS in Blazor TimePicker
 
 TimePicker allows you to customize the text box and popup list appearance to suit the application by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfInputTextBase-1.html#Syncfusion_Blazor_Inputs_SfInputTextBase_1_CssClass) property.
 

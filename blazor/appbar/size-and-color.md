@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Size and Color with Blazor AppBar Component | Syncfusion®
-description: Check out and learn about Size and Color with the Blazor AppBar component in the Blazor Server App and the Blazor WebAssembly App.
+title: Size and Color in Blazor AppBar | Syncfusion®
+description: Set the Blazor AppBar size with the Mode property (Regular, Prominent, or Dense) and choose its color scheme with ColorMode.
 platform: Blazor
 control: AppBar
 documentation: ug
 ---
 
-# Size and Color with Blazor AppBar Component
+# Size and Color in Blazor AppBar
 
 ## Size
 

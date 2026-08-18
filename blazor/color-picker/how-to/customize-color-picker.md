@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize Color Picker in Blazor Color Picker Component | Syncfusion®
-description: Checkout and learn here all the features about Customize Color Picker in Blazor Color Picker component and much more.
+title: How to customize the Color Picker in Blazor | Syncfusion®
+description: Customize the Blazor Color Picker with custom palette colors, custom CSS classes, and inline or popup rendering for the picker area.
 platform: Blazor
 control: Color Picker
 documentation: ug
 ---
 
-# Customize Color Picker in Blazor Color Picker Component
+# How to customize the Color Picker in Blazor
 
 ## Custom palette
 

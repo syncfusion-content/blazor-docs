@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Toast in Blazor WASM App | Syncfusion®
-description: Check out and learn about getting started with Blazor Toast component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Toast in Blazor WASM App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Toast in a Blazor WebAssembly app with setup steps.
 platform: Blazor
 control: Toast
 documentation: ug
 ---
 
-# Getting Started with Blazor Toast Component in Blazor WASM App
+# Getting Started with Blazor Toast in Blazor WASM App
 
 This section briefly explains how to include [Blazor Toast](https://www.syncfusion.com/blazor-components/blazor-toast) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

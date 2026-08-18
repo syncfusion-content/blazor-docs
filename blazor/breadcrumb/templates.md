@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Breadcrumb Templates with Blazor Breadcrumb component | Syncfusion®
-description: Breadcrumb section explains how to customize the item template and separator template to the Breadcrumb items.
+title: Templates in Blazor Breadcrumb | Syncfusion®
+description: Customize the Blazor Breadcrumb with item and separator templates to render custom content and visual structure between Breadcrumb entries.
 platform: Blazor
 control: Breadcrumb
 documentation: ug
@@ -90,7 +90,7 @@ Customize a single Breadcrumb item by providing custom content as the `Breadcrum
         <BreadcrumbItem>
             <span class="e-searchfor-text">
                 <span style="margin-right: 5px">Search for:</span>
-                <a class="e-breadcrumb-text" href="./breadcrumb/default-functionalities" onclick="return false">Breadcrumb</a>
+                <a class="e-breadcrumb-text" href="./breadcrumb/default-functionalities" aria-label="Breadcrumb demo link" onclick="return false">Breadcrumb</a>
             </span>
         </BreadcrumbItem>
     </BreadcrumbItems>

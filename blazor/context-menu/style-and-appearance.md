@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles and Appearances in Blazor ContextMenu Component | Syncfusion®
-description: Checkout and learn here all the features about Styles and Appearances in Blazor ContextMenu component and more.
+title: Style and Appearance in Blazor Context Menu | Syncfusion®
+description: Customize the Blazor Context Menu appearance by overriding its default CSS classes or by building a custom theme with the Syncfusion Theme Studio.
 platform: Blazor
 control: Context Menu
 documentation: ug
 ---
 
-# Style and Appearance in Blazor ContextMenu Component
+# Style and Appearance in Blazor Context Menu
 
 To modify the [Blazor ContextMenu](https://www.syncfusion.com/blazor-components/blazor-context-menu) appearance, you need to override the default CSS of the ContextMenu component. Find the list of CSS classes and its corresponding section in the ContextMenu component. You can also create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=bootstrap5).
 

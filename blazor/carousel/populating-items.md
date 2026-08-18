@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Populating items with Blazor Carousel Component | Syncfusion®
-description: Checkout and learn about populating items with Blazor Carousel component in Blazor Server App and Blazor WebAssembly App.
+title: Populating Items in Blazor Carousel | Syncfusion®
+description: Populate the Blazor Carousel from a data source or by adding CarouselItem templates, binding images, captions, and partial content per slide.
 platform: Blazor
 control: Carousel
 documentation: ug
 ---
 
-# Populating items in Blazor Carousel component
+# Populating Items in Blazor Carousel
 
 ## Populating items using CarouselItem
 
