@@ -9,9 +9,9 @@ documentation: ug
 
 # Lazy Load Grouping for Large Data Performance in Blazor Data Grid
 
-In Blazor, lazy loading refers to loading data dynamically only when needed, rather than loading everything upfront. This approach reduces initial load time and improves application performance.
+Lazy loading loads data dynamically on-demand rather than loading all data upfront. This reduces initial load time and improves performance.
 
-Lazy load grouping in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) efficiently loads grouped data by fetching only the required records on demand. This feature is especially useful for large datasets where loading all rows at once can affect performance. When grouping is applied, the DataGrid initially renders only top-level group caption rows in a collapsed state. The child rows for each group are fetched on demand and rendered when the corresponding caption row is expanded.
+Lazy load grouping in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) efficiently loads grouped data by fetching only the required records on demand. This feature is especially useful for large datasets where loading all rows at once can affect performance. When grouping is applied, the DataGrid initially renders only top-level group caption rows in a collapsed state. Child rows are fetched on demand when the caption row is expanded.
 
 To enable this feature, set [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) to **true** in [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings). Ensure grouping is enabled by setting AllowGrouping to true.
 
@@ -114,7 +114,7 @@ public class OrderData
 
 ## Lazy load grouping with infinite scrolling
 
-Lazy load grouping with infinite scrolling is useful when presenting grouped data at scale while maintaining responsiveness. Data is loaded on-demand as users interact with the interface, improving performance and user experience.
+Useful for presenting large grouped datasets while maintaining responsiveness. Data is loaded on-demand as users interact with the interface, improving performance and user experience.
 
 **How lazy load grouping with infinite scrolling works**
 
@@ -228,7 +228,7 @@ public class OrderData
 
 ## Lazy load grouping with virtual scrolling
 
-The lazy load grouping with virtual scrolling feature in the Blazor DataGrid efficiently presents large grouped datasets by reducing initial load time and providing smooth scrolling.
+Efficiently presents large grouped datasets with reduced initial load time and smooth scrolling.
 
 **How lazy load grouping with virtual scrolling works**
 
@@ -288,7 +288,7 @@ public class OrderData
         if (Orders.Count() == 0)
         {
             int? code = 10247;
-            for (int i = 1; i < 19999; i++)
+            for (int i = 1; i < 20000; i++)
             {
                 Orders.Add(new OrderData(code + 1, "Gumbär Gummib", i, "Marie Bertrand"));
                 Orders.Add(new OrderData(code + 2, "Valkoinen suklaa", i+1, "Paula Wilson"));
@@ -323,7 +323,7 @@ public class OrderData
 
 ## Lazy load grouping with custom adaptor
 
-Use a Custom Adaptor of DataManager when binding remote data. Along with the default server request, this feature sends additional details to handle lazy load grouping. On the server, these details are bound to the **LazyLoad** and **LazyExpandAllGroup** parameters in the [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) model. For implementing server logic, extend the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) class.
+Use Custom Adaptor when binding remote data. Along with the default server request, this feature sends additional details to handle lazy load grouping. On the server, these details are bound to the **LazyLoad** and **LazyExpandAllGroup** parameters in the [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) model. For implementing server logic, extend the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) class.
 
 | Property Name | Description |
 |-------|---------|
@@ -364,7 +364,7 @@ public class CustomAdaptor : DataAdaptor
         DataResult DataObject = new DataResult();
         if (dm.Group != null)
         {
-            // Grouping (Perform lazy load grouping need to send LazyLoad property in Group method).
+            // Grouping (Perform lazy load grouping by sending LazyLoad property in Group method).
             IEnumerable ResultData = DataSource.ToList();
             ResultData = DataUtil.Group<Customer>(DataSource, dm.Group[0], dm.Aggregates, 0, dm.GroupByFormatter, dm.LazyLoad, dm.LazyExpandAllGroup);
             DataObject.Result = ResultData;
