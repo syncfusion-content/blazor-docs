@@ -11,7 +11,7 @@ documentation: ug
 
 The scrolling feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables navigation through content that extends beyond the visible area of the Grid. Scrollbars appear automatically when content exceeds the specified [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) of the Grid element. The feature is useful for large datasets or when the Grid must fit within a constrained layout. The vertical and horizontal scrollbars appear based on the following criteria:
 
-* The vertical scrollbar appears when the total height of rows exceeds the Grid elemment's height.
+* The vertical scrollbar appears when the total height of rows exceeds the Grid element's height.
 * The horizontal scrollbar appears when the total width of columns exceeds the Grid element's width.
 
 > The default values for `Height` and `Width` are `auto`.
