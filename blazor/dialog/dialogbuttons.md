@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Dialog Buttons in Blazor Dialog Component | Syncfusion®
-description: Checkout and learn here all about how to add Dialog buttons and add icons to Dialog buttons in Blazor Dialog component and more.
+title: Dialog Buttons in Blazor Dialog | Syncfusion®
+description: Add action buttons to the Blazor Dialog footer, with optional icons, custom click handlers, and the built-in OK and Cancel buttons.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Dialog Buttons in Blazor Dialog Component
+# Dialog Buttons in Blazor Dialog
 
 The Blazor Dialog component supports rendering one or more action buttons in its footer using the [DialogButtons Tag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtons.html) element. Inside this element, each button is defined using the [DialogButton Tag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html). These buttons can be fully customized with various properties, including:
 

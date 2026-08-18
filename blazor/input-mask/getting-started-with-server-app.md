@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Input Mask in Server App | Syncfusion
-description: Learn how to get started with the Blazor Input Mask component in a Blazor Server App using Visual Studio, Visual Studio Code, and the .NET CLI.
+description: Learn how to get started with the Syncfusion Blazor Input Mask in a Blazor Server app with installation and setup steps.
 platform: Blazor
 component: Input Mask
 documentation: ug

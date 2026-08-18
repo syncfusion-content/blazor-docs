@@ -1,13 +1,13 @@
-﻿---
+---
 layout: post
-title: Style and appearance in Blazor DatePicker Component | Syncfusion®
-description: Checkout and learn here all the features about Style and appearance in Blazor DatePicker component and more.
+title: Style and Appearance in Blazor DatePicker | Syncfusion®
+description: Customize the Blazor DatePicker appearance by overriding its default CSS structure to adjust input, popup, calendar cells, and selection styles.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Style and Appearance in Blazor DatePicker Component
+# Style and Appearance in Blazor DatePicker
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

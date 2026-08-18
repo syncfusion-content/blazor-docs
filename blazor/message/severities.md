@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Severities with Blazor Message Component | Syncfusion®
-description: Checkout and learn about Severities with Blazor Message component in Blazor Server App and Blazor WebAssembly App.
+title: Severities in Blazor Message | Syncfusion
+description: Display Blazor Message with Normal, Success, Info, Warning, or Error severity levels using the Severity property.
 platform: Blazor
 control: Message
 documentation: ug
 ---
 
-# Severities in Blazor Message Component
+# Severities in Blazor Message
 
 The severity denotes the importance and context of the message to the user. The message contains different severity types. Use the [Severity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_Severity) property to display the messages with different severity levels.
 

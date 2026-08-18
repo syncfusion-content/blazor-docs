@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor MultiSelect Dropdown Component | Syncfusion®
-description: Checkout and learn here all about data binding in Blazor MultiSelect Dropdown component and much more details.
+title: Data Binding in Blazor MultiSelect Dropdown | Syncfusion
+description: Bind local collections or remote data services to Blazor MultiSelect Dropdown using DataSource and DataManager.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Data Binding in Blazor MultiSelect Dropdown Component
+# Data Binding in Blazor MultiSelect Dropdown
 
 The MultiSelect loads data from either local data sources or remote data services. Use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property to bind local data, or use the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) to bind remote data.
 
@@ -247,7 +247,7 @@ The following example demonstrates remote data binding with offline mode enabled
 
 Follow these steps to consume data from [Entity Framework](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-orm/entityframework) in the MultiSelect component.
 
-#### Create DBContext class
+### Create DBContext class
 
 Create a DbContext class named `OrderContext` to connect to a Microsoft SQL Server database.
 

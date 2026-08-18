@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Expand Mode in Blazor Accordion Component | Syncfusion®
-description: Checkout and learn here all features for handling Expand Mode in Blazor Accordion component and much more.
+title: Expand Mode in Blazor Accordion | Syncfusion®
+description: Choose Single or Multiple expand mode in Blazor Accordion to control whether one or several panels can be open at the same time.
 platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
-# Expand Mode in Blazor Accordion Component
-
+# Expand Mode in Blazor Accordion
 The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) supports two expand modes that control how the items open and close: `Single` and `Multiple`. The mode is set with the [`ExpandMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html#Syncfusion_Blazor_Navigations_SfAccordion_ExpandMode) parameter on `SfAccordion`.
 
 ## Single

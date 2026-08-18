@@ -24,7 +24,7 @@ Install-Package OllamaSharp
 
 {% endhighlight %}
 {% endtabs %}
-- [Ollama](https://ollama.com/docs) is installed on the local system (no virtual machines required).
+- [Ollama](https://docs.ollama.com) is installed on the local system (no virtual machines required).
 - An Ollama model (for example, `llama2`) is downloaded using the command:
   ```bash
   ollama run llama2
@@ -303,7 +303,7 @@ This example illustrates how the Blazor AI library integrates with Ollama to reo
 ## Error Handling
 - **Model not found**: Ensure the specified Ollama model (for example, `llama2`) is downloaded and available.
 - **JSON parsing errors**: Handle invalid JSON responses by logging errors or displaying user-friendly messages, as shown in the `OpenAIHandler` method.
-- **Resource limitations**: Local models require sufficient hardware (e.g., 8GB RAM for `llama2`). Check [Ollama documentation](https://ollama.com/docs) for model-specific requirements.
+- **Resource limitations**: Local models require sufficient hardware (e.g., 8GB RAM for `llama2`). Check [Ollama documentation](https://docs.ollama.com) for model-specific requirements.
 
 
 ## See Also

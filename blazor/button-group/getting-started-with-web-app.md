@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Button Group in Web App | Syncfusion
-description: Check out and learn about the documentation for getting started with Blazor Button Group Component in Blazor Web App.
+title: Getting Started with Blazor Button Group Web App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Button Group control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Button Group
 documentation: ug
 ---
 
-# Getting started with Blazor Button Group in Blazor Web App
+# Getting Started with Blazor Button Group in Blazor Web App
 
 This section briefly explains how to include [Blazor Button Group](https://www.syncfusion.com/blazor-components/blazor-button-group) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

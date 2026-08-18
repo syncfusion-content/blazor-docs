@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Calendar Component | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor Calendar component including keyboard navigation, ARIA attributes, and usability features.
+title: Accessibility in Blazor Calendar | Syncfusion®
+description: Learn how Blazor Calendar meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA attributes, keyboard navigation, and screen reader support.
 platform: Blazor
 control: Calendar
 documentation: ug
 ---
 
-# Accessibility in Blazor Calendar Component
+# Accessibility in Blazor Calendar
 
 The [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

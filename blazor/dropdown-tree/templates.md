@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor Dropdown Tree Component | Syncfusion®
-description: Checkout and learn here all the features about Templates in Blazor Dropdown Tree component and much more.
+title: Templates in Blazor Dropdown Tree | Syncfusion®
+description: Customize Blazor Dropdown Tree list items, selected values, headers, and footers using templates for design.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
 ---
 
-# Templates in Blazor Dropdown Tree Component
+# Templates in Blazor Dropdown Tree
 
 The Dropdown Tree has been provided with several options to customize each list item, header, and footer elements.
 

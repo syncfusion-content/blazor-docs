@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Icons with Blazor Message Component | Syncfusion®
-description: Checkout and learn about Icons with Blazor Message component in Blazor Server App and Blazor WebAssembly App.
+title: Icons in Blazor Message | Syncfusion
+description: Show or hide severity and close icons in Blazor Message and add custom icons for visual context clarity today.
 platform: Blazor
 control: Message
 documentation: ug
 ---
 
-# Icons in Blazor Message Component
+# Icons in Blazor Message
 
 This section explains the message with no icons, how to show or hide the close icon and add the custom severity icon to the message.
 

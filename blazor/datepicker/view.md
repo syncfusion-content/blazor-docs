@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Start and Depth View in Blazor DatePicker Component | Syncfusion®
-description: Checkout and learn here all the features about Start and Depth View in Blazor DatePicker component and more.
+title: Start and Depth View in Blazor DatePicker | Syncfusion®
+description: Set the Blazor DatePicker initial Start view and maximum Depth (Month, Year, or Decade) to control the calendar navigation hierarchy.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Start and Depth View in Blazor DatePicker Component
+# Start and Depth View in Blazor DatePicker
 
 The DatePicker provides the following predefined [CalendarView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarView.html) values that let users navigate the calendar and select a date:
 

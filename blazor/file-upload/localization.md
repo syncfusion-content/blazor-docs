@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Blazor File Upload Component | Syncfusion®
-description: Learn how to translate labels and tooltips in the Blazor File Upload component to different cultures and much more details.
+title: Localization in Blazor File Upload | Syncfusion
+description: Localize Blazor File Upload labels, tooltips, and status messages for different cultures and languages.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# Localization in Blazor File Upload Component
+# Localization in Blazor File Upload
 
 The Blazor File Upload component can be localized to display static text, such as button labels and tooltips, in different languages. This is achieved by adding a resource file (`.resx`) for each culture and referencing it in your application.
 

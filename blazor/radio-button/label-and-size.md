@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Label and Size in Blazor RadioButton Component | Syncfusion®
-description: Checkout and learn here all about Label and Size in Syncfusion Blazor RadioButton component with examples and much more details.
+title: Label and Size in Blazor Radio Button | Syncfusion
+description: Configure Blazor Radio Button labels, label position, and sizes for accessible single-selection groups.
 platform: Blazor
 control: Radio Button
 documentation: ug
 ---
 
-# Label and Size in Blazor RadioButton Component
+# Label and Size in Blazor Radio Button
 
 This section explains how to configure labels and sizes for the RadioButton component.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Range Restriction in Blazor DateRangePicker Component | Syncfusion®
-description: Checkout and learn here all about Range Restriction in Blazor DateRangePicker component and much more details.
+title: Range Restriction in Blazor DateRangePicker | Syncfusion®
+description: Restrict the Blazor DateRangePicker selectable range using Min, Max, and MinDays/MaxDays to enforce date policies for booking scenarios.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
 ---
 
-# Range Restriction in Blazor DateRangePicker Component
+# Range Restriction in Blazor DateRangePicker
 
 Range selection in the DateRangePicker can be customized with restrictions based on application needs.
 
