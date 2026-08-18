@@ -9,15 +9,15 @@ documentation: ug
 
 # Scrolling in Blazor TreeGrid
 
-The scrollbar will be displayed in the tree grid when the content exceeds the element [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Width) or [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Height). The vertical and horizontal scrollbars will be displayed based on the following criteria:
+The scrollbar will be displayed in the treegrid when the content exceeds the element [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Width) or [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Height). The vertical and horizontal scrollbars will be displayed based on the following criteria:
 
-The vertical scrollbar appears when the total height of rows present in the tree grid exceeds its element height. The horizontal scrollbar appears when the sum of the columns' width exceeds the tree grid element width. The `Height` and `Width` are used to set the tree grid height and width, respectively.
+The vertical scrollbar is displayed when the total height of all rows exceeds the TreeGrid's configured height. The horizontal scrollbar is displayed when the combined width of all columns exceeds the TreeGrid's width. Use the `Height` and `Width` properties to configure the TreeGrid dimensions.
 
 N> The default value for `Height` and `Width` is **auto**.
 
 ## Set width and height
 
-To specify the `Height` and `Width` of the scroller in the pixel, set the pixel value to a number.
+Set the `Width` and `Height` properties to define the TreeGrid dimensions. When the content exceeds the configured size, the TreeGrid automatically displays vertical and horizontal scrollbars as needed.
 
 {% tabs %}
 
@@ -87,7 +87,7 @@ public class TreeData
 
 ## Responsive with parent container
 
-Specify the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Width) as **100%** to make the tree grid element fill its parent container. Setting the `Height` to **100%** requires the tree grid parent element to have explicit height.
+Specify the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Width) as **100%** to make the treegrid element fill its parent container. Setting the `Height` to **100%** requires the treegrid parent element to have explicit height.
 
 {% tabs %}
 
@@ -167,48 +167,9 @@ public class TreeData
 
 {% endtabs %}
 
-<!--
-Scroll to selected row
-
-You can scroll the tree grid content to the selected row position by using the [`RowSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowSelected) event.
-
-```csharp
-
-@using TreeGridComponent.Data;
-@using Syncfusion.Blazor.TreeGrid;
-@using Syncfusion.Blazor.Grids
-
-<SfTreeGrid ref="@treeGrid" Height="300" DataSource="@TreeGridData" IdMapping="TaskId" RowSelected="onRowSelected" ParentIdMapping="ParentId" TreeColumnIndex="1">
-    <TreeGridColumns>
-        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn>
-        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80"></TreeGridColumn>
-    </TreeGridColumns>
-</SfTreeGrid>
-
-@code{
-    SfTreeGrid treeGrid;
-    public object[] TreeGridData { get; set; }
-    protected override void OnInitialized()
-    {
-        this.TreeGridData = TreeData.GetSelfDataSource().ToList().Cast<object>().ToArray();
-    }
-    private void onRowSelected(object args)
-    {
-        treeGrid.GetContent().
-    }
-}
-
-```
--->
-
 ## Sticky header
 
-The Blazor TreeGrid provides a feature that allows column headers to remain fixed while scrolling, ensuring they stay visible at all times. This behavior can be enabled by setting the `EnableStickyHeader` property to **true**.
-
-In the below demo, the TreeGrid headers remain sticky while scrolling within the TreeGrid's parent div element.
+The Blazor TreeGrid provides a feature that allows column headers to remain fixed while scrolling, ensuring they stay visible at all times. Enable sticky headers by setting the [EnableStickyHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableStickyHeader) property to **true**.
 
 {% tabs %}
 {% highlight razor %}
@@ -336,9 +297,9 @@ namespace TreeGridComponent.Data
 
 ## Frozen rows and columns
 
-Frozen rows and columns provides an option to make rows and columns always visible in the top and left side of the tree grid while scrolling.
+Frozen rows and columns provides an option to make rows and columns always visible at the top and left of the treegrid while scrolling.
 
-In this demo, the [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FrozenColumns) is set as **2** and the [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FrozenRows) is set as **3**. Hence, the left two columns and top three rows are frozen.
+Use the [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FrozenColumns) and [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FrozenRows) properties to freeze columns and rows in the Blazor TreeGrid. Frozen elements remain fixed and visible while scrolling horizontally or vertically.
 
 {% tabs %}
 
@@ -409,9 +370,7 @@ public class TreeData
 
 ### Freeze particular columns
 
-To freeze particular column in the tree grid, the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_IsFrozen) property can be used.
-
-In this demo, the columns with the field name **TaskName** and **Duration** is frozen using the `IsFrozen` property.
+To freeze particular column in the treegrid, the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_IsFrozen) property can be used.
 
 {% tabs %}
 
@@ -614,14 +573,13 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-N> If frozen columns are not specified, the frozen column separator will be displayed at the left and right ends. You can dynamically change the frozen columns by dragging the column separator.
+N> If frozen columns are not specified, the frozen column separator is displayed at the left and right ends, and columns can be dynamically changed by dragging the separator only when `AllowFreezeLineMoving` is set to true.
 
 ![Add or Remove Frozen Blazor TreeGrid Columns by Dragging the Column Separator](./images/blazor-treegrid-freeze-line-moving.webp)
 
 ## Scroll the content programmatically
-This section shows you how to invoke a [ScrollIntoViewAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ScrollIntoViewAsync_System_Int32_System_Int32_System_Int32_) method to scroll the tree grid content into view externally by passing column index or row index as parameter.
 
-In the below demo, modifying the RowIndex value triggers a vertical scroll, while changing the ColumnIndex value initiates a horizontal scroll when the corresponding button is clicked.
+To scroll TreeGrid content into view externally, the [ScrollIntoViewAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ScrollIntoViewAsync_System_Int32_System_Int32_System_Int32_) method can be invoked. This method accepts a column index or row index as a parameter, ensuring the specified content is brought into view.
 
  ```cshtml
  
@@ -741,4 +699,4 @@ In the below demo, modifying the RowIndex value triggers a vertical scroll, whil
     }
 }
 ```
-![Blazor Tree Grid Scroll programmatically](./images/blazor-treegrid-scroll-programmatically.webp)
+![Blazor TreeGrid Scroll programmatically](./images/blazor-treegrid-scroll-programmatically.webp)
