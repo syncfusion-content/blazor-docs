@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Initialize the Blazor Sidebar with ListView | Syncfusion®
-description: Learn here all about how to initialize the Sidebar with ListView in Blazor Sidebar component and more.
+title: How to initialize the Blazor Sidebar with ListView | Syncfusion
+description: Render a Blazor Sidebar with a ListView inside its content area for navigation menus, enabling rich and accessible sidebar content.
 platform: Blazor
 control: Sidebar
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD009 -->
 
-# Initialize the Blazor Sidebar with ListView
+# How to initialize the Blazor Sidebar with ListView
 
 Any HTML element can be placed in the Sidebar content area. Sidebar supports all types of HTML structures like `TreeView`, `ListView`, etc.
 

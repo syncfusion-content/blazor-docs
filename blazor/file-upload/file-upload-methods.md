@@ -1,13 +1,13 @@
 ---
 layout: post
-title: File Upload Methods in Blazor File Upload Component | Syncfusion®
-description: Checkout and learn about file upload methods in Blazor, including GetFileDetails, UploadAsync, CancelAsync, and ClearAllAsync.
+title: File Upload Methods in Blazor File Upload | Syncfusion
+description: Manage Blazor File Upload programmatically with methods to get file details, upload, cancel, clear, and pause or resume.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# File Upload Methods in Blazor Uploader
+# File Upload Methods in Blazor File Upload
 
 This section details the various methods available to interact with and manage the Blazor File Upload component programmatically.
 

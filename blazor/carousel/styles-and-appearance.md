@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and Appearance in Blazor Carousel Component | Syncfusion®
-description: Checkout and learn here all about style and appearance in Blazor Carousel component and much more details.
+title: Style and Appearance in Blazor Carousel | Syncfusion®
+description: Customize the Blazor Carousel appearance by overriding its default CSS classes or by building a custom theme with the Syncfusion Theme Studio.
 platform: Blazor
 control: Carousel
 documentation: ug
 ---
 
-# Styles and appearance in Blazor Carousel component
+# Style and Appearance in Blazor Carousel
 
 To modify the Carousel appearance, override the default CSS of the Carousel component. The following list shows the CSS classes and their corresponding sections in the Carousel. You can also create a custom theme for the controls using the [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material). For guidance on using a custom theme, see the [Theme Studio documentation](https://ej2.syncfusion.com/themestudio/?theme=material).
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Quick Access Toolbar with Blazor Image Editor | Syncfusion®
-description: Explore the Quick Access Toolbar in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
+title: Quick Access Toolbar in Blazor Image Editor | Syncfusion
+description: Customize the quick access toolbar for selected annotations in Blazor Image Editor using event-based toolbar item configuration.
 platform: Blazor
 control: Image Editor
 documentation: ug
 ---
 
-# Quick Access Toolbar in the Blazor Image Editor Component
+# Quick Access Toolbar in Blazor Image Editor
 
 The quick access toolbars in the Image Editor facilitate interactions with annotations such as Rectangle, Ellipse, Line, Arrow, and Path. These toolbars provide a configurable set of tools and options tailored to each annotation type. The toolbar appears only when an annotation is selected, ensuring a focused and contextual editing experience.
 

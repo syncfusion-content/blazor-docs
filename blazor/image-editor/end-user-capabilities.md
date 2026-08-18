@@ -1,13 +1,13 @@
 ---
 layout: post
-title: End-user capabilities with Blazor Image Editor Component | Syncfusion®
-description: Explore end-user capabilities in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
+title: End-User Capabilities in Blazor Image Editor | Syncfusion
+description: Learn about built-in end-user actions in Blazor Image Editor, including opening images, zooming, and touch or mouse interaction.
 platform: Blazor
 control: Image Editor
 documentation: ug
 ---
 
-# End-user capabilities in the Blazor Image Editor component
+# End-User Capabilities in Blazor Image Editor
 
 The following operations are available for end users and are outlined in the sections below.
 

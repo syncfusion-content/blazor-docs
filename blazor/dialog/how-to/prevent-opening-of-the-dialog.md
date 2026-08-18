@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open a Dialog on condition in Blazor Dialog Component | Syncfusion®
-description: Checkout and learn here all about Open a Dialog on condition in Blazor Dialog component and much more details.
+title: How to open a Dialog on condition in Blazor Dialog | Syncfusion®
+description: Open the Blazor Dialog conditionally based on application state, user role, or other criteria by setting the Visible flag.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Open a Dialog on condition in Blazor Dialog Component
+# How to open a Dialog on condition in Blazor Dialog
 
 You can prevent opening of the dialog by setting the `OnOpen` event argument cancel value to true. In the following sample, the success dialog is opened when you enter the username value with minimum 4 characters. Otherwise, it will not be opened.
 

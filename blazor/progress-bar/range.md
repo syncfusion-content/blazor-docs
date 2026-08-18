@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Range in Blazor ProgressBar Component | Syncfusion®
-description: Learn about range in Blazor ProgressBar component with examples for setting minimum and maximum values and much more details.
+title: Blazor ProgressBar Range Examples | Syncfusion®
+description: Learn how to set the range in Syncfusion Blazor ProgressBar using Minimum and Maximum properties with code samples.
 platform: Blazor
-control: Progress Bar 
+control: ProgressBar
 documentation: ug
 ---
 
-# Range in Blazor ProgressBar Component
+# Blazor ProgressBar Range
 
 The range represents the entire span of the Progress Bar and it can be defined using the [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_Minimum) and the [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_Maximum) properties.
 

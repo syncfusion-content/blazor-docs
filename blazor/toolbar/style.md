@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and Appearance in Blazor Toolbar Component | Syncfusion®
-description: Checkout and learn here all the features about style and appearance in Blazor Toolbar component and more.
+title: Style and Appearance in Blazor Toolbar | Syncfusion
+description: Customize Blazor Toolbar background, border, and item styles using CSS selectors and custom properties for branding.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Style and Appearance in Blazor Toolbar Component
+# Style and Appearance in Blazor Toolbar
 
 This document provides CSS structures for modifying the control’s appearance based on user preference. 
 

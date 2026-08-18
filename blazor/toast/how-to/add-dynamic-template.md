@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Add dynamic template in Blazor Toast Component | Syncfusion®
-description: Checkout and learn here all the features about how to add dynamic template in Blazor Toast component and more.
+title: How to add a dynamic template in Blazor Toast | Syncfusion
+description: Change Blazor Toast templates dynamically when calling the Show method to display multiple unique toasts.
 platform: Blazor
 control: Toast
 documentation: ug
 ---
 
-# Add dynamic template in Blazor Toast Component
+# How to add a dynamic template in Blazor Toast
 
 Toast supports to change templates dynamically with displaying in multiple toasts. The toast properties can be changed while calling in the `Show` method.
 

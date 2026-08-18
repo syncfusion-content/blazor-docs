@@ -1,13 +1,13 @@
 ---
 layout: post
-title: User Interaction in Blazor Linear Gauge Component | Syncfusion®
-description: Checkout and learn here all the features about user interaction in Blazor Linear Gauge component and more.
+title: Blazor Linear Gauge User Interaction | Syncfusion®
+description: Learn how to enable Blazor Linear Gauge tooltips with custom formats and templates, and let users drag pointers to update axis values interactively.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# User Interaction in Blazor Linear Gauge Component
+# Blazor Linear Gauge User Interaction
 
 ## Tooltip
 

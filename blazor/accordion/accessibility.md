@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Accordion Component | Syncfusion®
-description: Checkout and learn here all features about Accessibility in Blazor Accordion component and much more.
+title: Accessibility in Blazor Accordion | Syncfusion®
+description: Learn how Blazor Accordion meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA roles, states, properties, and full keyboard navigation.
 platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
-# Accessibility in Blazor Accordion Component
+# Accessibility in Blazor Accordion
 
 The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component has been designed keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) specifications, by applying the appropriate WAI-ARIA roles, states, and properties along with keyboard support. This makes it usable for people who rely on assistive technologies, with information about the elements exposed through attributes like `aria-labelledby`. It helps to provide information about the elements in a document for assistive technology. The component implements keyboard navigation by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/) and is tested in major screen readers, including NVDA 2023+, JAWS 2024+, VoiceOver (macOS/iOS), and TalkBack (Android).
 
