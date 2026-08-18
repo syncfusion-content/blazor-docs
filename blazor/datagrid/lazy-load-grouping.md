@@ -11,7 +11,7 @@ documentation: ug
 
 Lazy loading loads data dynamically on-demand rather than loading all data upfront. This reduces initial load time and improves performance.
 
-Lazy load grouping in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) efficiently loads grouped data by fetching only the required records on demand. This feature is especially useful for large datasets where loading all rows at once can affect performance. When grouping is applied, the DataGrid initially renders only top-level group caption rows in a collapsed state. Child rows are fetched on demand when the caption row is expanded.
+Lazy load grouping in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) efficiently loads grouped data by fetching only the required records on demand. This feature is especially useful for large datasets where loading all rows at once can affect performance. When grouping is applied, the Data Grid initially renders only top-level group caption rows in a collapsed state. Child rows are fetched on demand when the caption row is expanded.
 
 To enable this feature, set [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) to **true** in [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html). Ensure grouping is enabled by setting `AllowGrouping` to **true**. The basic sample relies on paging to fetch child rows on demand, so set `AllowPaging` to **true** on the Grid.
 
@@ -113,7 +113,7 @@ Useful for presenting large grouped datasets while maintaining responsiveness. D
 
 **How lazy load grouping with infinite scrolling works**
 
-1. When enabled, the DataGrid initially renders only the top-level group caption rows in a collapsed state.
+1. When enabled, the Data Grid initially renders only the top-level group caption rows in a collapsed state.
 2. Child rows for a group are fetched and rendered only when the corresponding caption row is expanded.
 3. Infinite scrolling loads additional data as the user reaches the end of the scrollbar.
 
@@ -221,7 +221,7 @@ Efficiently presents large grouped datasets with reduced initial load time and s
 
 **How lazy load grouping with virtual scrolling works**
 
-1. When enabled, the DataGrid renders only the initial top-level group caption rows in a collapsed state.
+1. When enabled, the Data Grid renders only the initial top-level group caption rows in a collapsed state.
 2. Child rows for each group are fetched and rendered only when the respective caption row is expanded.
 3. Virtual scrolling loads and displays a buffered set of records while scrolling vertically.
 
@@ -378,7 +378,7 @@ public class CustomAdaptor : DataAdaptor
 
 ## See also
 
-* [Paging in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/paging)
-* [Virtual scrolling in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling)
-* [Infinite scrolling in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/infinite-scrolling)
-* [Custom binding in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/custom-binding)
+* [Paging in Blazor Data Grid](https://blazor.syncfusion.com/documentation/datagrid/paging)
+* [Virtual scrolling in Blazor Data Grid](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling)
+* [Infinite scrolling in Blazor Data Grid](https://blazor.syncfusion.com/documentation/datagrid/infinite-scrolling)
+* [Custom binding in Blazor Data Grid](https://blazor.syncfusion.com/documentation/datagrid/custom-binding)
