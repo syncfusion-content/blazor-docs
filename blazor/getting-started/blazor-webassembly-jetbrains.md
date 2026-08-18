@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor WASM and Server Apps in JetBrains Rider 
 
-This guide explains how to create **Blazor Server** and **Blazor WebAssembly (WASM)** applications in **JetBrains Rider** and integrate [Blazor components](https://www.syncfusion.com/blazor-components)
+This guide explains how to create **Blazor Server** and **Blazor WebAssembly (WASM)** applications in [JetBrains Rider](https://www.jetbrains.com/rider/) and integrate [Blazor components](https://www.syncfusion.com/blazor-components).
 
 ## Install JetBrains Rider
 
@@ -18,7 +18,7 @@ This guide explains how to create **Blazor Server** and **Blazor WebAssembly (WA
 - Run the installer and follow the on‑screen instructions to complete the installation.
 - After installation finishes, launch JetBrains Rider to verify the setup and begin your Blazor development.
 
-## Creating a Blazor Application
+## Creating a Blazor application
 
 ### Blazor WebAssembly Standalone App
 
@@ -67,7 +67,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) at the end of the `<head>` section in the `wwwroot/index.html` (Blazor WebAssembly) or `App.razor` (Blazor Server) file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) at the end of the `<head>` section in the  `wwwroot/index.html` for **Blazor WebAssembly App** or `App.razor` for **Blazor Server App** file.
 
 {% tabs %}
 {% highlight html tabtitle="wwwroot/index.html" %}
@@ -122,6 +122,7 @@ Add the Blazor service to the `Program.cs` file to enable Blazor components in t
 using Syncfusion.Blazor;
 ....
 builder.Services.AddSyncfusionBlazor();
+....
 
 {% endhighlight %}
 {% endtabs %}
