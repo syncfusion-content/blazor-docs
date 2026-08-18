@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) is built to support widely accepted accessibility standards. These standards help ensure that the component is usable by individuals with varying abilities, including those using assistive technologies.
+The [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) is built to support widely accepted accessibility standards. These standards help ensure that the component is usable by individuals with varying abilities, including those using assistive technologies.
 Supported guidelines include:
 
 - [Americans with Disabilities Act (ADA)](https://www.ada.gov/)
@@ -45,15 +45,15 @@ Supported guidelines include:
 
 ## WAI-ARIA attributes
 
-The Blazor DataGrid implements the [WAI-ARIA grid pattern](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) to support accessibility requirements. This ensures compatibility with assistive technologies such as screen readers, including **JAWS** and **NVDA**. WAI-ARIA (Web Accessibility Initiative – Accessible Rich Internet Applications) attributes define roles, states, and properties that make the DataGrid accessible to individuals with disabilities.
+The Blazor Data Grid implements the [WAI-ARIA grid pattern](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) to support accessibility requirements. This ensures compatibility with assistive technologies such as screen readers, including **JAWS** and **NVDA**. WAI-ARIA (Web Accessibility Initiative – Accessible Rich Internet Applications) attributes define roles, states, and properties that make the Data Grid accessible to individuals with disabilities.
 
 | Attribute | Purpose |
 |-----------|---------|
 | `role="grid"` | Identifies the element as a grid container. |
-| `role="row"` | Defines a row containing cells within the DataGrid. |
-| `role="rowgroup"` | Groups multiple rows, such as in grouped or hierarchical DataGrids. |
+| `role="row"` | Defines a row containing cells within the Data Grid. |
+| `role="rowgroup"` | Groups multiple rows, such as in grouped or hierarchical Data Grids. |
 | `role="columnheader"` | Specifies a header cell providing column information. |
-| `role="gridcell"` | Indicates a data cell within the DataGrid. |
+| `role="gridcell"` | Indicates a data cell within the Data Grid. |
 | `role="button"` | Represents interactive elements that function as buttons. |
 | `role="search"` | Identifies search regions, such as in the toolbar. |
 | `role="presentation"` | Hides elements from assistive technologies when not relevant. |
@@ -63,14 +63,14 @@ The Blazor DataGrid implements the [WAI-ARIA grid pattern](https://www.w3.org/WA
 | `aria-rowspan` | Indicates the number of rows spanned by a cell. |
 | `aria-colspan` | Indicates the number of columns spanned by a cell. |
 | `aria-selected` | Indicates the selection state of rows or cells. |
-| `aria-expanded` | Shows whether expand/collapse icons are expanded in hierarchical or grouped DataGrids. |
+| `aria-expanded` | Shows whether expand/collapse icons are expanded in hierarchical or grouped Data Grids. |
 | `aria-sort` | Indicates sorting order (ascending or descending) for columns. |
 | `aria-owns` | Defines relationships between elements for visual or functional context. |
 | `aria-hidden` | Hides elements from assistive technologies. |
 | `aria-labelledby` | Provides accessible names for elements like checkboxes in filters or dialogs. |
 | `aria-describedby` | Describes features enabled in a header cell when it receives focus. |
 
-The DataGrid uses a two-table structure for header and content. ARIA roles and attributes are applied to parent and child elements to enhance screen reader support. This structure may trigger warnings in automated accessibility tools, but it does not affect how screen readers interpret the content.
+The Data Grid uses a two-table structure for header and content. ARIA roles and attributes are applied to parent and child elements to enhance screen reader support. This structure may trigger warnings in automated accessibility tools, but it does not affect how screen readers interpret the content.
 
 Accessibility checker tools may report the following known issues:
 
@@ -81,14 +81,14 @@ Accessibility checker tools may report the following known issues:
 * **Content not within a landmark element:** Add page-level landmarks (`<header>`, `<main>`, `<nav>`) to scope interactive regions.
 * **Multiple elements with role="search" lacking unique labels:** Assign unique aria-label or aria-labelledby attributes to each search region.
 * **Text contrast (WCAG 1.4.3):** Improve contrast ratio to at least 4.5:1 for standard text using CSS. The "4.10" label is the legacy WCAG 2.0 numbering for the same criterion; current WCAG 2.2 references it as [Success Criterion 1.4.3 Contrast (Minimum)](https://www.w3.org/TR/WCAG22/#contrast-minimum).
-* **Grid lacks a programmatic name:** Set aria-label or aria-labelledby on the main DataGrid container.
-* **role="rowgroup" not owned by a grid:** Ensure grouped content remains within the element that has role="grid" in the DataGrid.
+* **Grid lacks a programmatic name:** Set aria-label or aria-labelledby on the main Data Grid container.
+* **role="rowgroup" not owned by a grid:** Ensure grouped content remains within the element that has role="grid" in the Data Grid.
 
 To improve accessibility, apply page landmarks, assign unique labels to search regions, and verify that color contrast meets WCAG 2.2 AA standards. When customizing styles, maintain visible focus indicators and a logical focus order.
 
 ## Keyboard interaction
 
-The Blazor DataGrid supports keyboard navigation based on the ARIA grid [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/grid/#keyboard-interaction) guidelines. This enables efficient navigation for scenarios involving keyboard input or assistive technologies.
+The Blazor Data Grid supports keyboard navigation based on the ARIA grid [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/grid/#keyboard-interaction) guidelines. This enables efficient navigation for scenarios involving keyboard input or assistive technologies.
 
 The supported keyboard shortcuts are listed below.
 
@@ -110,14 +110,14 @@ The supported keyboard shortcuts are listed below.
 |-----------------------------------|---------------------------------------------|------------------------------------------------------------|
 | <kbd>Home</kbd>                   | <kbd>Fn</kbd> + <kbd>←</kbd>                | Move focus to the first cell of the focused row.           |
 | <kbd>End</kbd>                    | <kbd>Fn</kbd> + <kbd>→</kbd>                | Move focus to the last cell of the focused row.            |
-| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>←</kbd> | Move focus to the first cell of the first row in the DataGrid. |
-| <kbd>Ctrl</kbd> + <kbd>End</kbd>  | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>→</kbd> | Move focus to the last cell of the last row in the DataGrid.   |
+| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>←</kbd> | Move focus to the first cell of the first row in the Data Grid. |
+| <kbd>Ctrl</kbd> + <kbd>End</kbd>  | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>→</kbd> | Move focus to the last cell of the last row in the Data Grid.   |
 | <kbd>↑</kbd>                      | <kbd>↑</kbd>                                | Move the cell focus up from the focused cell.              |
 | <kbd>↓</kbd>                      | <kbd>↓</kbd>                                | Move the cell focus down from the focused cell.            |
 | <kbd>→</kbd>                      | <kbd>→</kbd>                                | Move the cell focus right from the focused cell.           |
 | <kbd>←</kbd>                      | <kbd>←</kbd>                                | Move the cell focus left from the focused cell.            |
-| <kbd>Alt</kbd> + <kbd>J</kbd>     | <kbd>⌥</kbd> + <kbd>J</kbd>                 | Move focus to the DataGrid.                                    |
-| <kbd>Alt</kbd> + <kbd>W</kbd>     | <kbd>⌥</kbd> + <kbd>W</kbd>                 | Move focus to the DataGrid content element.                    |
+| <kbd>Alt</kbd> + <kbd>J</kbd>     | <kbd>⌥</kbd> + <kbd>J</kbd>                 | Move focus to the Data Grid.                                    |
+| <kbd>Alt</kbd> + <kbd>W</kbd>     | <kbd>⌥</kbd> + <kbd>W</kbd>                 | Move focus to the Data Grid content element.                    |
 
 ### Selection
 
@@ -150,7 +150,7 @@ The supported keyboard shortcuts are listed below.
 
 | Windows                        | Mac                         | Actions         |
 |--------------------------------|-----------------------------|-----------------|
-| <kbd>Ctrl</kbd> + <kbd>P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Print the DataGrid. |
+| <kbd>Ctrl</kbd> + <kbd>P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Print the Data Grid. |
 
 ### Clipboard
 
@@ -206,8 +206,8 @@ The supported keyboard shortcuts are listed below.
 
 ## Ensuring accessibility
 
-The Blazor DataGrid is validated for accessibility using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) integrated with Playwright tests.
-Accessibility compliance can be evaluated using the interactive [sample](https://blazor.syncfusion.com/accessibility/datagrid), which demonstrates the DataGrid's behavior with accessibility tools and validation steps.
+The Blazor Data Grid is validated for accessibility using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) integrated with Playwright tests.
+Accessibility compliance can be evaluated using the interactive [sample](https://blazor.syncfusion.com/accessibility/datagrid), which demonstrates the Data Grid's behavior with accessibility tools and validation steps.
 
 ## See also
 

@@ -9,9 +9,9 @@ documentation: ug
 
 # Searching in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) includes a built-in search feature that helps locate records quickly across the DataGrid data. Users can filter displayed records by entering a search key, which is especially useful for large datasets.
+The [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) includes a built-in search feature that helps locate records quickly across the Data Grid data. Users can filter displayed records by entering a search key, which is especially useful for large datasets.
 
-To provide a search box in the UI, add the Search item to the toolbar using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property. Searching can also be performed programmatically using the [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) method. The [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching) property is column-level and is used to include or exclude specific columns from search; setting it is optional because the DataGrid performs a global search by default.
+To provide a search box in the UI, add the Search item to the toolbar using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property. Searching can also be performed programmatically using the [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) method. The [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching) property is column-level and is used to include or exclude specific columns from search; setting it is optional because the Data Grid performs a global search by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -84,11 +84,11 @@ To provide a search box in the UI, add the Search item to the toolbar using the 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZVRZmtdBCeQZiQx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> The clear icon appears in the DataGrid search box when focused or after typing a character. Selecting the clear icon removes the text and resets the search results.
+> The clear icon appears in the Data Grid search box when focused or after typing a character. Selecting the clear icon removes the text and resets the search results.
 
 ## Initial search
 
-By default, search is performed after the DataGrid renders and a search action is triggered. To apply a search on initial render, configure the [GridSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html) with the following properties:
+By default, search is performed after the Data Grid renders and a search action is triggered. To apply a search on initial render, configure the [GridSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html) with the following properties:
 
 | Property     | Description                                                                                                                                                                                                         |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -170,7 +170,7 @@ By default, search is performed after the DataGrid renders and a search action i
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNVxZwjxhWRqTDIV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> By default, the DataGrid searches all visible columns. To limit search to specific fields, set the `Fields` property of `GridSearchSettings`.
+> By default, the Data Grid searches all visible columns. To limit search to specific fields, set the `Fields` property of `GridSearchSettings`.
 
 ## Search operators
 
@@ -284,13 +284,13 @@ Search operators define how the search key is compared to data values. Configure
 
 ## Search by external button
 
-The Blazor DataGrid supports programmatic search, enabling custom search triggers such as external buttons. Use the DataGrid's [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) method and pass the search text. Pass an empty string to the same method to clear the current search.
+The Blazor Data Grid supports programmatic search, enabling custom search triggers such as external buttons. Use the Data Grid's [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) method and pass the search text. Pass an empty string to the same method to clear the current search.
 
 Steps:
 
-1. Render a [Button](https://blazor.syncfusion.com/documentation/button/getting-started-with-web-app) outside the DataGrid UI.
+1. Render a [Button](https://blazor.syncfusion.com/documentation/button/getting-started-with-web-app) outside the Data Grid UI.
 2. Handle the button's [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick) event.
-3. Access the DataGrid reference.
+3. Access the Data Grid reference.
 4. Call `SearchAsync` with the search key, or with an empty string to clear the search.
 
 {% tabs %}
@@ -452,7 +452,7 @@ By default, the search scans all visible columns. To restrict the search to spec
 
 ## Disable search for a particular column
 
-By default, the Blazor DataGrid searches across all visible columns. To exclude a column, set the column's [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching) property to false.
+By default, the Blazor Data Grid searches across all visible columns. To exclude a column, set the column's [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching) property to false.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -526,7 +526,7 @@ By default, the Blazor DataGrid searches across all visible columns. To exclude 
 
 ## Ignore accents in search
 
-By default, the DataGrid's search does not treat accented and unaccented characters as equivalent. To support accent-insensitive search, set [GridSearchSettings.IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreAccent) to **true**. This improves usability when data contains diacritic characters.
+By default, the Data Grid's search does not treat accented and unaccented characters as equivalent. To support accent-insensitive search, set [GridSearchSettings.IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreAccent) to **true**. This improves usability when data contains diacritic characters.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -602,7 +602,7 @@ public class InventorDetails
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLRNmXxBCbUodva?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * Accent-insensitive comparison applies to searching and filtering when using an IEnumerable data source.
-> * IgnoreAccent does not apply when the DataGrid is bound to a remote data source such as OData or Web API (for example, through [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor)). IgnoreAccent key will be sent to server and operation should be handled at user level..
+> * IgnoreAccent does not apply when the Data Grid is bound to a remote data source such as OData or Web API (for example, through [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor)). IgnoreAccent key will be sent to server and operation should be handled at user level..
 > * This feature affects characters outside the ASCII range.
 
 ## Search on each keystroke
@@ -703,7 +703,7 @@ The search-on-keystroke approach enables real-time results while typing in the s
 
 ## Search using multiple keywords
 
-The DataGrid can also be searched using multiple keywords. Build compound predicates with the DataGrid's [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property and Data query helpers ([WhereFilter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html), **And/Or**) to combine conditions. This approach is particularly useful for remote data scenarios where the server executes filtering.
+The Data Grid can also be searched using multiple keywords. Build compound predicates with the Data Grid's [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property and Data query helpers ([WhereFilter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html), **And/Or**) to combine conditions. This approach is particularly useful for remote data scenarios where the server executes filtering.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -815,7 +815,7 @@ The DataGrid can also be searched using multiple keywords. Build compound predic
 
 ## Clear search by external button
 
-The Blazor DataGrid provides the ability to clear the current search programmatically. To reset search results from an external button, call [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) with an empty string. This clears the search text and removes the applied search.
+The Blazor Data Grid provides the ability to clear the current search programmatically. To reset search results from an external button, call [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) with an empty string. This clears the search text and removes the applied search.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
