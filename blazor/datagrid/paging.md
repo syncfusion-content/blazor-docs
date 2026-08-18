@@ -598,7 +598,7 @@ The Blazor DataGrid allows customizing the default values in the page size dropd
 
 > The PageSizes property can be configured with either an array of strings or a boolean value.
 
-## Navigate to a Particular Page
+## Navigate to a particular page
 
 Navigating to a particular page in the Blazor DataGrid is useful when dealing with large datasets, enabling quick jumps to specific pages.
 
