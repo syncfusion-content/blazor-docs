@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Change caret icon in Blazor Dropdown Menu Component | Syncfusion®
-description: Checkout and learn here all about changing the caret icon in Blazor Dropdown Menu component and more.
+title: How to change the caret icon in Blazor Dropdown Menu | Syncfusion®
+description: Replace the default caret icon of the Blazor Dropdown Menu with a custom CSS class or icon font for a different look.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
 ---
 
-# Change caret icon in Blazor Dropdown Menu Component
+# How to change the caret icon in Blazor Dropdown Menu
 
 The caret icon in the Dropdown Menu component can be customized when the popup opens and closes by handling the [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_OnOpen) and [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_OnClose) events. These callbacks trigger before the popup is displayed or hidden, providing a convenient place to toggle CSS classes that adjust the caret appearance.
 

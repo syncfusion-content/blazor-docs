@@ -99,7 +99,7 @@ The following example validates the Syncfusion<sup style="font-size:70%">&reg;</
 
 ## Jenkins
 
-* Create an [Environment Variable](https://www.jenkins.io/doc/pipeline/tour/environment) named 'LICENSE_VALIDATION'. Use the path of the LicenseKeyValidation.ps1 script file as a value (e.g., D:\LicenseKeyValidator\LicenseKeyValidation.ps1).
+* Create an [Environment Variable](https://www.jenkins.io/doc/pipeline/tour/environment/) named 'LICENSE_VALIDATION'. Use the path of the LicenseKeyValidation.ps1 script file as a value (e.g., D:\LicenseKeyValidator\LicenseKeyValidation.ps1).
 
 * Include a stage in Jenkins to execute the LicenseKeyValidation.ps1 script in PowerShell. 
 

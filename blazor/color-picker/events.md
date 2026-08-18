@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Colorpicker Component | Syncfusion®
-description: Checkout and learn here all about the Events in Blazor Color picker component and much more details.
+title: Events in Blazor Color Picker | Syncfusion®
+description: Handle Blazor Color Picker events for value changes, selection, opening, and closing of the popup to react to user color selection.
 platform: Blazor
-control: Colorpicker
+control: Color Picker
 documentation: ug
 ---
 
-# Events in Blazor Color Picker Component
+# Events in Blazor Color Picker
 
 This section lists the events raised by the Blazor Color Picker component and when they are triggered during user interaction. Events are grouped by the part of the component lifecycle they belong to: popup lifecycle, value change, mode switching, tile rendering, and component lifecycle.
 

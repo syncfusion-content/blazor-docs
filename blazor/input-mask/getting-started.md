@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Input Mask in WASM App | Syncfusion
-description: Check out and learn about getting started with Blazor Input Mask component in Blazor WebAssembly Application.
+description: Learn how to get started with the Syncfusion Blazor Input Mask in a Blazor WebAssembly app with installation and setup steps.
 platform: Blazor
 control: Input Mask
 documentation: ug

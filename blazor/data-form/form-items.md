@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Form Items in Blazor DataForm Component | Syncfusion®
-description: Checkout and learn here about how to configure Form Item and its customization in Blazor DataForm component.
+title: Form Items in Blazor Data Form | Syncfusion®
+description: Configure individual Blazor Data Form FormItem fields with editor types, IDs, placeholders, labels, CSS classes, and enable or disable state.
 platform: Blazor
 control: DataForm
 documentation: ug
 ---
 
-# Form items in DataForm component
+# Form Items in Blazor Data Form
 
 The [FormItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html) configures the editor for a specific model field. It supports setting a unique identifier (ID), selecting the editor type, applying CSS classes, specifying placeholder and label text, and enabling or disabling the field. The following sections demonstrate common property usage:
 - Field: map the model property to an editor

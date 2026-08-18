@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sorting in Blazor DropDownList component | Syncfusion®
-description: Checkout and learn here all the features about Sorting in Blazor DropDown List component and much more details.
+title: Sorting in Blazor Dropdown List | Syncfusion®
+description: Sort Blazor Dropdown List items in ascending, descending, or original order with one property configuration.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Sorting in Dropdown List
+# Sorting in Blazor Dropdown List
 
 Sorting enables you to arrange items in `Ascending` or `Descending` order. To enable sorting in the `DropDownList`, set the [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_SortOrder) property to the required value. 
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Paging in Blazor MultiColumn ComboBox Component | Syncfusion®
-description: Checkout and learn here all about Paging in Blazor MultiColumn ComboBox component and much more details.
+title: Paging in Blazor MultiColumn ComboBox | Syncfusion
+description: Enable paging in Blazor MultiColumn ComboBox to navigate large datasets with AllowPaging, PageCount, and PageSize.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
 ---
 
-# Paging in Blazor MultiColumn ComboBox Component
+# Paging in Blazor MultiColumn ComboBox
 
 Paging provides an option to display data in segmented pages, making it easier to navigate large datasets. To enable paging, set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_AllowPaging) property to `true` (default is `false`). When paging is enabled, a pager component is rendered at the bottom of the MultiColumn ComboBox popup to navigate between pages. If the total records fit on a single page, the pager is hidden.
 

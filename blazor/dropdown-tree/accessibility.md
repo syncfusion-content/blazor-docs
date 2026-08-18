@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Dropdown Tree Component | Syncfusion®
-description: Checkout and learn here all the features about Accessibility in Blazor Dropdown Tree component and more.
+title: Accessibility in Blazor Dropdown Tree | Syncfusion®
+description: Learn how Blazor Dropdown Tree supports accessibility standards, ARIA attributes, keyboard navigation, and assistive technologies.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
 ---
 
-# Accessibility in Blazor Dropdown Tree Component
+# Accessibility in Blazor Dropdown Tree
 
 The [Blazor Dropdown Tree](https://www.syncfusion.com/blazor-components/blazor-dropdowntree) component has been designed, keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications, and applied the WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
 

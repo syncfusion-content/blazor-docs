@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor DropDown List Component | Syncfusion®
-description: Checkout and learn here all about Templates in Blazor DropDown List component and much more details.
+title: Templates in Blazor Dropdown List | Syncfusion®
+description: Customize Blazor Dropdown List items, selected values, group headers, and popup header or footer with templates.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Templates in DropDown List
+# Templates in Blazor Dropdown List
 
 The DropDownList provides several templates to customize the appearance of individual list items, group headers, the selected value, and the popup’s header and footer.
 

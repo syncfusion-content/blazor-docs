@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize Blazor ListView Component to Grid Layout | Syncfusion®
-description: Learn here all about customizing listview as grid layout in Blazor ListView component and much more details.
+title: How to customize as grid layout in Blazor ListView | Syncfusion
+description: Render Blazor ListView items as a grid layout with CSS and support add, remove, sort, and filter operations.
 platform: Blazor
 control: Listview
 documentation: ug
 ---
 
-# Customize Blazor ListView Component to Grid Layout
+# How to customize as grid layout in Blazor ListView
 
 In ListView, list items can be rendered in grid layout with the following data manipulations.
 

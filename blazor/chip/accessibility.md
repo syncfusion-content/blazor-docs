@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Chip Component | Syncfusion®
-description: Checkout and learn here all the features about Accessibility in Blazor Chip component and much more details.
+title: Accessibility in Blazor Chips | Syncfusion®
+description: Learn how Blazor Chips meet WCAG 2.2, Section 508, and ADA standards with WAI-ARIA roles, keyboard navigation, and screen reader support.
 platform: Blazor
-control: Chip
+control: Chips
 documentation: ug
 ---
 
-# Accessibility in Blazor Chip Component
+# Accessibility in Blazor Chips
 
 The [Blazor Chips](https://www.syncfusion.com/blazor-components/blazor-chips) component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

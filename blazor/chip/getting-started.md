@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Chips in Blazor WASM App | Syncfusion
-description: Check out and learn how to get started with the Blazor Chips component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Chips in Blazor WASM App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Chips control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Chips
 documentation: ug
 ---
 
-# Getting Started with Blazor Chips Component in Blazor WASM App
+# Getting Started with Blazor Chips in Blazor WASM App
 
 This section briefly explains about how to include [Blazor Chips](https://www.syncfusion.com/blazor-components/blazor-chips) component to a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

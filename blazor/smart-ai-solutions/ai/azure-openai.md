@@ -371,7 +371,7 @@ This example illustrates how the Blazor AI library integrates with Azure OpenAI 
 
 ## Error Handling
 - **Invalid credentials**: Ensure the API key, endpoint, and model are valid and correctly configured in environment variables or Azure Key Vault.
-- **Rate limits**: Azure OpenAI usage may be limited based on your subscription. See the [Azure OpenAI pricing documentation](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/) for details.
+- **Rate limits**: Azure OpenAI usage may be limited based on your subscription. See the [Azure OpenAI pricing documentation](https://azure.microsoft.com/en-us/pricing/details/azure-openai/) for details.
 
 ## See Also
 - [Blazor QueryBuilder Documentation](https://blazor.syncfusion.com/documentation/query-builder/getting-started-webapp)

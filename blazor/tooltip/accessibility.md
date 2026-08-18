@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Tooltip Component | Syncfusion®
-description: Checkout and learn here all the features about accessibility in Blazor Tooltip component and much more details.
+title: Accessibility in Blazor Tooltip | Syncfusion
+description: Learn how Blazor Tooltip supports accessibility with ARIA roles, keyboard activation, and screen readers.
 platform: Blazor
 control: Tooltip
 documentation: ug
 ---
 
-# Accessibility in Blazor Tooltip Component
+# Accessibility in Blazor Tooltip
 
 The [Blazor Tooltip](https://www.syncfusion.com/blazor-components/blazor-tooltip) component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

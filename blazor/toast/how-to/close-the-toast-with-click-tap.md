@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Close the toast with click/tap in Blazor Toast Component | Syncfusion®
-description: Checkout and learn here all about how to close the toast with click/tap in Blazor Toast component and more.
+title: How to close the toast on click or tap in Blazor Toast | Syncfusion
+description: Close Blazor Toast notifications on click or tap by handling ToastClickEventArgs in the click event handler.
 platform: Blazor
 control: Toast
 documentation: ug
 ---
 
-# Close the toast with click/tap in Blazor Toast Component
+# How to close the toast on click or tap in Blazor Toast
 
 By default, the toasts are expired based on the `Timeout` value. The toast hiding process can be customized with click/tap action by setting the `ToastClickEventArgs` in the clicked callback function with static Toast.
 

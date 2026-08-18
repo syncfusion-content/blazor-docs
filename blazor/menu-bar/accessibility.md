@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Menu Bar Component | Syncfusion®
-description: Checkout and learn here all the features about accessibility in Blazor Menu Bar component and much more details.
+title: Accessibility in Blazor Menu Bar | Syncfusion
+description: Learn how Blazor Menu Bar supports accessibility standards including keyboard navigation, screen readers, and ARIA roles.
 platform: Blazor
 control: Menu Bar
 documentation: ug
 ---
 
-# Accessibility in Blazor Menu Bar Component
+# Accessibility in Blazor Menu Bar
 
 The Blazor Menu Bar component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
