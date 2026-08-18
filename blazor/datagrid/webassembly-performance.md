@@ -196,7 +196,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLRDGNxBEqcogXh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrHNbivetRLqBuB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > - Use the args-level `PreventRender` property for events that expose a typed args object with that member, for example [RowSelectEventArgs&lt;OrderData&gt;](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowSelectEventArgs-1.html) used by [RowSelected](https://blazor.syncfusion.com/documentation/datagrid/events#rowselected). Set it to **true** to reduce UI latency; the property affects rendering only for the event-triggered cycle and does not change component state beyond that cycle.
 > - For events whose args type does not expose `PreventRender` (for example, [DataBound](https://blazor.syncfusion.com/documentation/datagrid/events#databound), which uses `DataBoundEventArgs<TValue>`), call the DataGrid’s `PreventRender` method instead.
