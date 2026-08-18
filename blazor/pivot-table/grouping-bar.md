@@ -65,12 +65,12 @@ The grouping bar offers additional options to modify its appearance and behavior
 
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
-| `ShowFieldsPanel` | `Boolean` | `false` | Shows or hides the fields panel above the grouping bar. |
-| `ShowFilterIcon` | `Boolean` | `true` | Shows or hides the filter icon for all fields. |
-| `ShowSortIcon` | `Boolean` | `true` | Shows or hides the sort icon for all fields. |
-| `ShowRemoveIcon` | `Boolean` | `true` | Shows or hides the remove icon for all fields. |
-| `ShowValueTypeIcon` | `Boolean` | `true` | Shows or hides the aggregation dropdown icon for all value fields. |
-| `AllowDragAndDrop` | `Boolean` | `true` | Enables or disables drag-and-drop for all fields. |
+| `ShowFieldsPanel` | `boolean ` | `false` | Shows or hides the fields panel above the grouping bar. |
+| `ShowFilterIcon` | `boolean ` | `true` | Shows or hides the filter icon for all fields. |
+| `ShowSortIcon` | `boolean ` | `true` | Shows or hides the sort icon for all fields. |
+| `ShowRemoveIcon` | `boolean ` | `true` | Shows or hides the remove icon for all fields. |
+| `ShowValueTypeIcon` | `boolean ` | `true` | Shows or hides the aggregation dropdown icon for all value fields. |
+| `AllowDragAndDrop` | `boolean ` | `true` | Enables or disables drag-and-drop for all fields. |
 
 The same options can also be set on individual field items inside `PivotViewDataSourceSettings` to control the behavior of a specific field.
 
