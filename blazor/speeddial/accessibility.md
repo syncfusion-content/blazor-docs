@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor SpeedDial Component | Syncfusion®
-description: Checkout and learn here all about accessibility and keyboard in Blazor Speed Dial component and much more.
+title: Accessibility in Blazor Speed Dial | Syncfusion
+description: Learn how Blazor Speed Dial supports accessibility, ARIA roles, and keyboard navigation for quick access to action items.
 platform: Blazor
 control: SpeedDial
 documentation: ug
 ---
 
-# Accessibility in Blazor SpeedDial Component
+# Accessibility in Blazor Speed Dial
 
 The Blazor SpeedDial component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

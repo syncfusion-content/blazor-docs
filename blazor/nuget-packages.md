@@ -32,19 +32,19 @@ This package contains the base component, common classes, common functionalities
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a>
 </td>
 <td>
 Common, Base, MediaQuery
 </td>
 <td>
 <ul>
-<li><a href="https://www.nuget.org/packages/Microsoft.AspNetCore.Components.Web/" target="_blank">Microsoft.AspNetCore.Components.Web</a></li>
-<li><a href="https://www.nuget.org/packages/Microsoft.CSharp/" target="_blank">Microsoft.CSharp</a> (Utilized up to v20.3.0.61)</li>
-<li><a href="https://www.nuget.org/packages/Newtonsoft.Json/" target="_blank">Newtonsoft.Json</a> (Utilized up to v19.3.0.59)</li>
-<li><a href="#syncfusionblazorthemes">Syncfusion.Blazor.Themes</a> (Utilized up to v19.4.0.56)</li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Licensing/" target="_blank">Syncfusion.Licensing</a></li>
-<li><a href="https://www.nuget.org/packages/System.Text.Json/" target="_blank">System.Text.Json</a> (Utilizing from v19.4.0.38)</li>
+<li><a href="https://www.nuget.org/packages/Microsoft.AspNetCore.Components.Web/" target="_blank" aria-label="Web NuGet Package">Microsoft.AspNetCore.Components.Web</a></li>
+<li><a href="https://www.nuget.org/packages/Microsoft.CSharp/" target="_blank" aria-label="CSharp NuGet Package">Microsoft.CSharp</a> (Utilized up to v20.3.0.61)</li>
+<li><a href="https://www.nuget.org/packages/Newtonsoft.Json/" target="_blank" aria-label="Newtonsoft Json NuGet Package">Newtonsoft.Json</a> (Utilized up to v19.3.0.59)</li>
+<li><a href="#syncfusionblazorthemes" aria-label="Blazor Theme NuGet Package">Syncfusion.Blazor.Themes</a> (Utilized up to v19.4.0.56)</li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Licensing/" target="_blank" aria-label="Syncfusion Licensing NuGet Package">Syncfusion.Licensing</a></li>
+<li><a href="https://www.nuget.org/packages/System.Text.Json/" target="_blank" aria-label="Json NuGet Package">System.Text.Json</a> (Utilizing from v19.4.0.38)</li>
 </ul>
 </td>
 </tr>
@@ -71,12 +71,12 @@ The Blazor Smart Components are designed to seamlessly integrate with AI and off
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.SmartComponents/">Syncfusion.Blazor.SmartComponents</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.SmartComponents/" aria-label="Blazor Smart Components NuGet Package">Syncfusion.Blazor.SmartComponents</a>
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/smart-paste/getting-started">Smart Paste Button</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/smart-textarea/getting-started">Smart TextArea</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/smart-paste/getting-started" aria-label="Blazor Smart Paste Button NuGet Package">Smart Paste Button</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/smart-textarea/getting-started" aria-label="Blazor Smart TextArea NuGet Package">Smart TextArea</a></li>
 </ul>
 </td>
 <td>
@@ -87,10 +87,10 @@ The Blazor Smart Components are designed to seamlessly integrate with AI and off
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="##syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="https://www.nuget.org/packages/Azure.AI.OpenAI/">Azure.AI.OpenAI</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="##syncfusionblazorbuttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazorinputs" aria-label="Blazor Inouts NuGet Package">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="https://www.nuget.org/packages/Azure.AI.OpenAI/" aria-label="Azure OpenAI NuGet Package">Azure.AI.OpenAI</a></li>
 </ul>
 </td>
 </tr>
@@ -116,12 +116,12 @@ The AI AssistView creates an interface through which users can interact with AI-
         </td>
     </tr>
     <tr>
-        <td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat">Syncfusion.Blazor.InteractiveChat</a></td>
+        <td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat" aria-label="Blazor InteractiveChat NuGet Package">Syncfusion.Blazor.InteractiveChat</a></td>
         <td>
         <ul>
         <li>
-        <a href="https://blazor.syncfusion.com/documentation/ai-assistview/getting-started">AI AssistView</a></li>
-        <li><a href="https://blazor.syncfusion.com/documentation/chat-ui/getting-started">Chat UI</a></li>
+        <a href="https://blazor.syncfusion.com/documentation/ai-assistview/getting-started" aria-label="Blazor AI AssitView Component">AI AssistView</a></li>
+        <li><a href="https://blazor.syncfusion.com/documentation/chat-ui/getting-started" aria-label="Blazor Chat UI Component">Chat UI</a></li>
         </ul>
         </td>
         <td>
@@ -132,10 +132,10 @@ The AI AssistView creates an interface through which users can interact with AI-
         </td>
         <td>
             <ul>
-                <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core </a></li>
-                <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/">Syncfusion.Blazor.Inputs</a></li>
-                <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/">Syncfusion.Blazor.Navigations</a></li>
-                <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Notifications/">Syncfusion.Blazor.Notifications</a></li>
+                <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core </a></li>
+                <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/" aria-label="Blazor Inputs NuGet Package">Syncfusion.Blazor.Inputs</a></li>
+                <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/" aria-label="Blazor Navigations NuGet Package">Syncfusion.Blazor.Navigations</a></li>
+                <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Notifications/" aria-label="Blazor Notifications NuGet Package">Syncfusion.Blazor.Notifications</a></li>
             </ul>
         </td>
     </tr>
@@ -162,13 +162,13 @@ The Blazor BarcodeGenerator supports the most common 1D and 2D barcode, and comp
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.BarcodeGenerator/">Syncfusion.Blazor.BarcodeGenerator</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.BarcodeGenerator/" aria-label="Blazor Barcode NuGet Package">Syncfusion.Blazor.BarcodeGenerator</a>
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/barcode/barcodegenerator">Barcode Generator</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/barcode/datamatrixgenerator">Data Matrix Generator</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/barcode/qrcodegenerator">QR Code Generator</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/barcode/barcodegenerator" aria-label="Blazor Barcode Component">Barcode Generator</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/barcode/datamatrixgenerator" aria-label="Blazor Data Matrix Generator Component">Data Matrix Generator</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/barcode/qrcodegenerator" aria-label="Blazor QR Code Generator Component">QR Code Generator</a></li>
 </ul>
 </td>
 <td>
@@ -179,7 +179,7 @@ The Blazor BarcodeGenerator supports the most common 1D and 2D barcode, and comp
 </ul>
 </td>
 <td>
-<a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a>
+<a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a>
 </td>
 </tr>
 </table>
@@ -205,20 +205,20 @@ The Blazor Bullet Chart is used to visually compare measures, similar to the com
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.BulletChart/">Syncfusion.Blazor.BulletChart</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.BulletChart/" aria-label="Blazor BulletChart NuGet Package">Syncfusion.Blazor.BulletChart</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/bullet-chart/getting-started-with-web-app">Bullet Chart</a>
+<a href="https://blazor.syncfusion.com/documentation/bullet-chart/getting-started-with-web-app" aria-label="Blazor Bullet Chart Component">Bullet Chart</a>
 </td>
 <td>
 SfBulletChart
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazordatavizcommon">Syncfusion.Blazor.DataVizCommon</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/">Syncfusion.PdfExport.Net.Core</a> (Utilizing from v19.1.0.54)</li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazordatavizcommon" aria-label="Blazor DataVizCommon NuGet Package">Syncfusion.Blazor.DataVizCommon</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" aria-label="Syncfusion PdfExport NuGet Package">Syncfusion.PdfExport.Net.Core</a> (Utilizing from v19.1.0.54)</li>
 </ul>
 </td>
 </tr>
@@ -245,18 +245,18 @@ The Blazor buttons package contains UI components such as Button, Checkbox, Radi
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons/">Syncfusion.Blazor.Buttons</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons/" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a>
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/button/getting-started-with-web-app">Button</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app">CheckBox</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app">Chip</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/floating-action-button/getting-started-with-web-app">Floating Action Button</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/radio-button/getting-started-webapp">RadioButton</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/speeddial/getting-started-webapp">Speed Dial</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started-webapp">Toggle Switch Button</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/appearance/icons">Icon</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/button/getting-started-with-web-app" aria-label="Blazor Button Component">Button</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app" aria-label="Blazor CheckBox Component">CheckBox</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app" aria-label="Blazor Chip Component">Chip</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/floating-action-button/getting-started-with-web-app" aria-label="Blazor Floating Action Button Component">Floating Action Button</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/radio-button/getting-started-webapp" aria-label="Blazor RadioButton Component">RadioButton</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/speeddial/getting-started-webapp" aria-label="Blazor Speed Dial Component">Speed Dial</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started-webapp" aria-label="Blazor Toggle Switch Button Component">Toggle Switch Button</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/appearance/icons" aria-label="Blazor Icons Library">Icon</a></li>
 </ul>
 </td>
 <td>
@@ -272,7 +272,7 @@ The Blazor buttons package contains UI components such as Button, Checkbox, Radi
 </ul>
 </td>
 <td>
-<a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a>
+<a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a>
 </td>
 </tr>
 </table>
@@ -298,15 +298,15 @@ The Calendars package contains date and time components such as Calendar, DatePi
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/">Syncfusion.Blazor.Calendars</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/" aria-label="Blazor Calendar NuGet Package">Syncfusion.Blazor.Calendars</a>
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/calendar/getting-started-with-web-app">Calendar</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app">DatePicker</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/daterangepicker/getting-started-with-web-app">DateRangePicker</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app">DateTime Picker</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/timepicker/getting-started-webapp">Time Picker</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/calendar/getting-started-with-web-app" aria-label="Blazor Calendar Component">Calendar</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app" aria-label="Blazor DatePicker Component">DatePicker</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/daterangepicker/getting-started-with-web-app" aria-label="Blazor DateRangePicker Component">DateRangePicker</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app" aria-label="Blazor DateTimePicker Component">DateTime Picker</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/timepicker/getting-started-webapp" aria-label="Blazor TimePicker Component">Time Picker</a></li>
 </ul>
 </td>
 <td>
@@ -320,10 +320,10 @@ The Calendars package contains date and time components such as Calendar, DatePi
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="#syncfusionblazorlists">Syncfusion.Blazor.Lists</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazorbuttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazorinputs" aria-label="Blazor Inputs NuGet Package">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="#syncfusionblazorlists" aria-label="Blazor List NuGet Package">Syncfusion.Blazor.Lists</a></li>
 </ul>
 </td>
 </tr>
@@ -350,18 +350,18 @@ A Blazor Card is a small layout that shows a defined content in an organized str
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Cards/">Syncfusion.Blazor.Cards</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Cards/" aria-label="Blazor Card NuGet Package">Syncfusion.Blazor.Cards</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/card/getting-started-with-web-app">Card</a>
+<a href="https://blazor.syncfusion.com/documentation/card/getting-started-with-web-app" aria-label="Blazor Card Component">Card</a>
 </td>
 <td>
 SfCard
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a> (Utilizing from v19.1.0.54)</li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a> (Utilizing from v19.1.0.54)</li>
 </ul>
 </td>
 </tr>
@@ -388,12 +388,12 @@ The Blazor Chart is a well-crafted charting component to visualize data. It cont
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Charts/">Syncfusion.Blazor.Charts</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Charts/" aria-label="Blazor Chart NuGet Package">Syncfusion.Blazor.Charts</a>
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/chart/getting-started-with-web-app">Charts</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/accumulation-chart/getting-started-with-web-app">Accumulation Chart</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/chart/getting-started-with-web-app" aria-label="Blazor Chart Component">Charts</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/accumulation-chart/getting-started-with-web-app" aria-label="Blazor Accumulation Chart Component">Accumulation Chart</a></li>
 </ul>
 </td>
 <td>
@@ -404,10 +404,10 @@ The Blazor Chart is a well-crafted charting component to visualize data. It cont
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazordatavizcommon">Syncfusion.Blazor.DataVizCommon</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank">Syncfusion.PdfExport.Net.Core</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazordatavizcommon" aria-label="Blazor DataVizCommon NuGet Package">Syncfusion.Blazor.DataVizCommon</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank" aria-label="Syncfusion PdfExport NuGet Package">Syncfusion.PdfExport.Net.Core</a></li>
 </ul>
 </td>
 </tr>
@@ -434,11 +434,11 @@ The Blazor Chart Wizard is an interactive chart creation and customization compo
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.ChartWizard">Syncfusion.Blazor.ChartWizard</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.ChartWizard" aria-label="Blazor ChartWizard NuGet Package">Syncfusion.Blazor.ChartWizard</a>
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/chart-wizard/getting-started-with-web-app">Chart Wizard</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/chart-wizard/getting-started-with-web-app" aria-label="Blazor ChartWizard Component">Chart Wizard</a></li>
 </ul>
 </td>
 <td>
@@ -448,18 +448,18 @@ The Blazor Chart Wizard is an interactive chart creation and customization compo
 </td>
 <td>
 <ul>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Charts">Syncfusion.Blazor.Charts</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core">Syncfusion.Blazor.Core</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Data">Syncfusion.Blazor.Data</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DataVizCommon">Syncfusion.Blazor.DataVizCommon</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns">Syncfusion.Blazor.DropDowns</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Grid">Syncfusion.Blazor.Grid</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.SplitButtons">Syncfusion.Blazor.SplitButtons</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.ExcelExport.Net.Core">Syncfusion.ExcelExport.Net.Core</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core">Syncfusion.PdfExport.Net.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Charts" aria-label="Blazor Chart NuGet Package">Syncfusion.Blazor.Charts</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Data" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DataVizCommon" aria-label="Blazor DataVizCommon NuGet Package">Syncfusion.Blazor.DataVizCommon</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns" aria-label="Blazor DropDowns NuGet Package">Syncfusion.Blazor.DropDowns</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Grid" aria-label="Blazor Grid NuGet Package">Syncfusion.Blazor.Grid</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs" aria-label="Blazor Input NuGet Package">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations" aria-label="Blazor Navigation NuGet Package">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.SplitButtons" aria-label="Blazor SplitButton NuGet Package">Syncfusion.Blazor.SplitButtons</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.ExcelExport.Net.Core" aria-label="Syncfusion ExcelExport NuGet Package">Syncfusion.ExcelExport.Net.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core" aria-label="Syncfusion PdfExport NuGet Package">Syncfusion.PdfExport.Net.Core</a></li>
 </ul>
 </td>
 </tr>
@@ -485,16 +485,16 @@ The Blazor 3D Chart is a graphical representation of data in three dimensions, s
 </td>
 </tr>
 <tr>
-<td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Chart3D">Syncfusion.Blazor.Chart3D</a></td>
-<td><a href="https://blazor.syncfusion.com/documentation/3d-chart/getting-started-with-web-app">3D Chart</a></td>
+<td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Chart3D" aria-label="Blazor Chart3D NuGet Package">Syncfusion.Blazor.Chart3D</a></td>
+<td><a href="https://blazor.syncfusion.com/documentation/3d-chart/getting-started-with-web-app" aria-label="Blazor 3D Chart Component">3D Chart</a></td>
 <td>SfChart3D</td>
 <td>
 <ul>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Data/">Syncfusion.Blazor.Data</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DataVizCommon/">Syncfusion.Blazor.DataVizCommon</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.ExcelExport.Net.Core/">Syncfusion.ExcelExport.Net.Core</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/">Syncfusion.PdfExport.Net.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Data/" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DataVizCommon/" aria-label="Blazor DataVizCommon NuGet Package">Syncfusion.Blazor.DataVizCommon</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.ExcelExport.Net.Core/" aria-label="Syncfusion ExcelExport NuGet Package">Syncfusion.ExcelExport.Net.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" aria-label="Syncfusion PdfExport NuGet Package">Syncfusion.PdfExport.Net.Core</a></li>
 </ul>
 </td>
 </tr>
@@ -521,18 +521,18 @@ The Blazor Circular Gauge is used for visualizing numeric values on a circular s
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.CircularGauge/">Syncfusion.Blazor.CircularGauge</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.CircularGauge/" aria-label="Blazor Circular Gauge NuGet Package">Syncfusion.Blazor.CircularGauge</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/circular-gauge/getting-started-with-web-app">Circular Gauge</a>
+<a href="https://blazor.syncfusion.com/documentation/circular-gauge/getting-started-with-web-app" aria-label="Blazor Circular Gauge Component">Circular Gauge</a>
 </td>
 <td>
 SfCircularGauge
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank">Syncfusion.PdfExport.Net.Core</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank" aria-label="Syncfusion PdfExport NuGet Package">Syncfusion.PdfExport.Net.Core</a></li>
 </ul>
 </td>
 </tr>
@@ -559,16 +559,16 @@ The SfDataManager is a data management package to perform data operations such a
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Data/">Syncfusion.Blazor.Data</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Data/" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/data/getting-started-with-web-app">DataManager</a>
+<a href="https://blazor.syncfusion.com/documentation/data/getting-started-with-web-app" aria-label="Blazor DataManager Component">DataManager</a>
 </td>
 <td>
 SfDataManager
 </td>
 <td>
-<a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a>
+<a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a>
 </td>
 </tr>
 </table>
@@ -585,16 +585,16 @@ The Blazor DataForm is a powerful UI component that simplifies the creation of d
 <td><b>Dependencies</b></td>
 </tr>
 <tr>
-<td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DataForm">Syncfusion.Blazor.DataForm</a></td>
-<td><a href="https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app">DataForm</a></td>
+<td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DataForm" aria-label="Blazor DataForm NuGet Package">Syncfusion.Blazor.DataForm</a></td>
+<td><a href="https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app" aria-label="Blazor DataForm Component">DataForm</a></td>
 <td>SfDataForm</td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazorcalendars">Syncfusion.Blazor.Calendars</a></li>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a></li>
-<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="#syncfusionblazorbuttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazorcalendars" aria-label="Blazor Calendar NuGet Package">Syncfusion.Blazor.Calendars</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazordropdowns" aria-label="Blazor DropDown NuGet Package">Syncfusion.Blazor.DropDowns</a></li>
+<li><a href="#syncfusionblazorinputs" aria-label="Blazor Input NuGet Package">Syncfusion.Blazor.Inputs</a></li>
 </ul>
 </td>
 </tr>
@@ -618,13 +618,13 @@ The Blazor DataVizCommon is the base package for the svg elements used in the vi
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.DataVizCommon/">Syncfusion.Blazor.DataVizCommon</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.DataVizCommon/" aria-label="Blazor DataVizCommon NuGet Package">Syncfusion.Blazor.DataVizCommon</a>
 </td>
 <td>
 -
 </td>
 <td>
-<a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a>
+<a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a>
 </td>
 </tr>
 </table>
@@ -650,16 +650,16 @@ A package of Blazor Dropdown contains a collection of Dropdown components such a
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/">Syncfusion.Blazor.DropDowns</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/" aria-label="Blazor DropDown NuGet Package">Syncfusion.Blazor.DropDowns</a>
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/autocomplete/getting-started-with-web-app">AutoComplete</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/combobox/getting-started-with-web-app">ComboBox</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app">DropDown List</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/listbox/getting-started-webapp">ListBox</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/multiselect-dropdown/getting-started-webapp">MultiSelect DropDown</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/mention/getting-started-webapp">Mention</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/autocomplete/getting-started-with-web-app" aria-label="Blazor AutoComplete Component">AutoComplete</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/combobox/getting-started-with-web-app" aria-label="Blazor ComboBox Component">ComboBox</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app" aria-label="Blazor DropDown List Component">DropDown List</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/listbox/getting-started-webapp" aria-label="Blazor ListBox Component">ListBox</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/multiselect-dropdown/getting-started-webapp" aria-label="Blazor MultiSelect DropDown Component">MultiSelect DropDown</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/mention/getting-started-webapp" aria-label="Blazor Mention Component">Mention</a></li>
 </ul>
 </td>
 <td>
@@ -674,12 +674,12 @@ A package of Blazor Dropdown contains a collection of Dropdown components such a
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="#syncfusionblazornotifications">Syncfusion.Blazor.Notifications</a> (Utilizing from v21.1.35)</li>
-<li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazorbuttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazorinputs" aria-label="Blazor Input NuGet Package">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="#syncfusionblazornotifications" aria-label="Blazor Notification NuGet Package">Syncfusion.Blazor.Notifications</a> (Utilizing from v21.1.35)</li>
+<li><a href="#syncfusionblazorspinner" aria-label="Blazor Spinner NuGet Package">Syncfusion.Blazor.Spinner</a></li>
 </ul>
 </td>
 </tr>
@@ -706,27 +706,27 @@ Blazor File Manager is a graphical user interface component used to manage the f
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.FileManager/">Syncfusion.Blazor.FileManager</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.FileManager/" aria-label="Blazor FileManager NuGet Package">Syncfusion.Blazor.FileManager</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/file-manager/getting-started-with-web-app">FileManager</a>
+<a href="https://blazor.syncfusion.com/documentation/file-manager/getting-started-with-web-app" aria-label="Blazor FileManager Component">FileManager</a>
 </td>
 <td>
 SfFileManager
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazorgrid">Syncfusion.Blazor.Grid</a></li>
-<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="#syncfusionblazorlayouts">Syncfusion.Blazor.Layouts</a></li>
-<li><a href="#syncfusionblazorlists">Syncfusion.Blazor.Lists</a></li>
-<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a></li>
-<li><a href="#syncfusionblazorsplitbuttons">Syncfusion.Blazor.SplitButtons</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazorbuttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazorgrid" aria-label="Blazor DataGrid NuGet Package">Syncfusion.Blazor.Grid</a></li>
+<li><a href="#syncfusionblazorinputs" aria-label="Blazor Input NuGet Package">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="#syncfusionblazorlayouts" aria-label="Blazor Layout NuGet Package">Syncfusion.Blazor.Layouts</a></li>
+<li><a href="#syncfusionblazorlists" aria-label="Blazor List NuGet Package">Syncfusion.Blazor.Lists</a></li>
+<li><a href="#syncfusionblazornavigations" aria-label="Blazor Navigation NuGet Package">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="#syncfusionblazorpopups" aria-label="Blazor Popup NuGet Package">Syncfusion.Blazor.Popups</a></li>
+<li><a href="#syncfusionblazorspinner" aria-label="Blazor Spinner NuGet Package">Syncfusion.Blazor.Spinner</a></li>
+<li><a href="#syncfusionblazorsplitbuttons" aria-label="Blazor SplitButton NuGet Package">Syncfusion.Blazor.SplitButtons</a></li>
 </ul>
 </td>
 </tr>
@@ -753,27 +753,27 @@ Blazor DataGrid component is used to display and manipulate the tabular data wit
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Grid/">Syncfusion.Blazor.Grid</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Grid/" aria-label="Blazor DataGrid NuGet Package">Syncfusion.Blazor.Grid</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app">DataGrid</a>
+<a href="https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app" aria-label="Blazor DataGrid Component">DataGrid</a>
 </td>
 <td>
 SfGrid
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazorcalendars">Syncfusion.Blazor.Calendars</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a></li>
-<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.ExcelExport.Net.Core/" target="_blank">Syncfusion.ExcelExport.Net.Core</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank">Syncfusion.PdfExport.Net.Core</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazorbuttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazorcalendars" aria-label="Blazor Calendar NuGet Package">Syncfusion.Blazor.Calendars</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazordropdowns" aria-label="Blazor DropDown NuGet Package">Syncfusion.Blazor.DropDowns</a></li>
+<li><a href="#syncfusionblazorinputs" aria-label="Blazor Input NuGet Package">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="#syncfusionblazornavigations" aria-label="Blazor Navigation NuGet Package">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="#syncfusionblazorpopups" aria-label="Blazor Popup NuGet Package">Syncfusion.Blazor.Popups</a></li>
+<li><a href="#syncfusionblazorspinner" aria-label="Blazor Spinner NuGet Package">Syncfusion.Blazor.Spinner</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.ExcelExport.Net.Core/" target="_blank" aria-label="Syncfusion ExcelExport NuGet Package">Syncfusion.ExcelExport.Net.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank" aria-label="Syncfusion PdfExport NuGet Package">Syncfusion.PdfExport.Net.Core</a></li>
 </ul>
 </td>
 </tr>
@@ -800,20 +800,20 @@ Blazor HeatMap Chart is used to visualize two-dimensional data in which the valu
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.HeatMap/">Syncfusion.Blazor.HeatMap</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.HeatMap/" aria-label="Blazor HeatMap NuGet Package">Syncfusion.Blazor.HeatMap</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/heatmap-chart/getting-started-with-web-app">HeatMap Chart</a>
+<a href="https://blazor.syncfusion.com/documentation/heatmap-chart/getting-started-with-web-app" aria-label="Blazor HeatMap Chart Component">HeatMap Chart</a>
 </td>
 <td>
 SfHeatMap
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazordatavizcommon">Syncfusion.Blazor.DataVizCommon</a> (Utilizing from v19.1.0.54)</li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank">Syncfusion.PdfExport.Net.Core</a> (Utilizing from v19.1.0.54)</li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazordatavizcommon" aria-label="Blazor DataVizCommon NuGet Package">Syncfusion.Blazor.DataVizCommon</a> (Utilizing from v19.1.0.54)</li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank" aria-label="Syncfusion PdfExport NuGet Package">Syncfusion.PdfExport.Net.Core</a> (Utilizing from v19.1.0.54)</li>
 </ul>
 </td>
 </tr>
@@ -840,22 +840,22 @@ The Blazor In-place Editor component is most useful for editing a value dynamica
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.InPlaceEditor/">Syncfusion.Blazor.InPlaceEditor</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.InPlaceEditor/" aria-label="Blazor InPlacEditor NuGet Package">Syncfusion.Blazor.InPlaceEditor</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/in-place-editor/getting-started-with-web-app">In-place Editor</a>
+<a href="https://blazor.syncfusion.com/documentation/in-place-editor/getting-started-with-web-app" aria-label="Blazor InPlaceEditor Component">In-place Editor</a>
 </td>
 <td>
 SfInPlaceEditor
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a></li>
-<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazorbuttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazordropdowns" aria-label="Blazor DropDown NuGet Package">Syncfusion.Blazor.DropDowns</a></li>
+<li><a href="#syncfusionblazorinputs" aria-label="Blazor Input NuGet Package">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="#syncfusionblazorpopups" aria-label="Blazor Popup NuGet Package">Syncfusion.Blazor.Popups</a></li>
+<li><a href="#syncfusionblazorspinner" aria-label="Blazor Spinner NuGet Package">Syncfusion.Blazor.Spinner</a></li>
 </ul>
 </td>
 </tr>
@@ -882,23 +882,23 @@ The Blazor Image Editor component loads and modifies the images by performing ac
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.ImageEditor/">Syncfusion.Blazor.ImageEditor</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.ImageEditor/" aria-label="Blazor ImageEditor NuGet Package">Syncfusion.Blazor.ImageEditor</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/image-editor/getting-started-with-web-app">Image Editor</a>
+<a href="https://blazor.syncfusion.com/documentation/image-editor/getting-started-with-web-app" aria-label="Blazor ImageEditor Component">Image Editor</a>
 </td>
 <td>
 SfImageEditor
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="#syncfusionblazorsplitbuttons">Syncfusion.Blazor.SplitButtons</a></li>
-<li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazorbuttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazorinputs" aria-label="Blazor Input NuGet Package">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="#syncfusionblazorpopups" aria-label="Blazor Popup NuGet Package">Syncfusion.Blazor.Popups</a></li>
+<li><a href="#syncfusionblazornavigations" aria-label="Blazor Navigation NuGet Package">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="#syncfusionblazorsplitbuttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.SplitButtons</a></li>
+<li><a href="#syncfusionblazorspinner" aria-label="Blazor Spinner NuGet Package">Syncfusion.Blazor.Spinner</a></li>
 </ul>
 </td>
 </tr>
@@ -925,21 +925,21 @@ A package of Blazor input components comes with a collection of form components.
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/">Syncfusion.Blazor.Inputs</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/" aria-label="Blazor Input NuGet Package">Syncfusion.Blazor.Inputs</a>
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/color-picker/getting-started-with-web-app">Color Picker</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/input-mask/getting-started-with-web-app">Input Mask</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started-webapp">Numeric TextBox</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/rating/getting-started-webapp">Rating</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/range-slider/getting-started-webapp">Range Slider</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp">TextBox</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/file-upload/getting-started-with-web-app">File Upload</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/signature/getting-started-webapp">Signature</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/textarea/getting-started-webapp">TextArea</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/otp-input/getting-started-webapp">OTP Input</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/speech-to-text/getting-started-web-app">Speech To Text</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/color-picker/getting-started-with-web-app" aria-label="Blazor Color Picker Component">Color Picker</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/input-mask/getting-started-with-web-app" aria-label="Blazor Input Mask Component">Input Mask</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started-webapp" aria-label="Blazor Numeric TextBox Component">Numeric TextBox</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/rating/getting-started-webapp" aria-label="Blazor Rating Component">Rating</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/range-slider/getting-started-webapp" aria-label="Blazor Range Slider Component">Range Slider</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp" aria-label="Blazor TextBox Component">TextBox</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/file-upload/getting-started-with-web-app" aria-label="Blazor File Upload Component">File Upload</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/signature/getting-started-webapp" aria-label="Blazor Signature Component">Signature</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/textarea/getting-started-webapp" aria-label="Blazor TextArea Component">TextArea</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/otp-input/getting-started-webapp" aria-label="Blazor OTP Input Component">OTP Input</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/speech-to-text/getting-started-web-app" aria-label="Blazor Speech To Text Component">Speech To Text</a></li>
 </ul>
 </td>
 <td>
@@ -959,11 +959,11 @@ A package of Blazor input components comes with a collection of form components.
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a></li>
-<li><a href="#syncfusionblazorsplitbuttons">Syncfusion.Blazor.SplitButtons</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazorpopups" aria-label="Blazor Popup NuGet Package">Syncfusion.Blazor.Popups</a></li>
+<li><a href="#syncfusionblazorspinner" aria-label="Blazor Spinner NuGet Package">Syncfusion.Blazor.Spinner</a></li>
+<li><a href="#syncfusionblazorsplitbuttons" aria-label="Blazor SplitButton NuGet Package">Syncfusion.Blazor.SplitButtons</a></li>
 </ul>
 </td>
 </tr>
@@ -990,25 +990,25 @@ The Blazor Kanban board visually depicts work at various stages of a process usi
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Kanban/">Syncfusion.Blazor.Kanban</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Kanban/" aria-label="Blazor Kanban NuGet Package">Syncfusion.Blazor.Kanban</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/kanban/getting-started-with-web-app">Kanban</a>
+<a href="https://blazor.syncfusion.com/documentation/kanban/getting-started-with-web-app" aria-label="Blazor Kanban Component">Kanban</a>
 </td>
 <td>
 SfKanban
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a></li>
-<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="#syncfusionblazorlists">Syncfusion.Blazor.Lists</a> (Utilized up to v19.2.0.62)</li>
-<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a> (Utilized up to v19.3.0.43)</li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazorbuttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazordropdowns" aria-label="Blazor DropDown NuGet Package">Syncfusion.Blazor.DropDowns</a></li>
+<li><a href="#syncfusionblazorinputs" aria-label="Blazor Input NuGet Package">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="#syncfusionblazorlists" aria-label="Blazor List NuGet Package">Syncfusion.Blazor.Lists</a> (Utilized up to v19.2.0.62)</li>
+<li><a href="#syncfusionblazornavigations" aria-label="Blazor Navigation NuGet Package">Syncfusion.Blazor.Navigations</a> (Utilized up to v19.3.0.43)</li>
+<li><a href="#syncfusionblazorpopups" aria-label="Blazor Popup NuGet Package">Syncfusion.Blazor.Popups</a></li>
+<li><a href="#syncfusionblazorspinner" aria-label="Blazor Spinner NuGet Package">Syncfusion.Blazor.Spinner</a></li>
 </ul>
 </td>
 </tr>
@@ -1035,13 +1035,13 @@ The layout package contains Splitter and Dashboard Layout components. The Blazor
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Layouts/">Syncfusion.Blazor.Layouts</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Layouts/" aria-label="Blazor Layout NuGet Package">Syncfusion.Blazor.Layouts</a>
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/dashboard-layout/getting-started-with-web-app">Dashboard Layout</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/splitter/getting-started-webapp">Splitter</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/timeline/getting-started-webapp">Timeline</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/dashboard-layout/getting-started-with-web-app" aria-label="Blazor Dashboard Layout Component">Dashboard Layout</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/splitter/getting-started-webapp" aria-label="Blazor Splitter Component">Splitter</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/timeline/getting-started-webapp" aria-label="Blazor Timeline Component">Timeline</a></li>
 </ul>
 </td>
 <td>
@@ -1053,8 +1053,8 @@ The layout package contains Splitter and Dashboard Layout components. The Blazor
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
 </ul>
 </td>
 </tr>
@@ -1081,18 +1081,18 @@ The Blazor Linear Gauge is used for visualizing numeric values in a linear scale
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.LinearGauge/">Syncfusion.Blazor.LinearGauge</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.LinearGauge/" aria-label="Blazor Linear Gauge NuGet Package">Syncfusion.Blazor.LinearGauge</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/linear-gauge/getting-started-webapp">Linear Gauge</a>
+<a href="https://blazor.syncfusion.com/documentation/linear-gauge/getting-started-webapp" aria-label="Blazor Linear Gauge Component">Linear Gauge</a>
 </td>
 <td>
 SfLinearGauge
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank">Syncfusion.PdfExport.Net.Core</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank" aria-label="Syncfusion PdfExport NuGet Package">Syncfusion.PdfExport.Net.Core</a></li>
 </ul>
 </td>
 </tr>
@@ -1119,19 +1119,19 @@ Blazor ListView component allows to select an item or multiple items from a list
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Lists/">Syncfusion.Blazor.Lists</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Lists/" aria-label="Blazor ListView NuGet Package">Syncfusion.Blazor.Lists</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/listview/getting-started-webapp">ListView</a>
+<a href="https://blazor.syncfusion.com/documentation/listview/getting-started-webapp" aria-label="Blazor ListView Component">ListView</a>
 </td>
 <td>
 SfListView
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazorbuttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
 </ul>
 </td>
 </tr>
@@ -1158,19 +1158,19 @@ The Blazor Maps component is used for rendering maps from GeoJSON data or other 
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Maps/">Syncfusion.Blazor.Maps</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Maps/" aria-label="Blazor Map NuGet Package">Syncfusion.Blazor.Maps</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/maps/getting-started-webapp">Maps</a>
+<a href="https://blazor.syncfusion.com/documentation/maps/getting-started-webapp" aria-label="Blazor Map Component">Maps</a>
 </td>
 <td>
 SfMaps
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank">Syncfusion.PdfExport.Net.Core</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank" aria-label="Syncfusion PdfExport NuGet Package">Syncfusion.PdfExport.Net.Core</a></li>
 </ul>
 </td>
 </tr>
@@ -1194,15 +1194,15 @@ SfMaps
 </td>
 </tr>
 <tr>
-<td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.MultiColumnComboBox">Syncfusion.Blazor.MultiColumnComboBox</a></td>
-<td><a href="https://blazor.syncfusion.com/documentation/multicolumn-combobox/getting-started">MultiColumn ComboBox</a></td>
+<td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.MultiColumnComboBox" aria-label="Blazor MultiColumn ComboBox NuGet Package">Syncfusion.Blazor.MultiColumnComboBox</a></td>
+<td><a href="https://blazor.syncfusion.com/documentation/multicolumn-combobox/getting-started" aria-label="Blazor MultiColumn ComboBox Component">MultiColumn ComboBox</a></td>
 <td>SfMultiColumnComboBox</td>
 <td>
 <ul>
-    <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core</a></li>
-    <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Data/">Syncfusion.Blazor.Data</a></li>
-    <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Grid/">Syncfusion.Blazor.Grid</a></li>
-    <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/">Syncfusion.Blazor.Inputs</a></li>
+    <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+    <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Data/" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+    <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Grid/" aria-label="Blazor DataGrid NuGet Package">Syncfusion.Blazor.Grid</a></li>
+    <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/" aria-label="Blazor Input NuGet Package">Syncfusion.Blazor.Inputs</a></li>
 </ul>
 </td>
 </tr>
@@ -1229,22 +1229,22 @@ A package of Blazor navigation components such as Accordion, Context Menu, Tabs,
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/">Syncfusion.Blazor.Navigations</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/" aria-label="Blazor Navigation NuGet Package">Syncfusion.Blazor.Navigations</a>
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/accordion/getting-started-with-web-app">Accordion</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/appbar/getting-started-with-web-app">AppBar</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/breadcrumb/getting-started-with-web-app">Breadcrumb</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/context-menu/getting-started-with-web-app">ContextMenu</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/dropdown-tree/getting-started-with-web-app">DropDown Tree</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/menu-bar/getting-started-webapp">Menu Bar</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/sidebar/getting-started-webapp">Sidebar</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/stepper/getting-started-webapp">Stepper</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/tabs/getting-started-webapp">Tabs</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/toolbar/getting-started-webapp">Toolbar</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/treeview">TreeView</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/pager/getting-started-webapp">Pager</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/accordion/getting-started-with-web-app" aria-label="Blazor Accordion Component">Accordion</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/appbar/getting-started-with-web-app" aria-label="Blazor AppBar Component">AppBar</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/breadcrumb/getting-started-with-web-app" aria-label="Blazor Breadcrumb Component">Breadcrumb</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/context-menu/getting-started-with-web-app" aria-label="Blazor Context Menu Component">ContextMenu</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/dropdown-tree/getting-started-with-web-app" aria-label="Blazor DropDown Tree Component">DropDown Tree</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/menu-bar/getting-started-webapp" aria-label="Blazor Menu Bar Component">Menu Bar</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/sidebar/getting-started-webapp" aria-label="Blazor Sidebar Component">Sidebar</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/stepper/getting-started-webapp" aria-label="Blazor Stepper Component">Stepper</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/tabs/getting-started-webapp" aria-label="Blazor Tab Component">Tabs</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/toolbar/getting-started-webapp" aria-label="Blazor Toolbar Component">Toolbar</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/treeview/getting-started-webapp" aria-label="Blazor TreeView Component">TreeView</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/pager/getting-started-webapp" aria-label="Blazor Pager Component">Pager</a></li>
 </ul>
 </td>
 <td>
@@ -1265,14 +1265,14 @@ A package of Blazor navigation components such as Accordion, Context Menu, Tabs,
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a> (Utilizing from v20.2.0.36)</li>
-<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="#syncfusionblazorlists">Syncfusion.Blazor.Lists</a></li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a> (Utilizing from v19.3.0.43)</li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazorbuttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazordropdowns" aria-label="Blazor DropDown NuGet Package">Syncfusion.Blazor.DropDowns</a> (Utilizing from v20.2.0.36)</li>
+<li><a href="#syncfusionblazorinputs" aria-label="Blazor Input NuGet Package">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="#syncfusionblazorlists" aria-label="Blazor List NuGet Package">Syncfusion.Blazor.Lists</a></li>
+<li><a href="#syncfusionblazorpopups" aria-label="Blazor Popup NuGet Package">Syncfusion.Blazor.Popups</a></li>
+<li><a href="#syncfusionblazorspinner" aria-label="Blazor Spinner NuGet Package">Syncfusion.Blazor.Spinner</a> (Utilizing from v19.3.0.43)</li>
 </ul>
 </td>
 </tr>
@@ -1299,13 +1299,13 @@ The notification component Toast is used to notify status or summary information
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Notifications/">Syncfusion.Blazor.Notifications</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Notifications/" aria-label="Blazor Notification NuGet Package">Syncfusion.Blazor.Notifications</a>
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/toast/getting-started-webapp">Toast</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/skeleton/getting-started-webapp">Skeleton</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/message/getting-started-webapp">Message</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/toast/getting-started-webapp" aria-label="Blazor Toast Component">Toast</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/skeleton/getting-started-webapp" aria-label="Blazor Skeleton Component">Skeleton</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/message/getting-started-webapp" aria-label="Blazor Message Component">Message</a></li>
 </ul>
 </td>
 <td>
@@ -1317,8 +1317,8 @@ The notification component Toast is used to notify status or summary information
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazorbuttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
 </ul>
 </td>
 </tr>
@@ -1345,10 +1345,10 @@ The Blazor Pivot Table is a powerful control used to organize and summarize busi
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable/">Syncfusion.Blazor.PivotTable</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable/" aria-label="Blazor Pivot Table NuGet Package">Syncfusion.Blazor.PivotTable</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp">Pivot Table</a>
+<a href="https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp" aria-label="Blazor Pivot Table Component">Pivot Table</a>
 </td>
 <td>
 <ul>
@@ -1358,20 +1358,20 @@ The Blazor Pivot Table is a powerful control used to organize and summarize busi
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazorcalendars">Syncfusion.Blazor.Calendars</a> (Utilizing from v20.1.0.47)</li>
-<li><a href="#syncfusionblazorcharts">Syncfusion.Blazor.Charts</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a></li>
-<li><a href="#syncfusionblazorgrid">Syncfusion.Blazor.Grid</a></li>
-<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a></li>
-<li><a href="#syncfusionblazorsplitbuttons">Syncfusion.Blazor.SplitButtons</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.ExcelExport.Net.Core/" target="_blank">Syncfusion.ExcelExport.Net.Core</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank">Syncfusion.PdfExport.Net.Core</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazorbuttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazorcalendars" aria-label="Blazor Calendar NuGet Package">Syncfusion.Blazor.Calendars</a> (Utilizing from v20.1.0.47)</li>
+<li><a href="#syncfusionblazorcharts" aria-label="Blazor Chart NuGet Package">Syncfusion.Blazor.Charts</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazordropdowns" aria-label="Blazor DropDown NuGet Package">Syncfusion.Blazor.DropDowns</a></li>
+<li><a href="#syncfusionblazorgrid" aria-label="Blazor DataGrid NuGet Package">Syncfusion.Blazor.Grid</a></li>
+<li><a href="#syncfusionblazorinputs" aria-label="Blazor Input NuGet Package">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="#syncfusionblazornavigations" aria-label="Blazor Navigation NuGet Package">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="#syncfusionblazorpopups" aria-label="Blazor Popup NuGet Package">Syncfusion.Blazor.Popups</a></li>
+<li><a href="#syncfusionblazorspinner" aria-label="Blazor Spinner NuGet Package">Syncfusion.Blazor.Spinner</a></li>
+<li><a href="#syncfusionblazorsplitbuttons" aria-label="Blazor SplitButton NuGet Package">Syncfusion.Blazor.SplitButtons</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.ExcelExport.Net.Core/" target="_blank" aria-label="Syncfusion ExcelExport NuGet Package">Syncfusion.ExcelExport.Net.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank" aria-label="Syncfusion PdfExport NuGet Package">Syncfusion.PdfExport.Net.Core</a></li>
 </ul>
 </td>
 </tr>
@@ -1398,13 +1398,13 @@ A package of Blazor popup components Dialog and Tooltip are used to display info
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Popups/">Syncfusion.Blazor.Popups</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Popups/" aria-label="Blazor Popup NuGet Package">Syncfusion.Blazor.Popups</a>
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/dialog/getting-started-with-web-app">Dialog</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/predefined-dialogs/getting-started-webapp">Predefined Dialog</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/tooltip/getting-started-webapp">Tooltip</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/dialog/getting-started-with-web-app" aria-label="Blazor Dialog Component">Dialog</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/predefined-dialogs/getting-started-webapp" aria-label="Blazor Predefined Dialog Component">Predefined Dialog</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/tooltip/getting-started-webapp" aria-label="Blazor Tooltip NuGet Package">Tooltip</a></li>
 </ul>
 </td>
 <td>
@@ -1415,8 +1415,8 @@ A package of Blazor popup components Dialog and Tooltip are used to display info
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazorbuttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
 </ul>
 </td>
 </tr>
@@ -1443,18 +1443,18 @@ The Progress Bar control can be used to visualize the changing status of an exte
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.ProgressBar/">Syncfusion.Blazor.ProgressBar</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.ProgressBar/" aria-label="Blazor ProgressBar NuGet Package">Syncfusion.Blazor.ProgressBar</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/progress-bar/getting-started-webapp">ProgressBar</a>
+<a href="https://blazor.syncfusion.com/documentation/progress-bar/getting-started-webapp" aria-label="Blazor ProgressBar Component">ProgressBar</a>
 </td>
 <td>
 SfProgressBar
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
 </ul>
 </td>
 </tr>
@@ -1481,24 +1481,24 @@ The Blazor QueryBuilder package contains the QueryBuilder component that allows 
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.QueryBuilder/">Syncfusion.Blazor.QueryBuilder</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.QueryBuilder/" aria-label="Blazor QueryBuilder NuGet Package">Syncfusion.Blazor.QueryBuilder</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/query-builder/getting-started-webapp">QueryBuilder</a>
+<a href="https://blazor.syncfusion.com/documentation/query-builder/getting-started-webapp" aria-label="Blazor QueryBuilder Component">QueryBuilder</a>
 </td>
 <td>
 SfQueryBuilder
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazorcalendars">Syncfusion.Blazor.Calendars</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a></li>
-<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="#syncfusionblazorsplitbuttons">Syncfusion.Blazor.SplitButtons</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazorbuttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazorcalendars" aria-label="Blazor Calendar NuGet Package">Syncfusion.Blazor.Calendars</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazordropdowns" aria-label="Blazor DropDown NuGet Package">Syncfusion.Blazor.DropDowns</a></li>
+<li><a href="#syncfusionblazorinputs" aria-label="Blazor Input NuGet Package">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="#syncfusionblazorpopups" aria-label="Blazor Popup NuGet Package">Syncfusion.Blazor.Popups</a></li>
+<li><a href="#syncfusionblazorsplitbuttons" aria-label="Blazor SplitButton NuGet Package">Syncfusion.Blazor.SplitButtons</a></li>
 </ul>
 </td>
 </tr>
@@ -1522,19 +1522,19 @@ SfQueryBuilder
 </td>
 </tr>
 <tr>
-<td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Ribbon">Syncfusion.Blazor.Ribbon</a></td>
-<td><a href="https://blazor.syncfusion.com/documentation/ribbon/getting-started">Ribbon</a></td>
+<td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Ribbon" aria-label="Blazor Ribbon NuGet Package">Syncfusion.Blazor.Ribbon</a></td>
+<td><a href="https://blazor.syncfusion.com/documentation/ribbon/getting-started" aria-label="Blazor Ribbon Component">Ribbon</a></td>
 <td>SfRibbon</td>
 <td>
 <ul>
-<li><a href="https://www.nuget.org/packages/Newtonsoft.Json/">Newtonsoft.Json</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons/">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/">Syncfusion.Blazor.DropDowns</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Popups/">Syncfusion.Blazor.Popups</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.SplitButtons/">Syncfusion.Blazor.SplitButtons</a></li>
+<li><a href="https://www.nuget.org/packages/Newtonsoft.Json/" aria-label="Newtonsoft Json NuGet Package">Newtonsoft.Json</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons/" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/" aria-label="Blazor DropDown NuGet Package">Syncfusion.Blazor.DropDowns</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/" aria-label="Blazor Input NuGet Package">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/" aria-label="Blazor Navigation NuGet Package">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Popups/" aria-label="Blazor Popup NuGet Package">Syncfusion.Blazor.Popups</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.SplitButtons/" aria-label="Blazor SplitButton NuGet Package">Syncfusion.Blazor.SplitButtons</a></li>
 </ul>
 </td>
 </tr>
@@ -1561,23 +1561,23 @@ The Blazor Range Navigator is an interface for selecting a small range from a la
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.RangeNavigator/">Syncfusion.Blazor.RangeNavigator</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.RangeNavigator/" aria-label="Blazor RangeNavigator NuGet Package">Syncfusion.Blazor.RangeNavigator</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/range-selector/getting-started-webapp">Range Selector</a>
+<a href="https://blazor.syncfusion.com/documentation/range-selector/getting-started-webapp" aria-label="Blazor Range Selector Component">Range Selector</a>
 </td>
 <td>
 SfRangeNavigator
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorcalendars">Syncfusion.Blazor.Calendars</a></li>
-<li><a href="#syncfusionblazorcharts">Syncfusion.Blazor.Charts</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazordatavizcommon">Syncfusion.Blazor.DataVizCommon</a></li>
-<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank">Syncfusion.PdfExport.Net.Core</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazorcalendars" aria-label="Blazor Calendar NuGet Package">Syncfusion.Blazor.Calendars</a></li>
+<li><a href="#syncfusionblazorcharts" aria-label="Blazor Chart NuGet Package">Syncfusion.Blazor.Charts</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazordatavizcommon" aria-label="Blazor DataVizCommon NuGet Package">Syncfusion.Blazor.DataVizCommon</a></li>
+<li><a href="#syncfusionblazornavigations" aria-label="Blazor Navigation NuGet Package">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank" aria-label="Syncfusion PdfExport NuGet Package">Syncfusion.PdfExport.Net.Core</a></li>
 </ul>
 </td>
 </tr>
@@ -1601,15 +1601,15 @@ SfRangeNavigator
 </td>
 </tr>
 <tr>
-<td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Sankey">Syncfusion.Blazor.Sankey</a></td>
-<td><a href="https://blazor.syncfusion.com/documentation/sankey/getting-started">Sankey</a></td>
+<td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Sankey" aria-label="Blazor Sankey NuGet Package">Syncfusion.Blazor.Sankey</a></td>
+<td><a href="https://blazor.syncfusion.com/documentation/sankey/getting-started" aria-label="Blazor Sankey Component">Sankey</a></td>
 <td>SfSankey</td>
 <td>
 <ul>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Data/">Syncfusion.Blazor.Data</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DataVizCommon/">Syncfusion.Blazor.DataVizCommon</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/">Syncfusion.PdfExport.Net.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Data/" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DataVizCommon/" aria-label="Blazor DataVizCommon NuGet Package">Syncfusion.Blazor.DataVizCommon</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" aria-label="Syncfusion PdfExport NuGet Package">Syncfusion.PdfExport.Net.Core</a></li>
 </ul>
 </td>
 </tr>
@@ -1636,11 +1636,11 @@ The Blazor Scheduler component is an event calendar that facilitates users with 
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Schedule/">Syncfusion.Blazor.Schedule</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Schedule/" aria-label="Blazor Schedule NuGet Package">Syncfusion.Blazor.Schedule</a>
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/scheduler/getting-started-webapp">Scheduler</a></li>
+<li><a href="https://help.syncfusion.com/scheduler-sdk/blazor/schedule/getting-started-webapp" aria-label="Blazor Scheduler Component">Scheduler</a></li>
 <li>Recurrence Editor</li>
 </ul>
 </td>
@@ -1652,16 +1652,16 @@ The Blazor Scheduler component is an event calendar that facilitates users with 
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazorcalendars">Syncfusion.Blazor.Calendars</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a></li>
-<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.ExcelExport.Net.Core/" target="_blank">Syncfusion.ExcelExport.Net.Core</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazorbuttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazorcalendars" aria-label="Blazor Calendar NuGet Package">Syncfusion.Blazor.Calendars</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazordropdowns" aria-label="Blazor DropDown NuGet Package">Syncfusion.Blazor.DropDowns</a></li>
+<li><a href="#syncfusionblazorinputs" aria-label="Blazor Input NuGet Package">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="#syncfusionblazornavigations" aria-label="Blazor Navigation NuGet Package">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="#syncfusionblazorpopups" aria-label="Blazor Popup NuGet Package">Syncfusion.Blazor.Popups</a></li>
+<li><a href="#syncfusionblazorspinner" aria-label="Blazor Spinner NuGet Package">Syncfusion.Blazor.Spinner</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.ExcelExport.Net.Core/" target="_blank" aria-label="Syncfusion ExcelExport NuGet Package">Syncfusion.ExcelExport.Net.Core</a></li>
 </ul>
 </td>
 </tr>
@@ -1688,20 +1688,20 @@ The Blazor Smith Chart is a control for showing the parameters of transmission l
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.SmithChart/">Syncfusion.Blazor.SmithChart</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.SmithChart/" aria-label="Blazor Smith Chart NuGet Package">Syncfusion.Blazor.SmithChart</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/smith-chart/getting-started-webapp">Smith Chart</a>
+<a href="https://blazor.syncfusion.com/documentation/smith-chart/getting-started-webapp" aria-label="Blazor Smith Chart Component">Smith Chart</a>
 </td>
 <td>
 SfSmithChart
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazordatavizcommon">Syncfusion.Blazor.DataVizCommon</a> (Utilizing from v19.1.0.54)</li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/">Syncfusion.PdfExport.Net.Core</a> (Utilizing from v19.1.0.54)</li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazordatavizcommon" aria-label="Blazor DataVizCommon NuGet Package">Syncfusion.Blazor.DataVizCommon</a> (Utilizing from v19.1.0.54)</li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" aria-label="Syncfusion PdfExport NuGet Package">Syncfusion.PdfExport.Net.Core</a> (Utilizing from v19.1.0.54)</li>
 </ul>
 </td>
 </tr>
@@ -1728,20 +1728,20 @@ The Blazor Sparkline Charts is a replacement for normal charts to display trends
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Sparkline/">Syncfusion.Blazor.Sparkline</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Sparkline/" aria-label="Blazor Sparkline NuGet Package">Syncfusion.Blazor.Sparkline</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/sparkline/getting-started-webapp">Sparkline</a>
+<a href="https://blazor.syncfusion.com/documentation/sparkline/getting-started-webapp" aria-label="Blazor Sparkline Component">Sparkline</a>
 </td>
 <td>
 SfSparkline
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazordatavizcommon">Syncfusion.Blazor.DataVizCommon</a> (Utilizing from v19.1.0.54)</li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a> (Utilizing from v19.2.0.48)</li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazordatavizcommon" aria-label="Blazor DataVizCommon NuGet Package">Syncfusion.Blazor.DataVizCommon</a> (Utilizing from v19.1.0.54)</li>
+<li><a href="#syncfusionblazorpopups" aria-label="Blazor Popup NuGet Package">Syncfusion.Blazor.Popups</a> (Utilizing from v19.2.0.48)</li>
 </ul>
 </td>
 </tr>
@@ -1768,16 +1768,16 @@ The Blazor Spinner is a loading indicator that denotes long-running tasks with n
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Spinner/">Syncfusion.Blazor.Spinner</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Spinner/" aria-label="Blazor Spinner NuGet Package">Syncfusion.Blazor.Spinner</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/spinner/getting-started-webapp">Spinner</a>
+<a href="https://blazor.syncfusion.com/documentation/spinner/getting-started-webapp" aria-label="Blazor Spinner Component">Spinner</a>
 </td>
 <td>
 SfSpinner
 </td>
 <td>
-<a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a>
+<a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a>
 </td>
 </tr>
 </table>
@@ -1803,14 +1803,14 @@ The Blazor SplitButtons package contains UI components such as DropDownButton, S
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.SplitButtons/">Syncfusion.Blazor.SplitButtons</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.SplitButtons/" aria-label="Blazor SplitButton NuGet Package">Syncfusion.Blazor.SplitButtons</a>
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/button-group/getting-started-with-web-app">ButtonGroup</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/drop-down-menu/getting-started-with-web-app">DropDownButton</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/progress-button/getting-started-webapp">ProgressButton</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/split-button/getting-started-webapp">SplitButton</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/button-group/getting-started-with-web-app" aria-label="Blazor ButtonGroup Component">ButtonGroup</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/drop-down-menu/getting-started-with-web-app" aria-label="Blazor DropDownButton Component">DropDownButton</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/progress-button/getting-started-webapp" aria-label="Blazor ProgressButton Component">ProgressButton</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/split-button/getting-started-webapp" aria-label="Blazor SplitButton Component">SplitButton</a></li>
 </ul>
 </td>
 <td>
@@ -1823,10 +1823,10 @@ The Blazor SplitButtons package contains UI components such as DropDownButton, S
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazorbuttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazorpopups" aria-label="Blazor Popup NuGet Package">Syncfusion.Blazor.Popups</a></li>
+<li><a href="#syncfusionblazorspinner" aria-label="Blazor Spinner NuGet Package">Syncfusion.Blazor.Spinner</a></li>
 </ul>
 </td>
 </tr>
@@ -1853,21 +1853,21 @@ The Blazor Stock Chart is an easy-to-use financial charting package to track and
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.StockChart/">Syncfusion.Blazor.StockChart</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.StockChart/" aria-label="Blazor Stock Chart NuGet Package">Syncfusion.Blazor.StockChart</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/stock-chart/getting-started-webapp">Stock Chart</a>
+<a href="https://blazor.syncfusion.com/documentation/stock-chart/getting-started-webapp" aria-label="Blazor Stock Chart Component">Stock Chart</a>
 </td>
 <td>
 SfStockChart
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorrangenavigator">Syncfusion.Blazor.RangeNavigator</a> (Utilizing from v19.1.0.54)</li>
-<li><a href="#syncfusionblazorcalendars">Syncfusion.Blazor.Calendars</a> (Utilized up to v18.4.0.49)</li>
-<li><a href="#syncfusionblazorcharts">Syncfusion.Blazor.Charts</a> (Utilized up to v18.4.0.49)</li>
-<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a> (Utilized up to v18.4.0.49)</li>
-<li><a href="#syncfusionblazorsplitbuttons">Syncfusion.Blazor.SplitButtons</a> (Utilized up to v18.4.0.49)</li>
+<li><a href="#syncfusionblazorrangenavigator" aria-label="Blazor RangeNavigator NuGet Package">Syncfusion.Blazor.RangeNavigator</a> (Utilizing from v19.1.0.54)</li>
+<li><a href="#syncfusionblazorcalendars" aria-label="Blazor Calendar NuGet Package">Syncfusion.Blazor.Calendars</a> (Utilized up to v18.4.0.49)</li>
+<li><a href="#syncfusionblazorcharts" aria-label="Blazor Chart NuGet Package">Syncfusion.Blazor.Charts</a> (Utilized up to v18.4.0.49)</li>
+<li><a href="#syncfusionblazornavigations" aria-label="Blazor Navigation NuGet Package">Syncfusion.Blazor.Navigations</a> (Utilized up to v18.4.0.49)</li>
+<li><a href="#syncfusionblazorsplitbuttons" aria-label="Blazor SplitButton NuGet Package">Syncfusion.Blazor.SplitButtons</a> (Utilized up to v18.4.0.49)</li>
 </ul>
 </td>
 </tr>
@@ -1891,7 +1891,7 @@ This package contains the Blazor UI components theme files.
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Themes/">Syncfusion.Blazor.Themes</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Themes/" aria-label="Blazor Theme NuGet Package">Syncfusion.Blazor.Themes</a>
 </td>
 <td>
 <ul>
@@ -1932,22 +1932,22 @@ Blazor Tree Grid is a feature-rich control used to visualize self-referential an
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.TreeGrid/">Syncfusion.Blazor.TreeGrid</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.TreeGrid/" aria-label="Blazor TreeGrid NuGet Package">Syncfusion.Blazor.TreeGrid</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/treegrid/getting-started-webapp">TreeGrid</a>
+<a href="https://blazor.syncfusion.com/documentation/treegrid/getting-started-webapp" aria-label="Blazor TreeGrid Component">TreeGrid</a>
 </td>
 <td>
 SfTreeGrid
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazorgrid">Syncfusion.Blazor.Grid</a></li>
-<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazorgrid" aria-label="Blazor DataGrid NuGet Package">Syncfusion.Blazor.Grid</a></li>
+<li><a href="#syncfusionblazornavigations" aria-label="Blazor Navigation NuGet Package">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="#syncfusionblazorpopups" aria-label="Blazor Popup NuGet Package">Syncfusion.Blazor.Popups</a></li>
+<li><a href="#syncfusionblazorspinner" aria-label="Blazor Spinner NuGet Package">Syncfusion.Blazor.Spinner</a></li>
 </ul>
 </td>
 </tr>
@@ -1974,19 +1974,19 @@ Blazor TreeMap is a feature-rich component used to visualize both hierarchical a
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.TreeMap/">Syncfusion.Blazor.TreeMap</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.TreeMap/" aria-label="Blazor TreeMap NuGet Package">Syncfusion.Blazor.TreeMap</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/treemap/getting-started-webapp">TreeMap</a>
+<a href="https://blazor.syncfusion.com/documentation/treemap/getting-started-webapp" aria-label="Blazor TreeMap Component">TreeMap</a>
 </td>
 <td>
 SfTreeMap
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank">Syncfusion.PdfExport.Net.Core</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank" aria-label="Syncfusion PdfExport NuGet Package">Syncfusion.PdfExport.Net.Core</a></li>
 </ul>
 </td>
 </tr>

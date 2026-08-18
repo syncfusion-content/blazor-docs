@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor OTP Input Component | Syncfusion®
-description: Learn about accessibility features in Blazor OTP Input component including WAI-ARIA support, keyboard navigation, and assistive technology compatibility.
+title: Accessibility in Blazor OTP Input | Syncfusion
+description: Learn how Blazor OTP Input supports accessibility with ARIA roles, keyboard navigation, and screen reader compatibility.
 platform: Blazor
 control: OTP Input
 documentation: ug
 ---
 
-# Accessibility in Blazor OTP Input component
+# Accessibility in Blazor OTP Input
 
 The Blazor OTP Input component follows established accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

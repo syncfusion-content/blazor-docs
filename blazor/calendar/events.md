@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Calendar Component | Syncfusion®
-description: Checkout and learn here all features about available Events in Blazor Calendar component and much more.
+title: Events in Blazor Calendar | Syncfusion®
+description: Handle Blazor Calendar events such as ValueChange, Navigated, and OnRenderDayCell to react to user selections and custom day-cell rendering.
 platform: Blazor
 control: Calendar
 documentation: ug
 ---
 
-# Events in Blazor Calendar Component
+# Events in Blazor Calendar
 
 This section lists the events of the [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) component and describes when they are triggered during user interaction and rendering.
 

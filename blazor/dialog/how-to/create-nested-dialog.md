@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create nested Dialog in Blazor Dialog Component | Syncfusion®
-description: Checkout and learn here all about creating nested Dialog in Blazor Dialog component and much more details.
+title: How to create a nested Dialog in Blazor Dialog | Syncfusion®
+description: Create a Blazor Dialog nested inside another dialog by placing a child SfDialog in the parent's content to open layered dialogs.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Create Nested Dialog in Blazor Dialog Component
+# How to create a nested Dialog in Blazor Dialog
 
 A Dialog can be nested within another Dialog. The following sample contains parent and child Dialog (inner Dialog).
 

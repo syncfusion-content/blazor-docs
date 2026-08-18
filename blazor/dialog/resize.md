@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Resizing in Blazor Dialog Component | Syncfusion®
-description: Checkout and learn here all the features about Resizing in Blazor Dialog component and much more details.
+title: Resizing in Blazor Dialog | Syncfusion®
+description: Allow users to resize the Blazor Dialog by dragging its edges or corners, with configurable min and max width and height constraints.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Resizing in Blazor Dialog Component
+# Resizing in Blazor Dialog
 
 The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) supports resizing feature. To resize the dialog, select and resize it by using its resize handles (grip areas) or hovering on any of the edges or borders of the dialog within the sample container. This allows users to dynamically adjust the dialog size to better accommodate content or fit their preferred viewing area.
 

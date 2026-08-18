@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Methods in Blazor TextArea Component | Syncfusion®
-description: Checkout and learn the features about the list of all available methods in the Blazor TextArea component and much more details.
+title: Methods in Blazor TextArea | Syncfusion
+description: Use Blazor TextArea async methods such as FocusAsync to move input focus programmatically in your application.
 platform: Blazor
 control: TextArea
 documentation: ug
 ---
 
-# Methods in Blazor TextArea Component
+# Methods in Blazor TextArea
 
 This section describes the methods available for interacting with the TextArea component.
 

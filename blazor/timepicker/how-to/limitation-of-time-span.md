@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Limitations of TimeSpan DataType in Blazor TimePicker | Syncfusion®
-description: Learn here all about Limitations of TimeSpan DataType in Blazor TimePicker component and much more details.
+title: How to handle TimeSpan limitations in Blazor TimePicker | Syncfusion
+description: Learn how Blazor TimePicker handles TimeSpan custom format limitations for separators and literals in display.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# Limitations of TimeSpan DataType in Blazor TimePicker Component
+# How to handle TimeSpan limitations in Blazor TimePicker
 
 Based on [C# standard behavior](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-timespan-format-strings), the standard TimeSpan format specifiers do not include separator symbols, such as the symbols that separate hours from minutes, or seconds from fractional seconds. These symbols must be included in the custom format string as string literals.
 

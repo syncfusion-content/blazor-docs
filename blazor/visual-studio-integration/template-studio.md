@@ -78,7 +78,7 @@ N> The Syncfusion® Blazor extensions for Visual Studio require Essential Studio
 
 9. The created project includes the chosen theme, Syncfusion NuGet package versions, authentication settings, and sample render code for the selected components.
 
-10. If you installed the trial setup or NuGet packages from nuget.org, register the Syncfusion® license key in your application. Syncfusion® introduced the licensing system in the 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key. Refer to this [blog post](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) for background on the licensing changes introduced in Essential Studio®.
+10. If you installed the trial setup or NuGet packages from nuget.org, register the Syncfusion® license key in your application. Syncfusion® introduced the licensing system in the 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key. Refer to this [blog post](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2) for background on the licensing changes introduced in Essential Studio®.
 
 ## Authentication Configuration
 

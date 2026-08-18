@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Markers in Blazor Sparkline Component | Syncfusion®
-description: Check out and learn about marker options and customization in the Blazor Sparkline component and much more details.
+title: Blazor Sparkline Charts Markers Examples | Syncfusion®
+description: Learn how to add and customize markers in Syncfusion Blazor Sparkline using SparklineMarkerSettings for special points and styles.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Markers in Blazor Sparkline Component
+# Blazor Sparkline Charts Markers
 
 Data markers provide information about data points in the Sparkline series.
 

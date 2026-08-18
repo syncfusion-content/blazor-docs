@@ -19,7 +19,7 @@ Before you begin, confirm the following:
 * The .NET SDK that matches the target Syncfusion Blazor version is installed.
 * You are signed in to Windows with administrator rights.
 * The downloaded Blazor offline installer is available locally. If you have not downloaded it yet, see [Download the Blazor offline installer](https://blazor.syncfusion.com/documentation/installation/offline-installer/how-to-download).
-* A trial unlock key, a licensed unlock key, or valid Syncfusion<sup style="font-size:70%">&reg;</sup> account credentials are available to unlock the installer. See [How to generate an unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) for details.
+* A trial unlock key, a licensed unlock key, or valid Syncfusion<sup style="font-size:70%">&reg;</sup> account credentials are available to unlock the installer. See [How to generate an unlock key](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) for details.
 
 ## Install with the user interface
 
@@ -48,7 +48,7 @@ The steps below show how to install the Essential Studio<sup style="font-size:70
 
    The trial unlock key is valid for 30 days; expired keys are not accepted.
 
-   To learn how to generate an unlock key for both trial and licensed products, see the [How to generate an unlock key](https://www.syncfusion.com/kb/2326) Knowledge Base article.
+   To learn how to generate an unlock key for both trial and licensed products, see the [How to generate an unlock key](https://support.syncfusion.com/kb/article/2757/how-to-generate-syncfusion-setup-unlock-key-from-syncfusion-support-account) Knowledge Base article.
 
    ![Offline installer Use unlock key wizard](images/webofflineinstaller-3.webp)
 

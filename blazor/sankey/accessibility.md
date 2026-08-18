@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Sankey Component | Syncfusion®
-description: Checkout and learn here all about Accessibility using Keyboard navigation in Blazor Sankey component and more.
+title: Blazor Sankey Diagram Accessibility | Syncfusion®
+description: Learn how the Blazor Sankey Diagram supports WCAG 2.2, Section 508, screen readers, RTL, color contrast, and full keyboard navigation.
 platform: Blazor
 control: Sankey
 documentation: ug
 ---
 
-# Accessibility in Blazor Sankey Component
+# Blazor Sankey Diagram Accessibility
 
 The Blazor Sankey component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

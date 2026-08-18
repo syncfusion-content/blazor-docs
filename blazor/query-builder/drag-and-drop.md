@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Drag and Drop in Blazor QueryBuilder Component | Syncfusion®
-description: Checkout and learn here all about Drag and Drop in Blazor QueryBuilder component with examples and much more details.
+title: Drag and Drop in Blazor Query Builder | Syncfusion
+description: Reorder rules and groups in Blazor Query Builder using drag-and-drop with hooks for start, drag, and drop events.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Drag and drop in Blazor QueryBuilder Component
+# Drag and Drop in Blazor Query Builder
 
 The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) supports drag-and-drop reordering of rules and groups for a more intuitive query-building experience. Enable this per instance by setting the [`AllowDragAndDrop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_AllowDragAndDrop) property to `true` (default is `false`). Rules and groups can be dragged within the same group or across groups; items retain their type (a rule cannot be dropped as a group and vice versa).
 

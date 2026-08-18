@@ -1,13 +1,13 @@
 ---
 layout: post
-title: State Persistence in Blazor Dialog Component | Syncfusion®
-description: Learn how to implement and manage state persistence in the Blazor Dialog component to maintain dialog state across interactions.
+title: Persistent State in Blazor Dialog | Syncfusion®
+description: Implement and manage state persistence in the Blazor Dialog to maintain dialog state, position, and size across user interactions.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Enable State Persistence in Blazor Dialog Component
+# Persistent State in Blazor Dialog
 
 To ensure the Blazor Dialog component retains its size and position across page reloads and reopen actions, set the [`EnablePersistence`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_EnablePersistence) property to `true`. Additionally, enable the [`AllowPrerender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowPrerender) property to maintain the dialog's DOM elements even when it is hidden.
 

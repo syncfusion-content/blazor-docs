@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Icons in Blazor Dropdown Menu Component | Syncfusion®
-description: Checkout and learn here all the features about Icons in Blazor Dropdown Menu component and much more details.
+title: Icons in Blazor Dropdown Menu | Syncfusion®
+description: Add leading and popup-item icons to the Blazor Dropdown Menu using the IconCss and IconPosition properties for richer visuals.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
 ---
 
-# Icons in Blazor Dropdown Menu Component
+# Icons in Blazor Dropdown Menu
 
 ## Dropdown Menu icons
 

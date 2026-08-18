@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize the up and down arrow in Numeric TextBox | Syncfusion®
-description: Learn how to customize spin button up and down arrows in Blazor Numeric TextBox with custom icons and styling.
+description: Customize spin up and down arrows in Blazor Numeric TextBox using e-spin-up and e-spin-down CSS classes.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug

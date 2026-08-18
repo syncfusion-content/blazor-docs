@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Blazor Mention Component | Syncfusion®
-description: Checkout and learn here all the features about localization in Blazor Mention component and much more details.
+title: Localization in Blazor Mention | Syncfusion
+description: Localize Blazor Mention UI strings to display content in any language supported by your application.
 platform: Blazor
 control: Mention
 documentation: ug
 ---
 
-# Localization in Blazor Mention Component
+# Localization in Blazor Mention
 
 ## Localization
 

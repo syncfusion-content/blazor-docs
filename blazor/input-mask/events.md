@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Input Mask Component | Syncfusion®
-description: Checkout and learn here all the features and Events in Blazor Input Mask component and much more details.
+title: Events in Blazor Input Mask | Syncfusion
+description: Use Blazor Input Mask events such as Blur, Created, Destroyed, and Focus to handle lifecycle and focus changes.
 platform: Blazor
 control: Input Mask
 documentation: ug
 ---
 
-# Events in Blazor Input Mask Component
+# Events in Blazor Input Mask
 
 This section lists the events available in the Blazor Input Mask (MaskedTextBox) component and when they are raised. Use these events to react to focus changes, value updates, and lifecycle moments. For reference, see the SfMaskedTextBox API.
 

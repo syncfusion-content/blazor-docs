@@ -1,13 +1,13 @@
 ---
 layout: post
-title: CSS Structure in Blazor ListView Component | Syncfusion®
-description: Checkout and learn here all the features about CSS Structure in Blazor ListView component and much more details.
+title: Style and Appearance in Blazor ListView | Syncfusion
+description: Customize the appearance of Blazor ListView with CSS classes for container, items, headers, and selection states.
 platform: Blazor
 control: Listview
 documentation: ug
 ---
 
-# Styles and Appearances in Blazor ListView Component
+# Style and Appearance in Blazor ListView
 
 Customize the appearance of the ListView by overriding the component's default CSS. The following table lists commonly used CSS selectors and the corresponding UI areas they affect. For consistent theming across applications, consider generating a custom theme with [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 

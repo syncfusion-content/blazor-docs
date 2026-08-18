@@ -49,5 +49,5 @@ For the complete registration steps, see [Register the license key in an applica
 
 To learn how to use the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in your application, refer to the following getting started topics:
 
-* Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in a [Blazor Server app](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac) on Linux.
-* Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in a [Blazor WebAssembly app](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac) on Linux.
+* Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in a [Blazor Server app](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) on Linux.
+* Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in a [Blazor WebAssembly app](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) on Linux.

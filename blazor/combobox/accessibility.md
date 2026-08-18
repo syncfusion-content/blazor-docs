@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn here all the features about Accessibility in Blazor ComboBox component and much more.
+title: Accessibility in Blazor ComboBox | Syncfusion®
+description: Learn how Blazor ComboBox applies WAI-ARIA roles, states, and properties with complete keyboard support for assistive technology users.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Accessibility in Blazor ComboBox Component
+# Accessibility in Blazor ComboBox
 
 The [Blazor ComboBox](https://www.syncfusion.com/blazor-components/blazor-combobox) component has been designed with the `WAI-ARIA` specifications in mind, and applies the WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized
 by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Message Component | Syncfusion®
-description: Checkout and learn here all the features about Accessibility in Blazor Message component and much more details.
+title: Accessibility in Blazor Message | Syncfusion
+description: Learn how Blazor Message supports accessibility standards, including keyboard navigation, screen readers, and ARIA roles.
 platform: Blazor
 control: Message
 documentation: ug
 ---
 
-# Accessibility in Blazor Message Component
+# Accessibility in Blazor Message
 
 The Blazor Message component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
