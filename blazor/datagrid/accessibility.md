@@ -50,10 +50,10 @@ The Blazor DataGrid implements the [WAI-ARIA grid pattern](https://www.w3.org/WA
 | Attribute | Purpose |
 |-----------|---------|
 | `role="grid"` | Identifies the element as a grid container. |
-| `role="row"` | Defines a row containing cells within the grid. |
-| `role="rowgroup"` | Groups multiple rows, such as in grouped or hierarchical grids. |
+| `role="row"` | Defines a row containing cells within the DataGrid. |
+| `role="rowgroup"` | Groups multiple rows, such as in grouped or hierarchical DataGrids. |
 | `role="columnheader"` | Specifies a header cell providing column information. |
-| `role="gridcell"` | Indicates a data cell within the grid. |
+| `role="gridcell"` | Indicates a data cell within the DataGrid. |
 | `role="button"` | Represents interactive elements that function as buttons. |
 | `role="search"` | Identifies search regions, such as in the toolbar. |
 | `role="presentation"` | Hides elements from assistive technologies when not relevant. |
@@ -63,7 +63,7 @@ The Blazor DataGrid implements the [WAI-ARIA grid pattern](https://www.w3.org/WA
 | `aria-rowspan` | Indicates the number of rows spanned by a cell. |
 | `aria-colspan` | Indicates the number of columns spanned by a cell. |
 | `aria-selected` | Indicates the selection state of rows or cells. |
-| `aria-expanded` | Shows whether expand/collapse icons are expanded in hierarchical or grouped grids. |
+| `aria-expanded` | Shows whether expand/collapse icons are expanded in hierarchical or grouped DataGrids. |
 | `aria-sort` | Indicates sorting order (ascending or descending) for columns. |
 | `aria-owns` | Defines relationships between elements for visual or functional context. |
 | `aria-hidden` | Hides elements from assistive technologies. |
@@ -81,8 +81,8 @@ Accessibility checker tools may report the following known issues:
 * **Content not within a landmark element:** Add page-level landmarks (`<header>`, `<main>`, `<nav>`) to scope interactive regions.
 * **Multiple elements with role="search" lacking unique labels:** Assign unique aria-label or aria-labelledby attributes to each search region.
 * **Text contrast (WCAG 1.4.3):** Improve contrast ratio to at least 4.5:1 for standard text using CSS. The "4.10" label is the legacy WCAG 2.0 numbering for the same criterion; current WCAG 2.2 references it as [Success Criterion 1.4.3 Contrast (Minimum)](https://www.w3.org/TR/WCAG22/#contrast-minimum).
-* **Grid lacks a programmatic name:** Set aria-label or aria-labelledby on the main Grid container.
-* **role="rowgroup" not owned by a grid:** Ensure grouped content remains within the element that has role="grid".
+* **Grid lacks a programmatic name:** Set aria-label or aria-labelledby on the main DataGrid container.
+* **role="rowgroup" not owned by a grid:** Ensure grouped content remains within the element that has role="grid" in the DataGrid.
 
 To improve accessibility, apply page landmarks, assign unique labels to search regions, and verify that color contrast meets WCAG 2.2 AA standards. When customizing styles, maintain visible focus indicators and a logical focus order.
 
