@@ -18,7 +18,7 @@ This guide explains how to create **Blazor Server** and **Blazor WebAssembly (WA
 - Run the installer and follow the on‑screen instructions to complete the installation.
 - After installation finishes, launch JetBrains Rider to verify the setup and begin your Blazor development.
 
-Choose the project type based on your requirements, either a [Blazor Server](#creating-a-blazor-server-app) App or a [Blazor WebAssembly (WASM)](#creating-a-blazor-webassembly-standalone-app) App.
+Choose the project type based on your requirements, either a [Blazor Server App](#creating-a-blazor-server-app) or a [Blazor WebAssembly (WASM) App](#creating-a-blazor-webassembly-standalone-app).
 
 ## Creating a Blazor WebAssembly Standalone App
 
@@ -35,16 +35,16 @@ Follow these steps to create a Blazor application in Rider:
 
 ![Jetbrains project creation for wasm app](images/project-creation-wasm.webp)
 
+Once the project is created, Rider opens the solution and restores the required dependencies automatically.
+
 To quickly get started with a Blazor WebAssembly application in JetBrains Rider with Blazor components, watch the following video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=hLBBg-mkC2Y" %}
 
-Once the project is created, Rider opens the solution and restores the required dependencies automatically.
-
 ### Adding Blazor NuGet packages
 
-After creating the Blazor project, you must install the required NuGet packages to use Blazor components.
+After creating the Blazor project, you must install the required NuGet packages to use [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid).
 
 **Install required NuGet packages**
 
@@ -55,7 +55,7 @@ After creating the Blazor project, you must install the required NuGet packages 
     - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
     - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
-Once the installation is complete, the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) are ready to be used in your application.
+Once the installation is complete, the **Blazor DataGrid** are ready to be used in your application.
 
 ### Register the Blazor services
 
@@ -165,7 +165,7 @@ Once the project is created, Rider opens the solution and restores the required 
 
 ### Adding Blazor NuGet packages
 
-After creating the Blazor project, you must install the required NuGet packages to use Blazor components.
+After creating the Blazor project, you must install the required NuGet packages to use [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid).
 
 **Install required NuGet packages**
 
@@ -176,7 +176,7 @@ After creating the Blazor project, you must install the required NuGet packages 
     - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
     - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
-Once the installation is complete, the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) are ready to be used in your application.
+Once the installation is complete, the **Blazor DataGrid** are ready to be used in your application.
 
 ### Register the Blazor services
 
