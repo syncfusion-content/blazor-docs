@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Creating a Stripe payment gateway with Blazor components | Syncfusion
+title: Getting Started with the Stripe Payment Gateway in Blazor components | Syncfusion
 description: Step-by-step guide to build a stripe payment gateway in Blazor app, covering product listings, cart management, checkout and stripe payment with Blazor components.
 platform: Blazor
 control: Common
@@ -13,7 +13,7 @@ This guide explains how to integrate the Stripe payment gateway in a Blazor appl
 
 ## Prerequisites
 
-* [.NET 10 SDK or later](https://dotnet.microsoft.com/en-us/download/dotnet)
+* [.NET 8 SDK or later](https://dotnet.microsoft.com/en-us/download/dotnet)
 * [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 * A [Stripe account](https://dashboard.stripe.com/register) in test mode with access to API keys and webhook signing secrets
 
@@ -25,7 +25,7 @@ This article adds Stripe checkout on top of an [existing Blazor shopping cart ap
 
 ### Install required Blazor packages
 
-Install the [Stripe.net](https://www.nuget.org/packages/Stripe.net) NuGet packages.
+Install the [Stripe.net](https://www.nuget.org/packages/Stripe.net) NuGet package.
 
 * [Stripe.net](https://www.nuget.org/packages/Stripe.net)
 
@@ -49,54 +49,24 @@ Open the `Components/_Imports.razor` file and import the namespaces required by 
 {% highlight razor tabtitle="_Imports.razor" %}
 
 @using Microsoft.JSInterop
-@using ShoppingCart.Models
-@using ShoppingCart.Services
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.Inputs
-@using Syncfusion.Blazor.Spinner
 
 {% endhighlight %}
 {% endtabs %}
 
-### Register Blazor service
+### Bind the Stripe configuration
 
-Add the Blazor service to the `~/Program.cs` file to enable Blazor components in the application, and bind the Stripe configuration section to the `StripeOptions` model.
+Bind the Stripe configuration section to the `StripeOptions` model in the `~/Program.cs` file. 
 
 {% tabs %}
 {% highlight csharp tabtitle="Program.cs" %}
-
-using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.Configure<StripeOptions>(
     builder.Configuration.GetSection(StripeOptions.SectionName));
 
-builder.Services.AddSyncfusionBlazor();
-
 {% endhighlight %}
 {% endtabs %}
-
-### Add stylesheet and script resources
-
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the `App.razor` file.
-
-{% tabs %}
-{% highlight razor tabtitle="App.razor" %}
-
-<head>
-    ...
-    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-</head>
-<body>
-    ...
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
-</body>
-
-{% endhighlight %}
-{% endtabs %}
-
-N> `Stripe.js` is loaded on demand by `wwwroot/js/payment.js` only when the Checkout page mounts the payment form. This approach reduces initial page load time for pages that do not process payments and is a Stripe security best practice. Do not add a static `<script src="https://js.stripe.com/v3"></script>` tag to `App.razor`.
 
 ## Project structure
 
@@ -125,7 +95,7 @@ This structure helps keep the application maintainable and scalable by clearly s
 
 ## Define data models
 
-The checkout flow uses two models to bridge the application's order data with Stripe's payment objects. The `StripeOptions` model represents the Stripe API configuration bound from `appsettings.json`. The `Order` model represents an order and stores the Stripe Payment Intent identifier, the latest Payment Intent status, the resolved Payment Method identifier, and the associated shipping and payment details.
+The checkout flow uses two models to bridge the application's order data with Stripe's payment objects. The `StripeOptions` model represents the Stripe API configuration bound from `appsettings.json`. The `Order` model represents an order and stores the Stripe Payment Intent identifier and the associated shipping and payment details.
 
 {% tabs %}
 {% highlight csharp tabtitle="Models/StripeOptions.cs" %}
@@ -146,40 +116,68 @@ namespace ShoppingCart.Models
 {% endhighlight %}
 {% highlight csharp tabtitle="Models/Order.cs" %}
 
-public class Order
-{
-    public int OrderId { get; set; }
-    public List<CartItem> Items { get; set; } = new();
-    public decimal TotalAmount { get; set; }
-    public DateTime OrderDate { get; set; }
-    public string Status { get; set; } = "Pending";
+    public class Order
+    {
+        public int OrderId { get; set; }
+        public List<CartItem> Items { get; set; } = new();
+        public decimal TotalAmount { get; set; }
+        public DateTime OrderDate { get; set; }
+        public string Status { get; set; } = "Pending";
 
-    // Stripe payment references (NEVER raw card data)
-    public string? PaymentIntentId { get; set; }
-    public string? PaymentStatus { get; set; }   // requires_payment_method | processing | succeeded | canceled
-    public string? PaymentMethodId { get; set; }
-    public string Currency { get; set; } = "usd";
+        // Stripe payment references (NEVER raw card data)
+        public string? PaymentIntentId { get; set; }
+        public string? PaymentStatus { get; set; }   // requires_payment_method | processing | succeeded | canceled
+        public string? PaymentMethodId { get; set; }
+        public string Currency { get; set; } = "usd";
 
-    public ShippingInfo Shipping { get; set; } = new();
-    public PaymentInfo Payment { get; set; } = new();
-}
+        public ShippingInfo Shipping { get; set; } = new();
+        public PaymentInfo Payment { get; set; } = new();
+    }
 
-public class PaymentInfo
-{
+    public class ShippingInfo
+    {
+        [Required(ErrorMessage = "Full name is required")]
+        public string FullName { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Address is required")]
+        public string Address { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "City is required")]
+        public string City { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "State is required")]
+        public string State { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "ZIP code is required")]
+        [RegularExpression(@"^\d{5}(-\d{4})?$", ErrorMessage = "Enter a valid ZIP code")]
+        public string ZipCode { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Country is required")]
+        public string Country { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Phone is required")]
+        [Phone(ErrorMessage = "Enter a valid phone number")]
+        public string Phone { get; set; } = string.Empty;
+
+        // Optional: separate billing email, used by Stripe receipt
+        [EmailAddress(ErrorMessage = "Enter a valid email")]
+        public string? Email { get; set; }
+    }
+
     // Holds NON-SENSITIVE billing metadata for display only.
     // Real card data is captured by Stripe Elements and never touches this object.
-    public string? CardBrand { get; set; }
-    public string? CardLast4 { get; set; }
-    public int? CardExpMonth { get; set; }
-    public int? CardExpYear { get; set; }
-    public string? BillingName { get; set; }
-    public string? BillingEmail { get; set; }
-}
+    public class PaymentInfo
+    {
+        public string? CardBrand { get; set; }
+        public string? CardLast4 { get; set; }
+        public int? CardExpMonth { get; set; }
+        public int? CardExpYear { get; set; }
+        public string? BillingName { get; set; }
+        public string? BillingEmail { get; set; }
+    }
 
 {% endhighlight %}
 {% endtabs %}
-
-`PaymentIntentId` stores the Stripe Payment Intent identifier for the order, `PaymentStatus` mirrors the Stripe Payment Intent status, `PaymentMethodId` is captured once the Payment Intent is confirmed, and `PaymentInfo` holds only non-sensitive display metadata such as the card brand and last four digits.
 
 ## Configure Stripe settings
 
@@ -205,9 +203,10 @@ Populate the actual key values locally using .NET User Secrets so that the **Sec
 {% tabs %}
 {% highlight powershell tabtitle="User Secrets" %}
 
+dotnet user-secrets init
 dotnet user-secrets set "Stripe:PublishableKey" "pk_test_..."
 dotnet user-secrets set "Stripe:SecretKey" "sk_test_..."
-
+dotnet user-secrets set "Stripe:WebhookSecret" "whsec_..."
 
 {% endhighlight %}
 {% endtabs %}
@@ -215,8 +214,6 @@ dotnet user-secrets set "Stripe:SecretKey" "sk_test_..."
 Retrieve the **Publishable key** and **Secret key** from the Stripe Dashboard under **Developers > API keys**. Create a webhook endpoint under **Developers > Webhooks** pointing to `https://<your-app-domain>/api/stripe/webhook`, subscribe it to `payment_intent.succeeded`, `payment_intent.payment_failed`, and `charge.refunded`, and copy the resulting **Signing secret** into `Stripe:WebhookSecret`.
 
 ## Create the services
-
-In a Blazor application, services are used to handle business logic and maintain shared state across components. They are registered with dependency injection and allow multiple pages and components to access the same data in a consistent and controlled manner.
 
 The checkout flow uses two services: a scoped `IStripePaymentService` for communicating with the Stripe API, and a singleton `IOrderService` for storing and updating orders as the Payment Intent transitions through its lifecycle.
 
@@ -425,103 +422,15 @@ Register the payment-related services in `Program.cs` so they can be accessed th
 {% tabs %}
 {% highlight csharp tabtitle="Program.cs" %}
 
-```csharp
 builder.Services.AddSingleton<IOrderService, OrderService>();     // Singleton to persist orders across requests
 builder.Services.AddScoped<IStripePaymentService, StripePaymentService>();
-```
 
 {% endhighlight %}
 {% endtabs %}
+
+This tutorial changes `IOrderService` from scoped to singleton (and adds UpdateAsync) so order state survives across the webhook request. Replace the existing `AddScoped<IOrderService, OrderService>()` line from the shopping cart tutorial with `AddSingleton<IOrderService, OrderService>()` below. Don't add both.
 
 N> The `ICartService`, `IProductService`, and `IWishlistService` registrations are covered in [Creating a Shopping Cart with Blazor Components](https://blazor.syncfusion.com/documentation/tutorials/shopping-cart).
-
-## Add the Stripe webhook endpoint
-
-The Stripe webhook endpoint is registered as a minimal API in `Program.cs` to receive asynchronous payment status updates directly from Stripe. This endpoint must be mapped before any middleware that buffers or consumes the request body, because Stripe's signature check requires the raw, unmodified request bytes.
-
-{% tabs %}
-{% highlight csharp tabtitle="Program.cs" %}
-
-// Stripe requires the raw request body to validate the signature.
-app.MapPost("/api/stripe/webhook", async (HttpRequest request,
-                                         IStripePaymentService stripeService,
-                                         IOrderService orderService,
-                                         ILogger<Program> logger) =>
-{
-    // Read raw JSON
-    request.EnableBuffering();
-    using var reader = new StreamReader(request.Body, leaveOpen: true);
-    var json = await reader.ReadToEndAsync();
-    request.Body.Position = 0;
-
-    var signature = request.Headers["Stripe-Signature"].ToString();
-    var stripeEvent = stripeService.ConstructWebhookEvent(json, signature);
-
-    if (stripeEvent == null)
-    {
-        logger.LogWarning("Stripe webhook signature verification failed.");
-        return Results.BadRequest(new { error = "Invalid signature" });
-    }
-
-    switch (stripeEvent.Type)
-    {
-        case "payment_intent.succeeded":
-        {
-            var intent = stripeEvent.Data.Object as PaymentIntent;
-            if (intent != null)
-            {
-                var order = stripeService.GetOrderByPaymentIntentId(intent.Id);
-                if (order != null)
-                {
-                    order.PaymentStatus = intent.Status;
-                    order.Status = "Paid";
-                    order.PaymentMethodId = intent.PaymentMethodId;
-                    await orderService.UpdateAsync(order);
-                    logger.LogInformation("Order {OrderId} marked as Paid (PaymentIntent {IntentId})",
-                        order.OrderId, intent.Id);
-                }
-            }
-            break;
-        }
-        case "payment_intent.payment_failed":
-        {
-            var intent = stripeEvent.Data.Object as PaymentIntent;
-            if (intent != null)
-            {
-                var order = stripeService.GetOrderByPaymentIntentId(intent.Id);
-                if (order != null)
-                {
-                    order.PaymentStatus = intent.Status;
-                    order.Status = "Payment Failed";
-                    await orderService.UpdateAsync(order);
-                }
-            }
-            break;
-        }
-        case "charge.refunded":
-        {
-            var charge = stripeEvent.Data.Object as Charge;
-            if (charge?.PaymentIntentId != null)
-            {
-                var order = stripeService.GetOrderByPaymentIntentId(charge.PaymentIntentId);
-                if (order != null)
-                {
-                    order.Status = "Refunded";
-                    await orderService.UpdateAsync(order);
-                }
-            }
-            break;
-        }
-        default:
-            logger.LogInformation("Unhandled Stripe event type: {Type}", stripeEvent.Type);
-            break;
-    }
-
-    return Results.Ok();
-});
-
-{% endhighlight %}
-{% endtabs %}
 
 ## Create the JavaScript interop module
 
@@ -603,13 +512,15 @@ export function unmountPaymentElement() {
 {% endhighlight %}
 {% endtabs %}
 
-`mountPaymentElement` loads Stripe.js using the **Publishable key**, creates a Stripe `elements` instance scoped to the **Client Secret**, and mounts the Payment Element into the specified DOM element. `confirmPayment` calls `stripe.confirmPayment` with `redirect: "if_required"`, which keeps the user on the page for standard card payments and only redirects when an additional authentication step, such as 3D Secure, is required. `unmountPaymentElement` releases the mounted element and resets the module state.
+`mountPaymentElement` loads Stripe.js using the **Publishable key**, creates a Stripe `elements` instance scoped to the **Client Secret**, and mounts the Payment Element into the specified DOM element. `confirmPayment` calls `stripe.confirmPayment` with `redirect: "if_required"`, which keeps the user on the page for standard card payments. `unmountPaymentElement` releases the mounted element and resets the module state.
 
-## Create the checkout and order confirmation pages
+N> `Stripe.js` is loaded on demand by `wwwroot/js/payment.js` only when the Checkout page mounts the payment form. Do not add a static `<script src="https://js.stripe.com/v3"></script>` tag to `App.razor`.
+
+## Update the checkout and order confirmation pages
 
 The pages below demonstrate how the checkout flow integrates the Syncfusion Blazor components with Stripe Elements to collect shipping and card details, confirm the Payment Intent, and display the final order status. Each page binds its inputs to a strongly typed `Order` model and uses [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox), [Blazor MaskedTextBox](https://www.syncfusion.com/blazor-components/blazor-input-mask), [Blazor Spinner](https://www.syncfusion.com/blazor-components/blazor-spinner), and [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) components to capture user input and trigger actions.
 
-### Create the `Checkout` page
+### Update the `Checkout` page
 
 Collects shipping information, creates the Stripe Payment Intent, mounts the Stripe Payment Element into a plain HTML `<div>`, and submits the payment for confirmation.
 
@@ -887,11 +798,9 @@ Collects shipping information, creates the Stripe Payment Intent, mounts the Str
 {% endhighlight %}
 {% endtabs %}
 
-On first render, `OnAfterRenderAsync` places the order, creates the Stripe Payment Intent, and mounts the Payment Element inside the `<div id="stripe-payment-element">` container. On submit, `ProcessOrder` calls `confirmPayment` through JavaScript interop, updates the order status, clears the cart, and navigates to the order confirmation page.
-
 N> The `<div id="stripe-payment-element">` is not a Syncfusion component. It is a plain DOM element controlled entirely by `Stripe.js`, which keeps raw card data out of the ASP.NET Core server's request pipeline.
 
-### Create the `OrderConfirmation` page
+### Update the `OrderConfirmation` page
 
 Displays the final order status after checkout, using the order's `Status` and `PaymentStatus` values to determine which message to render.
 
@@ -1009,8 +918,6 @@ Displays the final order status after checkout, using the order's `Status` and `
 
 {% endhighlight %}
 {% endtabs %}
-
-This page retrieves the order using `IOrderService.GetOrderByIdAsync` and displays a **Payment Successful**, **Payment Failed**, or **Order Awaiting Payment** message based on `IsPaid` and `IsFailed`.
 
 ## Run the application
 
