@@ -9,9 +9,11 @@ documentation: ug
 
 # Footer Aggregates in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports calculating and displaying aggregate values in footer cells. Footer aggregates summarize column values across rows and render in the DataGrid footer. Use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate) property to render aggregate values in footer cells.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports calculating and displaying aggregate values in footer cells. Footer aggregates summarize column values across rows and are rendered in the DataGrid footer. Use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate) property to render aggregate values in footer cells.
 
 Access aggregate values inside `FooterTemplate` through the implicit template parameter **context**. Cast **context** to [AggregateTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateTemplateContext.html) to read properties such as **Sum, Average, Min, Max, Count, TrueCount,** and **FalseCount**.
+
+N> **TrueCount** and **FalseCount** properties apply only to boolean fields. These properties count the number of true and false values in the column respectively.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -74,7 +76,7 @@ Access aggregate values inside `FooterTemplate` through the implicit template pa
         {
 
         }
-        public OrderData(int? OrderID, string CustomerID,double Freight,string ShipName)
+        public OrderData(int? OrderID, string CustomerID, double? Freight, string ShipName)
         {
             this.OrderID = OrderID;
             this.CustomerID = CustomerID;                   
@@ -87,7 +89,6 @@ Access aggregate values inside `FooterTemplate` through the implicit template pa
         {
             if (Orders.Count() == 0)
             {
-                int code = 10;
                 for (int i = 1; i < 2; i++)
                 {
                     Orders.Add(new OrderData(10248, "VINET", 32.38, "Vins et alcools Cheval"));
@@ -99,7 +100,6 @@ Access aggregate values inside `FooterTemplate` through the implicit template pa
                     Orders.Add(new OrderData(10254, "CHOPS",32.38, "Chop-suey Chinese"));
                     Orders.Add(new OrderData(10255, "RICSU",41.34, "Richter Supermarkt"));
                     Orders.Add(new OrderData(10256, "WELLI",11.61, "Ernst Handel"));
-                    code += 5;
                 }
             }
             return Orders;
@@ -116,12 +116,12 @@ Access aggregate values inside `FooterTemplate` through the implicit template pa
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNBdtmjgrKMuuXxh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > Data source behavior:
-> - With local data, footer aggregates are calculated over the entire bound dataset.
-> - With remote data and paging, footer aggregates typically reflect only the current page unless the adaptor or server provides total summaries.
+> - With local data, footer aggregates are calculated over the complete bound dataset.
+> - With remote data and paging, footer aggregates usually reflect the current page unless the adaptor or server returns total summaries.
 
 ## Format aggregate values
 
-To format footer aggregate results in the Blazor DataGrid, use the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Format) property of the aggregate column. The Format string determines how the aggregate value is displayed and supports culture-aware currency, numeric, and date formats.
+To format footer aggregate results, use the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Format) property of the aggregate column. The Format value controls the display of the aggregate output and supports culture-aware numeric and currency formats.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -184,7 +184,7 @@ To format footer aggregate results in the Blazor DataGrid, use the [Format](http
         {
 
         }
-        public OrderData(int? OrderID, string CustomerID,double Freight,string ShipName)
+        public OrderData(int? OrderID, string CustomerID, double? Freight, string ShipName)
         {
             this.OrderID = OrderID;
             this.CustomerID = CustomerID;                   
@@ -197,7 +197,6 @@ To format footer aggregate results in the Blazor DataGrid, use the [Format](http
         {
             if (Orders.Count() == 0)
             {
-                int code = 10;
                 for (int i = 1; i < 2; i++)
                 {
                     Orders.Add(new OrderData(10248, "VINET", 32.38, "Vins et alcools Cheval"));
@@ -209,7 +208,6 @@ To format footer aggregate results in the Blazor DataGrid, use the [Format](http
                     Orders.Add(new OrderData(10254, "CHOPS",32.38, "Chop-suey Chinese"));
                     Orders.Add(new OrderData(10255, "RICSU",41.34, "Richter Supermarkt"));
                     Orders.Add(new OrderData(10256, "WELLI",11.61, "Ernst Handel"));
-                    code += 5;
                 }
             }
             return Orders;
@@ -224,3 +222,5 @@ To format footer aggregate results in the Blazor DataGrid, use the [Format](http
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNVHNmNgBgVnWONN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+N> The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Field) property determines which column is used for aggregate calculation, while the [ColumnName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_ColumnName) property determines which column displays the aggregate result. The aggregate value appears in the footer of the column specified by `ColumnName` rather than in the footer of the source field column.
