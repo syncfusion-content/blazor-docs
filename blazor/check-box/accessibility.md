@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor CheckBox Component | Syncfusion®
-description: Checkout and learn here all the features about Accessibility in Blazor CheckBox component and much more.
+title: Accessibility in Blazor CheckBox | Syncfusion®
+description: Learn how Blazor CheckBox meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA roles, keyboard navigation, and label support.
 platform: Blazor
 control: Checkbox
 documentation: ug
 ---
 
-# Accessibility in Blazor CheckBox Component
+# Accessibility in Blazor CheckBox
 
 The Blazor CheckBox component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

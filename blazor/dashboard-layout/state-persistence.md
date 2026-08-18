@@ -1,13 +1,13 @@
 ---
 layout: post
-title: State Persistence in Blazor Dashboard Layout Component | Syncfusion®
-description: Checkout and learn about State Persistence in Blazor Dashboard Layout component in Blazor Server App and Blazor WebAssembly App.
+title: State Persistence in Blazor Dashboard Layout | Syncfusion®
+description: Save and restore the Blazor Dashboard Layout panel positions, sizes, and arrangement so the layout persists across page refreshes.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
 ---
 
-# State Persistence in Blazor Dashboard Layout Component
+# State Persistence in Blazor Dashboard Layout
 
 State persistence allows users to save and restore the layout of the Blazor Dashboard Layout component. This feature ensures that custom panel positions, sizes, and arrangements remain intact even after a page refresh or navigating away and returning, providing a consistent user experience.
 

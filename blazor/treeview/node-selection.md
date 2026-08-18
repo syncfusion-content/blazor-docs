@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Node Selection in Blazor TreeView Component | Syncfusion®
-description: Checkout and learn here all the features about Node Selection in Blazor TreeView component and much more details.
+title: Node Selection in Blazor TreeView | Syncfusion
+description: Select nodes through data binding or the SelectedNodes property with two-way binding support in TreeView.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Node Selection in Blazor TreeView Component
+# Node Selection in Blazor TreeView
 
 Node selection in the Blazor TreeView component occurs by clicking the corresponding nodes. The [**Selected**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Selected) field or [SelectedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_SelectedNodes) property is used to perform node selection.
 

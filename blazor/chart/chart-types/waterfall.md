@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Waterfall in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about Waterfall Chart in Blazor Charts component and much more.
+title: Blazor Waterfall Chart Examples and Documentation | Syncfusion®
+description: Learn how to create Blazor Waterfall Charts using Syncfusion. Show the cumulative effect of sequential positive and negative values.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Waterfall in Blazor Charts Component
+# Waterfall Chart in Blazor
 
 ## Waterfall
 

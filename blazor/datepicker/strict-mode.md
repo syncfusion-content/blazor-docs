@@ -1,13 +1,13 @@
-﻿---
+---
 layout: post
-title: Strict Mode in Blazor DatePicker Component | Syncfusion®
-description: Checkout and learn here all the features about Strict Mode in Blazor DatePicker component and much more.
+title: Strict Mode in Blazor DatePicker | Syncfusion®
+description: Enable Strict Mode in the Blazor DatePicker so the input value must match the defined format, blocking out-of-range or invalid typed values.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Strict Mode in Blazor DatePicker Component
+# Strict Mode in Blazor DatePicker
 
 The [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_StrictMode) property controls how the DatePicker handles invalid or out-of-range values entered in the input. When `StrictMode` is enabled:
 

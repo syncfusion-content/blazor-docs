@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Node customization in Blazor TreeView Component | Syncfusion®
-description: Checkout and learn here all the features about Node customization in Blazor TreeView component and much more details.
+title: Node Customization in Blazor TreeView | Syncfusion
+description: Customize node images, text wrap, tooltips, and visibility in Blazor TreeView using field mappings and styles.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Node Customization in Blazor TreeView Component
+# Node Customization in Blazor TreeView
 
 The TreeView nodes in the Blazor TreeView component can be customized based on your needs.
 

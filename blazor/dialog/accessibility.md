@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Dialog Component | Syncfusion®
-description: Checkout and learn here all the features about Accessibility in Blazor Dialog component and much more.
+title: Accessibility in Blazor Dialog | Syncfusion®
+description: Learn how Blazor Dialog meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA roles, focus trap, and keyboard navigation for screen readers.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Accessibility in Blazor Dialog Component
+# Accessibility in Blazor Dialog
 
 The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) is characterized with complete ARIA Accessibility support which makes it accessible to on-screen readers and other assistive technology devices. This component is designed with the reference of the guidelines document given in [WAI ARAI Accessibility Practices](https://www.w3.org/WAI/ARIA/apg/#dialog_modal).
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor RadioButton Component | Syncfusion®
-description: Checkout and learn here all about native events in Syncfusion Blazor RadioButton component with examples and much more details.
+title: Native Events in Blazor Radio Button | Syncfusion
+description: Attach native DOM events such as change, click, and focus to Blazor Radio Button with event argument types.
 platform: Blazor
 control: Radio Button
 documentation: ug
 ---
 
-# Native Events in Blazor RadioButton Component
+# Native Events in Blazor Radio Button
 
 Attach native DOM events to the RadioButton component using the `@on{event}` attribute (for example, `@onchange`, `@onclick`). The attribute value is an event handler method, and the event-specific data is provided via the event argument parameter.
 

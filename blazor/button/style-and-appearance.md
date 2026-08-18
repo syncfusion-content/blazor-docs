@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles and Appearances in Blazor Button Component | Syncfusion®
-description: Checkout and learn here all features about Styles and Appearances in Blazor Button component and much more.
+title: Style and Appearance in Blazor Button | Syncfusion®
+description: Customize the Blazor Button appearance by overriding its default CSS classes or by building a custom theme with the Syncfusion Theme Studio.
 platform: Blazor
 control: Button
 documentation: ug
 ---
 
-# Styles and Appearances in Blazor Button Component
+# Style and Appearance in Blazor Button
 
 To modify the Button appearance, you need to override the default CSS of the Button component. The following table lists the available CSS classes and their corresponding section in the Button component. You can also create your own custom theme for the controls using the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 

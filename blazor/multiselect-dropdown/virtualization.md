@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Virtualization in Blazor MultiSelect Dropdown Component | Syncfusion®
-description: Checkout and learn here all about virtualization in Blazor MultiSelect Dropdown component and much more details.
+title: Virtualization in Blazor MultiSelect Dropdown | Syncfusion
+description: Enable virtualization in Blazor MultiSelect Dropdown to scroll large datasets efficiently with on-demand rendering.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Virtualization in Blazor MultiSelect Dropdown Component
+# Virtualization in Blazor MultiSelect Dropdown
 
 The MultiSelect component includes a virtual scrolling feature that improves UI performance when working with large datasets. By enabling the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_EnableVirtualization) option, the MultiSelect renders only a subset of items initially. As the user scrolls, additional items are dynamically loaded, resulting in a smooth and efficient experience.
 

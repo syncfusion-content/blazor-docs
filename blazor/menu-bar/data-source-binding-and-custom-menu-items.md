@@ -1,13 +1,13 @@
 ---
 layout: post
-title: DataSource Binding and Custom Items in Blazor Menu Bar | Syncfusion®
-description: Learn here all about data source binding and custom items in Blazor Menu Bar component and much more details.
+title: DataSource Binding and Custom Items in Blazor Menu Bar | Syncfusion
+description: Bind self-referential or hierarchical data to Blazor Menu Bar and customize menu fields and menu items.
 platform: Blazor
-control: Menu Bar
+control: Menu Bar 
 documentation: ug
 ---
 
-# DataSource Binding and Custom Items in Blazor Menu Bar Component
+# DataSource Binding and Custom Items in Blazor Menu Bar
 
 The [Blazor Menu Bar](https://www.syncfusion.com/blazor-components/blazor-menu-bar) supports data source binding, including self-referential data structures.
 
@@ -196,7 +196,7 @@ When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfu
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrdZnAtLAdDGBiO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage="./images/blazor-menubar-self-referential-data.webp" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrdZnAtLAdDGBiO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Self-Referential Data in Blazor MenuBar](./images/blazor-menubar-self-referential-data.webp)" %}
 
 ## Custom Menu Bar Items
 
@@ -245,8 +245,8 @@ To customize Menu Bar items in your application, set a custom template using [Me
                                 @MenuItems.About
                             </div>
                             <div class="e-card-actions">
-                                <input type="button" class="e-btn e-outline" style="pointer-events: auto;" value="Read More" />
-                            </divbutton type="button" class="e-btn e-outline" style="pointer-events: auto;">Read More</button
+                                <button type="button" class="e-btn e-outline" style="pointer-events: auto;">Read More</button>
+                            </div>
                         </div>
                     }
                 }

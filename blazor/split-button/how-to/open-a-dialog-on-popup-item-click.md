@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open a dialog on popup item click in Blazor SplitButton | Syncfusion®
-description: Learn here all about how to open a dialog on popup item click in Blazor SplitButton component and more.
+title: How to open a dialog on Blazor Split Button popup click | Syncfusion
+description: Open a Blazor Dialog when a Blazor Split Button popup item is selected using the ItemSelected event.
 platform: Blazor
 control: Split Button
 documentation: ug
 ---
 
-# Open a dialog on popup item click in Blazor SplitButton Component
+# How to open a dialog on Blazor Split Button popup click
 
 This section explains how to open a dialog on a SplitButton popup item click. This can be achieved by handling dialog open in [ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SplitButtonEvents.html#Syncfusion_Blazor_SplitButtons_SplitButtonEvents_ItemSelected) event of the Split Button.
 

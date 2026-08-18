@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Clear an Image with Blazor Image Editor Component | Syncfusion®
+title: How to Clear an Image in Blazor Image Editor | Syncfusion
 description: Learn how to clear an image in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor
 documentation: ug
 ---
 
-# Clear an Image in the Blazor Image Editor component
+# How to Clear an Image in Blazor Image Editor
 
 The [ClearImageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ClearImageAsync) method clears the current image from the editor. This is useful when the component is rendered in a dialog; calling `ClearImageAsync` before closing the dialog prevents the previously loaded image from persisting when the dialog is reopened, ensuring a fresh state for a new selection.
 

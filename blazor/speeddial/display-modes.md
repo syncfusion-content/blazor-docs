@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Display Modes in Blazor SpeedDial Component | Syncfusion®
-description: Checkout and learn about linear and radial display modes in Blazor SpeedDial component and much more.
+title: Display Modes in Blazor Speed Dial | Syncfusion
+description: Display Blazor Speed Dial items in Linear or Radial modes and control direction with the Mode property.
 platform: Blazor
 control: SpeedDial
 documentation: ug
 ---
 
-# Display Modes in Blazor SpeedDial Component
+# Display Modes in Blazor Speed Dial
 
 The action items in the Blazor SpeedDial can be displayed in Linear or Radial modes by setting the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Mode) property. By default, SpeedDial items are displayed in Linear mode.
 
