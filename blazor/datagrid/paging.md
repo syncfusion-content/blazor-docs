@@ -705,28 +705,26 @@ public class OrderData
 
 ## Dynamically calculate page size based on element height
 
-It is possible to dynamically calculate the page size of a Grid by considering the height of its parent element. This helps ensure the Grid’s content fits the available space and avoids unnecessary scrolling. When the parent element’s height changes, computing the PageSize accordingly adjusts the number of visible records and prevents empty space or overflow.
+It is possible to dynamically calculate the page size of a Grid by considering the height of its parent element. This helps ensure the Grid’s content fits the available space and avoids unnecessary scrolling. When the parent element’s height changes, computing the PageSize accordingly adjusts the number of visible records and prevents empty space or overflow. In this example, the Grid's [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property is explicitly set, and the same value is used when calculating the page size.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Inputs
-@using Syncfusion.Blazor.Buttons
 
 <div style="padding:0 0 20px 0">
     <label style="padding: 30px 17px 0 0">Select page size:</label>
-    <SfNumericTextBox Placeholder="select container height" Width="200px" Format="###.##" @bind-Value=@value TValue="int?" Min="150"  Step=50>
+    <SfNumericTextBox Placeholder="select container height" Width="200px" Format="###.##" @bind-Value=@value TValue="int?" Min="150" Step=50>
         <NumericTextBoxEvents TValue="int?" ValueChange="@CalculatePageSize"></NumericTextBoxEvents>
     </SfNumericTextBox>
 </div>
 
-<SfGrid @ref="Grid" DataSource="@GridData" AllowPaging="true" >
+<SfGrid @ref="Grid" DataSource="@GridData" RowHeight="37" AllowPaging="true">
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d"  TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -744,61 +742,68 @@ It is possible to dynamically calculate the page size of a Grid by considering t
     {
         value = args.Value;
         GridHeight = (int)args.Value;
-        var RowHeight = 37; //height of the each row.
-        Grid.Height = GridHeight.ToString(); //DataGrid height.
-        var PageSize = (this.Grid.PageSettings as GridPageSettings).PageSize; //Initial page size.
-        decimal PageResize = ((GridHeight) - (PageSize * RowHeight)) / RowHeight; //New page size is obtained here.
-        Grid.PageSettings.PageSize = PageSize + (int)Math.Round(PageResize);
+
+        var rowHeight = 37;     
+        var headerHeight = 37; 
+
+        Grid.Height = GridHeight.ToString();
+
+        var contentHeight = GridHeight - headerHeight;
+
+        var pageSize = (int)Math.Floor((double)contentHeight / rowHeight);
+
+        Grid.PageSettings.PageSize = Math.Max(pageSize, 1);
+
         await Grid.Refresh();
     }
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
  public class OrderData
-    {
-        public static List<OrderData> Orders = new List<OrderData>();
-        
-        public OrderData()
-        {
+{
+    public static List<OrderData> Orders = new List<OrderData>();
 
-        }
-        public OrderData(int? OrderID,string CustomerID, DateTime? OrderDate, double? Freight)
-        {
-           this.OrderID = OrderID;    
-           this.CustomerID = CustomerID;
-            this.OrderDate = OrderDate;
-            this.Freight = Freight;            
-        }
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int OrderID = 10248;
-                for (int i = 1; i < 7; i++)
-                {
-                    Orders.Add(new OrderData(OrderID+1, "VINET", new DateTime(1996, 07, 06), 32.38));
-                    Orders.Add(new OrderData(OrderID+2, "TOMSP", new DateTime(1996, 07, 06), 11.61));
-                    Orders.Add(new OrderData(OrderID+3, "HANAR", new DateTime(1996, 07, 06), 65.83));
-                    Orders.Add(new OrderData(OrderID+4, "VICTE", new DateTime(1996, 07, 06), 45.78));
-                    Orders.Add(new OrderData(OrderID+5, "SUPRD", new DateTime(1996, 07, 06), 98.6));
-                    Orders.Add(new OrderData(OrderID+6, "HANAR", new DateTime(1996, 07, 06), 103.45));
-                    Orders.Add(new OrderData(OrderID+7, "CHOPS", new DateTime(1996, 07, 06), 103.45));
-                    Orders.Add(new OrderData(OrderID+8, "RICSU", new DateTime(1996, 07, 06), 112.48));
-                    Orders.Add(new OrderData(OrderID+9, "WELLI", new DateTime(1996, 07, 06), 33.45));
-                    OrderID += 9;
-                }
-            }
-            return Orders;
-        }
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+    public OrderData()
+    {
+
     }
+    public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.Freight = Freight;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int OrderID = 10248;
+            for (int i = 1; i < 7; i++)
+            {
+                Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 06), 32.38));
+                Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 06), 11.61));
+                Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), 65.83));
+                Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 06), 45.78));
+                Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 06), 98.6));
+                Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 06), 103.45));
+                Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 06), 103.45));
+                Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 06), 112.48));
+                Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 06), 33.45));
+                OrderID += 9;
+            }
+        }
+        return Orders;
+    }
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public double? Freight { get; set; }
+}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhdNwZqyhuqpZAJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVHtPCbrisimTve?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Render pager at the top of the Grid
 
