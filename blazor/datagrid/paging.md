@@ -436,7 +436,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXLntQDASrPjtMxA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> * Inside the `Template` RenderFragment, access parameters using the implicit parameter named context, which is of type [PagerTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.PagerTemplateContext.html) API.
+> * Inside the `Template` RenderFragment, access parameters using the implicit parameter named context, which is of type [PagerTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.PagerTemplateContext.html).
 > * Refer to the [Blazor Grid Pager Template](https://blazor.syncfusion.com/demos/datagrid/pager-template?theme=fluent2) online demo showcasing the Pager Template feature in the Blazor DataGrid.
 
 ## Pager with page size dropdown
@@ -519,7 +519,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDLHNmtqoLlLKwWE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> * When the PageSizes property is set to true, the page size dropdown uses default options such as [‘All’, ‘5’, ‘10’, ‘15’, ‘20’]. When set to false, the dropdown is hidden.
+> * When the PageSizes property is set to true, the page size dropdown uses default options such as ["All", "5", "10", 15", "20"]. When set to false, the dropdown is hidden.
 > * Refer to the [Blazor Grid Paging](https://www.syncfusion.com/blazor-components/blazor-datagrid/paging) feature tour for an overview of paging.
 > * Refer to the Blazor DataGrid feature tour and the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.
 
@@ -598,7 +598,7 @@ The Blazor DataGrid allows customizing the default values in the page size dropd
 
 > The PageSizes property can be configured with either an array of strings or a boolean value.
 
-## How to navigate to a particular page
+## Navigate to a Particular Page
 
 Navigating to a particular page in the Blazor DataGrid is useful when dealing with large datasets, enabling quick jumps to specific pages.
 
