@@ -164,7 +164,7 @@ Include the required [script references](https://blazor.syncfusion.com/documenta
 
 ## Add Blazor Color Picker component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Color Picker](https://www.syncfusion.com/blazor-components/blazor-color-picker) component inside the Razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Color Picker](https://www.syncfusion.com/blazor-components/blazor-color-picker) component inside the `.Client` project Razor file.
 
 N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the Razor file (for example, `InteractiveServer`, `InteractiveWebAssembly`, or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
