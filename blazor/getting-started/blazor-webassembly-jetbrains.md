@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get Started with Blazor WASM and Server App in JetBrains Rider | Syncfusion
+title: Getting Started with Blazor Apps in JetBrains Rider | Syncfusion
 description: Step-by-step guide to create Blazor WebAssembly (WASM) and Blazor Server applications in JetBrains Rider and integrate Syncfusion Blazor DataGrid.
 platform: Blazor
 control: common
