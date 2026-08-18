@@ -11,9 +11,9 @@ documentation: ug
 
 N> Before adding column template to the treegrid, it is recommended to go through the [template](../templates) section topic to configure the template.
 
-To learn more about **Column Template** in the Blazor TreeGrid component, check out this video.
-
 The Column template has options to display custom element value or content in the column. The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component can be used to specify this custom content. Inside the Template, data is accessed using the implicit named parameter **context**.
+
+To learn more about **Column Template** in the Blazor TreeGrid component, check out this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=PnM11O-BPVU"%}

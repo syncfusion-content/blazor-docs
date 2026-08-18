@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Resizing in Blazor TreeGrid 
 
-Column width can be resized by clicking and dragging the right edge of the column header. The column resizes immediately during the drag operation. Each column can be auto resized by double-clicking the right edge of the column header to fit the width of that column based on the widest cell content. To enable column resizing, set the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowResizing) property to true.
+Column width can be resized by clicking and dragging the right edge of the column header. The column resizes immediately during the drag operation. Each column can be auto resized by double-clicking the right edge of the column header to fit the width of that column based on the widest cell content. To enable column resizing, set the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowResizing) property to **true**.
 
 {% tabs %}
 
@@ -73,7 +73,7 @@ namespace TreeGridComponent.Data
 
 ![Resizing Column in Blazor TreeGrid](../images/blazor-treegrid-column-resizing.webp)
 
-N> Resizing for a specific column can be disabled by setting the `AllowResizing` property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component to false.
+N> Resizing for a specific column can be disabled by setting the `AllowResizing` property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component to **false**.
 <br/> In RTL mode, the left edge of the header cell can be clicked and dragged to resize the column.
 
 ## Min and max width
@@ -242,7 +242,7 @@ namespace TreeGridComponent.Data
 
 ## Touch interaction
 
-On touch devices, when the right edge of the header cell is tapped, a floating resize handle will appear on the right border.. To resize the column, tap and drag the floating handler as needed. Columns can also be auto-fitted through the TreeGrid's column menu. To enable column menu, define the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ShowColumnMenu) property as true.
+On touch devices, when the right edge of the header cell is tapped, a floating resize handle will appear on the right border.. To resize the column, tap and drag the floating handler as needed. Columns can also be auto-fitted through the TreeGrid's column menu. To enable column menu, define the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ShowColumnMenu) property as **true**.
 
 ![Blazor TreeGrid Column Resizing in Touch Interaction](../images/blazor-treegrid-column-resizing-touch.webp)
 
@@ -263,10 +263,10 @@ The `OnResizeStart` event is triggered before a column is resized. This event ca
 
 The event uses the [ResizeArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ResizeArgs.html) class, which includes:
 
-| Event Argument | Description                                                                 |
-|----------------|------------------------------------------------------------------------------|
-| Column         | Represents the column being resized.                                        |
-| Cancel         | Determines whether the resizing operation should be aborted. Setting this property to **true** prevents the resizing from being applied. |
+| Event Argument | Type           | Description                                                                 |
+|----------------|----------------|------------------------------------------------------------------------------|
+| Column         | GridColumn | Represents the column being resized.                                        |
+| Cancel         | bool           | Determines whether the resizing operation should be aborted. Setting this property to **true** prevents the resizing from being applied. |
 
 ---
 
@@ -278,10 +278,10 @@ The `ResizeStopped` event is triggered after a column has been resized. This eve
 
 The event uses the [ResizeArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ResizeArgs.html) class, which includes:
 
-| Event Argument | Description                                                                 |
-|----------------|------------------------------------------------------------------------------|
-| Column         | Represents the column that was resized.                                     |
-| Cancel         | Indicates whether the resize operation was canceled. If **true**, the column was not resized. |
+| Event Argument | Type           | Description                                                                 |
+|----------------|----------------|------------------------------------------------------------------------------|
+| Column         | TreeGridColumn | Represents the column that was resized.                                     |
+| Cancel         | TreeGridColumn           | Indicates whether the resize operation was canceled. If **true**, the column was not resized. |
 
 ---
 

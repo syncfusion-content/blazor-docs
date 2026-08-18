@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Reordering in Blazor TreeGrid 
 
-Drag and drop a column header to reorder it from one position to another position within the treegrid. To enable reordering, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowReordering) property to true.
+To reorder columns in the Blazor TreeGrid, drag and drop a column header to the desired position. To enable reordering, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowReordering) property to **true**.
 
 {% tabs %}
 
@@ -79,11 +79,18 @@ namespace TreeGridComponent.Data
 
 ![Reordering Columns in Blazor TreeGrid](../images/blazor-treegrid-column-reorder.webp)
 
-N> To prevent reordering of a specific column, set the `AllowReordering` property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) to false.
+N> To prevent reordering of a specific column, set the `AllowReordering` property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) to **false**.
 
 ## Reorder single column
 
-TreeGrid has option to reorder a column either by interaction or by using the [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ReorderColumnsAsync_System_Collections_Generic_List_System_String__System_String_) method.
+TreeGrid has option to reorder a column through user interaction or programmatically using the [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ReorderColumnsAsync_System_Collections_Generic_List_System_String__System_String_) method.
+
+**Parameters**
+
+| **Type**       | **Name**   | **Description**                                                                 |
+|----------------|------------|---------------------------------------------------------------------------------|
+| List<string>   | fromFName  | The list of column field names to move. Multiple columns can be passed together. |
+| string         | toFName    | The field name of the destination column. The source columns are placed before it. |
 
 {% tabs %}
 
@@ -253,7 +260,6 @@ The event uses the [ColumnReorderingEventArgs](https://help.syncfusion.com/cr/bl
 
 | Event Argument     | Type                   | Description                                                                 |
 |--------------------|------------------------|------------------------------------------------------------------------------|
-| ReorderingColumns  | List<TreeGridColumn>   | Represents the columns being dragged.                                       |
 | Cancel             | bool                   | Set to **true** to cancel the reordering operation.                         |
 
 ---
@@ -268,8 +274,8 @@ The event uses the [ColumnReorderedEventArgs](https://help.syncfusion.com/cr/bla
 
 | Parameter           | Type                   | Description                                                                 |
 |---------------------|------------------------|-----------------------------------------------------------------------------|
-| ReorderingColumns   | List<TreeGridColumn>   | Represents the columns that were reordered.                                 |
-| ToColumn            | TreeGridColumn         | Destination column where the reordered columns are placed.                  |
+| ReorderingColumns   | List<GridColumn>   | Represents the columns that were reordered.                                 |
+| ToColumn            | GridColumn         | Destination column where the reordered columns are placed.                  |
 
 ---
 
