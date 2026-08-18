@@ -9,10 +9,10 @@ documentation: ug
 
 # Aggregate Customization in Blazor Data Grid
 
-Aggregates are displayed as summary rows in the DataGrid footer, providing a consolidated view of totals, averages, or counts. These rows can be styled using CSS to match the layout and design of the grid. Styling options are available for:
+Aggregates are displayed as summary rows in the DataGrid footer, providing a consolidated view of totals, averages, or counts. These rows can be styled using CSS to match the layout and design of the grid. The following elements can be customized:
 
-- **Aggregate root container:** The outer wrapper of the footer row.
-- **Aggregate summary row and cells:** The row that shows summary values, and the cells that display each result.
+- Aggregate root container
+- Aggregate summary row and cells
 
 ## Customize the aggregate root element
 The **.e-gridfooter** class styles the root container of the aggregate footer row. Use CSS to adjust its appearance:
@@ -20,14 +20,15 @@ The **.e-gridfooter** class styles the root container of the aggregate footer ro
 ```css
 .e-grid .e-gridfooter {
     font-family: cursive;
+    background-color: #f5f8fc;
 }
 ```
 
-Properties like **font-family**, **font-size**, and **padding** can be changed to fit the grid layout design.
+Properties like **font-family**, **font-size**, **background-color**, and **padding** can be changed to fit the grid layout design.
 
 ![Aggregate footer root with custom font](../images/style-and-appearance/aggregate-root-element.webp)
 
-## Customize the aggregate cell elements
+## Customize the aggregate row and cell elements
 
 The **.e-summaryrow** and **.e-summarycell** classes define the appearance of the summary row and its individual cells in the Blazor DataGrid. Apply CSS to modify their look:
 
@@ -37,7 +38,7 @@ The **.e-summaryrow** and **.e-summarycell** classes define the appearance of th
 }
 ```
 
-Properties such as **background-color**, **color**, and **text-align** can be adjusted to improve clarity and interaction.
+Properties such as **background-color**, **color**, and **text-align** can be adjusted to improve readability and visual consistency.
 
 ![Aggregate summary cell with custom background color](../images/style-and-appearance/aggregate-cell-element.webp)
 
@@ -90,7 +91,7 @@ Properties such as **background-color**, **color**, and **text-align** can be ad
 </style>
 
 @code {
-    private List<OrderData> Orders { get; set; }
+    private List<OrderData> Orders { get; set; } = new();
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
@@ -140,4 +141,10 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLnjmDWVeFwFgTt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthxXbsFBGynTDxw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+## See Also
+
+- [Aggregates in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/aggregates)
+- [Grouping in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/grouping)
+- [`AggregateType` API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateType.html)
