@@ -644,9 +644,9 @@ The search-on-keystroke approach enables real-time results while typing in the s
         Orders = OrderData.GetAllRecords();
     }  
         
-    public void OnInput(InputEventArgs args)
+    public async Task OnInput(InputEventArgs args)
     {
-        this.DefaultGrid.SearchAsync(args.Value);
+        await this.DefaultGrid.SearchAsync(args.Value);
     }
 }
 {% endhighlight %}
@@ -822,7 +822,7 @@ The Blazor DataGrid provides the ability to clear the current search programmati
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
-<SfButton Content="ClearSearch" OnClick="clearSearch"></SfButton>
+<SfButton Content="ClearSearch" OnClick="ClearSearch"></SfButton>
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowSorting="true" Toolbar=@ToolbarItems>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -841,7 +841,7 @@ The Blazor DataGrid provides the ability to clear the current search programmati
     {
         Orders = OrderData.GetAllRecords();
     }
-    public async Task clearSearch()
+    public async Task ClearSearch()
     {
         await DefaultGrid.SearchAsync("");
     }    
