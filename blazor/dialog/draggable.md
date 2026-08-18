@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Draggable in Blazor Dialog Component | Syncfusion®
-description: Checkout and learn here all the features about Draggable in Blazor Dialog component and much more details.
+title: Draggable in Blazor Dialog | Syncfusion®
+description: Enable draggable behavior in the Blazor Dialog so users can move the dialog within the viewport by dragging its header.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Draggable in Blazor Dialog Component
+# Draggable in Blazor Dialog
 
 The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) component supports draggable functionality, allowing users to reposition dialogs within their target container by clicking and dragging the dialog header. This feature enhances user experience by providing flexible dialog placement, particularly useful in applications with multiple dialogs or when users need to access content beneath the dialog while keeping it visible.
 

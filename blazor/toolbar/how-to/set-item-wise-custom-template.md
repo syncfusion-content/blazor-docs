@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Set Item-Wise Custom Template in Toolbar | Syncfusion®
-description: Checkout and learn here all the features about how to set item-wise custom template in Blazor Toolbar component and more.
+title: How to set item-wise custom template in Blazor Toolbar | Syncfusion
+description: Render custom content per Blazor Toolbar item using the Template property with HTML or RenderFragment.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Set Item-Wise Custom Template in Blazor Toolbar Component
+# How to set item-wise custom template in Blazor Toolbar
 
 The Toolbar supports defining custom content for an item using its [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Template) property, which accepts either an HTML element or a `RenderFragment`.
 

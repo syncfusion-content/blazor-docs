@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Badge in Blazor WASM App | Syncfusion
-description: Check out and learn about getting started with Blazor Badge component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Badge in Blazor WASM App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Badge control. Explore setup, features, examples, and customization options.
 platform: Blazor
 control: Badge
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Blazor Badge Component in Blazor WASM App
+# Getting Started with Blazor Badge in Blazor WASM App
 
 This section briefly explains how to include the [Blazor Badge](https://www.syncfusion.com/blazor-components/blazor-badge) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

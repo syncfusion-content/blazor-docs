@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Use Case Scenarios in Blazor Menu Bar Component | Syncfusion®
-description: Checkout and learn here all about use case scenarios in Blazor Menu Bar component and much more details.
+title: Use Case Scenarios in Blazor Menu Bar | Syncfusion
+description: Build scrollable and adaptive Blazor Menu Bar layouts using EnableScrolling and responsive sizing options.
 platform: Blazor
 control: Menu Bar 
 documentation: ug
 ---
 
-# Use Case Scenarios in Blazor Menu Bar Component
+# Use Case Scenarios in Blazor Menu Bar
 
 ## Scrollable Menu Bar
 

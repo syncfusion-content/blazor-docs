@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Add and Remove Items in Blazor Dropdown Menu Component | Syncfusion®
-description: Checkout and learn here all about Add and Remove Items in Blazor Dropdown Menu component and much more details.
+title: How to add and remove items in Blazor Dropdown Menu | Syncfusion®
+description: Add and remove Blazor Dropdown Menu items at runtime by modifying the Items collection, with dynamic UI updates.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
 ---
 
-# Add and Remove Items in Blazor Dropdown Menu Component
+# How to add and remove items in Blazor Dropdown Menu
 
 The Dropdown Menu component (SfDropDownButton) can dynamically add or remove menu items using the [AddItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_AddItems_System_Collections_Generic_List_Syncfusion_Blazor_SplitButtons_DropDownMenuItem__System_String_System_Boolean_) and [RemoveItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_RemoveItems_System_Collections_Generic_List_System_String__System_Boolean_) methods.
 

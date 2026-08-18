@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Dashboard Layout Component | Syncfusion®
-description: Checkout and learn here all the features about Accessibility in Blazor Dashboard Layout component and much more.
+title: Accessibility in Blazor Dashboard Layout | Syncfusion®
+description: Learn how Blazor Dashboard Layout applies WAI-ARIA roles, states, and properties for intuitive navigation and interaction with assistive technologies.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
 ---
 
-# Accessibility in Blazor Dashboard Layout Component
+# Accessibility in Blazor Dashboard Layout
 
 The [Blazor Dashboard Layout](https://www.syncfusion.com/blazor-components/blazor-dashboard) component is designed with a strong focus on accessibility, adhering to the [WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications)](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications. It applies appropriate WAI-ARIA roles, states, and properties to ensure intuitive navigation and interaction for users relying on assistive technologies (AT).
 

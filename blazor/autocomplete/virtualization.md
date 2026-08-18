@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Virtualization in Blazor AutoComplete Component | Syncfusion®
-description: Checkout and learn here all features about Virtualization in Blazor AutoComplete component and much more.
+title: Virtualization in Blazor AutoComplete | Syncfusion®
+description: Enable virtual scrolling in the Blazor AutoComplete to render only a window of items, then load more on scroll for smooth performance with large datasets.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Virtualization in Blazor AutoComplete Component
+# Virtualization in Blazor AutoComplete
 
 The AutoComplete component includes a virtual scrolling feature designed to enhance UI performance when handling large data sets. By enabling the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_EnableVirtualization) option, the component renders only a window of items initially and loads additional items on demand as scroll, providing a smooth and efficient experience.
 

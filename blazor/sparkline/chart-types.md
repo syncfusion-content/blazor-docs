@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Chart Types in Blazor Sparkline Component | Syncfusion®
-description: Check out and learn the features about the different chart types available in the Blazor Sparkline component.
+title: Blazor Sparkline Charts Chart Types Examples | Syncfusion®
+description: Learn about the chart types available in Syncfusion Blazor Sparkline, including Line, Column, Area, and WinLoss shapes.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Chart Types in Blazor Sparkline Component
+# Blazor Sparkline Charts Chart Types
 
 Different shapes can be used to represent the Sparkline Chart by specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) property.
 

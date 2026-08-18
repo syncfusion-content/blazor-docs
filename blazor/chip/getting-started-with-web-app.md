@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Chips in Blazor Web App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor Chips Component in Blazor Web App.
+title: Getting Started with Blazor Chips in Blazor Web App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Chips control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Chips
 documentation: ug
 ---
 
-# Getting Started with Blazor Chips Component in Blazor Web App
+# Getting Started with Blazor Chips in Blazor Web App
 
 This section briefly explains how to include the [Blazor Chips](https://www.syncfusion.com/blazor-components/blazor-chips) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

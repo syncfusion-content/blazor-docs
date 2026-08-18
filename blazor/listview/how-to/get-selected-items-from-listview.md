@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Get selected items from Blazor ListView Component | Syncfusion®
-description: Learn here all the features about getting the selected items in Blazor ListView component and much more details.
+title: How to get selected items in Blazor ListView | Syncfusion
+description: Retrieve selected or checked items from Blazor ListView using GetCheckedItemsAsync and display their details.
 platform: Blazor
 control: ListView
 documentation: ug
 ---
 
-# Retrieving Selected Items in Blazor ListView
+# How to get selected items in Blazor ListView
 
 The Blazor ListView component allows users to choose multiple items from a list. To retrieve these selected items, you can refer the below implementation in ListView component. This functionality is especially useful for applications that need to process or display data based on user selections.
 

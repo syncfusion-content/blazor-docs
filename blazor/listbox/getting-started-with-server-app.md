@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with Blazor ListBox in Blazor Server App | Syncfusion®
-description: Check out the documentation for getting started with Blazor ListBox Component in Blazor Server App and much more details.
+title: Getting Started with Blazor ListBox in Blazor Server App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor ListBox in a Blazor Server app with installation and setup steps.
 platform: Blazor
 control: ListBox
 documentation: ug
 ---
 
-# Getting Started with Blazor ListBox Component in Blazor Server App
+# Getting Started with Blazor ListBox in Blazor Server App
 
 This section briefly explains how to include the [Blazor ListBox](https://www.syncfusion.com/blazor-components/blazor-listbox) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

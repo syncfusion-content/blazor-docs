@@ -1,13 +1,13 @@
 ---
 layout: post
-title: HTTP Client in Blazor File Upload Component | Syncfusion®
-description: Learn about using HTTP Client with the Blazor File Upload component for handling file uploads with customized requests.
+title: HTTP Client in Blazor File Upload | Syncfusion
+description: Use a pre-configured HttpClient with Blazor File Upload for custom headers, authentication, and request configuration.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# HTTP Client in Blazor File Upload Component
+# HTTP Client in Blazor File Upload
 
 The File Upload component in Blazor enables you to utilize the [`HttpClientInstance`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_HttpClientInstance) property of the `Uploader` component. This property allows you to append a pre-configured `HttpClient` instance to all file upload (SaveUrl) and remove (RemoveUrl) requests. This is particularly useful for centralized management of authentication tokens, custom headers, or other request configurations that need to be consistently applied across multiple HttpClient requests within your application.
 

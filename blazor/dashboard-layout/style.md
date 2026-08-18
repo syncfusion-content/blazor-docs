@@ -1,13 +1,13 @@
 ---
 layout: post
-title: CSS Structure in Blazor Dashboard Layout Component | Syncfusion®
-description: Checkout and learn here all about CSS Structure in Blazor Dashboard Layout component and much more details.
+title: Style and Appearance in Blazor Dashboard Layout | Syncfusion®
+description: Customize the Blazor Dashboard Layout appearance by overriding its default CSS structure for cells, panels, headers, and content.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
 ---
 
-# CSS Structure in Blazor Dashboard Layout Component
+# Style and Appearance in Blazor Dashboard Layout
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

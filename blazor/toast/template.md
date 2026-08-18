@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Template in Blazor Toast Component | Syncfusion®
-description: Checkout and learn here all the features about template in Blazor Toast component and much more details.
+title: Template in Blazor Toast | Syncfusion
+description: Use header, content, and footer templates to customize Blazor Toast notification layouts and structures.
 platform: Blazor
 control: Toast
 documentation: ug
 ---
 
-# Template in Blazor Toast Component
+# Template in Blazor Toast
 
 Configure templates to display within a header, content, and footer section of Toast. The header, content and footer templates can be defined as `HTML element` inside `ToastTemplates`.
 
