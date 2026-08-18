@@ -9,9 +9,7 @@ documentation: ug
 
 # AutoFill Feature in Blazor TreeGrid
 
-# AutoFill Feature in Blazor TreeGrid
-
-AutoFill Feature allows copying the data of the selected cells and paste it to another cells by dragging the autofill icon of the selected cells up to the required cells. This feature is enabled by defining [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableAutoFill) property as true.
+AutoFill Feature allows copying the data of the selected cells and paste it to another cells by dragging the autofill icon of the selected cells up to the required cells. This feature is enabled by defining [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableAutoFill) property as **true**.
 
 **Steps to use AutoFill feature**
 
@@ -101,8 +99,8 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-N> * If [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableAutoFill) is set to true, then the autofill icon will be displayed on cell selection to copy cells.
-<br/> * It requires the selection [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_Mode) to be `Cell`,  [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_CellSelectionMode) to be `Box` and also Batch Editing should be enabled.
+N> * If [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableAutoFill) is set to **true**, then the autofill icon will be displayed on cell selection to copy cells.
+<br/> * AutoFill requires the selection [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_Mode) to be `Cell`,  [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_CellSelectionMode) to be `Box` and also Batch Editing should be enabled.
 
 ![Auto FIll in Blazor TreeGrid](./images/blazor-treegrid-auto-fill.webp)
 

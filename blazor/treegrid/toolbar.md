@@ -9,11 +9,13 @@ documentation: ug
 
 # Toolbar in Blazor TreeGrid
 
-The toolbar in the Blazor TreeGrid provides quick access to common actions such as adding, editing, deleting, printing, and exporting data (Excel, CSV, PDF).
+The toolbar in the Blazor TreeGrid can be configured to provide quick access to common actions such as adding, editing, deleting, printing, and exporting data (Excel, CSV, PDF).
 
 The toolbar can be configured with built-in toolbar items or custom items using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar) property. The `Toolbar` property accepts:
 - An array of strings for built-in items
 - An array of [ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor) objects for custom items (text, icon, id, tooltip)
+
+Toolbar items in the Blazor TreeGrid are only active when their corresponding feature (such as editing, printing, or exporting) is enabled in the TreeGrid configuration.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=yqp_Ukr_aQs" %}
 
@@ -108,7 +110,7 @@ N> The [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGri
 
 Enable or disable toolbar items dynamically to control which actions are available based on application logic or user interactions.
 
-Toolbar items in the Blazor TreeGrid can be enabled or disabled dynamically using the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method. This provides programmatic control over the availability of specific items by their IDs.
+Toolbar items in the Blazor TreeGrid can be enabled or disabled dynamically using the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method. This allows specific toolbar items to be enabled or disabled using their item IDs.
 
 {% tabs %}
 

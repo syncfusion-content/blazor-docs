@@ -13,7 +13,7 @@ The TreeGrid user interface (UI) was redesigned to provide an optimal viewing ex
 
 ## Render adaptive dialog
 
-To render adaptive dialog UI in the TreeGrid, set the [EnableAdaptiveUI](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableAdaptiveUI) property to true. The TreeGrid will render the filter, sort, and edit dialogs in full screen for a better user experience.
+To render adaptive dialog UI in the TreeGrid, set the [EnableAdaptiveUI](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableAdaptiveUI) property to **true**. The TreeGrid will render the filter, sort, and edit dialogs in full screen for a better user experience.
 
 ```csharp
 
