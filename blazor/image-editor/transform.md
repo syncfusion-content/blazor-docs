@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Transform with Blazor Image Editor Component | Syncfusion®
-description: Explore the transform support in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
+title: Transform in Blazor Image Editor | Syncfusion
+description: Transform images in Blazor Image Editor with rotation, flipping, straightening, zooming, and panning operations.
 platform: Blazor
 control: Image Editor
 documentation: ug
 ---
 
-# Transform in the Blazor Image Editor Component
+# Transform in Blazor Image Editor
 
 The [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) component provides rotation, flipping, straightening, zooming, and panning for images and annotations. These transformations enable precise adjustments and help enhance visual presentation.
 

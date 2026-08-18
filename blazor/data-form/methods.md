@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Methods in Blazor DataForm Component | Syncfusion®
-description: Checkout and learn here about in-built functions along with their correct application within the Blazor DataForm component.
+title: Methods in Blazor Data Form | Syncfusion®
+description: Use the Blazor Data Form built-in methods to validate, submit, and reset the form, and to access or update field values programmatically.
 platform: Blazor
 control: DataForm
 documentation: ug
 ---
 
-# Built-in methods in DataForm component
+# Methods in Blazor Data Form
 
 The following methods can be invoked on the DataForm instance to manage validation and rendering behavior.
 

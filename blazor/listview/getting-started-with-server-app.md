@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with ListView in Blazor Server App | Syncfusion®
-description: Check out the documentation for getting started with Blazor ListView Components in Blazor Server App.
+title: Getting Started with Blazor ListView in Blazor Server App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor ListView in a Blazor Server app with installation and setup steps.
 platform: Blazor
 control: ListView
 documentation: ug
 ---
 
-# Getting Started with Blazor ListView Component in Blazor Server App
+# Getting Started with Blazor ListView in Blazor Server App
 
 This section briefly explains how to include the [Blazor ListView](https://www.syncfusion.com/blazor-components/blazor-listview) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

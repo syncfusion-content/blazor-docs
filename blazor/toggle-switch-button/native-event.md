@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Toggle Switch Button Component | Syncfusion®
-description: Checkout and learn here all the features about events in Blazor Toggle Switch Button component and more.
+title: Native Event in Blazor Toggle Switch Button | Syncfusion
+description: Handle ValueChange and native DOM events for Blazor Toggle Switch Button interactions and custom triggers.
 platform: Blazor
 control: Toggle Switch Button 
 documentation: ug
 ---
 
-# Events in Blazor Toggle Switch Button Component
+# Native Event in Blazor Toggle Switch Button
 
 This section describes how to handle the ValueChange event and bind standard Blazor native DOM events to the Toggle Switch Button component for common interaction scenarios such as focus, keyboard, mouse, and touch.
 
@@ -241,6 +241,5 @@ The following example demonstrates handling touch events:
 ## See also
 
 * [Accessibility in Blazor Toggle Switch Button](./accessibility.md)
-
 
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: HTML Attribute Support in Blazor ListView Component | Syncfusion®
-description: Checkout and learn here all about HTML Attribute Support in Blazor ListView component and much more details.
+title: How to use HTML attribute support in Blazor ListView | Syncfusion
+description: Apply standard HTML attributes such as id, style, and title directly to the Blazor ListView component tag.
 platform: Blazor
-control: Button
+control: ListView
 documentation: ug
 ---
 
-# HTML Attribute Support in Blazor ListView Component
+# How to use HTML attribute support in Blazor ListView
 
 The Blazor ListView component allows you to apply standard HTML attributes such as **id**, **style**, **title**, and more directly on the component tag. These attributes can be specified as part of the ListView element.
 

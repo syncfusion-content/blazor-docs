@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and appearance in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn here all the features about Style and appearance in Blazor ComboBox component and more.
+title: Style and Appearance in Blazor ComboBox | Syncfusion®
+description: Customize the Blazor ComboBox appearance by overriding its default CSS structure to adjust input, popup, list items, and theming for user preferences.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Style and appearance in Blazor ComboBox Component
+# Style and Appearance in Blazor ComboBox
 
 The following content provides the CSS structure and options that can be used to modify the component’s appearance based on user preference.
 
