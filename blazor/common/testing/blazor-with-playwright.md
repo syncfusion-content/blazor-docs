@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Components E2E Test Automation with Playwright | Syncfusion®
+title: End-to-End Test Automation in Blazor with Playwright | Syncfusion®
 description: Learn to automate end-to-end testing of Blazor components using Playwright and NUnit in a .NET WebAssembly app.
 platform: Blazor
 component: Common

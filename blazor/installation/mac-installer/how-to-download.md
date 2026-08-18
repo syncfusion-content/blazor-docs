@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Download the Blazor Mac installer | Syncfusion®
+title: Download the Blazor Mac Installer | Syncfusion®
 description: Learn here about how to download the Blazor Mac installer for trial or licensed use, including Start trials and License & Downloads options.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Download the Syncfusion® Blazor Mac installer
+# How to Download the Syncfusion® Blazor Mac Installer
 
 The Blazor Mac installer is available as a trial or a licensed installer, depending on your account status. The sections below describe both download paths. Trial downloads provide a 30‑day evaluation and only the latest version is available.
 

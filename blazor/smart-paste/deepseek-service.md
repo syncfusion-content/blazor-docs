@@ -1,7 +1,7 @@
 ---
 layout: post
-title: DeepSeek AI Integration with Blazor Smart Paste Button | Syncfusion®
-description: Learn how to integrate the Blazor Smart Paste Button with DeepSeek AI services in a Blazor App and much more details.
+title: DeepSeek AI Integration in Blazor Smart Paste | Syncfusion®
+description: Learn how to configure DeepSeek AI models with the Syncfusion Blazor Smart Paste Button to automate form completion.
 platform: Blazor
 control: Smart Paste Button
 documentation: ug

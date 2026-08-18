@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Suggestion Customization in Blazor Smart TextArea | Syncfusion®
-description: Checkout and learn here all about Suggestion Customization in Blazor Smart TextArea component and much more details.
+title: Customize Blazor Smart TextArea Suggestions | Syncfusion®
+description: Learn how to customize the appearance and behavior of AI-generated suggestions in the Syncfusion Blazor Smart TextArea.
 platform: Blazor
 control: Smart TextArea
 documentation: ug
 ---
 
-# Customizing Appearance of Suggestions 
+# Customizing Appearance of Suggestions in Blazor Smart TextArea 
 
 The `ShowSuggestionOnPopup` attribute in Blazor Smart TextArea allows you to control how text suggestions are displayed to the users.
 

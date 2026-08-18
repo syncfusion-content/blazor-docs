@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor | Syncfusion®
+title: Globalization Support in Blazor | Syncfusion®
 description: Learn how Blazor components handle globalization for numbers, dates, times, and currencies across cultures in Blazor Web App, WASM, and Server App.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Globalization in Blazor Application
+# Globalization in Blazor Applications
 
 Globalization combines internationalization (i18n)—parsing and formatting dates, times, numbers, and currencies—and localization (l10n)—adding culture-specific customizations and translating UI text.
 

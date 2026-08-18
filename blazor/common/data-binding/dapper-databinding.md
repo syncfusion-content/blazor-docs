@@ -1,11 +1,10 @@
 ---
 layout: post
-title: Bind data using Dapper and perform CRUD operations | Syncfusion
-component: "DataGrid component and DataManager"
+title: Bind Data Using Dapper and Perform CRUD Operations | Syncfusion®
 description: How to consume data from SQL database using Dapper, bind it to a Syncfusion Component, and perform CRUD operations.
-component: Common
-documentation: ug
 platform: Blazor
+control: Common
+documentation: ug
 ---
 
 # How to Bind Data Using Dapper and Perform CRUD Operations
@@ -303,8 +302,8 @@ public class BugDataAdaptor: DataAdaptor
 Now, Open the `Program.cs` file in the application and register the `BugDataAdaptor` class.
 
 {% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines="4"%}
 
+{% highlight c# tabtitle="~/Program.cs" hl_lines="4" %}
 ....
 builder.Services.AddScoped<BugDataAccessLayer>();
 builder.Services.AddSyncfusionBlazor();

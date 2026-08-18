@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Integrating Blazor Components in .NET MAUI and Web App | Syncfusion
+title: Integrating .NET MAUI Blazor Hybrid and Web App | Syncfusion®
 description: Steps to create a .NET MAUI Blazor Hybrid and Blazor Web App and integrate Blazor components and much more details.
 platform: Blazor
 component: Common

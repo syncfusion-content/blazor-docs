@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Interactive Render Mode in Blazor Web App | Syncfusion®
-description: Check out the documentation for Interactive Render Mode in Blazor Components in Blazor Web App and much more details.
+description: Learn how to set the Interactive Render Mode in a Blazor Web App and how each mode affects component interactivity.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Render Interactive Modes in Blazor Web App
+# Interactive Render Mode in Blazor Web App
 
 This section explains the set of commands used to create a Blazor Web App with various Interactive Render Modes. These commands can be executed via the command prompt (Windows), terminal (macOS), or shell (Linux), allowing you to create Blazor applications using different rendering modes.
 

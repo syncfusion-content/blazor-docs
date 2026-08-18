@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Blazor extension for Visual Studio | Syncfusion®
+title: About Blazor Extension for Visual Studio | Syncfusion®
 description: Learn here about the Blazor extension for Visual Studio and how it streamlines integration with components. Explore to more details.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Overview of Blazor extension for Visual Studio
+# About Blazor Extension for Visual Studio
 
 The Syncfusion® Blazor extension for Visual Studio streamlines working with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components by configuring the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages and themes. A single extension supports both Visual Studio 2022 and 2026.
 

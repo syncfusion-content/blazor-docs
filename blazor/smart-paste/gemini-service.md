@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Gemini AI Integration with Blazor Smart Paste Button | Syncfusion®
-description: Learn how to implement a custom AI service using Google's Gemini API with the Blazor Smart Paste Button component in a Blazor App.
+title: Gemini AI Integration in Blazor Smart Paste | Syncfusion®
+description: Learn how to connect Google Gemini AI services with the Syncfusion Blazor Smart Paste Button for intelligent form filling.
 platform: Blazor
 control: Smart Paste Button
 documentation: ug

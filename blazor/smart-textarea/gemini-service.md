@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gemini AI Integration with Blazor Smart TextArea | Syncfusion®
+title: Gemini AI Service Integration in Blazor Smart TextArea | Syncfusion®
 description: Learn how to implement a custom AI service using Google's Gemini API with the Blazor Smart TextArea component in a Blazor App.
 platform: Blazor
 control: Smart TextArea

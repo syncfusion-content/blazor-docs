@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Bind data to the Blazor components using gRPC service | Syncfusion"
+title: Bind Data to the Blazor Components Using gRPC Service | Syncfusion®
 description: "Checkout and learn here all about how to consume data from gRPC service and bind it to the Blazor Component."
 platform: Blazor
 component: Common

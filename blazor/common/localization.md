@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization (Multi-Language) in Blazor components | Syncfusion®
+title: Localization Support in Blazor | Syncfusion®
 description: Learn how to localize Blazor UI components in Blazor Web App, WASM, Server, and .NET MAUI apps using resource files and dynamic culture switching.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Localization of Blazor Components
+# Localization in Blazor Application
 
 [Localization](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?view=aspnetcore-8.0) is the process of translating application resources into different languages for specific cultures. Blazor components can be localized by adding a resource file for each language.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Template Studio for Blazor | Syncfusion®
+title: Syncfusion Blazor Template Studio in Visual Studio | Syncfusion®
 description: Learn here about how to create a Blazor application using Blazor components with the Template Studio in Visual Studio 2026. Explore to more details.
 platform: Blazor
 control: Common

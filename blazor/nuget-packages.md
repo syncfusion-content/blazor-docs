@@ -1,13 +1,13 @@
 ---
 layout: post
-title: NuGet Packages List for Blazor Components | Syncfusion®
+title: NuGet Packages for Blazor Components | Syncfusion®
 description: Learn here about the installing, managing and upgrading of NuGet packages of Blaor Components and much more details.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
-# NuGet Packages for Blazor UI components
+# NuGet Packages for Blazor Components
 
 Starting with v18.4.0.30 (Volume 4, 2020), the Blazor UI components are separately available in individual NuGet packages. The NuGet packages are segregated based on the component usage and its namespace. The complete NuGet package [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) will also be available along with the individual NuGet packages. It means its support is not deprecated yet.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Predefined Code Snippets in Blazor Playground | Syncfusion®
+title: Predefined Code Snippets for Blazor Playground | Syncfusion®
 description: Learn how to use predefined code snippets in Blazor Playground to quickly add Blazor components and automatically install required NuGet packages.
 platform: Blazor
 control: Common

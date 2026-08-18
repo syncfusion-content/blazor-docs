@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Install the Blazor Linux installer | Syncfusion®
+title: Install the Blazor Linux Installer | Syncfusion®
 description: Learn here about how to install the Blazor Linux offline installer (ZIP), review included content, and register license keys in sample projects.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Install the Syncfusion® Blazor Linux installer
+# How to Install the Syncfusion® Blazor Linux Installer
 
 The steps below describe how to install and use the Blazor Linux offline installer (ZIP), review the included content, and register the license key in the bundled sample projects.
 

@@ -2,13 +2,13 @@
 layout: post
 title: Getting Started with the AI Coding Assistant for Blazor | Syncfusion®
 description: Learn how to configure and use AI Coding Assistant for intelligent code generation, documentation, and troubleshooting in Blazor apps.
-control: Getting Started with the AI Coding Assistant
-platform: blazor
+control: AI Coding Assistant
+platform: Blazor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the AI Coding Assistant
+# Getting Started with the AI Coding Assistant for Blazor
 
 The **AI Coding Assistant** is designed to streamline the development workflow for Blazor applications that use Blazor components. It leverages contextual knowledge of the Blazor component library to generate code snippets, configuration examples, and guided explanations—reducing documentation lookups and increasing productivity.
 

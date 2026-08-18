@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with Blazor Server App | Syncfusion
+title: Getting Started with Blazor Server-side App | Syncfusion®
 description: Check out the documentation for getting started with Blazor Components in Visual Studio and much more.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Getting Started with Blazor Server App
+# Getting Started with Blazor Server-side App
 
 This article provides step-by-step instructions for building a Blazor Server App with the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
