@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Template with Blazor Message Component | Syncfusion®
-description: Checkout and learn about Template with Blazor Message component in Blazor Server App and Blazor WebAssembly App.
+title: Template in Blazor Message | Syncfusion
+description: Customize Blazor Message content with HTML elements and Blazor components using templates for rich content today.
 platform: Blazor
 control: Message
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Template in Blazor Message
 
-The message supports templates that allows the user to customize the content with a custom structure. The content can be a string, paragraph, or any other HTML element. The template can be added directly to the `SfMessage` tags.
+The message supports templates that allow the user to customize the content with a custom structure. The content can be a string, a paragraph, or any other HTML element. The template can be added directly to the `SfMessage` tag.
 
 
 In the following sample, the Message component content is customized with HTML elements and Blazor Buttons, which are directly added to the `SfMessage` tag.

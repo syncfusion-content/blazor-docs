@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Tab key navigation in Blazor Toolbar Component | Syncfusion®
-description: Checkout and learn here all the features about how to Tab key navigation toolbar item in Blazor Toolbar component and more.
+title: How to enable tab key navigation in Blazor Toolbar | Syncfusion
+description: Enable Tab key navigation between Blazor Toolbar items using the TabIndex property value for accessibility.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Enabling Tab key Navigation in Blazor Toolbar Component
+# How to enable tab key navigation in Blazor Toolbar
 
 The [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) property of a Toolbar item enables tab key navigation for the item. By default, navigation between items occurs using the arrow keys. The `TabIndex` property additionally allows switching between items using the Tab and Shift+Tab keys.
 
-To utilize the [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) property, set it for each Toolbar item where tab key navigation is desired. The [TabIndex] property requires an integer value. A value of 0 or a negative value disables tab key navigation for the item.
+To utilize the `TabIndex` property, set it for each Toolbar item where tab key navigation is desired. The `TabIndex` property requires an integer value. A value of `0` or a negative value disables tab key navigation for the item.
 
 For example, to enable tab key navigation with an explicit order for two Toolbar items, use the following code:
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 <SfToolbar Width="600">
     <ToolbarItems>
@@ -24,9 +24,11 @@ For example, to enable tab key navigation with an explicit order for two Toolbar
     </ToolbarItems>
 </SfToolbar>
 ```
-With the preceding code, navigation between the two Toolbar items is possible using the Tab and Shift+Tab keys, in addition to arrow keys. Items are navigated in the explicit order specified by their [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) values.
-If [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) is set to `0` for all Toolbar items, tab key navigation follows the element's natural source order, rather than a numerically explicit [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) order. For example:
-```csharp
+With the preceding code, navigation between the two Toolbar items is possible using the Tab and Shift+Tab keys, in addition to arrow keys. Items are navigated in the explicit order specified by their `TabIndex` values.
+
+If `TabIndex` is set to `0` for all Toolbar items, tab key navigation follows the element's natural source order, rather than a numerically explicit `TabIndex` order. For example:
+
+```cshtml
 @using Syncfusion.Blazor.Navigations
 <SfToolbar Width="600">
     <ToolbarItems>
@@ -35,7 +37,10 @@ If [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigation
     </ToolbarItems>
 </SfToolbar>
 ```
-```csharp
+
+The following example demonstrates the source-order navigation behavior with a more complete Toolbar containing multiple item groups:
+
+```cshtml
 @using Syncfusion.Blazor.Navigations
 <SfToolbar Width="600">
     <ToolbarItems>

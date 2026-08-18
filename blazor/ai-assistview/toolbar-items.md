@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Toolbar items in Blazor AI AssistView Component | Syncfusion®
-description: Checkout and learn here all about Toolbar items with Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
+title: Toolbar Items in Blazor AI AssistView | Syncfusion®
+description: Configure Blazor AI AssistView toolbar items using AssistViewToolbarItem, PromptToolbarItem, and ResponseToolbarItem directives with position control.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 ---
 
-# Toolbar items in Blazor AI AssistView component
+# Toolbar Items in Blazor AI AssistView
 
 You can render the AI AssistView toolbar items by using the [AssistViewToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewToolbarItem.html), [PromptToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.PromptToolbarItem.html), [ResponseToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ResponseToolbarItem.html) & `AssistViewFooterToolbar` tag directives.
 

@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Value Binding in Blazor MultiColumn ComboBox Component | Syncfusion®
-description: Checkout and learn here all the features about value binding in Blazor MultiColumn ComboBox component and much more details.
+title: Value Binding in Blazor MultiColumn ComboBox | Syncfusion
+description: Bind selected values and indexes in Blazor MultiColumn ComboBox with @bind-Value and @bind-Index for selection today.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
 ---
 
-# Value Binding in MultiColumn ComboBox
+# Value Binding in Blazor MultiColumn ComboBox
 
 Value binding synchronizes the selected value between the Blazor MultiColumn ComboBox and the parent component. The control supports two binding approaches:
 - `@bind-Value` to bind the selected value
 - `@bind-Index` to bind by the zero-based item index
 
-## Value binding
+## Value Binding
 
 Bind the selected value using the [`@bind-Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Value) attribute. Supported value types include primitives (such as `string`, `int`, `bool`, `enum`) and complex types. Ensure the bound value type aligns with the configured [ValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ValueField) and [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_TextField) mapping.
 
@@ -30,9 +30,9 @@ When the component value changes, all places bound with the same variable are up
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZBJXYhzMFjWdrGx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with Bind Value](./images/value-binding/blazor-combobox-bind-value.webp)" %}
 
-## Index value binding
+## Index Value Binding
 
-The Index value binding is accomplished through the [@bind-Index]() attribute, which supports both integer and nullable integer types. This attribute allows you to bind values according to their corresponding index.
+The index value binding is accomplished through the [@bind-Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Index) attribute, which supports both integer and nullable integer types. This attribute allows you to bind values according to their corresponding zero-based index in the data source.
 
 {% highlight cshtml %}
 
@@ -70,11 +70,11 @@ The following example uses `string` as the `TValue`, so clearing sets the value 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXBftkrKpNAYFijk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with clear button](./images/value-binding/blazor_combobox_show-hide-clear-button.webp)" %}
 
-## Dynamically change TItem
+## Dynamically Change TItem
 
 `TItem` can be changed dynamically by wrapping the MultiColumn ComboBox in a generic component that declares `@typeparam` parameters for `TValue` and `TItem`, and exposes parameters for the data source and bound value. The following sample demonstrates using a generic component to switch data types.
 
-### Creating a generic MultiColumn ComboBox component
+### Creating a Generic MultiColumn ComboBox Component
 
 Create a `MultiColumnComboBox.razor` file that defines `@typeparam` for `TValue` and `TItem`, and exposes parameters for `customData` and `ComboBoxValue`.
 
@@ -102,7 +102,7 @@ Create a `MultiColumnComboBox.razor` file that defines `@typeparam` for `TValue`
 {% endhighlight %}
 {% endtabs %}
 
-### Use the generic component with different types
+### Use the Generic Component with Different Types
 
 Render the generic component with the required `TValue` and `TItem` in the corresponding Razor page.
 

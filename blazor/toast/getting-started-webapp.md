@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Toast in Blazor Web App | Syncfusion®
-description: Check out and learn the documentation for getting started with Blazor Toast Components in Blazor Web App.
+title: Getting Started with Blazor Toast in Blazor Web App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Toast in a Blazor Web App using setup steps and code examples.
 platform: Blazor
 control: Toast
 documentation: ug
 ---
 
-# Getting Started with Blazor Toast Component in Blazor Web App
+# Getting Started with Blazor Toast in Blazor Web App
 
 This section explains how to add the [Blazor Toast](https://www.syncfusion.com/blazor-components/blazor-toast) component to a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -263,7 +263,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-* [Show or hide toast from any page using service in Blazor](https://support.syncfusion.com/kb/article/11734/show-or-hide-toast-from-any-page-using-service-in-blazor)
+* [Show or hide toast from any page using service in Blazor](https://support.syncfusion.com/kb/article/11734/how-to-show-or-hide-any-page-using-blazor-toast)
 * [Getting Started with Blazor for client-side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Blazor for server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Blazor for server-side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli)

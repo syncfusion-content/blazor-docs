@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor TextBox Component | Syncfusion®
-description: Discover Blazor TextBox Components accessibility features—easy to learn, implement and much more details.
+title: Accessibility in Blazor TextBox | Syncfusion
+description: Learn how Blazor TextBox supports accessibility with WCAG 2.2, keyboard navigation, and screen readers.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Accessibility in Blazor TextBox Component
+# Accessibility in Blazor TextBox
 
 The [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) follows accessibility guidelines and standards commonly used to evaluate UI accessibility, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI‑ARIA](https://www.w3.org/TR/wai-aria/).
 
@@ -36,9 +36,9 @@ The accessibility compliance for the Blazor TextBox component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Blazor TextBox is characterized with complete ARIA Accessibility support that helps to access through the on-screen readers and other assistive technology devices. This component is designed with the reference of the guidelines document given in [WAI ARAI Accessibility practices](https://www.w3.org/TR/wai-aria/#textbox).
+The Blazor TextBox provides complete ARIA support that helps to access through on-screen readers and other assistive technology devices. This component is designed with the reference of the guidelines document given in [WAI-ARIA Accessibility practices](https://www.w3.org/TR/wai-aria/#textbox).
 
-The TextBox uses the `textbox` role and following ARIA properties for its element based on its state.
+The TextBox uses the `textbox` role and the following ARIA properties for its element based on its state.
 
 | **Property** | **Functionality** |
 | --- | --- |

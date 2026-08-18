@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Header and Content in Blazor Card Component | Syncfusion®
-description: Checkout and learn here all about Header and Content in Blazor Card component and much more details.
+title: Header and Content in Blazor Card | Syncfusion®
+description: Render header and content sections in the Blazor Card using the CardHeader and CardContent slots to organize title, subtitle, and main body.
 platform: Blazor
 control: Card
 documentation: ug
@@ -13,22 +13,23 @@ documentation: ug
 
 ## Header
 
-The Card can be created with header title, sub title and images. For adding header you need to add `CardHeader` Component. Card provides below elements and corresponding class definitions to include header.
+The Card can be created with a header that contains a title, a sub-title, and an optional image. To add a header, use the [`CardHeader`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html) component. The Card provides the following elements and corresponding CSS classes for building a header.
 
-Elements   | Description
------------- | -------------
-Caption | It is the wrapper element to include title and sub-title.
-Image | It supports to include header images with the specified dimensions.
+| Element | Description |
+| --- | --- |
+| [Caption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html) | Wrapper element that includes the title and sub-title. |
+| [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardImage.html) | Includes a header image with the specified dimensions. |
 
-Class   | Description
------------- | -------------
-`Title` |  Main title text within the header.
-`SubTitle` | A sub-title within the header.
-`CardImage` | To include heading image within the header.
+| Parameter | Description |
+| --- | --- |
+| [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html#Syncfusion_Blazor_Cards_CardHeader_Title) | Main title text within the header. |
+| [`SubTitle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html#Syncfusion_Blazor_Cards_CardHeader_SubTitle) | A sub-title within the header. |
+| [`CardImage`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardImage.html) | To include heading image within the header. |
+
 
 ### Title and Subtitle
 
-For adding header to the Card, Title Property.
+To add a header to the Card, use the `CardHeader` component and set the `Title` and `SubTitle` properties.
 
 * Add `Title` Property inside the header caption for adding main title.
 
@@ -36,7 +37,7 @@ For adding header to the Card, Title Property.
 
 ### Image
 
-Card header has an option for adding images in the header. It is aligned with either before or after the header based on the HTML element positioned in the header structure. The header image can be added by `ImageUrl` component  which can be placed before or after the header caption wrapper element.
+The Card header supports an optional image set via the [`ImageUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html#Syncfusion_Blazor_Cards_CardHeader_ImageUrl) parameter on [`CardHeader`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html). The image is rendered either before or after the caption, depending on the value of the [`ImagePosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.ImagePosition.html) parameter (default: `Before`).
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
@@ -52,9 +53,9 @@ Card header has an option for adding images in the header. It is aligned with ei
 
 ## Content
 
-Content in Card holds texts, images, links, and all possible HTML elements. It is adaptable within the Card root element.
+Content in the Card holds text, images, links, and all possible HTML elements. It renders anywhere inside the Card root element.
 
-* Create a `Content` component.
+* Create a [`CardContent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardContent.html) component.
 * Place content `div` element in the Card root element or within any Card inner elements.
 
 ```cshtml
@@ -73,7 +74,7 @@ Content in Card holds texts, images, links, and all possible HTML elements. It i
 
 ### Image
 
-Card content is designed to display an image tag within it. You can wrap an image element inside the card content to create a visually appealing layout. Additionally, CSS styling can be used to further customize the appearance of card content.
+You can place a raw `<img>` element inside `CardContent` to render an image within the content area. For component-based image rendering, use the `CardImage` component as described in [Image and Divider in Blazor Card](card-image.md).
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
@@ -95,3 +96,11 @@ Card content is designed to display an image tag within it. You can wrap an imag
 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjBnjRsrrunDISPn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Card Component Content with Image](images/Blazor-Card-Component-Content-with-Image.webp)" %}
+
+## See also
+
+* [Style and Appearance in Blazor Card](style.md)
+* [Image and Divider in Blazor Card](card-image.md)
+* [Action Buttons in Blazor Card](action-buttons.md)
+* [Horizontal Card in Blazor Card](horizontal.md)
+* [Card API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.SfCard.html)

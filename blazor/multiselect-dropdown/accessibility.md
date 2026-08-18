@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Accessibility in Blazor MultiSelect Dropdown Component | Syncfusion®
-description: Checkout and learn here all about accessibility in Blazor MultiSelect Dropdown component and much more details.
+title: Accessibility in Blazor MultiSelect Dropdown | Syncfusion
+description: Learn how Blazor MultiSelect Dropdown supports accessibility with ARIA roles, states, and full keyboard interaction.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Accessibility in Blazor MultiSelect Dropdown Component
+# Accessibility in Blazor MultiSelect Dropdown
 
 The [Blazor MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) component is designed in accordance with WAI-ARIA specifications and applies appropriate roles, states, and properties along with full keyboard support. It offers complete keyboard interaction and ARIA support to ensure usability for people who use assistive technologies or rely on keyboard navigation.
 
-The Blazor MultiSelect Dropdown component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor MultiSelect Dropdown component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor MultiSelect Dropdown component is outlined below.
 

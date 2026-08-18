@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Legend in Blazor 3D Chart Component | Syncfusion®
-description: Checkout and learn here all about the Legends and its customization in Blazor 3D Chart component and much more.
+title: Blazor 3D Chart Legend Configuration Examples | Syncfusion®
+description: Learn how to enable and customize the legend in Syncfusion Blazor 3D Chart, including position, alignment, and styling options.
 platform: Blazor
 control: 3D Chart
 documentation: ug
 ---
 
-# Legend in Blazor 3D Chart Component
+# Blazor 3D Chart Legend
 
 Legend provides information about the series rendered in the 3D chart.
 

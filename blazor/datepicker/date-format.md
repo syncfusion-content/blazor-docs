@@ -1,23 +1,17 @@
 ---
 layout: post
-title: Date Format in Blazor DatePicker Component | Syncfusion®
-description: Checkout and learn here all the features about Date Format in Blazor DatePicker component and much more.
+title: Date Format in Blazor DatePicker | Syncfusion®
+description: Customize the Blazor DatePicker date display and input format using the Format property with standard .NET date format specifiers.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-#  Date Format in Blazor DatePicker Component
+# Date Format in Blazor DatePicker
 
 ## Display Format
 
-The display format can be used to specify how the date value is displayed or entered in a `DatePicker` control
-
-The string format of the date value specifies how the date value should be represented as a string. Different countries and regions have different conventions for representing the date value in a string format. In addition to representing the date value in different string formats, it is also possible to specify the order in which the day, month, and year values appear in the string. For example, the day/month/year format could be written as `28-12-2022` or `28.12.2022`
-
-By default, the DatePicker's format is based on the culture. You can also set the own [Custom Format](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) or [Standard Format](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings) by using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Format) property.
-
-> Once the display format property has been defined, it will be applied consistently to all cultures, regardless of their conventions for representing the date value. In other words, the display format property serves as a standardized way of representing the date value, ensuring that it is displayed and entered consistently regardless of the culture or region in which the application is used.
+The display format specifies how the date value is rendered in the DatePicker input. By default, the DatePicker's format is based on the current culture (for example, `M/d/yyyy` for `en-US`). You can override the default by setting your own [.NET custom](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) or [.NET standard](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings) date format string through the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Format) property. Once the `Format` is set, it is applied consistently to all cultures, regardless of their regional conventions.
 
 {% highlight Razor %}
 
@@ -30,12 +24,19 @@ By default, the DatePicker's format is based on the culture. You can also set th
 
 ## Input Formats
 
-The input format can be used to specify how the date value is entered in a `DatePicker` control.
+The [InputFormats](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_InputFormats) property accepts an array of format strings used to parse the value typed by the user. When the user finishes typing (by pressing the Enter key, the Tab key, or when the input loses focus), the entered value is parsed against the configured input formats and converted to the `Format` value. The default value of `InputFormats` is `null`, which means the culture's date pattern is used.
 
-The string format of the date value specifies how the date should be represented as a string when entered by the user. When the user types the date in the input format, it will be automatically converted to the display format after pressing enter, tab key, or when the input loses focus. This enhances the user experience by allowing intuitive data entry through various custom input formats. You can also set your own [Custom Format](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) or [Standard Format](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings) by using [InputFormats](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_InputFormats) property.
+You can specify one or more [.NET custom](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) or [.NET standard](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings) date format strings. When multiple formats are provided, each pattern is tried in order until one parses successfully. For invalid input, the [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_StrictMode) property controls whether the value is reset or highlighted with an error style.
 
 {% highlight Razor %}
 
 {% include_relative code-snippet/InputFormat.razor %}
 
 {% endhighlight %}
+
+## See also
+
+* [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Format) property
+* [InputFormats](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_InputFormats) property
+* [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_StrictMode) property
+* [Globalization in Blazor DatePicker](globalization)

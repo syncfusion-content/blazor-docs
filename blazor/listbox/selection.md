@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Selection in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all about selection in Blazor ListBox component and much more details.
+title: Selection in Blazor ListBox | Syncfusion
+description: Configure single or multiple selection in Blazor ListBox using SelectionSettings and keyboard shortcuts.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Selection in Blazor ListBox Component
+# Selection in Blazor ListBox
 
-The ListBox supports selecting a single item or multiple items using mouse or keyboard. There are two selection modes available in the ListBox:
+The Blazor ListBox supports selecting a single item or multiple items using the mouse or the keyboard. There are two selection modes available in the ListBox:
 
-* Single - Select a single item in the ListBox.
-* Multiple - Select multiple items in the ListBox.
+* **Single** – Select a single item in the ListBox.
+* **Multiple** – Select multiple items in the ListBox.
 
 ## Single selection
 
-To enable single selection, set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html#Syncfusion_Blazor_DropDowns_ListBoxSelectionSettings_Mode) to `Single` in the [SelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html) property.
+To enable single selection, set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html#Syncfusion_Blazor_DropDowns_ListBoxSelectionSettings_Mode) to `Single` in the [ListBoxSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html) child component.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -50,7 +50,7 @@ To enable single selection, set the [Mode](https://help.syncfusion.com/cr/blazor
 
 ## Multiple selection
 
-To enable multiple selection, set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html#Syncfusion_Blazor_DropDowns_ListBoxSelectionSettings_Mode) to `Multiple` in the [SelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html) property. Use the Shift, Ctrl, and arrow keys to select multiple items with the keyboard.
+To enable multiple selection, set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html#Syncfusion_Blazor_DropDowns_ListBoxSelectionSettings_Mode) to `Multiple` in the [ListBoxSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html) child component. Use the **Shift**, **Ctrl**, and arrow keys to select multiple items with the keyboard.
 
 N> By default, the selection mode is `Multiple`.
 
@@ -90,7 +90,7 @@ The ListBox supports checkbox selection for choosing multiple items. To enable c
 
 ### Select All
 
-To select all items in the ListBox, enable the [ShowSelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html#Syncfusion_Blazor_DropDowns_ListBoxSelectionSettings_ShowSelectAll) property.
+To select all items in the ListBox at once, set the [ShowSelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html#Syncfusion_Blazor_DropDowns_ListBoxSelectionSettings_ShowSelectAll) property to `true`.
 
 ```cshtml
 
@@ -125,6 +125,13 @@ To select all items in the ListBox, enable the [ShowSelectAll](https://help.sync
 
 ### Maximum Selection Length
 
-The [MaximumSelectionLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_MaximumSelectionLength) property gets or sets the maximum length of items that can be selected in the ListBox. This property should be set based on the length of your data source. By setting this limitation, the selection of items in the list will be prevented.
+The [MaximumSelectionLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_MaximumSelectionLength) property limits the number of items that can be selected at one time. When the limit is reached, additional selection is prevented. Set this based on the size of your data source.
 
-N> The default value of MaximumSelectionLength property is `500`.
+N> The default value of the `MaximumSelectionLength` property is `500`.
+
+## See also
+
+* [Bind Change Events in Blazor ListBox](./how-to/bind-change-event.md)
+* [Get Items in Blazor ListBox](./how-to/get-items.md)
+* [Select Items in Blazor ListBox](./how-to/select-items.md)
+* [Data Binding in Blazor ListBox](./data-binding.md)

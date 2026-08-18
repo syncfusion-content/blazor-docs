@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column Spanning in Blazor DataGrid Component | Syncfusion®
-description: Learn here all about column spanning in Blazor DataGrid component of Essential Studio and much more details.
+title: Blazor Grid Column Spanning | Syncfusion
+description: Learn how to use column spanning in Blazor Data Grid to merge adjacent cells, create custom layouts, and improve data presentation.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Column spanning in Blazor DataGrid
+# Column Spanning in Blazor Data Grid
 
 Column spanning in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides automatic vertical merging of adjacent cells within the same column when identical values are detected. This feature enhances data readability by consolidating repeated values into a single, taller cell, making it particularly effective for scenarios where the same value appears across consecutive rows.
 

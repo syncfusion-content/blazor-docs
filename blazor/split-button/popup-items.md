@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup Items in Blazor SplitButton Component | Syncfusion®
-description: Checkout and learn here all the features about popup items in Blazor SplitButton component and much more.
+title: Popup Items in Blazor Split Button | Syncfusion
+description: Configure Blazor Split Button popup items with icons, separators, URL navigation, and click events for rich menus.
 platform: Blazor
 control: Split Button
 documentation: ug
 ---
 
-# Popup Items in Blazor SplitButton Component
+# Popup Items in Blazor Split Button
 
 ## Icons
 
@@ -50,7 +50,7 @@ The following image shows Split Button popup items with icons.
 
 ### Item Templating
 
-Popup items can be customized using the `CssClass` property. Customize the items using CSS style.
+Popup items can be customized using the `CssClass` property. Apply custom styles to change the appearance of each item.
 
 ```cshtml
 

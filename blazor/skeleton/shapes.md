@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Shapes in Blazor Skeleton Component | Syncfusion®
-description: Checkout and learn here all about shapes and how to use them in Blazor Skeleton component and much more.
+title: Shapes in Blazor Skeleton | Syncfusion
+description: Use built-in Blazor Skeleton shapes such as Circle, Square, Text, and Rectangle for loading placeholders.
 platform: Blazor
 control: Skeleton
 documentation: ug
 ---
 
-# Shapes in Blazor Skeleton Component
+# Shapes in Blazor Skeleton
 
-The Skeleton component support various built-in shape variants to design layout of the page. You can use the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Shape) property to create a preview of any layout.
+The Skeleton component supports various built-in shape variants to design the layout of a page. You can use the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Shape) property to create a preview of any layout.
 
 The Skeleton component supports the following content shapes:
 

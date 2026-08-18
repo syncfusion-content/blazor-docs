@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Mention in Blazor Server App | Syncfusion
-description: Check out and learn the documentation for getting started with Blazor Mention Components in Server App.
+title: Getting Started with Blazor Mention | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Mention in a Blazor Server app with installation and setup steps.
 platform: Blazor
 control: Mention
 documentation: ug
 ---
 
-# Getting Started with Blazor Mention in Blazor Server App
+# Getting Started with Blazor Mention
 
 This section briefly explains how to include the [Blazor Mention](https://www.syncfusion.com/blazor-components/blazor-mention) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -309,5 +309,5 @@ In the below example, the `Target` property of the Mention component is set to t
 
 ## See also
 
-1. [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-2. [Getting Started with Blazor for Server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+1. [Getting Started with Blazor Web App in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Getting Started with Blazor WebAssembly App in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)

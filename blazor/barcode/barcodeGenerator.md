@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Barcode Generator in Blazor Barcode Component | Syncfusion®
-description: Checkout and learn here all features about Barcode Generator in Blazor Barcode component and much more.
+title: Barcode Generator in Blazor Barcode Generator | Syncfusion®
+description: Generate linear 1D barcodes in Blazor using Code39, Code128, Codabar, Code93, and other symbologies with customizable color, size, and display text.
 platform: Blazor
 control: Barcode
 documentation: ug
@@ -23,7 +23,7 @@ The Code 39 character set includes digits 0-9, uppercase letters A–Z, and the 
 
 ## Code39 Extended
 
-Code 39 Extended is an enhanced version of Code 39 that supports ASCII character set. In Code 39 Extended, it can encode lowercase letters (a–z) and special keyboard characters by using combinations of standard Code 39 symbols.
+Code 39 Extended is an enhanced version of Code 39 that supports ASCII character set. In Code 39 Extended, it can encode lowercase letters (a–z), digits, and special keyboard characters by using combinations of standard Code 39 symbols.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -63,13 +63,13 @@ The characters A, B, C, and D serve as start and stop characters. Codabar is use
 
 ## Code 32
 
-Code 32 is used mainly for coding pharmaceuticals, cosmetics, and dietetics. It is often to encode the Italian Pharmacode that has the following structure:
+Code 32 is used mainly for coding pharmaceuticals, cosmetics, and dietetics. It is often used to encode the Italian Pharmacode that has the following structure:
 
 * ‘A’ character (ASCII 65), that is not really encoded.
 * 8 digits for the Pharmacode (It generally begins with / and prefixed with 0).
 * 1 digit for checksum module 10, that is automatically calculated by the barcode.
 
-The value to be encoded must be 8 digits Pharmacode (prefix it with ‘0’ if necessary), and the 9th digit (the checksum) is automatically calculated by barcode.
+The value must contains 8 digits Pharmacode (prefix it with ‘0’ if necessary), and the 9th digit (the checksum) is automatically calculated by barcode. The checksum is used for validation and is not required to be entered in the Value property and is generated internally.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -95,9 +95,16 @@ Code 93 is designed to complement and improve Code 39. It represents the entire 
 
 Code 93 Extended Barcode symbology is a continuous, variable length, self-checking. It is based on Code 93 Barcode. The Extended Version can encode all 128 ASCII characters.
 
+```cshtml
+@using Syncfusion.Blazor.BarcodeGenerator
+
+<SfBarcodeGenerator Width="200px" Height="150px" Type="@BarcodeType.Code93Extension" Value="SYNCFUSION"></SfBarcodeGenerator>
+
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrxDbisUZiwIgjt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Code 93 Extension in Blazor Barcode](images/blazor-Code93-Extension.webp)" %}
 ## Code 128
 
-Code 128 is a variable-length, high-density, alphanumeric, linear bar code symbology capable of encoding full 128-character ASCII character set and extended character sets. This symbology includes a checksum digit for verification and the barcode can be verified character-by-character by verifying the parity of each data byte.
+Code 128 is a variable-length, high-density, alphanumeric, linear barcode symbology capable of encoding full 128-character ASCII character set and extended character sets. This symbology includes a checksum digit for verification and the barcode can be verified character-by-character by verifying the parity of each data byte. Code 128 supports Code Set A, Code Set B, and Code Set C. Use Code Set A for upper-case alphanumeric characters and control characters, Code Set B for upper- and lower-case alphanumeric characters and punctuation, and Code Set C for numeric data encoded in digit pairs.
 
 ### Code 128 Code Sets
 
@@ -119,7 +126,7 @@ The last seven characters of Code Sets A and B (character values 96-102) and the
 
 ## Customizing the Barcode color
 
-A page or printed media with barcode often appears colorful in the background and surrounding region with other contents. In such cases, the barcode can also be customized to suit the needs. You can achieve this by using for [ForeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_ForeColor) property.
+A page or printed media with barcode often appears colorful in the background and surrounding region with other contents. In such cases, the barcode can also be customized to suit the needs. You can achieve this by using the [ForeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_ForeColor) property.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -159,7 +166,7 @@ In barcode generators, Customize the barcode text by using display [Text](https:
 
 The [EnableCheckSum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_EnableCheckSum) property specifies an error detection in which some additional characters are added to a barcode to protect the integrity of the barcode data. The default value of this property is set as true for BarcodeType.Code39.
 
-The below code explains how to set the EnableCheckSum property to hide the extra characters displayed at the end of the barcode.
+The following code shows how to set the EnableCheckSum property to hide the extra characters displayed at the end of the barcode.
 
 ```cshtml
 <SfBarcodeGenerator EnableCheckSum=false
@@ -173,7 +180,7 @@ The below code explains how to set the EnableCheckSum property to hide the extra
 
 ## Event
 
-[OnValidationFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_OnValidationFailed) event in the [SfBarcodeGenerator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html) is used to trigger when the input is invalid string.
+[OnValidationFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_OnValidationFailed) event in the [SfBarcodeGenerator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html) is triggered when the input string is invalid.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -183,13 +190,12 @@ The below code explains how to set the EnableCheckSum property to hide the extra
 {
     public void OnValidationFailed(ValidationFailedEventArgs args)
     {
+         //Action to be performed.
     }
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXLHZniCTMfPFDvD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## See also
-
-* [How to generate a QR Code in (2FA) Application in Blazor Diagram?](https://support.syncfusion.com/kb/article/16295/how-to-generate-a-qr-code-in-2fa-application-in-blazor-diagram)
 
 * [How to create a simple BarcodeGenerator and QRCodeGenerator sample in a .NET 8 Blazor Web App using interactive render mode as a server?](https://support.syncfusion.com/kb/article/17284/how-to-create-a-simple-barcodegenerator-and-qrcodegenerator-sample-in-a-net-8-blazor-web-app-using-interactive-render-mode-as-a-server)

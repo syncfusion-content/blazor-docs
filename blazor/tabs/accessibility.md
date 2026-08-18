@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Tabs Component | Syncfusion®
-description: Checkout and learn here all the features about accessibility in Blazor Tabs component and much more details.
+title: Accessibility in Blazor Tabs | Syncfusion
+description: Learn how Blazor Tabs supports accessibility with keyboard navigation and screen reader compatibility.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Accessibility in Blazor Tabs Component
+# Accessibility in Blazor Tabs
 
 The [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -57,7 +57,7 @@ The following list of attributes are added in the Tab.
 
 ## Keyboard interaction
 
-By default, keyboard navigation is enabled. This component implements keyboard navigation support by following the [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/#Tabpanel) practices. Once focused on the active Tab element, you can use the following key combination for interacting with the Tab.
+By default, keyboard navigation is enabled. This component implements keyboard navigation support by following the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/#Tabpanel) practices. Once focused on the active Tab element, you can use the following key combination for interacting with the Tab.
 
 | Windows | Mac | Actions |
 |--- |--- | --- |
@@ -66,8 +66,8 @@ By default, keyboard navigation is enabled. This component implements keyboard n
 | <kbd>Enter</kbd> or <kbd> Space</kbd> | <kbd>Enter</kbd> or <kbd> Space</kbd> | Selects the Tab if it is not selected. Opens the popup dropdown icon if it is focused. Select the Tab item as active when popup item is focused. |
 | <kbd>Esc(Escape)</kbd> | <kbd>Esc</kbd> | Closes the popup if popup is in opened state. |
 | <kbd>↑</kbd> or <kbd>↓</kbd> | <kbd>↑</kbd> or <kbd>↓</kbd> | When the popup is open and focused, it will move to previous or next Tab items of the popup in the vertical direction. |
-|  <kbd>Home</kbd> | <kbd>Home</kbd> | Moves focus to the first Tab. |
-|  <kbd>End </kbd> | <kbd>End</kbd> | Moves focus to the last Tab. |
+| <kbd>Home</kbd> | <kbd>Home</kbd> | Moves focus to the first Tab. |
+| <kbd>End</kbd> | <kbd>End</kbd> | Moves focus to the last Tab. |
 |  <kbd>Shift + F10 </kbd> | <kbd>⇧</kbd> + <kbd>F10</kbd> | If popup mode is enabled, it opens the popup when the Tab is focused. |
 |  <kbd>Delete</kbd> | <kbd>Delete</kbd> | Deletes the Tab, if close button is enabled in Tab header. |
 
@@ -79,4 +79,4 @@ The accessibility compliance of the Tabs component is shown in the following sam
 
 ## See also
 
-* [Accessibility in  Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

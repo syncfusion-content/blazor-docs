@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Style and appearance in Blazor In-place Editor Component | Syncfusion®
-description: Checkout and learn here all about style and appearance in Blazor In-place Editor component and much more details.
+title: Style and Appearance in Blazor In-place Editor | Syncfusion
+description: Customize the appearance of Blazor In-place Editor with CSS selectors for text, action buttons, and container styles.
 platform: Blazor
 control: In-place Editor 
 documentation: ug
 ---
 
-# Style and Appearance in Blazor In-place Editor Component
+# Style and Appearance in Blazor In-place Editor
 
-The following guidance shows the CSS selectors that can be used to customize the control’s appearance to match application branding and user preferences.
+The following sections describe the CSS selectors that can be used to customize the component's appearance to match application branding and user preferences.
 
 To get started quickly with customizing the Blazor In-place Editor, watch the following video or explore the [GitHub sample for customizing the Blazor In-place Editor](https://github.com/SyncfusionExamples/how-to-customize-the-blazor-in-place-editor-component):
 

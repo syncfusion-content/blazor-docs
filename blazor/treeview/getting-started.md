@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor TreeView in Blazor WASM App | Syncfusion®
+title: Getting Started with Blazor TreeView in Blazor WASM App | Syncfusion
 description: Check out and learn about getting started with Blazor TreeView component in Blazor WebAssembly Application.
 platform: Blazor
 control: TreeView

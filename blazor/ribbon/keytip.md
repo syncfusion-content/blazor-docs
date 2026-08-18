@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Keytips in Blazor Ribbon Component | Syncfusion®
-description: Checkout and learn about Keytips in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
-platform: Blazor
+title: Keytip in Blazor Ribbon | Syncfusion
+description: Learn how to enable keyboard navigation in the Blazor Ribbon using KeyTips that activate when the Alt key is pressed for fast access to items.
 control: Ribbon
+platform: Blazor
 documentation: ug
 ---
 
-# KeyTips in Blazor Ribbon component
+# Keytip in Blazor Ribbon
 
 The Blazor Ribbon component supports keyboard navigation through keytips, enabling users to interact with the Ribbon interface without a mouse. Keytips can be enabled by setting the `EnableKeyTips` property, allowing users to quickly access commands using keyboard shortcuts.
 

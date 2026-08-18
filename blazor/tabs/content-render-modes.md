@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Content Render Modes in Blazor Tabs Component | Syncfusion®
-description: Checkout and learn here all the features about content render modes in Blazor Tabs component and more.
+title: Content Render Modes in Blazor Tabs | Syncfusion
+description: Choose dynamic, on-demand, or initial render modes to control how Blazor Tabs content loads in the DOM.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Content Render Modes in Blazor Tabs Component
+# Content Render Modes in Blazor Tabs
 
 In [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs), the content of the Tabs can be rendered based on the scenario. The content rendering of tabs can be done by the following three different ways.
 
@@ -19,7 +19,7 @@ In [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs), the 
 
 This mode is the default one in which the content of the selected tab alone will be loaded and available in DOM initially and it will be replaced with corresponding content if you select the tab dynamically. Since in this mode, the browser maintains the DOM with current active tab content alone, page loading performance is increased with rendering DOM. But the Tabs doesn't maintain its current state since every time tab loaded with fresh content.
 
-In the following code example, there are two tabs. The first tab have a login page and second tab have Grid component. The second tab Grid component will be rendered in the DOM only when the login is completed. The second tab will be replaced the first tab in the DOM.
+In the following code example, there are two tabs. The first tab shows a login page and the second tab shows the Grid component. The second tab (Grid) is rendered in the DOM only after the login is completed. Because this mode replaces the previous tab's content, the first tab is removed from the DOM when the second tab is activated.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -127,13 +127,13 @@ In the following code example, there are two tabs. The first tab have a login pa
 }
 ```
 
-N> In this mode, if you want to maintain the state, you have to handle it in application end.
+N> In this mode, the Tab does not maintain its own state when it is replaced. If you need to preserve state, you must manage it in your application code.
 
 ## On Demand rendering or lazy loading
 
-You can set this mode to our Tabs by setting `ContentLoad.Demand` to the property `LoadOn`. In this mode, the content of the selected tab alone will be loaded initially. The content of the selected tab will be rendered on selection. The content of the tabs which were loaded once will be maintained in the DOM. In this mode, since the selected tab content alone rendered on initial load and maintained the other tabs on selection in the DOM, state of the tabs like scroller position, form values etc.., will be maintained.
+You can enable this mode by setting `ContentLoad.Demand` on the [LoadOn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_LoadOn) property of `SfTab`. In this mode, only the content of the initially selected tab is loaded. The content of any other tab is rendered only when that tab is selected. Once a tab's content is rendered, it is kept in the DOM. This preserves state such as the scroller position, form values, and other UI state for tabs that have been visited.
 
-In the following code example, Calendar and Scheduler have been rendered in first and second tab respectively. Initially, Scheduler is not available once the second tab is selected, scheduler will be rendered. Both the calendar and scheduler will be maintained in DOM, changing the date either in calendar or scheduler will change the date in other.
+In the following code example, the Calendar is rendered in the first tab and the Scheduler in the second tab. Initially, the Scheduler is not available; once the second tab is selected, the Scheduler is rendered. Both the Calendar and the Scheduler are then maintained in the DOM, and changing the date in either component updates the other.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -175,9 +175,9 @@ In the following code example, Calendar and Scheduler have been rendered in firs
 
 ## On initial rendering
 
- This mode can be set to the Tabs by setting `ContentLoad.Init` to the property `LoadOn`. In this mode, the content of all the tabs will be rendered on initial load and maintained in the DOM. You can use this mode, when you have less number of tabs and you need to maintain the state of tabs. In this mode, you can access the reference of components rendered in other tabs.
+This mode can be enabled by setting `ContentLoad.Init` on the `LoadOn` property of `SfTab`. In this mode, the content of all the tabs is rendered on initial load and maintained in the DOM. Use this mode when you have a small number of tabs and you need to maintain the state of the components in each tab. In this mode, you can also access the references of components rendered in other tabs.
 
- In the following example, all the three tabs are rendered in initial load itself and the data entered in the first tab will be maintained even when second or third tab is in active state.
+In the following example, all three tabs are rendered on initial load. The data entered in the first tab is preserved even when the second or third tab is the active tab.
 
  ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -216,7 +216,7 @@ In the following code example, Calendar and Scheduler have been rendered in firs
             <ContentTemplate>
                 <p>You can check out our Blazor demo here - https://blazor.syncfusion.com/demos/ </p>
                 <br />
-                <p>Also user guide will be avail here - https://blazor.syncfusion.com/documentation/introduction/</p>
+                <p>Also user guide will be avail here - https://blazor.syncfusion.com/documentation/introduction</p>
             </ContentTemplate>
         </TabItem>
         <TabItem>
@@ -250,14 +250,14 @@ In the following code example, Calendar and Scheduler have been rendered in firs
 </SfTab>
 
 @code {
-    private string UserName;
-    private string MailAddress;
-    private string Comments;
+    private string UserName = string.Empty;
+    private string MailAddress = string.Empty;
+    private string Comments = string.Empty;
     private int SelectedTab = 0;
     public Boolean EmptyField { get; set; } = false;
     private void OnSignin()
     {
-        if (this.UserName == null || this.MailAddress == null)
+        if (string.IsNullOrWhiteSpace(this.UserName) || string.IsNullOrWhiteSpace(this.MailAddress))
         {
             EmptyField = true;
         }
@@ -273,16 +273,16 @@ In the following code example, Calendar and Scheduler have been rendered in firs
     }
     public void OnSubmit()
     {
-        if (this.UserName == null || this.MailAddress == null || this.Comments == null)
+        if (string.IsNullOrWhiteSpace(this.UserName) || string.IsNullOrWhiteSpace(this.MailAddress) || string.IsNullOrWhiteSpace(this.Comments))
         {
             EmptyField = true;
         }
         else
         {
             EmptyField = false;
-            this.UserName = null;
-            this.MailAddress = null;
-            this.Comments = null;
+            this.UserName = string.Empty;
+            this.MailAddress = string.Empty;
+            this.Comments = string.Empty;
         }
     }
 }

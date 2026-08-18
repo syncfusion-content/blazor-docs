@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor CheckBox Component | Syncfusion®
-description: Checkout and learn here all the features about Accessibility in Blazor CheckBox component and much more.
+title: Accessibility in Blazor CheckBox | Syncfusion®
+description: Learn how Blazor CheckBox meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA roles, keyboard navigation, and label support.
 platform: Blazor
 control: Checkbox
 documentation: ug
 ---
 
-# Accessibility in Blazor CheckBox Component
+# Accessibility in Blazor CheckBox
 
 The Blazor CheckBox component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -38,7 +38,7 @@ The accessibility compliance for the Blazor CheckBox component is outlined below
 
 ## WAI-ARIA attributes
 
-The Blazor CheckBox component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor CheckBox component:
+The Blazor CheckBox component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/) patterns for accessibility. The following ARIA attributes are used in the Blazor CheckBox component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -46,7 +46,7 @@ The Blazor CheckBox component followed the [WAI-ARIA](https://www.w3.org/WAI/ARI
 
 ## Keyboard interaction
 
-The Blazor CheckBox component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor CheckBox component.
+The Blazor CheckBox component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor CheckBox component.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
@@ -54,12 +54,12 @@ The Blazor CheckBox component followed the [keyboard interaction](https://www.w3
 
 ## Ensuring accessibility
 
-The Blazor CheckBox component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The Blazor CheckBox component's accessibility levels are validated through [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
 
-The accessibility compliance of the Blazor CheckBox component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/checkbox) in a new window to evaluate the accessibility of the Blazor CheckBox component with accessibility tools.
+The accessibility compliance of the Blazor CheckBox component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/checkbox) in a new window to evaluate accessibility with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/checkbox.html" %}
 
 ## See also
 
-* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)

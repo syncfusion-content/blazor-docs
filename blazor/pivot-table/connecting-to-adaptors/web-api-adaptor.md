@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Blazor Pivot Table with WebApiAdaptor | Syncfusion®
-description: Learn how to bind remote data and perform CRUD operations using WebApiAdaptor in the Syncfusion Blazor Pivot Table component.
+title: WebApi Adaptor in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table binds to a Web API through the WebApiAdaptor, which loads all records in one request and aggregates client-side.
 platform: Blazor
 keywords: adaptors, webapiadaptor, webapi adaptor, remotedata
 control: Pivot Table
 documentation: ug
 ---
 
-# WebApiAdaptor in Blazor Pivot Table
+# WebApi Adaptor in Blazor Pivot Table
 
 The [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) is an extension of the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor), designed to interact with Web APIs that expose OData endpoints. This adaptor ensures seamless communication between the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) and OData-endpoint-based Web APIs, enabling efficient data retrieval and CRUD operations. The Blazor Pivot Table fetches the entire data set from the server in a single request and performs aggregation, sorting, filtering, and paging on the client side; the server is only responsible for returning the raw data and handling CRUD (insert/update/delete) requests.
 
@@ -171,7 +171,7 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://learn.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-10.0&viewFallbackFrom=aspnetcore-2.1&tabs=visual-studio%2Clinux-ubuntu#http-strict-transport-security-protocol-hsts.
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 

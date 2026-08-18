@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Scrolling in Blazor DataGrid | Syncfusion®
-description: Learn how to configure scrolling and explore various customization options in the Blazor DataGrid component for enhanced user experience.
+title: Blazor Grid Scrolling | Syncfusion
+description: Learn how to configure scrolling in Blazor Data Grid, customize horizontal and vertical scrolling, and improve navigation for large datasets.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Scrolling in Blazor DataGrid
+# Scrolling in Blazor Data Grid
 
 The scrolling feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables navigation through content that extends beyond the visible area of the Grid. Scrollbars appear automatically when content exceeds the specified **Width** or **Height** of the Grid element. This is useful for large datasets or when the Grid must fit within a constrained layout. The vertical and horizontal scrollbars are displayed based on the following criteria:
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Item Configuration in Blazor Toolbar Component | Syncfusion®
-description: Checkout and learn here all the features about item configuration in Blazor Toolbar component and more.
+title: Item Configuration in Blazor Toolbar | Syncfusion
+description: Configure Blazor Toolbar items with align, icon, template, overflow, disabled, and HTML attributes for full control.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Item Configuration in Blazor Toolbar Component
+# Item Configuration in Blazor Toolbar
 
 The [Blazor Toolbar](https://www.syncfusion.com/blazor-components/blazor-toolbar) can be rendered by defining a list of items. Items can be constructed with the following built-in Items types or item template.
 
@@ -31,7 +31,7 @@ The [Blazor Toolbar](https://www.syncfusion.com/blazor-components/blazor-toolbar
 
 ## Align
 
-This property specifies the alignment of Toolbar items within the Toolbar. Each item aligns according to its `Align` property. The possible values are:
+This property specifies the alignment of Toolbar items within the Toolbar. Each item aligns according to its [`Align`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Align) property. The possible values are:
 
 1.  **Left**: Aligns items to the left side of the Toolbar.
 2.  **Center**: Aligns items at the center of the Toolbar.
@@ -54,23 +54,23 @@ This property specifies the alignment of Toolbar items within the Toolbar. Each 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDrdjwNLzDpCSkNK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Aligning Blazor Toolbar Item](./images/blazor-toolbar-align-item.webp)" %}
 
-To optimize the alignment of Toolbar items without using [Align](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Align) property, utilize the [Spacer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Type) in toolbar. Refer [here](./align-items.md) to integrate spacer in Toolbar.
+To optimize the alignment of Toolbar items without using the `Align` property, utilize the [`Spacer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemType.html#Syncfusion_Blazor_Navigations_ItemType_Spacer) type in toolbar. Refer [here](./align-items-using-spacer.md) to integrate spacer in Toolbar.
 
 ## CssClass
 
-Single or multiple CSS classes can be added to the Toolbar Items using the Toolbar item `CssClass` property. Refer [Set Items customization](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-command-customization) for snippet and output.
+Single or multiple CSS classes can be added to the Toolbar Items using the Toolbar item [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_CssClass) property, allowing custom styling of individual items. Refer [Set Items customization](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-command-customization) for snippet and output.
 
 ## Disabled
 
-It specifies whether an item should be disabled or not. Refer [Enable/Disable Toolbar item](https://blazor.syncfusion.com/documentation/toolbar/how-to/enable-or-disable-toolbar-item) for snippet and output.
+The [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Disabled) property specifies whether an item should be disabled or not. Setting it to `true` makes the item non-interactive. Refer [Enable/Disable Toolbar item](https://blazor.syncfusion.com/documentation/toolbar/how-to/enable-or-disable-toolbar-item) for snippet and output.
 
 ## HtmlAttributes
 
-This property is used to add custom HTML attributes to the Toolbar item, such as `style`, `class`, etc. Refer [Set Items customization](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-command-customization) for examples and output.
+The [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_HtmlAttributes) property is used to add custom HTML attributes to the Toolbar item, such as `style`, `class`, etc. New `class` values are appended to existing classes, while `style` attributes are replaced. Refer [Set Items customization](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-command-customization) for examples and output.
 
 ## Id
 
-This property specifies a unique ID to be used for the button or input element of the Toolbar item. 
+The [`Id`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Id) property specifies a unique ID to be used for the button or input element of the Toolbar item.
 
 ```cshtml
 
@@ -91,23 +91,23 @@ This property specifies a unique ID to be used for the button or input element o
 
 ## Overflow
 
-It Specifies the Toolbar Items display area when an element’s content is too large to fit available space. This is applicable only to `Popup` mode. The possible values are:
+The [`Overflow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Overflow) property specifies the Toolbar Items display area when an element’s content is too large to fit available space. This is applicable only to `Popup` mode. The possible values are:
 
 1. **Show**: Always shows the item as the primary priority on the Toolbar.
 
 2. **Hide**: Always shows the item as the secondary priority on the popup.
 
-3. **None**: No priority for display, and as per normal order moves to popup when content exceeds.
+3. **None**: No priority for display, and as per normal order Items are moved to popup when content exceeds.
 
-Refer [Responsive Mode](https://blazor.syncfusion.com/documentation/toolbar/responsive-mode#text-mode-for-buttons) for snippet and output.
+Refer [Responsive Mode](https://blazor.syncfusion.com/documentation/toolbar/responsive-mode#priority-of-items) for snippet and output.
 
 ## PrefixIcon
 
-This property defines single or multiple classes, separated by space, used to specify an icon for the button. The icon is positioned before the text content if text is available; otherwise, only the icon is rendered. Refer [Customize the Scrolling distance](https://blazor.syncfusion.com/documentation/toolbar/how-to/customize-the-scrolling-distance) for examples and output.
+The [`PrefixIcon`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_PrefixIcon) property defines single or multiple classes, separated by space, used to specify an icon for the button. The icon is positioned before the text content if text is available; otherwise, only the icon is rendered. Refer [Customize the Scrolling distance](https://blazor.syncfusion.com/documentation/toolbar/how-to/customize-the-scrolling-distance) for examples and output.
 
 ## ShowAlwaysInPopup
 
-It defines the priority of items to display it in popup always. It allows to maintain toolbar item on popup always but it does not work for the toolbar priority items.
+The [`ShowAlwaysInPopup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_ShowAlwaysInPopup) property defines that an item is always displayed in the popup. It does not work for items with `Overflow='Show'`.
 
 ```cshtml
 
@@ -137,7 +137,7 @@ It defines the priority of items to display it in popup always. It allows to mai
 
 ## ShowTextOn
 
-It specifies where the button text will be displayed on popup mode of the Toolbar. The possible values are:
+The [`ShowTextOn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_ShowTextOn) property specifies where the button text will be displayed on popup mode of the Toolbar. The possible values are:
 
 1. **Toolbar**: Text will be displayed on Toolbar only.
 
@@ -149,7 +149,7 @@ Refer [Responsive Mode](https://blazor.syncfusion.com/documentation/toolbar/resp
 
 ## SuffixIcon
 
-This property defines single or multiple classes, separated by space, used to specify an icon for the button. The icon is positioned after the text content if text is available.
+The [`SuffixIcon`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_SuffixIcon) property defines single or multiple classes, separated by space, used to specify an icon for the button. The icon is positioned after the text content if text is available.
 
 ```cshtml
 
@@ -190,19 +190,19 @@ N> Refer [here](https://blazor.syncfusion.com/documentation/appearance/icons#ico
 
 ## TabIndex
 
-The Toolbar supports `TabIndex` functionality. Refer [Tab key navigation toolbar items ](https://blazor.syncfusion.com/documentation/toolbar/how-to/tab-key-navigation-toolbar-items) for detailed explanation, snippets, and output. 
+The Toolbar supports the [`TabIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) property to enable Tab and Shift+Tab key navigation between items, in addition to arrow-key navigation. Refer [Tab key navigation toolbar items ](https://blazor.syncfusion.com/documentation/toolbar/how-to/tab-key-navigation-toolbar-items) for detailed explanation, snippets, and output. 
 
 ## Template
 
-The Toolbar supports custom content rendering using its `Template` property. This property accepts either an HTML element or a `RenderFragment`. Refer [Set item-wise custom template](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-item-wise-custom-template) for detailed explanation, snippets, and output.
+The Toolbar supports custom content rendering using its [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Template) property. This property accepts either an HTML element or a `RenderFragment`, allowing you to render any content inside a toolbar item. Refer [Set item-wise custom template](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-item-wise-custom-template) for detailed explanation, snippets, and output.
 
 ## Text
 
-It is used to specify the text to be displayed on the Toolbar button. Refer [Getting Started](https://blazor.syncfusion.com/documentation/toolbar/getting-started#adding-toolbar-component-to-the-application) for the snippet and output.
+The [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Text) property is used to specify the text to be displayed on the Toolbar button. Refer [Getting Started](https://blazor.syncfusion.com/documentation/toolbar/getting-started#add-blazor-toolbar-component) for the snippet and output.
 
 ## TooltipText
 
-It is used to specify the text to be displayed on hovering the Toolbar button.
+The [`TooltipText`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TooltipText) property is used to specify the text to be displayed on hovering the Toolbar button.
 
 ```cshtml
 
@@ -213,7 +213,7 @@ It is used to specify the text to be displayed on hovering the Toolbar button.
         <ToolbarItem Text="Cut" TooltipText="Cut"></ToolbarItem>
         <ToolbarItem Text="Copy" TooltipText="Copy"></ToolbarItem>
         <ToolbarItem Text="Paste" TooltipText="Paste"></ToolbarItem>
-        //To separate the Toolbar items
+        @*To separate the Toolbar items*@
         <ToolbarItem></ToolbarItem>
         <ToolbarItem Text="Bold" TooltipText="Bold"></ToolbarItem>
         <ToolbarItem Text="Underline" TooltipText="Underline"></ToolbarItem>
@@ -227,7 +227,7 @@ It is used to specify the text to be displayed on hovering the Toolbar button.
 
 ## Type
 
-It specifies the types of Items to be rendered in the Toolbar. Supported types are:
+The [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Type) property specifies the types of Items to be rendered in the Toolbar. Supported types are:
 
 1. **Button**: Creates the Button control with its given properties like text, prefixIcon, etc.
 
@@ -235,26 +235,26 @@ It specifies the types of Items to be rendered in the Toolbar. Supported types a
 
 3. **Input**: Creates an input element that is applicable to template rendering with Blazor controls like DropDownList, AutoComplete, etc.
 
-4. **Spacer**: Adds a space within the Toolbar item. [Spacer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Type) can be used to align the Toolbar items to the left, center, and right.
+4. **Spacer**: Adds a space within the Toolbar item. [`Spacer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemType.html#Syncfusion_Blazor_Navigations_ItemType_Spacer) can be used to align the Toolbar items to the left, center, and right.
 
 ### Button
 
-`Button` is the default Items [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Type), and it can be rendered by using the `Text` property.
+[`Button`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemType.html#Syncfusion_Blazor_Navigations_ItemType_Button) is the default Items [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Type), and it can be rendered by using the `Text` property.
 Properties of the button Items type:
 
   Property   | Description
 ------------ | -------------
   Text       | The text to be displayed for the button.
- ID         | The ID of the button to be rendered. If the ID is not given, auto ID is generated.
+ Id         | The Id of the button to be rendered. If the Id is not given, auto Id is generated.
   PrefixIcon | Defines the class used to specify an icon for the button. The icon is `positioned before` the text if the text is available or the icon alone button is rendered.
-SuffixIcon | Defines the class used to specify an icon for the button. The icon is `positioned after` the text if text is available. If both [PrefixIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_PrefixIcon) and [SuffixIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_SuffixIcon) are specified, only the `PrefixIcon` is considered.
+SuffixIcon | Defines the class used to specify an icon for the button. The icon is `positioned after` the text if text is available. If both [`PrefixIcon`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_PrefixIcon) and [`SuffixIcon`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_SuffixIcon) are specified, only the `PrefixIcon` is rendered.
   Width      | Used to set the width of the button.
 
 Refer [Set Blazor Tooltip to the Items](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-tool-tip-to-the-commands) for snippet and output.
 
 ### Separator
 
-The `Separator` type adds a vertical line that visually separates Toolbar's items.
+The [`Separator`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemType.html#Syncfusion_Blazor_Navigations_ItemType_Separator) type adds a vertical line that visually separates Toolbar's items.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -278,13 +278,13 @@ N> If `Separator` is added as the first or the last item, it will not be visible
 
 ### Input
 
-The `Input` type is only applicable for adding `Template` elements when the `Template` property is defined as an `object`. Input type creates an `input element` internally that acts as the container for `Syncfusion` input based components.
+The [`Input`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemType.html#Syncfusion_Blazor_Navigations_ItemType_Input) type is only applicable for adding `Template` elements when the `Template` property is defined as an `object`. This type creates an `input element` internally that acts as the container for Syncfusion input-based components.
 
 #### NumericTextBox
 
 * The `NumericTextBox` component can be included by importing the `@using Syncfusion.Blazor.Inputs` package into the `~/_Imports.razor` file.
 
-* Initialize the `NumericTextBox` in [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Template) property, where the Toolbar item `Type` is set as `Input`.
+* Initialize the `NumericTextBox` in [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Template) property, where the Toolbar item `Type` is set as `Input`.
 
 * Related `NumericTextBox` component properties can also be configured as given below.
 
@@ -381,11 +381,11 @@ The following code explains how to add `NumericTextBox`, `DropDownList`, `RadioB
 
 ### Spacer
 
-N> Refer [Align Items Using Spacer](./align-items-using-spacer) to integrate the spacer in the Toolbar component.
+N> Refer [Align Items Using Spacer](./align-items-using-spacer.md) to integrate the spacer in the Toolbar component.
 
 ## Visible
 
-It specifies whether an item should be hidden or not.
+The [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Visible) property specifies whether an item should be hidden or not.
 
 ```cshtml
 
@@ -409,7 +409,7 @@ It specifies whether an item should be hidden or not.
 
 ## Width
 
-It specifies the width of the Toolbar button Items.
+The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Width) property specifies the width of the Toolbar button Items.
 
 ```cshtml
 

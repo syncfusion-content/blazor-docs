@@ -1,7 +1,7 @@
 ---
 layout: post
-title: OLAP in Blazor Pivot Table Component | Syncfusion®
-description: Learn about OLAP data source support in Blazor Pivot Table component with examples and much more details.
+title: OLAP in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table connects to OLAP cubes and analyzes multidimensional data with MDX queries, axes, measures, and drill operations.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -10,9 +10,9 @@ documentation: ug
 <!-- markdownlint-disable MD024 -->
 <!-- markdownlint-disable MD012 -->
 
-# OLAP in Blazor Pivot Table component
+# OLAP in Blazor Pivot Table
 
-## Getting started
+## Getting Started
 
 This section explains how to create a simple [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using an OLAP data source. For details on setting up a Blazor application, refer to the [Getting started with Blazor for client-side in Visual Studio 2022](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) guide, which covers the initial setup and configuration steps.
 

@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Data Binding in Blazor Pivot Table Component | Syncfusion®
-description: Learn about data binding options in Blazor Pivot Table component for JSON and remote data sources and much more details.
+title: Data Binding in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table binds local JSON arrays, remote services, and OLAP cubes for data visualization and analysis.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Data Binding in Blazor Pivot Table Component
+# Data Binding in Blazor Pivot Table
 
 ## JSON
 
-For JSON data binding, the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Type) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) needs to be set as `DataSourceType.JSON`. Since JSON is the default data type, you can bind JSON data without setting this property.
+The Pivot Table supports JSON data binding by setting the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Type) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) needs to be set as `DataSourceType.JSON`. Since JSON is the default data type, you can bind JSON data without setting this property.
 
 ### Binding JSON data via local
 
@@ -1324,6 +1324,8 @@ The load event provides the following parameters:
 
 ## See also
 
+* [Aggregation](https://blazor.syncfusion.com/documentation/pivot-table/aggregation)
+* [Server Side Pivot Engine](https://blazor.syncfusion.com/documentation/pivot-table/server-side-pivot-engine)
 * [How to convert complex data to flat data and assign it to the Blazor Pivot Table](https://blazor.syncfusion.com/documentation/pivot-table/how-to/bind-complex-data-to-the-pivot-table)
 
 N> You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

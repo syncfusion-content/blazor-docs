@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Native Events in Blazor DatePicker Component | Syncfusion®
-description: Checkout and learn here all the features about native events in Blazor DatePicker component and much more.
+title: Native Events in Blazor DatePicker | Syncfusion®
+description: Attach native DOM events to the Blazor DatePicker using the on{event} attribute, and pass event argument data to the handler.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Native Events in Blazor DatePicker Component
+# Native Events in Blazor DatePicker
 
-This section explains the steps to include native events and pass data to event handler in the DatePicker component.
+This section explains how to bind native DOM events to the DatePicker component and how to pass event data to the event handler. The DatePicker component supports the standard Blazor event-binding syntax (`@on<event>`) on its root input element.
 
 ## Bind native events to DatePicker
 
 You can access any native event by using on `<event>` attribute with a component. The attribute's value is treated as an event handler.
 
-In the following example, the KeyPressed method is called every time the key is pressed on input.
+In the following example, the `KeyPressed` method is called every time a key is pressed in the input.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -29,7 +29,7 @@ In the following example, the KeyPressed method is called every time the key is 
 }
 ```
 
-Also, you can rewrite the previous code example as follows using the Lambda expressions.
+You can also rewrite the previous example using a lambda expression.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -39,16 +39,16 @@ Also, you can rewrite the previous code example as follows using the Lambda expr
 
 ## Pass event data to event handler
 
-Blazor provides a set of argument types to map to native events. The list of event types and event arguments are:
+Blazor provides a set of argument types that map to native events. The supported event types and their arguments are:
 
-* Focus Events - FocusEventArgs
-* Mouse Events - MouseEventArgs
-* Keyboard Events - KeyboardEventArgs
-* Input Events - ChangeEventArgs/EventArgs
-* Touch Events – TouchEventArgs
-* Pointer Events – PointerEventArgs
+* Focus events – `FocusEventArgs`
+* Mouse events – `MouseEventArgs`
+* Keyboard events – `KeyboardEventArgs`
+* Input events – `ChangeEventArgs` / `EventArgs`
+* Touch events – `TouchEventArgs`
+* Pointer events – `PointerEventArgs`
 
-In the following example, the KeyPressed method is called every time any key is pressed inside the input. But, the message will be printed when you press the "5" key.
+In the following example, the `KeyPressed` method is called every time a key is pressed in the input, but the message is printed only when the `5` key is pressed.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -66,13 +66,18 @@ In the following example, the KeyPressed method is called every time any key is 
 }
 ```
 
-Using Lambda expression, you can pass the event data to the event handler.
+You can also use a lambda expression to forward the event data to the handler.
 
 ## List of native events supported
 
-| List of Native events |  |  | |
-| --- | --- | --- | --- |
-| onclick | onblur | onfocus | onfocusout |
-| onmousemove | onmouseover | onmouseout | onmousedown | onmouseup |
-| ondblclick | onkeydown | onkeyup | onkeypress |
-| ontouchend | onfocusin | onmouseup | ontouchstart |
+| Category | Events |
+| --- | --- |
+| Focus | `onfocus`, `onblur`, `onfocusin`, `onfocusout` |
+| Mouse | `onclick`, `ondblclick`, `onmousedown`, `onmouseup`, `onmouseover`, `onmouseout`, `onmousemove` |
+| Keyboard | `onkeydown`, `onkeyup`, `onkeypress` |
+| Touch | `ontouchstart`, `ontouchend` |
+
+## See also
+
+* [Events](events)
+* [Blazor event handling](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/event-handling)

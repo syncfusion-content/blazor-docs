@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Modal in Blazor Dialog Component | Syncfusion®
-description: Checkout and learn here all the features about Modal in Blazor Dialog component and much more details.
+title: Modal Dialog in Blazor Dialog | Syncfusion®
+description: Display the Blazor Dialog as a modal overlay that blocks interaction with the rest of the page until it is closed, with a backdrop.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Modal in Blazor Dialog Component
+# Modal Dialog in Blazor Dialog
 
 A modal dialog prevents users from interacting with the rest of the application until the dialog is closed. The [IsModal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_IsModal) property enables modal behavior by displaying an overlay behind the Dialog, ensuring users must complete their interaction with the Dialog before accessing other application content.
 
@@ -88,3 +88,9 @@ The following example demonstrates how to close a modal dialog when the user cli
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjLetFiJJHqtzBdm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog with Modal Overlay](./images/blazor-dialog-modal-closes.gif)" %}
+
+## See also
+
+* [Prevent Closing of Modal Dialog in Blazor Dialog Component](./how-to/prevent-closing-of-modal-dialog)
+* [Create Nested Dialog in Blazor Dialog Component](./how-to/create-nested-dialog)
+* [Positioning in Blazor Dialog Component](./positioning)

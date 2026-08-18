@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Configuring options in Blazor Toast Component | Syncfusion®
-description: Checkout and learn here all the features about configuring options in Blazor Toast component and more.
+title: Configuring Options in Blazor Toast | Syncfusion
+description: Configure Blazor Toast title, content, templates, progress bar, and built-in styling options for custom notifications.
 platform: Blazor
 control: Toast
 documentation: ug
 ---
 
-# Configuring options in Blazor Toast Component
+# Configuring Options in Blazor Toast
 
 This section explains the steps required to customize the appearance of the toast using built-in APIs.
 
@@ -238,9 +238,9 @@ Both the width and height properties allow setting pixels/numbers/percentage. Th
         if (e.Checked)
         {
             await ToastObj.HideAsync();
-            this.Width = "100%";
             this.Title = "";
-            this.ToastContent = "<div class='e-custom'>Take a look at our next generation <b>Javascript</b> <a href='https://blazor.syncfusion.com/home/index.html' target='_blank'>LEARN MORE</a></div>";
+            this.Width = "100%";
+            this.ToastContent = "<div class='e-custom'>Take a look at our next generation <b>Javascript</b> <a href=\"https://blazor.syncfusion.com/demos\" rel='noopener noreferrer' aria-label='Learn more about Syncfusion Blazor demos' target='_blank'>Explore Syncfusion Blazor Demos</a></div>";
             StateHasChanged();
         }
         else
@@ -407,7 +407,7 @@ app.Run();
 
     <main>
         <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+            <a href="https://docs.microsoft.com/aspnet/" target="_blank" aria-label="About ASP.NET">About</a>
         </div>
 
         <article class="content px-4">

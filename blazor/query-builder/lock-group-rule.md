@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Lock Group/ Rule in Blazor QueryBuilder Component | Syncfusion®
-description: Checkout and learn here all about Lock Group/ Rule in Blazor QueryBuilder component with examples and much more details.
+title: Lock Group or Rule in Blazor Query Builder | Syncfusion
+description: Lock individual rules or entire groups in Blazor Query Builder to disable editing while still evaluating them.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Lock Group/ Rule in Blazor QueryBuilder Component
+# Lock Group or Rule in Blazor Query Builder
 
 The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) supports locking individual rules or entire groups. When a rule is locked, its field, operator, and value editors are disabled and cannot be changed. Locking a group disables all editors and actions within that group. Locked items still participate in evaluation; only editing is restricted. The visibility of lock buttons in the UI can be configured through the [`ShowButtons`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderShowButtons.html) configuration.
 
@@ -68,8 +68,6 @@ Locking can be done through the user interface or programmatically.
         }
         };
 
-    public string[] GroupID = new string[] { "group1" };
-
     private void lockGroup()
     {
         QuerybuilderObj.LockGroup("group0");
@@ -96,4 +94,4 @@ Locking can be done through the user interface or programmatically.
 
 ![Lock Group/Rule in Blazor Query Builder](./images/lock-group-rule.webp)
 
-N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
+N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=fluent2) to know how to render and configure the query builder.

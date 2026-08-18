@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Histogram in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Histogram Chart in Blazor Charts component and more.
+title: Blazor Histogram Chart Examples and Documentation | Syncfusion®
+description: Learn how to render Blazor Histogram Charts using Syncfusion. Display large data distributions visually with bin-based frequency aggregation.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Histogram in Blazor Charts Component
+# Histogram Chart in Blazor
 
 ## Histogram
 

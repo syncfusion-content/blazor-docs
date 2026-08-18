@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and appearance in Blazor Calendar Component | Syncfusion®
-description: Checkout and learn here all features about Style and appearance in Blazor Calendar component and much more.
+title: Style and Appearance in Blazor Calendar | Syncfusion®
+description: Customize the Blazor Calendar appearance by overriding its default CSS structure to adjust cells, header, navigation, and selected day styles.
 platform: Blazor
 control: Calendar
 documentation: ug
 ---
 
-# Style and appearance in Blazor Calendar Component
+# Style and Appearance in Blazor Calendar
 
 The following content shows the Calendar’s CSS structure that can be overridden to change the component’s appearance based on user preferences. These examples are theme-agnostic overrides; depending on the selected theme, additional selector specificity may be required.
 

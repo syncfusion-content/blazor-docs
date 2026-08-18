@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor In-place Editor in Web App | Syncfusion®
-description: Check out and learn about the documentation for getting started with Blazor In-place Editor component in Blazor Web App.
+title: Getting Started with Blazor In-place Editor in Web App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor In-place Editor in a Blazor Web App with installation and setup steps.
 platform: Blazor
 component: In-place Editor
 documentation: ug
@@ -574,7 +574,6 @@ After submit, the edited data is sent to the server, and the updated value is re
 
 ## See also
 
-1. [Getting Started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=.net-cli)
-2. [Getting Started with Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
-3. [Getting Started with Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli)
+1. [Getting Started with Blazor WebAssembly App in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Server App in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 

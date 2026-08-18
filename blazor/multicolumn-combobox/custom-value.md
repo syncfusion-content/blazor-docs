@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Adding Custom Value to Blazor MultiColumn ComboBox | Syncfusion®
-description: Checkout and learn here all about adding custom value in Blazor MultiColumn ComboBox component and much more.
+title: Custom Value in Blazor MultiColumn ComboBox | Syncfusion
+description: Allow users to add custom values to Blazor MultiColumn ComboBox using the AllowCustom property at runtime today.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
 ---
 
-# Adding Custom Value to Blazor MultiColumn ComboBox Component
+# Custom Value in Blazor MultiColumn ComboBox
 
-Custom values can be added to the Blazor MultiColumn ComboBox when the typed value does not match any item in the list. In this case, an action button appears in the popup; selecting it adds the typed value as a new item to the current list. By default, the [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_AllowCustom) property is set to `true`. To prevent adding custom values, set `AllowCustom` to `false`.
+Custom values can be added to the Blazor MultiColumn ComboBox when the typed value does not match any item in the list. In this case, an **Add** button appears in the popup; selecting it adds the typed value as a new item to the current list. By default, the [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_AllowCustom) property is set to `true`. To prevent adding custom values, set `AllowCustom` to `false`.
 
 **[Index.razor]**
 

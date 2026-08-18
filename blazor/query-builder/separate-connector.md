@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Separate Connector in Blazor QueryBuilder Component | Syncfusion®
-description: Checkout and learn here all about Separate Connector in Blazor QueryBuilder component with examples and much more details.
+title: Separate Connector in Blazor Query Builder | Syncfusion
+description: Use separate AND/OR connectors between rules or groups in Blazor Query Builder with EnableIndividualConditions.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Separate Connector in Blazor QueryBuilder Component
+# Separate Connector in Blazor Query Builder
 
 The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) supports separate connectors between rules or groups within the same parent group. When enabled, each rule (or nested group) can specify its own connector (AND/OR), allowing more precise control over complex logic than using a single group-level connector.
 
@@ -65,4 +65,4 @@ Use the [`EnableIndividualConditions`](https://help.syncfusion.com/cr/blazor/Syn
 
 ![EnableIndividualConditions in Blazor Query Builder](./images/separate-connector.webp)
 
-N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
+N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=fluent2) to know how to render and configure the query builder.

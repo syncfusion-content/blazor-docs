@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Open the Blazor TimePicker Picker popup on Focus | Syncfusion®
-description: Learn here all the features about opening the Blazor TimePicker Picker popup upon focusing input and much more.
+title: How to open the popup on focus in Blazor TimePicker | Syncfusion
+description: Open the Blazor TimePicker popup automatically when the input receives focus using the OpenOnFocus property.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# Open the Blazor TimePicker Picker popup on Focus
+# How to open the popup on focus in Blazor TimePicker
 
-You can also open the TimePicker Picker popup on input focus by setting the [OpenOnFocus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_OpenOnFocus) property to true.
+You can open the TimePicker popup on input focus by setting the [OpenOnFocus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_OpenOnFocus) property to `true`.
 
-The following example demonstrates how to open the TimePicker Picker popup when the input is focused.
+The following example demonstrates how to open the TimePicker popup when the input is focused.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -19,7 +19,14 @@ The following example demonstrates how to open the TimePicker Picker popup when 
 <SfTimePicker TValue="DateTime?" FullScreen="true" OpenOnFocus="true" ShowClearButton="true"></SfTimePicker>
 
 ```
-![Opening Blazor TimePicker Picker Popup](../images/blazor-timepicker-open-focus.gif)
+
+![Opening Blazor TimePicker Popup](../images/blazor-timepicker-open-focus.gif)
+
+## See also
+
+* [Events in Blazor TimePicker](../events)
+* [Data Binding in Blazor TimePicker](../data-binding)
+* [Style and appearance in Blazor TimePicker](../style-appearance)
 
 
 

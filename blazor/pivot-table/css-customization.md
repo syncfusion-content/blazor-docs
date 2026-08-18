@@ -1,13 +1,13 @@
 ---
 layout: post
-title: CSS Customization in Blazor Pivot Table Component | Syncfusion®
-description: Learn how to customize CSS styling in Blazor Pivot Table component with examples and much more details.
+title: CSS Customization in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table exposes CSS classes for styling row headers, column headers, value cells, field list, and grouping bar areas.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# CSS Customization in Blazor Pivot Table Component
+# CSS Customization in Blazor Pivot Table
 
 The Blazor Pivot Table component provides extensive CSS customization options, allowing users to modify the visual appearance and layout of various pivot table elements. This includes styling row headers, column headers, value cells, summary cells, Field List components, and Grouping Bar areas to match application themes and design requirements.
 
@@ -113,7 +113,7 @@ The CSS selectors target the following Pivot Table elements:
 - `.e-group-columns`: Hides the column axis in the Grouping Bar.
 - `.e-group-filters`: Adjusts the height of the filter axis to compensate for the hidden column axis in the Grouping Bar.
 - `.e-field-list-columns`: Hides the column axis in the Field List dialog.
-- `.e-field-list-values`: Adjusts the layout of the values axis when the column section is hidden in the Field List dialog.
+- `.e-field-list-values`: Adjusts the layout of the value axis when the column section is hidden in the Field List dialog.
 
 ![Hiding Columns in Blazor PivotTable GroupingBar](images/blazor-pivottable-hide-columns-in-groupbar.webp)
 
@@ -121,7 +121,7 @@ The CSS selectors target the following Pivot Table elements:
 
 ## Text Alignment
 
-The alignment of text inside row headers, column headers, value cells, and summary cells can be customized using CSS styling. The following example demonstrates how to center-align text in value cells:
+The alignment of text inside row headers, column headers, value cells, and summary cells can be customized using CSS styling. The following example demonstrates how to center-align text in value cells (additional selectors for column headers, row headers, and summary cells are included as commented CSS in the sample):
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -182,9 +182,9 @@ The alignment of text inside row headers, column headers, value cells, and summa
 
 ![Text Alignment in Blazor PivotGrid](images/blazor-pivotgrid-text-alignment.webp)
 
-## Customize header, value and summary cell styles
+## Customize header, value, and summary cell styles
 
-The Pivot Table component elements including header cells, value cells, and summary cells can be styled using built-in CSS class names. This enables comprehensive visual customization of the component's appearance to match application themes and design requirements.
+Pivot Table elements such as header cells, value cells, and summary cells can be styled using built-in CSS class names. This enables comprehensive visual customization of the component's appearance to match application themes and design requirements.
 
 The following code sample demonstrates how to apply custom background colors to different cell types:
 
@@ -241,10 +241,10 @@ The following code sample demonstrates how to apply custom background colors to 
 ```
 
 The CSS classes target the following Pivot Table elements:
-- `.e-headercell`: Styles column header cells
-- `.e-rowsheader`: Styles row header cells  
-- `.e-summary:not(.e-gtot)`: Styles subtotal summary cells (excluding grand totals)
-- `.e-gtot`: Styles grand total cells
+- `.e-headercell`: Styles column header cells.
+- `.e-rowsheader`: Styles row header cells.
+- `.e-summary:not(.e-gtot)`: Styles subtotal summary cells (excluding grand totals).
+- `.e-gtot`: Styles grand total cells.
 
 ![Blazor PivotGrid with Custom Styles](images/blazor-pivotgrid-custom-styles.webp)
 

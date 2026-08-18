@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Configuration in Blazor In-place Editor Component | Syncfusion®
-description: Checkout and learn here all about Configuration in Blazor In-place Editor component and much more details.
+title: Configuration in Blazor In-place Editor | Syncfusion
+description: Configure Blazor In-place Editor rendering modes, including Inline and Popup display options and behavior.
 platform: Blazor
 control: In-place Editor
 documentation: ug
 ---
 
-# Configuration in Blazor In-place Editor Component
+# Configuration in Blazor In-place Editor
 
 ## Rendering modes
 
-This section explains the supported rendering modes of the In-place Editor. Supported rendering modes:
+This section explains the supported rendering modes of the In-place Editor. The supported rendering modes are:
 
-- Popup
-- Inline
+- **Popup**
+- **Inline**
 
-N> Inline mode is the default when the editor opens.
+N> Inline is the default rendering mode.
 
-- Popup mode displays the editable container like a tooltip or popover above the target element.
-- Inline mode replaces the element with the editable container. To open the editor in Inline mode, set Mode to Inline.
+- **Popup** mode displays the editable container like a tooltip or popover above the target element.
+- **Inline** mode replaces the element with the editable container. To open the editor in Inline mode, set the `Mode` property to `Inline`.
 
 In the following example, the In-place Editor renders in Inline mode. The rendering mode can be switched dynamically by changing the drop-down value.
 
@@ -99,22 +99,22 @@ In the following example, the In-place Editor renders in Inline mode. The render
 
 Popup mode can be customized by using the `InPlaceEditorPopupSettings` tag.
 
-Popup mode is rendered using the Blazor Tooltip component, so tooltip properties and events can be used to customize popup behavior through `InPlaceEditorPopupSettings` by configuring tooltip properties
+Popup mode is rendered using the Blazor Tooltip component, so tooltip properties and events can be used to customize popup behavior through `InPlaceEditorPopupSettings`.
 
-N> For more details, refer to the tooltip documentation [section](../tooltip/getting-started-webapp).
+N> For more details, refer to the [Tooltip documentation](../tooltip/getting-started-webapp).
 
 ## Event actions for editing
 
-The event action of the editor will be enabled in the edit mode based on the `EditableOn` property. By default, `Click` is enabled.
+The action that opens the editor is configured by the `EditableOn` property. By default, `Click` is enabled.
 The following options are also supported:
 
 * **Click**:  Opens the editor on a single click.
 * **DoubleClick**: Opens the editor on a double click. This option does not apply to the edit icon.
 * **EditIconClick**: Disables input-triggered editing and allows editing only through the edit icon.
 
-N> The In-place Editor receives focus by pressing the Tab key from the previous focusable element. Press `Enter`to open the editor.
+N> The In-place Editor receives focus by pressing the Tab key from the previous focusable element. Press `Enter` to open the editor.
 
-In the following code block, when switching the drop-down item, the selected value is assigned to the `EditableOn` property. The editor will be opened when you double click on the input.
+In the following code block, when switching the drop-down item, the selected value is assigned to the `EditableOn` property. The editor is opened when you double click on the input.
 
 ```cshtml
 
@@ -205,13 +205,13 @@ In the following code block, when switching the drop-down item, the selected val
 
 ## Action on focus out
 
-An action can be performed when clicking outside the editor container. This is controlled by the ActionOnBlur property. By default, Submit is enabled. The following options are supported:
+An action can be performed when clicking outside the editor container. This is controlled by the `ActionOnBlur` property. By default, `Submit` is enabled. The following options are supported:
 
-- Cancel: Cancels editing and restores the previous content.
-- Submit: Saves the edited content.
-- Ignore: Performs no action.
+- **Cancel**: Cancels editing and restores the previous content.
+- **Submit**: Saves the edited content.
+- **Ignore**: Performs no action.
 
-In the following example, the selected drop-down value is assigned to ActionOnBlur.
+In the following example, the selected drop-down value is assigned to the `ActionOnBlur` property.
 
 ```cshtml
 @using Syncfusion.Blazor.InPlaceEditor
@@ -297,7 +297,7 @@ In the following example, the selected drop-down value is assigned to ActionOnBl
 
 ## Display modes
 
-By default, the In-place Editor input element is highlighted with a dotted underline. To remove dotted underline from input element, add `{"data-underline", "false" }` attribute at In-place Editor root element.
+By default, the In-place Editor input element is highlighted with a dotted underline. To remove the dotted underline from the input element, add the `{"data-underline", "false"}` attribute to the In-place Editor root element.
 
 The following example shows interactive and normal display modes.
 
@@ -365,7 +365,7 @@ The following example shows interactive and normal display modes.
 
 ![Blazor In-place Editor text with underline](./images/blazor-inplace-editor-text-with-under-line.webp)
 
-## See Also
+## See also
 
-* [Disable the editor](./how-to/disable-edit-mode)
-* [Animate the editor during popup mode](./how-to/custom-animation)
+- [Disable the editor](./how-to/disable-edit-mode)
+- [Animate the editor during popup mode](./how-to/custom-animation)

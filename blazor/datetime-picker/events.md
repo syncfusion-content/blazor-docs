@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Events in Blazor DateTimePicker Component | Syncfusion®
-description: Learn about events in the Blazor DateTimePicker component, including ValueChange, OnOpen, OnClose, OnRenderDayCell, and more.
+title: Events in Blazor DateTime Picker | Syncfusion®
+description: Handle Blazor DateTime Picker events such as ValueChange, OnOpen, OnClose, OnRenderDayCell, and Navigated to react to user input and rendering.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
 ---
 
-# Events in Blazor Datetime Picker Component
+# Events in Blazor DateTime Picker
 
 This section lists and describes the events raised by the DateTimePicker component for user interactions and lifecycle actions.
 
-N> Starting with `v17.2.*`, the DateTimePicker exposes a streamlined set of events. Event names were changed from previous releases, and several events were removed. The following table shows the event name changes from `v17.1.*` to `v17.2.*`.
+N> Starting with `v17.2.*`, the DateTimePicker exposes a renamed set of events, and several new lifecycle and input events were introduced. The following table shows the event name changes from `v17.1.*` to `v17.2.*`.
 
 Event Name(`v17.1.*`) |Event Name(`v17.2.*`)
 -----|-----
@@ -143,7 +143,7 @@ The `Focus` event is triggered when the input gains focus.
 
 ## Navigated
 
-The `Navigated` event is triggered when navigating between calendar views (such as month, year, or decade) or within the same view.
+The `Navigated` event is triggered when the active date, month, year, or decade view changes. The handler receives a `NavigatedEventArgs` that exposes the current `View`, `Month`, and `Year`.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -151,7 +151,6 @@ The `Navigated` event is triggered when navigating between calendar views (such 
 <SfDateTimePicker TValue="DateTime?" >
     <DateTimePickerEvents TValue="DateTime?" Navigated="NavigateHandler"></DateTimePickerEvents>
 </SfDateTimePicker>
-
 
 @code{
 

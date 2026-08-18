@@ -1,45 +1,51 @@
 ---
 layout: post
-title: User Interaction with Blazor Signature Component | Syncfusion®
-description: Checkout and learn about the user interactions available in Blazor Signature component in Blazor Server App and Blazor WebAssembly App.
+title: User Interaction in Blazor Signature | Syncfusion
+description: Perform undo, redo, clear, and read-only actions in Blazor Signature with built-in async methods for signature editing control.
 platform: Blazor
 control: Signature
 documentation: ug
 ---
 
-# User Interactions in Blazor Signature component
+# User Interaction in Blazor Signature
 
-The [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) component supports various interaction like Undo, Redo, Clear, Disabled, and ReadOnly. Every changes occurred in signature can be taken as a snap and saved to collection for handling the above user interactions. 
+The [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) component supports various interactions such as Undo, Redo, Clear, Disabled, and ReadOnly. Every change that occurs in the signature is captured as a snap and saved to a collection to enable the above user interactions. These interactions are split into two groups: **Runtime Methods** (Undo, Redo, Clear) and **State Properties** (Disabled, ReadOnly).
 
-## Undo
+## Runtime Methods
 
-It reverts the last action of signature using the [`UndoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_UndoAsync) method. It removes the latest snap from the collection and load a previous snap to signature. Here, [`CanUndoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanUndoAsync) method is used to ensure whether undo can be performed or not.
+### Undo
 
-## Redo
+It reverts the last action of the signature using the [`UndoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_UndoAsync) method. It removes the latest snap from the collection and loads a previous snap to the signature. The [`CanUndoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanUndoAsync) method is used to check whether undo can be performed or not.
 
-It reverts the last undo action of the signature using the [`RedoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_RedoAsync) method. Here, [`CanRedoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanRedoAsync) method is used to ensure whether redo can be performed or not.
+### Redo
 
-## Clear
+It reverts the last undo action of the signature using the [`RedoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_RedoAsync) method. The [`CanRedoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanRedoAsync) method is used to check whether redo can be performed or not.
 
-It clears the signature and makes the canvas empty using the [`ClearAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_ClearAsync) method. Here, [`IsEmptyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_IsEmptyAsync) method is used to ensure whether the signature is empty or not.
+### Clear
 
-## Disabled
+It clears the signature and makes the canvas empty using the [`ClearAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_ClearAsync) method. The [`IsEmptyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_IsEmptyAsync) method is used to check whether the signature is empty or not.
 
-It disables the signature component using the [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_Disabled) property.
+## State Properties
 
-## ReadOnly
+### Disabled
 
-It prevents the signature from editing using the [`IsReadOnly`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_IsReadOnly) property.
+It disables the signature component using the [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_Disabled) property. The default value is `false`.
 
-The following sample explains about user interactions available in signature.
+### ReadOnly
+
+It prevents the signature from being edited using the [`IsReadOnly`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_IsReadOnly) property. The default value is `false`.
+
+## Toggling User Interactions
+
+The following example demonstrates how to wire up the user interactions available in the Signature component. The example uses the [`Changed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_Changed) event along with the `CanUndoAsync`, `CanRedoAsync`, and `IsEmptyAsync` methods to enable or disable the action buttons, and uses checkboxes to toggle the `Disabled` and `IsReadOnly` state properties of the component.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons
 
-<SfButton CssClass="e-primary" @ref="undoBtn" @onclick="OnUndo">UNDO</SfButton>
-<SfButton CssClass="e-primary" @ref="redoBtn" @onclick="OnRedo">REDO</SfButton>
-<SfButton CssClass="e-primary" @ref="clearBtn" @onclick="OnClear">CLEAR</SfButton>
+<SfButton CssClass="e-primary" Disabled="@undoDisabled" @onclick="OnUndo">UNDO</SfButton>
+<SfButton CssClass="e-primary" Disabled="@redoDisabled" @onclick="OnRedo">REDO</SfButton>
+<SfButton CssClass="e-primary" Disabled="@clearDisabled" @onclick="OnClear">CLEAR</SfButton>
 
 <SfCheckBox Label="Disable" ValueChange="OnDisable" TChecked="bool"></SfCheckBox>
 <SfCheckBox Label="Readonly" ValueChange="OnReadOnly" TChecked="bool"></SfCheckBox>
@@ -48,30 +54,30 @@ The following sample explains about user interactions available in signature.
 
 @code{
     private SfSignature signature;
-    private SfButton undoBtn;
-    private SfButton redoBtn;
-    private SfButton clearBtn;
     private bool disabled = false;
     private bool isReadOnly = false;
-    private void OnUndo()
+    private bool undoDisabled = true;
+    private bool redoDisabled = true;
+    private bool clearDisabled = true;
+    private async Task OnUndo()
     {
         if (!signature.Disabled && !signature.IsReadOnly)
         {
-            signature.UndoAsync();
+            await signature.UndoAsync();
         }
     }
-    private void OnRedo()
+    private async Task OnRedo()
     {
         if (!signature.Disabled && !signature.IsReadOnly)
         {
-            signature.RedoAsync();
+            await signature.RedoAsync();
         }
     }
-    private void OnClear()
+    private async Task OnClear()
     {
         if (!signature.Disabled && !signature.IsReadOnly)
         {
-            signature.ClearAsync();
+            await signature.ClearAsync();
         }
     }
     private void OnDisable(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> args)
@@ -87,30 +93,9 @@ The following sample explains about user interactions available in signature.
         bool canUndo = await signature.CanUndoAsync();
         bool canRedo = await signature.CanRedoAsync();
         bool isEmpty = await signature.IsEmptyAsync();
-        if (canUndo)
-        {
-            undoBtn.Disabled = true;
-        }
-        else
-        {
-            undoBtn.Disabled = false;
-        }
-        if (canRedo)
-        {
-            redoBtn.Disabled = true;
-        }
-        else
-        {
-            redoBtn.Disabled = false;
-        }
-        if (isEmpty)
-        {
-            clearBtn.Disabled = true;
-        }
-        else
-        {
-            clearBtn.Disabled = false;
-        }
+        undoDisabled = !canUndo;
+        redoDisabled = !canRedo;
+        clearDisabled = isEmpty;
     }
 }
 ```

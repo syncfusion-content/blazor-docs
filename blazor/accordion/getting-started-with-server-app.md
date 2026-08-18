@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Accordion in Server App | Syncfusion®
-description: Check out and learn about getting started with Blazor Accordion component in Blazor Server App using Visual Studio and more.
+title: Getting Started with Blazor Accordion Server App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Accordion control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Accordion
 documentation: ug
 ---
 
-# Getting Started with Blazor Accordion Component in Blazor Server App
+# Getting Started with Blazor Accordion in Blazor Server App
 
 This section briefly explains how to include the [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -237,7 +237,7 @@ The following code explains how to initialize Blazor Accordion using header and 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLHNnsCsGnvTpBG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Accordion with header and content Template](images/blazor-accordion-header-template.webp)" %}
 
-N> You can refer to the [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) feature tour to explore its key features and capabilities. You can also browse the [Blazor Accordion examples](https://blazor.syncfusion.com/demos/accordion/default-functionalities?theme=bootstrap5) to learn how to render and configure the component.
+N> You can refer to the [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) feature tour to explore its key features and capabilities. You can also browse the [Blazor Accordion examples](https://blazor.syncfusion.com/demos/accordion/default-functionalities?theme=fluent2) to learn how to render and configure the component.
 
 ## See also
 

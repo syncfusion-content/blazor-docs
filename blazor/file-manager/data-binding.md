@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor File Manager Component | Syncfusion
-description: Learn how to configure and use data binding in the Blazor File Manager component with practical examples and implementation guidance.
-platform: Blazor
+title: Data Binding in Blazor File Manager | Syncfusion
+description: Learn how to bind data to the Blazor File Manager using a RESTful JSON service or a list of objects through events.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Data Binding in Blazor File Manager Component
+# Data Binding in Blazor File Manager
 
 The File Manager uses [SfFileManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html), which supports both RESTful JSON data services binding and IEnumerable binding. It provides the option to load data either with the [AjaxSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html) property or list of objects by providing the response within the corresponding events.
 
@@ -624,7 +624,7 @@ To render the root-level folder, specify the ParentID as null, or there is no ne
 {% endhighlight %}
 {% endtabs %}
 
-N> [Also see the demo here](https://blazor.syncfusion.com/demos/file-manager/flat-data).
+N> [Also see the demo here](https://blazor.syncfusion.com/demos/file-manager/flat-data?theme=fluent2).
 
 ### Injected service
 

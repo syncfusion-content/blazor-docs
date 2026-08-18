@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Cascading in Blazor DropDown List Component | Syncfusion®
-description: Checkout and learn here all about Cascading in Blazor DropDown List component and much more details.
+title: Cascading in Blazor Dropdown List | Syncfusion®
+description: Build dependent Blazor Dropdown List components where child lists load data based on the selected parent value.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Cascading in Dropdown List
+# Cascading in Blazor Dropdown List
 
 Cascading refers to configuring two or more DropDownList components so that the available options in a child list depend on the selected value of its parent. This pattern is commonly used for parent–child lookups such as Country → State/Province → City.
 
@@ -27,4 +27,4 @@ In the following sample, selecting a country in the first DropDownList loads its
 
 ![Blazor DropdownList with cascading](./images/cascading/blazor_dropdown_cascading.gif)
 
-N> [View Sample in Demo](https://blazor.syncfusion.com/demos/dropdown-list/cascading?theme=bootstrap5).
+N> [View Sample in Demo](https://blazor.syncfusion.com/demos/dropdown-list/cascading?theme=fluent2).

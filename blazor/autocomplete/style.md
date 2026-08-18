@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and appearance in Blazor AutoComplete Component | Syncfusion®
-description: Checkout and learn here all about Style and appearance in Blazor AutoComplete component and much more.
+title: Style and Appearance in Blazor AutoComplete | Syncfusion®
+description: Customize the Blazor AutoComplete appearance by overriding its default CSS structure to adjust input, popup, list items, and theming for user preferences.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Style and Appearance in Blazor AutoComplete Component
+# Style and Appearance in Blazor AutoComplete
 
 The following content explains the CSS structure and options that can be used to modify the component’s appearance based on user preferences and theming requirements.
 
@@ -193,7 +193,7 @@ In the following code, CSS targets the `.e-list-item` elements within `.e-dropdo
 
 ![Blazor AutoComplete with customized selected item opacity](./images/style/blazor_autocomplete_opacity-style.webp)
 
-## Customizing the height
+## Customizing the height and width
 
 ### Height of AutoComplete
 
@@ -249,7 +249,7 @@ In the following code, a single list item is disabled using JavaScript interop.
 
 ![Blazor AutoComplete with a disabled list item](./images/style/blazor_autocomplete_disable-listitem.webp)
 
-## Adding search icon in the Blazor AutoComplete component.
+## Adding a search icon in the Blazor AutoComplete component
 
 Add a search icon to the AutoComplete by overriding the content of the existing icon. The following code demonstrates how to add a search icon.
 

@@ -23,7 +23,7 @@ The license key is different from the installer unlock key and must be generated
 
 * **License key** - A string registered in your project to avoid licensing warnings.
 
-N> See difference between the [unlock key and licensing key](https://support.syncfusion.com/kb/article/7863/difference-between-the-unlock-key-and-licensing-key).
+N> See difference between the [unlock key and licensing key](https://support.syncfusion.com/kb/article/7863/how-to-differentiate-between-the-unlock-key-and-licensing-key-in-miscellaneous-configuration).
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> license keys on build servers
 

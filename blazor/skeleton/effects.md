@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Effects in Blazor Skeleton Component | Syncfusion®
-description: Checkout and learn here all about shimmer effects and how to use them in Blazor Skeleton component and much more.
+title: Shimmer Effect in Blazor Skeleton | Syncfusion
+description: Apply shimmer effects like Wave, Pulse, Fade, or None to Blazor Skeleton placeholders to show engaging loading states.
 platform: Blazor
 control: Skeleton
 documentation: ug
 ---
 
-# Shimmer Effect in Blazor Skeleton Component
+# Shimmer Effect in Blazor Skeleton
 
-You can use the [Effect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Effect) property to change animation effect in the skeleton component. Skeleton supports `Wave`, `Pulse` and `Fade` effects and by default, the `Effect` is set to `Wave` effect.
+You can use the [`Effect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Effect) property to change animation effect in the skeleton component. Skeleton supports [`Wave`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.ShimmerEffect.html#Syncfusion_Blazor_Notifications_ShimmerEffect_Wave), [`Pulse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.ShimmerEffect.html#Syncfusion_Blazor_Notifications_ShimmerEffect_Pulse), [`Fade`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.ShimmerEffect.html#Syncfusion_Blazor_Notifications_ShimmerEffect_Fade), and [`None`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.ShimmerEffect.html#Syncfusion_Blazor_Notifications_ShimmerEffect_None) effects and by default, the `Effect` is set to `Wave` effect. If no animation effect is required, set the `Effect` property to `None`.
 
 {% tabs %}
 {% highlight razor %}

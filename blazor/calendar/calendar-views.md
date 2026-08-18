@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Calendar Views in Blazor Calendar Component | Syncfusion®
-description: Checkout and learn here all features about Calendar Views in Blazor Calendar component and much more.
+title: Calendar Views in Blazor Calendar | Syncfusion®
+description: Switch between Month, Year, and Decade views in the Blazor Calendar to navigate and select dates across different time scales.
 platform: Blazor
 control: Calendar
 documentation: ug
 ---
 
-# Calendar Views in Blazor Calendar Component
+# Calendar Views in Blazor Calendar
 
 A [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) has the following predefined views that provide a flexible way to navigate back and forth when selecting dates.
 
@@ -37,7 +37,7 @@ The following example demonstrates how to set the `Year` as the start view of th
 
 ## View restriction
 
-By defining the Start and Depth property with different views, drill-down and drill-up navigation can be limited. Calendar views will drill down to the view set in the [Depth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Depth) property and drill up to the view set in the [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfCalendar-1.html) property. Start represents a broader view and Depth represents a more detailed view within the hierarchy (Month < Year < Decade).
+By defining the Start and Depth property with different views, drill-down and drill-up navigation can be limited. Calendar views will drill down to the view set in the [Depth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Depth) property and drill up to the view set in the [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Start) property. Start represents a broader (less detailed) view and Depth represents a more detailed view within the hierarchy (Decade > Year > Month, from broader to more detailed).
 
 The following example displays the Calendar in `Decade` view and allows selecting a date by drilling down to the `Month` view.
 

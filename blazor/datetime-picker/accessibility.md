@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor DateTimePicker Component | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor Datetime Picker component and much more details.
+title: Accessibility in Blazor DateTime Picker | Syncfusion®
+description: Learn how Blazor DateTime Picker meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA attributes, keyboard navigation, and screen reader support.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
 ---
 
-# Accessibility in Blazor DateTimePicker Component
+# Accessibility in Blazor DateTime Picker
 
 Web accessibility ensures that web content and applications are usable by people with disabilities, especially where dynamic content and advanced UI components are involved.
 
@@ -45,16 +45,16 @@ The DateTimePicker provides built-in compliance with [WAI-ARIA](https://www.w3.o
 Common roles and attributes include:
 - Roles: combobox/textbox (for the input), dialog or popup container, grid for the calendar, and gridcell for individual dates.
 - `aria-expanded`: Indicates whether the popup (calendar/time list) is open or closed on the input/combobox element.
-- `aria-disabled`: Conveys the disabled state of the DateTimePicker.
-- `aria-activedescendant`: Identifies the currently focused date cell within the calendar grid or the focused item in the time list.
+- `aria-disabled`: Indicates the disabled state of the DateTimePicker.
+- `aria-activedescendant`: Indicates the currently focused date cell within the calendar grid or the focused item in the time list.
 
 To learn about the accessibility of Calendar, refer to the Calendar's [Accessibility](https://blazor.syncfusion.com/documentation/calendar/accessibility) section.
 
 ## Keyboard interaction
 
-Use the following keys to interact with the Blazor DateTimePicker. This component implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/).
+Use the following keys to interact with the Blazor DateTimePicker. The component implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/).
 
-Blazor DateTimePicker supports the below list of shortcut keys:
+The following shortcut keys are supported:
 
 ### Input navigation
 
@@ -64,10 +64,11 @@ Before opening the popup, use the following keys to control the popup element.
 | --- | --- | --- |
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup. |
 | <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the popup. |
+| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the popup. |
 
 ### Calendar navigation
 
-Use the following keys to interact with the Calendar after the DatePicker popup has opened:
+Use the following keys to interact with the Calendar after the DateTimePicker popup has opened:
 
 | Windows | Mac | Description |
 | --- | --- | --- |
@@ -87,7 +88,7 @@ Use the following keys to interact with the Calendar after the DatePicker popup 
 | <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Home</kbd> | Focuses the first date of the current year. |
 | <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>End</kbd> | Focuses the last date of the current year. |
 
-Use the following shortcut keys to interact with the TimePicker after the TimePicker popup has opened:
+Use the following shortcut keys to interact with the time list after the popup has opened:
 
 | Windows | Mac | Description |
 | --- | --- | --- |
@@ -102,7 +103,7 @@ Use the following shortcut keys to interact with the TimePicker after the TimePi
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup. |
 | <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the popup. |
 
-N> The “t” key behavior in the following example is custom to the sample and not a built-in shortcut. For additional information about native events, see the [Native events](https://blazor.syncfusion.com/documentation/datetime-picker/native-events) topic.
+N> The “t” key behavior in the example below is custom to the sample and not a built-in shortcut. For additional information about native events, see the [Native events](https://blazor.syncfusion.com/documentation/datetime-picker/native-events) topic.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -123,9 +124,9 @@ N> The “t” key behavior in the following example is custom to the sample and
 
 ## Ensuring accessibility
 
-The Blazor DateTimePicker component’s accessibility levels are validated using the [axe-core](https://www.npmjs.com/package/axe-core) tool during automated testing.
+The Blazor DateTimePicker component’s accessibility levels are ensured through the [axe-core](https://www.npmjs.com/package/axe-core) tool during automated testing.
 
-The accessibility compliance of the DateTimePicker component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/datetimepicker) in a new window to evaluate the DateTimePicker component with accessibility tools.
+The accessibility compliance of the DateTimePicker component is demonstrated in the [sample](https://blazor.syncfusion.com/accessibility/datetimepicker). Open the sample in a new window to evaluate the DateTimePicker component with accessibility tools.
 
 ## See also
 

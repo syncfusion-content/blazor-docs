@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Events in Blazor Toggle Switch Button Component | Syncfusion®
-description: Checkout and learn here all the features about events in Blazor Toggle Switch Button component and more.
+title: Native Event in Blazor Toggle Switch Button | Syncfusion
+description: Handle ValueChange and native DOM events for Blazor Toggle Switch Button interactions and custom triggers.
 platform: Blazor
 control: Toggle Switch Button 
 documentation: ug
 ---
 
-# Events in Blazor Toggle Switch Button Component
+# Native Event in Blazor Toggle Switch Button
 
-This explains how to handle the ValueChange event and bind standard Blazor native DOM events to the Toggle Switch Button component for common interaction scenarios such as focus, keyboard, mouse, and touch.
+This section describes how to handle the ValueChange event and bind standard Blazor native DOM events to the Toggle Switch Button component for common interaction scenarios such as focus, keyboard, mouse, and touch.
 
 ## ValueChange Event
 
@@ -90,7 +90,7 @@ The following example demonstrates handling focus events on the Toggle Switch Bu
 
 ### Keyboard Events
 
-Keyboard events are triggered when keyboard interactions occur on the Toggle Switch Button component. The `KeyboardEventArgs` event argument provides information about which key was pressed and keyboard modifiers, allowing you to handle keyboard navigation and shortcuts.
+Keyboard events are raised during a keyboard interaction with the Toggle Switch Button component. The `KeyboardEventArgs` event argument provides information about the key that was pressed and the active keyboard modifiers, allowing you to handle keyboard navigation and shortcuts.
 
 | Event | Behavior |
 |---|---|
@@ -134,10 +134,10 @@ The following example demonstrates handling keyboard events:
 
 Mouse events fire when the user interacts with the Toggle Switch Button using the mouse. The `MouseEventArgs` parameter provides positional data, button information, and other mouse-related properties.
 
-**Event Types:**| Event | Behavior |
+| Event | Behavior |
 |---|---|
 | **onclick** | Fires when the component is clicked |
-| **ondbclick** | Fires when the component is double-clicked |
+| **ondblclick** | Fires when the component is double-clicked |
 | **onmousedown** | Fires when a mouse button is pressed down |
 | **onmouseup** | Fires when a mouse button is released |
 | **onmousemove** | Fires as the mouse pointer moves over the component |
@@ -238,5 +238,8 @@ The following example demonstrates handling touch events:
 }
 ```
 
+## See also
+
+* [Accessibility in Blazor Toggle Switch Button](./accessibility.md)
 
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and appearance in Blazor DateRangePicker Component | Syncfusion®
-description: Checkout and learn here all about style and appearance in Blazor DateRangePicker component and much more details.
+title: Style and Appearance in Blazor DateRangePicker | Syncfusion®
+description: Customize the Blazor DateRangePicker appearance by overriding its default CSS structure to adjust input, popup, and range selection styles.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
 ---
 
-# Style and Appearance in Blazor DateRangePicker Component
+# Style and Appearance in Blazor DateRangePicker
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
@@ -157,7 +157,7 @@ Use the following CSS to customize the selected date cell grid in the DateRangeP
 
 ## Full screen mode support in mobiles and tablets
 
-The DateRangePicker component's full-screen mode feature enables users to view the component popup element in full-screen mode on mobile devices with improved visibility and a better user experience. It is important to mention that this feature is exclusively available for mobile devices in both landscape and portrait orientations. To activate the full screen mode within the DateRangePicker component, simply set the [FullScreen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_FullScreen) API value to `true`. This action will extend the calendar and presets popup element to occupy the entire screen on mobile devices.
+The DateRangePicker component's full-screen mode enables users to view the popup in full-screen on mobile devices for improved visibility and a better user experience. This feature is available only on mobile devices, in both landscape and portrait orientations. The default value of the [FullScreen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_FullScreen) property is `false`. To enable full-screen mode in the DateRangePicker, set the `FullScreen` property to `true`. This extends the calendar and presets popup to occupy the entire screen on mobile devices.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

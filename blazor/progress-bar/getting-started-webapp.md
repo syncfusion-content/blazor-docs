@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor ProgressBar in Web App | Syncfusion
-description: Check out and learn the documentation for getting started with Blazor ProgressBar Components in Blazor Web App.
+title: Getting Started with Blazor ProgressBar in Web App | Syncfusion®
+description: Learn how to get started with Syncfusion Blazor ProgressBar in a Blazor Web App, including server and client setup, packages, and first chart.
 platform: Blazor
 control: ProgressBar
 documentation: ug
@@ -239,4 +239,4 @@ Change the type of the ProgressBar by using the [Type](https://help.syncfusion.c
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZBdjwtiTGZpYwVi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular ProgressBar](images/blazor-circular-progressbar.webp)" %}
 
-N> You can also explore our [Blazor ProgressBar example](https://blazor.syncfusion.com/demos/progress-bar/linear) that shows you how to render and configure the ProgressBar.
+N> You can also explore our [Blazor ProgressBar example](https://blazor.syncfusion.com/demos/progress-bar/linear?theme=fluent2) that shows you how to render and configure the ProgressBar.

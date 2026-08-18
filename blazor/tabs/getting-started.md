@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Tabs in Blazor WASM App | Syncfusion
-description: Check out and learn about getting started with Blazor Tabs component in Blazor WebAssembly Application.
+description: Learn how to get started with the Syncfusion Blazor Tabs in a Blazor WebAssembly app with setup steps.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -335,6 +335,5 @@ Selected Tab
 
 ## See also
 
-1. [Getting Started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-2. [Getting Started with Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
-3. [Getting Started with Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Getting Started with Blazor Web App in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+2. [Getting Started with Blazor Server App in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)

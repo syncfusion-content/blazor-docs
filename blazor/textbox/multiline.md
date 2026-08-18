@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Multiline in Blazor TextBox Component | Syncfusion®
-description: Checkout and learn here all the features about Multiline in Blazor TextBox component and much more details.
+title: Multiline in Blazor TextBox | Syncfusion
+description: Convert Blazor TextBox into a multiline input using the Multiline property and render it as a textarea element.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Multiline in Blazor TextBox Component
+# Multiline in Blazor TextBox
 
 This feature enables the TextBox to accept multiple lines of text for scenarios such as addresses, descriptions, and comments. When Multiline is enabled, the component renders an HTML textarea element under the hood and supports vertical resizing by default.
 
@@ -35,7 +35,7 @@ N> The multiline TextBox allows resizing in the vertical direction only by defau
 
 ## Implementing floating label
 
-Floating label behavior can be applied to a multiline TextBox by setting [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_FloatLabelType) to Auto. In this mode, the Placeholder text acts as the floating label for the multiline TextBox. The placeholder can be specified using the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Placeholder) property or the Placeholder attribute. Use descriptive placeholder text or an associated label to improve accessibility.
+Floating label behavior can be applied to a multiline TextBox by setting [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_FloatLabelType) to `Auto`. In this mode, the Placeholder text acts as the floating label for the multiline TextBox. The placeholder can be specified using the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Placeholder) property or the `Placeholder` attribute. Use descriptive placeholder text or an associated `<label>` element to improve accessibility.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

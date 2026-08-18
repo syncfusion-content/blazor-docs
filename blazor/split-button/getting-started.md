@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Get Started with Blazor Split Button in Blazor WASM App | Syncfusion
-description: Check out and learn how to get started with the Blazor Split Button component in Blazor WebAssembly Application.
+title: Blazor Split Button WASM App Getting Started | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Split Button in a Blazor WebAssembly app with setup steps.
 platform: Blazor
 component: Split Button
 documentation: ug
