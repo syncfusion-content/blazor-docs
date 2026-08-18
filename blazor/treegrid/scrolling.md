@@ -11,13 +11,13 @@ documentation: ug
 
 The scrollbar will be displayed in the treegrid when the content exceeds the element [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Width) or [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Height). The vertical and horizontal scrollbars will be displayed based on the following criteria:
 
-The vertical scrollbar appears when the total height of rows present in the treegrid exceeds its element height. The horizontal scrollbar appears when he sum of the columns' widths exceeds the treegrid element width. The `Height` and `Width` properties are used to set the treegrid height and width, respectively.
+The vertical scrollbar is displayed when the total height of all rows exceeds the TreeGrid's configured height. The horizontal scrollbar is displayed when the combined width of all columns exceeds the TreeGrid's width. Use the `Height` and `Width` properties to configure the TreeGrid dimensions.
 
 N> The default value for `Height` and `Width` is **auto**.
 
 ## Set width and height
 
-The Blazor TreeGrid allows precise control over the scroller dimensions by setting pixel values for the TreeGrid’s `Width` and `Height`. Specify numeric pixel values to constrain the TreeGrid and automatically show scrollbars when content overflows.
+Set the `Width` and `Height` properties to define the TreeGrid dimensions. When the content exceeds the configured size, the TreeGrid automatically displays vertical and horizontal scrollbars as needed.
 
 {% tabs %}
 
@@ -169,7 +169,7 @@ public class TreeData
 
 ## Sticky header
 
-The Blazor TreeGrid provides a feature that allows column headers to remain fixed while scrolling, ensuring they stay visible at all times. Enable sticky headers by setting the `EnableStickyHeader` property to **true**.
+The Blazor TreeGrid provides a feature that allows column headers to remain fixed while scrolling, ensuring they stay visible at all times. Enable sticky headers by setting the [EnableStickyHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableStickyHeader) property to **true**.
 
 {% tabs %}
 {% highlight razor %}
@@ -299,7 +299,7 @@ namespace TreeGridComponent.Data
 
 Frozen rows and columns provides an option to make rows and columns always visible at the top and left of the treegrid while scrolling.
 
-Frozen columns and rows in the Blazor TreeGrid can be enabled by configuring the [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FrozenColumns) and [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FrozenRows) properties. This ensures specific columns and rows remain visible while scrolling.
+Use the [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FrozenColumns) and [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FrozenRows) properties to freeze columns and rows in the Blazor TreeGrid. Frozen elements remain fixed and visible while scrolling horizontally or vertically.
 
 {% tabs %}
 
@@ -573,7 +573,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-N> If frozen columns are not specified, the frozen column separator is displayed at the left and right ends. Frozen columns can be dynamically changed by dragging the column separator.
+N> If frozen columns are not specified, the frozen column separator is displayed at the left and right ends, and columns can be dynamically changed by dragging the separator only when `AllowFreezeLineMoving` is set to true.
 
 ![Add or Remove Frozen Blazor TreeGrid Columns by Dragging the Column Separator](./images/blazor-treegrid-freeze-line-moving.webp)
 
