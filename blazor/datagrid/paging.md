@@ -15,7 +15,7 @@ To enable paging, set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Sy
 
 Paging options can be configured through the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component. GridPageSettings allows control of page size, current page, and total record count.
 
-> For large data sources, paging improves performance by fetching and rendering only a subset of records per page. For remote data, combine paging with server-side data retrieval to avoid loading all records at once. See the [Remote Data](https://blazor.syncfusion.com/documentation/datagrid/data-binding/remote-data) documentation for more details.
+> For large data sources, paging improves performance by fetching and rendering only a subset of records per page. For [remote data](https://blazor.syncfusion.com/documentation/datagrid/data-binding/remote-data), combine paging with server-side data retrieval to avoid loading all records at once.
 
 ## Customize the pager options
 
