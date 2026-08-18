@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Methods in Blazor Sparkline Component | Syncfusion®
-description: Learn about available methods in the Blazor Sparkline component, including how to refresh the chart.
+title: Blazor Sparkline Charts Methods Examples | Syncfusion®
+description: Learn about available methods in Syncfusion Blazor Sparkline, including how to use RefreshAsync with @ref to update the chart.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Methods in Blazor Sparkline Component
+# Blazor Sparkline Charts Methods
 
 The `@ref` property can be used to create an object reference for the Sparkline component and call its methods.
 

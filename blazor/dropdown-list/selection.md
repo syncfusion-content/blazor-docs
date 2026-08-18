@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in Blazor DropDownList component | Syncfusion®
-description: Checkout and learn here all about the Selection feature in Blazor DropDownList component and much more details.
+title: Selection in Blazor Dropdown List | Syncfusion®
+description: Get, set, and handle selected values in Blazor Dropdown List using value binding, index binding, and selection events.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Selection in Dropdown List
+# Selection in Blazor Dropdown List
 
 ## Get selected value
 
@@ -153,7 +153,7 @@ The [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.Dro
 
 {% endhighlight %}
 
-## Get Data by value
+## Get data by value
 
 Retrieve the selected data by invoking the `GetDataByValue(TValue)` method on the `DropDownList` instance (accessed via `@ref`). For example, bind a button click to call `GetDataByValue(TValue)` and process the returned item.
 
@@ -163,7 +163,7 @@ Retrieve the selected data by invoking the `GetDataByValue(TValue)` method on th
 
 {% endhighlight %} 
 
-## Get List Item
+## Get list items
 
 Retrieve the list items by calling the `GetItemsAsync()` method on the `DropDownList` instance. For example, bind a button click to invoke `GetItemsAsync()` and use the returned items for further processing.
 

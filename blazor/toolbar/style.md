@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Style and Appearance in Blazor Toolbar Component | Syncfusion®
-description: Checkout and learn here all the features about style and appearance in Blazor Toolbar component and more.
+title: Style and Appearance in Blazor Toolbar | Syncfusion
+description: Customize Blazor Toolbar background, border, and item styles using CSS selectors and custom properties for branding.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Style and Appearance in Blazor Toolbar Component
+# Style and Appearance in Blazor Toolbar
 
 This document provides CSS structures for modifying the control’s appearance based on user preference. 
 
-## Customizing Toolbar
+## Customizing the Toolbar
 
 Use the following CSS to customize the Toolbar.
 
@@ -25,7 +25,7 @@ Use the following CSS to customize the Toolbar.
 
 ## Customizing the Toolbar Items
 
-Use the following CSS to customize the items of Toolbar.
+Use the following CSS to customize the items of the Toolbar.
 
 ```CSS
 
@@ -36,7 +36,7 @@ Use the following CSS to customize the items of Toolbar.
 
 ```
 
-Use the following CSS to customize the button in the items of Toolbar.
+Use the following CSS to customize the button in the items of the Toolbar.
 
 ```CSS
 
@@ -47,9 +47,9 @@ Use the following CSS to customize the button in the items of Toolbar.
 
 ```
 
-## Customizing Toolbar's Item Icon
+## Customizing the Toolbar's Item Icon
 
-Use the following CSS to customize the item icon of Toolbar control.
+Use the following CSS to customize the item icon of the Toolbar control.
 
 ```CSS
 
@@ -60,7 +60,7 @@ Use the following CSS to customize the item icon of Toolbar control.
 
 ```
 
-## Customizing the Hover State of Toolbar Control
+## Customizing the Hover State of the Toolbar
 
 Use the following CSS to customize the toolbar item when hovering.
 
@@ -73,7 +73,7 @@ Use the following CSS to customize the toolbar item when hovering.
 
 ```
 
-## Customizing Selected Item of Toolbar Control
+## Customizing the Selected Item of the Toolbar
 
 Use the following CSS to customize the selected toolbar item.
 

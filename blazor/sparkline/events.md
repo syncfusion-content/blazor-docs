@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Sparkline Component | Syncfusion®
-description: Check out and learn about available events and event handling in the Blazor Sparkline component and much more details.
+title: Blazor Sparkline Charts Events Examples and Reference | Syncfusion®
+description: Learn about events in Syncfusion Blazor Sparkline such as Loaded, OnMarkerRender, OnDataLabelRender, and AxisLabelRender with examples.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Events in Blazor Sparkline Component
+# Blazor Sparkline Charts Events
 
 This section describes the Sparkline component's events that are triggered when actions are performed. Events are provided through the [SparklineEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html) component.
 

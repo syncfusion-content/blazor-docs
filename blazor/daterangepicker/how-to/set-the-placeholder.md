@@ -1,17 +1,15 @@
 ---
 layout: post
-title: Set the Placeholder in Blazor DateRangePicker Component | Syncfusion®
-description: Checkout and learn here all about Set the Placeholder in Blazor DateRangePicker component and much more details.
+title: How to set the Placeholder in Blazor DateRangePicker | Syncfusion®
+description: Set custom placeholder text for the Blazor DateRangePicker input fields using the Placeholder property to guide user input.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
 ---
 
-# Set the Placeholder in Blazor DateRangePicker Component
+# How to set the Placeholder in Blazor DateRangePicker
 
-The following code demonstrates how to set [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_Placeholder) in the DateRangePicker component.
-
-Using `Placeholder`, you can display a short hint in the input element.
+The following example shows how to set the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_Placeholder) in the DateRangePicker. The placeholder displays a short hint in the input element. The default value of the `Placeholder` property is an empty string.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

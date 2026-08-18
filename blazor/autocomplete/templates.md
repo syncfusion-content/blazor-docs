@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor AutoComplete Component | Syncfusion®
-description: Checkout and learn here all features about Templates in Blazor AutoComplete component and much more.
+title: Templates in Blazor AutoComplete | Syncfusion®
+description: Customize the Blazor AutoComplete with item, group header, header, footer, and empty or error templates to render rich content in the suggestion list.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Templates in Blazor AutoComplete Component
+# Templates in Blazor AutoComplete
 
 The AutoComplete provides multiple template options to customize each list item, group header, header, footer, and empty/error states in the popup.
 

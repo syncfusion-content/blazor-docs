@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Size and Color with Blazor AppBar Component | Syncfusion®
-description: Check out and learn about Size and Color with the Blazor AppBar component in the Blazor Server App and the Blazor WebAssembly App.
+title: Size and Color in Blazor AppBar | Syncfusion®
+description: Set the Blazor AppBar size with the Mode property (Regular, Prominent, or Dense) and choose its color scheme with ColorMode.
 platform: Blazor
 control: AppBar
 documentation: ug
 ---
 
-# Size and Color with Blazor AppBar Component
+# Size and Color in Blazor AppBar
 
 ## Size
 
-The size of the AppBar can be set using the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Mode) property. The available types of the Blazor AppBar are as follows:
+The size of the AppBar can be set using the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Mode) property. By default, the `Mode` property is set to `AppBarMode.Regular`. The [AppBarMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AppBarMode.html) enum exposes three values:
 
 * Regular AppBar
 * Prominent AppBar
@@ -83,8 +83,8 @@ This height mode can be set to the AppBar by setting `AppBarMode.Prominent` to t
     .control-container .prominent-appbar .e-inherit.e-btn:active,
     .control-container .prominent-appbar .e-inherit.e-btn.e-active,
     .control-container .prominent-appbar .e-inherit.e-css.e-btn:hover,
-    .control-container .prominent-appbar .e-inherit.e-css.e-btn:focus
-    .control-container .prominent-appbar .e-inherit.e-css.e-btn:active
+    .control-container .prominent-appbar .e-inherit.e-css.e-btn:focus,
+    .control-container .prominent-appbar .e-inherit.e-css.e-btn:active,
     .control-container .prominent-appbar .e-inherit.e-css.e-btn.e-active {
         background: rgba(255, 255, 255, .08);
     }
@@ -249,3 +249,11 @@ This color mode can be set to the AppBar by setting `AppBarColor.Inherit` to the
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtVxDdMiBxOKpSGv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Inherit Color](./images/inherit_appbar.webp)" %}
+
+## See Also
+
+* [Getting Started with Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/getting-started)
+* [Positioning in Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/position)
+* [Designing the User Interface in Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/design)
+* [Styles and Appearances in Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/style-and-appearance)
+* [Accessibility in Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/accessibility)

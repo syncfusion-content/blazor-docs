@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Drag And Drop in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all the features about drag and drop in Blazor ListBox component and much more.
+title: Drag and Drop in Blazor ListBox | Syncfusion
+description: Enable drag and drop within or across Blazor ListBox controls using AllowDragAndDrop, Scope, and related events.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Drag And Drop in Blazor ListBox Component
+# Drag and Drop in Blazor ListBox
 
-The ListBox supports dragging a single item or a group of selected items and dropping them within the same ListBox or into another ListBox.
+The Blazor ListBox supports dragging a single item or a group of selected items and dropping them within the same ListBox or into another ListBox.
 
-Customize drag-and-drop behavior using the following events.
+Customize drag-and-drop behavior by handling the following events on the [ListBoxEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxEvents-2.html) child component:
 
 | Events | Description |
 |------|------|
@@ -56,7 +56,7 @@ Drag and drop within a single ListBox can be achieved by setting the [AllowDragA
 
 ## Multiple ListBox
 
-Drag and drop between two ListBoxes can be achieved by setting the [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_AllowDragAndDrop) property to `true` and assigning the same [Scope](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_Scope) value (for example, `combined-list`) to both ListBoxes. The Scope value enables cross-list drag-and-drop; element IDs should remain unique and are independent of Scope.
+Enable drag and drop between two or more ListBoxes by setting `AllowDragAndDrop` to `true` and assigning the same [Scope](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_Scope) value to each ListBox. The `Scope` value is what groups the ListBoxes for cross-list drag-and-drop. The HTML element IDs that wrap each ListBox must remain unique and are independent of `Scope`.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -76,7 +76,7 @@ Drag and drop between two ListBoxes can be achieved by setting the [AllowDragAnd
 
 @code {
     public List<CountryCode> GroupA = new List<CountryCode>
-  {
+    {
         new CountryCode{ Name = "Australia", Code = "AU" },
         new CountryCode{ Name = "Bermuda", Code = "BM" },
         new CountryCode{ Name = "Canada", Code = "CA" },
@@ -89,7 +89,7 @@ Drag and drop between two ListBoxes can be achieved by setting the [AllowDragAnd
     };
 
     public List<CountryCode> GroupB = new List<CountryCode>
-  {
+    {
         new CountryCode{ Name = "India", Code = "IN" },
         new CountryCode{ Name = "Italy", Code = "IT" },
         new CountryCode{ Name = "Japan", Code = "JP" },
@@ -146,6 +146,7 @@ The toolbar and drag-and-drop actions between two ListBoxes can be enabled by as
 
 @code {
     public string[] Items = new string[] { "MoveTo", "MoveFrom", "MoveAllTo", "MoveAllFrom" };
+
     public List<CountryCode> GroupA = new List<CountryCode>
     {
         new CountryCode{ Name = "Australia", Code = "AU" },
@@ -161,7 +162,7 @@ The toolbar and drag-and-drop actions between two ListBoxes can be enabled by as
         new CountryCode{ Name = "Italy", Code = "IT" },
         new CountryCode{ Name = "Japan", Code = "JP" },
         new CountryCode{ Name = "Mexico", Code = "MX" },
-        new CountryCode{ Name = "Norway", Code = "NO" },
+        new CountryCode{ Name = "Norway", Code = "NO" }
     };
 
     public class CountryCode
@@ -185,3 +186,10 @@ The toolbar and drag-and-drop actions between two ListBoxes can be enabled by as
 ```
 
 ![Dragging Item between Blazor dual ListBox](./images/blazor-listbox-dual-and-drag.webp)
+
+## See also
+
+* [Dual ListBox in Blazor](./dual-listbox.md)
+* [Getting Started with Blazor ListBox](./getting-started.md)
+* [Selection in Blazor ListBox](./selection.md)
+* [Accessibility in Blazor ListBox](./accessibility.md)

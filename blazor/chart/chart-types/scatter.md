@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Scatter in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Scatter Chart in Blazor Charts component and much more.
+title: Blazor Scatter Chart Examples and Documentation | Syncfusion®
+description: Learn how to create Blazor Scatter Charts using Syncfusion. Visualize the relationship between two numeric parameters as individual data points.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Scatter in Blazor Charts Component
+# Scatter Chart in Blazor
 
 ## Scatter
 

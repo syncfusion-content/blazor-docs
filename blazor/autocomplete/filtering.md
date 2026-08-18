@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in Blazor AutoComplete Component | Syncfusion®
-description: Checkout and learn here all features about Filtering in Blazor AutoComplete component and much more.
+title: Filtering in Blazor AutoComplete | Syncfusion®
+description: Filter Blazor AutoComplete suggestions as the user types using StartsWith, EndsWith, or Contains match modes, with case sensitivity and diacritic options.
 platform: Blazor
 control: AutoComplete
 documentation: ug

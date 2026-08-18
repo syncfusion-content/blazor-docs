@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Accessibility in Blazor Input Mask Component | Syncfusion®
-description: Checkout and learn here all the features about Accessibility in Blazor Input Mask component and much more details.
+title: Accessibility in Blazor Input Mask | Syncfusion
+description: Learn how Blazor Input Mask supports accessibility standards, keyboard navigation, screen readers, and ARIA attributes.
 platform: Blazor
 control: Input Mask
 documentation: ug
 ---
 
-# Accessibility in Blazor Input Mask Component
+# Accessibility in Blazor Input Mask
 
-The [Blazor MaskedTextBox](https://www.syncfusion.com/blazor-components/blazor-input-mask) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The [Blazor MaskedTextBox](https://www.syncfusion.com/blazor-components/blazor-input-mask) component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor MaskedTextBox component is outlined below.
 

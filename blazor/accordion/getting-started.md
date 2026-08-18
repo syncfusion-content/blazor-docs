@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Accordion in WASM APP | Syncfusion
-description: Check out and learn about getting started with Blazor Accordion component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Accordion in Blazor WASM App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Accordion control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Accordion
 documentation: ug

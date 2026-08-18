@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in Blazor 3D Chart Component | Syncfusion®
-description: Checkout and learn here all features about Selection feature in Blazor 3D Chart component and much more.
+title: Blazor 3D Chart Selection Examples | Syncfusion®
+description: Learn about selection in Syncfusion Blazor 3D Chart, including Point, Series, and Cluster selection modes with code samples.
 platform: Blazor
 control: 3D Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Selection in Blazor 3D Chart Component
+# Blazor 3D Chart Selection
 
 The 3D chart provides selection support for the series and its data points on mouse click.
 

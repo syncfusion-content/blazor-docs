@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Labels in Blazor 3D Chart Component | Syncfusion®
-description: Checkout and learn here all features about the Data Labels in Blazor 3D Chart component and much more.
+title: Blazor 3D Chart Data Labels Examples | Syncfusion®
+description: Learn how to add and customize data labels in Syncfusion Blazor 3D Chart series using the Visible property in Chart3DDataLabel.
 platform: Blazor
 control: 3D Chart
 documentation: ug
 ---
 
-# Data Labels in Blazor 3D Chart Component
+# Blazor 3D Chart Data Labels
 
 Data labels are fields that includes information about the sample point connected to an output. It can be added to a chart series by enabling the `Visible` property in the `Chart3DDataLabel`. By default, the labels will arrange smartly without overlapping.
 

@@ -1,15 +1,17 @@
 ---
 layout: post
-title: Data Binding in Blazor Input Mask Component | Syncfusion®
-description: Checkout and learn here all about the Data Binding in Blazor Input Mask component and much more details.
+title: Data Binding in Blazor Input Mask | Syncfusion
+description: Bind string values with two-way data binding in Blazor Input Mask using the @bind-Value attribute and update values programmatically.
 platform: Blazor
 control: Input Mask
 documentation: ug
 ---
 
-# Data Binding in Blazor Input Mask Component
+# Data Binding in Blazor Input Mask
 
-Use the @bind-Value attribute to enable two-way data binding with the MaskedTextBox. The Value parameter is of type string. When the user edits the input, the bound field is updated; when the bound field changes in code, the component reflects the new value. For reference, see SfMaskedTextBox, Value, and Mask in the API, and the Blazor data binding guidance.
+Use the `@bind-Value` directive to enable two-way data binding with the MaskedTextBox. The Value parameter is of type string. When the user edits the input, the bound field is updated; when the bound field changes in code, the component reflects the new value.
+
+For reference, see the [SfMaskedTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html), [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_Value), and [Mask](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_Mask) API references, and the Blazor [data binding](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/data-binding) documentation.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -25,7 +27,7 @@ Use the @bind-Value attribute to enable two-way data binding with the MaskedText
 
 ## Dynamic value binding
 
-The value can also be updated programmatically at runtime. Updating the bound field triggers the component to display the new value, as shown in the following example.
+The value can also be updated programmatically at runtime. Updating the bound field triggers the component to display the new value, as shown in the following example. Click the **Update Value** button to change the bound value at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

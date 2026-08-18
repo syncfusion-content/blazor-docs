@@ -1,13 +1,13 @@
-﻿---
+---
 layout: post
-title: Date Range in Blazor DatePicker Component | Syncfusion®
-description: Checkout and learn here all the features about Date Range in Blazor DatePicker component and much more.
+title: Date Range in Blazor DatePicker | Syncfusion®
+description: Restrict the Blazor DatePicker to a specific date range using the Min and Max properties, with inclusive bounds and date-only comparison.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Date Range in Blazor DatePicker Component
+# Date Range in Blazor DatePicker
 
 The DatePicker allows you to restrict the selectable date to a specified range by using the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Max) properties.
 

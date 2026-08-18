@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Range Selector Component | Syncfusion®
-description: Checkout and learn here all about events in Blazor Range Selector component with examples and much more details.
+title: Blazor Range Selector Events Examples and Reference | Syncfusion®
+description: Learn about events in Syncfusion Blazor Range Selector such as Loaded, Changed, OnTooltipRender, and SelectorRender with usage examples.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Events in Blazor Range Selector Component
+# Blazor Range Selector Events
 
 This section describes about the Range Selector component's events, that is triggered when appropriate actions are performed. The events should be provided to the Range Selector through the **RangeNavigatorEvents** component.
 

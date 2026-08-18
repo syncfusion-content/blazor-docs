@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor FAB Component in WASM App | Syncfusion
-description: Check out and learn about getting started with the Blazor Floating Action Button component in Blazor WebAssembly Application.
+title: Getting Started with Blazor FAB in Blazor WASM App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Floating Action Button in a Blazor WebAssembly app with setup steps.
 platform: Blazor
 control: Floating Action Button
 documentation: ug

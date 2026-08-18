@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Spinner Component | Syncfusion®
-description: Checkout and learn here all the features about events in Blazor Spinner component and much more details.
+title: Events in Blazor Spinner | Syncfusion
+description: Handle lifecycle events such as Created, OnShow, and OnHide in Blazor Spinner with event arguments for custom behavior.
 platform: Blazor
 control: Spinner
 documentation: ug
 ---
 
-# Events in Blazor Spinner Component
+# Events in Blazor Spinner
 
 The Blazor Spinner component exposes a set of lifecycle events that hook into key moments of the Spinner's existence—from its initial creation to its final destruction, as well as before it is shown or hidden. These events provide full control over the Spinner's behavior, enabling custom logic execution, application state updates, operation cancellation, or integration with logging and monitoring systems.
 

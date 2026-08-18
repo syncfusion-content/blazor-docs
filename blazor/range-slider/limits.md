@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Limits in Blazor Range Slider Component | Syncfusion®
-description: Checkout and learn here all about limits in Blazor Range Slider component with examples and much more details.
+title: Limits in Blazor Range Slider | Syncfusion
+description: Restrict Blazor Range Slider thumb movement within allowed ranges using MinStart, MinEnd, MaxStart, and MaxEnd.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Limits in Blazor Range Slider Component
+# Limits in Blazor Range Slider
 
 Slider limits restrict the movement of the slider thumb(s) within a specified range. This is useful when higher or lower values would negatively affect a process or product where the slider is used.
 

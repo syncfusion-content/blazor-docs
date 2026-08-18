@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Icons and Templates in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all about icons and templates in Blazor ListBox component and more.
+title: Icons and Templates in Blazor ListBox | Syncfusion
+description: Add icons and custom item templates to Blazor ListBox to tailor list item content and visual layout.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Icons and Templates in Blazor ListBox Component
+# Icons and Templates in Blazor ListBox
 
 ## Icons
 
-To display an icon for each ListBox item, map the [IconCss field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ListBoxFieldSettings_IconCss) to a CSS class name. By default, the icon is positioned on the left side of the item text. Icon glyphs are provided by the theme CSS; custom icons can also be supplied via user-defined CSS classes.
+To display an icon for each ListBox item, map the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ListBoxFieldSettings_IconCss) field to a CSS class name. By default, the icon is positioned on the left side of the item text. Syncfusion's built-in icon glyphs are provided by the theme CSS; custom icons can also be supplied via user-defined CSS classes.
 
 In the following example, icon classes are mapped to the `IconCss` field.
 
@@ -70,7 +70,7 @@ In the following example, icon classes are mapped to the `IconCss` field.
 
 ## Templates
 
-ListBox items can be customized according to the requirement using [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property.
+ListBox items can be customized by using the [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property of the [ListBoxTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxTemplates-1.html) child component. The template receives a `context` value of type `TItem` that exposes the bound item's properties.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -173,3 +173,9 @@ ListBox items can be customized according to the requirement using [ItemTemplate
 ```
 
 ![Blazor ListBox with icon](./images/blazor-listbox-icon-template.webp)
+
+## See also
+
+* [Data Binding in Blazor ListBox](./data-binding.md)
+* [Selection in Blazor ListBox](./selection.md)
+* [Getting Started with Blazor ListBox](./getting-started.md)

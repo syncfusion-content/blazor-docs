@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Form Validation in Blazor MultiSelect Component | Syncfusion®
-description: Checkout and learn here all about Form Validation in Blazor MultiSelect component and much more details.
+title: Form Validation in Blazor MultiSelect Dropdown | Syncfusion
+description: Validate Blazor MultiSelect Dropdown inside Blazor EditForm with data annotations and validation messages.
 platform: Blazor
-control: MultiSelect
+control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Form Validation in MultiSelect
+# Form Validation in Blazor MultiSelect Dropdown
 
 ## Edit form validation
 
-The MultiSelect component can be used inside an EditForm to build a form that supports selecting multiple values. The `EditForm` component validates data annotation rules via the `DataAnnotationsValidator` component.
+The MultiSelect component can be used inside an `EditForm` to build a form that supports selecting multiple values. The `EditForm` component validates data annotation rules via the `DataAnnotationsValidator` component.
 
 When the MultiSelect input is valid, the form can be submitted. If the input is invalid, a validation message is displayed until a valid value is provided.
 

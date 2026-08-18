@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Virtualization in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn here all the features about Virtualization in Blazor ComboBox component and much more.
+title: Virtualization in Blazor ComboBox | Syncfusion®
+description: Enable virtual scrolling in the Blazor ComboBox to render only a window of items, then load more on scroll for smooth performance with large datasets.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Virtualization in Blazor ComboBox Component
+# Virtualization in Blazor ComboBox
 
 The ComboBox component includes a virtual scrolling feature designed to enhance UI performance, particularly for handling large datasets. By enabling the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_EnableVirtualization) option, the ComboBox intelligently manages data rendering, ensuring only a subset of items is initially loaded when the component is rendered. As you interact with the dropdown, additional items are dynamically loaded as you scroll, creating a smooth and efficient user experience.
 

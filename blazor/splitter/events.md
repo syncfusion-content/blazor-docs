@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Events in Blazor Splitter Component | Syncfusion®
-description: Checkout and learn here all the features about events in Blazor Splitter component and much more details.
+title: Events in Blazor Splitter | Syncfusion
+description: Handle Blazor Splitter events such as Created, Resizing, OnResizeStop, and OnCollapse for pane actions.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# Events in Blazor Splitter Component
+# Events in Blazor Splitter
 
 This section explains the list of events of the splitter component which will be triggered for appropriate splitter actions.
 
 ## Created
 
-`Created` event triggers after creating the splitter component with its panes.
+The `Created` event triggers after the Splitter component is created with its panes.
 
 ```cshtml
 

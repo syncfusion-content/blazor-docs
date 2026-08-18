@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Set Items Customization in Blazor Toolbar Component | Syncfusion®
-description: Checkout and learn here all the features about how to set Items customization in Blazor Toolbar component and more.
+title: How to set command customization in Blazor Toolbar | Syncfusion
+description: Customize Blazor Toolbar item commands using HtmlAttributes and CssClass for styling, behavior, and accessibility.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Set Items Customization in Blazor Toolbar Component
+# How to set command customization in Blazor Toolbar
 
-The `HtmlAttributes` property of a Toolbar item sets HTML attributes (such as `id`, `class`, `style`, and `role`) for its associated elements.
+The [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_HtmlAttributes) property of a Toolbar item sets HTML attributes (such as `id`, `class`, `style`, and `role`) for its associated elements.
 
 When `style` attributes are added, if existing `style` attributes are present, the new ones will replace them. This behavior differs for the `class` attribute; new classes are added to the element without replacing existing ones.
 
-Single or multiple CSS classes can be applied to Toolbar items using the `ToolbarItem`'s `CssClass` property.
+Single or multiple CSS classes can be applied to Toolbar items using the Toolbar item's [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_CssClass) property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 

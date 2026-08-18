@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Right to Left in Blazor Menu Bar Component | Syncfusion®
-description: Checkout and learn here all the features about right to left in Blazor Menu Bar component and much more details.
+title: How to enable right to left in Blazor Menu Bar | Syncfusion
+description: Enable right-to-left layout for Blazor Menu Bar by setting the EnableRtl property to true for RTL language support.
 platform: Blazor
 control: Menu Bar 
 documentation: ug
 ---
 
-# Right to Left in Blazor Menu Bar Component
+# How to enable right to left in Blazor Menu Bar
 
-Menu Bar component has RTL support. This can be achieved by setting [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~EnableRtl.html) as `true`.
+The Menu Bar component supports right-to-left (RTL) layout direction for languages such as Arabic and Hebrew. This is enabled by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~EnableRtl.html) property to `true`. When enabled, the menu bar reverses its layout: items align to the right, sub menus open toward the left, and any built-in icons are mirrored.
 
-The following example illustrates how to enable right-to-left support in Menu Bar component.
+The following example illustrates how to enable right-to-left support in the Menu Bar component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
