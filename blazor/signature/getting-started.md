@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Signature in Blazor WASM App | Syncfusion
-description: Check out and learn how to get started with the Blazor Signature component in Blazor WebAssembly Application.
+description: Learn how to get started with the Syncfusion Blazor Signature in a Blazor WebAssembly app with setup steps.
 platform: Blazor
 control: Signature
 documentation: ug

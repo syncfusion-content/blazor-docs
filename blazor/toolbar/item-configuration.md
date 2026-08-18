@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Item Configuration in Blazor Toolbar Component | Syncfusion®
-description: Checkout and learn here all the features about item configuration in Blazor Toolbar component and more.
+title: Item Configuration in Blazor Toolbar | Syncfusion
+description: Configure Blazor Toolbar items with align, icon, template, overflow, disabled, and HTML attributes for full control.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Item Configuration in Blazor Toolbar Component
+# Item Configuration in Blazor Toolbar
 
 The [Blazor Toolbar](https://www.syncfusion.com/blazor-components/blazor-toolbar) can be rendered by defining a list of items. Items can be constructed with the following built-in Items types or item template.
 

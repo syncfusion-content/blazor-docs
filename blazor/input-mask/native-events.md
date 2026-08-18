@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor Input Mask Component | Syncfusion®
-description: Checkout and learn here all about Native Events in Blazor Input Mask component and much more details.
+title: Native Events in Blazor Input Mask | Syncfusion
+description: Bind native DOM events such as onkeypress, onfocus, and onblur to Blazor Input Mask and pass event arguments to handlers.
 platform: Blazor
 control: Input Mask
 documentation: ug
 ---
 
-# Native Events in Blazor Input Mask Component
+# Native Events in Blazor Input Mask
 
 This section describes how to bind native DOM events to the MaskedTextBox component and how to pass event data to event handlers.
 

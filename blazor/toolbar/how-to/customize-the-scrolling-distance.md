@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize the Scrolling distance in Blazor Toolbar | Syncfusion®
-description: Learn here all the features about customize the scrolling distance in Blazor Toolbar component and more.
+title: How to customize scrolling distance in Blazor Toolbar | Syncfusion
+description: Control how far Blazor Toolbar scrolls using the ScrollStep property when navigation icons are clicked.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Customize the Scrolling Distance in Blazor Toolbar Component
+# How to customize scrolling distance in Blazor Toolbar
 
 The Toolbar's [`ScrollStep`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfToolbar.html#Syncfusion_Blazor_Navigations_SfToolbar_ScrollStep) property lets you customize the scrolling distance when the left or right navigation icons are clicked. Pass the desired value to the `ScrollStep` property to control the scroll behavior.
 

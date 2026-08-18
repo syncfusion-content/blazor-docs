@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Breadcrumb Component | Syncfusion®
-description: Checkout and learn here all about features Accessibility in Blazor Breadcrumb component and much more.
+title: Accessibility in Blazor Breadcrumb | Syncfusion®
+description: Learn how Blazor Breadcrumb meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA roles, keyboard navigation, and screen reader support.
 platform: Blazor
 control: Breadcrumb
 documentation: ug
 ---
 
-# Accessibility in Blazor Breadcrumb Component
+# Accessibility in Blazor Breadcrumb
 
 The Blazor Breadcrumb component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pane Content in Blazor Splitter Component | Syncfusion®
-description: Checkout and learn here all the features about pane content in Blazor Splitter component much more details.
+title: Pane Content in Blazor Splitter | Syncfusion
+description: Render plain text, HTML markup, or other Blazor components inside Splitter pane contents for flexible layouts.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# Pane Content in Blazor Splitter Component
+# Pane Content in Blazor Splitter
 
 This section explains how to provide plain text content or HTML markup to splitter pane.
 

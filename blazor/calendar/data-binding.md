@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor Calendar Component | Syncfusion®
-description: Checkout and learn here all features about Data Binding in Blazor Calendar component and including one-way, two-way and dynamic value data binding.
+title: Data Binding in Blazor Calendar | Syncfusion®
+description: Bind a date value to the Blazor Calendar using one-way, two-way, or dynamic value binding with Value, DateTime, DateOnly, or null.
 platform: Blazor
 control: Calendar
 documentation: ug
 ---
 
-# Data Binding in Blazor Calendar Component
+# Data Binding in Blazor Calendar
 
 This section explains how to bind a value to the Calendar component in the following ways:
 

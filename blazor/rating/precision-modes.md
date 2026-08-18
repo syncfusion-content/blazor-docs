@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Precision Modes in Blazor Rating Component | Syncfusion®
-description: Checkout and learn here all about Precision Modes with Blazor Rating component in Server App and WebAssembly App with examples.
+title: Precision Modes in Blazor Rating | Syncfusion
+description: Set Blazor Rating precision to Full, Half, Quarter, or Exact for fine-grained value selection and more accurate user ratings.
 platform: Blazor
 control: Rating
 documentation: ug
 ---
 
-# Precision Modes in Blazor Rating Component
+# Precision Modes in Blazor Rating
 
 Use the [Precision](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Precision) property of the Blazor Rating component to control how finely users can select values. The default precision is `Full`. Interaction by mouse and keyboard follows the selected precision step.
 

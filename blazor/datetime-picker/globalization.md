@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor DateTimePicker Component | Syncfusion®
-description: Checkout and learn here all about Globalization in Blazor Datetime Picker component and much more details.
+title: Globalization in Blazor DateTime Picker | Syncfusion®
+description: Globalize the Blazor DateTime Picker for different cultures with right-to-left rendering, localized names, and culture-specific date and time formats.
 platform: Blazor
-control: Datetime Picker 
+control: DateTimePicker
 documentation: ug
 ---
 
-# Globalization in Blazor Datetime Picker Component
+# Globalization in Blazor DateTime Picker
 
 The [Blazor DateTimePicker](https://www.syncfusion.com/blazor-components/blazor-datetime-picker) component reflects the application's culture based on the system culture. Date and time formats, month and day names, and other culture-specific settings are derived automatically from the current culture.
 

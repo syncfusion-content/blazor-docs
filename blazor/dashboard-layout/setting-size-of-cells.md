@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Configure Grid Layout in Blazor Dashboard | Syncfusion®
-description: Learn here all about Configuring the Grid Layout in Blazor Dashboard Layout component and much more.
+title: Configuring the Grid Layout in Blazor Dashboard Layout | Syncfusion®
+description: Configure the Blazor Dashboard Layout grid by setting cell size, column count, row spacing, and breakpoints to control the panel layout.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
 ---
 
-# Configuring the Grid Layout in Blazor Dashboard Layout Component
+# Configuring the Grid Layout in Blazor Dashboard Layout
 
 The **Dashboard Layout** component is built upon a grid structure, which is divided into equally sized subsections known as cells.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Placeholder/FloatLabel in Blazor DropDown List Component | Syncfusion®
-description: Checkout and learn here all about Placeholder and FloatLabel in Blazor DropDown List component and much more details.
+title: Placeholder and Float Label in Blazor Dropdown List | Syncfusion®
+description: Configure placeholder text, colored placeholders, mandatory indicators, and floating labels in Blazor Dropdown List.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Placeholder and Float Label in DropDownList
+# Placeholder and Float Label in Blazor Dropdown List
 
 ## Placeholder
 
