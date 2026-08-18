@@ -106,7 +106,7 @@ Clipboard actions can also be triggered with external buttons or programmatic me
 
 The [`CopyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method copies selected rows or cells:
 
-- Pass **true** to include column headers in the copied content.
+- Pass **true** to copy the selected rows or cells with headers.
 - Pass **false** or omit the parameter to copy without headers.
 
 {% tabs %}
@@ -119,7 +119,7 @@ The [`CopyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.
     <SfButton OnClick="Copy" Content="Copy" CssClass="e-outline"></SfButton>
     <SfButton OnClick="CopyHeader" Content="Copy With Header" CssClass="e-outline" Style="margin-left: 10px;"></SfButton>
 </div>
-<SfGrid @ref="Grid" DataSource="@Orders" Height="348">
+<SfGrid @ref="Grid" DataSource="@Orders" AllowSelection="true" Height="348">
     <GridSelectionSettings Type="SelectionType.Multiple"></GridSelectionSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
@@ -291,9 +291,9 @@ internal sealed class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrnDcXszsUECbja?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Autofill Limitations
+### AutoFill Limitations
 
-- **Data Type Conversion**: AutoFill does not convert string values to numeric or date types. Copying strings into numeric cells results in **NaN**, and copying strings into date cells results in an **empty cell**.
+- **Data Type Conversion:** AutoFill does not convert string values to numeric or date types. Copying strings into numeric cells results in **NaN**, and copying strings into date cells results in an **empty cell**.
 - **Value Copying**: AutoFill copies values directly from the source range without generating non-linear or sequential series.
 - **Virtualization**: AutoFill is not supported with virtual scrolling or column virtualization.
 - **Infinite Scrolling**: With infinite scrolling, AutoFill applies only to cells within the current viewport.
@@ -303,7 +303,7 @@ internal sealed class OrderData
 
 ## Pasting Data
 
-The **Paste** feature in the Blazor DataGrid pastes grid-copied data into the grid using <kbd>Ctrl + V</kbd>.
+The **Paste** feature in the Blazor DataGrid allows pasting data that was previously copied from the DataGrid by pressing <kbd>Ctrl + V</kbd>.
 
 To enable pasting, ensure `GridEditSettings` is configured with `Mode="EditMode.Batch"` and `AllowEditing="true"`. Pasted values remain in batch mode until the **Update** button is clicked to apply changes to the data source.
 
