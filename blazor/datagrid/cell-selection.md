@@ -9,13 +9,13 @@ documentation: ug
 
 # Cell Selection in Blazor Data Grid
 
-Cell selection in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables interactive selection of specific cells or ranges of cells using mouse clicks or keyboard navigation (arrow keys). This feature is useful for highlighting, manipulating, or performing actions on individual cells within the Grid.
+Cell selection in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables interactive selection of specific cells or ranges of cells using mouse clicks or keyboard navigation (arrow keys). This feature is useful for highlighting, manipulating, or performing actions on individual cells within the Grid.
 
 > To enable cell selection, set the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property to either **Cell** or **Both**. This determines the selection mode of the Grid.
 
 ## Single cell selection
 
-Single cell selection allows selecting one cell at a time within the Blazor DataGrid. This is useful for focusing on a specific cell or performing actions on individual cell values.
+Single cell selection allows selecting one cell at a time within the Blazor Data Grid. This is useful for focusing on a specific cell or performing actions on individual cell values.
 
 To enable single cell selection:
 
@@ -32,7 +32,7 @@ To enable single cell selection:
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="120" Format="C2"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.ShippedDate) HeaderText="Shipped Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
@@ -89,7 +89,7 @@ public class OrderDetails
     public int OrderID { get; set; }
     public string CustomerID { get; set; }
     public DateTime OrderDate { get; set; }
-    public double? Freight { get; set; }
+    public double Freight { get; set; }
     public DateTime ShippedDate { get; set; }
     public string ShipCountry { get; set; }
 }
@@ -101,7 +101,7 @@ public class OrderDetails
 
 ## Multiple cell selection
 
-Multiple cell selection in the Blazor DataGrid enables selection of multiple cells within the Grid. This feature is beneficial for performing actions on several cells simultaneously or focusing on specific areas of the data.
+Multiple cell selection in the Blazor Data Grid enables selection of multiple cells within the Grid. This feature is beneficial for performing actions on several cells simultaneously or focusing on specific areas of the data.
 
 To enable multiple cell selection:
 
@@ -116,9 +116,9 @@ To enable multiple cell selection:
 <SfGrid DataSource="@OrderData" AllowSelection="true" AllowPaging="true">
     <GridSelectionSettings Type="SelectionType.Multiple" Mode="SelectionMode.Cell"></GridSelectionSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="120" Format="C2"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.ShippedDate) HeaderText="Shipped Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
@@ -175,7 +175,7 @@ public class OrderDetails
     public int OrderID { get; set; }
     public string CustomerID { get; set; }
     public DateTime OrderDate { get; set; }
-    public double? Freight { get; set; }
+    public double Freight { get; set; }
     public DateTime ShippedDate { get; set; }
     public string ShipCountry { get; set; }
 }
@@ -187,7 +187,7 @@ public class OrderDetails
 
 ## Cell selection mode
 
-The cell selection mode in the Blazor DataGrid enables interactive selection of specific cells or ranges of cells. This feature is particularly useful for performing actions on selected cells or retrieving data from targeted areas within the Grid.
+The cell selection mode in the Blazor Data Grid enables interactive selection of specific cells or ranges of cells. This feature is particularly useful for performing actions on selected cells or retrieving data from targeted areas within the Grid.
 
 The Grid supports three types of cell selection modes, configurable via the [GridSelectionSettings.CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CellSelectionMode) property:
 
@@ -195,9 +195,7 @@ The Grid supports three types of cell selection modes, configurable via the [Gri
 2. **Box:** Enables selection of a rectangular range of cells between specified start and end column indexes, including all rows within the defined range. Useful for column-specific selections.
 3. **BoxWithBorder:** Similar to Box, but adds a visual border around the selected cell range for easier identification.
 
-Cell selection requires the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) to be set to **Cell** or **Both**, and the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) to be **Multiple**.
-
-The following example demonstrates how to dynamically enable and change the `GridSelectionSettings.CellSelectionMode` using a  [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app).
+The following example demonstrates how to dynamically enable and change the `GridSelectionSettings.CellSelectionMode` using a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -206,7 +204,7 @@ The following example demonstrates how to dynamically enable and change the `Gri
 @using Syncfusion.Blazor.DropDowns
 
 <div style="display:flex; margin-bottom:5px;">
-    <label style="margin: 5px 5px 0 0"> Choose cell selection mode :</label>
+    <label style="margin: 5px 5px 0 0"> Choose cell selection mode:</label>
     <SfDropDownList TValue="CellSelectionMode" TItem="DropDownOrder" Width="120px" DataSource="@DropDownData" @bind-Value="@CellSelectionModeValue">
         <DropDownListEvents TItem="DropDownOrder" TValue="CellSelectionMode" ValueChange="@ValueChange"></DropDownListEvents>
         <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
@@ -229,7 +227,7 @@ The following example demonstrates how to dynamically enable and change the `Gri
     {
         OrderData = OrderDetails.GetAllRecords();
     }
-    public CellSelectionMode CellSelectionModeValue { get; set; } = Syncfusion.Blazor.Grids.CellSelectionMode.Box;
+    public CellSelectionMode CellSelectionModeValue { get; set; } = Syncfusion.Blazor.Grids.CellSelectionMode.Flow;
     public class DropDownOrder
     {
         public string Text { get; set; }
@@ -237,8 +235,8 @@ The following example demonstrates how to dynamically enable and change the `Gri
     }
     List<DropDownOrder> DropDownData = new List<DropDownOrder>
     {
+        new DropDownOrder() { Text = "Flow", Value = Syncfusion.Blazor.Grids.CellSelectionMode.Flow },
         new DropDownOrder() { Text = "Box", Value = Syncfusion.Blazor.Grids.CellSelectionMode.Box },
-        new DropDownOrder() { Text = "Flow", Value = Syncfusion.Blazor.Grids.CellSelectionMode.Flow},
         new DropDownOrder() { Text = "Box With Border", Value = Syncfusion.Blazor.Grids.CellSelectionMode.BoxWithBorder }
     };
     public void ValueChange(ChangeEventArgs<CellSelectionMode, DropDownOrder> Args)
@@ -294,13 +292,13 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhxXQXiAdhruSzH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBRDlMFzMxuSfoj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Select cells via programmatically
+## Select cells programmatically
 
-Single cell selection, multiple cell selection, and range-based cell selection can be performed externally in the Blazor DataGrid using built-in methods. These API's allow programmatic interaction with specific cells in the Grid.
+Single cell selection, multiple cell selection, and range-based cell selection can be performed externally in the Blazor Data Grid using built-in methods. These APIs allow programmatic interaction with specific cells in the Grid.
 
-### Single cell selection
+### Select a single cell programmatically
 
 To select a single cell programmatically, use the [SelectCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectCellAsync_System_ValueTuple_System_Int32_System_Int32__System_Nullable_System_Boolean__) method. This method selects a cell based on the specified row and column indexes.
 
@@ -386,7 +384,7 @@ public class OrderDetails
     }
     public int OrderID { get; set; }
     public string CustomerID { get; set; }
-    public double? Freight { get; set; }
+    public double Freight { get; set; }
     public string ShipCountry { get; set; }
 }
 
@@ -395,9 +393,9 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrHNmXWURKqveSp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Multiple cell selection
+### Select multiple cells programmatically
 
-Multiple cell selection in the Blazor DataGrid enables selection of multiple cells within the Grid. This is useful for performing actions on several cells simultaneously or focusing on specific data regions.
+Multiple cell selection in the Blazor Data Grid enables selection of multiple cells within the Grid. This is useful for performing actions on several cells simultaneously or focusing on specific data regions.
 
 To perform multiple cell selection programmatically, use the [SelectCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectCellsAsync_System_ValueTuple_System_Int32_System_Int32____) method. This method accepts a collection of row and column index pairs to define the target cells.
 
@@ -486,7 +484,7 @@ public class OrderDetails
     }
     public int OrderID { get; set; }
     public string CustomerID { get; set; }
-    public double? Freight { get; set; }
+    public double Freight { get; set; }
     public string ShipCountry { get; set; }
 }
 
@@ -495,11 +493,9 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXhdNmXWURKFfSsB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> Cell selection requires the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) to be set to **Cell** or **Both**, and the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) to be set to **Multiple**.
+### Range of cell selection
 
-### Range of Cell selection
-
-To select a range of cells in the Blazor DataGrid enables selection of a continuous set of cells within the grid. This feature is useful for performing actions on multiple cells simultaneously or focusing on a specific range of data.
+Selecting a range of cells in the Blazor Data Grid enables selection of a continuous set of cells within the Grid. This feature is useful for performing actions on multiple cells simultaneously or focusing on a specific range of data.
 
 To achieve a range of cell selection, use the [SelectCellsByRangeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectCellsByRangeAsync_System_ValueTuple_System_Int32_System_Int32__System_Nullable_System_ValueTuple_System_Int32_System_Int32___) method. It selects a range of cells starting from the specified start index and ending at the specified end index.
 
@@ -527,7 +523,7 @@ To achieve a range of cell selection, use the [SelectCellsByRangeAsync](https://
     <SfNumericTextBox TValue="int" @bind-Value="@EndColumnIndexValue" Width="150px"></SfNumericTextBox>
 </div>
 <div style="margin-bottom:5px">
-    <SfButton OnClick="SelectCells">Select range of Cell</SfButton>
+    <SfButton OnClick="SelectCells">Select Range of Cells</SfButton>
 </div>
 <SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true" Height="315">
     <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple" Mode="Syncfusion.Blazor.Grids.SelectionMode.Cell"></GridSelectionSettings>
@@ -553,6 +549,7 @@ To achieve a range of cell selection, use the [SelectCellsByRangeAsync](https://
 
     public async Task SelectCells()
     {
+        // Clear any previous cell selection so the new range starts from a clean state.
         await Grid.ClearCellSelectionAsync();
 
         await Grid.SelectCellsByRangeAsync((StartRowIndexValue, StartColumnIndexValue), (EndRowIndexValue, EndColumnIndexValue));
@@ -598,19 +595,19 @@ public class OrderDetails
     }
     public int OrderID { get; set; }
     public string CustomerID { get; set; }
-    public double? Freight { get; set; }
+    public double Freight { get; set; }
     public string ShipCountry { get; set; }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBRtcDCKRTedYIB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrHZPCvKvoIxeTm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
 ## Get selected row cell indexes
 
-The Blazor DataGrid provides a method to retrieve the collection of selected row and cell indexes for the currently selected cells. This is useful for performing actions or applying logic based on selected cell positions.
+The Blazor Data Grid provides a method to retrieve the collection of selected row and cell indexes for the currently selected cells. This is useful for performing actions or applying logic based on selected cell positions.
 
 To retrieve the selected indexes, use the [GetSelectedRowCellIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRowCellIndexesAsync) method.
 
@@ -708,7 +705,7 @@ public class OrderDetails
     }
     public int OrderID { get; set; }
     public string CustomerID { get; set; }
-    public double? Freight { get; set; }
+    public double Freight { get; set; }
     public string ShipCountry { get; set; }
 }
 
@@ -717,9 +714,9 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjVHXwXiKdeIEMMA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Clear selection via programmatically
+## Clear selection programmatically
 
-Clearing cell selection programmatically in the Blazor DataGrid is useful when you need to remove existing cell selections based on user actions or application logic. This can be achieved using the [ClearCellSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearCellSelectionAsync) method.
+Clearing cell selection programmatically in the Blazor Data Grid is useful while removing existing cell selections based on user actions or application logic. This can be achieved using the [ClearCellSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearCellSelectionAsync) method.
 
 The `ClearCellSelectionAsync` method is applicable when the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property is set to **Multiple** or **Single**.
 
@@ -795,7 +792,7 @@ public class OrderDetails
     }
     public int OrderID { get; set; }
     public string CustomerID { get; set; }
-    public double? Freight { get; set; }
+    public double Freight { get; set; }
     public string ShipCountry { get; set; }
 }
 
@@ -806,7 +803,7 @@ public class OrderDetails
 
 ## Cell selection events
 
-The Blazor DataGrid provides multiple events to customize and respond to cell selection behavior. These events allow developers to implement validation, control selection flow, and trigger actions based on user interaction.
+The Blazor Data Grid provides multiple events to customize and respond to cell selection behavior. These events allow developers to implement validation, control selection flow, and trigger actions based on user interaction.
 
 * [CellSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSelecting): Triggered before a cell is selected. Use this event to implement custom logic or validation to control whether the cell should be selected.
 
@@ -908,7 +905,7 @@ public class OrderDetails
     }
     public int OrderID { get; set; }
     public string CustomerID { get; set; }
-    public double? Freight { get; set; }
+    public double Freight { get; set; }
     public string ShipCountry { get; set; }
 }
 
