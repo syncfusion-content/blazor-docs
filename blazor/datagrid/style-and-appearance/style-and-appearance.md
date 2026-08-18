@@ -9,11 +9,13 @@ documentation: ug
 
 # Style and Appearance in Blazor Data Grid
 
-The Blazor Data Grid provides comprehensive styling and appearance customization capabilities to align grid designs with application requirements. Built-in themes enable rapid implementation, CSS customization allows visual element adjustment, and theme-based styling creates consistent user experiences.
+The Blazor DataGrid provides comprehensive styling and appearance customization capabilities to align grid designs with application requirements. Built-in themes enable rapid implementation. CSS customization allows visual element adjustment. Theme-based styling creates consistent user experiences.
 
 ## Built-in themes
 
-The Data Grid component provides multiple themes aligned with industry-standard design systems, available in both light and dark variants. Available themes include:
+The DataGrid component provides multiple themes aligned with industry-standard design systems, available in both light and dark variants. Use the Syncfusion.Blazor.Themes package and choose a theme that matches the supported Blazor version in the project. Add the selected stylesheet to the application by referencing the theme CSS file from the main HTML page used by the app.
+
+Available themes include:
 
 | Theme                         | Style Sheet Name                         |
 |------------------------------|------------------------------------------|
@@ -39,10 +41,10 @@ The Data Grid component provides multiple themes aligned with industry-standard 
 
 ## Size modes
 
-The Data Grid component provides two size modes designed for different interaction contexts and device types:
+The DataGrid component provides two size modes designed for different interaction contexts and device types:
 
 - **Normal mode** (default) — Standard sizing configured for mouse and keyboard interactions.
-- **Touch mode** (bigger) — Enlarged elements with increased padding, font sizes, and touch targets for touch-based interaction and improved accessibility. Apply the `e-bigger` CSS class to the `<body>` element to enable this mode.
+- **Touch mode** (bigger) — Enlarged elements with increased padding, font sizes, and touch targets for touch-based interaction and improved accessibility. Apply the `e-bigger` CSS class to a wrapper element around the grid, such as a container `<div>`, to enable this mode.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -130,15 +132,15 @@ internal sealed class OrderData
 
 ## Theme customization
 
-The Blazor Data Grid provides flexible theme customization options to align control appearance with application design requirements. Built-in themes can be customized by overriding default CSS variables or by creating completely customized themes using Syncfusion Theme Studio.
+Customize the appearance of built-in themes to align the control with application design requirements. Two approaches are available: override default CSS variables for quick adjustments, or create fully customized themes with Syncfusion Theme Studio.
 
-### Default CSS override
+### CSS variable overrides
 
-The Blazor Data Grid themes use CSS variables with the unified `–sf` naming convention. This ensures visual consistency, straightforward customization, and global updates. Centralized variables allow quick adjustments to **colors**, **backgrounds**, and **borders** across the grid.
+DataGrid themes rely on CSS variables that use the `--sf` prefix for color, background, and border tokens, and the `--e-*` prefix for global tokens such as the default font family. The combined `--sf` and `--e-*` variables ensure visual consistency, straightforward customization, and global updates. Centralized variables allow quick adjustments to **colors**, **backgrounds**, and **borders** across the grid.
 
 #### Material 3 theme color variables
 
-The **Material 3** theme applies scalable CSS custom properties to maintain consistency within the Blazor Data Grid. Variables are designed for straightforward theming and responsive behavior.
+The **Material 3** theme applies scalable CSS custom properties to maintain consistency within the Blazor DataGrid. Variables are designed for straightforward theming and responsive behavior.
 
 | Name | Purpose |
 |------|---------|
@@ -150,15 +152,15 @@ The **Material 3** theme applies scalable CSS custom properties to maintain cons
 
 #### Bootstrap 5.3 theme color variables
 
-The **Bootstrap 5.3** theme extends Bootstrap's framework with CSS custom properties for the Data Grid.
+The **Bootstrap 5.3** theme extends Bootstrap's framework with CSS custom properties for the Blazor DataGrid.
 
 | Name | Purpose |
 |------|---------|
 | `--e-font-name` | Specifies the default font family used across the DataGrid |
 | `--color-sf-content-bg-color-alt1` | Controls the background of the DataGrid header |
 | `--color-sf-content-bg-color` | Controls the background of the DataGrid content |
-| `--color-sf-table-bg-color-hover` | Defines the background styling for selected rows during hover interaction |
-| `--color-sf-content-bg-color-hover` | Defines background behavior when primary elements are hovered |
+| `--color-sf-table-bg-color-hover` | Defines the row hover background applied while the pointer is over a DataGrid row |
+| `--color-sf-content-bg-color-hover` | Defines the background color for content elements such as the pager and primary controls during hover interaction |
 | `--color-sf-primary` | Defines the main theme styling used across components |
 | `--color-sf-primary-light` | Provides a softer variation of the primary theme for backgrounds |
 | `--color-sf-border-light` | Specifies styling for light borders and separators |
@@ -171,8 +173,8 @@ The **Tailwind 3** theme uses utility-first CSS custom properties to deliver a *
 |------|---------|
 | `--e-font-name` | Specifies the default font family used across the UI |
 | `--color-sf-content-bg-color` | Controls the main background of the application area |
-| `--color-sf-table-bg-color-hover` | Defines background behavior during hover interaction |
-| `--color-sf-content-bg-color-hover` | Defines the background color for pager during hover interaction |
+| `--color-sf-table-bg-color-hover` | Defines the row hover background applied while the pointer is over a DataGrid row |
+| `--color-sf-content-bg-color-hover` | Defines the background color for content elements such as the pager and primary controls during hover interaction |
 | `--color-sf-primary` | Defines the main theme color used across components |
 | `--color-sf-border-light` | Defines the border color used across the component |
 
@@ -183,9 +185,9 @@ The **Fluent 2** theme leverages modern CSS custom properties to provide a clean
 | Name | Purpose |
 |------|---------|
 | `--e-font-name` | Specifies the default font family used across the DataGrid |
-| `--color-sf-content-bg-color-alt1` | Controls the main background of the DataGrid |
-| `--color-sf-table-bg-color-hover` | Defines the background styling for selected rows during hover interaction |
-| `--color-sf-content-bg-color-hover` | Defines background behavior when primary elements are hovered |
+| `--color-sf-content-bg-color-alt1` | Controls the background of the DataGrid header |
+| `--color-sf-table-bg-color-hover` | Defines the row hover background applied while the pointer is over a DataGrid row |
+| `--color-sf-content-bg-color-hover` | Defines the background color for content elements such as the pager and primary controls during hover interaction |
 | `--color-sf-primary` | Defines the main theme styling used across components |
 | `--color-sf-border-light` | Specifies styling for light borders and separators |
 | `--color-sf-border-alt` | Defines alternate border styling for DataGrid elements |
@@ -283,7 +285,7 @@ The **.e-grid** class styles the root container of the Blazor DataGrid. Apply CS
 }
 ```
 
-Properties such as f **font-family**,**background-color**, and spacing-related styles can be adjusted to align with the grid design.
+Properties such as font family, background color, and spacing can be adjusted to match the grid design.
 
 ![Grid root element](../images/style-and-appearance/style-font-family.webp)
 
@@ -312,7 +314,7 @@ This customization applies a `cursive` font to the grid content. Additional styl
         /* background-color: #fafafa; */
     }
 
-    /* Prefer specificity over !important for hover */
+    /* Row hover styling */
     .e-grid .e-content .e-row:hover .e-rowcell {
         background-color: rgb(204, 229, 255);
     }
@@ -390,9 +392,9 @@ internal sealed class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjrnNQZsBREHoLlL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Customize alternate rows with frozen columns
+## Customize alternate rows
 
-The **.e-altrow .e-rowcell** selector styles cells in alternate rows when [Frozen columns](https://blazor.syncfusion.com/documentation/datagrid/frozen-column) are enabled in the Blazor DataGrid.
+The **.e-altrow .e-rowcell** selector styles cells in alternate rows in the Blazor DataGrid. The same selector also applies across frozen and movable sections when [Frozen columns](https://blazor.syncfusion.com/documentation/datagrid/frozen-column) are enabled.
 
 ```css
 .e-grid .e-altrow .e-rowcell {
@@ -400,9 +402,9 @@ The **.e-altrow .e-rowcell** selector styles cells in alternate rows when [Froze
 }
 ```
 
-Adjust properties like **background-color**,**font-family**, and **border** to maintain consistent styling across frozen and movable sections.
+Adjust properties like **background-color**, **font-family**, and **border** to maintain consistent styling across frozen and movable sections.
 
-![Alternate row styling with frozen columns](../images/style-and-appearance/style-frozon.webp)
+![Alternate row styling](../images/style-and-appearance/style-frozon.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -482,7 +484,7 @@ internal sealed class OrderData
 
 ## Customize the color of grid lines
 
-The Blazor DataGrid allows customization of grid lines to match application design requirements. Apply CSS to structural elements such as header cells, row cells, and the grid container to control color, thickness, and border style.
+Customize grid lines to match application design requirements. Apply CSS to structural elements such as header cells, row cells, and the grid container to control color, thickness, and border style.
 
 The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property defines border visibility and supports options for `Horizontal`, `Vertical`, `Both`, or `None`.
 
@@ -584,21 +586,21 @@ internal sealed class OrderData
 
 ### Using Theme Studio
 
-Syncfusion Theme Studio provides a unified approach to create custom themes for all controls, including the Blazor Data Grid. This advanced method defines a comprehensive set of styles to achieve consistent appearance across the application.
+Syncfusion Theme Studio provides a unified approach to create custom themes for all controls, including the Blazor DataGrid. This advanced method defines a comprehensive set of styles to achieve consistent appearance across the application.
 
-1. Navigate to the Syncfusion® [Theme Studio]((https://blazor.syncfusion.com/themestudio/?theme=material3)).
+1. Navigate to the Syncfusion® [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material3).
 2. Select the **Grid** control from the left panel.
 3. Customize **colors**, **typography**, **spacing**, and other **visual tokens**.
-4. Download the generated CSS file and integrate it into the Blazor project's site stylesheet or theme bundle.
+4. Download the generated CSS file and include it in the app stylesheet or the theme bundle used by the project.
 
 ## See Also
 
-- [Customize Aggregate](./aggregate.md)
-- [Customize Editing](./editing.md)
-- [Customize Filtering](./filtering.md)
-- [Customize Grouping](./grouping.md)
-- [Customize Header](./header.md)
-- [Customize Paging](./paging.md)
-- [Customize Selection](./selection.md)
-- [Customize Sorting](./sorting.md)
-- [Customize Toolbar](./toolbar.md)
+- [Customize Aggregate](https://blazor.syncfusion.com/documentation/datagrid/style-and-appearance/aggregate)
+- [Customize Editing](https://blazor.syncfusion.com/documentation/datagrid/style-and-appearance/editing)
+- [Customize Filtering](https://blazor.syncfusion.com/documentation/datagrid/style-and-appearance/filtering)
+- [Customize Grouping](https://blazor.syncfusion.com/documentation/datagrid/style-and-appearance/grouping)
+- [Customize Header](https://blazor.syncfusion.com/documentation/datagrid/style-and-appearance/header)
+- [Customize Paging](https://blazor.syncfusion.com/documentation/datagrid/style-and-appearance/paging)
+- [Customize Selection](https://blazor.syncfusion.com/documentation/datagrid/style-and-appearance/selection)
+- [Customize Sorting](https://blazor.syncfusion.com/documentation/datagrid/style-and-appearance/sorting)
+- [Customize Toolbar](https://blazor.syncfusion.com/documentation/datagrid/style-and-appearance/toolbar)
