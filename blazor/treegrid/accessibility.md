@@ -99,6 +99,16 @@ The Blazor TreeGrid component's accessibility levels are ensured through an [axe
 
 The accessibility compliance of the Blazor TreeGrid component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/treegrid) in a new window to evaluate the accessibility of the Blazor TreeGrid component with accessibility tools.
 
+**Steps to test accessibility using axe‑core DevTools**
+
+1. Install axe DevTools extension in your browser (Chrome or Edge).
+
+2. Open the TreeGrid accessibility sample: TreeGrid sample.
+
+3. Run analysis from the axe DevTools tab in Developer Tools.
+
+4. Review and fix violations in your TreeGrid implementation, then re‑run until compliance is achieved.
+
 {% previewsample "https://blazor.syncfusion.com/accessibility/treegrid" %}
 
 ## See also

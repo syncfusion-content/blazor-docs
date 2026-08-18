@@ -9,7 +9,7 @@ documentation: ug
 
 # Context Menu in Blazor TreeGrid
 
-The TreeGrid has options to show the context menu when right-clicked on it. To enable this feature, define either default or custom items in the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ContextMenuItems) property.
+The TreeGrid has options to show the context menu when right-clicked within the TreeGrid. To enable this feature, define either default or custom items in the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ContextMenuItems) property.
 
 Items |Description
 -----|-----
@@ -34,7 +34,6 @@ Items |Description
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
 
-@using Syncfusion.Blazor.TreeGrid
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Navigations

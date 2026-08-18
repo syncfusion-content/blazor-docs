@@ -9,8 +9,8 @@ documentation: ug
 
 # Clipboard in Blazor TreeGrid
 
-The **clipboard** feature in the Blazor TreeGrid allows copying selected rows or cells using keyboard shortcuts or programmatic methods. This helps transfer data to external applications such as spreadsheets or text editors.
-To use keyboard shortcuts, selection must be enabled and the grid must be focused.
+The **clipboard** feature in the Blazor TreeGrid allows copying selected rows or cells using keyboard shortcuts or programmatic APIs. This helps transfer data to external applications such as spreadsheets or text editors.
+To use keyboard shortcuts, selection must be enabled and the TreeGrid must be focused.
 
 Interaction keys |Description
 -----|-----
@@ -394,4 +394,3 @@ Clipboard events are used to control or validate clipboard operations in a TreeG
 
 * [BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCellPaste) : Triggered before pasting the copied value into each cell. The paste action for a specific cell can be canceled, or the value can be modified before insertion.
 
-> For more details, refer to the `BeforeCopyPaste` and `BeforeCellPaste` events.
