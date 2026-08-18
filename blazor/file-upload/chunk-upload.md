@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Chunk Upload in Blazor File Upload Component | Syncfusion®
-description: Checkout and learn here all about Chunk Upload in Blazor File Upload component and and much more details.
+title: Chunk Upload in Blazor File Upload | Syncfusion
+description: Upload large files reliably in Blazor File Upload by splitting them into chunks with pause, resume, and retry support.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# Chunk Upload in Blazor File Upload Component 
+# Chunk Upload in Blazor File Upload
 
-### Description 
+## Description
 
 Chunk Upload in the Blazor File Upload component allows you to upload large files by splitting them into smaller, manageable chunks. This process significantly improves reliability, especially over unreliable networks, by reducing the impact of network interruptions. If a part of the file fails to upload, only that specific chunk needs to be re-transmitted, rather than the entire file. This feature is particularly useful for handling large media files, database backups, or any other substantial data transfers where interruptions are a concern. The Uploader sends these chunks to the server using AJAX, enabling the ability to pause, resume, and retry failed chunk uploads.
 

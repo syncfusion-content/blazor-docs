@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn here all the features about Native Events in Blazor ComboBox component and much more.
+title: Native Events in Blazor ComboBox | Syncfusion®
+description: Attach native DOM events to the Blazor ComboBox using Blazor's @on{event} directive and pass event argument data to the handler.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Native Events in Blazor ComboBox Component
+# Native Events in Blazor ComboBox
 
 The following section explains the steps to include native events and pass data to event handler in ComboBox component.
 

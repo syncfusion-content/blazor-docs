@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor Mention Component | Syncfusion®
-description: Checkout and learn here all the features about templates in Blazor Mention component and much more details.
+title: Templates in Blazor Mention | Syncfusion
+description: Customize Blazor Mention suggestion list items and display with ItemTemplate and template context parameters.
 platform: Blazor
 control: Mention
 documentation: ug
 ---
 
-# Templates in Blazor Mention Component
+# Templates in Blazor Mention
 
 The Mention is a templated Blazor component that allows you to customize various parts of the UI using template parameters. It allows you to render custom components or content based on your own logic. The Mention has been provided with several options to customize each suggestion list items.
 

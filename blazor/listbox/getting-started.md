@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor ListBox in Blazor WASM App | Syncfusion®
-description: Check out and learn how to get started with the Blazor ListBox component in a Blazor WebAssembly Application.
+title: Getting Started with Blazor ListBox in Blazor WASM App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor ListBox in a Blazor WebAssembly app with installation and setup steps.
 platform: Blazor
 control: ListBox
 documentation: ug
 ---
 
-# Getting Started with Blazor ListBox Component in Blazor WASM App
+# Getting Started with Blazor ListBox in Blazor WASM App
 
 This guide briefly explains how to include the [Blazor ListBox](https://www.syncfusion.com/blazor-components/blazor-listbox) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

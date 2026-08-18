@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Maps Component | Syncfusion®
-description: Check out and learn here all about the accessibility in the Blazor Maps component and much more details.
+title: Blazor Maps Accessibility | Syncfusion®
+description: Learn how Blazor Maps meet WCAG 2.2, Section 508, WAI-ARIA, and screen reader accessibility standards with keyboard navigation support.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Accessibility in Blazor Maps Component
+# Blazor Maps Accessibility
 
 The [Blazor Maps](https://www.syncfusion.com/blazor-components/blazor-map) component adheres to widely adopted accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI-ARIA roles](https://www.w3.org/TR/wai-aria/#roles).
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Progress Button in WASM App | Syncfusion
-description: Check out and learn how to get started with the Blazor Progress Button component in a Blazor WebAssembly Application.
+description: Learn how to get started with the Syncfusion Blazor Progress Button in a Blazor WebAssembly app with setup steps.
 platform: Blazor
 control: Progress Button
 documentation: ug

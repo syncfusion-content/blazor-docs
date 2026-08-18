@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor DateRangePicker Component | Syncfusion®
-description: Checkout and learn here all about Events in Blazor DateRangePicker component and and much more details.
+title: Events in Blazor DateRangePicker | Syncfusion®
+description: Handle Blazor DateRangePicker events such as ValueChange, RangeSelected, OnOpen, OnClose, and Navigated to react to user input.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
 ---
 
-# Events in Blazor DateRangePicker Component
+# Events in Blazor DateRangePicker
 
 This section lists the events of the DateRangePicker component that are triggered by corresponding user actions.
 

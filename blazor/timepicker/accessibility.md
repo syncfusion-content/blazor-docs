@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  Accessibility in Blazor TimePicker Component | Syncfusion®
-description: Checkout and learn here all the features about the accessibility in Blazor TimePicker component and much more.
+title: Accessibility in Blazor TimePicker | Syncfusion
+description: Learn how Blazor TimePicker supports accessibility with keyboard navigation and screen reader compatibility.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-#  Accessibility in Blazor TimePicker Component
+# Accessibility in Blazor TimePicker
 
 Web accessibility makes web applications and their content more accessible to people with disabilities by removing barriers that can prevent interaction. The TimePicker is designed to surface dynamic value changes and DOM updates to assistive technologies in a predictable way.
 

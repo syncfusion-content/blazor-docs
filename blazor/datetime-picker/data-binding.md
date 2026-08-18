@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor DateTimePicker Component | Syncfusion®
-description: Learn how to bind values to the Blazor DateTimePicker using one-way binding, two-way binding with @bind-Value, and dynamic updates.
+title: Data Binding in Blazor DateTime Picker | Syncfusion®
+description: Bind values to the Blazor DateTime Picker using one-way binding, two-way binding with @bind-Value, and dynamic value updates.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
 ---
 
-# Data Binding in Blazor DateTimePicker Component
+# Data Binding in Blazor DateTime Picker
 
 This section explains how to bind values to the DateTimePicker component in the following ways.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Blazor Mention Component | Syncfusion®
-description: Checkout and learn here all about the customization in Blazor Mention component and much more details.
+title: Customization in Blazor Mention | Syncfusion
+description: Customize Blazor Mention behavior with show or hide mention character, suffix text, and CSS styling options.
 platform: Blazor
 control: Mention
 documentation: ug
 ---
 
-# Customization in Blazor Mention Component
+# Customization in Blazor Mention
 
 ## Show or hide mention character
 

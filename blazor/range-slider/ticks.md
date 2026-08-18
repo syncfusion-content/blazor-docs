@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Ticks in Blazor Range Slider Component | Syncfusion®
-description: Checkout and learn here all about Ticks in Blazor Range Slider component with examples and much more details.
+title: Ticks in Blazor Range Slider | Syncfusion
+description: Configure Blazor Range Slider tick intervals and visibility with SmallStep, LargeStep, and ShowSmallTicks.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Ticks in Blazor Range Slider Component
+# Ticks in Blazor Range Slider
 
 Ticks in the slider help users quickly identify the current value or range. Configure tick intervals using [`SmallStep`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_SmallStep) and [`LargeStep`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_LargeStep). By default, only major (large) tick labels are displayed. Use the [`ShowSmallTicks`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_ShowSmallTicks) property to show or hide minor ticks.
 

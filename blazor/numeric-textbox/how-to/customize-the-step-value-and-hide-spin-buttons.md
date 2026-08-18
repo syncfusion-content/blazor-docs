@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize spin buttons in Blazor NumericTextBox | Syncfusion®
-description: Learn how to customize step value and hide spin buttons in Blazor Numeric TextBox with practical examples.
+description: Configure step increments and hide spin buttons in Blazor Numeric TextBox using Step and ShowSpinButton.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Splitter in Blazor WASM App | Syncfusion
-description: Check out and learn about getting started with Blazor Splitter component in Blazor WebAssembly Application.
+description: Learn how to get started with the Syncfusion Blazor Splitter in a Blazor WebAssembly app with setup steps.
 platform: Blazor
 control: Splitter
 documentation: ug

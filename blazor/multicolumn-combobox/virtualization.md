@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Virtualization in Blazor MultiColumn ComboBox Component | Syncfusion®
-description: Checkout and learn here all about Virtualization in Blazor MultiColumn ComboBox component and much more.
+title: Virtualization in Blazor MultiColumn ComboBox | Syncfusion
+description: Virtualize Blazor MultiColumn ComboBox for large datasets with EnableVirtualization and on-demand loading.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
 ---
 
-# Virtualization in Blazor MultiColumn ComboBox Component
+# Virtualization in Blazor MultiColumn ComboBox
 
 The Blazor MultiColumn ComboBox supports virtualization to improve performance with large datasets. When [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_EnableVirtualization) is enabled, the component initially renders only the items needed to fill the visible popup area. As the user scrolls, additional items are fetched and rendered on demand, creating smooth scrolling with reduced DOM size.
 

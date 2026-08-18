@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Accordion Component | Syncfusion®
-description: Checkout and learn here all features about handling Accordion events in Blazor Accordion components.
+title: Events in Blazor Accordion | Syncfusion®
+description: Handle Blazor Accordion actions through events such as Expanding, Expanded, Collapsing, and Collapsed using the AccordionEvents component inside SfAccordion.
 platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
-# Events in Blazor Accordion Component
+# Events in Blazor Accordion
 
 This section lists the events raised by the [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) and when each is triggered.
 
