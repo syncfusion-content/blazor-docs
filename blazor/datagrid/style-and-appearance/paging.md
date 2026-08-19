@@ -13,14 +13,14 @@ The appearance of paging elements in the [Blazor DataGrid](https://www.syncfusio
 
 - **Root container:** The outermost wrapper that holds all pager content.
 - **Pager container:** The inner flex container that aligns the page-size dropdown, numeric buttons, and navigation buttons.
-- **Pager message:** The `.e-pagermsg` text that shows the current page information, such as “1 of 10 items”.
+- **Pager message:** The `.e-parentmsgbar` text that shows the current page information, such as “1 of 10 items”.
 - **Navigation buttons:** Commands for first, previous, next, and last page navigation.
 - **Numeric page buttons:** Clickable page numbers that jump directly to specific pages.
 - **Current page button:** The highlight that marks the active numeric page button.
 
 ## Customize the pager root element
 
-The **.e-gridpager** class styles the pager root element in the Blazor DataGrid. Use CSS to adjust its appearance:
+The **.e-gridpager** class styles the pager root element in the Blazor DataGrid. Use CSS to adjust the pager root appearance:
 
 ```css
 .e-grid .e-gridpager {
@@ -35,7 +35,7 @@ Properties like **font-family**, **background-color**, and spacing-related style
 
 ## Customize the pager container element
 
-The **.e-pagercontainer** class styles the pager container in the Blazor DataGrid. Apply CSS to modify its look:
+The **.e-pagercontainer** class styles the pager container in the Blazor DataGrid. Apply CSS to modify the pager container appearance:
 
 ```css
 .e-grid .e-pagercontainer {
@@ -50,7 +50,7 @@ Properties such as **font-family**, **background-color**, and spacing-related st
 
 ## Customize the pager message
 
-The **.e-parentmsgbar** class styles the text that reports the visible item range and total count, such as `1 - 8 of 25 items`. Apply CSS to change its appearance:
+The **.e-parentmsgbar** class styles the text that reports the visible item range and total count, such as `1 - 8 of 25 items`. Apply CSS to change the pager message appearance:
 
 ```css
 .e-grid .e-gridpager .e-parentmsgbar {
@@ -91,7 +91,7 @@ The **.e-prevpagedisabled**, **.e-prevpage**, **.e-nextpage**, **.e-nextpagedisa
 }
 ```
 
-Adjust properties like **background-color** to match the design, and keep the `:focus-visible` outline to maintain a visible keyboard focus state for accessibility.
+Properties like **background-color** can be adjusted to match the design. The `:focus-visible` outline should be retained to maintain a visible keyboard focus state for accessibility.
 
 ![Pager navigation elements](../images/style-and-appearance/grid-pager-navigation-element.webp)
 
@@ -101,7 +101,7 @@ The numeric pager area has two related classes: **.e-numericitem** for every num
 
 ### Numeric button elements
 
-The **.e-numericitem** class styles the numeric page buttons in the Blazor DataGrid. Apply CSS to change their appearance:
+The **.e-numericitem** class styles the numeric page buttons in the Blazor DataGrid. Apply CSS to change the numeric button appearance:
 
 ```css
 .e-grid .e-gridpager .e-numericitem {
@@ -116,13 +116,13 @@ The **.e-numericitem** class styles the numeric page buttons in the Blazor DataG
 }
 ```
 
-Modify properties such as **background-color**, **color**, and **`:hover` styles** to improve clarity and interaction.
+Properties such as **background-color**, **color**, and **`:hover` styles** can be modified to improve clarity and interaction.
 
 ![Pager numeric button elements](../images/style-and-appearance/pager-page-numeric-link-elements.webp)
 
 ### Current page numeric element
 
-The **.e-currentitem** class styles the current page button in the Blazor DataGrid pager. Use CSS to adjust it:
+The **.e-currentitem** class styles the current page button in the Blazor DataGrid pager. Use CSS to adjust the current page button:
 
 ```css
 .e-grid .e-gridpager .e-currentitem {
@@ -131,7 +131,7 @@ The **.e-currentitem** class styles the current page button in the Blazor DataGr
 }
 ```
 
-Change properties like **background-color** and **color** to highlight the active page.
+Properties like **background-color** and **color** can be changed to highlight the active page.
 
 ![Current page numeric element](../images/style-and-appearance/grid-pager-current-page-numeric-element.webp)
 
