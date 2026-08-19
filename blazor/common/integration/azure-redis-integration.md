@@ -15,7 +15,7 @@ This guide explains how to integrate [Blazor components](https://www.syncfusion.
 
 * [.NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks) (version 8.0 or later, this guide uses .NET 10.0)
 * [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later, or [Visual Studio Code](https://code.visualstudio.com/) with the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
-* An [Azure Cache for Redis](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/quickstart-create-redis) instance (or [Azure Managed Redis](https://learn.microsoft.com/en-us/azure/redis/quickstart-create-managed-redis)) provisioned in your subscription
+* An [Azure Cache for Redis](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/quickstart-create-redis) instance provisioned in your subscription
 
 ## Create the Blazor project
 
