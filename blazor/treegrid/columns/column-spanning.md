@@ -9,9 +9,9 @@ documentation: ug
 
 # Column Spanning in Blazor TreeGrid
 
-Column spanning in the Blazor TreeGrid provides automatic vertical merging of adjacent cells within the same column when identical values are detected. This improves readability by consolidating repeated values into a single taller cell, which is especially useful when the same value appears across consecutive rows.
+Column spanning in the Blazor TreeGrid provides automatic vertical merging of adjacent cells within the same column when identical values are detected. This improves readability by consolidating repeated values into a single taller cell. It is especially useful when the same value appears across consecutive rows.
 
-Column spanning is enabled by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AutoSpan) property of the `SfTreeGrid` component to [AutoSpanMode.Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AutoSpanMode.html#Syncfusion_Blazor_Grids_AutoSpanMode_Column).  When activated, the TreeGrid evaluates each column and merges stacked cells that share identical values, thereby reducing visual redundancy and presenting a cleaner, more structured layout. The merging process is fully declarative and requires no additional code or preprocessing.
+Column spanning is enabled by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AutoSpan) property of the `SfTreeGrid` component to [AutoSpanMode.Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AutoSpanMode.html#Syncfusion_Blazor_Grids_AutoSpanMode_Column).  When activated, the TreeGrid evaluates each column and merges adjacent cells with identical values, reducing visual redundancy for a cleaner layout. The merging process is fully declarative and is enabled declaratively through the AutoSpan property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -500,7 +500,7 @@ public class ProjectTask
 
 ## Controlling spanning at the TreeGrid and column levels
 
-The spanning behavior is determined by how the TreeGrid‑level and column‑level `AutoSpan` settings interact. When spanning is disabled at the TreeGrid level, all spanning directions are turned off globally, and column settings cannot override this restriction. Column‑level `AutoSpan` can only narrow the spanning directions permitted by the TreeGrid, ensuring consistent behavior across the component while still allowing fine‑grained control at the column level.
+The spanning behavior is determined by how the TreeGrid‑level and column‑level `AutoSpan` settings interact. When spanning is disabled at the TreeGrid level, all spanning directions are turned off globally, and column settings cannot override this restriction. Column‑level `AutoSpan` restricts the spanning directions permitted by the TreeGrid, ensuring consistent behavior across the component while still allowing fine‑grained control at the column level.
 
 | TreeGrid AutoSpan | Column AutoSpan | Effective Behavior |
 |---|---|---|
@@ -523,7 +523,7 @@ The spanning behavior is determined by how the TreeGrid‑level and column‑lev
 
 ---
 
-## Applying column spanning via programmatically
+## Applying Column Spanning Programmatically
 
 In addition to automatic cell merging, the Blazor TreeGrid provides API support for manually merging cells when custom layout behavior is required. This functionality is available through the [MergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_MergeCellsAsync_Syncfusion_Blazor_Grids_MergeCellInfo_) method, which enables the definition of rectangular regions of cells to be merged programmatically.
 
@@ -542,8 +542,6 @@ To define a merged region, use the following properties of the `MergeCellInfo` c
 | `ColumnIndex`  | int  | The zero-based index of the anchor column (top-left cell of the merged region). |
 | `RowSpan`      | int (optional) | The number of rows to span, starting from the anchor cell. By default set to 1. |
 | `ColumnSpan`   | int (optional) | The number of columns to span, starting from the anchor cell. By default set to 1. |
-
-The following sample demonstrates programmatic column spanning by calling `MergeCellsAsync` with parameters such as `RowIndex`, `ColumnIndex`, and `ColumnSpan` for a single merge, and by passing multiple `MergeCellInfo` objects with the same parameters in an array for batch merging.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -767,7 +765,7 @@ public class ProjectTask
 
 ## Clearing spanning via programmatically
 
-The Blazor TreeGrid provides API support to manually remove merged regions when restoration of individual cells is required. This functionality is achieved using the [UnmergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_UnmergeCellsAsync_Syncfusion_Blazor_Grids_UnmergeCellInfo_) methods, which allow specific merged areas to be unmerged programmatically. For scenarios where all merged regions in the current view need to be reset, the [UnmergeAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_UnmergeAllAsync) method can be used to restore every cell to its original state.
+The Blazor TreeGrid provides API support to manually remove merged regions when restoration of individual cells is required. This functionality is achieved using the [UnmergeCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_UnmergeCellsAsync_Syncfusion_Blazor_Grids_UnmergeCellInfo_) method, which allow specific merged areas to be unmerged programmatically.To reset all merged regions in the current view, the [UnmergeAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_UnmergeAllAsync) method can be used to restore every cell to its original state.
 
 | Method | Parameter | Type | Description |
 |--------|-----------|------|-------------|
@@ -1033,7 +1031,7 @@ public class ProjectTask
 
 ## Limitations
 
-The following list outlines the features that are not compatible with column spanning:
+The following features are incompatible with column spanning:
 
 * Virtualization
 * Infinite Scrolling
