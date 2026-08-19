@@ -41,7 +41,7 @@ The **.e-input** class inside **.e-filterbarcell** styles the input field in the
 }
 ```
 
-Adjust properties such as **font-family**, **font-size**, and **border** can be adjusted to improve readability and match the grid design.
+Adjust properties such as **font-family**, **font-size**, and **border** to improve readability and match the grid design.
 
 ![Filter bar input with custom font](../images/style-and-appearance/filter-bar-input-element.webp)
 
@@ -72,6 +72,8 @@ The **.e-clear-icon::before** class defines the clear icon in the filter bar inp
 The `content` property can be updated to use a different glyph from the icon set.
 
 ![Filter bar input with customized clear icon](../images/style-and-appearance/filter-bar-input-clear-icon.webp)
+
+The example below shows a complete filter bar customization sample.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

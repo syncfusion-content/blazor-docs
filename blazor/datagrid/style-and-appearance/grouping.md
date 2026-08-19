@@ -9,7 +9,9 @@ documentation: ug
 
 # Customize Grouping in Blazor Data Grid
 
-The appearance of grouping elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. Styling options are available for different parts of the grouping interface:
+The appearance of grouping elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS.
+
+Styling options are available for different parts of the grouping interface:
 
 - **Group header container and text:** Displays grouped column names and allows drag-and-drop grouping actions.
 - **Expand and collapse icons:** Controls used to toggle visibility of grouped rows.
@@ -35,6 +37,7 @@ Properties like **background-color**, **padding**, **border**, and **font** can 
 The **.e-icon-gdownarrow** and **.e-icon-grightarrow** classes define the expand and collapse icons in grouped rows. Apply CSS to modify their look:
 
 ```css
+
 .e-grid .e-icon-gdownarrow::before {
     content: '\e7c9';
 }
@@ -44,7 +47,7 @@ The **.e-icon-gdownarrow** and **.e-icon-grightarrow** classes define the expand
 }
 ```
 
-Modify the `content`, color, or size to align with custom icon sets. Confirm that the appropriate icon font family is available so glyphs render correctly. Refer to the [icons](https://blazor.syncfusion.com/documentation/appearance/icons) documentation to choose glyphs for your theme.
+Modify the `content`, color, or size to align with custom icon sets. Confirm that the `e-icons` font family is available so glyphs render correctly. Refer to the [icons](https://blazor.syncfusion.com/documentation/appearance/icons) documentation to choose glyphs for your theme.
 
 ![Expand and collapse icons](../images/style-and-appearance/group-expand-or-collapse-icons.webp)
 
