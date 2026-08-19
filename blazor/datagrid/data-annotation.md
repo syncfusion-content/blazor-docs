@@ -19,7 +19,7 @@ To enable data annotation in the Blazor Data Grid:
 2. Bind the Data Grid to a model using `TValue` and [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource).
 3. Apply annotation attributes to model properties to enforce validation and display rules during CRUD operations.
 
-### Supported data annotation attributes
+## Supported Data annotation attributes
 
 Data annotation attributes control four key aspects of Data Grid column behavior:
 
@@ -222,4 +222,4 @@ The following image shows how Data Annotations are applied to Data Grid columns 
 N> The `EditType` property on each `GridColumn` controls which editor renders during editing (for example, `DataType.Date` maps to a date picker by default). For the full list of available editors and how to map a `DataType` to a specific `EditType`, see [Edit Types in Blazor Data Grid](edit-types).
 
 
-N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for an overview of available features. Explore the [Blazor Data Grid documentation](https://help.syncfusion.com/blazor/datagrid/getting-started) for more information about data binding and configuration options.
+N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for an overview of available features. Explore the [Blazor Data Grid documentation](https://blazor.syncfusion.com/documentation/datagrid/overview) for more information about data binding and configuration options.
