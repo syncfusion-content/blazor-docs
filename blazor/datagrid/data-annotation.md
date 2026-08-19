@@ -9,21 +9,21 @@ documentation: ug
 
 # Data annotation in Blazor Data Grid
 
-Data annotations define validation and display rules for model classes or properties in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid). These attributes ensure that input values follow specific formats and constraints while providing clear error messages during editing operations.
+Data annotations define validation and display rules for model classes or properties in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid). These attributes ensure that input values follow specific formats and constraints while providing clear error messages during editing operations.
 
-When the DataGrid is bound to a model, data annotations automatically map to corresponding [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) settings. This enables built-in validation and metadata display during CRUD operations.
+When the Data Grid is bound to a model, data annotations automatically map to corresponding [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) settings. This enables built-in validation and metadata display during CRUD operations.
 
-To enable data annotation in the Blazor DataGrid:
+To enable data annotation in the Blazor Data Grid:
 
 1. Add the **System.ComponentModel.DataAnnotations** namespace to the Blazor application.
-2. Bind the DataGrid to a model using `TValue` and [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource).
+2. Bind the Data Grid to a model using `TValue` and [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource).
 3. Apply annotation attributes to model properties to enforce validation and display rules during CRUD operations.
 
 ### Supported data annotation attributes
 
-Data annotation attributes control four key aspects of DataGrid column behavior:
+Data annotation attributes control four key aspects of Data Grid column behavior:
 
-- **Display attributes** manage how column headers and metadata appear in the DataGrid interface
+- **Display attributes** manage how column headers and metadata appear in the Data Grid interface
 - **Format attributes** define how data values are displayed and formatted in cells and edit dialogs
 - **Metadata attributes** control column visibility, editing behavior, and primary key identification
 - **Validation attributes** enforce data validation rules and display error messages during data entry
@@ -32,11 +32,11 @@ The following tables describe each category:
 
 ### Display attributes
 
-Use **Display** attributes to control how column headers, ordering, and metadata appear in the DataGrid interface.
+Use **Display** attributes to control how column headers, ordering, and metadata appear in the Data Grid interface.
 
 | Attribute Name | Properties | Functionality |
 |----------------|------------|---------------|
-| Display | Name | Sets the header text for the DataGrid column |
+| Display | Name | Sets the header text for the Data Grid column |
 | Display | ShortName | Sets a shorter version of the header text |
 | Display | AutoGenerateField | Prevents the column from being auto-generated |
 | Display | AutoGenerateFilter | Disables filtering for the column |
@@ -59,7 +59,7 @@ Apply **DisplayFormat** attributes when column values require specific formattin
 
 ### Metadata attributes
 
-Metadata attributes control column visibility, editing capabilities, and key identification in the DataGrid.
+Metadata attributes control column visibility, editing capabilities, and key identification in the Data Grid.
 
 | Attribute Name | Properties | Functionality |
 |----------------|------------|---------------|
@@ -69,7 +69,7 @@ Metadata attributes control column visibility, editing capabilities, and key ide
 
 ### Validation attributes
 
-Add validation attributes to enforce rules that display inline validation messages in the Blazor DataGrid during CRUD operations.
+Add validation attributes to enforce rules that display inline validation messages in the Blazor Data Grid during CRUD operations.
 
 N> Validation messages appear only in the add and edit forms. Enable CRUD operations by setting `AllowAdding="true"` and `AllowEditing="true"` on `GridEditSettings` so the edit dialog can render the validation errors.
 
@@ -201,7 +201,7 @@ The `Display` attribute can be used to show user-friendly labels for enum values
         [Display(Name = "Freight", AutoGenerateFilter = false)]
         public double? Freight { get; set; }
 
-        // Hides the column from the DataGrid UI.
+        // Hides the column from the Data Grid UI.
         [ScaffoldColumn(false)]
         public string ShipCity { get; set; }
 
@@ -212,11 +212,11 @@ The `Display` attribute can be used to show user-friendly labels for enum values
 {% endhighlight %}
 {% endtabs %}
 
-The following image shows how Data Annotations are applied to Grid columns in a Blazor application:
+The following image shows how Data Annotations are applied to Data Grid columns in a Blazor application:
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZrRXQDrLszxRyQn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Annotation in Grid](./images/blazor-datagrid-data-annotation.webp)" %}
 
 N> The `EditType` property on each `GridColumn` controls which editor renders during editing (for example, `DataType.Date` maps to a date picker by default). For the full list of available editors and how to map a `DataType` to a specific `EditType`, see [Edit Types in Blazor Data Grid](edit-types).
 
 
-N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for an overview of available features. Explore the [Blazor DataGrid documentation](https://help.syncfusion.com/blazor/datagrid/getting-started) for more information about data binding and configuration options.
+N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for an overview of available features. Explore the [Blazor Data Grid documentation](https://help.syncfusion.com/blazor/datagrid/getting-started) for more information about data binding and configuration options.
