@@ -161,7 +161,7 @@ Assign service data as an instance of [SfDataManager](https://help.syncfusion.co
 @using System.Dynamic
 
 <SfChart>
-    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"></SfDataManager>
 
     <ChartPrimaryXAxis Title="Orders" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"
                        RangePadding="ChartRangePadding.Additional"></ChartPrimaryXAxis>
@@ -191,7 +191,7 @@ The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Orders" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
+    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Orders" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
 
     <ChartPrimaryXAxis Title="Orders" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"
                        ></ChartPrimaryXAxis>
@@ -214,7 +214,7 @@ The following sample code shows how to send parameters using the Query property 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"></SfDataManager>
 
     <ChartPrimaryXAxis Title="Orders" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"
                        RangePadding="ChartRangePadding.Additional"></ChartPrimaryXAxis>
