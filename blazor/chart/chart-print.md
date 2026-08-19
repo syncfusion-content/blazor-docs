@@ -380,7 +380,7 @@ The [Exporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 * `Height`: This property specifies the height of the exported chart. It is not applicable for **XLSX** and **CSV** formats.
 * `Width`: This property specifies the width of the exported chart. It is not applicable for **XLSX** and **CSV** formats.
 
-#### Options applicable to XLSX and CSV formats
+### Options applicable to XLSX and CSV formats
 
 * `Workbook`: Represents the workbook generated during export. Available only when `ExportType` is **XLSX** or **CSV**; for image and PDF formats, this property is **null**.
 

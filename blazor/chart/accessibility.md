@@ -106,7 +106,7 @@ The Blazor Chart component follows the [keyboard interaction](https://www.w3.org
 
 ## Ensuring accessibility
 
-The Blazor Chart component's accessibility is validated through automated checks using the [Deque Axe-Core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) library driven by Playwright tests.
+The Blazor Chart component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
 The accessibility compliance of the Blazor Chart component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/chart) in a new window to evaluate the accessibility of the Blazor Chart component with assistive technologies such as screen readers, keyboard-only navigation, and contrast analyzers.
 

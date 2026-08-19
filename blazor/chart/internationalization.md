@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Charts Internationalization Examples | Syncfusion®
-description: Learn how to globalize Syncfusion Blazor Charts. Configure LabelFormat for axis labels, data labels, and tooltips for cultures such as de-DE or ja-JP.
+description: Learn how to globalize Syncfusion Blazor Charts. Configure LabelFormat for axis labels, data labels, and tooltips for cultures such as EUR or ja-JP.
 platform: Blazor
 control: Charts
 documentation: ug
@@ -20,9 +20,9 @@ To localize text resources (such as the title, axis title, legend text, and tool
 <!-- markdownlint-disable MD036 -->
 ## Globalization
 
-The [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelFormat) property of the axis, together with the application's [CultureInfo](https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo), formats the [Axis label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html), [Data label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html), and [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) values in the [Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html) component.
+[LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelFormat) property in axis is used to globalize the number, date and time value of the elements such as [Axis label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html), [Data label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html), and [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) in the [Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html) component.
 
-The standard format specifier `c` (currency) renders values using the current culture. In the following example the application culture is set to `de-DE`, so values render as EUR; switch the `CultureInfo` to `ja-JP` to render values in yen.
+In the below example, axis, point and tooltip labels are globalized to EUR.
 
 ```cshtml
 

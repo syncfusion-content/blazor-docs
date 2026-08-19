@@ -326,4 +326,3 @@ Axis also supports custom label formats using the `{value}` placeholder, which i
 * [Marker](./data-markers)
 * [Numeric axis](./numeric-axis)
 * [Date-time axis](./date-time-axis)
-* [Logarithmic axis live demo](https://blazor.syncfusion.com/demos/chart/logarithmic-axis?theme=fluent2)
