@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor SplitButton Component | Syncfusion®
-description: Checkout and learn here all the features about accessibility in Blazor SplitButton component and more.
+title: Accessibility in Blazor Split Button | Syncfusion
+description: Learn how Blazor Split Button supports accessibility with WCAG 2.2, keyboard shortcuts, and screen readers.
 platform: Blazor
 control: Split Button
 documentation: ug
 ---
 
-# Accessibility in Blazor SplitButton Component
+# Accessibility in Blazor Split Button
 
 The Blazor SplitButton component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

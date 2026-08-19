@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Skeleton in Blazor WASM App | Syncfusion
-description: Check out and learn how to get started with the Blazor Skeleton component in Blazor WebAssembly Application.
+description: Learn how to get started with the Syncfusion Blazor Skeleton in a Blazor WebAssembly app with setup steps.
 platform: Blazor
 control: Skeleton
 documentation: ug

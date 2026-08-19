@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotation with Blazor Image Editor Component | Syncfusion®
-description: Explore annotation features in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
+title: Annotation in Blazor Image Editor | Syncfusion
+description: Add text, freehand drawings, and shapes to images in Blazor Image Editor with customization tracked in undo/redo history.
 platform: Blazor
 control: Image Editor
 documentation: ug
 ---
 
-# Annotations in the Blazor Image Editor component
+# Annotation in Blazor Image Editor
 
 The [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) component supports annotations including text, freehand drawings, and shapes such as rectangles, ellipses, arrows, paths, and lines. These tools enable effective visual markup for notes and sketches. Multiple annotations can be drawn simultaneously. All actions, including customizations, are tracked in the undo/redo collection to support iterative editing.
 

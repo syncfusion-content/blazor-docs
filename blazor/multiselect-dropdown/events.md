@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor MultiSelect Dropdown Component | Syncfusion®
-description: Learn about events in the Blazor MultiSelect Dropdown component for data actions, popup control, selection, filtering, and much more details.
+title: Events in Blazor MultiSelect Dropdown | Syncfusion
+description: Handle data loading, popup open/close, selection, filtering, and clearing events in Blazor MultiSelect Dropdown.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Events in Blazor MultiSelect Dropdown Component
+# Events in Blazor MultiSelect Dropdown
 
 The Blazor [MultiSelect Dropdown](https://blazor.syncfusion.com/documentation/multiselect-dropdown/getting-started) component exposes a rich set of events that allow developers to interact with and respond to various lifecycle moments — from data loading and popup open/close, to item selection, chip tagging, custom values, filtering, and clearing. All events are defined through the [`MultiSelectEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html) child component, which is added inside [`SfMultiSelect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html).
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Formatting in Blazor Range Slider Component | Syncfusion®
-description: Checkout and learn here all about formatting in Blazor Range Slider component with examples and much more details.
+title: Formatting in Blazor Range Slider | Syncfusion
+description: Format Blazor Range Slider values with prefixes, suffixes, and decimal precision using Format and events.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Formatting in Blazor Range Slider Component
+# Formatting in Blazor Range Slider
 
 The [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_Format) property is used to customize the prefix, suffix, decimal precision, and other display aspects of slider values. Formatted values are also applied to the ARIA attributes of the slider to ensure accessible output. There are two ways to apply formatting in the slider:
 

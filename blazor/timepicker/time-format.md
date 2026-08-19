@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Time Format in Blazor TimePicker Component | Syncfusion®
-description: Checkout and learn here all the features about Time Format in Blazor TimePicker component and much more.
+title: Time Format in Blazor TimePicker | Syncfusion
+description: Set custom or standard display formats for Blazor TimePicker values using the Format property for localization.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# Time Format in Blazor TimePicker Component
+# Time Format in Blazor TimePicker
 
 ## Display Format
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sorting in Blazor AutoComplete component | Syncfusion®
-description: Checkout and learn here all features about the Sorting feature in Blazor AutoComplete component and much more.
+title: Sorting in Blazor AutoComplete | Syncfusion®
+description: Sort Blazor AutoComplete items in ascending or descending order using the SortOrder property, with None, Ascending, and Descending options.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Sorting in AutoComplete
+# Sorting in Blazor AutoComplete
 
 Sorting orders the displayed items in the AutoComplete popup. The default sort order is `None`.
 

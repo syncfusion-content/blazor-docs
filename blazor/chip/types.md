@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Types in Blazor Chip Component | Syncfusion®
-description: Checkout and learn here all the features about Chip Types in Blazor Chip component and much more details.
+title: Types in Blazor Chips | Syncfusion®
+description: Choose the Blazor Chip type (Input, Choice, Filter, or Action) to match the chip's role in selection, filtering, or action triggering.
 platform: Blazor
-control: Chip
+control: Chips
 documentation: ug
 ---
 
-# Types in Blazor Chip Component
+# Types in Blazor Chips
 
 The Chip control has the following types.
 

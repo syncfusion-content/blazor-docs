@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Dropdown List in Blazor MAUI App | Syncfusion
-description: Check out and learn about how to get started with the Blazor Dropdown List Component in Blazor MAUI App.
+title: Getting Started with Blazor Dropdown List in MAUI App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Dropdown List in a .NET MAUI Blazor Hybrid app with step-by-step setup.
 platform: Blazor
 control: Dropdown List
 documentation: ug
 ---
 
-# Getting Started with Blazor Dropdown List Component in Blazor MAUI App
+# Getting Started with Blazor Dropdown List in MAUI App
 
 This section explains the step-by-step process of integrating the [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component in your Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

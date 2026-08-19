@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Time Range Slider in Blazor Range Slider Component | Syncfusion®
-description: Checkout and learn here all about Time Range Slider in Blazor Range Slider component with examples and much more details.
+title: How to format time range slider in Blazor Range Slider | Syncfusion
+description: Format Blazor Range Slider tick labels and tooltips to display time values in user-friendly format for clearer time range selection.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Time Range Slider in Blazor Range Slider Component
+# How to format time range slider in Blazor Range Slider
 
 Time formatting for the Blazor Range Slider can be achieved in the same way as date formatting by using the [`TicksRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_TicksRendering) and [`OnTooltipChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_OnTooltipChange) events.
 

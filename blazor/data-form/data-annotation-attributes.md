@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data annotation attributes in Blazor DataForm | Syncfusion®
-description: Check out and learn about how to use data annotation attributes such as display, validation, data type to control the Blazor DataForm component.
+title: Data Annotation Attributes in Blazor Data Form | Syncfusion®
+description: Use .NET data annotation attributes to control Blazor Data Form labels, placeholders, auto-generation, editable state, and validation behavior.
 platform: Blazor
 control: DataForm
 documentation: ug
 ---
 
-# Data annotation attributes
+# Data Annotation Attributes in Blazor Data Form
 
 The DataForm component supports .NET data annotation attributes from [System.ComponentModel.DataAnnotations](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=net-8.0) to control labels, placeholders, auto-generation, editable, and validation behavior.
 

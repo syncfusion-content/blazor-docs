@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor DateRangePicker Component | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor DateRangePicker component and much more details.
+title: Accessibility in Blazor DateRangePicker | Syncfusion®
+description: Learn how Blazor DateRangePicker meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA attributes, keyboard navigation, and screen reader support.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
 ---
 
-# Accessibility in Blazor DateRangePicker Component
+# Accessibility in Blazor DateRangePicker
 
 The [Blazor DateRangePicker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
