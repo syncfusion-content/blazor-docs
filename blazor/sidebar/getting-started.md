@@ -284,13 +284,11 @@ Here, the DOM elements will not get changed. It only closes the main content by 
 {% endhighlight %}
 {% endtabs %}
 
-N> Class can be added to the Sidebar element using `HtmlAttributes` property. In that class, you have to add new styles or override existing styles of Sidebar element.
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhTjsAXUHEgsGGw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Enabling Backdrop in Blazor Sidebar](./images/blazor-sidebar-enable-backdrop.webp)" %}
 
 ## Enable Animation
 
-Animation transitions can be set while expanding or collapsing the Sidebar using the `Animate` property. By default, `Animate` property is set to true. `EnableRTL` will display the Sidebar in the right-to-left direction.
+Animation transitions can be set while expanding or collapsing the Sidebar using the [`Animate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_Animate) property. By default, the `Animate` property is set to true. The [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_EnableRtl) property will display the Sidebar in the right-to-left direction.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -339,6 +337,51 @@ Animation transitions can be set while expanding or collapsing the Sidebar using
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBJNCKjKGsidAEC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sidebar with Animation](./images/blazor-sidebar-animation.webp)" %}
+
+## Add custom class to the Sidebar element
+
+A custom class can be added to the Sidebar element using the `@attributes` directive. In that class, you can add new styles or override existing styles of the Sidebar element.
+
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Navigations
+
+<div id="header" style="height:45px;text-align: center;color:white;background-color:midnightblue;font-size:1.2rem;line-height:45px;">
+    Header
+</div>
+
+<SfSidebar Width="250px" @attributes="@SidebarAttributes">
+    <ChildContent>
+        <div style="text-align: center;" class="text-content">Sidebar</div>
+    </ChildContent>
+</SfSidebar>
+
+<div class="text-content" style="text-align: center;">Main content</div>
+
+@code {
+    public Dictionary<string, object> SidebarAttributes = new Dictionary<string, object>()
+    {
+        { "class", "custom-sidebar" }
+    };
+}
+
+<style>
+    .text-content {
+        font-size: 1.5rem;
+        padding: 3rem;
+    }
+
+    .custom-sidebar {
+        background-color: #e3f2fd;
+        color: #0d47a1;
+    }
+</style>
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVxZPilwgXoqNBU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Adding Custom Class to Blazor Sidebar](./images/blazor-sidebar-custom-class.webp)" %}
 
 ## Navigation with Blazor Sidebar
 
