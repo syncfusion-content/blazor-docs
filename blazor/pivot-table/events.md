@@ -136,7 +136,7 @@ To know more about this event, refer [here](./calculated-field#calculatedfieldcr
 
 ## Selection and interaction events
 
-#### CellClick
+### CellClick
 
 The [CellClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_CellClick) event is triggered whenever a cell in the Pivot Table component is clicked. This event has an argument named [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.CellClickEventArgs.html#Syncfusion_Blazor_PivotView_CellClickEventArgs_Data) that exposes `RowHeaders`, `ColumnHeaders`, `FormattedText`, and `CssClass` (among others) for the clicked cell. Using this event, end users can customize the selected cell's information to their specific requirements.
 
@@ -667,7 +667,7 @@ To know more about this event, refer [here](./tool-bar#removereport).
 
 To know more about this event, refer [here](./tool-bar#savereport).
 
-#### ToolbarRendered
+## ToolbarRendered
 
 The event [ToolbarRendered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ToolbarRendered) is triggered before the toolbar is rendered. This event is available only when the toolbar is enabled in the Pivot Table. It has the following parameter: [CustomToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ToolbarArgs.html#Syncfusion_Blazor_PivotView_ToolbarArgs_CustomToolbar), which is a `List<ItemModel>` from the [`Syncfusion.Blazor.Navigations`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.html) namespace. Using this event, users can add custom toolbar items as well as remove existing items from the toolbar.
 
