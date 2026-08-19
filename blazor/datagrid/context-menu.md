@@ -9,9 +9,9 @@ documentation: ug
 
 # Context Menu in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports a context menu that appears when right-clicking within the DataGrid. Quick access to actions related to DataGrid data and layout improves usability.
+The [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports a context menu that appears when right-clicking within the Data Grid. Quick access to actions related to Data Grid data and layout improves usability.
 
-To enable the context menu, configure the `ContextMenuItems` property of the DataGrid. Use built-in items for standard menu options or add custom items for application-specific functionality. The context menu appears when right-clicking in these DataGrid areas:
+To enable the context menu, configure the `ContextMenuItems` property of the Data Grid. Use built-in items for standard menu options or add custom items for application-specific functionality. The context menu appears when right-clicking in these Data Grid areas:
 
 * **Header:** Displays column-specific actions.
 * **Content:** Shows row-related options.
@@ -26,7 +26,7 @@ The default context menu items include:
 - **Header:** `Group` and `Ungroup` require `AllowGrouping = true`. `SortAscending` and `SortDescending` require `AllowSorting = true`.
 - **Content:** `Edit`, `Delete`, `Save`, and `Cancel` require edit settings such as `GridEditSettings`. `PdfExport`, `ExcelExport`, and `CsvExport` require the corresponding export permission flags such as `AllowPdfExport`, `AllowExcelExport`, and `AllowCsvExport`.
 - **Pager:** `FirstPage`, `PrevPage`, `LastPage`, and `NextPage` require `AllowPaging = true`.
-- **Copy:** `Copy` appears when the grid supports clipboard operations and the target area is applicable.
+- **Copy:** `Copy` appears when the Data Grid supports clipboard operations and the target area is applicable.
 
 **Header**
 
@@ -50,9 +50,9 @@ The default context menu items include:
 | `Save`        | Save changes to edited record.                                      |
 | `Cancel`      | Cancel edit state and revert changes.                               |
 | `Copy`        | Copy selected records to clipboard.                                 |
-| `PdfExport`   | Export DataGrid data as a PDF document.                             |
-| `ExcelExport` | Export DataGrid data as an Excel document.                          |
-| `CsvExport`   | Export DataGrid data as a CSV document.                            |
+| `PdfExport`   | Export Data Grid data as a PDF document.                             |
+| `ExcelExport` | Export Data Grid data as an Excel document.                          |
+| `CsvExport`   | Export Data Grid data as a CSV document.                            |
 
 > Requires: `Edit`, `Delete`, `Save`, and `Cancel` require edit settings in `GridEditSettings`.
 
@@ -153,7 +153,7 @@ public class OrderData
 
 ## Custom context menu items
 
-The DataGrid supports custom context menu items along with default options.
+The Data Grid supports custom context menu items along with default options.
 
 To configure custom context menu items:
 
@@ -161,7 +161,7 @@ To configure custom context menu items:
 2. Set the properties for each custom item:
    - **Text**: Display text for the menu item.
    - **Id**: Unique identifier for the menu item used in event handlers.
-   - **Target**: CSS selector for the DataGrid area where the item appears, such as `.e-content`.
+   - **Target**: CSS selector for the Data Grid area where the item appears, such as `.e-content`.
    - **IconCss**: CSS class for an icon, if required.
    - **Items**: List of sub-menu items for hierarchical menus.
    - For a full list, see the [ContextMenuItemModel API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html).
@@ -255,7 +255,7 @@ public class EmployeeData
 
 ## Built-in and custom context menu items
 
-The DataGrid supports both built-in and custom context menu items together. This combination supports extension of default actions such as **Copy**, **Delete**, or **Edit** with application-specific commands like **Copy with headers** or **Export row**.
+The Data Grid supports both built-in and custom context menu items together. This combination supports extension of default actions such as **Copy**, **Delete**, or **Edit** with application-specific commands like **Copy with headers** or **Export row**.
 
 To configure built-in and custom context menu items:
 
@@ -351,9 +351,9 @@ public class OrderData
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXrHtQNLBtpYwkYC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
-## Sub-context menu items in DataGrid
+## Sub-context menu items in Data Grid
 
-The DataGrid supports hierarchical context menus. Sub-items can be grouped under a parent menu item for better organization.
+The Data Grid supports hierarchical context menus. Sub-items can be grouped under a parent menu item for better organization.
 
 To configure sub-context menu items:
 
@@ -466,15 +466,15 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVRNmDVBNSkKtdT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Disable the context menu for specific columns in DataGrid
+## Disable the context menu for specific columns in Data Grid
 
-The Blazor DataGrid allows restricting the context menu for individual columns, which is useful when dealing with **sensitive** or **read-only** data.
+The Blazor Data Grid allows restricting the context menu for individual columns, which is useful when dealing with **sensitive** or **read-only** data.
 
 This behavior is controlled using the [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event. The event is triggered before the context menu appears and provides access to column details. By checking the column's **Field** property, the context menu can be conditionally disabled.
 
 To disable the context menu for a specific column:
 
-1. Handle the [ContextMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ContextMenuOpen) event of the Grid.
+1. Handle the [ContextMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ContextMenuOpen) event of the Data Grid.
 2. Use the **args.Column.Field** property to identify the target column.
 3. Set **args.Cancel = true** to prevent the context menu from opening for that column.
 
@@ -577,11 +577,11 @@ public class OrderData
 
 ## Enable or disable context menu items (Disabled state)
 
-Blazor DataGrid allows dynamic control over the availability of context menu items using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Disabled) property. This feature allows conditional restriction of actions such as **Edit** or **Delete** based on column, row data, or custom logic. The item appears in the menu but cannot be selected.
+Blazor Data Grid allows dynamic control over the availability of context menu items using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Disabled) property. This feature allows conditional restriction of actions such as **Edit** or **Delete** based on column, row data, or custom logic. The item appears in the menu but cannot be selected.
 
 To achieve this, handle the [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event. The event is triggered before the context menu is displayed and allows enabling or disabling menu items dynamically based on conditions.
 
-1. Handle the [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event of the grid.
+1. Handle the [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event of the Data Grid.
 2. Use the **args.ContextMenu.Items** collection to access the menu items.
 3. Set the **Disabled** property of the required item(s) to **true** or **false** based on the defined logic.
 
@@ -681,11 +681,11 @@ public class OrderData
 
 ## Show or hide context menu items (Visibility)
 
-The Blazor DataGrid allows dynamically showing or hiding specific context menu items using the [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property. This feature supports conditional visibility based on column, row data, or custom logic. The item is completely removed from the menu when hidden.
+The Blazor Data Grid allows dynamically showing or hiding specific context menu items using the [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property. This feature supports conditional visibility based on column, row data, or custom logic. The item is completely removed from the menu when hidden.
 
 To control the visibility of context menu items:
 
-1. Handle the [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event of the grid.
+1. Handle the [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event of the Data Grid.
 2. Use the **args.ContextMenu.Items** collection to access the menu items.
 3. Set the [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property of the required item(s) to **true** or **false** based on the defined logic.
 
@@ -781,14 +781,14 @@ public class OrderData
 
 ## Access specific row details on context menu click
 
-The Blazor DataGrid allows retrieving details of a specific row when a context menu item is clicked. This feature is useful for displaying or processing the selected row’s data.
+The Blazor Data Grid allows retrieving details of a specific row when a context menu item is clicked. This feature is useful for displaying or processing the selected row’s data.
 
 To achieve this, handle the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event. The event is triggered when a context menu item is clicked and provides access to the selected row details.
 
 To access row data on context menu click:
 
 1. Define a custom context menu item using the `ContextMenuItems` property.
-2. Handle the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event of the grid.
+2. Handle the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event of the Data Grid.
 3. Use the **args.RowInfo.RowData** property from the event arguments to access the full details of the selected row.
 
 {% tabs %}
@@ -888,4 +888,4 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htVHZwXrrDvZZIqC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a detailed overview of available capabilities. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) for data presentation and manipulation.
+Refer to the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a detailed overview of available capabilities. Explore the [Blazor Data Grid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) for data presentation and manipulation.
