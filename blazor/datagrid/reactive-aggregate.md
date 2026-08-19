@@ -9,18 +9,18 @@ documentation: ug
 
 # Reactive Aggregates in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports reactive aggregates that update dynamically as data changes. Aggregate values are recalculated when underlying data is edited, providing real-time updates to footer, group footer, and group caption summaries.
+Reactive aggregates in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) update automatically after batch cell changes are saved. Summary values refresh in the footer, group footer, and group caption summary areas with each saved change.
 
 ## Auto-update aggregate values in batch editing
 
-When the DataGrid is in batch editing mode, aggregate values in the footer, group footer, and group caption are refreshed each time a cell edit is saved. This ensures that summaries reflect the most recent edits.
+When Data Grid is in batch editing mode, aggregate values in the footer, group footer, and group caption refresh each time a cell edit is saved. Summary values always reflect the latest saved changes. Deleting a record in batch mode also triggers aggregate recalculation after saving changes.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" AllowGrouping="true" Toolbar="@ToolbarItems">
-    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Batch"></GridEditSettings>
+    <GridEditSettings AllowDeleting="true" AllowEditing="true" Mode="EditMode.Batch"></GridEditSettings>
     <GridPageSettings PageSize="5"></GridPageSettings>
     <GridGroupSettings Columns=@GroupOption></GridGroupSettings>
     <GridAggregates>
@@ -40,7 +40,7 @@ When the DataGrid is in batch editing mode, aggregate values in the footer, grou
         </GridAggregate>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(OrderData.Freight) Type="AggregateType.Sum">
+                <GridAggregateColumn Field=@nameof(OrderData.Freight) Type="AggregateType.Sum" Format="C2">
                     <GroupFooterTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
@@ -52,25 +52,39 @@ When the DataGrid is in batch editing mode, aggregate values in the footer, grou
                 </GridAggregateColumn>
             </GridAggregateColumns>
         </GridAggregate>
+        <GridAggregate>
+            <GridAggregateColumns>
+                <GridAggregateColumn Field=@nameof(OrderData.Freight) Type="AggregateType.Sum" Format="C2">
+                    <FooterTemplate>
+                        @{
+                            var aggregate = (context as AggregateTemplateContext);
+                            <div>
+                                <p>TotalSum: @aggregate.Sum</p>
+                            </div>
+                        }
+                    </FooterTemplate>
+                </GridAggregateColumn>
+            </GridAggregateColumns>
+        </GridAggregate>
     </GridAggregates>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Coutry" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
+
 @code {
-    private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
     private List<string> ToolbarItems = new List<string>() { "Update", "Cancel", "Delete" };
     private string[] GroupOption = (new string[] { "ShipCountry" });
-  
+
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
-    }    
+    }
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
@@ -94,7 +108,6 @@ When the DataGrid is in batch editing mode, aggregate values in the footer, grou
         {
             if (Orders.Count() == 0)
             {
-                int code = 10;
                 for (int i = 1; i < 2; i++)
                 {
                     Orders.Add(new OrderData(10248, "ERNSH", "Austria", new DateTime(1996, 07, 17), 140.51));
@@ -106,7 +119,6 @@ When the DataGrid is in batch editing mode, aggregate values in the footer, grou
                     Orders.Add(new OrderData(10254, "QUEDE", "Switzerland", new DateTime(1996, 07, 04), 32.38));
                     Orders.Add(new OrderData(10255, "RICSU", "Austria", new DateTime(1996, 07, 08), 41.34));
                     Orders.Add(new OrderData(10256, "WELLI", "Belgium", new DateTime(1996, 07, 05), 11.61));
-                    code += 5;
                 }
             }
             return Orders;
@@ -121,6 +133,6 @@ When the DataGrid is in batch editing mode, aggregate values in the footer, grou
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhHDwjKxLCmXMyp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrnDFCvXTPxYTlK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > Aggregate values refresh after batch changes are saved (Update). Adding a new record does not update aggregates until the changes are saved.
