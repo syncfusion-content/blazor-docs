@@ -9,11 +9,11 @@ documentation: ug
 
 # Reactive Aggregates in Blazor Data Grid
 
-Reactive aggregates in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) update automatically after batch cell changes are saved. Summary values refresh in the footer, group footer, and group caption summary areas with each saved change.
+Reactive aggregates in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) update automatically after batch cell changes are saved. Summary values refresh in the footer, group footer, and group caption summary areas with each saved change.
 
 ## Auto-update aggregate values in batch editing
 
-When DataGrid is in batch editing mode, aggregate values in the footer, group footer, and group caption refresh each time a cell edit is saved. Summary values always reflect the latest saved changes. Deleting a record in batch mode also triggers aggregate recalculation after saving changes.
+When Data Grid is in batch editing mode, aggregate values in the footer, group footer, and group caption refresh each time a cell edit is saved. Summary values always reflect the latest saved changes. Deleting a record in batch mode also triggers aggregate recalculation after saving changes.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
