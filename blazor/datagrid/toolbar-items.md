@@ -9,11 +9,11 @@ documentation: ug
 
 # Toolbar Items in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) offers a flexible toolbar that enables the addition of custom toolbar items or modification of existing ones. The toolbar appears above the DataGrid, providing convenient access to common actions and custom functionality.
+The [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) offers a flexible toolbar that enables the addition of custom toolbar items or modification of existing ones. The toolbar appears above the Data Grid, providing convenient access to common actions and custom functionality.
 
-## Built-in Toolbar Items
+## Built-in toolbar items
 
-Built-in toolbar items in the Blazor DataGrid use predefined actions to perform standard operations.
+Built-in toolbar items in the Blazor Data Grid use predefined actions to perform standard operations.
 
 Add built-in toolbar items by defining the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property as a collection of built-in item names (strings). Each item is rendered as a button with an icon and text. The following table lists the built-in toolbar items and their actions.
 
@@ -21,17 +21,17 @@ Add, Edit, Update, Delete, and Cancel require editing to be enabled through [Gri
 
 | Built-in Toolbar Items | Action |
 |------------------------|--------|
-| Add | Adds a new row to the DataGrid. |
+| Add | Adds a new row to the Data Grid. |
 | Edit | Puts the selected row into edit mode. |
 | Update | Saves changes made during edit mode. |
 | Delete | Deletes the selected record. |
 | Cancel | Discards changes made during edit mode. |
 | Search | Displays a search box to filter the records. |
-| Print | Prints the DataGrid content. |
+| Print | Prints the Data Grid content. |
 | ColumnChooser | Opens the Column Chooser to toggle column visibility. |
-| PdfExport | Exports DataGrid data to a PDF file. |
-| ExcelExport | Exports DataGrid data to an Excel file. |
-| CsvExport | Exports DataGrid data to a CSV file. |
+| PdfExport | Exports Data Grid data to a PDF file. |
+| ExcelExport | Exports Data Grid data to an Excel file. |
+| CsvExport | Exports Data Grid data to a CSV file. |
 
 N> Built-in item IDs are typically prefixed with the grid ID (for example, Grid_add). Use these IDs in event handlers for robust detection.
 
@@ -104,7 +104,7 @@ N> Built-in item IDs are typically prefixed with the grid ID (for example, Grid_
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDrHXQXnLlBkzsCZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Show only icons in built-in Toolbar Items
+### Show only icons in built-in toolbar items
 
 Showing only icons in the built-in toolbar items allows a compact toolbar layout.
 
@@ -187,7 +187,7 @@ To show only icons, hide the text part of the buttons using CSS. For accessibili
 
 ### Customize the built-in toolbar items
 
-The Blazor DataGrid allows customizing built-in toolbar items, including disabling default actions and executing custom logic when a button is clicked.
+The Blazor Data Grid allows customizing built-in toolbar items, including disabling default actions and executing custom logic when a button is clicked.
 
 Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event to intercept actions. For custom ItemModel items, **args.Item.Id** is explicit and reliable. For built-in string items, the item ID can be generated automatically, so the ID should be treated as a convenience rather than a fixed contract.
 
@@ -275,9 +275,9 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXBnjvscNgRJASkQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
-## Custom Toolbar Items
+## Custom toolbar items
 
-Adding custom toolbar items to the Blazor DataGrid enables personalized functionality.
+Adding custom toolbar items to the Blazor Data Grid enables personalized functionality.
 
 Use the `Syncfusion.Blazor.Navigations` namespace to access `ItemModel`. Define custom items by setting the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property to a collection of [ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor) objects, and handle actions in the [OnToolbarClick](https://blazor.syncfusion.com/documentation/datagrid/events#ontoolbarclick) event.
 
@@ -373,7 +373,7 @@ By default, custom toolbar items are positioned on the **left** side. Change the
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZVRDGDxBlThnXMj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Both built-in and custom items in Toolbar
+## Both built-in and custom items in toolbar
 
 Combining built-in and custom items provides flexibility to create a toolbar with standard actions and custom functionality.
 
@@ -558,9 +558,9 @@ By default, custom toolbar items are aligned on the **left**. Modify the positio
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LthdtGZHhFpQrGBR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Customize custom Toolbar Items that use the same text as built-in Items
+## Customize custom toolbar items that use the same text as built-in items
 
-When creating custom toolbar items using the same text as built-in items (such as Add, Edit, or Delete), the DataGrid may treat them as built-in items. This can lead to unexpected behavior—for example, the buttons may be disabled in certain states.
+When creating custom toolbar items using the same text as built-in items (such as Add, Edit, or Delete), the Data Grid may treat them as built-in items. This can lead to unexpected behavior—for example, the buttons may be disabled in certain states.
 
 To avoid such behavior and ensure proper functionality:
 

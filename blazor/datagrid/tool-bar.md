@@ -9,7 +9,7 @@ documentation: ug
 
 # Toolbar Configuration and Customization in Blazor Data Grid
 
-The toolbar in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides quick access to common actions such as adding, editing, deleting, printing, and exporting data (Excel, CSV, PDF).
+The toolbar in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides quick access to common actions such as adding, editing, deleting, printing, and exporting data (Excel, CSV, PDF).
 
 The toolbar can be configured with built-in toolbar items or custom items using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property. The `Toolbar` property accepts:
 - An array of strings for built-in items
@@ -90,11 +90,11 @@ N> For custom toolbar actions, use [ItemModel](https://help.syncfusion.com/cr/bl
 
 Enable or disable toolbar items dynamically to control which actions are available based on application logic or user interactions.
 
-Toolbar items in the Blazor DataGrid can be enabled or disabled dynamically using the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method. This provides programmatic control over the availability of specific items by their IDs.
+Toolbar items in the Blazor Data Grid can be enabled or disabled dynamically using the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method. This provides programmatic control over the availability of specific items by their IDs.
 
-For built-in toolbar items, the Grid generates IDs using the format `Grid_<ItemText>`. For example, `Add`, `Edit`, and `Delete` receive IDs such as `Grid_Add`, `Grid_Edit`, and `Grid_Delete`.
+For built-in toolbar items, the Data Grid generates IDs using the format `Grid_<ItemText>`. For example, `Add`, `Edit`, and `Delete` receive IDs such as `Grid_Add`, `Grid_Edit`, and `Grid_Delete`.
 
-For custom toolbar items specified as strings, the Grid also generates IDs in the same format. For example, custom items such as `Expand` and `Collapse` receive IDs like `Grid_Expand` and `Grid_Collapse`.
+For custom toolbar items specified as strings, the Data Grid also generates IDs in the same format. For example, custom items such as `Expand` and `Collapse` receive IDs like `Grid_Expand` and `Grid_Collapse`.
 
 For custom items created with [`ItemModel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html), set the `Id` property explicitly and use that value when enabling or disabling the toolbar item.
 
@@ -320,7 +320,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXhxDPMdSWbmINPG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Customize Toolbar buttons using CSS
+## Customize toolbar buttons using CSS
 
 Customize the appearance of built-in toolbar buttons by applying CSS to achieve cohesive theming and clear visual hierarchy. Maintain sufficient color contrast and preserve visible focus indicators for accessibility.
 
@@ -413,6 +413,6 @@ The following example demonstrates changing the background color of the `Add`, `
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/Customizing-the-toolbar-items-tooltip-text-in-Blazor-Grid)
 
-N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.
+N> Refer to the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor Data Grid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.
 
 N> Styling tips: for CSS isolation, place styles in a component stylesheet such as **.razor.css**. To target inner elements, use the **::deep** selector where appropriate. Add state styles for hover, active, focus-visible, and disabled states, and maintain high-contrast support for accessibility.
