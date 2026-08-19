@@ -225,6 +225,8 @@ In the pivot chart, users can switch between a single axis and multiple axes usi
 
 The pivot chart supports three modes for multiple axes: `Stacked`, `Single`, and `Combined`. Users can select a mode from the "Multiple Axis Mode" dropdown list, which appears after clicking the **More...** option in the chart type dropdown menu.
 
+![Multiple axis mode options](images/blazor-pivot-chart-multi-axis-modes.webp)
+
 ## Show or hide legend
 
 In the pivot chart, you can show or hide the legend dynamically using an option in the chart type drop-down menu on the toolbar. This allows you to control whether the legend appears alongside the chart. For accumulation chart types, such as pie, doughnut, pyramid, and funnel, the legend is hidden by default. You can enable or disable the legend using a built-in checkbox available in the drop-down menu.
@@ -1048,7 +1050,6 @@ namespace MyWebService.Controllers
         }
     }
 }
-
 ```
 
 **5.** When you run the app, it will be hosted at `https://localhost:44313`. You can use the hosted URL to save and load reports in the SQL database from the Pivot Table.
@@ -1062,6 +1063,7 @@ When you select the **"Save a report"** option from the toolbar, the [SaveReport
 For example, the report shown in the following code snippet will be passed to the **SaveReport** method along with the report name **"Sample Report"** and saved in the SQL database.
 
 [Index.razor]
+
 ```cshtml
 @using System.Data
 @using MyBlazorServerApp.Data;
@@ -1127,7 +1129,6 @@ For example, the report shown in the following code snippet will be passed to th
         }
     }
 }
-
 ```
 
 [PivotController.cs]
@@ -1185,7 +1186,6 @@ namespace MyWebService.Controllers
         }
     }
 }
-
 ```
 
 ![The current report has been saved in the SQL database](images/blazor_output_save_report.webp)
@@ -1201,6 +1201,7 @@ When you select the dropdown menu item from the toolbar, the [LoadReport](#loadr
 For example, if the report name **"Sample Report 1"** is selected from a dropdown menu and passed, the **LoadReport** method will use that name to search for the report in the SQL database, retrieve it, and then load it into the pivot table.
 
 [Index.razor]
+
 ```cshtml
 @using System.Data
 @using MyBlazorServerApp.Data;
@@ -1273,7 +1274,6 @@ For example, if the report name **"Sample Report 1"** is selected from a dropdow
         await this.PivotRef.LoadPersistDataAsync(responseText);
     }
 }
-
 ```
 
 [PivotController.cs]
@@ -1324,7 +1324,6 @@ namespace MyWebService.Controllers
         }
     }
 }
-
 ```
 
 ![Loading a report from SQL database](images/blazor_output_load_report.webp)
@@ -1336,6 +1335,7 @@ When you select the **"Rename a current report"** option from the toolbar, the [
 For example, if we rename the current report from **"Sample Report 1"** to **"Sample Report 2"**, both **"Sample Report 1"** and **"Sample Report 2"** will be passed to the **RenameReport** method, which will rename the current report with the new report name **"Sample Report 2"** in the SQL database.
 
 [Index.razor]
+
 ```cshtml
 @using System.Data
 @using MyBlazorServerApp.Data;
@@ -1406,7 +1406,6 @@ For example, if we rename the current report from **"Sample Report 1"** to **"Sa
         }
     }
 }
-
 ```
 
 [PivotController.cs]
@@ -1477,7 +1476,6 @@ namespace MyWebService.Controllers
         }
     }
 }
-
 ```
 
 ![Renaming a report in the SQL database](images/blazor_output_rename_report.webp)
@@ -1486,12 +1484,13 @@ namespace MyWebService.Controllers
 
 When you select the **"Delete a current report"** option from the toolbar, the [RemoveReport](#removereport) event is triggered. In this event, an HTTP request is made to the **RemoveReport** method of the Web API controller, passing the current report name to identify and delete the appropriate report from the SQL database.
 
-> * If the current report **n** from the pivot table is deleted, the pivot table will automatically load the next report from the report list.
-> * When a report is removed from a pivot table with only one report, the SQL database refreshes; however, the pivot table will continue to show the removed report until a new report is added to the pivot table.
+N> * If the current report **n** from the pivot table is deleted, the pivot table will automatically load the next report from the report list.
+N> * When a report is removed from a pivot table with only one report, the SQL database refreshes; however, the pivot table will continue to show the removed report until a new report is added to the pivot table.
 
 For example, if we delete the current report **"Sample Report 2"** from the pivot table, the current report name **"Sample Report 2"** is passed to the **RemoveReport** method, which allows you to identify and delete the report from the SQL database.
 
 [Index.razor]
+
 ```cshtml
 @using System.Data
 @using MyBlazorServerApp.Data;
@@ -1561,6 +1560,7 @@ For example, if we delete the current report **"Sample Report 2"** from the pivo
 ```
 
 [PivotController.cs]
+
 ```csharp
 namespace MyWebService.Controllers
 {
@@ -1608,7 +1608,6 @@ namespace MyWebService.Controllers
         }
     }
 }
-
 ```
 
 ![Deleting a report from the SQL database](images/blazor_output_remove_report.webp)
@@ -1619,15 +1618,15 @@ When you select the **"Create a new report"** option from the toolbar, the [NewR
 
 ![Adding a report in the SQL database](images/blazor_output_new_report.webp)
 
-> In [this](https://github.com/SyncfusionExamples/web-Save-and-load-report-from-SQL-database-to-pivot-table) GitHub repository, you can find our Blazor Pivot Table sample and ASP.NET Core Web Application to save and load reports from SQL Server database.
+### Report manipulation limitations
 
-### Limitations with respect to report manipulation
-
-Below points need to be considered when saving the report to SQL Server database.
+The following points apply when saving reports to a SQL Server database:
 
 * **Data source**: Both raw data and aggregated data won't be saved and loaded from the database.
 * **Hyperlinks**: Option to link external facts via pivot table cells won't be saved and loaded from the database.
 * The pivot table should always load reports from the SQL database based on the data source that is currently bound to it.
+
+> In [this](https://github.com/SyncfusionExamples/web-Save-and-load-report-from-SQL-database-to-pivot-table) GitHub repository, you can find our Blazor Pivot Table sample and ASP.NET Core Web Application to save and load reports from SQL Server database.
 
 ## Load desired report from the report list as default
 
@@ -1774,27 +1773,27 @@ By default, the Pivot Table displays with the report configuration defined in th
 
 ### FetchReport
 
-The [FetchReport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_FetchReport) event is triggered when a user clicks the dropdown list in the toolbar to retrieve saved reports. It includes the [ReportName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FetchReportArgs.html#Syncfusion_Blazor_PivotView_FetchReportArgs_ReportName) parameter, which holds the name of the selected report. This event allows users to fetch report names from local storage and populate the dropdown list for easy selection.
+The [`FetchReport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_FetchReport) event is triggered when a user clicks the dropdown list in the toolbar to retrieve saved reports. It includes the [`ReportName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FetchReportArgs.html#Syncfusion_Blazor_PivotView_FetchReportArgs_ReportName) parameter, which holds the name of the selected report. This event allows users to fetch report names from local storage and populate the dropdown list for easy selection.
 
 ### LoadReport
 
-The [LoadReport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_LoadReport) event occurs when a user selects a report from the dropdown list in the toolbar of the Pivot Table. This event allows the user to load the chosen report into the Pivot Table for viewing or analysis. It includes two parameters: [Report](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.LoadReportArgs.html#Syncfusion_Blazor_PivotView_LoadReportArgs_Report), which contains the details of the selected report, and [ReportName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.LoadReportArgs.html#Syncfusion_Blazor_PivotView_LoadReportArgs_ReportName), which specifies the name of the report. These parameters allow the user to load the selected report into the Pivot Table, updating the displayed data based on the chosen report.
+The [`LoadReport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_LoadReport) event occurs when a user selects a report from the dropdown list in the toolbar of the Pivot Table. This event allows the user to load the chosen report into the Pivot Table for viewing or analysis. It includes two parameters: [`Report`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.LoadReportArgs.html#Syncfusion_Blazor_PivotView_LoadReportArgs_Report), which contains the details of the selected report, and [`ReportName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.LoadReportArgs.html#Syncfusion_Blazor_PivotView_LoadReportArgs_ReportName), which specifies the name of the report. These parameters allow the user to load the selected report into the Pivot Table, updating the displayed data based on the chosen report.
 
 ### NewReport
 
-The [NewReport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_NewReport) event is triggered when a user clicks the **New Report** icon in the toolbar. This event allows the user to create a new report and add it to the report list. The event provides a parameter, [Report](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.NewReportArgs.html#Syncfusion_Blazor_PivotView_NewReportArgs_Report), which contains details about the new report. By using this event, users can easily start fresh with a new set of data configurations in the Pivot Table, managed through the report settings.
+The [`NewReport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_NewReport) event is triggered when a user clicks the **New Report** icon in the toolbar. This event allows the user to create a new report and add it to the report list. The event provides a parameter, [`Report`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.NewReportArgs.html#Syncfusion_Blazor_PivotView_NewReportArgs_Report), which contains details about the new report. By using this event, users can easily start fresh with a new set of data configurations in the Pivot Table, managed through the [`DataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_DataSourceSettings) property.
 
 ### RenameReport
 
-The [RenameReport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_RenameReport) event is triggered when a user clicks the rename report icon in the toolbar. This event allows users to change the name of a selected report from the report list. It includes the following parameters: [Rename](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.RenameReportArgs.html#Syncfusion_Blazor_PivotView_RenameReportArgs_Rename), which holds the new report name entered by the user; [Report](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.RenameReportArgs.html#Syncfusion_Blazor_PivotView_RenameReportArgs_Report), which contains the details of the current report; and [ReportName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.RenameReportArgs.html#Syncfusion_Blazor_PivotView_RenameReportArgs_ReportName), which stores the original name of the report.
+The [`RenameReport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_RenameReport) event is triggered when a user clicks the rename report icon in the toolbar. This event allows users to change the name of a selected report from the report list. It includes the following parameters: [`Rename`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.RenameReportArgs.html#Syncfusion_Blazor_PivotView_RenameReportArgs_Rename), which holds the new report name entered by the user; [`Report`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.RenameReportArgs.html#Syncfusion_Blazor_PivotView_RenameReportArgs_Report), which contains the details of the current report; and [`ReportName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.RenameReportArgs.html#Syncfusion_Blazor_PivotView_RenameReportArgs_ReportName), which stores the original name of the report.
 
 ### RemoveReport
 
-The [RemoveReport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_RemoveReport) event is triggered when a user clicks the remove report icon in the toolbar. It includes two parameters: [Report](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.RemoveReportArgs.html#Syncfusion_Blazor_PivotView_RemoveReportArgs_Report) and [ReportName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.RemoveReportArgs.html#Syncfusion_Blazor_PivotView_RemoveReportArgs_ReportName). These parameters allow the user to identify and remove a selected report from the report list in the Pivot Table.
+The [`RemoveReport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_RemoveReport) event is triggered when a user clicks the remove report icon in the toolbar. It includes two parameters: [`Report`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.RemoveReportArgs.html#Syncfusion_Blazor_PivotView_RemoveReportArgs_Report) and [`ReportName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.RemoveReportArgs.html#Syncfusion_Blazor_PivotView_RemoveReportArgs_ReportName). These parameters allow the user to identify and remove a selected report from the report list in the Pivot Table.
 
 ### SaveReport
 
-The [SaveReport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_SaveReport) event triggers when a user clicks the save report icon in the toolbar. It allows the user to save changes made to the current report. The event includes two parameters: [Report](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SaveReportArgs.html#Syncfusion_Blazor_PivotView_SaveReportArgs_Report), which contains the report details, and [ReportName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SaveReportArgs.html#Syncfusion_Blazor_PivotView_SaveReportArgs_ReportName), which specifies the name of the saved report.
+The [`SaveReport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_SaveReport) event triggers when a user clicks the save report icon in the toolbar. It allows the user to save changes made to the current report. The event includes two parameters: [`Report`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SaveReportArgs.html#Syncfusion_Blazor_PivotView_SaveReportArgs_Report), which contains the report details, and [`ReportName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SaveReportArgs.html#Syncfusion_Blazor_PivotView_SaveReportArgs_ReportName), which specifies the name of the saved report.
 
 ### BeforeExport
 
@@ -1959,9 +1958,10 @@ Here’s an example of how to use the [BeforeExport](https://help.syncfusion.com
 
 ### OnActionBegin
 
-The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) event triggers when a user starts an action in the toolbar, such as switching between the pivot table and pivot chart, changing chart types, applying conditional formatting, or exporting data. This event helps users identify the action being performed and provides options to control it. It includes the following parameters:
+The [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin)  event triggers when a user starts an action in the toolbar, such as switching between the pivot table and pivot chart, changing chart types, applying conditional formatting, or exporting data. This event helps users identify the action being performed and provides options to control it. It includes the following parameters:
 
-* [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_DataSourceSettings): Contains the current report settings of the pivot table, including the data source, rows, columns, values, filters, and format settings.
+
+* [`DataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_DataSourceSettings): Contains the current report settings of the pivot table, including the data source, rows, columns, values, filters, and format settings.
 * [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_ActionName): Indicates the name of the action being performed. Below is a list of toolbar actions and their corresponding names:
 
 | Action | Action Name |
@@ -1982,9 +1982,9 @@ The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pivo
 | Sub-totals menu | Hide sub-totals, Show row sub-totals, Show column sub-totals, Show sub-totals |
 | Grand totals menu | Hide grand totals, Show row grand totals, Show column grand totals, Show grand totals |
 
-* [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_Cancel): Allows users to stop the current action by setting this option to **true**.
+* [`Cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_Cancel): Allows users to stop the current action by setting this option to **true**.
 
-In the example below, the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) event is used to prevent the "Add new report" and "Save current report" actions by setting args.Cancel to **true**. This stops these specific toolbar actions from proceeding. The code demonstrates how to control toolbar interactions effectively.
+In the example below, the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) event is used to prevent the "Add new report" and "Save current report" actions by setting `args.Cancel` to **true**. This stops these specific toolbar actions from proceeding. The code demonstrates how to control toolbar interactions effectively.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView;
@@ -2055,10 +2055,10 @@ In the example below, the [OnActionBegin](https://help.syncfusion.com/cr/blazor/
 
 ### OnActionComplete
 
-The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionComplete) event triggers after a toolbar action, such as switching between a pivot table and pivot chart, changing chart types, applying conditional formatting, or exporting data, is completed. This event helps users track the completion of these actions at runtime. It includes the following parameters:
+The [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionComplete) event triggers after a toolbar action, such as switching between a pivot table and pivot chart, changing chart types, applying conditional formatting, or exporting data, is completed. This event helps users track the completion of these actions at runtime. It includes the following parameters:
 
-* [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_DataSourceSettings): Contains the current report settings, including the input data, rows, columns, values, filters, and format settings.
-* [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionName): Indicates the name of the completed action. The table below lists the toolbar actions and their corresponding names:
+* [`DataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_DataSourceSettings): Contains the current report settings, including the input data, rows, columns, values, filters, and format settings.
+* [`ActionName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionName): Indicates the name of the completed action. The table below lists the toolbar actions and their corresponding names:
 
 | Action | Action Name |
 | ------ | --------- |
@@ -2078,7 +2078,7 @@ The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.P
 | Sub-totals menu | Sub-totals hidden, Row sub-totals shown, Column sub-totals shown, Sub-totals shown |
 | Grand totals menu | Grand totals hidden, Row grand totals shown, Column grand totals shown, Grand totals shown |
 
-* [ActionInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionInfo): Provides specific details about the completed action, such as the report name when adding a new report.
+* [`ActionInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionInfo): Provides specific details about the completed action, such as the report name when adding a new report.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView;
@@ -2146,10 +2146,11 @@ The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.P
 ```
 
 ### OnActionFailure
+### ActionFailure
 
-The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionFailure) event occurs when a user action in the Pivot Table does not complete as expected. This event helps users understand what went wrong during interactions with the toolbar. It includes the following parameters:
+The [`OnActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionFailure)  event occurs when a user action in the Pivot Table does not complete as expected. This event helps users understand what went wrong during interactions with the grouping bar.
 
-* [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ActionName): Identifies which user action did not succeed. The table below lists the actions and their corresponding names:
+* [`ActionName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ActionName): Identifies which user action did not succeed. The table below lists the actions and their corresponding names:
 
 | Action | Action Name |
 | ------ | --------- |
@@ -2169,7 +2170,7 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pi
 | Sub-totals menu | Hide sub-totals, Show row sub-totals, Show column sub-totals, Show sub-totals |
 | Grand totals menu | Hide grand totals, Show row grand totals, Show column grand totals, Show grand totals |
 
-* [ErrorInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ErrorInfo): Provides details about the error that occurred for the specific user action.
+* [`ErrorInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ErrorInfo): Provides details about the error that occurred for the specific user action.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView;

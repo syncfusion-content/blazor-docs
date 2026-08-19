@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to bind complex data in Blazor Pivot Table | Syncfusion
-description: Step-by-step example showing how to bind complex data in the Blazor Pivot Table by flattening nested objects into a flat structure with ExpandoObject.
+title: How to convert complex JSON to flat JSON for Pivot Table | Syncfusion
+description: Step-by-step example showing how to convert complex JSON to flat JSON in the Blazor Pivot Table and assign it as the data source.
 platform: Blazor
 control: Pivot Table
 documentation: ug

@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in Blazor Pivot Table
 
-The tooltip displays contextual information when users hover over value cells in the pivot table. It can be enabled or disabled by setting the [`ShowTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowTooltip) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.html) class to **true** or **false**. By default, tooltip is enabled in the pivot table and shows the cell value with its row and column headers.
+The tooltip displays contextual information when users hover over value cells in the pivot table. It can be enabled or disabled by setting the [`ShowTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowTooltip) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.html) class to **true** or **false**. By default, the tooltip is enabled in the pivot table and shows the cell value with its row and column headers.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -60,7 +60,7 @@ When you create a custom tooltip template, you gain access to the [PivotTooltipT
 * **`AggregateType`**: Specifies the aggregate type of the selected value cell.
 * **`Value`**: Displays the formatted value of the selected value cell.
 
-You can apply tooltip customization to both the Pivot Table and Pivot Chart components using the **`TooltipTemplate`** property. The following example demonstrates how to create a professional-looking custom tooltip that displays all relevant information in a well-organized format:
+You can apply tooltip customization to both the Pivot Table and Pivot Chart together, or to either one individually. To customize the Pivot Table tooltip, using the **`TooltipTemplate`** property. The following example demonstrates how to create a professional-looking custom tooltip that displays all relevant information in a well-organized format:
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
