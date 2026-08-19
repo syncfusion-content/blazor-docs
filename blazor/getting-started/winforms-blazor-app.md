@@ -129,3 +129,5 @@ Add a Blazor component to any Razor file in the Blazor project. The example belo
 In the Visual Studio toolbar, click the start button to build and run the app.
 
 ![WinForms Blazor App with Blazor Components](images/winforms/winforms-blazor-datagrid.webp)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/windowsforms-with-blazor).
