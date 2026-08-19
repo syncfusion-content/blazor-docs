@@ -9,27 +9,33 @@ documentation: ug
 
 # Toolbar Customization in Blazor Data Grid
 
-The appearance of toolbar elements in the Blazor DataGrid can be customized using CSS. Styling options are available for different parts of the toolbar interface:
+The appearance of toolbar elements in the Blazor Data Grid can be customized using CSS. Styling options are available for different parts of the toolbar interface:
 
-- **Toolbar root container:** The outer wrapper that contains all toolbar items.
-- **Toolbar buttons:**  Shows interactive elements used for actions such as Add, Edit, Delete, Update, and Cancel.
+- **Toolbar root element:** The outer element that hosts the toolbar and its items.
+- **Toolbar items container:** The inner wrapper that holds each toolbar item.
+- **Toolbar buttons:** Interactive elements used for actions such as Add, Edit, Delete, Update, and Cancel.
 
-## Customize the toolbar root element
+## Customize the toolbar items container
 
-The **.e-toolbar-items** class styles the toolbar root container in the Blazor DataGrid. This container holds all toolbar items and can be styled using CSS:
+The **.e-toolbar-items** class styles the inner items container of the toolbar in the Blazor Data Grid. The outer toolbar root element uses the **.e-toolbar** class. Both elements can be styled using CSS:
 
 ```css
+.e-grid .e-toolbar {
+    border-bottom: 1px solid #c8ddf1;
+}
+
 .e-grid .e-toolbar-items {
     background-color: #deecf9;
 }
 ```
+
 Properties such as **background-color**, **padding**, **border**, and **box-shadow** can be modified to suit the layout design.
 
-![Grid toolbar root element](../images/style-and-appearance/grid-toolbar-root-element.webp)
+![Data Grid toolbar items container](../images/style-and-appearance/grid-toolbar-root-element.webp)
 
 ## Customize the toolbar button elements
 
-The **.e-btn** class inside **.e-toolbar** defines the appearance of toolbar buttons in the Blazor DataGrid. Apply CSS to customize their styling:
+The **.e-btn** class inside **.e-toolbar** defines the appearance of toolbar buttons in the Blazor Data Grid. Apply CSS to customize their styling:
 ```css
 .e-grid .e-toolbar .e-btn {
     background-color: #deecf9;
@@ -37,7 +43,7 @@ The **.e-btn** class inside **.e-toolbar** defines the appearance of toolbar but
 ```
 Properties such as **background-color**, **color**, **border**, **font-size**, and **padding** can be adjusted to align with the design. Ensure that customized colors meet WCAG contrast guidelines and that focus indicators remain visible for keyboard navigation.
 
-![Grid toolbar button element](../images/style-and-appearance/grid-toolbar-button-element.webp)
+![Data Grid toolbar button element](../images/style-and-appearance/grid-toolbar-button-element.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
