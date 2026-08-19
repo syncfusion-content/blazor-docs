@@ -9,9 +9,9 @@ documentation: ug
 
 # Data annotation in Blazor Data Grid
 
-Data annotations define validation and display rules for model classes or properties in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid). These attributes ensure that input values follow specific formats and constraints while providing clear error messages during editing operations.
+Data annotations define validation and display rules for model classes or properties in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid). These attributes enforce specific formats and constraints on input values and show clear error messages during editing operations.
 
-When the Data Grid is bound to a model, data annotations automatically map to corresponding [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) settings. This enables built-in validation and metadata display during CRUD operations.
+When the Data Grid is bound to a model, data annotations automatically map to corresponding [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) settings, enabling built-in validation and metadata display during CRUD operations.
 
 To enable data annotation in the Blazor Data Grid:
 
@@ -43,7 +43,7 @@ Use **Display** attributes to control how column headers, ordering, and metadata
 | Display | Description | Sets tooltip text shown when hovering the column's ellipsis |
 | Display | Order | Defines the display order of the column |
 
-> When the `Display` attribute's `Name` and the column's `HeaderText` property are both defined, the `HeaderText` value takes precedence and is shown in the column header.
+N> When the `Display` attribute's `Name` and the column's `HeaderText` property are both defined, the `HeaderText` value takes precedence and is shown in the column header.
 
 ### DisplayFormat attributes
 
@@ -64,14 +64,17 @@ Metadata attributes control column visibility, editing capabilities, and key ide
 | Attribute Name | Properties | Functionality |
 |----------------|------------|---------------|
 | ScaffoldColumnAttribute | Scaffold | Controls column visibility in the UI |
-| ReadOnlyAttribute | IsReadOnly | Prevents editing of the column |
+| ReadOnlyAttribute | IsReadOnly | Marks a model property as read-only at the model level. The Blazor Data Grid honors this attribute by rendering the column as read-only during editing. |
+| EditableAttribute | AllowEdit | Prevents editing of the column directly on the `GridColumn`. `EditableAttribute` is the Syncfusion-specific attribute used in the Data Grid sample. |
 | Key | Key | Marks the column as the primary key. Pair with `IsPrimaryKey="true"` on the `GridColumn` to enable add, edit, and delete operations. |
+
+N> Both `ReadOnlyAttribute` and `EditableAttribute` prevent editing in the Blazor Data Grid. `ReadOnlyAttribute` is a standard .NET data annotation recognized by validation and binding layers, while `EditableAttribute` is a Syncfusion-specific attribute applied directly on the model property to control the column's edit behavior in the Data Grid.
 
 ### Validation attributes
 
 Add validation attributes to enforce rules that display inline validation messages in the Blazor Data Grid during CRUD operations.
 
-N> Validation messages appear only in the add and edit forms. Enable CRUD operations by setting `AllowAdding="true"` and `AllowEditing="true"` on `GridEditSettings` so the edit dialog can render the validation errors.
+N> Validation messages appear only in the add and edit forms. Enable CRUD operations by setting `AllowAdding="true"`, `AllowEditing="true"`, and `AllowDeleting="true"` on `GridEditSettings`. The corresponding toolbar items (`Add`, `Edit`, `Delete`, `Update`, `Cancel`) must also be included in the `Toolbar` property so the edit dialog can render the validation errors.
 
 | Attribute Name | Key Parameters | Functionality |
 |----------------|----------------|---------------|
@@ -86,7 +89,7 @@ N> Validation messages appear only in the add and edit forms. Enable CRUD operat
 
 ### Displaying enum values
 
-The `Display` attribute can be used to show user-friendly labels for enum values. This improves readability by replacing raw enum values with descriptive names.
+The `Display` attribute can be used to show user-friendly labels for enum values, improving readability by replacing raw enum values with descriptive names.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -137,7 +140,7 @@ The `Display` attribute can be used to show user-friendly labels for enum values
                 CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", string.Empty, null })[Rnd.Next(5)],
                 Freight = 2.1 * x,
                 OrderDate = DateTime.Now.AddDays(-x),
-                ShipCity = (new string[] { "Berlin", "Madrid", "Cholchester", "Marseille", "Tsawassen" })[Rnd.Next(5)],
+                ShipCity = (new string[] { "Berlin", "Madrid", "Colchester", "Marseille", "Tsawassen" })[Rnd.Next(5)],
                 Verified = (Status)Values.GetValue(Rnd.Next(Values.Length)),
             }).ToList();
     }
