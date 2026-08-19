@@ -9,20 +9,26 @@ documentation: ug
 
 # Excel Exporting in Blazor Data Grid
 
-The Excel and CSV exporting feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables exporting Grid data to spreadsheet formats for external analysis or sharing.
+The Excel and CSV exporting feature in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables exporting Data Grid data to spreadsheet formats for external analysis or sharing.
 
-To enable Excel export, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowExcelExport) property to **true**. This property activates the export functionality in the Grid.
+To enable Excel export, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowExcelExport) property to **true**. Setting the property to **true** activates the export functionality in the Data Grid.
 
-To initiate Excel export, use the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method. This method exports the Grid data to an Excel document.
+To initiate Excel export, use the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method. The method exports the Data Grid data to an Excel document.
 
-To initiate CSV export, use the [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_System_Boolean_Syncfusion_Blazor_Grids_ExcelExportProperties_) method. This method exports the Grid data to a CSV document.
+To initiate CSV export, use the [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method. The method exports the Data Grid data to a CSV document.
+
+> When triggering the export action from a toolbar item (such as **ExcelExport** or **CsvExport**), call the export method from within the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event handler. The handler identifies the clicked toolbar item by ID and invokes the appropriate export method.
+
+> Toolbar item IDs follow the pattern `{GridID}_{itemNameInLowercase}`. For an **ExcelExport** toolbar item, the generated ID is `Grid_excelexport`.
+
+> Hidden columns set with `Visible="false"` are not included in the exported file.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPaging="true" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" ,"CsvExport" })" Height="348">
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPaging="true" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })" Height="348">
     <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
@@ -43,7 +49,7 @@ To initiate CSV export, use the [ExportToCsvAsync](https://help.syncfusion.com/c
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_excelexport") //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_excelexport")
         {
             await Grid.ExportToExcelAsync();
         }
@@ -105,9 +111,9 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtLHjGZVUmSbgRKo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Show spinner while exporting 
+## Show spinner while exporting
 
-Displaying a spinner during export operations in the Blazor DataGrid provides a visual indication of progress and improves export feedback.
+Displaying a spinner during export operations in the Blazor Data Grid provides a visual indication of progress and clear progress feedback to users.
 
 To show a spinner during export:
 
@@ -115,7 +121,6 @@ To show a spinner during export:
 2. Call [ShowSpinnerAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowSpinnerAsync) before invoking export to display the spinner.
 3. Use [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_System_Boolean_Syncfusion_Blazor_Grids_ExcelExportProperties_) to perform export.
 4. Handle the [ExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExportComplete) event to call [HideSpinnerAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideSpinnerAsync) to hide the spinner.
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -142,7 +147,7 @@ To show a spinner during export:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_excelexport") //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_excelexport")
         {
             // Show spinner while exporting.
             await Grid.ShowSpinnerAsync();
@@ -150,10 +155,10 @@ To show a spinner during export:
         }
     }
 
-    public void ExportCompleteHandler(object args)
+    public async Task ExportCompleteHandler(object args)
     {
         // Hide spinner after export completes.
-        Grid.HideSpinnerAsync();
+        await Grid.HideSpinnerAsync();
     }
 }
 
@@ -208,13 +213,13 @@ public class OrderData
 
 ## Binding custom data source while exporting
 
-The Blazor DataGrid supports exporting data to Excel or CSV format using a custom data source. This capability allows exporting data that is not directly bound to the Grid, including data generated or retrieved dynamically.
+The Blazor Data Grid supports exporting data to Excel or CSV format using a custom data source. The custom data source capability allows exporting data that is not directly bound to the Data Grid, including data generated or retrieved dynamically.
 
 To export using a custom data source:
 
 1. Create a custom data collection to be exported.
-2. Define the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_DataSource) property within an [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html)  object.
-3. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick)  event.
+2. Define the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_DataSource) property within an [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) object.
+3. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event.
 4. Pass the `ExcelExportProperties` object to the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
 
 {% tabs %}
@@ -243,7 +248,7 @@ To export using a custom data source:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_excelexport") //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_excelexport")
         {
             var filteredData = Orders.Where(x => x.OrderID <= 10255).ToList();
             ExcelExportProperties exportProperties = new ExcelExportProperties
@@ -308,14 +313,15 @@ public class OrderData
 
 ## Exporting with custom aggregate
 
-Exporting Blazor DataGrid data with custom aggregates enables inclusion of calculated values in the exported file based on specific conditions. This feature supports enhanced reporting and analysis by incorporating tailored aggregate information.
+Exporting Blazor Data Grid data with custom aggregates enables inclusion of calculated values in the exported file based on specific conditions. The custom aggregate feature supports enhanced reporting and analysis by incorporating tailored aggregate information.
+
 To export with a custom aggregate:
 
-1. Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property of the aggregate column to **Custom**.
-2. Assign a function to the `CustomAggregate` property to calculate the required value.
-3. Display the calculated value in the Grid using a [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate).
+1. Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property of the [GridAggregateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html) to **Custom**.
+2. Define a function that returns the calculated value (for example, `CustomAggregateFunction()`).
+3. Display the calculated value in the Blazor Data Grid using a [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate).
 4. Handle the [ExcelAggregateTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelAggregateTemplateInfo) event.
-5. Assign the calculated value to **args.Cell.Value** inside the event handler to include it in the exported Excel file.
+5. Assign the calculated value to `args.Cell.Value` inside the event handler to include the calculated value in the exported Excel file.
 6. Trigger export using the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
 
 {% tabs %}
@@ -343,7 +349,7 @@ To export with a custom aggregate:
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Visible="false" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
     </GridColumns>
@@ -360,7 +366,7 @@ To export with a custom aggregate:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_excelexport") //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_excelexport")
         {
             await Grid.ExportToExcelAsync();
         }
@@ -431,14 +437,14 @@ public class OrderData
 
 ## Exporting with custom date format
 
-The exporting functionality in the Blazor DataGrid enables exporting Grid data with customized date formats. This capability is useful for generating reports or documents that require specific date representations.
+The exporting functionality in the Blazor Data Grid enables exporting Data Grid data with customized date formats. The custom date format capability is useful for generating reports or documents that require specific date representations.
 
 To export with a custom date format:
 
 1. Apply the desired format string to the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property of the date column.
 2. Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property of the column to [ColumnType.Date](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_Date).
-3. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick)  event.
-4. Call [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) to export the Grid with the applied date format.
+3. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event.
+4. Call [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) to export the Data Grid with the applied date format.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -467,7 +473,7 @@ To export with a custom date format:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_excelexport") //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_excelexport")
         {
             await Grid.ExportToExcelAsync();
         }
@@ -523,14 +529,14 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrHZcNBgGEkXTft?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Passing additional parameters to the server when exporting
+## Passing additional parameters when exporting
 
-Passing additional parameters to the server during data export in the Blazor DataGrid provides flexibility to include extra information or customize the export process based on specific requirements.
+Passing additional parameters to the server during data export in the Blazor Data Grid provides flexibility to include extra information or to customize the export process based on specific requirements.
 
 To pass additional parameters during export:
 
 1. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event.
-2. Use the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property of the Grid to define a new query.
+2. Use the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property of the Data Grid to define a new query.
 3. Call the [AddParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html#Syncfusion_Blazor_Data_Query_AddParams_System_String_System_Object_) method to append custom parameters to the query.
 4. Invoke [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) to initiate export.
 5. Handle the [ExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExportComplete) event to restore the original query state after export.
@@ -571,7 +577,7 @@ To pass additional parameters during export:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_excelexport") //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_excelexport")
         {
             queryClone = this.Grid?.Query;
             Grid!.Query = new Query().AddParams("recordcount", "15");
@@ -645,3 +651,7 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtrdjcDrgPzoxnBX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+## See also
+
+* [PDF Exporting in Blazor Data Grid](https://blazor.syncfusion.com/documentation/datagrid/pdf-export)
