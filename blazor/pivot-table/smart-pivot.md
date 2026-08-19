@@ -339,7 +339,7 @@ The following example shows how to set up these features in your Blazor applicat
             </Content>
         </DialogTemplates>
         <DialogButtons>
-            <DialogButton IsPrimary="true" Content="Submit" OnClick="@OnBtnClick" />
+            <DialogButton IsPrimary="true" Content="Submit" OnClick="@OnButtonClick" />
         </DialogButtons>
     </SfDialog>
 
@@ -593,7 +593,7 @@ namespace SyncfusionAISamples.Components.Pages.PivotTable
             await Dialog.ShowAsync();
         }
 
-        private async Task OnBtnClick()
+        private async Task OnButtonClick()
         {
             await Dialog.HideAsync();
             if (ChoiceSelected[0] == "Predictive Analytics & Modeling")
@@ -858,7 +858,7 @@ If the AI service fails to return a valid response, the Pivot Table shows a toas
 - **Model Unavailable**: Ensure the specified `openAIModel`, `azureOpenAIModel`, or `ModelName` is deployed and supported by your account.
 - **Network Issues**: Check connectivity to the AI service endpoint, especially for self-hosted Ollama instances.
 - **Large Datasets**: Processing large datasets may cause timeouts. Consider batching data or optimizing the prompt for efficiency.
-- **Malformed AI Response**: If the model returns JSON that does not match the expected `PivotReport` schema, the catch block in `OnBtnClick` shows the toast. Re-prompt the model with clearer instructions or reduce the dataset size.
+- **Malformed AI Response**: If the model returns JSON that does not match the expected `PivotReport` schema, the catch block in `OnButtonClick` shows the toast. Re-prompt the model with clearer instructions or reduce the dataset size.
 
 ## Performance Considerations
 
