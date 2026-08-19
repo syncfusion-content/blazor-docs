@@ -9,13 +9,13 @@ documentation: ug
 
 # Header Customization in Blazor Data Grid
 
-The appearance of header elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. The following parts of the header interface can be styled:
+The appearance of header elements in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. The following parts of the header interface can be styled:
 
 - **Header container**: The outer wrapper that holds all column headers.
 - **Header cells**: Individual containers for each column title and associated icons.
 - **Header text container**: The inner element that holds the header text content.
 
-## Customize the Blazor DataGrid header
+## Customize the Blazor Data Grid header
 
 The **.e-gridheader** class styles the header container in the Blazor Data Grid. Use CSS to adjust its appearance:
 
