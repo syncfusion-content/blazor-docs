@@ -9,11 +9,11 @@ documentation: ug
 
 # Style and Appearance in Blazor Data Grid
 
-The Blazor DataGrid provides comprehensive styling and appearance customization capabilities to align grid designs with application requirements. Built-in themes enable rapid implementation. CSS customization allows visual element adjustment. Theme-based styling creates consistent user experiences.
+The Blazor Data Grid provides comprehensive styling and appearance customization capabilities to align Data Grid designs with application requirements. Built-in themes enable rapid implementation. CSS customization allows visual element adjustment. Theme-based styling creates consistent user experiences.
 
 ## Built-in themes
 
-The DataGrid component provides multiple themes aligned with industry-standard design systems, available in both light and dark variants. Use the Syncfusion.Blazor.Themes package and choose a theme that matches the supported Blazor version in the project. Add the selected stylesheet to the application by referencing the theme CSS file from the main HTML page used by the app.
+The Data Grid component provides multiple themes aligned with industry-standard design systems, available in both light and dark variants. Use the Syncfusion.Blazor.Themes package and choose a theme that matches the supported Blazor version in the project. Add the selected stylesheet to the application by referencing the theme CSS file from the main HTML page used by the app.
 
 Available themes include:
 
@@ -41,10 +41,10 @@ Available themes include:
 
 ## Size modes
 
-The DataGrid component provides two size modes designed for different interaction contexts and device types:
+The Data Grid component provides two size modes designed for different interaction contexts and device types:
 
 - **Normal mode** (default) — Standard sizing configured for mouse and keyboard interactions.
-- **Touch mode** (bigger) — Enlarged elements with increased padding, font sizes, and touch targets for touch-based interaction and improved accessibility. Apply the `e-bigger` CSS class to a wrapper element around the grid, such as a container `<div>`, to enable this mode.
+- **Touch mode** (bigger) — Enlarged elements with increased padding, font sizes, and touch targets for touch-based interaction and improved accessibility. Apply the `e-bigger` CSS class to a wrapper element around the Data Grid, such as a container `<div>`, to enable this mode.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -136,7 +136,7 @@ Customize the appearance of built-in themes to align the control with applicatio
 
 ### CSS variable overrides
 
-DataGrid themes rely on CSS variables that use the `--sf` prefix for color, background, and border tokens, and the `--e-*` prefix for global tokens such as the default font family. The combined `--sf` and `--e-*` variables ensure visual consistency, straightforward customization, and global updates. Centralized variables allow quick adjustments to **colors**, **backgrounds**, and **borders** across the grid.
+Data Grid themes rely on CSS variables that use the `--sf` prefix for color, background, and border tokens, and the `--e-*` prefix for global tokens such as the default font family. The combined `--sf` and `--e-*` variables ensure visual consistency, straightforward customization, and global updates. Centralized variables allow quick adjustments to **colors**, **backgrounds**, and **borders** across the Data Grid.
 
 #### Material 3 theme color variables
 
@@ -144,7 +144,7 @@ The **Material 3** theme applies scalable CSS custom properties to maintain cons
 
 | Name | Purpose |
 |------|---------|
-| `--e-font-name` | Specifies the default font family applied across the DataGrid |
+| `--e-font-name` | Specifies the default font family applied across the Data Grid |
 | `--color-sf-surface` | Controls base surface styling for UI elements |
 | `--color-sf-on-surface` | Defines text appearance on surface elements |
 | `--color-sf-primary-container` | Applies background styling for active or highlighted row states |
@@ -152,14 +152,14 @@ The **Material 3** theme applies scalable CSS custom properties to maintain cons
 
 #### Bootstrap 5.3 theme color variables
 
-The **Bootstrap 5.3** theme extends Bootstrap's framework with CSS custom properties for the Blazor DataGrid.
+The **Bootstrap 5.3** theme extends Bootstrap's framework with CSS custom properties for the Blazor Data Grid.
 
 | Name | Purpose |
 |------|---------|
-| `--e-font-name` | Specifies the default font family used across the DataGrid |
-| `--color-sf-content-bg-color-alt1` | Controls the background of the DataGrid header |
-| `--color-sf-content-bg-color` | Controls the background of the DataGrid content |
-| `--color-sf-table-bg-color-hover` | Defines the row hover background applied while the pointer is over a DataGrid row |
+| `--e-font-name` | Specifies the default font family used across the Data Grid |
+| `--color-sf-content-bg-color-alt1` | Controls the background of the Data Grid header |
+| `--color-sf-content-bg-color` | Controls the background of the Data Grid content |
+| `--color-sf-table-bg-color-hover` | Defines the row hover background applied while the pointer is over a Data Grid row |
 | `--color-sf-content-bg-color-hover` | Defines the background color for content elements such as the pager and primary controls during hover interaction |
 | `--color-sf-primary` | Defines the main theme styling used across components |
 | `--color-sf-primary-light` | Provides a softer variation of the primary theme for backgrounds |
@@ -173,7 +173,7 @@ The **Tailwind 3** theme uses utility-first CSS custom properties to deliver a *
 |------|---------|
 | `--e-font-name` | Specifies the default font family used across the UI |
 | `--color-sf-content-bg-color` | Controls the main background of the application area |
-| `--color-sf-table-bg-color-hover` | Defines the row hover background applied while the pointer is over a DataGrid row |
+| `--color-sf-table-bg-color-hover` | Defines the row hover background applied while the pointer is over a Data Grid row |
 | `--color-sf-content-bg-color-hover` | Defines the background color for content elements such as the pager and primary controls during hover interaction |
 | `--color-sf-primary` | Defines the main theme color used across components |
 | `--color-sf-border-light` | Defines the border color used across the component |
@@ -184,13 +184,13 @@ The **Fluent 2** theme leverages modern CSS custom properties to provide a clean
 
 | Name | Purpose |
 |------|---------|
-| `--e-font-name` | Specifies the default font family used across the DataGrid |
-| `--color-sf-content-bg-color-alt1` | Controls the background of the DataGrid header |
-| `--color-sf-table-bg-color-hover` | Defines the row hover background applied while the pointer is over a DataGrid row |
+| `--e-font-name` | Specifies the default font family used across the Data Grid |
+| `--color-sf-content-bg-color-alt1` | Controls the background of the Data Grid header |
+| `--color-sf-table-bg-color-hover` | Defines the row hover background applied while the pointer is over a Data Grid row |
 | `--color-sf-content-bg-color-hover` | Defines the background color for content elements such as the pager and primary controls during hover interaction |
 | `--color-sf-primary` | Defines the main theme styling used across components |
 | `--color-sf-border-light` | Specifies styling for light borders and separators |
-| `--color-sf-border-alt` | Defines alternate border styling for DataGrid elements |
+| `--color-sf-border-alt` | Defines alternate border styling for Data Grid elements |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -275,9 +275,9 @@ internal sealed class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXVdNGMQfqinyBZn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Customize the DataGrid root element
+## Customize the Data Grid root element
 
-The **.e-grid** class styles the root container of the Blazor DataGrid. Apply CSS to modify its appearance:
+The **.e-grid** class styles the root container of the Blazor Data Grid. Apply CSS to modify its appearance:
 
 ```css
 .e-grid {
@@ -285,11 +285,11 @@ The **.e-grid** class styles the root container of the Blazor DataGrid. Apply CS
 }
 ```
 
-Properties such as font family, background color, and spacing can be adjusted to match the grid design.
+Properties such as font family, background color, and spacing can be adjusted to match the Data Grid design.
 
 ![Grid root element](../images/style-and-appearance/style-font-family.webp)
 
-This customization applies a `cursive` font to the grid content. Additional styling can be applied to rows, alternate rows, selected rows, and hover states. Avoid using `!important` for hover styles in production environments. Instead, increase selector specificity to maintain consistent styling control.
+This customization applies a `cursive` font to the Data Grid content. Additional styling can be applied to rows, alternate rows, selected rows, and hover states. Avoid using `!important` for hover styles in production environments. Instead, increase selector specificity to maintain consistent styling control.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -394,7 +394,7 @@ internal sealed class OrderData
 
 ## Customize alternate rows
 
-The **.e-altrow .e-rowcell** selector styles cells in alternate rows in the Blazor DataGrid. The same selector also applies across frozen and movable sections when [Frozen columns](https://blazor.syncfusion.com/documentation/datagrid/frozen-column) are enabled.
+The **.e-altrow .e-rowcell** selector styles cells in alternate rows in the Blazor Data Grid. The same selector also applies across frozen and movable sections when [Frozen columns](https://blazor.syncfusion.com/documentation/datagrid/frozen-column) are enabled.
 
 ```css
 .e-grid .e-altrow .e-rowcell {
@@ -482,9 +482,9 @@ internal sealed class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhdjcDsrnOuJceC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Customize the color of grid lines
+## Customize the color of Data Grid lines
 
-Customize grid lines to match application design requirements. Apply CSS to structural elements such as header cells, row cells, and the grid container to control color, thickness, and border style.
+Customize Data Grid lines to match application design requirements. Apply CSS to structural elements such as header cells, row cells, and the Data Grid container to control color, thickness, and border style.
 
 The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property defines border visibility and supports options for `Horizontal`, `Vertical`, `Both`, or `None`.
 
@@ -586,7 +586,7 @@ internal sealed class OrderData
 
 ### Using Theme Studio
 
-Syncfusion Theme Studio provides a unified approach to create custom themes for all controls, including the Blazor DataGrid. This advanced method defines a comprehensive set of styles to achieve consistent appearance across the application.
+Syncfusion Theme Studio provides a unified approach to create custom themes for all controls, including the Blazor Data Grid. This advanced method defines a comprehensive set of styles to achieve consistent appearance across the application.
 
 1. Navigate to the Syncfusion® [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material3).
 2. Select the **Grid** control from the left panel.
