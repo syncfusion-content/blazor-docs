@@ -9,7 +9,7 @@ documentation: ug
 
 # Aggregate Customization in Blazor Data Grid
 
-Aggregates are displayed as summary rows in the DataGrid footer, providing a consolidated view of totals, averages, or counts. These rows can be styled using CSS to match the layout and design of the grid. The following elements can be customized:
+Aggregates are displayed as summary rows in the Data Grid footer, providing a consolidated view of totals, averages, or counts. These rows can be styled using CSS to match the layout and design of the Data Grid. The following elements can be customized:
 
 - Aggregate root container
 - Aggregate summary row and cells
@@ -24,13 +24,13 @@ The **.e-gridfooter** class styles the root container of the aggregate footer ro
 }
 ```
 
-Properties like **font-family**, **font-size**, **background-color**, and **padding** can be changed to fit the grid layout design.
+Properties like **font-family**, **font-size**, **background-color**, and **padding** can be changed to fit the Data Grid layout design.
 
 ![Aggregate footer root with custom font](../images/style-and-appearance/aggregate-root-element.webp)
 
 ## Customize the aggregate row and cell elements
 
-The **.e-summaryrow** and **.e-summarycell** classes define the appearance of the summary row and its individual cells in the Blazor DataGrid. Apply CSS to modify their look:
+The **.e-summaryrow** and **.e-summarycell** classes define the appearance of the summary row and its individual cells in the Blazor Data Grid. Apply CSS to modify their look:
 
 ```css
 .e-grid .e-summaryrow .e-summarycell {
@@ -145,6 +145,6 @@ internal sealed class OrderData
 
 ## See Also
 
-- [Aggregates in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/aggregates)
-- [Grouping in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/grouping)
+- [Aggregates in Blazor Data Grid](https://blazor.syncfusion.com/documentation/datagrid/aggregates)
+- [Grouping in Blazor Data Grid](https://blazor.syncfusion.com/documentation/datagrid/grouping)
 - [`AggregateType` API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateType.html)
