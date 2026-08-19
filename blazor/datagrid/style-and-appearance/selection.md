@@ -9,14 +9,16 @@ documentation: ug
 
 # Selection Customization in Blazor Data Grid
 
-The appearance of selection elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. Styling options are available for:
+The appearance of selection elements in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. Styling options are available for:
 
 - **Row selection background:** Highlights the entire row when selected.
 - **Cell selection background:** Highlights individual cells when selected.
 
+The selection mode and type are configured through the [GridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html) component using the `Mode` and `Type` properties. The examples in this document use `SelectionMode.Row` and `SelectionMode.Cell` with `SelectionType.Multiple`.
+
 ## Customize row selection background
 
-The **.e-selectionbackground** class styles the background of selected rows in the DataGrid. Use CSS to modify its appearance:
+The **.e-selectionbackground** class styles the background of selected rows in the Blazor Data Grid. Use CSS to customize its appearance:
 
 ```css
 .e-grid td.e-selectionbackground {
@@ -24,7 +26,7 @@ The **.e-selectionbackground** class styles the background of selected rows in t
 }
 ```
 
-Properties such as **background-color**, **color**, and **font-weight** can be adjusted to match the grid’s design.
+Properties such as **background-color**, **color**, and **font-weight** can be adjusted to match the Data Grid’s design.
 
 ![Row selection](../images/style-and-appearance/row-selection.webp)
 
@@ -68,10 +70,10 @@ internal sealed class OrderData
 {
     private static readonly List<OrderData> Data = new List<OrderData>();
 
-    public OrderData(int orderId, string customerId, double freight, DateTime orderDate)
+    public OrderData(int orderID, string customerID, double freight, DateTime orderDate)
     {
-        OrderID = orderId;
-        CustomerID = customerId;
+        OrderID = orderID;
+        CustomerID = customerID;
         Freight = freight;
         OrderDate = orderDate;
     }
@@ -108,7 +110,7 @@ internal sealed class OrderData
 
 ## Customize cell selection background
 
-The **.e-cellselectionbackground** class styles the background of selected cells in the DataGrid. Apply CSS to customize its appearance:
+The **.e-cellselectionbackground** class styles the background of selected cells in the Blazor Data Grid. Use CSS to customize its appearance:
 
 ```css
 .e-grid td.e-cellselectionbackground {
@@ -117,6 +119,8 @@ The **.e-cellselectionbackground** class styles the background of selected cells
 ```
 
 Modify visual properties to align with the overall layout and improve clarity.
+
+In cell selection mode, a focused cell is also indicated by the **.e-focused** class. The additional `.e-grid td.e-focused` rule in the sample below adds a visible outline so users can see which cell currently has keyboard focus, which is especially helpful for keyboard navigation and accessibility.
 
 ![Cell selection](../images/style-and-appearance/cell-selection.webp)
 
