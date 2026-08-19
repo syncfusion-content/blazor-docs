@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize Grouping in Blazor Data Grid
 
-The appearance of grouping elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS.
+The appearance of grouping elements in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS.
 
 Styling options are available for different parts of the grouping interface:
 
@@ -20,7 +20,7 @@ Styling options are available for different parts of the grouping interface:
 
 ## Customize the group drop area
 
-The `.e-groupdroparea` class styles the group drop area in the Blazor DataGrid. Use CSS to adjust the appearance:
+The `.e-groupdroparea` class styles the group drop area in the Blazor Data Grid. Use CSS to adjust the appearance:
 
 ```css
 .e-grid .e-groupdroparea {
@@ -36,7 +36,7 @@ The `.e-groupdroparea` class styles the group drop area in the Blazor DataGrid. 
 }
 ```
 
-Properties like `background-color`, `padding`, `border`, and `font` can be changed to fit the grid layout design.
+Properties like `background-color`, `padding`, `border`, and `font` can be changed to fit the Data Grid layout design.
 
 ![Group header](../images/style-and-appearance/group-header.webp)
 
@@ -74,7 +74,7 @@ The `.e-groupcaption` class styles the group caption row, and the `.e-recordplus
 }
 ```
 
-Adjust properties such as `background-color`, `padding`, `border`, and `font` to maintain consistency with the rest of the grid.
+Adjust properties such as `background-color`, `padding`, `border`, and `font` to maintain consistency with the rest of the Data Grid.
 
 ![Group caption row](../images/style-and-appearance/group-caption-row.webp)
 
