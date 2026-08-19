@@ -3,15 +3,13 @@ layout: post
 title: Blazor TreeGrid Filtering | Syncfusion
 description: Learn how to enable and configure filtering in Blazor TreeGrid, use hierarchy filter modes, and quickly find relevant data.
 platform: Blazor
-control: TreeGrid
+control: Tree Grid
 documentation: ug
 ---
 
 # Filtering in Blazor TreeGrid
 
-Filtering displays specific or related records based on defined criteria. To enable filtering in the TreeGrid, set [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowFiltering) to true. Configure filtering behavior through [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings). For related filtering UIs, see the filter menu, Excel-like filter, and filter bar topics.
-
-The following video shows how to filter data in the Blazor TreeGrid.
+Filtering displays specific or related records based on defined criteria. To enable filtering in the TreeGrid, set [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowFiltering) to **true**. Configure filtering behavior through [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings). For related filtering UIs, see the filter menu, Excel-like filter, and filter bar topics. The default filter type in TreeGrid is FilterBar.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=7lhP9qa-UqY"%}
@@ -81,7 +79,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Filtering in Blazor TreeGrid](../images/blazor-treegrid-filtering.webp)
+![Filtering in Blazor TreeGrid](images/blazor-treegrid-filtering.webp)
 Filtering enabled in the TreeGrid with basic column configurations.
 
 N> Use [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_String_System_String_) to apply a filter programmatically and [ClearFilteringAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ClearFilteringAsync) to clear filters. To disable filtering for a specific column, set the column’s `AllowFiltering` to false.
@@ -90,17 +88,17 @@ N> Use [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 TreeGrid supports multiple hierarchy modes through the [HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_HierarchyMode) property of [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings). The following modes are available:
 
-* **Parent** : This is the default filter hierarchy mode in the Tree Grid. The filtered records are displayed with its parent records, if the filtered records not have any parent record then the filtered records are only displayed.
+* **Parent** : This is the default filter hierarchy mode in the TreeGrid. Shows the filtered record along with its parent if one exists. If the record has no parent, only the filtered record is shown.
 
-* **Child** : The filtered records are displayed with its child record, if the filtered records does not have any child record then the filtered records are only displayed.
+* **Child** : Shows the filtered record along with its child records if any exist. If the record has no child, only the filtered record is shown.
 
-* **Both** : The filtered records are displayed with its both parent and child record, if the filtered records does not have any parent and child record then the filtered records are only displayed.
+* **Both** : Shows the filtered record along with both its parent and child records if they exist. If the record has neither parent nor child, only the filtered record is shown.
 
-* **None** : The filtered records are only displayed.
+* **None** : Shows only the filtered record itself, without including any parent or child records.
 
 ## Initial filter
 
-To apply filters during initial rendering, configure one or more filter **PredicateModel** values in the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_Columns) collection of [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings).
+To apply filters during initial rendering, configure one or more filter **PredicateModel** values in the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_Columns) collection of [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings).
 
 {% tabs %}
 
@@ -179,9 +177,11 @@ namespace TreeGridComponent.Data {
 
 ![Blazor TreeGrid with Initial Filter](../images/blazor-treegrid-initial-filter.webp)
 
+N> [MatchCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridFilterColumn_MatchCase) specifies whether filtering should respect case sensitivity. When set to **true**, records are matched with exact case; when set to **false**, case differences are ignored.
+
 ## Filter operators
 
-Define the filter operator for a column using the Operator property in the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_Columns) collection of [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings).
+Define the filter operator for a column using the Operator property in the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_Columns) collection of [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings).
 
 The available operators and their supported data types are:
 
@@ -228,11 +228,9 @@ a* |Values that start with “a”.
 *a* |Values that contain “a”.
 *a*b* |Values that contain “a”, followed by anything, then “b”, followed by anything.
 
-The following image illustrates the **Wildcard** operator in action.
+![WildcardFilter](images/blazor-treegrid-wildcard-search.webp) 
 
-![WildcardFilter](../images/blazor-treegrid-wildcard-search.webp) 
-
-> When using the **Wildcard** operator, records are displayed according to the selected filter [HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_HierarchyMode) in [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings). For details, see the filter hierarchy modes [section](https://blazor.syncfusion.com/documentation/treegrid/filter#filter-hierarchy-modes).
+> When using the **Wildcard** operator, records are displayed according to the selected filter [HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_HierarchyMode) in [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings). For details, see the filter hierarchy modes [section](https://blazor.syncfusion.com/documentation/treegrid/filter#filter-hierarchy-modes).
 
 ### LIKE filtering
 
@@ -249,17 +247,15 @@ Operator |Description
 ab% |Values that start with “ab”.
 %ab |Values that end with “ab”.
 
-The following image illustrates the **LIKE** operator in action.
-
 ![LIKEFilter](../images/blazor-treegrid-like_filter.webp)
 
 > When using the **LIKE** operator, records are displayed according to the selected filter [HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_HierarchyMode) in [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings). For details, see the filter hierarchy modes [section](https://blazor.syncfusion.com/documentation/treegrid/filter#filter-hierarchy-modes).
 
 ## Filter enum column
 
-Filter enum-type data in a TreeGrid column using a filter template.
+Filter enum-type data in a TreeGrid column using a filter template. 
 
-In the following example, an enumerated list is bound to the Priority column, and the `SfDropDownList` component is rendered in the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Columns#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterTemplate) of that column.  
+An enumerated list is bound to the Priority column, and the `SfDropDownList` component is rendered within the column’s [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterTemplate).
 
 In the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of `SfDropDownList`, the Priority column is filtered programmatically using [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_String_System_String_).
 
@@ -300,12 +296,6 @@ In the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dro
     protected override void OnInitialized()
     {
         this.TreeData = SelfReferenceData.GetTree().Take(50).ToList();
-    }
-    public enum Prioritize : short
-    {
-        High = 1,
-        Low = 2,
-        Critical = 3
     }
     public class Data
     {
@@ -550,7 +540,7 @@ The Blazor TreeGrid filtering functionality can be configured to ignore diacriti
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 <div class="container mt-4">
-    <<SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowFiltering="true">
+    <SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowFiltering="true">
     <TreeGridFilterSettings Type="Syncfusion.Blazor.TreeGrid.FilterType.FilterBar" IgnoreAccent="true"> </TreeGridFilterSettings>
     <TreeGridColumns>
         <TreeGridColumn Field=@nameof(TreeTask.TaskID) HeaderText="Task ID" TextAlign="TextAlign.Right" Width="90"  IsPrimaryKey />
