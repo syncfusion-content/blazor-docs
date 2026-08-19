@@ -13,7 +13,7 @@ Globalization in the Blazor Pivot Table covers two related features: **localizat
 
 N> **Prerequisites:** The samples in this page use the `ProductDetails` model defined in the [Getting Started](./getting-started) topic under **Assigning sample data to the pivot table**. The Blazor Pivot Table is compatible with Syncfusion Blazor 28.1.33 and later on .NET 6.0+.
 
-### Key changes in the RTL sample
+## Key changes in the RTL sample
 
 The Pivot Table is rendered in RTL by adding a single attribute to `SfPivotView`:
 
