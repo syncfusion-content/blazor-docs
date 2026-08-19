@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Open Numeric Keyboard in Numeric TextBox | Syncfusion®
-description: Learn how to configure Blazor Numeric TextBox to display the numeric keyboard on mobile and touch devices.
+title: Open Numeric Keyboard in Blazor Numeric Textbox | Syncfusion
+description: Configure Blazor Numeric TextBox to show a numeric keyboard on mobile and touch devices for input today.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
 ---
 
-# Open Numeric Keyboard in Numeric TextBox Component
+# How to open numeric keyboard in Blazor Numeric Textbox
 
 On mobile and touch devices, providing a numeric keyboard improves data entry for number inputs. This topic explains how to hint supported browsers to show a numeric keypad while keeping the Numeric TextBox behavior intact.
 
 ## Enabling the Numeric Keyboard
 
-A practical way to suggest a numeric keypad on many mobile browsers is to set the input type to "tel", which often triggers a number-centric keypad. Behavior varies by device and browser.
+A practical way to suggest a numeric keypad on many mobile browsers is to set the input `type` to `"tel"`, which often triggers a number-centric keypad. Behavior varies by device and browser.
 
 Here is an example code snippet using the Blazor Numeric TextBox component:
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <div style="margin:150px auto;width:300px">
@@ -31,7 +31,7 @@ By setting the `type` attribute to `"tel"`, the Numeric TextBox will trigger the
 
 ## Fallback for Unsupported Browsers
 
-It is important to note that not all browsers support the `type="tel"` attribute. In cases where a browser does not support this attribute, the `Numeric TextBox` will fall back to being a standard text input. This ensures that the functionality remains intact across all browsers, even if the enhanced keyboard experience is not available.
+It is important to note that not all browsers honor the `type="tel"` attribute. In cases where a browser does not support it, the Numeric TextBox falls back to a standard text input. This ensures that the functionality remains intact across all browsers, even if the enhanced keyboard experience is not available.
 
 ## Live Sample
 

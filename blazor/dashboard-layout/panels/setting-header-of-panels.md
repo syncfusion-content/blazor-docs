@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Header and Content in Blazor Dashboard Layout Component | Syncfusion®
-description: Checkout and learn here all about Header and Content in Blazor Dashboard Layout component and much more.
+title: Header and Content in Blazor Dashboard Layout | Syncfusion®
+description: Render the Blazor Dashboard Layout panel header and content using HeaderTemplate and ContentTemplate for rich, customized panel layouts.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
 ---
 
-# Header and Content Templates in Blazor Dashboard Layout Component
+# Header and Content in Blazor Dashboard Layout
 
 The Blazor Dashboard Layout component utilizes two primary templates for rendering data within its panels:
 

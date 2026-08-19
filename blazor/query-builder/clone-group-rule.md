@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Clone Group/ Rule in Blazor QueryBuilder Component | Syncfusion®
-description: Checkout and learn here all about Clone Group/ Rule in Blazor QueryBuilder component with examples and much more details.
+title: Clone Group or Rule in Blazor Query Builder | Syncfusion
+description: Clone individual rules or entire groups in Blazor Query Builder using CloneRule and CloneGroup methods.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Clone Group/ Rule in Blazor QueryBuilder Component
+# Clone Group or Rule in Blazor Query Builder
 
 The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) supports cloning both individual rules and entire groups. Cloning creates an exact duplicate of the selected rule or group adjacent to the original, making it quick to replicate complex query structures. The [`ShowButtons`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderShowButtons.html) configuration controls the visibility of cloning buttons in the user interface for convenient, on-demand access.
 
@@ -72,8 +72,6 @@ Cloning is available via the user interface and programmatically:
             }
         }
         };
-
-    public string[] GroupID = new string[] { "group1" };
 
     private void cloneGroup()
     {

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Form Groups in Blazor DataForm Component | Syncfusion®
-description: Checkout and learn here about the single and multiple form group configuration  with Blazor DataForm component.
+title: Form Group in Blazor Data Form | Syncfusion®
+description: Organize Blazor Data Form fields into single or multiple form groups using FormGroup for descriptive group labels and column-based layouts.
 platform: Blazor
 control: DataForm
 documentation: ug
 ---
 
-# Form group in DataForm component
+# Form Group in Blazor Data Form
 
 In the DataForm, the [FormGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormGroup.html) feature organizes `FormItem` and `FormAutoGenerateItems` under a descriptive group label with an optional identifier, and supports a column-based layout within each group.
 

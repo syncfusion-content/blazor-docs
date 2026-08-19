@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor TextBox in Blazor MAUI App | Syncfusion®
-description: Check out and learn about the documentation for getting started with Blazor TextBox Component in Blazor MAUI App.
+title: Getting Started with Blazor TextBox in MAUI App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor TextBox in a Blazor MAUI app using setup steps and code examples.
 platform: Blazor
-component: TextBox
+control: TextBox
 documentation: ug
 ---
 
-# Getting Started with Blazor TextBox Component in Blazor MAUI App
+# Getting Started with Blazor TextBox in MAUI App
 
 This guide explains how to include the [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) component in a Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/) and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

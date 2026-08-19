@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Limitations of TimeSpan DataType in Blazor TimePicker | Syncfusion®
-description: Learn here all about Limitations of TimeSpan DataType in Blazor TimePicker component and much more details.
+title: How to handle TimeSpan limitations in Blazor TimePicker | Syncfusion
+description: Learn how Blazor TimePicker handles TimeSpan custom format limitations for separators and literals in display.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# Limitations of TimeSpan DataType in Blazor TimePicker Component
+# How to handle TimeSpan limitations in Blazor TimePicker
 
-Based on [C# standard behavior](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-timespan-format-strings), the custom TimeSpan format specifiers  do not include placeholder separator symbols, such as the symbols that separate hours from minutes, or seconds from fractional seconds. Instead, these symbols must be included in the custom format string as string literals.
+Based on [C# standard behavior](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-timespan-format-strings), the standard TimeSpan format specifiers do not include separator symbols, such as the symbols that separate hours from minutes, or seconds from fractional seconds. These symbols must be included in the custom format string as string literals.
 
 This means that if you want to format a TimeSpan value with custom separators, you need to include the separators in the format string yourself. For example, to format a TimeSpan value with a hyphen (-) as a separator between hours, minutes, and seconds, you would use the following format string.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Calendars
 
@@ -25,15 +25,15 @@ This means that if you want to format a TimeSpan value with custom separators, y
 }
 
 ```
+
 ![Blazor TimePicker with Time Span Format](../images/blazor-timepicker-time-span-format.gif)
 
-N> The TimeSpan will always show the time value in 24-hour format.
+N> The TimePicker always displays a TimeSpan value in 24-hour format, regardless of the configured `Format`.
 
 ## Supported Format String with TimeSpan
 
-| List of TimeSpan custom formats supported in Blazor |  |  | |
-| --- | --- | --- | --- |
-| Format specifier | Example | Output |
+| Format specifier | Example Format String | Output |
+| --- | --- | --- |
 | h | h:mm:ss | 8:05:00 |
 | hh | hh:mm:ss | 08:05:00 |
 | m | hh:m:ss | 08:5:00 |
@@ -47,12 +47,12 @@ N> The TimeSpan will always show the time value in 24-hour format.
 
 N>The Blazor TimePicker component does not support the `d` or `dd` format specifier for days.
 
-#### To display the backslashes (\\\\) in the format string, you need to escape them by doubling them. For example:
+## Escaping Backslashes in the Format String
 
-This means that if you want to display a two backslash in the format string, you need to type four backslashes.
+To display backslashes (`\\`) in the format string, escape them by doubling them. For example, to display two backslashes in the format string, type four backslashes in the Razor markup.
 
-#### Here is an example of how to use this in a Blazor TimePicker component:
-```csharp
+The following example shows how to use this in a Blazor TimePicker component:
+```cshtml
 
 @using Syncfusion.Blazor.Calendars
 
@@ -68,3 +68,9 @@ This means that if you want to display a two backslash in the format string, you
 This will render a TimePicker component that displays the time in the `hh\\mm\\ss` format.
 
 ![Blazor TimePicker with Time Span Format](../images/blazor-timepicker-time-span-custom-format.gif)
+
+## See also
+
+* [Time Format in Blazor TimePicker](../time-format)
+* [Strict Mode in Blazor TimePicker](../strict-mode)
+* [Data Binding in Blazor TimePicker](../data-binding)

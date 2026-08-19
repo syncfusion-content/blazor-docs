@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filter & Search list items using Blazor ListView | Syncfusion
-description: Learn here all about filter and search list items using Syncfusion Blazor ListView component and more.
+title: Filter and Search List Items in Blazor ListView | Syncfusion
+description: Filter and search Blazor ListView items in real time from an input control using the OnInput event handler today.
 platform: Blazor
 control: Listview
 documentation: ug
 ---
 
-# Filter and search list items using Blazor ListView Component
+# How to filter and search list items in Blazor ListView
 
 The filtered data can be displayed in the ListView component depending on the user inputs. Refer to the following steps to render the ListView with the filtered data.
 

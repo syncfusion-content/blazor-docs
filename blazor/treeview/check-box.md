@@ -1,13 +1,13 @@
 ---
 layout: post
-title: CheckBox in Blazor TreeView Component | Syncfusion®
-description: Checkout and learn here all the features about CheckBox in Blazor TreeView component and much more details.
+title: CheckBox in Blazor TreeView | Syncfusion
+description: Show checkboxes and enable parent-child auto check states in Blazor TreeView with built-in properties.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# CheckBox in Blazor TreeView Component
+# CheckBox in Blazor TreeView
 
 The Blazor TreeView component enables multiple node selection through checkboxes by activating the [`ShowCheckBox`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ShowCheckBox) property. When this property is enabled, a checkbox appears before the text of each TreeView node.
 

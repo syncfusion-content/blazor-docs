@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mask Configuration in Blazor Input Mask Component | Syncfusion®
-description: Checkout and learn here all about Mask Configuration in Blazor Input Mask component and much more details.
+title: Mask Configuration in Blazor Input Mask | Syncfusion
+description: Define standard and custom mask elements in Blazor Input Mask to validate formatted user input such as dates, phones, and IDs.
 platform: Blazor
 control: Input Mask
 documentation: ug
 ---
 
-# Mask Configuration in Blazor Input Mask Component
+# Mask Configuration in Blazor Input Mask
 
 The [Mask](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_Mask) is a set of standard and custom elements that validate user input based on defined rules.
 
@@ -15,7 +15,7 @@ N> When the Mask property is not set or is empty, the MaskedTextBox behaves as a
 
 ## Standard mask elements
 
-The following table lists the mask elements and their behavior based on the[MSDN](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.maskedtextbox.mask?view=windowsdesktop-9.0&viewFallbackFrom=net-8.0) standard.
+The following table lists the mask elements and their behavior based on the [MSDN](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.maskedtextbox.mask?view=windowsdesktop-9.0&viewFallbackFrom=net-8.0) standard.
 
 The mask can be formed by combining any one or more of these mask elements.
 
@@ -92,7 +92,7 @@ In the following example, a regular expression is set for each input position.
 
 ## Prompt character
 
-The prompt character is the symbol used to indicate input positions defined by the mask. Customize the prompt character by using the [PromptChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_PromptChar) property.
+The prompt character is the symbol used to indicate input positions defined by the mask. By default, the prompt character is `_`. Customize the prompt character by using the [PromptChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_PromptChar) property. The `PromptChar` property accepts a `char` value.
 
 The following example demonstrates the MaskedTextBox with a customized prompt character `#`.
 
@@ -110,7 +110,7 @@ The following example demonstrates the MaskedTextBox with a customized prompt ch
 
 ## Include literals in the value
 
-By default, the component’s [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_Value) returns the raw value (without literals). To include mask literals in the returned value, enable the [EnableLiterals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_EnableLiterals) property.
+By default, the component’s [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_Value) returns the raw value (without literals). To include mask literals in the returned value, enable the [EnableLiterals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_EnableLiterals) property. The default value of `EnableLiterals` is `false`.
 
 The following example demonstrates how to obtain the value with mask literals.
 
@@ -124,11 +124,11 @@ The following example demonstrates how to obtain the value with mask literals.
 
 ### Prompt placeholder
 
-By default, non-filling blank spaces in the mask are replaced with empty string in the Value property. You can change that prompt placeholder by using [PromptPlaceholder](https://www.syncfusion.com/blazor-components/blazor-input-mask) property.
+By default, non-filling blank spaces in the mask are replaced with an empty string in the Value property. You can change that prompt placeholder by using the [PromptPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_PromptPlaceholder) property. The `PromptPlaceholder` property accepts a `char` value.
 
-Set the `Null` value to the PromptPlaceholder property when you don't want to use this character in the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_Value) property.
+Set `PromptPlaceholder` to `null` when you do not want to use this character in the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_Value) property.
  
-N> An empty PromptPlaceholder will apply to the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_Value) property when you have enabled the [EnableLiterals](https://www.syncfusion.com/blazor-components/blazor-input-mask) property.
+> An empty `PromptPlaceholder` is applied to the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_Value) property when the [EnableLiterals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_EnableLiterals) property is enabled.
 
 {% highlight Razor %}
 
@@ -138,7 +138,7 @@ N> An empty PromptPlaceholder will apply to the [Value](https://help.syncfusion.
 
 ![Blazor MaskedTextBox with Prompt Character](./images/promptplaceholder.gif)
 
-N> Don't use the PromptPlaceholder character as valid for the user input in the mask. For example, if you have a mask "00/00/0000" and PromptPlaceholder as "5" then you type 2 in the input, [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_Value) will become "25/55/5555". Its lead to return wrong value as Value of the component.
+> Do not use the `PromptPlaceholder` character as valid input in the mask. For example, if you have a mask `"00/00/0000"` and `PromptPlaceholder` as `"5"`, and you type `2` in the input, the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_Value) will become `"25/55/5555"`. This leads to an incorrect value being returned as the Value of the component.
 
 
 

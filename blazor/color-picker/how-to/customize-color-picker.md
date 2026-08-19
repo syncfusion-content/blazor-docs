@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Customize Color Picker in Blazor Color Picker Component | Syncfusion®
-description: Checkout and learn here all the features about Customize Color Picker in Blazor Color Picker component and much more.
+title: How to customize the Color Picker in Blazor | Syncfusion®
+description: Customize the Blazor Color Picker with custom palette colors, custom CSS classes, and inline or popup rendering for the picker area.
 platform: Blazor
 control: Color Picker
 documentation: ug
 ---
 
-# Customize Color Picker in Blazor Color Picker Component
+# How to customize the Color Picker in Blazor
 
 ## Custom palette
 
-By default, the palette renders with a set of predefined colors. To load custom colors, set the [PresetColors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_PresetColors) property. To further customize palette tiles (for example, to add a class for styling), use the [OnTileRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_OnTileRender) event.
+By default, the palette renders with a set of predefined colors. To load custom colors, set the [PresetColors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_PresetColors) property to a dictionary where each key is a group name and the value is a string array of hex codes. To further customize individual palette tiles (for example, to add a class for styling), use the [OnTileRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_OnTileRender) event.
 
 ```cshtml
 
@@ -81,7 +81,7 @@ By default, the palette renders with a set of predefined colors. To load custom 
 
 ## Hide input area from picker
 
-By default, the input area is rendered in the Color Picker. To hide the input area, add the built-in class `e-hide-value` via the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_CssClass) property. This hides the input field visually while retaining core picker functionality.
+By default, the input area is rendered in the Color Picker. To hide the input area, add the built-in class `e-hide-value` via the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_CssClass) property. This hides the input field visually while keeping the picker fully functional.
 
 In the following sample, the Color Picker is rendered without the input area.
 
@@ -124,3 +124,9 @@ The following sample shows the customized Color Picker handle.
 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXLdXHMaJUDvPXqx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Blazor ColorPicker Handle Shape](./../images/blazor-colorpicker-handle-customization.webp)" %}
+
+## See also
+
+* [Blazor Color Picker Getting Started](https://blazor.syncfusion.com/documentation/color-picker/getting-started)
+* [Blazor Color Picker Styles and Appearances](https://blazor.syncfusion.com/documentation/color-picker/style-and-appearance)
+* [Blazor Color Picker Events](https://blazor.syncfusion.com/documentation/color-picker/events)

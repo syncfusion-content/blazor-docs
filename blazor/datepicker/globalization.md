@@ -1,38 +1,35 @@
 ---
 layout: post
-title: Globalization in Blazor DatePicker Component | Syncfusion®
-description: Checkout and learn here all the features about globalization support in Blazor DatePicker component, it's elements and more.
+title: Globalization in Blazor DatePicker | Syncfusion®
+description: Globalize the Blazor DatePicker for different cultures, including right-to-left rendering, localized names, and culture-specific date formats.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Globalization in Blazor DatePicker Component
+# Globalization in Blazor DatePicker
 
-[Blazor DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Blazor components.
+
+The [Blazor DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker) component can be localized. Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Blazor components.
+
 
 ## Right-To-Left
 
-The DatePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew to display the text in the right-to-left direction. Use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_EnableRtl) property to set the RTL direction.
+The DatePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew. Use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerModel.html#Syncfusion_Blazor_Calendars_DatePickerModel_EnableRtl) property to set the RTL direction. The component renders based on the system culture.
 
-The following code example initializes the DatePicker component in `Arabic` culture.
+The following code example initializes the DatePicker component in RTL mode.
 
 ```cshtml
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Calendars
-@inject HttpClient Http;
 
-<SfDatePicker TValue="DateTime?" EnableRtl=true Locale="ar"></SfDatePicker>
-
-@code {
-    [Inject]
-    protected IJSRuntime JsRuntime { get; set; }
-    protected override async Task OnInitializedAsync()
-    {
-        this.JsRuntime.Sf().LoadLocaleData(await Http.GetJsonAsync<object>("blazor-locale/src/ar.json")).SetCulture("ar");
-    }
-}
+<SfDatePicker TValue="DateTime?" EnableRtl=true></SfDatePicker>
 ```
 
+![Right to Left in Blazor DatePicker](./images/blazor-datepicker-right-to-left.webp)
 
+## See also
 
-![Right to Left in Blazor DatePicker with Arabic Culture](./images/blazor-datepicker-right-to-left.webp)
+* [Blazor Localization](../common/localization)
+* [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_EnableRtl) property
+* [Date Format](date-format)

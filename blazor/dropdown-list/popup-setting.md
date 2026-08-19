@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup Setting in Blazor DropDownList Component | Syncfusion®
-description: Checkout and learn here all about Popup Setting in Blazor DropDown List component and much more details.
+title: Popup Setting in Blazor Dropdown List | Syncfusion®
+description: Customize Blazor Dropdown List popup dimensions, resize behavior, z-index, text overflow, and open-close behavior.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Popup Setting in Dropdown List
+# Popup Setting in Blazor Dropdown List
 
 ## Popup resize
 
@@ -35,7 +35,7 @@ In the following sample, `PopupWidth` is set to `300px`.
 
 ![Blazor DropDownList with customized popup width](./images/popup-setting/blazor_dropdown_popup-width.webp)
 
-## Handling TextOverflow 
+## Handling text overflow
 
 When the popup width is smaller than the item text, the `text-overflow: ellipsis` style is applied automatically to truncate long text with an ellipsis.
 

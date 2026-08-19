@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Value Binding in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn here how to configure value, index, and primitive bindings in the Blazor ComboBox component and much more.
+title: Value Binding in Blazor ComboBox | Syncfusion®
+description: Bind values to the Blazor ComboBox using one-way and two-way binding with Value, Text, or Index, and synchronize state with the parent component.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Value Binding in ComboBox
+# Value Binding in Blazor ComboBox
 
 Value binding is the process of passing values between a component and its parent. There are two methods for binding values:
 - bind-Value binding

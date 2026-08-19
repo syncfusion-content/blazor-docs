@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Mask Support in Blazor DateTimePicker Component | Syncfusion®
-description: Checkout and learn here all about Mask Support in Blazor DateTimePicker component and much more details.
+title: Mask Support in Blazor DateTime Picker | Syncfusion®
+description: Apply an input mask to the Blazor DateTime Picker to guide users as they type date and time values, ensuring consistent input format.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
 ---
-# Mask Support in Blazor DateTimePicker Component
+# Mask Support in Blazor DateTime Picker
 
-The masking feature guides users to enter date and time values that match the display format defined by the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Format) property. Enable or disable masking using the [EnableMask](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_EnableMask) property. When enabled, the input shows a mask pattern derived from the configured format and the current culture (including localized separators and literals). Masking improves guidance during entry but does not, by itself, validate out-of-range values or business rules.
+The masking feature guides users to enter date and time values that match the display format defined by the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Format) property. Enable or disable masking using the [EnableMask](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_EnableMask) property (default is `false`). When enabled, the input shows a mask pattern derived from the configured format and the current culture (including localized separators and literals). Masking improves guidance during entry but does not, by itself, validate out-of-range values or business rules.
 
 {% highlight Razor %}
 
@@ -20,7 +20,7 @@ The masking feature guides users to enter date and time values that match the di
 
 ## MaskPlaceholder
 
-The [DateTimePickerMaskPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateTimePickerMaskPlaceholder.html) directive allows custom placeholder text for each segment of the date and time format in a `DateTimePicker`. Use it together with [EnableMask](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_EnableMask) to provide clear guidance for expected input. Placeholders apply to the segments used by the configured format (for example, dd/MM/yyyy hh:mm:ss).
+The [DateTimePickerMaskPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateTimePickerMaskPlaceholder.html) directive allows custom placeholder text for each segment of the configured date and time format. Use it together with [EnableMask](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_EnableMask) to provide clear guidance for expected input. Placeholders apply to the segments used by the configured format (for example, `dd/MM/yyyy hh:mm:ss`). Declare `<DateTimePickerMaskPlaceholder>` as a child of `<SfDateTimePicker>`.
 
 The `DateTimePickerMaskPlaceholder` tag directive has the following properties:
 
@@ -29,10 +29,10 @@ The `DateTimePickerMaskPlaceholder` tag directive has the following properties:
 * [Year](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.MaskPlaceholder.html#Syncfusion_Blazor_Calendars_MaskPlaceholder_Year) : Placeholder text for the year segment (such as `yy`/`yyyy`).
 * [Hour](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.MaskPlaceholder.html#Syncfusion_Blazor_Calendars_MaskPlaceholder_Hour) : Placeholder text for the hour segment (such as `h`/`hh`).
 * [Minute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.MaskPlaceholder.html#Syncfusion_Blazor_Calendars_MaskPlaceholder_Minute) : Placeholder text for the minute segment (`m`/`mm`).
-* [Second](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.MaskPlaceholder.html#Syncfusion_Blazor_Calendars_MaskPlaceholder_Second): Placeholder text for the second segment (`s`/`ss`).
-* [DayOfWeek](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.MaskPlaceholder.html#Syncfusion_Blazor_Calendars_MaskPlaceholder_DayOfWeek) : Placeholder text for the weekday segment (`ddd`/`dddd`).
+* [Second](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.MaskPlaceholder.html#Syncfusion_Blazor_Calendars_MaskPlaceholder_Second) : Placeholder text for the second segment (`s`/`ss`).
+* [DayOfWeek](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.MaskPlaceholder.html#Syncfusion_Blazor_Calendars_MaskPlaceholder_DayOfWeek) : Placeholder text for the weekday segment (`ddd`/`dddd`). Only used when the `Format` includes a day-of-week token such as `ddd`/`dddd`.
 
-By default, the component uses placeholder text from the current culture’s resource file for each date and time segment. To override these defaults, specify custom values using the `DateTimePickerMaskPlaceholder` directive.
+By default, the component uses placeholder text from the current culture's resource file for each date and time segment. To override these defaults, specify custom values using the `DateTimePickerMaskPlaceholder` directive.
 
 {% highlight Razor %}
 
@@ -42,4 +42,9 @@ By default, the component uses placeholder text from the current culture’s res
 
 ![Blazor DateTimePicker Mask Support with MaskPlaceholder](./images/DateTimePickerMaskPlaceholder.gif)
 
-> If custom placeholder text is not specified for a segment, the component uses the default placeholder text from the current culture’s resource file for that segment. The mask pattern and separators are culture-aware, and validation behavior (such as handling incomplete or out-of-range input) follows the component’s configuration, including properties like StrictMode.
+> If custom placeholder text is not specified for a segment, the component uses the default placeholder text from the current culture's resource file for that segment. The mask pattern and separators are culture-aware, and validation behavior (such as handling incomplete or out-of-range input) follows the component's configuration. Enable [StrictMode](./strict-mode) to enforce the mask on blur; with `StrictMode="false"`, masked but incomplete input may resolve to `null`.
+
+## See also
+
+* [DateTime Format in Blazor DateTimePicker](./date-time-format)
+* [Strict Mode in Blazor DateTimePicker](./strict-mode)

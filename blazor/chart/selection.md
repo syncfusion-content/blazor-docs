@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Selection in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about Selection feature in Blazor Charts component and much more.
+title: Blazor Charts Selection Examples | Syncfusion®
+description: Learn how to enable selection in Syncfusion Blazor Charts. Choose Point, Series, Cluster, DragXY, or DragX modes for mouse or touch.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
 <!-- markdownlint-disable MD036 -->
 
-# Selection in Blazor Charts Component
+# Blazor Charts Selection
 
 The chart provides selection support for the series and its data points on mouse or touch action.
 

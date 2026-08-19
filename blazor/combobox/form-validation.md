@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Form Validation in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn about Form validation with Blazor ComboBox component in Blazor Sever App and Blazor WebAssembly App.
+title: Form Validation in Blazor ComboBox | Syncfusion®
+description: Use the Blazor ComboBox inside an EditForm with data annotations to validate user selection and required fields before submission.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Form Validation in ComboBox
+# Form Validation in Blazor ComboBox
 
 This article demonstrates how to use the Blazor ComboBox within a Blazor EditForm to validate user input with data annotations. The example shows a form where the user selects an item from the ComboBox, and validation ensures required fields are completed before submission.
 

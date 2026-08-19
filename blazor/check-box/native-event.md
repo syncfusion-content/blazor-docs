@@ -1,53 +1,71 @@
 ---
 layout: post
-title: Native Events in Blazor CheckBox Component | Syncfusion®
-description: Checkout and learn here all the features about Native Events in Blazor CheckBox component and much more.
+title: Native Events in Blazor CheckBox | Syncfusion®
+description: Attach native DOM events to the Blazor CheckBox using the on{event} attribute, and pass event argument data to the event handler.
 platform: Blazor
 control: Checkbox
 documentation: ug
 ---
 
-# Native Events in Blazor CheckBox Component
+# Native Events in Blazor CheckBox
 
-You can define the native event using on `event` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.
+You can bind native Blazor events to the CheckBox component using the `@on{event}` directive. The event-specific data is available through the event arguments.
 
-The different event argument types for each event are,
+The following event argument types are used for each event category:
 
-* Focus Events - UIFocusEventArgs
-* Mouse Events - UIMouseEventArgs
-* Keyboard Events - UIKeyboardEventArgs
-* Touch Events – UITouchEventArgs
+* Focus Events - `FocusEventArgs`
+* Mouse Events - `MouseEventArgs`
+* Keyboard Events - `KeyboardEventArgs`
+* Touch Events - `TouchEventArgs`
 
-## List of Native events supported
+> All event argument types are from the `Microsoft.AspNetCore.Components.Web` namespace.
 
-The following native event support has been provided to the Checkbox component:
+## List of native events supported
 
-| List of Native events |  |  | | |
+The following native events are supported by the CheckBox component:
+
+| List of native events |  |  |  |  |
 | --- | --- | --- | --- | --- |
 | onchange | oninput | onblur | onfocusout | onfocusin |
-|onfocus|onclick|onkeydown|onkeyup|onkeypress|
+| onfocus | onkeydown | onkeyup | onkeypress |
 
-## How to bind onchange event to Checkbox
+| Event | Description |
+| --- | --- |
+| `onchange` | Fires when the CheckBox value is committed by the user. |
+| `oninput` | Fires every time the value changes. |
+| `onblur` | Fires when the CheckBox loses focus. |
+| `onfocus` | Fires when the CheckBox gains focus. |
+| `onfocusin` | Fires when focus enters the CheckBox (bubbling). |
+| `onfocusout` | Fires when focus leaves the CheckBox (bubbling). |
+| `onkeydown` | Fires when a key is pressed down. |
+| `onkeyup` | Fires when a key is released. |
+| `onkeypress` | Fires when a key that produces a character is pressed. |
 
-The `onchange` attribute is used to bind the onchange event for Checkbox. Here, we have explained about the sample code snippets of Checkbox.
+## How to bind onchange event to CheckBox
+
+The `@onchange` attribute is used to bind the native onchange event to a CheckBox. The following sample shows how to bind it.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
+@using Microsoft.AspNetCore.Components
 
 <SfCheckBox @bind-Checked="isChecked" Label="Change" @onchange="onChange"></SfCheckBox>
 
 @code {
     private bool isChecked = true;
-    private void onChange(Microsoft.AspNetCore.Components.ChangeEventArgs args)
+    private void onChange(ChangeEventArgs args)
     {
-       //onChange Event triggered
+       // onChange event triggered
+       var value = args.Value;
     }
 }
 ```
 
-## How to bind ValueChange event to Checkbox
+## How to bind ValueChange event to CheckBox
 
-To bind the change event in the checkbox [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html#Syncfusion_Blazor_Buttons_SfCheckBox_1_ValueChange) event is used and the event is triggered when the value in the checkbox changes.
+The component-specific change event is bound using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html#Syncfusion_Blazor_Buttons_SfCheckBox_1_ValueChange) event of the CheckBox. This event is triggered when the CheckBox value changes. The `ChangeEventArgs<bool>` type is from `Syncfusion.Blazor.Buttons` (it is not the framework's `Microsoft.AspNetCore.Components.ChangeEventArgs`), so that namespace must be imported.
+
+`@onchange` is used for the framework's native change behavior with `ChangeEventArgs` (object `Value`). `ValueChange` is used when a strongly typed `ChangeEventArgs<bool>` payload from Syncfusion is required.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -58,7 +76,7 @@ To bind the change event in the checkbox [ValueChange](https://help.syncfusion.c
     private bool isChecked = true;
     private void ValueChange(ChangeEventArgs<bool> args)
     {
-        //ValueChange Event triggered
+        // ValueChange event triggered
         var state = args.Checked;
     }
 }
