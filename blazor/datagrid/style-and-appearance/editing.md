@@ -9,7 +9,7 @@ documentation: ug
 
 # Editing Customization in Blazor Data Grid
 
-The appearance of editing elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS.
+The appearance of editing elements in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS.
 
 - **Edited and newly added rows:** Highlights rows that are being modified or newly inserted.
 - **Edited row input elements:** Displays text boxes used to enter or update values during editing.
@@ -148,7 +148,7 @@ internal sealed class OrderData
 
 The **.e-edit-dialog** and **.e-dlg-header-content** classes style the dialog header when dialog editing is enabled.
 
-> The edit dialog appears only when `GridEditSettings Mode="EditMode.Dialog"` is set on the grid. Set this property to render the dialog and apply the styles in this section. Apply CSS to differentiate the header:
+> The edit dialog appears only when `GridEditSettings Mode="EditMode.Dialog"` is set on the Data Grid. Set this property to render the dialog and apply the styles in this section. Apply CSS to differentiate the header:
 
 ```css
 .e-edit-dialog .e-dlg-header-content {
@@ -259,7 +259,7 @@ internal sealed class OrderData
 
 ## Customize command column buttons
 
-The **.e-edit**, **.e-delete**, **.e-update**, and **.e-cancel-icon** classes style the command column buttons in the Blazor DataGrid. Use CSS to adjust their appearance:
+The **.e-edit**, **.e-delete**, **.e-update**, and **.e-cancel-icon** classes style the command column buttons in the Blazor Data Grid. Use CSS to adjust their appearance:
 
 ```css
 .e-grid .e-delete::before,
