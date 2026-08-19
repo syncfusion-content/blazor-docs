@@ -9,7 +9,7 @@ documentation: ug
 
 # Filtering Customization in Blazor Data Grid
 
-The appearance of filtering elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. Styling options are available for different parts of the filtering interface:
+The appearance of filtering elements in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. Styling options are available for different parts of the filtering interface:
 
 - **Filter bar cell and input elements:** Used to enter filter values directly in the header row.
 - **Input focus styles:** Visual highlight applied when the filter input field is focused.
@@ -42,7 +42,7 @@ The **.e-input** class inside **.e-filterbarcell** styles the input field in the
 }
 ```
 
-Properties such as **font-family**, **font-size**, and **border** can be adjusted to improve readability and match the grid design.
+Properties such as **font-family**, **font-size**, and **border** can be adjusted to improve readability and match the Data Grid design.
 
 ![Filter bar input with custom font](../images/style-and-appearance/filter-bar-input-element.webp)
 
@@ -248,7 +248,7 @@ Change properties like **font-family**, **background-color**, and **border** to 
 
 The **.e-contextmenu-container ul** descendant selector inside **.e-filter-popup** styles the number filter list in the Excel-style filter dialog. Apply CSS to change its appearance.
 
-> **Note:** This style applies only when the grid uses Excel-style filtering. Set `Type="FilterType.Excel"` in `GridFilterSettings` to render the number filter menu that contains the `.e-contextmenu-container` element.
+> **Note:** This style applies only when the Data Grid uses Excel-style filtering. Set `Type="FilterType.Excel"` in `GridFilterSettings` to render the number filter menu that contains the `.e-contextmenu-container` element.
 
 ```css
 .e-grid .e-filter-popup .e-contextmenu-container ul {
