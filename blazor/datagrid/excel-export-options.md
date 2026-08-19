@@ -9,28 +9,40 @@ documentation: ug
 
 # Excel Export Options in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) allows customization of Excel and CSV export functionality. This flexibility enables precise control over the exported content and layout to meet specific requirements.
+The [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) allows customization of Excel and CSV export functionality. This flexibility enables precise control over the exported content and layout to meet specific requirements.
 
-The export behavior can be customized using the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) property. This property supports various options, including:
+The export behavior can be customized using the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) property. The following options are covered in this page:
 
-* Exporting specific columns.
-* Including or excluding hidden columns.
-* Exporting with a custom data source.
-* Changing the file name.
-* Adding headers and footers.
-* Exporting multiple Grids.
-* Customizing data using queries.
-* Defining delimiters for CSV export.
+* Exporting current page records.
+* Exporting the selected records.
+* Exporting grouped records.
+* Exporting with hidden columns.
+* Showing or hiding columns while exporting.
+* Defining a custom file name.
+* Customizing columns on export.
+* Customizing font and color.
+* Customizing the background color.
+* Adding additional worksheets.
+* Adding header and footer content.
+* Applying conditional cell formatting.
 * Encoding support for CSV export.
-* Applying themes.
+* Exporting Data Grid data as a stream.
+
+> The `ExcelExportProperties` class is also used to configure CSV export options such as encoding and delimiters.
 
 ## Export current page records
 
-Exporting the current page records from the Blazor DataGrid enables generating Excel or CSV documents that reflect only the data currently visible in the Grid. This approach is suitable when the intent is to capture a snapshot of the paginated view rather than the entire dataset.
+Exporting the current page records from the Blazor Data Grid enables generating Excel or CSV documents that reflect only the data currently visible in the Data Grid. This approach is suitable when the intent is to capture a snapshot of the paginated view rather than the entire dataset.
 
-To configure this behavior, handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and invoke the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method with the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_ExportType)  property set in the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) object. The available options include:
+Before using this option, set [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) to **true** on the Data Grid. When [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_ExportType) is set to **CurrentPage**, only the records visible on the active page are exported. When the export type is **AllPages**, the export includes all records from the data source.
 
-* **CurrentPage**: Includes only the records shown on the active Grid page.
+To configure this behavior, handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and invoke the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method with the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_ExportType) property set in the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) object.
+
+> When [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) is invoked without an [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) argument, the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_ExportType) property defaults to **AllPages**, so every record from the data source is included in the exported file.
+
+The available options include:
+
+* **CurrentPage**: Includes only the records shown on the active Data Grid page.
 * **AllPages**: Includes all records across all pages.
 
 {% tabs %}
@@ -137,16 +149,20 @@ public class EmployeeData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBHDcDLAWnQITam?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Export the selected records 
+## Export the selected records
 
-Exporting selected records from the Blazor DataGrid enables generating Excel or CSV documents that include only specific data. This approach supports focused exports based on selection.
+Exporting selected records from the Blazor Data Grid enables generating Excel or CSV documents that include only specific data. This approach exports user-selected records only.
+
+Before using this option, enable row selection by setting [GridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html) in the Data Grid.
 
 To export selected records:
 
 1. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event.
-2. Retrieve the selected records using [GetSelectedRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRecordsAsync) .
-3. Assign the selected data to [ExportProperties.DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_DataSource)  property.
+2. Retrieve the selected records using [GetSelectedRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRecordsAsync).
+3. Assign the selected data to [ExportProperties.DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_DataSource) property.
 4. Invoke the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
+
+> When no rows are selected, [GetSelectedRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRecordsAsync) returns an empty collection.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -240,7 +256,7 @@ public class OrderData
 
 ## Exporting grouped records
 
-The Blazor DataGrid supports exporting grouped records with outline formatting, allowing detailed rows to be collapsed for improved readability in the exported Excel document. This approach preserves the grouping structure and is suitable for sharing grouped data.
+The Blazor Data Grid supports exporting grouped records with outline formatting, allowing detailed rows to be collapsed for improved readability in the exported Excel document. This approach preserves the grouping structure and is suitable for sharing grouped data.
 
 To enable grouped record export:
 
@@ -335,23 +351,23 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNrdNwZLqscObBez?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Limitations
+### Limitations
 
-Microsoft Excel supports a maximum of seven nested outline levels. The Blazor DataGrid can export up to seven levels of grouped records with outline formatting. If the grouping exceeds this limit, the exported document will not include outline structures.
+Microsoft Excel supports a maximum of seven nested outline levels. The Blazor Data Grid can export up to seven levels of grouped records with outline formatting. If the grouping exceeds this limit, the exported document will not include outline structures.
 
-Refer to the [Microsoft Excel](https://learn.microsoft.com/en-us/sql/reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs?view=sql-server-2017#ExcelLimitations) limitations for more details.
+Refer to the [Excel specifications and limits](https://support.microsoft.com/en-us/office/excel-specifications-and-limits-1672b34d-7043-467e-8eea-6a29216401ed) page for more details.
 
 ## Export with hidden columns
 
-The Blazor DataGrid supports exporting columns that are hidden in the UI but required in the exported Excel or CSV document. This approach helps include important data in the exported file without showing it in the Grid.
+The Blazor Data Grid supports exporting columns that are hidden in the UI but required in the exported Excel or CSV document. This approach helps include important data in the exported file without showing it in the Data Grid.
 
 To include hidden columns in the export:
 
-1. Set [ExcelExportProperties.includeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeHiddenColumn) to **true**.
+1. Set [ExcelExportProperties.IncludeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeHiddenColumn) to **true**.
 2. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event.
 3. Invoke the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
 
-In this configuration, the **ShipCity** column is hidden in the Grid and included in the exported Excel file when `ExcelExportProperties.IncludeHiddenColumn` is enabled.
+In this configuration, the **ShipCity** column is hidden in the Data Grid and included in the exported Excel file when `ExcelExportProperties.IncludeHiddenColumn` is enabled.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -454,23 +470,22 @@ public class OrderData
 
 ## Show or hide columns while exporting
 
-The Blazor DataGrid allows showing or hiding specific columns during export. This helps include only the required data in the Excel or CSV file.
+The Blazor Data Grid allows showing or hiding specific columns during export. This helps include only the required data in the Excel or CSV file.
 
 To configure column visibility during export:
 
 1. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and update the column visibility using the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Visible) property.
-2. Export the Grid using the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
+2. Export the Data Grid using the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
 3. Handle the [ExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExportComplete) event to restore the original visibility.
 
-In this configuration, the **CustomerID** column is shown only during export, and the **ShipCity** column is hidden.
+In this configuration, the **CustomerID** column is shown during export only, while the **ShipCity** column remains hidden.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders"  AllowExcelExport="true"
-Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
     <GridEvents OnToolbarClick="ToolbarClickHandler" ExportComplete="ExportCompleteHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
@@ -484,8 +499,10 @@ Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
 @code {
     private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
+    // CustomerID starts hidden in the Data Grid and becomes visible only during export.
+    // ShipCity starts visible in the Data Grid and is hidden during export to demonstrate the toggle behavior.
     public bool isCustomerIDVisible { get; set; } = false;
-    public bool isShipCityVisible { get; set; }
+    public bool isShipCityVisible { get; set; } = true;
 
     protected override void OnInitialized()
     {
@@ -497,7 +514,7 @@ Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
         if (args.Item.Id == "Grid_excelexport")
         {
             isCustomerIDVisible = true;
-            isShipCityVisible=false;
+            isShipCityVisible = false;
             await Grid.ExportToExcelAsync();
         }
     }
@@ -505,7 +522,7 @@ Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
     public void ExportCompleteHandler(object args)
     {
         isCustomerIDVisible = false;
-        isShipCityVisible=true;
+        isShipCityVisible = true;
     }
 }
 
@@ -566,7 +583,7 @@ public class OrderData
 
 ## Define file name
 
-The Blazor DataGrid supports assigning a custom file name when exporting data to Excel or CSV formats. This capability helps generate descriptive file names, improving the organization and identification of exported documents.
+The Blazor Data Grid supports assigning a custom file name when exporting data to Excel or CSV formats. This capability helps generate descriptive file names, improving the organization and identification of exported documents.
 
 To configure a custom file name, set the [FileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_FileName) property of the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) class within the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event. Use this configuration as a parameter in the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method to initiate the export process with the specified file name.
 
@@ -671,7 +688,7 @@ public class OrderData
 
 ## Customizing columns on export
 
-The Blazor DataGrid allows customizing which columns appear in the exported Excel or CSV file. This helps adjust column headers, alignment, and formatting based on export requirements.
+The Blazor Data Grid allows customizing which columns appear in the exported Excel or CSV file. This helps adjust column headers, alignment, and formatting based on export requirements.
 
 To customize columns during export:
 
@@ -707,7 +724,7 @@ In this configuration, the **OrderID** column is exported with the header text *
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_excelexport") //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_excelexport") // Id is the combination of the Data Grid's ID and the item name.
         {
             List<GridColumn> ExportColumns = new List<GridColumn>();
             ExportColumns.Add(new GridColumn() { Field = "OrderID", HeaderText = "Order Number", Width = "120" });
@@ -775,29 +792,28 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBRZwXBKnnYFopT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> By default, the exported Excel document uses the **Material** theme styling.
-
 ## Font and color customization
 
-The Blazor DataGrid supports applying font and color styles to the exported Excel or CSV document. This helps maintain a consistent and readable appearance for exported data.
+The Blazor Data Grid supports applying font and color styles to the exported Excel or CSV document. This helps maintain a consistent and readable appearance for exported data.
+
+> By default, the exported Excel document uses the **Material** theme styling.
 
 To apply styling:
 
 1. Define the [Theme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Theme) property in [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html).
-2. Set font styles for the [Caption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html#Syncfusion_Blazor_Grids_ExcelTheme_Caption), [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html#Syncfusion_Blazor_Grids_ExcelTheme_Header), and [Record](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html#Syncfusion_Blazor_Grids_ExcelTheme_Record) sections using the ExcelStyle class.
+2. Set font styles for the [Caption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html#Syncfusion_Blazor_Grids_ExcelTheme_Caption), [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html#Syncfusion_Blazor_Grids_ExcelTheme_Header), and [Record](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html#Syncfusion_Blazor_Grids_ExcelTheme_Record) sections using the [ExcelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelStyle.html) class.
 3. Pass the theme configuration to the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method in the OnToolbarClick event.
 
-**Theme Properties**
-
+### Theme properties
 
 * **Caption**
 Applies styling to the caption section in the exported document. The caption is typically a title or description shown at the top of the Excel or CSV sheet.
 
 * **Header**
-Applies styling to the column headers in the exported document. These headers match the column titles shown in the Grid.
+Applies styling to the column headers in the exported document. These headers match the column titles shown in the Data Grid.
 
 * **Record**
-Applies styling to the data rows in the exported document. These rows contain the actual values from the Grid.
+Applies styling to the data rows in the exported document. These rows contain the actual values from the Data Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -898,27 +914,21 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLRZGtVqHvLZXAB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Customizing the background color for a Grid in an exported Excel or CSV document
+## Customize background color on export
 
-The Blazor DataGrid allows customizing the background color of Grid content—such as header, record, and caption rows—when exporting to Excel or CSV formats. This improves readability and enhances the visual appearance of exported files.
+The Blazor Data Grid allows customizing the background color of Data Grid content—such as header, record, and caption rows—when exporting to Excel or CSV formats. This improves readability and enhances the visual appearance of exported files.
 
 To apply background color:
 
 1. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event.
-
 2. Create an instance of [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html).
-
 3. Define an [ExcelTheme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html) and set a custom [ExcelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelStyle.html) with the [BackColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelStyle.html#Syncfusion_Blazor_Grids_ExcelStyle_BackColor) property.
-
 4. Assign the style to the following properties of the theme:
-
-* [Caption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html#Syncfusion_Blazor_Grids_ExcelTheme_Caption): Applies background color to the caption section at the top of the exported document.
-* [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html#Syncfusion_Blazor_Grids_ExcelTheme_Header): Applies background color to the column headers.
-* [Record](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html#Syncfusion_Blazor_Grids_ExcelTheme_Record): Applies background color to the data rows.
-
+   * [Caption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html#Syncfusion_Blazor_Grids_ExcelTheme_Caption): Applies background color to the caption section at the top of the exported document.
+   * [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html#Syncfusion_Blazor_Grids_ExcelTheme_Header): Applies background color to the column headers.
+   * [Record](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html#Syncfusion_Blazor_Grids_ExcelTheme_Record): Applies background color to the data rows.
 5. Set the theme to the Theme property of `ExcelExportProperties`.
-
-6. Invoke the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) to export the Grid with the applied background color.
+6. Invoke the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) to export the Data Grid with the applied background color.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -939,7 +949,6 @@ To apply background color:
 @code {
     private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
-    public string FileName { get; set; } = string.Empty;
 
     protected override void OnInitialized()
     {
@@ -1018,23 +1027,23 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrHXGDLAxYiCjdl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Add additional worksheets to Excel document while exporting
+## Add additional worksheets while exporting
 
-The Blazor DataGrid allows adding additional worksheets to the exported Excel or CSV document. This is useful for including supplementary information, summaries, or additional datasets alongside the Grid content.
+The Blazor Data Grid allows adding additional worksheets to the exported Excel or CSV document. This is useful for including supplementary information, summaries, or additional datasets alongside the Data Grid content.
+
+By default, the Data Grid exports data to the first worksheet. The sheet name can be customized by using the **Workbook.Worksheets[0].Name** property.
 
 To add additional worksheets during export:
 
-1. Create a new instance of the **Workbook** class and assign it to the [Workbook](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Workbook)  property of [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html).
+1. Create a new instance of the **Workbook** class and assign it to the [Workbook](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Workbook) property of [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html).
 
 2. Use the **Worksheets.Add** method to append new worksheets to the workbook.
 
 3. Set the [GridSheetIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_GridSheetIndex) property to **0** to specify the worksheet index where the Grid data should be placed.
 
-4. The Grid exports data to the first worksheet by default, you can customize the sheet name using the **Workbook.Worksheets[0].Name** property. Optionally, you can use the `GridSheetIndex` property to specify the worksheet index used for exporting.
+4. Invoke the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method to export the Grid with the additional worksheets.
 
-5. Invoke the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) to export the Grid with the additional worksheets.
-
-Two extra blank worksheets are added along with the worksheet containing the Grid data in this configuration.
+In this example, two additional blank worksheets are added alongside the worksheet containing the Data Grid data.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1073,10 +1082,9 @@ Two extra blank worksheets are added along with the worksheet containing the Gri
             // Add additional worksheets.
             ExportProperties.Workbook.Worksheets.Add();
             ExportProperties.Workbook.Worksheets.Add();
-            // Define the Gridsheet index where Grid data must be exported.
+            // Define the Grid sheet index where Data Grid data must be exported.
             ExportProperties.GridSheetIndex = 0;
-            //Access the first worksheet and assign a custom name
-            // Worksheets collection is available after Workbook initialization
+            // Access the first worksheet and assign a custom name.
             ExportProperties.Workbook.Worksheets[0].Name = "My Exported Data";
             await Grid.ExportToExcelAsync(ExportProperties);
         }
@@ -1138,17 +1146,15 @@ public class OrderData
 
 ## Encoding support for CSV export
 
-The Blazor DataGrid supports specifying a custom character encoding when exporting data to CSV documents. This capability ensures compatibility with legacy systems or software that does not support UTF-8.
+The Blazor Data Grid supports specifying a custom character encoding when exporting data to CSV documents. This capability ensures compatibility with legacy systems or software that does not support UTF-8.
 
-To configure a custom encoding, include the **System.Text** namespace in the component. This namespace provides access to the available encoding types. For details about the supported encoding formats, refer to the Microsoft System.Text [documentation](https://learn.microsoft.com/en-us/dotnet/api/system.text.encoding?).
+To configure a custom encoding, include the **System.Text** namespace in the component. This namespace provides access to the available encoding types. For details about the supported encoding formats, refer to the [Encoding](https://learn.microsoft.com/en-us/dotnet/api/system.text.encoding) API documentation.
 
 
-### When to use custom encoding
+**When to use custom encoding**
 
 - When exporting data that contains special characters or symbols.
-
 - When integrating with legacy systems that require a specific encoding.
-
 - When opening CSV files in software that does not default to UTF-8.
 
 > By default, **Encoding.UTF8** is applied when exporting the CSV document.
@@ -1164,7 +1170,7 @@ To configure a custom encoding, handle the [OnToolbarClick](https://help.syncfus
 <SfGrid ID="Grid" @ref="Grid" DataSource="@GridData" AllowPaging="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })" AllowExcelExport="true">
     <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrdersDetails"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(OrdersDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true"></GridColumn>
         <GridColumn Field=@nameof(OrdersDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
         <GridColumn Field=@nameof(OrdersDetails.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrdersDetails.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" Type="ColumnType.Date" Width="160"></GridColumn>
@@ -1192,7 +1198,7 @@ To configure a custom encoding, handle the [OnToolbarClick](https://help.syncfus
             }
             else if (args.Item.Id == "Grid_csvexport")
             {
-                // Explicitly set UTF-8 encoding. Use other encodings (e.g., Encoding.Latin1) for legacy system compatibility.
+                // Explicitly set UTF-8 encoding. Use other encodings (e.g., Encoding.GetEncoding(1252)) for legacy system compatibility.
                 await this.Grid.ExportToCsvAsync(new ExcelExportProperties
                 {
                     Encoding = System.Text.Encoding.UTF8,
@@ -1258,17 +1264,15 @@ To configure a custom encoding, handle the [OnToolbarClick](https://help.syncfus
 {% endhighlight %}
 {% endtabs %}
 
-> Note: The `ExcelExportProperties` class is also used for configuring CSV export options, including encoding.
-
 ## Conditional cell formatting
 
-The Blazor DataGrid supports conditional formatting of cells in the exported Excel document. This feature enables customizing the appearance of specific cells based on values or defined criteria.
+The Blazor Data Grid supports conditional formatting of cells in the exported Excel document. This feature enables customizing the appearance of specific cells based on values or defined criteria.
 
 To apply conditional formatting during export:
 
 1. Handle the [ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent) event. This event is triggered for each cell during the Excel export process.
 
-2. Access the [args.Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_ExcelHeaderQueryCellInfoEventArgs_Style) property from the event argument and modify its properties such as `BackColor` based on condition.
+2. Access the [args.Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_ExcelHeaderQueryCellInfoEventArgs_Style) property from the event argument and modify its properties such as `BackColor` based on a condition.
 
 > The cell object can also be accessed using the [args.Cell.CellStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_ExcelHeaderQueryCellInfoEventArgs_Cell) property to apply styles conditionally.
 
@@ -1401,7 +1405,7 @@ public class OrderData
 
 ## Adding header and footer in the exported Excel document
 
-The Excel or CSV export feature in Blazor DataGrid supports including header and footer content in the exported Excel or CSV document. This feature is useful for adding additional information such as branding, contact details, or summary notes.
+The Excel or CSV export feature in Blazor Data Grid supports including header and footer content in the exported Excel or CSV document. This feature is useful for adding additional information such as branding, contact details, or summary notes.
 
 To include header and footer content:
 
@@ -1413,7 +1417,7 @@ To include header and footer content:
 
 3. Assign the header and footer content using a collection of [ExcelRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelRow.html) and [ExcelCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelCell.html) objects.
 
-4. Invoke [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) to export the Grid with the configured header and footer.
+4. Invoke [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) to export the Data Grid with the configured header and footer.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1645,13 +1649,13 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZBRZwDVKQLMtnCu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Exporting Grid Data as Stream
+## Export Data Grid data as a stream
 
-The Blazor DataGrid supports exporting Grid data as a memory stream, enabling programmatic handling before saving or processing. This includes exporting Grid data as a memory stream, merging multiple memory streams, and converting the memory stream to a file stream for download.
+The Blazor Data Grid supports exporting Grid data as a memory stream, enabling programmatic handling before saving or processing. This includes exporting Data Grid data as a memory stream, merging multiple memory streams, and converting the memory stream to a file stream for download.
 
-### Exporting Grid Data as Memory Stream
+### Export grid data as a memory stream
 
-The export-to-memory-stream feature enables exporting Grid data to a memory stream instead of saving it directly to a file. This approach is useful for generating and serving the file directly to the client without storing it on the server.
+The export-to-memory-stream feature enables exporting Data Grid data to a memory stream instead of saving it directly to a file. This approach is useful for generating and serving the file directly to the client without storing it on the server.
 
 To export as a memory stream:
 
@@ -1721,8 +1725,8 @@ Include the script reference in the application:
 {% endhighlight %}
 {% endtabs %}
 
-**Step 3: Export Grid data as memory stream and invoke the JavaScript function**
-In the **Index.razor** file, configure the Grid and handle the export operation in the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event. Use the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_System_Boolean_Syncfusion_Blazor_Grids_ExcelExportProperties_) method with the `asMemoryStream` parameter set to **true**, and invoke the `saveAsFile` JavaScript function to download the exported Excel file.
+**Step 3: Export Data Grid data as memory stream and invoke the JavaScript function**
+In the **Index.razor** file, configure the Data Grid and handle the export operation in the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event. Use the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_System_Boolean_Syncfusion_Blazor_Grids_ExcelExportProperties_) method with the `asMemoryStream` parameter set to **true**, and invoke the `saveAsFile` JavaScript function to download the exported Excel file.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1755,7 +1759,7 @@ In the **Index.razor** file, configure the Grid and handle the export operation 
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {       
-        if (args.Item.Id == "Grid_excelexport") //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_excelexport") // Id is the combination of the Grid's ID and the item name.
         {           
            MemoryStream streamDoc =  await Grid.ExportToExcelAsync(asMemoryStream: true);
            await JSRuntime.InvokeVoidAsync("saveAsFile", new object[] { "ExcelStream.xlsx", Convert.ToBase64String(streamDoc.ToArray()), true });
@@ -1818,7 +1822,7 @@ public class OrderData
 
 ### Enable filtering in exported file
 
-The Blazor DataGrid can export data as a memory stream, allowing modification of the Excel workbook before the file is delivered to the client. With the [XlsIO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library, Excel features such as **AutoFilter** can be enabled programmatically so that the exported file opens with filter options already available on each column header.
+The Blazor Data Grid can export data as a memory stream, allowing modification of the Excel workbook before the file is delivered to the client. With the [XlsIO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library, Excel features such as **AutoFilter** can be enabled programmatically so that the exported file opens with filter options already available on each column header.
 
 This method is helpful when the exported **Excel** file needs to support data analysis, sorting, and filtering immediately after download, without requiring any additional manual setup.
 
@@ -1912,9 +1916,9 @@ function saveAsFile(filename, bytesBase64) {
 {% endhighlight %}
 {% endtabs %}
 
-### Converting Memory Stream to File Stream for Excel Export
+### Convert memory stream to file stream
 
-The Excel Export feature in Blazor DataGrid allows exporting Grid data to an Excel workbook. In scenarios where the exported document needs to be saved as a physical file on the system, the memory stream can be converted into a file stream. This is useful when storing or processing the file outside the browser context.
+The Excel Export feature in Blazor Data Grid allows exporting Data Grid data to an Excel workbook. In scenarios where the exported document needs to be saved as a physical file on the system, the memory stream can be converted into a file stream. This is useful when storing or processing the file outside the browser context.
 
 To save the exported Excel file locally:
 
@@ -1955,7 +1959,7 @@ In this configuration, the memory stream is converted and saved as a file named 
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {       
-        if (args.Item.Id == "Grid_excelexport") //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_excelexport") // Id is the combination of the Grid's ID and the item name.
         {
             MemoryStream streamDoc =  await Grid.ExportToExcelAsync(asMemoryStream: true);
             
@@ -2028,14 +2032,14 @@ public class OrderData
 
 > A complete sample is available on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Converting%20_Memory%20_File_Stream/Exporting_Stream).
 
-### Merging Two Excel Memory Streams
+### Merge two Excel memory streams
 
 To merge two Excel memory streams and export the combined file as a single Excel workbook, use the [Syncfusion.Blazor.XlsIO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library to copy worksheets between workbooks.
 
 In this configuration, two memory streams are used:
 
-- **streamDoc1:** Represents the default Grid export.
-- **streamDoc2:** Represents a customized Grid export using [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html).
+- **streamDoc1:** Represents the default Data Grid export.
+- **streamDoc2:** Represents a customized Data Grid export using [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html).
 The merging process combines the contents of both streams into a single workbook, which is then exported as a memory stream and downloaded via JavaScript interop.
 
 {% tabs %}
@@ -2068,7 +2072,7 @@ The merging process combines the contents of both streams into a single workbook
     }
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {       
-        if (args.Item.Id == "Grid_excelexport") //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_excelexport") // Id is the combination of the Grid's ID and the item name.
         {
             //Merging two memory stream for Excel export.
             MemoryStream mergedStream = new MemoryStream();
@@ -2078,7 +2082,7 @@ The merging process combines the contents of both streams into a single workbook
             //Create a copy of streamDoc1 to access the memory stream.
             MemoryStream copyOfStreamDoc1 = new MemoryStream(streamDoc1.ToArray());
             
-            //Customized Grid memory stream.
+            //Customized Data Grid memory stream.
             ExcelExportProperties ExcelProperties = new ExcelExportProperties();
             ExcelTheme Theme = new ExcelTheme();
             ExcelStyle ThemeStyle = new ExcelStyle()
