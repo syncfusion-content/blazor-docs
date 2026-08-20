@@ -196,7 +196,7 @@ When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfu
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrdZnAtLAdDGBiO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage="./images/blazor-menubar-self-referential-data.webp" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrdZnAtLAdDGBiO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Self-Referential Data in Blazor MenuBar](./images/blazor-menubar-self-referential-data.webp)" %}
 
 ## Custom Menu Bar Items
 
