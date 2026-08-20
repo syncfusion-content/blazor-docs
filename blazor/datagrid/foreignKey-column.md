@@ -9,17 +9,19 @@ documentation: ug
 
 # Foreign Key Column in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports displaying related data from a **foreign key data source** in a column. This feature is useful when a column represents a foreign key relationship with another data source.
+The [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports displaying related data from a foreign data source in a column. This feature is useful when a column represents a foreign key relationship with another data source.
 
 A foreign key column can be configured using the following properties of the [GridForeignColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridForeignColumn-1.html) directive:
 
 * [ForeignDataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridForeignColumn-1.html#Syncfusion_Blazor_Grids_GridForeignColumn_1_ForeignDataSource) – Specifies the data source that contains the related data.
-* [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) – Maps the column in the Grid to the field in the foreign data source that represents the foreign key.
-* [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) – Specifies the field from the foreign data source that should be displayed in the Grid.
+* [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) – Maps the column in the Blazor Data Grid to the field in the foreign data source that represents the foreign key.
+* [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) – Specifies the field from the foreign data source that should be displayed in the Blazor Data Grid.
+* `TValue` – Represents the type of each item in the foreign data source (for example, `EmployeeData`). When the foreign data source is bound through `SfDataManager` in a remote scenario, include the type parameter on `GridForeignColumn` so the foreign key column can resolve the related records.
+
 
 ## Binding local data
 
-The Blazor DataGrid supports binding local data to a foreign key column. This allows related data from a local data source to be displayed within the Grid.
+The Blazor Data Grid supports binding local data to a foreign key column. This allows related data from a local data source to be displayed within the Data Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -115,18 +117,20 @@ public class EmployeeDetails
 
 ## Binding remote data
 
-The Blazor DataGrid supports binding remote data to a foreign key column using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). This approach is useful when retrieving data from services such as **OData**, **Web API**, or other remote endpoints.
+The Blazor Data Grid supports binding remote data to a foreign key column using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). This approach is useful when retrieving data from services such as **OData**, **Web API**, or other remote endpoints.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315">
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
          <GridForeignColumn TValue="EmployeeData" Field=@nameof(OrderDetails.EmployeeID) HeaderText="Employee Name" ForeignKeyValue="FirstName" Width="150">
-            <Syncfusion.Blazor.Data.SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Employees" CrossDomain="true" Adaptor=" Syncfusion.Blazor.Adaptors.ODataV4Adaptor">
-            </Syncfusion.Blazor.Data.SfDataManager>
+            <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Employees" CrossDomain="true" Adaptor="Adaptors.ODataV4Adaptor">
+            </SfDataManager>
         </GridForeignColumn>
         <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -201,6 +205,8 @@ public class OrderDetails
 
 The Blazor DataGrid supports customizing the editor for a foreign key column using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature. By default, a [dropdown](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) is rendered for editing foreign key columns. Other components, such as [ComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started-with-web-app), can be used by defining an edit template.
 
+> * The editing feature demonstrated in this section requires a primary key column (`IsPrimaryKey="true"`), toolbar items, and the `GridEditSettings` configuration. To learn about configuring these prerequisites, refer to the [Editing in Blazor Data Grid documentation](https://blazor.syncfusion.com/documentation/datagrid/editing).
+
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
@@ -248,20 +254,15 @@ The Blazor DataGrid supports customizing the editor for a foreign key column usi
         {
             if (Employees.Count() == 0)
             {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Employees.Add(new EmployeeData( 1, "Nancy"));
-                    Employees.Add(new EmployeeData( 2, "Andrew"));
-                    Employees.Add(new EmployeeData( 3, "Janet"));
-                    Employees.Add(new EmployeeData( 4, "Nancy"));
-                    Employees.Add(new EmployeeData( 5, "Margaret"));
-                    Employees.Add(new EmployeeData( 6, "Steven"));
-                    Employees.Add(new EmployeeData( 7, "Janet"));
-                    Employees.Add(new EmployeeData( 8, "Andrew"));
-                    Employees.Add(new EmployeeData(9, "Nancy"));
-                    code += 5;
-                }
+                Employees.Add(new EmployeeData( 1, "Nancy"));
+                Employees.Add(new EmployeeData( 2, "Andrew"));
+                Employees.Add(new EmployeeData( 3, "Janet"));
+                Employees.Add(new EmployeeData( 4, "Margaret"));
+                Employees.Add(new EmployeeData( 5, "Steven"));
+                Employees.Add(new EmployeeData( 6, "Michael"));
+                Employees.Add(new EmployeeData( 7, "Robert"));
+                Employees.Add(new EmployeeData( 8, "Laura"));
+                Employees.Add(new EmployeeData( 9, "Anne"));
             }
             return Employees;
         }
@@ -287,20 +288,15 @@ The Blazor DataGrid supports customizing the editor for a foreign key column usi
         {
             if (Orders.Count() == 0)
             {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248,1, "Reims", 32.18));
-                    Orders.Add(new OrderData(10249,2, "Münster",33.33));
-                    Orders.Add(new OrderData(10250,3, "Rio de Janeiro",12.35));
-                    Orders.Add(new OrderData(10251,4, "Reims", 22.65));
-                    Orders.Add(new OrderData(10252,5, "Lyon", 63.43));
-                    Orders.Add(new OrderData(10253,6, "Charleroi",56.98));
-                    Orders.Add(new OrderData(10254,7, "Rio de Janeiro", 45.65));
-                    Orders.Add(new OrderData(10255,8, "Münster", 11.13));
-                    Orders.Add(new OrderData(10256,9, "Reims", 87.59));
-                    code += 5;
-                }
+                Orders.Add(new OrderData(10248,1, "Reims", 32.18));
+                Orders.Add(new OrderData(10249,2, "Münster",33.33));
+                Orders.Add(new OrderData(10250,3, "Rio de Janeiro",12.35));
+                Orders.Add(new OrderData(10251,4, "Reims", 22.65));
+                Orders.Add(new OrderData(10252,5, "Lyon", 63.43));
+                Orders.Add(new OrderData(10253,6, "Charleroi",56.98));
+                Orders.Add(new OrderData(10254,7, "Rio de Janeiro", 45.65));
+                Orders.Add(new OrderData(10255,8, "Münster", 11.13));
+                Orders.Add(new OrderData(10256,9, "Reims", 87.59));
             }
             return Orders;
         }
@@ -312,15 +308,15 @@ The Blazor DataGrid supports customizing the editor for a foreign key column usi
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrxZmNqBAHJewHX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVRZlVtABeILHBY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize filter UI in foreign key column
 
-The Blazor DataGrid allows customizing the filtering interface for foreign key columns using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property. By default, a dropdown is rendered for filtering foreign key columns. The `FilterTemplate` property enables creating a custom UI for filtering.
+The Blazor Data Grid allows customizing the filtering interface for foreign key columns using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property. By default, a dropdown is rendered for filtering foreign key columns. The `FilterTemplate` property enables creating a custom UI for filtering.
 
-> For all filter types other than `FilterBar`, filtering parameters are passed as **PredicateModel&lt;T&gt;**, where **T** represents the type of the [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) property when using a foreign key column.
+> For all filter types other than `FilterBar`, filtering parameters are passed as **PredicateModel&lt;T&gt;**. **T** must match the type of the [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) property when a foreign key column is used. For example, if `ForeignKeyValue="FirstName"` is a `string`, use `PredicateModel<string>`, as shown below.
 
-In this configuration, a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) is rendered as the filter UI for the **EmployeeID** foreign key column. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property of `SfDropDownList` is set to the **employees** collection, and the `Fields` property maps **FirstName** as the **display text** and **EmployeeID** as the **value**. The `Value` property is bound to the current filter value of the column.
+In this configuration, a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) is rendered as the filter UI for the **EmployeeID** foreign key column. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property of `SfDropDownList` is set to the **Employees** collection, and the `Fields` property maps **FirstName** as the **display text** and **EmployeeID** as the **value**. The `Value` property is bound to the current filter value of the column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -333,6 +329,7 @@ In this configuration, a [DropDownList](https://blazor.syncfusion.com/documentat
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridForeignColumn Field=@nameof(OrderDetails.EmployeeID) HeaderText="Employee Name" ForeignKeyValue="FirstName" ForeignDataSource="@Employees" Width="150">
             <FilterTemplate>
+                <!-- The generic type of PredicateModel must match the ForeignKeyValue type (string here, since ForeignKeyValue="FirstName"). -->
                 <SfDropDownList Placeholder="FirstName" ID="FirstName" @bind-Value="@((context as PredicateModel<string>).Value)" TItem="EmployeeDetails" TValue="string" DataSource="@Employees">
                     <DropDownListFieldSettings Value="FirstName" Text="FirstName"></DropDownListFieldSettings>
                 </SfDropDownList>
@@ -426,7 +423,7 @@ public class EmployeeDetails
 
 ## Use filter bar template in foreign key column
 
-The Blazor DataGrid allows customizing the filter bar for foreign key columns using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property. This feature enables rendering a custom component or HTML template in the filter bar instead of the default UI.
+The Blazor Data Grid allows customizing the filter bar for foreign key columns using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property. This feature enables rendering a custom component or HTML template in the filter bar instead of the default UI.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -438,7 +435,7 @@ The Blazor DataGrid allows customizing the filter bar for foreign key columns us
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridForeignColumn Field=@nameof(OrderDetails.EmployeeID) HeaderText="Employee Name" ForeignKeyValue="FirstName" ForeignDataSource="@Employees" Width="150">
             <FilterTemplate>
-                <SfDropDownList ID="EmployeeID" PlaceHolder="Employee Name" Value="@((string)(context as PredicateModel).Value)" DataSource="@DropDownData" TValue="string" TItem="DropDownOrder">
+                <SfDropDownList ID="EmployeeID" Placeholder="Employee Name" Value="@((string)(context as PredicateModel).Value)" DataSource="@DropDownData" TValue="string" TItem="DropDownOrder">
                     <DropDownListEvents ValueChange="@Change" TItem="DropDownOrder" TValue="string"></DropDownListEvents>
                     <DropDownListFieldSettings Value="FirstName" Text="FirstName"></DropDownListFieldSettings>
                 </SfDropDownList>
@@ -558,11 +555,11 @@ public class EmployeeDetails
 
 ## Perform aggregation in foreign key column
 
-By default, the Blazor DataGrid does not support aggregation in foreign key columns. However, this can be achieved by using a custom aggregate function.
+By default, the Blazor Data Grid does not support aggregation for foreign key columns. However, aggregation can be achieved by using a custom aggregate function.
 
 To perform aggregation in a foreign key column:
 
-1. Define a foreign key column in the Grid.
+1. Define a foreign key column in the Blazor Data Grid.
 2. Implement a custom aggregate function to calculate the required value.
 3. Assign the function to the `CustomAggregate` property of the aggregate column.
 
@@ -575,7 +572,7 @@ To perform aggregation in a foreign key column:
         <GridAggregate>
             <GridAggregateColumns>
                 <GridAggregateColumn Field="EmployeeID" Type="AggregateType.Custom">
-                    <FooterTemplate Context="data">
+                    <FooterTemplate>
                         Count of Margaret: @CustomAggregateFn()
                     </FooterTemplate>
                 </GridAggregateColumn>
@@ -677,7 +674,7 @@ public class EmployeeDetails
 
 ## Prevent filter query generation for foreign key column
 
-By default, the DataGrid generates a filter query for foreign key columns based on the foreign key value. To override this behavior and apply a custom filter query, use the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtering) event and set the [PreventFilterQuery](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilteringEventArgs.html#Syncfusion_Blazor_Grids_FilteringEventArgs_PreventFilterQuery) property to **true**. Then, define a custom query using the `Query` class.
+By default, the Blazor Data Grid generates a filter query for foreign key columns based on the foreign key value. To override this behavior and apply a custom filter query, use the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtering) event and set the [PreventFilterQuery](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilteringEventArgs.html#Syncfusion_Blazor_Grids_FilteringEventArgs_PreventFilterQuery) property to **true**. Then, define a custom query using the `Query` class.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -703,13 +700,6 @@ By default, the DataGrid generates a filter query for foreign key columns based 
     </GridColumns>
 </SfGrid>
 
-<style>
-    .e-grid .e-gridcontent .e-rowcell.highlight {
-        color: red;
-        font-weight: bolder;
-    }
-</style>
-
 @code {
     private SfGrid<OrderDto> Grid { get; set; }
     private Query currentQuery = new Query();
@@ -734,7 +724,7 @@ By default, the DataGrid generates a filter query for foreign key columns based 
         foreach (var p in args.FilterPredicates)
         {
             const string navigationField = "Employee/FirstName";
-            var op = p.Operator.ToString()?.ToLowerInvariant();
+            var op = p.Operator.ToString().ToLowerInvariant();
             if (string.IsNullOrWhiteSpace(op)) continue;
 
             var value = p.Value ?? p.ActualValue;
@@ -770,7 +760,7 @@ By default, the DataGrid generates a filter query for foreign key columns based 
 
 ## Render foreign key value in column template
 
-The Blazor DataGrid supports rendering foreign key values within a [column template](https://blazor.syncfusion.com/documentation/datagrid/column-template), enabling display of descriptive values from a related data source instead of the underlying foreign key. This approach is useful when a foreign key refers to an ID and a corresponding name or label needs to be shown.
+The Blazor Data Grid supports rendering foreign key values within a [column template](https://blazor.syncfusion.com/documentation/datagrid/column-template), enabling display of descriptive values from a related data source instead of the underlying foreign key. This approach is useful when a foreign key refers to an ID and a corresponding name or label needs to be shown.
 
 To configure this feature, define a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property and bind the required value from the foreign key mapping.
 
@@ -862,7 +852,7 @@ To configure this feature, define a column using the [Template](https://help.syn
 
 ## Enable multiple foreign key columns
 
-The Blazor DataGrid supports configuring multiple foreign key columns with editing options. This feature allows displaying related data from different foreign data sources in the Grid.
+The Blazor Data Grid supports configuring multiple foreign key columns with editing options. This feature allows displaying related data from different foreign data sources in the Data Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -874,7 +864,7 @@ The Blazor DataGrid supports configuring multiple foreign key columns with editi
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
         <GridForeignColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" ForeignKeyValue="CustomerName" ForeignDataSource="@Employees" Width="150"></GridForeignColumn>
         <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
-        <GridForeignColumn Field=@nameof(OrderDetails.EmployeeID) HeaderText=" Ship City" ForeignKeyValue="City" ForeignDataSource="@Countries" Width="150"></GridForeignColumn>
+        <GridForeignColumn Field=@nameof(OrderDetails.EmployeeID) HeaderText="Ship City" ForeignKeyValue="City" ForeignDataSource="@Countries" Width="150"></GridForeignColumn>
         <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -894,12 +884,12 @@ The Blazor DataGrid supports configuring multiple foreign key columns with editi
 public class OrderDetails
 {
     public static List<OrderDetails> order = new List<OrderDetails>();
-    public OrderDetails(int OrderID, string CustomerId, int EmployeeId, string Shipcountry, double Freight)
+    public OrderDetails(int OrderID, string CustomerId, int EmployeeId, string ShipCountry, double Freight)
     {
         this.OrderID = OrderID;
         this.CustomerID = CustomerId;
         this.EmployeeID = EmployeeId;
-        this.ShipCountry = Shipcountry;
+        this.ShipCountry = ShipCountry;
         this.Freight = Freight; 
     }
     public static List<OrderDetails> GetAllRecords()
@@ -997,11 +987,11 @@ public class EmployeeDetails
 
 ## Edit template in foreign key column using remote data
 
-The Blazor DataGrid supports customizing the edit template for foreign key columns when using remote data. By default, a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) is rendered for editing. Other components, such as [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started-with-web-app), can be used by defining an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate).
+The Blazor Data Grid supports customizing the edit template for foreign key columns when using remote data. By default, a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) is rendered for editing. Other components, such as [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started-with-web-app), can be used by defining an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate).
 
 **Key steps**
 
-1. Configure [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) in the Grid for remote **CRUD** operations using [UrlAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_UrlAdaptor).
+1. Configure [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) in the Blazor Data Grid for remote **CRUD** operations using [UrlAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_UrlAdaptor).
 2. Render `SfDataManager` inside the foreign key column for remote foreign data.
 3. Use `EditTemplate` to render a custom component like [SfAutoComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html), bind the foreign key field using [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value), and configure [AutoCompleteFieldSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html) with [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html#Syncfusion_Blazor_DropDowns_AutoCompleteFieldSettings_Text) and [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html#Syncfusion_Blazor_DropDowns_AutoCompleteFieldSettings_Value).
 
