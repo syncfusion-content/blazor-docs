@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with the Stripe Payment Gateway in Blazor components | Syncfusion
-description: Step-by-step guide to build a stripe payment gateway in Blazor app, covering product listings, cart management, checkout and stripe payment with Blazor components.
+title: Getting Started with the Stripe Payment Gateway in a Blazor App | Syncfusion
+description: Step-by-step guide to integrate the Stripe payment gateway into a Blazor shopping cart application, covering Payment Intents, Stripe Elements, and client-side payment confirmation with Blazor components.
 platform: Blazor
 control: Common
 documentation: ug
@@ -9,27 +9,27 @@ documentation: ug
 
 # Getting Started with the Stripe Payment Gateway in Blazor
 
-This guide explains how to integrate the Stripe payment gateway in a Blazor application using [Blazor components](https://www.syncfusion.com/blazor-components). It walks through the core building blocks of a card-based checkout flow, including configuring Stripe, creating and updating Payment Intents, collecting card details through Stripe Elements, and reconciling payment status with the application's order records using webhooks.
+This guide explains how to integrate the Stripe payment gateway in a Blazor application using [Blazor components](https://www.syncfusion.com/blazor-components). It walks through the core building blocks of a card-based checkout flow, including configuring Stripe, creating and updating Payment Intents, collecting card details through Stripe Elements.
 
 ## Prerequisites
 
 * [.NET 8 SDK or later](https://dotnet.microsoft.com/en-us/download/dotnet)
-* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
-* A [Stripe account](https://dashboard.stripe.com/register) in test mode with access to API keys and webhook signing secrets
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later, or [Visual Studio Code](https://code.visualstudio.com/) with the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
+* A [Stripe account](https://dashboard.stripe.com/register) in test mode with access to API keys
 
 ## Create the Blazor project
 
 To create a Blazor application, follow the [Blazor Server App getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code).
 
-This article adds Stripe checkout on top of an [existing Blazor shopping cart application](https://blazor.syncfusion.com/documentation/tutorials/shopping-cart). For the product catalog, cart, and wishlist implementation, refer to [Creating a Shopping Cart with Blazor Components](https://blazor.syncfusion.com/documentation/tutorials/shopping-cart). Complete that tutorial first, then continue with the steps below.
+This article adds Stripe checkout on top of an [existing Blazor shopping cart application](https://blazor.syncfusion.com/documentation/tutorials/shopping-cart). Complete that tutorial first, then continue with the steps below.
 
-### Install required Blazor packages
+## Install NuGet package
 
-Install the [Stripe.net](https://www.nuget.org/packages/Stripe.net) NuGet package.
+Install the [Stripe.net](https://www.nuget.org/packages/Stripe.net) package by using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
 * [Stripe.net](https://www.nuget.org/packages/Stripe.net)
 
-Alternatively, Open a terminal in the project root and run the following commands to install these packages.
+Alternatively, open a terminal in the project root and run the following commands to install this package.
 
 {% tabs %}
 {% highlight powershell tabtitle=".NET CLI" %}
@@ -39,7 +39,7 @@ dotnet add package Stripe.net
 {% endhighlight %}
 {% endtabs %}
 
-N> The Syncfusion Blazor packages for TextBox, Button, Spinner, and MaskedTextBox are included as dependencies from the shopping cart tutorial. If you're starting this tutorial independently, ensure these packages are installed. For a complete list, refer to [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
+N> The Syncfusion Blazor packages [Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons), [Spinner](https://www.nuget.org/packages/Syncfusion.Blazor.Spinner), and [Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) are included as dependencies from the shopping cart tutorial. If you're starting this tutorial independently, ensure these packages are installed. For a complete list, refer to [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 ### Add required namespaces
 
@@ -48,7 +48,16 @@ Open the `Components/_Imports.razor` file and import the namespaces required by 
 {% tabs %}
 {% highlight razor tabtitle="_Imports.razor" %}
 
+@using System.ComponentModel.DataAnnotations
 @using Microsoft.JSInterop
+@using ShoppingCart.Models
+@using ShoppingCart.Services
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Spinner
 
 {% endhighlight %}
 {% endtabs %}
@@ -61,7 +70,7 @@ Bind the Stripe configuration section to the `StripeOptions` model in the `~/Pro
 {% highlight csharp tabtitle="Program.cs" %}
 
 var builder = WebApplication.CreateBuilder(args);
-
+...
 builder.Services.Configure<StripeOptions>(
     builder.Configuration.GetSection(StripeOptions.SectionName));
 
@@ -88,34 +97,23 @@ ShoppingCart/
 ├── Properties/
 │   └── launchSettings.json
 ├── appsettings.json
-└── Program.cs                # Service registration and Stripe webhook endpoint
+└── Program.cs                # Service registration
+
 ```
 
 This structure helps keep the application maintainable and scalable by clearly separating data models, services, and UI components. It also makes it easier to update or extend the application as payment requirements evolve.
 
 ## Define data models
 
-The checkout flow uses two models to bridge the application's order data with Stripe's payment objects. The `StripeOptions` model represents the Stripe API configuration bound from `appsettings.json`. The `Order` model represents an order and stores the Stripe Payment Intent identifier and the associated shipping and payment details.
+The checkout flow uses two models to bridge the application's order data with Stripe's payment objects. The `StripeOptions` model represents the Stripe API configuration bound from `appsettings.json`. The existing `Order` model (defined in the shopping cart tutorial) needs new Stripe payment fields, and the `PaymentInfo` class must be replaced because Stripe Elements now collects card data securely. Replace the contents of `Models/Order.cs` with the following
 
 {% tabs %}
-{% highlight csharp tabtitle="Models/StripeOptions.cs" %}
+{% highlight csharp tabtitle="Models/Order.cs" %}
+
+using System.ComponentModel.DataAnnotations;
 
 namespace ShoppingCart.Models
 {
-    public class StripeOptions
-    {
-        public const string SectionName = "Stripe";
-
-        public string PublishableKey { get; set; } = string.Empty;
-        public string SecretKey { get; set; } = string.Empty;
-        public string WebhookSecret { get; set; } = string.Empty;
-        public string Currency { get; set; } = "usd";
-    }
-}
-
-{% endhighlight %}
-{% highlight csharp tabtitle="Models/Order.cs" %}
-
     public class Order
     {
         public int OrderId { get; set; }
@@ -175,6 +173,23 @@ namespace ShoppingCart.Models
         public string? BillingName { get; set; }
         public string? BillingEmail { get; set; }
     }
+}
+
+{% endhighlight %}
+
+{% highlight csharp tabtitle="Models/StripeOptions.cs" %}
+
+namespace ShoppingCart.Models
+{
+    public class StripeOptions
+    {
+        public const string SectionName = "Stripe";
+
+        public string PublishableKey { get; set; } = string.Empty;
+        public string SecretKey { get; set; } = string.Empty;
+        public string Currency { get; set; } = "usd";
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -190,7 +205,6 @@ Add a `Stripe` section to `appsettings.json` with empty placeholder values.
   "Stripe": {
     "PublishableKey": "",
     "SecretKey": "",
-    "WebhookSecret": "",
     "Currency": "usd"
   }
 }
@@ -206,12 +220,11 @@ Populate the actual key values locally using .NET User Secrets so that the **Sec
 dotnet user-secrets init
 dotnet user-secrets set "Stripe:PublishableKey" "pk_test_..."
 dotnet user-secrets set "Stripe:SecretKey" "sk_test_..."
-dotnet user-secrets set "Stripe:WebhookSecret" "whsec_..."
 
 {% endhighlight %}
 {% endtabs %}
 
-Retrieve the **Publishable key** and **Secret key** from the Stripe Dashboard under **Developers > API keys**. Create a webhook endpoint under **Developers > Webhooks** pointing to `https://<your-app-domain>/api/stripe/webhook`, subscribe it to `payment_intent.succeeded`, `payment_intent.payment_failed`, and `charge.refunded`, and copy the resulting **Signing secret** into `Stripe:WebhookSecret`.
+Retrieve the **Publishable key** and **Secret key** from the Stripe Dashboard under **Developers > API keys**.
 
 ## Create the services
 
@@ -219,7 +232,7 @@ The checkout flow uses two services: a scoped `IStripePaymentService` for commun
 
 ### Stripe payment service
 
-Creates and updates Stripe Payment Intents, verifies the signature of incoming Stripe webhooks, and looks up orders by their Payment Intent identifier.
+Creates and updates Stripe Payment Intents and looks up orders by their Payment Intent identifier.
 
 {% tabs %}
 {% highlight csharp tabtitle="IStripePaymentService.cs" %}
@@ -231,8 +244,6 @@ namespace ShoppingCart.Services
     public interface IStripePaymentService
     {
         Task<PaymentIntentResult> CreateOrUpdatePaymentIntentAsync(Order order);
-        Stripe.Event? ConstructWebhookEvent(string json, string stripeSignature);
-        Order? GetOrderByPaymentIntentId(string paymentIntentId);
     }
 
     public record PaymentIntentResult(string PaymentIntentId, string ClientSecret, string Status);
@@ -312,32 +323,9 @@ namespace ShoppingCart.Services
             }
         }
 
-        public Stripe.Event? ConstructWebhookEvent(string json, string stripeSignature)
+        public async Task<Order?> GetOrderByPaymentIntentIdAsync(string paymentIntentId)
         {
-            if (string.IsNullOrWhiteSpace(_options.WebhookSecret))
-            {
-                // Without a webhook secret we can't safely verify. Return null so caller
-                // can decide (e.g. log + skip in development).
-                return null;
-            }
-
-            try
-            {
-                return Stripe.EventUtility.ConstructEvent(
-                    json,
-                    stripeSignature,
-                    _options.WebhookSecret,
-                    tolerance: 300);
-            }
-            catch (StripeException)
-            {
-                return null;
-            }
-        }
-
-        public Order? GetOrderByPaymentIntentId(string paymentIntentId)
-        {
-            var orders = _orderService.GetOrdersAsync().GetAwaiter().GetResult();
+            var orders = await _orderService.GetOrdersAsync();
             return orders.FirstOrDefault(o => o.PaymentIntentId == paymentIntentId);
         }
     }
@@ -422,13 +410,13 @@ Register the payment-related services in `Program.cs` so they can be accessed th
 {% tabs %}
 {% highlight csharp tabtitle="Program.cs" %}
 
-builder.Services.AddSingleton<IOrderService, OrderService>();     // Singleton to persist orders across requests
+builder.Services.AddSingleton<IOrderService, OrderService>(); 
 builder.Services.AddScoped<IStripePaymentService, StripePaymentService>();
 
 {% endhighlight %}
 {% endtabs %}
 
-This tutorial changes `IOrderService` from scoped to singleton (and adds UpdateAsync) so order state survives across the webhook request. Replace the existing `AddScoped<IOrderService, OrderService>()` line from the shopping cart tutorial with `AddSingleton<IOrderService, OrderService>()` below. Don't add both.
+This tutorial changes `IOrderService` from scoped to singleton (and adds UpdateAsync) so order state survives across the JS interop confirmation call and any post-confirmation page navigation. Replace the existing `AddScoped<IOrderService, OrderService>()` line from the shopping cart tutorial with `AddSingleton<IOrderService, OrderService>()` below. Don't add both.
 
 N> The `ICartService`, `IProductService`, and `IWishlistService` registrations are covered in [Creating a Shopping Cart with Blazor Components](https://blazor.syncfusion.com/documentation/tutorials/shopping-cart).
 
@@ -528,6 +516,7 @@ Collects shipping information, creates the Stripe Payment Intent, mounts the Str
 {% highlight razor tabtitle="Components/Pages/Checkout.razor" %}
 
 @page "/checkout"
+@rendermode InteractiveServer
 @using Microsoft.Extensions.Options
 @using ShoppingCart.Models
 @inject ICartService CartService
@@ -765,13 +754,11 @@ Collects shipping information, creates the Stripe Payment Intent, mounts the Str
                 return;
             }
 
-            // Card payment succeeded without 3DS redirect.
-            // (3DS challenges are handled by redirecting to returnUrl.)
+            // Card payment succeeded.
             order.PaymentIntentId = result.PaymentIntentId;
             order.PaymentStatus = result.Status;
             order.Status = "Paid";
 
-            // Pull latest card details (brand + last 4) for display
             await OrderService.UpdateAsync(order);
 
             CartService.ClearCart();
@@ -808,6 +795,7 @@ Displays the final order status after checkout, using the order's `Status` and `
 {% highlight razor tabtitle="Components/Pages/OrderConfirmation.razor" %}
 
 @page "/order-confirmation/{OrderId:int}"
+@rendermode InteractiveServer
 @using ShoppingCart.Models
 @inject IOrderService OrderService
 @inject NavigationManager NavigationManager
@@ -939,18 +927,19 @@ Before running the application, configure the Stripe test-mode keys as described
 
 * The checkout page loads the shipping form and the Stripe Payment Element, with a spinner shown while the secure payment form initializes.
 * Submitting a valid test card (for example, `4242 4242 4242 4242`, any future expiry, any CVC) confirms the Payment Intent and navigates to the order confirmation page with a **Payment Successful** message.
-* The Stripe webhook endpoint receives asynchronous `payment_intent.succeeded`, `payment_intent.payment_failed`, and `charge.refunded` events and updates the corresponding order status.
-* The order confirmation page displays the correct **Paid**, **Payment Failed**, or **Awaiting Payment** status based on the latest order state.
+
+**Output**
+
+![Blazor Payment gateway sample](./images/payment-gateway.webp)
 
 ## See also
 
 * [Creating a Shopping Cart with Blazor Components](https://blazor.syncfusion.com/documentation/tutorials/shopping-cart)
 * [Getting started with Blazor Server app](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting started with Blazor TextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp)
-* [Getting started with Blazor MaskedTextBox](https://blazor.syncfusion.com/documentation/maskedtextbox/getting-started-webapp)
 * [Getting started with Blazor Spinner](https://blazor.syncfusion.com/documentation/spinner/getting-started-webapp)
 * [Getting started with Blazor Button](https://blazor.syncfusion.com/documentation/button/getting-started-with-server-app)
 * [Configure dependency injection in Blazor applications](https://learn.microsoft.com/en-us/aspnet/core/blazor/dependency-injection)
 * [Stripe Payment Intents API documentation](https://docs.stripe.com/payments/payment-intents)
 * [Stripe Elements documentation](https://docs.stripe.com/payments/elements)
-* [Stripe webhooks documentation](https://docs.stripe.com/webhooks)
+
