@@ -85,7 +85,7 @@ Follow the instructions for your selected service to register the AI model in yo
 
 ### OpenAI
 
-Create an API key from the [OpenAI dashboard](https://platform.openai.com/api-keys) and set `openAIApiKey` (preferably by reading it from configuration rather than hard-coding). Specify the desired model (for example, `gpt-3.5-turbo` or `gpt-4`) in `openAIModel`. The model you choose must be one your OpenAI account has access to.
+Generate an API key from OpenAI and set `openAIApiKey`. Specify the desired model (for example, `gpt-3.5-turbo` or `gpt-4`) in `openAIModel`.
 
 - Install the required NuGet packages:
 
