@@ -9,10 +9,11 @@ documentation: ug
 
 # PDF Export in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides a built-in feature to export grid data to a **PDF document**. This functionality is useful for generating printable reports or sharing data in a standardized format.
+The [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides built-in support for exporting grid data to a **PDF document**. This functionality is useful for generating printable reports or sharing data in a standardized format.
 To enable PDF export:
 
 * Set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPdfExport) property to **true**.
+* Add the `PdfExport` item to the Data Grid toolbar. See [toolbar configuration](https://blazor.syncfusion.com/documentation/datagrid/tool-bar).
 * Call the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method to perform the export.
 
 {% tabs %}
@@ -35,7 +36,7 @@ To enable PDF export:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_pdfexport")  // ID is a combination of the grid's ID and the item name.
         {
             await this.DefaultGrid.ExportToPdfAsync();
         }
@@ -94,7 +95,7 @@ public class OrderDetails
 
 ## Show spinner while exporting
 
-The Blazor DataGrid supports displaying a spinner during PDF export to indicate that the operation is in progress. This improves the experience by providing visual feedback while the export is being processed.
+The Blazor Data Grid supports displaying a spinner during PDF export to indicate that the operation is in progress. This provides visual feedback while the export is being processed.
 
 To show and hide the spinner:
 
@@ -122,7 +123,7 @@ To show and hide the spinner:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_pdfexport")  // ID is a combination of the Data Grid's ID and the item name.
         {
             // Show spinner while exporting.
             await this.DefaultGrid.ShowSpinnerAsync();
@@ -188,7 +189,7 @@ public class OrderDetails
 
 ## Binding custom data source while exporting
 
-The Blazor DataGrid supports exporting to PDF using a custom data source. This feature allows exporting data that is not currently bound to the grid and can be generated dynamically based on application logic.
+The Blazor Data Grid supports exporting to PDF using a custom data source. This feature allows exporting data that is not currently bound to the Data Grid and can be generated dynamically based on application logic.
 
 To use a custom data source during export:
 
@@ -222,7 +223,7 @@ To use a custom data source during export:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_pdfexport")  // ID is a combination of the Data Grid's ID and the item name.
         {
             var convertedOrders = ConvertToOrderDetails(newOrders);
             PdfExportProperties PdfProperties = new PdfExportProperties
@@ -332,20 +333,22 @@ public class ChangeData
 
 ## Exporting with custom aggregate
 
-The Blazor DataGrid supports exporting grid data with custom aggregates. This feature enables including calculated values in the exported PDF, providing a comprehensive view for reporting or analysis.
+The Blazor Data Grid supports exporting Data Grid data with custom aggregates. This feature enables including calculated values in the exported PDF, providing a comprehensive view for reporting or analysis.
 
 To apply a custom aggregate during export:
 
-1. Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property to Custom in the aggregate column.
+1. Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property to `AggregateType.Custom` in the aggregate column.
 2. Implement a custom function to calculate the required value.
 3. Use the [PdfAggregateTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfAggregateTemplateInfo) event to inject the calculated result into the exported PDF.
+
+The `FooterTemplate` renders the aggregate value in the Data Grid; `PdfAggregateTemplateInfo` supplies the corresponding value in the exported PDF.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@OrderData" Toolbar="@(new List<string>() {"PdfExport"})" AllowPdfExport="true">
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@OrderData" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true">
     <GridEvents TValue="OrderDetails" OnToolbarClick="ToolbarClickHandler" PdfAggregateTemplateInfo="PdfAggregateTemplateInfoHandler"></GridEvents>
 
     <GridAggregates>
@@ -383,7 +386,7 @@ To apply a custom aggregate during export:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname. 
+        if (args.Item.Id == "Grid_pdfexport")  // ID is a combination of the Data Grid's ID and the item name.
         {
             await DefaultGrid.ExportToPdfAsync();
         }
@@ -451,27 +454,26 @@ public class OrderDetails
 
 ## Exporting with custom date format
 
-The Blazor DataGrid supports applying custom date formats when exporting data to PDF. This feature ensures that dates in the exported document follow a specific presentation format required for reporting or compliance.
+The Blazor Data Grid supports applying custom date formats when exporting data to PDF. This feature ensures that dates in the exported document follow a specific presentation format required for reporting or compliance.
 
 To apply a custom date format:
 
-1. Configure the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property on the target column.
-2. Specify a valid .NET date format string to define the desired output.
-3. Invoke the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method within the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event to export the data to a PDF document.
+1. Set the target column [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property to `ColumnType.Date`.
+2. Set the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property to a custom .NET date format string, such as `ddd, MMM d, ''yy`.
+3. Invoke the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method from the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event after applying the date column settings.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Height="315" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true">
     <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Type="ColumnType.Date" Format="@FormatOptions" Width="100">
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Width="80"></GridColumn>
-        </GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Type="ColumnType.Date" Format="@FormatOptions" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -482,7 +484,7 @@ To apply a custom date format:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_pdfexport")  // ID is a combination of the Data Grid's ID and the item name.
         {
             await this.DefaultGrid.ExportToPdfAsync();
         }
@@ -504,7 +506,7 @@ public class OrderData
 
     public OrderData() { }
 
-    public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, int employeeID)
+    public OrderData(int OrderID, string CustomerID, string ShipName, double? Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, int employeeID)
     {
         this.OrderID = OrderID;
         this.CustomerID = CustomerID;
@@ -550,18 +552,18 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLRNwNUHWlQRWVo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrdjPLteJPnwJaW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Passing additional parameters to the server when exporting
+## Passing additional parameters when exporting
 
-The Blazor DataGrid allows passing additional parameters during PDF export. This capability provides flexibility to include extra information or customize the export process based on application requirements.
+The Blazor Data Grid supports additional parameters during PDF export. Additional parameters can provide extra information or customize the export process. The key and value supplied to [AddParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html#Syncfusion_Blazor_Data_Query_AddParams_System_String_System_Object_) are application-defined and forwarded to the data layer with the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query).
 
 To pass additional parameters:
 
-1. Use the `Query` property of the grid.
-2. Call [AddParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html#Syncfusion_Blazor_Data_Query_AddParams_System_String_System_Object_) to append custom parameters.
+1. Use the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property of the grid.
+2. Call [AddParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html#Syncfusion_Blazor_Data_Query_AddParams_System_String_System_Object_) to append a custom key and value to the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query).
 3. Invoke the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method in the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event to export the data to a PDF document.
-4. Use the [ExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExportComplete) event to reset the query after export.
+4. Use the [ExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExportComplete) event to reset the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) after export.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -570,7 +572,7 @@ To pass additional parameters:
 @using Syncfusion.Blazor.Data
 
 <p>@message</p>
-<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPdfExport="true" Toolbar="@(new List<string>() { "PdfExport" })" Height="348">
+<SfGrid ID="Grid" @ref="GridRef" DataSource="@Orders" AllowPdfExport="true" Toolbar="@(new List<string>() { "PdfExport" })" Height="348">
     <GridEvents OnToolbarClick="ToolbarClickHandler" ExportComplete="ExportCompleteHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
@@ -580,16 +582,19 @@ To pass additional parameters:
     </GridColumns>
 </SfGrid>
 <style>
-    p{
+    p {
         color: red;
-        text-align:center;
+        text-align: center;
     }
 </style>
 @code {
-    private SfGrid<OrderData> Grid;
+    private SfGrid<OrderData> GridRef;
     public List<OrderData> Orders { get; set; }
     private string message = "";
-    private Query queryClone;
+    // Holds the original Query reference so it can be restored after export.
+    // The Query is replaced (not mutated) inside the toolbar handler, so the
+    // original instance remains safe to reassign back to the Data Grid.
+    private Query originalQuery;
 
     protected override void OnInitialized()
     {
@@ -598,25 +603,25 @@ To pass additional parameters:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_pdfexport") // ID is a combination of the Data Grid's ID and the item name.
         {
-            queryClone = this.Grid?.Query;
-            this.Grid!.Query = new Query().AddParams("recordcount", "15");
+            originalQuery = this.GridRef?.Query;
+            this.GridRef!.Query = new Query().AddParams("RecordCount", "15");
 
-            if (this.Grid!.Query.Queries.Params?.Count > 0)
+            if (this.GridRef!.Query.Queries.Params?.Count > 0)
             {
-                var param = Grid.Query.Queries.Params.First();
+                var param = GridRef.Query.Queries.Params.First();
                 message = $"Key: {param.Key} and Value: {param.Value?.ToString()} on {args.Item.Text}";
             }
-            await Grid.ExportToPdfAsync();
+            await GridRef.ExportToPdfAsync();
         }
     }
 
     public void ExportCompleteHandler(object args)
     {
-        if (queryClone != null)
+        if (originalQuery != null)
         {
-            this.Grid!.Query = queryClone;
+            this.GridRef!.Query = originalQuery;
         }
     }
 }
@@ -639,7 +644,7 @@ public class OrderData
     public static List<OrderData> GetAllRecords()
     {
         if (Orders.Count == 0)
-        { 
+        {
             Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier"));
             Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten"));
             Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes"));
