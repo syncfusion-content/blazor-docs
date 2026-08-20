@@ -35,9 +35,8 @@ To define columns manually in Blazor DataGrid, use [GridColumn](https://help.syn
 </SfGrid>
 
 @code {
-   private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
-       
+
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
@@ -92,7 +91,7 @@ To define columns manually in Blazor DataGrid, use [GridColumn](https://help.syn
 
 ## Auto generated columns
 
-The Blazor DataGrid automatically generates columns when the `Columns` collection is not defined during Grid initialization. All properties in the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) are rendered as Grid columns.
+The Blazor DataGrid generates columns automatically when the `Columns` collection is not defined during Grid initialization. It renders all properties in the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) as Grid columns.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -161,7 +160,7 @@ The Blazor DataGrid automatically generates columns when the `Columns` collectio
 
 ### Configure primary key for auto-generated columns
 
-When editing is enabled in the Grid, a primary key must be set for auto-generated columns to uniquely identify each row for operations such as updating or deleting data. This can be achieved by using the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) object in the [OnDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnDataBound)  event.
+When editing is enabled, set a primary key for auto-generated columns so the Grid can identify each row during update and delete operations. Use the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) in the [OnDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnDataBound) event.
 
 Setting `IsPrimaryKey` to **true** for an auto-generated column ensures that the Grid can identify rows uniquely when editing is enabled.
 
@@ -462,9 +461,9 @@ The Blazor DataGrid supports complex data binding using the **dot (.)** operator
 
 To bind local data to the Grid using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, use the **dot (.)** operator in the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
-This approach is helpful for binding nested properties like **Employee.FirstName** and **Employee.LastName** from a nested **Employee** object.
+This approach binds nested properties such as **Employee.FirstName** and **Employee.LastName** from a nested **Employee** object.
 
-> The **nameof** operator can also be used for complex columns instead of assigning static text for the `Field` property:
+> Use the **nameof** operator for complex column fields instead of hard-coded strings when you define the `Field` property:
 
 > ```cshtml
 > <GridColumn Field="@(nameof(EmployeeData.EmployeeName) + "." + nameof(EmployeeName.FirstName))" HeaderText="First Name" Width="150"></GridColumn>
@@ -690,7 +689,7 @@ Complex data binding can be achieved by using the **dot (.)** operator in the [F
 
 The Blazor DataGrid supports using complex columns as foreign key columns. This enables related data from a [ForeignDataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridForeignColumn-1.html#Syncfusion_Blazor_Grids_GridForeignColumn_1_ForeignDataSource) to be displayed based on the value of a complex column.
 
-In this configuration, the **Employee.EmployeeID** column is set as a foreign key column, and the **FirstName** field from the foreign data source is displayed.
+In this example, the **Employee.EmployeeID** column acts as the foreign key column, and the Grid displays the **FirstName** field from the foreign data source.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

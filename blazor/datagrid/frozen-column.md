@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Pinning (Frozen) in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports freezing columns to keep them visible while scrolling through large datasets. This feature ensures that important fields remain accessible regardless of horizontal scroll position.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports freezing columns to keep them visible during scrolling through large datasets. Important fields remain accessible regardless of horizontal scroll position.
 
 Column pinning can be configured using either grid-level or column-level settings.
 
@@ -531,3 +531,9 @@ The frozen columns and freeze direction features in Blazor DataGrid have the fol
 * The [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) and [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) properties are incompatible and cannot be used simultaneously.
 
 > N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.
+
+## See also
+
+* [Column Reorder in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/column-reorder)
+* [Column Resizing in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/column-resizing)
+* [Column Chooser in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/column-chooser)
