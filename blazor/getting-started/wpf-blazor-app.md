@@ -24,19 +24,19 @@ Visual Studio provides the **WPF Application** template to create WPF Blazor App
 
 ## Prerequisites
 
-* [Supported platforms (WPF documentation)](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/?view=netdesktop-8.0)
+* [Supported platforms (WPF documentation)](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/)
 * [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) or [Visual Studio 2026](https://visualstudio.microsoft.com/downloads/)
 
 ## Create a new WPF Blazor App in Visual Studio
 
-To create a **WPF Blazor App** using Visual Studio, follow the comprehensive steps in the [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/wpf?view=aspnetcore-8.0) documentation. Ensuring and understanding each step in the official guide establishes the foundation required to continue with this documentation.
+To create a **WPF Blazor App** using Visual Studio, follow the comprehensive steps in the [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/wpf?view=aspnetcore-10.0) documentation. Ensuring and understanding each step in the official guide establishes the foundation required to continue with this documentation.
 
 ## Install Blazor Grid and Themes NuGet in the App
 
-To add the **Blazor DataGrid** component in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes). Alternatively, run the following commands in the Package Manager Console to achieve the same.
+To add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes). Alternatively, run the following commands in the Package Manager Console to achieve the same.
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight C# tabtitle="Package Manager Console" %}
 
 Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
@@ -50,9 +50,9 @@ N> Ensure the package [Microsoft.AspNetCore.Components.WebView.Wpf](https://www.
 
 N> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
 
-## Add Import Namespaces
+## Add import namespaces
 
-Open the `~/_Imports.razor` file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces:
+After the packages are installed, open the `~/_Imports.razor` file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces:
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -63,7 +63,7 @@ Open the `~/_Imports.razor` file and import the `Syncfusion.Blazor` and `Syncfus
 {% endhighlight %}
 {% endtabs %}
 
-## Register Blazor Service
+## Register the Blazor service
 
 Register the Blazor service in the `MainWindow.xaml.cs` file of the WPF Blazor App.
 
