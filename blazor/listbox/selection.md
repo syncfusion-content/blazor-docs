@@ -164,46 +164,6 @@ In the following example, the `MaximumSelectionLength` is set to `2`, so the use
 
 ![Blazor ListBox with Maximum Selection Length](./images/blazor-listbox-maximum-selection-length.webp)
 
-## Pre-select items
-
-Items can be pre-selected when the component is rendered by binding the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_Value) parameter to an array that contains the values to be selected. The values must match the field configured in the [ListBoxFieldSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxFieldSettings.html) child component.
-
-In the following example, the values `Vehicle-02` and `Vehicle-04` are pre-selected by binding the `Value` parameter.
-
-```cshtml
-
-@using Syncfusion.Blazor.DropDowns
-
-<SfListBox TValue="string[]" DataSource="@Vehicles" TItem="VehicleData" Value="@SelectedItems">
-    <ListBoxFieldSettings Text="Text" Value="Id" />
-    <ListBoxSelectionSettings Mode="Syncfusion.Blazor.DropDowns.SelectionMode.Multiple"></ListBoxSelectionSettings>
-</SfListBox>
-
-@code {
-    public List<VehicleData> Vehicles = new List<VehicleData>
-    {
-        new VehicleData { Text = "Hennessey Venom", Id = "Vehicle-01" },
-        new VehicleData { Text = "Bugatti Chiron", Id = "Vehicle-02" },
-        new VehicleData { Text = "Bugatti Veyron Super Sport", Id = "Vehicle-03" },
-        new VehicleData { Text = "SSC Ultimate Aero", Id = "Vehicle-04" },
-        new VehicleData { Text = "Koenigsegg CCR", Id = "Vehicle-05" },
-        new VehicleData { Text = "McLaren F1", Id = "Vehicle-06" },
-        new VehicleData { Text = "Aston Martin One-77", Id = "Vehicle-07" },
-        new VehicleData { Text = "Jaguar XJ220", Id = "Vehicle-08" }
-    };
-
-    public string[] SelectedItems = new string[] { "Vehicle-02", "Vehicle-04" };
-
-    public class VehicleData {
-        public string Text { get; set; }
-        public string Id { get; set; }
-    }
-}
-
-```
-
-![Blazor ListBox with Pre-selected Items](./images/blazor-listbox-pre-selected-items.webp)
-
 ## Selection change event
 
 The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ListBoxEvents_2_ValueChange) event fires whenever the selection changes. It is configured through the [ListBoxEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxEvents-2.html) child component and passes a [ListBoxChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxChangeEventArgs-2.html) argument to the handler that contains the added, removed, and current values.
