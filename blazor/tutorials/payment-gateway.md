@@ -535,7 +535,7 @@ Collects shipping information, creates the Stripe Payment Intent, mounts the Str
     @if (!CartService.Items.Any())
     {
         <div class="alert alert-warning">
-            Your cart is empty. <a href="/catalog" aria-label="Continue shopping">Continue shopping</a>
+            Your cart is empty. <a href="/catalog" aria-label="Browse the product catalog">Continue shopping</a>
         </div>
     }
     else
