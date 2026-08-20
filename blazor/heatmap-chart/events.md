@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor HeatMap Component | Syncfusion®
-description: Checkout and learn here all about the features and events in Blazor HeatMap component and much more details.
+title: Blazor HeatMap Chart Events | Syncfusion®
+description: Learn how to handle Blazor HeatMap Chart interactions with CellClicked, CellRendering, CellSelected, and Created events.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
 ---
 
-# Events in Blazor HeatMap Chart Component
+# Blazor HeatMap Chart Events
 
 This section describes the events that will be triggered for appropriate actions in HeatMap. The events should be declared in the HeatMap component using the [HeatMapEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html).
 

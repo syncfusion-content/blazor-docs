@@ -1,13 +1,13 @@
 ---
 layout: post
-title: File Source in Blazor File Upload Component | Syncfusion®
-description: Checkout and learn here all about File Source in Blazor File Upload component and and much more details.
+title: File Source in Blazor File Upload | Syncfusion
+description: Upload entire directories including subfolders in Blazor File Upload using the directory upload feature.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# File Source in Blazor File Upload Component
+# File Source in Blazor File Upload
 
 ## Directory upload
 
@@ -141,4 +141,4 @@ public void Remove(IList<IFormFile> UploadFiles)
 }
 ```
 
-N> You can also explore our [Blazor File Upload example](https://blazor.syncfusion.com/demos/file-upload/default-functionalities?theme=bootstrap5) to understand how to browse the files that need to be uploaded to the server.
+N> You can also explore our [Blazor File Upload example](https://blazor.syncfusion.com/demos/file-upload/default-functionalities?theme=fluent2) to understand how to browse the files that need to be uploaded to the server.

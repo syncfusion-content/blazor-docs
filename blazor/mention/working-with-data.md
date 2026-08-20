@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with data in Blazor Mention Component | Syncfusion®
-description: Checkout and learn here all the features about working with data in Blazor Mention component and much more details.
+title: Working with Data in Blazor Mention | Syncfusion
+description: Bind local lists or remote data to Blazor Mention with DataSource and DataManager for flexible suggestion sources.
 platform: Blazor
 control: Mention
 documentation: ug
 ---
 
-# Working with Data in Blazor Mention Component
+# Working with Data in Blazor Mention
 
 The Mention allows you to bind data either from a local source or a remote data service using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. If you want to bind data from a local source, you can simply assign an enumerable list of data items to the `DataSource` property. If you want to bind data from a remote data service, you can use the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) component to fetch and bind the data to the `Mention` component.
 
@@ -72,7 +72,7 @@ In the following example, the `CodeFormat.ID` column and `Country.CountryName` c
 
 ### Expando object binding
 
-The [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) is a dynamic object type that allows you to add and delete properties and methods at runtime. This can be a useful feature in certain situations, such as when you want to bind data to a component in a flexible and dynamic way. You can bind the data in an `ExpandoObject` to the Mention component by passing the object as the value for the `DataSource` property.
+The [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject) is a dynamic object type that allows you to add and delete properties and methods at runtime. This can be a useful feature in certain situations, such as when you want to bind data to a component in a flexible and dynamic way. You can bind the data in an `ExpandoObject` to the Mention component by passing the object as the value for the `DataSource` property.
 
 In the following example, the `ExpandoObject` is bound to the collection of vehicles data.
 

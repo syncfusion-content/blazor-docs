@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filtering in Blazor MultiColumn ComboBox Component | Syncfusion®
-description: Checkout and learn here all the features about Filtering in Blazor MultiColumn ComboBox component and much more.
+title: Filtering in Blazor MultiColumn ComboBox | Syncfusion
+description: Filter Blazor MultiColumn ComboBox data items interactively as users type with AllowFiltering enabled today easily.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
 ---
 
-# Filtering in Blazor MultiColumn ComboBox Component
+# Filtering in Blazor MultiColumn ComboBox
 
 The MultiColumn ComboBox offers built-in functionality for filtering data items when the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_AllowFiltering) option is enabled. Filtering begins as the user types in the input field. By default, the AllowFiltering property is set to `false`.
 
@@ -25,7 +25,7 @@ The following code demonstrates the filtering functionality with local data in t
 
 ## Remote data
 
-For remote data, every key press and filter action request is processed on the server side.
+For remote data, each keystroke triggers a server-side filter request that returns only matching records.
 
 The following code illustrates the filtering capabilities using the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) in the MultiColumn ComboBox component, utilizing the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Prevent Panel Overlap in Blazor Dashboard | Syncfusion®
-description: Check out and learn how to preventing panel overlap in the Blazor Dashboard Layout component and much more.
+title: How to prevent panel overlap in Blazor Dashboard Layout | Syncfusion®
+description: Prevent Blazor Dashboard Layout panels from overlapping by assigning unique Id values to each DashboardLayoutPanel component.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
 ---
 
-# Preventing Panel Overlap in Blazor Dashboard Layout
+# How to prevent panel overlap in Blazor Dashboard Layout
 
 When dynamically rendering [DashboardLayoutPanel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html) components, panels may overlap if not configured correctly. This issue typically occurs when multiple panels are assigned the same [`Id`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_Id) property. The Dashboard Layout component uses this `Id` internally to uniquely identify and manage each panel's position and state. If `Id` values are duplicated, the component treats these panels as the same instance, causing them to render in the same location (e.g., Row = 0, Column = 0) and visually overlap.
 

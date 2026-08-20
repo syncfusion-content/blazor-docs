@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Open a Dialog on Item click in Blazor ContextMenu | Syncfusion®
-description: Checkout and learn here all about Open a dialog on Context Menu item click in Blazor ContextMenu component and more.
+title: Open a Dialog on Item Click in Blazor Context Menu | Syncfusion®
+description: Open a Blazor Dialog when a Context Menu item is selected by handling the ItemSelected event and invoking the Dialog's Show method.
 platform: Blazor
 control: Context Menu
 documentation: ug
 ---
 
-# Open a Dialog on Item Click in Blazor Context Menu
+# How to open a dialog on item click in Blazor Context Menu
 
-This section explains how to open a Dialog when a Context Menu item is selected. This can be achieved by handling the [ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_ItemSelected) event of the Context Menu and invoking the Dialog component's methods programmatically.
+This section explains how to open a Dialog when a ContextMenu item is selected. Handle the [ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_ItemSelected) event of the ContextMenu and invoke the Dialog component's methods programmatically.
 
 In the following example, the ContextMenu component is rendered for a target element, and the ItemSelected event is used to detect the selected menu item. When the Save As... item is clicked, the event handler calls the Dialog's [ShowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_ShowAsync_System_Nullable_System_Boolean__) method to open the Dialog component. The dialog can then be closed by clicking the Submit button, which invokes the [HideAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_HideAsync_System_String_) method.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in Blazor Pivot Table Component | Syncfusion®
-description: Learn about tooltip in Blazor Pivot Table component for displaying contextual information with examples and much more details.
+title: Tooltip in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table shows contextual tooltips on value cells, including row and column header information, controlled by the ShowTooltip property.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Tooltip in Blazor Pivot Table Component
+# Tooltip in Blazor Pivot Table
 
 The tooltip displays contextual information when users hover over value cells in the pivot table. It can be enabled or disabled by setting the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowTooltip) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.html) class to **true** or **false**. By default, tooltip is enabled in the pivot table and shows the cell value along with row and column header information.
 

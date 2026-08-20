@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor DataForm Component | Syncfusion®
-description: Checkout and learn here about how to customize the specific editor component or entire form components in Blazor DataForm component.
+title: Templates in Blazor Data Form | Syncfusion®
+description: Customize the Blazor Data Form with templates to render a specific editor component, entire form, group, or section with custom content.
 platform: Blazor
 control: DataForm
 documentation: ug
 ---
 
-# Templates in DataForm component
+# Templates in Blazor Data Form
 
 The DataForm component supports templating to customize either a specific field editor or the entire form layout and validation experience.
 
@@ -83,7 +83,7 @@ When using the `Template` renderer, validation messages can be displayed using a
 
 ![Blazor DataForm showing validation messages in tooltips for templated editors](images/blazor_dataform_tooltip_with_templates.webp)
 
-## Validation summary 
+## Validation summary
 
 Use the [ValidationSummary](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.validationsummary?view=aspnetcore-8.0) tag to display a consolidated list of validation messages. It must be placed within the `FormValidator` tag to function correctly. The example below demonstrates its usage.
 

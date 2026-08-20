@@ -1,17 +1,50 @@
 ---
 layout: post
-title: Customize the bar in Blazor Range Slider Component | Syncfusion®
-description: Checkout and learn here all about customize the bar in Blazor Range Slider component with examples and much more details.
+title: How to customize the bar in Blazor Range Slider | Syncfusion
+description: Style the Blazor Range Slider track and selected range with CSS classes for custom colors, gradients, and enhanced visual feedback.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Customize the bar in Blazor Range Slider Component
+# How to customize the bar in Blazor Range Slider
 
-The slider’s appearance can be customized with CSS. By overriding the slider CSS classes, the slider bar can be styled to match application design requirements. The slider bar supports theme-based styling and can be further customized. By default, the slider uses the `e-slider-track` class for the track. Override the class with custom color values as shown in the following example.
+The slider’s appearance can be customized with CSS. By overriding the slider CSS classes, the slider bar can be styled to match application design requirements. The slider bar supports theme-based styling and can be further customized. By default, the slider uses the `e-slider-track` class for the track. The selected portion (between the handles) uses the `e-range` class. Override either or both classes with custom color values, as shown in the three scenarios below.
 
-```css
+## Customizing the track height
+
+The simplest way to customize the bar is to change the track height. The following example renders a thicker 8-pixel track with no border radius.
+
+```cshtml
+@using Syncfusion.Blazor.Inputs
+
+<div class="slider_container">
+    <div class="slider-labeltext slider_userselect">Height</div>
+    <SfSlider TValue="int" Value="30" ID="height_slider"></SfSlider>
+</div>
+
+<style>
+    #height_slider.e-control.e-slider .e-slider-track {
+        height: 8px;
+        top: calc(50% - 4px);
+        border-radius: 0;
+    }
+</style>
+```
+
+## Customizing the bar with a gradient
+
+Apply a CSS gradient to the selected range to create a multi-color effect. The rule below sets the selected range to a 6-pixel-tall gradient bar; the underlying track is rendered 8 pixels tall to provide a visible border.
+
+```cshtml
+@using Syncfusion.Blazor.Inputs
+
+<div class="slider_container">
+    <div class="slider-labeltext slider_userselect">Gradient color</div>
+    <SfSlider TValue="int" Value="50" ID="gradient_slider" Type="SliderType.MinRange"></SfSlider>
+</div>
+
+<style>
 #gradient_slider.e-control.e-slider .e-range {
     height: 6px;
     top: calc(50% - 3px);
@@ -21,37 +54,70 @@ The slider’s appearance can be customized with CSS. By overriding the slider C
     background: -moz-linear-gradient(left, #e1451d 0, #fdff47 17%, #86f9fe 50%, #2900f8 65%, #6e00f8 74%, #e33df9 83%, #e14423 100%);
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZTE0NTFkIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTclIiBzdG9wLWNvbG9yPSIjZmRmZjQ3IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjODZmOWZlIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNjUlIiBzdG9wLWNvbG9yPSIjMjkwMGY4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNzQlIiBzdG9wLWNvbG9yPSIjNmUwMGY4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iODMlIiBzdG9wLWNvbG9yPSIjZTMzZGY5IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2UxNDQyMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
 }
+</style>
 ```
 
-In this example, the gradient background of the selection bar is customized to create a dynamic color effect.
+## Customizing the bar with dynamic colors
+
+Bind the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_CssClass) parameter to a variable and update it from the [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_ValueChange) event to change the range and handle color based on the current value. The `else` branch below ensures the initial value of `0` still gets a color.
 
 ```cshtml
-<SfSlider @bind-Value="@Value" ID="dynamic_color_slider" Type="SliderType.MinRange">
-    <SliderEvents TValue="int" ValueChange="@(e => { OnChange(e.Value); })"></SliderEvents>
-</SfSlider>
+@using Syncfusion.Blazor.Inputs
+
+<div class="slider_container">
+    <div class="slider-labeltext slider_userselect">Dynamic thumb and selection bar color</div>
+    <SfSlider TValue="int" @bind-Value="@Value" ID="dynamic_color_slider" Type="SliderType.MinRange" CssClass="@DynamicColor">
+        <SliderEvents TValue="int" ValueChange="@(e => { OnChange(e.Value); })"></SliderEvents>
+    </SfSlider>
+</div>
+@code {
+    string DynamicColor = "e-slider-green";
+    int Value = 20;
+    void OnChange(int value)
+    {
+        if (value <= 25)
+        {
+            DynamicColor = "e-slider-green";
+        }
+        else if (value <= 50)
+        {
+            DynamicColor = "e-slider-royalblue";
+        }
+        else if (value <= 75)
+        {
+            DynamicColor = "e-slider-darkorange";
+        }
+        else
+        {
+            DynamicColor = "e-slider-red";
+        }
+    }
+}
 ```
 
-The color of the bar can be customized in several ways, including height, gradients, and dynamic CSS classes based on the current value.
+## Complete example with all three scenarios
+
+The following sample combines the height, gradient, and dynamic-color scenarios in a single page so you can compare them side by side.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs;
-@using Syncfusion.Blazor.Buttons;
+
 <div class="col-lg-12 control-section">
     <div class="control-wrapper">
         <div class="slider-content-wrapper">
             <div class="slider_container">
                 <div class="slider-labeltext slider_userselect">Height</div>
-                <SfSlider Value="30" ID="height_slider">
+                <SfSlider TValue="int" Value="30" ID="height_slider">
                 </SfSlider>
             </div>
             <div class="slider_container">
                 <div class="slider-labeltext slider_userselect">Gradient color</div>
-                <SfSlider Value="50" ID="gradient_slider" Type="SliderType.MinRange">
+                <SfSlider TValue="int" Value="50" ID="gradient_slider" Type="SliderType.MinRange">
                 </SfSlider>
             </div>
             <div class="slider_container">
                 <div class="slider-labeltext slider_userselect">Dynamic thumb and selection bar color</div>
-                <SfSlider @bind-Value="@Value" ID="dynamic_color_slider" Type="SliderType.MinRange" CssClass="@DynamicColor">
+                <SfSlider TValue="int" @bind-Value="@Value" ID="dynamic_color_slider" Type="SliderType.MinRange" CssClass="@DynamicColor">
                     <SliderEvents TValue="int" ValueChange="@(e => { OnChange(e.Value); })"></SliderEvents>
                 </SfSlider>
             </div>
@@ -63,19 +129,19 @@ The color of the bar can be customized in several ways, including height, gradie
     int Value = 20;
     void OnChange(int value)
     {
-        if (value > 0 && value <= 25)
+        if (value <= 25)
         {
             DynamicColor = "e-slider-green";
         }
-        else if (value > 25 && value <= 50)
+        else if (value <= 50)
         {
             DynamicColor = "e-slider-royalblue";
         }
-        else if (value > 50 && value <= 75)
+        else if (value <= 75)
         {
             DynamicColor = "e-slider-darkorange";
         }
-        else if (value > 75 && value <= 100)
+        else
         {
             DynamicColor = "e-slider-red";
         }
@@ -154,10 +220,6 @@ The color of the bar can be customized in several ways, including height, gradie
         margin-top: 40px;
     }
 
-    #height_slider .e-tab-handle::after {
-        background-color: #f9920b;
-    }
-
     #height_slider.e-control.e-slider .e-slider-track {
         height: 8px;
         top: calc(50% - 4px);
@@ -199,7 +261,7 @@ You can enhance the Blazor Range Slider by defining different track colors for s
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
-<SfSlider ID="sliderTracks" TValue="int[]" Value=@RangeValue Type="SliderType.Range" Width="400px">
+<SfSlider ID="sliderTracks" TValue="int[]" Min="0" Max="100" Value=@RangeValue Type="SliderType.Range" Width="400px">
     <SliderTicks Placement="Placement.Both" ShowSmallTicks="true" LargeStep="20" SmallStep="5"></SliderTicks>
     <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" ShowOn="TooltipShowOn.Always"></SliderTooltip>
     <SliderColorRanges>

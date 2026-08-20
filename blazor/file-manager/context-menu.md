@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Context Menu in Blazor File Manager Component | Syncfusion®
-description: Checkout and learn here all about Context Menu in Blazor File Manager component and much more details.
-platform: Blazor
+title: Context Menu in Blazor File Manager | Syncfusion
+description: Learn how to add and customize context menu items for files, folders, and layout areas in the Blazor File Manager.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Context Menu in Blazor File Manager Component
+# Context Menu in Blazor File Manager
 
 The context menu items can be added for the files, folders, and layout in the [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component using the properties of the [ContextMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html) below.
 

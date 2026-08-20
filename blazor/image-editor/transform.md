@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Transform with Blazor Image Editor Component | Syncfusion®
-description: Explore the transform support in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
+title: Transform in Blazor Image Editor | Syncfusion
+description: Transform images in Blazor Image Editor with rotation, flipping, straightening, zooming, and panning operations.
 platform: Blazor
 control: Image Editor
 documentation: ug
 ---
 
-# Transform in the Blazor Image Editor Component
+# Transform in Blazor Image Editor
 
 The [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) component provides rotation, flipping, straightening, zooming, and panning for images and annotations. These transformations enable precise adjustments and help enhance visual presentation.
 
@@ -227,7 +227,7 @@ Using the [ZoomTrigger](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 Panning is available when the image exceeds the canvas or the selection area. After zooming or applying a selection for cropping, the image may extend beyond the canvas or selection. Click and drag on the canvas to move the image and view the desired area.
 
-## OnPanStart and OnPanEnd event 
+## OnPanStart and OnPanEnd events
 
 The [OnPanStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnPanStart) event fires when dragging begins within the canvas, and the [OnPanEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnPanEnd) event fires when the panning action completes. These events can update state in response to the gesture and use [PanEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.PanEventArgs.html).
 
@@ -235,11 +235,11 @@ Parameters for `OnPanStart` and `OnPanEnd`:
 
 - `PanEventArgs.StartPoint` – The `ImageEditorPoint` (x, y) representing the start point.
 
-- `PanEventArgs.Endpoint` – The `ImageEditorPoint` (x, y) representing the end point.
+- `PanEventArgs.EndPoint` – The `ImageEditorPoint` (x, y) representing the end point.
 
 - `PanEventArgs.Cancel` – Boolean value to cancel the panning action.
 
-## Zooming event 
+## Zooming event
 
 The [Zooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Zooming) event triggers during zoom operations and can be used to react to image position or scale changes. It uses [ZoomEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ZoomEventArgs.html).
 
@@ -255,7 +255,7 @@ Parameter for `Zooming`:
 
 - `ZoomEventArgs.ZoomTrigger` – The type of zoom interaction performed.
 
-## Rotating event 
+## Rotating event
 
 The [Rotating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Rotating) event triggers during rotate or straighten operations and provides rotation details. It uses [RotateEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.RotateEventArgs.html).
 
@@ -267,7 +267,7 @@ Parameters for `Rotating`:
 
 - `RotateEventArgs.Cancel` – Boolean value to cancel the rotation action.
 
-## Flipping event 
+## Flipping event
 
 The [Flipping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Flipping) event triggers during flip operations and provides details about the flip. It uses [FlipEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FlipEventArgs.html).
 

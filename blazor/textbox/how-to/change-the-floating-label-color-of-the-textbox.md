@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Floating Label Color of Blazor TextBox Component | Syncfusion®
-description: Learn here all about changing the floating label color of the Blazor TextBox component and much more details.
+title: How to change the floating label color in Blazor TextBox | Syncfusion
+description: Change Blazor TextBox floating label color for success, warning, or focus states using custom CSS rules.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Change the Floating Label Color of the Blazor TextBox Component
+# How to change the floating label color in Blazor TextBox
 
 Change the floating label color for the Blazor TextBox in specific validation states by applying custom CSS. The following example demonstrates styling the floating label for both success and warning states using the built-in `e-success` and `e-warning` classes. The sample also toggles focus classes to reflect the focused state of the input.
 
@@ -20,7 +20,7 @@ Change the floating label color for the Blazor TextBox in specific validation st
         <label class="e-float-text">Success</label>
     </div>
     <div class="e-float-input @(FloatTextClass) e-warning">
-        <input type="text" @onfocus="@FlaotFocus" @onblur="@FloatBlur" required />
+        <input type="text" @onfocus="@FloatFocus" @onblur="@FloatBlur" required />
         <span class="e-float-line"></span>
         <label class="e-float-text">Warning</label>
     </div>
@@ -35,7 +35,7 @@ Change the floating label color for the Blazor TextBox in specific validation st
         StateHasChanged();
     }
 
-    public void FlaotFocus(FocusEventArgs args)
+    public void FloatFocus(FocusEventArgs args)
     {
         this.FloatTextClass = this.FloatTextClass + FocusClass;
         StateHasChanged();

@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Add Toggle Button in Blazor Toolbar Component | Syncfusion®
-description: Checkout and learn here all the features about how to add toggle button in Blazor Toolbar component and more.
+title: How to add toggle button in Blazor Toolbar | Syncfusion
+description: Add a toggle button to Blazor Toolbar using the Template property with custom HTML or a button component.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Add Toggle Button in Blazor Toolbar Component
+# How to add toggle button in Blazor Toolbar
 
-Toolbar supports adding a toggle button by using the `Template` property.
+Toolbar supports adding a toggle button by using the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Template) property.
 
-* By using Toolbar template property, pass required HTML String to render the toggle button.
+* By using Toolbar's `Template` property, pass the required HTML String to render the toggle button.
 
 ```cshtml
 <Template>
@@ -19,10 +19,9 @@ Toolbar supports adding a toggle button by using the `Template` property.
 </Template>
 ```
 
-* Now render the toggle Button into the targeted element in the Toolbar created event handler and bind click event for it.
-On clicking the toggle Button, change the required icon and content based on current active state.
+* Render the `SfButton` with the [`IsToggle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IsToggle) property set to `true` inside the `Template`, and use a click event handler to update the icon and content based on the toggle state.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
@@ -62,7 +61,7 @@ On clicking the toggle Button, change the required icon and content based on cur
 </SfToolbar>
 <br />
 <div id="content" style="display:@DisplayValue">
-    This content will be hidden, when you click on hide button and toggle will get an active state as shown, otherwise it will be visible.
+    This content will be hidden when you click the hide button and the toggle will get an active state as shown; otherwise it will be visible.
 </div>
 
 <style>

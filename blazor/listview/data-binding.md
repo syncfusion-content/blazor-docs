@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor ListView Component | Syncfusion®
-description: Checkout and learn here all the features about data binding in Blazor ListView component and much more details.
+title: Data Binding in Blazor ListView | Syncfusion
+description: Bind local arrays or remote data services to Blazor ListView using DataSource and DataManager with field mappings.
 platform: Blazor
 control: ListView
 documentation: ug
 ---
 
-# Data Binding in Blazor ListView Component
+# Data Binding in Blazor ListView
 
 ListView provides an option to load the data either from local dataSource or remote data services. This can be done through the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_DataSource) property that supports the data type of array or [`DataManager`](https://blazor.syncfusion.com/documentation/data/getting-started). ListView supports different kind of data services such as OData, OData V4, and Web API, and data formats like XML, JSON, and, JSONP with the help of DataManager Adaptors.
 
@@ -15,8 +15,8 @@ ListView provides an option to load the data either from local dataSource or rem
 |------|------|-------------|
 | Id | string | Specifies ID attribute of list item, mapped in dataSource. |
 | Text | string | Specifies list item display text field. |
-| IsChecked | string | Specifies checked status of list item. |
-| Enabled | string | Specifies enabled state of list item. |
+| IsChecked | bool | Specifies checked status of list item. |
+| Enabled | bool | Specifies enabled state of list item. |
 | IconCss | string | Specifies the icon class of each list item that will be added before to the list item text. |
 | Child | string | Specifies child dataSource fields. |
 | Tooltip | string | Specifies tooltip title text field. |

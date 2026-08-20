@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Drag and Drop in Blazor Dashboard Layout Component | Syncfusion®
-description: Checkout and learn here all the features about Drag and Drop in Blazor Dashboard Layout component and much more.
+title: Drag and Drop in Blazor Dashboard Layout | Syncfusion®
+description: Enable drag and drop in the Blazor Dashboard Layout to reorder panels, with a highlighted placeholder showing the target drop position.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
 ---
 
-# Drag and Drop in Blazor Dashboard Layout Component
+# Drag and Drop in Blazor Dashboard Layout
 
 The Dashboard Layout component provides built-in drag-and-drop functionality, enabling users to reorder and rearrange panels dynamically within the layout. As a panel is dragged, a placeholder area is highlighted, indicating the potential placement location when the panel is dropped. This visual feedback assists users in determining optimal panel positioning.
 

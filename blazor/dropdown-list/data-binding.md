@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor DropDown List Component | Syncfusion®
-description: Checkout and learn here all about Data Binding in Blazor DropDown List component and much more details.
+title: Data Binding in Blazor Dropdown List | Syncfusion®
+description: Bind local collections, remote services, primitive values, complex objects, and dynamic data to the Blazor Dropdown List component.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Data Binding in Dropdown List
+# Data Binding in Blazor Dropdown List
 
 The DropDown List component supports binding data from local collections and remote services. Use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property to bind local data or configure a [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) for remote data operations. Map fields using the component’s FieldSettings to specify which properties supply item text and value.
 
@@ -197,7 +197,7 @@ The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#
 
 ### Custom adaptor
 
-The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing customize data binding and editing operations in the DropDownList component.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing customize data binding and editing operations in the DropDownList component.
 
 For implementing custom data binding in the DropDownList, the `DataAdaptor` class is used. This abstract class acts as a base class for the custom adaptor.
 
@@ -240,7 +240,7 @@ To reduce network requests, load all data at initialization and process actions 
 
 ### Entity Framework
 
-Follow these steps to consume data from the [Entity Framework](https://blazor.syncfusion.com/documentation/common/data-binding/bind-entity-framework) in the DropDown List component.
+Follow these steps to consume data from the [Entity Framework](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-orm/entityframework) in the DropDown List component.
 
 #### Create DBContext class
 

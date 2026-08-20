@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Integration in Blazor TreeView Component | Syncfusion®
-description: Checkout and learn here all the features about Integration in Blazor TreeView component and much more.
+title: Integration in Blazor TreeView | Syncfusion
+description: Integrate Context Menu, Badge, Sidebar, and icon libraries with Blazor TreeView for richer interactions.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Integration in Blazor TreeView Component
+# Integration in Blazor TreeView
 
 A Context Menu, Badge, Sidebar, Error boundary components, and Icon library can all be integrated into the Blazor TreeView component.
 
@@ -574,7 +574,7 @@ The Blazor TreeView component has the built-in option to customize each node's a
 
 ## Navigation within Sidebar
 
-The Blazor TreeView component's [`NavigateUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldSettings-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldSettings_1_NavigateUrl) field is used for navigation between pages. This example maps `NavigateUrl` to facilitate page transitions when the TreeView is embedded within a Sidebar component.
+The Blazor TreeView component's [`NavigateUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_NavigateUrl) field is used for navigation between pages. This example maps `NavigateUrl` to facilitate page transitions when the TreeView is embedded within a Sidebar component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

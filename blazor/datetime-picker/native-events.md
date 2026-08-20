@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor DateTimePicker Component | Syncfusion®
-description: Checkout and learn here all about Native Events in Blazor Datetime Picker component and much more details.
+title: Native Events in Blazor DateTime Picker | Syncfusion®
+description: Attach native DOM events to the Blazor DateTime Picker using the on{event} attribute, and pass event argument data to the handler.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
 ---
 
-# Native Events in Blazor DateTimePicker Component
+# Native Events in Blazor DateTime Picker
 
 The following section explains how to attach native DOM events to the DateTimePicker component and pass event data to the handler.
 
@@ -45,8 +45,8 @@ Blazor provides argument types that map to native DOM events. Common event categ
 * Mouse events - MouseEventArgs
 * Keyboard events - KeyboardEventArgs
 * Input events - ChangeEventArgs/EventArgs
-* Touch events – TouchEventArgs
-* Pointer events – PointerEventArgs
+* Touch events - TouchEventArgs
+* Pointer events - PointerEventArgs
 
 In the following example, the `KeyPressed` method is invoked on each key press, and a message is written only when the "5" key is pressed.
 
@@ -66,13 +66,17 @@ In the following example, the `KeyPressed` method is invoked on each key press, 
 }
 ```
 
-Lambda expressions can also be used to pass the event data to the handler.
+Lambda expressions can also pass the event data to the handler.
 
 ## List of native events supported
 
-| List of Native events |  |  | |
-| --- | --- | --- | --- |
-| onclick | onblur | onfocus | onfocusout |
-| onmousemove | onmouseover | onmouseout | onmousedown | onmouseup |
-| ondblclick | onkeydown | onkeyup | onkeypress |
-| ontouchend | onfocusin | onmouseup | ontouchstart |
+| Event category | Native events |
+| --- | --- |
+| Focus | `onfocus`, `onblur`, `onfocusin`, `onfocusout` |
+| Mouse | `onclick`, `ondblclick`, `onmousedown`, `onmouseup`, `onmouseover`, `onmouseout`, `onmousemove` |
+| Keyboard | `onkeydown`, `onkeyup`, `onkeypress` |
+| Touch | `ontouchstart`, `ontouchend` |
+
+## See also
+
+* [Events in Blazor DateTimePicker](./events)

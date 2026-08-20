@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Severities with Blazor Message Component | Syncfusion®
-description: Checkout and learn about Severities with Blazor Message component in Blazor Server App and Blazor WebAssembly App.
+title: Severities in Blazor Message | Syncfusion
+description: Display Blazor Message with Normal, Success, Info, Warning, or Error severity levels using the Severity property.
 platform: Blazor
 control: Message
 documentation: ug

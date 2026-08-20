@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Range Slider inside Dialog in Blazor Range Slider | Syncfusion®
-description: Checkout and learn here all about Slider inside Dialog popup in Blazor Range Slider component with examples and much more details.
+title: How to render range slider inside a dialog in Blazor | Syncfusion
+description: Render Blazor Range Slider inside a dialog and call RepositionAsync on open to ensure correct positioning and accessibility in modals.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Render the Blazor Range Slider Inside a Dialog Popup
+# How to render range slider inside a dialog in Blazor
 
 When the dialog is initially hidden, the Blazor Range Slider may be initialized before layout information is available. As a result, the slider cannot size and position itself correctly, and the initial value may not render accurately. To resolve this, capture the slider instance using `@ref` and call the slider’s [RepositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_RepositionAsync) method in the dialog’s [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Opened) event so the component recalculates its layout after the dialog is visible.
 
@@ -24,7 +24,7 @@ When the dialog is initially hidden, the Blazor Range Slider may be initialized 
     <DialogTemplates>
         <Header>Slider in Dialog Popup</Header>
         <Content>
-            <SfSlider @ref="sliderObj" Value=@RangeValue Type="SliderType.Range"></SfSlider>
+            <SfSlider @ref="sliderObj" TValue="int[]" Min="0" Max="100" Value="@RangeValue" Type="SliderType.Range"></SfSlider>
         </Content>
     </DialogTemplates>
 </SfDialog>
@@ -33,14 +33,18 @@ When the dialog is initially hidden, the Blazor Range Slider may be initialized 
     SfSlider<int[]>? sliderObj;
     public bool IsVisible { get; set; } = false;
     public int[] RangeValue = { 30, 70 };
-    public void Opened()
+    public async Task Opened()
     {
-       sliderObj?.RepositionAsync();
+       // Await the reposition so the dialog animation has completed and the slider
+       // can read the final container size before recomputing its layout.
+       if (sliderObj != null)
+       {
+           await sliderObj.RepositionAsync();
+       }
     }
     protected void ToggleDialog()
     {
         IsVisible = !IsVisible;
-        StateHasChanged();
     }
 }
 

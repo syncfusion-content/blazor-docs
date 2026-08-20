@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Drag and Drop in Blazor QueryBuilder Component | Syncfusion®
-description: Checkout and learn here all about Drag and Drop in Blazor QueryBuilder component with examples and much more details.
+title: Drag and Drop in Blazor Query Builder | Syncfusion
+description: Reorder rules and groups in Blazor Query Builder using drag-and-drop with hooks for start, drag, and drop events.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Drag and drop in Blazor QueryBuilder Component
+# Drag and Drop in Blazor Query Builder
 
 The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) supports drag-and-drop reordering of rules and groups for a more intuitive query-building experience. Enable this per instance by setting the [`AllowDragAndDrop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_AllowDragAndDrop) property to `true` (default is `false`). Rules and groups can be dragged within the same group or across groups; items retain their type (a rule cannot be dropped as a group and vice versa).
 
 Drag-and-drop events provide hooks to monitor and customize behavior:
-- [`DragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderDragStart.html): Fires when a drag begins (access the source item and cancel if needed).
+- [`DragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderEvents-1.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderEvents_1_RuleDragStarting): Fires when a drag begins (access the source item and cancel if needed).
 - [`Drag`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderDrag.html): Fires during dragging (track current target and position).
-- [`Drop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderDrop.html): Fires when the item is dropped (determine target group and insert index, or cancel to enforce business rules).
+- [`Drop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderEvents-1.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderEvents_1_RuleDropped): Fires when the item is dropped (determine target group and insert index, or cancel to enforce business rules).
 
 Touch input is supported on mobile and tablet devices. For accessibility, consider offering parallel UI actions (such as add/remove buttons) for users who rely on keyboard navigation.
 
@@ -69,4 +69,4 @@ Touch input is supported on mobile and tablet devices. For accessibility, consid
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjVntmtEVPNqOzjT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Dragging a rule to reorder within a group in the Blazor Query Builder](./images/drag-and-drop.webp)" %}
 
-N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
+N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=fluent2) to know how to render and configure the query builder.

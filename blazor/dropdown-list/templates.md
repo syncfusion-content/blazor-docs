@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor DropDown List Component | Syncfusion®
-description: Checkout and learn here all about Templates in Blazor DropDown List component and much more details.
+title: Templates in Blazor Dropdown List | Syncfusion®
+description: Customize Blazor Dropdown List items, selected values, group headers, and popup header or footer with templates.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Templates in DropDown List
+# Templates in Blazor Dropdown List
 
 The DropDownList provides several templates to customize the appearance of individual list items, group headers, the selected value, and the popup’s header and footer.
 
@@ -101,7 +101,7 @@ In the following sample, the popup displays a “no data available” message.
 
 ## Action failure template
 
-Customize the popup content shown when a remote data request fails using the [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ActionFailureTemplate) property.
+Customize the popup content shown when a remote data request fails by using the [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ActionFailureTemplate) property.
 
 In the following sample, the DropDownList displays a notification when data retrieval fails.
 

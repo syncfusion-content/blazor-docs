@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Grouping Bar in Blazor Pivot Table Component | Syncfusion®
-description: Learn about grouping bar in Blazor Pivot Table component for runtime report creation with examples and much more details.
+title: Grouping Bar in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table exposes a grouping bar for dragging, dropping, filtering, and sorting fields interactively at runtime.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Grouping Bar in Blazor Pivot Table Component
+# Grouping Bar in Blazor Pivot Table
 
 To have a quick glance about **Grouping Bar** in the Blazor Pivot Table, watch this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=Odkh7RkvjoY&t=109s"%}
 
-The Grouping Bar option in the Pivot Table automatically displays fields from the bound data source. It allows users to drag and drop fields between different axes such as columns, rows, values, and filters to create a pivot table at runtime. You can enable it by setting the [ShowGroupingBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowGroupingBar) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**.
+The Grouping Bar option in the Pivot Table automatically displays fields from the bound data source. It allows users to drag and drop fields between different axes such as columns, rows, values, and filters to create a Pivot Table at runtime. You can enable it by setting the [ShowGroupingBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowGroupingBar) property to **true**. The default value is `false`.
 
 The grouping bar provides intuitive interactions similar to the Field List, making report creation accessible to all users. These interactions include:
 
@@ -23,6 +23,7 @@ The grouping bar provides intuitive interactions similar to the Field List, maki
 * Adding fields to the report using the fields panel option.
 * Filtering members of specific fields using the filter icon.
 * Sorting members of specific fields using the sort icon.
+* Changing the aggregation type of value fields using the dropdown icon.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -60,11 +61,24 @@ The grouping bar provides intuitive interactions similar to the Field List, maki
 
 ![Blazor PivotTable with Grouping Bar](images/blazor-pivottable-grouping-bar.webp)
 
+The grouping bar offers additional options to modify its appearance and behavior using the [`PivotViewGroupingBarSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupingBarSettings.html) class. The available sub-properties are summarized below:
+
+| Property | Type | Default | Description |
+|----------|------|---------|-------------|
+| `ShowFieldsPanel` | `boolean ` | `false` | Shows or hides the fields panel above the grouping bar. |
+| `ShowFilterIcon` | `boolean ` | `true` | Shows or hides the filter icon for all fields. |
+| `ShowSortIcon` | `boolean ` | `true` | Shows or hides the sort icon for all fields. |
+| `ShowRemoveIcon` | `boolean ` | `true` | Shows or hides the remove icon for all fields. |
+| `ShowValueTypeIcon` | `boolean ` | `true` | Shows or hides the aggregation dropdown icon for all value fields. |
+| `AllowDragAndDrop` | `boolean ` | `true` | Enables or disables drag-and-drop for all fields. |
+
+The same options can also be set on individual field items inside `PivotViewDataSourceSettings` to control the behavior of a specific field.
+
 ## Show or hide fields panel
 
 The fields panel appears above the grouping bar and shows all the fields that are available in the data source but not currently used in the Pivot Table report. Users can drag and drop these fields into the appropriate axes (rows, columns, values, or filters) to build their desired Pivot Table layout. When a field is removed from any axis, it automatically returns to the fields panel for reuse.
 
-To display the fields panel, set the [ShowFieldsPanel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupingBarSettings.html#Syncfusion_Blazor_PivotView_PivotViewGroupingBarSettings_ShowFieldsPanel) property to **true** within the [PivotViewGroupingBarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupingBarSettings.html) configuration.
+To display the fields panel, set the [ShowFieldsPanel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupingBarSettings.html#Syncfusion_Blazor_PivotView_PivotViewGroupingBarSettings_ShowFieldsPanel) property to **true** within the [PivotViewGroupingBarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupingBarSettings.html) configuration. The default value is `false`.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -96,11 +110,11 @@ To display the fields panel, set the [ShowFieldsPanel](https://help.syncfusion.c
 
 ![Displaying Fields Panel in Blazor PivotTable](images/blazor-pivottable-show-fields-panel.webp)
 
-## Show or hide all filter icon
+## Show or hide filter icon for all fields
 
-The Grouping Bar provides an option to filter members of specific fields during runtime in the Pivot Table. To filter members in a field, click the filter icon next to the field name and select or deselect the members you want to display.
+Use the filter icon next to a field name to filter its members at runtime. To filter members, click the filter icon and select or deselect the members you want to display.
 
-By default, the filter icon appears next to each field in the grouping bar. If you want to hide the filter icon, set the [ShowFilterIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupingBarSettings.html#Syncfusion_Blazor_PivotView_PivotViewGroupingBarSettings_ShowFilterIcon) property to **false** within the [PivotViewGroupingBarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupingBarSettings.html) configuration.
+By default, the filter icon appears next to each field in the grouping bar. To hide the filter icon for all fields, set the [ShowFilterIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupingBarSettings.html#Syncfusion_Blazor_PivotView_PivotViewGroupingBarSettings_ShowFilterIcon) property to **false** within the [PivotViewGroupingBarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupingBarSettings.html) configuration.
 
 > By default, the filter icon is enabled in the grouping bar.
 
@@ -140,9 +154,9 @@ By default, the filter icon appears next to each field in the grouping bar. If y
 
 ![Hiding All Filter Icon in GroupBar in Blazor PivotTable](images/blazor-pivottable-hide-filter-icon-in-group-bar.webp)
 
-## Show or hide specific filter icon
+## Show or hide filter icon for a specific field
 
-By default, the filter icon appears for all fields in the grouping bar. To hide the filter icon for specific fields, set the [ShowFilterIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_ShowFilterIcon) property to **false** for those fields in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html). This lets you control which fields can be filtered, providing a cleaner and more focused user interface.
+By default, the filter icon appears for all fields in the grouping bar. To hide the filter icon for a specific field, set the [ShowFilterIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_ShowFilterIcon) property to **false** for that field in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html). This lets you control which fields can be filtered, providing a cleaner and more focused user interface.
 
 In the sample below, the filter icons for the "Quarter" and "Products" fields are hidden.
 
@@ -181,11 +195,11 @@ In the sample below, the filter icons for the "Quarter" and "Products" fields ar
 
 ![Hiding Specific Filter Icon in Blazor PivotTable](images/blazor-pivottable-hide-specific-filter-icon.webp)
 
-## Show or hide all sort icon
+## Show or hide sort icon for all fields
 
 The Grouping Bar provides an option to sort members of a particular field in either ascending or descending order at runtime. To sort a field, click the sort icon next to the field name. To reverse the sort direction, click the same sort icon again. By default, the sort icon is displayed next to each field in the grouping bar, and members are arranged in ascending order.
 
-To disable the sort option, set the [ShowSortIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupingBarSettings.html#Syncfusion_Blazor_PivotView_PivotViewGroupingBarSettings_ShowSortIcon) property to **false** within the [PivotViewGroupingBarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupingBarSettings.html) configuration.
+To disable the sort option for all fields, set the [ShowSortIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupingBarSettings.html#Syncfusion_Blazor_PivotView_PivotViewGroupingBarSettings_ShowSortIcon) property to **false** within the [PivotViewGroupingBarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupingBarSettings.html) configuration.
 
 > By default, the sort icon is enabled in the grouping bar.
 
@@ -226,7 +240,7 @@ To disable the sort option, set the [ShowSortIcon](https://help.syncfusion.com/c
 
 ![Hiding All Sort Icon in Blazor PivotTable](images/blazor-pivottable-hide-all-sort-icon.webp)
 
-## Show or hide specific sort icon
+## Show or hide sort icon for a specific field
 
 You can choose to show or hide the sort icon for individual fields in the Pivot Table's grouping bar. To hide the sort icon for a particular field, set the [ShowSortIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_ShowSortIcon) property to **false** for that field in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) property.
 
@@ -268,7 +282,7 @@ In the example below, the sort icons for the "Quarter" and "Country" fields are 
 
 ![Hiding Specific Sort Icon in Blazor PivotTable](images/blazor-pivottable-hide-specific-sort-icon.webp)
 
-## Show or hide all remove icon
+## Show or hide remove icon for all fields
 
 The grouping bar in the Pivot Table lets users remove any field at runtime by clicking the remove icon next to the field. By default, the remove icon is visible beside each field in the grouping bar.
 
@@ -312,7 +326,7 @@ If you want to hide the remove icon, set the [ShowRemoveIcon](https://help.syncf
 
 ![Hiding All Remove Icon in Blazor PivotTable](images/blazor-pivottable-hide-all-remove-icon.webp)
 
-## Show or hide specific remove icon
+## Show or hide remove icon for a specific field
 
 You can hide the remove icon for an individual field button in the Pivot Table grouping bar. To do this, set the [ShowRemoveIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_ShowRemoveIcon) property to **false** for the desired field within the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) options.
 
@@ -353,7 +367,7 @@ In the example below, the remove icon for the "Year", "Sold", and "Products" fie
 
 ![Hiding Specific Remove Icon in Blazor PivotTable](images/blazor-pivottable-hide-specific-remove-icon.webp)
 
-## Disable all fields from dragging
+## Disable dragging for all fields
 
 In the Pivot Table, the grouping bar lets users move fields between the row, column, value, and filter axes to change the report as needed. By default, all fields can be moved using drag-and-drop in the grouping bar. To prevent users from dragging any fields, set the [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupingBarSettings.html#Syncfusion_Blazor_PivotView_PivotViewGroupingBarSettings_AllowDragAndDrop) option in [PivotViewGroupingBarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupingBarSettings.html) to **false**. This will lock the layout of the current report, so users cannot rearrange fields in the grouping bar.
 
@@ -393,7 +407,7 @@ In the Pivot Table, the grouping bar lets users move fields between the row, col
 
 ![Disabling All Fields while Dragging in Blazor PivotTable](images/blazor-pivottable-disable-all-field-while-dragging.webp)
 
-## Disable specific field from dragging
+## Disable dragging for a specific field
 
 You can prevent users from dragging certain fields in the grouping bar of the Pivot Table. To do this, set the [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_AllowDragAndDrop) property to **false** for the specific field within the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
 
@@ -432,7 +446,7 @@ In the example below, users cannot drag the "Year" and "Products" fields. This s
 }
 ```
 
-## Changing aggregation type of value fields at runtime
+## Change aggregation type of value fields at runtime
 
 Users can easily perform calculations on groups of values in the Pivot Table by using the aggregation option. Each value field in the Pivot Table appears in the grouping bar with a dropdown icon next to it. This icon lets users select a different aggregation type, such as Sum, Average, or Count, at runtime. When an aggregation type is selected, the Pivot Table values update immediately to reflect the new calculation.
 
@@ -479,7 +493,7 @@ By default, the icon for setting the aggregation type is visible in the grouping
 <br/>
 ![Changing Aggregation Type in Blazor PivotTable](images/blazor-pivottable-aggregation-groupbar-menu.webp)
 
-## Show or hide specific dropdown icon
+## Show or hide value type dropdown icon for a specific field
 
 You can hide the dropdown icon for a particular field button in the Pivot Table’s grouping bar. To do this, set the [ShowValueTypeIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_ShowValueTypeIcon) property to **false** for the desired field within the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
 
@@ -520,9 +534,9 @@ In the following example, the dropdown icon for the "Sold" field is hidden:
 
 ![Hiding Specific DropDown Icon in Blazor PivotTable](images/blazor-pivottable-hide-specific-dropdown-icon.webp)
 
-N> The properties [ShowFilterIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_ShowFilterIcon), [ShowSortIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_ShowSortIcon), [ShowValueTypeIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_ShowValueTypeIcon), and [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_AllowDragAndDrop) in fields of [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) are applicable for both grouping bar and field list.
+N> The following properties—[ShowFilterIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_ShowFilterIcon), [ShowSortIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_ShowSortIcon), [ShowValueTypeIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_ShowValueTypeIcon), and [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_AllowDragAndDrop) in fields of [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) apply to both the grouping bar and field list.
 
-## Events
+## Event
 
 ### OnFieldDropped
 
@@ -533,7 +547,7 @@ The [OnFieldDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Piv
 - [DroppedField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldDroppedEventArgs.html#Syncfusion_Blazor_PivotView_FieldDroppedEventArgs_DroppedField): Defines the dropped field item.
 - [DroppedPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldDroppedEventArgs.html#Syncfusion_Blazor_PivotView_FieldDroppedEventArgs_DroppedPosition): Defines the position where the field has been dropped.
 
-For example, you can use this event to change the caption of the [DroppedField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldDroppedEventArgs.html#Syncfusion_Blazor_PivotView_FieldDroppedEventArgs_DroppedField) instantly at runtime when a user moves a field to a different axis.
+For example, you can use this event to change the caption of the [DroppedField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldDroppedEventArgs.html#Syncfusion_Blazor_PivotView_FieldDroppedEventArgs_DroppedField) instantly at runtime when a user moves a field to a different axis. Modifying the caption updates only the field's display in the grouping bar; it does not rename the underlying data source field.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -744,7 +758,7 @@ The [AggregateMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 The event provides the following parameters:
 
 - [FieldName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.AggregateMenuOpenEventArgs.html#Syncfusion_Blazor_PivotView_AggregateMenuOpenEventArgs_FieldName): The name of the field for which the aggregation menu is opened.
-- [AggregateTypes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.AggregateMenuOpenEventArgs.html#Syncfusion_Blazor_PivotView_AggregateMenuOpenEventArgs_AggregateTypes): The list of aggregation types available for the selected field.
+- [AggregateTypes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.AggregateMenuOpenEventArgs.html#Syncfusion_Blazor_PivotView_AggregateMenuOpenEventArgs_AggregateTypes): A collection of aggregation types available for the selected field (for example, `SummaryTypes.Sum`, `SummaryTypes.Avg`, and `SummaryTypes.Max`).
 - [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.AggregateMenuOpenEventArgs.html#Syncfusion_Blazor_PivotView_AggregateMenuOpenEventArgs_Cancel): A boolean that, when set to true, prevents the dropdown menu from opening.
 
 In the following sample, the dropdown menu for the "Amount" field is customized to show specific aggregation types.
@@ -791,7 +805,7 @@ In the following sample, the dropdown menu for the "Amount" field is customized 
 
 ```
 
-N> The events [FieldRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_FieldRemove), [FieldDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_FieldDrop), [FieldDragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_FieldDragStart), [OnFieldDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_FieldDropped), and [AggregateMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_AggregateMenuOpen) are applicable for both grouping bar and field list.
+N> The [AggregateMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_AggregateMenuOpen), [FieldRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_FieldRemove), [FieldDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_FieldDrop), [FieldDragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_FieldDragStart) and [OnFieldDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_FieldDropped) events are applicable for both grouping bar and field list.
 
 ### OnActionBegin
 
@@ -814,7 +828,7 @@ N> This option applies only to actions performed through the field-based UI, suc
 
 - [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_Cancel): Set this property to **true** within the event to prevent the current action from being completed.
 
-In the example below, users can restrict actions like sorting or filtering from the grouping bar by setting `args.Cancel` to **true** within the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) event.
+For example, in the sample below, users can restrict actions like sorting or filtering from the grouping bar by setting `args.Cancel` to **true** within the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) event.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -867,7 +881,8 @@ The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.P
 The event provides the following parameters:
 
 - [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_DataSourceSettings): Contains the current report settings, including information about the input data, rows, columns, values, filters, and format settings used in the Pivot Table.
-- [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionName): Specifies the name of the action just completed. The table below lists possible UI actions and their corresponding action names:
+
+- [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionName): A string specifying the name of the action just completed. The table below lists possible UI actions and their corresponding action names:
 
   | Action                                          | Action Name               |
   |-------------------------------------------------|--------------------------|
@@ -931,7 +946,7 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pi
 
 **Event Parameters**
 
-- [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ActionName): Identifies which user action did not succeed. The table below lists the actions and their corresponding names:
+- [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ActionName): A string identfying which user action did not succeed. The table below lists the actions and their corresponding names:
 
   | Action                                                | Action Name         |
   |-------------------------------------------------------|---------------------|

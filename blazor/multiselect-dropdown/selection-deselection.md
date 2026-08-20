@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in Blazor MultiSelect Component | Syncfusion®
-description: Checkout and learn here all about the Selection feature in Blazor MultiSelect component and much more details.
+title: Selection and Deselection in Blazor MultiSelect Dropdown | Syncfusion
+description: Retrieve selected values from Blazor MultiSelect Dropdown using the ValueChange event and event arguments.
 platform: Blazor
-control: MultiSelect
+control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Selection and deselection in MultiSelect
+# Selection and Deselection in Blazor MultiSelect Dropdown
 
 ## Get selected value
 
@@ -19,7 +19,7 @@ Get the selected values of the MultiSelect component in the [ValueChange](https:
 
 {% endhighlight %}
 
-## Preselected value on OnInitializedAsync
+## Preselected value with OnInitializedAsync
 
 Bind the pre-selected value to the MultiSelect component using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Value) attribute. Assign the value property inside the [OnInitializedAsync](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-10.0#component-initialization-oninitializedasync) lifecycle. The following sample shows how to bind the value on the initial rendering of the component.
 

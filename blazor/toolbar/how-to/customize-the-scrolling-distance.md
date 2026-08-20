@@ -1,53 +1,55 @@
 ---
 layout: post
-title: Customize the Scrolling distance in Blazor Toolbar | Syncfusion®
-description: Learn here all the features about customize the scrolling distance in Blazor Toolbar component and more.
+title: How to customize scrolling distance in Blazor Toolbar | Syncfusion
+description: Control how far Blazor Toolbar scrolls using the ScrollStep property when navigation icons are clicked.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Customize the Scrolling Distance in Blazor Toolbar Component
+# How to customize scrolling distance in Blazor Toolbar
 
-The toolbar `ScrollStep` property supports to customize the scrolling distance, by clicking the left and right side navigation icons. A required value can be passed through the `ScrollStep` property to customize toolbar scrolling distance.
+The Toolbar's [`ScrollStep`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfToolbar.html#Syncfusion_Blazor_Navigations_SfToolbar_ScrollStep) property lets you customize the scrolling distance when the left or right navigation icons are clicked. Pass the desired value to the `ScrollStep` property to control the scroll behavior.
 
-```csharp
+N> The `ScrollStep` value applies only when the Toolbar's [`OverflowMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfToolbar.html#Syncfusion_Blazor_Navigations_SfToolbar_OverflowMode) is set to `Scrollable` (the default). The default `ScrollStep` value is `0`.
+
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
 <SfToolbar Width="600" ScrollStep="50">
     <ToolbarItems>
-        <ToolbarItem PrefixIcon="e-icons e-cut" Tooltiptext="Cut"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-copy" Tooltiptext="Copy"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-paste" Tooltiptext="Paste"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-icons e-cut" TooltipText="Cut"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-icons e-copy" TooltipText="Copy"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-icons e-paste" TooltipText="Paste"></ToolbarItem>
         <ToolbarItem Type="ItemType.Separator"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-bold" Tooltiptext="Bold"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-underline" Tooltiptext="Underline"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-italic" Tooltiptext="Italic"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-paint-bucket" Tooltiptext="Color-Picker"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-icons e-bold" TooltipText="Bold"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-icons e-underline" TooltipText="Underline"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-icons e-italic" TooltipText="Italic"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-icons e-paint-bucket" TooltipText="Color-Picker"></ToolbarItem>
         <ToolbarItem Type="ItemType.Separator"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-align-left" Tooltiptext="Align-Left"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-align-right" Tooltiptext="Align-Right"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-align-center" Tooltiptext="Align-Center"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-justify" Tooltiptext="Align-Justify"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-icons e-align-left" TooltipText="Align-Left"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-icons e-align-right" TooltipText="Align-Right"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-icons e-align-center" TooltipText="Align-Center"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-icons e-justify" TooltipText="Align-Justify"></ToolbarItem>
         <ToolbarItem Type="ItemType.Separator"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-list-unordered" Tooltiptext="Bullets"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-list-ordered" Tooltiptext="Numbering"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-icons e-list-unordered" TooltipText="Bullets"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-icons e-list-ordered" TooltipText="Numbering"></ToolbarItem>
         <ToolbarItem Type="ItemType.Separator"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-sort-ascending" Tooltiptext="Sort A - Z"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-sort-descending" Tooltiptext="Sort Z - A"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-icons e-sort-ascending" TooltipText="Sort A - Z"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-icons e-sort-descending" TooltipText="Sort Z - A"></ToolbarItem>
         <ToolbarItem Type="ItemType.Separator"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-upload-1" Tooltiptext="Upload"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-download" Tooltiptext="Download"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-icons e-upload-1" TooltipText="Upload"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-icons e-download" TooltipText="Download"></ToolbarItem>
         <ToolbarItem Type="ItemType.Separator"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-increase-indent" Tooltiptext="Text Indent"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-decrease-indent" Tooltiptext="Text Outdent"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-icons e-increase-indent" TooltipText="Text Indent"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-icons e-decrease-indent" TooltipText="Text Outdent"></ToolbarItem>
         <ToolbarItem Type="ItemType.Separator"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-erase" Tooltiptext="Clear"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-refresh" Tooltiptext="Reload"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-export" Tooltiptext="Export"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-icons e-erase" TooltipText="Clear"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-icons e-refresh" TooltipText="Reload"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-icons e-export" TooltipText="Export"></ToolbarItem>
     </ToolbarItems>
 </SfToolbar>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrdNwtBTddNsjxS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Custominzing Scroll Step in Blazor Toolbar](../images/blazor-toolbar-scrollstep.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrdNwtBTddNsjxS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Scroll Step in Blazor Toolbar](../images/blazor-toolbar-scrollstep.webp)" %}

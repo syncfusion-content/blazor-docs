@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Special Dates in Blazor DateTimePicker Component | Syncfusion®
-description: Learn how to customize special dates in the Blazor DateTimePicker using the OnRenderDayCell event to highlight or disable specific days.
+title: Special Dates in Blazor DateTime Picker | Syncfusion®
+description: Customize special dates in the Blazor DateTime Picker using the OnRenderDayCell event to highlight, style, or disable specific days.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
 ---
 
-# Special Dates in Blazor DateTimePicker Component
+# Special Dates in Blazor DateTime Picker
 
-Customize specific dates in the DateTimePicker using the [OnRenderDayCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateTimePickerEvents-1.html#Syncfusion_Blazor_Calendars_DateTimePickerEvents_1_OnRenderDayCell) event. This event is triggered for each day cell as it is created, allowing to apply custom styles or disable specific dates. In the following example, selected dates in the current month are styled by adding the CSS classes personal-appointment and official-appointment defined in the sample.
+Customize specific dates in the DateTimePicker using the [OnRenderDayCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateTimePickerEvents-1.html#Syncfusion_Blazor_Calendars_DateTimePickerEvents_1_OnRenderDayCell) event. This event is triggered for each day cell as it is created, allowing you to apply custom styles or disable specific dates. The handler receives a `RenderDayCellEventArgs` that exposes `Date` (the cell's date), `IsDisabled` and `IsOutOfRange` flags, and a settable `CellData` used to customize the cell's content and CSS classes. In the following example, specific days of the current month are styled by adding the CSS classes `personal-appointment` and `official-appointment` defined in the sample's `<style>` block.
 
 ```cshtml
 
@@ -89,3 +89,7 @@ Customize specific dates in the DateTimePicker using the [OnRenderDayCell](https
 ```
 
 ![Blazor DateTimePicker highlighting special dates for personal and official appointments](./images/blazor_datetimepicker_special_dates.webp)
+
+## See also
+
+* [Events in Blazor DateTimePicker](./events)

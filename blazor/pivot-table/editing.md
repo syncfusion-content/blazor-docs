@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Editing in Blazor Pivot Table Component | Syncfusion®
-description: Learn about editing features in Blazor Pivot Table component for CRUD operations with examples and much more details.
+title: Editing in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table enables inline editing of value cells to add, update, and delete raw data through the drill-through grid.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Editing in Blazor Pivot Table Component
+# Editing in Blazor Pivot Table
 
 N> This feature is applicable only for the relational data source.
 
-The cell editing option allows users to directly change data in the pivot table by adding, updating, or deleting raw data items within any value cell. When you double-click a value cell, the raw items appear in a data grid within a new window. In this data grid, you can perform CRUD operations by double-clicking cells or using toolbar options. After you finish editing the raw items, the pivot table automatically updates the aggregated values. To enable this option, set the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html#Syncfusion_Blazor_PivotView_PivotViewCellEditSettings_AllowEditing) property in [PivotViewCellEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html) class to **true**.
+The cell editing option allows users to directly change data in the pivot table by adding, updating, or deleting raw data items within any value cell. When you double-click a value cell, the raw items appear in a data grid within a new window. In this data grid, you can perform CRUD operations by double-clicking cells or using toolbar options. After you finish editing the raw items, the pivot table automatically updates the aggregated values. To enable this option, set the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html#Syncfusion_Blazor_PivotView_PivotViewCellEditSettings_AllowEditing) property in [PivotViewCellEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html) to **true**.
 
 The [PivotViewCellEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html) class provides comprehensive control over editing behavior through the following options:
 
@@ -42,7 +42,7 @@ The following are the supported edit types in the data grid:
 * Batch
 * Command Columns
 
-To learn about how to work with Editing options, you can check on this video for Blazor Pivot Table.
+To learn how to work with editing options, check out this video.
 
 {% youtube "https://www.youtube.com/watch?v=bnOn_L6dPY4" %}
 
@@ -50,7 +50,7 @@ To learn about how to work with Editing options, you can check on this video for
 
 Normal edit mode allows users to edit one row at a time in the editing dialog with simple data changes and updates. In normal edit mode, when editing begins, the selected row changes to edit state. Cell values can be modified and saved to the data source by clicking the "Update" toolbar button. To enable normal edit mode, set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html#Syncfusion_Blazor_PivotView_PivotViewCellEditSettings_Mode) property in [PivotViewCellEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html) class to [EditMode.Normal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EditMode.html#Syncfusion_Blazor_PivotView_EditMode_Normal).
 
-N> The normal edit mode [EditMode.Normal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EditMode.html#Syncfusion_Blazor_PivotView_EditMode_Normal) is set as the default mode for editing.
+N> [EditMode.Normal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EditMode.html#Syncfusion_Blazor_PivotView_EditMode_Normal) is the default edit mode.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -167,7 +167,7 @@ Batch editing enables users to make multiple changes to data grid cells and save
 
 ## Command column
 
-The command column option provides dedicated action buttons within the data grid for streamlined CRUD operations as an alternative to using toolbar options. An additional column appears in the data grid layout containing command buttons to perform the CRUD operations. To enable the command columns, set the [AllowCommandColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html#Syncfusion_Blazor_PivotView_PivotViewCellEditSettings_AllowCommandColumns) property in [PivotViewCellEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html) class to **true**.
+The command column option provides dedicated action buttons within the data grid for streamlined CRUD operations as an alternative to using toolbar options. An additional column appears in the data grid layout containing command buttons to perform the CRUD operations. To enable the command columns, set the [AllowCommandColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html#Syncfusion_Blazor_PivotView_PivotViewCellEditSettings_AllowCommandColumns) property in [PivotViewCellEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html) to **true**.
 
 The available built-in command buttons are:
 
@@ -179,7 +179,7 @@ The available built-in command buttons are:
 | Cancel | Cancel the edited state. |
 
 N>
-- When the command column option is enabled, the Edit, Delete, Update, and Cancel buttons are not shown in the Data Grid's toolbar. Instead, these action buttons appear in the last column of each row within the Data Grid.
+- When the command column option is enabled, the **Edit**, **Delete**, **Update**, and **Cancel** buttons are not shown in the Data Grid's toolbar. Instead, these action buttons appear in the last column of each row within the Data Grid.
 - To delete a record directly from the data grid using the **Delete** action button in the command column, you need to set the [AllowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html#Syncfusion_Blazor_PivotView_PivotViewCellEditSettings_AllowDeleting) property to **true**.
 
 ```cshtml
@@ -307,14 +307,16 @@ Clicking a data point in the pivot chart displays the underlying raw items in a 
 
 ## Events
 
+The Pivot Table provides the following events to monitor editing operations. Use them to track, customize, or intercept a specific stage of the editing workflow.
+
 ### EditCompleted
 
-The event [EditCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_EditCompleted) triggers when values cells are edited completely. The event provides edited cell(s) information along with its previous cell value. It also helps to do the CRUD operation by manually updating the database which is connected to the component. It has the following parameters:
+The event [EditCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_EditCompleted) triggers when value cells are edited completely. The event provides edited cell information along with the previous cell value. It also lets you perform CRUD operations by manually updating the data source connected to the component. It has the following parameters.
 
 * [AddedData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EditCompletedEventArgs-1.html#Syncfusion_Blazor_PivotView_EditCompletedEventArgs_1_AddedData) - It holds the newly added raw data of the current edited cell which is used to add them in the datasource.
 * [ModifiedData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EditCompletedEventArgs-1.html#Syncfusion_Blazor_PivotView_EditCompletedEventArgs_1_ModifiedData) - It holds the modified raw data of the current edited cell as well as their current index, which is used to identify and update them in the datasource.
 * [RemovedData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EditCompletedEventArgs-1.html#Syncfusion_Blazor_PivotView_EditCompletedEventArgs_1_RemovedData) - It holds the current edited cell's removed raw data as well as their current index, which is used to identify and remove them from the datasource.
-* [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EditCompletedEventArgs-1.html#Syncfusion_Blazor_PivotView_EditCompletedEventArgs_1_Cancel) - It is a boolean property and if it is set as **true**, the editing won’t be reflected in the pivot table.
+* [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EditCompletedEventArgs-1.html#Syncfusion_Blazor_PivotView_EditCompletedEventArgs_1_Cancel) - A Boolean property. When set to `true`, the edit is not reflected in the pivot table.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -364,21 +366,21 @@ The event [EditCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ### OnActionBegin
 
-The event [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) triggers when editing actions such as add, edit, save, or delete are started through the UI (either by dialog or inline editing). This event lets users monitor the editing workflow and take action before the operation completes. The following parameters are available in the event:
+The event [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) event triggers when editing actions such as add, save, or delete are started through the UI (either by dialog or inline editing). This event lets users monitor the editing workflow and take action before the operation completes. The following parameters are available in the event:
 
 * [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_DataSourceSettings): Contains the current data source settings, including all input data, rows, columns, values, filters, and format settings.
 * [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_ActionName): Shows the name of the editing action that has started. The following are the UI actions and their names:
 
-   | Action | Action Name|
-   |--------|-------------|
-   | Editing| Edit record|
-   | Save| Save edited records|
-   | Add| Add new record|
-   | Delete| Remove record|
+   | Action  | Action Name|
+   |--------|--------------|
+   | Editing | Edit record|
+   | Save  | Save edited records|
+   | Add  | Add new record|
+   | Delete  | Remove record|
 
 * [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_Cancel): Allows users to stop (cancel) the action by setting this option to **true**.
 
-In the following example, editing actions such as add and save can be restricted by setting the **args.Cancel** option to **true** in the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) event.
+For example, you can restrict add and save actions by setting **args.Cancel** to **true** in the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) event.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -425,10 +427,10 @@ In the following example, editing actions such as add and save can be restricted
 
 ### OnActionComplete
 
-The event [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionComplete) triggers whenever a UI action, such as add, update, remove, or save (using dialog or inline editing), is finished. This lets users know exactly what kind of action has just been completed. The event provides the following details:
+The event [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionComplete) event triggers whenever a UI action, such as add, update, remove, or save (using dialog or inline editing), is finished. This lets users know exactly what kind of action has just been completed. The event provides the following details:
 
 * [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_DataSourceSettings): Contains the current data source settings, including input data, rows, columns, values, filters, format settings, and more.
-* [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionName): It holds the name of the current action completed. The following are the UI actions and their names:
+* [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionName): It holds the name of the completed action. The following are the UI actions and their names:
 
    | Action | Action Name|
    |--------|-------------|
@@ -483,12 +485,12 @@ The event [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 ### OnActionFailure
 
-The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionFailure) triggers when the current UI action fails to achieve the desired result. It has the following parameters:
+The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionFailure) event is triggered when a UI action fails to produce the expected result. This event provides detailed information about the failure through the following parameters:
 
 * [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ActionName): It holds the name of the current action failed. The following are the UI actions and their names:
 
    | Action | Action Name|
-   |--------|-------------|
+   |------|-------------|
    | Editing| Edit record|
    | Save| Save edited records|
    | Add| Add new record|

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Export in Blazor Barcode Component | Syncfusion®
-description: Checkout and learn here all features about Export functionality in Blazor Barcode component and much more.
+title: Export in Blazor Barcode Generator | Syncfusion®
+description: Export the Blazor Barcode as JPG or PNG image, or retrieve it as a base64 string, for download or reuse in the app.
 platform: Blazor
 control: Barcode
 documentation: ug
@@ -32,7 +32,7 @@ documentation: ug
 
 ### ExportAsBaseImage
 
-Barcode provides support to export as an image in the specified image type and returns it as base64 string.
+Barcode provides support to export as an image in the specified image type and returns it as a base64 string. The returned string can be used to display the image directly in the application or store it for later use.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started with Blazor File Upload in Blazor Web App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor File Upload Component in Blazor Web App.
+description: Learn how to get started with the Syncfusion Blazor File Upload in a Blazor Web App with installation and setup steps.
 platform: Blazor
 component: File Upload
 documentation: ug
 ---
 
-# Getting Started with Blazor File Upload Component in a Blazor Web App
+# Getting Started with Blazor File Upload in Blazor Web App
 
 This section briefly explains how to include the [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -185,7 +185,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload) component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload) component will render in your default web browser.
 
 {% endtabcontent %}
 
@@ -472,7 +472,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 ## See also
 
 1. [Getting Started with Blazor WebAssembly Standalone App .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=.net-cli)
-2. [Getting Started with Blazor WebAssembly Standalone App in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
+2. [Getting Started with Blazor WebAssembly Standalone App in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 3. [Getting Started with Blazor Web App in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli)
 4. [Getting Started with File Upload in Blazor WebAssembly using Visual Studio](https://blazor.syncfusion.com/documentation/file-upload/how-to/getting-started-with-blazor-webassembly)
 5. [How to convert images to Base64 string with Blazor File Upload](https://support.syncfusion.com/kb/article/21178/how-to-convert-images-to-base64-string-with-blazor-file-upload)

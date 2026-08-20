@@ -1,17 +1,17 @@
 ---
 layout: post
-title:  DateOnly Support in Blazor DateRangePicker Component | Syncfusion®
-description: Checkout and learn here all about the DateOnly Support in Blazor DateRangePicker component and much more.
+title: DateOnly Support in Blazor DateRangePicker | Syncfusion®
+description: Use the .NET DateOnly type with the Blazor DateRangePicker by setting the TValue generic to DateOnly or DateOnly? for date-only range selection.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
 ---
 
-# DateOnly Support in Blazor DateRangePicker Component
+# DateOnly Support in Blazor DateRangePicker
 
-The [DateOnly](https://learn.microsoft.com/en-us/dotnet/api/system.dateonly?view=net-7.0) type is a new type in .NET 6 that allows you to represent a date without a time component. To use it with the Blazor DateRangePicker component, set the type parameter to `DateOnly`.
+The [DateOnly](https://learn.microsoft.com/en-us/dotnet/api/system.dateonly) type was introduced in .NET 6 and allows you to represent a date without a time component. To use it with the Blazor DateRangePicker component, set the `TValue` parameter to `DateOnly`.
 
-> Blazor DateRangePicker Component supports `DateOnly` type in .NET 7 and above version only, even though it introduced in .NET 6 itself due to serialization problem.
+> The Blazor DateRangePicker component supports the `DateOnly` type in .NET 7 and above only, even though it was introduced in .NET 6, due to a serialization problem.
 
 {% highlight Razor %}
 

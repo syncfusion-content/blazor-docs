@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor AI AssistView Component | Syncfusion®
-description: Checkout and learn here all about Templates with Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
+title: Templates in Blazor AI AssistView | Syncfusion®
+description: Customize Blazor AI AssistView with BannerTemplate, PromptTemplate, ResponseTemplate, and SuggestionsTemplate for flexible UI layouts.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 ---
 
-# Templates in Blazor AI AssistView component
+# Templates in Blazor AI AssistView
 
 The AI AssistView provides several template options to customize the banner, prompt, response, suggestions and footer items.
 

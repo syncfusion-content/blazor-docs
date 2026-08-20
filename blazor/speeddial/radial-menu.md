@@ -1,19 +1,23 @@
 ---
 layout: post
-title: RadialMenu in Blazor SpeedDial Component | Syncfusion®
-description: Checkout and learn about radial menu and its customization in Blazor SpeedDial component and much more.
+title: Radial Menu in Blazor Speed Dial | Syncfusion
+description: Arrange Blazor Speed Dial items in a radial menu with customizable angles, direction, and offset for unique layouts.
 platform: Blazor
 control: SpeedDial
 documentation: ug
 ---
 
-# Radial Menu in Blazor Speed Dial Component
+# Radial Menu in Blazor Speed Dial
 
-Display Speed Dial action items in a circular pattern like a radial menu by setting the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Mode) property to radial. Customize the `Direction`, `StartAngle`, `EndAngle`, and `Offset` using the [SpeedDialRadialSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialRadialSettings.html) tag directive.
+Display SpeedDial action items in a circular pattern like a radial menu by setting the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Mode) property to `Radial`. Customize the `Direction`, `StartAngle`, `EndAngle`, and `Offset` using the [SpeedDialRadialSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialRadialSettings.html) tag directive.
 
 ## Radial Menu direction
 
-Open the action items in either a clockwise or an anticlockwise direction by setting the [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialRadialSettings.html#Syncfusion_Blazor_Buttons_SpeedDialRadialSettings_Direction) property. The default value is `Auto`, which determines the arc based on the Speed Dial `Position`.
+Open the action items in either a clockwise or an anticlockwise direction by setting the [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialRadialSettings.html#Syncfusion_Blazor_Buttons_SpeedDialRadialSettings_Direction) property. The available [RadialDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.RadialDirection.html) values are:
+
+* `Clockwise` - Items are arranged in the clockwise direction.
+* `AntiClockwise` - Items are arranged in the anticlockwise direction.
+* `Auto` (default) - The direction is automatically determined based on the SpeedDial `Position`.
 
 ```cshtml
 

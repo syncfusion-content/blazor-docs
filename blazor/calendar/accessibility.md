@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Calendar Component | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor Calendar component including keyboard navigation, ARIA attributes, and usability features.
+title: Accessibility in Blazor Calendar | Syncfusion®
+description: Learn how Blazor Calendar meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA attributes, keyboard navigation, and screen reader support.
 platform: Blazor
 control: Calendar
 documentation: ug
 ---
 
-# Accessibility in Blazor Calendar Component
+# Accessibility in Blazor Calendar
 
 The [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -38,8 +38,7 @@ The accessibility compliance for the Blazor Calendar component is outlined below
 
 ## WAI-ARIA attributes 
 
-
-Blazor Calendar provides built-in compliance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) specifications. WAI-ARIA support is achieved through attributes like `aria-label`, `aria-selected`, `aria-disabled`, and `aria-activedescendant` applied for navigation buttons, and disable and active day cells.
+Blazor Calendar provides built-in compliance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) specifications. WAI-ARIA support is achieved through attributes like `aria-label`, `aria-selected`, `aria-disabled`, and `aria-activedescendant` applied for navigation buttons, and disabled and active day cells.
 
 It helps disabled persons by providing information about the widget for assistive technology in the screen readers. Calendar component contains grid role and grid cell for each day cell.
 
@@ -49,7 +48,7 @@ It helps disabled persons by providing information about the widget for assistiv
 
 * **aria-disabled**: Indicates the disabled state of the Calendar component.
 
-* **aria-activedescendent**: Helps in managing the current active child of the Calendar component.
+* **aria-activedescendant**: Helps in managing the current active child of the Calendar component.
 
 * **role**: Gives information to assistive technologies about how to handle each element in a widget.
 

@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Data Binding in Blazor TreeView Component | Syncfusion®
-description: Checkout and learn here all the features about data binding support in Blazor TreeView component, it's elements and more.
+title: Data Binding in Blazor TreeView | Syncfusion
+description: Bind local lists or remote services with load-on-demand support in Blazor TreeView using data adapters.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Data Binding in Blazor TreeView Component
+# Data Binding in Blazor TreeView
 
 The Blazor TreeView component provides the option to load data either from the local data sources or from remote data services. This can be done through [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property that is a member of the [`TreeViewFieldsSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldsSettings-1.html) property. The `DataSource` property supports list of objects and `DataManager`. It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 
-The Blazor TreeView features "load on demand" (lazy loading) by default, which minimizes bandwidth usage when handling large datasets. It initially loads only the first-level nodes. Child nodes are loaded when a parent node is expanded, based on the [`ParentID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldSettings-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldSettings_1_ParentID) or [`Child`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldSettings-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldSettings_1_Child) member.
+The Blazor TreeView features "load on demand" (lazy loading) by default, which minimizes bandwidth usage when handling large datasets. It initially loads only the first-level nodes. Child nodes are loaded when a parent node is expanded, based on the [`ParentID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_ParentID) or [`Child`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Child) member.
 
 By default, the [`LoadOnDemand`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_LoadOnDemand) property is set to `true`. Disabling this property renders all tree nodes at once at the beginning. The [`DataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_DataBound) event triggers once the data source is populated in the TreeView, allowing for post-data-binding actions.
 
@@ -22,7 +22,7 @@ A video demonstrating how to bind list data and service URLs to the Blazor TreeV
 
 ## Local Data
 
-To bind local data to the Blazor TreeView, assign a list of objects to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldSettings-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldSettings_1_DataSource) property. The Blazor TreeView component primarily requires three fields—[`Id`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldSettings-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldSettings_1_Id), [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldSettings-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldSettings_1_Text), and either [`ParentID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldSettings-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldSettings_1_ParentID) or [`Child`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldSettings-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldSettings_1_Child)—to render data. If mapper fields are not explicitly specified, default values are used. Local data sources can also be provided as an instance of [`DataManager`](https://blazor.syncfusion.com/documentation/data/getting-started).
+To bind local data to the Blazor TreeView, assign a list of objects to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property. The Blazor TreeView component primarily requires three fields—[`Id`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Id), [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Text), and either [`ParentID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_ParentID) or [`Child`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Child)—to render data. If mapper fields are not explicitly specified, default values are used. Local data sources can also be provided as an instance of [`DataManager`](https://blazor.syncfusion.com/documentation/data/getting-started).
 
 Two primary methods for local data binding are supported:
 
@@ -32,7 +32,7 @@ Two primary methods for local data binding are supported:
 
 ### Hierarchical Data
 
-The Blazor TreeView can be populated with a hierarchical data source composed of a nested list of objects. A hierarchical data structure is directly assigned to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldSettings-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldSettings_1_DataSource) property. All field members from the hierarchical data are then mapped to the corresponding keys within the [`TreeViewFieldsSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldsSettings-1.html) property.
+The Blazor TreeView can be populated with a hierarchical data source composed of a nested list of objects. A hierarchical data structure is directly assigned to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property. All field members from the hierarchical data are then mapped to the corresponding keys within the [`TreeViewFieldsSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldsSettings-1.html) property.
 
 In the following example, **Id**, **FolderName**, and **SubFolders** columns from hierarchical data have been mapped to [`Id`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Id), [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Text), and [`Child`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Child) fields, respectively.
 

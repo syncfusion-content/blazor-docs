@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Working with Data in Blazor Stock Chart Component | Syncfusion®
-description: Checkout and learn how to bind data to the Blazor Stock Chart using lists, Dynamic Objects and much more details.
+title: Blazor Stock Chart Working with Data | Syncfusion®
+description: Learn how to bind data to the Blazor Stock Chart using a list of business objects, SfDataManager, or remote RESTful JSON services.
 platform: Blazor
-control: Stock Chart 
+control: Stock Chart
 documentation: ug
 ---
 
 <!-- markdownlint-disable MD036 -->
 
-# Working with Data in Blazor Stock Chart Component
+# Blazor Stock Chart Working with Data
 
 The Stock Chart uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports RESTful JSON services and IEnumerable binding. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) can be set using either the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component or a list of business objects.
 

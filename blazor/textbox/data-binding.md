@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor TextBox Component | Syncfusion®
-description: Checkout and learn here all the features about data binding in Blazor TextBox component and much more details.
+title: Data Binding in Blazor TextBox | Syncfusion
+description: Bind values to Blazor TextBox with one-way, two-way, dynamic, or complex data binding options for flexible form integration.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Data Binding in Blazor TextBox Component
+# Data Binding in Blazor TextBox
 
 This section describes how to bind values to the TextBox component using the following approaches:
 
@@ -40,7 +40,7 @@ public string Name { get; set; } = "Hello, World!";
 
 ## Two-way data binding
 
-Use the `@bind-Value` attribute for two-way binding. Supported types include `string`, `int`, `enum`, `DateTime`, and `bool`. When the component value changes, the bound variable is updated, and vice versa.
+Use the `@bind-Value` attribute for two-way binding. The `SfTextBox` component is a `string`-based wrapper, so it supports the `string` type out of the box. For other types (such as `int`, `enum`, `DateTime`, and `bool`), use the generic `SfTextBox<TValue>` overload. When the component value changes, the bound variable is updated, and vice versa.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -56,7 +56,7 @@ public string Name { get; set; } = "Syncfusion";
 }
 ```
 
-## Dynamic value binding
+## Dynamic CSS class binding
 
 The component can update styles or other parameters dynamically in response to events. Calling `StateHasChanged()` notifies the component to re-render; event callbacks typically trigger re-render automatically, so this call may be optional depending on the scenario.
 

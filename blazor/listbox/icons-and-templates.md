@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Icons and Templates in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all about how to add icons and customize templates in the Blazor ListBox component and much more details.
+title: Icons and Templates in Blazor ListBox | Syncfusion
+description: Add icons and custom item templates to Blazor ListBox to tailor list item content and visual layout.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Icons and Templates in Blazor ListBox Component
+# Icons and Templates in Blazor ListBox
 
 ## Icons
 
@@ -175,3 +175,9 @@ The [ListBoxTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
 ```
 
 ![Blazor ListBox with icon](./images/blazor-listbox-icon-template.webp)
+
+## See also
+
+* [Data Binding in Blazor ListBox](./data-binding.md)
+* [Selection in Blazor ListBox](./selection.md)
+* [Getting Started with Blazor ListBox](./getting-started.md)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Azure cloud provider in Blazor File Manager Component | Syncfusion®
-description: Check out and learn about the Azure cloud file system provider in the Blazor File Manager component and much more details.
-platform: Blazor
+title: Azure Cloud Provider in Blazor File Manager | Syncfusion
+description: Learn how to connect the Blazor File Manager to Azure Blob Storage to browse and manage files in the cloud.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Azure cloud file system provider
+# Azure Cloud Provider in Blazor File Manager
 
 ## Introduction to Azure Blob Storage
 
@@ -23,7 +23,7 @@ Before you integrate Azure Blob Storage with the Blazor File Manager, ensure you
 
 ## Setting Up Azure Blob Storage
 
-- Sign in to the [Azure Portal](https://portal.azure.com/) and [create a storage account](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal) with Blob service enabled.
+- Sign in to the [Azure Portal](https://portal.azure.com/#home) and [create a storage account](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal) with Blob service enabled.
 - [Create a Blob Container](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?tabs=azure-portal#create-a-container) (example: files). See Azure docs for [container naming rules](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction#naming-and-referencing-containers-blobs-and-metadata).
 
 ## Backend Setup
@@ -31,7 +31,7 @@ Before you integrate Azure Blob Storage with the Blazor File Manager, ensure you
 Clone the [Azure File Provider](https://github.com/SyncfusionExamples/azure-aspcore-file-provider) using the following command,
 
 ```bash
-git clone https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider ej2-azure-aspcore-file-provider
+git clone https://github.com/SyncfusionExamples/azure-aspcore-file-provider.git ej2-azure-aspcore-file-provider
 ```
 
 N> This Azure Blob Storage provider for the Blazor File Manager is intended for demonstration and evaluation only. Before using it in production, consult your security team and complete a security review.

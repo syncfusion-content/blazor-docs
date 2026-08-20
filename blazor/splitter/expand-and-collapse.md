@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Expand and Collapse in Blazor Splitter Component | Syncfusion®
-description: Checkout and learn here all about how to expand and collapse in Blazor Splitter component much more details.
+title: Expand and Collapse in Blazor Splitter | Syncfusion
+description: Enable Collapsible on Blazor Splitter panes and expand or collapse them using built-in icons and events.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# Expand and Collapse in Blazor Splitter Component
+# Expand and Collapse in Blazor Splitter
 
 ## Collapsible panes
 
-The Splitter panes can be configured with built-in expand and collapse functionalities. By default, the collapsible behavior is disabled. Enable the `Collapsible` behavior in the SplitterPane property to show or hide the expand or collapse icons in the panes. The panes can be dynamically expanded and collapsed by the corresponding icons.
+The Splitter panes can be configured with built-in expand and collapse functionalities. By default, the collapsible behavior is disabled. Enable the `Collapsible` behavior on the `SplitterPane` to show or hide the expand or collapse icons in the panes. The panes can be dynamically expanded and collapsed by the corresponding icons.
 
 The following code shows how to enable collapsible behavior.
 

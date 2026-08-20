@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Cascading in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn here all the features about Cascading in the Blazor ComboBox component and much more.
+title: Cascading in Blazor ComboBox | Syncfusion®
+description: Build cascading Blazor ComboBoxes where a child ComboBox filters its options based on the selection made in the parent ComboBox.
 platform: Blazor
-control: DropDown List
+control: ComboBox
 documentation: ug
 ---
 
-# Cascading in ComboBox
+# Cascading in Blazor ComboBox
 
 A cascading ComboBox filters the options of a child ComboBox based on the selection made in the parent ComboBox. This enables a hierarchy of ComboBox options, where child options depend on the parent’s selected value.
 
@@ -41,4 +41,4 @@ In the following example, the ComboBox lists countries, and textboxes display th
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXLxZdLUKDDGkuiV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Cascading with other form field in Blazor ComboBox](./images/cascading/blazor_combobox_cascading-with-other-form-field.webp)" %}
 
-N> [View the cascading ComboBox demo](https://blazor.syncfusion.com/demos/combobox/cascading?theme=bootstrap5).
+N> [View the cascading ComboBox demo](https://blazor.syncfusion.com/demos/combobox/cascading?theme=fluent2).

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor SpeechToText Component | Syncfusion®
-description: Checkout and learn about Events in Blazor SpeechToText component in Blazor Server App and Blazor WebAssembly App.
+title: Events in Blazor Speech To Text | Syncfusion®
+description: The Speech To Text component triggers events for recognition start, stop, errors, and transcript changes during speech processing.
 platform: Blazor
 control: SpeechToText
 documentation: ug
 ---
 
-# Events in Blazor SpeechToText component
+# Events in Blazor Speech To Text
 
 This section describes the SpeechToText events that will be triggered when appropriate actions are performed. The following events are available in the SpeechToText component.
 

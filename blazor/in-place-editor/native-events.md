@@ -1,33 +1,33 @@
 ---
 layout: post
-title: Native Events in Blazor In-place Editor Component | Syncfusion®
-description: Checkout and learn here all about Native Events in Blazor In-place Editor component and much more details.
+title: Native Events in Blazor In-place Editor | Syncfusion
+description: Bind native mouse and keyboard events such as onmousedown and onkeydown to Blazor In-place Editor input field.
 platform: Blazor
 control: In-place Editor  
 documentation: ug
 ---
 
-# Overview on Native Events
+# Native Events in Blazor In-place Editor
 
-You can define the native event using on `<event>` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.
+You can define a native event by using the `on<event>` attribute on a component. The value of the attribute is treated as an event handler. The event-specific data is available in the event arguments.
 
-The different event argument types for each event are:
+The supported event argument types for each event are:
 
-* Mouse Events - UIMouseEventArgs
-* Keyboard Events - UIKeyboardEventArgs
+* **Mouse Events** - `UIMouseEventArgs`
+* **Keyboard Events** - `UIKeyboardEventArgs`
 
-## List of Native events supported
+## List of native events supported
 
-The following native events support is provided to the In-place Editor component:
+The following native events are supported by the In-place Editor component:
 
-| List of Native events |  |  | |
+| List of native events |  |  | |
 | --- | --- | --- | --- |
 | onmousedown | onmouseup | onmouseover | onmousemove |
 | onmouseout | onkeydown | onkeypress | onkeyup |
 
-## How to bind onmousedown event to In-place Editor
+## How to bind the onmousedown event to the In-place Editor
 
-The `onmousedown` attribute is used to bind the mouse down event for In-place Editor. The sample code snippets of `onmousedown` in In-place Editor to change the mode as Inline are explained as follows.
+The `onmousedown` attribute is used to bind the mouse-down event for the In-place Editor. The following sample shows how to use `onmousedown` in the In-place Editor to toggle the rendering mode between `Inline` and `Popup`.
 
 ```cshtml
 
@@ -36,15 +36,13 @@ The `onmousedown` attribute is used to bind the mouse down event for In-place Ed
 <SfInPlaceEditor Mode="@Mode" @onmousedown="OnMouseDown" Type="InputType.Text" Value="@TextValue" SubmitOnEnter="true" />
 
 @code {
-    public string TextValue = "Andrew";
-    public Syncfusion.Blazor.InPlaceEditor.RenderMode Mode = Syncfusion.Blazor.InPlaceEditor.RenderMode.Inline;
+    public string TextValue { get; set; } = "Andrew";
+    public Syncfusion.Blazor.InPlaceEditor.RenderMode Mode { get; set; } = Syncfusion.Blazor.InPlaceEditor.RenderMode.Inline;
 
     private void OnMouseDown(MouseEventArgs args)
     {
         this.Mode = this.Mode == Syncfusion.Blazor.InPlaceEditor.RenderMode.Inline ? Syncfusion.Blazor.InPlaceEditor.RenderMode.Popup : Syncfusion.Blazor.InPlaceEditor.RenderMode.Inline;
-        this.StateHasChanged();
     }
 
 }
-
 ```

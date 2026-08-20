@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Numeric TextBox Component | Syncfusion®
-description: Learn about events in the Blazor Numeric TextBox component including Blur, Created, Destroyed, Focus, and ValueChange events.
+title: Events in Blazor Numeric Textbox | Syncfusion
+description: Handle Blazor Numeric TextBox events such as Blur, Focus, Created, Destroyed, and ValueChange in code today.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
 ---
 
-# Events in Blazor Numeric TextBox Component
+# Events in Blazor Numeric Textbox
 
 This section lists the events raised by the Numeric TextBox component and when they occur. Events are wired using the nested NumericTextBoxEvents tag inside the SfNumericTextBox.
 
@@ -42,7 +42,7 @@ The `Created` event fires after the NumericTextBox component has been initialize
 </SfNumericTextBox>
 
 @code {
-    private void CreatedHandler(Object args)
+    private void CreatedHandler(object args)
     {
         // Here you can customize your code
     }
@@ -61,14 +61,14 @@ The `Destroyed` event fires when the NumericTextBox component is disposed.
 </SfNumericTextBox>
 
 @code {
-    private void DestroyedHandler(Object args)
+    private void DestroyedHandler(object args)
     {
         // Here you can customize your code
     }
 }
 ```
 
-## Focus 
+## Focus
 
 The `Focus` event occurs when the NumericTextBox receives focus.
 

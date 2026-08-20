@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Show/Hide Accordion item in Blazor Accordion Component | Syncfusion®
-description: Checkout and learn here all about how to Show/Hide Accordion item in Blazor Accordion component and more.
+title: How to show or hide an item in Blazor Accordion | Syncfusion®
+description: Show or hide a Blazor Accordion item using either a conditional foreach render or by toggling the item's Visible property at runtime.
 platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
-# Show/Hide Accordion Item in Blazor Accordion Component
+# How to show or hide an item in Blazor Accordion
 
 The Accordion component provides support to show or hide specific accordion items using two approaches:
 
@@ -139,3 +139,11 @@ In the following example, the specified accordion item will toggle between showi
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBxDRCMMkloUhYC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Hiding or showing items in Blazor Accordion](../images/blazor-accordion-show-hide-item.webp)" %}
+
+## See also
+
+* [Add/Remove Accordion Items](https://blazor.syncfusion.com/documentation/accordion/how-to/add-remove-accordion-items)
+* [Enable or Disable Item](https://blazor.syncfusion.com/documentation/accordion/how-to/enable-disable-accordion-item)
+* [Data Binding in Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/data-binding)
+* [Accessibility in Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/accessibility)
+* [AccordionItem API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html)

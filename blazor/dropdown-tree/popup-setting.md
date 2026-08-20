@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup Setting in Blazor Dropdown Tree Component | Syncfusion®
-description: Checkout and learn here all the features about Popup Setting in Blazor Dropdown Tree component and much more.
+title: Popup Setting in Blazor Dropdown Tree | Syncfusion®
+description: Customize the Blazor Dropdown Tree popup with width, height, and dimension settings to fit your layout.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
 ---
 
-# Popup Setting in Dropdown Tree
+# Popup Setting in Blazor Dropdown Tree
 
 ## Change the popup width
 
@@ -93,9 +93,7 @@ Customize the height of the popup using the [PopupHeight](https://help.syncfusio
 
 ## Change the popup ZIndex
 
-Customize the [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ZIndex) value of the component popup element.
-
-Defaults to `1000`
+Customize the [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ZIndex) of the component popup element. The default ZIndex is `1000`.
 
 ## Popup height based on available space
 
