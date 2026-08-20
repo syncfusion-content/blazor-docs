@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Reorder in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) allows columns to be reordered by dragging and dropping a column header from one position to another within the Grid.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) allows columns to be reordered by dragging and dropping a column header from one position to another within the Data Grid.
 
 To enable column reordering, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowReordering) property of the [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **true**.
 
@@ -78,12 +78,11 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNrRXwtsTyCAayFp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> * To disable reordering for a specific column, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
-> * When columns are reordered, the position of the corresponding column data also changes. Ensure that any logic dependent on column order is updated accordingly.
+> When columns are reordered, the position of the column's content also changes. Ensure that any logic dependent on column order is updated accordingly.
 
-## Prevent reordering for particular column
+## Prevent reordering for a particular column
 
-The Blazor DataGrid allows all columns to be reordered by dragging and dropping their headers. However, certain columns are intended to remain fixed in position.
+The Blazor Data Grid allows all columns to be reordered by dragging and dropping their headers. However, certain columns are intended to remain fixed in position.
 
 To disable reordering for a specific column, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering) property of that [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
 
@@ -152,11 +151,11 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrdZwjsJIMnxBdR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Reorder columns via programmatically
+## Reorder columns programmatically
 
-The Blazor DataGrid allows columns to be reordered programmatically using built-in methods. Columns can be moved based on index or field name, enabling dynamic layout control through external UI elements such as buttons.
+The Blazor Data Grid allows columns to be reordered programmatically using built-in methods. Columns can be moved based on index or field name, enabling dynamic layout control through external UI elements such as buttons.
 
-> To reorder columns externally, set the  [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering) property of the [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **true**.
+> To reorder columns externally, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowReordering) property of the [SfGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **true**.
 
 ### Reorder column by index
 
@@ -192,9 +191,9 @@ In this configuration, the column at index **1** is moved to index **2**.
     {
         Orders = OrderDetails.GetAllRecords();       
     }
-    public void ReorderByIndex()
+    public async Task ReorderByIndex()
     {
-        Grid.ReorderColumnByIndexAsync(1, 2);
+        await Grid.ReorderColumnByIndexAsync(1, 2);
     }
 }
 {% endhighlight %}
@@ -247,12 +246,10 @@ public class OrderDetails
 
 To reorder a column by its field name and target index, use the [ReorderColumnByTargetIndexAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumnByTargetIndexAsync_System_String_System_Int32_) method.
 
-
 | Parameter   | Type   | Description                                      |
 |-------------|--------|--------------------------------------------------|
 | fieldName   | string | Field name of the column to be moved.           |
 | toIndex     | int    | Target index where the column should be placed. |
-
 
 In this configuration, the column with field name **OrderID** is moved to index **3**.
 
@@ -279,9 +276,9 @@ In this configuration, the column with field name **OrderID** is moved to index 
     {
         Orders = OrderDetails.GetAllRecords();       
     }
-    public void ReorderByTargetIndex()
+    public async Task ReorderByTargetIndex()
     {
-        Grid.ReorderColumnByTargetIndexAsync("OrderID", 3);
+        await Grid.ReorderColumnByTargetIndexAsync("OrderID", 3);
     }
 }
 {% endhighlight %}
@@ -330,7 +327,7 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjVdjmjipyryCwGK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Reorder column by field names
+### Reorder columns by field name
 
 Columns can be reordered programmatically by specifying the field names of the columns to move and the target position. This functionality supports both single-column and multi-column reordering.
 
@@ -338,22 +335,19 @@ Columns can be reordered programmatically by specifying the field names of the c
 
 The [ReorderColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumnAsync_System_String_System_String_) method reorders a single column by specifying its current field name and the target column's field name.
 
-
-| Parameter        | Type     | Description                                                              |
-|------------------|----------|--------------------------------------------------------------------------|
-| fromFieldName  | string | Field name of the column to be moved.                                   |
-| toFieldName    | string | Field name of the column before which the column should be placed.      |
-
+| Parameter      | Type   | Description                                                          |
+|----------------|--------|----------------------------------------------------------------------|
+| fromFieldName  | string | Field name of the column to be moved.                                |
+| toFieldName    | string | Field name of the column before which the column should be placed.   |
 
 **Reorder multiple columns**
 
 The [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumnsAsync_System_Collections_Generic_List_System_String__System_String_) method reorders multiple columns simultaneously by providing a list of field names and the target column's field name.
 
-
-| Parameter         | Type            | Description                                                              |
-|-------------------|-----------------|--------------------------------------------------------------------------|
-| fromFieldNames  | List&lt;string&gt;  | Field names of the columns to be moved.                                  |
-| toFieldName     | string        | Field name of the column before which the group should be placed.        |
+| Parameter      | Type             | Description                                                          |
+|----------------|------------------|----------------------------------------------------------------------|
+| fromFieldNames | List&lt;string&gt; | Field names of the columns to be moved.                              |
+| toFieldName    | string           | Field name of the column before which the group should be placed.    |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -372,20 +366,20 @@ The [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     </GridColumns>
 </SfGrid>
 @code {
-    public List<string> ColumnName = (new List<string> { "ShipCity", "ShipRegion", "ShipName" });
+    public List<string> ColumnNames = new List<string> { "ShipCity", "ShipRegion", "ShipName" };
     private SfGrid<OrderDetails> Grid;
     public List<OrderDetails> Orders { get; set; }   
     protected override void OnInitialized()
     {
         Orders = OrderDetails.GetAllRecords();
     }
-    public void ReorderSingleColumn()
+    public async Task ReorderSingleColumn()
     {
-        Grid.ReorderColumnAsync("ShipCity", "OrderID");
+        await Grid.ReorderColumnAsync("ShipCity", "OrderID");
     }
-    public void ReorderMultipleColumn()
+    public async Task ReorderMultipleColumn()
     {
-        Grid.ReorderColumnsAsync(ColumnName, "OrderID");
+        await Grid.ReorderColumnsAsync(ColumnNames, "OrderID");
     }
 }
 {% endhighlight %}
@@ -432,14 +426,14 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrRDGZizeVFNraR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrxtFVjiVLBPKAA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Reorder events
 
-The Blazor DataGrid provides events to handle column reordering interactions. These events allow executing custom logic during drag-and-drop operations.
+The Blazor Data Grid provides events to handle column reordering interactions. These events allow executing custom logic during drag-and-drop operations.
 
-1. [ColumnReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnReordering): Triggered while a column header is being dragged.
-2. [ColumnReordered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnReordered): Triggered when a column header is dropped on the target column.
+1. [ColumnReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnReordering): Triggered when a column header is being dragged, before the reorder is applied.
+2. [ColumnReordered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnReordered): Triggered after a column header is dropped and the reorder is applied on the target column.
 
 ### ColumnReordering
 
@@ -463,7 +457,7 @@ The `ColumnReordered` event is triggered after a column header is dropped on the
 
 The event uses the [ColumnReorderedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnReorderedEventArgs.html) class, which includes the following properties:
 
-| Parameter            | Type                   | Description                                                                 |
+| Event Argument            | Type                   | Description                                                                 |
 |----------------------|------------------------|-----------------------------------------------------------------------------|
 | ReorderingColumns  | List&lt;GridColumn&gt;     | Represents the columns that were reordered.                                 |
 | ToColumn           | GridColumn           | Destination column where the reordered columns are placed.                 |
@@ -477,7 +471,7 @@ The event uses the [ColumnReorderedEventArgs](https://help.syncfusion.com/cr/bla
     <span>@ReorderMessage</span>
 </div>
 <SfGrid @ref="Grid" DataSource="@OrderData" Height="315" AllowReordering="true">
-    <GridEvents TValue="OrderDetails" ColumnReordered ="ColumnReordered" ColumnReordering ="ColumnReordering"></GridEvents>
+    <GridEvents TValue="OrderDetails" ColumnReordered="ColumnReordered" ColumnReordering="ColumnReordering"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
@@ -505,6 +499,7 @@ The event uses the [ColumnReorderedEventArgs](https://help.syncfusion.com/cr/bla
     }
     public void ColumnReordered(ColumnReorderedEventArgs args)
     {
+        ReorderMessage = string.Empty;
         ReorderMessage = "ColumnReordered event triggered. " + args.ReorderingColumns[0].HeaderText + " column is dragged to index " + args.ReorderingColumns[0].Index;
     }
 }
