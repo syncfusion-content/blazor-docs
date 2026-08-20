@@ -27,8 +27,6 @@ This article adds Stripe checkout on top of an [existing Blazor shopping cart ap
 
 Install the [Stripe.net](https://www.nuget.org/packages/Stripe.net) package by using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
-* [Stripe.net](https://www.nuget.org/packages/Stripe.net)
-
 Alternatively, open a terminal in the project root and run the following commands to install this package.
 
 {% tabs %}
