@@ -11,6 +11,18 @@ documentation: ug
 
 A template column value can be edited by setting the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) property for the corresponding [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component.
 
+**Template Column Editing Steps in Blazor TreeGrid**
+
+A template column value can be edited by setting the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) property for the corresponding [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component.
+
+1. Set Field property on the column to bind it to the data source.  
+2. Define Template for display mode (how the value appears when not editing). 
+3. Define EditTemplate for edit mode (how the editor appears when editing).
+4. Trigger edit via the toolbar (Add, Edit, Delete, Update, Cancel).
+5. Editor displays in place of the template, allowing the value to be modified.
+
+Editor displays in place of the template, allowing the value to be modified.
+
 {% tabs %}
 
 {% highlight razor %}

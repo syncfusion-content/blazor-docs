@@ -18,7 +18,7 @@ By default, TreeGrid will occupy the entire space of the parent element when the
 @using TreeGridComponent.Data;
 @using  Syncfusion.Blazor.Grids;
 @using  Syncfusion.Blazor.TreeGrid;
-@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Navigations;
 
 <div style="height:300px">
         <SfTab ID="Ej2Tab" Width="100%">

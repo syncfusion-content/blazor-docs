@@ -19,6 +19,14 @@ documentation: ug
 </style>
 ```
 
-N> To hide the header for a particular TreeGrid, apply the above styles to that TreeGrid using the ID selector (#TreeGrid.e-treegrid .e-gridheader .e-columnheader).
+**DOM Structure Explanation**
+
+1. **.e-treegrid** → Root container class applied to the TreeGrid component. It wraps the entire treegrid, including header, body, and footer.
+
+2. **.e-gridheader** → Represents the header section inside the TreeGrid. This contains the row of column headers displayed at the top.
+
+3. **.e-columnheader** → Targets the individual header row that holds all column header cells. Each cell corresponds to a TreeGridColumn.
+
+N> To hide the header of a specific TreeGrid, apply the preceding styles using a unique TreeGrid ID, for example, #TreeGrid .e-treegrid .e-gridheader .e-columnheader.
 
 ![Hiding Header in Blazor TreeGrid](../images/blazor-treegrid-hide-header.webp)
