@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Resizing in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides an intuitive interface for resizing columns to fit their content. This feature allows columns to be adjusted for improved readability and layout control.
+The [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides an intuitive interface for resizing columns to fit their content. This feature allows columns to be adjusted for improved readability and layout control.
 
 To enable column resizing, set the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowResizing) property of the [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **true**.
 
@@ -88,14 +88,13 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVdNGjCpSesjhLc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> * To disable resizing for a specific column, set the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
 > * In RTL mode, column resizing is performed by dragging the left edge of the header cell.
-> * The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) property of the `GridColumn` can be set to define the initial column width. When resizing is enabled, this value can be overridden by manual adjustments.
+> * The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width) property of the `GridColumn` can be set to define the initial column width. When resizing is enabled, this value can be overridden by manual adjustments.
 > * If the `Width` property of a `GridColumn` is explicitly set to **0** and resizing is enabled, the DataGrid automatically assigns a default width of **200px** to that column.
 
-## Restrict the resizing based on minimum and maximum width
+## Restrict resizing based on minimum and maximum width
 
-The Blazor DataGrid allows restricting column resizing between a defined minimum and maximum width. This ensures that columns remain within a specific size range, maintaining layout consistency and readability.
+The Blazor Data Grid allows restricting column resizing between a defined minimum and maximum width. This ensures that columns remain within a specific size range, maintaining layout consistency and readability.
 
 To configure this behavior, set the [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_MinWidth) and [MaxWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_MaxWidth) properties for the respective [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
@@ -176,9 +175,9 @@ public class OrderDetails
 > * Ensure that the values assigned to `MinWidth` and `MaxWidth` are suitable for the content and layout requirements.
 > * When resizing exceeds the defined range, the column width is automatically restricted to the nearest valid value within the specified limits.
 
-## Prevent resizing for particular column
+## Prevent resizing for a particular column
 
-The Blazor DataGrid provides the ability to restrict resizing for individual columns. This is useful when a column's width must remain fixed for layout consistency or to prevent unintended changes.
+The Blazor Data Grid provides the ability to restrict resizing for individual columns. This is useful when a column's width must remain fixed for layout consistency or to prevent unintended changes.
 
 To disable resizing for a specific column, set the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) property of that [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
 
@@ -251,7 +250,7 @@ public class OrderDetails
 
 ## Resize stacked header column
 
-The Blazor DataGrid allows resizing stacked columns by dragging the right edge of the stacked column header. During this action, the widths of the child columns are adjusted simultaneously.
+The Blazor Data Grid supports resizing stacked columns by dragging the right edge of the stacked column header. During resizing, the child column widths change together.
 
 To disable resizing for a specific stacked column, set the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) property of that [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
 
@@ -333,7 +332,7 @@ public class OrderDetails
 
 ## Touch interaction
 
-The Blazor DataGrid supports touch interactions, enabling column resizing on mobile devices. Columns can be resized by tapping and dragging the floating handler, or adjusted using the column menu options.
+The Blazor Data Grid supports touch interactions, enabling column resizing on mobile devices. Columns can be resized by tapping and dragging the floating handler or by using the column menu options.
 
 **Resizing Columns on Touch Devices**
 
@@ -343,13 +342,20 @@ To resize a column:
 2. A floating handler appears over the column’s right border.
 3. Tap and drag the handler to adjust the column width.
 
-![Blazor DataGrid column resizing in touch interaction.](./images/blazor-datagrid-column-resizing.webp)
+![Blazor DataGrid column resizing in touch interaction](./images/blazor-datagrid-column-resizing.webp)
 
-## Resize columns via programmatically
+**Resizing Columns Using the Column Menu**
 
-The Blazor DataGrid supports column resizing through external UI interactions such as dropdowns or buttons. This allows dynamic control over column widths without relying on the Grid’s built-in UI handlers.
+The column menu can also be used to resize columns on touch devices. For more information on the column menu, refer to the [Column Menu](column-menu.md) documentation.
 
-To resize a column externally, update the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width)  property of the target [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), and invoke the [RefreshColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RefreshColumnsAsync) method to apply the changes.
+1. Tap the menu icon in the column header to open the column menu.
+2. Tap the **AutoFit** option to resize the current column to fit its content, or tap the **AutoFit All** option to resize all columns to fit their content.
+
+## Resize columns programmatically
+
+The Blazor Data Grid supports column resizing through external UI interactions such as dropdowns or buttons. This allows dynamic control over column widths without relying on the Grid’s built-in UI handlers.
+
+To resize a column externally, update the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width) property of the target [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), and invoke the [RefreshColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RefreshColumnsAsync) method to apply the changes.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -370,10 +376,10 @@ To resize a column externally, update the [Width](https://help.syncfusion.com/cr
     <SfTextBox CssClass="e-outline" @bind-Value="@ModifiedWidth" PlaceHolder="@PlaceHolder" Width="150px"></SfTextBox>
     <SfButton OnClick="onExternalResize">Resize</SfButton>
 </div>
-<SfGrid @ref="Grid" AllowResizing="true" DataSource="@Orders">                
+<SfGrid @ref="Grid" AllowResizing="true" DataSource="@Orders">
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="@IdWidth"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID"  Width="@CustomerWidth"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="@CustomerWidth"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="@FreightWidth"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" Width="@CountryWidth"></GridColumn>
     </GridColumns>
@@ -391,34 +397,44 @@ To resize a column externally, update the [Width](https://help.syncfusion.com/cr
     public string FreightWidth = "80";
     public string CountryWidth = "100";
     public string PlaceHolder { get; set; } = "Enter new width";
-    public string DropDownValue { get; set; } = "OrderID";    
+    public string DropDownValue { get; set; } = "OrderID";
     public class Columns
     {
         public string ID { get; set; }
         public string Value { get; set; }
-    }    
-    List<Columns> LocalData = new List<Columns>    {
-        new Columns() { ID= "OrderID", Value= "OrderID" },
-        new Columns() { ID= "CustomerID", Value= "CustomerID" },
-        new Columns() { ID= "Freight", Value= "Freight" },
-        new Columns() { ID= "ShipCountry", Value= "ShipCountry" },
-    };   
+    }
+    List<Columns> LocalData = new List<Columns>
+    {
+        new Columns() { ID = "OrderID", Value = "OrderID" },
+        new Columns() { ID = "CustomerID", Value = "CustomerID" },
+        new Columns() { ID = "Freight", Value = "Freight" },
+        new Columns() { ID = "ShipCountry", Value = "ShipCountry" },
+    };
     public async Task onExternalResize()
-    {        
-        var selectedColumn = await Grid.GetColumnByFieldAsync(DropDownValue); 
-        if(selectedColumn.Field == "OrderID") {
+    {
+        // Validate the width input to ensure it is a non-negative numeric value.
+        if (string.IsNullOrEmpty(ModifiedWidth) || !double.TryParse(ModifiedWidth, out double parsedWidth) || parsedWidth <= 0)
+        {
+            return;
+        }
+        var selectedColumn = await Grid.GetColumnByFieldAsync(DropDownValue);
+        if (selectedColumn.Field == "OrderID")
+        {
             IdWidth = ModifiedWidth;
         }
-        if(selectedColumn.Field == "CustomerID") {
+        if (selectedColumn.Field == "CustomerID")
+        {
             CustomerWidth = ModifiedWidth;
-        }         
-        if(selectedColumn.Field == "Freight") {
+        }
+        if (selectedColumn.Field == "Freight")
+        {
             FreightWidth = ModifiedWidth;
-        } 
-        if(selectedColumn.Field == "ShipCountry") {
+        }
+        if (selectedColumn.Field == "ShipCountry")
+        {
             CountryWidth = ModifiedWidth;
-        }      
-        await Grid.RefreshColumnsAsync();        
+        }
+        await Grid.RefreshColumnsAsync();
     }
 }
 {% endhighlight %}
@@ -463,11 +479,11 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrdZcNMfemtjwjl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVdDPBtKqtcwhUP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Resizing events
 
-The Blazor DataGrid provides events that are triggered during column resizing operations. These events allow execution of custom logic before and after a column is resized, enabling validation, customization, and UI updates or notifications.
+The Blazor Data Grid provides events that are triggered during column resizing operations. These events allow execution of custom logic before and after a column is resized, enabling validation, customization, and UI updates or notifications.
 
 1. [OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnResizeStart): Triggered when column resizing begins.
 
@@ -498,7 +514,6 @@ The event uses the [ResizeArgs](https://help.syncfusion.com/cr/blazor/Syncfusion
 | Event Argument | Description                                                                 |
 |----------------|------------------------------------------------------------------------------|
 | Column       | Represents the column that was resized.                                     |
-| Cancel       | Indicates whether the resize operation was canceled. If **true**, the column was not resized. |
 
 
 {% tabs %}
@@ -544,48 +559,48 @@ The event uses the [ResizeArgs](https://help.syncfusion.com/cr/blazor/Syncfusion
 {% endhighlight %}
 {% highlight c# tabtitle="OrderDetails.cs" %}
 public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, double Freight, string ShipCity, string ShipName, string ShipCountry, string ShipAddress)
     {
-        public static List<OrderDetails> order = new List<OrderDetails>();
-        public OrderDetails(int OrderID, string CustomerId, double Freight, string ShipCity, string ShipName, string ShipCountry, string ShipAddress)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerId;
-            this.Freight = Freight;
-            this.ShipCity = ShipCity;
-            this.ShipName = ShipName;
-            this.ShipCountry = ShipCountry;
-            this.ShipAddress = ShipAddress;      
-        }
-        public static List<OrderDetails> GetAllRecords()
-        {
-            if (order.Count == 0)
-            {
-                order.Add(new OrderDetails(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier", "Australia", "59 rue de l Abbaye"));
-                order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten", "Australia", "Luisenstr. 48"));
-                order.Add(new OrderDetails(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes", "United States", "Rua do Paço, 67"));
-                order.Add(new OrderDetails(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock", "Australia", "2, rue du Commerce"));
-                order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices", "United States", "Boulevard Tirou, 255"));
-                order.Add(new OrderDetails(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes", "United States", "Rua do Paço, 67"));
-                order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Bern", "Chop-suey Chinese", "Switzerland", "Hauptstr. 31"));
-                order.Add(new OrderDetails(10255, "RICSU", 148.33, "Genève", "Richter Supermarkt", "Switzerland", "Starenweg 5"));
-                order.Add(new OrderDetails(10256, "WELLI", 13.97, "Resende", "Wellington Importadora", "Brazil", "Rua do Mercado, 12"));
-                order.Add(new OrderDetails(10257, "HILAA", 81.91, "San Cristóbal", "HILARION-Abastos", "Venezuela", "Carrera 22 con Ave. Carlos Soublette #8-35"));
-                order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Graz", "Ernst Handel", "Austria", "Kirchgasse 6"));
-                order.Add(new OrderDetails(10259, "CENTC", 3.25, "México D.F.", "Centro comercial Moctezuma", "Mexico", "Sierras de Granada 9993"));
-                order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Köln", "Ottilies Käseladen", "Germany", "Mehrheimerstr. 369"));
-                order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Rio de Janeiro", "Que Delícia", "Brazil", "Rua da Panificadora, 12"));
-                order.Add(new OrderDetails(10262, "RATTC", 48.29, "Albuquerque", "Rattlesnake Canyon Grocery", "USA", "2817 Milton Dr."));
-           }
-            return order;
-        }
-        public int OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public double Freight { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipName { get; set; }
-        public string ShipCountry { get; set; }
-        public string ShipAddress { get; set; }
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.Freight = Freight;
+        this.ShipCity = ShipCity;
+        this.ShipName = ShipName;
+        this.ShipCountry = ShipCountry;
+        this.ShipAddress = ShipAddress;      
     }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier", "Australia", "59 rue de l Abbaye"));
+            order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten", "Australia", "Luisenstr. 48"));
+            order.Add(new OrderDetails(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes", "United States", "Rua do Paço, 67"));
+            order.Add(new OrderDetails(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock", "Australia", "2, rue du Commerce"));
+            order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices", "United States", "Boulevard Tirou, 255"));
+            order.Add(new OrderDetails(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes", "United States", "Rua do Paço, 67"));
+            order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Bern", "Chop-suey Chinese", "Switzerland", "Hauptstr. 31"));
+            order.Add(new OrderDetails(10255, "RICSU", 148.33, "Genève", "Richter Supermarkt", "Switzerland", "Starenweg 5"));
+            order.Add(new OrderDetails(10256, "WELLI", 13.97, "Resende", "Wellington Importadora", "Brazil", "Rua do Mercado, 12"));
+            order.Add(new OrderDetails(10257, "HILAA", 81.91, "San Cristóbal", "HILARION-Abastos", "Venezuela", "Carrera 22 con Ave. Carlos Soublette #8-35"));
+            order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Graz", "Ernst Handel", "Austria", "Kirchgasse 6"));
+            order.Add(new OrderDetails(10259, "CENTC", 3.25, "México D.F.", "Centro comercial Moctezuma", "Mexico", "Sierras de Granada 9993"));
+            order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Köln", "Ottilies Käseladen", "Germany", "Mehrheimerstr. 369"));
+            order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Rio de Janeiro", "Que Delícia", "Brazil", "Rua da Panificadora, 12"));
+            order.Add(new OrderDetails(10262, "RATTC", 48.29, "Albuquerque", "Rattlesnake Canyon Grocery", "USA", "2817 Milton Dr."));
+       }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+    public string ShipCountry { get; set; }
+    public string ShipAddress { get; set; }
+}
 {% endhighlight %}
 {% endtabs %}
 
