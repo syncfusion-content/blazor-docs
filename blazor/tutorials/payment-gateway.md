@@ -936,9 +936,6 @@ Before running the application, configure the Stripe test-mode keys as described
 
 * [Creating a Shopping Cart with Blazor Components](https://blazor.syncfusion.com/documentation/tutorials/shopping-cart)
 * [Getting started with Blazor Server app](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-* [Getting started with Blazor TextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp)
-* [Getting started with Blazor Spinner](https://blazor.syncfusion.com/documentation/spinner/getting-started-webapp)
-* [Getting started with Blazor Button](https://blazor.syncfusion.com/documentation/button/getting-started-with-server-app)
 * [Configure dependency injection in Blazor applications](https://learn.microsoft.com/en-us/aspnet/core/blazor/dependency-injection)
 * [Stripe Payment Intents API documentation](https://docs.stripe.com/payments/payment-intents)
 * [Stripe Elements documentation](https://docs.stripe.com/payments/elements)
