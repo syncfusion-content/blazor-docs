@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Smart TextArea Component
 
-This section briefly explains about how to include the [Blazor Smart TextArea](https://www.syncfusion.com/blazor-components/blazor-smart-textarea) component in your Blazor Server App using Visual Studio.
+This section briefly explains about how to include [Blazor Smart TextArea](https://www.syncfusion.com/blazor-components/blazor-smart-textarea) component in your Blazor Server App using Visual Studio.
 
 {% tabcontents %}
 
@@ -54,7 +54,7 @@ N> Blazor Smart Components are compatible with both `OpenAI` and `Azure OpenAI`,
 
 ## Create a new Blazor App in Visual Studio Code
 
-You can create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+You can create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
 Alternatively, you can create a Server application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
@@ -93,9 +93,9 @@ N> Blazor components are available in [nuget.org](https://www.nuget.org/packages
 
 {% endtabcontents %}
 
-## Add import namespaces
+## Register Blazor Service
 
-After the packages are installed, open the **~/Components/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.SmartComponents` namespaces.
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.SmartComponents` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -106,9 +106,7 @@ After the packages are installed, open the **~/Components/_Imports.razor** file 
 {% endhighlight %}
 {% endtabs %}
 
-## Register Blazor Service
-
-Open the **Program.cs** file in Blazor Server App and register the Blazor service.
+Now, register the Blazor Service in the **~/Program.cs** file of your Blazor Server App.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
@@ -125,6 +123,7 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
+....
 
 {% endhighlight %}
 {% endtabs %}
@@ -295,31 +294,29 @@ var app = builder.Build();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) at the end of the `<head>` section in the **App.razor** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
-{% tabs %}
-{% highlight razor tabtitle="App.razor" %}
+* For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
 
-<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+* For **.NET 10, .NET 9 and .NET 8** Blazor Server app, include it in the **~/Components/App.razor** file.
 
-{% endhighlight %}
-{% endtabs %}
+```html
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/tailwind.css" rel="stylesheet" />
+</head>
 
-Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **App.razor** file to enable Smart TextArea functionality.
-
-{% tabs %}
-{% highlight razor tabtitle="App.razor" %}
-
-<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-
-{% endhighlight %}
-{% endtabs %}
+<body>
+    ....
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</body>
+```
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Blazor Smart TextArea component
 
-Add the [Blazor Smart TextArea](https://www.syncfusion.com/blazor-components/blazor-smart-textarea) component in the **~/Pages/Index.razor** file.
+Add the **Blazor Smart TextArea** component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Index.razor" %}
@@ -345,7 +342,7 @@ Add the [Blazor Smart TextArea](https://www.syncfusion.com/blazor-components/bla
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the [Blazor Smart TextArea](https://www.syncfusion.com/blazor-components/blazor-smart-textarea) component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor Smart TextArea component in your default web browser.
 
 * Type 'To investigate' to experience instant sentence autocompletion.
 
