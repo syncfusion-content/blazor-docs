@@ -9,9 +9,9 @@ documentation: ug
 
 # How to open and close Context Menu in Blazor
 
-Open and close the Context Menu manually whenever required by using the Open and Close methods. In the following sample, the Context Menu manually opens while clicking the button using [Open](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_Open_System_Nullable_System_Double__System_Nullable_System_Double__) method with `ClientX` and `ClientY` coordinates.
+Open and close the Context Menu manually whenever required by using the OpenAsync and Close methods. In the following sample, the Context Menu manually opens while clicking the button using the [OpenAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_OpenAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Boolean_) method with `ClientX` and `ClientY` coordinates.
 
-To manually close the Context Menu, [Close](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_Close) method can be used.
+To manually close the Context Menu, the [Close](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_Close) method can be used.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -29,10 +29,10 @@ To manually close the Context Menu, [Close](https://help.syncfusion.com/cr/blazo
 </div>
 
 @code {
-    SfContextMenu<MenuItem> contextMenuObj;
-    private void OpenContextMenu(MouseEventArgs e)
+    private SfContextMenu<MenuItem> contextMenuObj;
+    private async Task OpenContextMenu(MouseEventArgs e)
     {
-        contextMenuObj.Open(e.ClientX, e.ClientY);
+        await contextMenuObj.OpenAsync(e.ClientX, e.ClientY);
     }
 }
 
