@@ -31,14 +31,14 @@ The following example illustrates how to move items between the **Group A** and 
 
 <div id="listbox1">
     <h4>Group A</h4>
-    <SfListBox TValue="string[]" DataSource="@GroupA" Scope="combined-list" Id="group-a" TItem="CountryCode">
+    <SfListBox TValue="string[]" DataSource="@GroupA" Scope="combined-list" ID="group-a" TItem="CountryCode">
         <ListBoxFieldSettings Text="Name"></ListBoxFieldSettings>
         <ListBoxToolbarSettings Items="@Items"></ListBoxToolbarSettings>
     </SfListBox>
 </div>
 <div id="listbox2">
     <h4>Group B</h4>
-    <SfListBox TValue="string[]" Scope="combined-list" Id="group-b" DataSource="@GroupB" TItem="CountryCode">
+    <SfListBox TValue="string[]" Scope="combined-list" ID="group-b" DataSource="@GroupB" TItem="CountryCode">
         <ListBoxFieldSettings Text="Name"></ListBoxFieldSettings>
     </SfListBox>
 </div>

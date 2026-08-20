@@ -176,21 +176,21 @@ Enable drag and drop between two or more ListBoxes by setting `AllowDragAndDrop`
 
 ## Dual ListBox with drag and drop
 
-The toolbar and drag-and-drop actions between two ListBoxes can be enabled by assigning a unique `Id` and the same [Scope](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_Scope) value to both instances. `Id` identifies each ListBox in the DOM, while `Scope` groups the ListBoxes so the toolbar and drag-and-drop actions operate across them.
+The toolbar and drag-and-drop actions between two ListBoxes can be enabled by assigning a unique `ID` and the same [Scope](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_Scope) value to both instances. `ID` identifies each ListBox in the DOM, while `Scope` groups the ListBoxes so the toolbar and drag-and-drop actions operate across them.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <div id="listbox1">
     <h4>Group A</h4>
-    <SfListBox TValue="string[]" Id="scope1" Scope="scope1" DataSource="@GroupA" TItem="CountryCode" AllowDragAndDrop="true">
+    <SfListBox TValue="string[]" ID="scope1" Scope="scope1" DataSource="@GroupA" TItem="CountryCode" AllowDragAndDrop="true">
         <ListBoxFieldSettings Text="Name"></ListBoxFieldSettings>
         <ListBoxToolbarSettings Items="@Items"></ListBoxToolbarSettings>
     </SfListBox>
 </div>
 <div id="listbox2">
     <h4>Group B</h4>
-    <SfListBox TValue="string[]" Id="scope2" Scope="scope1" DataSource="@GroupB" TItem="CountryCode" AllowDragAndDrop="true">
+    <SfListBox TValue="string[]" ID="scope2" Scope="scope1" DataSource="@GroupB" TItem="CountryCode" AllowDragAndDrop="true">
         <ListBoxFieldSettings Text="Name"></ListBoxFieldSettings>
     </SfListBox>
 </div>
