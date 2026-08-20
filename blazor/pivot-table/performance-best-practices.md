@@ -7,9 +7,9 @@ control: Pivot Table
 documentation: ug
 ---
 
-# Performance best practices in React Pivot Table
+# Performance best practices in Blazor Pivot Table
 
-Performance optimization is crucial when working with large datasets in the [Syncfusion<sup style="font-size:70%">&reg;</sup> React Pivot Table](https://www.syncfusion.com/blazor-components). This documentation provides best practices to support your data analysis and to enhance the user experience.
+Performance optimization is crucial when working with large datasets in the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table](https://www.syncfusion.com/blazor-components). This documentation provides best practices to support your data analysis and to enhance the user experience.
 
 N> In Blazor, the framework takes about 0.06 milliseconds to render one component on the page. You can find more details at the official [documentation link](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0).
 
@@ -76,7 +76,7 @@ For more information on implementing the data compression in the Pivot Table, yo
 
 ### Defer layout update
 
-The Defer Layout Update feature in the Pivot Table allows end-users to perform various operations—such as adding, removing, and rearranging fields, filtering, sorting, changing aggregation types, and more—without immediately updating the Pivot Table. End-users complete their modifications, and the final application of these changes occurs when they click the **Apply** button in the Field List UI. This action triggers the Pivot Table to update based on the last modified report. By deferring the layout update until explicitly requested, the React Pivot Table remains unchanged initially, ensuring minimal resource utilization and avoiding frequent re-rendering.
+The Defer Layout Update feature in the Pivot Table allows end-users to perform various operations—such as adding, removing, and rearranging fields, filtering, sorting, changing aggregation types, and more—without immediately updating the Pivot Table. End-users complete their modifications, and the final application of these changes occurs when they click the **Apply** button in the Field List UI. This action triggers the Pivot Table to update based on the last modified report. By deferring the layout update until explicitly requested, the Blazor Pivot Table remains unchanged initially, ensuring minimal resource utilization and avoiding frequent re-rendering.
 
 For more information on defer layout updates, you can refer to the documentation [here](https://blazor.syncfusion.com/documentation/pivot-table/defer-layout-update).
 
