@@ -15,32 +15,34 @@ The DataForm component supports localization for any culture. Refer to the [Blaz
 
 Follow these steps to configure localization for label text and validation error messages in the Blazor DataForm component.
 
-1. After integrating localization files in the application as described in the [Blazor localization](https://blazor.syncfusion.com/documentation/common/localization) topic, open the required culture resource file in Visual Studio.
-
-![Localization step-1](./images/blazor_dataform_localization_step.webp)
-
-
-2. In the opened resource file, select Add Resource and include the appropriate key with the corresponding localized text as shown.
-
-![Localization step-2](./images/blazor_dataform_localization_step1.webp)
-
-3. Specify the [ResourceType](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.resourcetype?view=net-8.0#system-componentmodel-dataannotations-displayattribute-resourcetype) (from the Resources folder) and the resource key in the [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-8.0) attribute of the corresponding model property to localize labels. Similarly, localize validation messages by setting [ErrorMessageResourceType](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute.errormessageresourcetype?view=net-8.0#system-componentmodel-dataannotations-validationattribute-errormessageresourcetype) and [ErrorMessageResourceName](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute.errormessageresourcename?view=net-8.0#system-componentmodel-dataannotations-validationattribute-errormessageresourcename) on attributes such as [Required](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=net-8.0), as shown below.
-
-| ![Localization step 3](./images/blazor_dataform_localization_step3.webp) | ![Localization step 3](./images/blazor_dataform_localization_step3_2.webp) |
-
-{% tabs %}
-{% highlight razor tabtitle="Razor"  %}
-
-{% include_relative code-snippet/localization/localization.razor %}
-
-{% endhighlight %}
-{% highlight razor tabtitle="Razor"  %}
-
-{% include_relative code-snippet/localization/localization.razor %}
-
-{% endhighlight %}
-{% endtabs %}
-
-4. Run the application to view the DataForm with localized labels and validation messages.
-
-![Localization applied in the DataForm component](./images/blazor_dataform_localization.webp)
+<ol>
+	<li>
+		After integrating localization files in the application as described in the <a href="https://blazor.syncfusion.com/documentation/common/localization" aria-label="Blazor localization documentation">Blazor localization</a> topic, open the required culture resource file in Visual Studio.<br>
+		<img src="./images/blazor_dataform_localization_step.webp" alt="Localization step-1">
+	</li>
+	<li>
+		In the opened resource file, select Add Resource and include the appropriate key with the corresponding localized text as shown.<br>
+		<img src="./images/blazor_dataform_localization_step1.webp" alt="Localization step-2">
+	</li>
+	<li>
+		Specify the <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.resourcetype?view=net-8.0#system-componentmodel-dataannotations-displayattribute-resourcetype" aria-label="ResourceType API documentation">ResourceType</a> (from the Resources folder) and the resource key in the <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-8.0" aria-label="DisplayAttribute API documentation">Display</a> attribute of the corresponding model property to localize labels. Similarly, localize validation messages by setting <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute.errormessageresourcetype?view=net-8.0#system-componentmodel-dataannotations-validationattribute-errormessageresourcetype" aria-label="ErrorMessageResourceType API documentation">ErrorMessageResourceType</a> and <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute.errormessageresourcename?view=net-8.0#system-componentmodel-dataannotations-validationattribute-errormessageresourcename" aria-label="ErrorMessageResourceName API documentation">ErrorMessageResourceName</a> on attributes such as <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=net-8.0" aria-label="RequiredAttribute API documentation">Required</a>, as shown below.<br>
+		<table>
+			<tr>
+				<td><img src="./images/blazor_dataform_localization_step3.webp" alt="Localization step 3"></td>
+				<td><img src="./images/blazor_dataform_localization_step3_2.webp" alt="Localization step 3"></td>
+			</tr>
+		</table>
+		{% tabs %}
+		{% highlight razor tabtitle="Razor"  %}
+		{% include_relative code-snippet/localization/localization.razor %}
+		{% endhighlight %}
+		{% highlight C# tabtitle="C#"  %}
+		{% include_relative code-snippet/localization/localization.cs %}
+		{% endhighlight %}
+		{% endtabs %}
+	</li>
+	<li>
+		Run the application to view the DataForm with localized labels and validation messages.<br>
+		<img src="./images/blazor_dataform_localization.webp" alt="Localization applied in the DataForm component">
+	</li>
+</ol>
