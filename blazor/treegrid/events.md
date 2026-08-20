@@ -11,7 +11,7 @@ documentation: ug
 
 In this section, the list of events of the TreeGrid component is provided which will be triggered for appropriate TreeGrid actions.
 
-The events should be provided to the TreeGrid using [TreeGridEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html) component. When using events of TreeGrid, **TValue** must be provided in the `TreeGridEvents` component.
+The events should be provided to the TreeGrid using [TreeGridEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html) component. When declaring events, the generic type parameter **TValue** must be specified in the `TreeGridEvents` tag, as it defines the schema for the TreeGrid event data.
 
 ## OnActionBegin
 
@@ -512,7 +512,7 @@ The events should be provided to the TreeGrid using [TreeGridEvents](https://hel
 
 ## DetailDataBound
 
-The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_DetailDataBound) event triggers after detail row expands.
+The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_DetailDataBound) event triggers when a detail row expands.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid
@@ -699,7 +699,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## OnBeginEdit
 
-[OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnBeginEdit) event triggers before a record is edited.
+[OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnBeginEdit) event triggers before a record enters edit mode.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
