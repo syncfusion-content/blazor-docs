@@ -101,13 +101,13 @@ The accessibility compliance of the Blazor TreeGrid component is shown in the fo
 
 **Steps to test accessibility using axe‑core DevTools**
 
-1. Install axe DevTools extension in your browser (Chrome or Edge).
+1. Install the axe DevTools extension in Chrome or Edge.
 
 2. Open the TreeGrid accessibility sample: TreeGrid sample.
 
 3. Run analysis from the axe DevTools tab in Developer Tools.
 
-4. Review and fix violations in your TreeGrid implementation, then re‑run until compliance is achieved.
+4. Review and fix violations in the TreeGrid implementation, then re‑run until compliance is achieved.
 
 {% previewsample "https://blazor.syncfusion.com/accessibility/treegrid" %}
 
