@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with the Stripe Payment Gateway in a Blazor App | Syncfusion
-description: Step-by-step guide to integrate the Stripe payment gateway into a Blazor shopping cart application, covering Payment Intents, Stripe Elements, and client-side payment confirmation with Blazor components.
+title: Integrate Stripe Payment Gateway in a Blazor App | Syncfusion
+description: Learn to integrate the Stripe payment gateway into a Blazor shopping cart app, covering Payment Intents, Stripe Elements, and client-side payment confirmation.
 platform: Blazor
 control: Common
 documentation: ug
@@ -535,7 +535,7 @@ Collects shipping information, creates the Stripe Payment Intent, mounts the Str
     @if (!CartService.Items.Any())
     {
         <div class="alert alert-warning">
-            Your cart is empty. <a href="/catalog">Continue shopping</a>
+            Your cart is empty. <a href="/catalog" aria-label="Continue shopping">Continue shopping</a>
         </div>
     }
     else
