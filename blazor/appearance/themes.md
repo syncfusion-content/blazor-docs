@@ -580,7 +580,7 @@ LibMan offers the following advantages:
 
 3. You can refer the combined component styles by using `@syncfusion/blazor-themes@{{ site.ej2version }}` in the library textbox.
 
-![Library text box populated with @syncfusion/blazor-themes](images/library-unpkg.webp)
+![Library text box populated with blazor-themes](images/library-unpkg.webp)
 
 4. For example, select **Choose specific files** and choose the Fluent 2 theme (SCSS-Themes/fluent2.scss) in the dialog, and click Install.
 
