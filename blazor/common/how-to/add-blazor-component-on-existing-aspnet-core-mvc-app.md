@@ -18,12 +18,12 @@ This guide explains how to add a [Blazor DataGrid](https://www.syncfusion.com/bl
 
 ## Steps to integrate DataGrid component
 
-Open the existing ASP.NET Core MVC application in Visual Studio, and follow this steps one by one.
+Open the existing ASP.NET Core MVC application in Visual Studio, and follow these steps one by one.
 
 ### Install the Blazor NuGet packages
 
 * Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-* Search the required NuGet packages ([Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and install them.
+* Search the required NuGet packages [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and install them.
 
 Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
@@ -85,20 +85,26 @@ app.MapBlazorHub();
 {% endtabs %}
 
 
-### Add the theme stylesheet and script references in `~/Views/Shared/_Layout.cshtml`
+### Add the theme stylesheet and script references
+
+Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<head>` section in the `~/Views/Shared/_Layout.cshtml` file.
 
 {% tabs %}
-{% highlight C# tabtitle="_Layout.cshtml" %}
-    <head>
-        ...
-        <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-        <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
-    </head>
-    <body>
-        ...
-        <script src="_framework/blazor.server.js"></script>
-        ...
-    </body>
+{% highlight html tabtitle="_Layout.cshtml" %}
+
+<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
+
+{% endhighlight %}
+{% endtabs %}
+
+Add required Blazor script references at the end of the `<body>` section in the `~/Views/Shared/_Layout.cshtml` file.
+
+{% tabs %}
+{% highlight html tabtitle="_Layout.cshtml" %}
+
+<script src="_framework/blazor.server.js"></script>
+
 {% endhighlight %}
 {% endtabs %}
 
