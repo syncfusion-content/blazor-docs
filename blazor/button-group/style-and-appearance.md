@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles and Appearances in Blazor ButtonGroup Component | Syncfusion®
-description: Checkout and learn here all features about Styles and Appearances in Blazor ButtonGroup component and more.
+title: Style and Appearance in Blazor Button Group | Syncfusion®
+description: Customize the Blazor Button Group appearance by overriding its default CSS classes or by building a custom theme with the Syncfusion Theme Studio.
 platform: Blazor
 control: Button Group
 documentation: ug
 ---
 
-# Styles and Appearances in Blazor Button Group Component
+# Style and Appearance in Blazor Button Group
 
 The appearance of the Button Group can be modified by overriding the default CSS of the Button Group component. The following table lists the CSS classes that can be overridden and the corresponding element or state they target. A custom theme for the controls can also be created using the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 

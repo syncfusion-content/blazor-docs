@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor DateTimePicker Component | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor Datetime Picker component and much more details.
+title: Accessibility in Blazor DateTime Picker | Syncfusion®
+description: Learn how Blazor DateTime Picker meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA attributes, keyboard navigation, and screen reader support.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
 ---
 
-# Accessibility in Blazor DateTimePicker Component
+# Accessibility in Blazor DateTime Picker
 
 Web accessibility ensures that web content and applications are usable by people with disabilities, especially where dynamic content and advanced UI components are involved.
 

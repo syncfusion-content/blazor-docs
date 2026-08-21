@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Enable or Disable Items in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all about enable or disable Items in Blazor ListBox component and much more details.
+title: How to enable or disable items in Blazor ListBox | Syncfusion
+description: Enable or disable specific items in Blazor ListBox at runtime using the EnableItems method dynamically.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Enable or Disable Items in Blazor ListBox Component
+# How to enable or disable items in Blazor ListBox
 
 The [EnableItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_EnableItems__1___0_System_Boolean_) method enables or disables specific items in the Blazor ListBox at runtime. Disabled items are rendered in a muted state, cannot be selected by the user, and are skipped when keyboard navigation is used.
 

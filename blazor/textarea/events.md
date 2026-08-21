@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor TextArea Component | Syncfusion®
-description: Handling events triggered by user interactions or changes of the Blazor Textarea component and much more.
+title: Events in Blazor TextArea | Syncfusion
+description: Handle Blazor TextArea events such as Created, Input, ValueChange, Focus, and Blur during user interaction.
 platform: Blazor
 control: TextArea
 documentation: ug
 ---
 
-# Events in Blazor TextArea Component
+# Events in Blazor TextArea
 
 This topic describes the TextArea events raised during user interaction and component lifecycle. The following events are available: Created, Input, ValueChange, Focus, Blur, and Destroyed.
 

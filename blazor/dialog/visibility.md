@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Visibility in Blazor Dialog Component | Syncfusion®
-description: Checkout and learn here all the features about Visibility in Blazor Dialog component and much more details.
+title: Visibility in Blazor Dialog | Syncfusion®
+description: Show and hide the Blazor Dialog using the Visible property or the Show and Hide methods, and react to Open and Close events.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Visibility in Blazor Dialog Component
+# Visibility in Blazor Dialog
 
 The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Visible) property controls whether the dialog is shown or hidden on the page. Setting it to true displays the dialog, while setting it to false hides the dialog from view.
 

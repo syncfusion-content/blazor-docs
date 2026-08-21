@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Icons and submenu Items in Blazor Menu Bar Component | Syncfusion®
-description: Checkout and learn here all about icons and submenu items in Blazor Menu Bar component and much more details.
+title: Icons and Submenu Items in Blazor Menu Bar | Syncfusion
+description: Add icons to Blazor Menu Bar items and submenus using IconCss for clear visual representation of actions.
 platform: Blazor
-control: Menu Bar
+control: Menu Bar 
 documentation: ug
 ---
 
-# Icons and Submenu Items in Blazor Menu Bar Component
+# Icons and Submenu Items in Blazor Menu Bar
 
 ## Icons
 

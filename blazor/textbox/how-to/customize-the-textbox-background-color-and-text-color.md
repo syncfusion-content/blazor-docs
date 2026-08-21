@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize the Background & Text Color in Blazor TextBox | Syncfusion®
-description: Learn here all about customizing the TextBox Background Color and Text Color in Blazor TextBox component and much more details.
+title: Background and Text Color in Blazor TextBox | Syncfusion
+description: Customize Blazor TextBox background and text colors using custom CSS applied through the CssClass property.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Customize background and text color in Blazor TextBox component
+# How to customize background and text color in Blazor TextBox
 
 To customize the background and text color of the Blazor TextBox component, you can use custom CSS styles along with the Blazor TextBox component. Below are the steps to achieve this customization:
 

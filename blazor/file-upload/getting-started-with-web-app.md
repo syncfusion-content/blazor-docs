@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started with Blazor File Upload in Blazor Web App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor File Upload Component in Blazor Web App.
+description: Learn how to get started with the Syncfusion Blazor File Upload in a Blazor Web App with installation and setup steps.
 platform: Blazor
 component: File Upload
 documentation: ug
 ---
 
-# Getting Started with Blazor File Upload Component in a Blazor Web App
+# Getting Started with Blazor File Upload in Blazor Web App
 
 This section briefly explains how to include the [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -185,7 +185,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload) component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload) component will render in your default web browser.
 
 {% endtabcontent %}
 

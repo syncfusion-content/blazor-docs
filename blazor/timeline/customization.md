@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Blazor Timeline Component | Syncfusion®
-description: Checkout and learn here all the features about customization in Blazor Timeline component and more details.
+title: Customization in Blazor Timeline | Syncfusion
+description: Customize Blazor Timeline item dots, connectors, borders, and spacing using CSS and item properties.
 platform: Blazor
 control: Timeline
 documentation: ug
 ---
 
-# Customization in Blazor Timeline Component
+# Customization in Blazor Timeline
 
 Customize the Timeline item's dot size, connectors, dot borders, and dot outer space to personalize its appearance. This section details various methods for styling the items.
 

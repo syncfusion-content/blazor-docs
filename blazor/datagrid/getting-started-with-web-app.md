@@ -13,6 +13,11 @@ This section briefly explains how to include the [Blazor DataGrid](https://www.s
 
 > **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Code Studio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
+To get started quickly with Blazor DataGrid component, check out the following video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=hjPGxApA5W8" %}
+
 ## Create a new Blazor Web App
 
 {% tabcontents %}

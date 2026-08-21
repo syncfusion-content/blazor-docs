@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Searching and Filtering in Blazor TreeView Component | Syncfusion®
-description: Checkout and learn here all the features about Searching and Filtering in Blazor TreeView component and much more details.
+title: Searching and Filtering in Blazor TreeView | Syncfusion
+description: Filter TreeView nodes dynamically using an external TextBox input in Blazor for real-time filter searches.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Searching and Filtering in Blazor TreeView Component
+# Searching and Filtering in Blazor TreeView
 
 The Blazor TreeView component supports filtering its nodes through an external input `TextBox` component. This allows users to dynamically narrow down the displayed nodes based on their input.
 

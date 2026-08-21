@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor Button Group Component | Syncfusion®
-description: Checkout and learn here all features about Native Events in Blazor Button Group component and much more.
+title: Native Events in Blazor Button Group | Syncfusion®
+description: Handle native DOM events on the Blazor Button Group component using Blazor's @on{event} directive and event argument data.
 platform: Blazor
 control: Button Group
 documentation: ug
 ---
 
-# Native Events in Blazor Button Group Component
+# Native Events in Blazor Button Group
 
 Native DOM events (such as click, change, focus, mouse, keyboard, and touch events) can be handled on the Button Group component through Blazor's `@on{event}` directive (for example, `@onclick`, `@onchange`). The value of the directive is treated as an event handler. The event-specific data is passed to the handler through the event arguments.
 
