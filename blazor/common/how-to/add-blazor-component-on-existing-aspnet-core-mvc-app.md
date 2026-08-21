@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add a Blazor DataGrid to an Existing ASP.NET Core MVC App | Syncfusion®
+title: Add a Blazor DataGrid to an Existing ASP.NET Core MVC App | Syncfusion
 description: Learn how to add a Syncfusion Blazor DataGrid component to an existing ASP.NET Core MVC application using the built-in component tag helper in Visual Studio.
 platform: Blazor
 control: Common
