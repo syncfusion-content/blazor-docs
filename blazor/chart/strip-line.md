@@ -11,17 +11,9 @@ documentation: ug
 
 # Blazor Charts Stripline
 
-<<<<<<< HEAD
 ## Horizontal striplines
 
 Add a [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html) to the vertical (Y) axis to create a horizontal stripline. Striplines are drawn in the provided start-to-end range, and an axis can have multiple striplines.
-=======
-<!-- markdownlint-disable MD036 -->
-
-## Horizontal striplines
-
-By adding the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html) on the vertical axis, one can create a horizontal stripline. Striplines are drawn in the provided start-to-end range, and an axis can have multiple striplines.
->>>>>>> 655e5219cae0555ffa90c568af9ca098db13f034
 
 ```cshtml
 
@@ -32,13 +24,8 @@ By adding the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
     <ChartPrimaryYAxis>
         <ChartStriplines>
-<<<<<<< HEAD
             <ChartStripline Start="28" End="30" Color="red"/>
             <ChartStripline Start="33" End="35" Color="blue"/>
-=======
-            <ChartStripline Start="20" End="25" Color="red"/>
-            <ChartStripline Start="32" End="35" Color="blue"/>
->>>>>>> 655e5219cae0555ffa90c568af9ca098db13f034
         </ChartStriplines>
     </ChartPrimaryYAxis>
 
@@ -49,11 +36,7 @@ By adding the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 </SfChart>
 
-<<<<<<< HEAD
 @code {
-=======
-@code{
->>>>>>> 655e5219cae0555ffa90c568af9ca098db13f034
     public class ChartData
     {
         public string X { get; set; }
@@ -69,7 +52,6 @@ By adding the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.
 		new ChartData { X = "Thu", Y = 28 },
 		new ChartData { X = "Fri", Y = 30 },
 		new ChartData { X = "Sat", Y = 31 }
-<<<<<<< HEAD
 	};
 }
 
@@ -79,17 +61,6 @@ By adding the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.
 ## Vertical striplines
 
 Add a [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html) to the horizontal (X) axis to create a vertical stripline. An axis can have multiple striplines drawn in the provided start-to-end range.
-=======
-    };
-}
-
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthdDRCBpJybXKNs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chart with Horizontal Striplines](images/strip-line/blazor-chart-horizontal-strip-line.webp)" %}
-
-## Vertical striplines
-
-By adding the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html) on the horizontal axis, one can create a vertical stripline. Striplines are drawn in the provided start-to-end range, and an axis can have multiple striplines.
->>>>>>> 655e5219cae0555ffa90c568af9ca098db13f034
 
 ```cshtml
 
@@ -109,11 +80,7 @@ By adding the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.
     </ChartSeriesCollection>
 </SfChart>
 
-<<<<<<< HEAD
 @code {
-=======
-@code{
->>>>>>> 655e5219cae0555ffa90c568af9ca098db13f034
     public class ChartData
     {
         public string X { get; set; }
@@ -122,7 +89,6 @@ By adding the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
     public List<ChartData> WeatherReports = new List<ChartData>
     {
-<<<<<<< HEAD
         new ChartData { X = "Sun", Y = 28 },
         new ChartData { X = "Mon", Y = 27 },
         new ChartData { X = "Tue", Y = 33 },
@@ -130,30 +96,15 @@ By adding the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.
         new ChartData { X = "Thu", Y = 28 },
         new ChartData { X = "Fri", Y = 30 },
         new ChartData { X = "Sat", Y = 31 }
-=======
-		new ChartData { X = "Sun", Y = 28 },
-		new ChartData { X = "Mon", Y = 27 },
-		new ChartData { X = "Tue", Y = 33 },
-		new ChartData { X = "Wed", Y = 36 },
-		new ChartData { X = "Thu", Y = 28 },
-		new ChartData { X = "Fri", Y = 30 },
-		new ChartData { X = "Sat", Y = 31 }
->>>>>>> 655e5219cae0555ffa90c568af9ca098db13f034
     };
 }
 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhxNRiBzznsUStq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chart with Vertical Striplines](images/strip-line/blazor-chart-vertical-stripline.webp)" %}
 
-<<<<<<< HEAD
 ## Stripline customization
 
 The [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_Start) and [End](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_End) properties define the stripline's range. Use [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_Size) and [Border](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_Border) to customize the stripline's thickness and outline. Set [StartFromAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_StartFromAxis) to **true** to anchor the stripline at the axis origin. The [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_ZIndex) property controls the rendering order so the stripline is drawn behind or in front of the series elements. [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_Opacity) controls the background transparency.
-=======
-## Striplines customization
-
-The [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_Start) property in a stripline can be used to customize the starting value in that stripline. The [End](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_End) property customizes the end value in the same way. Both [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_Size) and [Border](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_Border) properties can be used to customize the stripline's size and border. The [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_ZIndex) property can be used to alter the order of the stripline, determining whether it should be drawn behind or over the series elements.
->>>>>>> 655e5219cae0555ffa90c568af9ca098db13f034
 
 ```cshtml
 
@@ -172,11 +123,7 @@ The [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
     </ChartSeriesCollection>
 </SfChart>
 
-<<<<<<< HEAD
 @code {
-=======
-@code{
->>>>>>> 655e5219cae0555ffa90c568af9ca098db13f034
 
     public class ChartData
     {
@@ -185,7 +132,6 @@ The [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
     }
 
     public List<ChartData> WeatherReports = new List<ChartData>
-<<<<<<< HEAD
     {
         new ChartData { X = "Sun", Y = 28 },
         new ChartData { X = "Mon", Y = 27 },
@@ -195,17 +141,6 @@ The [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
         new ChartData { X = "Fri", Y = 30 },
         new ChartData { X = "Sat", Y = 31 }
     };
-=======
-	{
-		new ChartData { X = "Sun", Y = 28 },
-		new ChartData { X = "Mon", Y = 27 },
-		new ChartData { X = "Tue", Y = 33 },
-		new ChartData { X = "Wed", Y = 36 },
-		new ChartData { X = "Thu", Y = 28 },
-		new ChartData { X = "Fri", Y = 30 },
-		new ChartData { X = "Sat", Y = 31 }
-	};
->>>>>>> 655e5219cae0555ffa90c568af9ca098db13f034
 }
 
 ```
@@ -213,11 +148,7 @@ The [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
 
 ## Text customization
 
-<<<<<<< HEAD
 Use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_Text) property to add a label to a stripline. [TextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_TextStyle) customizes the label's appearance, while [Rotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_Rotation) rotates it. The [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_HorizontalAlignment) and [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_VerticalAlignment) properties control the position of the stripline label.
-=======
-[TextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_TextStyle) and [Rotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_Rotation) properties can be used to customize and rotate the text presented in a stripline. The [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_HorizontalAlignment) and [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_VerticalAlignment) properties can be used to customize the horizontal and vertical alignment of the stripline text.
->>>>>>> 655e5219cae0555ffa90c568af9ca098db13f034
 
 ```cshtml
 
@@ -239,11 +170,7 @@ Use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
     </ChartSeriesCollection>
 </SfChart>
 
-<<<<<<< HEAD
 @code {
-=======
-@code{
->>>>>>> 655e5219cae0555ffa90c568af9ca098db13f034
 
     public class ChartData
     {
@@ -252,7 +179,6 @@ Use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
     }
 
     public List<ChartData> WeatherReports = new List<ChartData>
-<<<<<<< HEAD
     {
         new ChartData { X = "Sun", Y = 28 },
         new ChartData { X = "Mon", Y = 27 },
@@ -262,17 +188,6 @@ Use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
         new ChartData { X = "Fri", Y = 30 },
         new ChartData { X = "Sat", Y = 31 }
     };
-=======
-	{
-		new ChartData { X = "Sun", Y = 28 },
-		new ChartData { X = "Mon", Y = 27 },
-		new ChartData { X = "Tue", Y = 33 },
-		new ChartData { X = "Wed", Y = 36 },
-		new ChartData { X = "Thu", Y = 28 },
-		new ChartData { X = "Fri", Y = 30 },
-		new ChartData { X = "Sat", Y = 31 }
-	};
->>>>>>> 655e5219cae0555ffa90c568af9ca098db13f034
 }
 
 ```
@@ -280,7 +195,6 @@ Use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
 
 ## Segmented stripline
 
-<<<<<<< HEAD
 Use the [IsSegmented](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_IsSegmented) property of the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html) to limit a stripline to a specific segment of the opposite axis.
 
 * [IsSegmented](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_IsSegmented) - Enables the segmented stripline.
@@ -291,15 +205,6 @@ Use the [IsSegmented](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 * [SegmentAxisName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_SegmentAxisName) - Specifies the name of the associated axis (for example, **PrimaryYAxis**).
 * [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_Color) - Sets the color of the segment.
 * [StartFromAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_StartFromAxis) - When **false**, the stripline is clipped to the segment range instead of running from the axis origin.
-=======
-To create a stripline in a specific region with respect to a segment (segmented stripline), you can use the [IsSegmented](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_IsSegmented) property of the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline__ctor). The start and end values of this type of stripline can be defined through the [SegmentStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_SegmentStart) and [SegmentEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_SegmentEnd) properties. Additionally, you can use the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_Color) property to set the color of the segment and the [SegmentAxisName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_SegmentAxisName) property to specify the axis for the segment stripline.
-
-* [IsSegmented](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_IsSegmented) - It is used to enable the segmented stripline.
-* [SegmentStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_SegmentStart) - Used to change the start value of the segment, which corresponds to the associated axis.
-* [SegmentEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_SegmentEnd) - Used to change the end value of the segment, which also corresponds to the associated axis.
-* [SegmentAxisName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_SegmentAxisName) - Used to specify the name of the associated axis.
-* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html#Syncfusion_Blazor_Charts_ChartStripline_Color) - Used to customize the color for the stripline.
->>>>>>> 655e5219cae0555ffa90c568af9ca098db13f034
 
 ```cshtml
 
@@ -316,11 +221,7 @@ To create a stripline in a specific region with respect to a segment (segmented 
     </ChartPrimaryXAxis>
     <ChartPrimaryYAxis Interval="0.5" Minimum="0" Maximum="3.5"></ChartPrimaryYAxis>
     <ChartSeriesCollection>
-<<<<<<< HEAD
         <ChartSeries Fill="blue" DataSource="@StepLineData" Width="2" XName="X" YName="Y" Type="ChartSeriesType.StepLine">
-=======
-        <ChartSeries Fill="blue" DataSource="@StepLineData" Width="2" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StepLine">
->>>>>>> 655e5219cae0555ffa90c568af9ca098db13f034
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -345,7 +246,6 @@ To create a stripline in a specific region with respect to a segment (segmented 
     };
 }
 ```
-<<<<<<< HEAD
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjLRtdshppcHNygP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chart With Segmented Stripline](images/strip-line/blazor-chart-segmented-stripline.webp)" %}
 
 ## Stripline tooltip
@@ -355,17 +255,6 @@ Stripline tooltips display contextual information when the user hovers over a st
 ### Default stripline tooltip
 
 The following example enables a stripline tooltip with default settings. The tooltip appears when the user hovers over the band.
-=======
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLRtdshppcHNygP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chart With Segmented Stripline](../chart/images/strip-line/blazor-chart-segmented-stripline.webp)" %}
-
-## Stripline tooltip
-
-Stripline tooltips provide additional contextual information on interaction with striplines in the chart. To display a tooltip on a stripline, add the [ChartStriplineTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltip.html) component inside the desired [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html) and set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltip.html#Syncfusion_Blazor_Charts_ChartStriplineTooltip_Enable) property to **true**. It is particularly useful for explaining the significance of specific ranges or thresholds marked by striplines.
-
-**Default stripline tooltip code example:**
-
-Below is the simplest way to enable a stripline tooltip using default settings. The tooltip will display on interaction with the stripline.
->>>>>>> 655e5219cae0555ffa90c568af9ca098db13f034
 
 ```cshtml
 
@@ -382,16 +271,9 @@ Below is the simplest way to enable a stripline tooltip using default settings. 
             <ChartStripline Start="new DateTime(2024, 01, 01, 07, 00, 00)"
                             End="new DateTime(2024, 01, 01, 09, 00, 00)"
                             Text="Rush Hour"
-<<<<<<< HEAD
                             Color="#FFED4A">
 
                 @* Stripline Tooltip: shown when the user hovers over the band *@
-=======
-                            Color="#FFED4A"
-                            Visible="true">
-
-                @* Stripline Tooltip: shows 'Rush Hour' with band hover/tap *@
->>>>>>> 655e5219cae0555ffa90c568af9ca098db13f034
                 <ChartStriplineTooltip Enable="true"></ChartStriplineTooltip>
             </ChartStripline>
         </ChartStriplines>
@@ -435,21 +317,11 @@ Below is the simplest way to enable a stripline tooltip using default settings. 
 
 ### Tooltip customization properties
 
-<<<<<<< HEAD
 The tooltip supports the following properties:
 
 - [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltip.html#Syncfusion_Blazor_Charts_ChartStriplineTooltip_Enable) - Enables or disables the stripline tooltip. Default is `false`.
 - [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltip.html#Syncfusion_Blazor_Charts_ChartStriplineTooltip_Header) - Sets the title text shown at the top of the tooltip.
 - [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltip.html#Syncfusion_Blazor_Charts_ChartStriplineTooltip_Content) - Specifies custom content for the tooltip body using a format string. The format supports token placeholders that are replaced with corresponding values at runtime:
-=======
-The stripline tooltip offers comprehensive customization options through the following properties:
-
-- [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltip.html#Syncfusion_Blazor_Charts_ChartStriplineTooltip_Enable) - A boolean property that enables or disables the stripline tooltip. Default value is **false**.
-
-- [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltip.html#Syncfusion_Blazor_Charts_ChartStriplineTooltip_Header) - Defines the title text displayed at the top of the tooltip.
-
-- [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltip.html#Syncfusion_Blazor_Charts_ChartStriplineTooltip_Content) - Allows you to specify custom content for the tooltip body using a format string. The format supports token placeholders that are replaced with corresponding values at runtime. Supported tokens:
->>>>>>> 655e5219cae0555ffa90c568af9ca098db13f034
   - **${stripline.text}** – The stripline label.
   - **${stripline.start}** – The stripline start value.
   - **${stripline.end}** – The stripline end value.
@@ -458,7 +330,6 @@ The stripline tooltip offers comprehensive customization options through the fol
   - **${stripline.segmentEnd}** – The stripline segment end value (if applicable).
   - **${stripline.segmentAxisName}** – The stripline segment axis name (if applicable).
   - **${stripline.size}** – The stripline size (if applicable).
-<<<<<<< HEAD
 - [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltip.html#Syncfusion_Blazor_Charts_ChartStriplineTooltip_Fill) - Sets the tooltip background color. Accepts any valid CSS color value (hex, rgb, rgba, or named color).
 - [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltip.html#Syncfusion_Blazor_Charts_ChartStriplineTooltip_Opacity) - Sets the tooltip background transparency. Accepts a value between `0` (transparent) and `1` (opaque). Default is `0.75`.
 - [ShowHeaderLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltip.html#Syncfusion_Blazor_Charts_ChartStriplineTooltip_ShowHeaderLine) - Shows or hides the horizontal separator between the tooltip header and content.
@@ -480,32 +351,6 @@ Use the [ChartStriplineTooltipBorder](https://help.syncfusion.com/cr/blazor/Sync
 - [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltipBorder.html#Syncfusion_Blazor_Charts_ChartStriplineTooltipBorder_Color) - Border color. Accepts any valid CSS color value.
 
 ### Customized stripline tooltip
-=======
-
-- [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltip.html#Syncfusion_Blazor_Charts_ChartStriplineTooltip_Fill) - Sets the background color of the tooltip. Accepts any valid CSS color value (hex, rgb, rgba, named colors).
-
-- [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltip.html#Syncfusion_Blazor_Charts_ChartStriplineTooltip_Opacity) - Controls the transparency level of the tooltip background. Accepts numeric values between 0 (completely transparent) and 1 (completely opaque). The default value is 0.75.
-
-- [ShowHeaderLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltip.html#Syncfusion_Blazor_Charts_ChartStriplineTooltip_ShowHeaderLine) - A boolean property that controls the visibility of the horizontal separator line between the tooltip header and content. Set to **true** to display the line or **false** to hide it.
-
-The [ChartStriplineTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltipTextStyle.html) component allows you to customize the appearance of text within the tooltip:
-
-- [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltipTextStyle.html#Syncfusion_Blazor_Charts_ChartStriplineTooltipTextStyle_Size) - Specifies the font size of the tooltip text. Accepts pixel values (e.g., "12px").
-
-- [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltipTextStyle.html#Syncfusion_Blazor_Charts_ChartStriplineTooltipTextStyle_Color) - Defines the text color. Accepts any valid CSS color value.
-
-- [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltipTextStyle.html#Syncfusion_Blazor_Charts_ChartStriplineTooltipTextStyle_FontFamily) - Sets the font family for the tooltip text. Accepts standard CSS font family values (e.g., "Arial", "Segoe UI", "Roboto").
-
-- [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltipTextStyle.html#Syncfusion_Blazor_Charts_ChartStriplineTooltipTextStyle_FontWeight) - Controls the thickness of the text.
-
-The [ChartStriplineTooltipBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltipBorder.html) component enables you to add and customize borders around the tooltip:
-
-- [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltipBorder.html#Syncfusion_Blazor_Charts_ChartStriplineTooltipBorder_Width) - Specifies the thickness of the tooltip border in pixels. Accepts numeric values. Default value is **0**.
-
-- [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplineTooltipBorder.html#Syncfusion_Blazor_Charts_ChartStriplineTooltipBorder_Color) - Defines the color of the tooltip border. Accepts any valid CSS color value.
-
-**Customized stripline tooltip code example:**
->>>>>>> 655e5219cae0555ffa90c568af9ca098db13f034
 
 ```cshtml
 
@@ -518,16 +363,11 @@ The [ChartStriplineTooltipBorder](https://help.syncfusion.com/cr/blazor/Syncfusi
         <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
     </ChartPrimaryXAxis>
 
-<<<<<<< HEAD
     <ChartPrimaryYAxis Minimum="65" Maximum="110" Interval="5" LabelFormat="${value}k" RangePadding="ChartRangePadding.None">
-=======
-    <ChartPrimaryYAxis Minimum="65" Maximum="110" Interval="5" LabelFormat="${value}k" RangePadding="Syncfusion.Blazor.Charts.ChartRangePadding.None">
->>>>>>> 655e5219cae0555ffa90c568af9ca098db13f034
         <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
         <ChartStriplines>
 
             @* Stripline: Highlights the upper revenue target range from 95k to 110k with text style and border customization. *@
-<<<<<<< HEAD
             <ChartStripline Start="95" End="110" Text="Target Band" Color="#FFF59E" HorizontalAlignment="Anchor.Middle">
                 <ChartStriplineTextStyle Size="12px" Color="#0b3a66" FontWeight="600"></ChartStriplineTextStyle>
                 <ChartStriplineBorder Width="0"></ChartStriplineBorder>
@@ -536,16 +376,6 @@ The [ChartStriplineTooltipBorder](https://help.syncfusion.com/cr/blazor/Syncfusi
                 <ChartStriplineTooltip Enable="true"
                                        Header="Target"
                                        Content="Range: ${stripline.start} - ${stripline.end}<br/>Axis: ${axis.name}<br/>Label: ${stripline.text}"
-=======
-            <ChartStripline Start="95" End="110" Color="#FFF59E" HorizontalAlignment="Anchor.Middle" Visible="true">
-                <ChartStriplineTextStyle Size="12px" Color="#0b3a66" FontWeight="600"></ChartStriplineTextStyle>
-                <ChartStriplineBorder Width="0"></ChartStriplineBorder>
-
-                @* Stripline Tooltip: providing interactive context with customizatioon for the target bands over hover/tap *@
-                <ChartStriplineTooltip Enable="true"
-                                       Header="Target"
-                                       Content="Range: ${stripline.start} - ${stripline.end}<br/>Axis: ${axis.name}"
->>>>>>> 655e5219cae0555ffa90c568af9ca098db13f034
                                        Fill="#F43F5E"
                                        Opacity="0.95"
                                        ShowHeaderLine="true">
@@ -598,7 +428,6 @@ The [ChartStriplineTooltipBorder](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ![Blazor Chart with Customized Stripline Tooltip](images/strip-line/blazor-chart-stripline-tooltip-customized.webp)
 
-<<<<<<< HEAD
 N> See the [Blazor Charts demo](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) for striplines combined with other series types, or explore related axis features such as [Multiple panes](./multiple-panes), [Crosshair and trackball](./cross-hair-and-track-ball), and [Chart appearance](./chart-appearance).
 
 ## See also
@@ -608,12 +437,3 @@ N> See the [Blazor Charts demo](https://blazor.syncfusion.com/demos/chart/line?t
 * [Data markers](./data-markers)
 * [Multiple panes](./multiple-panes)
 * [Crosshair and trackball](./cross-hair-and-track-ball)
-=======
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
-
-## See also
-
-* [Data label](./data-labels)
-* [Tooltip](./tool-tip)
-* [Marker](./data-markers)
->>>>>>> 655e5219cae0555ffa90c568af9ca098db13f034
