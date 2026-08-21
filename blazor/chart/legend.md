@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Blazor Charts Legend Configuration Examples | Syncfusion®
 description: Learn how to display and customize legends in Syncfusion Blazor Charts. Enable ChartLegendSettings Visible and configure position and alignment.
@@ -11,7 +11,7 @@ documentation: ug
 
 The [legend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html) provides information on the series shown in the chart.
 
-A detailed walkthrough demonstrating how to add and customize legend in the chart is presented in the video below.
+Watch the video below for a walkthrough on adding and customizing the legend.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=mra9AP4HBPc" %}
 
@@ -70,7 +70,7 @@ To display the legend for the chart, set the [Visible](https://help.syncfusion.c
 
 <!-- markdownlint-disable MD036 -->
 
-The legend can be placed at [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Left), [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Right), [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Top), [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Bottom) or [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Custom) position of the chart using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Position) property. By default, the legend appears at the **bottom** of the chart.
+The legend can be placed at [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Left), [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Right), [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Top), [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Bottom) or [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Custom) position of the chart using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Position) property. By default, the legend appears at the **bottom** of the chart.
 
 ```cshtml
 
@@ -115,7 +115,7 @@ The legend can be placed at [Left](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ![Changing Legend Position in Blazor Column Chart](images/legend/blazor-column-chart-legend-position.webp)
 
-The [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Custom) position helps to position the legend anywhere in the chart using x and y coordinates.
+The [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Custom) position helps to position the legend anywhere in the chart using x and y coordinates (in pixels, relative to the chart's top-left corner).
 
 ```cshtml
 
@@ -167,9 +167,9 @@ The [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Lege
 
 <!-- markdownlint-disable MD036 -->
 
-## Legend Reverse
+## Reversing Legend Order
 
-The order of the legend items can be reversed by using the [Reverse](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Reverse) property. By default, legend for the first series in the collection will be placed first.
+The order of the legend items can be reversed by using the [Reverse](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Reverse) property. By default, the first series in the collection is shown first.
 
 ```cshtml
 
@@ -219,11 +219,9 @@ The order of the legend items can be reversed by using the [Reverse](https://hel
 
 ![Changing Blazor Column Chart Legend Reverse](images/legend/blazor-column-chart-legend-reverse.webp)
 
-**Legend Alignment**
+### Legend Alignment
 
-<!-- markdownlint-disable MD036 -->
-
-Using the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Alignment) property, place the legend in [Centre](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Alignment.html#Syncfusion_Blazor_Charts_Alignment_Center), [Far](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Alignment.html#Syncfusion_Blazor_Charts_Alignment_Far), or [Near](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Alignment.html#Syncfusion_Blazor_Charts_Alignment_Near) alignment.
+Using the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Alignment) property, place the legend in [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Alignment.html#Syncfusion_Blazor_Charts_Alignment_Center), [Far](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Alignment.html#Syncfusion_Blazor_Charts_Alignment_Far), or [Near](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Alignment.html#Syncfusion_Blazor_Charts_Alignment_Near) alignment.
 
 ```cshtml
 
@@ -277,7 +275,7 @@ Using the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ### Legend Shape
 
-The [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_LegendShape) property in the [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) can be used to change the shape of the legend icon. The default icon shape for legends is [SeriesType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendShape.html#Syncfusion_Blazor_Charts_LegendShape_SeriesType).
+The [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_LegendShape) property in the [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) can be used to change the shape of the legend icon. The default icon shape for legends is [SeriesType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendShape.html#Syncfusion_Blazor_Charts_LegendShape_SeriesType). Other available values include `Circle`, `Diamond`, `Rectangle`, `Pentagon`, `Triangle`, `InvertedTriangle`, `Cross`, `HorizontalLine`, `VerticalLine`, and `Image`.
 
 ```cshtml
 
@@ -374,7 +372,7 @@ When the legend is placed on the top or bottom of the chart, it takes up 20% - 2
 
 ![Blazor Column Chart Legend with Custom Size](images/legend/blazor-column-chart-legend-custom-size.webp)
 
-### Legend Shape Size
+### Legend Shape Dimensions
 
 The [ShapeHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ShapeHeight) and [ShapeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ShapeWidth) properties can be used to adjust the dimensions of the legend shape.
 
@@ -476,7 +474,7 @@ The [ItemPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ### Legend Paging
 
-When the legend items exceed the available legend bounds, paging is enabled by default. Navigation buttons allow the legend items to be viewed across multiple pages.
+When the legend items exceed the available legend bounds, paging is enabled automatically. Navigation buttons allow the legend items to be viewed across multiple pages. The [Padding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Padding) property controls the space between the legend bounds and the items, while [ShapePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ShapePadding) controls the space between each shape and its label.
 
 ```cshtml
 
@@ -529,7 +527,7 @@ When the legend items exceed the available legend bounds, paging is enabled by d
 
 ### Legend Text Wrap
 
-When the legend text exceeds the container, the text can be wrapped by using [TextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_TextWrap) Property. End user can also wrap the legend text based on the [MaximumLabelWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_MaximumLabelWidth) property.
+When the legend text exceeds the container, the text can be wrapped by using the [TextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_TextWrap) property. Other available values are `Normal`, `AnyWhere`, and `WrapWithOverflow`. You can also wrap the legend text based on the [MaximumLabelWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_MaximumLabelWidth) property.
 
 ```cshtml
 
@@ -546,7 +544,7 @@ When the legend text exceeds the container, the text can be wrapped by using [Te
         <ChartSeries DataSource="@MedalDetails" Name="Bronze Medals" XName="Country" Width="2" LegendShape="LegendShape.Diamond" Opacity="1" YName="Bronze" Type="ChartSeriesType.Column">
         </ChartSeries>
     </ChartSeriesCollection>
-    <ChartLegendSettings Visible="true" Position="@LegendPosition.Right" TextWrap="@TextWrap.Wrap" MaximumLabelWidth="50">
+    <ChartLegendSettings Visible="true" Position="LegendPosition.Right" MaximumLabelWidth="50">
         <ChartLegendBorder Color="red" Width="1"/>
     </ChartLegendSettings>
 </SfChart>
@@ -578,9 +576,9 @@ When the legend text exceeds the container, the text can be wrapped by using [Te
 
 ![Blazor Chart Legend with Wrap](images/legend/blazor-chart-legend-wrap.webp)
 
-## Series selection based on legend
+## Disabling Series Toggle on Legend Click
 
-By default, when you click on the legend item, the appropriate series visibility is collapsed. On the other hand, [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ToggleVisibility) property is used to disable such functionality.
+By default, when you click a legend item, the corresponding series is hidden. To disable this behavior, set the [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ToggleVisibility) property on `ChartLegendSettings` to **false**.
 
 ```cshtml
 
@@ -600,6 +598,7 @@ By default, when you click on the legend item, the appropriate series visibility
 
     <ChartLegendSettings Visible="true" ToggleVisibility="false"/>
 </SfChart>
+
 @code{
 
     public class ChartData
@@ -627,9 +626,9 @@ By default, when you click on the legend item, the appropriate series visibility
 
 ![Blazor Column Chart Legend with Series Selection](images/legend/blazor-column-chart-legend-series-selection.webp)
 
-## Hiding legend item
+## Hiding a Legend Item
 
-The series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Name) will be displayed as the legend text by default. One can skip the legend for particular series by providing an empty string to the series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Name) property.
+The series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Name) is displayed as the legend text by default. To skip the legend for a particular series, set its `Name` to an empty string. To hide the legend for the whole chart, set `ChartLegendSettings.Visible` to **false**.
 
 ```cshtml
 
@@ -648,9 +647,9 @@ The series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
         </ChartSeries>
     </ChartSeriesCollection>
 
-    <ChartLegendSettings Visible="true" ToggleVisibility="true">
-    </ChartLegendSettings>
+    <ChartLegendSettings Visible="true" />
 </SfChart>
+
 @code{
     
     public class ChartData
@@ -678,14 +677,15 @@ The series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ![Hiding Legend Item in Blazor Column Chart](images/legend/blazor-column-chart-hide-legend-item.webp)
 
-## Legend Template
+## Legend Item Template
 
-Legend templates allow you to replace default legend icons and text with custom HTML or Blazor markup for each series. This enables branded styles, richer content (icons, multi-line text, badges), improved readability, and localization.
+Legend item templates allow you to replace default legend icons and text with custom HTML or Blazor markup for each series. This enables branded styles, richer content (icons, multi-line text, badges), improved readability, and localization.
 
-To use, add a `LegendItemTemplate` inside any [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) you want to customize. The rendered content becomes the legend item and can be styled with CSS. Legend interactions (click to toggle series) remain unless [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ToggleVisibility) is set to false. Templates work with all legend positions, alignments, and paging.
+To use, add a [LegendItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_LegendItemTemplate) inside any [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) you want to customize. The rendered content becomes the legend item and can be styled with CSS. Legend interactions (click to toggle series) remain unless [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ToggleVisibility) is set to **false**. Templates work with all legend positions, alignments, and paging.
 
-```
+```cshtml
 @using Syncfusion.Blazor.Charts
+@using System.Linq
 
 @* Initialize the chart and configure essential features *@
 <SfChart Title="Olympic Medals">
@@ -744,7 +744,7 @@ To use, add a `LegendItemTemplate` inside any [ChartSeries](https://help.syncfus
 
 </SfChart>
 
-@code {
+@code{
 
     public class ChartData
     {
@@ -773,10 +773,11 @@ To use, add a `LegendItemTemplate` inside any [ChartSeries](https://help.syncfus
 ```
 ![Legend Template in Blazor Column Chart](images/legend/blazor-column-chart-legend-template.webp)
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> For a runnable sample that includes legends, see the [Blazor Charts demo](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2).
 
 ## See also
 
 * [Data label](./data-labels)
 * [Marker](./data-markers)
-* [Toggle Series Visibility Using Legend](https://support.syncfusion.com/kb/article/20966/how-to-toggle-series-visibility-using-legend-in-live-blazor-chart)
+* [Chart Appearance](./chart-appearance)
+* [Events](./events)
