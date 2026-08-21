@@ -401,5 +401,5 @@ N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/bla
 * [Hilo Open Close](./high-low-open-close)
 * [Data Label](../data-labels)
 * [Tooltip](../tool-tip)
-* [Data markers](../data-markers)
+* [Data Marker](../data-markers)
 * [Legend](../legend)

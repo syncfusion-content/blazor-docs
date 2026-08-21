@@ -798,7 +798,7 @@ N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/bla
 ## See also
 
 * [Stacked waterfall chart with the bar chart](https://support.syncfusion.com/kb/article/11589/how-to-create-a-stacked-waterfall-chart-using-a-blazor-bar-chart)
-* [Data labels](../data-labels)
+* [Data Label](../data-labels)
 * [Tooltip](../tool-tip)
-* [Data markers](../data-markers)
+* [Data Marker](../data-markers)
 * [Legend](../legend)

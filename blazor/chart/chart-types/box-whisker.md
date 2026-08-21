@@ -462,5 +462,5 @@ N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/bla
 
 * [Data Label](../data-labels)
 * [Tooltip](../tool-tip)
-* [Data marker](../data-markers)
+* [Data Marker](../data-markers)
 * [Legend](../legend)

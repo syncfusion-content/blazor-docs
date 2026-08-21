@@ -533,5 +533,5 @@ N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/bla
 
 * [Data Label](../data-labels)
 * [Tooltip](../tool-tip)
-* [Data markers](../data-markers)
+* [Data Marker](../data-markers)
 * [Legend](../legend)

@@ -17,7 +17,9 @@ A detailed demonstration of the process for creating a column chart using Blazor
 
 {% youtube "youtube:https://www.youtube.com/watch?v=IQb0sJPlvZI" %}
 
-To render a [Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) series in your chart, define the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Column) in your chart configuration. This indicates that the data should be represented as a column chart, which is ideal for visualizing for comparing different categories of data or tracking changes over time.
+To render a [Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) series in your chart, define the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Column) in your chart configuration. This indicates that the data should be represented as a column chart, which is ideal for comparing different categories of data or tracking changes over time.
+
+N> **Troubleshooting:** If columns do not render, verify that `Type` is set to `ChartSeriesType.Column` and that the X-axis `ValueType` is `Category` (or `DateTime`/`DateTimeCategory` for time-series data). The chart container must have a non-zero height.
 
 ```cshtml
 
@@ -56,13 +58,13 @@ To render a [Column Chart](https://www.syncfusion.com/blazor-components/blazor-c
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBnXxiyqOWhYDOS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor column Chart.](../images/chart-types-images/blazor-column-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBnXxiyqOWhYDOS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column Chart](../images/chart-types-images/blazor-column-chart.webp)" %}
 
 N> Refer to our [Blazor Column Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Column Charts Example](https://blazor.syncfusion.com/demos/chart/column?theme=fluent2) to compare **Frequency**, **Count**, **Total**, or **Average** of data in different categories.
 
 ## Binding data with series
 
-You can bind data to the chart using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property within the series configuration. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) value can be set using either [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) property values or a list of business objects. More information on data binding can be found [here](../working-with-data). To display the data correctly, map the fields from the data to the chart series' [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) properties.
+You can bind data to the chart using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property within the series configuration. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) value can be set using either [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) property values or a list of business objects. More information on data binding is available in [Working with data](../working-with-data). To display the data correctly, map the fields from the data to the chart series' [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) properties.
 
 ```cshtml
 
@@ -150,7 +152,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZhRNHCygYCmymvy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property can be used to apply a gradient color to the column series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
+The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property can also apply a gradient color to the column series. By configuring this property with gradient values, the color transitions smoothly from one shade to another.
 
 ```cshtml
 
@@ -202,7 +204,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 
 **Opacity**
 
-The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) property specifies the transparency level of the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill). Adjusting this property allows you to control how opaque or transparent the fill color of the series appears.
+The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) property sets the transparency of the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) color. Accepts a value between `0` (fully transparent) and `1` (fully opaque).
 
 ```cshtml
 
@@ -289,7 +291,7 @@ The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 
 **Series Border**
 
-The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesBorder.html) property to customize the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Width) and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Color) of the series border.
+Use the [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesBorder.html) property to customize the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesBorder.html#Syncfusion_Blazor_Charts_ChartSeriesBorder_Width) and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesBorder.html#Syncfusion_Blazor_Charts_ChartSeriesBorder_Color) of the series border.
 
 ```cshtml
 
@@ -372,7 +374,7 @@ The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VthnDxiSAEqgSxbl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column Chart with corner radius](../images/chart-types-images/blazor-column-chart-corner-radius.webp)" %}
 
-Customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event argument.
+Customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by setting the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event arguments.
 
 ```cshtml
 
@@ -837,9 +839,11 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNLRDRWIKkcsfKSD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and explore the [Blazor Column Chart Example](https://blazor.syncfusion.com/demos/chart/column?theme=fluent2) to learn how the column chart compares values across categories using vertical bars.
 
 ## See also
 
 * [Data Label](../data-labels)
 * [Tooltip](../tool-tip)
+* [Data Marker](../data-markers)
+* [Legend](../legend)
