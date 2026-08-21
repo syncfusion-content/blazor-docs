@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toolbar in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table exposes a toolbar with built-in options for new, save, load, grid-chart switching, exporting, and conditional formatting.
+description: Learn how the Blazor Pivot Table exposes a toolbar for switching between table and chart views, exporting, conditional formatting, and report management.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -9,14 +9,12 @@ documentation: ug
 
 # Toolbar in Blazor Pivot Table
 
-The toolbar in the Blazor Pivot Table component provides easy access to commonly used features, such as switching between a pivot table and a pivot chart, changing chart types, applying conditional formatting, exporting data, and more. To enable the toolbar, set the [ShowToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowToolbar) property to **true**. Additionally, the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_Toolbar) property accepts a collection of built-in toolbar options, allowing users to interact with the Pivot Table efficiently at runtime.
+The toolbar in the Blazor Pivot Table component provides easy access to commonly used features, such as switching between a pivot table and a pivot chart, changing chart types, applying conditional formatting, exporting data, and more. To enable the toolbar, set the [`ShowToolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowToolbar) property to **true**. The [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_Toolbar) property accepts a collection of built-in toolbar options, letting users perform common operations at runtime.
 
 To have a quick glance on how to add and customize toolbar in the Blazor Pivot Table, watch this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=X74nXMoJ8KQ"%}
-
-## Built-in Toolbar Options
 
 The following table lists the built-in toolbar options and their actions:
 
@@ -35,10 +33,10 @@ The following table lists the built-in toolbar options and their actions:
 | Grand Total | Shows or hides grand totals in the pivot table |
 | Conditional Formatting | Opens a pop-up to apply formatting to cells based on conditions |
 | Number Formatting | Opens a pop-up to apply number formatting to cells |
-| Field List | Opens the field list pop-up to configure the report settings |
+| Field List | Opens the field list pop-up to configure the [`PivotViewDataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) |
 | MDX | Displays the MDX query used to retrieve data from an OLAP data source. **Note**: This option applies only to OLAP data sources. |
 
-N> The order of toolbar options can be changed by simply moving the position of items in the [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ToolbarItems.html) collection. Also, if end user wants to remove any toolbar option from getting displayed, it can be simply ignored from adding into the [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ToolbarItems.html) collection.
+N> The order of toolbar options can be changed by reordering items in the **ToolbarItems** collection. To remove a built-in option, simply omit it from the collection.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -163,7 +161,7 @@ N> The order of toolbar options can be changed by simply moving the position of 
 
 ![Blazor PivotTable with Toolbar](images/blazor-pivottable-with-toolbar.webp)
 
-## Show desired chart types in the dropdown menu
+## Show specific chart types in the dropdown menu
 
 By default, the dropdown menu in the toolbar displays all available chart types. However, you may want to show only specific chart types in the dropdown menu based on your application’s needs. To do this, use the [ChartTypes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ChartTypes) property. This property allows you to define a list of chart types that will appear in the dropdown menu, ensuring users see only the options you select.
 
@@ -224,6 +222,8 @@ To learn more about the supported chart types, see the [Pivot Chart documentatio
 In the pivot chart, users can switch between a single axis and multiple axes using a built-in checkbox located in the chart type dropdown menu on the toolbar. This option allows users to display data on multiple axes for better visualization. For more details, [refer here](https://blazor.syncfusion.com/documentation/pivot-table/pivot-chart#multi-axis).
 
 ![Displaying Multiple Axes in Blazor PivotTable DropDown Menu](images/blazor-pivotchart-show-multiple-axes.webp)
+
+The pivot chart supports three modes for multiple axes: `Stacked`, `Single`, and `Combined`. Users can select a mode from the "Multiple Axis Mode" dropdown list, which appears after clicking the **More...** option in the chart type dropdown menu.
 
 ## Show or hide legend
 

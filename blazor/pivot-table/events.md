@@ -9,6 +9,22 @@ documentation: ug
 
 # Events in Blazor Pivot Table
 
+The Blazor Pivot Table exposes events that let you hook into its lifecycle, customize rendering, respond to user actions (selection, drill, edit), and react to export and engine updates. All events are wired through the `PivotViewEvents` (or `PivotFieldListEvents`) child tag, and event handlers receive strongly typed arguments. Most samples in this page use the `ProductDetails` model defined in the [Getting Started](./getting-started) topic under **Assigning sample data to the pivot table**.
+
+N> The events listed below are grouped by topic for easier scanning. Events documented elsewhere in the documentation are summarized here with a one-line description and a link to the full topic.
+
+## Lifecycle events
+
+### OnLoad
+
+The [OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnLoad) event fires when the Pivot Table is initialized, before the engine begins populating data. It is available in both Pivot Table and Field List. For a usage example, refer to the [Data binding event documentation](./data-binding#event).
+
+## Layout and rendering events
+
+### BeforeColumnsRender
+
+The event [BeforeColumnsRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_BeforeColumnsRender) triggers while framing each column for rendering in the pivot table. It allows users to customize the text alignment, column visibility, autofit, reordering, and minimum and maximum width for a specific column. It has the following parameters:
+
 ## AggregateMenuOpen
 
 To know more about this event, refer [here](./grouping-bar#aggregatemenuopen).
@@ -67,9 +83,11 @@ The event [BeforeColumnsRender](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 To know more about this event, refer [here](./tool-bar#beforeexport).
 
-## BeginDrillThrough
+## Drill events
 
-The event [BeginDrillThrough](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_BeginDrillThrough) is triggered when the value cell is clicked in the Pivot Table while editing. To use this event, user need to enable editing option with the help of [PivotViewCellEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html) class. It has following parameters - [CellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.BeginDrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_BeginDrillThroughEventArgs_CellInfo) and [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.BeginDrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_BeginDrillThroughEventArgs_Type). This event allows user to view the [CellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.BeginDrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_BeginDrillThroughEventArgs_CellInfo) which contains [ColumnHeaders](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_ColumnHeaders), [CurrentCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_CurrentCell), [CurrentTarget](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_CurrentTarget), [RawData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_RawData), [RowHeaders](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_RowHeaders) and [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_Value).
+### BeginDrillThrough
+
+The event [BeginDrillThrough](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_BeginDrillThrough) is triggered when the value cell is clicked in the Pivot Table while editing. To use this event, users need to enable the editing option using the [PivotViewCellEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html) class. It has the following parameters: [CellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.BeginDrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_BeginDrillThroughEventArgs_CellInfo) and [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.BeginDrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_BeginDrillThroughEventArgs_Type). This event allows users to view the [CellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.BeginDrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_BeginDrillThroughEventArgs_CellInfo) which contains [ColumnHeaders](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_ColumnHeaders), [CurrentCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_CurrentCell), [CurrentTarget](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_CurrentTarget), [RawData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_RawData), [RowHeaders](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_RowHeaders) and [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_Value).
 
 N> In this event, the parameter [GridObj](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.BeginDrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_BeginDrillThroughEventArgs_GridObj) is returned as **null** due to its size.
 
@@ -116,9 +134,11 @@ N> In this event, the parameter [GridObj](https://help.syncfusion.com/cr/blazor/
 
 To know more about this event, refer [here](./calculated-field#calculatedfieldcreate).
 
-## CellClick
+## Selection and interaction events
 
-The [CellClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_CellClick) event is triggered whenever a cell in the Pivot Table component is clicked. This event has an argument named [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.CellClickEventArgs.html#Syncfusion_Blazor_PivotView_CellClickEventArgs_Data). Using this event, end users may customize the information in the selected cell to their specific requirements.
+#### CellClick
+
+The [CellClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_CellClick) event is triggered whenever a cell in the Pivot Table component is clicked. This event has an argument named [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.CellClickEventArgs.html#Syncfusion_Blazor_PivotView_CellClickEventArgs_Data) that exposes `RowHeaders`, `ColumnHeaders`, `FormattedText`, and `CssClass` (among others) for the clicked cell. Using this event, end users can customize the selected cell's information to their specific requirements.
 
 ```cshtml
 
@@ -174,9 +194,9 @@ The [CellClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotVie
 
 To know more about this event, refer [here](./row-and-column#event).
 
-## CellSelecting
+### CellSelecting
 
-The event [CellSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_CellSelecting) is triggered when cell selection is about to initiate in the Pivot Table. To use this event, [AllowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_AllowSelection) property in [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) must be set to **true**. It has the following parameters -  [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCellSelectedEventArgs.html#Syncfusion_Blazor_PivotView_PivotCellSelectedEventArgs_CurrentCell), [CurrentCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCellSelectedEventArgs.html#Syncfusion_Blazor_PivotView_PivotCellSelectedEventArgs_CurrentCell), [IsCellClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCellSelectedEventArgs.html#Syncfusion_Blazor_PivotView_PivotCellSelectedEventArgs_IsCellClick) and [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCellSelectedEventArgs.html#Syncfusion_Blazor_PivotView_PivotCellSelectedEventArgs_Data). For instance, using this event, user can pass those selected cell information to any external component for data binding.
+The event [CellSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_CellSelecting) is triggered when cell selection is about to initiate in the Pivot Table. To use this event, the [AllowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_AllowSelection) property in [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) must be set to **true**. It has the following parameters: [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCellSelectedEventArgs.html#Syncfusion_Blazor_PivotView_PivotCellSelectedEventArgs_Cancel), [CurrentCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCellSelectedEventArgs.html#Syncfusion_Blazor_PivotView_PivotCellSelectedEventArgs_CurrentCell), [IsCellClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCellSelectedEventArgs.html#Syncfusion_Blazor_PivotView_PivotCellSelectedEventArgs_IsCellClick) and [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCellSelectedEventArgs.html#Syncfusion_Blazor_PivotView_PivotCellSelectedEventArgs_Data). For instance, using this event, users can pass the selected cell information to any external component for data binding.
 
 ```cshtml
 
@@ -221,9 +241,11 @@ The event [CellSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ```
 
-## ChartSeriesCreated
+## Chart events
 
-The event [ChartSeriesCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ChartSeriesCreated) is triggered once chart series are completely rendered. This event is triggered only when [View](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDisplayOption.html#Syncfusion_Blazor_PivotView_PivotViewDisplayOption_View) property in [PivotViewDisplayOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDisplayOption.html) class is set to **Chart**.  It has following parameter - [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ChartSeriesCreatedEventArgs.html#Syncfusion_Blazor_PivotView_ChartSeriesCreatedEventArgs_Cancel), and [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ChartSeriesCreatedEventArgs.html#Syncfusion_Blazor_PivotView_ChartSeriesCreatedEventArgs_Series). When the parameter [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ChartSeriesCreatedEventArgs.html#Syncfusion_Blazor_PivotView_ChartSeriesCreatedEventArgs_Cancel) is set to **true**, chart series rendered will be revoked.
+### ChartSeriesCreated
+
+The event [ChartSeriesCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ChartSeriesCreated) is triggered once chart series are completely rendered. This event is triggered only when the [View](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDisplayOption.html#Syncfusion_Blazor_PivotView_PivotViewDisplayOption_View) property in the [PivotViewDisplayOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDisplayOption.html) class is set to **Chart**. It has the following parameters: [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ChartSeriesCreatedEventArgs.html#Syncfusion_Blazor_PivotView_ChartSeriesCreatedEventArgs_Cancel), and [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ChartSeriesCreatedEventArgs.html#Syncfusion_Blazor_PivotView_ChartSeriesCreatedEventArgs_Series). When the parameter [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ChartSeriesCreatedEventArgs.html#Syncfusion_Blazor_PivotView_ChartSeriesCreatedEventArgs_Cancel) is set to **true**, chart series rendering is canceled.
 
 ```cshtml
 
@@ -263,9 +285,11 @@ The event [ChartSeriesCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ```
 
-## ConditionalFormatting
+## Conditional formatting and value events
 
-The event [ConditionalFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ConditionalFormatting) is triggered initially while clicking the "ADD CONDITION" button inside the conditional formatting dialog in-order to fill user specific condition instead of default condition at runtime. To use this event, [AllowConditionalFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowConditionalFormatting) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class must be set to **true**. It has following parameters - [ApplyGrandTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_ConditionalFormatSettings_ApplyGrandTotals), [Conditions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_ConditionalFormatSettings_Conditions), [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_ConditionalFormatSettings_Label), [Measure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_ConditionalFormatSettings_Measure), [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_ConditionalFormatSettings_Style), [Value1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_ConditionalFormatSettings_Value1) and [Value2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_ConditionalFormatSettings_Value2).
+### ConditionalFormatting
+
+The event [ConditionalFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ConditionalFormatting) is triggered initially when the **ADD CONDITION** button is clicked inside the conditional formatting dialog, to fill a user-specific condition instead of the default condition at runtime. To use this event, the [AllowConditionalFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowConditionalFormatting) property in the [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class must be set to **true**. It has the following parameters: [ApplyGrandTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_ConditionalFormatSettings_ApplyGrandTotals), [Conditions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_ConditionalFormatSettings_Conditions), [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_ConditionalFormatSettings_Label), [Measure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_ConditionalFormatSettings_Measure), [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_ConditionalFormatSettings_Style), [Value1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_ConditionalFormatSettings_Value1) and [Value2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_ConditionalFormatSettings_Value2).
 
 ```cshtml
 
@@ -313,9 +337,11 @@ The event [ConditionalFormatting](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```
 
-## DataBound
+## Data and engine events
 
-The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_DataBound) event triggers when data source is populated in the Pivot Table.
+### DataBound
+
+The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_DataBound) event triggers when the data source is populated in the Pivot Table.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -352,9 +378,9 @@ The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotVie
 }
 ```
 
-## Drill
+### Drill
 
-The event [Drill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_Drill) is triggered whenever a member is expanded or collapsed in the Pivot Table. It has following parameters - [DrillInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillArgs-1.html#Syncfusion_Blazor_PivotView_DrillArgs_1_DrillInfo) and [PivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillArgs-1.html#Syncfusion_Blazor_PivotView_DrillArgs_1__ctor). For instance using this event, user can alter delimiter and drill action for the respective item.
+The event [Drill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_Drill) is triggered whenever a member is expanded or collapsed in the Pivot Table. It has the following parameters: [DrillInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillArgs-1.html#Syncfusion_Blazor_PivotView_DrillArgs_1_DrillInfo) and [PivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillArgs-1.html#Syncfusion_Blazor_PivotView_DrillArgs_1__ctor). For instance, using this event, users can alter the delimiter and drill action for the respective item.
 
 N> In this event, the parameter [PivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillArgs-1.html#Syncfusion_Blazor_PivotView_DrillArgs_1__ctor) is returned as **null** due to its size.
 
@@ -395,9 +421,9 @@ N> In this event, the parameter [PivotView](https://help.syncfusion.com/cr/blazo
 
 ```
 
-## DrillThrough
+### DrillThrough
 
-The event [DrillThrough](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_DrillThrough) is triggered when a value cell is clicked in the Pivot Table during drill through operation. It has following parameter - [ColumnHeaders](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_ColumnHeaders), [CurrentCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_CurrentCell), [CurrentTarget](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_CurrentTarget), [RawData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_RawData), [RowHeaders](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_RowHeaders) and [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_Value). This event allows user to view cell information like [ColumnHeaders](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_ColumnHeaders), [CurrentCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_CurrentCell), [CurrentTarget](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_CurrentTarget), [RawData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_RawData), [RowHeaders](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_RowHeaders) and [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_Value) for the appropriate cell in which drill through is performed. Exclusively the event helps to view and process the raw data information behind a aggregated value inside value cell.
+The event [DrillThrough](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_DrillThrough) is triggered when a value cell is clicked in the Pivot Table during a drill-through operation. To use this event, set the [`AllowDrillThrough`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowDrillThrough) property of [`SfPivotView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) to **true**. It exposes the following parameters for the clicked cell: [ColumnHeaders](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_ColumnHeaders), [CurrentCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_CurrentCell), [CurrentTarget](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_CurrentTarget), [RawData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_RawData), [RowHeaders](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_RowHeaders) and [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_Value). This event helps to view and process the raw data behind an aggregated value inside a value cell.
 
 ```cshtml
 
@@ -440,15 +466,15 @@ The event [DrillThrough](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 To know more about this event, refer [here](./editing#editcompleted).
 
-## EnginePopulating
+### EnginePopulating
 
 The [EnginePopulating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_EnginePopulating) event is available in both Pivot Table and Field List.
 
-* The event [EnginePopulating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldListEvents-1.html#Syncfusion_Blazor_PivotView_PivotFieldListEvents_1_EnginePopulating) is triggered from Field List object whenever the report gets modified in its UI.
+* The event [EnginePopulating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldListEvents-1.html#Syncfusion_Blazor_PivotView_PivotFieldListEvents_1_EnginePopulating) is triggered from the Field List object whenever the report is modified in its UI.
 
-* Likewise, [EnginePopulating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_EnginePopulating) event is triggered from Pivot Table object whenever the report gets modified via grouping bar, toolbar, etc.
+* Likewise, the [EnginePopulating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_EnginePopulating) event is triggered from the Pivot Table object whenever the report is modified via the grouping bar, toolbar, and so on.
 
-This event will be triggered before engine framing works gets initiated and allows user to customize the pivot datasource settings. It has the following parameter - [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EnginePopulatingEventArgs.html#Syncfusion_Blazor_PivotView_EnginePopulatingEventArgs_DataSourceSettings).
+This event fires before engine framing begins and allows users to customize the pivot data source settings. It has the following parameter: [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EnginePopulatingEventArgs.html#Syncfusion_Blazor_PivotView_EnginePopulatingEventArgs_DataSourceSettings).
 
 ```cshtml
 
@@ -499,9 +525,11 @@ To know more about this event, refer [here](./excel-export#excelheaderquerycelli
 
 To know more about this event, refer [here](./excel-export#excelquerycellinfo).
 
-## ExportCompleted 
+## Export and report events
 
-The event [`ExportCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ExportCompleted) is triggered after the pivot table (or) pivot chart has been exported to a PDF, Excel, CSV, or other document.
+### ExportCompleted
+
+The event [`ExportCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ExportCompleted) is triggered after the pivot table or pivot chart has been exported to a PDF, Excel, CSV, or other document.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -639,9 +667,9 @@ To know more about this event, refer [here](./tool-bar#removereport).
 
 To know more about this event, refer [here](./tool-bar#savereport).
 
-## ToolbarRendered
+#### ToolbarRendered
 
-The event [ToolbarRendered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ToolbarRendered) is triggered before rendering of toolbar. This event is available only when toolbar is enabled in the Pivot Table. It has following parameter - [CustomToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ToolbarArgs.html#Syncfusion_Blazor_PivotView_ToolbarArgs_CustomToolbar). Using this event user can add custom toolbar items as well as remove existing items from the toolbar.
+The event [ToolbarRendered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ToolbarRendered) is triggered before the toolbar is rendered. This event is available only when the toolbar is enabled in the Pivot Table. It has the following parameter: [CustomToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ToolbarArgs.html#Syncfusion_Blazor_PivotView_ToolbarArgs_CustomToolbar), which is a `List<ItemModel>` from the [`Syncfusion.Blazor.Navigations`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.html) namespace. Using this event, users can add custom toolbar items as well as remove existing items from the toolbar.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
