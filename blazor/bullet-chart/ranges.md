@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Bullet Chart Ranges Examples | Syncfusion®
-description: Learn how to define qualitative ranges in Syncfusion Blazor Bullet Chart using BulletChartRangeCollection with Good, Satisfactory, and Bad values.
+description: Learn how to define qualitative ranges in Syncfusion Blazor Bullet Chart using BulletChartRangeCollection with Bad, Satisfactory, and Good values.
 platform: Blazor
 control: Bullet Chart
 documentation: ug
@@ -9,16 +9,16 @@ documentation: ug
 
 # Blazor Bullet Chart Ranges
 
-Ranges represent the quality of a specific range such as **Good**, **Bad** and **Satisfactory** in the Bullet Chart scale. The ending point of a qualitative range is specified in the [End](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRange.html#Syncfusion_Blazor_Charts_BulletChartRange_End) property. The minimum value of a quantitative scale is considered the starting point of the first range or the previous range end point.
+Ranges represent the quality of each interval, such as **Bad**, **Satisfactory**, and **Good**, on the Bullet Chart scale. The ending point of a qualitative range is specified in the [End](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRange.html#Syncfusion_Blazor_Charts_BulletChartRange_End) property. The minimum value of the quantitative scale is the starting point of the first range, and the end point of the previous range is the starting point of each subsequent range. Set the range end points in ascending order and set the final range end point to the chart maximum to cover the entire scale.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfBulletChart DataSource="@BulletChartData" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="300" Interval="50" Title="Revenue">
     <BulletChartRangeCollection>
-        <BulletChartRange End=150> </BulletChartRange>
-        <BulletChartRange End=250></BulletChartRange>
-        <BulletChartRange End=300></BulletChartRange>
+        <BulletChartRange End=150 Name="Bad"> </BulletChartRange>
+        <BulletChartRange End=250 Name="Satisfactory"></BulletChartRange>
+        <BulletChartRange End=300 Name="Good"></BulletChartRange>
     </BulletChartRangeCollection>
 </SfBulletChart>
 
@@ -34,11 +34,13 @@ Ranges represent the quality of a specific range such as **Good**, **Bad** and *
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLHZniLrCyJeDQw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Ranges in Blazor Bullet Chart](images/blazor-bullet-chart-range.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBRDbLMKraVVXSe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Ranges in Blazor Bullet Chart](images/blazor-bullet-chart-range.webp)" %}
 
 ## Color customization
 
-Enhance the readability of ranges with color and opacity. It can be applied using the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRange.html#Syncfusion_Blazor_Charts_BulletChartRange_Color) and [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRange.html#Syncfusion_Blazor_Charts_BulletChartRange_Opacity) properties respectively.
+Enhance the readability of ranges with color and opacity. They can be applied using the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRange.html#Syncfusion_Blazor_Charts_BulletChartRange_Color) and [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRange.html#Syncfusion_Blazor_Charts_BulletChartRange_Opacity) properties respectively.
+
+Use the [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRange.html#Syncfusion_Blazor_Charts_BulletChartRange_Name) property to specify the range name displayed in the legend. The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRange.html#Syncfusion_Blazor_Charts_BulletChartRange_Shape) property customizes the legend symbol for the range.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
