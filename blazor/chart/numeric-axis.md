@@ -11,9 +11,9 @@ documentation: ug
 
 # Blazor Charts Numeric Axis
 
-Numeric axis can be used to represent numeric values in a chart. The [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_ValueType) of an axis is [Double](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Double) by default.
+Use the numeric axis to represent numeric values in a chart. The [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_ValueType) of an axis is [Double](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Double) by default; you can set it explicitly when you want to make the choice visible in your code.
 
-A detailed walkthrough for customizing the numeric axis is provided in the video below.
+Watch the video below for a walkthrough on customizing the numeric axis.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=sZbkeHLqEco" %}
 
@@ -28,7 +28,7 @@ A detailed walkthrough for customizing the numeric axis is provided in the video
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public double XValue { get; set; }
@@ -52,21 +52,21 @@ A detailed walkthrough for customizing the numeric axis is provided in the video
 
 ## Range and interval
 
-The axis range will be calculated automatically based on the provided data; however, the axis range can also be customized using [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Maximum), and [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Interval) properties.
+The axis range is calculated automatically from the data. You can also customize the range with the [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Maximum), and [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Interval) properties.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis Minimum="5" Maximum="50" Interval="2"/>
+    <ChartPrimaryXAxis Minimum="5" Maximum="70" Interval="5"/>
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Data" XName="XValue" YName="YValue"/>
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public double XValue { get; set; }
@@ -90,7 +90,7 @@ The axis range will be calculated automatically based on the provided data; howe
 
 ## Range padding
 
-The [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) property can be used to apply padding to the minimum and maximum extremes of range. The following types of padding are supported by the numeric axis:
+The [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) property adds padding to the minimum and maximum extremes of the range. The numeric axis supports the following padding types from the [ChartRangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartRangePadding.html) enum:
 
 * None
 * Round
@@ -108,13 +108,12 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 <SfChart>
     <ChartPrimaryYAxis RangePadding="ChartRangePadding.None"/>
-
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Data" XName="XValue" YName="YValue"/>
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public double XValue { get; set; }
@@ -152,7 +151,7 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public double XValue { get; set; }
@@ -190,7 +189,7 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public double XValue { get; set; }
@@ -228,7 +227,7 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public double XValue { get; set; }
@@ -267,7 +266,7 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public double XValue { get; set; }
@@ -291,21 +290,21 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## Label format
 
-Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelFormat) property on an axis, it is possible to format the numeric labels to all globalize formats.
+Use the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelFormat) property to format numeric labels using the standard .NET globalization format strings.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Sales Comparison">
-    <ChartPrimaryYAxis LabelFormat="c"/>    
+    <ChartPrimaryYAxis LabelFormat="c"/>
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Data" XName="X" YName="Y" Type="ChartSeriesType.Column"/>
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public double X { get; set; }
@@ -332,7 +331,7 @@ Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVHjdCVzipdaCzG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Label Formatting in Blazor Line Chart](images/numeric-axis/blazor-line-chart-label-format.webp)" %}
 
-The table below shows the results of applying various commonly used label formats to numeric data.
+The table below shows the results of applying common label formats to numeric data.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -340,8 +339,14 @@ The table below shows the results of applying various commonly used label format
 <tr>
 <td><b>Label Value</b></td>
 <td><b>Label Format property value</b></td>
-<td><b>Result </b></td>
-<td><b>Description </b></td>
+<td><b>Result</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>1000</td>
+<td>n0</td>
+<td>1,000</td>
+<td>The number is rounded to 0 decimal places and grouped by thousands.</td>
 </tr>
 <tr>
 <td>1000</td>
@@ -383,13 +388,13 @@ The table below shows the results of applying various commonly used label format
 <td>1000</td>
 <td>c1</td>
 <td>$1000.0</td>
-<td>The currency symbol is appended to number and number is rounded to 1 decimal place.</td>
+<td>The currency symbol is appended to the number and the number is rounded to 1 decimal place.</td>
 </tr>
 <tr>
 <td>1000</td>
 <td>c2</td>
 <td>$1000.00</td>
-<td>The currency symbol is appended to number and number is rounded to 2 decimal places.</td>
+<td>The currency symbol is appended to the number and the number is rounded to 2 decimal places.</td>
 </tr>
 </table>
 
@@ -412,7 +417,7 @@ To separate groups of thousands for numerical values, use the [UseGroupingSepara
     </ChartPrimaryYAxis>
     <ChartTooltipSettings Enable="true" />
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@Data" Name="Test" XName="PrdDate" Width="2" YName="Amount" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Line">
+        <ChartSeries DataSource="@Data" Name="Test" XName="PrdDate" Width="2" YName="Amount" Type="ChartSeriesType.Line">
             <ChartMarker Visible="true">
                 <ChartDataLabel Visible="true" />
             </ChartMarker>
@@ -459,7 +464,7 @@ Axis also supports custom label format using placeholders such as {value}K, wher
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public double XValue { get; set; }
@@ -480,10 +485,14 @@ Axis also supports custom label format using placeholders such as {value}K, wher
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtLxtnsBpioPAlGt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Line Chart with Custom Label Format](images/numeric-axis/blazor-line-chart-custom-label-format.webp)" %}
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [category axis](./category-axis), [date time axis](./date-time-axis), and [logarithmic axis](./logarithmic-axis) docs to compare how each axis type renders the same data.
 
 ## See also
 
 * [Data label](./data-labels)
 * [Tooltip](./tool-tip)
 * [Marker](./data-markers)
+* [Category axis](./category-axis)
+* [Date time axis](./date-time-axis)
+* [Logarithmic axis](./logarithmic-axis)
+* [Multiple panes](./multiple-panes)
