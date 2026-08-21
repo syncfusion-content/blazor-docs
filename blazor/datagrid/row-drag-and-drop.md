@@ -9,16 +9,19 @@ documentation: ug
 
 # Row Drag and Drop in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports built-in row drag-and-drop functionality. Rows can be reordered within the grid, moved between grids, or dropped into custom components.
+The [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports built-in row drag-and-drop functionality. Rows can be reordered within the Data Grid, moved between Data Grids, or dropped into custom components.
 
-Enable row drag and drop by setting [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowRowDragAndDrop) to true. Configure the drop target using the [TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html#Syncfusion_Blazor_Grids_GridRowDropSettings_TargetID) property in [RowDropSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html).
+Enable row drag and drop by setting [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowRowDragAndDrop) to **true**. Configure the drop target using the [TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html#Syncfusion_Blazor_Grids_GridRowDropSettings_TargetID) property in [GridRowDropSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html).
 
 > - Row selection must be enabled to perform row drag and drop.  
 > - To drag multiple rows, set [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) to Multiple.
+> - Define at least one column as a primary key using the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property.
 
-## Drag and drop within DataGrid
+Multiple selected rows can be dragged and dropped based on the current selection. A single row can be dragged and dropped within the same Data Grid without enabling multiple selection.
 
-The drag and drop feature enables reordering of rows within the Blazor DataGrid using the drag handle. Set the [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowRowDragAndDrop) property to **true** to enable this feature. By default, the value is **false**.
+## Drag and drop within Data Grid
+
+The drag and drop feature enables reordering of rows within the Blazor Data Grid using the drag handle. Set the [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowRowDragAndDrop) property to **true** to enable this feature. By default, the value is **false**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -38,7 +41,6 @@ The drag and drop feature enables reordering of rows within the Blazor DataGrid 
 </SfGrid>
 @code {
     public List<OrderData> Orders { get; set; }
-    public List<OrderData> SecondGrid { get; set; } = new List<OrderData>();
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
@@ -49,62 +51,61 @@ The drag and drop feature enables reordering of rows within the Blazor DataGrid 
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-    public class OrderData
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData() { }
+    public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, int employeeID)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-        public OrderData() { }
-        public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, int employeeID)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.ShipName = ShipName;
-            this.Freight = Freight;
-            this.OrderDate = OrderDate;
-            this.ShippedDate = ShippedDate;
-            this.IsVerified = IsVerified;
-            this.ShipCity = ShipCity;
-            this.ShipCountry = ShipCountry;
-            this.EmployeeID = employeeID; 
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count == 0)
-            {
-                Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", 1));
-                Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Germany", 2));
-                Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "Brazil", 3));
-                Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", 1));
-                Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", 2));
-                Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, "Bern", "Switzerland", 3));
-                Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", 2));
-                Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "Brazil", 1));
-                Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", 3));
-            }
-            return Orders;
-        }
-
-        public int OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipName { get; set; }
-        public double? Freight { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public DateTime? ShippedDate { get; set; }
-        public bool? IsVerified { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipCountry { get; set; }
-        public int EmployeeID { get; set; } 
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.ShipName = ShipName;
+        this.Freight = Freight;
+        this.OrderDate = OrderDate;
+        this.ShippedDate = ShippedDate;
+        this.IsVerified = IsVerified;
+        this.ShipCity = ShipCity;
+        this.ShipCountry = ShipCountry;
+        this.EmployeeID = employeeID;
     }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", 1));
+            Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Germany", 2));
+            Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "Brazil", 3));
+            Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", 1));
+            Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", 2));
+            Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, "Bern", "Switzerland", 3));
+            Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", 2));
+            Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "Brazil", 1));
+            Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", 3));
+        }
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipName { get; set; }
+    public double? Freight { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public DateTime? ShippedDate { get; set; }
+    public bool? IsVerified { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipCountry { get; set; }
+    public int EmployeeID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjBRDcXUnBUAxRBy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Drag and drop to DataGrid
+## Drag and drop to Data Grid
 
-
-The Blazor DataGrid supports dragging rows from one grid and dropping them into another. Enable this feature by setting the [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowRowDragAndDrop) property to **true** on both grids. To specify the target grid, configure the [RowDropSettings.TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html#Syncfusion_Blazor_Grids_GridRowDropSettings_TargetID) property with the target grid's ID.
+The Blazor Data Grid supports dragging rows from one Data Grid and dropping rows into another. Enable this feature by setting the [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowRowDragAndDrop) property to **true** on both grids. To specify the target grid, configure the [GridRowDropSettings.TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html#Syncfusion_Blazor_Grids_GridRowDropSettings_TargetID) property with the target Data Grid's ID.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -145,54 +146,54 @@ The Blazor DataGrid supports dragging rows from one grid and dropping them into 
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-  public class OrderData
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData() { }
+
+    public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, int employeeID)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-
-        public OrderData() { }
-
-        public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, int employeeID)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.ShipName = ShipName;
-            this.Freight = Freight;
-            this.OrderDate = OrderDate;
-            this.ShippedDate = ShippedDate;
-            this.IsVerified = IsVerified;
-            this.ShipCity = ShipCity;
-            this.ShipCountry = ShipCountry;
-            this.EmployeeID = employeeID; 
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count == 0)
-            {
-                Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", 1));
-                Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Germany", 2));
-                Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "Brazil", 3));
-                Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", 1));
-                Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", 2));
-                Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, "Bern", "Switzerland", 3));
-                Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", 2));
-                Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "Brazil", 1));
-                Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", 3));
-            }
-            return Orders;
-        }
-
-        public int OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipName { get; set; }
-        public double? Freight { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public DateTime? ShippedDate { get; set; }
-        public bool? IsVerified { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipCountry { get; set; }
-        public int EmployeeID { get; set; } 
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.ShipName = ShipName;
+        this.Freight = Freight;
+        this.OrderDate = OrderDate;
+        this.ShippedDate = ShippedDate;
+        this.IsVerified = IsVerified;
+        this.ShipCity = ShipCity;
+        this.ShipCountry = ShipCountry;
+        this.EmployeeID = employeeID;
     }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", 1));
+            Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Germany", 2));
+            Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "Brazil", 3));
+            Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", 1));
+            Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", 2));
+            Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, "Bern", "Switzerland", 3));
+            Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", 2));
+            Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "Brazil", 1));
+            Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", 3));
+        }
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipName { get; set; }
+    public double? Freight { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public DateTime? ShippedDate { get; set; }
+    public bool? IsVerified { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipCountry { get; set; }
+    public int EmployeeID { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -201,29 +202,29 @@ The Blazor DataGrid supports dragging rows from one grid and dropping them into 
 
 ## Drag and drop in empty area
 
-The Blazor DataGrid supports dropping rows in empty content areas. By default, the `AllowEmptyAreaDrop` setting is enabled, allowing rows to be dropped anywhere within the grid content. Rows dropped in an empty area are appended to the end of the data. This applies to both within-grid and between-grid scenarios.
+The Blazor Data Grid supports dropping rows in empty content areas. By default, the [AllowEmptyAreaDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html#Syncfusion_Blazor_Grids_GridRowDropSettings_AllowEmptyAreaDrop) setting is enabled, allowing rows to be dropped anywhere within the grid content. Rows dropped in an empty area are appended to the end of the data. The setting applies to both within-Data Grid and between-Data Grid scenarios.
 
-To display the drop indicator only when hovering over rows, disable the AllowEmptyAreaDrop property in the RowDropSettings configuration.
+To display the drop indicator only when hovering over rows, set the [AllowEmptyAreaDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html#Syncfusion_Blazor_Grids_GridRowDropSettings_AllowEmptyAreaDrop) property to **false** in the `GridRowDropSettings` configuration.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid id="Grid" DataSource="@FirstGridData" AllowRowDragAndDrop="true" AllowSelection="true" AllowPaging="true">
+<SfGrid ID="Grid" DataSource="@FirstGridData" AllowRowDragAndDrop="true" AllowSelection="true" AllowPaging="true">
     <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
     <GridPageSettings PageCount="1" PageSize="12"></GridPageSettings>
-    <GridRowDropSettings TargetID="DestGrid"></GridRowDropSettings>
+    <GridRowDropSettings TargetID="DestGrid" AllowEmptyAreaDrop="false"></GridRowDropSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrdersDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrdersDetails.CustomerID) HeaderText="Customer ID" Width="135"></GridColumn>
         <GridColumn Field=@nameof(OrdersDetails.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" Width="130"></GridColumn>
     </GridColumns>
 </SfGrid>
-<SfGrid id="DestGrid" DataSource="@SecondGridData" AllowRowDragAndDrop="true" AllowSelection="true" AllowPaging="true" Height="350">
+<SfGrid ID="DestGrid" DataSource="@SecondGridData" AllowRowDragAndDrop="true" AllowSelection="true" AllowPaging="true" Height="350">
     <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
     <GridPageSettings PageCount="1" PageSize="12"></GridPageSettings>
-    <GridRowDropSettings TargetID="Grid"></GridRowDropSettings>
+    <GridRowDropSettings TargetID="Grid" AllowEmptyAreaDrop="false"></GridRowDropSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrdersDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrdersDetails.CustomerID) HeaderText="Customer ID" Width="135"></GridColumn>
@@ -281,17 +282,19 @@ public class OrdersDetails
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBRNPLCTyLKIcbp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
 ## Drag and drop to custom component
 
-The Blazor DataGrid supports dragging rows into custom components. Enable [AllowRowDragAndDrop] and set [RowDropSettings.TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html#Syncfusion_Blazor_Grids_GridRowDropSettings_TargetID) to the **ID** of the target component.
+The Blazor Data Grid supports dragging rows into custom components. Enable [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowRowDragAndDrop) and set [GridRowDropSettings.TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html#Syncfusion_Blazor_Grids_GridRowDropSettings_TargetID) to the **ID** of the target component.
 
-In the following example, selected grid rows are dropped into a TreeGrid using the [RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDropped) event. After the drop, the corresponding rows are removed from the source grid and added to the target:
+Selected Data Grid rows are dropped into a Tree Grid using the [RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDropped) event. After the drop, corresponding rows are removed from the source Data Grid and added to the target:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
-@using Syncfusion.Blazor.Grids;
-@using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.TreeGrid
 
 <div>
     <SfGrid @ref="grid" ID="Grid" DataSource="@GridData" AllowRowDragAndDrop="true" AllowSelection="true">
@@ -303,7 +306,7 @@ In the following example, selected grid rows are dropped into a TreeGrid using t
             <GridColumn Field="TaskName" HeaderText="Task Name" Width="160"></GridColumn>
             <GridColumn Field="Description" HeaderText="Description" TextAlign="TextAlign.Left" Width="180"></GridColumn>
             <GridColumn Field="Category" HeaderText="Category" TextAlign="TextAlign.Left" Width="180"></GridColumn>
-            <GridColumn Field="StartDate" HeaderText="StartDate" TextAlign="TextAlign.Left" Format="d" Type="ColumnType.Date" Width="160"></GridColumn>
+            <GridColumn Field="StartDate" HeaderText="Start Date" TextAlign="TextAlign.Left" Format="d" Type="ColumnType.Date" Width="160"></GridColumn>
             <GridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GridColumn>
         </GridColumns>
     </SfGrid>
@@ -668,19 +671,22 @@ public class WrapData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjLnXwZKxreBBpWo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Drag and drop events 
+## Drag and drop events
 
-The Blazor DataGrid exposes events to customize and track drag-and-drop operations:
+The Blazor Data Grid exposes events to customize and track drag-and-drop operations:
 
 - [RowDragStarting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDragStarting) – Triggered when dragging starts.
 - [RowDropping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDropping) – Triggered while dragged rows are being dropped on the target; can be canceled.
 - [RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDropped) – Triggered after rows are dropped on the target.
+
+The [RowDroppingEventArgs<T>](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDroppingEventArgs-1.html) object provides [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDroppingEventArgs-1.html#Syncfusion_Blazor_Grids_RowDroppingEventArgs_1_Data) for dragged rows, [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDroppingEventArgs-1.html#Syncfusion_Blazor_Grids_RowDroppingEventArgs_1_Cancel) for preventing a drop, [DropIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDroppingEventArgs-1.html#Syncfusion_Blazor_Grids_RowDroppingEventArgs_1_DropIndex) for the destination row index, [FromIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDroppingEventArgs-1.html#Syncfusion_Blazor_Grids_RowDroppingEventArgs_1_FromIndex) for the source row index, and [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDroppingEventArgs-1.html#Syncfusion_Blazor_Grids_RowDroppingEventArgs_1_Target) for the target element. The [RowDroppedEventArgs<T>](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDroppedEventArgs-1.html) object provides [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDroppedEventArgs-1.html#Syncfusion_Blazor_Grids_RowDroppedEventArgs_1_Data), [DropIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDroppedEventArgs-1.html#Syncfusion_Blazor_Grids_RowDroppedEventArgs_1_DropIndex), [FromIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDroppedEventArgs-1.html#Syncfusion_Blazor_Grids_RowDroppedEventArgs_1_FromIndex) for drop details, [Action](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDroppedEventArgs-1.html#Syncfusion_Blazor_Grids_RowDroppedEventArgs_1_Action) for cross-grid add or delete actions, and [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDroppedEventArgs-1.html#Syncfusion_Blazor_Grids_RowDroppedEventArgs_1_Target) for the target element.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
+<div class="row-drag-drop-events">
 <p>@message</p>
 <SfGrid @ref="Grid" DataSource="@Orders" ID="Grid" AllowSelection="true" AllowRowDragAndDrop="true">
     <GridEvents RowDragStarting="RowDragStartingHandler" RowDropping="RowDroppingHandler" RowDropped="RowDroppedHandler" TValue="OrderData"></GridEvents>
@@ -695,11 +701,12 @@ The Blazor DataGrid exposes events to customize and track drag-and-drop operatio
     </GridColumns>
 </SfGrid>
 <style>
-    p{
+    .row-drag-drop-events p {
         color: red;
-        text-align:center;
+        text-align: center;
     }
 </style>
+</div>
 @code {
     SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
@@ -783,12 +790,8 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZVnXGXKxLSlNfyE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> To perform row drag and drop, define at least one column as a primary key using the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property.
-
 ## Limitations
 
-- Multiple rows can be dragged and dropped based on the current selection.
-- A single row can be dragged and dropped within the same grid even if multiple selection is not enabled.
-- Row drag and drop does not have built-in support when combined with sorting, filtering, hierarchy grid, or row template features.
+- Row drag and drop does not have built-in support when combined with sorting, filtering, hierarchy Data Grid, or row template features.
 - Row drag and drop with grouping does not support lazy-load grouping.
-- Dragging and dropping within the same group key is not supported. The grid does not allow drag-and-drop for multiple rows that belong to different grouped collections.
+- Dragging and dropping rows within the same group key or across different grouped collections is not supported.
