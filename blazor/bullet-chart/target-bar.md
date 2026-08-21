@@ -9,12 +9,12 @@ documentation: ug
 
 # Blazor Bullet Chart Target Bar
 
-The line marker that runs perpendicular to the orientation of the graph is known as the **Comparative Measure** and it is used as a target marker to compare against the feature measure value. This is also called as the **Target Bar** in the Bullet Chart. To display the target bar, the [TargetField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetField) should be mapped to the appropriate field from the datasource.
+The line marker that runs perpendicular to the feature measure is known as the **Comparative Measure** and is used as a target marker to compare against the feature measure value. This is also called the **Target Bar** in the Bullet Chart. To display the target bar, the [TargetField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetField) should be mapped to the appropriate field from the data source.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
 
-<SfBulletChart DataSource="@BulletChartData" TargetField="Target" Minimum="0" Maximum="30" Interval="5">
+<SfBulletChart DataSource="@BulletChartData" ValueField="Value" TargetField="Target" Minimum="0" Maximum="30" Interval="5">
     <BulletChartRangeCollection>
         <BulletChartRange End=20> </BulletChartRange>
         <BulletChartRange End=25></BulletChartRange>
@@ -25,11 +25,12 @@ The line marker that runs perpendicular to the orientation of the graph is known
 @code{
     public class ChartData
     {
+        public double Value { get; set; }
         public double Target { get; set; }
     }
     public List<ChartData> BulletChartData = new List<ChartData>
     {
-        new ChartData { Target = 25 }
+        new ChartData { Value = 15, Target = 25 }
     };
 }
 ```
@@ -38,12 +39,12 @@ The line marker that runs perpendicular to the orientation of the graph is known
 
 ## Types of target bar
 
-The shape of the target bar can be customized using the [TargetTypes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetTypes) property and it supports [Circle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TargetType.html#Syncfusion_Blazor_Charts_TargetType_Circle), [Cross](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TargetType.html#Syncfusion_Blazor_Charts_TargetType_Cross), and [Rect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TargetType.html#Syncfusion_Blazor_Charts_TargetType_Rect) shapes. The default type of the target bar is [Rect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TargetType.html#Syncfusion_Blazor_Charts_TargetType_Rect).
+The shape of the target bar can be customized using the [TargetTypes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetTypes) property, which supports the [Circle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TargetType.html#Syncfusion_Blazor_Charts_TargetType_Circle), [Cross](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TargetType.html#Syncfusion_Blazor_Charts_TargetType_Cross), and [Rect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TargetType.html#Syncfusion_Blazor_Charts_TargetType_Rect) shapes. The default type of the target bar is [Rect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TargetType.html#Syncfusion_Blazor_Charts_TargetType_Rect).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
 
-<SfBulletChart DataSource="@BulletChartData" TargetField="Target" Minimum="0" Maximum="30" Interval="5" TargetTypes="new List<TargetType>() { TargetType.Cross }">
+<SfBulletChart DataSource="@BulletChartData" ValueField="Value" TargetField="Target" Minimum="0" Maximum="30" Interval="5" TargetTypes="new List<TargetType>() { TargetType.Rect }">
     <BulletChartRangeCollection>
         <BulletChartRange End=20> </BulletChartRange>
         <BulletChartRange End=25></BulletChartRange>
@@ -52,21 +53,19 @@ The shape of the target bar can be customized using the [TargetTypes](https://he
 </SfBulletChart>
 ```
 
-N> Refer to the [code block](#target-bar-in-blazor-bullet-chart-component) to know about the property value of the **BulletChartData**.
-
-![Rectangle Target Bar with Blazor Bullet Chart](images/blazor-bullet-chart-rectangle-target-bar.webp)
+![Rectangle Target Bar with Blazor Bullet Chart](images/blazor-bullet-chart-cross-target-bar.webp)
 
 ## Target bar customization
 
-The following properties can be used to customize the Target Bar.
+The following properties can be used to customize the target bar.
 
-* [TargetColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetColor) - Specifies the fill color of Target Bar.
-* [TargetWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetWidth) - Specifies the width of Target Bar.
+* [TargetColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetColor) - Specifies the fill color of the target bar.
+* [TargetWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetWidth) - Specifies the width of the target bar.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
 
-<SfBulletChart DataSource="@BulletChartData" TargetField="Target" Minimum="0" Maximum="30" Interval="5" TargetColor="red" TargetWidth="10">
+<SfBulletChart DataSource="@BulletChartData" ValueField="Value" TargetField="Target" Minimum="0" Maximum="30" Interval="5" TargetColor="red" TargetWidth="10">
     <BulletChartRangeCollection>
         <BulletChartRange End=20> </BulletChartRange>
         <BulletChartRange End=25></BulletChartRange>
@@ -74,7 +73,5 @@ The following properties can be used to customize the Target Bar.
     </BulletChartRangeCollection>
 </SfBulletChart>
 ```
-
-N> Refer to the [code block](#target-bar-in-blazor-bullet-chart-component) to know about the property value of the **BulletChartData**.
 
 ![Customizing Target Bar in Blazor Bullet Chart](images/blazor-bullet-chart-target-bar-customization.webp)
