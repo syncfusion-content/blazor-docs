@@ -11,12 +11,12 @@ documentation: ug
 
 ## MajorTickLines and MinorTickLines Customization
 
-The following properties can be used to customize [MajorTicklines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartMajorTickLines.html) and [MinorTicklines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartMinorTickLines.html).
+The following properties can be used to customize [MajorTickLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartMajorTickLines.html) and [MinorTickLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartMinorTickLines.html).
 
-* **Width** - Specifies the width of ticklines.
-* **Height** - Specifies the height of ticklines.
-* **Color** - Specifies the color of ticklines.
-* **EnableRangeColor** - Specifies the color of ticklines and represents the color from corresponding range colors.
+* **Width** - Specifies the width of tick lines.
+* **Height** - Specifies the height of tick lines.
+* **Color** - Specifies the color of tick lines.
+* **EnableRangeColor** - Specifies whether the tick lines use the colors from the corresponding ranges.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -45,6 +45,8 @@ The following properties can be used to customize [MajorTicklines](https://help.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLnZnsWJcBdndGw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Major and Minor TickLines in Blazor Bullet Chart](images/blazor-bullet-chart-tick-line-customization.webp)" %}
 
+The following examples use the `BulletChartData` data source defined in this section unless otherwise noted.
+
 ## Tick placement
 
 The major and the minor ticks can be placed [Inside](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TickPosition.html#Syncfusion_Blazor_Charts_TickPosition_Inside) or [Outside](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TickPosition.html#Syncfusion_Blazor_Charts_TickPosition_Outside) the ranges using the [TickPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TickPosition) property.
@@ -54,63 +56,59 @@ The major and the minor ticks can be placed [Inside](https://help.syncfusion.com
 
 <SfBulletChart DataSource="@BulletChartData" TickPosition="TickPosition.Inside" ValueField="FieldValue" TargetField="Target" Minimum="0" Maximum="30" Interval="5">
     <BulletChartRangeCollection>
-        <BulletChartRange End=20> </BulletChartRange>
+        <BulletChartRange End=20></BulletChartRange>
         <BulletChartRange End=25></BulletChartRange>
         <BulletChartRange End=30></BulletChartRange>
     </BulletChartRangeCollection>
 </SfBulletChart>
 ```
 
-N> Refer to the [code block](#majorticklines-and-minorticklines-customization) to know about the property value of **BulletChartData**.
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZLnNnMCTQVadaKh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Tick Position in Blazor Bullet Chart](images/blazor-bullet-chart-tick-position.webp)" %}
 
 ## Label format
 
-The axis labels support all the globalize formats and can be changed using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Format) property. The following code shows the axis label in the currency format.
+The axis labels support standard globalization formats and can be changed using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Format) property. The following code shows the axis label in the currency format.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfBulletChart DataSource="@BulletChartData" Format="C" ValueField="FieldValue" TargetField="Target" Minimum="0" Maximum="30" Interval="5">
     <BulletChartRangeCollection>
-        <BulletChartRange End=20> </BulletChartRange>
+        <BulletChartRange End=20></BulletChartRange>
         <BulletChartRange End=25></BulletChartRange>
         <BulletChartRange End=30></BulletChartRange>
     </BulletChartRangeCollection>
 </SfBulletChart>
 ```
 
-N> Refer to the [code block](#majorticklines-and-minorticklines-customization) to know about the property value of **BulletChartData**.
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBHNHCCzcAASWeh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Label Format in Blazor Bullet Chart](images/blazor-bullet-chart-label-format.webp)" %}
 
-The following table describes the result of applying some commonly used formats to numeric axis values.
+The following table describes the result of applying some commonly used formats to numeric axis values using the `en-US` culture.
 
 <!-- markdownlint-disable MD033 -->
 <table>
 <tr>
 <td><b>Label Value</b></td>
 <td><b>Label Format property value</b></td>
-<td><b>Result </b></td>
-<td><b>Description </b></td>
+<td><b>Result</b></td>
+<td><b>Description</b></td>
 </tr>
 <tr>
 <td>1000</td>
 <td>n1</td>
-<td>1000.0</td>
+<td>1,000.0</td>
 <td>The result is rounded to 1 decimal place.</td>
 </tr>
 <tr>
 <td>1000</td>
 <td>n2</td>
-<td>1000.00</td>
+<td>1,000.00</td>
 <td>The result is rounded to 2 decimal places.</td>
 </tr>
 <tr>
 <td>1000</td>
 <td>n3</td>
-<td>1000.000</td>
+<td>1,000.000</td>
 <td>The result is rounded to 3 decimal places.</td>
 </tr>
 <tr>
@@ -134,13 +132,13 @@ The following table describes the result of applying some commonly used formats 
 <tr>
 <td>1000</td>
 <td>c1</td>
-<td>$1000.0</td>
+<td>$1,000.0</td>
 <td>The currency symbol is appended to the result and it is rounded to 1 decimal place.</td>
 </tr>
 <tr>
 <td>1000</td>
 <td>c2</td>
-<td>$1000.00</td>
+<td>$1,000.00</td>
 <td>The currency symbol is appended to the result and it is rounded to 2 decimal places.</td>
 </tr>
 </table>
@@ -154,12 +152,11 @@ To separate the groups of thousands, set the [EnableGroupSeparator](https://help
 
 <SfBulletChart DataSource="@BulletChartData" EnableGroupSeparator="true" Format="N0" ValueField="FieldValue" TargetField="Target" Minimum="0" Maximum="2500" Interval="250">
     <BulletChartRangeCollection>
-        <BulletChartRange End=500> </BulletChartRange>
+        <BulletChartRange End=500></BulletChartRange>
         <BulletChartRange End=1500></BulletChartRange>
         <BulletChartRange End=2500></BulletChartRange>
     </BulletChartRangeCollection>
 </SfBulletChart>
-
 @code{
     public class ChartData
     {
@@ -177,27 +174,25 @@ To separate the groups of thousands, set the [EnableGroupSeparator](https://help
 
 ## Custom label format
 
-Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_LabelFormat) property, axis labels can be specified with a custom defined format in addition to the axis value. The label format uses a placeholder such as **${value}K**, which represents the axis label.
+Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_LabelFormat) property, axis labels can be specified with a custom-defined format in addition to the axis value. The label format uses a placeholder such as **${value}K**, which represents the axis label.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfBulletChart DataSource="@BulletChartData" LabelFormat="${value}K" ValueField="FieldValue" TargetField="Target" Minimum="0" Maximum="2500" Interval="250">
     <BulletChartRangeCollection>
-        <BulletChartRange End=500> </BulletChartRange>
+        <BulletChartRange End=500></BulletChartRange>
         <BulletChartRange End=1500></BulletChartRange>
         <BulletChartRange End=2500></BulletChartRange>
     </BulletChartRangeCollection>
 </SfBulletChart>
 ```
 
-N> Refer to the [code block](#grouping-separator) to know about the property value of **BulletChartData**.
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjrdDHsLrDiRjaAp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Bullet Chart with Custom Label Format](images/blazor-bullet-chart-custom-label-format.webp)" %}
 
 ## Label placement
 
-Label can be placed [Inside](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelsPlacement.html#Syncfusion_Blazor_Charts_LabelsPlacement_Inside) or [Outside](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelsPlacement.html#Syncfusion_Blazor_Charts_LabelsPlacement_Outside) of the ranges using the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_LabelPosition) property.
+Labels can be placed [Inside](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelsPlacement.html#Syncfusion_Blazor_Charts_LabelsPlacement_Inside) or [Outside](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelsPlacement.html#Syncfusion_Blazor_Charts_LabelsPlacement_Outside) the ranges using the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_LabelPosition) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -210,8 +205,6 @@ Label can be placed [Inside](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
     </BulletChartRangeCollection>
 </SfBulletChart>
 ```
-
-N> Refer to the [code block](#grouping-separator) to know about the property value of **BulletChartData**.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjhnDdsVBiZDmeZw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Label Position in Blazor Bullet Chart](images/blazor-bullet-chart-labels-position.webp)" %}
 
@@ -231,13 +224,11 @@ To place an axis opposite to its original position, set the [OpposedPosition](ht
 </SfBulletChart>
 ```
 
-N> Refer to the [code block](#grouping-separator) to know about the property value of **BulletChartData**.
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDVdDHWhBCZeabMX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Bullet Chart with Opposed Position](images/blazor-bullet-chart-opposed-position.webp)" %}
 
 ## Category label
 
-The [Bullet Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html) supports X-axis label by specifying the property from the data source to the [CategoryField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_CategoryField). It helps to understand the input data in a more efficient way.
+The [Bullet Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html) supports a category-axis label by specifying the property from the data source to the [CategoryField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_CategoryField). It helps users understand the input data more efficiently.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -268,7 +259,7 @@ The [Bullet Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 ## Axis label and category label customization
 
-The label color, opacity, font size, font family, font weight, and font style can be customized by using the [BulletChartCategoryLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartCategoryLabelStyle.html) setting for category and the [BulletChartLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartLabelStyle.html) setting for axis label. The [EnableRangeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartCommonFont.html#Syncfusion_Blazor_Charts_BulletChartCommonFont_EnableRangeColor) property specifies the color of the axis label and represents the color from the corresponding range colors.
+The label color, opacity, font size, font family, font weight, and font style can be customized by using the [BulletChartCategoryLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartCategoryLabelStyle.html) setting for the category label and the [BulletChartLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartLabelStyle.html) setting for the axis label. The [EnableRangeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartCommonFont.html#Syncfusion_Blazor_Charts_BulletChartCommonFont_EnableRangeColor) property specifies whether the axis label uses the color from the corresponding range.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -283,7 +274,5 @@ The label color, opacity, font size, font family, font weight, and font style ca
     </BulletChartRangeCollection>
 </SfBulletChart>
 ```
-
-N> Refer to the [code block](#category-label) to know about the property value of **BulletChartData**.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXrHZxChrssSBsgJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Axis and Category Label in Blazor Bullet Chart](images/blazor-bullet-chart-label-customization.webp)" %}
