@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table shows contextual tooltips on value cells, including row and column header information, controlled by the ShowTooltip property.
+description: Learn how the Blazor Pivot Table shows contextual tooltips on value cells and headers, with the showTooltip property to enable or disable them.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in Blazor Pivot Table
 
-The tooltip displays contextual information when users hover over value cells in the pivot table. It can be enabled or disabled by setting the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowTooltip) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.html) class to **true** or **false**. By default, tooltip is enabled in the pivot table and shows the cell value along with row and column header information.
+The tooltip displays contextual information when users hover over value cells in the pivot table. It can be enabled or disabled by setting the [`ShowTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowTooltip) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.html) class to **true** or **false**. By default, the tooltip is enabled in the pivot table and shows the cell value with its row and column headers.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -44,31 +44,23 @@ The tooltip displays contextual information when users hover over value cells in
 
 ![Blazor PivotTable with ToolTip](images/blazor-pivottable-tooltip.webp)
 
-## Tooltip Template
+## Tooltip template
 
-By default, the tooltip displays basic information such as cell value and headers. However, you can customize the tooltip's appearance and content by using the [`TooltipTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewTemplates.html) property available within the [PivotViewTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewTemplates.html) class. This allows you to design a custom HTML layout for the tooltip with styling and formatting that matches your application's design.
+Users can customize the tooltip in the Pivot Table component by setting the [`TooltipTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewTemplates.html) property within the [PivotViewTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewTemplates.html) class. This allows you to design a custom HTML layout for the tooltip with styling and formatting that matches your application's design.
 
 ### Tooltip Template Context
 
 When you create a custom tooltip template, you gain access to the [PivotTooltipTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotTooltipTemplateContext.html) object, which contains the following properties that you can use to display dynamic information within your custom tooltip:
 
-* **`RowHeaders`**: Displays the header values of the rows that are associated with the currently hovered value cell.
+* **`RowHeaders`**: Displays the row headers for the selected value cell.
+* **`ColumnHeaders`**: Displays the column headers for the selected value cell.
+* **`RowFields`**:Displays the row fields of the selected value cell.
+* **`ColumnFields`**:Displays the column fields of the selected value cell.
+* **`ValueField`**: Displays the value field name of the selected cell.
+* **`AggregateType`**: Specifies the aggregate type of the selected value cell.
+* **`Value`**: Displays the formatted value of the selected value cell.
 
-* **`ColumnHeaders`**: Displays the header values of the columns that are associated with the currently hovered value cell.
-
-* **`RowFields`**: Displays the names of all row fields that are configured in the Pivot Table.
-
-* **`ColumnFields`**: Displays the names of all column fields that are configured in the Pivot Table.
-
-* **`ValueField`**: Displays the name of the value field from the currently hovered value cell.
-
-* **`AggregateType`**: Displays the aggregate function (such as Sum, Average, Count) applied to the currently hovered value cell.
-
-* **`Value`**: Displays the formatted and calculated value of the currently hovered value cell.
-
-### Creating a Custom Tooltip Template
-
-You can apply tooltip customization to both the Pivot Table and Pivot Chart components using the **`TooltipTemplate`** property. The following example demonstrates how to create a professional-looking custom tooltip that displays all relevant information in a well-organized format:
+You can apply tooltip customization to both the Pivot Table and Pivot Chart together, or to either one individually. To customize the Pivot Table tooltip, using the **`TooltipTemplate`** property. The following example demonstrates how to create a professional-looking custom tooltip that displays all relevant information in a well-organized format:
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
