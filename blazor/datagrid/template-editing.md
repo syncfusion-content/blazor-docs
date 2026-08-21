@@ -9,17 +9,22 @@ documentation: ug
 
 # Template Editing in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component supports template editing, offering a flexible approach to customize the appearance and behavior of cells during editing. **Templates** can be used to define the structure and content of editable cells within the Grid.
+The [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component supports template editing, offering a flexible approach to customize the appearance and behavior of cells during editing. **Templates** can be used to define the structure and content of editable cells within the grid.
 
 ## Inline template editing
 
-The Blazor DataGrid supports inline template editing, which allows customization of the default inline editing behavior by enabling custom editors for grid rows. This is achieved by setting the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Normal** and wrapping editor elements inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
+The Blazor Data Grid supports inline template editing, which allows customization of the default inline editing behavior by enabling custom editors for grid rows. This is achieved by setting the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Normal** and wrapping editor elements inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
 
-This configuration is useful for rendering highly customized editors or modifying the layout of editable cells.
+The inline configuration is useful for rendering highly customized editors or modifying the layout of editable cells.
 
 > Custom HTML elements or components can be used as editors. Two-way data binding (**@bind-Value**) must be implemented to ensure synchronization with the grid's data.
 
-In this configuration, the [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) rendered for the **OrderID** column inside the inline editing template is disabled using the `Enabled` property to prevent editing of the primary key column.
+To implement inline template editing:
+
+- Set the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Normal**.
+- Wrap the required editor elements inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
+
+The inline configuration renders the [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) for the **OrderID** column inside the inline editing template. The `Enabled` property prevents editing of the primary key column. The inline configuration treats `OrderID == 0` as the marker for a new record. An `OrderID` value other than `0` represents an existing record, so `Enabled` is `true` during add operations and `false` during edit operations.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -70,7 +75,7 @@ In this configuration, the [SfNumericTextBox](https://blazor.syncfusion.com/docu
                                 </SfDropDownList>
                             </td>
                             <td>
-                                <SfTextBox ID="ShipAddress" @bind-Value="@(Order.ShipAddress)" Multiline=true></SfTextBox>
+                                <SfTextBox ID="ShipAddress" @bind-Value="@(Order.ShipAddress)" Multiline="true"></SfTextBox>
                             </td>
                         </tr>
                     </tbody>
@@ -183,7 +188,7 @@ public class OrderDetails
 
 ## Dialog template editing
 
-The Blazor DataGrid supports dialog template editing, which allows customization of the default dialog editing behavior by defining custom editors for grid rows within a dialog. This configuration is useful for designing customized edit dialogs or including additional fields that are not part of the column model.
+The Blazor Data Grid supports dialog template editing, which allows customization of the default dialog editing behavior by defining custom editors for grid rows within a dialog. This configuration is useful for designing customized edit dialogs or including additional fields that are not part of the column model.
 
 To implement dialog template editing:
 
@@ -192,8 +197,7 @@ To implement dialog template editing:
 
 > Custom components used within the dialog template must be bound with two-way data binding (**@bind-Value**) to ensure synchronization with the grid's data.
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=Cfj476xT2ao" %}
+{% youtube "youtube:https://www.youtube.com/watch?v=Cfj476xT2ao" %}
 
 In this configuration, the [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) rendered for the **OrderID** column inside the dialog template is disabled using the `Enabled` property to prevent editing of the primary key column.
 
@@ -353,11 +357,11 @@ public class OrderDetails
 
 ### Disable components in dialog template
 
-In the Blazor DataGrid, specific components rendered inside the dialog template can be disabled based on data source values. This behavior is controlled by setting the `Enabled` property of the components.
+In the Blazor Data Grid, set the `Enabled` property of components rendered inside the dialog template to disable specific components based on data source values.
 
 To dynamically modify the `Enabled` property within the dialog template, use the [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating) and [OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBeginEdit) events of the grid. These events are triggered before adding a new record or editing an existing record, allowing conditional control over component states.
 
-In this configuration, the `Enabled` property of the **OrderID** textbox is toggled based on the operation type (add or edit) using the `RowCreating` and `OnBeginEdit` events.
+The dialog configuration toggles the `Enabled` property of the **OrderID** textbox based on the operation type (add or edit) using the `RowCreating` and `OnBeginEdit` events.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -522,11 +526,11 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjBHNQDHVezLgbFY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
-### Get value from editor
+### Customize value before saving
 
-The Blazor DataGrid supports reading, formatting, and updating the current editor value before it is saved. This functionality is useful for performing actions such as formatting or validation prior to committing data to the underlying data source.
+The Blazor Data Grid supports reading, formatting, and updating the current editor value before saving. The [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) event supports formatting or validation before committing data to the underlying data source.
 
-To implement this behavior, use the [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) event, which is triggered before the save action is executed in the grid.
+To customize a value before saving, use the `RowUpdating` event. The event occurs before the grid saves the record.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -688,11 +692,11 @@ public class OrderDetails
 
 ### Set focus to particular column editor
 
-The Blazor DataGrid allows control over the focus behavior of input elements in edit forms. By default, the first input element in the dialog receives focus when the dialog opens. In scenarios where the first input element is disabled or hidden, a valid input element can be explicitly focused.
+The Blazor Data Grid allows control over the focus behavior of input elements in edit forms. By default, the first input element in the dialog receives focus when the dialog opens. In scenarios where the first input element is disabled or hidden, a valid input element can be explicitly focused.
 
 This behavior can be achieved using the `Created` or `DataBound` event of the corresponding component.
 
-In this configuration, the **CustomerID** column is focused by invoking the [FocusAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusAsync) method within the AutoComplete's [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_DataBound) event.
+The configuration focuses the **CustomerID** column by invoking the [FocusAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusAsync) method within the AutoComplete's [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_DataBound) event.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -854,9 +858,9 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVxZmXdVeJugwKk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
-## Render tab component inside the dialog template
+### Render tab component inside the dialog template
 
-Enhance the editing experience in the Blazor DataGrid by rendering a [Tab](https://blazor.syncfusion.com/documentation/tabs/getting-started-webapp) component inside the dialog template. This configuration is useful for presenting multiple editing sections or categories in a tabbed layout, providing a more intuitive and navigable interface for data editing.
+Enhance the editing experience in the Blazor Data Grid by rendering a [Tab](https://blazor.syncfusion.com/documentation/tabs/getting-started-webapp) component inside the dialog template. This configuration is useful for presenting multiple editing sections or categories in a tabbed layout, providing a more intuitive and navigable interface for data editing.
 
 To enable this functionality:
 
@@ -954,15 +958,14 @@ To enable this functionality:
         OrderData = OrderDetails.GetAllRecords();
     }
     private OrderDetails CurrentEditingRecord { get; set; }
-    private void MoveNext()
+    private async Task MoveNext()
     {
         if (CurrentEditingRecord.OrderID == 0 || string.IsNullOrWhiteSpace(CurrentEditingRecord.CustomerID))
         {
-            Tab.PreventRender(false);
+            return;
         }
-        else{
-            Tab.SelectAsync(1);
-        }
+
+        await Tab.SelectAsync(1);
     }
     private void Submit()
     {
@@ -970,7 +973,7 @@ To enable this functionality:
     }
     public void OnTabSelecting(SelectingEventArgs args)
     {
-        if (CurrentEditingRecord.OrderID == 0 || string.IsNullOrWhiteSpace(CurrentEditingRecord.CustomerID) || CurrentEditingRecord.Freight <= 0)
+        if (CurrentEditingRecord.OrderID == 0 || string.IsNullOrWhiteSpace(CurrentEditingRecord.CustomerID))
         {
             args.Cancel = true;
         }
@@ -1066,15 +1069,15 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVdNmZdBIISxizu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthRtPBMKJdGrSvI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ### Complex data binding with dialog template
 
-The Blazor DataGrid supports editing of complex objects in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) using a dialog template. This configuration is suitable for managing hierarchical or nested data structures.
+The Blazor Data Grid supports editing of complex objects in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) using a dialog template. This configuration is suitable for managing hierarchical or nested data structures.
 
 To bind and edit complex objects, render the required HTML editor elements or components such as [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html). Use two-way data binding (**@bind-Value**) to ensure real-time updates to the data in the `GridColumn`.
 
-> When configuring complex columns, define the `ID` property appropriately. Replace the dot operator (**.**) in the field value with triple underscores (**___**) to maintain correct mapping and avoid runtime issues.
+> When configuring complex columns, use triple underscores (**___**) instead of dots in every editor `ID` value. Use `EmpDetails___FirstName` and `EmpDetails___SalaryDetails___Salary` for nested editor IDs. Dot notation remains valid for `GridColumn.Field` values, such as `EmpDetails.FirstName` and `EmpDetails.SalaryDetails.Salary`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1092,15 +1095,15 @@ To bind and edit complex objects, render the required HTML editor elements or co
                     <SfNumericTextBox TValue="int" ID="EmployeeID" Enabled="@((Employee.EmployeeID == 0) ? true : false)" @bind-Value="Employee.EmployeeID" FloatLabelType="FloatLabelType.Always" Placeholder="Employee ID"></SfNumericTextBox>
                 </div>
                 <div class="form-group col-md-6">
-                    <SfTextBox ID="EmpDetails.FirstName" @bind-Value="@(Employee.EmpDetails.FirstName)" TValue="string" FloatLabelType="FloatLabelType.Always" Placeholder="First Name">
+                    <SfTextBox ID="EmpDetails___FirstName" @bind-Value="@(Employee.EmpDetails.FirstName)" TValue="string" FloatLabelType="FloatLabelType.Always" Placeholder="First Name">
                     </SfTextBox>
                 </div>
                 <div class="form-group col-md-6">
-                    <SfTextBox ID="EmpDetails.LastName" @bind-Value="@(Employee.EmpDetails.LastName)" TValue="string" FloatLabelType="FloatLabelType.Always" Placeholder="Last Name">
+                    <SfTextBox ID="EmpDetails___LastName" @bind-Value="@(Employee.EmpDetails.LastName)" TValue="string" FloatLabelType="FloatLabelType.Always" Placeholder="Last Name">
                     </SfTextBox>
                 </div>
                 <div class="form-group col-md-6">
-                    <SfNumericTextBox TValue="int" ID="EmpDetails__SalaryDetails__Salary" @bind-Value="Employee.EmpDetails.SalaryDetails.Salary" Step=50 FloatLabelType="FloatLabelType.Always" Placeholder="Salary"></SfNumericTextBox>
+                    <SfNumericTextBox TValue="int" ID="EmpDetails___SalaryDetails___Salary" @bind-Value="Employee.EmpDetails.SalaryDetails.Salary" Step=50 FloatLabelType="FloatLabelType.Always" Placeholder="Salary"></SfNumericTextBox>
                 </div>
                  <div class="form-group col-md-6">
                     <SfTextBox ID="Title" @bind-Value="@(Employee.Title)" TValue="string" FloatLabelType="FloatLabelType.Always" Placeholder="Title">
@@ -1174,13 +1177,13 @@ public class SalaryDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBHNcXxBoHrMJhC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrnZPLMLCusdQDL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Use FileUploader in Grid dialog edit template
+### Use FileUploader in Data Grid dialog edit template
 
-Images can be uploaded during add or edit operations and displayed in a grid column using the [Column Template](https://blazor.syncfusion.com/documentation/datagrid/column-template) and [Dialog Template](https://blazor.syncfusion.com/documentation/datagrid/template-editing#dialog-template-editing) features of the Blazor DataGrid. The `Column Template` is used to display the image, while the `Dialog Template` renders the [SfUploader](https://blazor.syncfusion.com/documentation/file-upload/getting-started-with-web-app) component for image upload during dialog editing.
+Images can be uploaded during add or edit operations and displayed in a grid column using the [Column Template](https://blazor.syncfusion.com/documentation/datagrid/column-template) and [Dialog Template](https://blazor.syncfusion.com/documentation/datagrid/template-editing#dialog-template-editing) features of the Blazor Data Grid. The `Column Template` displays the image. The `Dialog Template` renders the [SfUploader](https://blazor.syncfusion.com/documentation/file-upload/getting-started-with-web-app) component for image upload during dialog editing.
 
-In this configuration, add, edit, and save operations are handled using the [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating), [RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing), and [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) events of the grid. Image file selection and upload actions are performed using the [FileSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_FileSelected) and [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) events of the `SfUploader`.
+The configuration handles add, edit, and save operations using the [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating), [RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing), and [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) events of the grid. Image file selection and upload actions are performed using the [FileSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_FileSelected) and [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) events of the `SfUploader`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1218,27 +1221,29 @@ In this configuration, add, edit, and save operations are handled using the [Row
                             </td>
                         </tr>
                         <tr>
-                            <div class="image" style="margin-top: 10px; width: 300px">
-                                <SfUploader ID="uploadFiles" AllowedExtensions=".jpg,.png,.jpeg">
-                                    <UploaderEvents ValueChange="OnChange" FileSelected="Selected"></UploaderEvents>
-                                    <UploaderTemplates>
-                                        <Template Context="HttpContext">
-                                            @{
-                                                <table>
-                                                    <tr>
-                                                        <td>
-                                                            <span>Updated Employee Image</span>
-                                                        </td>
-                                                        <td>
-                                                            <img class="upload-image" style="margin-left:10px;" src="@(files.Count >0 ? files.Where(item=>item.Name == HttpContext.Name)?.FirstOrDefault()?.Path : string.Empty)">
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            }
-                                        </Template>
-                                    </UploaderTemplates>
-                                </SfUploader>
-                            </div>
+                            <td>
+                                <div class="image" style="margin-top: 10px; width: 300px">
+                                    <SfUploader ID="uploadFiles" AllowedExtensions=".jpg,.png,.jpeg">
+                                        <UploaderEvents ValueChange="OnChange" FileSelected="Selected"></UploaderEvents>
+                                        <UploaderTemplates>
+                                            <Template Context="HttpContext">
+                                                @{
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <span>Updated Employee Image</span>
+                                                            </td>
+                                                            <td>
+                                                                <img class="upload-image" style="margin-left:10px;" src="@(files.Count > 0 ? files.FirstOrDefault(item => item.Name == HttpContext.Name)?.Path : string.Empty)">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                }
+                                            </Template>
+                                        </UploaderTemplates>
+                                    </SfUploader>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -1246,7 +1251,7 @@ In this configuration, add, edit, and save operations are handled using the [Row
         </Template>
     </GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(EmployeeDetails.EmployeeID) HeaderText="Employee ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="@TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeDetails.EmployeeID) HeaderText="Employee ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules { Required = true })" TextAlign="@TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(EmployeeDetails.EmployeeName) HeaderText="Employee Name" Width="140"></GridColumn>
         <GridColumn Field="ImageUrl" HeaderText="Employee Image" Width="200">
             <Template>
@@ -1269,55 +1274,69 @@ In this configuration, add, edit, and save operations are handled using the [Row
     }
 </style>
 @code {
+
     public List<fileInfo> files = new List<fileInfo>();
     public SfGrid<EmployeeDetails> Grid { get; set; }
     public string UploadedFile { get; set; }
     public List<EmployeeDetails> EmployeeData { get; set; }
-   
+
     public void RowAddingHandler(RowCreatingEventArgs<EmployeeDetails> args)
     {
         Grid.PreventRender(false);
     }
     public void RowEditingHandler(RowEditingEventArgs<EmployeeDetails> args)
     {
-         Grid.PreventRender(false);
+        Grid.PreventRender(false);
     }
     public void RowUpdatingHandler(RowUpdatingEventArgs<EmployeeDetails> args)
     {
-       args.Data.ImageUrl = "scripts/Images/Employees/" + UploadedFile;
+        args.Data.ImageUrl = "scripts/Images/Employees/" + UploadedFile;
     }
-    public void OnChange(UploadChangeEventArgs args)
+
+    public async Task OnChange(UploadChangeEventArgs args)
     {
         files = new List<fileInfo>();
+
         foreach (var file in args.Files)
         {
-            var path = Path.GetFullPath("wwwroot\\scripts\\Images\\Employees\\") + file.FileInfo.Name;
-            FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
-            file.Stream.WriteTo(filestream);
-            filestream.Close();
-            file.Stream.Close();
-            files.Add(new fileInfo() { Path = "scripts/Images/Employees/" + file.FileInfo.Name, Name = file.FileInfo.Name, Size = file.FileInfo.Size });
+            var path = Path.Combine( "wwwroot", "scripts", "Images", "Employees", file.FileInfo.Name);
+
+            await using FileStream fileStream =
+                new FileStream(path, FileMode.Create, FileAccess.Write);
+
+            await file.File.OpenReadStream(long.MaxValue).CopyToAsync(fileStream);
+
+            files.Add(new fileInfo()
+            {
+                Path = "scripts/Images/Employees/" + file.FileInfo.Name,
+                Name = file.FileInfo.Name,
+                Size = file.FileInfo.Size
+            });
         }
     }
+
     public void Selected(SelectedEventArgs Args)
     {
         UploadedFile = Args.FilesData[0].Name;
     }
+
     protected override void OnInitialized()
     {
         EmployeeData = Enumerable.Range(1, 9).Select(x => new EmployeeDetails()
-            {
-                EmployeeID = x,
-                EmployeeName = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                ImageUrl = "scripts/Images/Employees/" + x + ".png",
-            }).ToList();
+        {
+            EmployeeID = x,
+            EmployeeName = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            ImageUrl = "scripts/Images/Employees/" + x + ".png",
+        }).ToList();
     }
+
     public class EmployeeDetails
     {
         public int EmployeeID { get; set; }
         public string EmployeeName { get; set; }
         public string ImageUrl { get; set; }
     }
+
     public class fileInfo
     {
         public string Path { get; set; }
@@ -1328,10 +1347,10 @@ In this configuration, add, edit, and save operations are handled using the [Row
 {% endhighlight %}
 {% endtabs %}
 
-> A fully working sample is available [here](https://github.com/SyncfusionExamples/blazor-datagrid-crud-dialog-fileuploader)
+> A complete implementation is available [here](https://github.com/SyncfusionExamples/blazor-datagrid-crud-dialog-fileuploader)
 
-## See Also
+## See also
 
 * [Display validation message in dialog template](https://blazor.syncfusion.com/documentation/datagrid/column-validation#display-validation-message-in-dialog-template)
 
-N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.
+N> Refer to the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor Data Grid overview](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.
