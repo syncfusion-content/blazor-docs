@@ -9,7 +9,7 @@ documentation: ug
 
 # Render TreeGrid Inside Tab with Specific Height in Blazor TreeGrid
 
-By default, Tree Grid will occupy the entire space of the parent element when the Tree Grid [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Width) property is defined as 100%. But if the similar Tree Grid is rendered inside the Tab control, it will consider the entire page and render the Tree Grid without horizontal scroller.
+By default, TreeGrid will occupy the entire space of the parent element when the TreeGrid [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Width) property is defined as 100%. But when a TreeGrid is rendered inside the Tab control, it will consider the entire page and render the TreeGrid without horizontal scroller.
 
 {% tabs %}
 
@@ -18,14 +18,14 @@ By default, Tree Grid will occupy the entire space of the parent element when th
 @using TreeGridComponent.Data;
 @using  Syncfusion.Blazor.Grids;
 @using  Syncfusion.Blazor.TreeGrid;
-@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Navigations;
 
 <div style="height:300px">
         <SfTab ID="Ej2Tab" Width="100%">
             <TabItems>
                 <TabItem>
                     <ChildContent>
-                        <TabHeader Text="Tree Grid 1"></TabHeader>
+                        <TabHeader Text="TreeGrid 1"></TabHeader>
                     </ChildContent>
                     <ContentTemplate>
                         <SfTreeGrid DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" AllowPaging="true"
@@ -43,7 +43,7 @@ By default, Tree Grid will occupy the entire space of the parent element when th
                 </TabItem>
                 <TabItem>
                     <ChildContent>
-                        <TabHeader Text="Tree Grid 2"></TabHeader>
+                        <TabHeader Text="TreeGrid 2"></TabHeader>
                     </ChildContent>
                     <ContentTemplate>
                         <SfTreeGrid DataSource="@TreeDataSource" IdMapping="TaskId" ParentIdMapping="ParentId" AllowPaging="true"

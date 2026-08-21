@@ -9,7 +9,19 @@ documentation: ug
 
 # Template Column Editing in Blazor TreeGrid
 
-A template column value can be edited by defining the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) property for that particular [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component.
+A template column value can be edited by setting the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) property for the corresponding [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component.
+
+**Template Column Editing Steps in Blazor TreeGrid**
+
+A template column value can be edited by setting the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) property for the corresponding [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component.
+
+1. Set Field property on the column to bind it to the data source.  
+2. Define Template for display mode (how the value appears when not editing). 
+3. Define EditTemplate for edit mode (how the editor appears when editing).
+4. Trigger edit via the toolbar (Add, Edit, Delete, Update, Cancel).
+5. Editor displays in place of the template, allowing the value to be modified.
+
+Editor displays in place of the template, allowing the value to be modified.
 
 {% tabs %}
 
@@ -28,14 +40,13 @@ A template column value can be edited by defining the [Field](https://help.syncf
                 <Template>
                     @{
                         var data = context as TreeData;
-                        <a href="#">@data.TaskName</a>
+                        <a href="#" aria-label="Task link for @data.TaskName">@data.TaskName</a>
                     }
                 </Template>
             </TreeGridColumn>
             <TreeGridColumn Field="Priority" HeaderText="Priority" Width="60"></TreeGridColumn>
             <TreeGridColumn Field="Duration" HeaderText="Duration" Width="70" Format="C2" TextAlign="TextAlign.Right"></TreeGridColumn>
             <TreeGridColumn Field="Progress" HeaderText="Progress" Width="70" Format="C2" TextAlign="TextAlign.Right"></TreeGridColumn>
-
         </TreeGridColumns>
     </SfTreeGrid>
 
