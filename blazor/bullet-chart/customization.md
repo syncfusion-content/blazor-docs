@@ -16,7 +16,7 @@ The [Blazor Bullet Chart](https://www.syncfusion.com/blazor-components/blazor-bu
 ```cshtml
 @using Syncfusion.Blazor.Charts
 
-<SfBulletChart DataSource="@BulletChartData" Orientation="OrientationType.Vertical" Width="20%" Title="Sales Rate in dollars" Subtitle="(in dollars $)" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="100" Interval="20">
+<SfBulletChart DataSource="@BulletChartData" Orientation="OrientationType.Vertical" Width="20%" Title="Sales rate in dollars" Subtitle="($)" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="100" Interval="20">
     <BulletChartRangeCollection>
         <BulletChartRange End=35></BulletChartRange>
         <BulletChartRange End=50></BulletChartRange>
@@ -39,11 +39,15 @@ The [Blazor Bullet Chart](https://www.syncfusion.com/blazor-components/blazor-bu
 
 ![Blazor Bullet Chart with Orientation](images/blazor-bullet-chart-orientation.webp)
 
+The following examples use the `BulletChartData` definition shown in the Orientation example.
+
 ## Right-to-left (RTL)
 
-The Bullet Chart supports the right-to-left rendering that can be enabled by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_EnableRtl) property to **true**.
+The Bullet Chart supports rendering in the right-to-left direction, which can be enabled by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_EnableRtl) property to **true**.
 
 ```cshtml
+@using Syncfusion.Blazor.Charts
+
 <SfBulletChart DataSource="@BulletChartData" EnableRtl="true" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="100" Interval="20">
     <BulletChartRangeCollection>
         <BulletChartRange End=35></BulletChartRange>
@@ -53,13 +57,11 @@ The Bullet Chart supports the right-to-left rendering that can be enabled by set
 </SfBulletChart>
 ```
 
-N> Refer to the [code block](#orientation) to know about the property value of **BulletChartData**.
-
 ![Right to Left Flow Direction in Blazor Bullet Chart](images/blazor-bullet-chart-right-to-left-direction.webp)
 
 ## Animation
 
-The actual and the target bar supports the linear animation via the [BulletChartAnimation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartAnimation.html) setting. The speed and the delay are controlled using the [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartAnimation.html#Syncfusion_Blazor_Charts_BulletChartAnimation_Duration) and [Delay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartAnimation.html#Syncfusion_Blazor_Charts_BulletChartAnimation_Delay) properties respectively.
+The actual and target bars support linear animation through the [BulletChartAnimation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartAnimation.html) setting. The animation duration and delay are specified in milliseconds using the [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartAnimation.html#Syncfusion_Blazor_Charts_BulletChartAnimation_Duration) and [Delay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartAnimation.html#Syncfusion_Blazor_Charts_BulletChartAnimation_Delay) properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -74,11 +76,9 @@ The actual and the target bar supports the linear animation via the [BulletChart
 </SfBulletChart>
 ```
 
-N> Refer to the [code block](#orientation) to know about the property value of **BulletChartData**.
-
 ## Theme
 
-The Bullet Chart supports different type of themes via the [Theme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Theme) property.
+The Bullet Chart supports different themes through the [Theme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Theme) property. Refer to the [Theme enum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Theme.html) for the available values.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -93,18 +93,16 @@ The Bullet Chart supports different type of themes via the [Theme](https://help.
 </SfBulletChart>
 ```
 
-N> Refer to the [code block](#orientation) to know about the property value of **BulletChartData**.
-
 ![Applying Theme to Blazor Bullet Chart](images/blazor-bullet-chart-theme.webp)
 
 ## Border
 
-The Bullet Chart border color can be enabled by setting the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartCommonBorder.html#Syncfusion_Blazor_Charts_BulletChartCommonBorder_Color) property in the [BulletChartBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Theme), and the width of the border can be customized using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartCommonBorder.html#Syncfusion_Blazor_Charts_BulletChartCommonBorder_Width) property.
+The Bullet Chart border color can be enabled by setting the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartCommonBorder.html#Syncfusion_Blazor_Charts_BulletChartCommonBorder_Color) property in the [BulletChartBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartBorder.html), and the width of the border can be customized using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartCommonBorder.html#Syncfusion_Blazor_Charts_BulletChartCommonBorder_Width) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
 
-<SfBulletChart DataSource="@BulletChartData" Height="150px" Title="Sales Rate in dollars" Subtitle="(in dollars $)" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="100" Interval="20">
+<SfBulletChart DataSource="@BulletChartData" Height="150px" Title="Sales rate in dollars" Subtitle="($)" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="100" Interval="20">
     <BulletChartBorder Color="red" Width="2"></BulletChartBorder>
     <BulletChartRangeCollection>
         <BulletChartRange End=35> </BulletChartRange>
@@ -113,7 +111,5 @@ The Bullet Chart border color can be enabled by setting the [Color](https://help
     </BulletChartRangeCollection>
 </SfBulletChart>
 ```
-
-N> Refer to the [code block](#orientation) to know about the property value of **BulletChartData**.
 
 ![Blazor Bullet Chart with Border](images/blazor-bullet-chart-with-border.webp)
