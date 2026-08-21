@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Content in Blazor Tooltip Component | Syncfusion®
-description: Checkout and learn here all the features about content in Blazor Tooltip component and much more details.
+title: Content in Blazor Tooltip | Syncfusion
+description: Display simple text, HTML, or template content in Blazor Tooltip based on target interaction for rich content.
 platform: Blazor
 control: Tooltip
 documentation: ug
 ---
 
-# Content in Blazor Tooltip Component
+# Content in Blazor Tooltip
 
 The Blazor Tooltip component allows you to display additional information when users hover over or interact with elements on your web page. Here's how you can explore and implement various content within your Tooltip to enhance its functionality and appearance.
 
@@ -47,7 +47,7 @@ You can also use the **title** attribute of the target element as the Tooltip co
         <SfButton ID="btn1" Content="Show Tooltip 1" title="Go green and save energy!"></SfButton>
         <SfButton ID="btn2" Content="Show Tooltip 2" title="Plant trees to combat climate change!"></SfButton>
         <button title="Recycle to reduce waste">Recycle Tips</button>
-        <a href="#" title="Switch to renewable energy">Renewable Energy</a>
+        <a href="#" aria-label="Switch to renewable energy" title="Switch to renewable energy">Renewable Energy</a>
     </div>
 </SfTooltip>
 
@@ -94,7 +94,7 @@ Check out the following code example to see how to include an HTML template insi
                     </p>
                 </div>
                     <p>Source:<br />
-                        <a href='https://en.wikipedia.org/wiki/Eastern_bluebird' target='_blank'>https://en.wikipedia.org/wiki/Eastern_bluebird</a>
+                        <a href='https://en.wikipedia.org/wiki/Eastern_bluebird' aria-label="Eastern Bluebird on Wikipedia" target='_blank'>https://en.wikipedia.org/wiki/Eastern_bluebird</a>
                     </p>
             </div>
         </div>

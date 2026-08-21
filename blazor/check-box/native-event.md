@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor CheckBox Component | Syncfusion®
-description: Checkout and learn here all the features about Native Events in Blazor CheckBox component and much more.
+title: Native Events in Blazor CheckBox | Syncfusion®
+description: Attach native DOM events to the Blazor CheckBox using the on{event} attribute, and pass event argument data to the event handler.
 platform: Blazor
 control: Checkbox
 documentation: ug
 ---
 
-# Native Events in Blazor CheckBox Component
+# Native Events in Blazor CheckBox
 
 You can bind native Blazor events to the CheckBox component using the `@on{event}` directive. The event-specific data is available through the event arguments.
 

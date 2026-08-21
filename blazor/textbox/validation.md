@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Validation in Blazor TextBox Component | Syncfusion®
-description: Checkout and learn here all the features about Validation in Blazor TextBox component and much more details.
+title: Validation in Blazor TextBox | Syncfusion
+description: Apply error, warning, or success visual states to Blazor TextBox using CssClass for validation styling.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Validation in Blazor TextBox Component
+# Validation in Blazor TextBox
 
 The TextBox supports three types of validation styles, namely `error`, `warning`, and `success`. These are visual states only and do not implement validation logic. Apply the corresponding classes—`.e-error`, `.e-warning`, or `.e-success`—to the component’s wrapper (added via the CssClass property) to change the appearance based on validation outcome. For more information, see the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfInputTextBase-1.html#Syncfusion_Blazor_Inputs_SfInputTextBase_1_CssClass) API reference.
 

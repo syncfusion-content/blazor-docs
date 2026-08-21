@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles in Blazor Floating Action Button Component | Syncfusion®
-description: Checkout and learn here all about Styles in Blazor Floating Action Button component and much more details.
+title: Styles in Blazor Floating Action Button | Syncfusion
+description: Apply predefined styles and custom CSS to the Blazor Floating Action Button, including hover text and outline effects.
 platform: Blazor
 control: Floating Action Button
 documentation: ug
 ---
 
-# Styles in Blazor Floating Action Button Component
+# Styles in Blazor Floating Action Button
 
 This section explains the style options for the Blazor Floating Action Button (FAB), including predefined style classes, custom CSS, showing text on hover, and outline customization.
 

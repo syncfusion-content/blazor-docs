@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Linear Gauge Component | Syncfusion®
-description: Checkout and learn here all about the features and events in Blazor Linear Gauge component and much more details.
+title: Blazor Linear Gauge Events | Syncfusion®
+description: Learn how to handle Blazor Linear Gauge events such as AnnotationRendering, AxisLabelRendering, Loaded, and OnDragStart to customize behavior.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Events in Blazor Linear Gauge Component
+# Blazor Linear Gauge Events
 
 This section describes the Linear Gauge component's event that gets triggered when corresponding operations are performed. The events should be provided to the Linear Gauge by using the [LinearGaugeEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html).
 

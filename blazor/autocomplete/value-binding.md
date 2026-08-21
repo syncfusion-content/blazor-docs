@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Value Binding in Blazor AutoComplete Component | Syncfusion®
-description: Checkout and Learn how to bind and manage selected values in the Blazor AutoComplete component and much more.
+title: Value Binding in Blazor AutoComplete | Syncfusion®
+description: Bind values to the Blazor AutoComplete using one-way and two-way binding with Value, Text, or Index, and synchronize state with the parent component.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Value Binding in AutoComplete
+# Value Binding in Blazor AutoComplete
 
 Value binding is the process of passing values between a component and its parent. There are two methods for binding values.These are.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup Settings in Blazor MultiColumn ComboBox | Syncfusion®
-description: Checkout and learn here all about Popup Setting in Blazor MultiColumn ComboBox component and much more.
+title: Popup Setting in Blazor MultiColumn ComboBox | Syncfusion
+description: Customize Blazor MultiColumn ComboBox popup width and dimensions using PopupWidth and other settings.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
 ---
 
-# Popup Setting in MultiColumn ComboBox
+# Popup Setting in Blazor MultiColumn ComboBox
 
 ## Change the Popup Width
 

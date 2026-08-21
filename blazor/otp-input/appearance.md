@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor OTP Input Component | Syncfusion®
-description: Learn how to customize the appearance of Blazor OTP Input component including length, disabled state, and visual styles.
+title: Appearance in Blazor OTP Input | Syncfusion
+description: Customize Blazor OTP Input length, disabled state, border, and visual appearance to match your application's design and improve secure entry usability.
 platform: Blazor
 control: OTP Input
 documentation: ug
 ---
 
-# Appearance in Blazor OTP Input component
+# Appearance in Blazor OTP Input
 
 Customize the appearance of the OTP input component, including input length, disabled state, and visual styles.
 

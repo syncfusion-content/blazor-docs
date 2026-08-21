@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize the limits in Blazor Range Slider Component | Syncfusion®
-description: Checkout and learn here all about how to customize the limits in Blazor Range Slider component with examples and much more details.
+title: How to customize the limits in Blazor Range Slider | Syncfusion
+description: Style the Blazor Range Slider limits bar with CSS to match application design and ensure consistent branding for range selection.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Customize the limits in Blazor Range Slider Component
+# How to customize the limits in Blazor Range Slider
 
 The slider’s limits bar can be customized with CSS. By overriding the slider CSS classes, the limits region can be styled to match application design requirements. In this example, the limits bar is given a custom background color. By default, the limits bar uses the `e-limits` class. Override that class with your preferred color values as shown below.
 

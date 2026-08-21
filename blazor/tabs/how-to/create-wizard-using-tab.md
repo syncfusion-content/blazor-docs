@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create wizard in Blazor Tabs Component | Syncfusion®
-description: Checkout and learn here all about how to create wizard in Blazor Tabs component and much more details.
+title: How to create wizard in Blazor Tabs | Syncfusion
+description: Build a multi-step wizard using Blazor Tabs with validation, templates, and enabled or disabled steps.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Create wizard in Blazor Tabs Component
+# How to create wizard in Blazor Tabs
 
 Tab items can be disabled during initial control rendering by passing the tab index and a boolean value to the [EnableTabAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_EnableTabAsync_System_Int32_System_Boolean_) public method.
 

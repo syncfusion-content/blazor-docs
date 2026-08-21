@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mask Support in Blazor TimePicker Component | Syncfusion®
-description: Checkout and learn here all the features about Mask Support in Blazor TimePicker component and much more.
+title: Mask Support in Blazor TimePicker | Syncfusion
+description: Use EnableMask in Blazor TimePicker to guide users to enter time values in the correct format with masking.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# Mask Support in Blazor TimePicker Component
+# Mask Support in Blazor TimePicker
 
 The masking feature lets users enter a time in the format specified by the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_Format) property, which helps ensure the value is entered correctly and makes the expected input format clear at a glance. Use the [EnableMask](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_EnableMask) property on the TimePicker component to enable or disable the masking functionality. When enabled, the input field is rendered with a mask that matches the configured time format pattern.
 

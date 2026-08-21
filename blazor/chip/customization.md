@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Blazor Chip Component | Syncfusion®
-description: Checkout and learn here all the features about Customization in the Blazor Chip component and much more.
+title: Style and Appearance in Blazor Chips | Syncfusion®
+description: Customize the Blazor Chips appearance, including leading and trailing icons, avatar, and custom CSS styles for selected and default states.
 platform: Blazor
-control: Chip
+control: Chips
 documentation: ug
 ---
 
-# Customization in Blazor Chip Component
+# Style and Appearance in Blazor Chips
 
 This section explains how to customize styles, leading icons, avatars, trailing icons, outline chips, and templates in the Chip component.
 
@@ -185,14 +185,14 @@ The following code example demonstrates how the layout and design of chips can b
 <SfChip ID="customTemplate">
     <ChipItems>
         <ChipItem LeadingIconCss="trendingIcon">
-            <a href="https://timesofindia.indiatimes.com/news" target="_blank" class="anchorElement">#BreakingNews</a>
+            <a href="https://timesofindia.indiatimes.com/news" target="_blank" aria-label="Breaking News" class="anchorElement">#BreakingNews</a>
             <span class="textElement">125k posts</span>
         </ChipItem>
         <ChipItem LeadingIconCss="cameraIcon">
-            <a href="https://blog.google/products-and-platforms/products/photos/" target="_blank" class="anchorElement">#PhotoOfTheDay</a>
+            <a href="https://blog.google/products-and-platforms/products/photos/" target="_blank" aria-label="Photo Of The Day" class="anchorElement">#PhotoOfTheDay</a>
         </ChipItem>
         <ChipItem LeadingIconCss="trendingIcon">
-            <a href="https://indianexpress.com/section/technology/" target="_blank" class="anchorElement">#TechNews</a>
+            <a href="https://indianexpress.com/section/technology/" target="_blank" aria-label="Tech News" class="anchorElement">#TechNews</a>
             <span class="textElement">107k posts</span>
         </ChipItem>
     </ChipItems>
