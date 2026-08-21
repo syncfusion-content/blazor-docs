@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Bullet Chart Tooltip Examples | Syncfusion®
-description: Learn how to enable and customize tooltips in Syncfusion Blazor Bullet Chart, including format, template, and styling options.
+description: Learn how to enable and customize tooltips in Syncfusion Blazor Bullet Chart, including template and styling options.
 platform: Blazor
 control: Bullet Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Bullet Chart Tooltip
 
-When the mouse is hovered over a bar in the Bullet Chart, the tooltip displays important summary about the actual and the target bar values.
+When hovering over a bar in the Bullet Chart, the tooltip displays a summary of the actual and target bar values.
 
 ## Default tooltip
 
@@ -46,15 +46,15 @@ The tooltip is not visible by default. To make it visible, set the [Enable](http
 }
 ```
 
-![Blazor Bullet Chart displays ToolTip](images/blazor-bulletchart-tooltip.webp)
+![Blazor Bullet Chart displays Tooltip](images/blazor-bulletchart-tooltip.webp)
 
 ## Tooltip customization
 
-The following properties can be used to customize the Bullet Chart tooltip.
+The following properties and nested components can be used to customize the Bullet Chart tooltip.
 
-* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Fill) - Specifies the color of tooltip.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Fill) - Specifies the color of the tooltip.
 * [BulletChartTooltipBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltipBorder.html) - Specifies the tooltip border color and width.
-* [BulletChartTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltipTextStyle.html) - Specifies the tooltip font family, font style, font weight, color and size.
+* [BulletChartTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltipTextStyle.html) - Specifies the tooltip font family, style, weight, color, and size.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -72,13 +72,11 @@ The following properties can be used to customize the Bullet Chart tooltip.
 </SfBulletChart>
 ```
 
-N> Refer to the [code block](#default-tooltip) to know about the property value of the **BulletChartData**.
-
-![Customizing Blazor Bullet Chart ToolTip](images/blazor-bullet-chart-tooltip-customization.webp)
+![Customizing Blazor Bullet Chart Tooltip](images/blazor-bullet-chart-tooltip-customization.webp)
 
 ## Tooltip template
 
-The tooltip can be rendered as a custom component using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Template) property in the [BulletChartTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html) which accepts one or more UI elements as an input, that can be rendered as a part of the tooltip rendering.
+The tooltip can be customized using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Template) property in the [BulletChartTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html), which accepts UI content rendered as part of the tooltip.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -92,10 +90,10 @@ The tooltip can be rendered as a custom component using the [Template](https://h
                         <td style="font-weight:bold; color:black; padding-left: 5px;padding-top: 2px;padding-bottom: 2px;">@context.Category Sales</td>
                     </tr>
                     <tr>
-                        <td style="padding-left: 5px; color:black; padding-right: 5px; padding-bottom: 2px;">Expected : @context.ValueField%  </td>
+                        <td style="padding-left: 5px; color:black; padding-right: 5px; padding-bottom: 2px;">Actual : @context.ValueField%  </td>
                     </tr>
                     <tr>
-                        <td style="padding-left: 5px; color:black; padding-right: 5px">Actual : @context.TargetValue% </td>
+                        <td style="padding-left: 5px; color:black; padding-right: 5px">Target : @context.TargetValue% </td>
                     </tr>
                 </table>
             }
@@ -109,6 +107,8 @@ The tooltip can be rendered as a custom component using the [Template](https://h
 </SfBulletChart>
 ```
 
-N> Refer to the [code block](#default-tooltip) to know about the property value of the **BulletChartData**.
-
 ![Blazor Bullet Chart Tooltip with Template](images/blazor-bullet-chart-tooltip-template.webp)
+
+## Troubleshooting
+
+If the tooltip does not appear, verify that `Enable="true"` is set, the `ValueField` and `TargetField` properties match the data source fields, and the required Syncfusion styles and scripts are configured.
