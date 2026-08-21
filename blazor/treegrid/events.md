@@ -9,13 +9,13 @@ documentation: ug
 
 # Events in Blazor TreeGrid
 
-In this section, the list of events of the Tree Grid component is provided which will be triggered for appropriate Tree Grid actions.
+In this section, the list of events of the TreeGrid component is provided which will be triggered for appropriate TreeGrid actions.
 
-The events should be provided to the Tree Grid using [TreeGridEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html) component. When using events of Tree Grid, **TValue** must be provided in the `TreeGridEvents` component.
+The events should be provided to the TreeGrid using [TreeGridEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html) component. When declaring events, the generic type parameter **TValue** must be specified in the `TreeGridEvents` tag, as it defines the schema for the TreeGrid event data.
 
 ## OnActionBegin
 
-[OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionBegin) event triggers when the Tree Grid actions such as sorting, filtering, paging etc., starts.
+[OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionBegin) event triggers when the TreeGrid actions such as sorting, filtering, paging etc., start.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -25,9 +25,9 @@ The events should be provided to the Tree Grid using [TreeGridEvents](https://he
     <TreeGridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Row"></TreeGridEditSettings>
     <TreeGridEvents TValue="BusinessObject" OnActionBegin="ActionBeginHandler"></TreeGridEvents>
     <TreeGridColumns>
-        <TreeGridColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true" Width="80" TextAlign=" Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="220"></TreeGridColumn>
-        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign=" Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" EditType="Syncfusion.Blazor.Grids.EditType.NumericEdit" TextAlign=" Syncfusion.Blazor.Grids.TextAlign.Left"></TreeGridColumn>
         <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80"></TreeGridColumn>
         <TreeGridColumn Field="Approved" HeaderText="Approved" Type="Syncfusion.Blazor.Grids.ColumnType.Boolean" EditType="Syncfusion.Blazor.Grids.EditType.BooleanEdit" Width="100" DisplayAsCheckBox="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></TreeGridColumn>
@@ -63,28 +63,26 @@ The events should be provided to the Tree Grid using [TreeGridEvents](https://he
 
     public void ActionBeginHandler(ActionEventArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## OnActionComplete
 
-[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionComplete) event triggers when the Tree Grid actions such as sorting, filtering, paging etc. are completed.
+[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionComplete) event triggers when the TreeGrid actions such as sorting, filtering, paging etc. are completed.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
-
-@using Syncfusion.Blazor.Grids;
 @using Syncfusion.Blazor.TreeGrid;
 
 <SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <TreeGridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Row"></TreeGridEditSettings>
     <TreeGridEvents TValue="BusinessObject" OnActionComplete="ActionCompleteHandler"></TreeGridEvents>
     <TreeGridColumns>
-        <TreeGridColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true" Width="80" TextAlign=" Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="220"></TreeGridColumn>
-        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign=" Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" EditType="Syncfusion.Blazor.Grids.EditType.NumericEdit" TextAlign=" Syncfusion.Blazor.Grids.TextAlign.Left"></TreeGridColumn>
         <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80"></TreeGridColumn>
         <TreeGridColumn Field="Approved" HeaderText="Approved" Type="Syncfusion.Blazor.Grids.ColumnType.Boolean" EditType="Syncfusion.Blazor.Grids.EditType.BooleanEdit" Width="100" DisplayAsCheckBox="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></TreeGridColumn>
@@ -120,14 +118,14 @@ The events should be provided to the Tree Grid using [TreeGridEvents](https://he
 
     public void ActionCompleteHandler(ActionEventArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## OnActionFailure
 
-[OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionFailure) event triggers when any Tree Grid action fails to achieve the desired results. By using this event the error details and its cause are achieved. In the below sample, the wrong field name is provided for the [IdMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_IdMapping) property. So that it will throw the OnActionFailure event.
+[OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionFailure) event triggers when any TreeGrid action fails to achieve the desired results. By using this event the error details and its cause are obtained. In the below sample, the wrong field name is provided for the [IdMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_IdMapping) property. So that it will throw the OnActionFailure event.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -175,14 +173,14 @@ The events should be provided to the Tree Grid using [TreeGridEvents](https://he
 
     public void ActionFailureHandler(FailureEventArgs args)
     {
-        // Here you can get the error details in the args
+        // Error details can be accessed in the args parameter.
     }
 }
 ```
 
 ## Created
 
-[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Created) event triggers when the Tree Grid component is created. The Tree Grid properties can be modified by using this event.
+[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Created) event triggers when the TreeGrid component is created. The TreeGrid properties can be modified by using this event.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -190,7 +188,7 @@ The events should be provided to the Tree Grid using [TreeGridEvents](https://he
 <SfTreeGrid @ref="TreeGrid" DataSource="@TreeData"  IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridEvents TValue="BusinessObject" Created="CreatedHandler"></TreeGridEvents>
     <TreeGridColumns>
-        <TreeGridColumn Field="TaskId" HeaderText="Task ID"  Width="80" TextAlign=" Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID"  Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="220"></TreeGridColumn>
         <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Left"></TreeGridColumn>
@@ -230,14 +228,14 @@ The events should be provided to the Tree Grid using [TreeGridEvents](https://he
 
     public void CreatedHandler(object args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## OnLoad
 
-[OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnLoad) event triggers before the rendering process starts which allows customization of the Tree Grid properties before the Tree Grid rendering.
+[OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnLoad) event triggers before the rendering process starts which allows customization of the TreeGrid properties before the TreeGrid rendering.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -245,7 +243,7 @@ The events should be provided to the Tree Grid using [TreeGridEvents](https://he
 <SfTreeGrid @ref="TreeGrid" DataSource="@TreeData"  IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridEvents TValue="BusinessObject" OnLoad="LoadHandler"></TreeGridEvents>
     <TreeGridColumns>
-        <TreeGridColumn Field="TaskId" HeaderText="Task ID"  Width="80" TextAlign=" Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID"  Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="220"></TreeGridColumn>
         <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100"  TextAlign="Syncfusion.Blazor.Grids.TextAlign.Left"></TreeGridColumn>
@@ -285,14 +283,14 @@ The events should be provided to the Tree Grid using [TreeGridEvents](https://he
 
     public void LoadHandler(object args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## Destroyed
 
-[Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Destroyed) event triggers when the Tree Grid component is destroyed. By using this event, it is confirmed that the Tree Grid gets completely destroyed.
+[Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Destroyed) event triggers when the TreeGrid component is destroyed. By using this event, it is confirmed that the TreeGrid gets completely destroyed.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -300,7 +298,7 @@ The events should be provided to the Tree Grid using [TreeGridEvents](https://he
 <SfTreeGrid @ref="TreeGrid" DataSource="@TreeData"  IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridEvents TValue="BusinessObject" Destroyed="DestroyHandler"></TreeGridEvents>
     <TreeGridColumns>
-        <TreeGridColumn Field="TaskId" HeaderText="Task ID"  Width="80" TextAlign=" Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID"  Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="220"></TreeGridColumn>
         <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Left"></TreeGridColumn>
@@ -340,14 +338,14 @@ The events should be provided to the Tree Grid using [TreeGridEvents](https://he
 
     public void DestroyHandler(object args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## OnDataBound
 
-[OnDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnDataBound) event triggers before the data is bound to Tree Grid.
+[OnDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnDataBound) event triggers before the data is bound to TreeGrid.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -396,14 +394,14 @@ The events should be provided to the Tree Grid using [TreeGridEvents](https://he
 
     public void DataBoundHandler(BeforeDataBoundArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## DataBound
 
-[DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_DataBound) event triggers when the data source is populated in the Tree Grid. The code can be customized.
+[DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_DataBound) event triggers when the data source is populated in the TreeGrid. The code can be customized.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -451,14 +449,14 @@ The events should be provided to the Tree Grid using [TreeGridEvents](https://he
 
     public void DataBoundHandler(object args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## RowDataBound
 
-[RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDataBound) event triggers every time a request is made to access row information, element, or data and also before the row element is appended to the Tree Grid element.
+[RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDataBound) event triggers every time a request is made to access row information, element, or data and also before the row element is appended to the TreeGrid element.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -507,14 +505,14 @@ The events should be provided to the Tree Grid using [TreeGridEvents](https://he
 
     public void RowDataBoundHandler(RowDataBoundEventArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## DetailDataBound
 
-The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_DetailDataBound) event triggers after detail row expands.
+The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_DetailDataBound) event triggers when a detail row expands.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid
@@ -582,14 +580,14 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     }
     public void DetailDataBoundHandler(DetailDataBoundEventArgs<Employee> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## HeaderCellInfo
 
-[HeaderCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_HeaderCellInfo) event triggers during the rendering of every header cells in the Tree Grid so that the header cells can be customized.
+[HeaderCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_HeaderCellInfo) event triggers during the rendering of every header cells in the TreeGrid so that the header cells can be customized.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -638,14 +636,14 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void HeaderCellInfoHandler(HeaderCellInfoEventArgs args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## QueryCellInfo
 
-[QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_QueryCellInfo) event triggers every time a request is made to access cell information, element, or data and also before the cell element is appended to the Tree Grid element.
+[QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_QueryCellInfo) event triggers every time a request is made to access cell information, element, or data and also before the cell element is appended to the TreeGrid element.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -694,14 +692,14 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void QueryCellInfoHandler(QueryCellInfoEventArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## OnBeginEdit
 
-[OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnBeginEdit) event triggers before the record is to be edit.
+[OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnBeginEdit) event triggers before a record enters edit mode.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -751,7 +749,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void BeginEditHandler(BeginEditArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -808,7 +806,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void BatchAddHandler(BeforeBatchAddArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -865,7 +863,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void BatchSaveHandler(BeforeBatchSaveArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -922,7 +920,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void BatchDeleteHandler(BeforeBatchDeleteArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -979,7 +977,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void CellEditHandler(CellEditArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -1035,7 +1033,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void CellSaveHandler(CellSaveArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -1091,7 +1089,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void CellSavedHandler(CellSaveArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -1146,7 +1144,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void RowSelectingHandler(RowSelectingEventArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -1201,7 +1199,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void RowSelectedHandler(RowSelectEventArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -1256,7 +1254,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void RowDeselectingHandler(RowDeselectEventArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -1311,7 +1309,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void RowDeselectHandler(RowDeselectEventArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -1367,7 +1365,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void CellSelectingHandler(CellSelectingEventArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -1423,7 +1421,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void CellSelectedHandler(CellSelectEventArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -1479,7 +1477,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void CellDeselectingHandler(CellDeselectEventArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -1535,7 +1533,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void CellDeselectedHandler(CellDeselectEventArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -1590,7 +1588,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void RecordDoubleClickHandler(RecordDoubleClickEventArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -1645,7 +1643,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs Args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -1762,7 +1760,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     }
     public void ColumnMenuItemClickedHandler(ColumnMenuClickEventArgs args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -1780,9 +1778,9 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     <TreeGridPageSettings PageSize="1"></TreeGridPageSettings>
     <TreeGridEvents ContextMenuItemClicked="ContextMenuItemClickedHandler" TValue="BusinessObject"></TreeGridEvents>
     <TreeGridColumns>
-        <TreeGridColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true" Width="80" TextAlign=" Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="220"></TreeGridColumn>
-        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign=" Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" EditType="Syncfusion.Blazor.Grids.EditType.NumericEdit" TextAlign=" Syncfusion.Blazor.Grids.TextAlign.Left"></TreeGridColumn>
         <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80"></TreeGridColumn>
         <TreeGridColumn Field="Approved" HeaderText="Approved" Type="Syncfusion.Blazor.Grids.ColumnType.Boolean" EditType="Syncfusion.Blazor.Grids.EditType.BooleanEdit" Width="100" DisplayAsCheckBox="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></TreeGridColumn>
@@ -1817,7 +1815,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     }
     public void ContextMenuItemClickedHandler(ContextMenuClickEventArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -1835,9 +1833,9 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     <TreeGridPageSettings PageSize="1"></TreeGridPageSettings>
     <TreeGridEvents ContextMenuOpen="ContextMenuOpenHandler" TValue="BusinessObject"></TreeGridEvents>
     <TreeGridColumns>
-        <TreeGridColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true" Width="80" TextAlign=" Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="220"></TreeGridColumn>
-        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign=" Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" EditType="Syncfusion.Blazor.Grids.EditType.NumericEdit" TextAlign=" Syncfusion.Blazor.Grids.TextAlign.Left"></TreeGridColumn>
         <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80"></TreeGridColumn>
         <TreeGridColumn Field="Approved" HeaderText="Approved" Type="Syncfusion.Blazor.Grids.ColumnType.Boolean" EditType="Syncfusion.Blazor.Grids.EditType.BooleanEdit" Width="100" DisplayAsCheckBox="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></TreeGridColumn>
@@ -1872,14 +1870,14 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     }
     public void ContextMenuOpenHandler(ContextMenuOpenEventArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## OnPdfExport
 
-[OnPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnPdfExport) event triggers before the Tree Grid data is exported to PDF document.
+[OnPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnPdfExport) event triggers before the TreeGrid data is exported to PDF document.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -1934,14 +1932,14 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     }
     public void PdfExportHandler(object args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## PdfQueryCellInfoEvent
 
-[PdfQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_PdfQueryCellInfoEvent) event triggers before the Tree Grid data is exported to PDF document. It can be used to customize the Tree Grid content in PDF document.
+[PdfQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_PdfQueryCellInfoEvent) event triggers before the TreeGrid data is exported to PDF document. It can be used to customize the TreeGrid content in PDF document.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -1996,14 +1994,14 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     }
     public void PdfQueryCellInfoHandler(PdfQueryCellInfoEventArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## OnExcelExport
 
-[OnExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnExcelExport) event triggers before the Tree Grid data is exported to the excel file.
+[OnExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnExcelExport) event triggers before the TreeGrid data is exported to the excel file.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -2057,14 +2055,14 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     }
     public void ExcelExportHandler(object args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## ExcelQueryCellInfoEvent
 
-[ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ExcelQueryCellInfoEvent) event triggers before the Tree Grid data is exported to the Excel file. It can be used to customize the Tree Grid content in Excel file.
+[ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ExcelQueryCellInfoEvent) event triggers before the TreeGrid data is exported to the Excel file. It can be used to customize the TreeGrid content in Excel file.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -2119,7 +2117,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     }
     public void ExcelQueryCellInfoHandler(ExcelQueryCellInfoEventArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -2173,7 +2171,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     }
     public void OnResizeStartHanlder(ResizeArgs args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -2227,7 +2225,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     }
     public void ResizeStoppedHanlder(ResizeArgs args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -2280,7 +2278,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     }
     public void ExpandingHandler(RowExpandingEventArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
@@ -2333,14 +2331,14 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     }
     public void ExpandedHandler(RowExpandedEventArgs<BusinessObject> args)
     {
-        // Here you can customize your code
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## BeforeCopyPaste
 
-[BeforeCopyPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCopyPaste) event will trigger before the cell is copied or pasted in the tree grid cell and you can cancel this entire copy or paste action by using this event.
+The [BeforeCopyPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCopyPaste) event is triggered before a cell is copied or pasted in the TreeGrid, allowing the entire copy or paste action to be canceled if needed.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -2388,11 +2386,11 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     {
         if (args.Action == "Copy")
         {
-            // Here you can customize your code.
+            // Code customization can be applied here..
         }
         if (args.Action == "Paste")
         {
-            // Here you can customize your code.
+            // Code customization can be applied here..
         }
     }
 }
@@ -2400,7 +2398,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## BeforeCellPaste
 
-[BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCellPaste) event will be trigger before pasting the copied cell value for each cell and you can cancel the pasting action for a particular cell or change the value by using this event.
+The [BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCellPaste) event is triggered before pasting the copied cell value into each cell, allowing the paste action for a specific cell to be canceled or the value to be modified before insertion.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -2446,7 +2444,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     
     public async Task CellPasteHandler(Syncfusion.Blazor.TreeGrid.BeforeCellPasteEventArgs<BusinessObject> args)
     {
-        // Here you can customize your code.
+        // Code customization can be applied here..
     }
 }
 ```
@@ -2502,7 +2500,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     
     public void RowDroppingHandler(RowDroppingEventArgs<BusinessObject> args)
     {
-        // Here, you can customize your code.
+        // Code customization can be applied here.
     }
 }
 ```
@@ -2556,13 +2554,13 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
     
     public async Task RowDroppedHandler(RowDroppedEventArgs<BusinessObject> args)
     {
-        // Here you can customize your code.
+        // Code customization can be applied here..
     }
 }
 ```
 ## Sorting
 
-[Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Sorting) event is raised before a sorting action is performed or a column is removed from sorting in the Tree Grid or when the sort column direction changes from Ascending to Descending or vice versa for the same column.
+[Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Sorting) event is raised before a sorting action is performed or a column is removed from sorting in the TreeGrid or when the sort column direction changes from Ascending to Descending or vice versa for the same column.
 
 ```cshtml
 
@@ -2610,14 +2608,14 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void SortingHandler(SortingEventArgs args)
     {
-        // Here, you can customize your code.
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## Sorted
 
-[Sorted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Sorted) event is raised after a sorting action is performed or a column is removed from sorting in the Tree Grid or when the sort column direction changes from Ascending to Descending or vice versa for the same column.
+[Sorted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Sorted) event is raised after a sorting action is performed or a column is removed from sorting in the TreeGrid or when the sort column direction changes from Ascending to Descending or vice versa for the same column.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -2664,14 +2662,14 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void SortedHandler(SortedEventArgs args)
     {
-        // Here, you can customize your code.
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## Searching
 
-[Searching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Searching) event is raised before the search action is performed in the Tree Grid.
+[Searching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Searching) event is raised before the search action is performed in the TreeGrid.
 ```cshtml
 
 @using Syncfusion.Blazor.TreeGrid;
@@ -2718,14 +2716,14 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void SearchingHandler(SearchingEventArgs args)
     {
-        // Here, you can customize your code.
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## Searched
 
-[Searched](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Searched) event is raised after the search action is performed in the Tree Grid.
+[Searched](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Searched) event is raised after the search action is performed in the TreeGrid.
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
 
@@ -2771,14 +2769,14 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void SearchedHandler(SearchedEventArgs args)
     {
-        // Here, you can customize your code.
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## RowCreating
 
-[RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowCreating) event triggers before the add action is performed in the Tree Grid.
+[RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowCreating) event triggers before the add action is performed in the TreeGrid.
 
 ```cshtml
 
@@ -2827,14 +2825,14 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void RowCreatingHandler(RowCreatingEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## RowCreated
 
-[RowCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowCreated) event is raised after the add action is performed in the Tree Grid.
+[RowCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowCreated) event is raised after the add action is performed in the TreeGrid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -2882,14 +2880,14 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void RowCreatedHandler(RowCreatedEventArgs<Order> args) 
     {
-        // Here, you can customize your code.
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## RowUpdating
 
-[RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowUpdating) event is raised before the edited or added data is saved in the Tree Grid.
+[RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowUpdating) event is raised before the edited or added data is saved in the TreeGrid.
 
 ```cshtml
 
@@ -2938,14 +2936,14 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void RowUpdatingHandler(RowUpdatingEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## RowUpdated
 
-[RowUpdated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowUpdated) event is raised after edited or added data is saved in the Tree Grid.
+[RowUpdated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowUpdated) event is raised after edited or added data is saved in the TreeGrid.
 
 ```cshtml
 
@@ -2994,14 +2992,14 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void RowUpdatedHandler(RowUpdatedEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## RowDeleting
 
-[RowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDeleting) event is raised before the record is deleted in the Tree Grid.
+[RowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDeleting) event is raised before the record is deleted in the TreeGrid.
 
 ```cshtml
 
@@ -3050,14 +3048,14 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void RowDeletingHandler(RowDeletingEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## RowDeleted
 
-[RowDeleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDeleted) event is raised after a record is deleted in the Tree Grid.
+[RowDeleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDeleted) event is raised after a record is deleted in the TreeGrid.
 
 ```cshtml
 
@@ -3106,14 +3104,14 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void RowDeletedHandler(RowDeletedEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## EditCanceling
 
-[EditCanceling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Cancelling) event is raised before canceling the update of edited or added data in the Tree Grid.
+[EditCanceling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Cancelling) event is raised before canceling the update of edited or added data in the TreeGrid.
 
 ```cshtml
 
@@ -3162,7 +3160,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void EditCancelingHandler(EditCancelingEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Code customization can be applied here.
     }
 }
 
@@ -3170,7 +3168,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## EditCanceled
 
-[EditCanceled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Cancelled) event is raised after canceling the update of edited or added data in the Tree Grid.
+[EditCanceled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Cancelled) event is raised after canceling the update of edited or added data in the TreeGrid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3218,7 +3216,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void EditCanceledHandler(EditCanceledEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Code customization can be applied here.
     }
 }
 
@@ -3226,7 +3224,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## BeforeRowEditing
 
-[BeforeRowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeRowEditing) event is raised before when the editing action of a row begins in the Tree Grid.
+[BeforeRowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeRowEditing) event is raised before when the editing action of a row begins in the TreeGrid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3274,7 +3272,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void OnRowEditStartHandler(OnRowEditStartEventArgs args)
     {
-        // Here, you can customize your code.    
+        // Code customization can be applied here.    
     }
 }
 
@@ -3282,7 +3280,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## RowEditing
 
-[RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowEditing) event is raised before the edit action is performed in the Tree Grid.
+[RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowEditing) event is raised before the edit action is performed in the TreeGrid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3330,14 +3328,14 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void RowEditingHandler(RowEditingEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## RowEdited
 
-[RowEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowEdited) event is raised after the edit action is performed in the Tree Grid.
+[RowEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowEdited) event is raised after the edit action is performed in the TreeGrid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3385,14 +3383,14 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void RowEditedHandler(RowEditedEventArgs<Order> args)
     {
-        // Here, you can customize your code.
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## Filtering
 
-[Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Filtering) event is raised before the filtering or clear filtering action is performed in the Tree Grid.
+[Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Filtering) event is raised before the filtering or clear filtering action is performed in the TreeGrid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3440,14 +3438,14 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void FilteringHandler(FilteringEventArgs args)
     {
-        // Here, you can customize your code.   
+        // Code customization can be applied here.   
     }
 }
 ```
 
 ## Filtered
 
-[Filtered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Filtered) event is raised after the filtering or clear filtering action is performed in the Tree Grid.
+[Filtered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Filtered) event is raised after the filtering or clear filtering action is performed in the TreeGrid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3495,14 +3493,14 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void FilteredHandler(FilteredEventArgs args)
     {
-        // Here, you can customize your code.
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## FilterDialogOpening
 
-[FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_FilterDialogOpening) event triggers before the filter dialog is opened in the Tree Grid.
+[FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_FilterDialogOpening) event triggers before the filter dialog is opened in the TreeGrid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3551,7 +3549,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
     public void FilterDialogOpeningHandler(FilterDialogOpeningEventArgs args)
     {
-        // Here, you can customize your code.
+        // Code customization can be applied here.
     }
 }
 ```
@@ -3559,7 +3557,7 @@ N> This event is raised specifically for the `Menu` and `Excel` [FilterType](htt
 
 ## FilterDialogOpened
 
-[FilterDialogOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_FilterDialogOpened) event is raised after the filter dialog is opened in the Tree Grid.
+[FilterDialogOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_FilterDialogOpened) event is raised after the filter dialog is opened in the TreeGrid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3608,7 +3606,7 @@ N> This event is raised specifically for the `Menu` and `Excel` [FilterType](htt
 
     public void FilterDialogOpenedHandler(FilterDialogOpenedEventArgs args)
     {
-        // Here, you can customize your code.
+        // Code customization can be applied here.
     }
 }
 ```
@@ -3665,14 +3663,14 @@ N> This event is raised specifically for the `Excel` [FilterType](https://help.s
 
     public void CheckboxFilterSearchingHandler(CheckboxFilterSearchingEventArgs args)
     {
-        // Here, you can customize your code.       
+        // Code customization can be applied here.       
     }
 }
 ```
 
 ## ColumnReordering
 
-[ColumnReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ColumnReordering) event is raised before when columns reordering action is performed in the Tree Grid.
+[ColumnReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ColumnReordering) event is raised before when columns reordering action is performed in the TreeGrid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3720,14 +3718,14 @@ N> This event is raised specifically for the `Excel` [FilterType](https://help.s
 
     public void ColumnReorderingHandler(ColumnReorderingEventArgs args)
     {
-        // Here, you can customize your code.
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## ColumnReordered
 
-[ColumnReordered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ColumnReordered) event is raised after when columns are reordered in the Tree Grid.
+[ColumnReordered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ColumnReordered) event is raised after when columns are reordered in the TreeGrid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3775,14 +3773,14 @@ N> This event is raised specifically for the `Excel` [FilterType](https://help.s
 
     public void ColumnReorderedHandler(ColumnReorderedEventArgs args)
     {
-        // Here, you can customize your code.
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## ColumnsStateChanging
 
-[ColumnsStateChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ColumnsStateChanging) event is raised before the Tree Grid's column visibility is changing.
+[ColumnsStateChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ColumnsStateChanging) event is raised before the TreeGrid's column visibility is changing.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3831,14 +3829,14 @@ N> This event is raised specifically for the `Excel` [FilterType](https://help.s
 
     public void ColumnVisibilityChangingHandler(ColumnVisibilityChangingEventArgs args)
     {
-        // Here, you can customize your code.
+        // Code customization can be applied here.
     }
 }
 ```
 
 ## ColumnsStateChanged
 
-[ColumnsStateChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ColumnsStateChanged) event is raised after the Tree Grid's column visibility is changed.
+[ColumnsStateChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ColumnsStateChanged) event is raised after the TreeGrid's column visibility is changed.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -3886,10 +3884,10 @@ N> This event is raised specifically for the `Excel` [FilterType](https://help.s
 
     public void ColumnVisibilityChangedHandler(ColumnVisibilityChangedEventArgs args)
     {
-        // Here, you can customize your code.
+        // Code customization can be applied here.
     }
 }
 ```
 
-> You will not limit TreeGrid with these events; instead, you will add new events in the future based on the user requests. If the event you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
+> TreeGrid is not limited by the existing events; additional events will be introduced in the future based on feature requests. If an event is not currently available, a request can be submitted [here](https://www.syncfusion.com/feedback/blazor-components).
 
