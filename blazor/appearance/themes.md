@@ -558,54 +558,54 @@ https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast-l
 
 ## LibMan
 
-Library Manager ([LibMan](https://learn.microsoft.com/en-us/aspnet/core/client-side/libman/libman-vs)) is a client-side library acquisition tool that downloads popular libraries and frameworks from a file system or a CDN.
+Library Manager ([LibMan](https://learn.microsoft.com/en-us/aspnet/core/client-side/libman/libman-vs?view=aspnetcore-10.0)) is a client-side library acquisition tool that downloads popular libraries and frameworks from a file system or a CDN.
 
-LibMan offers the following advantages,
+LibMan offers the following advantages:
 
 1. Only the library files you need are downloaded.
-2. Additional tooling, such as Node.js, npm, and WebPack, isn't necessary to acquire a subset of files in a library.
+
+2. Additional tooling, such as [Node.js](https://nodejs.org/en/download), [npm](https://www.npmjs.com/), and [WebPack](https://webpack.js.org/), isn't necessary to acquire a subset of files in a library.
+
 3. Files can be placed in a specific location without resorting to build tasks or manual file copying.
 
 ### Client-side library dialog
 
-1.Right-click the project folder where the files should be added. Select **Add** -> **Client-Side Library**. Then Add Client-Side Library dialog appears like below.
+1. Right-click the project folder where the files should be added and select **Add → Client-Side Library**. The Add Client-Side Library dialog appears, as shown below.
 
-![Client side library dialog](images/theme-client-side.webp)
+![Add Client-Side Library dialog in Visual Studio](images/theme-client-side.webp)
 
-2.Select the **unpkg** in the provider dropdown to get the Blazor control themes.
+2. Select **unpkg** from the provider dropdown to retrieve the Syncfusion theme asset (@syncfusion/blazor-themes).
 
 ![Select unpkg provider](images/client-library-unpkg.webp)
 
-3.You can refer the combined component styles by using `@syncfusion/blazor-themes@{{ site.ej2version }}` in the library textbox.
+3. You can refer the combined component styles by using `@syncfusion/blazor-themes@{{ site.ej2version }}` in the library textbox.
 
-![Specify library](images/library-unpkg.webp)
+![Library text box populated with @syncfusion/blazor-themes](images/library-unpkg.webp)
 
-4.You can choose to select specific files or include all library files, as shown below.
+4. For example, select **Choose specific files** and choose the Fluent 2 theme (SCSS-Themes/fluent2.scss) in the dialog, and click Install.
 
-For example, select specific files and choose the Bootstrap 5 theme in the dialog.
+![Files selection dialog showing Fluent 2 SCSS files](images/library-unpkg-theme.webp)
 
-![Choose themes](images/library-unpkg-theme.webp)
-
-5.By using the target location textbox, you can specify the location of where files will be stored in the application.
+5. By using the target location textbox, you can specify the location of where files will be stored in the application.
 
 For example, the default location `wwwroot/lib/syncfusion/blazor-themes/` has been modified to `wwwroot/themes/syncfusion/blazor-themes/`.
 
-![Modified the target location](images/client-side-target-unpkg.webp)
+![Target Location field set to wwwroot/themes/syncfusion/blazor-themes/](images/client-side-target-unpkg.webp)
 
-6.Click the install button then `libman.json` file is added to the root application with the following content.
+6. Click **Install** button then `libman.json` file is added to the root application with the following content.
 
 {% tabs %}
-{% highlight cshtml tabtitle="libman.json" %}
+{% highlight json tabtitle="libman.json" %}
 
 {
-  "version": "1.0",
+  "version": "3.0",
   "defaultProvider": "unpkg",
   "libraries": [
     {
       "library": "@syncfusion/blazor-themes@{{ site.ej2version }}",
       "destination": "wwwroot/themes/syncfusion/blazor-themes/",
       "files": [
-        "SCSS-Themes/bootstrap5.scss"
+        "SCSS-Themes/fluent2.scss"
       ]
     }
   ]
@@ -614,54 +614,50 @@ For example, the default location `wwwroot/lib/syncfusion/blazor-themes/` has be
 {% endhighlight %}
 {% endtabs %}
 
-N> If you use individual component styles, you should install the styles of their dependent components as well. Refer to [this](https://blazor.syncfusion.com/documentation/nuget-packages#available-nuget-packages) to find the dependent components.
+N> If you use individual component styles, install the styles of their dependent components as well. See the [Available NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#available-nuget-packages) section for the dependency list.
 
-7.You can add the `SCSS theme` for Blazor applications through LibMan and compile it by using the [Web Compiler 2022+](https://marketplace.visualstudio.com/items?itemName=Failwyn.WebCompiler64) by following steps.
+7. You can add the `SCSS theme` for Blazor applications through LibMan and compile it by using the [Web Compiler 2022+](https://marketplace.visualstudio.com/items?itemName=Failwyn.WebCompiler64) by following steps.
 
 * Open Visual Studio 2022 and click the Extensions in the toolbar.
 
-    ![VS Extension](images/vs_extension.webp)
+    ![Visual Studio Extensions menu in the toolbar](images/vs_extension.webp)
 
 * Search the `Web Compiler 2022+` in search box and download the extension.
 
-    ![Web Compiler 2022+](images/web_compiler.webp)
+    ![Web Compiler 2022+ extension in the Visual Studio Manage Extensions dialog](images/web_compiler.webp)
 
 * Right-click the `SCSS` file and click the Web Compiler to compile the file.
 
-![Themes-libman-compile](images/themes-libman-compile.webp)
+![Web Compiler context menu on the fluent2.scss file](images/themes-libman-compile.webp)
 
 * The `compilerconfig.json` file is created by default as shown in the following code snippet.
 
 {% tabs %}
-{% highlight c# tabtitle="compilerconfig.json" %}
+{% highlight json tabtitle="compilerconfig.json" %}
 
 [
   {
-    "outputFile": "wwwroot/themes/syncfusion/blazor-themes/SCSS-Themes/bootstrap5.css",
-    "inputFile": "wwwroot/themes/syncfusion/blazor-themes/SCSS-Themes/bootstrap5.scss"
+    "outputFile": "wwwroot/themes/syncfusion/blazor-themes/SCSS-Themes/fluent2.css",
+    "inputFile": "wwwroot/themes/syncfusion/blazor-themes/SCSS-Themes/fluent2.scss"
   }
 ]
 
 {% endhighlight %}
 {% endtabs %}
 
-* The `SCSS` file has been compiled to the `CSS` file. Then, add the compiled CSS file to the `<head>` element of the Host page.
+* The `SCSS` file has been compiled to the `CSS` file. Then, add the compiled CSS file at the end of the `<head>` section in the **App.razor** file.
 
 {% tabs %}
-{% highlight c# tabtitle="~/_Host.cshtml" %}
+{% highlight c# tabtitle="App.razor" %}
 
-<head>
-    ...
-    <!-- Blazor components' styles -->
-    <link href="~/themes/syncfusion/blazor-themes/scss-themes/bootstrap5.css" rel="stylesheet" />
-</head>
+<link href="/themes/syncfusion/blazor-themes/scss-themes/fluent2.css" rel="stylesheet" />
 
 {% endhighlight %}
 {% endtabs %}
 
-8.Run the application and see the bootstrap5 themes downloaded from LibMan were applied.
+8. Run the application. The Fluent 2 theme downloaded through LibMan is applied.
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-libman)
+N> [View Blazor LibMan sample on GitHub](https://github.com/SyncfusionExamples/blazor-libman)
 
 ## NPM package reference
 
