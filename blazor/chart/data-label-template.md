@@ -11,7 +11,26 @@ documentation: ug
 
 # Blazor Charts Data Label Template
 
-Text and interior information for a point can be bound from a datasource other than the x and y values. The implicit named parameter context can be used to access the aggregate values within the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Template). To retrieve aggregate values inside the template, type cast the context as [ChartDataPointInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataPointInfo.html). The context attribute can also be used to modify the name of this implicit parameter. For example, the data label information can be accessed using context in the template as shown below.
+Additional information for a point can be bound from a data source other than the x and y values. The implicit parameter `context` exposes the data point details inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Template). To access these details, type cast the context as [ChartDataPointInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataPointInfo.html).
+
+## Available context members
+
+The following members are available on the [ChartDataPointInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataPointInfo.html) instance inside the template:
+
+| Member | Description |
+| --- | --- |
+| `X` | X value of the data point. |
+| `Y` | Y value of the data point. |
+| `Text` | Value mapped through the `Name` property of `ChartDataLabel`. |
+| `SeriesName` | Name of the series the point belongs to. |
+| `SeriesIndex` | Index of the series the point belongs to. |
+| `PointIndex` | Index of the point within the series. |
+
+Use a template when the default label content is insufficient—for example, when you need to combine multiple values, apply rich formatting, or render inline HTML. Otherwise, use the built-in `Format`, `Name`, or `Template` placeholder options documented in [Blazor Charts Data Labels](data-labels.md).
+
+## Renaming the context parameter
+
+The `Template` exposes the implicit parameter as `context` by default. Set `Context` on `Template` to use a different name in your markup, as shown below.
 
 ```cshtml
 <ChartDataLabel Visible="true" Name="Text">
@@ -24,8 +43,10 @@ Text and interior information for a point can be bound from a datasource other t
         }
     </Template>
 </ChartDataLabel>
-  
+
 ```
+
+The following complete sample renders a styled two-cell label that shows the mapped `Text` value alongside the y value.
 
 ```cshtml
 
@@ -55,7 +76,7 @@ Text and interior information for a point can be bound from a datasource other t
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class Data
     {
         public string X { get; set; }
@@ -64,16 +85,20 @@ Text and interior information for a point can be bound from a datasource other t
     }
 
     public List<Data> SalesReports = new List<Data>
-	{
-       new Data{ X= "Jan", Y= 3, Text= "January" },
-       new Data{ X= "Feb", Y= 3.5, Text= "February" },
-       new Data{ X= "Mar", Y= 7, Text= "March" },
-       new Data{ X= "Apr", Y= 13.5, Text= "April" }
+    {
+        new Data{ X= "Jan", Y= 3, Text= "January" },
+        new Data{ X= "Feb", Y= 3.5, Text= "February" },
+        new Data{ X= "Mar", Y= 7, Text= "March" },
+        new Data{ X= "Apr", Y= 13.5, Text= "April" }
     };
 }
 
 ```
 
-![Blazor Chart Label with Template](images/data-label/blazor-chart-label-template.webp)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVntbWqzMDXOvXH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chart Label with Template](images/data-label/blazor-chart-label-template.webp)" %}
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+## See also
+
+* [Blazor Charts Data Labels](data-labels.md)
+* [ChartDataLabel API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html)
+* [ChartDataPointInfo API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataPointInfo.html)
