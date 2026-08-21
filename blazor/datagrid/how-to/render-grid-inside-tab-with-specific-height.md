@@ -14,8 +14,9 @@ By default, the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/b
 To ensure the Grid scrolls within the Tab content area (keeping the tab header fixed), override the Tab content height with CSS so the Grid receives a well-defined parent height.
 
 > Notes:
-- The parent container of the Tab must have an explicit height (for example, a fixed pixel height or a flex container with a resolved height).
-- The value used to subtract the tab header (36px below) is theme-dependent and may need adjustment based on the chosen theme and device density.
+> - The parent container of the Tab must have an explicit height or a resolved height from CSS layout (for example, a fixed pixel height or a flex container with a resolved height).
+> - The sample uses a fixed wrapper height of `500px` and a `36px` offset for the tab header. Adjust those values for the chosen theme, browser scaling, or different layout needs.
+> - If the theme or device density changes, measure the rendered tab header height and update the CSS offset accordingly.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -108,7 +109,7 @@ To ensure the Grid scrolls within the Tab content area (keeping the tab header f
 
 <style>
     /* Adjust the content area to fill available height below the tab header.
-       The 36px subtraction is an example and may differ by theme/density. */
+       The 36px subtraction is an example and may differ by theme or display scaling. */
     .e-tab > .e-content {
         height: calc(100% - 36px); /* tab height - tab header height */
     }
