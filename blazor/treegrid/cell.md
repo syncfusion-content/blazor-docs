@@ -9,73 +9,92 @@ documentation: ug
 
 # Cell Features in Blazor TreeGrid
 
-## Displaying the HTML content
+# Displaying HTML Content in Blazor TreeGrid
 
-The HTML tags can be displayed in the Tree Grid header and content by enabling the [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_DisableHtmlEncode) property.
+Displaying HTML content in the Blazor TreeGrid is useful when presenting formatted elements such as images, hyperlinks, or styled text within hierarchical tabular layouts. The TreeGrid supports rendering HTML tags in both header and content cells.
+
+By default, HTML content is encoded to prevent security vulnerabilities. To render raw HTML, set the [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_DisableHtmlEncode) property to **false**. This allows HTML tags to be displayed as intended within the cell.
+
+## Configuration Steps
+
+- Set `DisableHtmlEncode` to **false** in the column definition.  
+- Insert HTML tags such as `<img>`, `<a>`, or `<b>` directly into the cell content.  
+- Use a [Blazor Toggle Switch](https://www.syncfusion.com/blazor-components/blazor-toggle-switch-button) to dynamically control the encoding behavior.  
+- Handle the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event to update the column setting.  
+- Call the [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Refresh) method to apply the changes and re-render the TreeGrid.  
 
 {% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Buttons
 
-{% highlight razor %}
+<label> Enable or disable HTML Encode</label>
+<SfSwitch ValueChange="Change" TChecked="bool"></SfSwitch>
 
-@using TreeGridComponent.Data
-@using Syncfusion.Blazor.TreeGrid;
-
-<SfTreeGrid IdMapping="TaskId" DataSource="@TreeGridData" ParentIdMapping="ParentId" TreeColumnIndex="1">
+<SfTreeGrid @ref="TreeGrid" DataSource="@Tasks" TreeColumnIndex="1" IdMapping="TaskId" ParentIdMapping="ParentId" Height="315">
     <TreeGridColumns>
-        <TreeGridColumn Field="TaskId" HeaderText="<span> Task ID </span>" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="TaskName" HeaderText="<span> Task Name </span>" Width="160"></TreeGridColumn>
-        <TreeGridColumn Field="Duration" HeaderText="<span> Duration </span>" DisableHtmlEncode="false" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="Progress" HeaderText="<span> Progress </span>" DisableHtmlEncode="false" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field=@nameof(TreeData.BusinessObject.TaskId) HeaderText="Task ID" TextAlign="TextAlign.Right" Width="120"></TreeGridColumn>
+        <TreeGridColumn Field=@nameof(TreeData.BusinessObject.TaskName) HeaderText="<span> Task Name </span>" DisableHtmlEncode="@IsEncode" Width="180"></TreeGridColumn>
+        <TreeGridColumn Field=@nameof(TreeData.BusinessObject.StartDate) HeaderText="Start Date" Format="d" Width="140"></TreeGridColumn>
+        <TreeGridColumn Field=@nameof(TreeData.BusinessObject.Duration) HeaderText="Duration" Width="120"></TreeGridColumn>
+        <TreeGridColumn Field=@nameof(TreeData.BusinessObject.Progress) HeaderText="Progress" Width="120"></TreeGridColumn>
     </TreeGridColumns>
 </SfTreeGrid>
 
-@code{
-    public List<TreeData.BusinessObject> TreeGridData { get; set; }
+@code {
+    private SfTreeGrid<TreeData.BusinessObject> TreeGrid;
+    public bool IsEncode { get; set; } = true;
+    public List<TreeData.BusinessObject> Tasks { get; set; }
+
     protected override void OnInitialized()
     {
-        this.TreeGridData = TreeData.GetSelfDataSource().ToList();
+        Tasks = TreeData.GetSelfDataSource();
     }
-}
 
-{% endhighlight %}
-
-{% highlight c# %}
-
-namespace TreeGridComponent.Data {
-
-public class TreeData
+    private async Task Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> args)
     {
-        public class BusinessObject
-        {
-            public int TaskId { get; set;}
-            public string TaskName { get; set;}
-            public DateTime? StartDate { get; set;}
-            public int? Duration { get; set;}
-            public int? Progress { get; set;}
-            public int? ParentId { get; set;}
-        }
-
-        public static List<BusinessObject> GetSelfDataSource()
-        {
-            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",StartDate = new DateTime(2017, 10, 23),Duration = 10,Progress = 70,ParentId = null });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",StartDate = new DateTime(2017, 10, 23),Duration = 4,Progress = 80,ParentId = 1 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",StartDate = new DateTime(2017, 10, 24),Duration = 5,Progress = 65,ParentId = 2 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",StartDate = new DateTime(2017, 10, 25),Duration = 6,Progress = 77,ParentId = 3 });
-            return BusinessObjectCollection;
-        }
+        IsEncode = !args.Checked;
+        await TreeGrid.RefreshAsync();
     }
 }
-
 {% endhighlight %}
 
+{% highlight c# tabtitle="TreeData.cs" %}
+public class TreeData
+{
+    public class BusinessObject
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public int? Duration { get; set; }
+        public int? Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    public static List<BusinessObject> GetSelfDataSource()
+    {
+        List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
+        BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1, TaskName = "<b>Parent Task 1</b>", StartDate = new DateTime(2017, 10, 23), Duration = 10, Progress = 70, ParentId = null });
+        BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2, TaskName = "<b>Child Task 1</b>", StartDate = new DateTime(2017, 10, 23), Duration = 4, Progress = 80, ParentId = 1 });
+        BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3, TaskName = "<b>Child Task 2</b>", StartDate = new DateTime(2017, 10, 24), Duration = 5, Progress = 65, ParentId = 2 });
+        BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4, TaskName = "<b>Child Task 3</b>", StartDate = new DateTime(2017, 10, 25), Duration = 6, Progress = 77, ParentId = 3 });
+        return BusinessObjectCollection;
+    }
+}
+{% endhighlight %}
 {% endtabs %}
 
 ![Displaying HTML Content in Blazor TreeGrid Cell](images/blazor-treegrid-cell-with-html-content.webp)
 
+> * The [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_DisableHtmlEncode) property disables HTML encoding for the corresponding column in the DataGrid.
+> * When set to **false**, HTML tags in the column’s data are rendered as HTML.
+> * When set to **true**, HTML tags are encoded and displayed as plain text.
+> * Disabling HTML encoding introduces potential security vulnerabilities. Enable this feature only when using fully trusted and sanitized data sources.
+
 ## Customize cell styles
 
-The appearance of cells can be customized by using the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Query) event. The [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Query) event triggers for every cell. In that event handler, you can get **QueryCellInfoEventArgs** that contains the details of the cell.
+The appearance of cells can be customized by using the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_QueryCellInfo) event. The `QueryCellInfo` event triggers for every cell, and in the event handler, **QueryCellInfoEventArgs** provides the details of the cell.
 
 {% tabs %}
 
@@ -137,15 +156,15 @@ The appearance of cells can be customized by using the [QueryCellInfo](https://h
 
 namespace TreeGridComponent.Data {
 
-public class TreeData
+    public class TreeData
     {
-            public int TaskId { get; set;}
-            public string TaskName { get; set;}
-            public DateTime? StartDate { get; set;}
-            public int? Duration { get; set;}
-            public int? Progress { get; set;}
-            public string Priority { get; set;}
-            public int? ParentId { get; set;}
+        public int TaskId { get; set;}
+        public string TaskName { get; set;}
+        public DateTime? StartDate { get; set;}
+        public int? Duration { get; set;}
+        public int? Progress { get; set;}
+        public string Priority { get; set;}
+        public int? ParentId { get; set;}
        
         public static List<TreeData> GetSelfDataSource()
         {
@@ -172,9 +191,7 @@ public class TreeData
 
 ## Auto wrap
 
-The auto wrap allows the cell content of the tree grid to wrap to the next line when it exceeds the boundary of the cell width. The Cell Content wrapping works based on the position of white space between words. To enable auto wrap, set the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowTextWrap) property to **true**.
-
-Note: When a column width is not specified, then auto wrap of columns will be adjusted with respect to the tree grid's width.
+The auto wrap allows the cell content of the TreeGrid to wrap to the next line when it exceeds cell width. The Cell Content wrapping works based on the position of white space between words. To enable auto wrap, set the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowTextWrap) property to **true**.
 
 {% tabs %}
 
@@ -237,11 +254,13 @@ public class TreeData
 
 {% endtabs %}
 
-![Blaor TreeGrid with Auto Wrap](images/blazor-treegrid-auto-wrap.webp)
+![Blazor TreeGrid with Auto Wrap](images/blazor-treegrid-auto-wrap.webp)
+
+N> When a column width is not specified, that column's auto wrap will be adjusted with respect to the TreeGrid's width.
 
 ## Grid lines
 
-The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GridLines) have option to display cell border and it can be defined by the [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GridLines) property.
+The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GridLines) have option to display cell border and it can be defined by the `GridLines` property.
 
 The available modes of grid lines are:
 
@@ -257,7 +276,7 @@ The available modes of grid lines are:
 
 {% highlight razor %}
 
-@using TreeGridComponent.Data
+@using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
 
 <SfTreeGrid IdMapping="TaskId" ParentIdMapping="ParentId" DataSource="@TreeGridData"  TreeColumnIndex="1" GridLines="Syncfusion.Blazor.Grids.GridLine.None">
@@ -285,7 +304,7 @@ The available modes of grid lines are:
 
 namespace TreeGridComponent.Data {
 
-public class TreeData
+    public class TreeData
     {
         public class BusinessObject
         {
@@ -316,13 +335,13 @@ public class TreeData
 
 ![Blazor TreeGrid with Grid Lines](images/blazor-treegrid-with-grid-lines.webp)
 
-N> By default, the tree grid renders with **Default** mode.
+N> By default, the TreeGrid renders with **Default** mode.
 
 ## Clip Mode
 
 The clip mode provides options to display its overflow cell content and it can be defined by the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ClipMode) property.
 
-There are three types of [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ClipMode). They are:
+There are three types of `ClipMode`. They are:
 
 * **Clip**: Truncates the cell content when it overflows its area.
 * **Ellipsis**: Displays ellipsis when the cell content overflows its area.
@@ -332,7 +351,7 @@ There are three types of [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfu
 
 {% highlight razor %}
 
-@using TreeGridComponent.Data
+@using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
 
 <SfTreeGrid IdMapping="TaskId" ParentIdMapping="ParentId" DataSource="@TreeGridData"  TreeColumnIndex="1">
@@ -360,7 +379,7 @@ There are three types of [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfu
 
 namespace TreeGridComponent.Data {
 
-public class TreeData
+    public class TreeData
     {
         public class BusinessObject
         {
