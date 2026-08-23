@@ -31,7 +31,7 @@ In the `ShowTooltip` method, specify the following parameters programmatically t
 @inject HttpClient Http
 
 <div class="row">
-    <div class ="col">
+    <div class="col">
         <SfChart Title="USD to EUR" @ref="Chart1" Width="550">
             <ChartEvents ChartMouseMove="OnMouseEventChart1" ChartMouseUp="OnMouseLeaveChart1" ChartMouseDown="ChartMouseDown"></ChartEvents>
             <ChartArea>
@@ -122,23 +122,12 @@ In the `ShowTooltip` method, specify the following parameters programmatically t
         Chart1.ShowTooltip(args.MouseX, args.MouseY, false);       
     }
 
-    public void OnMouseLeaveChart1()
-    {
-        Chart2.HideTooltip();
-    }
-
-    public void OnMouseLeaveChart2()
-    {
-        Chart1.HideTooltip();
-    }
-
     public void OnMouseLeaveChart1(ChartMouseEventArgs args)
     {
         isTapHold = false;
         isTouch = false;
         isMouseMoveUpDetected = true;
-        Chart2.HideTooltip();            
-
+        Chart2.HideTooltip();
     }
 
     public void OnMouseLeaveChart2(ChartMouseEventArgs args)
