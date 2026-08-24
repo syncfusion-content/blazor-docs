@@ -9,17 +9,17 @@ documentation: ug
 
 # Column Rendering in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides flexible options to control how columns are rendered. Columns can be manually defined, automatically generated, or customized dynamically to ensure data is displayed as required.
+The [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides flexible options to control how columns are rendered. Columns can be manually defined, automatically generated, or customized dynamically to ensure data is displayed as required.
 
-Column definitions act as the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) schema for the Grid. Operations such as sorting, filtering, and grouping are performed based on these definitions. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property is essential for mapping `DataSource` values to Grid columns.
+Column definitions act as the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) schema for the Data Grid. Operations such as sorting, filtering, and grouping are performed based on these definitions. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property is essential for mapping `DataSource` values to Grid columns.
 
-> * If the column `Field` is not present in the `DataSource`, the column will display **empty** values.
+> * If the column `Field` is not present in the `DataSource`, the column displays **empty** values.
 > * If the `Field` name contains a **dot** operator, it is treated as complex binding.
 > * The `Field` property must be defined for a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) column to enable CRUD and data operations such as filtering and searching.
 
-## Define columns manually 
+## Define columns manually
 
-To define columns manually in Blazor DataGrid, use [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to specify each column and configure properties such as [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field), [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText), [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type), and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width). This approach provides full control over column behavior and appearance.
+To define columns manually in Blazor Data Grid, use [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to specify each column and configure properties such as [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field), [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText), [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type), and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width). This approach provides full control over column behavior and appearance.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -35,7 +35,6 @@ To define columns manually in Blazor DataGrid, use [GridColumn](https://help.syn
 </SfGrid>
 
 @code {
-   private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
        
     protected override void OnInitialized()
@@ -92,7 +91,7 @@ To define columns manually in Blazor DataGrid, use [GridColumn](https://help.syn
 
 ## Auto generated columns
 
-The Blazor DataGrid automatically generates columns when the `Columns` collection is not defined during Grid initialization. All properties in the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) are rendered as Grid columns.
+The Blazor Data Grid automatically generates columns when no `GridColumn` definitions are provided in the Data Grid during initialization. All properties in the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) are rendered as Grid columns.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -155,15 +154,16 @@ The Blazor DataGrid automatically generates columns when the `Columns` collectio
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZLHtGjCfTJzsODc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * When columns are auto-generated, the column [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) is determined from the first record of the `DataSource`.
+> * When the `DataSource` is `null` or empty, no data rows or auto-generated columns are rendered because no first record is available.
 > * For large datasets, auto-generating columns can impact performance. In such cases, it is recommended to define columns manually or enable column virtualization by setting [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization) to **true**.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=f7OIzUM0e7Y"%}
 
 ### Configure primary key for auto-generated columns
 
-When editing is enabled in the Grid, a primary key must be set for auto-generated columns to uniquely identify each row for operations such as updating or deleting data. This can be achieved by using the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) object in the [OnDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnDataBound)  event.
+When editing is enabled in the Data Grid, a primary key must be set for auto-generated columns to uniquely identify each row for operations such as updating or deleting data. This can be achieved by using the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) object in the [OnDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnDataBound) event.
 
-Setting `IsPrimaryKey` to **true** for an auto-generated column ensures that the Grid can identify rows uniquely when editing is enabled.
+Setting `IsPrimaryKey` to **true** for an auto-generated column ensures that the Data Grid can identify rows uniquely when editing is enabled.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -184,7 +184,11 @@ Setting `IsPrimaryKey` to **true** for an auto-generated column ensures that the
     }   
     public void DataBoundHandler(BeforeDataBoundArgs<OrderData> args)
     {
-        Grid.Columns[0].IsPrimaryKey = true;
+        var primaryKeyColumn = Grid.Columns.FirstOrDefault(column => column.Field == nameof(OrderData.OrderID));
+        if (primaryKeyColumn != null)
+        {
+            primaryKeyColumn.IsPrimaryKey = true;
+        }
     }
 }
 {% endhighlight %}
@@ -232,7 +236,7 @@ Setting `IsPrimaryKey` to **true** for an auto-generated column ensures that the
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhdjmjMzJfnfbuz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVnDFhJeFxQBOtu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Configure column options for auto-generated columns
 
@@ -326,7 +330,7 @@ Column options such as [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 ## Dynamic column generation
 
-The Blazor DataGrid supports generating columns dynamically at runtime based on the data structure. This approach is useful when the column set changes depending on the data source or when working with flexible models. Columns can be created using reflection or dynamic objects in scenarios where the schema is not fixed.
+The Blazor Data Grid supports generating columns dynamically at runtime based on the data structure. This approach is useful when the column set changes depending on the data source or when working with flexible models. Columns can be created using reflection or dynamic objects in scenarios where the schema is not fixed.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -405,7 +409,6 @@ Columns can be generated dynamically at runtime by binding data as a list of [Ex
 {% highlight razor tabtitle="Index.razor" %}
 @using System.Dynamic
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Buttons
 
 <SfGrid TValue="ExpandoObject" DataSource=@GridData>
     <GridColumns>
@@ -429,13 +432,13 @@ Columns can be generated dynamically at runtime by binding data as a list of [Ex
         var ColCount = random.Next(2, 6);
         var ColNames = new string[ColCount];
 
-        // Generate random number of columns.
+        // Generate a random number of columns.
         for (var col = 0; col < ColCount; col++)
         {
             ColNames[col] = "Col" + random.Next(0, 5000);
         }
         
-        // Generate 25 rows based on the generated columns name.
+        // Generate 25 rows based on the generated column names.
         for (var row = 0; row < 25; row++)
         {
             dynamic item = new ExpandoObject();
@@ -454,20 +457,20 @@ Columns can be generated dynamically at runtime by binding data as a list of [Ex
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtLdZGtspJdiatcD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Complex data generation
+## Complex data binding
 
-The Blazor DataGrid supports complex data binding using the **dot (.)** operator in the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property. This feature is useful for displaying nested or hierarchical data structures.
+The Blazor Data Grid supports complex data binding using the **dot (.)** operator in the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property. This feature is useful for displaying nested or hierarchical data structures.
 
 ### Using local data
 
-To bind local data to the Grid using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, use the **dot (.)** operator in the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
+To bind local data to the Data Grid using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, use the **dot (.)** operator in the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
 This approach is helpful for binding nested properties like **Employee.FirstName** and **Employee.LastName** from a nested **Employee** object.
 
 > The **nameof** operator can also be used for complex columns instead of assigning static text for the `Field` property:
 
 > ```cshtml
-> <GridColumn Field="@(nameof(EmployeeData.EmployeeName) + "." + nameof(EmployeeName.FirstName))" HeaderText="First Name" Width="150"></GridColumn>
+> <GridColumn Field="@(nameof(EmployeeData.Name) + "." + nameof(EmployeeName.FirstName))" HeaderText="First Name" Width="150"></GridColumn>
 > ```
 
 {% tabs %}
@@ -478,7 +481,7 @@ This approach is helpful for binding nested properties like **Employee.FirstName
     <GridColumns>
         <GridColumn Field=@nameof(EmployeeData.EmployeeID) HeaderText="EmployeeID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field="Name.FirstName" HeaderText="First Name" Width="150"></GridColumn>
-        <GridColumn Field="Name.LastName" HeaderText="Last Name"Width="130"></GridColumn>
+        <GridColumn Field="Name.LastName" HeaderText="Last Name" Width="130"></GridColumn>
         <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -518,11 +521,11 @@ This approach is helpful for binding nested properties like **Employee.FirstName
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLnDGNWTfnlDaeV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-###  Using remote data
+### Using remote data
 
 When using remote data, configure data operations through [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which handles data retrieval, paging, sorting, and other operations from the remote service.
 
-Complex data binding can be enabled by adding the [Expand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html#Syncfusion_Blazor_Data_Query_Expand_System_Collections_Generic_List_System_String__) query to the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property of the Grid to eager load nested data.
+Complex data binding can be enabled by adding the [Expand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html#Syncfusion_Blazor_Data_Query_Expand_System_Collections_Generic_List_System_String__) query to the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property of the Data Grid to eager-load nested data.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -535,14 +538,14 @@ Complex data binding can be enabled by adding the [Expand](https://help.syncfusi
     <GridColumns>
         <GridColumn Field=@nameof(EmployeeData.OrderID) TextAlign="TextAlign.Center" HeaderText="Order ID" Width="120"></GridColumn>
         <GridColumn Field=@nameof(EmployeeData.CustomerID) TextAlign="TextAlign.Center" HeaderText="Customer Name" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.ShipCity) TextAlign="TextAlign.Center" HeaderText="ShipCity" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.ShipCity) TextAlign="TextAlign.Center" HeaderText="Ship City" Width="120"></GridColumn>
         <GridColumn Field="Employee.City" TextAlign="TextAlign.Center" HeaderText="City" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
 
-    private Query GridQuery= new Query().Expand(new List<string> { "Employee" });
+    private Query GridQuery = new Query().Expand(new List<string> { "Employee" });
     public class EmployeeData
     {
         public int OrderID { get; set; }
@@ -578,7 +581,7 @@ Complex data binding can be achieved by using the **dot (.)** operator in the [F
         <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field="CustomerID.Name" HeaderText="Customer Name" Width="120"></GridColumn>
         <GridColumn Field="Freight" HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field="OrderDate" HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
         <GridColumn Field="ShipCountry.Country" HeaderText="Ship Country"  Width="150"></GridColumn>
         <GridColumn Field="Verified" HeaderText="Active" DisplayAsCheckBox="true" Width="150"></GridColumn>
     </GridColumns>
@@ -612,13 +615,11 @@ Complex data binding can be achieved by using the **dot (.)** operator in the [F
 {% endhighlight %}
 {% endtabs %}
 
-> * Data operations and CRUD operations are supported for complex DynamicObject binding fields.
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNhdNmNspTQolWPD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Complex data generation using DynamicObject
 
-[DynamicObject](https://blazor.syncfusion.com/documentation/datagrid/column-rendering#complex-data-generation-using-dynamicobject) is used when custom logic for property access or dynamic behavior is required.
+[DynamicObject](https://blazor.syncfusion.com/documentation/datagrid/data-binding/local-data#dynamicobject-binding) is used when custom logic for property access or dynamic behavior is required.
 
 Complex data binding can be achieved by using the **dot (.)** operator in the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field)  property when working with DynamicObject.
 
@@ -662,6 +663,8 @@ Complex data binding can be achieved by using the **dot (.)** operator in the [F
     {
         Dictionary<string, object> dictionary = new Dictionary<string, object>();
 
+        // Data Grid enumeration requires GetDynamicMemberNames; TryGetMember reads values; TrySetMember writes edited values.
+
         public override bool TryGetMember(GetMemberBinder binder, out object result)
         {
             string name = binder.Name;
@@ -682,27 +685,26 @@ Complex data binding can be achieved by using the **dot (.)** operator in the [F
 {% endhighlight %}
 {% endtabs %}
 
-> * Data operations and CRUD operations can also be performed on complex DynamicObject binding fields.
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXLdtQNWTplGgeNg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### How to set complex column as foreign key column
+> * Data operations and CRUD operations are supported for complex ExpandoObject and DynamicObject binding fields.
 
-The Blazor DataGrid supports using complex columns as foreign key columns. This enables related data from a [ForeignDataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridForeignColumn-1.html#Syncfusion_Blazor_Grids_GridForeignColumn_1_ForeignDataSource) to be displayed based on the value of a complex column.
+### Set a complex column as a foreign key column
+
+The Blazor Data Grid supports using complex columns as foreign key columns. Related data from a [ForeignDataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridForeignColumn-1.html#Syncfusion_Blazor_Grids_GridForeignColumn_1_ForeignDataSource) can be displayed based on the value of a complex column. See [Foreign Key Columns](https://blazor.syncfusion.com/documentation/datagrid/foreignkey-column) for supported operations and limitations.
 
 In this configuration, the **Employee.EmployeeID** column is set as a foreign key column, and the **FirstName** field from the foreign data source is displayed.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using System.Dynamic
 
 <p>Complex data binding with foreign data source</p>
 
 <SfGrid DataSource="@Orders" Height="315">
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Width="120"></GridColumn>
-        <GridForeignColumn Field=Employee.EmployeeID HeaderText="Employee Name" ForeignKeyValue="FirstName" ForeignKeyField="EmployeeID" ForeignDataSource="@Employees1" Width="150"></GridForeignColumn>
+        <GridForeignColumn Field="Employee.EmployeeID" HeaderText="Employee Name" ForeignKeyValue="FirstName" ForeignKeyField="EmployeeID" ForeignDataSource="@Employees1" Width="150"></GridForeignColumn>
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="120"></GridColumn>
     </GridColumns>
