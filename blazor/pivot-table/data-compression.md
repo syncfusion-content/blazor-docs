@@ -1,24 +1,23 @@
 ---
 layout: post
 title: Data Compression in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table compresses unique raw records to speed up rendering of large datasets when paired with virtual scrolling.
+description: Learn how the Blazor Pivot Table compresses repeated members in rows and columns to reduce render time on large relational data sources.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Data Compression in Blazor Pivot Table
+# Data compression in Blazor Pivot Table
 
 > This property is applicable only for the relational data source.
 
-When binding large volumes of raw data, the pivot table processes all raw data to generate aggregated data during initial rendering and report manipulation. However, with data compression enabled, the input raw data is compressed based on the uniqueness of the raw data, and the final compressed raw data is utilized by the pivot table. The compressed raw data is then used for all subsequent operations, reducing the looping complexity and improving the performance of the pivot table. For example, if the pivot table connects to one million raw data records that compress to 1,000 unique raw data records, it will render significantly faster—potentially within 3 seconds rather than 10 seconds, depending on the data complexity and system performance. Enable this option by using the [AllowDataCompression](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowDataCompression) property along with [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_EnableVirtualization) property.
-
-> N> This option will only function when the virtual scrolling is enabled.
+When binding large volumes of raw data, the pivot table processes all raw data to generate aggregated data during initial rendering and report manipulation. However, with data compression enabled, the input raw data is compressed based on its unique values, and the pivot table uses the final compressed raw data. The compressed raw data is then used for all subsequent operations, reducing the looping complexity and improving the performance of the pivot table. For example, if the pivot table connects to one million raw data records that compress to 1,000 unique raw data records, it will render significantly faster—potentially within 3 seconds rather than 10 seconds, depending on the data complexity and system performance. Enable this option by setting [AllowDataCompression](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowDataCompression) 
+to **true** on the Pivot Table component.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
-<SfPivotView TValue="ProductDetails" Width="800" Height="300" EnableVirtualization="true" AllowDataCompression="true">
+<SfPivotView TValue="ProductDetails" Width="800" Height="300"  AllowDataCompression="true">
     <PivotViewDataSourceSettings DataSource="@data">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
