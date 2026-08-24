@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sorting in Blazor DropDownList component | Syncfusion®
+title: Sorting in Blazor DropDown List component | Syncfusion®
 description: Checkout and learn here all the features about Sorting in Blazor DropDown List component and much more details.
 platform: Blazor
 control: DropDownList

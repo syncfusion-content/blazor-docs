@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Multicolumn in Blazor DropDownList Component | Syncfusion®
+title: Multicolumn in Blazor DropDown List Component | Syncfusion®
 description: Checkout and learn here all about Multicolumn in Blazor DropDown List component and much more details.
 platform: Blazor
 control: DropDownList

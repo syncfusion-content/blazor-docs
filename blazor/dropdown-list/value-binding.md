@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Value binding in Blazor DropDownList component | Syncfusion®
+title: Value binding in Blazor DropDown List component | Syncfusion®
 description: Checkout and learn here all about Value Binding in Blazor DropDown List component and much more details.
 platform: Blazor
 control: DropDownList

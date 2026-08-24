@@ -378,7 +378,7 @@ Use [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
 
 ### Getting datasource using instance
 
-To retrieve the data source from a Blazor DropDownList component, you can access the `DataSource` property of the component instance. An example of how this can be done is by binding the component to a list of objects as its data source and then, in the button click event, calling the `GetDataSource` method which in turn retrieves the data source by accessing the DataSource property of the DropDownList instance.
+To retrieve the data source from a Blazor DropDown List component, you can access the `DataSource` property of the component instance. An example of how this can be done is by binding the component to a list of objects as its data source and then, in the button click event, calling the `GetDataSource` method which in turn retrieves the data source by accessing the DataSource property of the DropDownList instance.
 
 {% highlight cshtml %}
 
@@ -388,7 +388,7 @@ To retrieve the data source from a Blazor DropDownList component, you can access
 
 ### Getting datasource using variable
 
-To obtain the data source for a Blazor DropDownList using a variable, you can define a variable in your component to hold the data source, and then use this variable to access the data source. In this example, the `GetDataSource` method is triggered when the button is clicked. This method retrieves the data source for the DropDownList by accessing the Countries variable, which holds the list of countries for the DropDownList.
+To obtain the data source for a Blazor DropDown List using a variable, you can define a variable in your component to hold the data source, and then use this variable to access the data source. In this example, the `GetDataSource` method is triggered when the button is clicked. This method retrieves the data source for the DropDownList by accessing the Countries variable, which holds the list of countries for the DropDownList.
 
 {% highlight cshtml %}
 
