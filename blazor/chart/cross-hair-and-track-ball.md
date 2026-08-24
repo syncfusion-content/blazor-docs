@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Blazor Charts Crosshair and Trackball | Syncfusion®
 description: Learn how to enable crosshair and trackball in Syncfusion Blazor Charts. Inspect data points with a tooltip on mouse move or touch.

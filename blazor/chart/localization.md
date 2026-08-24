@@ -57,13 +57,11 @@ app.UseRequestLocalization();
 
 Add a `.resx` file under `Resources/` named `Syncfusion.Blazor.Charts.{culture}.resx` (for example, `Syncfusion.Blazor.Charts.fr-FR.resx`) and provide translated values for each chart string.
 
-N> **Prerequisites:** Localization requires the [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts/) NuGet package and the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) base package. It works in Blazor Server, Blazor WebAssembly, and Blazor Hybrid (.NET MAUI) apps on .NET 6.0 or later.
-
 N> **Troubleshooting:** If translated text does not appear, verify that the `ResourcesPath` matches the folder containing your `.resx` files, that the resource file is named exactly `Syncfusion.Blazor.Charts.{culture}.resx`, and that the request culture is being applied (check `app.UseRequestLocalization()` is called before `app.UseRouting()`).
 
 ## Right-to-Left (RTL) rendering
 
-The chart supports right-to-left rendering for languages such as Arabic and Hebrew. Enable RTL by setting the chart's `EnableRtl` property to `true` and applying the matching `dir="rtl"` attribute on the host page.
+The chart supports right-to-left rendering for languages such as Arabic and Hebrew. Enable RTL by setting the chart's `EnableRtl` property to `true` and configuring the host page with a right-to-left text direction (set the document's direction to RTL, e.g., `<html dir="rtl" lang="ar">`).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
