@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hyperlink in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table adds hyperlinks to row, column, and value cells through hyperlinkSettings for interactive navigation and drill-through.
+description: Learn how the Blazor Pivot Table adds hyperlinks to row, column, and value cells through PivotViewHyperlinkSettings for interactive navigation and drill-through.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -416,7 +416,7 @@ The pivot table triggers the [`HyperlinkCellClicked`](https://help.syncfusion.co
 
 It provides the following parameters:
 
-** [`CurrentCell`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_CurrentCell) (`DOM`): Refers to the clicked cell element, which can be modified as needed.
+* [`CurrentCell`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_CurrentCell) (`DOM`): Refers to the clicked cell element, which can be modified as needed.
 * [`Cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_Cancel) (`boolean`): If set to **true**, prevents athe default click behavior from running (for example, navigation). Set to **false** to let the click proceed normally and your custom code run in addition.
 * [`Data`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_Data) (`object`): Contains detailed information about the clicked cell, including its value, row and column headers, position, and whether it is a summary cell.
 * [`NativeEvent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_NativeEvent) (`object`): Represents the original browser event triggered by the click, useful for advanced event handling.

@@ -2146,7 +2146,6 @@ The [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 ```
 
 ### OnActionFailure
-### ActionFailure
 
 The [`OnActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionFailure)  event occurs when a user action in the Pivot Table does not complete as expected. This event helps users understand what went wrong during interactions with the grouping bar.
 

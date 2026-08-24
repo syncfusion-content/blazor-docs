@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to customize the Pivot Table loading indicator | Syncfusion
-description: Step-by-step example showing how to customize the loading indicator in the Blazor  Pivot Table using the spinnerTemplate property.
+description: Step-by-step example showing how to customize the loading indicator in the Blazor  Pivot Table using the SpinnerTemplate property.
 platform: Blazor
 control: Pivot Table
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Performance Tips in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table handles large datasets and complex reports with performance tips like virtual scrolling, paging, and data compression.
+description: Learn how the Blazor Pivot Table handles large datasets and complex reports with performance tips like virtual scrolling, paging, and a server-side engine.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -31,7 +31,7 @@ Refer to the below documentation:
 
 ### Virtual scrolling
 
-Virtual scrolling improves the performance of the Pivot Table when working with large datasets by only displaying the rows and columns that are currently visible in the viewport. This approach reduces initial load time and memory usage, as the control processes only the data currently in view. As you scroll vertically or horizontally, additional data loads automatically in the background. For detailed guidance on implementing virtual scrolling in the Pivot Table, see the [virtual scrolling](https://blazor.syncfusion.com/documentation/pivot-table/virtual-scrolling) topic.
+Virtual scrolling improves the performance of the Pivot Table when working with large datasets by only displaying the rows and columns that are currently visible in the viewport. This approach reduces initial load time and memory usage, as the control processes only the data currently in view. As you scroll vertically or horizontally, additional data loads automatically in the background. For detailed guidance on implementing virtual scrolling in the Pivot Table, see the [Virtual Scrolling](https://blazor.syncfusion.com/documentation/pivot-table/virtual-scrolling) topic.
 
 ### Paging
 
@@ -62,7 +62,7 @@ For more information on implementing the server-side engine in the Pivot Table, 
 
 ### Data compression
 
-If your input raw data contains a large number of repeated records, the data compression option becomes particularly useful. Refer to the [data compression](./data-compression) topic for the exact property name and configuration.
+If your input raw data contains a large number of repeated records, the data compression option becomes particularly useful. Refer to the [Data compression](./data-compression) topic for the exact property name and configuration.
 
 In this approach, based on the pivot report defined in the data source settings and with the data compression option enabled, all the input raw data is initially iterated. Repetitive records are then summarized, reducing the overall input data for all further pivot calculations. For example, if there are 1000 records with 400 records being repeated, data compression will clean up and result in 600 unique records for every future pivot calculation. Now consider the impact with one million records and how useful it will be.
 
@@ -88,7 +88,7 @@ Once the input raw data is arranged as needed and the Pivot Table is rendered, i
 
 ### Member filtering
 
-When working with large datasets, set a display limit for members in the filter dialog UI using the [`MaxNodeLimitInMemberEditor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_MaxNodeLimitInMemberEditor) property on each filter. This allows the filter dialog to quickly show members up to the specified limit without facing performance issues. If there are more members beyond this limit, a message displaying the count of remaining members appears at the bottom of the filter dialog UI. End users can then access the remaining members using the search option provided in the filter dialog at runtime. For detailed instructions on implementing the node limit in the filter dialog UI, refer to the [filtering performance tips](./filtering#performance-tips) section.
+When working with large datasets, set a display limit for members in the filter dialog UI using the [`MaxNodeLimitInMemberEditor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_MaxNodeLimitInMemberEditor) property on each filter. This allows the filter dialog to quickly show members up to the specified limit without facing performance issues. If there are more members beyond this limit, a message displaying the count of remaining members appears at the bottom of the filter dialog UI. End users can then access the remaining members using the search option provided in the filter dialog at runtime. For detailed instructions on implementing the node limit in the filter dialog UI, refer to the [Filtering performance tips](./filtering#performance-tips) section.
 
 ### Grouping
 

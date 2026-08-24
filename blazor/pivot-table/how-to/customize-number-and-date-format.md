@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to customize number and date values in Pivot Table | Syncfusion
-description: Step-by-step example showing how to customize number and date values in the Blazor Pivot Table using formatSettings and culture.
+description: Step-by-step example showing how to customize number and date values in the Blazor Pivot Table using PivotViewFormatSettings and culture.
 platform: Blazor
 control: Pivot Table
 documentation: ug

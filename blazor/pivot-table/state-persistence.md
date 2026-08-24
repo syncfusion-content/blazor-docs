@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State Persistence in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table retains the current report, filters, and expanded state across browser refreshes using enablePersistence.
+description: Learn how the Blazor Pivot Table retains the current report, filters, and expanded state across browser refreshes using EnablePersistence.
 platform: Blazor
 control: Pivot Table
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Virtual Scrolling in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table renders only the rows and columns visible in the viewport using enableVirtualization, for efficient large-dataset rendering.
+description: Learn how the Blazor Pivot Table renders only the rows and columns visible in the viewport using EnableVirtualization, for efficient large-dataset rendering.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -167,8 +167,8 @@ To optimize performance, set the [AllowSinglePage](https://help.syncfusion.com/c
 * In virtual scrolling, the [ColumnWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_ColumnWidth) property in [GridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) must be in pixels; percentage values are not accepted.
 * Features such as auto fit, column resizing, text wrapping, and setting column widths through events can dynamically affect the row height and column width at runtime. These changes are not considered in the scroller calculations, particularly with large datasets, which can cause performance issues. It is not recommended to use these features alongside virtualization.
 * Grouping, which takes additional time to split raw items into the provided format.
-* Date formatting, which takes additional time to convert date format.
-* Date formatting with sorting requires the full date-time format to perform sorting along with the provided date format, which lags performance.
+* Date Formatting, which takes additional time to convert date format.
+* Date Formatting with sorting requires the full date-time format to perform sorting along with the provided date format, which lags performance.
 * When using OLAP data, subtotals and grand totals are only displayed when measures are bound at the last position in the [rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Rows) or [columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Columns) axis. Otherwise, the Pivot Table will show data without summary totals.
 * Even with virtual scrolling, the current viewport data plus the immediate previous and next pages are all retrieved. As a result, when the user scrolls slightly ahead or behind, the next or previous page data is shown immediately. **Note:** Large `Width` and `Height` values increase the loading count across the current, previous, and next viewport, which can affect performance.
 

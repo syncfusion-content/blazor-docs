@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to hide empty headers in Blazor Pivot Table | Syncfusion
-description: Step-by-step example showing how to hide empty headers in the Blazor Pivot Table by setting showHeaderWhenEmpty to false.
+description: Step-by-step example showing how to hide empty headers in the Blazor Pivot Table by setting ShowHeaderWhenEmpty  to false.
 platform: Blazor
 control: Pivot Table
 documentation: ug

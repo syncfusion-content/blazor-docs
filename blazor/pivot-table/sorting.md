@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table sorts row and column members in ascending, descending, or custom order using the sortSettings property.
+description: Learn how the Blazor Pivot Table sorts row and column members in ascending, descending, or custom order using the PivotViewSortSettings property.
 platform: Blazor
 control: Pivot Table
 documentation: ug

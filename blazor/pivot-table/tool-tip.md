@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table shows contextual tooltips on value cells and headers, with the showTooltip property to enable or disable them.
+description: Learn how the Blazor Pivot Table shows contextual tooltips on value cells and headers, with the ShowTooltip property to enable or disable them.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -54,8 +54,8 @@ When you create a custom tooltip template, you gain access to the [PivotTooltipT
 
 * **`RowHeaders`**: Displays the row headers for the selected value cell.
 * **`ColumnHeaders`**: Displays the column headers for the selected value cell.
-* **`RowFields`**:Displays the row fields of the selected value cell.
-* **`ColumnFields`**:Displays the column fields of the selected value cell.
+* **`RowFields`**: Displays the row fields of the selected value cell.
+* **`ColumnFields`**: Displays the column fields of the selected value cell.
 * **`ValueField`**: Displays the value field name of the selected cell.
 * **`AggregateType`**: Specifies the aggregate type of the selected value cell.
 * **`Value`**: Displays the formatted value of the selected value cell.

@@ -31,7 +31,7 @@ The following features require the `style-src 'unsafe-inline'` directive. They a
 
 ### 1. Pivot chart integration
 
-When you enable the integrated Pivot Chart view (via the toolbar's Chart toggle or `<PivotViewDisplayOption View="View.Chart" />`), the chart applies dynamic inline styles for chart rendering, positioning, legends, tooltips, and responsive layout adjustments. The chart's tooltip, legend, and data-label popups are also rendered with inline styles, so they will be hidden or unstyled under a strict CSP.
+When you enable the integrated Pivot Chart view (via the `ShowToolbar` Chart toggle or `<PivotViewDisplayOption View="View.Chart" />`), the chart applies dynamic inline styles for chart rendering, positioning, legends, tooltips, and responsive layout adjustments. The chart's tooltip, legend, and data-label popups are also rendered with inline styles, so they will be hidden or unstyled under a strict CSP.
 
 ### 2. Conditional formatting
 
