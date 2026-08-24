@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Virtualization in Blazor DropDownList component | Syncfusion®
+title: Virtualization in Blazor DropDown List component | Syncfusion®
 description: Checkout and learn here all about Virtualization in Blazor DropDown List component and much more details.
 platform: Blazor
 control: DropDownList
@@ -9,7 +9,7 @@ documentation: ug
 
 # Virtualization in DropDown List
 
-To get started quickly with virtualization in the Blazor DropDownList component, watch the video below.
+To get started quickly with virtualization in the Blazor Dropdown List component, watch the video below.
 
 {% youtube "https://www.youtube.com/watch?v=ysctYSeGZYE" %}
 

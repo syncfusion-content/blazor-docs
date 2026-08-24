@@ -7,9 +7,9 @@ control: DropDownList
 documentation: ug
 ---
 
-# Form Validation in Dropdown List
+# Form Validation in DropDown List
 
-This article explains how to use the Blazor DropDownList component in a validated form. It shows how to bind to a model, apply data annotations, and display validation errors so the form can be submitted only when required fields are valid.
+This article explains how to use the Blazor DropDown List component in a validated form. It shows how to bind to a model, apply data annotations, and display validation errors so the form can be submitted only when required fields are valid.
 
 ## Dropdown List inside edit form
 
