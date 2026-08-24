@@ -24,10 +24,8 @@ An axis can be positioned in the chart area using [CrossesAt](https://help.syncf
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" CrossesAt="3"/>
-
-    <ChartPrimaryYAxis CrossesAt="30"/>
-
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" CrossesAt="15"/>
+    <ChartPrimaryYAxis CrossesAt="5"/>
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="ChartSeriesType.Column"/>
     </ChartSeriesCollection>
@@ -182,7 +180,7 @@ The width, color, and height (size) of the minor and major tick lines can be cus
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVnZFiqKBzZCsMp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column Chart with Custom Tick Lines](images/axis-customization/blazor-column-chart-custom-tick-lines.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBdZlhTzeSnxMFz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column Chart with Custom Tick Lines](images/axis-customization/blazor-column-chart-custom-tick-lines.webp)" %}
 
 ## Grid lines customization
 
@@ -190,41 +188,42 @@ The width, color, and dash array of the minor and major grid lines can be custom
 
 ```cshtml
 
+
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Double" MinorTicksPerInterval="2">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" MinorTicksPerInterval="2">
         <ChartAxisMajorGridLines Width="5" Color="blue"/>
         <ChartAxisMinorGridLines Width="0.5" Color="red"/>
     </ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="ChartSeriesType.Column"/>
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="ChartSeriesType.Column"/>        
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
-        public double X { get; set; }
+        public string X { get; set; }
         public double YValue { get; set; }
     }
-
+	
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
-        new ChartData { X= 1, YValue= 46 },
-        new ChartData { X= 2, YValue= 27 },
-        new ChartData { X= 3, YValue= 26 },
-        new ChartData { X= 4, YValue= 23 },
-        new ChartData { X= 5, YValue= 16 },
-        new ChartData { X= 6, YValue= 36 },
-        new ChartData { X= 7, YValue= 12 },
-        new ChartData { X= 8, YValue= 20 },
+        new ChartData { X= "USA", YValue= 46 },
+        new ChartData { X= "GBR", YValue= 27 },
+        new ChartData { X= "CHN", YValue= 26 },
+        new ChartData { X= "UK", YValue= 23 },
+        new ChartData { X= "AUS", YValue= 16 },
+        new ChartData { X= "IND", YValue= 36 },
+        new ChartData { X= "DEN", YValue= 12 },
+        new ChartData { X= "MEX", YValue= 20 },
     };
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBRtvsKqhxsxeyJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column Chart with Custom GridLines](images/axis-customization/blazor-column-chart-custom-gridline.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBRNvVTzygydBVx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column Chart with Custom GridLines](images/axis-customization/blazor-column-chart-custom-gridline.webp)" %}
 
 ## Multiple Axis
 

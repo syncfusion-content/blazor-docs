@@ -20,20 +20,17 @@ Add a [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>    
-
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>
     <ChartPrimaryYAxis>
         <ChartStriplines>
-            <ChartStripline Start="28" End="30" Color="red"/>
-            <ChartStripline Start="33" End="35" Color="blue"/>
+            <ChartStripline Start="20" End="25" Color="red"/>
+            <ChartStripline Start="32" End="35" Color="blue"/>
         </ChartStriplines>
     </ChartPrimaryYAxis>
-
     <ChartSeriesCollection>
         <ChartSeries Type="ChartSeriesType.Column" DataSource="@WeatherReports" XName="X" YName="Y">
         </ChartSeries>
     </ChartSeriesCollection>
-
 </SfChart>
 
 @code {
@@ -56,7 +53,7 @@ Add a [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthnDbikJNbpXIze?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chart with Horizontal Striplines](images/strip-line/blazor-chart-horizontal-strip-line.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBnXvBpTcQXnwbg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chart with Horizontal Striplines](images/strip-line/blazor-chart-horizontal-strip-line.webp)" %}
 
 ## Vertical striplines
 
