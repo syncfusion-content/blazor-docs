@@ -9,7 +9,18 @@ documentation: ug
 
 # Getting Started with Blazor Message
 
-This section briefly explains about how to include [Blazor Message](https://www.syncfusion.com/blazor-components/blazor-message) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+
+The Blazor Message component is used to display contextual information, status updates, success confirmations, warnings, and error messages within an application. It helps communicate important information to users in a clear and visually distinct manner without interrupting their workflow.
+
+Common use cases include:
+
+- Displaying informational messages and guidance.
+- Showing success confirmations after completing an action.
+- Alerting users about warnings or potential issues.
+- Presenting error messages when an operation fails.
+- Providing application status or contextual feedback.
+
+This section briefly explains how to include the [Blazor Message](https://www.syncfusion.com/blazor-components/blazor-message) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -173,11 +184,6 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 @using Syncfusion.Blazor.Notifications
 
 <SfMessage>Please read the comments carefully</SfMessage>
-<style>
-    .e-message {
-        width: 300px;
-    }
-</style>
 
 {% endhighlight %}
 {% endtabs %}
@@ -188,7 +194,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Message component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The [Blazor Message](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html) component will render in your default web browser.
 
 {% endtabcontent %}
 

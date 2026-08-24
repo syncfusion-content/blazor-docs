@@ -9,6 +9,16 @@ documentation: ug
 
 # Getting Started with Blazor Message
 
+The Blazor Message component is used to display contextual information, status updates, success confirmations, warnings, and error messages within an application. It helps communicate important information to users in a clear and visually distinct manner without interrupting their workflow.
+
+Common use cases include:
+
+- Displaying informational messages and guidance.
+- Showing success confirmations after completing an action.
+- Alerting users about warnings or potential issues.
+- Presenting error messages when an operation fails.
+- Providing application status or contextual feedback.
+
 This section briefly explains how to include [Blazor Message](https://www.syncfusion.com/blazor-components/blazor-message) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WebAssembly App
@@ -162,14 +172,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Notifications
-
 <SfMessage>Please read the comments carefully</SfMessage>
-<style>
-    .e-message {
-        width: 300px;
-    }
-</style>
 
 {% endhighlight %}
 {% endtabs %}
@@ -180,7 +183,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Message component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The [Blazor Message](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html) component will render in your default web browser.
 
 {% endtabcontent %}
 
