@@ -11,7 +11,7 @@ documentation: ug
 
 ## Title
 
-The title of the [Blazor Bullet Chart](https://www.syncfusion.com/blazor-components/blazor-bullet-chart) displays the information about the data plotted by specifying it in the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Title) property.
+The [Blazor Bullet Chart](https://www.syncfusion.com/blazor-components/blazor-bullet-chart) title describes the plotted data. Specify the title using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Title) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -55,13 +55,13 @@ To show additional information about the data plotted, the Bullet Chart can also
 </SfBulletChart>
 ```
 
-N> Refer to the [code block](#title) to know about the property value of the **BulletChartData**.
+N> Refer to the [code block](#title) for the **BulletChartData** data model and definition. Retain this `@code` block when using the subsequent examples.
 
 ![Blazor Bullet Chart with Subtitle](images/blazor-bullet-chart-subtitle.webp)
 
 ## Title and subtitle position
 
-The title and the subtitle positions can be customized using the [TitlePosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TitlePosition) property. Possible positions are [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextPosition.html#Syncfusion_Blazor_Charts_TextPosition_Left), [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextPosition.html#Syncfusion_Blazor_Charts_TextPosition_Right), [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextPosition.html#Syncfusion_Blazor_Charts_TextPosition_Top) and [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextPosition.html#Syncfusion_Blazor_Charts_TextPosition_Bottom).
+The positions of the title and subtitle can be customized using the [TitlePosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TitlePosition) property. Possible positions are [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextPosition.html#Syncfusion_Blazor_Charts_TextPosition_Left), [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextPosition.html#Syncfusion_Blazor_Charts_TextPosition_Right), [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextPosition.html#Syncfusion_Blazor_Charts_TextPosition_Top), and [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextPosition.html#Syncfusion_Blazor_Charts_TextPosition_Bottom).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -99,19 +99,19 @@ The title and the subtitle positions can be customized using the [TitlePosition]
 </SfBulletChart>
 ```
 
-N> Refer to the [code block](#title) to know about the property value of the **BulletChartData**.
+N> Refer to the [code block](#title) for the **BulletChartData** data model and definition.
 
 ![Changing Title and Subtitle Position in Blazor Bullet Chart](images/blazor-bullet-chart-title-positions.webp)
 
 ## Title and subtitle customization
 
-The title and the subtitle - color, opacity, font size, font family, font weight, and font style can be customized using the [BulletChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTitleStyle.html) and the [BulletChartSubTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartSubTitleStyle.html) settings. The [MaximumTitleWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartCommonFont.html#Syncfusion_Blazor_Charts_BulletChartCommonFont_MaximumTitleWidth) property determines the maximum width of the text, and the [TextOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartCommonFont.html#Syncfusion_Blazor_Charts_BulletChartCommonFont_TextOverflow) property is used to [Wrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextOverflow.html#Syncfusion_Blazor_Charts_TextOverflow_Wrap) or [Trim](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextOverflow.html#Syncfusion_Blazor_Charts_TextOverflow_Trim) the title and the subtitle when the text size exceeds the [MaximumTitleWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartCommonFont.html#Syncfusion_Blazor_Charts_BulletChartCommonFont_MaximumTitleWidth). The default value of the [TextOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartCommonFont.html#Syncfusion_Blazor_Charts_BulletChartCommonFont_TextOverflow) is [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextOverflow.html#Syncfusion_Blazor_Charts_TextOverflow_None).
+The color, opacity, font size, font family, font weight, and font style of the title and subtitle can be customized using the [BulletChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTitleStyle.html) and [BulletChartSubTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartSubTitleStyle.html) settings. The [MaximumTitleWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartCommonFont.html#Syncfusion_Blazor_Charts_BulletChartCommonFont_MaximumTitleWidth) property specifies the maximum text width in pixels. Set [TextOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartCommonFont.html#Syncfusion_Blazor_Charts_BulletChartCommonFont_TextOverflow) to [Wrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextOverflow.html#Syncfusion_Blazor_Charts_TextOverflow_Wrap) or [Trim](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextOverflow.html#Syncfusion_Blazor_Charts_TextOverflow_Trim) on each style to control text that exceeds its configured width. The default value of [TextOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartCommonFont.html#Syncfusion_Blazor_Charts_BulletChartCommonFont_TextOverflow) is [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextOverflow.html#Syncfusion_Blazor_Charts_TextOverflow_None).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfBulletChart DataSource="@BulletChartData" Height="150px" Title="Sales Rate" Subtitle="(in dollars $)" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="100" Interval="20">
-    <BulletChartTitleStyle Color="red" Opacity="1" Size="15px"></BulletChartTitleStyle>
+    <BulletChartTitleStyle Color="red" Opacity="1" Size="15px" FontFamily="Segoe UI" FontWeight="bold" MaximumTitleWidth="100" TextOverflow="TextOverflow.Wrap"></BulletChartTitleStyle>
     <BulletChartSubTitleStyle Color="red" Opacity="0.5" Size="13px" FontStyle="italic" MaximumTitleWidth="70" TextOverflow="TextOverflow.Trim"></BulletChartSubTitleStyle>
     <BulletChartRangeCollection>
         <BulletChartRange End=35> </BulletChartRange>
@@ -121,6 +121,6 @@ The title and the subtitle - color, opacity, font size, font family, font weight
 </SfBulletChart>
 ```
 
-N> Refer to the [code block](#title) to know about the property value of the **BulletChartData**.
+N> Refer to the [code block](#title) for the **BulletChartData** data model and definition.
 
 ![Customizing Title and Subtitle in Blazor Bullet Chart](images/blazor-bullet-chart-title-customization.webp)
