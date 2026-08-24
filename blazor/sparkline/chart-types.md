@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Sparkline Charts Chart Types Examples | Syncfusion®
-description: Learn about the chart types available in Syncfusion Blazor Sparkline, including Line, Column, Area, and WinLoss shapes.
+description: Learn about the chart types available in Syncfusion Blazor Sparkline, including Line, Column, Pie, WinLoss, and Area charts.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Sparkline Charts Chart Types
 
-Different shapes can be used to represent the Sparkline Chart by specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) property.
+Different chart types can be displayed by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) property. For setup and package requirements, refer to [Getting Started](getting-started.md).
 
 ## Line
 
@@ -60,13 +60,13 @@ The [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Spar
 
 ```
 
-N> Refer to the [code block](#line) for the **PopulationData** property value.
+N> This example uses the **PopulationData** property defined in the [Line](#line) example.
 
 ![Blazor Sparkline Column Chart](images/SparklineTypes/blazor-column-sparkline.webp)
 
 ## Pie
 
-The [Pie](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_Pie) chart type renders the Sparkline series as a pie chart.
+The [Pie](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_Pie) chart type renders each data point as a pie slice, with the slice size based on its value.
 
 ```cshtml
 
@@ -77,13 +77,13 @@ The [Pie](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sparkli
 
 ```
 
-N> Refer to the [code block](#line) for the **PopulationData** property value.
+N> This example uses the **PopulationData** property defined in the [Line](#line) example.
 
 ![Blazor Sparkline Pie Chart](images/SparklineTypes/blazor-pie-sparkline.webp)
 
 ## WinLoss
 
-The [WinLoss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_WinLoss) chart type renders the Sparkline series as WinLoss.
+The [WinLoss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_WinLoss) chart type renders positive values as wins, negative values as losses, and zero values as ties.
 
 ```cshtml
 
@@ -109,6 +109,6 @@ The [Area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sparkl
 
 ```
 
-N> Refer to the [code block](#line) for the **PopulationData** property value.
+N> This example uses the **PopulationData** property defined in the [Line](#line) example.
 
 ![Blazor Sparkline Area Chart](images/SparklineTypes/blazor-area-sparkline.webp)

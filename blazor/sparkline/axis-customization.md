@@ -54,7 +54,7 @@ A category axis value is provided by setting the [ValueType](https://help.syncfu
 
 @using Syncfusion.Blazor.Charts
 
-<SfSparkline XName="EmployeeName"YName="WorkHours"TValue="WorkDetails"DataSource="@EmployeeWorkReport" Type="SparklineType.Column"ValueType="SparklineValueType.Category" Height="250px"Width="450px">
+<SfSparkline XName="EmployeeName" YName="WorkHours" TValue="WorkDetails" DataSource="@EmployeeWorkReport" Type="SparklineType.Column" ValueType="SparklineValueType.Category" Height="250px" Width="450px">
 </SfSparkline>
 
 @code {
@@ -114,7 +114,7 @@ A DateTime axis value is provided by setting the [ValueType](https://help.syncfu
 
 ![Blazor Sparkline Chart with DateTime Value](images/Axis/blazor-sparkline-datetime-value.webp)
 
-## Change the Min and Max Values of Axis
+## Change the Minimum and Maximum Axis Values
 
 The minimum and maximum values of the X-axis can be customized using the [MinX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html#Syncfusion_Blazor_Charts_SparklineAxisSettings_MinX) and [MaxX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html#Syncfusion_Blazor_Charts_SparklineAxisSettings_MaxX) properties of [SparklineAxisSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html). The Y-axis min and max values can be set using [MinY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html#Syncfusion_Blazor_Charts_SparklineAxisSettings_MinY) and [MaxY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html#Syncfusion_Blazor_Charts_SparklineAxisSettings_MaxY).
 
@@ -123,7 +123,7 @@ The minimum and maximum values of the X-axis can be customized using the [MinX](
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="@ExpenditureReport" TValue="ExpenditureDetails" XName="Year" YName="Expense" Type="SparklineType.Column" ValueType="SparklineValueType.Numeric" Height="250px" Width="450px">
-    <SparklineAxisSettings MinY="100" MaxY="220"></SparklineAxisSettings>
+    <SparklineAxisSettings MinX="2009" MaxX="2017" MinY="100" MaxY="220"></SparklineAxisSettings>
 </SfSparkline>
 
 ```
@@ -132,9 +132,9 @@ N> Refer to the [code block](#numeric) for the **ExpenditureReport** property va
 
 ![Changing Minimum and Maximum Values of Blazor Sparkline Chart Axis](images/Axis/blazor-sparkline-min-max-value.webp)
 
-## Change Value of Axis
+## Change the Axis Value
 
-The horizontal axis line value can be customized by setting the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html#Syncfusion_Blazor_Charts_SparklineAxisSettings_Value) property in [SparklineAxisSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html).
+The axis value can be customized by setting the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html#Syncfusion_Blazor_Charts_SparklineAxisSettings_Value) property in [SparklineAxisSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisSettings.html).
 
 ```cshtml
 
@@ -152,7 +152,7 @@ N> Refer to the [code block](#numeric) for the **ExpenditureReport** property va
 
 ## Axis Line Customization
 
-The axis line can be enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html#Syncfusion_Blazor_Charts_SparklineAxisLineSettings_Visible) property to **true** in [SparklineAxisLineSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html).
+The axis line can be enabled by setting the Boolean [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html#Syncfusion_Blazor_Charts_SparklineAxisLineSettings_Visible) property to **true** in [SparklineAxisLineSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html).
 
 N> The axis line is not applicable for the [WinLoss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_WinLoss) chart type.
 
@@ -167,7 +167,7 @@ The axis line can be customized using the following properties:
 
 @using Syncfusion.Blazor.Charts
 
-<SfSparkline DataSource="ExpenditureReport" TValue="ExpenditureDetails" XName="Year" YName="Expense" Type="SparklineType.Line" Height="250px" Width="450px">
+<SfSparkline DataSource="@ExpenditureReport" TValue="ExpenditureDetails" XName="Year" YName="Expense" Type="SparklineType.Line" ValueType="SparklineValueType.Numeric" Height="250px" Width="450px">
     <SparklineAxisSettings>
         <SparklineAxisLineSettings Visible="true" Color="#ff14ae" DashArray="5" Opacity="1"></SparklineAxisLineSettings>
     </SparklineAxisSettings>
