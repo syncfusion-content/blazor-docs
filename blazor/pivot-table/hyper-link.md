@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hyperlink in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table adds hyperlinks to row, column, and value cells through PivotViewHyperlinkSettings for interactive navigation and drill-through.
+description: Learn how to configure hyperlinks for row, column, and value cells in the Blazor Pivot Table with PivotViewHyperlinkSettings.
 platform: Blazor
 control: Pivot Table
 documentation: ug
