@@ -165,7 +165,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-<SfListBox TValue="string[]" TItem="string[]"></SfListBox>
+<SfListBox TValue="string[]" TItem="string"></SfListBox>
 
 {% endhighlight %}
 {% endtabs %}
@@ -188,20 +188,20 @@ After initialization, populate the ListBox using the `DataSource` property. In t
         new VehicleData { Text = "SSC Ultimate Aero", Id = "Vehicle-04" },
         new VehicleData { Text = "Koenigsegg CCR", Id = "Vehicle-05" },
         new VehicleData { Text = "McLaren F1", Id = "Vehicle-06" },
-        new VehicleData { Text = "Aston Martin One- 77", Id = "Vehicle-07" },
+        new VehicleData { Text = "Aston Martin One-77", Id = "Vehicle-07" },
         new VehicleData { Text = "Jaguar XJ220", Id = "Vehicle-08" }
     };
 
     public class VehicleData {
-      public string Text  { get; set; }
-      public string Id  { get; set; }
+      public string Text { get; set; }
+      public string Id { get; set; }
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-N> `TValue` specifies the value type of the data source for type inference. It is a generic type and can be specified as string[], int[], and so on.
+N> `TValue` specifies the type of the selected value or values (for example, `string[]`), while `TItem` specifies the type of each data source item (for example, `VehicleData`).
 
 ## Run the application
 
