@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Smith Chart Tooltip
 
-When the mouse is moved over a point in the Smith Chart, a tooltip will appear displaying information about the point. By default, the tooltip is disabled. To enable the tooltip, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltip.html#Syncfusion_Blazor_Charts_SmithChartSeriesTooltip_Visible) property to **true** in the [SmithChartSeriesTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltip.html).
+When the pointer moves over a point in the Smith Chart, a tooltip appears displaying information about the point. By default, the tooltip is disabled. To enable the tooltip, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltip.html#Syncfusion_Blazor_Charts_SmithChartSeriesTooltip_Visible) property to **true** in the [SmithChartSeriesTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltip.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -48,7 +48,8 @@ The tooltip can be customized for each series using the following properties.
 
 * [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltip.html#Syncfusion_Blazor_Charts_SmithChartSeriesTooltip_Fill) - Used to change the fill color of the tooltip.
 * [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltip.html#Syncfusion_Blazor_Charts_SmithChartSeriesTooltip_Opacity) - Used to control the opacity of the tooltip.
-* [SmithChartSeriesTooltipBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltipBorder.html) - Used to customize the width and color of the border using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonBorder.html#Syncfusion_Blazor_Charts_SmithChartCommonBorder_Width) and the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonBorder.html#Syncfusion_Blazor_Charts_SmithChartCommonBorder_Color) properties.
+* [SmithChartSeriesTooltipBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltipBorder.html) - Nested component used to customize the border width and color using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonBorder.html#Syncfusion_Blazor_Charts_SmithChartCommonBorder_Width) and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonBorder.html#Syncfusion_Blazor_Charts_SmithChartCommonBorder_Color) properties.
+* [TooltipMappingName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_TooltipMappingName) - Specifies the data-source field used for the tooltip content.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -85,7 +86,7 @@ The tooltip can be customized for each series using the following properties.
 
 ## Tooltip Template
 
-To access the aggregate values inside the template, the implicit named parameter context can be used. The context can be typecast as the [SmithChartPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartPoint.html) to get aggregate values inside the template. The tooltip template using the context is as follows.
+To access the point values inside the template, use the implicit `context` parameter. The context can be typecast as the [SmithChartPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartPoint.html) to access the point's resistance and reactance values. The following example uses the context in a tooltip template.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -99,7 +100,7 @@ To access the aggregate values inside the template, the implicit named parameter
                     @{
                         var data = context as SmithChartPoint;
                     }
-                    <div style="background-color: blue">@data.Resistance: @data.Reactance</div>
+                    <div style="background-color: blue">@data?.Resistance: @data?.Reactance</div>
                 </Template>
             </SmithChartSeriesTooltip>
         </SmithChartSeries>
@@ -124,3 +125,7 @@ To access the aggregate values inside the template, the implicit named parameter
 ```
 
 ![Blazor Smith Chart with Tooltip Template](./images/Tooltip/blazor-smith-chart-tooltip-template.webp)
+
+## Troubleshooting
+
+If the tooltip does not appear, verify that `Visible="true"` is set on `SmithChartSeriesTooltip` and that the series contains valid `Resistance` and `Reactance` mappings. For setup requirements, see [Getting Started with Blazor Smith Chart](getting-started.md).

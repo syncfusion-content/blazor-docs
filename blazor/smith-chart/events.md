@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Smith Chart Events Examples and Reference | Syncfusion®
-description: Learn about events in Syncfusion Blazor Smith Chart such as Loaded, OnLegendItemRender, OnSeriesRender, and TooltipRender with usage examples.
+description: Learn about events in Syncfusion Blazor Smith Chart such as Loaded, OnPrintComplete, OnExportComplete, AxisLabelRendering, and SeriesRender with usage examples.
 platform: Blazor
 control: Smith Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Smith Chart Events
 
-This section describes about the Smith Chart component's events that will be triggered when appropriate actions are performed. The events should be provided to the Smith Chart through the **SmithChartEvents** component.
+This section describes the events triggered by the Smith Chart component when appropriate actions are performed. Configure these events through the **SmithChartEvents** component. For setup instructions, see [Getting started with the Blazor Smith Chart](getting-started.md).
 
 The Smith Chart component supports the following events.
 
@@ -63,7 +63,7 @@ The [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Smit
 
 ## OnPrintComplete
 
-The `OnPrintComplete` event triggers after the Smith Chart is printed.
+The [OnPrintComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_OnPrintComplete) event triggers after the Smith Chart is printed.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -186,17 +186,17 @@ Before rendering each axis label, the [AxisLabelRendering](https://help.syncfusi
     };
     public void AxisLabelCustomization(SmithChartAxisLabelRenderEventArgs args)
     {
-        // Here you can customize your code
+        // Here you can customize your code.
     }
 }
 ```
 
 ## LegendRendering
 
-Before rendering each legend, the [LegendRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_LegendRendering) event is triggered. The following arguments are present in this event:
+Before rendering each legend item, the [LegendRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_LegendRendering) event is triggered. The following arguments are present in this event:
 
 * `Text` - Specifies the current legend text.
-* `Shape` - Customize the shape of the legend.
+* `Shape` - Specifies the shape of the legend item.
 * `Fill` - Specifies the legend shape color.
 
 ```cshtml
@@ -363,15 +363,15 @@ The [SubtitleRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ## TextRendering
 
-The [TextRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_TextRendering) event triggers before the datalabel text is rendered. The following arguments are present in this event:
+The [TextRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_TextRendering) event triggers before the data label text is rendered. The following arguments are present in this event:
 
 * `Text` - Specifies the current text of the label.
-* `X` - Specifies the current datalabel X position.
-* `Y` - Specifies the current datalabel Y position.
-* `PointIndex` - Specifies the current point index of the datalabel.
-* `SeriesIndex` - Specifies the current series index of the datalabel.
-* `Border` - Specifies the current datalabel border.
-* `Color` - Specifies the current datalabel color.
+* `X` - Specifies the current data label X position.
+* `Y` - Specifies the current data label Y position.
+* `PointIndex` - Specifies the current point index of the data label.
+* `SeriesIndex` - Specifies the current series index of the data label.
+* `Border` - Specifies the current data label border.
+* `Color` - Specifies the current data label color.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -413,8 +413,8 @@ The [TextRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 The [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_SizeChanged) event triggers when the browser window is resized. The following arguments are present in this event:
 
-* `CurrentSize` - Specifies the current size of the Chart.
-* `PreviousSize` - Specifies the previous size of the Chart.
+* `CurrentSize` - Specifies the current size of the Smith Chart.
+* `PreviousSize` - Specifies the previous size of the Smith Chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
