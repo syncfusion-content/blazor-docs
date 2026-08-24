@@ -210,7 +210,7 @@ After initialization, populate the ListBox using the `DataSource` property. In t
 {% endhighlight %}
 {% endtabs %}
 
-N> `TValue` is the type of the value in the data source used for type inference. It is a generic type and can be specified as string[], int[], etc.
+N> `TValue` specifies the type of the selected value or values (for example, `string[]`), while `TItem` specifies the type of each data source item (for example, `VehicleData`).
 
 ## Run the application
 
