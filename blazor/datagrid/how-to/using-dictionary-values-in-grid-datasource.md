@@ -9,9 +9,9 @@ documentation: ug
 
 # Using Dictionary Values as Data Source in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can display values from a dictionary by using a column [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template). Because a dictionary is not a scalar field, the column cannot bind directly to it. Instead, the template accesses the dictionary via the row item and renders the corresponding value by matching the row’s key with the dictionary key.
+The [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can display values from a **Dictionary** by using a column [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template). Because a **Dictionary** is not a scalar field, the column cannot bind directly to it. Instead, the template reads the **Dictionary** from the row item and renders the matching value by comparing the current row key with each dictionary key.
 
-In the following example, the **ShipName** data is stored as a **Dictionary** and accessed inside the GridColumn template using the KeyValuePair type. The row’s **OrderID** is compared with the dictionary key, and the matching value is displayed. This approach lets each row retrieve and render the appropriate dictionary value from a shared lookup at runtime. For efficiency, ensure that a consistent key (such as the primary key) is used for the lookup, and consider a direct lookup pattern when rendering complex templates.
+In the following example, the **ShipName** data is stored as a **Dictionary** and accessed inside the Data Grid column template using the KeyValuePair type. The row’s **OrderID** is compared with each dictionary key, and the matching value is displayed. This approach lets each row retrieve and render the appropriate dictionary value from a shared lookup at runtime. For consistent results, use a stable key such as the primary key when comparing dictionary entries while rendering the template.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -20,12 +20,12 @@ In the following example, the **ShipName** data is stored as a **Dictionary** an
 <SfGrid DataSource="@GridData" AllowPaging="true">
     <GridPageSettings PageSize="6"></GridPageSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderDetail.OrderID) HeaderText="Order ID" TextAlign="@TextAlign.Right" IsPrimaryKey="true" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetail.OrderDate) HeaderText=" Order Date" Format="d" Type=ColumnType.Date TextAlign="@TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetail.Freight) HeaderText="Freight" Format="C2" AllowEditing="false" TextAlign="@TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetail.ShipCountry) HeaderText="Ship Country" TextAlign="@TextAlign.Right" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetail.ShipCity) HeaderText="Ship City" TextAlign="@TextAlign.Right" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetail.ShipName) HeaderText="Ship Name" TextAlign="@TextAlign.Right" Width="150">
+        <GridColumn Field="@nameof(OrderDetail.OrderID)" HeaderText="Order ID" TextAlign="@TextAlign.Right" IsPrimaryKey="true" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(OrderDetail.OrderDate)" HeaderText="Order Date" Format="d" Type="@ColumnType.Date" TextAlign="@TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field="@nameof(OrderDetail.Freight)" HeaderText="Freight" Format="C2" AllowEditing="false" TextAlign="@TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(OrderDetail.ShipCountry)" HeaderText="Ship Country" TextAlign="@TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(OrderDetail.ShipCity)" HeaderText="Ship City" TextAlign="@TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(OrderDetail.ShipName)" HeaderText="Ship Name" TextAlign="@TextAlign.Right" Width="150">
             <Template>
                 @{
                     var Details = context as OrderDetail;
