@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Smith Chart Accessibility
 
-The Blazor Smith Chart component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Smith Chart component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI-ARIA roles](https://www.w3.org/TR/wai-aria/#roles).
 
 The accessibility compliance for the Blazor Smith Chart component is outlined below.
 
@@ -21,7 +21,7 @@ The accessibility compliance for the Blazor Smith Chart component is outlined be
 | [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) |<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 
 <style>
@@ -39,7 +39,7 @@ The accessibility compliance for the Blazor Smith Chart component is outlined be
 
 ## WAI-ARIA attributes
 
-The Blazor Smith Chart component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Smith Chart component:
+The Blazor Smith Chart component follows [WAI-ARIA](https://www.w3.org/TR/wai-aria/) patterns to improve accessibility. The following roles and ARIA attributes are used in the Blazor Smith Chart component:
 
 * img (role)
 * button (role)
@@ -50,24 +50,24 @@ The Blazor Smith Chart component followed the [WAI-ARIA](https://www.w3.org/WAI/
 
 ## Keyboard interaction
 
-The Blazor Smith Chart component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Smith Chart component.
+The Blazor Smith Chart component supports keyboard interaction, making it easier for people who use assistive technologies (AT) and those who rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Smith Chart component.
 
 | Windows | Mac | Description |
 | --- | --- | --- |
 | <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves the focus to the next element in the Smith Chart. |
 | <kbd>Shift + Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the focus to the previous element in the Smith Chart. |
-| <kbd>↓</kbd> | <kbd>↓</kbd> | Moves the focus to the data point right side from the selected point. |
-| <kbd>↑</kbd> | <kbd>↑</kbd> | Moves the focus to the data point right side from the selected point. |
-| <kbd>←</kbd> | <kbd>←</kbd> | Moves the focus to the next series in our Smith Chart component. |
-| <kbd>→</kbd> | <kbd>→</kbd> | Moves the focus to the previous series in our Smith Chart component. |
-| <kbd>↓</kbd> or <kbd>←</kbd> | <kbd>↓</kbd> or <kbd>←</kbd> | Moves the focus to the legend left side from the selected legend. |
-| <kbd>↑</kbd> or <kbd>→</kbd> | <kbd>↑</kbd> or <kbd>→</kbd> | Moves the focus to the legend right side from the selected legend. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Moves the focus to the data point below the selected point. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Moves the focus to the data point above the selected point. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Moves the focus to the previous series in the Smith Chart. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Moves the focus to the next series in the Smith Chart. |
+| <kbd>↓</kbd> or <kbd>←</kbd> | <kbd>↓</kbd> or <kbd>←</kbd> | Moves the focus to the legend item on the left of the selected legend item. |
+| <kbd>↑</kbd> or <kbd>→</kbd> | <kbd>↑</kbd> or <kbd>→</kbd> | Moves the focus to the legend item on the right of the selected legend item. |
 | <kbd>Enter</kbd> or <kbd>Space</kbd> | <kbd>Enter</kbd> or <kbd>Space</kbd> | Toggles the visibility of the corresponding series. |
 | <kbd>Ctrl + P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Prints the Smith Chart. |
 
 ## Ensuring accessibility
 
-The Blazor Smith Chart component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The Blazor Smith Chart component's accessibility is validated with [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) and Playwright tests.
 
 The accessibility compliance of the Blazor Smith Chart component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/smith-chart) in a new window to evaluate the accessibility of the Blazor Smith Chart component with accessibility tools.
 

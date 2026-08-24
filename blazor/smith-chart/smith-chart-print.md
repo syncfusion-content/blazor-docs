@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Smith Chart Print and Export Examples | Syncfusion®
-description: Learn how to print and export Syncfusion Blazor Smith Chart using PrintAsync, or export to image, SVG, and PDF formats.
+description: Learn how to print and export the Syncfusion Blazor Smith Chart using PrintAsync or exporting to image, SVG, and PDF formats.
 platform: Blazor
 control: Smith Chart
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Print
 
-The rendered Smith Chart can be printed directly from the browser by calling the public method `PrintAsync`.
+The rendered Smith Chart can be printed directly from the browser by calling the public method [`PrintAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmithChart.html#Syncfusion_Blazor_Charts_SfSmithChart_PrintAsync_Microsoft_AspNetCore_Components_ElementReference_). The optional element reference parameter can be omitted to print the Smith Chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -50,13 +50,15 @@ The rendered Smith Chart can be printed directly from the browser by calling the
 }
 ```
 
+If printing or exporting does not work, verify that the Syncfusion Blazor service and required script resources are configured and that the Smith Chart has finished rendering before calling the method.
+
 ## Export
 
-The rendered Smith Chart can be exported to **JPEG**, **PNG**, **SVG**, or **PDF** format by using the `ExportAsync` method in the Smith Chart. This method contains the following parameters:
+The rendered Smith Chart can be exported to **JPEG**, **PNG**, **SVG**, or **PDF** format by using the [`ExportAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmithChart.html#Syncfusion_Blazor_Charts_SfSmithChart_ExportAsync_Syncfusion_Blazor_Charts_ExportType_System_String_Syncfusion_PdfExport_PdfPageOrientation_) method of the Smith Chart component. Replace `ExportType.PDF` with `ExportType.JPEG`, `ExportType.PNG`, or `ExportType.SVG` to export to another format. The method accepts the following parameters:
 
-* **Type** - To specify the export type. The component can be exported to **JPEG**, **PNG**, **SVG**, or **PDF** format.
-* **File name** - To specify the file name to export.
-* **Orientation** - To specify the orientation type. This is applicable only for PDF export type. It is an optional parameter.
+* **type** - Specifies the export type.
+* **fileName** - Specifies the file name.
+* **orientation** - Specifies the page orientation. This applies only to PDF export and is optional; the default value is `null`.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
