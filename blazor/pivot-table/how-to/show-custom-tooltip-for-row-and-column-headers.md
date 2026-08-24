@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to add custom tooltips to Pivot Table headers | Syncfusion
-description: Step-by-step example showing how to add custom tooltips to headers in the Blazor Pivot Table, binding SfTooltip to header cells via OnRender and ContentTemplate.
+description: Learn how to add custom tooltips to Blazor Pivot Table headers using SfTooltip, OnRender, and ContentTemplate.
 platform: Blazor
 control: Pivot Table
 documentation: ug
