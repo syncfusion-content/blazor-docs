@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to switch to older themes in Blazor Pivot Table | Syncfusion
-description: Step-by-step example showing how to switch to older themes in the Blazor Pivot Table by overriding CSS for row, column, and header cell backgrounds.
+title: How to switch to the older Pivot Table theme | Syncfusion
+description: Step-by-step example showing how to switch to the older theme style in the Blazor Pivot Table, with CSS overrides and row-height changes.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -10,15 +10,15 @@ documentation: ug
 <!-- markdownlint-disable MD012 -->
 <!-- markdownlint-disable MD009 -->
 
-# How to switch to older themes in Blazor Pivot Table
+# How to switch to the older Pivot Table theme
 
-Since Volume 1, 2020, the theming and layout of the Pivot Table. If you prefer the appearance of the earlier theme, you can revert to it by making specific changes. This guide explains how to restore the older theme's style by modifying the CSS to adjust cell background colors and set the row height to match the previous layout.
+Since Volume 1, 2020, Syncfusion<sup style="font-size:70%">&reg;</sup> revised the theming and layout of the Pivot Table. If you prefer the appearance of the earlier theme, you can revert to it by making specific changes. This guide explains how to restore the older theme's style by modifying the CSS to adjust cell background colors and set the row height to match the previous layout.
 
 ## CSS Selectors
 
 In the current theme, cells are differentiated by their background colors. To avoid this, you need to override these background colors via simple CSS adjustments within your application. The following CSS selectors allow achieving the same for Material, Fabric, Bootstrap, and Bootstrap v4 themes:
 
-```html      
+```html
 <!-- Codes here... -->
 <style>
     .e-pivotview .e-rowsheader, 
@@ -34,7 +34,7 @@ In the current theme, cells are differentiated by their background colors. To av
 
 For the High Contrast theme, the following CSS is required:
 
-```html      
+```html
 <!-- Codes here... -->
 <style>
     .e-pivotview .e-rowsheader, 
@@ -50,7 +50,9 @@ For the High Contrast theme, the following CSS is required:
 
 ## Adjusting Row Height
 
-In the current theme, the height of each Pivot Table row has been reduced to make the component more compact. Users can reset the height of the Pivot Table rows using the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_RowHeight) property within [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html). In the older theme, this property was typically set to 36 pixels for desktop layouts and 48 pixels for mobile layouts. To replicate the older theme style, reset the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_RowHeight) accordingly.
+In the current theme, the height of each Pivot Table row has been reduced to make the component more compact. Users can reset the height of the Pivot Table rows using the [`RowHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_RowHeight) property within [`PivotViewGridSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html). In the older theme, this property was typically set to 36 pixels for desktop layouts and 48 pixels for mobile layouts. To replicate the older theme style, reset the [`RowHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_RowHeight) accordingly.
+
+The following code sample demonstrates how to replicate the older theme style:
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
