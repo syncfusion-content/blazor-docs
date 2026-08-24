@@ -18,8 +18,7 @@ The value set to the [GroupTo](https://help.syncfusion.com/cr/blazor/Syncfusion.
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Sales Analysis" EnableSmartLabels="true">
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
+    <AccumulationChartLegendSettings Visible="false" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@DataSource" XName="XValue" YName="YValue" Name="Sales" GroupTo="10">
             <AccumulationDataLabelSettings Visible="true" Name="Text" Position="AccumulationLabelPosition.Outside">
@@ -28,7 +27,7 @@ The value set to the [GroupTo](https://help.syncfusion.com/cr/blazor/Syncfusion.
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string XValue { get; set; }
@@ -69,9 +68,7 @@ The points that have been grouped together will appear as a single slice with th
 
 <SfAccumulationChart Title="Sales Analysis" EnableSmartLabels="true">
     <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
-
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
+    <AccumulationChartLegendSettings Visible="false" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@DataSource" XName="XValue" YName="YValue" Explode="true" Radius="70%" GroupTo="15">
             <AccumulationDataLabelSettings Visible="true" Name="Text" Position="AccumulationLabelPosition.Outside">
@@ -82,7 +79,7 @@ The points that have been grouped together will appear as a single slice with th
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string XValue { get; set; }
@@ -121,9 +118,7 @@ The points that have been grouped together will appear as a single slice with th
 
 <SfAccumulationChart Title="Sales Analysis" EnableSmartLabels="true">
     <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
-
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
+    <AccumulationChartLegendSettings Visible="false" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@DataSource" XName="XValue" YName="YValue" GroupTo="9" GroupMode="GroupMode.Point">
             <AccumulationDataLabelSettings Visible="true" Name="Text" Position="AccumulationLabelPosition.Outside">
@@ -134,7 +129,7 @@ The points that have been grouped together will appear as a single slice with th
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string XValue { get; set; }

@@ -16,8 +16,7 @@ The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Acc
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics" EnableSmartLabels="true">
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
+    <AccumulationChartLegendSettings Visible="false" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser">
             <AccumulationDataLabelSettings Visible="true" Name="Browser"></AccumulationDataLabelSettings>
@@ -25,7 +24,7 @@ The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Acc
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set;}
@@ -56,8 +55,7 @@ When the data label text exceeds the container, the text can be wrapped by using
 @using Syncfusion.Blazor.Charts
 
  <SfAccumulationChart Title="Mobile Browser Statics">
-         <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
+         <AccumulationChartLegendSettings Visible="false" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@PieChartPoints" XName="Browser" YName="Users" Name="Browser">
             <AccumulationDataLabelSettings EnableRotation="true" Visible="true" MaxWidth="100" TextWrap="@Syncfusion.Blazor.TextWrap.Wrap" Name="DataLabelMappingName" Position="AccumulationLabelPosition.Inside">
@@ -66,7 +64,7 @@ When the data label text exceeds the container, the text can be wrapped by using
         </AccumulationChartSeriesCollection>
     </SfAccumulationChart>
 
-@code{
+@code {
     public List<PieData> PieChartPoints { get; set; } = new List<PieData>
     {
         new PieData { Browser =  "Opera Mini", Users = 80, DataLabelMappingName = "Opera Mini (80M) 32%" },
@@ -93,8 +91,7 @@ The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ac
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
+    <AccumulationChartLegendSettings Visible="false" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser">
             <AccumulationDataLabelSettings Visible="true" Name="Browser" Position="AccumulationLabelPosition.Outside"></AccumulationDataLabelSettings>
@@ -102,7 +99,7 @@ The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ac
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -134,8 +131,7 @@ Data labels will be arranged smartly without overlapping with each other. The [E
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart EnableSmartLabels="true">
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
+    <AccumulationChartLegendSettings Visible="false" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Country" YName="Users">
             <AccumulationDataLabelSettings Visible="true" Name="Country" Position="AccumulationLabelPosition.Outside">
@@ -145,7 +141,7 @@ Data labels will be arranged smartly without overlapping with each other. The [E
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Country { get; set; }
@@ -186,8 +182,7 @@ When the data label is placed [Outside](https://help.syncfusion.com/cr/blazor/Sy
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics" EnableSmartLabels="true">
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
+    <AccumulationChartLegendSettings Visible="false" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser">
             <AccumulationDataLabelSettings Visible="true" Name="Text" Position="AccumulationLabelPosition.Outside">
@@ -197,7 +192,7 @@ When the data label is placed [Outside](https://help.syncfusion.com/cr/blazor/Sy
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -229,8 +224,7 @@ The [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accumu
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics" EnableSmartLabels="true">
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
+    <AccumulationChartLegendSettings Visible="false" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser">
             <AccumulationDataLabelSettings Visible="true" Name="Text">
@@ -239,7 +233,7 @@ The [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accumu
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -272,8 +266,7 @@ Data label for the accumulation chart can be formatted using [Format](https://he
 <SfAccumulationChart Title="Product Sales" EnableAnimation="false">
     <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
 
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
+    <AccumulationChartLegendSettings Visible="false" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@ChartValues" XName="XValue" YName="YValue" Name="Browser" Radius="80%" StartAngle="0" EndAngle="360" InnerRadius="0%">
             <AccumulationDataLabelSettings Visible="true"  Format="C1" Position="AccumulationLabelPosition.Inside"></AccumulationDataLabelSettings>
@@ -281,7 +274,7 @@ Data label for the accumulation chart can be formatted using [Format](https://he
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string XValue { get; set; }
@@ -343,10 +336,10 @@ Data labels can be customized using the template element for the accumulation ch
             </AccumulationDataLabelSettings>
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+    <AccumulationChartLegendSettings Visible="false" />
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }

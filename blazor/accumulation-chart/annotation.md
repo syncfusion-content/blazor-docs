@@ -21,7 +21,6 @@ Annotations are texts, shapes, or images that are used to highlight a specific r
             <AccumulationDataLabelSettings Visible="true" Name="Text" Position="AccumulationLabelPosition.Outside"></AccumulationDataLabelSettings>
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
     <AccumulationChartAnnotations>
         <AccumulationChartAnnotation X="Opera" Y="11" CoordinateUnits="@Syncfusion.Blazor.Charts.Units.Point" Region="@Syncfusion.Blazor.Charts.Regions.Series">
             <ContentTemplate>
@@ -31,7 +30,7 @@ Annotations are texts, shapes, or images that are used to highlight a specific r
     </AccumulationChartAnnotations>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -67,7 +66,6 @@ The [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accu
             <AccumulationDataLabelSettings Visible="true" Name="Text" Position="AccumulationLabelPosition.Outside"></AccumulationDataLabelSettings>
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
     <AccumulationChartAnnotations>
         <AccumulationChartAnnotation X=130 Y=180 CoordinateUnits="@Syncfusion.Blazor.Charts.Units.Pixel" Region="@Syncfusion.Blazor.Charts.Regions.Chart">
             <ContentTemplate>
@@ -77,7 +75,7 @@ The [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accu
     </AccumulationChartAnnotations>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -113,7 +111,6 @@ The [CoordinateUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
             <AccumulationDataLabelSettings Visible="true" Name="Text" Position="AccumulationLabelPosition.Outside"></AccumulationDataLabelSettings>
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
     <AccumulationChartAnnotations>
         <AccumulationChartAnnotation X="Chrome" Y="37" CoordinateUnits="@Syncfusion.Blazor.Charts.Units.Point" Region="@Syncfusion.Blazor.Charts.Regions.Series">
             <ContentTemplate>
@@ -123,7 +120,7 @@ The [CoordinateUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
     </AccumulationChartAnnotations>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }

@@ -59,8 +59,7 @@ The complete code snippet for the preceding steps is as follows.
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart>
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
+    <AccumulationChartLegendSettings Visible="false" />
     <AccumulationChartAnnotations>
         <AccumulationChartAnnotation X="50%" Y="50%" CoordinateUnits="Units.Pixel" Region="Regions.Chart">
             <ContentTemplate>
@@ -68,7 +67,6 @@ The complete code snippet for the preceding steps is as follows.
             </ContentTemplate>
         </AccumulationChartAnnotation>
     </AccumulationChartAnnotations>
-
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries InnerRadius="60%" Name="@nameof(MyDataModel.XValue)" DataSource="@chartData" YName="@nameof(MyDataModel.YValue)" XName="@nameof(MyDataModel.XValue)"></AccumulationChartSeries>
     </AccumulationChartSeriesCollection>

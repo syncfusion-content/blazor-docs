@@ -19,8 +19,7 @@ The `PrintAsync` method can be used to print a rendered chart directly from the 
 @using Syncfusion.Blazor.Buttons
 
 <SfAccumulationChart @ref="ChartObj" Title="Mobile Browser Statistics" EnableSmartLabels="true">
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
+    <AccumulationChartLegendSettings Visible="false" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="RIO" GroupTo="10">
             <AccumulationDataLabelSettings Visible="true" Name="Text" Position="AccumulationLabelPosition.Outside">
@@ -31,7 +30,7 @@ The `PrintAsync` method can be used to print a rendered chart directly from the 
 
 <SfButton ID="button" Content="Print" @onclick="@Click" IsPrimary="true" CssClass="e-flat"></SfButton>
 
-@code{
+@code {
     SfAccumulationChart ChartObj;
 
     private async Task Click()
@@ -77,8 +76,7 @@ The optional parameters for this method are,
 @using Syncfusion.ExcelExport;
 
 <SfAccumulationChart @ref="ChartObj" Title="Mobile Browser Statistics" EnableSmartLabels="true">
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
+    <AccumulationChartLegendSettings Visible="false" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="RIO" GroupTo="10">
             <AccumulationDataLabelSettings Visible="true" Name="Text" Position="AccumulationLabelPosition.Outside">
@@ -90,7 +88,7 @@ The optional parameters for this method are,
 
 <SfButton ID="button" Content="Export" @onclick="@Click" IsPrimary="true" CssClass="e-flat"></SfButton>
 
-@code{
+@code {
     SfAccumulationChart ChartObj;
 
     private async Task Click()
@@ -148,7 +146,7 @@ In the code example below, the accumulation chart is exported to Excel format. T
 
 <SfAccumulationChart @ref="accumulationChart" EnableBorderOnMouseMove="false" Title="Browser Market Share" EnableAnimation="true" Theme="Syncfusion.Blazor.Theme.Tailwind3">
     <AccumulationChartTooltipSettings Header="" Format="<b>${point.x}</b><br>Browser Share: <b>${point.y}%</b>" Enable="true"></AccumulationChartTooltipSettings>
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+    <AccumulationChartLegendSettings Visible="false" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@PieChartPoints" XName="Browser" YName="Users" Radius="@Radius" Name="Browser" StartAngle="@StartAngle"
                                  InnerRadius="0%" ExplodeIndex="0" Explode="true" ExplodeOffset="@ExplodeRadius">

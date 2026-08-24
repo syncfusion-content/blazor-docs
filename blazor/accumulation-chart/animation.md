@@ -15,18 +15,16 @@ You can customize animation for a series using [`Animation`](https://help.syncfu
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
+    <AccumulationChartLegendSettings Visible="false" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser">
             <AccumulationDataLabelSettings Visible="true"></AccumulationDataLabelSettings>
             <AccumulationChartAnimation Enable="false"></AccumulationChartAnimation>
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -57,11 +55,11 @@ You can programmatically refresh chart using [Refresh](https://help.syncfusion.c
        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser">
       </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-   <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
+   <AccumulationChartLegendSettings Visible="true" />
 </SfAccumulationChart>
 <button  @onclick="ButtonClick">Click me</button>
 
-@code{
+@code {
     SfAccumulationChart accumulationChart;
     public class Statistics
     {

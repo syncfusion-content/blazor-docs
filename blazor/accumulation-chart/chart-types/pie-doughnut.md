@@ -23,11 +23,10 @@ The [Pie Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart
                                  Name="Browser">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
+    <AccumulationChartLegendSettings Visible="true" />
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -59,15 +58,13 @@ The radius of the pie series will be set to 80% of its size (minimum of chart wi
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
     <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser" Radius="100%">
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser" Radius="100%">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+    <AccumulationChartLegendSettings Visible="false" />
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -99,16 +96,13 @@ The center x and center y can be used to change the pie's center position. The p
 
 <SfAccumulationChart EnableAnimation="false" Title="Mobile Browser Statistics">
     <AccumulationChartCenter X="70%" Y="60%" />
-
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" />
     </AccumulationChartSeriesCollection>
-
     <AccumulationChartLegendSettings Visible="false" />
-
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -139,15 +133,14 @@ The [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accu
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Oil and other liquid imports in USA" EnableAnimation="true" EnableSmartLabels="true">
-    <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
-
+    <AccumulationChartLegendSettings Visible="true" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" InnerRadius="20%" Radius="R">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -185,11 +178,10 @@ The doughnut chart can be created by setting the [InnerRadius](https://help.sync
                                  Name="Browser" InnerRadius="40%">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+    <AccumulationChartLegendSettings Visible="false" />
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -225,12 +217,11 @@ The [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
                                  StartAngle="270" EndAngle="90">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
     <AccumulationChartLegendSettings Visible="false">
     </AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -261,8 +252,7 @@ The [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
-
+    <AccumulationChartLegendSettings Visible="true" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser" PointColorMapping="Fill">
             <AccumulationDataLabelSettings Visible="true" Name="Text"></AccumulationDataLabelSettings>
@@ -270,7 +260,7 @@ The [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -306,7 +296,7 @@ The corners of all the slices in the pie/donut chart series can be rounded using
         <AccumulationChartSeries DataSource="@DonutChartPoints" XName="Food" YName="Amount" InnerRadius="40%" BorderRadius="8">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+    <AccumulationChartLegendSettings Visible="false" />
 </SfAccumulationChart>
 
 @code {
@@ -337,15 +327,14 @@ When the mouse hovers over the pie/doughnut chart, the border appears by default
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics" EnableBorderOnMouseMove="false">
-    <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
-
+    <AccumulationChartLegendSettings Visible="true" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }

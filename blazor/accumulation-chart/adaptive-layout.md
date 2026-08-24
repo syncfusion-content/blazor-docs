@@ -23,7 +23,7 @@ When viewing the accumulation chart on mobile devices, some elements may not dis
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
     <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
-    <AccumulationChartLegendSettings Visible="true" Position="LegendPosition.Right"></AccumulationChartLegendSettings>
+    <AccumulationChartLegendSettings Visible="true" Position="LegendPosition.Right" />
 </SfAccumulationChart>
 
 @code {

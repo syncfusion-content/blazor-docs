@@ -25,7 +25,7 @@ Data points that contain **NaN** or **null** value are considered as empty point
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public EmptyPointMode Mode = EmptyPointMode.Gap;
 
     public class Statistics
@@ -72,7 +72,7 @@ Choose the mode that best conveys the structure of your data when observations a
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     // Switch between Drop / Zero / Average to see each mode in action.
     public EmptyPointMode Mode = EmptyPointMode.Average;
 
@@ -105,8 +105,7 @@ The [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accumu
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
     <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Profit">
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Profit">
             <AccumulationChartEmptyPointSettings Mode="@Mode" Fill="#c0faf4">
                 <AccumulationChartEmptyPointBorder Color="red" Width="2"></AccumulationChartEmptyPointBorder>
             </AccumulationChartEmptyPointSettings>
@@ -116,7 +115,7 @@ The [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accumu
 </SfAccumulationChart>
 
 
-@code{
+@code {
     public EmptyPointMode Mode = EmptyPointMode.Average;
 
     public class Statistics
@@ -159,7 +158,7 @@ The border of an empty point can be styled independently from data points using 
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public EmptyPointMode Mode = EmptyPointMode.Average;
 
     public class Statistics
@@ -202,7 +201,7 @@ When no data is available to render in the accumulation chart, the [NoDataTempla
             <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser">
             </AccumulationChartSeries>
         </AccumulationChartSeriesCollection>
-        <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
+        <AccumulationChartLegendSettings Visible="true" />
     </ChildContent>
 </SfAccumulationChart>
 

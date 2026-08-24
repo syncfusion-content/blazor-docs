@@ -49,7 +49,6 @@ A linear gradient may be applied directly at the series level. The same gradient
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@CategoryData" XName="Category" YName="Share" Type="AccumulationType.Pie" Name="Share by Category">
             <AccumulationChartSeriesBorder Color="#FFFFFF" Width="2"></AccumulationChartSeriesBorder>
-
             <AccumulationDataLabelSettings Visible="true" Position="AccumulationLabelPosition.Outside" Name="Share">
                 <AccumulationChartConnector Length="10px" />
                 <AccumulationChartDataLabelFont Size="12px" />
@@ -105,7 +104,6 @@ A diagonal linear gradient can be applied per data point using the `OnPointRende
     <AccumulationChartEvents OnPointRender="OnPointRender" />
     <AccumulationChartLegendSettings Visible="true" />
     <AccumulationChartTooltipSettings Enable="true" />
-
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@CategoryData" XName="Category" YName="Share" Type="AccumulationType.Pie" Name="Share by Category">
             <AccumulationChartSeriesBorder Color="transparent" Width="0"></AccumulationChartSeriesBorder>
@@ -194,11 +192,9 @@ A radial gradient can be applied directly at the series level. The same gradient
 <SfAccumulationChart Title="Orders by Category" Width="100%">
     <AccumulationChartLegendSettings Visible="true" />
     <AccumulationChartTooltipSettings Enable="true" />
-
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@CategoryData" XName="Category" YName="Share" Type="AccumulationType.Pie" Name="Share by Category">
             <AccumulationChartSeriesBorder Color="#FFFFFF" Width="2"></AccumulationChartSeriesBorder>
-
             <AccumulationDataLabelSettings Visible="true" Position="AccumulationLabelPosition.Outside" Name="DataLabelMappingName">
                 <AccumulationChartConnector Length="10px" />
                 <AccumulationChartDataLabelFont Size="12px" />
