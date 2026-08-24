@@ -38,7 +38,7 @@ When viewing the accumulation chart on mobile devices, some elements may not dis
     {
         new PieData { Browser = "Chrome", Users = 59.28, DataLabelMappingName = "Chrome: 59.28%" },
         new PieData { Browser = "UC Browser", Users = 4.37, DataLabelMappingName = "UC Browser: 4.37%" },
-        new PieData { Browser = "Internet Explorer", Users = 6.12, DataLabelMappingName = "Internet Explorer: 6 12%" },
+        new PieData { Browser = "Internet Explorer", Users = 6.12, DataLabelMappingName = "Internet Explorer: 6.12%" },
         new PieData { Browser = "Sogou Explorer", Users = 1.37, DataLabelMappingName = "Sogou Explorer: 1.37%" },
         new PieData { Browser = "QQ", Users = 3.96, DataLabelMappingName = "QQ: 3.96%" },
         new PieData { Browser = "Safari", Users = 4.73, DataLabelMappingName = "Safari: 4.73%" },
@@ -57,7 +57,7 @@ The table below outlines the behavior of chart elements under specific condition
 | Element      | Size              | Behavior         |
 |--------------|-------------------|------------------|
 | Title  | <kbd>Height &lt; 200</kbd> / <kbd>Width &lt; 200</kbd> | Accumulation chart title is disabled |
-| Sutitle | <kbd>Height &lt; 300</kbd> / <kbd>Width &lt; 300</kbd> | Accumulation chart subtitle is disabled |
+| Subtitle | <kbd>Height &lt; 300</kbd> / <kbd>Width &lt; 300</kbd> | Accumulation chart subtitle is disabled |
 | Datalabel | <kbd>Radius &lt; 300</kbd> / <kbd>Radius &lt; 200</kbd> | Data label moves inside / Datalabel is disabled |
 | Legend | <kbd>Height &lt; 300</kbd> / <kbd>Width &lt; 300</kbd> | Moves bottom or top legend to the right if width is greater than 200px; otherwise, disabled / Moves right or left legend to bottom if height is greater than 200px; otherwise, disabled |
 
@@ -65,6 +65,6 @@ N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/bla
 
 ## See also
 
-* [Data label](./data-labels)
+* [Data label](./data-label)
 * [Tooltip](./tool-tip)
 * [Legend](./legend)

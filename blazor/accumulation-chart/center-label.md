@@ -100,7 +100,7 @@ The position of the center label can be adjusted using the [XOffset](https://hel
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
     <AccumulationChartCenterLabel Text="Mobile Browser<br>Statistics 2024">
-        <AccumulationChartCenterLabelFont Size="15px" FontWeight="600" FontFamily="Roboto" fontStyle="Italic" Color="Blue" ></AccumulationChartCenterLabelFont>
+        <AccumulationChartCenterLabelFont Size="15px" FontWeight="600" FontFamily="Roboto" FontStyle="Italic" Color="Blue" ></AccumulationChartCenterLabelFont>
     </AccumulationChartCenterLabel>
     <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 </SfAccumulationChart>

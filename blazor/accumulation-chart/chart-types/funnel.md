@@ -169,7 +169,7 @@ The neck size of the funnel chart can be customized by using the [NeckWidth](htt
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhHXwCyBITHlNGm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Funnel Chart with Gap](../images/funnel/blazor-funnel-chart-with-gap.webp)" %}
 
-## Funnel explode
+## Funnel Explode
 
 Points can be exploded on mouse click by setting the [Explode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Explode) property to **true**. The point on load can be exploded using [ExplodeIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_ExplodeIndex). Explode distance can be set by using [ExplodeOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_ExplodeOffset) property.
 
@@ -179,8 +179,7 @@ Points can be exploded on mouse click by setting the [Explode](https://help.sync
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
     <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser" Type=" AccumulationType.Funnel" ExplodeIndex="3" Explode="true" ExplodeOffset="10%">
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser" Type="AccumulationType.Funnel" ExplodeIndex="3" Explode="true" ExplodeOffset="10%">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
 
@@ -261,7 +260,7 @@ Labels will be arranged automatically on the left side of the funnel and pyramid
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDhRXGseVIcTBxye?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Funnel Chart with Smart Data Label](../images/funnel/blazor-funnel-chart-smart-data-label.webp)" %}
 
-## Border radius
+## Border Radius
 
 The corners of the first data point and last data point in the funnel chart series can be rounded using the [BorderRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_BorderRadius) property within the [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html).
 

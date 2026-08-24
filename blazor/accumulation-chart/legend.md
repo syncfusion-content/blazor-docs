@@ -47,7 +47,7 @@ The legend is available for accumulation charts, just like it is for charts, and
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrRZmBDgbpbidem?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Legend in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend.webp)" %}
 
-## Position and alignment
+## Position and Alignment
 
 The legend can be placed at [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Left), [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Right), [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Top) or [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Bottom)  [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Custom) position of the chart using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Position) property. The [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Alignment) property can also be used to align the legend to the chart's [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Alignment.html#Syncfusion_Blazor_Charts_Alignment_Center), [Far](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Alignment.html#Syncfusion_Blazor_Charts_Alignment_Far) or [Near](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Alignment.html#Syncfusion_Blazor_Charts_Alignment_Near).
 
@@ -128,7 +128,7 @@ You can reverse the order of the legend items by using the [Reverse](https://hel
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVHDmhjAlcZuEPi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Legend Reverse in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-reverse.webp)" %}
 
-## Legend shape
+## Legend Shape
 
 The [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_LegendShape) property in the [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#properties) can be used to change the shape of the legend icon. The default icon shape for legends is [SeriesType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendShape.html#Syncfusion_Blazor_Charts_LegendShape_SeriesType).
 
@@ -169,7 +169,7 @@ The [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhRtGrjKvEAVoJr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Legend Shape in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-shape.webp)" %}
 
-## Legend size
+## Legend Size
 
 The legend size can be customized by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Height) properties of the [AccumulationChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html).
 
@@ -211,7 +211,7 @@ The legend size can be customized by using the [Width](https://help.syncfusion.c
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVnZwhDKkNswjbN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Legend Size in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-size.webp)" %}
 
-## Legend shape size
+## Legend Shape Size
 
 The [ShapeHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_ShapeHeight) and [ShapeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_ShapeWidth) properties can be used to adjust the dimensions of the legend shape.
 
@@ -293,7 +293,7 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDrxXwhXgurhFXhI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Paging for Legend in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-paging.webp)" %}
 
-### Paging customization
+### Paging Customization
 
 In legend pager, the arrow elements can be customized by using the [ArrowSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendPageSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendPageSettings_ArrowSize) property in the [AccumulationChartLegendPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendPageSettings.html) and the page numbers can be customized by using the [AccumulationChartLegendPageSettingsTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendPageSettingsTextStyle.html).
 
@@ -302,7 +302,7 @@ In legend pager, the arrow elements can be customized by using the [ArrowSize](h
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart ID="chart" Width="640px" Height="475px" Theme="@Theme">
-    <AccumulationChartLegendSettings ToggleVisibility=false TextWrap="@Syncfusion.Blazor.TextWrap.Wrap" MaximumLabelWidth="80" Position="@position" Height="@Height" Width="@Width">
+    <AccumulationChartLegendSettings ToggleVisibility="false" TextWrap="@Syncfusion.Blazor.TextWrap.Wrap" MaximumLabelWidth="80" Position="@position" Height="@Height" Width="@Width">
         <AccumulationChartLegendPageSettings ArrowSize="10">
             <AccumulationChartLegendPageSettingsTextStyle Color="blue">
             </AccumulationChartLegendPageSettingsTextStyle>
@@ -350,9 +350,9 @@ In legend pager, the arrow elements can be customized by using the [ArrowSize](h
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhnXmLDqkmoVqCg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Accumulation Chart Legend Pager Customization](images/legend/blazor-accumulation-chart-legend-paging-customization.webp)" %}
 
-## Legend text wrap
+## Legend Text Wrap
 
-When the legend text exceeds the container, the text can be wrapped by using [TextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_TextWrap) Property. End user can also wrap the legend text based on the [MaximumLabelWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_MaximumLabelWidth) property.
+When the legend text exceeds the container, the text can be wrapped by using the [TextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_TextWrap) property. The end user can also wrap the legend text based on the [MaximumLabelWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_MaximumLabelWidth) property.
 
 ```cshtml
 
@@ -453,7 +453,74 @@ To use, add a `LegendItemTemplate` inside any [AccumulationChartSeries](https://
 ```
 ![Legend Template in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-template.webp)
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=fluent2) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.
+## Legend Background
+
+The background color of the legend area can be customized using the [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Background) property of the [AccumulationChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html). Combined with the legend border and padding, this lets you create distinct visual zones for the legend area on top of chart backgrounds.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfAccumulationChart Title="Mobile Browser Statistics">
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
+                                 Name="Browser">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+
+    <AccumulationChartLegendSettings Visible="true" Background="#F4F7FB">
+        <AccumulationChartLegendBorder Color="#9CA3AF" Width="1"></AccumulationChartLegendBorder>
+    </AccumulationChartLegendSettings>
+</SfAccumulationChart>
+
+@code {
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+    {
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4 },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+}
+```
+
+![Legend Template in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-background.webp)
+
+## Troubleshooting
+
+This section answers common questions when configuring the legend for the Blazor Accumulation Chart.
+
+**Q: Why doesn't the legend appear even though I have data?**
+
+A: The legend is hidden when `Visible` is set to `false` (the default). Set `Visible="true"` on the [AccumulationChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html). Also confirm that the data is bound through the `DataSource` and that the chart series renders at least one slice.
+
+**Q: Why is the legend placed in an unexpected position?**
+
+A: The legend position is controlled by the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Position) property. The default behavior places the legend on the right when the chart's width is greater than its height, and at the bottom when the height is greater. Override this with an explicit value such as `Position="LegendPosition.Top"`.
+
+**Q: Why are legend items not all visible?**
+
+A: When pager navigation arrows appear, paging is in effect. Increase the legend [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Height), enable [TextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_TextWrap) with a [MaximumLabelWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_MaximumLabelWidth), or apply the [Paging customization](#paging-customization) section.
+
+**Q: Why does clicking a legend item not toggle the series?**
+
+A: Toggle behavior depends on [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_ToggleVisibility). The default is `true`. If toggling is disabled, set `ToggleVisibility="true"` on the legend settings. Custom [LegendItemTemplate](#legend-template) content also needs to keep the root clickable (e.g., a `<div>` rather than inline content inside a non-clickable element) to forward the toggle event.
+
+**Q: How do I hide a specific entry from the legend?**
+
+A: Set the `Name` of the corresponding `AccumulationChartSeries` to an empty string. A series with no rendered name will be excluded from the legend. Note that this also hides it in tooltips that derive their header from the series name.
+
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=fluent2) to know about the various features of accumulation charts and how they are used to represent numeric proportional data.
+
+## See also
 
 * [Grouping](./grouping)
 * [Data label](./data-label)

@@ -11,7 +11,7 @@ documentation: ug
 
 # Blazor Accumulation Chart Title and Subtitle
 
-The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_Title) property can be used to give the accumulation chart a title in-order to provide information about the data displayed.
+The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_Title) property can be used to give the accumulation chart a title in order to provide information about the data displayed.
 
 ```cshtml 
 
@@ -19,11 +19,9 @@ The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAcc
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
     <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser">
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
     <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
@@ -49,7 +47,7 @@ The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAcc
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNLRNQLXTtYnBred?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Title in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-title.webp)" %}
 
-## Title customization
+## Title Customization
 
 The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_Title) can be customized to be defined in the [AccumulationChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTitleStyle.html).
 
@@ -58,14 +56,11 @@ The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAcc
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
-	<AccumulationChartTitleStyle FontFamily="Arial" FontWeight="regular" Color="#E27F2D" Size="23px"></AccumulationChartTitleStyle>
-
+	<AccumulationChartTitleStyle FontFamily="Arial" FontWeight="normal" Color="#E27F2D" Size="23px"></AccumulationChartTitleStyle>
     <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser">
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
     <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
@@ -91,7 +86,7 @@ The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAcc
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rthxZchDzCZzDwAH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Title in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-title-customization.webp)" %}
 
-### Title position
+### Title Position
 
 The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTitleStyle.html#Syncfusion_Blazor_Charts_AccumulationChartTitleStyle_Position) property customizes the placement of the accumulation chart title. It supports the following options: [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Right), [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Left), [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Bottom), [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Top), and [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Custom), providing flexible title alignment based on layout requirements. By default, the accumulation chart title appears at the top of the chart.
 
@@ -104,11 +99,9 @@ N> The subtitle, which appears below the title, will also be positioned along wi
 <SfAccumulationChart Title="Mobile Browser Statistics" SubTitle="In the year 2014 - 2015">
     <AccumulationChartTitleStyle Position="ChartTitlePosition.Bottom"></AccumulationChartTitleStyle>
     <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser">
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
     <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
@@ -142,11 +135,9 @@ When the `Position` is set to `Custom`, the title can be positioned anywhere on 
 <SfAccumulationChart Title="Mobile Browser Statistics" SubTitle="In the year 2014 - 2015">
     <AccumulationChartTitleStyle Position="ChartTitlePosition.Custom" X="320" Y="10"></AccumulationChartTitleStyle>
     <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser">
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
     <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
@@ -174,7 +165,7 @@ When the `Position` is set to `Custom`, the title can be positioned anywhere on 
 
 ## Subtitle
 
-The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SubTitle) property can be used to give the accumulation chart a subtitle in-order to provide an additional information about the data displayed.
+The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_SubTitle) property can be used to give the accumulation chart a subtitle in order to provide additional information about the data displayed.
 
 ```cshtml 
 
@@ -182,7 +173,6 @@ The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sf
 
 <SfAccumulationChart Title="Mobile Browser Statistics" SubTitle="In the year 2014 - 2015">
     <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
         </AccumulationChartSeries>
@@ -211,19 +201,17 @@ The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sf
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDVnDmhjpWpUhWEg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Subtitle in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-with-subtitle.webp)" %}
 
-## Subtitle customization
+## Subtitle Customization
 
-The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SubTitle) can be customized to be defined in the [AccumulationChartSubTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSubTitleStyle.html).
+The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_SubTitle) can be customized to be defined in the [AccumulationChartSubTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSubTitleStyle.html).
 
 ```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics" SubTitle="In the year 2014 - 2015">
-    <AccumulationChartSubTitleStyle FontFamily="Arial" FontWeight="regular" Color="#E27F2D" Size="13px"></AccumulationChartSubTitleStyle>
-
+    <AccumulationChartSubTitleStyle FontFamily="Arial" FontWeight="normal" Color="#E27F2D" Size="13px"></AccumulationChartSubTitleStyle>
     <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
         </AccumulationChartSeries>

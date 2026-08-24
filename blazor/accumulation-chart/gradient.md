@@ -19,7 +19,7 @@ Gradients add depth and modern styling to charts by smoothly blending multiple c
 A linear gradient blends colors along a straight path from a defined start point to an end point. In accumulation charts, a linear gradient can be applied either to the whole series or to each point via the `OnPointRender` event. An `AccumulationChartLinearGradient` is configured with one or more color stops.
 
 Properties:
-```
+```text
 X1 - Horizontal start position of the gradient (0 to 1).
 Y1 - Vertical start position of the gradient (0 to 1).
 X2 - Horizontal end position of the gradient (0 to 1).
@@ -50,7 +50,7 @@ A linear gradient may be applied directly at the series level. The same gradient
         <AccumulationChartSeries DataSource="@CategoryData" XName="Category" YName="Share" Type="AccumulationType.Pie" Name="Share by Category">
             <AccumulationChartSeriesBorder Color="#FFFFFF" Width="2"></AccumulationChartSeriesBorder>
 
-            <AccumulationDataLabelSettings Visible="true" Position="AccumulationLabelPosition.Outside" Name="DataLabelMappingName">
+            <AccumulationDataLabelSettings Visible="true" Position="AccumulationLabelPosition.Outside" Name="Share">
                 <AccumulationChartConnector Length="10px" />
                 <AccumulationChartDataLabelFont Size="12px" />
             </AccumulationDataLabelSettings>
@@ -68,23 +68,23 @@ A linear gradient may be applied directly at the series level. The same gradient
 </SfAccumulationChart>
 
 @code {
-    public class CategoryPoint { 
-        public string Category { get; set; } 
-        public double Share { get; set; } 
-        public string DataLabel { get; set; } 
+    public class CategoryPoint {
+        public string? Category { get; set; }
+        public double Share { get; set; }
+        public string? DataLabelMappingName { get; set; }
     }
 
     private readonly List<CategoryPoint> CategoryData = new ()
     {
-        new CategoryPoint { Category = "Electronics", Share = 22.5, DataLabel = "Electronics: 22.5%" },
-        new CategoryPoint { Category = "Fashion", Share = 18.0, DataLabel = "Fashion: 18.0%" },
-        new CategoryPoint { Category = "Home & Kitchen", Share = 15.5, DataLabel = "Home & Kitchen: 15.5%" },
-        new CategoryPoint { Category = "Beauty & Health", Share = 10.0, DataLabel = "Beauty & Health: 10.0%" },
-        new CategoryPoint { Category = "Sports & Outdoors", Share = 9.5, DataLabel = "Sports & Outdoors: 9.5%" },
-        new CategoryPoint { Category = "Books", Share = 8.0,  DataLabel = "Books: 8.0%" },
-        new CategoryPoint { Category = "Toys & Games", Share = 7.0, DataLabel = "Toys & Games: 7.0%" },
-        new CategoryPoint { Category = "Groceries", Share = 6.0,  DataLabel = "Groceries: 6.0%" },
-        new CategoryPoint { Category = "Other", Share = 3.5,  DataLabel = "Other: 3.5%" }
+        new CategoryPoint { Category = "Electronics", Share = 22.5, DataLabelMappingName = "Electronics: 22.5%" },
+        new CategoryPoint { Category = "Fashion", Share = 18.0, DataLabelMappingName = "Fashion: 18.0%" },
+        new CategoryPoint { Category = "Home & Kitchen", Share = 15.5, DataLabelMappingName = "Home & Kitchen: 15.5%" },
+        new CategoryPoint { Category = "Beauty & Health", Share = 10.0, DataLabelMappingName = "Beauty & Health: 10.0%" },
+        new CategoryPoint { Category = "Sports & Outdoors", Share = 9.5, DataLabelMappingName = "Sports & Outdoors: 9.5%" },
+        new CategoryPoint { Category = "Books", Share = 8.0,  DataLabelMappingName = "Books: 8.0%" },
+        new CategoryPoint { Category = "Toys & Games", Share = 7.0, DataLabelMappingName = "Toys & Games: 7.0%" },
+        new CategoryPoint { Category = "Groceries", Share = 6.0,  DataLabelMappingName = "Groceries: 6.0%" },
+        new CategoryPoint { Category = "Other", Share = 3.5,  DataLabelMappingName = "Other: 3.5%" }
     };
 }
 
@@ -167,7 +167,7 @@ A diagonal linear gradient can be applied per data point using the `OnPointRende
 ## Radial gradient
 
 Configure a radial gradient by assigning an `AccumulationChartRadialGradient` with one or more color stops inside the `OnPointRender` event. The following properties control the gradient appearance:
-```
+```text
 Cx - Normalized horizontal center of the gradient (0 to 1).
 Cy - Normalized vertical center of the gradient (0 to 1).
 Fx - Normalized horizontal focal point from which the gradient appears to originate (0 to 1).
@@ -186,7 +186,7 @@ Each color stop (`AccumulationChartGradientColorStop`) supports:
 
 A radial gradient can be applied directly at the series level. The same gradient is applied uniformly to all data points, legend symbols and tooltip markers.
 
-```
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -246,7 +246,7 @@ A radial gradient can be applied directly at the series level. The same gradient
 
 The following example uses a distinct color palette and an off-center radial gradient to create a clear light-to-shadow effect on each data point. The gradient is configured in `OnPointRender`, so each data point receives its own radial gradient derived from its base color.
 
-```
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -256,9 +256,8 @@ The following example uses a distinct color palette and an off-center radial gra
     <AccumulationChartEvents OnPointRender="OnPointRender" />
     <AccumulationChartLegendSettings Visible="true" />
     <AccumulationChartTooltipSettings Enable="true" />
-
     <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@CategoryData" XName="Category" YName="Share" Type="AccumulationType.Pie" Name="Share by Category">
+        <AccumulationChartSeries DataSource="@CategoryData" XName="Category" YName="Share" Type="AccumulationType.Pie" Name="Share by Category" InnerRadius="50%">
             <AccumulationChartSeriesBorder Color="transparent" Width="0"></AccumulationChartSeriesBorder>
             <AccumulationDataLabelSettings Visible="true" Position="AccumulationLabelPosition.Outside" Name="DataLabelMappingName">
                 <AccumulationChartConnector Length="10px" />

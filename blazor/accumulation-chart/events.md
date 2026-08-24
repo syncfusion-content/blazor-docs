@@ -42,7 +42,7 @@ PointMoved|
 
 ## OnDataLabelRender
 
-[OnDataLabelRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnDataLabelRender) event triggers, before datalabel for series is rendered.
+The [OnDataLabelRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnDataLabelRender) event triggers before the data label for the series is rendered.
 
 ### Arguments
 
@@ -92,7 +92,7 @@ The following properties are available in the [AccumulationTextRenderEventArgs](
 
 ## OnLegendItemRender
 
-[OnLegendItemRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnLegendItemRender) event triggers, before legend getting rendered.
+The [OnLegendItemRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnLegendItemRender) event triggers before the legend gets rendered.
 
 ### Arguments
 
@@ -190,7 +190,7 @@ The following properties are available in the [AccumulationPointRenderEventArgs]
 
 ## OnExportComplete
 
-[OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnExportComplete) event triggers after exporting the accumulation chart.
+The [OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnExportComplete) event triggers after exporting the accumulation chart.
 
 ### Arguments
 
@@ -243,7 +243,7 @@ The following field is available in the [ExportEventArgs](https://help.syncfusio
 
 ## OnPrintComplete
 
-`OnPrintComplete` event triggers after printing the accumulation chart.
+The `OnPrintComplete` event triggers after printing the accumulation chart.
 
 ```cshtml 
 @using Syncfusion.Blazor.Charts
@@ -289,7 +289,7 @@ The following field is available in the [ExportEventArgs](https://help.syncfusio
 
 ## SizeChanged
 
-[SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_SizeChanged) event is triggered when the accumulation chart is resized.
+The [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_SizeChanged) event is triggered when the accumulation chart is resized.
 
 ### Arguments
 
@@ -337,7 +337,7 @@ The following fields are available in the [AccumulationResizeEventArgs](https://
 
 ## Loaded
 
-`Loaded` event triggers after accumulation chart is loaded.
+The `Loaded` event triggers after the accumulation chart is loaded.
 
 ```cshtml 
 @using Syncfusion.Blazor.Charts
@@ -473,6 +473,103 @@ The following property is available in the [TooltipRenderEventArgs](https://help
     public void TooltipRenderEvent(TooltipRenderEventArgs args)
     {
         // Here, you can customize your code.
+    }
+}
+```
+
+## OnExportComplete (Async Sample)
+
+Use the `OnExportComplete` event with the modern async export API. The handler below initiates the export, awaits completion, and reports the resulting `DataUrl`.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<button class="btn-success" @onclick="Export">Export</button>
+
+<SfAccumulationChart Title="Mobile Browser Statistics" @ref="AccChart">
+    <AccumulationChartEvents OnExportComplete="ExportCompleteEvent"></AccumulationChartEvents>
+
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+</SfAccumulationChart>
+
+@code {
+    SfAccumulationChart AccChart;
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+    {
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4 },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+
+    private async Task Export()
+    {
+        await AccChart.ExportAsync(ExportType.JPEG, "Charts");
+    }
+
+    private void ExportCompleteEvent(ExportEventArgs args)
+    {
+        // Use args.DataUrl to inspect or post-process the exported file.
+    }
+}
+```
+
+## OnPrintComplete (Async Sample)
+
+Use the `OnPrintComplete` event with the modern async print API. The handler is invoked after the browser finishes the chart's print job.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<button class="btn-success" @onclick="Print">Print</button>
+
+<SfAccumulationChart Title="Mobile Browser Statistics" @ref="AccChart">
+    <AccumulationChartEvents OnPrintComplete="PrintCompleteEvent"></AccumulationChartEvents>
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+</SfAccumulationChart>
+
+@code {
+    SfAccumulationChart AccChart;
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+    {
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4 },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+
+    private async Task Print()
+    {
+        await AccChart.PrintAsync();
+    }
+
+    private void PrintCompleteEvent(ExportEventArgs args)
+    {
+        // Triggered after the print dialog has been handled by the browser.
     }
 }
 ```

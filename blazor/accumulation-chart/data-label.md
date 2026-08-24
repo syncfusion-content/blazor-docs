@@ -50,7 +50,7 @@ The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Acc
 
 ## Text Wrap
 
-When the data label text exceeds the container, the text can be wrapped by using [TextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_TextWrap) Property. End user can also wrap the data label text based on the [MaxWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_MaxWidth) property.
+When the data label text exceeds the container, the text can be wrapped by using the [TextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_TextWrap) property. The end user can also wrap the data label text based on the [MaxWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_MaxWidth) property.
 
 ```cshtml 
 @using Syncfusion.Blazor.Charts
@@ -60,7 +60,7 @@ When the data label text exceeds the container, the text can be wrapped by using
 
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@PieChartPoints" XName="Browser" YName="Users" Name="Browser">
-            <AccumulationDataLabelSettings EnableRotation="true" Visible="true" MaxWidth="100" TextWrap="Syncfusion.Blazor.TextWrap.Wrap" Name="DataLabelMappingName" Position="AccumulationLabelPosition.Inside">
+            <AccumulationDataLabelSettings EnableRotation="true" Visible="true" MaxWidth="100" TextWrap="@Syncfusion.Blazor.TextWrap.Wrap" Name="DataLabelMappingName" Position="AccumulationLabelPosition.Inside">
                 </AccumulationDataLabelSettings>
             </AccumulationChartSeries>
         </AccumulationChartSeriesCollection>
@@ -261,8 +261,6 @@ The [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accumu
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVxDwCSBPKCpwaV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Text Mapping in Blazor Accumulation Chart](images/data-label/blazor-accumulation-chart-text-mapping.webp)" %}
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=fluent2) to know various features of accumulation charts and how it is used to represent numeric proportional data.
-
 ## Format
 
 Data label for the accumulation chart can be formatted using [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Format) property. You can use the global formatting options, such as 'N1', 'P1', and 'C1'.
@@ -277,7 +275,7 @@ Data label for the accumulation chart can be formatted using [Format](https://he
     <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 
     <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@ChartValues" XName="XValue" YName="YValue" Name="Browser" Radius="80%" StartAngle="0" EndAngle="360"InnerRadius="0%">
+        <AccumulationChartSeries DataSource="@ChartValues" XName="XValue" YName="YValue" Name="Browser" Radius="80%" StartAngle="0" EndAngle="360" InnerRadius="0%">
             <AccumulationDataLabelSettings Visible="true"  Format="C1" Position="AccumulationLabelPosition.Inside"></AccumulationDataLabelSettings>
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
@@ -369,6 +367,8 @@ Data labels can be customized using the template element for the accumulation ch
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZLxZwiorbwBVjLC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Template in Blazor Accumulation Chart](images/data-label/blazor-accumulation-chart-with-data-label-template.webp)" %}
+
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=fluent2) to know about the various features of accumulation charts and how they are used to represent numeric proportional data.
 
 ## See also
 
