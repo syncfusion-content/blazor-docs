@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customizing and Multilevel nesting in Blazor ContextMenu | Syncfusion®
-description: Learn here all the features about Customizing and Multilevel nesting in Blazor ContextMenu component and much more.
+title: Customizing and Multilevel nesting in Blazor Context Menu | Syncfusion®
+description: Learn here all the features about Customizing and Multilevel nesting in Blazor Context Menu component and much more.
 platform: Blazor
 control: Context Menu
 documentation: ug
 ---
 
-# Customizing and Multilevel Nesting in Blazor ContextMenu Component
+# Customizing and Multilevel Nesting in Blazor Context Menu Component
 
 ## Customizing ContextMenu Items
 
