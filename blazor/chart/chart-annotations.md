@@ -23,15 +23,13 @@ Watch the video below for a walkthrough on adding and customizing annotations in
 
 <SfChart Title="Olympic Medals">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
-
     <ChartAnnotations>
-        <ChartAnnotation X="@data" Y="70" CoordinateUnits="Units.Point">
+        <ChartAnnotation X="@data" Y="75" CoordinateUnits="Units.Point">
             <ContentTemplate>
                 <div style="color: firebrick; font-size: medium; font-style: italic">Highest Medal Count</div>
             </ContentTemplate>
         </ChartAnnotation>
     </ChartAnnotations>
-
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="ChartSeriesType.Column" />
     </ChartSeriesCollection>
@@ -73,15 +71,13 @@ The [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Char
 
 <SfChart Title="Olympic Medals">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
-
     <ChartAnnotations>
-        <ChartAnnotation X="@Country" Y="70" Region="Regions.Series" CoordinateUnits="Units.Point">
+        <ChartAnnotation X="@Country" Y="75" Region="Regions.Series" CoordinateUnits="Units.Point">
             <ContentTemplate>
-                <div>Highest Medal Count</div>
+                <div><b>Highest Medal Count</b></div>
             </ContentTemplate>
         </ChartAnnotation>
     </ChartAnnotations>
-
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="ChartSeriesType.Column" />
     </ChartSeriesCollection>

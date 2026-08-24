@@ -25,32 +25,35 @@ When space constraints prevent information from being displayed through data lab
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart Title="Product Sales">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
-
-    <ChartPrimaryYAxis LabelFormat="{value}M"></ChartPrimaryYAxis>
-
-    <ChartTooltipSettings Enable="true"></ChartTooltipSettings>
-
+<SfChart Title="Olympic Medals">
+    <ChartPrimaryXAxis Title="Countries" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+    <ChartPrimaryYAxis Title="Medal Counts">
+    </ChartPrimaryYAxis>
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@SalesReports" Name="Sales" XName="X" YName="Y" Type="ChartSeriesType.Column">
-        </ChartSeries>
+        <ChartSeries TooltipMappingName="Text" DataSource="@MedalDetails" XName="X" YName="YValue" Type="ChartSeriesType.Column" />
     </ChartSeriesCollection>
+    <ChartTooltipSettings Enable="true" Header="${point.tooltip}"></ChartTooltipSettings>
 </SfChart>
 
 @code {
-    public class ColumnSalesData
+    public class ChartData
     {
         public string X { get; set; }
-        public double Y { get; set; }
+        public double YValue { get; set; }
+        public string Text { get; set; }
     }
 
-    public List<ColumnSalesData> SalesReports = new List<ColumnSalesData>
+    public List<ChartData> MedalDetails = new List<ChartData>
     {
-       new ColumnSalesData { X = "Jan", Y = 3 },
-       new ColumnSalesData { X = "Feb", Y = 3.5 },
-       new ColumnSalesData { X = "Mar", Y = 7, },
-       new ColumnSalesData { X = "Apr", Y = 13.5 }
+        new ChartData { X = "USA", YValue = 46, Text = "United States" },
+        new ChartData { X = "GBR", YValue = 27, Text = "Great Britain" },
+        new ChartData { X = "CHN", YValue = 26, Text = "China" },
+        new ChartData { X = "UK",  YValue = 26, Text = "United Kingdom" },
+        new ChartData { X = "AUS", YValue = 26, Text = "Australia" },
+        new ChartData { X = "IND", YValue = 26, Text = "India" },
+        new ChartData { X = "DEN", YValue = 26, Text = "Denmark" },
+        new ChartData { X = "MEX", YValue = 26, Text = "Mexico" }
     };
 }
 
@@ -240,16 +243,13 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartT
 
 <SfChart Title="Product Sales" HighlightColor="red">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
-
     <ChartPrimaryYAxis LabelFormat="{value}M"></ChartPrimaryYAxis>
-
     <ChartTooltipSettings Enable="true" Fill="gray">
         <ChartTooltipBorder Color="#FF0000" Width="2"></ChartTooltipBorder>
         <ChartTooltipTextStyle Color="white" Size="12px" FontWeight="Bold"></ChartTooltipTextStyle>
     </ChartTooltipSettings>
-
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@SalesReports" Name="Sales" XName="X" YName="Y" Type="ChartSeriesType.Column">
+        <ChartSeries DataSource="@SalesReports" XName="X" YName="Y" Type="ChartSeriesType.Column">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>

@@ -160,7 +160,7 @@ By default, the zooming toolbar appears only when the chart is zoomed. However, 
 ```cshtml
 @using Syncfusion.Blazor.Charts
 
-<SfChart Title="Sales History of Product X">
+<SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
     <ChartZoomSettings EnableSelectionZooming="true" EnableMouseWheelZooming="true" EnablePinchZooming="true" ToolbarDisplayMode="ToolbarMode.Always">
     </ChartZoomSettings>
@@ -352,23 +352,19 @@ The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
         <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
         <ChartAxisScrollbarSettings PointsLength="1000" Position="ScrollbarPosition.Bottom" />
     </ChartPrimaryXAxis>
-
     <ChartPrimaryYAxis Title="Profit ($)" RangePadding="ChartRangePadding.None">
         <ChartAxisLineStyle Width="0"></ChartAxisLineStyle>
         <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
         <ChartAxisScrollbarSettings PointsLength="1000" Position="ScrollbarPosition.Right" />
     </ChartPrimaryYAxis>
-
     <ChartSeriesCollection>
         <ChartSeries DataSource="@SalesReports" Name="Sales" XName="XValue" Width="2" Opacity="1"
                      YName="YValue" Type="ChartSeriesType.Area">
         </ChartSeries>
     </ChartSeriesCollection>
-
     <ChartArea>
         <ChartAreaBorder Width="0"></ChartAreaBorder>
     </ChartArea>
-
     <ChartZoomSettings EnableMouseWheelZooming="true" EnableScrollbar="true" EnablePinchZooming="true"
                        EnableSelectionZooming="true"></ChartZoomSettings>
     <ChartLegendSettings Visible="false"></ChartLegendSettings>

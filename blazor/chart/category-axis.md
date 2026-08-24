@@ -41,7 +41,7 @@ Watch this walkthrough of axis customization in Blazor Charts.
         new ChartData { X= "USA", YValue= 46 },
         new ChartData { X= "GBR", YValue= 27 },
         new ChartData { X= "CHN", YValue= 26 },
-        new ChartData { X= "FRA", YValue= 23 },
+        new ChartData { X= "UK", YValue= 23 },
         new ChartData { X= "AUS", YValue= 16 },
         new ChartData { X= "IND", YValue= 36 },
         new ChartData { X= "DEN", YValue= 12 },
@@ -50,7 +50,7 @@ Watch this walkthrough of axis customization in Blazor Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVdtFWgqARLKypa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column Chart with Default Axis](images/category-axis/blazor-chart-default-axis.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBRNnWLJtOKpNdh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column Chart with Default Axis](images/category-axis/blazor-chart-default-axis.webp)" %}
 
 ## Label placement
 
@@ -82,7 +82,7 @@ The category labels are positioned between ticks by default, but the [LabelPlace
         new ChartData { X= "USA", YValue= 46 },
         new ChartData { X= "GBR", YValue= 27 },
         new ChartData { X= "CHN", YValue= 26 },
-        new ChartData { X= "FRA", YValue= 23 },
+        new ChartData { X= "UK", YValue= 23 },
         new ChartData { X= "AUS", YValue= 16 },
         new ChartData { X= "IND", YValue= 36 },
         new ChartData { X= "DEN", YValue= 12 },
@@ -91,7 +91,7 @@ The category labels are positioned between ticks by default, but the [LabelPlace
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLxjPWgAUkSojUy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Labels Position in Blazor Chart](images/category-axis/blazor-diagram-label-position.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBnNHWLpNObjzKi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Labels Position in Blazor Chart](images/category-axis/blazor-diagram-label-position.webp)" %}
 
 ## Range and interval
 
