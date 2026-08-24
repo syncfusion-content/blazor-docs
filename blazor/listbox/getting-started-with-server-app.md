@@ -194,7 +194,7 @@ After initialization, populate the ListBox using the `DataSource` property. The 
         new VehicleData { Text = "SSC Ultimate Aero", Id = "Vehicle-04" },
         new VehicleData { Text = "Koenigsegg CCR", Id = "Vehicle-05" },
         new VehicleData { Text = "McLaren F1", Id = "Vehicle-06" },
-        new VehicleData { Text = "Aston Martin One- 77", Id = "Vehicle-07" },
+        new VehicleData { Text = "Aston Martin One-77", Id = "Vehicle-07" },
         new VehicleData { Text = "Jaguar XJ220", Id = "Vehicle-08" }
     };
 
@@ -207,7 +207,7 @@ After initialization, populate the ListBox using the `DataSource` property. The 
 {% endhighlight %}
 {% endtabs %}
 
-N> `TValue` is the type of the value in the data source used for type inference. It is a generic type and can be specified as string[], int[], etc.
+N> `TValue` specifies the type of the selected value or values (for example, `string[]`), while `TItem` specifies the type of each data source item (for example, `VehicleData`).
 
 ## Run the application
 
