@@ -12,13 +12,13 @@ keywords: Blazor Chart series label, series label, chart labels, inline series l
 
 The series label feature displays the name of each series directly within the chart area. This improves readability by helping users identify series inline and reduces reliance on the legend.
 
-This feature is especially useful in multi-series visualizations and exported charts, where quick in-chart identification is important.Series labels can be enabled and customized using the `SeriesLabelSettings` property.
+This feature is especially useful in multi-series visualizations and exported charts, where quick in-chart identification is important.Series labels can be enabled and customized using the [SeriesLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesLabelSettings.html) property.
 
 N> **Supported Series Types:** Series labels are available for Line, Area, Scatter, Column, Bar, Polar Line, and Radar Line chart types.
 
 ## Enable series labels
 
-To display series labels, set the `Visible` property of `SeriesLabelSettings` to `true` for the required series.
+To display series labels, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesLabelSettings.html#Syncfusion_Blazor_Charts_SeriesLabelSettings_Visible) property of [SeriesLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesLabelSettings.html) to `true` for the required series.
 
 ```cshtml
 
@@ -83,8 +83,7 @@ To display series labels, set the `Visible` property of `SeriesLabelSettings` to
 
 ```
 
-<!-- TODO: Add Blazor Playground sample after release -->
-![Blazor line chart displaying inline series labels](images/series-label/blazor-line-chart-series-label.webp)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhRXwCeUtiqTzwA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor line chart displaying inline series labels](images/series-label/blazor-line-chart-series-label.webp)" %}
 
 ## Customization
 
@@ -94,22 +93,22 @@ You can customize the appearance of the series label using the following propert
 
 Configure the main series label appearance:
 
-In the `SeriesLabelSettings`:
-* `Visible`: Enables or disables the display of series labels. Set to `true` to display the label for the corresponding series.
-* `Text`: Specifies the custom text to be displayed in the series label. If this property is not set, the label displays the corresponding series name by default.
-* `Background`: Specifies the background color of the series label. This helps the label stand out clearly within the chart area.
-* `Opacity`: Specifies the transparency level of the series label. The accepted range is from 0 to 1, where 0 represents full transparency and 1 represents full opacity. For example, set `Opacity="0.5"` for 50% transparency.
-* `ShowOverlapText`: Determines whether overlapping series labels should be displayed. This is useful when labels overlap because the corresponding series are positioned close to one another.
+In the [SeriesLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesLabelSettings.html):
+* [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesLabelSettings.html#Syncfusion_Blazor_Charts_SeriesLabelSettings_Visible): Enables or disables the display of series labels. Set to `true` to display the label for the corresponding series.
+* [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesLabelSettings.html#Syncfusion_Blazor_Charts_SeriesLabelSettings_Text): Specifies the custom text to be displayed in the series label. If this property is not set, the label displays the corresponding series name by default.
+* [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesLabelSettings.html#Syncfusion_Blazor_Charts_SeriesLabelSettings_Background): Specifies the background color of the series label. This helps the label stand out clearly within the chart area.
+* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesLabelSettings.html#Syncfusion_Blazor_Charts_SeriesLabelSettings_Opacity): Specifies the transparency level of the series label. The accepted range is from 0 to 1, where 0 represents full transparency and 1 represents full opacity. For example, set `Opacity="0.5"` for 50% transparency.
+* [ShowOverlapText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesLabelSettings.html#Syncfusion_Blazor_Charts_SeriesLabelSettings_ShowOverlapText): Determines whether overlapping series labels should be displayed. This is useful when labels overlap because the corresponding series are positioned close to one another.
 
-In the `SeriesLabelBorder`:
+In the [SeriesLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesLabelBorder.html):
 * `Color`: Specifies the border color of the series label. This can be used to visually separate the label from the chart background.
-* `Width`: Specifies the width of the border around the series label. A higher value makes the border more visible.
+* [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesLabelBorder.html#Syncfusion_Blazor_Charts_SeriesLabelBorder_Width): Specifies the width of the border around the series label. A higher value makes the border more visible.
 
-In the `SeriesLabelFont`:
-* `Size`: Specifies the font size of the label text.
-* `Color`: Specifies the font color of the label text.
-* `FontFamily`: Specifies the font family of the label text.
-* `FontWeight`: Specifies the font weight of the label text. Valid values include `normal`, `bold`, `600`, `700`, etc. (CSS font-weight format).
+In the [SeriesLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesLabelFont.html):
+* [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesLabelFont.html#Syncfusion_Blazor_Charts_SeriesLabelFont_Size): Specifies the font size of the label text.
+* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesLabelFont.html#Syncfusion_Blazor_Charts_SeriesLabelFont_Color): Specifies the font color of the label text.
+* [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesLabelFont.html#Syncfusion_Blazor_Charts_SeriesLabelFont_FontFamily): Specifies the font family of the label text.
+* [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesLabelFont.html#Syncfusion_Blazor_Charts_SeriesLabelFont_FontWeight): Specifies the font weight of the label text. Valid values include `normal`, `bold`, `600`, `700`, etc. (CSS font-weight format).
 
 ```cshtml
 
@@ -183,8 +182,7 @@ In the `SeriesLabelFont`:
 
 ```
 
-<!-- TODO: Add Blazor Playground sample after release -->
-![Blazor line chart with customized series label background, font, and border](images/series-label/blazor-line-chart-series-label-customization.webp)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhHXQWeAXmXdxjU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor line chart with customized series label background, font, and border](images/series-label/blazor-line-chart-series-label-customization.webp)" %}
 
 ## See also
 

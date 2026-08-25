@@ -304,7 +304,7 @@ The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 **Show Risers**
 
-The `ShowRisers` property determines whether vertical riser lines are displayed between consecutive data points in the series. Set this property to `true` to show the riser lines or `false` to hide them. Hiding risers can simplify the chart appearance and make the overall trend easier to follow. 
+The [ShowRisers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ShowRisers) property determines whether vertical riser lines are displayed between consecutive data points in the series. Set this property to `true` to show the riser lines or `false` to hide them. Hiding risers can simplify the chart appearance and make the overall trend easier to follow. 
 
 ```cshtml
 
@@ -356,8 +356,7 @@ The `ShowRisers` property determines whether vertical riser lines are displayed 
 
 ```
 
-<!-- TODO: Add preview sample after release -->
-![Blazor Step Area Chart NoRiser Series](../images/chart-types-images/blazor-step-area-chart-noriser-series.webp)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrRtmMIKgGAEhCg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Step Area Chart NoRiser Series](../images/chart-types-images/blazor-step-area-chart-noriser-series.webp)" %}
 
 ## Empty points
 
