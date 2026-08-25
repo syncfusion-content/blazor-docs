@@ -7,9 +7,9 @@ control: DataGrid
 documentation: ug
 ---
 
-# Add Data Grid to Blazor WebAssembly using .NET CLI
+# Add Data Grid to Blazor WebAssembly Using .NET CLI
 
-This article provides step-by-step instructions to build a standalone Blazor WebAssembly app and integrate the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet). The guidance aligns with .NET 8/9 Blazor WebAssembly project standards and notes when to use a hosted WebAssembly option.
+The article provides step-by-step instructions to build a standalone Blazor WebAssembly app and integrate the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet). The guidance aligns with .NET 8/9 Blazor WebAssembly project standards and notes when to use a hosted WebAssembly option.
 
 ## Using the Playground
 
@@ -19,24 +19,24 @@ This article provides step-by-step instructions to build a standalone Blazor Web
 
 ## Manually creating a project
 
-This section explains how to manually create a standalone Blazor WebAssembly app using the CLI.
+Manual project creation explains how to create a standalone Blazor WebAssembly app using the CLI.
 
 ### Prerequisites
 
 Install the latest [.NET SDK](https://dotnet.microsoft.com/en-us/download) for .NET 8/9. To verify installed SDKs, run:
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet --list-sdks
 
 {% endhighlight %}
 {% endtabs %}
 
-To check the current default .NET SDK version installed on a system, run the following command in a terminal or command prompt:
+To check the current default .NET SDK version, run the command below in a terminal or command prompt:
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet --version
 
@@ -48,13 +48,13 @@ dotnet --version
 To create a new standalone Blazor WebAssembly app targeting the latest supported framework, run one of the following:
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 8 (recommended)" %}
+{% highlight bash tabtitle=".NET 8 (recommended)" %}
 
 dotnet new blazorwasm -o BlazorApp -f net8.0
 cd BlazorApp
 
 {% endhighlight %}
-{% highlight c# tabtitle=".NET 9 (preview or latest)" %}
+{% highlight bash tabtitle=".NET 9" %}
 
 dotnet new blazorwasm -o BlazorApp -f net9.0
 cd BlazorApp
@@ -65,13 +65,13 @@ cd BlazorApp
 For a hosted Blazor WebAssembly experience (with ASP.NET Core backend), add the hosted option:
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 8 hosted" %}
+{% highlight bash tabtitle=".NET 8 hosted" %}
 
 dotnet new blazorwasm -o BlazorApp -f net8.0 --hosted
 cd BlazorApp
 
 {% endhighlight %}
-{% highlight c# tabtitle=".NET 9 hosted" %}
+{% highlight bash tabtitle=".NET 9 hosted" %}
 
 dotnet new blazorwasm -o BlazorApp -f net9.0 --hosted
 cd BlazorApp
@@ -81,12 +81,12 @@ cd BlazorApp
 
 N> If the project is created without specifying -f, the template may default to an older target framework depending on the installed SDKs. Always include -f net8.0 or -f net9.0 to target the intended framework version. See the [template options](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for details.
 
-### Install Blazor DataGrid and Themes NuGet in the app
+### Install Blazor DataGrid and Themes NuGet packages in the app
 
-To add the `Syncfusion.Blazor.Grid` NuGet package to the application, use the following command in the command prompt (Windows) or terminal (Linux/macOS). For more details, refer to [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli).
+To add the `Syncfusion.Blazor.Grid` NuGet package to the application, run the command below in the command prompt (Windows) or terminal (Linux/macOS). For more details, refer to [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli).
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet add package Syncfusion.Blazor.Grid --version {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
@@ -99,19 +99,18 @@ N> Blazor components are available on [nuget.org](https://www.nuget.org/packages
 
 ### Register Blazor service
 
-1. Import namespaces
+#### Import namespaces
 
 Open the **~/_Imports.razor** file and add the following namespaces:
 
 ```cshtml
-
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
-
 ```
-2. Register the service
 
-In **~/Program.cs**, register the Blazor service as shown below:
+#### Register the service
+
+In **~/Program.cs**, add the following service registration:
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor WebAssembly App" hl_lines="3 11" %}
@@ -132,28 +131,34 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
+`AddSyncfusionBlazor()` is the required service registration. No extra namespace registration is required beyond the namespaces in **~/_Imports.razor**.
+
 ### Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` section of the main layout page as shown below:
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet in the `<head>` and the script in `<body>` of **wwwroot/index.html**.
 
-For .NET 8/9 standalone Blazor WebAssembly apps, add the following to the **wwwroot/index.html** file:
+For .NET 8/9 standalone Blazor WebAssembly apps, add the entries below to the **wwwroot/index.html** file:
 
 ```html
 <head>
-    ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 <body>
-    ....
+    ...
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
 ```
 
-N> See the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes. Also see [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) for approaches to add script references.
+Restart the app to apply theme and script changes.
 
-### Add Blazor DataGrid
+N> For more theme and script options, see the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) and [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) articles.
 
-Add the Blazor DataGrid in the **~/Pages/Home.razor** file.
+### Add a minimal Data Grid
+
+Add the Blazor Data Grid in the **~/Pages/Home.razor** file.
+Create **OrderData.cs** in the project root or in a **Data** folder.
+
+The sample renders the Data Grid with auto-generated columns.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -164,11 +169,11 @@ Add the Blazor DataGrid in the **~/Pages/Home.razor** file.
 
 @code {
     public List<OrderData> Orders { get; set; }
-       
+
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
-    }   
+    }
 }
 
 {% endhighlight %}
@@ -177,20 +182,21 @@ Add the Blazor DataGrid in the **~/Pages/Home.razor** file.
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
+
     public OrderData()
     {
-
     }
-    public OrderData( int? OrderID, string CustomerID)
+
+    public OrderData(int? OrderID, string CustomerID)
     {
         this.OrderID = OrderID;
         this.CustomerID = CustomerID;
     }
+
     public static List<OrderData> GetAllRecords()
     {
         if (Orders.Count() == 0)
         {
-            int code = 10;
             for (int i = 1; i < 2; i++)
             {
                 Orders.Add(new OrderData(1, "ALFKI"));
@@ -198,11 +204,12 @@ public class OrderData
                 Orders.Add(new OrderData(3, "ANANTR"));
                 Orders.Add(new OrderData(4, "ANANTR"));
                 Orders.Add(new OrderData(5, "ALFKI"));
-                code += 5;
             }
         }
+
         return Orders;
     }
+
     public int? OrderID { get; set; }
     public string CustomerID { get; set; }
 }
@@ -210,25 +217,25 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-* To build and run the Blazor WebAssembly application, use the following command in the terminal or command prompt:
+Save all files, then run `dotnet run` to build and run the Blazor WebAssembly app.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet run
 
 {% endhighlight %}
 {% endtabs %}
 
-After the app starts, navigate to `http://localhost:<port-number>` in the browser to view the Grid.
+After the app starts, open `http://localhost:<port-number>` in the browser and view the Data Grid.
 
-![Blazor DataGrid running in a WebAssembly app](../images/blazor-datagrid-component.webp)
+![Blazor Data Grid running in a Blazor WebAssembly app](../images/blazor-datagrid-component.webp)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVRNdgtetUSCuOz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Defining row data
 
-To bind data for the Blazor DataGrid, assign a `List<OrderData>` (or any collection that implements `IEnumerable<OrderData>`) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The list data source can also be provided as an instance of `DataManager`. Assign the data source in the `OnInitialized` lifecycle method of the page.
+To bind data for the Blazor Data Grid, assign a `List<OrderData>` (or any collection that implements `IEnumerable<OrderData>`) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The list data source can also be provided as an instance of `DataManager`. Assign the data source in the `OnInitialized` lifecycle method of the page.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -239,11 +246,11 @@ To bind data for the Blazor DataGrid, assign a `List<OrderData>` (or any collect
 
 @code {
     public List<OrderData> Orders { get; set; }
-       
+
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
-    }   
+    }
 }
 
 {% endhighlight %}
@@ -252,25 +259,26 @@ To bind data for the Blazor DataGrid, assign a `List<OrderData>` (or any collect
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
+
     public OrderData()
     {
-
     }
-    public OrderData( int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
+
+    public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
     {
         this.OrderID = OrderID;
         this.CustomerID = CustomerID;
         this.OrderDate = OrderDate;
         this.Freight = Freight;
     }
+
     public static List<OrderData> GetAllRecords()
     {
         if (Orders.Count() == 0)
         {
-            int code = 10;
             for (int i = 1; i < 2; i++)
             {
-                Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
+                Orders.Add(new OrderData(10248, "VINET", new DateTime(1996, 07, 07), 32.38));
                 Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 07, 07), 92.38));
                 Orders.Add(new OrderData(10250, "HANAR", new DateTime(1996, 07, 07), 62.77));
                 Orders.Add(new OrderData(10251, "VICTE", new DateTime(1996, 07, 07), 12.38));
@@ -278,17 +286,19 @@ public class OrderData
                 Orders.Add(new OrderData(10253, "CHOPS", new DateTime(1996, 07, 07), 31.31));
                 Orders.Add(new OrderData(10254, "RICSU", new DateTime(1996, 07, 07), 22.37));
                 Orders.Add(new OrderData(10255, "WELLI", new DateTime(1996, 07, 07), 44.34));
-                Orders.Add(new OrderData(10256, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
-                code += 5;
+                Orders.Add(new OrderData(10256, "RICSU", new DateTime(1996, 07, 07), 31.33));
             }
         }
+
         return Orders;
     }
+
     public int? OrderID { get; set; }
     public string CustomerID { get; set; }
     public DateTime? OrderDate { get; set; }
     public double? Freight { get; set; }
-} 
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -296,11 +306,11 @@ public class OrderData
 
 ### Defining columns
 
-Columns are automatically generated when the column declaration is empty or undefined during initialization of the Blazor DataGrid.
+Columns are automatically generated when the column declaration is empty or undefined during initialization of the Blazor Data Grid.
 
-The Grid also supports explicitly defining columns using [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html). In `GridColumn`, several properties are available to customize column behavior.
+The Data Grid also supports explicitly defining columns using [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html). In `GridColumn`, several properties are available to customize column behavior.
 
-Key properties in the example below:
+The key properties are:
 
 * [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field): Binds the column to a property on the data model.
 * [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText): Sets the displayed column title.
@@ -324,13 +334,12 @@ Key properties in the example below:
 </SfGrid>
 
 @code {
-   private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
-       
+
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
-    }       
+    }
 }
 
 {% endhighlight %}
@@ -354,7 +363,6 @@ public class OrderData
     {
         if (Orders.Count() == 0)
         {
-            int code = 10;
             for (int i = 1; i < 2; i++)
             {
                 Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
@@ -366,7 +374,6 @@ public class OrderData
                 Orders.Add(new OrderData(10254, "RICSU", new DateTime(1996, 07, 07), 22.37));
                 Orders.Add(new OrderData(10255, "WELLI", new DateTime(1996, 07, 07), 44.34));
                 Orders.Add(new OrderData(10256, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
-                code += 5;
             }
         }
         return Orders;
@@ -383,7 +390,7 @@ public class OrderData
 
 ### Enable paging
 
-The Blazor DataGrid can display records in a paged format. To enable paging, set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to `true`. Customize the pager using [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings).
+The Blazor Data Grid can display records in a paged format. To enable paging, set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to `true`. Customize the pager using [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings). The default page size is 12 when `PageSize` is not specified.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -391,7 +398,7 @@ The Blazor DataGrid can display records in a paged format. To enable paging, set
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
-     <GridPageSettings PageSize="5"></GridPageSettings>
+    <GridPageSettings PageSize="5"></GridPageSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
@@ -402,11 +409,11 @@ The Blazor DataGrid can display records in a paged format. To enable paging, set
 
 @code {
     public List<OrderData> Orders { get; set; }
-       
+
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
-    }       
+    }
 }
 
 {% endhighlight %}
@@ -430,7 +437,6 @@ public class OrderData
     {
         if (Orders.Count() == 0)
         {
-            int code = 10;
             for (int i = 1; i < 2; i++)
             {
                 Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
@@ -442,7 +448,6 @@ public class OrderData
                 Orders.Add(new OrderData(10254, "RICSU", new DateTime(1996, 07, 07), 22.37));
                 Orders.Add(new OrderData(10255, "WELLI", new DateTime(1996, 07, 07), 44.34));
                 Orders.Add(new OrderData(10256, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
-                code += 5;
             }
         }
         return Orders;
@@ -459,7 +464,7 @@ public class OrderData
 
 ### Enable sorting
 
-The Blazor DataGrid can sort records in ascending or descending order. To enable sorting, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to true. Customize sorting using [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortSettings).
+The Blazor Data Grid can sort records in ascending or descending order. To enable sorting, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to `true`. Customize sorting using [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortSettings).
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -477,11 +482,11 @@ The Blazor DataGrid can sort records in ascending or descending order. To enable
 
 @code {
     public List<OrderData> Orders { get; set; }
-       
+
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
-    }       
+    }
 }
 
 {% endhighlight %}
@@ -505,7 +510,6 @@ public class OrderData
     {
         if (Orders.Count() == 0)
         {
-            int code = 10;
             for (int i = 1; i < 2; i++)
             {
                 Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
@@ -517,7 +521,6 @@ public class OrderData
                 Orders.Add(new OrderData(10254, "RICSU", new DateTime(1996, 07, 07), 22.37));
                 Orders.Add(new OrderData(10255, "WELLI", new DateTime(1996, 07, 07), 44.34));
                 Orders.Add(new OrderData(10256, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
-                code += 5;
             }
         }
         return Orders;
@@ -534,7 +537,7 @@ public class OrderData
 
 ### Enable filtering
 
-The Blazor DataGrid can filter records to display only those that meet specific criteria. To enable filtering, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to true. Customize filtering behavior using [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
+The Blazor Data Grid can filter records to display only those that meet specific criteria. To enable filtering, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to `true`. Customize filtering behavior using [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -552,7 +555,7 @@ The Blazor DataGrid can filter records to display only those that meet specific 
 
 @code {
     public List<OrderData> Orders { get; set; }
-       
+
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
@@ -580,7 +583,6 @@ public class OrderData
     {
         if (Orders.Count() == 0)
         {
-            int code = 10;
             for (int i = 1; i < 2; i++)
             {
                 Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
@@ -592,7 +594,6 @@ public class OrderData
                 Orders.Add(new OrderData(10254, "RICSU", new DateTime(1996, 07, 07), 22.37));
                 Orders.Add(new OrderData(10255, "WELLI", new DateTime(1996, 07, 07), 44.34));
                 Orders.Add(new OrderData(10256, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
-                code += 5;
             }
         }
         return Orders;
@@ -610,7 +611,7 @@ public class OrderData
 
 ### Enable grouping
 
-The Blazor DataGrid can group records by one or more columns. To enable grouping, set the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to true. Customize grouping behavior using [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings).
+The Blazor Data Grid can group records by one or more columns. To enable grouping, set the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to `true`. Customize grouping behavior using [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings).
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -628,7 +629,7 @@ The Blazor DataGrid can group records by one or more columns. To enable grouping
 
 @code {
     public List<OrderData> Orders { get; set; }
-       
+
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
@@ -656,7 +657,6 @@ public class OrderData
     {
         if (Orders.Count() == 0)
         {
-            int code = 10;
             for (int i = 1; i < 2; i++)
             {
                 Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
@@ -668,7 +668,6 @@ public class OrderData
                 Orders.Add(new OrderData(10254, "RICSU", new DateTime(1996, 07, 07), 22.37));
                 Orders.Add(new OrderData(10255, "WELLI", new DateTime(1996, 07, 07), 44.34));
                 Orders.Add(new OrderData(10256, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
-                code += 5;
             }
         }
         return Orders;
@@ -684,14 +683,11 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBxZHgDIXxXecpf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-![Blazor DataGrid](../images/blazor-datagrid-render.webp)
+![Blazor Data Grid running in a Blazor WebAssembly app](../images/blazor-datagrid-render.webp)
 
 > Find the sample in this [GitHub location](https://github.com/SyncfusionExamples/How-to-Getting-Started-Blazor-DataGrid-Samples/tree/master/BlazorApp).
 
 ## See also
 
-* [Getting Started with DataGrid in Blazor WebAssembly using Visual Studio 2022](./blazor-webassembly-datagrid-using-visual-studio)
-
-* [Getting Started with DataGrid in Blazor Server using Visual Studio 2022](../getting-started-with-server-app.md)
-
-* [Getting Started with DataGrid in Blazor Server using .NET Core CLI](./server-side-using-cli)
+* [Getting Started with Data Grid in Blazor Server using Visual Studio 2022](../getting-started-with-server-app.md)
+* [Getting Started with Data Grid in Blazor Server using .NET Core CLI](./server-side-using-cli)
