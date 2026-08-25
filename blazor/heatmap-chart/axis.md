@@ -9,15 +9,21 @@ documentation: ug
 
 # Blazor HeatMap Chart Axis
 
-Heat map consists of two axes namely, `X-axis` and `Y-axis` that displays the row headers and column headers to plot the data points respectively. You can define the type, format, and other customizing options for both axes in the heat map.
+The Blazor HeatMap Chart plots data on two axes: the X axis (columns) and the Y axis (rows). Both axes support axis `ValueType`, formatting, label rotation, intervals, and additional customization such as inversed and opposed positioning.
 
 ## Types
 
-There are three different axis types available in the heat map, which defines the data type of the axis labels. You can define the axis type by using the `ValueType` property in the heat map.
+The `ValueType` property of an axis controls the data type of its labels. The following values are supported.
 
-### Category axis
+| `ValueType` | Description | Default | Available labels |
+| --- | --- | --- | --- |
+| `Category` | Renders string labels (the default). | Yes | `string[]` |
+| `Numeric` | Renders numeric labels with optional `Minimum`/`Maximum`/`Interval`. | No | Numeric array |
+| `DateTime` | Renders date-time labels using `Minimum`, `Maximum`, and `IntervalType`. | No | DateTime array |
 
-Category axis type is used to represent the string values in axis labels.
+### Category Axis
+
+Category is the default `ValueType`. Use it to represent string labels on an axis.
 
 ```cshtml
 
@@ -58,9 +64,9 @@ Category axis type is used to represent the string values in axis labels.
 
 ![Blazor HeatMap Chart with Axis](images/axis/blazor-heatmap-chart-axis.webp)
 
-### Numeric axis
+### Numeric Axis
 
-Numeric axis type is used to represent the numeric values in axis labels.
+Use the Numeric axis type to render numeric values as axis labels. Pair it with `Minimum`, `Maximum`, and `Interval` properties to control the numeric range and step.
 
 ```cshtml
 
@@ -99,9 +105,9 @@ Numeric axis type is used to represent the numeric values in axis labels.
 
 ![Blazor HeatMap Chart with Numeric Axis](images/axis/blazor-heatmap-chart-numeric-axis.webp)
 
-### Date-time axis
+### Date-Time Axis
 
-Date-time axis type is used to represent the date-time values in axis labels with a specific format. In date-time axis, you can define the start and end date/time using the `Minimum` and `Maximum` properties.
+Use the Date-Time axis type to render date-time values as axis labels. Use the `Minimum` and `Maximum` properties to define the start and end date/time, and the `IntervalType` property to control how the axis is divided. The following `IntervalType` values are supported: `Years`, `Months`, `Days`, `Hours`, `Minutes`, `Seconds`, and `Auto`.
 
 ```cshtml
 
@@ -143,9 +149,9 @@ Date-time axis type is used to represent the date-time values in axis labels wit
 
 ![Blazor HeatMap Chart with DateTime Axis](images/axis/blazor-heatmap-chart-datetime-axis.webp)
 
-## Inversed axis
+## Inversed Axis
 
-Heat map supports inversing the axis origin for both axes, where the axis labels are placed in an inversed manner. You can enable axis inversing by enabling the `IsInversed` property.
+Use the `IsInversed` property to render axis labels in reverse order. By default, the property is `false`. Apply it to the X axis, the Y axis, or both as needed.
 
 ```cshtml
 
@@ -187,9 +193,9 @@ Heat map supports inversing the axis origin for both axes, where the axis labels
 
 ![Blazor HeatMap Chart with Inversed Axis](images/axis/blazor-heatmap-chart-inversed-axis.webp)
 
-## Opposed axis
+## Opposed Axis
 
-In heat map, you can place the axis label in an opposite position of its default axis label position by using the `OpposedPosition` property.
+Use the `OpposedPosition` property to render axis labels on the opposite side of the chart from the default position. By default, the property is `false`. Apply it to the X axis, the Y axis, or both as needed.
 
 ```cshtml
 
@@ -231,19 +237,21 @@ In heat map, you can place the axis label in an opposite position of its default
 
 ![Blazor HeatMap Chart with Opposed Axis](images/axis/blazor-heatmap-chart-opposed-axis.webp)
 
-## Axis labels customization
+## Axis Labels Customization
 
-### Customizing the text style
+### Customizing the Text Style
 
-The text style of the axis labels can be customized using the following options available in the [HeatMapXAxisTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapXAxisTextStyle.html) for x-axis and [HeatMapYAxisTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapYAxisTextStyle.html) for y-axis.
+Customize the text style of the axis labels with the following properties of the [`HeatMapXAxisTextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapXAxisTextStyle.html) for the X axis and the [`HeatMapYAxisTextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapYAxisTextStyle.html) for the Y axis.
 
-* `Color` - It is used to change the text color of the axis labels.
-* `FontFamily` - It is used to change the font family of the axis labels.
-* `FontStyle` - It is used to change the font style of the axis labels.
-* `FontWeight` - It is used to change the font weight of the axis labels.
-* `Size` - It is used to change the font size of the axis labels.
-* `TextAlignment` - It is used to position and align the axis labels. This property takes values such as **Near**, **Center**, and **Far**.
-* `TextOverflow` - When the axis label exceeds the intended space, this property is used to trim or wrap it. This property takes values such as **None**, **Trim**, and **Wrap**.
+| Property | Type | Description |
+| --- | --- | --- |
+| `Color` | `string` | Sets the axis label text color (CSS color string). |
+| `FontFamily` | `string` | Sets the font family (default `"Segoe UI"`). |
+| `FontStyle` | `string` | Sets the font style (`normal` or `italic`). |
+| `FontWeight` | `string` | Sets the font weight (for example, `normal` or numeric value). |
+| `Size` | `string` | Sets the font size in pixels (for example, `"15px"`). |
+| `TextAlignment` | enum | Aligns the axis labels. Allowed values: `Alignment.Near`, `Alignment.Center`, `Alignment.Far`. |
+| `TextOverflow` | enum | Trims or wraps labels when they exceed the available space. Allowed values: `TextOverflow.None`, `TextOverflow.Trim`, `TextOverflow.Wrap`. |
 
 ```cshtml
 
@@ -288,7 +296,7 @@ The text style of the axis labels can be customized using the following options 
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] { "Month of Feburary 2023", "Month of March 2023", "Month of April 2023", "Month of May 2023", "Month of June 2023", "Month of July 2023", "Month of August 2023", "Month of September 2023", "Month of October 2023", "Month of November 2023", "Month of December 2023" };
+    string[] XAxisLabels = new string[] { "Month of February 2023", "Month of March 2023", "Month of April 2023", "Month of May 2023", "Month of June 2023", "Month of July 2023", "Month of August 2023", "Month of September 2023", "Month of October 2023", "Month of November 2023", "Month of December 2023" };
     string[] YAxisLabels = new string[] { "Ace Apparels", "Alpha Apparels", "RL Garments", "RRD Garments", "RRD Apparels", "RR Garments", "SR Garments" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
@@ -301,7 +309,9 @@ The text style of the axis labels can be customized using the following options 
 
 ![Text style customization for the axis labels in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-with-text-style-customization.webp)
 
-### Providing line breaks
+### Axis Label Line break
+
+Use the `<br>` character to split axis label text into multiple lines for improved readability.
 
 Axis labels with line breaks improve the readability of the HeatMap by splitting the text on an axis into multiple lines. The **"\<br>"** character is used to add line breaks to the axis labels.
 
@@ -337,14 +347,18 @@ Axis labels with line breaks improve the readability of the HeatMap by splitting
 
 ![Axis Labels with line breaks in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-axis-labels-with-line-breaks.webp)
 
-### Customizing axis labels when intersecting
+### Customizing Axis Labels When Intersecting
 
-When the axis labels intersect, [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_LabelIntersectAction) property is used to handle the intersection. The `LabelIntersectAction` property can take the following values.
+When the axis labels overlap, use the [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_LabelIntersectAction) property to control the rendering. The following values are supported.
 
-* **None** - It specifies that no action is taken when the axis labels intersect.
-* **Trim** - It specifies to trim the axis labels when they intersect.
-* **Rotate45** - When the axis labels intersect, they are rotated to 45 degrees.
-* **MultipleRows** - It specifies to show all the axis labels as multiple rows when they intersect.
+| Value | Description |
+| --- | --- |
+| `None` | No action is taken. Overlapping labels remain visible. |
+| `Trim` | Trims the labels that overlap. |
+| `Rotate45` | Rotates the overlapping labels to 45 degrees. |
+| `MultipleRows` | Shows the overlapping labels on multiple rows. |
+
+The following example trims axis labels using `LabelIntersectAction`.
 
 The below example demonstrates to trim the axis labels by using the `LabelIntersectAction` property.
 
@@ -391,7 +405,7 @@ The below example demonstrates to trim the axis labels by using the `LabelInters
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] { "Month of Feburary 2023", "Month of March 2023", "Month of April 2023", "Month of May 2023", "Month of June 2023", "Month of July 2023", "Month of August 2023", "Month of September 2023", "Month of October 2023", "Month of November 2023", "Month of December 2023" };
+    string[] XAxisLabels = new string[] { "Month of February 2023", "Month of March 2023", "Month of April 2023", "Month of May 2023", "Month of June 2023", "Month of July 2023", "Month of August 2023", "Month of September 2023", "Month of October 2023", "Month of November 2023", "Month of December 2023" };
     string[] YAxisLabels = new string[] { "Ace Apparels", "Alpha Apparels", "RL Garments", "RRD Garments", "RRD Apparels", "RR Garments", "SR Garments" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
@@ -400,9 +414,9 @@ The below example demonstrates to trim the axis labels by using the `LabelInters
     }
 }
 
-```
+```Axis Labels
 
-![Label customization when intersecting with other labels in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-when-intersecting-with-other-labels.webp)
+Rotate the axis labels to a custom angle using the [`LabelRotation`hart](images/axis/blazor-heatmap-chart-label-when-intersecting-with-other-labels.webp)
 
 ### Rotating axis labels
 
@@ -449,7 +463,7 @@ The axis labels can be rotated to a desired angle by using the [LabelRotation](h
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] { "Month of Feburary 2023", "Month of March 2023", "Month of April 2023", "Month of May 2023", "Month of June 2023", "Month of July 2023", "Month of August 2023", "Month of September 2023", "Month of October 2023", "Month of November 2023", "Month of December 2023" };
+    string[] XAxisLabels = new string[] { "Month of February 2023", "Month of March 2023", "Month of April 2023", "Month of May 2023", "Month of June 2023", "Month of July 2023", "Month of August 2023", "Month of September 2023", "Month of October 2023", "Month of November 2023", "Month of December 2023" };
     string[] YAxisLabels = new string[] { "Ace Apparels", "Alpha Apparels", "RL Garments", "RRD Garments", "RRD Apparels", "RR Garments", "SR Garments" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
@@ -462,9 +476,11 @@ The axis labels can be rotated to a desired angle by using the [LabelRotation](h
 
 ![Label rotation in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-rotation.webp)
 
-### Label formatting
+### Label Formatting
 
-The HeatMap supports formatting the axis labels by using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_LabelFormat) property. Using this property, you can customize the axis label by global string format (‘P’, ‘C’, etc) or customized format like ‘{value}°C’.
+Use the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_LabelFormat) property to format axis labels. You can use standard format specifiers (for example, `C` for currency, `P` for percent) or a custom pattern with the `{value}` placeholder (for example, `{value}°C`).
+
+The following placeholders are supported: `{value}` (current numeric value), `{xLabel}` (column label), and `{yLabel}` (row label).
 
 ```cshtml
 
@@ -592,19 +608,20 @@ Axis label increment in the heat map is used to display the axis labels with reg
 
 ![Incrementing Axis Label in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-increment-axis-label.webp)
 
-## Multilevel labels
+## Multi-Level Labels
 
-Multilevel labels are used to classify a group of axis labels as a single category, which is then displayed with a label. By using multiple [HeatMapMultiLevelLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapMultiLevelLabels.html) tag, you can add multiple levels on top of the axis labels.
+Multi-level labels group a range of axis labels under a single category by using the [`HeatMapMultiLevelLabel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapMultiLevelLabels.html) child component. To classify labels into groups, add multiple [`HeatMapAxisMultiLevelCategories`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelCategories.html) child components. The `Start` and `End` values are 0-based inclusive indices into the `Labels` array, and the [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelCategories.html#Syncfusion_Blazor_HeatMap_HeatMapAxisMultiLevelCategories_Text) property provides the display name for the group. Multiple `HeatMapMultiLevelLabel` blocks can be combined to render several label rows (for example, quarters on one row and yearly summary on another).
 
-To divide and group the axis labels, you can use multiple [HeatMapAxisMultiLevelCategories](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelCategories.html) tags. The starting and ending indexes of the axis labels can be set using the [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelCategories.html#Syncfusion_Blazor_HeatMap_HeatMapAxisMultiLevelCategories_Start) and [End](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelCategories.html#Syncfusion_Blazor_HeatMap_HeatMapAxisMultiLevelCategories_End) properties in the [HeatMapAxisMultiLevelCategories](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelCategories.html) tag. The [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelCategories.html#Syncfusion_Blazor_HeatMap_HeatMapAxisMultiLevelCategories_Text) property can be used to specify a name for the grouped axis labels.
+The following properties and child components are available to customize multi-level labels.
 
-The multilevel labels can be customized by using the following properties and tags.
-* [Overflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapMultiLevelLabel.html#Syncfusion_Blazor_HeatMap_HeatMapMultiLevelLabel_Overflow) - It is used to trim or wrap the multilevel labels when the label overflows the intended space. NOTE: This property is only for x-axis.
-* [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapMultiLevelLabel.html#Syncfusion_Blazor_HeatMap_HeatMapMultiLevelLabel_Alignment) - It is used to place and align the multilevel labels.
-* [MaximumTextWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelCategories.html#Syncfusion_Blazor_HeatMap_HeatMapAxisMultiLevelCategories_MaximumTextWidth) - It is used to set the maximum width of the text. When the text length exceeds the maximum text width, the overflow action will be performed.
-* [HeatMapAxisMultiLevelLabelsTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelLabelsTextStyle.html) - It is used to customize the font style of the multilevel labels.
-* [HeatMapXAxisMultiLevelLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapXAxisMultiLevelLabelBorder.html) - It is used to customize the border of the multilevel labels displayed in the x-axis.
-* [HeatMapYAxisMultiLevelLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapYAxisMultiLevelLabelBorder.html) - It is used to customize the border of the multilevel labels displayed in the y-axis.
+| Member | Description |
+| --- | --- |
+| [`Overflow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapMultiLevelLabel.html#Syncfusion_Blazor_HeatMap_HeatMapMultiLevelLabel_Overflow) | Trims or wraps labels when they overflow. Applies only to the X axis. |
+| [`Alignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapMultiLevelLabel.html#Syncfusion_Blazor_HeatMap_HeatMapMultiLevelLabel_Alignment) | Positions and aligns the multi-level labels. |
+| [`MaximumTextWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelCategories.html#Syncfusion_Blazor_HeatMap_HeatMapAxisMultiLevelCategories_MaximumTextWidth) | Sets the maximum text width before the overflow action applies. |
+| [`HeatMapAxisMultiLevelLabelsTextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelLabelsTextStyle.html) | Customize the font family, size, weight, and color of the multi-level labels. |
+| [`HeatMapXAxisMultiLevelLabelBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapXAxisMultiLevelLabelBorder.html) | Customize the border of multi-level labels on the X axis. |
+| [`HeatMapYAxisMultiLevelLabelBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapYAxisMultiLevelLabelBorder.html) | Customize the border of multi-level labels on the Y axis. |
 
 ```cshtml
 
@@ -718,4 +735,20 @@ The multilevel labels can be customized by using the following properties and ta
 }
 
 ```
-![Multilevel labels in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-multi-level-labels.webp)
+![Multi-level labels in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-multi-level-labels.webp)
+
+## Troubleshooting
+
+* **Axis labels are missing.** Verify that `Labels.Length` matches the corresponding data dimension (rows for Y, columns for X).
+* **Date-time labels do not render.** Pass `DateTime` values to `Minimum`/`Maximum` instead of string labels, and ensure `Labels` are `DateTime[]` values.
+* **Numeric ticks display empty values.** Use numeric `Labels` (for example, a `double[]`) when `ValueType.Numeric` is set.
+
+## See Also
+
+* [Blazor HeatMap Chart Appearance](appearance.md)
+* [Blazor HeatMap Chart Palette](palette.md)
+* [Blazor HeatMap Chart Legend](legend.md)
+* [Blazor HeatMap Chart Selection](selection.md)
+* [Blazor HeatMap Chart Tooltip](tooltip.md)
+* [Blazor HeatMap Chart Events](events.md)
+* [Getting Started with Blazor HeatMap Chart](getting-started.md)

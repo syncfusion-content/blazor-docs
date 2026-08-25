@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor HeatMap Chart Legend
 
-The legend is used to provide the information about the heat map cell. You can enable the legend by setting the `Visible` property to true.
+The legend provides information about the HeatMap cells. To display the legend, set the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapLegendSettings.html#Syncfusion_Blazor_HeatMap_HeatMapLegendSettings_Visible) property of [`HeatMapLegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapLegendSettings.html) to `true`.
 
 ```cshtml
 
@@ -69,12 +69,14 @@ The legend is used to provide the information about the heat map cell. You can e
 
 ## Legend types
 
-Heat map supports two legend types: Gradient and list type.
+The HeatMap supports the following legend types:
 
-* Gradient - This is a continuous color legend with smooth color transition between palette color values.
-* List - List is a fixed color legend. Each palette color information is shown separately in the list item.
+| Legend Type | Property Value | Description |
+| :--- | :--- | :--- |
+| **Gradient** | `PaletteType.Gradient` | Displays a continuous color scale with smooth transitions between values. |
+| **Fixed** | `PaletteType.Fixed` | Displays discrete color ranges as individual legend items. |
 
-You can change the legend type by using the `Type` property in the `HeatMapPaletteSettings` property.
+You can change the legend type by setting the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapPaletteSettings.html#Syncfusion_Blazor_HeatMap_HeatMapPaletteSettings_Type) property in [`HeatMapPaletteSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapPaletteSettings.html).
 
 ```cshtml
 
@@ -119,7 +121,7 @@ You can change the legend type by using the `Type` property in the `HeatMapPalet
 
 ## Placement
 
-You can place the legend at left, right, top, or bottom to the heat map layout by using the `Position` property. The legend is positioned at the right to the heat map by default.
+You can position the legend on the left, right, top, or bottom of the HeatMap by setting the [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapLegendSettings.html#Syncfusion_Blazor_HeatMap_HeatMapLegendSettings_Position) property in `HeatMapLegendSettings`. By default, the legend is displayed on the right side of the HeatMap.
 
 ```cshtml
 
@@ -164,7 +166,7 @@ You can place the legend at left, right, top, or bottom to the heat map layout b
 
 ## Alignment
 
-You can align the legend as center, far, or near to the heat map using the `Alignment` property.
+You can align the legend relative to the HeatMap by setting the [`Alignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapLegendSettings.html#Syncfusion_Blazor_HeatMap_HeatMapLegendSettings_Alignment) property. The supported alignment options are `Near`, `Center`, and `Far`.
 
 ```cshtml
 
@@ -208,7 +210,7 @@ You can align the legend as center, far, or near to the heat map using the `Alig
 
 ## Legend dimensions
 
-You can change the legend dimensions with values in pixels or percentage by using the`Width` and `Height` properties.
+You can customize the legend dimensions by setting the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapLegendSettings.html#Syncfusion_Blazor_HeatMap_HeatMapLegendSettings_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapLegendSettings.html#Syncfusion_Blazor_HeatMap_HeatMapLegendSettings_Height) properties. These properties accept pixel or percentage values.
 
 ```cshtml
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor HeatMap Chart Events | Syncfusion®
-description: Learn how to handle Blazor HeatMap Chart interactions with CellClicked, CellRendering, CellSelected, and Created events.
+description: Learn how to handle Blazor HeatMap Chart interactions with CellClicked, CellRendering, CellSelected, Created, and other events.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
@@ -13,9 +13,13 @@ This section describes the events that will be triggered for appropriate actions
 
 ## CellClicked
 
-When you click on a HeatMap cell, the [CellClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellClicked) event is triggered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.CellClickEventArgs.html). When you right-click on a HeatMap cell, the `CellClicked` event will be triggered, and the [HasRightClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.CellClickEventArgs.html#Syncfusion_Blazor_HeatMap_CellClickEventArgs_HasRightClicked) property in the event argument will be set to **true**.
+When you click a HeatMap cell, the [CellClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellClicked) event is triggered.
 
-The following example demonstrates how to use the `CellClicked` event. In this example, content will be displayed when you click on a HeatMap cell. Additionally, a dialog box showing the cell value, x-axis label, and y-axis label of the current cell will appear only when you right-click on the HeatMap cell.
+When you right-click a HeatMap cell, the `CellClicked` event is triggered, and the [HasRightClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.CellClickEventArgs.html#Syncfusion_Blazor_HeatMap_CellClickEventArgs_HasRightClicked) property is set to **true**.
+
+The following example demonstrates how to use the `CellClicked` event. In this example, a message is displayed when you click a HeatMap cell. When you right-click a HeatMap cell, a dialog displays the current cell value, X-axis label, and Y-axis label.
+
+For more information about the event arguments, see [CellClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.CellClickEventArgs.html).
 
 ```cshtml
 @using Syncfusion.Blazor.HeatMap
@@ -122,7 +126,7 @@ The following example demonstrates how to use the `CellClicked` event. In this e
             cellValue = args.Value;
         } else {
             IsCellClicked = true;
-            CellClicked = "The cell clicked event has been triggered!!";
+            CellClicked = "The cell clicked event has been triggered!";
         }
     }
 
@@ -137,9 +141,11 @@ The following example demonstrates how to use the `CellClicked` event. In this e
 
 ## CellRendering
 
-The [CellRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellRendering) event will be triggered before each HeatMap cell is rendered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellRenderEventArgs.html).
+## CellRendering
 
-The following example demonstrates how to use the `CellRendering` event to customize the value, color, and border color of the cell.
+The [CellRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellRendering) event is triggered before each HeatMap cell is rendered. For more information about the event arguments, see [HeatMapCellRenderEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellRenderEventArgs.html).
+
+The following example demonstrates how to use the `CellRendering` event to customize a cell's displayed value, color, and border color before it is rendered.
 
 ```cshtml
 @using Syncfusion.Blazor.HeatMap
@@ -175,9 +181,11 @@ The following example demonstrates how to use the `CellRendering` event to custo
 
 ## CellSelected
 
-When single or multiple cells in the HeatMap are selected, the [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellSelected) event is triggered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SelectedEventArgs.html).
+The [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellSelected) event is triggered when one or more HeatMap cells are selected. For more information about the event arguments, refer to the [SelectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SelectedEventArgs.html).
 
-The following example demonstrates how to use the `CellSelected` event to obtain the count and details of the selected cells.
+N> To trigger the `CellSelected` event, set `AllowSelection="true"`.
+
+The following example demonstrates how to use the `CellSelected` event to retrieve the count of the selected cells.
 
 ```cshtml
 @using Syncfusion.Blazor.HeatMap
@@ -225,7 +233,7 @@ The following example demonstrates how to use the `CellSelected` event to obtain
 
 ## Created
 
-The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Created) event is triggered during the initial rendering process, that is, immediately after the HeatMap component is initialized. This indicates that this event will be executed only once.
+The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Created) event is triggered during the initial rendering process, immediately after the HeatMap component is initialized. This event is triggered only once during the component's lifecycle.
 
 The following example demonstrates how to use the `Created` event.
 
@@ -249,7 +257,7 @@ The following example demonstrates how to use the `Created` event.
     private void Created()
     {
         IsVisible = true;
-        EventText = "The created event has been triggered!!!";
+        EventText = "The created event has been triggered!";
     }
     public double[,] dataSource = new double[,]
     {
@@ -275,7 +283,7 @@ The following example demonstrates how to use the `Created` event.
 
 ## OnLoad
 
-The [OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_OnLoad) event is triggered before the HeatMap is rendered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.LoadedEventArgs.html).
+The [OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_OnLoad) event is triggered before the HeatMap is rendered. For more information about the event arguments, refer to the [LoadedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.LoadedEventArgs.html).
 
 The following example demonstrates how to use the `OnLoad` event.
 
@@ -300,7 +308,7 @@ The following example demonstrates how to use the `OnLoad` event.
     private void Load(LoadedEventArgs args)
     {
         IsVisible = true;
-        EventText = "The load event has been triggered!!!";
+        EventText = "The load event has been triggered!";
     }
     public double[,] dataSource = new double[,]
     {
@@ -326,7 +334,7 @@ The following example demonstrates how to use the `OnLoad` event.
 
 ## Loaded
 
-The [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Loaded) event is triggered when the HeatMap component is re-rendered during a browser window resize. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.LoadedEventArgs.html).
+The [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Loaded) event is triggered after the HeatMap component is rendered. For more information about the event arguments, refer to the [LoadedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.LoadedEventArgs.html).
 
 The following example demonstrates how to use the `Loaded` event.
 
@@ -350,7 +358,7 @@ The following example demonstrates how to use the `Loaded` event.
     private void Loaded(LoadedEventArgs args)
     {
         IsVisible = true;
-        EventText = "The loaded event has been triggered!!!";
+        EventText = "The loaded event has been triggered!";
     }
     public double[,] dataSource = new double[,]
     {
@@ -377,7 +385,7 @@ The following example demonstrates how to use the `Loaded` event.
 
 ## Resized
 
-When the browser window is resized, the [Resized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Resized) event is triggered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.ResizeEventArgs.html).
+When the browser window is resized, the [Resized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Resized) event is triggered. For more information about the event arguments, refer to the [ResizeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.ResizeEventArgs.html).
 
 The following example demonstrates how to use the `Resized` event.
 
@@ -401,7 +409,7 @@ The following example demonstrates how to use the `Resized` event.
     private void Resized(ResizeEventArgs args)
     {
         IsVisible = true;
-        EventText = "The resized event has been triggered!!!";
+        EventText = "The resized event has been triggered!";
     }
     public double[,] dataSource = new double[,]
     {
@@ -427,7 +435,7 @@ The following example demonstrates how to use the `Resized` event.
 
 ## TooltipRendering
 
-The [TooltipRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_TooltipRendering) event is triggered before the tooltip is rendered on the HeatMap cell. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.TooltipEventArgs.html).
+The [TooltipRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_TooltipRendering) event is triggered before the tooltip is rendered on the HeatMap cell. For more information about the event arguments, refer to the [TooltipEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.TooltipEventArgs.html).
 
 The following example demonstrates how to use the `TooltipRendering` event to customize tooltips for specific cells when hovering over them.
 
@@ -470,7 +478,7 @@ The following example demonstrates how to use the `TooltipRendering` event to cu
 
 ## CellDoubleClicked
 
-When you double-click on a HeatMap cell, the [CellDoubleClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellDoubleClicked) event is triggered. To learn more about the arguments for this event, refer to the documentation [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.CellDoubleClickEventArgs.html).
+When you double-click on a HeatMap cell, the [CellDoubleClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellDoubleClicked) event is triggered. For more information about the event arguments, refer to the [CellDoubleClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.CellDoubleClickEventArgs.html).
 
 The following example demonstrates how to use the `CellDoubleClicked` event to retrieve the value of a cell, as well as its x-axis and y-axis labels, by performing a double-click action.
 
@@ -528,7 +536,7 @@ The following example demonstrates how to use the `CellDoubleClicked` event to r
 
 ## LegendRendering
 
-The [LegendRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_LegendRendering) event is triggered before each legend item is rendered. To learn more about the arguments for this event, refer to the documentation [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.LegendRenderEventArgs.html).
+The [LegendRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_LegendRendering) event is triggered before each legend item is rendered. For more information about the event arguments, refer to the [LegendRenderEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.LegendRenderEventArgs.html).
 
 The following example demonstrates how to use the `LegendRendering` event to customize the value of the text in the legend.
 

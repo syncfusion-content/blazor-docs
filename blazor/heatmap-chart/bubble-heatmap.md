@@ -9,30 +9,37 @@ documentation: ug
 
 # Blazor HeatMap Chart Bubble HeatMap
 
-This section shows how to customize the appearance of the HeatMap cells as bubbles. The below video demonstrates the same.
+This topic explains how to render the Blazor HeatMap with bubble cells instead of the default rectangular cells. It also describes how to visualize data using bubble size, color, sector, or a combination of size and color.
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=MXrqp-YHUgU"%}
+{% youtube "youtube:https://www.youtube.com/watch?v=MXrqp-YHUgU" %}
 
-Data points represent the data source values with **gradient** or **fixed** colors in the HeatMap. You can customize the appearance of these data points by changing the `Color` and `Size` attributes.
+Data points in the HeatMap normally render as color-filled rectangles. Set the [`TileType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_TileType) property to `Bubble` to render each data point as a circular bubble, and use [`BubbleType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_BubbleType) to choose how the bubble encodes the value.
 
-The data points can be represented in color fill or bubble shape by defining the [TileType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_TileType) property. By default, the data points are color filled with gradient or fixed colors and this depiction of data points is defined as `Rect` in the `TileType` property.
+The following `CellType` values are supported:
 
-The cell customizations and color mapping for rect tile type is defined in [appearance](https://blazor.syncfusion.com/documentation/heatmap-chart/appearance) and [palette](https://blazor.syncfusion.com/documentation/heatmap-chart/palette) sections in detail.
+| `CellType` | Description |
+| --- | --- |
+| `Rect` | Color-filled rectangular cells (default). |
+| `Bubble` | Bubble cells. Pair with `BubbleType` to control encoding. |
 
-## Bubble types
+For cell and color customizations with the default `Rect` tile type, see [Blazor HeatMap Chart Appearance](appearance.md) and [Blazor HeatMap Chart Palette](palette.md).
 
-The data points can be represented in the bubble along with its attributes by setting the [TileType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_TileType) property to **Bubble**.
+## Bubble Types
 
-In bubble HeatMap, you can display the data points with bubble size, bubble colors, and sector attributes of the bubble.
+Set `TileType="CellType.Bubble"` to render each data point as a bubble. Then set `BubbleType` to one of the supported encodings:
 
-### Bubble size
+| `BubbleType` | Description |
+| --- | --- |
+| `Size` | Bubble radius encodes the data value. |
+| `Color` | All bubbles share the same radius; bubble color encodes the value. |
+| `Sector` | The filled sector inside each bubble encodes the value. |
+| `SizeAndColor` | Combines both `Size` and `Color` encoding. |
 
-In this bubble HeatMap type, the size factor of the bubble is used to denote the data variations. The radius of the bubble varies according to data values.
+### Bubble Size
 
-By default, the bubble with small size denotes the data value with small magnitude and the larger bubble size denotes the data value with larger magnitude. This behavior can be inversed by using the [IsInversedBubbleSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_IsInversedBubbleSize) property.
+The radius of each bubble represents the corresponding data value. Smaller values are displayed as smaller bubbles, while larger values are displayed as larger bubbles. Use the [`IsInversedBubbleSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_IsInversedBubbleSize) property to invert this behavior, causing smaller bubbles to represent larger values and larger bubbles to represent smaller values.
 
-To render a bubble HeatMap with size series, set the [BubbleType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_BubbleType) property to **Size**.
+Set [`BubbleType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_BubbleType) to `Size` to render a size-encoded bubble HeatMap.
 
 ```cshtml
 
@@ -76,16 +83,15 @@ To render a bubble HeatMap with size series, set the [BubbleType](https://help.s
     }
 }
 
-
 ```
 
 ![Changing Bubble Size in Blazor HeatMap Chart](images/bubble/blazor-heatmap-chart-bubble-size.webp)
 
-### Bubble color
+### Bubble Color
 
-In HeatMap, defined with this tile type, the data points will be represented with same sized bubbles and the data value variations are represented with the bubble colors.
+Use this tile type to display all bubbles with the same size. The data values are differentiated by the bubble color.
 
-To represent the data points with variations in bubble colors, set the [BubbleType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_BubbleType) property to **Color**.
+Set [`BubbleType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_BubbleType) to `Color` to render a color-encoded bubble HeatMap.
 
 ```cshtml
 
@@ -133,11 +139,11 @@ To represent the data points with variations in bubble colors, set the [BubbleTy
 
 ![Changing Bubble Color in Blazor HeatMap Chart](images/bubble/blazor-heatmap-chart-bubble-color.webp)
 
-### Bubble sector
+### Bubble Sector
 
-In this bubble HeatMap type, the sector of the bubble decides the magnitude of data point. If the sector is large, then the data point value will be high.
+Use this bubble type to represent data values through the size of the filled sector. A larger sector indicates a higher value, while a smaller sector indicates a lower value.
 
-To render the data points with bubble sector, set the [BubbleType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_BubbleType) property to **Sector**.
+Set [`BubbleType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_BubbleType) to `Sector` to render a sector-encoded bubble HeatMap.
 
 ```cshtml
 
@@ -186,19 +192,19 @@ To render the data points with bubble sector, set the [BubbleType](https://help.
 ![Displaying Bubble Sector in Blazor HeatMap Chart](images/bubble/blazor-heatmap-chart-bubble-sector.webp)
 
 
-### Combining size and color bubble types
+### Combining Size and Color
 
-In this bubble HeatMap type, size and color of the bubble represents the data value variation. To render this bubble HeatMap type, set the [BubbleType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_BubbleType) property to **SizeAndColor**.
+Use the `SizeAndColor` bubble type to represent data values through both bubble size and color. To render this bubble type, set the [`BubbleType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_BubbleType) property to `SizeAndColor`
 
-The following examples demonstrate different data binding with the **SizeAndColor** bubble type set in the HeatMap.
+The following sections demonstrate the supported binding patterns (Array Table, Array Cell, JSON Table, and JSON Cell).
 
 **Array binding**
 
-When an array of numbers is specified as the `DataSource`, the bubble HeatMap can be rendered with different sizes and colors depending on the bound data.
+When an array of values is provided as the DataSource, the bubble HeatMap renders bubble sizes and colors based on the bound data values.
 
 **Table**
 
-The following example illustrates how to render a bubble HeatMap with different sizes and colors using array table binding.
+The following example shows how to render a bubble HeatMap with size-and-color encoding using an array table binding.
 
 ```cshtml
 
@@ -271,7 +277,7 @@ The following example illustrates how to render a bubble HeatMap with different 
 
 **Cell**
 
-The following example illustrates how to render a bubble HeatMap with different sizes and colors using array cell binding.
+The following example renders a bubble HeatMap with size-and-color encoding using an array with cell adaptor binding.
 
 ```cshtml
 
@@ -343,11 +349,11 @@ The following example illustrates how to render a bubble HeatMap with different 
 
 **JSON binding**
 
-When a list of JSON objects are specified as `DataSource`, the bubble HeatMap can be rendered with different sizes and colors depending on the bound data.
+When JSON records are provided as the `DataSource`, the bubble HeatMap renders bubble sizes and colors based on the bound data values.
 
 **Table**
 
-The following example illustrates how to render a bubble HeatMap with different sizes and colors using JSON table binding.
+The following example shows how to render a bubble HeatMap with size-and-color encoding using JSON data with table binding.
 
 ```cshtml
 
@@ -405,7 +411,7 @@ The following example illustrates how to render a bubble HeatMap with different 
 
 **Cell**
 
-The following example illustrates how to render a bubble HeatMap with different sizes and colors using JSON cell binding.
+The following example renders a bubble HeatMap with size-and-color encoding using JSON data and cell binding.
 
 ```cshtml
 
@@ -449,10 +455,8 @@ The following example illustrates how to render a bubble HeatMap with different 
         new SampleData  { RowId= "France", ColumnId= "2015", Value= "84.5" },
         new SampleData  { RowId= "France", ColumnId= "2016", Value= "82.6" },
         new SampleData  { RowId= "USA", ColumnId= "2010", Value= "60.6" },
-        new SampleData  { RowId= "USA", ColumnId= "2014", Value= "75.3" },
-        new SampleData  { RowId= "USA", ColumnId= "2011", Value= "65.4" },
-        new SampleData  { RowId= "USA", ColumnId= "2012", Value= "70.8" },
-        new SampleData  { RowId= "USA", ColumnId= "2012", Value= "70.8" },
+        new SampleData  { RowId= "USA", ColumnId= "2011", Value= "75.3" },
+        new SampleData  { RowId= "USA", ColumnId= "2012", Value= "65.4" },
         new SampleData  { RowId= "USA", ColumnId= "2013", Value= "73.8" },
         new SampleData  { RowId= "USA", ColumnId= "2014", Value= "75.3" },
         new SampleData  { RowId= "USA", ColumnId= "2015", Value= "77.5" },
@@ -521,11 +525,11 @@ The following example illustrates how to render a bubble HeatMap with different 
 ![Bubble HeatMap with size and color combined and rendered with JSON data and cell adaptor type](images/bubble/blazor-heatmap-chart-json-cell-data-bubble-sizeandcolor.webp)
 
 
-**Binding size and color values from datasource**
+### Binding Size and Color from the Data Source
 
-The size and color of the bubbles in the **SizeAndColor** bubble HeatMap type can be customized by binding the datasource field name that holds the size and color values to the [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapBubbleDataMapping.html#Syncfusion_Blazor_HeatMap_HeatMapBubbleDataMapping_Size) and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapBubbleDataMapping.html#Syncfusion_Blazor_HeatMap_HeatMapBubbleDataMapping_Color) properties in the [HeatMapBubbleDataMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapBubbleDataMapping.html).
+Bind two distinct JSON fields to the [`Size`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapBubbleDataMapping.html#Syncfusion_Blazor_HeatMap_HeatMapBubbleDataMapping_Size) and [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapBubbleDataMapping.html#Syncfusion_Blazor_HeatMap_HeatMapBubbleDataMapping_Color) properties of [`HeatMapBubbleDataMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapBubbleDataMapping.html) when you need each axis of the bubble (size and color) to be driven by separate data fields instead of the same `Value` field.
 
->The `HeatMapBubbleDataMapping` supports only for the JSON data with cell adaptor type.
+> `HeatMapBubbleDataMapping` supports only JSON data bound with the cell adaptor type.
 
 ```cshtml
 
@@ -631,3 +635,20 @@ The size and color of the bubbles in the **SizeAndColor** bubble HeatMap type ca
 ```
 
 ![Bubble HeatMap with size and color type and bubble attributes](images/bubble/blazor-heatmap-chart-bubble-size-and-color-cell.webp)
+
+## Troubleshooting
+
+* **Bubbles are not visible.** Verify that the data array dimensions (`row count × column count`) match the `YAxisLabels` length (rows) and `XAxisLabels` length (columns).
+* **`HeatMapBubbleDataMapping` is ignored.** This child component is only honored in JSON data bound with `AdaptorType.Cell`.
+* **Sector bubbles look empty.** Ensure the bound values are non-zero, and that the palette is configured (see [Palette](palette.md)).
+* **`ShowLabel` overlaps bubbles.** For `BubbleType.Size` or `BubbleType.Sector`, disable the data label (`ShowLabel="false"`) for readability.
+
+## See Also
+
+* [Blazor HeatMap Chart Appearance](appearance.md)
+* [Blazor HeatMap Chart Palette](palette.md)
+* [Blazor HeatMap Chart Legend](legend.md)
+* [Blazor HeatMap Chart Selection](selection.md)
+* [Blazor HeatMap Chart Tooltip](tooltip.md)
+* [Blazor HeatMap Chart Events](events.md)
+* [Getting Started with Blazor HeatMap Chart](getting-started.md)
