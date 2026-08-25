@@ -9,9 +9,9 @@ documentation: ug
 
 # Blazor Sparkline Charts Dimensions
 
-## Size for the Container
+## Size of the Container
 
-The size of the [Blazor Sparkline Chart](https://www.syncfusion.com/blazor-components/blazor-sparkline) is determined by its container. You can set the size inline or via CSS.
+The size of the [Blazor Sparkline Chart](https://www.syncfusion.com/blazor-components/blazor-sparkline) is determined by its container. You can set the container size inline or via CSS.
 
 ```cshtml
 
@@ -46,7 +46,7 @@ The size of the [Blazor Sparkline Chart](https://www.syncfusion.com/blazor-compo
 
 ![Blazor Sparkline Chart with Container Size](./images/SparklineDimension/blazor-sparkline-chart-container-size.webp)
 
-## Size for Sparkline
+## Size of the Sparkline
 
 Set the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Height) properties to define the Sparkline Chart's size.
 
@@ -68,13 +68,13 @@ Specify the Sparkline Chart size in pixels.
 
 ```
 
-N> Refer to the [code block](#size-for-the-container) for the `populationData` property value.
+N> Refer to the [code block](#size-of-the-container) for the `PopulationData` field value.
 
-![Changing Blazor Sparkline Chart Size in Pixel](./images/SparklineDimension/blazor-sparkline-chart-size-in-pixel.webp)
+![Changing Blazor Sparkline Chart Size in Pixels](./images/SparklineDimension/blazor-sparkline-chart-size-in-pixel.webp)
 
 ### In Percentage
 
-Set values in percentage to size the Sparkline Chart relative to its container. For example, setting height to "50%" renders the chart at half the container's height.
+Set percentage values to size the Sparkline Chart relative to its container. The container must have defined dimensions for percentage sizing to work. For example, setting height to "80%" renders the chart at 80% of the container's height.
 
 ```cshtml
 
@@ -92,6 +92,6 @@ Set values in percentage to size the Sparkline Chart relative to its container. 
 
 ```
 
-N> Refer to the [code block](#size-for-the-container) for the `populationData` property value.
+N> Refer to the [code block](#size-of-the-container) for the `PopulationData` field value.
 
 ![Changing Blazor Sparkline Chart Size in Percentage](./images/SparklineDimension/blazor-sparkline-chart-size-in-percentage.webp)

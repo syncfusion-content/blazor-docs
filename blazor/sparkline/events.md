@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Sparkline Charts Events
 
-This section describes the Sparkline component's events that are triggered when actions are performed. Events are provided through the [SparklineEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html) component.
+This section describes the events provided by the Sparkline component through the [SparklineEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html) component.
 
 ## Loaded
 
@@ -52,7 +52,7 @@ The [OnPointRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     <SparklineEvents OnPointRendering="@PointRenderHandler"></SparklineEvents>
 </SfSparkline>
 
-@code{
+@code {
     public void PointRenderHandler(SparklinePointEventArgs args)
     {
         // Here you can customize the code.
@@ -67,7 +67,7 @@ The [OnPointRegionMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 | Argument name | Description |
 |--------------|-------------|
-| PointerIndex | Specifies the Sparkline point index region. |
+| PointIndex   | Specifies the index of the clicked Sparkline point. |
 | Cancel       | Specifies the event cancel status. |
 
 ```cshtml
@@ -90,7 +90,7 @@ The [OnPointRegionMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 ## OnResizing
 
-The [OnResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html#Syncfusion_Blazor_Charts_SparklineEvents_OnResizing) event triggers while resizing the window.
+The [OnResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html#Syncfusion_Blazor_Charts_SparklineEvents_OnResizing) event triggers while resizing the Sparkline.
 
 | Argument name | Description |
 |--------------|-------------|
@@ -152,8 +152,8 @@ The [OnMarkerRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 | Border       | Specifies the color and width of the marker border. |
 | Fill         | Specifies the marker fill color. |
 | PointIndex   | Specifies the marker point index. |
-| X            | Specifies the x axis of the marker. |
-| Y            | Specifies the y axis of the marker. |
+| X            | Specifies the x-axis position of the marker. |
+| Y            | Specifies the y-axis position of the marker. |
 | Size         | Specifies the size of the marker. |
 | Cancel       | Specifies the event cancel status. |
 
@@ -184,8 +184,8 @@ The [OnDataLabelRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 | Border       | Specifies the color and width of the data label border. |
 | Fill         | Specifies the series fill color of the data label. |
 | PointIndex   | Specifies the data label point index. |
-| X            | Specifies the x axis of the data label. |
-| Y            | Specifies the y axis of the data label. |
+| X            | Specifies the x-axis position of the data label. |
+| Y            | Specifies the y-axis position of the data label. |
 | Text         | Specifies the content of the data label. |
 | Color        | Specifies the content color. |
 | Cancel       | Specifies the event cancel status. |

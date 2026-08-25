@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Sparkline Charts Accessibility
 
-The Blazor Sparkline component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
+The Blazor Sparkline component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI-ARIA roles](https://www.w3.org/TR/wai-aria/#roles).
 
 The table below outlines accessibility compliance for the Blazor Sparkline component.
 
@@ -40,32 +40,32 @@ The table below outlines accessibility compliance for the Blazor Sparkline compo
 
 ## WAI-ARIA Attributes
 
-The component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns for accessibility. The following ARIA attributes are used:
+The component follows [WAI-ARIA](https://www.w3.org/TR/wai-aria/) practices for accessibility. The following roles and ARIA attributes are used:
 
-* img (role)
-* region (role)
-* aria-label (attribute)
-* aria-hidden (attribute)
-* aria-pressed (attribute)
+* `img` (role)
+* `region` (role)
+* `aria-label` (attribute)
+* `aria-hidden` (attribute)
+* `aria-pressed` (attribute)
 
 ## Keyboard Interaction
 
-The component supports [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guidelines, making it accessible for users relying on assistive technologies (AT) or keyboard navigation. Supported keyboard shortcuts:
+The component supports [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/) guidelines, making it accessible for users relying on assistive technologies (AT) or keyboard navigation. Supported keyboard interactions:
 
 | Windows | Mac | Description |
 | --- | --- | --- |
 | <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves focus to the next element in the Sparkline. |
 | <kbd>Shift + Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves focus to the previous element in the Sparkline. |
-| <kbd>↓</kbd> | <kbd>↓</kbd> | Moves focus to the data point right side from the selected point. |
-| <kbd>↑</kbd> | <kbd>↑</kbd> | Moves focus to the data point right side from the selected point. |
-| <kbd>ESC</kbd> | <kbd>ESC</kbd> | Cancels the tooltip for the data point. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Moves focus to the next data point. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Moves focus to the previous data point. |
+| <kbd>ESC</kbd> | <kbd>ESC</kbd> | Closes the tooltip for the data point. |
 | <kbd>Ctrl + P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Prints the Sparkline. |
 
 ## Ensuring Accessibility
 
-Accessibility is validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
+Automated accessibility checks are validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests. These checks do not replace manual keyboard and screen-reader testing.
 
-Evaluate accessibility in the Blazor Sparkline component by opening the [sample](https://blazor.syncfusion.com/accessibility/sparkline) in a new window and using accessibility tools.
+Evaluate accessibility in the Blazor Sparkline component by opening the [Sparkline accessibility sample](https://blazor.syncfusion.com/accessibility/sparkline) and using accessibility tools. Verify focus movement, data-point announcements, tooltip dismissal, and print behavior.
 
 ## See Also
 
