@@ -237,7 +237,7 @@ The Dashboard Layout component can be rendered with multiple panels, each design
 Panels are interactive, supporting functionalities such as dragging, floating, and resizing.
 
 > [!IMPORTANT]
-> Each DashboardLayoutPanel must have a unique [`Id`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_ID) value. The Dashboard Layout component uses the [`Id`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_ID) property internally to identify and manage panel state and position. Using duplicate IDs can cause panels to overlap or render in the same location.
+> Each DashboardLayoutPanel must have a unique [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_ID) value. The Dashboard Layout component uses the [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_ID) property internally to identify and manage panel state and position. Using duplicate IDs can cause panels to overlap or render in the same location.
 >
 > For more information, refer to the [FAQ](https://blazor.syncfusion.com/documentation/dashboard-layout/faq/all-panels-rendered-at-the-same-position) on preventing panel overlap.
 
@@ -517,7 +517,7 @@ These components are placed as panel content by assigning the corresponding Blaz
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LthdjxLUqbWENRZr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard Layout displays Chart Component](images/blazor-dashboard-layout-with-chart-component.webp)" %}
 
-> Currently, when Chart components are hosted inside Dashboard Layout panels, call `RefreshAsync()` after the layout has completed rendering or when panel resizing is finished. This ensures the chart recalculates its dimensions based on the final container size.
+> Currently, when Chart components are hosted inside Dashboard Layout panels, call [`RefreshAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_RefreshAsync_System_Boolean_) after the layout has completed rendering or when panel resizing is finished. This ensures the chart recalculates its dimensions based on the final container size.
 
 To get started quickly with designing a Blazor Dashboard Layout with UI Components, you can check the video below.
 
