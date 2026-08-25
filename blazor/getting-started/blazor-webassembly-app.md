@@ -17,7 +17,7 @@ This article provides step-by-step instructions for building a Blazor WebAssembl
 
 {% playground "https://blazorplayground.syncfusion.com/" %}
 
-## Using CLI Templates
+## Using .NET CLI Templates
 
 Quickly set up a Blazor application using the preconfigured [Syncfusion WebAssembly App Template](https://help.syncfusion.com/extension/syncfusion-blazor-webassemblyapp-template-via-nuget/installation).
 
