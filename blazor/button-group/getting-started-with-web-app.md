@@ -223,7 +223,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVftihITUHgzQAT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Button Group Component](./images/blazor-button-group-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhnXRsLBRXQGBjx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button Group Component](./images/blazor-button-group-component.webp)" %}
 
 N> [View the sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ButtonGroup).
 

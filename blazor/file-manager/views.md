@@ -26,10 +26,10 @@ The large icons view layout can be customized using the `LargeIconsTemplate` pro
 @using Syncfusion.Blazor.FileManager;
 <SfFileManager TValue="FileManagerDirectoryContent" CssClass="e-fm-template-sample">
     <ChildContent>
-        <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                                 UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                                 DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                                 GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+        <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                                 UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                                 DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                                 GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
         </FileManagerAjaxSettings>
     </ChildContent>
     <LargeIconsTemplate Context="item">
@@ -125,10 +125,10 @@ To add a custom column to the details view, use the [FileManagerColumn](https://
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent" View="ViewType.Details">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerDetailsViewSettings>
         <FileManagerColumns>
@@ -161,10 +161,10 @@ The details view settings like, column [Width](https://help.syncfusion.com/cr/bl
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent" View="ViewType.Details">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerDetailsViewSettings>
         <FileManagerColumns>

@@ -248,7 +248,7 @@ This is demonstrated in an example where the TreeView operations are manipulated
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZheMDMKCfviYktD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Context Menu in Blazor TreeView Component](./images/blazor-treeview-node-with-context-menu.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthnjGWDAmocmtRr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Context Menu in Blazor TreeView Component](./images/blazor-treeview-node-with-context-menu.webp)" %}
 
 ## Badge Integration
 
@@ -413,7 +413,7 @@ The Blazor TreeView component integrates with the Blazor Badge component, enabli
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXreitsqiTbQmSBM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Badge integration in Blazor TreeView](./images/blazor-treeview-badge-integration.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVnDwstgwRGRkyw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Badge integration in Blazor TreeView](./images/blazor-treeview-badge-integration.webp)" %}
 
 ## Icons Library Integration
 
@@ -570,11 +570,11 @@ The Blazor TreeView component has the built-in option to customize each node's a
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBIWZsKWoisIIxY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Icons integration in Blazor TreeView](./images/blazor-treeview-Icon-integration.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBdjGiNUGQbjMXm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Icons integration in Blazor TreeView](./images/blazor-treeview-Icon-integration.webp)" %}
 
 ## Navigation within Sidebar
 
-The Blazor TreeView component's [`NavigateUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldSettings-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldSettings_1_NavigateUrl) field is used for navigation between pages. This example maps `NavigateUrl` to facilitate page transitions when the TreeView is embedded within a Sidebar component.
+The Blazor TreeView component's [`NavigateUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_NavigateUrl) field is used for navigation between pages. This example maps `NavigateUrl` to facilitate page transitions when the TreeView is embedded within a Sidebar component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

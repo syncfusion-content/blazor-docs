@@ -513,7 +513,7 @@ Generate SQL with named parameters using [`GetNamedParameterSql`](https://help.s
 
 ### Exporting to MongoDB Query
 
-Convert the current rules to MongoDB query syntax using [`GetMongoQuery`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetMongoQuery_Syncfusion_Blazor_QueryBuilder_RuleModel_). Ensure date and number formats match expectations of the target database.
+Convert the current rules to MongoDB query syntax using [`GetMongoQuery`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetMongoQuery_Syncfusion_Blazor_QueryBuilder_RuleModel_). Ensure date and number formats match the expectations of the target database.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -565,4 +565,4 @@ Convert the current rules to MongoDB query syntax using [`GetMongoQuery`](https:
 
 ```
 
-N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.
+N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=fluent2) to know how to render and configure the query builder.

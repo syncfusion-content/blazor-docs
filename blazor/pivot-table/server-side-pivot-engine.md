@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Server Side Engine in Blazor Pivot Table Component | Syncfusion®
-description: Learn how to connect Blazor Pivot Table to a server-side pivot engine for large datasets with examples and much more details.
+description: Learn how the Blazor Pivot Table uses a server-side Pivot Engine to aggregate, filter, sort, and group data, streaming only the current viewport to the client.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -17,7 +17,7 @@ This section explains how to use the [Syncfusion.Pivot.Engine](https://www.nuget
 
 ### Download and installing Server-side Pivot Engine
 
-1. Download the ASP.NET Core-based standalone [application](https://github.com/SyncfusionExamples/server-side-pivot-engine-for-blazor-pivot-table.git) from the GitHub repository. This application includes all necessary files to set up and use the server-side Pivot Engine.
+1. Download the ASP.NET Core-based standalone [application](https://github.com/SyncfusionExamples/server-side-pivot-engine-for-blazor-pivot-table) from the GitHub repository. This application includes all necessary files to set up and use the server-side Pivot Engine.
 
 2. The downloaded **PivotController** application contains the following files to support data communication and processing:
    - **PivotController.cs** in the **Controllers** folder: Handles data communication between the server and the Pivot Table.

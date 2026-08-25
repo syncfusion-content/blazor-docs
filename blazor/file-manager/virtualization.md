@@ -20,10 +20,10 @@ Here is a sample demonstrating Virtualization enabled in the **Details** ViewTyp
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent" View="ViewType.Details" EnableVirtualization="true">
-        <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/FileOperations"
-                                 UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Upload"
-                                 DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Download"
-                                 GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/GetImage">
+        <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/Virtualization/FileOperations"
+                                 UploadUrl="https://physical-service.syncfusion.com/api/Virtualization/Upload"
+                                 DownloadUrl="https://physical-service.syncfusion.com/api/Virtualization/Download"
+                                 GetImageUrl="https://physical-service.syncfusion.com/api/Virtualization/GetImage">
         </FileManagerAjaxSettings>        
     </SfFileManager>
 
@@ -32,7 +32,7 @@ Here is a sample demonstrating Virtualization enabled in the **Details** ViewTyp
 
 The below GIF demonstrates the file loading when virtualization is enabled, a sizable collection of files can be found in the folders **Documents** and **Text Documents**..
 
-![Virtualization in Blazor FileManager](images/blazor-filemanager-virtualization.gif)
+![Virtualization in Blazor FileManager](images/blazor-filemanager-virtualization.webp)
 
 ## Limitations
 

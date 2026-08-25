@@ -7,11 +7,11 @@ control: Checkbox
 documentation: ug
 ---
 
-# CheckBox customization in Blazor CheckBox Component
+# Customization in Blazor CheckBox Component
 
-## Customize Styles and Appearances
+## Customize styles and appearances
 
-To modify the [Blazor CheckBox](https://www.syncfusion.com/blazor-components/blazor-checkbox) appearance, you need to override the default CSS of CheckBox component. Find the list of CSS classes and their corresponding section in CheckBox. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+To modify the [Blazor CheckBox](https://www.syncfusion.com/blazor-components/blazor-checkbox) appearance, override the default CSS of the CheckBox component. The list of CSS classes and their corresponding sections in the CheckBox is shown below. A custom theme can also be created using the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
 |CSS Class | Purpose of Class|
 |-----|-----|
@@ -20,14 +20,14 @@ To modify the [Blazor CheckBox](https://www.syncfusion.com/blazor-components/bla
 |.e-checkbox-wrapper .e-label|To customize the checkbox label. |
 |.e-checkbox-wrapper:hover .e-label|To customize the checkbox label on hover. |
 |.e-checkbox-wrapper .e-frame.e-check|To customize the checked checkbox. |
-|.e-checkbox-wrapper:hover .e-frame.e-check|To customize the checked checkbox when hover. |
+|.e-checkbox-wrapper:hover .e-frame.e-check|To customize the checked checkbox on hover. |
 
-## Customize Checkbox appearance
+## Customize CheckBox appearance
 
-You can customize the appearance of the Checkbox component using the CSS rules. Define own CSS rules according to your requirement and assign the class name to the
+The appearance of the CheckBox component is customized using CSS rules. Custom CSS rules are defined according to requirements and the class name is assigned to the
 [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) property.
 
-The background and border color of the Checkbox is customized through the custom classes to create primary, success, warning, and danger info type of checkbox.
+The background and border colors of the CheckBox are customized through custom classes to create primary, success, info, warning, and danger variants.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -89,13 +89,17 @@ The background and border color of the Checkbox is customized through the custom
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVKshBQrJbnEQzO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Appearance of Blazor CheckBox](./images/blazor-checkbox-appearance-customization.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLHtQMtfnDxdYLB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Appearance of Blazor CheckBox](./images/blazor-checkbox-appearance-customization.webp)" %}
 
 ## Customize width and height
 
-The height and width of the Checkbox component can be customized by setting `height` and `width` properties in `styles`
+The height and width of the CheckBox component can be customized using CSS. The following example shows how to apply a custom size by setting `height` and `width` on the `.e-frame` selector.
 
-The following section explains about how to customize the height and width of the Checkbox component.
+The `HtmlAttributes` parameter can also be used to set inline `style` directly on the rendered input:
+
+```cshtml
+<SfCheckBox Label="Inline" HtmlAttributes="@(new Dictionary<string, object> { { "style", "width:30px;height:30px;" } })"></SfCheckBox>
+```
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -130,11 +134,11 @@ The following section explains about how to customize the height and width of th
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrUWLLGVTFECslm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Height and Width of Blazor CheckBox](./images/blazor-checkbox-height-width-customization.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLdtGiZTnsqcvDo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Height and Width of Blazor CheckBox](./images/blazor-checkbox-height-width-customization.webp)" %}
 
 ## Custom frame
 
-Checkbox frame can be customized as per the requirement by adding CSS rules.
+The CheckBox frame can be customized by adding CSS rules.
 
 In the following example, to-do list is displayed with round checkbox by changing `border-radius` as `100%` by adding `e-custom` class.
 
@@ -157,41 +161,14 @@ In the following example, to-do list is displayed with round checkbox by changin
         .e-custom .e-frame {
             border-radius: 100%;
         }
-
-        .e-checkicon.e-checkbox-wrapper .e-frame.e-check::before {
-            content: '\e77d';
-        }
-
-        .e-checkicon.e-checkbox-wrapper .e-check {
-            font-size: 8.5px;
-        }
-
-        .e-checkicon.e-checkbox-wrapper .e-frame.e-check {
-            background-color: white;
-            border-color: grey;
-            color: grey;
-        }
-
-        .e-checkicon.e-checkbox-wrapper:hover .e-frame.e-check {
-            background-color: white;
-            border-color: grey;
-            color: grey;
-        }
-
-        .e-checkicon.e-checkbox-wrapper .e-checkbox:focus + .e-frame.e-check {
-            background-color: white;
-            border-color: grey;
-            box-shadow: none;
-            color: grey;
-        }
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrgirhGhJYCyqDJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Blazor CheckBox Frame](./images/blazor-checkbox-frame-customization.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhnXciDzxBZSKMK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Blazor CheckBox Frame](./images/blazor-checkbox-frame-customization.webp)" %}
 
 ## Custom check icon
 
-Checkbox check icon can be customized as per the requirement by adding CSS rules.
+The CheckBox check icon can be customized by adding CSS rules.
 
 In the following example, the check icon can be customized by changing check icon content, background and border color in focus and hovered states by adding `e-checkicon` class.
 
@@ -212,7 +189,7 @@ In the following example, the check icon can be customized by changing check ico
 
 <style>
     .e-checkicon.e-checkbox-wrapper .e-frame.e-check::before {
-        content: '\e682';
+        content: '\e917';
     }
     .e-checkicon.e-checkbox-wrapper .e-check {
         font-size: 12px;
@@ -235,11 +212,11 @@ In the following example, the check icon can be customized by changing check ico
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBgWrLGrpkSQSUL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Check Icon in Blazor CheckBox](./images/blazor-checkbox-check-icon-customization.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhHDwitzdSGeeZB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Check Icon in Blazor CheckBox](./images/blazor-checkbox-check-icon-customization.webp)" %}
 
-## Right-To-Left in Blazor CheckBox Component
+## Right-to-left in Blazor CheckBox Component
 
-Checkbox component has RTL support. This can be achieved by setting [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) as `true`.
+The CheckBox component has RTL (right-to-left) support. This can be achieved by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) property to `true`.
 
 The following example illustrates how to enable right-to-left support in Checkbox component.
 
@@ -253,31 +230,31 @@ The following example illustrates how to enable right-to-left support in Checkbo
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVgiLhmVyZvKJzz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Right to Left in Blazor CheckBox](./images/blazor-checkbox-right-to-left.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhdNmWDfdxouMPf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Right to Left in Blazor CheckBox](./images/blazor-checkbox-right-to-left.webp)" %}
 
-## Model Binding in Blazor CheckBox Component
+## Model binding in Blazor CheckBox Component
 
-To get start quickly with Model Binding in Blazor CheckBox Component, you can check on this video:
+To get started quickly with model binding in the Blazor CheckBox component, refer to the following video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=4vMuReo0Hz4"%}
 
-This section demonstrates the strongly typed extension support in Checkbox. The view that can bind with any model is called as strongly typed view. You can bind any class as model to view, access model properties on that view, and use data associated with model to render the component.
+The following sample demonstrates model binding with the CheckBox. A view that can bind to any model is called a strongly typed view. Any class can be bound as a model to the view, the model properties can be accessed on that view, and the data associated with the model can be used to render the component. The validation uses the standard Blazor `EditForm` with `DataAnnotationsValidator` (no additional Syncfusion registration is required).
 
-In this sample, first check the option and click the submit button to post the selected value in the Checkbox. When the value is not checked, validation error message will be shown below the Checkbox.
+In this sample, the option is checked and the Submit button is clicked to post the selected value. When the CheckBox is not checked, the validation error message is shown below it.
 
 ```csharp
 
 @using Syncfusion.Blazor.Buttons
 @using System.ComponentModel.DataAnnotations
 
-<EditForm Model="Annotate">
+<EditForm Model="Annotate" OnValidSubmit="HandleValidSubmit">
     <DataAnnotationsValidator></DataAnnotationsValidator>
     <div class="form-group">
         <SfCheckBox Label="Option 1" @bind-Checked="@Annotate.Check"></SfCheckBox>
         <ValidationMessage For="@(() => Annotate.Check)" />
     </div>
-    <SfButton HtmlAttributes="@Submit" Content="Submit"></SfButton>
+    <button type="submit" class="e-btn e-primary">Submit</button>
 </EditForm>
 
 @code {
@@ -287,11 +264,11 @@ In this sample, first check the option and click the submit button to post the s
         [Range(typeof(bool), "true", "true", ErrorMessage = "You need to agree to the Terms and Conditions")]
         public bool Check { get; set; }
     }
-    public Dictionary<string, object> Submit = new Dictionary<string, object>()
+    private void HandleValidSubmit()
     {
-        { "type", "submit"}
-    };
+        // Submit the form when validation passes
+    }
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhKMVrmrJkahhmZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Model Binding in Blazor CheckBox](./images/blazor-checkbox-model-binding.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBHtmiXJHmiLtVc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Model Binding in Blazor CheckBox](./images/blazor-checkbox-model-binding.webp)" %}

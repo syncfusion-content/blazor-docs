@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Performance Tips for Blazor Pivot Table Component | Syncfusion®
-description: Learn best practices to improve performance of Blazor Pivot Table component with examples and much more details.
+title: Performance Tips in Blazor Pivot Table | Syncfusion
+description: Learn performance tips for the Blazor Pivot Table, including the individual NuGet package, virtual scrolling, paging, and a server-side engine.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Best practices to improve the performance of the Blazor Pivot Table
+# Performance Tips in Blazor Pivot Table
 
 Performance optimization is crucial when working with large datasets in the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components). This documentation provides some best practices to empower your data analysis and enhance the user experience.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in Blazor Pivot Table Component | Syncfusion®
-description: Learn about filtering options in Blazor Pivot Table component including member, label, and value filtering.
+title: Filtering in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table applies member, label, and value filtering via the field list, the grouping bar, or PivotViewFilterSettings.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD012 -->
 
-# Filtering in Blazor Pivot Table Component
+# Filtering in Blazor Pivot Table
 
 Filtering helps you focus on specific data by showing only the records you need in the Pivot Table. This allows you to analyze relevant information more effectively by including or excluding specific members through the user interface or programmatically.
 
@@ -883,4 +883,4 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pi
 }
 ```
 
-N> You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to knows how to render and configure the pivot table.
+N> You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to knows how to render and configure the pivot table.

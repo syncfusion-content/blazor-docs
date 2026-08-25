@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Toolbar in Blazor Pivot Table Component | Syncfusion®
-description: Learn about toolbar in Blazor Pivot Table component for quick access to common features with examples and much more details.
+title: Toolbar in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table exposes a toolbar with built-in options for new, save, load, grid-chart switching, exporting, and conditional formatting.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Toolbar in Blazor Pivot Table Component
+# Toolbar in Blazor Pivot Table
 
 The toolbar in the Blazor Pivot Table component provides easy access to commonly used features, such as switching between a pivot table and a pivot chart, changing chart types, applying conditional formatting, exporting data, and more. To enable the toolbar, set the [ShowToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowToolbar) property to **true**. Additionally, the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_Toolbar) property accepts a collection of built-in toolbar options, allowing users to interact with the Pivot Table efficiently at runtime.
 
@@ -1619,7 +1619,7 @@ When you select the **"Create a new report"** option from the toolbar, the [NewR
 
 ![Adding a report in the SQL database](images/blazor_output_new_report.webp)
 
-> In [this](https://github.com/SyncfusionExamples/Save-and-load-report-from-SQL-database-to-pivot-table) GitHub repository, you can find our Blazor Pivot Table sample and ASP.NET Core Web Application to save and load reports from SQL Server database.
+> In [this](https://github.com/SyncfusionExamples/web-Save-and-load-report-from-SQL-database-to-pivot-table) GitHub repository, you can find our Blazor Pivot Table sample and ASP.NET Core Web Application to save and load reports from SQL Server database.
 
 ### Limitations with respect to report manipulation
 
@@ -2236,4 +2236,4 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pi
 
 ```
 
-N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
+N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

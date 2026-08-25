@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in Blazor Pivot Table Component | Syncfusion®
-description: Learn about tooltip in Blazor Pivot Table component for displaying contextual information with examples and much more details.
+title: Tooltip in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table shows contextual tooltips on value cells, including row and column header information, controlled by the ShowTooltip property.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Tooltip in Blazor Pivot Table Component
+# Tooltip in Blazor Pivot Table
 
 The tooltip displays contextual information when users hover over value cells in the pivot table. It can be enabled or disabled by setting the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowTooltip) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.html) class to **true** or **false**. By default, tooltip is enabled in the pivot table and shows the cell value along with row and column header information.
 
@@ -178,4 +178,4 @@ The `RowHeaders` and `ColumnHeaders` properties return concatenated header value
 
 You can extend the template by adding conditional rendering, additional HTML elements, or interactive content based on context properties. For example, use `@if` blocks to show/hide information dynamically. Keep in mind that custom templates are re-evaluated on each hover, so avoid expensive computations in the template markup to prevent render lag.
 
-N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
+N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

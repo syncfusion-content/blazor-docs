@@ -79,7 +79,7 @@ In the Blazor TreeView component, use the [**NavigateUrl**](https://help.syncfus
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhyWXsKsofaKFFo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVRNmsNAFLZGdss?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Full Row Navigation in Blazor TreeView Component
 
@@ -144,7 +144,7 @@ The [`FullRowNavigable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBeMjMgWyoQVXTq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVRjwCDUvVJYUDO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Handle Processing on Node Click in Blazor TreeView Component
 
@@ -332,7 +332,7 @@ The [**NavigateUrl**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Na
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVyiDMgMIHAZHOb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLnDmiXKlhwYwIa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## NavigateUrl with Built-in URLs
 
@@ -408,4 +408,4 @@ However, when using the built-in URLs from the NuGet package (for example, **Mic
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVyMNiKiecLpEyW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLHtwWtqPAtRwRd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

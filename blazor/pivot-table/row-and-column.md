@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Row and Column in Blazor Pivot Table Component | Syncfusion®
-description: Learn about row and column features in Blazor Pivot Table component with examples and much more details.
+title: Row and Column in Blazor Pivot Table | Syncfusion
+description: Learn how to set the Blazor Pivot Table's row and column dimensions in pixel, percentage, or auto height with a 400px minimum width to ensure proper rendering.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD012 -->
 
-# Row and Column in Blazor Pivot Table Component
+# Row and Column in Blazor Pivot Table
 
 To learn about how to use the row and column options effectively in the Blazor Pivot Table, watch this video:
 
@@ -798,4 +798,4 @@ N> Specify the model type for the data source, as it determines the context that
 
 ![Blazor PivotTable with Cell Template](images/blazor-pivottable-cell-template.webp)
 
-N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
+N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

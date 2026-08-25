@@ -114,4 +114,4 @@ In the following example, the `SortOrder` property is dynamically updated on the
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVICtCUhBoSVZoy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhnjcWNzrzFPmaA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

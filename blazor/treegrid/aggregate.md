@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Aggregate in Blazor TreeGrid Component | Syncfusion®
-description: Checkout and learn here all the features about aggregate in Blazor TreeGrid component and much more details.
+title: Blazor TreeGrid Aggregates | Syncfusion
+description: Learn how to configure and display aggregates in Blazor TreeGrid  using footer, group footer, and caption templates for summary calculations.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Aggregate in Blazor TreeGrid Component
+# Aggregate in Blazor TreeGrid
 
 To know about Aggregate in Blazor tree grid Component, you can check this video.
 

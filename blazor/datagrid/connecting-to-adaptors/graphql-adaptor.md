@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Data Grid with GraphQL using Custom Adaptor | Syncfusion®
-description: Build Blazor apps with GraphQL and Data Grid to enable CRUD, filtering, sorting, paging, and grouping for seamless data operations.
+title: Blazor Grid GraphQL Data Binding | Syncfusion
+description: Learn how to connect GraphQL with Blazor Data Grid for CRUD operations, filtering, sorting, paging, and grouping of data.
 control: DataGrid
 platform: blazor
 documentation: ug
 ---
 
-# Connect Blazor DataGrid with GraphQL using Hot Chocolate
+# Connect GraphQL to Blazor Data Grid
 
 GraphQL is a query language that allows applications to request exactly the data needed, nothing more and nothing less. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response.
 
@@ -20,7 +20,7 @@ GraphQL is a query language that allows applications to request exactly the data
 - **Resolvers**: Each query or mutation is handled by a resolver, which is a function responsible for fetching data or executing an operation. **Query resolvers** handle **read operations**, while **mutation resolvers** handle **write operations**.
 - **Schema**: Defines the structure of the API. The schema describes available data types, the fields within those types, and the operations that can be executed. Query definitions specify how data can be retrieved, and mutation definitions specify how data can be modified. 
 
-[Hot Chocolate](https://chillicream.com/docs/hotchocolate/v15) is an open‑source GraphQL server framework for .NET. Hot Chocolate enables the creation of GraphQL APIs using ASP.NET Core and integrates seamlessly with modern .NET applications, including Blazor.
+[Hot Chocolate](https://chillicream.com/docs/hotchocolate) is an open‑source GraphQL server framework for .NET. Hot Chocolate enables the creation of GraphQL APIs using ASP.NET Core and integrates seamlessly with modern .NET applications, including Blazor.
 
 ## Prerequisites
 

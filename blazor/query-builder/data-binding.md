@@ -189,7 +189,7 @@ Complex data binding allows you to work with nested objects and subfields. Bind 
         <QueryBuilderColumn Field="Name" Label="Name" Type="ColumnType.Object">
             <QueryBuilderColumns>
                 <QueryBuilderColumn Field="FirstName" Label="First Name" Type="ColumnType.String"></QueryBuilderColumn>
-                <QueryBuilderColumn Field="LasttName" Label="Last Name" Type="ColumnType.String"></QueryBuilderColumn>
+                <QueryBuilderColumn Field="LastName" Label="Last Name" Type="ColumnType.String"></QueryBuilderColumn>
             </QueryBuilderColumns>
         </QueryBuilderColumn>
         <QueryBuilderColumn Field="Country" Label="Country" Type="ColumnType.Object">
@@ -197,7 +197,7 @@ Complex data binding allows you to work with nested objects and subfields. Bind 
                 <QueryBuilderColumn Field="State" Label="State" Type="ColumnType.Object">
                     <QueryBuilderColumns>
                         <QueryBuilderColumn Field="City" Label="City" Type="ColumnType.String"></QueryBuilderColumn>
-                        <QueryBuilderColumn Field="ZipCode" Label="Zip Code" Type="ColumnType.String"></QueryBuilderColumn>
+                        <QueryBuilderColumn Field="Zipcode" Label="Zip Code" Type="ColumnType.String"></QueryBuilderColumn>
                     </QueryBuilderColumns>
                 </QueryBuilderColumn>
                 <QueryBuilderColumn Field="Region" Label="Region" Type="ColumnType.String"></QueryBuilderColumn>
@@ -251,4 +251,4 @@ Complex data binding allows you to work with nested objects and subfields. Bind 
 
 ![Complex Data Binding in Blazor QueryBuilder](./images/blazor-query-builder-complex-db.webp)
 
-N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the Query Builder.
+N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=fluent2) to know how to render and configure the Query Builder.

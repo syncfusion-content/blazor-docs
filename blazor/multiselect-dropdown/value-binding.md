@@ -110,7 +110,7 @@ The following example uses `int?` as `TValue`, so clearing sets the value to `nu
 
 The `TItem` type can be changed dynamically by creating a generic wrapper component using the `@typeparam` directive. The following example shows how to change `TItem` dynamically for different data sources.
 
-### Creating generic MultiSelect component
+### Creating a generic MultiSelect component
 
 Create a `MultiSelect.razor` file as a parent component. Add parameters for the List of `<TItem>` and the bound `TValue[]`.
 
@@ -137,7 +137,7 @@ public EventCallback<TValue> DDLValueChanged { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-### Usage of generic component with different type
+### Usage of the generic component with different types
 
 Render the generic MultiSelect with the required `TValue` and `TItem` in the respective Razor components.
 

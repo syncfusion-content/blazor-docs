@@ -189,4 +189,4 @@ In the [SeriesLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 * [Data Label](./data-labels)
 * [Legend](./legend)
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page to explore the available chart features. You can also check the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to learn how chart types are used to visualize data trends over equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page to explore the available chart features. You can also check the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to learn how chart types are used to visualize data trends over equal intervals.

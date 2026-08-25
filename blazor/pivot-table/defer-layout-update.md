@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Defer Layout Update in Blazor Pivot Table Component | Syncfusion®
-description: Learn about defer layout update in Blazor Pivot Table component for optimized performance and much more details.
+title: Defer Layout Update in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table defers layout updates so Field List changes batch into one Apply click, reducing renders for complex reports.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Defer Layout Update in Blazor Pivot Table Component
+# Defer Layout Update in Blazor Pivot Table
 
 Defer update support allows updating the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component only on demand, significantly improving performance for complex data operations. When this feature is enabled, users can drag-and-drop fields between row, column, value, and filter axes, apply sorting and filtering inside the Field List, resulting in changes to the pivot report configuration without immediately updating the pivot table values. Once all operations are performed and the "Apply" button is clicked in the Field List, the pivot table will update with the final modified report. This approach reduces multiple unnecessary renders and brings better performance, especially when working with large datasets or performing multiple field operations.
 
@@ -119,4 +119,4 @@ N> To make the field list interact with the pivot table, use the **UpdateViewAsy
 
 ![Blazor PivotTable with Defer Static Update](images/blazor-pivottable-defer-static-update.webp)
 
-N> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
+N> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

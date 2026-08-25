@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Dialog Editing in Blazor DataGrid | Syncfusion®
-description: Checkout and learn here all the features about Dialog Editing in Blazor DataGrid and much more details.
+title: Blazor Grid Dialog Editing | Syncfusion
+description: Learn how to use dialog editing in Blazor Data Grid for add, edit, validation, custom edit forms, dialog templates, and CRUD operations.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Dialog editing in Blazor DataGrid
+# Dialog Editing in Blazor Data Grid
 
 Dialog editing in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables editing of data in the selected row using a dialog window. This feature facilitates quick modification of cell values and updates the data source without navigating to a separate page or view. Dialog editing is particularly effective for scenarios requiring streamlined editing of multiple cells.
 
@@ -176,7 +176,7 @@ public class OrderDetails
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLdZwtrBgOCWMim?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * The DataGrid add or edit dialog element includes a max-height property, which is calculated based on the available window height. In a standard window size of **1920×1080** pixels, the dialog height can be set up to **658px**.
-> * Refer to the Blazor DataGrid feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand data presentation and manipulation.
+> * Refer to the Blazor DataGrid feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.
 
 ## Show or hide columns in dialog editing
 

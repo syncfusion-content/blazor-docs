@@ -160,7 +160,7 @@ Adjust list item background and text colors for focused, active, and hovered sta
 
 ![Blazor DropDownList with custom item state colors](./images/style/blazor_dropdown_outline-theme.webp)
 
-## Customizing the appearance of pop-up element
+## Customizing the appearance of the popup element
 
 Customize popup appearance by targeting popup and list item selectors (for example, `.e-list-item.e-item-focus`) and applying styles such as background and borders.
 
@@ -196,11 +196,11 @@ Add the additional input attributes such as disabled, value, and more to the roo
 
 ![Blazor DropDownList with input attributes](./images/style/blazor_dropdown_input-attributes-propety.webp)
 
-## Set the various font family for dropdown list elements
+## Set a custom font family for DropDownList elements
 
-The font-family of the dropdown list can be changed by overriding using the following selector. The overridden can be applied to specific component by adding a class name through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property.
+Change the font family of the dropdown list by overriding the following selector. The override can be scoped to a specific component by adding a class name through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property.
 
-In the following sample, the font family of the DropDownList, ListItem text in DropDownList and filterInput text are changed.
+In the following sample, the font family of the DropDownList, the list item text in the DropDownList, and the filter input text are changed.
 
 {% highlight cshtml %}
 

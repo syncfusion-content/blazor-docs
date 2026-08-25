@@ -257,7 +257,9 @@ Add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-da
 
 ### Run the application
 
-To run the application, use the following command:
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.
+
+Alternatively, run the application using the following .NET CLI command from the project root directory.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}

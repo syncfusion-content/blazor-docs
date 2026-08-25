@@ -299,4 +299,4 @@ The Blazor TreeView component supports filtering its nodes through an external i
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrIsXMKhVJFHvwP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Searching and Filtering in Blazor TreeView Component](./images/blazor-treeview-searching-and-filtering.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLxXGWtzrqxSbEX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Searching and Filtering in Blazor TreeView Component](./images/blazor-treeview-searching-and-filtering.webp)" %}

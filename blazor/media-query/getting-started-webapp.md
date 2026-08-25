@@ -57,7 +57,7 @@ cd BlazorWebApp.Client
 
 {% endtabcontents %}
 
-N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
+N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc#interactivity-location) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
 ## Install the required Blazor packages
 
@@ -117,12 +117,12 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 ## Add import namespaces
 
-After the package is installed, open the **~/Components/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` namespace.
+After the package is installed, open the **~/Components/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor.Core` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
-@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Core
 
 {% endhighlight %}
 {% endtabs %}
@@ -164,12 +164,12 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 
 N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
+In the following example, the [ActiveBreakPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfMediaQuery.html#Syncfusion_Blazor_SfMediaQuery_ActiveBreakpoint) parameter is used to obtain the currently active breakpoint and dynamically update the layout based on the screen size.
+
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
-
-@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Core
 
 <SfMediaQuery @bind-ActiveBreakPoint="activeBreakpoint"></SfMediaQuery>
 <br />
@@ -440,10 +440,11 @@ dotnet run
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXVdXQZhzdRxdKGB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Media Query Component](images/blazor-media-query.webp)" %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MediaQuery).
+N> You can refer to the [Blazor Media Query](https://www.syncfusion.com/blazor-components/blazor-media-query) feature tour to explore its key features and capabilities. You can also browse the [Blazor Media Query examples](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MediaQuery) to learn how to render and configure the component.
 
 ## See also
 
-1. [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-2. [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-3. [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+1. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+2. [Getting Started with Blazor Server App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor WebAssembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+4. [Breakpoints in Blazor Media Query Component](https://blazor.syncfusion.com/documentation/media-query/break-points)

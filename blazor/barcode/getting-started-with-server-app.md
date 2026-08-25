@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Barcode Generator in Server App | Syncfusion
-description: Check out and learn about the documentation for getting started with Blazor Barcode Generator Component in Blazor Server App.
+title: Getting Started with Blazor Barcode in Server App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Barcode Generator control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Barcode Generator
 documentation: ug
@@ -247,5 +247,5 @@ Add a Data Matrix code to the Barcode Generator component.
 
 ## See also
 
-1. [Getting Started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-2. [Getting Started with Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
+1. [Getting Started with Blazor WebAssembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)

@@ -120,4 +120,4 @@ Node text is validated during the editing process using the [`NodeEdited`](https
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDresjCVKbokLFvR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Renaming Tree Node in Blazor TreeView](../images/blazor-treeview-rename-tree-node.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhHjQithnRrXwwD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Renaming Tree Node in Blazor TreeView](../images/blazor-treeview-rename-tree-node.webp)" %}

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor DataGrid in Server App | Syncfusion
-description: Check out and learn about the documentation for getting started with Blazor DataGrid Component in Blazor Server App.
+title: Blazor Grid Getting Started in Blazor Server App | Syncfusion
+description: Learn how to get started with Syncfusion Blazor DataGrid in a Server app, including project setup, package installation, service registration, and data binding.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Getting Started with Blazor DataGrid in Blazor Server App
+# Getting Started with Blazor Data Grid in Blazor Server App
 
 This section briefly explains how to include the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -154,7 +154,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ...
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 ...
-<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+<script src="_content/Syncfusion.Blazor.Grid/scripts/sf-grid.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}

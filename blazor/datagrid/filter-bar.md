@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filter Bar in Blazor DataGrid | Syncfusion®
-description: Learn about the Filter Bar feature in Blazor DataGrid, including configuration, usage, and customization options.
+title: Blazor Grid Filter Bar | Syncfusion
+description: Learn how to use the Filter Bar in Blazor Data Grid with filter operators, immediate and OnEnter modes, templates, and advanced filtering options.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Filter Bar in Blazor DataGrid
+# Filter Bar in Blazor Data Grid
 
 The filter bar feature provides an efficient and intuitive way to filter data within the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component. This feature displays input fields below each column header, enabling straightforward data filtering based on column-specific criteria. The filter bar enhances data exploration by allowing users to narrow down large datasets to display only relevant records.
 
@@ -729,7 +729,7 @@ public class OrderData
 
 ### Operator-based filtering in the filter bar
 
-The Syncfusion Blazor DataGrid supports operator-based filtering in the filter bar through the **ShowFilterBarOperator** property in [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
+The Blazor DataGrid supports operator-based filtering in the filter bar through the [ShowFilterBarOperator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_ShowFilterBarOperator) property in [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
 
 When the **ShowFilterBarOperator** property is enabled, clicking the filter icon in a filter bar cell displays an operator dropdown menu. A filtering condition appropriate to the column type can be selected, removing the need to type operator expressions manually.
 
@@ -834,5 +834,7 @@ public class OrderData
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthHZcLqLCzqjHom?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > The **ShowFilterBarOperator** feature is applicable only when the Grid uses the default **FilterType.FilterBar**. 

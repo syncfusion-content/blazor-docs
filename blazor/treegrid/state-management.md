@@ -1,13 +1,13 @@
 ---
 layout: post
-title: State management in Blazor TreeGrid Component | Syncfusion®
-description: Learn here all the features about State management in Blazor TreeGrid component and much more details.
+title: Blazor TreeGrid State Management | Syncfusion
+description: Learn how to persist, save, restore, and manage state in Blazor TreeGrid, including reset options and state persistence settings.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# State management in Blazor TreeGrid Component
+# State Management in Blazor TreeGrid
 
 Tree Grid Component retains its state using local storage on browser reload. Also, it allows users to save and load tree grid state manually. The tree grid will use a user-provided state to render instead of its properties provided declaratively.
 

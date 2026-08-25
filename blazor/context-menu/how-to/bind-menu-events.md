@@ -7,9 +7,21 @@ control: Context Menu
 documentation: ug
 ---
 
-# Bind Context Menu Events in Blazor ContextMenu Component
+# Bind Events in the Blazor ContextMenu Component
 
-To bind the menu event in the context menu [ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_ItemSelected) is used and the event is triggered when the item in the context menu is selected.
+To bind a menu event in the ContextMenu, the [ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_ItemSelected) event is used and is triggered when an item in the ContextMenu is selected.
+
+The following table lists the events exposed by `MenuEvents`.
+
+| Event | Description |
+| --- | --- |
+| [ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_ItemSelected) | Triggered when a ContextMenu item is selected. |
+| [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_OnOpen) | Triggered before the ContextMenu opens (root and sub menus). |
+| [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_Opened) | Triggered after the ContextMenu is fully opened. |
+| [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_OnClose) | Triggered before the ContextMenu closes. |
+| [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_Closed) | Triggered after the ContextMenu is fully closed. |
+
+The handler receives a [MenuEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEventArgs-1.html) object that exposes properties such as `Item`, `Event`, `Name`, and `ParentItem`.
 
 ```cshtml
 
@@ -48,4 +60,4 @@ To bind the menu event in the context menu [ItemSelected](https://help.syncfusio
 ```
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhUCBBcgOQARqgw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Binding Blazor ContextMenu Events](./../images/blazor-contextmenu-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVdjmiZJbXAPfth?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Binding Blazor ContextMenu Events](./../images/blazor-contextmenu-component.webp)" %}

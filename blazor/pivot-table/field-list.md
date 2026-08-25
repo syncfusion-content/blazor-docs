@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Field List in Blazor Pivot Table Component | Syncfusion®
-description: Learn about field list in Blazor Pivot Table component for organizing and analyzing data with examples and much more details.
+title: Field List in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table exposes a Field List to drag fields between columns, rows, values, and filters, as a popup or a fixed panel.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Field List in Blazor Pivot Table Component
+# Field List in Blazor Pivot Table
 
 The Field List makes it easy to organize and analyze data in your Pivot Table. It provides a user-friendly interface similar to Microsoft Excel that allows you to add or remove fields and move them between different axes like columns, rows, values, and filters. You can also apply sorting and filtering options while working with your data.
 
@@ -744,4 +744,4 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pi
 }
 ```
 
-N> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
+N> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

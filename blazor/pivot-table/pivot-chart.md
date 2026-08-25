@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pivot Chart in Blazor Pivot Table Component | Syncfusion®
-description: Learn about Pivot Chart in Blazor Pivot Table component for data visualization with examples and much more details.
+title: Pivot Chart in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table visualizes aggregated values with an integrated Pivot Chart supporting 15+ chart types, drill down, and configurable display.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Pivot Chart in Blazor Pivot Table Component
+# Pivot Chart in Blazor Pivot Table
 
 The Pivot Chart in the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component helps users visualize aggregated values in a clear and graphical format. It provides essential options like drill down and drill up operations, over 15 chart types, and various display settings for series, axes, legends, export, print, and tooltips. The main purpose of the Pivot Chart is to present Pivot Table data in a way that is easy to understand and interact with.
 
@@ -1635,4 +1635,4 @@ In the example below, clicking an external button labeled "Print Chart" calls th
 
 ![Printing in Blazor Pivot Chart](images/blazor-pivotchart-printing.webp)
 
-N> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
+N> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Compression in Blazor Pivot Table Component | Syncfusion®
-description: Learn about data compression in Blazor Pivot Table component for improved performance and much more details.
+title: Data Compression in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table compresses unique raw records to speed up rendering of large datasets when paired with virtual scrolling.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Data Compression in Blazor Pivot Table component
+# Data Compression in Blazor Pivot Table
 
 > This property is applicable only for relational data source.
 
@@ -60,4 +60,4 @@ When binding large volumes of raw data, the pivot table processes all raw data t
 - **"DistinctCount"** will function as **"Count"** aggregation type.
 - In a calculated field, existing fields can be inserted without changing their default aggregation type. Even if the aggregation type is changed, it will revert to the default aggregation type for calculation purposes.
 
-> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
+> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

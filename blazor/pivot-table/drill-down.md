@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Drill Down in Blazor Pivot Table Component | Syncfusion®
-description: Learn about drill down and drill up features in Blazor Pivot Table component with examples and much more details.
+title: Drill Down in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table expands and collapses hierarchical row and column members for drill down and drill up, including drill position and Expand All.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD034 -->
 
-# Drill Down in Blazor Pivot Table Component
+# Drill Down in Blazor Pivot Table
 
 ## Drill down and drill up
 
@@ -389,4 +389,4 @@ The [`OnActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 ```
 
-N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
+N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

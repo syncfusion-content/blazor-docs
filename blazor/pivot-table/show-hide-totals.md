@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Show or Hide Totals in Blazor Pivot Table Component | Syncfusion®
-description: Learn how to show or hide grand totals and sub-totals in Blazor Pivot Table component with examples and much more details.
+title: Show or Hide Totals in Blazor Pivot Table | Syncfusion
+description: Learn how to show or hide grand totals and sub-totals in the Blazor Pivot Table via ShowGrandTotals, ShowRowGrandTotals, and ShowColumnGrandTotals.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Show or Hide Totals in Blazor Pivot Table Component
+# Show or Hide Totals in Blazor Pivot Table
 
 The Pivot Table component allows users to easily customize the display of grand totals and sub-totals. This documentation explains how to control their visibility and positioning to suit your data analysis needs.
 
@@ -319,4 +319,4 @@ The toolbar also includes options for "Grand Totals Position" and "Subtotals Pos
 ![Displaying Specific Total using Toolbar in Blazor PivotTable](images/blazor-pivottable-show-sub-total-using-toolbar.webp)
 <br/>
 
-N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
+N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

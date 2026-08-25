@@ -9,7 +9,7 @@ documentation: ug
 
 # Expand/Collapse Actions in Blazor TreeView Component
 
-"Parent TreeView nodes in the Blazor TreeView component can be expanded or collapsed by clicking the respective arrow icons. The [**Expanded**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Expanded) field or the [ExpandedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ExpandedNodes) property can be used to perform expand actions within the TreeView component. When the Expanded field is utilized, it can be mapped directly in the data source. The [ExpandedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ExpandedNodes) property in the TreeView component provides two-way binding."
+Parent TreeView nodes in the Blazor TreeView component can be expanded or collapsed by clicking the respective arrow icons. The [**Expanded**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Expanded) field or the [ExpandedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ExpandedNodes) property can be used to perform expand actions within the TreeView component. When the Expanded field is utilized, it can be mapped directly in the data source. The [ExpandedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ExpandedNodes) property in the TreeView component provides two-way binding.
 
 ## Expand Nodes through Data Binding
 
@@ -95,7 +95,7 @@ Specific nodes can be programmatically expanded upon TreeView initialization by 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhSWNCrTNHHeZFa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Expand nodes through data binding](./images/blazor-treeview-expand-nodes-through-data-binding.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrntGiZAdGXPCeM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Expand nodes through data binding](./images/blazor-treeview-expand-nodes-through-data-binding.webp)" %}
 
 ## Expand Nodes through API
 
@@ -176,12 +176,12 @@ The Blazor TreeView component allows the expansion of specific nodes during init
                 Id = "8",
                 ParentId = "04",
                 Name = "Jazz"
-            });
+            });        
     }
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLyWDihfXmBfBeW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrnDQMNAHvInnlT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Get Expanded Nodes
 
@@ -334,7 +334,7 @@ The Blazor TreeView component provides the `ExpandedNodes` property for two-way 
         }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLSMDCVfjcEkxgQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Get expanded nodes](./images/blazor-treeview-get-expanded-nodes.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhnDcsXqHbvBTbr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Get expanded nodes](./images/blazor-treeview-get-expanded-nodes.webp)" %}
 
 ## Expand or Collapse a Node Programmatically
 
@@ -437,7 +437,7 @@ The following examples demonstrate using these methods with buttons to control t
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLSitiBfXbenDFt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBnXmsjqnaPCAdK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Expand a Node on Single Click
 
@@ -504,7 +504,7 @@ The default value of the `ExpandOn` property is `DoubleClick`.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDheMNWBptYXOwUq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLHtcsDAQjNqdxW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Expand or Collapse all Parent Nodes
 
@@ -605,11 +605,11 @@ The [CollapseAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.N
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhyCjshzDaRIMTD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBxNQCZKcNBGLLG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Single Expanded Node
 
-"In the Blazor TreeView component, all expanded nodes can be collapsed while expanding a particular individual node using the [CollapseAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CollapseAllAsync_System_String___) method using inside the [NodeExpanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeExpanding) event.
+In the Blazor TreeView component, all expanded nodes can be collapsed while expanding a particular individual node by calling the [CollapseAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CollapseAllAsync_System_String___) method inside the [NodeExpanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeExpanding) event.
 
 In the following example, the expanded nodes are collapsed while the **Gospel** node is expanded.
 
@@ -799,7 +799,7 @@ In the following example, the expand action for the **Discover Music** node is c
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVesNWVfsWLrBOI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVntmWNKGNIzsan?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Animation on Expand/Collapse Node
 
@@ -873,4 +873,4 @@ Both expand and collapse APIs offer the following properties:
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVoitirfWhVTKuB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVHtGsXKmXcoEbg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

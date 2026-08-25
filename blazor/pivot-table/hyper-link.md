@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Hyperlink in Blazor Pivot Table Component | Syncfusion®
-description: Learn about hyperlink feature in Blazor Pivot Table component for cell navigation with examples and much more details.
+title: Hyperlink in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table adds clickable hyperlinks in row, column, value, and summary cells through PivotViewHyperlinkSettings.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Hyperlink in Blazor Pivot Table Component
+# Hyperlink in Blazor Pivot Table
 
 The Pivot Table component provides built-in support for displaying hyperlinks within individual cells. This feature allows users to link data in specific cells, enhancing interactivity and navigation.
 
@@ -477,4 +477,4 @@ In the example below, when a hyperlink cell is clicked, the cell is checked to d
 }
 ```
 
-N> Refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
+N> Refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.
