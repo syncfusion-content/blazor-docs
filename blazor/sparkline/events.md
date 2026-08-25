@@ -11,7 +11,7 @@ documentation: ug
 
 This section describes the events provided by the Sparkline component through the [SparklineEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html) component.
 
-## OnLoaded
+## Loaded
 
 The `Loaded` event triggers after the Sparkline component has been loaded.
 

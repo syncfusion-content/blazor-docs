@@ -123,7 +123,7 @@ The minimum and maximum values of the X-axis can be customized using the [MinX](
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="@ExpenditureReport" TValue="ExpenditureDetails" XName="Year" YName="Expense" Type="SparklineType.Column" ValueType="SparklineValueType.Numeric" Height="250px" Width="450px">
-    <SparklineAxisSettings MinX="2009" MaxX="2017" MinY="100" MaxY="220"></SparklineAxisSettings>
+    <SparklineAxisSettings MinY="100" MaxY="220"></SparklineAxisSettings>
 </SfSparkline>
 
 ```
@@ -167,7 +167,7 @@ The axis line can be customized using the following properties:
 
 @using Syncfusion.Blazor.Charts
 
-<SfSparkline DataSource="@ExpenditureReport" TValue="ExpenditureDetails" XName="Year" YName="Expense" Type="SparklineType.Line" ValueType="SparklineValueType.Numeric" Height="250px" Width="450px">
+<SfSparkline DataSource="@ExpenditureReport" TValue="ExpenditureDetails" XName="Year" YName="Expense" Type="SparklineType.Line" Height="250px" Width="450px">
     <SparklineAxisSettings>
         <SparklineAxisLineSettings Visible="true" Color="#ff14ae" DashArray="5" Opacity="1"></SparklineAxisLineSettings>
     </SparklineAxisSettings>
