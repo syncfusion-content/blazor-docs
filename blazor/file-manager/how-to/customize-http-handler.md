@@ -149,11 +149,11 @@ You can create a Blazor server application with Windows authentication using Vis
 
 Include the [Microsoft.AspNetCore.Authentication.JWTBearer](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer) package for generating user tokens.
 
-Initialize the File Manager component in the **~/Pages/Index.razor** file using the [Getting Started with Blazor File Manager Component](https://blazor.syncfusion.com/documentation/file-manager/getting-started-with-web-app) documentation.
+Initialize the Blazor File Manager component in the **~/Pages/Index.razor** file using the [Getting Started with Blazor File Manager Component](https://blazor.syncfusion.com/documentation/file-manager/getting-started-with-web-app) documentation.
 
 ### Implementing JWT Token Generation and Authorization
 
-To authorize the File Manager component server response, generate a user token in the **onInitialized** method based on the user's authentication state. Then, pass this user token as a header through the File Manager component's HTTP client instance in the component's events.
+To authorize the Blazor File Manager component server response, generate a user token in the **onInitialized** method based on the user's authentication state. Then, pass this user token as a header through the Blazor File Manager component's HTTP client instance in the component's events.
 
 ```csharp
 
@@ -213,7 +213,7 @@ To authorize the File Manager component server response, generate a user token i
     {
         if (isRead && args.Action == "read")
         {
-            //Pass the user token through File Manager HTTP client instance.
+            //Pass the user token through Blazor File Manager HTTP client instance.
             args.HttpClientInstance.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
             isRead = false;
         }
@@ -249,7 +249,7 @@ To authorize the File Manager component server response, generate a user token i
 
 ```
 
-## Create service application for File Manager action
+## Create service application for Blazor File Manager action
 
 Create a new **ASP Core web application** with the required File Manager service models and controller, or clone the required service provider from the [file-system-provider](https://blazor.syncfusion.com/documentation/file-manager/file-system-provider) documentation that contains the available file service provider.
 
@@ -310,7 +310,7 @@ app.Run();
 
 ```
 
-Now it can authorize the File Manager server response based on the authorized role that is assigned by the client application, as shown below.
+Now it can authorize the Blazor File Manager server response based on the authorized role that is assigned by the client application, as shown below.
 
 ```cshtml
 

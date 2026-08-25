@@ -9,16 +9,16 @@ documentation: ug
 
 # How to Render the File Manager Inside Other Components in Blazor
 
-The File Manager component can be rendered within other components, such as Dialog, Tab, and more.
+The Blazor File Manager component can be rendered within other components, such as Dialog, Tab, and more.
 
-* [Adding File Manager inside the Dialog](#adding-file-manager-inside-the-dialog)
-* [Adding File Manager inside the Tab](#adding-file-manager-inside-the-tab)
+* [Adding Blazor File Manager inside the Dialog](#adding-file-manager-inside-the-dialog)
+* [Adding Blazor File Manager inside the Tab](#adding-file-manager-inside-the-tab)
 
-## Adding File Manager inside the Dialog
+## Adding Blazor File Manager inside the Dialog
 
-When rendering the Blazor File Manager component with the Flat Data sample inside the SfDialog component, the File Manager's layout height may not update correctly due to the dialog being in a hidden state during initialization.
+When rendering the Blazor File Manager component with the Flat Data sample inside the SfDialog component, the Blazor File Manager's layout height may not update correctly due to the dialog being in a hidden state during initialization.
 
-To overcome this, use the [RefreshLayoutAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_RefreshLayoutAsync) method of the FileManager component within the [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Opened) event of the SfDialog component. This ensures that the File Manager's layout is properly initialized and adjusted after the dialog is displayed.
+To overcome this, use the [RefreshLayoutAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_RefreshLayoutAsync) method of the FileManager component within the [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Opened) event of the SfDialog component. This ensures that the Blazor File Manager's layout is properly initialized and adjusted after the dialog is displayed.
 
 The following example shows how to render the SfFileManager component inside the SfDialog component:
 
@@ -182,9 +182,9 @@ The following example shows how to render the SfFileManager component inside the
 
 ![Blazor File Manager displayed inside a dialog](../images/blazor-filemanager-inside-dialog.webp)
 
-## Adding File Manager inside the Tab
+## Adding Blazor File Manager inside the Tab
 
-The following example demonstrates how to integrate the Blazor File Manager component within the content area of a Tab component. This setup allows users to manage files directly within a tabbed interface, providing an organized and efficient file management experience.
+The following example demonstrates how to integrate the Blazor Blazor File Manager component within the content area of a Tab component. This setup allows users to manage files directly within a tabbed interface, providing an organized and efficient file management experience.
 
 ```cshtml
 
@@ -198,7 +198,7 @@ The following example demonstrates how to integrate the Blazor File Manager comp
                 <TabHeader Text="Overview"></TabHeader>
             </ChildContent>
             <ContentTemplate>
-                The FileManager component includes a context menu for performing file operations,
+                The Blazor File Manager component includes a context menu for performing file operations,
                 a large-icons view for displaying files and folders, and a breadcrumb for navigation.
                 However, these basic functionalities can be extended using additional feature modules
                 like the toolbar, navigation pane, and details view to simplify navigation and

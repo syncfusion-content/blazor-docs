@@ -9,9 +9,9 @@ documentation: ug
 
 # File Operations in Blazor File Manager
 
-The File Manager component is used to browse, manage, and organize the files and folders in a file system through a web application. All basic file operations like creating a new folder, uploading and downloading of files in the file system, and deleting and renaming of existing files and folders are available in the File Manager component.  Additionally, previewing of image files is also provided in the File Manager component.
+The Blazor File Manager component is used to browse, manage, and organize the files and folders in a file system through a web application. All basic file operations like creating a new folder, uploading and downloading of files in the file system, and deleting and renaming of existing files and folders are available in the Blazor File Manager component.  Additionally, previewing of image files is also provided in the Blazor File Manager component.
 
-The following table represents the basic operations available in the File Manager and their corresponding functions.
+The following table represents the basic operations available in the Blazor File Manager and their corresponding functions.
 
 |Operation Name|Function|
 |----|----|
@@ -26,11 +26,11 @@ The following table represents the basic operations available in the File Manage
 |upload|Upload files to the current path or directory in the file system.|
 |download|Downloads the file from the server and the multiple files can be downloaded as ZIP files.|
 
-N> The *CreateFolder*, *Remove*, and *Rename* actions will be reflected in the File Manager only after the successful response from the server.
+N> The *CreateFolder*, *Remove*, and *Rename* actions will be reflected in the Blazor File Manager only after the successful response from the server.
 
 ## Request and Response Contents Format in Blazor File Manager component
 
-The following table represents the contents of *data, cwd, and files* in the File Manager request and response.
+The following table represents the contents of *data, cwd, and files* in the Blazor File Manager request and response.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
@@ -43,7 +43,7 @@ The following table represents the contents of *data, cwd, and files* in the Fil
 |size|Number|-|File size|
 |type|String|-|File extension|
 
-The following table represents the contents of *error* in the File Manager request and response.
+The following table represents the contents of *error* in the Blazor File Manager request and response.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
@@ -51,7 +51,7 @@ The following table represents the contents of *error* in the File Manager reque
 |message|String|-|Error message|
 |fileExists|String[]|-|List of duplicate file names|
 
-The following table represents the contents of *details* in the File Manager request and response.
+The following table represents the contents of *details* in the Blazor File Manager request and response.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
@@ -656,10 +656,10 @@ Move operation triggers on the server side and find the related code details.
 
 ## Sorting Files and Folders 
 
-In the Blazor File Manager component, you can perform sorting operations for both folders and files using the [SortBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortBy) and [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortOrder) properties. Additionally, you can use the **Sort by** toolbar button available in the File Manager component to perform sorting operations.
+In the Blazor File Manager component, you can perform sorting operations for both folders and files using the [SortBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortBy) and [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortOrder) properties. Additionally, you can use the **Sort by** toolbar button available in the Blazor File Manager component to perform sorting operations.
 
-**SortBy** - A field name used to sort the folders and files in the File Manager component. The default value is Name.
-**SortOrder** - sort order for the files and folders in the File Manager component.
+**SortBy** - A field name used to sort the folders and files in the Blazor File Manager component. The default value is Name.
+**SortOrder** - sort order for the files and folders in the Blazor File Manager component.
 
 The available options for the sort order are:
 
@@ -683,7 +683,7 @@ The available options for the sort order are:
 
 ## Custom sorting
 
-The File Manager component provides a way to customize the default sort action for the LargeIconsView by defining the [`SortComparer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortComparer) property and for sorting individual columns in the DetailsView by defining the `SortComparer` property in the [`FileManagerColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerColumn.html) class.The `SortComparer` class should implement the [IComparer](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-8.0) interface.
+The Blazor File Manager component provides a way to customize the default sort action for the LargeIconsView by defining the [`SortComparer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortComparer) property and for sorting individual columns in the DetailsView by defining the `SortComparer` property in the [`FileManagerColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerColumn.html) class.The `SortComparer` class should implement the [IComparer](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-8.0) interface.
 
 The following example demonstrates how to define custom sort comparer function to achieve natural sorting behavior for the Name column in both DetailsView and LargeIconsView.
 
@@ -1306,7 +1306,7 @@ The following table represents the request parameters of *GetImage* operations.
 
 Return the image as a file stream in response.
 
-The request from the File Manager can be customized using the `OnSend` event. Additional information can be passed to the File Manager in file operation response and can be used in customization.
+The request from the Blazor File Manager can be customized using the `OnSend` event. Additional information can be passed to the Blazor File Manager in file operation response and can be used in customization.
 
 GetImage operation triggers on the server side and find the related code details.
 
@@ -1325,7 +1325,7 @@ N> Refer to the [Providers](https://blazor.syncfusion.com/documentation/file-man
 
 ## Request and Response Contents Format
 
-The following table represents the contents of *data, cwd, and files* in the File Manager request and response.
+The following table represents the contents of *data, cwd, and files* in the Blazor File Manager request and response.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
@@ -1338,7 +1338,7 @@ The following table represents the contents of *data, cwd, and files* in the Fil
 |size|Number|-|File size|
 |type|String|-|File extension|
 
-The following table represents the contents of *error* in the File Manager request and response.
+The following table represents the contents of *error* in the Blazor File Manager request and response.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
@@ -1346,7 +1346,7 @@ The following table represents the contents of *error* in the File Manager reque
 |message|String|-|Error message|
 |fileExists|String[]|-|List of duplicate file names|
 
-The following table represents the contents of *details* in the File Manager request and response.
+The following table represents the contents of *details* in the Blazor File Manager request and response.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
@@ -1362,7 +1362,7 @@ The following table represents the contents of *details* in the File Manager req
 
 ## Events 
 
-The Blazor File Manager component has a list of events that can be triggered for certain actions. These events can be bound to the File Manager using the **FileManagerEvents**, which requires the **TValue** to be provided.
+The Blazor File Manager component has a list of events that can be triggered for certain actions. These events can be bound to the Blazor File Manager using the **FileManagerEvents**, which requires the **TValue** to be provided.
 
 N> All the events should be provided in a single **FileManagerEvents** component.
 
@@ -1476,7 +1476,7 @@ The [BeforePopupOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Fi
 
 ### Created
 
-The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_Created) event of the Blazor File Manager component is triggered when the File Manager component is created.
+The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_Created) event of the Blazor File Manager component is triggered when the Blazor File Manager component is created.
 
 ```cshtml
 
@@ -1503,7 +1503,7 @@ The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManage
 
 ### Destroyed
 
-The [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_Destroyed) event of the Blazor File Manager component is triggered when the File Manager component is destroyed.
+The [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_Destroyed) event of the Blazor File Manager component is triggered when the Blazor File Manager component is destroyed.
 
 ```cshtml
 
@@ -1745,7 +1745,7 @@ The [UploadListCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```
 ## Action buttons
 
-The File Manager has several menu buttons to access the file operations. The list of menu buttons available in the File Manager is given in the following table.
+The Blazor File Manager has several menu buttons to access the file operations. The list of menu buttons available in the Blazor File Manager is given in the following table.
 
 |Menu Button|Behavior|
 |----|----|
@@ -1830,7 +1830,7 @@ The following table provides the toolbar buttons that appear based on the select
 
 ## Server-side Configuration
 
-This documentation outlines the server-side implementation and configuration required for enabling comprehensive file management operations in the Blazor File Manager component.
+This documentation outlines the server-side implementation and configuration required for enabling comprehensive file management operations in the Blazor Blazor File Manager component.
 
 ### Create Models
 
@@ -1842,18 +1842,18 @@ To initialize a local service, create a new folder named `Controllers` inside th
 
 Make sure your controller `FileManagerController.cs` uses the model classes you've created. Import the model namespace at the top of your controller file
 
-File Manager's base functions are available in the following namespace.
+Blazor File Manager's base functions are available in the following namespace.
 ```cshtml
 using Syncfusion.EJ2.FileManager.Base;
 ````
-File Manager's operations are available in the following namespace.
+Blazor File Manager's operations are available in the following namespace.
 ````cshtml
 using Syncfusion.EJ2.FileManager.PhysicalFileProvider;
 ````
 
 ### Initialize the service in controller
 
-File Manager supports the basic file actions like Read, Delete, Copy, Move, Get Details, Search, Rename, and Create New Folder.
+Blazor File Manager supports the basic file actions like Read, Delete, Copy, Move, Get Details, Search, Rename, and Create New Folder.
 To perform the action add the following code in that `FileManagerController.cs` file.
 
 {% tabs %}
@@ -1889,7 +1889,7 @@ namespace filemanager.Server.Controllers
             this.operation.RootFolder(this.basePath + "\\" + this.root); // It denotes in which files and folders are available.
         }
 
-        // Processing the File Manager operations.
+        // Processing the Blazor File Manager operations.
         [Route("FileOperations")]
         public object FileOperations([FromBody] FileManagerDirectoryContent args)
         {
@@ -1929,7 +1929,7 @@ namespace filemanager.Server.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-N> For standalone Blazor WASM applications, the service from this [link](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/) can be used. This service is an ASP.NET Core project that acts as the backend API for your File Manager
+N> For standalone Blazor WASM applications, the service from this [link](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/) can be used. This service is an ASP.NET Core project that acts as the backend API for your Blazor File Manager
 
 To configure and map the controller, open the `~/Program.cs` file of the server part of the application. Add the following code to configure the service for the controller and map the controller after `app.UseRouting()`. The `app.UseRouting()` middleware should be placed after `app.UseHttpsRedirection()`. The correct ordering is essential to ensure proper request handling and middleware functionality:
 
@@ -1946,7 +1946,7 @@ app.MapControllers();
 
 This will configure and map the controller in your Blazor App.
 
-## Add File Manager to the Application
+## Add Blazor File Manager to the Application
 
 After configuring the server-side service, integrate the Syncfusion® Blazor File Manager component into the application by creating a dedicated Razor component.
 
@@ -2001,7 +2001,7 @@ Define a render mode at top of the component, as follows:
 
 ## Ajax Settings Configuration
 
-The Ajax Settings configuration allows you to define the endpoints for file operations, upload, download, and image preview functionality in the File Manager.
+The Ajax Settings configuration allows you to define the endpoints for file operations, upload, download, and image preview functionality in the Blazor File Manager.
 
 ### File download support
 

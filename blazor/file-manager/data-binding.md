@@ -41,9 +41,9 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Features;
-//File Manager's base functions are available in the below namespace.
+//Blazor File Manager's base functions are available in the below namespace.
 using Syncfusion.EJ2.FileManager.Base;
-//File Manager's operations are available in the below namespace.
+//Blazor File Manager's operations are available in the below namespace.
 using Syncfusion.EJ2.FileManager.PhysicalFileProvider;
 using Newtonsoft.Json;
 using System.Linq;
@@ -65,7 +65,7 @@ namespace filemanager.Server.Controllers
             this.operation.RootFolder(this.basePath + "\\" + this.root); // It denotes in which files and folders are available.
         }
 
-        // Processing the File Manager operations.
+        // Processing the Blazor File Manager operations.
         [Route("FileOperations")]
         public object FileOperations([FromBody] FileManagerDirectoryContent args)
         {
@@ -628,9 +628,9 @@ N> [Also see the demo here](https://blazor.syncfusion.com/demos/file-manager/fla
 
 ### Injected service
 
-Blazor File Manager can also be populated from an injected service, eliminating the need for HTTP client requests and backend URL configuration. This allows you to utilize your required service, such as physical, Amazon, Azure, etc., through the FileManager's action events.
+Blazor File Manager can also be populated from an injected service, eliminating the need for HTTP client requests and backend URL configuration. This allows you to utilize your required service, such as physical, Amazon, Azure, etc., through the Blazor File Manager's action events.
 
-These events enable you to access essential item details from the event argument. Subsequently, update the File Manager component's result data by incorporating the data returned from the injected service. Assign this returned data to the [Response](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.ReadEventArgs-1.html#Syncfusion_Blazor_FileManager_ReadEventArgs_1_Response) property of the corresponding event argument.
+These events enable you to access essential item details from the event argument. Subsequently, update the Blazor File Manager component's result data by incorporating the data returned from the injected service. Assign this returned data to the [Response](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.ReadEventArgs-1.html#Syncfusion_Blazor_FileManager_ReadEventArgs_1_Response) property of the corresponding event argument.
 
 To set up a locally injected physical service, create a new file with the extension `.cs` within the project, include the following GitHub file code in this file, and then proceed to inject the created service into the `program.cs` file.
 
@@ -779,7 +779,7 @@ To perform a download action in File Manager component with injected service, ut
 
 ### Get Image
 
-To load image in File Manager component with injected service, utilize the [BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeImageLoad) event. This will allow you to retrieve necessary Downloaded item details from the event argument. Updating the image file's stream data to the event argument [FileStream](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeImageLoadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeImageLoadEventArgs_1_FileStream) completes the image retrieval operation.
+To load image in Blazor File Manager component with injected service, utilize the [BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeImageLoad) event. This will allow you to retrieve necessary Downloaded item details from the event argument. Updating the image file's stream data to the event argument [FileStream](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeImageLoadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeImageLoadEventArgs_1_FileStream) completes the image retrieval operation.
 
 {% tabs %}
 {% highlight razor %}
