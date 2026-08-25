@@ -43,13 +43,13 @@ The Card header supports an optional image set via the [`ImageUrl`](https://help
 @using Syncfusion.Blazor.Cards
 
 <SfCard ID="HugeImage">
-    <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="images/cards/football.png" />
+    <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="https://cdn.syncfusion.com/blazor/images/cards/steven.png" />
 </SfCard>
 <SfCard ID="SecondCard">
-    <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="images/cards/football.png" />
+    <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="https://cdn.syncfusion.com/blazor/images/cards/steven.png" />
 </SfCard>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrRtxiVBYyfeJns?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVxZFrIpVEYZvgW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Content
 
@@ -62,7 +62,7 @@ Content in the Card holds text, images, links, and all possible HTML elements. I
 @using Syncfusion.Blazor.Cards
 
 <SfCard ID="HugeImage">
-    <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="images/cards/football.png" />
+    <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="https://cdn.syncfusion.com/blazor/images/cards/steven.png" />
 </SfCard>
 
 <SfCard ID="SecondCard">
@@ -70,7 +70,7 @@ Content in the Card holds text, images, links, and all possible HTML elements. I
 </SfCard>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrdjHsrVEycBMCY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrxZbryJgsjZCzm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Image
 
@@ -103,4 +103,4 @@ You can place a raw `<img>` element inside `CardContent` to render an image with
 * [Image and Divider in Blazor Card](card-image.md)
 * [Action Buttons in Blazor Card](action-buttons.md)
 * [Horizontal Card in Blazor Card](horizontal.md)
-* [Card API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.SfCard.html)
+* [Card API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.Shttps://blazorplayground.syncfusion.com/embed/BjrdjHsrVEycBMCY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2fCard.html)
