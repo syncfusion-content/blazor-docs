@@ -9,10 +9,10 @@ documentation: ug
 
 # Resize in Various Dimensions in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) fills its parent container. Therefore, changing the parent’s dimensions adjusts the Grid size automatically. This example shows how to resize the Grid externally using inputs and a button to modify the parent container’s width and height.
+The [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) fills the parent container. A change to the parent container’s dimensions automatically adjusts the Data Grid size. The example demonstrates external Data Grid resizing through NumericTextBox components and a button that modify the parent container’s width and height.
 
-> - When using `Height="100%"` for the Grid, ensure the parent container has an explicit height (pixels or a resolved flex height).
-> - Setting `Width="100%"` on the Grid ensures it follows the parent width exactly.
+> - When using [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height)="100%" for the Data Grid, ensure the parent container has an explicit height (pixels or a resolved flex height).
+> - Setting [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width)="100%" on the Data Grid ensures it follows the parent width exactly.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -52,7 +52,9 @@ The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagr
     private SfNumericTextBox<int> WidthTextBox;
     private SfNumericTextBox<int> HeightTextBox;
 
-    private string ParentStyle = "padding: 5px; width: 400px; height: 200px;";
+    private int GridWidth { get; set; } = 400;
+    private int GridHeight { get; set; } = 200;
+    private string ParentStyle => $"padding: 5px; width: {GridWidth}px; height: {GridHeight}px;";
 
     protected override void OnInitialized()
     {
@@ -61,9 +63,8 @@ The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagr
 
     private void ResizeGrid()
     {
-        var width = WidthTextBox?.Value ?? 400;
-        var height = HeightTextBox?.Value ?? 200;
-        ParentStyle = $"padding: 5px; width: {width}px; height: {height}px;";
+        GridWidth = WidthTextBox?.Value ?? GridWidth;
+        GridHeight = HeightTextBox?.Value ?? GridHeight;
     }
 }
 
@@ -115,4 +116,4 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhdtGZsLMqhPGwH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVxZFLeNHIYWHAd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
