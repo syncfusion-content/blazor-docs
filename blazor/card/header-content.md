@@ -103,4 +103,4 @@ You can place a raw `<img>` element inside `CardContent` to render an image with
 * [Image and Divider in Blazor Card](card-image.md)
 * [Action Buttons in Blazor Card](action-buttons.md)
 * [Horizontal Card in Blazor Card](horizontal.md)
-* [Card API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.Shttps://blazorplayground.syncfusion.com/embed/BjrdjHsrVEycBMCY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2fCard.html)
+* [Card API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.SfCard.html)
