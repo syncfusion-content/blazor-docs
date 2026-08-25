@@ -13,7 +13,7 @@ Panels are fundamental building blocks within the Blazor Dashboard Layout compon
 
 | **Panel Property** | **Default Value** | **Description** |
 | --- | --- | --- |
-| <kbd>Id</kbd> | null | Specifies the ID value of the panel. |
+| <kbd>ID</kbd> | null | Specifies a unique ID value for the panel. Duplicate ID values can cause panels to overlap or render in the same position. |
 | <kbd>Row</kbd> | 0 | Specifies the row value in which the panel to be placed. |
 | <kbd>Column</kbd> | 0 | Specifies the column value in which the panel to be placed. |
 | <kbd>SizeX</kbd> | 1 | Specifies the width of the panel in cells count. |
@@ -118,3 +118,8 @@ These properties are invaluable when designing dashboards where the content and 
 The following screenshot demonstrates the sizing of panels within the Dashboard Layout, using the `SizeX` and `SizeY` properties:
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjhRNRLgTMDPQSDl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Panel Size in Blazor Dashboard Layout](../images/blazor-admin-template-layout-panel-size.webp)" %}
+
+> [!IMPORTANT]
+> Always assign a unique [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_ID) to every `DashboardLayoutPanel`. The Dashboard Layout component uses the [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_ID) property internally to manage panel identity, position, and state. Duplicate [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_ID) values can cause panels to overlap or render in the same location.
+>
+> For more information, see the [FAQ](https://blazor.syncfusion.com/documentation/dashboard-layout/faq/all-panels-rendered-at-the-same-position) on preventing panel overlap.
