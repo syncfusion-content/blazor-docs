@@ -175,7 +175,7 @@ N> If the interactivity location is set to `Per page/component`, define a render
 
 ## Binding data source
 
-After initialization, populate the ListBox using the `DataSource` property. The following uses an array of objects.
+After initialization, populate the ListBox using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. The following uses an array of objects.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
