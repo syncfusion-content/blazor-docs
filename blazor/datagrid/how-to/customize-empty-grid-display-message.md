@@ -80,4 +80,4 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLRtQjCWufxUGkx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhxNlByZlTfVaem?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
