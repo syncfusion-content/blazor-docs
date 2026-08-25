@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to bind complex data in Blazor Pivot Table | Syncfusion
-description: Step-by-step example showing how to bind complex data in the Blazor Pivot Table by flattening nested objects into a flat structure with ExpandoObject.
+title: How to convert complex JSON to flat JSON for Pivot Table | Syncfusion
+description: Step-by-step example showing how to convert complex JSON to flat JSON in the Blazor Pivot Table and assign it as the data source.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -9,9 +9,11 @@ documentation: ug
 
 # How to bind complex data in Blazor Pivot Table
 
-The Pivot Table component requires flat data for binding. Complex data, such as nested objects or hierarchical structures, must be converted into a flat structure before it can be assigned to the Pivot Table using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property within [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
+The Blazor Pivot Table component requires flat data for binding. Complex data, such as nested objects or hierarchical structures, must be converted into a flat structure before it can be assigned to the Pivot Table using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property within [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html). Field names are then mapped to rows, columns, and values under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) to display the data effectively.
 
-In the example below, the `ConvertToFlatData` function transforms complex data with nested objects (e.g., `ShipDetails`) into flat data using `ExpandoObject`. The converted data is then assigned to the Pivot Table using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property. Field names are mapped to rows, columns, and values under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) to display the data effectively.
+## Sample data and flat-data conversion
+
+The following example builds a list of `ExpandoObject` items that contains a nested `ShipDetails` object, and then flattens that structure using the `ConvertToFlatData` helper. The helper iterates each top-level item; for every child whose value is an `ExpandoObject`, it copies the nested key/value pairs up to the parent, producing a single-level record that the Pivot Table can consume. The flattened list is then assigned to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
