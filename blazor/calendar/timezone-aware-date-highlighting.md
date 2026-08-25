@@ -87,13 +87,6 @@ When the `TimeZoneOffset` property is configured, the Today button uses the time
 * Selects the timezone-adjusted current date.
 * Maintains consistency between the selected and highlighted date.
 
-## Supported components
-
-* SfCalendar
-* SfDatePicker
-* SfDateTimePicker
-* SfDateRangePicker
-
 ## Timezone calculation examples
 
 | UTC Time | TimeZoneOffset | Highlighted Date |
