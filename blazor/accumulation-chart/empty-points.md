@@ -252,7 +252,7 @@ A: Use:
 
 **Q: Why is the data label not showing for empty points?**
 
-A: Data labels are drawn only when the point has a renderable value. In `Gap` and `Drop` modes the empty slice is not drawn, so its label is also suppressed. Switch to `Average` or `Zero` if you need a label for the empty point.
+A: Data labels are drawn only when the point has a value that can be rendered in the chart. In `Gap` and `Drop` modes the empty slice is not drawn, so its label is also suppressed. Switch to `Average` or `Zero` if you need a label for the empty point.
 
 **Q: Can I customize empty-point borders independently?**
 
