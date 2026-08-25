@@ -21,11 +21,10 @@ documentation: ug
                                  Name="Browser" Type="AccumulationType.Funnel">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+    <AccumulationChartLegendSettings Visible="false" />
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -56,8 +55,7 @@ The size of the funnel chart can be customized by using the [Width](https://help
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
+    <AccumulationChartLegendSettings Visible="false" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
                                  Name="Browser" Type="AccumulationType.Funnel" Width="60%" Height="80%">
@@ -65,7 +63,7 @@ The size of the funnel chart can be customized by using the [Width](https://help
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -103,11 +101,10 @@ The neck size of the funnel chart can be customized by using the [NeckWidth](htt
                                  Name="Browser" Type="AccumulationType.Funnel" NeckWidth="15%" NeckHeight="18%">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+    <AccumulationChartLegendSettings Visible="false" />
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser  { get; set; }
@@ -143,11 +140,10 @@ The neck size of the funnel chart can be customized by using the [NeckWidth](htt
                                  Name="Browser" GapRatio="0.2" Type="AccumulationType.Funnel" NeckWidth="15%" NeckHeight="18%">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+    <AccumulationChartLegendSettings Visible="false" />
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser  { get; set; }
@@ -169,7 +165,7 @@ The neck size of the funnel chart can be customized by using the [NeckWidth](htt
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhHXwCyBITHlNGm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Funnel Chart with Gap](../images/funnel/blazor-funnel-chart-with-gap.webp)" %}
 
-## Funnel explode
+## Funnel Explode
 
 Points can be exploded on mouse click by setting the [Explode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Explode) property to **true**. The point on load can be exploded using [ExplodeIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_ExplodeIndex). Explode distance can be set by using [ExplodeOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_ExplodeOffset) property.
 
@@ -179,15 +175,13 @@ Points can be exploded on mouse click by setting the [Explode](https://help.sync
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
     <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser" Type=" AccumulationType.Funnel" ExplodeIndex="3" Explode="true" ExplodeOffset="10%">
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser" Type="AccumulationType.Funnel" ExplodeIndex="3" Explode="true" ExplodeOffset="10%">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+    <AccumulationChartLegendSettings Visible="false" />
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -218,8 +212,7 @@ Labels will be arranged automatically on the left side of the funnel and pyramid
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="World Population" EnableAnimation="false">
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
+    <AccumulationChartLegendSettings Visible="false" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Country" YName="Users"
                                  Type="AccumulationType.Funnel" Explode="false" Width="50%" Height="80%" NeckWidth="15%" NeckHeight="18%">
@@ -230,7 +223,7 @@ Labels will be arranged automatically on the left side of the funnel and pyramid
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Country { get; set; }
@@ -261,7 +254,7 @@ Labels will be arranged automatically on the left side of the funnel and pyramid
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDhRXGseVIcTBxye?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Funnel Chart with Smart Data Label](../images/funnel/blazor-funnel-chart-smart-data-label.webp)" %}
 
-## Border radius
+## Border Radius
 
 The corners of the first data point and last data point in the funnel chart series can be rounded using the [BorderRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_BorderRadius) property within the [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html).
 
@@ -269,7 +262,7 @@ The corners of the first data point and last data point in the funnel chart seri
 @using Syncfusion.Blazor.Charts
 
  <SfAccumulationChart Title="Recruitment Process" EnableAnimation="false" >
-            <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+            <AccumulationChartLegendSettings Visible="false" />
             <AccumulationChartSeriesCollection>
                 <AccumulationChartSeries DataSource="@FunnelChartPoints" XName="InterviewProcess" YName="Candidates" BorderRadius="8"
                                          Type="AccumulationType.Funnel" Height="80%" Width="40%">
