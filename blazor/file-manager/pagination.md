@@ -89,7 +89,7 @@ Below is a screenshot illustrating the `CurrentPage` property in the Blazor File
 ![Pagination in Blazor File Manager](images/blazor-filemanager-currentpage.webp)
 
 
-## Pager Template in Blazor Blazor File Manager
+## Pager Template in Blazor File Manager
 
 The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPageSettings.html#Syncfusion_Blazor_FileManager_FileManagerPageSettings_Template) property in the [FileManagerPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPageSettings.html) allows you to insert custom UI elements, such as buttons or any HTML elements into the Blazor File Manager page settings. This offers greater flexibility and customization for the paging interface.
 

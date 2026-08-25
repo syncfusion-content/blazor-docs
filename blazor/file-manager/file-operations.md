@@ -1830,7 +1830,7 @@ The following table provides the toolbar buttons that appear based on the select
 
 ## Server-side Configuration
 
-This documentation outlines the server-side implementation and configuration required for enabling comprehensive file management operations in the Blazor Blazor File Manager component.
+This documentation outlines the server-side implementation and configuration required for enabling comprehensive file management operations in the Blazor File Manager component.
 
 ### Create Models
 

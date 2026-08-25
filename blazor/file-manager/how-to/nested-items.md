@@ -184,7 +184,7 @@ The following example shows how to render the SfFileManager component inside the
 
 ## Adding Blazor File Manager inside the Tab
 
-The following example demonstrates how to integrate the Blazor Blazor File Manager component within the content area of a Tab component. This setup allows users to manage files directly within a tabbed interface, providing an organized and efficient file management experience.
+The following example demonstrates how to integrate the Blazor File Manager component within the content area of a Tab component. This setup allows users to manage files directly within a tabbed interface, providing an organized and efficient file management experience.
 
 ```cshtml
 

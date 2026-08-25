@@ -11,7 +11,7 @@ documentation: ug
 
 The [Firebase Real time Database](https://firebase.google.com/) file system provider in **ASP.NET Core** provides the efficient way to store the Blazor File Manager file system in a cloud database as JSON representation.
 
-### Generate Secret access key from service account
+## Generate Secret access key from service account
 
 Follow the given steps to generate the secret access key:
 
