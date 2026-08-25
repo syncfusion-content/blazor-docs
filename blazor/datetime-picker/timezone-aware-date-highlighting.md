@@ -35,7 +35,7 @@ This behavior preserves backward compatibility for existing applications.
 
 ## Configure timezone-aware date highlighting
 
-```razor
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?"
@@ -49,7 +49,7 @@ This behavior preserves backward compatibility for existing applications.
 
 ## Use negative timezone offsets
 
-```razor
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?"
@@ -63,7 +63,7 @@ This behavior preserves backward compatibility for existing applications.
 
 ## Use fractional timezone offsets
 
-```razor
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?"
@@ -100,7 +100,7 @@ When the property is not specified or set to `null`:
 - Date calculation uses the server's local time.
 - Current highlighting behavior remains unchanged.
 
-```razor
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?">
