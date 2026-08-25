@@ -53,17 +53,21 @@ Specify a valid CSS selector in the `AppendTo` property. When the selector match
 
 {% highlight cshtml %}
 
-<div id="popupHost"></div>
+@using Syncfusion.Blazor.DropDowns
 
-<SfDropDownList TValue="string"
-                TItem="GameFields"
-                DataSource="@Games"
-                AppendTo="#popupHost"
-                Placeholder="Select a game">
-    <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
-</SfDropDownList>
+<div id="popupHost">
+    <SfDropDownList TValue="string"
+                    TItem="GameFields"
+                    DataSource="@Games"
+                    AppendTo="@AppendTarget"
+                    Placeholder="Select a game">
+        <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
+    </SfDropDownList>
+</div>
 
 @code {
+    private string AppendTarget = "#popupHost";
+
     public class GameFields
     {
         public string ID { get; set; }
@@ -72,13 +76,13 @@ Specify a valid CSS selector in the `AppendTo` property. When the selector match
 
     private List<GameFields> Games = new()
     {
-        new GameFields { ID = "Game1", Text = "American Football" },
-        new GameFields { ID = "Game2", Text = "Badminton" },
-        new GameFields { ID = "Game3", Text = "Basketball" },
-        new GameFields { ID = "Game4", Text = "Cricket" }
+        new() { ID = "Game1", Text = "American Football" },
+        new() { ID = "Game2", Text = "Badminton" },
+        new() { ID = "Game3", Text = "Basketball" },
+        new() { ID = "Game4", Text = "Cricket" }
     };
 }
 
 {% endhighlight %}
 
-N> The `AppendTo` property accepts a CSS selector such as `#elementId` or `.container`. If the specified element is not found, the popup is rendered in `document.body`.
+N> The `AppendTo` property accepts a CSS selector such as `#elementId` or `.container`.
