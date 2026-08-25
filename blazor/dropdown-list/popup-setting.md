@@ -215,4 +215,4 @@ Specify a valid CSS selector in the `AppendTo` property. When the selector match
 
 {% endhighlight %}
 
-N> The `AppendTo` property accepts a CSS selector such as `#elementId` or `.container`. If the specified element is not found, the popup is rendered in `document.body`.
+N> The `AppendTo` property accepts a CSS selector such as `#elementId` or `.container`. If the specified element is not found, the popup element will be appended to `document.body`.
