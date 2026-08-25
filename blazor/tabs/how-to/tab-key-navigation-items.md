@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Tab key navigation Tab item in Blazor Tabs Component | Syncfusion®
-description: Checkout and learn here all about how to Tab key navigation tab item in Blazor Tabs component and more.
+title: How to enable tab key navigation in Blazor Tabs | Syncfusion
+description: Enable standard Tab key navigation for Blazor Tabs items using the TabIndex property for keyboard accessibility.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Enabling Tab key navigation Tab item in Blazor Tabs Component
+# How to enable tab key navigation in Blazor Tabs
 
-The [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_TabIndex ) property of a Tab item is used to enable tab key navigation for that particular item. When a positive value is assigned to the [TabIndex] property, it allows the user to switch focus to the next or previous tab item using the Tab or Shift+Tab keys. By default, the user can only switch between tab items using the arrow keys.
+Use the [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_TabIndex) property of a Tab item to enable Tab key navigation for that particular item. When a positive value is assigned to the [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_TabIndex) property, the user can switch focus to the next or previous tab item using the Tab or Shift+Tab keys. By default, the user can only switch between tab items using the arrow keys.
 
-If the [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_TabIndex ) value is set to 0 for all tab items, the tab will switch based on the order of the elements on the page. This means that if the tab items are listed in a specific order on the page, the user will be able to navigate through them using the Tab key in that same order.
+If the [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_TabIndex) value is set to `0` for all tab items, the tab will switch based on the order of the elements on the page. This means that if the tab items are listed in a specific order on the page, the user can navigate through them using the Tab key in that same order.
 
-To use the [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_TabIndex ) property, you can assign a positive value to the property of each tab item that you want to enable tab key navigation.
+To use the [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_TabIndex) property, assign a positive value to the property of each tab item for which you want to enable Tab key navigation.
 
 ```cshtml
 

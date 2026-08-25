@@ -1,7 +1,7 @@
 ---
 layout: post
-title: OLAP in Blazor Pivot Table Component | Syncfusion®
-description: Learn about OLAP data source support in Blazor Pivot Table component with examples and much more details.
+title: OLAP in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table connects to OLAP cubes and analyzes multidimensional data with MDX queries, axes, measures, and drill operations.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -10,11 +10,11 @@ documentation: ug
 <!-- markdownlint-disable MD024 -->
 <!-- markdownlint-disable MD012 -->
 
-# OLAP in Blazor Pivot Table component
+# OLAP in Blazor Pivot Table
 
-## Getting started
+## Getting Started
 
-This section explains how to create a simple [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using an OLAP data source. For details on setting up a Blazor application, refer to the [Getting started with Blazor for client-side in Visual Studio 2022](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) guide, which covers the initial setup and configuration steps.
+The Blazor Pivot Table connects to OLAP (Online Analytical Processing) cubes to analyze multidimensional data using MDX (Multidimensional Expressions) queries, measures, hierarchies, levels, and drill operations. This section explains the steps to create a simple [Getting started with Blazor for client-side in Visual Studio 2022](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) with an OLAP data source in a Blazor environment. The samples connect to the public **Adventure Works** cube hosted at `https://bi.syncfusion.com/olap/msmdpump.dll`, so you can reproduce the output without provisioning a local SSAS instance.
 
 ### Adding the Blazor component package
 
@@ -34,7 +34,9 @@ You can add the Pivot Table component to any Razor page in the `~/Pages` folder.
 
 To enable users to perform meaningful analysis with OLAP data, the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component requires a properly configured OLAP data source. This data source connects to an OLAP cube, such as Microsoft SQL Server Analysis Services (SSAS), to fetch multidimensional data for analysis.
 
-For demonstration purposes, we'll use the **Adventure Works** cube. The OLAP data source is assigned to the Pivot Table component through the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class. Refer [here](#data-binding) to know more details about OLAP data binding.
+For demonstration purposes, we'll use the **Adventure Works** cube. The OLAP data source is assigned to the Pivot Table component through the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class. For more details on OLAP data binding, refer [here](#data-binding).
+
+Here's the complete code to initialize the Pivot Table with an OLAP data source:
 
 ```cshtml
 
@@ -157,58 +159,6 @@ After successful compilation of the application, simply press F5 to run the same
 
 ![OLAP in Blazor PivotTable](images/blazor-pivottable-with-olap.webp)
 
-### Enable Pivot Field List
-
-The Pivot Table component includes a built-in Field List, similar to the one in Microsoft Excel. This Field List allows users to add or remove [OLAP cube elements](#olap-cube-elements), and to move them between different axes: [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html), [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html), and [PivotViewFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilter.html). Users can also filter and sort these elements as needed, all during runtime.
-
-To display the Field List, set the [ShowFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowFieldList) property in the SfPivotView class to **true**. To know more about the field list, [refer](./field-list) here.
-
-```cshtml
-@using Syncfusion.Blazor.PivotView
-
-<SfPivotView TValue="ProductDetails" ShowFieldList="true" Width="800" Height="350">
-    <PivotViewDataSourceSettings TValue="ProductDetails" ProviderType="ProviderType.SSAS" Catalog="Adventure Works DW 2008 SE" Cube="Adventure Works" Url="https://bi.syncfusion.com/olap/msmdpump.dll" LocaleIdentifier="1033" EnableSorting="true">
-        <PivotViewColumns>
-            <PivotViewColumn Name="[Product].[Product Categories]" Caption="Product Category"></PivotViewColumn>
-            <PivotViewColumn Name="[Measures]" Caption="Measure"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="[Customer].[Customer Geography]" Caption="Customer Geography"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="[Measures].[Customer Count]" Caption="Customer Count"></PivotViewValue>
-            <PivotViewValue Name="[Measures].[Internet Sales Amount]" Caption="Internet Sales Amount"></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="[Measures].[Internet Sales Amount]" Format="C0"></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
-    <PivotViewGridSettings ColumnWidth="160"></PivotViewGridSettings>
-</SfPivotView>
-<style>
-    .e-pivotview {
-        min-height: 200px;
-    }
-</style>
-
-@code{
-    public class ProductDetails
-    {
-        public int Sold { get; set; }
-        public double Amount { get; set; }
-        public string Country { get; set; }
-        public string Products { get; set; }
-        public string Year { get; set; }
-        public string Quarter { get; set; }
-    }
-}
-```
-
-![Blazor PivotTable with OLAP FieldList Icon](images/blazor-pivottable-olap-fieldlist-icon.webp)
-<br/>
-
-![Blazor PivotTable with OLAP FieldList Dialog](images/blazor-pivottable-olap-fieldlist-dialog.webp)
-
 ### Enable Grouping Bar
 
 The grouping bar lets users easily organize [OLAP cube elements](#olap-cube-elements) from the connected data source. Users can drag these cube elements between different axes, such as [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html), [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html), and [PivotViewFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilter.html), to quickly change how data is shown in the Pivot Table. It also allows sorting, filtering, and removing of elements directly from the grouping bar, making it simple to customize the Pivot Table layout at runtime.
@@ -257,6 +207,58 @@ To display the grouping bar, set the [ShowGroupingBar](https://help.syncfusion.c
 ```
 
 ![Blazor PivotTable with OLAP Grouping Bar](images/blazor-pivottable-olap-grouping-bar.webp)
+
+### Enable Pivot Field List
+
+The Pivot Table component includes a built-in Field List, similar to the one in Microsoft Excel. This Field List allows users to add or remove [OLAP cube elements](#olap-cube-elements), and to move them between different axes: [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html), [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html), and [PivotViewFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilter.html). Users can also filter and sort these elements as needed, all during runtime.
+
+To display the Field List, set the [ShowFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowFieldList) property to **true**. To know more about the field list, [refer](./field-list) here.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="ProductDetails" ShowFieldList="true" Width="800" Height="350">
+    <PivotViewDataSourceSettings TValue="ProductDetails" ProviderType="ProviderType.SSAS" Catalog="Adventure Works DW 2008 SE" Cube="Adventure Works" Url="https://bi.syncfusion.com/olap/msmdpump.dll" LocaleIdentifier="1033" EnableSorting="true">
+        <PivotViewColumns>
+            <PivotViewColumn Name="[Product].[Product Categories]" Caption="Product Category"></PivotViewColumn>
+            <PivotViewColumn Name="[Measures]" Caption="Measure"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="[Customer].[Customer Geography]" Caption="Customer Geography"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="[Measures].[Customer Count]" Caption="Customer Count"></PivotViewValue>
+            <PivotViewValue Name="[Measures].[Internet Sales Amount]" Caption="Internet Sales Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="[Measures].[Internet Sales Amount]" Format="C0"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewGridSettings ColumnWidth="160"></PivotViewGridSettings>
+</SfPivotView>
+<style>
+    .e-pivotview {
+        min-height: 200px;
+    }
+</style>
+
+@code{
+    public class ProductDetails
+    {
+        public int Sold { get; set; }
+        public double Amount { get; set; }
+        public string Country { get; set; }
+        public string Products { get; set; }
+        public string Year { get; set; }
+        public string Quarter { get; set; }
+    }
+}
+```
+
+![Blazor PivotTable with OLAP FieldList Icon](images/blazor-pivottable-olap-fieldlist-icon.webp)
+<br/>
+
+![Blazor PivotTable with OLAP FieldList Dialog](images/blazor-pivottable-olap-fieldlist-dialog.webp)
 
 ### Exploring Filter Axis
 
@@ -314,7 +316,7 @@ There are two types of calculated fields:
 - **Calculated Measure** – Creates a new measure by using a custom expression.
 - **Calculated Dimension** – Creates a new dimension by using a custom expression.
 
-You can define calculated fields in your code by using the [PivotViewCalculatedFieldSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCalculatedFieldSetting.html) class in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings.html) configuration. The available options for calculated fields are:
+You can define calculated fields in your code by using the [PivotViewCalculatedFieldSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCalculatedFieldSetting.html) class in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) configuration. The available options for calculated fields are:
 
 - [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCalculatedFieldSetting.html#Syncfusion_Blazor_PivotView_PivotCalculatedFieldSetting_Name): Sets a unique name for the new calculated field.
 - [Formula](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCalculatedFieldSetting.html#Syncfusion_Blazor_PivotView_PivotCalculatedFieldSetting_Formula): Allows you to set the expression for the calculated field.
@@ -383,8 +385,10 @@ Users can add a calculated field at runtime using the built-in dialog by followi
 ![Displaying Create Calculated Field in Blazor PivotTable](images/blazor-pivottable-calculated-field-name.webp)
 <br/>
 
-**Step 2:** Create the expression for your calculated field. To do this, drag and drop fields from the tree view on the left side of the dialog and use simple arithmetic operators. **For example**: `IIF([Measures].[Internet Sales Amount]^0.5 > 100, [Measures].[Internet Sales Amount]*100, [Measures].[Internet Sales Amount]/100)`  
-For more information about supported [operators](https://learn.microsoft.com/en-us/sql/mdx/operators-mdx-syntax?view=sql-server-ver15) and [functions](https://learn.microsoft.com/en-us/sql/mdx/functions-mdx-syntax?view=sql-server-ver15), see the Microsoft documentation.
+**Step 2:** Create the expression for your calculated field. To do this, drag and drop fields from the tree view on the left side of the dialog and use simple arithmetic operators.
+
+**For example**: `IIF([Measures].[Internet Sales Amount]^0.5 > 100, [Measures].[Internet Sales Amount]*100, [Measures].[Internet Sales Amount]/100)`  
+For more information about supported [`operators`](https://learn.microsoft.com/en-us/sql/mdx/operators-mdx-syntax?view=sql-server-ver15) and [`functions`](https://learn.microsoft.com/en-us/sql/mdx/functions-mdx-syntax?view=sql-server-ver15), see the Microsoft documentation.
 <br/>
 
 ![Dragging Fields from TreeView to Blazor PivotTable Expression](images/blazor-pivottable-expression-in-calculated-field.webp)
@@ -550,7 +554,7 @@ To enable virtual scrolling, set the [EnableVirtualization](https://help.syncfus
 
 ![Virtual Scrolling in Blazor PivotTable](images/blazor-pivottable-virtual-scrolling.webp)
 
-#### Limitations for virtual scrolling
+#### Limitations for Virtual Scrolling
 
 - When using virtual scrolling, the [ColumnWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_ColumnWidth) property under [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) class must be set in pixels; percentage values are not supported.
 - Resizing columns or setting width to individual columns affects the calculation used to pick the correct page on scrolling.
@@ -868,4 +872,4 @@ In the field list, each node uses a specific icon to help users quickly identify
 | ![First level icon in Blazor pivot table component](images/FirstLevel.webp)<br>![Second level icon in Blazor pivot table component](images/SecondLevel.webp)<br>![Third level icon in Blazor pivot table component](images/ThirdLevel.webp) | Levels (in order) | Level Element | Yes |
 | ![NamedSet icon in Blazor pivot client control](images/NamedSet.webp) | Named set | Named Set | Yes |
 
-N> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
+N> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

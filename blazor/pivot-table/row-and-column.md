@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Row and Column in Blazor Pivot Table Component | Syncfusion®
-description: Learn about row and column features in Blazor Pivot Table component with examples and much more details.
+title: Row and Column in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table configures row and column axes, including field placement, width, height, scrollbar behavior, and layout options.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -9,12 +9,11 @@ documentation: ug
 
 <!-- markdownlint-disable MD012 -->
 
-# Row and Column in Blazor Pivot Table Component
+# Row and Column in Blazor Pivot Table
 
 To learn about how to use the row and column options effectively in the Blazor Pivot Table, watch this video:
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=QqqzLwdRCVI&t=109s"%}
+{% youtube "https://www.youtube.com/watch?v=QqqzLwdRCVI&t=109s"%}
 
 ## Width and Height
 
@@ -70,7 +69,7 @@ Adjusting the row height in the Pivot Table helps make your data easier to view 
 
 N> By default, the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_RowHeight) is set to **36** pixels for desktop layouts and **48** pixels for mobile layouts. However, if you enable the grouping bar option, note that only the column header height may change, while the rest of the rows maintain the specified height.
 
-In the following code sample, the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_RowHeight) property is set as **60** pixels.
+For example, in the sample code below, the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_RowHeight) property is set as **60** pixels. This increases the space for each row, making the data easier to read and compare.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -109,11 +108,11 @@ In the following code sample, the [RowHeight](https://help.syncfusion.com/cr/bla
 
 ## Column Width
 
-Controlling the width of columns allows users to view their data in the Pivot Table more clearly, making each column easy to read and ensuring that information is not cut off. To achieve this, you can use the [ColumnWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_ColumnWidth) property, which is available under the [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) class.
+Controlling the width of columns allows users to view their data in the Pivot Table more clearly, making each column easy to read and ensuring that information is not cut off. To achieve this, you can use the [ColumnWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_ColumnWidth) property, which is available under the [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html).
 
 N> By default, the [ColumnWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_ColumnWidth) is set to **110** pixels for all columns except the first one. The first column is assigned a width of **250** pixels if the grouping bar is enabled, or **200** pixels when it is not. This ensures that the data in the row header is always easily visible.
 
-In the following example, the [ColumnWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_ColumnWidth) property is set as **200** pixels.
+In the following example, the [ColumnWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_ColumnWidth) property is set to **200** pixels for all columns to provide a wider view.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -152,7 +151,7 @@ In the following example, the [ColumnWidth](https://help.syncfusion.com/cr/blazo
 
 ### Adjust width based on columns
 
-By default, when the component width exceeds the total width of all columns, the columns are automatically stretched to fill the available space. To prevent this stretching behavior, set the [AutoFit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_AutoFit) property in the [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) class to **false**. This ensures that the Pivot Table adjusts its overall width to match the combined width of all columns, maintaining their original proportions and improving data readability.
+By default, when the component width exceeds the total width of all columns, the columns are automatically stretched to fill the available space. To prevent this stretching behavior, set the [AutoFit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_AutoFit) property to **false** within the [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html). This ensures that the Pivot Table adjusts its overall width to match the combined width of all columns, maintaining their original proportions and improving data readability.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -192,7 +191,7 @@ By default, when the component width exceeds the total width of all columns, the
 
 The reorder option provides users with the flexibility to reorganize column headers within the Pivot Table by dragging and dropping them to different positions. This allows users to customize the layout of their data for better analysis and presentation.
 
-To enable this option, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_AllowReordering) property in [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) class to **true**. Once enabled, users can simply click and drag any column header to move it to their desired position within the table.
+To enable this option, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_AllowReordering) property to **true** within the [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) configuration. Once enabled, users can simply click and drag any column header to move it to their desired position within the table.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -233,7 +232,7 @@ To enable this option, set the [AllowReordering](https://help.syncfusion.com/cr/
 
 Column resizing in the Pivot Table helps users adjust the column widths to better view and compare data. Users can easily resize columns by clicking and dragging the right edge of any column header. As the user drags, the column’s width is updated immediately, offering a responsive and comfortable viewing experience.
 
-This option is enabled by default. To control column resizing, set the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_AllowResizing) property in [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) class to **true** or **false** as needed.
+This option is enabled by default. To control column resizing, set the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_AllowResizing) property in the [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) class to **true** or **false** as needed.
 
 N> In right-to-left (RTL) mode, users should click and drag the left edge of the header cell to resize the column.
 
@@ -271,7 +270,7 @@ N> In right-to-left (RTL) mode, users should click and drag the left edge of the
 
 ## Text Wrap
 
-The Pivot Table allows users to wrap cell content to the next line when the content exceeds the boundary of the cell width. To enable text wrap, set the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_AllowTextWrap) property in [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) class to **true**.
+The Pivot Table allows users to wrap cell content to the next line when the content exceeds the boundary of the cell width. To enable text wrap, set the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_AllowTextWrap) property to **true** within the [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) configuration.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -310,12 +309,12 @@ The Pivot Table allows users to wrap cell content to the next line when the cont
 
 ## Text Align
 
-Text alignment provides flexibility in positioning content within cells, making the data presentation more organized and visually appealing. You can align the content of the Pivot Table's row headers, column headers, and value cells using the [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_TextAlign) and [HeaderTextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTextAlign) properties in the [BeforeColumnsRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_BeforeColumnsRender) event. The available alignment options are:
+Text alignment provides flexibility in positioning content within cells, making the data presentation more organized and visually appealing. You can align the content of the Pivot Table's row headers, column headers, and value cells using the [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_TextAlign) and [HeaderTextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTextAlign) properties in the [BeforeColumnsRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_BeforeColumnsRender) event under [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html). The available alignment options are:
 
-* [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.TextAlign.html#Syncfusion_Blazor_Grids_TextAlign_Left) - Positions the content on the left side of the cell.
-* [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.TextAlign.html#Syncfusion_Blazor_Grids_TextAlign_Right) - Positions the content on the right side of the cell.
-* [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.TextAlign.html#Syncfusion_Blazor_Grids_TextAlign_Center) - Positions the content in the center of the cell.
-* [Justify](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.TextAlign.html#Syncfusion_Blazor_Grids_TextAlign_Justify) - Distributes the content evenly across the cell width for optimal space utilization.
+* [`Left`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.TextAlign.html#Syncfusion_Blazor_Grids_TextAlign_Left) - Positions the content on the left side of the cell.
+* [`Right`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.TextAlign.html#Syncfusion_Blazor_Grids_TextAlign_Right) - Positions the content on the right side of the cell.
+* [`Center`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.TextAlign.html#Syncfusion_Blazor_Grids_TextAlign_Center) - Positions the content in the center of the cell.
+* [`Justify`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.TextAlign.html#Syncfusion_Blazor_Grids_TextAlign_Justify) - Distributes the content evenly across the cell width for optimal space utilization.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -374,7 +373,7 @@ Text alignment provides flexibility in positioning content within cells, making 
 
 ## Grid Lines
 
-The grid lines option provides visual structure to the Pivot Table by displaying cell borders, making it easier for users to read and analyze data. You can control the display of grid lines using the [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_GridLines) property within the [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) class.
+The grid lines option provides visual structure to the Pivot Table by displaying cell borders, making it easier for users to read and analyze data. You can control the display of grid lines using the [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_GridLines) property within the [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) configuration.
 
 The following grid line modes are available:
 
@@ -427,9 +426,9 @@ N> The Pivot Table displays grid lines in [PivotGridLine.Both](https://help.sync
 
 Selection in the Pivot Table allows users to easily highlight rows, columns, or individual cells for better data focus and visualization. This makes it simple to compare and analyze specific data points within your table.
 
-To enable selection, set the [AllowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_AllowSelection) property in [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) class to **true**. This allows users to select table elements using a mouse click or arrow keys.
+To enable selection, set the [AllowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_AllowSelection) property to **true** within the [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) configuration. This allows users to select table elements using a mouse click or arrow keys.
 
-The Pivot Table provides two selection modes, controlled by the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewSelectionSettings.html#Syncfusion_Blazor_PivotView_PivotViewSelectionSettings_Type) property in [PivotViewSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewSelectionSettings.html) class:
+The Pivot Table provides two selection modes, controlled by the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewSelectionSettings.html#Syncfusion_Blazor_PivotView_PivotViewSelectionSettings_Type) property in [PivotViewSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewSelectionSettings.html):
 
 * [PivotSelectionType.Single](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotTableSelectionType.html#Syncfusion_Blazor_PivotView_PivotTableSelectionType_Single): Allows you to select only one row, column, or cell at a time. This is the default mode.
 * [PivotSelectionType.Multiple](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotTableSelectionType.html#Syncfusion_Blazor_PivotView_PivotTableSelectionType_Multiple): Lets you select several rows, columns, or cells. To select multiple items, hold down the "CTRL" key and click the rows or cells you wish to select. To select a range, hold the "SHIFT" key and click the first and last item in the range.
@@ -471,9 +470,9 @@ The Pivot Table provides two selection modes, controlled by the [Type](https://h
 
 ![Selection in Blazor PivotTable](images/blazor-pivottable-selection.webp)
 
-### Selection Mode
+### Selection mode
 
-You can choose how selection works by setting the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewSelectionSettings.html#Syncfusion_Blazor_PivotView_PivotViewSelectionSettings_Mode) property within the [PivotViewSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewSelectionSettings.html) class. The Pivot Table offers four simple options for selection mode:
+You can choose how selection works by setting the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewSelectionSettings.html#Syncfusion_Blazor_PivotView_PivotViewSelectionSettings_Mode) property within the [PivotViewSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewSelectionSettings.html) configuration. The Pivot Table offers four simple options for selection mode:
 
 * [SelectionMode.Row](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SelectionMode.html#Syncfusion_Blazor_PivotView_SelectionMode_Row): This is the default mode. It lets the user select an entire row with a single click.
 * [SelectionMode.Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SelectionMode.html#Syncfusion_Blazor_PivotView_SelectionMode_Column): In this mode, only entire columns can be selected.
@@ -521,10 +520,10 @@ By choosing the right selection mode, users can quickly highlight and review the
 
 ### Cell Selection Mode
 
-To set the cell selection mode, use the [PivotCellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewSelectionSettings.html#Syncfusion_Blazor_PivotView_PivotViewSelectionSettings_CellSelectionMode) option within the [PivotViewSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewSelectionSettings.html) class. The available modes are:
+To set the cell selection mode, use the [PivotCellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewSelectionSettings.html#Syncfusion_Blazor_PivotView_PivotViewSelectionSettings_CellSelectionMode) option within the [PivotViewSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewSelectionSettings.html). The available modes are:
 
 * [PivotCellSelectionMode.Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCellSelectionMode.html#Syncfusion_Blazor_PivotView_PivotCellSelectionMode_Flow): Selects a continuous range of cells from the starting cell to the ending cell, including all rows in between.
-* [PivotCellSelectionMode.Box](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCellSelectionMode.html#Syncfusion_Blazor_PivotView_PivotCellSelectionMode_Box): Selects a rectangular block of cells that spans from the starting cell to the ending cell, covering all intermediate rows and columns within the range.
+* [PivotCellSelectionMode.Box](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCellSelectionMode.html#Syncfusion_Blazor_PivotView_PivotCellSelectionMode_Box): Selects a rectangular block of cells that spans from the starting cell to the ending cell, covering all intermediate rows and columns within the selected range.
 
 * [PivotCellSelectionMode.BoxWithBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCellSelectionMode.html#Syncfusion_Blazor_PivotView_PivotCellSelectionMode_BoxWithBorder): This mode works like Box mode but also highlights the selected cells with borders for better visibility.
 
@@ -619,7 +618,7 @@ In the example below, selected cells appear with a **green-yellow** background. 
 
 #### CellSelected
 
-When a user finishes selecting cells, the [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_CellSelected) event is triggered. This event provides details about the selected cells, including the related row and column headers. The event holds important parameters, including [SelectedCellsInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCellSelectedEventArgs.html#Syncfusion_Blazor_PivotView_PivotCellSelectedEventArgs_SelectedCellsInfo). Users can use this information to easily identify the selected data and share it with other parts of their application, such as for data binding or additional processing.
+When a user finishes selecting cells, the [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_CellSelected) event is triggered. This event provides details about the selected cells, including the related row and column headers. The event holds three important parameters: [SelectedCellsInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCellSelectedEventArgs.html#Syncfusion_Blazor_PivotView_PivotCellSelectedEventArgs_SelectedCellsInfo),[CurrentCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCellSelectedEventArgs.html#Syncfusion_Blazor_PivotView_PivotCellSelectedEventArgs_CurrentCell), and [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCellSelectedEventArgs.html#Syncfusion_Blazor_PivotView_PivotCellSelectedEventArgs_Target). Users can use this information to easily identify the selected data and share it with other parts of their application, such as for data binding or additional processing.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -689,7 +688,7 @@ When a user finishes selecting cells, the [CellSelected](https://help.syncfusion
 
 ## Clip Mode
 
-The clip mode option in the Pivot Table determines how cell content is displayed when it exceeds the cell’s boundaries. You can set this option using the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_ClipMode) property within the [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) class. The Pivot Table provides the following clip mode options:
+The clip mode option in the Pivot Table determines how cell content is displayed when it exceeds the cell’s boundaries. You can set this option using the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_ClipMode) property within the [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) configuration. The Pivot Table provides the following clip mode options:
 
 * [PivotClipMode.Clip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotTableClipMode.html#Syncfusion_Blazor_PivotView_PivotTableClipMode_Clip): Cuts off any part of the cell content that does not fit within the cell.
 * [PivotClipMode.Ellipsis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotTableClipMode.html#Syncfusion_Blazor_PivotView_PivotTableClipMode_Ellipsis): Shows an ellipsis (`...`) at the end of the cell if the content is too long to fit.
@@ -798,4 +797,4 @@ N> Specify the model type for the data source, as it determines the context that
 
 ![Blazor PivotTable with Cell Template](images/blazor-pivottable-cell-template.webp)
 
-N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
+N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

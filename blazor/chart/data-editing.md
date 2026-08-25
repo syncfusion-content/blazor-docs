@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Editing in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Data Editing in Blazor Charts component and much more.
+title: Blazor Charts Data Editing Examples | Syncfusion®
+description: Learn how to enable drag-and-drop data editing in Syncfusion Blazor Charts. Set ChartDataEditSettings Enable to true with MinY, MaxY, and Fill.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Data Editing in Blazor Charts Component
+# Blazor Charts Data Editing
 
 Data editing allows rendered data points to be dragged and dropped at run time. The position or value of a point can be adjusted based on its y‑value. To enable data editing, set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataEditSettings.html#Syncfusion_Blazor_Charts_ChartDataEditSettings_Enable) property in the [ChartDataEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ChartDataEditSettings) to **true**. Use the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataEditSettings.html#Syncfusion_Blazor_Charts_ChartDataEditSettings_Fill) property to specify the edited point color, and the [MinY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataEditSettings.html#Syncfusion_Blazor_Charts_ChartDataEditSettings_MinY) and [MaxY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataEditSettings.html#Syncfusion_Blazor_Charts_ChartDataEditSettings_MaxY) properties to determine data editing's minimum and maximum range.
 
@@ -71,7 +71,7 @@ Data editing allows rendered data points to be dragged and dropped at run time. 
 
 ![Data Editing in Blazor Chart](images/data-editing/blazor-chart-data-editing.webp)
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 

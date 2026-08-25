@@ -1,27 +1,27 @@
 ---
 layout: post
-title: Orientation in Blazor Tabs Component | Syncfusion®
-description: Checkout and learn here all the features about orientation in Blazor Tabs component and much more details.
+title: Orientation in Blazor Tabs | Syncfusion
+description: Position Blazor Tabs header at the top, bottom, left, or right using HeaderPlacement values for flexible layouts.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Orientation in Blazor Tabs Component
+# Orientation in Blazor Tabs
 
-This section explains about modifying the position and modes of Tab header.
+This section explains how to modify the position and overflow mode of the Tab header.
 
-It allows placing the header section inside the Tabs component at different positions by using the [HeaderPlacement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_HeaderPlacement) property. The available positions are as follows:
+Use the [HeaderPlacement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_HeaderPlacement) property to place the Tab header at different positions around the content. The available values are:
 
-* **Top**: Tab header items can be arranged horizontally, and their content can be placed after the header.
-* **Bottom**: Tab header items can be arranged horizontally, and their content can be placed before the header.
-* **Left**: Tab header items can be arranged vertically, and their content can be placed after the header.
-* **Right**: Tab header items can be arranged vertically, and their content can be placed before the header.
+* **Top**: Tab header items are arranged horizontally, and the content is placed below the header.
+* **Bottom**: Tab header items are arranged horizontally, and the content is placed above the header.
+* **Left**: Tab header items are arranged vertically, and the content is placed to the right of the header.
+* **Right**: Tab header items are arranged vertically, and the content is placed to the left of the header.
 
-It is also adaptable to the available space when the tab items exceed the view space. The modes can be customized by using [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_OverflowMode) property. The available modes are as follows:
+When the tab items exceed the available space, the Tab adapts using an overflow mode. Use the [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_OverflowMode) property to control the behavior. The available modes are:
 
-* Scrollable
-* Popup
+* **Scrollable**: Header items scroll horizontally or vertically with navigation arrows.
+* **Popup**: Header items that do not fit are moved into a popup accessed by a dropdown icon.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -92,7 +92,7 @@ It is also adaptable to the available space when the tab items exceed the view s
                     </tr>
                     <tr>
                         <td style="width: 50%;">
-                            <div>Header Styles</div>
+                            <div>Overflow Mode</div>
                         </td>
                         <td style="width: 50%;">
                             <div>
@@ -158,4 +158,4 @@ It is also adaptable to the available space when the tab items exceed the view s
 </style>
 ```
 
-![Blazor Tabs with Horizontal Orientation](./images/blazor-tabs-orientation.webp)
+![Blazor Tabs with Orientation](./images/blazor-tabs-orientation.webp)

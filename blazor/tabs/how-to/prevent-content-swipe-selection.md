@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Prevent content swipe selection in Blazor Tabs Component | Syncfusion®
-description: Checkout and learn here all about how to prevent content swipe selection in Blazor Tabs component and more.
+title: How to prevent content swipe selection in Blazor Tabs | Syncfusion
+description: Control or prevent swipe-based tab switching in Blazor Tabs using the SwipeMode property for touch interfaces.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
 
-# Prevent content swipe selection in Blazor Tabs Component
+# How to prevent content swipe selection in Blazor Tabs
 
 The [`SwipeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_SwipeMode)  property in the Tab component allows users to navigate between tabs using swipe gestures, improving the overall navigation experience. It supports both touch and mouse inputs, enabling intuitive tab switching.
 
@@ -24,6 +24,8 @@ The following are the available [`SwipeMode`](https://help.syncfusion.com/cr/bla
 * [`~TabSwipeMode.Touch & ~TabSwipeMode.Mouse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabSwipeMode.html) - This disables both touch and mouse swipe actions, preventing any unintended tab switches.
 
 ```cshtml
+@using Syncfusion.Blazor.Navigations
+
 <SfTab SwipeMode="~TabSwipeMode.Touch & ~TabSwipeMode.Mouse">
     <TabItems>
         <TabItem>

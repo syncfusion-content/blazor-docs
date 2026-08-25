@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Print and Export in Blazor Accumulation Chart Component | Syncfusion®
-description: Checkout and learn here all about Print and Export in Blazor Accumulation Chart component and much more details.
+title: Blazor Accumulation Chart Print and Export Examples | Syncfusion®
+description: Learn how to print and export Syncfusion Blazor Accumulation Chart. Use PrintAsync for browser printing and export to image, SVG, or PDF.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Print and Export in Blazor Accumulation Chart Component
+# Blazor Accumulation Chart Print and Export
 
 ## Print
 
@@ -117,7 +117,7 @@ The optional parameters for this method are,
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBAshMJWGLIalWX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrRDcBDJBahYjoF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customizing the exported chart using Exporting event
 
@@ -236,9 +236,9 @@ In the code example below, the accumulation chart is exported to Excel format. T
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htryXJtGrZTUKjJB?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBHjwBNprxkwsFa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

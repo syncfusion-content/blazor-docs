@@ -19,8 +19,9 @@ The [Syncfusion® Blazor extension](https://marketplace.visualstudio.com/items?i
 
     ```
     sf<Syncfusion component name>-<feature>
-    Example: `sfgrid-grouping` to insert a DataGrid with grouping enabled.
     ```
+
+    For example, `sfgrid-grouping` inserts a DataGrid with grouping enabled.
 
 4. Choose the snippet from the suggestions and press **Enter** or **Tab**. The component markup is inserted with editable placeholders.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Positioning in Blazor Dialog Component | Syncfusion®
-description: Checkout and learn here all the features about Positioning in Blazor Dialog component and much more details.
+title: Positioning in Blazor Dialog | Syncfusion®
+description: Position the Blazor Dialog at predefined locations or by custom X and Y coordinates relative to the page or target element.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Positioning in Blazor Dialog Component
+# Positioning in Blazor Dialog
 
 The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) can be positioned using the `DialogPositionData` property by providing the X and Y coordinates. It can be positioned inside the target of the `container` or `<body>` of the element based on the given X and Y values.
 
@@ -166,4 +166,4 @@ By default, when scrolling the page or container, the Dialog scrolls along with 
 
 ## See also
 
-* [Positioning in Blazor Dialog Component](https://blazor.syncfusion.com/demos/dialog/positioning)
+* [Positioning in Blazor Dialog Component](https://blazor.syncfusion.com/demos/dialog/positioning?theme=fluent2)

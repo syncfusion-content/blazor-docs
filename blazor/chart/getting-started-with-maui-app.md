@@ -1,31 +1,31 @@
 ---
 layout: post
-title: Getting Started with Charts Component in Blazor MAUI App | Syncfusion
-description: Check out and learn about the documentation for getting started with the Blazor Charts Component in Blazor MAUI App.
+title: Getting Started with Blazor Charts in MAUI App | Syncfusion®
+description: Learn how to get started with Syncfusion Blazor Charts in a Blazor MAUI hybrid app. Explore setup, packages, and first chart example.
 platform: Blazor
 control: Charts
 documentation: ug
 ---
 
-# Getting Started with Blazor Charts Component in Blazor MAUI App
+# Getting Started with Blazor Charts in MAUI App
 
 This section explains the step-by-step process of integrating the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-Charts) component in your Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 > **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Code Studio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
-## Create a new Blazor MAUI App in Visual Studio
+## Create a new MAUI Blazor Hybrid App
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-Create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
+Create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-10.0). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-Run the following command to create a new Blazor MAUI App.
+Run the following command to create a new MAUI Blazor Hybrid App.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -36,13 +36,11 @@ cd MauiBlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-Alternatively, create a **Blazor MAUI App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
-
 {% endtabcontent %}
 
 {% tabcontent .NET CLI %}
 
-Run the following command to create a new Blazor MAUI App.
+Run the following command to create a new MAUI Blazor Hybrid App.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
@@ -113,8 +111,6 @@ dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
 ## Add import namespaces
 
 After the package is installed, open the **~/Components/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
-
-N> The `~/` notation represents the root directory of your project. This file is typically located in your project's root folder.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}

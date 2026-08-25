@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Zooming in Blazor Stock Chart Component | Syncfusion®
-description: Check out and learn here all about Zooming functionality in the Blazor Stock Chart component and much more details.
+title: Blazor Stock Chart Zooming | Syncfusion®
+description: Learn how to zoom the Blazor Stock Chart with selection, mouse wheel, or pinch gestures using EnableSelectionZooming and EnableMouseWheelZooming.
 platform: Blazor
 control: Stock Chart
 documentation: ug
 ---
 
-# Zooming in Blazor Stock Chart Component
+# Blazor Stock Chart Zooming
 
 ## Enable zooming
 
@@ -362,4 +362,4 @@ Set [EnableAutoIntervalOnZooming](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ![Auto Interval on Zooming in Blazor Area Chart](images/zooming/stock-chart-autointerval.webp)
 
-N> Refer to the [Blazor Stock Chart](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for feature overviews and the [Blazor Stock Chart example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=bootstrap5) to explore chart types and time based data representation.
+N> Refer to the [Blazor Stock Chart](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for feature overviews and the [Blazor Stock Chart example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=fluent2) to explore chart types and time based data representation.

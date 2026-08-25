@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Table in Tooltip in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about Table in Tooltip in Blazor Charts component and much more.
+title: How to Show a Table in Tooltip in Blazor Charts | Syncfusion®
+description: Learn how to show a table in a Blazor Charts tooltip using Syncfusion. Use ChartTooltipSettings Template with a Razor template to render HTML.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Table in Tooltip in Blazor Charts Component
+# How to Show a Table in Tooltip in Blazor Charts
 
 A table type tooltip can be created using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Template) property in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html). Follow the steps below to display a table inside the tooltip.
 
@@ -118,4 +118,4 @@ When the mouse is moved over the chart series points, the tooltip is displayed i
 
 ```
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

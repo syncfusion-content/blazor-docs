@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Types of Validation in Blazor DataForm | Syncfusion®
-description: Checkout and learn here about different types of validation that can be used in Blazor DataForm component.
+title: Validation in Blazor Data Form | Syncfusion®
+description: Apply different validation types in the Blazor Data Form, including data annotations, custom validators, and EditContext-based validation.
 platform: Blazor
 control: DataForm
 documentation: ug
 ---
 
-# Validation in DataForm component
+# Validation in Blazor Data Form
 
 DataForm supports standard and custom validation compatible with the[EditForm](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.editform?view=aspnetcore-7.0) component. Such as [DataAnnotationsValidator](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.dataannotationsvalidator?view=aspnetcore-7.0) , [ObjectGraphDataAnnotationsValidator ](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/validation?view=aspnetcore-8.0#nested-models-collection-types-and-complex-types) etc...We can specify the required validation inside `FormValidator` RenderFragment of the DataForm component , The following examples illustrate the procedures for setting up the component with various validation.
 
@@ -63,7 +63,7 @@ N> Install the [Microsoft.AspNetCore.Components.DataAnnotations.Validation](http
 
 ## Fluent validation 
 
-[FluentValidator](https://www.nuget.org/packages/Blazilla) is a custom validator that validates beyond standard data annotations. It supports rules such as credit card format checks, comparisons between fields, and range/threshold validations defined in FluentValidation rule classes.
+[FluentValidator](https://docs.fluentvalidation.net/en/latest/) is a custom validator that validates beyond standard data annotations. It supports rules such as credit card format checks, comparisons between fields, and range/threshold validations defined in FluentValidation rule classes.
 
 N> Install the [Blazilla](https://www.nuget.org/packages/Blazilla) NuGet package to use Fluent validation with the DataForm.
 

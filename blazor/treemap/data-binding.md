@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor TreeMap Component | Syncfusion®
-description: Checkout and learn here all the features about Data Binding in Blazor TreeMap component and much more details.
+title: Blazor TreeMap Data Binding | Syncfusion®
+description: Learn how to bind flat, hierarchical, and remote data to the Blazor TreeMap using DataSource, WeightValuePath, and Entity Framework.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Data Binding in Blazor TreeMap Component
+# Blazor TreeMap Data Binding
 
 ## Populate data
 
@@ -345,7 +345,7 @@ N> For more details on OData V4 services, refer to the [OData documentation](htt
 
 ### Web API
 
-Use [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) to bind TreeMap with Web API, created using OData endpoint.
+Use [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) to bind TreeMap with Web API, created using OData endpoint.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Virtualization in Blazor DataGrid | Syncfusion®
-description: Learn how to implement virtualization in the Blazor DataGrid, including virtual scrolling, paging, and performance optimization techniques.
+title: Blazor Grid Virtualization for Large Data Performance | Syncfusion
+description: Learn how to implement virtualization in Blazor Data Grid using virtual scrolling, paging, and performance optimization for large datasets.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Virtual scrolling in Blazor DataGrid
+# Virtual scrolling for Large Data Performance in Blazor Data Grid
 
 The virtual scrolling feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) efficiently handles large datasets by rendering only the rows currently visible in the viewport instead of the entire data source. This reduces DOM size, improves responsiveness, and lowers initial load time for datasets with thousands of records.
 
@@ -1066,7 +1066,7 @@ To enable external refresh of the virtualized Grid, set [EnableVirtualization](h
 
 > If [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) is specified, the page size is calculated using the given row height; otherwise, it is determined from the Grid row’s offset height.
 
-> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand data presentation and manipulation.
+> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.
 
 ## See also
 

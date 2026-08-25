@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in Blazor Pivot Table Component | Syncfusion®
-description: Learn about filtering options in Blazor Pivot Table component including member, label, and value filtering.
+title: Filtering in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table filters rows and columns using member, label, and value filtering for focused data analysis.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD012 -->
 
-# Filtering in Blazor Pivot Table Component
+# Filtering in Blazor Pivot Table
 
 Filtering helps you focus on specific data by showing only the records you need in the Pivot Table. This allows you to analyze relevant information more effectively by including or excluding specific members through the user interface or programmatically.
 
@@ -28,7 +28,7 @@ To get a quick glance at how to filter data in the Blazor Pivot Table, watch thi
 
 ## Member filtering
 
-This filtering option displays the Pivot Table with selective records based on the members you choose to include or exclude in each field. By default, member filtering is enabled through the [AllowMemberFilter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_AllowMemberFilter) property in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class. 
+This filtering option displays the Pivot Table with selective records based on the members you choose to include or exclude in each field. By default, member filtering is enabled through the [AllowMemberFilter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_AllowMemberFilter) property in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html). 
 
 Users can apply member filters at runtime by clicking the filter icon next to any field in the row, column, and filter axes, available in both the field list and grouping bar interfaces.
 
@@ -45,7 +45,7 @@ You can also configure filtering programmatically using the [PivotViewFilterSett
 * [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFilterSetting.html#Syncfusion_Blazor_PivotView_PivotFilterSetting_Name): Sets the appropriate field name for filtering.
 * [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFilterSetting.html#Syncfusion_Blazor_PivotView_PivotFilterSetting_Type): Specifies the filter type as [FilterType.Include](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FilterType.html#Syncfusion_Blazor_PivotView_FilterType_Include) or [FilterType.Exclude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FilterType.html#Syncfusion_Blazor_PivotView_FilterType_Exclude) to include or exclude field members respectively.
 * [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFilterSetting.html#Syncfusion_Blazor_PivotView_PivotFilterSetting_Items): Defines the members that need to be either included or excluded from the display.
-* [LevelCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFilterSetting.html#Syncfusion_Blazor_PivotView_PivotFilterSetting_LevelCount): Sets the level count of the field to fetch data from the cube. **NOTE: This property is applicable only for OLAP data sources.**
+* [LevelCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFilterSetting.html#Syncfusion_Blazor_PivotView_PivotFilterSetting_LevelCount): Sets the level count of the field to fetch data from the cube. **Note: This property is applicable only for OLAP data sources.**
 
 N> When you specify unavailable or inappropriate members in the include or exclude filter items collection, they will be ignored.
 
@@ -121,7 +121,7 @@ You can click the ascending sort icon to arrange members from A to Z (or lowest 
 
 The member filter dialog improves loading performance when working with large datasets by limiting the number of members displayed initially. This helps you work with extensive data without experiencing delays while the member list loads.
 
-You can control how many members are displayed in the member filter dialog using the [MaxNodeLimitInMemberEditor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_MaxNodeLimitInMemberEditor) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class. By default, this property is set to **1000**. When your data contains more members than this limit, only the specified number will be shown initially, and a message will indicate how many additional members are available.
+You can control how many members are displayed in the member filter dialog using the [MaxNodeLimitInMemberEditor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_MaxNodeLimitInMemberEditor) property. By default, this property is set to **1000**. When your data contains more members than this limit, only the specified number will be shown initially, and a message will indicate how many additional members are available.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -173,7 +173,7 @@ When the member count exceeds your set limit, you can use the search option to f
 
 ### Loading members on-demand
 
-N> This property is applicable only for OLAP data sources.
+N> This option is applicable only for OLAP data sources.
 
 This option improves the performance of the member editor by loading members only when needed, rather than loading all members at once. You can enable this by setting the [LoadOnDemandInMemberEditor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_LoadOnDemandInMemberEditor) property to **true**. When enabled, only the first level members are loaded initially from the OLAP cube, allowing the member editor to open quickly without performance delays.
 
@@ -266,7 +266,7 @@ The [LevelCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotVi
 
 ![Loading Member based on Level Count in Blazor PivotTable](images/blazor-pivottable-load-member-based-on-level.webp)
 
-In the example above, the [LevelCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFilterSetting.html#Syncfusion_Blazor_PivotView_PivotFilterSetting_LevelCount) is set to **2** for the "Customer Geography" dimension in [PivotViewFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSettings.html). This loads both the "Country" and "State-Province" levels during the initial loading process. Any search or filter operations will be applied only to the members within these two levels. To access members from deeper levels like "City", you can either expand the respective "State-Province" node or select the "City" level from the dropdown list.
+In the above example, the [LevelCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFilterSetting.html#Syncfusion_Blazor_PivotView_PivotFilterSetting_LevelCount) is set to **2** for the "Customer Geography" dimension in [PivotViewFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSettings.html). This loads both the "Country" and "State-Province" levels during the initial loading process. Any search or filter operations will be applied only to the members within these two levels. To access members from deeper levels like "City", you can either expand the respective "State-Province" node or select the "City" level from the dropdown list.
 
 ## Label filtering
 
@@ -276,7 +276,7 @@ Label filtering allows you to display only the data with specific header text ac
 * Number data type
 * Date data type
 
-To enable label filtering, set the [AllowLabelFilter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_AllowLabelFilter) property to **true** in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class. Once enabled, you can access the filtering options by clicking the filter icon next to any field in the row or column axis of the field list or grouping bar. This opens the filtering dialog where you can navigate to the "Label" tab to apply your label filtering criteria.
+To enable label filtering, set the [AllowLabelFilter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_AllowLabelFilter) property to **true** in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html). Once enabled, you can access the filtering options by clicking the filter icon next to any field in the row or column axis of the field list or grouping bar. This opens the filtering dialog where you can navigate to the "Label" tab to apply your label filtering criteria.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -322,7 +322,7 @@ To enable label filtering, set the [AllowLabelFilter](https://help.syncfusion.co
 <br/>
 ![Label Filtering in Blazor PivotGrid](images/blazor-pivotgrid-label-filtering.webp)
 
-N> In label filtering UI, based on the field chosen, it’s member data type is automatically recognized and filtering operation will be carried out. Where as in code behind, user need to define the data type through a property and it has been explained in the immediate section below.
+N> In the label filtering UI, the member data type is automatically recognized based on the field chosen, and the filtering operation is carried out accordingly. In code-behind, however, users need to define the data type through a property, as explained in the following section.
 
 ### Filtering string data type through code
 
@@ -339,7 +339,7 @@ This filtering approach is specifically designed for fields containing string da
 
 For example, to display only countries containing "United" in their name from a "Country" field, set the [Value1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFilterSetting.html#Syncfusion_Blazor_PivotView_PivotFilterSetting_Value1) property to "United" and the [Condition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFilterSetting.html#Syncfusion_Blazor_PivotView_PivotFilterSetting_Condition) property to [Operators.Contains](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Operators.html#Syncfusion_Blazor_PivotView_Operators_Contains).
 
-The following table shows all available operators for label filtering:
+The following table shows all available **operators** for label filtering:
 
 | Operator | Description |
 |------|-------------|
@@ -400,20 +400,18 @@ The following table shows all available operators for label filtering:
 
 ### Filtering number data type through code
 
-N> This option is applicable only for relational data sources.
-
 Filter numeric data programmatically to display only values that meet specific numeric conditions, helping you analyze data patterns and ranges more effectively. This filtering approach is specifically designed for fields containing numeric data types and follows the same configuration method as string data filtering, with one key difference: set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFilterSetting.html#Syncfusion_Blazor_PivotView_PivotFilterSetting_Type) property to [FilterType.Number](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FilterType.html#Syncfusion_Blazor_PivotView_FilterType_Number) enumeration instead of [FilterType.Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FilterType.html#Syncfusion_Blazor_PivotView_FilterType_Label).
 
 To filter numeric values, specify the filtering criteria using the following properties:
-- [Value1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFilterSetting.html#Syncfusion_Blazor_PivotView_PivotFilterSetting_Value1): The primary value for comparison.
-- [Condition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFilterSetting.html#Syncfusion_Blazor_PivotView_PivotFilterSetting_Condition): The comparison operator.
-- [Value2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFilterSetting.html#Syncfusion_Blazor_PivotView_PivotFilterSetting_Value2): The secondary value (required for [Operators.Between](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Operators.html#Syncfusion_Blazor_PivotView_Operators_Between) and [Operators.NotBetween](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Operators.html#Syncfusion_Blazor_PivotView_Operators_NotBetween) conditions).
+- [Value1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFilterSetting.html#Syncfusion_Blazor_PivotView_PivotFilterSetting_Value1): The primary value for comparison
+- [Condition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFilterSetting.html#Syncfusion_Blazor_PivotView_PivotFilterSetting_Condition): The comparison operator
+- [Value2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFilterSetting.html#Syncfusion_Blazor_PivotView_PivotFilterSetting_Value2): The secondary value (required for [Operators.Between](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Operators.html#Syncfusion_Blazor_PivotView_Operators_Between) and [Operators.NotBetween](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Operators.html#Syncfusion_Blazor_PivotView_Operators_NotBetween) conditions)
 
 For example, to display only sales data where the "Sold" field values are between 90 and 100, set [Value1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSetting.html#Syncfusion_Blazor_PivotView_PivotViewFilterSetting_Value1) to "90", [Value2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSetting.html#Syncfusion_Blazor_PivotView_PivotViewFilterSetting_Value2) to "100", and [Condition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSetting.html#Syncfusion_Blazor_PivotView_PivotViewFilterSetting_Condition) to [Operators.Between](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Operators.html#Syncfusion_Blazor_PivotView_Operators_Between).
 
 N> The following operators are supported for number data type: [Operators.Equals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Operators.html#Syncfusion_Blazor_PivotView_Operators_Equals), [Operators.DoesNotEquals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Operators.html#Syncfusion_Blazor_PivotView_Operators_DoesNotEquals), [Operators.GreaterThan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Operators.html#Syncfusion_Blazor_PivotView_Operators_GreaterThan), [Operators.GreaterThanOrEqualTo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Operators.html#Syncfusion_Blazor_PivotView_Operators_GreaterThanOrEqualTo), [Operators.LessThan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Operators.html#Syncfusion_Blazor_PivotView_Operators_LessThan), [Operators.LessThanOrEqualTo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Operators.html#Syncfusion_Blazor_PivotView_Operators_LessThanOrEqualTo), [Operators.Between](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Operators.html#Syncfusion_Blazor_PivotView_Operators_Between), and [Operators.NotBetween](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Operators.html#Syncfusion_Blazor_PivotView_Operators_NotBetween).
 
-N> Number filtering is available only when the field contains numeric data format.
+N> Number filtering is available only when the field contains numeric values.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -462,7 +460,7 @@ To apply date filtering, specify your filtering criteria using the [Value1](http
 
 N> You can use the following operators with date data type filtering: [Operators.Equals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Operators.html#Syncfusion_Blazor_PivotView_Operators_Equals), [Operators.DoesNotEquals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Operators.html#Syncfusion_Blazor_PivotView_Operators_DoesNotEquals), [Operators.Before](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Operators.html#Syncfusion_Blazor_PivotView_Operators_Before), [Operators.BeforeOrEqualTo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Operators.html#Syncfusion_Blazor_PivotView_Operators_BeforeOrEqualTo), [Operators.After](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Operators.html#Syncfusion_Blazor_PivotView_Operators_After), [Operators.AfterOrEqualTo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Operators.html#Syncfusion_Blazor_PivotView_Operators_AfterOrEqualTo), [Operators.Between](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Operators.html#Syncfusion_Blazor_PivotView_Operators_Between), and [Operators.NotBetween](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Operators.html#Syncfusion_Blazor_PivotView_Operators_NotBetween).
 
-N> Date filtering is available only when the field has date type [FormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSettings.html) configured.
+N> Date filtering is available only when the field has a [FormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSettings.html) entry with `Type="FormatType.DateTime"` configured.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -518,7 +516,7 @@ N> Date filtering is available only when the field has date type [FormatSettings
 
 ### Clearing the existing label filter
 
-You can clear the applied label filter by clicking the **Clear** option at the bottom of the filter dialog. This option is located under the **Label** tab for string and number type filtering, and under the **Date** tab for date type filtering.
+Users can clear the applied label filter by clicking the **Clear** option at the bottom of the filter dialog. This option is located under the **Label** tab for string and number type filtering, and under the **Date** tab for date type filtering.
 
 ![Clearing Date Filter in Blazor PivotTable](images/blazor-pivottable-clear-filter.webp)
 
@@ -642,7 +640,9 @@ You can clear the applied value filter by clicking the "Clear" option at the bot
 
 ![Clearing Value Filter in Blazor PivotTable](images/blazor-pivottable-clear-value-filter.webp)
 
-## Events
+## Event
+
+The Pivot Table provides the following events to monitor filtering operations. Use them to track, customize, or cancel a filter action at runtime.
 
 ### MemberEditorOpen
 
@@ -650,10 +650,10 @@ When you open the Member Editor dialog, the [MemberEditorOpen](https://help.sync
 
 * [FieldName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.MemberEditorOpenEventArgs.html#Syncfusion_Blazor_PivotView_MemberEditorOpenEventArgs_FieldName): The name of the field for which the Member Editor dialog opens.
 * [FieldMembers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.MemberEditorOpenEventArgs.html#Syncfusion_Blazor_PivotView_MemberEditorOpenEventArgs_FieldMembers): The list of all members in the selected field.
-* [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.MemberEditorOpenEventArgs.html#Syncfusion_Blazor_PivotView_MemberEditorOpenEventArgs_Cancel): If you set this property to true, the Member Editor dialog will not open.
-* [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.MemberEditorOpenEventArgs.html#Syncfusion_Blazor_PivotView_MemberEditorOpenEventArgs_FilterSetting): Contains the current filter settings including filter items, types, and conditions.
+* [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.MemberEditorOpenEventArgs.html#Syncfusion_Blazor_PivotView_MemberEditorOpenEventArgs_Cancel): If you set this property to `true`, the Member Editor dialog will not open.
+* [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.MemberEditorOpenEventArgs.html#Syncfusion_Blazor_PivotView_MemberEditorOpenEventArgs_FilterSetting): Contains the current ['FilterSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.MemberEditorOpenEventArgs.html#Syncfusion_Blazor_PivotView_MemberEditorOpenEventArgs_FilterSetting) including filter items, types, and conditions.
 
-In the below sample, the member editor of field "Country" shows only the selected Item.
+Here’s an example. In the Pivot Table below, only the selected member for the "Country" field appears in the Member Editor dialog:
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -712,11 +712,11 @@ The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pivo
 * [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_ActionName): Indicates the name of the action being initiated, such as **Filter field** for filtering.
 * [FieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_FieldInfo): Provides information about the selected field for the action.
 
-N> This option is applicable only when the field based UI actions are performed such as filtering, sorting, removing field from grouping bar, editing and aggregation type change.
+N> The `FieldInfo` property is available only when the action involves a specific field, such as filtering, sorting, removing a field from the grouping bar, editing, or changing the aggregation type.
 
 * [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_Cancel): A boolean property that allows you to prevent the current action from completing. Set this to **true** to stop the action.
 
-In the following example, filter action can be restricted by setting the **args.Cancel** option to **true** in the `OnActionBegin` event.
+In the example below, you can prevent a filter action by setting **args.Cancel** to **true** in the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_Cancel) event:
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -769,10 +769,12 @@ The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.P
 The event provides the following parameters:
 
 * [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_DataSourceSettings): Contains the current data source configuration, including input data source, rows, columns, values, filters, format settings, and other report settings.
+
 * [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionName): Specifies the name of the completed action. For filtering operations, the action name appears as **Field filtered**.
+
 * [FieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_FieldInfo): Contains information about the selected field that was involved in the action.
 
-N> This option is applicable only when the field based UI actions are performed such as filtering, sorting, removing field from grouping bar, editing and aggregation type change.
+N> This parameter is available only when the action involves a specific field, such as filtering, sorting, removing a field from the grouping bar, editing, or changing the aggregation type.
 
 * [ActionInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionInfo): Provides detailed information about the current UI action. For filtering operations, this includes filter members, field name, and other relevant details.
 
@@ -824,7 +826,7 @@ N> This option is applicable only when the field based UI actions are performed 
 
 The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionFailure) event is triggered when a UI action fails to produce the expected result. This event provides detailed information about the failure through the following parameters:
 
-* [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ActionName): It holds the name of the current action failed. For example, if the action fails while filtering, the action name will be shown as **Filter field**.
+* [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ActionName): It holds the name of the current action that failed. For example, if the action fails while filtering, the action name will be shown as **Filter field**.
 
 * [ErrorInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ErrorInfo): It holds the error information of the current UI action.
 
@@ -883,4 +885,4 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pi
 }
 ```
 
-N> You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to knows how to render and configure the pivot table.
+N> You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to knows how to render and configure the pivot table.

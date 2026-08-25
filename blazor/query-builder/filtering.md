@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filtering in Blazor QueryBuilder Component | Syncfusion®
-description: Checkout and learn here all about filtering in Blazor QueryBuilder component with examples and much more details.
+title: Filtering in Blazor Query Builder | Syncfusion
+description: Create, delete, and manage rules and groups in Blazor Query Builder programmatically and through the UI.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Filtering in Blazor QueryBuilder Component
+# Filtering in Blazor Query Builder
 
 The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) enables creating and deleting rules (conditions) and groups. Use [`ShowButtons`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderShowButtons.html) to control the visibility of these action buttons in the user interface.
 
@@ -69,8 +69,6 @@ Creation and deletion can be done through the UI or programmatically.
         }
     };
 
-    public string[] GroupID = new string[] { "group1" };
-
     private void addRule()
     {
         QuerybuilderObj.AddRule(SampRule, "group0");
@@ -101,4 +99,4 @@ Creation and deletion can be done through the UI or programmatically.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDrdZwXuBFsbVQDk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Filtering in Blazor Query Builder](./images/blazor-querybuilder-filtering.webp)" %}
 
-N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.
+N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=fluent2) to know how to render and configure the query builder.

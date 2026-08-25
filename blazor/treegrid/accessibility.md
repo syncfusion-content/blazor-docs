@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor TreeGrid Component | Syncfusion®
-description: Checkout and learn here all the features about accessibility in Blazor TreeGrid component and much more details.
+title: Blazor TreeGrid Accessibility | Syncfusion
+description: Learn how Blazor TreeGrid supports accessibility with WCAG 2.2 compliance, Section 508 support, ARIA attributes, keyboard navigation, and screen readers.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Accessibility in Blazor TreeGrid Component
+# Accessibility in Blazor TreeGrid
 
 The Blazor Tree Grid component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -87,10 +87,10 @@ The Blazor Tree Grid component followed the [keyboard interaction](https://www.w
 |<kbd>↓</kbd>| <kbd>↓</kbd> | Moves down a row/cell selection.|
 |<kbd>→</kbd>| <kbd>→</kbd> | Moves to the right cell selection.|
 |<kbd>←</kbd>| <kbd>←</kbd> | Moves to the left cell selection.|
-|<kbd>Alt + DownArrow</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Expands the selected group.|
 |<kbd>Ctrl + DownArrow</kbd> | <kbd>⌘</kbd> + <kbd>↓</kbd> | Expands all the visible groups.|
-|<kbd>Alt + UpArrow</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Collapses the selected group.|
+|<kbd>Ctrl + Shift + DownArrow</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>↓</kbd> | Expands the selected group.|
 |<kbd>Ctrl + UpArrow</kbd> | <kbd>⌘</kbd> + <kbd>↑</kbd> | Collapses all the visible groups.|
+|<kbd>Ctrl + Shift + UpArrow</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>↑</kbd> | Collapses the selected group.|
 |<kbd>Ctrl + P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Prints the Tree Grid.|
 
 ## Ensuring accessibility

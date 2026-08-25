@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Bind Change Events in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all about bind change events in Blazor ListBox component and much more details.
+title: How to bind change events in Blazor ListBox | Syncfusion
+description: Handle Blazor ListBox value changes by binding the ValueChange event to respond to selection updates.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Bind Change Events in Blazor ListBox Component
+# How to bind change events in Blazor ListBox
 
-Bind the change event in the listbox [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) event is used and the event is triggered when the value in the listbox changes.
+The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ListBoxEvents_2_ValueChange) event of the Blazor ListBox is triggered whenever the selected value changes because of a user interaction, such as selecting or deselecting an item. The event is exposed through the [ListBoxEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxEvents-2.html) child component and delivers a [ListBoxChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxChangeEventArgs-2.html) payload to the handler.
 
 ```cshtml
 
@@ -29,13 +29,13 @@ Bind the change event in the listbox [ValueChange](https://help.syncfusion.com/c
         new VehicleData { Text = "SSC Ultimate Aero", Id = "Vehicle-04" },
         new VehicleData { Text = "Koenigsegg CCR", Id = "Vehicle-05" },
         new VehicleData { Text = "McLaren F1", Id = "Vehicle-06" },
-        new VehicleData { Text = "Aston Martin One- 77", Id = "Vehicle-07" },
+        new VehicleData { Text = "Aston Martin One-77", Id = "Vehicle-07" },
         new VehicleData { Text = "Jaguar XJ220", Id = "Vehicle-08" }
         };
 
     public class VehicleData {
-        public string Text  { get; set; }
-        public string Id  { get; set; }
+        public string Text { get; set; }
+        public string Id { get; set; }
     }
 
     private void change(ListBoxChangeEventArgs<string[], VehicleData> args)
@@ -47,3 +47,10 @@ Bind the change event in the listbox [ValueChange](https://help.syncfusion.com/c
 ```
 
 ![Blazor ListBox with change event binding example](./../images/blazor-listbox.webp)
+
+## See also
+
+* [Select Items in Blazor ListBox](./select-items.md)
+* [Get Items in Blazor ListBox](./get-items.md)
+* [Data Binding in Blazor ListBox](./../data-binding.md)
+* [Selection in Blazor ListBox](./../selection.md)

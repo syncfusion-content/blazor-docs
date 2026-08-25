@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Response actions in Blazor Inline AI Assist Control | Syncfusion
-description: Checkout and learn about Response items with Blazor Inline AI Assist component in Blazor Server App and Blazor WebAssembly App.
+title: Response actions in Blazor Inline AI Assist | Syncfusion®
+description: Configure custom response actions in Blazor Inline AI Assist to accept, discard, or perform custom actions on AI-generated responses with built-in items.
 platform: Blazor
 control: Inline AI Assist
 documentation: ug

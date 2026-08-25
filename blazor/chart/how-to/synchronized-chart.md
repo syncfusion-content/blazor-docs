@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Synchronized Chart in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about Synchronized Chart in Blazor Charts component and much more details.
+title: How to Synchronize Charts in Blazor Charts | Syncfusion®
+description: Learn how to synchronize Blazor Charts using Syncfusion. Share tooltip, cursor, and selection across charts by sharing X-Y coordinates.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
 <!-- markdownlint-disable MD036 -->
 
-# Synchronized Chart in Blazor Charts Component
+# How to Synchronize Charts in Blazor Charts
 
 A synchronized chart has the ability to access and interact with two or more charts at the same time. This means that actions performed on one chart, such as positioning a cursor, clicking on a specific point, or activating a tooltip, are reflected simultaneously on corresponding positions or data points across other synchronized charts based on their X-Y coordinates. 
 
@@ -405,4 +405,4 @@ You can maintain constant zoom levels across multiple charts using the [OnZoomEn
 
 Check out the JSON file used for the above samples from here [Synchronized Chart Data](https://www.syncfusion.com/downloads/support/directtrac/general/ze/synchronized-data641318336).
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

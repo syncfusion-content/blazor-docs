@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Z-order with Blazor Image Editor Component | Syncfusion®
-description: Explore the Z-order support in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
+title: Z-Order in Blazor Image Editor | Syncfusion
+description: Control the stacking order of annotations in Blazor Image Editor by bringing shapes forward or sending them backward.
 platform: Blazor
 control: Image Editor
 documentation: ug
 ---
 
-# Z-order in the Blazor Image Editor Component
+# Z-Order in Blazor Image Editor
 
 The Image Editor supports z-order control to manage the stacking order of annotations. This capability is useful when designing templates such as greeting cards or posters, where arranging multiple annotations in the correct order is essential.
 

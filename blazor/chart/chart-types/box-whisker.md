@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Box and Whisker in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Box and Whisker Chart in Blazor Charts component and much more.
+title: Blazor Box and Whisker Chart Examples and Documentation | Syncfusion®
+description: Learn how to visualize statistical distributions in Blazor Box and Whisker Charts using Syncfusion. Plot min, Q1, median, Q3, and max with five Y values.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Box and Whisker in Blazor Charts Component
+# Box and Whisker Chart in Blazor
 
 ## Box and Whisker
 
@@ -53,9 +53,9 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBzjFVZSMTofoJN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Box and Whisker Charts](../images/othertypes/blazor-box-whisker-charts.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLHtdWLIfriQmSR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Box and Whisker Charts](../images/othertypes/blazor-box-whisker-charts.webp)" %}
 
-N> Refer to our [Blazor Box and Whisker Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/box-and-whisker-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Box and Whisker Chart Example](https://blazor.syncfusion.com/demos/chart/box-and-whisker) to know how to render and configure the box and whisker type charts.
+N> Refer to our [Blazor Box and Whisker Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/box-and-whisker-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Box and Whisker Chart Example](https://blazor.syncfusion.com/demos/chart/box-and-whisker?theme=fluent2) to know how to render and configure the box and whisker type charts.
 
 ## Binding data with series
 
@@ -97,7 +97,7 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBzjFVZSMTofoJN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBRjRiSgmkXRhxA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Series customization
 
@@ -144,7 +144,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLzjbrNIWmRppje?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrxXxWIgQYzlikX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **Opacity**
 
@@ -186,7 +186,7 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLJXPLjorqNXiVj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrHXnsSqwukAuPl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **DashArray**
 
@@ -228,7 +228,7 @@ The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhTDPhNyVTUAEnI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhnXnWyqFtKfzNJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **Series Border**
 
@@ -271,7 +271,7 @@ The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBztvBNILeJqLQs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLHXRiegbDcTmCs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Box plot
 
@@ -314,7 +314,7 @@ To change the rendering mode of the Box and Whisker series, use the [BoxPlotMode
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrJNbLZyqNmLSfX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBRtdMSUviWggaq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Show mean
 
@@ -356,7 +356,7 @@ In Box and Whisker series, [ShowMean](https://help.syncfusion.com/cr/blazor/Sync
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLTjlrtyAViHspW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrRXHWoKvsdqCcc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Events
 
@@ -405,7 +405,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVfDvVZeKUSJylc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVRNHWeqviboKfo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Point render
 
@@ -452,9 +452,9 @@ Use the [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVfZPBDSqpPmFsZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBRDRiyKPhLAurZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

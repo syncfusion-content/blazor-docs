@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Last Data Label in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Last Data Label in Blazor Charts component and much more.
+title: Blazor Charts Last Data Label Examples | Syncfusion®
+description: Learn how to highlight the most recent data point in Syncfusion Blazor Charts. Use ChartLastDataLabel ShowLabel with an indicator line.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Last Data Label in Blazor Charts Component
+# Blazor Charts Last Data Label
 
 The last data label feature highlights the most recent data point in a series by displaying a label along with an indicator line. This enhancement improves visibility and makes it easier to identify the latest value in the chart. The label can be enabled and customized using the [ChartLastDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLastDataLabel.html) property.
 
@@ -54,7 +54,7 @@ To enable the last data label, set the [ShowLabel](https://help.syncfusion.com/c
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrotEjvfKbMpjHI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Last Data Label in Blazor Column Chart](images/last-value/blazor-column-chart-last-value-label.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrxtdMrTSigLZcY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Last Data Label in Blazor Column Chart](images/last-value/blazor-column-chart-last-value-label.webp)" %}
 
 ## Customization
 
@@ -121,7 +121,7 @@ In the [ChartLastDataLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVojaDbzJnZIqnR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Last Data Label in Blazor Column Chart Customization](images/last-value/blazor-column-chart-last-value-label-customization.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhnDxiLJeWlqFlK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Last Data Label in Blazor Column Chart Customization](images/last-value/blazor-column-chart-last-value-label-customization.webp)" %}
 
 ## See also
 
@@ -129,4 +129,4 @@ In the [ChartLastDataLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusion
 * [Tooltip](./tool-tip)
 * [Marker](./data-markers)
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

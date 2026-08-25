@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Range Restriction in Blazor DateRangePicker Component | Syncfusion®
-description: Checkout and learn here all about Range Restriction in Blazor DateRangePicker component and much more details.
+title: Range Restriction in Blazor DateRangePicker | Syncfusion®
+description: Restrict the Blazor DateRangePicker selectable range using Min, Max, and MinDays/MaxDays to enforce date policies for booking scenarios.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
 ---
 
-# Range Restriction in Blazor DateRangePicker Component
+# Range Restriction in Blazor DateRangePicker
 
-Range selection in a DateRangePicker can be made-to-order with desired restrictions based on the application needs.
+Range selection in the DateRangePicker can be customized with restrictions based on application needs.
 
 ## Restrict the range within a range
 
-You can restrict the minimum and maximum date that can be allowed as Start and End date in a range selection with the help of [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateRangePickerModel-1.html#Syncfusion_Blazor_Calendars_DateRangePickerModel_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateRangePickerModel-1.html#Syncfusion_Blazor_Calendars_DateRangePickerModel_1_Max) properties.
+You can restrict the minimum and maximum dates that can be selected as the Start and End dates in a range using the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateRangePickerModel-1.html#Syncfusion_Blazor_Calendars_DateRangePickerModel_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateRangePickerModel-1.html#Syncfusion_Blazor_Calendars_DateRangePickerModel_1_Max) properties.
 
-* `Min`: Sets the minimum date that can be selected as StartDate.
-* `Max`: Sets the maximum date that can be selected as EndDate.
+* `Min`: Sets the minimum date that can be selected as the StartDate.
+* `Max`: Sets the maximum date that can be selected as the EndDate.
 
-In the following sample, you can select a range from 15th day of this month to 15th day of next month.
+In the following sample, you can select a range from the 15th of this month to the 15th of next month.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -36,12 +36,12 @@ In the following sample, you can select a range from 15th day of this month to 1
 
 ## Range span
 
-Span between ranges can be limited to avoid excess or less days selection towards the required days in a range. In this, minimum and maximum span allowed within the date range can be customized by the [MinDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_MinDays) and [MaxDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_MaxDays) properties.
+The span between the Start and End dates can be limited to enforce a minimum or maximum number of days in a range. The minimum and maximum span allowed within the date range can be customized using the [MinDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_MinDays) and [MaxDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_MaxDays) properties.
 
-* `MinDays`: Sets the minimum number of days between Start and EndDate.
-* `MaxDays`: Sets the maximum number of days between Start and EndDate.
+* `MinDays`: Sets the minimum number of days between the Start and End dates.
+* `MaxDays`: Sets the maximum number of days between the Start and End dates.
 
-In the following sample, the range selection should be greater than 5 days and less than 10 days, else it will not set.
+In the following sample, the range must be between 5 and 10 days; otherwise the selection is not applied.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -55,7 +55,7 @@ In the following sample, the range selection should be greater than 5 days and l
 
 ## Strict mode
 
-DateRangePicker provides an option to limit the user towards entering the valid date. With `StrictMode`, you can set only the valid date. If any invalid range is specified, the date range value resets to previous value. This restriction can be availed by setting the [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_StrictMode) property to true.
+DateRangePicker provides an option to restrict the user to entering only valid dates. With `StrictMode` enabled, the Start and End dates are clamped to the `Min` and `Max` bounds when an invalid or out-of-range range is specified. This behavior is enabled by setting the [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_StrictMode) property to true. The `MinDays` and `MaxDays` span rules still apply when `StrictMode` is enabled.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -81,11 +81,11 @@ If StartDate is less than Min date, it will be updated with Min date. If EndDate
 
 ![Blazor DateRangePicker in Strict Mode](./images/blazor-daterangepicker-strict-mode.webp)
 
-By default, the DatePicker acts in `StrictMode` false state that allows you to enter the invalid or out-of-range date in text box.
+By default, the DateRangePicker has `StrictMode` set to false, which allows you to enter invalid or out-of-range dates in the text box.
 
-If the Start and End dates are out of specified date range or invalid, then the model value will be set to `out of range` value or `null` respectively with highlighted  `error` class to indicate the value is out of range or invalid.
+If the Start and End dates are out of the specified date range or invalid, then the model value is set to an out-of-range value or `null`, and an `error` class is applied to highlight it.
 
-The following code demonstrates the `StrictMode` as false. Here, it allows you to enter the valid or invalid value in text box.
+The following sample sets `StrictMode` to false, which allows entering valid or invalid values in the text box.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -104,4 +104,4 @@ The following code demonstrates the `StrictMode` as false. Here, it allows you t
 
 ![Blazor DateRangePicker without Strict Mode](./images/blazor-daterangepicker-without-strict-mode.webp)
 
-N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap5) to understand how to present and manipulate data.
+N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=fluent2) to understand how to present and manipulate data.

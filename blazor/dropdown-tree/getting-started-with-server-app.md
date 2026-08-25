@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Dropdown Tree in Server App | Syncfusion
-description: Check out and learn about the documentation for getting started with Blazor Dropdown Tree Component in Blazor Server App.
+title: Blazor Dropdown Tree Server App Getting Started | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Dropdown Tree in a Blazor Server app with installation and configuration steps.
 platform: Blazor
 component: Dropdown Tree
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Dropdown Tree in Blazor Server App
 
-This section briefly explains how to include the [Blazor Dropdown Tree](https://www.syncfusion.com/blazor-components/blazor-dropdown-tree) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Dropdown Tree](https://www.syncfusion.com/blazor-components/blazor-dropdowntree) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Server App 
 
@@ -17,7 +17,7 @@ This section briefly explains how to include the [Blazor Dropdown Tree](https://
 
 {% tabcontent Visual Studio %}
 
-Create a **Blazor Server App** by using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a **Blazor Server App** by using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 {% endtabcontent %}
 
@@ -34,7 +34,7 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-Alternatively, create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+Alternatively, create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
 {% endtabcontent %}
 
@@ -128,30 +128,33 @@ After the packages are installed, open the **~/Components/_Imports.razor** file 
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in Blazor Server App and register the Blazor service.
+Open the **Program.cs** file in Blazor Server App and register the Blazor service and include the required namespace reference `using Syncfusion.Blazor;` at the top.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
+{% highlight C# tabtitle="Program.cs" %}
 
-....
-using Syncfusion.Blazor;
-....
 builder.Services.AddSyncfusionBlazor();
-....
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~/Components/App.razor** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) at the end of the `<head>` section in the **App.razor** file.
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
 
-...
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-...
+
+{% endhighlight %}
+{% endtabs %}
+
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **App.razor** file to enable Dropdown Tree functionality.
+
+{% tabs %}
+{% highlight razor tabtitle="App.razor" %}
+
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
@@ -204,7 +207,7 @@ The `TValue` parameter specifies the type for the [Value](https://help.syncfusio
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Dropdown Tree component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The [Blazor Dropdown Tree](https://www.syncfusion.com/blazor-components/blazor-dropdowntree) component will render in your default web browser.
 
 {% endtabcontent %}
 

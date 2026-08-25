@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Accessibility in Blazor Skeleton Component | Syncfusion®
-description: Checkout and learn here all the features about accessibility in Blazor Skeleton component and much more.
+title: Accessibility in Blazor Skeleton | Syncfusion
+description: Learn how Blazor Skeleton supports accessibility standards, ARIA attributes, and screen reader compatibility for inclusive loading placeholders.
 platform: Blazor
 control: Skeleton
 documentation: ug
 ---
 
-# Accessibility in Blazor Skeleton component
+# Accessibility in Blazor Skeleton
 
-The Blazor Skeleton component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Skeleton component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor Skeleton component is outlined below.
 

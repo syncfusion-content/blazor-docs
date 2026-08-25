@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles and Appearances in Blazor SplitButton Component | Syncfusion®
-description: Checkout and learn here all the features about styles and appearances in Blazor SplitButton component and more.
+title: Style and Appearance in Blazor Split Button | Syncfusion
+description: Customize Blazor Split Button appearance using CssClass and built-in theme CSS class overrides for branded styling.
 platform: Blazor
 control: Split Button
 documentation: ug
 ---
 
-# Styles and Appearances in Blazor SplitButton Component
+# Style and Appearance in Blazor Split Button
 
 To modify the SplitButton appearance, override the component's default CSS. The following table lists key CSS classes and their purposes. To scope changes to a specific instance, add a custom class through the `CssClass` property and target that class in styles. A custom theme can also be created using the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
@@ -212,7 +212,7 @@ The font family, font size, font weight, and letter spacing of both the button l
     }
 
     /* Font customization for popup menu items */
-    .font-split.e-dropdown-popup ul .e-item {
+    .font-split .e-dropdown-popup ul .e-item {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 14px;
         font-weight: 500;
@@ -220,7 +220,7 @@ The font family, font size, font weight, and letter spacing of both the button l
     }
 
     /* Font style on hover */
-    .font-split.e-dropdown-popup ul .e-item:hover {
+    .font-split .e-dropdown-popup ul .e-item:hover {
         font-weight: 700;
     }
 </style>
@@ -249,12 +249,12 @@ The width of the SplitButton's primary button part and the dropdown popup can be
     }
 
     /* Set a minimum width on the popup container */
-    .width-split.e-dropdown-popup {
+    .width-split .e-dropdown-popup {
         min-width: 160px;
     }
 
     /* Make popup items fill the full popup width */
-    .width-split.e-dropdown-popup ul .e-item {
+    .width-split .e-dropdown-popup ul .e-item {
         width: 100%;
         box-sizing: border-box;
         padding: 8px 16px;

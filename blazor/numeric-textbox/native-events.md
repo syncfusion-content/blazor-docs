@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor Numeric TextBox Component | Syncfusion®
-description: Learn how to bind native DOM events to the Blazor Numeric TextBox component and pass event data to handlers with examples.
+title: Native Events in Blazor Numeric Textbox | Syncfusion
+description: Attach native DOM events such as keypress and input to Blazor Numeric TextBox and pass event data to handlers.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
 ---
 
-# Native Events in Blazor Numeric TextBox Component
+# Native Events in Blazor Numeric Textbox
 
 This section explains how to attach native DOM events to the Numeric TextBox and how to pass event data to handlers.
 
@@ -47,7 +47,7 @@ Blazor provides strongly typed event argument classes that map to native events.
 - Touch events: TouchEventArgs
 - Pointer events: PointerEventArgs
 
-In the following example, the KeyPressed method is called every time any key is pressed inside input. But the message will be printed when you press "n" key.
+In the following example, the `KeyPressed` method is called every time any key is pressed inside the input. The message is printed when the `5` key is pressed.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

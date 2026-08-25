@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Labels in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Data Labels in Blazor Charts component and much more.
+title: Blazor Charts Data Labels Examples | Syncfusion®
+description: Learn how to show data labels on Syncfusion Blazor Charts. Enable ChartDataLabel Visible to display point values with auto-arrange.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Data Labels in Blazor Charts Component
+# Blazor Charts Data Labels
 
 [Data label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html) can be added to a [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) by enabling the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Visible) option in the data label settings. By default, the labels will organize themselves intelligently without overlapping.
 
@@ -263,7 +263,7 @@ Data label can be customized using [Fill](https://help.syncfusion.com/cr/blazor/
 
 ![Blazor Chart with Custom Label](images/data-label/blazor-chart-custom-label.webp)
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

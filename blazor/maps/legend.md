@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Legend in Blazor Maps Component | Syncfusion®
-description: Check out and learn how to configure and customize legends in the Blazor Maps component for effective data visualization.
+title: Blazor Maps Legend Support | Syncfusion®
+description: Learn how to add Default or Interactive legends to Blazor Maps to identify shape, bubble, or marker colors and surface exact range values on hover.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Legend in Blazor Maps Component
+# Blazor Maps Legend Support
 
 A legend visually explains the symbols used on Maps. It uses colors, shapes, or other identifiers based on the data and helps interpret what the Maps display. Enable legends by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) to **true**.
 
@@ -304,7 +304,7 @@ In the following example, color mapping is defined for ranges from **0** to **20
 
 ### Hiding desired legend items
 
-Use the [ShowLegend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_ShowLegend) property in [MapsShapeColorMapping](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html) to show or hide legend items. If [ShowLegend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_ShowLegend) is set to **false**, the legend item is hidden. Otherwise, it is visible.
+Use the [ShowLegend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_ShowLegend) property in [MapsShapeColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html) to show or hide legend items. If [ShowLegend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_ShowLegend) is set to **false**, the legend item is hidden. Otherwise, it is visible.
 
 ```cshtml
 

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Accessibility in Blazor File Manager Component | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor File Manager component and much more details.
-platform: Blazor
+title: Accessibility in Blazor File Manager | Syncfusion
+description: Learn how the Blazor File Manager supports WAI-ARIA, keyboard navigation, and WCAG, Section 508, and ADA accessibility standards.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Accessibility in Blazor File Manager Component
+# Accessibility in Blazor File Manager
 
-The [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component has been designed with keeping the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications in mind, and applied the `WAI-ARIA` roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support, which makes navigation easy for people who use assistive technologies (AT) or for users who completely rely on keyboard navigation.
+The [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component has been designed with keeping the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications in mind, and applied the `WAI-ARIA` roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support, which makes navigation easy for people who use assistive technologies (AT) or for users who completely rely on keyboard navigation.
 
 The Blazor File Manager component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

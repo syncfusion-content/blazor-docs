@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Upgrade Blazor DataGrid App to Latest Version | Syncfusion®
-description: Learn how to upgrade a Blazor DataGrid application to the latest version, update resource links, and resolve NuGet cache issues.
+title: Blazor Grid Upgrade NuGet Package | Syncfusion
+description: Learn how to upgrade a Blazor Data Grid application to the latest version, update resources, refresh NuGet packages, and resolve cache-related issues.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Upgrade application To latest version in Blazor DataGrid
+# Upgrade NuGet Package to Latest Version in Blazor Data Grid
 
 **Step 1:** Update to the latest Blazor [NuGet](https://www.nuget.org/packages/Syncfusion.Blazor/) package using the NuGet Package Manager in the application.
 
@@ -36,7 +36,7 @@ N> For production scenarios and minimal footprint, Syncfusion provides the Custo
 
 ## Breaking changes
 
-Some changes may occur across releases that affect existing applications. Review the breaking changes and notes for the target version before upgrading. Refer to the Blazor components [release notes](https://blazor.syncfusion.com/documentation/release-notes) for details.
+Some changes may occur across releases that affect existing applications. Review the breaking changes and notes for the target version before upgrading. Refer to the Blazor components [release notes](https://blazor.syncfusion.com/documentation/release-notes/34.1.29?type=all) for details.
 
 ## Cache problem
 
@@ -47,5 +47,3 @@ The following steps explain how to clean the cache:
 1. Delete/clear the `Syncfusion.Blazor` package from the installed location `{System drive}/Users/{user-name}/.nuget/packages/syncfusion.blazor`. On Windows, the installed location can also be accessed using `%userprofile%/.nuget/packages/syncfusion.blazor`.
 
 2. Update to the latest version of the `Syncfusion.Blazor` NuGet package.
-
-N> Looking for a complete Blazor DataGrid Component overview, including features, pricing, and documentation? Explore the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) Component page.

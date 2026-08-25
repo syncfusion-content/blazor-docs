@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Period Selector in Blazor Stock Chart Component | Syncfusion®
-description: Check out and learn here all about period selector in the Blazor Stock Chart component and much more details.
+title: Blazor Stock Chart Period Selector | Syncfusion®
+description: Learn how to add a period selector to the Blazor Stock Chart toolbar with intervals in Years, Months, Weeks, Days, Hours, or Minutes.
 platform: Blazor
-control: Stock Chart 
+control: Stock Chart
 documentation: ug
 ---
 
 <!-- markdownlint-disable MD036 -->
 
-# Period Selector in Blazor Stock Chart Component
+# Blazor Stock Chart Period Selector
 
 The period selector enables selecting a range with specified periods. The period selector is enabled by default in the stock chart.
 
@@ -17,7 +17,7 @@ The period selector enables selecting a range with specified periods. The period
 
 <!-- markdownlint-disable MD034 -->
 
-Periods is an array of objects that defines the range of [Periods](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Periods). The `Interval` property specifies the count value of the button, and the `Text` property specifies the text displayed on the button. The `IntervalType` property customizes the intervals of the buttons and supports the following types:
+Periods is an array of objects that defines the range of [Periods](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartPeriods.html). The `Interval` property specifies the count value of the button, and the `Text` property specifies the text displayed on the button. The `IntervalType` property customizes the intervals of the buttons and supports the following types:
 
 * Auto
 * Years
@@ -91,7 +91,7 @@ Periods is an array of objects that defines the range of [Periods](https://help.
 
 ## Visibility of period selector
 
-The [EnablePeriodSelector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_EnablePeriodSelector) property toggles the visibility of the period selector.
+The [EnablePeriodSelector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_EnablePeriodSelector) property toggles the visibility of the period selector.
 
 ```cshtml
 

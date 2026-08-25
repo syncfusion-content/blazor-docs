@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Blazor MultiSelect Dropdown Component | Syncfusion®
-description: Checkout and learn here all about localization in Blazor MultiSelect Dropdown component and much more details.
+title: Localization in Blazor MultiSelect Dropdown | Syncfusion
+description: Localize built-in UI strings and enable RTL support in Blazor MultiSelect Dropdown for global applications.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Globalization and Localization in Multiselect Dropdown
+# Localization in Blazor MultiSelect Dropdown
 
 ## Localization
 

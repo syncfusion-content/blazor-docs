@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Add/Remove Tab items in Blazor Tabs Component | Syncfusion®
-description: Checkout and learn here all the features about how to add or remove tab items in Blazor Tabs component and more.
+title: How to add or remove tab items in Blazor Tabs | Syncfusion
+description: Add or remove Blazor Tabs items dynamically using conditional rendering or public methods for dynamic interfaces.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Add/Remove Tab items in Blazor Tabs Component
+# How to add or remove tab items in Blazor Tabs
 
-Tabs provides a support to add or remove the specified tab item using following ways.
+The Tabs component supports adding or removing a tab item in the following ways:
 
 * Using conditional rendering.
 * Using public methods.
@@ -18,7 +18,7 @@ Tabs provides a support to add or remove the specified tab item using following 
 
 Tab items can be added or removed dynamically by iteration of tab items using conditional **foreach** loop.
 
-In the following demo, initially there are three tabs as the **TabItems** has three items. On `Add Item` button click, new item is added to the **TabItems** results in adding fourth tab to the Tabs component. On clicking the `Remove Item`, the first item of **TabItems** has been removed which results in removing first tab of our Tabs component.
+In the following demo, the **TabItems** list initially contains three items, so the Tab shows three tabs. Clicking **Add Item** appends a new item to **TabItems**, which adds a fourth tab to the Tabs component. Clicking **Remove Item** removes the first item of **TabItems**, which removes the first tab from the Tabs component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -94,7 +94,7 @@ In the following demo, initially there are three tabs as the **TabItems** has th
 
 Tabs can be added dynamically by passing list of items and index value to the `AddTab` method. The tab items can be removed by passing the specified item through `RemoveTab` method. Tab items can also be removed by clicking the close icon which appears on the tab header on setting true to `ShowCloseButton` property.
 
-In the following demo, a tab item can be added as first tab and removed as the last tab item by clicking the **Add Tab** and **Remove Last Tab** buttons respectively.
+In the following demo, a tab item can be added as the first tab and removed as the last tab item by clicking the **Add Tab** and **Remove Last Tab** buttons respectively.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

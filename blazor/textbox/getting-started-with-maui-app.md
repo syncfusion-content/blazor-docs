@@ -1,29 +1,29 @@
 ---
 layout: post
-title: Getting Started with Blazor TextBox in Blazor MAUI App | Syncfusion®
-description: Check out and learn about the documentation for getting started with Blazor TextBox Component in Blazor MAUI App.
+title: Getting Started with Blazor TextBox in MAUI App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor TextBox in a Blazor MAUI app using setup steps and code examples.
 platform: Blazor
-component: TextBox
+control: TextBox
 documentation: ug
 ---
 
-# Getting Started with Blazor TextBox Component in Blazor MAUI App
+# Getting Started with Blazor TextBox in MAUI App
 
 This guide explains how to include the [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) component in a Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/) and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-## Create a new Blazor MAUI App
+## Create a new MAUI Blazor Hybrid App
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-Create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
+Create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-10.0). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-Run the following command to create a new Blazor MAUI App.
+Run the following command to create a new MAUI Blazor Hybrid App.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -34,13 +34,11 @@ cd MauiBlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-Alternatively, create a **Blazor MAUI App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
-
 {% endtabcontent %}
 
 {% tabcontent .NET CLI %}
 
-Run the following command to create a new Blazor MAUI App.
+Run the following command to create a new MAUI Blazor Hybrid App.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
@@ -126,15 +124,10 @@ After the packages are installed, open the **~/Components/_Imports.razor** file 
 
 ## Register the Blazor service
 
-Open the **MauiProgram.cs** file in Blazor MAUI App and register the Blazor service.
+Open the **MauiProgram.cs** file in Blazor MAUI App and register the Blazor service and include the required namespace reference `using Syncfusion.Blazor;` at the top.
 
 {% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" %}
-
-....
-using Syncfusion.Blazor;
-
-....
+{% highlight C# tabtitle="MauiProgram.cs" %}
 
 public static class MauiProgram
 {
@@ -151,14 +144,21 @@ public static class MauiProgram
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) at the end of the `<head>` section in the **~wwwroot/index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
-...
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-...
+
+{% endhighlight %}
+{% endtabs %}
+
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **~wwwroot/index.html** file to enable TextBox functionality.
+
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
@@ -184,7 +184,7 @@ Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor TextBox component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) component will render in your default web browser.
 
 {% endtabcontent %}
 

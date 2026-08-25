@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Barcode Generator in Server App | Syncfusion
-description: Check out and learn about the documentation for getting started with Blazor Barcode Generator Component in Blazor Server App.
+title: Getting Started with Blazor Barcode in Server App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Barcode Generator control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Barcode Generator
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Barcode Generator Component in Server App
 
-This section briefly explains how to include the [Blazor Barcode Generator](https://www.syncfusion.com/blazor-components/blazor-barcode) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Barcode Generator](https://www.syncfusion.com/blazor-components/blazor-barcode) component into your Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Server App 
 
@@ -17,11 +17,22 @@ This section briefly explains how to include the [Blazor Barcode Generator](http
 
 {% tabcontent Visual Studio %}
 
-Create a **Blazor Server App** by using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+
+Create a **Blazor Server App** by using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+
+N> Configure the [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) is **Server** and Choose the appropriate [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a project.
+<br/> If you use the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio), a sample application can be generated automatically.
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 Run the following command to create a new Blazor Server App.
 
@@ -34,11 +45,18 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-Alternatively, create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+Alternatively, create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+
+N> Configure the [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) is **Server** and Choose the appropriate [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) while creating a project.
+<br/> If you use the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), a sample application can be generated automatically.
 
 {% endtabcontent %}
 
 {% tabcontent .NET CLI %}
+
+## Prerequisites
+
+Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If the .NET SDK is already installed, determine the installed version by running the following command in a command prompt (Windows), terminal (macOS), or command shell (Linux).
 
 Run the following command to create a new Blazor Server App.
 
@@ -55,26 +73,25 @@ cd BlazorApp
 
 {% endtabcontents %}
 
-N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Server App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
+N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=cli) while creating a Blazor Server App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
 ## Install the required Blazor packages 
 
-Install the [Syncfusion.Blazor.BarcodeGenerator](https://www.nuget.org/packages/Syncfusion.Blazor.BarcodeGenerator/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+Install the [Syncfusion.Blazor.BarcodeGenerator](https://www.nuget.org/packages/Syncfusion.Blazor.BarcodeGenerator/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet packages (`Syncfusion.Blazor.BarcodeGenerator` and `Syncfusion.Blazor.Themes`) and install them.
+2. Search the required NuGet packages (`Syncfusion.Blazor.BarcodeGenerator`) and install them.
 
-Alternatively, you can install the same packages using the Package Manager Console with the following commands.
+Alternatively, run the following commands in the Package Manager Console(Tools → NuGet Package Manager → Package Manager Console) to achieve the same.
 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager Console" %}
 
 Install-Package Syncfusion.Blazor.BarcodeGenerator -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -89,7 +106,6 @@ Open the terminal and run the following commands.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet add package Syncfusion.Blazor.BarcodeGenerator -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -104,7 +120,6 @@ Open the command prompt and run the following commands.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet add package Syncfusion.Blazor.BarcodeGenerator -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -113,7 +128,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endtabcontents %}
 
-## Add import namespaces
+## Import namespaces
 
 After the packages are installed, open the **~/Components/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.BarcodeGenerator` namespaces.
 
@@ -128,31 +143,28 @@ After the packages are installed, open the **~/Components/_Imports.razor** file 
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in Blazor Server App and register the Blazor service.
+Open the **Program.cs** file in Blazor Server App and register the Blazor service and include the required namespace reference `using Syncfusion.Blazor;` at the top.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
+{% highlight C# tabtitle="Program.cs" %}
 
-....
-using Syncfusion.Blazor;
-....
 builder.Services.AddSyncfusionBlazor();
-....
 
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet and script resources
+N> Register your Syncfusion license key before calling `AddSyncfusionBlazor()` by using `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY")`. A missing or invalid license will cause trial license warnings at runtime. See the [Syncfusion Licensing FAQ](https://www.syncfusion.com/sales/communitylicense) for details.
+
+## Add script resource
  
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~/Components/App.razor** file.
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **App.razor** file to enable Barcode Generator functionality.
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
 
-...
-<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-...
-<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+<body>
+    <script src="_content/Syncfusion.Blazor.BarcodeGenerator/scripts/sf-barcode.min.js" type="text/javascript"></script>
+</body>
 
 {% endhighlight %}
 {% endtabs %}
@@ -179,7 +191,7 @@ N> If the interactivity location is set to `Per page/component`, define a render
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Barcode Generator component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The [Blazor Barcode Generator](https://www.syncfusion.com/blazor-components/blazor-barcode) component will render in your default web browser.
 
 {% endtabcontent %}
 
@@ -217,7 +229,7 @@ dotnet run
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Barcode).
 
-## Adding QR Generator control
+## Add the QR Code Generator component
 
 Add a QR code to the Barcode Generator component.
 
@@ -231,14 +243,14 @@ Add a QR code to the Barcode Generator component.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhdZHiCAkFGfEhf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[QR Code Generator in Blazor Barcode Generator Component](images/blazor-barcode-with-qr-code.webp)" %}
 
-## Adding Data Matrix Generator control
+## Add the Data Matrix Generator component
 
 Add a Data Matrix code to the Barcode Generator component.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-<SfDataMatrixGenerator Width="200" Height="150" Value="SYNCFUSION"></SfDataMatrixGenerator>
+<SfDataMatrixGenerator Width="200px" Height="150px" Value="SYNCFUSION"></SfDataMatrixGenerator>
 
 {% endhighlight %}
 {% endtabs %}
@@ -247,5 +259,5 @@ Add a Data Matrix code to the Barcode Generator component.
 
 ## See also
 
-1. [Getting Started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-2. [Getting Started with Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
+1. [Getting Started with Blazor WebAssembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)

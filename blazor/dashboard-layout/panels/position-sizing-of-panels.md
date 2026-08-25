@@ -1,15 +1,13 @@
 ---
 layout: post
-title: Size and Position in Blazor Dashboard Layout Component | Syncfusion®
-description: Checkout and learn here all about size and position in Blazor Dashboard Layout component and much more.
+title: Size and Position in Blazor Dashboard Layout | Syncfusion®
+description: Set the size and position of Blazor Dashboard Layout panels with SizeX, SizeY, Row, and Column properties to control their grid placement.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
 ---
 
-# Size and Position of Panels in Blazor Dashboard Layout Component
-
-Panels are fundamental building blocks within the Blazor Dashboard Layout component, serving as containers for data visualization and presentation.
+# Size and Position in Blazor Dashboard Layout
 
 Panels are fundamental building blocks within the Blazor Dashboard Layout component, serving as containers for data visualization and presentation.
 

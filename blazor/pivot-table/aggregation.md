@@ -1,19 +1,18 @@
 ---
 layout: post
-title: Aggregation in Blazor Pivot Table Component | Syncfusion®
-description: Learn about aggregation types in Blazor Pivot Table component for value field calculations and much more details.
-platform: Blazor
+title: Aggregation in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table aggregates grouped values using built-in types like Sum, Count, Average, Min, Max, Product, Median, and more.
 control: Pivot Table
 documentation: ug
 ---
 
-# Aggregation in Blazor Pivot Table Component
+# Aggregation in Blazor Pivot Table
 
 N> This feature is applicable only for the relational data source.
 
 End users can perform calculations on groups of values (specifically for value fields placed in the value axis) by using different aggregation types. By default, values are combined by summing them. Additional aggregation types are described below.
 
-N> Numeric fields support all aggregation types listed below, except **CalculatedField**. Fields of type string, date, datetime, boolean, and similar types support only **Count** and **DistinctCount** aggregation.
+N> Numeric fields support all aggregation types listed below. Fields of type string, date, datetime, boolean, and similar types support only **Count** and **DistinctCount** aggregation.
 
 | Operator | Description |
 |------|-------------|
@@ -25,13 +24,13 @@ N> Numeric fields support all aggregation types listed below, except **Calculate
 | Max| Displays the maximum value for the selected field.|
 | Avg| Displays the average (mean) of the selected field values.|
 | Median| Displays the median value for the selected field.|
-| Index| Displays the index value for the selected field data.|
+| Index| Displays a sequential index number (1, 2, 3, …) for the selected field values in the pivot result.|
 | PopulationStDev| Displays the standard deviation of the population for the selected field.|
 | SampleStDev| Displays the sample standard deviation for the selected field.|
 | PopulationVar| Displays the variance of the population for the selected field.|
 | SampleVar| Displays the sample variance for the selected field.|
 | RunningTotals| Displays the running total for the selected field values.|
-| PercentageOfRunningTotals| Cumulative percentage of running totals (client-side engine only).|
+| PercentageOfRunningTotals| Displays the cumulative percentage of running totals (client-side engine only).|
 | DifferenceFrom| Displays the pivot table values with difference from the value of the base item in the base field.|
 | PercentageOfDifferenceFrom| Displays the pivot table values with percentage difference from the value of the base item in the base field.|
 | PercentageOfGrandTotal| Displays the pivot table values with percentage of grand total of all values.|
@@ -40,15 +39,16 @@ N> Numeric fields support all aggregation types listed below, except **Calculate
 | PercentageOfParentTotal| Displays the pivot table values with percentage of total of all values based on selected field.|
 | PercentageOfParentColumnTotal| Displays the pivot table values with percentage of its parent total in each column.|
 | PercentageOfParentRowTotal| Displays the pivot table values with percentage of its parent total in each row.|
-| CalculatedField| Displays the pivot table with calculated field values. It allows user to create a new calculated field alone.|
+
+N> **CalculatedField** is not an aggregation type. It enables you to create a new calculated field that is derived from existing fields using a formula. See the [Calculated Field](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field) section for details.
 
 ## Assigning aggregation type for value fields through API
 
-For each value field, the aggregation type can be set using the property [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_Type) in [PivotViewValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) class. Meanwhile, aggregation types like [SummaryTypes.DifferenceFrom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_DifferenceFrom) and [SummaryTypes.PercentageOfDifferenceFrom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_PercentageOfDifferenceFrom) can check for specific field of specific item using [BaseField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_BaseField) and [BaseItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_BaseItem) properties. Likewise, [SummaryTypes.PercentageOfParentTotal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_PercentageOfParentTotal) type can check for specific field using [BaseField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_BaseField) property. For instance, the aggregation type [SummaryTypes.DifferenceFrom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_DifferenceFrom) would intake the specified field and its corresponding member as input and its value is compared across other members in the same field and also across different fields to formulate an appropriate output value.  
+For each value field, the aggregation type can be set using the property [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_Type) in [PivotViewValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html). Aggregation types like [SummaryTypes.DifferenceFrom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_DifferenceFrom) and [SummaryTypes.PercentageOfDifferenceFrom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_PercentageOfDifferenceFrom) also require a specific field and item, which are configured using the [BaseField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_BaseField) and [BaseItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_BaseItem) properties. Likewise, [SummaryTypes.PercentageOfParentTotal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_PercentageOfParentTotal) type can be scoped to a specific field using the [BaseField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_BaseField) property. For instance, the aggregation type [SummaryTypes.DifferenceFrom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_DifferenceFrom) takes the specified field and its corresponding member as input, then compares its value against other members in the same field and across different fields to compute the appropriate output value.
 
-* [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_Type): It allows to set the aggregate type of the field.
-* [BaseField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_BaseField): It allows to set the specific field to aggregate the values.
-* [BaseItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_BaseItem): It allows to set the specific member to aggregate the values.
+* [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_Type): It allows you to set the aggregate type of the field.
+* [BaseField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_BaseField): It allows you to set the specific field to aggregate the values.
+* [BaseItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_BaseItem): It allows you to set the specific member to aggregate the values.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -86,7 +86,17 @@ For each value field, the aggregation type can be set using the property [Type](
 
 ![Aggregation in Blazor PivotTable](images/blazor-pivottable-aggregation.webp)
 
-N> By default, the aggregation will be considered as [SummaryTypes.Sum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_Sum) to the value fields which had number type and for the value fields which had non-number type values such as string, date, datetime, boolean, etc., the aggregation type will be considered as [SummaryTypes.Count](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_Count).
+N> By default, the aggregation is set to [SummaryTypes.Sum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_Sum) for value fields that have a number type, and to [SummaryTypes.Count](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html#Syncfusion_Blazor_PivotView_SummaryTypes_Count) for value fields that have non-number type values such as string, date, datetime, boolean, and so on.
+
+## Modifying aggregation type for value fields at runtime
+
+You can dynamically modify the aggregation type for value fields in the Pivot Table component through the UI at runtime. Value fields, displayed in the grouping bar and field list, include a dropdown icon that allows you to select from various aggregation types (e.g., **Sum**, **Average**, **Count**). Once you select a new aggregation type, the pivot table updates instantly to reflect the change, providing a seamless experience for data analysis.
+
+<!-- markdownlint-disable MD012 -->
+![List of pre-defined aggregation types to be changed via Field List](images/blazor-pivottable-aggregation-fieldlist-menu.webp)
+<br/>
+
+![List of pre-defined aggregation types to be changed via Grouping Bar](images/blazor-pivottable-aggregation-groupbar-menu.webp)
 
 ## Show desired aggregation types in its dropdown menu
 
@@ -135,19 +145,9 @@ The following code demonstrates how to configure the pivot table component to di
 
 ![Displaying Aggregation in Blazor PivotTable DropDown Menu](images/blazor-pivottable-aggregation-in-dropdown-menu.webp)
 
-## Modifying aggregation type for value fields at runtime
-
-You can dynamically modify the aggregation type for value fields in the Pivot Table component through the UI at runtime. Value fields, displayed in the grouping bar and field list, include a dropdown icon that allows you to select from various aggregation types (e.g., **Sum**, **Average**, **Count**). Once you select a new aggregation type, the pivot table updates instantly to reflect the change, providing a seamless experience for data analysis.
-
-<!-- markdownlint-disable MD012 -->
-![Modifying Aggregation Types via FieldList in Blazor PivotTable](images/blazor-pivottable-aggregation-fieldlist-menu.webp)
-<br/>
-
-![Modifying Aggregation Types via GroupBar in Blazor PivotTable](images/blazor-pivottable-aggregation-groupbar-menu.webp)
-
 ## Hiding aggregation type from button text
 
-By default, each field in the value axis is displayed with its name and aggregation type (e.g., "Sum of Units Sold"). To display only the field name (e.g., "Units Sold") and hide the aggregation type, set the [ShowAggregationOnValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowAggregationOnValueField) property in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class to **false**.
+By default, each field in the value axis is displayed with its name and aggregation type (e.g., "Sum of Units Sold"). To display only the field name (e.g., "Units Sold") and hide the aggregation type, set the [ShowAggregationOnValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowAggregationOnValueField) property in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) to **false**.
 
 This customization enhances the clarity of the pivot table’s interface by simplifying the button text, making it more concise and user-friendly.
 
@@ -192,7 +192,7 @@ This customization enhances the clarity of the pivot table’s interface by simp
 
 ## Hiding aggregation type icon from UI
 
-By default, the dropdown icon to change the aggregation type is visible in the grouping bar. To hide this icon, set the [ShowValueTypeIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupingBarSettings.html#Syncfusion_Blazor_PivotView_PivotViewGroupingBarSettings_ShowValueTypeIcon) property within [PivotViewGroupingBarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupingBarSettings.html) class to **false**.
+By default, the dropdown icon to change the aggregation type is visible in the grouping bar. To hide this icon, set the [ShowValueTypeIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupingBarSettings.html#Syncfusion_Blazor_PivotView_PivotViewGroupingBarSettings_ShowValueTypeIcon) property within [PivotViewGroupingBarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupingBarSettings.html) to **false**.
 
 N> The aggregation type icon can only be hidden in the Grouping Bar, not in the Field List.
 
@@ -234,6 +234,8 @@ N> The aggregation type icon can only be hidden in the Grouping Bar, not in the 
 
 ## Events
 
+The Pivot Table provides the following events to monitor aggregation-related UI actions. Each event lets you track or intercept a specific stage of the user interaction lifecycle.
+
 ### OnActionBegin
 
 The event [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) triggers when clicking and selecting the aggregate type via the dropdown icon in the value field button, which is present in both grouping bar and field list UI. This allows the user to identify the current action being performed at runtime. It has the following parameters:
@@ -244,11 +246,11 @@ The event [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 * [FieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_FieldInfo): Contains information regarding the selected value field.
 
-N> This option applies only to actions performed through the field-based UI, such as filtering, sorting, removing a field from the grouping bar, editing, and changing the aggregation type.
+N> This event applies only to actions performed through the field-based UI, such as filtering, sorting, removing a field from the grouping bar, editing, and changing the aggregation type.
 
 * [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_Cancel): Allows restricting the current action.
 
-In the following example, an action taken during aggregation type selection via the dropdown icon can be prevented by setting the **args.Cancel** option to **true** in the `OnActionBegin` event.
+In the following example, an action taken during aggregation type selection via the dropdown icon can be prevented by setting the **args.Cancel** option to **true** in the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) event.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -301,7 +303,7 @@ The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.P
 * [FieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_FieldInfo): Contains information about the selected value field.
 * [ActionInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionInfo): Defines the unique information about the current UI action performed.
 
-N> This option is applicable only when field-based UI actions are performed, such as filtering, sorting, removing a field from the grouping bar, editing, and changing the aggregation type.
+N> This event is triggered only when field-based UI actions are performed, such as filtering, sorting, removing a field from the grouping bar, editing, or changing the aggregation type.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -404,4 +406,4 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pi
 }
 ```
 
-N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
+N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

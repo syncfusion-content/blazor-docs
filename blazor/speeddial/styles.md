@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles in Blazor SpeedDial Component | Syncfusion®
-description: Checkout and learn here all the features about styles and icons in Blazor Speed Dial component and much more details.
+title: Styles in Blazor Speed Dial | Syncfusion
+description: Style Blazor Speed Dial button icons, text, colors, and states with CSS and built-in properties for branded appearance.
 platform: Blazor
 control: SpeedDial
 documentation: ug
 ---
 
-# Styles in Blazor SpeedDial Component
+# Styles in Blazor Speed Dial
 
 This section describes the different ways to style the SpeedDial component and configure its icons, text, states, and appearance.
 
@@ -143,7 +143,7 @@ Control the visibility of the Speed Dial component using the [Visible](https://h
 
 @using Syncfusion.Blazor.Buttons
 
-<SfSpeedDial Visible=false Content="Edit">
+<SfSpeedDial Visible="false" Content="Edit">
     <SpeedDialItems>
         <SpeedDialItem IconCss="e-icons e-cut"/>
         <SpeedDialItem IconCss="e-icons e-copy"/>
@@ -183,7 +183,7 @@ Use the [OpensOnHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.B
 
 @using Syncfusion.Blazor.Buttons
 
-<SfSpeedDial OpensOnHover=true Content="Edit">
+<SfSpeedDial OpensOnHover="true" Content="Edit">
     <SpeedDialItems>
         <SpeedDialItem IconCss="e-icons e-cut"/>
         <SpeedDialItem IconCss="e-icons e-copy"/>
@@ -198,7 +198,7 @@ Use the [OpensOnHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.B
 
 ## Customized icon
 
-Use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_CssClass) property to customize the appearance of the SZpeedDial component in its default state. Below example below demonstrates the `cssClass` property usage in speedDial.
+Use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_CssClass) property to customize the appearance of the SpeedDial component in its default state. The following example demonstrates the `CssClass` property usage in SpeedDial.
 
 {% tabs %}
 {% highlight razor %}

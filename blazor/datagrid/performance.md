@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Optimizing Blazor DataGrid Performance | Syncfusion®
-description: Learn best practices to optimize Blazor DataGrid performance when handling large datasets and multiple columns.
+title: Blazor Grid Performance Optimization | Syncfusion
+description: Learn how to optimize Blazor Data Grid performance for large datasets, improve rendering efficiency, and enhance user experience.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Performance Optimization for Blazor DataGrid
+# Performance Optimization in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides advanced features for displaying and managing large collections of data. When working with extensive datasets or grids containing numerous columns, performance optimization becomes essential to ensure responsive rendering and smooth interactions. This guide outlines proven strategies and best practices for improving DataGrid performance during data binding and rendering operations.
 
@@ -46,7 +46,7 @@ Rendering large collections in a single view can significantly impact performanc
 
 Virtualization renders only the rows visible within the viewport instead of the entire collection. This approach minimizes DOM elements and improves responsiveness.
 
-For more information on implementing row virtualization, refer to the [documentation](https://blazor.syncfusion.com/documentation/datagrid/virtualization).
+For more information on implementing row virtualization, refer to the [documentation](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling).
 
 **2. Infinite scrolling**
 
@@ -58,11 +58,11 @@ Both techniques are effective for handling large collections without compromisin
 
 ### Optimizing performance with column virtualization in large no of columns
 
-[Column virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtualization#column-virtualization) in the Blazor DataGrid optimizes rendering by displaying only the columns currently visible within the viewport. Additional columns are loaded dynamically as the user scrolls horizontally. This approach significantly reduces initial load time and improves responsiveness when working with grids that contain a large number of columns.
+[Column virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling#column-virtualization) in the Blazor DataGrid optimizes rendering by displaying only the columns currently visible within the viewport. Additional columns are loaded dynamically as the user scrolls horizontally. This approach significantly reduces initial load time and improves responsiveness when working with grids that contain a large number of columns.
 
 Both **row** and **column** virtualization can be enabled together to handle large collections efficiently. This combination ensures that only visible rows and columns are rendered, minimizing DOM elements and enhancing overall performance.
 
-For more information on implementing column virtualization, refer to the [documentation](https://blazor.syncfusion.com/documentation/datagrid/virtualization#column-virtualization).
+For more information on implementing column virtualization, refer to the [documentation](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling#column-virtualization).
 
 ### How to overcome browser height limitation in virtual scrolling
 
@@ -197,4 +197,4 @@ Microsoft Excel supports a maximum of 1,048,576 rows per worksheet. Exporting mi
 
 For large datasets, use alternative formats such as **CSV** (Comma-Separated Values) or other file types that can handle extensive data efficiently.
 
-For more details, refer to the documentation:[ Excel Specifications and Limits](https://support.microsoft.com/en-gb/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3)
+For more details, refer to the documentation:[ Excel Specifications and Limits](https://support.microsoft.com/en-us/excel/excel-specifications-and-limits)

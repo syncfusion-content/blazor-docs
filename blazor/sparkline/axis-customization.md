@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Axis Customization in Blazor Sparkline Component | Syncfusion®
-description: Check out and learn here all about axis customization options in Blazor Sparkline component and more.
+title: Blazor Sparkline Charts Axis Customization Examples | Syncfusion®
+description: Learn how to customize the axis in Syncfusion Blazor Sparkline, including ValueType, Numeric, Category, and DateTime axis options.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Axis Customization in Blazor Sparkline Component
+# Blazor Sparkline Charts Axis Customization
 
 ## Change the Value Type of the Sparkline Chart
 

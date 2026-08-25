@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Internationalization in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about Internationalization in Blazor Charts component and more.
+title: Blazor Charts Internationalization Examples | Syncfusion®
+description: Learn how to globalize Syncfusion Blazor Charts. Configure LabelFormat for axis labels, data labels, and tooltips for cultures such as EUR or ja-JP.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Internationalization in Blazor Charts Component
+# Blazor Charts Internationalization
 
 Internationalization is the process of designing and developing a component that can be easily adapted for users from any culture, region, or language. Below elements in the [Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html) display content based on the internationalization configuration.
 
@@ -82,7 +82,7 @@ Learn more about axis label format in-relation to axis types from the pages belo
 * [Logarithmic Label Format](./logarithmic-axis#label-format)
 * [Custom Label Format](./numeric-axis#custom-label-format)
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

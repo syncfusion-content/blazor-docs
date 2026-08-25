@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Blazor Mention Component | Syncfusion®
-description: Checkout and learn here all about the customization in Blazor Mention component and much more details.
+title: Customization in Blazor Mention | Syncfusion
+description: Customize Blazor Mention behavior with show or hide mention character, suffix text, and CSS styling options.
 platform: Blazor
 control: Mention
 documentation: ug
 ---
 
-# Customization in Blazor Mention Component
+# Customization in Blazor Mention
 
 ## Show or hide mention character
 
@@ -59,7 +59,7 @@ The [MentionChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDo
 
 ## Leading Space Requirement
 
-You can control whether a space is required before the mention character using the [RequireLeadingSpace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#properties) property in the Mention component. When set to `true` , a space must precede the mention character to trigger the suggestion popup. When set to `false`, the mention character can trigger suggestions without requiring a leading space.
+You can control whether a space is required before the mention character using the [RequireLeadingSpace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_RequireLeadingSpace) property in the Mention component. When set to `true` , a space must precede the mention character to trigger the suggestion popup. When set to `false`, the mention character can trigger suggestions without requiring a leading space.
 
 {% highlight razor %}
 

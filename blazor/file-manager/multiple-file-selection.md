@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Multiple File Selection in Blazor File Manager Component | Syncfusion®
-description: Checkout and learn here all about multiple file selection in Blazor File Manager component and much more details.
-platform: Blazor
+title: Multiple File Selection in Blazor File Manager | Syncfusion
+description: Learn how to select multiple files and folders in the Blazor File Manager using keyboard shortcuts, check boxes, or select all.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Multiple File Selection in Blazor File Manager Component
+# Multiple File Selection in Blazor File Manager
 
 The File Manager allows you to select multiple files by enabling the [`AllowMultiSelection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_AllowMultiSelection) property (enabled by default). The multiple selection can be done by pressing the `Ctrl` key or `Shift` key and selecting the files. The check box can also be used to do multiple selection. `Ctrl + A` can be used to select all files in the current directory. The [`FileSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_FileSelected) event will be triggered when the items of File Manager control is selected or unselected.
 
@@ -16,10 +16,10 @@ The File Manager allows you to select multiple files by enabling the [`AllowMult
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager AllowMultiSelection="true" TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                         UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                         DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                         GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                         UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                         DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                         GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
 </FileManagerAjaxSettings>
 </SfFileManager>
 
@@ -46,10 +46,10 @@ Additionally, you can obtain these details through the [FileDetails](https://hel
 
 <SfButton OnClick="GetSelectedFiles">ClickToGetSelectedFiles</SfButton>
 <SfFileManager @ref="FileManager" AllowMultiSelection="false" TValue="FileManagerDirectoryContent">
-        <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                                 UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                                 DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                                 GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+        <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                                 UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                                 DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                                 GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
         </FileManagerAjaxSettings>
         <FileManagerEvents TValue="FileManagerDirectoryContent" FileSelection="FileSelection"></FileManagerEvents>
 </SfFileManager>
@@ -81,10 +81,10 @@ For example, in the following example, selection is prevented for the **Music** 
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-        <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                                 UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                                 DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                                 GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+        <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                                 UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                                 DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                                 GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
         </FileManagerAjaxSettings>
         <FileManagerEvents TValue="FileManagerDirectoryContent" FileSelection="FileSelection"></FileManagerEvents>
 </SfFileManager>
@@ -114,10 +114,10 @@ To enable range selection, you need to set the [EnableRangeSelection](https://he
 <div class="control-section">
     <div class="control_wrapper">
         <SfFileManager @ref="File" TValue="FileManagerDirectoryContent" AllowMultiSelection="true" EnableRangeSelection="true">
-            <FileManagerAjaxSettings Url="https://amazons3.azurewebsites.net/api/AmazonS3Provider/AmazonS3Fileoperations"
-                                     UploadUrl="https://amazons3.azurewebsites.net/api/AmazonS3Provider/AmazonS3Upload"
-                                     DownloadUrl="https://amazons3.azurewebsites.net/api/AmazonS3Provider/AmazonS3Download"
-                                     GetImageUrl="https://amazons3.azurewebsites.net/api/AmazonS3Provider/AmazonS3GetImage">
+            <FileManagerAjaxSettings Url="https://amazon-service.syncfusion.com/AmazonS3Fileoperations"
+                                     UploadUrl="https://amazon-service.syncfusion.com/AmazonS3Upload"
+                                     DownloadUrl="https://amazon-service.syncfusion.com/AmazonS3Download"
+                                     GetImageUrl="https://amazon-service.syncfusion.com/AmazonS3GetImage">
             </FileManagerAjaxSettings>
         </SfFileManager>
     </div>
@@ -139,10 +139,10 @@ The [FileSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.File
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" FileSelection="FileSelection">
     </FileManagerEvents>
@@ -166,10 +166,10 @@ The [FileSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileM
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" FileSelected="FileSelected"></FileManagerEvents>
 </SfFileManager>

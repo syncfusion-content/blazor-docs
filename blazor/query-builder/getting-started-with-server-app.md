@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Query Builder in Server App | Syncfusion
-description: Check out and learn the documentation for getting started with Blazor Query Builder Components in Blazor Server App.
+title: Blazor Query Builder Server App Getting Started | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Query Builder in a Blazor Server app with setup steps.
 platform: Blazor
 component: Query Builder
 documentation: ug
 ---
 
-# Getting Started with Blazor Query Builder in Server App
+# Getting Started with Blazor Query Builder in Blazor Server App
 
 This section briefly explains how to include the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -17,7 +17,7 @@ This section briefly explains how to include the [Blazor Query Builder](https://
 
 {% tabcontent Visual Studio %}
 
-Create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation.
+Create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation.
 
 {% endtabcontent %}
 
@@ -34,7 +34,7 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-Alternatively, create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+Alternatively, create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
 {% endtabcontent %}
 
@@ -128,30 +128,33 @@ After the packages are installed, open the **~/Components/_Imports.razor** file 
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in Blazor Server App and register the Blazor service.
+Open the **Program.cs** file in Blazor Server App and register the Blazor service and include the required namespace reference `using Syncfusion.Blazor;` at the top.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
+{% highlight C# tabtitle="Program.cs" %}
 
-....
-using Syncfusion.Blazor;
-....
 builder.Services.AddSyncfusionBlazor();
-....
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~/Components/App.razor** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) at the end of the `<head>` section in the **App.razor** file.
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
 
-...
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-...
+
+{% endhighlight %}
+{% endtabs %}
+
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **App.razor** file to enable Query Builder functionality.
+
+{% tabs %}
+{% highlight razor tabtitle="App.razor" %}
+
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
@@ -205,7 +208,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Query Builder component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component will render in your default web browser.
 
 {% endtabcontent %}
 

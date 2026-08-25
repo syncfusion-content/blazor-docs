@@ -650,6 +650,9 @@ dotnet run
 
 ## See also
 
+- [Migrate ASP.NET Web Forms Controls to Blazor Components](https://blazor.syncfusion.com/documentation/common/migration/webform-to-blazor-migration)
+- [Migrating from Windows Forms to Blazor](https://blazor.syncfusion.com/documentation/common/migration/winforms-blazor-migration)
+- [Migrating ASP.NET Core Razor Pages to Blazor](https://blazor.syncfusion.com/documentation/common/migration/core-razor-pages-to-blazor)
 - [Data Binding in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/data-binding/data-binding)
 - [Editing in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/editing)
 - [Paging in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/paging)

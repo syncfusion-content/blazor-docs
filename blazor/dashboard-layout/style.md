@@ -1,13 +1,13 @@
 ---
 layout: post
-title: CSS Structure in Blazor Dashboard Layout Component | Syncfusion®
-description: Checkout and learn here all about CSS Structure in Blazor Dashboard Layout component and much more details.
+title: Style and Appearance in Blazor Dashboard Layout | Syncfusion®
+description: Customize the Blazor Dashboard Layout appearance by overriding its default CSS structure for cells, panels, headers, and content.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
 ---
 
-# CSS Structure in Blazor Dashboard Layout Component
+# Style and Appearance in Blazor Dashboard Layout
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
@@ -36,7 +36,7 @@ Apply the following CSS to customize the main content area of the Dashboard Layo
 
 ## Customizing the Dashboard Layout Panel Resize Icon
 
-The resize icon that appears in the corner of resizable panels can also be customized. Use the following CSS to modify its appearance.
+The resize icon that appears in the corner of resizable panels can also be customized. This selector applies only when `AllowResizing` is set to `true`. Use the following CSS to modify its appearance.
 
 ```css
 .e-dashboardlayout.e-control .e-panel .e-panel-container .e-resize.e-double{

@@ -1,29 +1,29 @@
 ---
 layout: post
-title: Getting Started with FileManager in Blazor MAUI App | Syncfusion
-description: Check out and learn about how to get started with the Blazor FileManager component in a Blazor MAUI App.
+title: Getting Started with File Manager in Blazor MAUI App | Syncfusion
+description: Learn how to get started with the Blazor File Manager component in a Blazor MAUI App using Visual Studio, VS Code, or the .NET CLI.
+control: File Manager
 platform: Blazor
-component: FileManager
 documentation: ug
 ---
 
-# Getting Started with Blazor FileManager Component in Blazor MAUI App
+# Getting Started with File Manager in Blazor MAUI App
 
 This section explains the step-by-step process of integrating the [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-## Create a new Blazor MAUI App in Visual Studio
+## Create a new MAUI Blazor Hybrid App
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-Create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
+Create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-10.0). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-Run the following command to create a new Blazor MAUI App.
+Run the following command to create a new MAUI Blazor Hybrid App.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -34,13 +34,11 @@ cd MauiBlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-Alternatively, create a **Blazor MAUI App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
-
 {% endtabcontent %}
 
 {% tabcontent .NET CLI %}
 
-Run the following command to create a new Blazor MAUI App.
+Run the following command to create a new MAUI Blazor Hybrid App.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
@@ -171,10 +169,10 @@ Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **
 {% highlight razor tabtitle="Home.razor" %}
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
 </SfFileManager>
 

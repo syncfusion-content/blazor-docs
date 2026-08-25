@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Spinner Component Integration | Syncfusion®
-description: Checkout and learn here all about Blazor spinner component integration with other Blazor components and much more.
+title: Spinner Integration in Blazor Spinner | Syncfusion
+description: Render Blazor Spinner inside other components such as Tabs and show or hide it during content loading or switching.
 platform: Blazor
 control: Spinner
 documentation: ug
 ---
 
-# Blazor Spinner Component Integration
+# Spinner Integration in Blazor Spinner
 
 The Spinner component is rendered with other Blazor components. For example, rendered the Blazor Tab component with Spinner component. To render the spinner inside the Tab component, the Spinner is set as a child of the Tab component and show or hide the Spinner when Tab switching.
 
@@ -59,12 +59,14 @@ The Spinner component is rendered with other Blazor components. For example, ren
 
     private async Task Selected(SelectEventArgs args)
     {
+        // Simulate a delay while the new tab content is being loaded.
         await Task.Delay(2000);
         this.VisibleProperty = false;
     }
 
     private void Selecting(SelectingEventArgs args)
     {
+        // Show the Spinner when the user starts switching to a different tab.
         this.VisibleProperty = true;
     }
 }

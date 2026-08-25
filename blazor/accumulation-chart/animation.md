@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Animation in Blazor Accumulation Chart Component | Syncfusion®
-description: Checkout and learn here all about Animation in Blazor Accumulation Chart component and much more details.
+title: Blazor Accumulation Chart Animation Examples | Syncfusion®
+description: Learn how to enable and customize animation in Syncfusion Blazor Accumulation Chart. Configure duration, delay, and per-series animation settings.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Animation in Blazor Accumulation Chart Component
+# Blazor Accumulation Chart Animation
 
 You can customize animation for a series using [`Animation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnimation.html) property. You can enable or disable animation of the series using [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnimation.html#Syncfusion_Blazor_Charts_AccumulationChartAnimation_Enable) property. [`Duration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnimation.html#Syncfusion_Blazor_Charts_AccumulationChartAnimation_Duration) specifies the duration of an animation and [`Delay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnimation.html#Syncfusion_Blazor_Charts_AccumulationChartAnimation_Delay) allows us to start the animation at desire time.
 
@@ -86,4 +86,4 @@ You can programmatically refresh chart using [Refresh](https://help.syncfusion.c
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBAWrMgzIuHCzXH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVRtwrXKwCqajVa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Nested items in Blazor File Manager Component | Syncfusion®
-description: Checkout and learn here all about nested items in Blazor File Manager component and much more details.
-platform: Blazor
+title: Render File Manager inside other Blazor Components | Syncfusion
+description: Learn how to render the Blazor File Manager inside other components like Dialog and Tab, and refresh the layout after display.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Nested items in Blazor File Manager Component
+# How to Render the File Manager Inside Other Components in Blazor
 
 The File Manager component can be rendered within other components, such as Dialog, Tab, and more.
 
@@ -212,10 +212,10 @@ The following example demonstrates how to integrate the Blazor File Manager comp
             </ChildContent>
             <ContentTemplate>
                 <SfFileManager TValue="FileManagerDirectoryContent">
-                    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+                    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
                     </FileManagerAjaxSettings>
                 </SfFileManager>
             </ContentTemplate>

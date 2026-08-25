@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started with Blazor File Upload in Blazor Web App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor File Upload Component in Blazor Web App.
+description: Learn how to get started with the Syncfusion Blazor File Upload in a Blazor Web App with installation and setup steps.
 platform: Blazor
 component: File Upload
 documentation: ug
 ---
 
-# Getting Started with Blazor File Upload Component in a Blazor Web App
+# Getting Started with Blazor File Upload in Blazor Web App
 
 This section briefly explains how to include the [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -17,7 +17,7 @@ This section briefly explains how to include the [Blazor File Upload](https://ww
 
 {% tabcontent Visual Studio %}
 
-Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 {% endtabcontent %}
 
@@ -35,7 +35,7 @@ cd BlazorWebApp.Client
 {% endhighlight %}
 {% endtabs %}
 
-Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
 {% endtabcontent %}
 
@@ -130,30 +130,33 @@ After the packages are installed, open the **~/_Imports.razor** file in the `.Cl
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
+Open the **Program.cs** file in Blazor Web App and register the Blazor service and include the required namespace reference `using Syncfusion.Blazor;` at the top. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
+{% highlight C# tabtitle="Program.cs" %}
 
-....
-using Syncfusion.Blazor;
-....
 builder.Services.AddSyncfusionBlazor();
-....
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) at the end of the `<head>` section in the **App.razor** file.
 
 {% tabs %}
-{% highlight html tabtitle="App.razor" %}
+{% highlight razor tabtitle="App.razor" %}
 
-...
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-...
+
+{% endhighlight %}
+{% endtabs %}
+
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **App.razor** file to enable File Upload functionality.
+
+{% tabs %}
+{% highlight razor tabtitle="App.razor" %}
+
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
@@ -161,7 +164,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor File Upload component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload) component inside the Razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload) component inside the `.Client` project razor file.
 
 N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the Razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
@@ -182,7 +185,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor File Upload component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload) component will render in your default web browser.
 
 {% endtabcontent %}
 
@@ -469,7 +472,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 ## See also
 
 1. [Getting Started with Blazor WebAssembly Standalone App .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=.net-cli)
-2. [Getting Started with Blazor WebAssembly Standalone App in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
+2. [Getting Started with Blazor WebAssembly Standalone App in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 3. [Getting Started with Blazor Web App in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli)
 4. [Getting Started with File Upload in Blazor WebAssembly using Visual Studio](https://blazor.syncfusion.com/documentation/file-upload/how-to/getting-started-with-blazor-webassembly)
 5. [How to convert images to Base64 string with Blazor File Upload](https://support.syncfusion.com/kb/article/21178/how-to-convert-images-to-base64-string-with-blazor-file-upload)

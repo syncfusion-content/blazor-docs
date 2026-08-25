@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pareto in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Pareto chart in Blazor Charts component and much more.
+title: Blazor Pareto Chart Examples and Documentation | Syncfusion®
+description: Learn how to create Blazor Pareto Charts using Syncfusion. Combine column and line series to show individual values and their cumulative totals.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Pareto in Blazor Charts Component
+# Pareto Chart in Blazor
 
 ## Pareto
 
@@ -63,7 +63,7 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVptvWuVRmwVTbC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Pareto Chart](../images/othertypes/blazor-pareto-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhntxiypUtzrGJW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Pareto Chart](../images/othertypes/blazor-pareto-chart.webp)" %}
 
 ## Binding data with series
 
@@ -119,7 +119,7 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVptvWuVRmwVTbC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrHDHseTUXwimTq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Events
 
@@ -182,7 +182,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrTXPsYqgLVodRw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVRjdsIJAZkVFyp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Point render
 
@@ -243,9 +243,9 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrJNbMOKUJJkngK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhdZHMozAsrnJzD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

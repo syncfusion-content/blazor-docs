@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Sort the Columns in Blazor QueryBuilder Component | Syncfusion®
-description: Checkout and learn here all about how to sort the columns in Blazor QueryBuilder component with examples and much more details.
+title: How to sort columns in Blazor Query Builder | Syncfusion
+description: Sort Blazor Query Builder field dropdown columns in ascending or descending order with SortDirection.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Sort the Columns in Blazor QueryBuilder Component
+# How to sort columns in Blazor Query Builder
 
-Sort the field list shown in the Query Builder’s field (column) dropdown to improve in large schemas. Set the [`SortDirection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_SortDirection) property to `SortDirection.Ascending` or `SortDirection.Descending` to control the order. Sorting is applied per component instance and is based on the displayed field labels.
+Sort the field list shown in the Query Builder’s field (column) dropdown to improve in large schemas. Set the [`SortDirection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_SortDirection) property to `SortDirection.Ascending` or `SortDirection.Descending` to control the order. Sorting is applied per component instance and is based on the displayed field labels.
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
 

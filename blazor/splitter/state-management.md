@@ -1,24 +1,24 @@
 ---
 layout: post
-title: State Management in Blazor Splitter Component | Syncfusion®
-description: Checkout and learn here all the features about state management in Blazor Splitter component much more details.
+title: State Management in Blazor Splitter | Syncfusion
+description: Save and load Blazor Splitter pane state such as collapsed, size, and min/max sizes for state persistence.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# State Management in Blazor Splitter Component
+# State Management in Blazor Splitter
 
 State management allows users to save and load Splitter state. The splitter will use user-provided state to render instead of its properties provided declaratively.
 
 The following properties can be saved and loaded into each **SplitterPane** later.
 
-Property|
------|
-Collapsed |
-Min |
-Max |
-Size |
+| Property | Description |
+| -------- | ----------- |
+| Collapsed | Indicates whether the pane is collapsed. |
+| Min | Minimum size of the pane. |
+| Max | Maximum size of the pane. |
+| Size | Current size of the pane. |
 
 ## Enabling persistence in Splitter
 

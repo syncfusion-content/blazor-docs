@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Styles in Blazor Skeleton Component | Syncfusion®
-description: Checkout and learn here all about styles and how to use them in Blazor Skeleton component and much more.
+title: Styles in Blazor Skeleton | Syncfusion
+description: Customize Blazor Skeleton colors, dimensions, and wave animation using CssClass and theme variables.
 platform: Blazor
 control: Skeleton
 documentation: ug
 ---
 
-# Styles in Blazor Skeleton Component
+# Styles in Blazor Skeleton
 
-You can customize skeleton component in the below ways.
+You can customize the skeleton component in the below ways.
 
 ## CssClass
 
-You can customize the style of a Skeleton component by using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_CssClass). The appearance of Blazor Skeleton can be customized by changing the wave color, background color, width, and height.
+You can customize the style of a Skeleton component by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_CssClass). The appearance of Blazor Skeleton can be customized by changing the wave color, background color, width, and height.
 
 {% tabs %}
 {% highlight razor %}

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 100% Stacked Column in Blazor 3D Chart Component | Syncfusion®
-description: Checkout and learn here all features about 100% Stacked Column Chart in Blazor 3D Chart component and more.
+title: Blazor 3D 100% Stacked Column Chart Examples | Syncfusion®
+description: Learn how to render a 100% Stacked Column Chart in Syncfusion Blazor 3D Chart by setting the series Type to StackingColumn100.
 platform: Blazor
 control: 3D Chart
 documentation: ug
 ---
 
-# 100% Stacked Column in Blazor 3D Chart Component
+# 100% Stacked Column 3D Chart in Blazor 
 
 ## 100% Stacked column chart
 
@@ -48,7 +48,7 @@ To render a `100% Stacked Column Chart` series, use series `Type` as `StackingCo
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLfjRsqLXBJrLXe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stacked Column100 3D Chart](../images/chart-types-images/blazor-stacked-column-100-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVnZRWjfRdfOKjW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Stacked Column100 3D Chart](../images/chart-types-images/blazor-stacked-column-100-chart.webp)" %}
 
 ## 100% Cylindrical stacked column chart
 
@@ -91,7 +91,7 @@ To render a 100% cylindrical stacked column chart, set the `ColumnFacet` propert
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVzjnCAhNBGdkGQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Cylindrical Column100 3D Chart](../images/chart-types-images/blazor-cylindricaal-stacked-column-100-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVdDRMXJHHlxcxf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Cylindrical Column100 3D Chart](../images/chart-types-images/blazor-cylindricaal-stacked-column-100-chart.webp)" %}
 
 ## Series customization
 
@@ -137,4 +137,4 @@ The following properties can be used to customize the `100% Stacked Column` seri
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhptHsKBjUZKwWE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stacked Column100 3D Chart with Custom Series](../images/chart-types-images/blazor-stacked-column-100-chart-custom-series.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrxXRWXfRwLFGXv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Stacked Column100 3D Chart with Custom Series](../images/chart-types-images/blazor-stacked-column-100-chart-custom-series.webp)" %}

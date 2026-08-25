@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Calculated Field in Blazor Pivot Table Component | Syncfusion®
-description: Learn how to create custom calculated fields in Blazor Pivot Table component with examples and much more details.
+title: Calculated Field in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table calculates new value fields at runtime using custom formulas, arithmetic operators, and the CalculatedFieldSettings property.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Calculated Field in Blazor Pivot Table Component
+# Calculated Field in Blazor Pivot Table
 
 The calculated field feature enables users to create custom value fields using mathematical formulas and existing fields from their data source. Users can perform complex calculations with basic arithmetic operators and seamlessly integrate these custom fields into their pivot table for enhanced data visualization and reporting.
 
@@ -15,7 +15,7 @@ The calculated field feature enables users to create custom value fields using m
 
 Users can create calculated fields in two convenient ways:
 - **Interactive Method**: Using the built-in dialog accessible from the Field List UI.
-- **Code-Based Method**: Configuring fields programmatically using the [PivotViewCalculatedFieldSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCalculatedFieldSetting.html) class.
+- **Code-Based Method**: Configuring fields programmatically using the [PivotViewCalculatedFieldSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCalculatedFieldSetting.html) property.
 
 To enable the calculated field functionality, set the [AllowCalculatedField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowCalculatedField) property to **true**. Once enabled, a "CALCULATED FIELD" button appears in the Field List UI. Clicking this button opens the calculated field dialog, where users can create and manage custom fields using an intuitive interface.
 
@@ -27,7 +27,9 @@ You can define calculated fields programmatically using the [PivotViewCalculated
 - [Formula](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCalculatedFieldSetting.html#Syncfusion_Blazor_PivotView_PivotCalculatedFieldSetting_Formula): Defines the mathematical expression using existing field names and arithmetic operators.
 - [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FormatSettings.html#Syncfusion_Blazor_PivotView_FormatSettings_Format): Configures the number format for displaying calculated results.
 
-N> The calculated field feature applies only to value fields. By default, calculated fields created programmatically are added to the field list and calculated field dialog UI. To display a calculated field in the pivot table UI, it must be added to the [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) class, as shown in the code below.
+N>
+- The calculated field feature applies only to value fields. By default, calculated fields created programmatically are added to the field list and calculated field dialog UI. To display a calculated field in the pivot table UI, it must be added to the [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) property, as shown in the code below.
+- The following advanced aggregation types are not supported within calculated field formulas: `Index`, `RunningTotals`, `PercentageOfRunningTotals`, `PercentageOfGrandTotal`, `PercentageOfColumnTotal`, `PercentageOfRowTotal`, `PercentageOfParentColumnTotal`, `PercentageOfParentRowTotal`, `DifferenceFrom`, `PercentageOfDifferenceFrom`, and `PercentageOfParentTotal`.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -134,10 +136,10 @@ To edit an existing calculated field:
 4. Make changes to the field name, formula, or format as needed.
 5. Click **OK** to apply the changes.
 
-![Editing Calculated Field in Blazor PivotTable](images/blazor-pivottable-editing-calculated-field.webp)
+![Editing the calculated field](images/blazor-pivottable-editing-calculated-field.webp)
 <br/>
 
-![Editing Calculated Field Formula in Blazor PivotTable](images/blazor-pivottable-calc-fieldlist-edit.webp)
+![Editing the calculated field formula](images/blazor-pivottable-calc-fieldlist-edit.webp)
 
 ## Renaming an existing calculated field
 
@@ -151,10 +153,10 @@ To rename a calculated field:
 4. Replace the existing name with your preferred name.
 5. Click **OK** to save the new name.
 
-![Editing in Blazor PivotTable Calculated Field](images/blazor-pivottable-edit-calculate-field.webp)
+![Renaming the calculated field - dialog open](images/blazor-pivottable-edit-calculate-field.webp)
 <br/>
 
-![Renaming in Blazor PivotTable Calculated Field](images/blazor-pivottable-renaming-calc-field.webp)
+![Renaming the calculated field - saved](images/blazor-pivottable-renaming-calc-field.webp)
 
 ## Editing an existing calculated field formula
 
@@ -171,10 +173,10 @@ To edit an existing calculated field formula:
 
 The pivot table will automatically refresh to reflect the updated calculations.
 
-![Editing in Blazor PivotTable Calculated Field](images/blazor-pivottable-editing-calculated-field.webp)
+![Editing a calculated field - dialog open](images/blazor-pivottable-editing-calculated-field.webp)
 <br/>
 
-![Editing in Blazor PivotTable Calculated Field Formula](images/blazor-pivottable-edit-calc-field-formula.webp)
+![Editing a calculated field - formula updated](images/blazor-pivottable-edit-calc-field-formula.webp)
 
 ## Reusing an existing formula in a new calculated field
 
@@ -190,13 +192,13 @@ To reuse an existing formula:
 6. Modify the formula further if needed, or use it as is.
 7. Click **OK** to create the new calculated field.
 
-![Dragging Existing Calculated Field in Blazor PivotTable](images/blazor-pivottable-drag-existing-calculated-field.webp)
+![Dragging the existing calculated field](images/blazor-pivottable-drag-existing-calculated-field.webp)
 <br/>
 
-![Dragging Blazor PivotTable Field to Formula](images/blazor-pivottable-drag-calc-field-to-formula.webp)
+![Dragging field to formula](images/blazor-pivottable-drag-calc-field-to-formula.webp)
 <br/>
 
-![Reusing Existing Calculated Field Formula in Blazor PivotTable](images/blazor-pivottable-reusing-existed-calc-field-formula.webp)
+![Reusing the existing calculated field formula](images/blazor-pivottable-reusing-existed-calc-field-formula.webp)
 
 ## Applying formatting to calculated field values
 
@@ -208,10 +210,10 @@ To format calculated field values in your code, use the [PivotViewFormatSettings
 
 To apply formatting to calculated field values via the user interface, use the built-in "Format" dropdown available in the calculated field dialog. This dropdown provides the following predefined format options:
 
-* **Standard** - Displays numbers in their basic numeric form.
+* **Standard** - Displays numbers using the default numeric format (equivalent to the `N` format).
 * **Currency** - Displays numbers as currency values.
 * **Percentage** - Displays numbers as percentage values.
-* **Custom** - Denotes the custom format. For example: "C2". This shows the value "9584.3" as "$9584.30."
+* **Custom** -  Allows you to specify a custom format pattern.
 * **None** - Applies no formatting to the values.
 
 N> By default, **None** is selected in the dropdown.
@@ -230,93 +232,99 @@ Below is a list of operators and functions that can be used in the formula to cr
 
 * `+` – addition operator.
 
-```typescript
- Syntax: X + Y
-```
+   ```typescript
+     Syntax: X + Y
+   ```
 
 * `-` – subtraction operator.
 
-```typescript
-Syntax: X - Y
-```
+    ```typescript
+       Syntax: X - Y
+    ```
 
 * `*` – multiplication operator.
 
-```typescript
-Syntax: X * Y
-```
+    ```typescript
+       Syntax: X * Y
+    ```
 
 * `/` – division operator.
 
-```typescript
-Syntax: X / Y
-```
+    ```typescript
+       Syntax: X / Y
+    ```
 
 * `^` – power operator.
 
-```typescript
-Syntax: X^2
-```
+    ```typescript
+       Syntax: X^Y
+    ```
 
-* `<` - less than operator.
+* `<` – less than operator.
 
-```typescript
-Syntax: X < Y
-```
+    ```typescript
+      Syntax: X < Y
+    ```
 
 * `<=` – less than or equal operator.
 
-```typescript
-Syntax: X <= Y
-```
+    ```typescript
+      Syntax: X <= Y
+    ```
 
 * `>` – greater than operator.
 
-```typescript
-Syntax: X > Y
-```
+    ```typescript
+      Syntax: X > Y
+    ```
 
 * `>=` – greater than or equal operator.
 
-```typescript
-Syntax: X >= Y
-```
+    ```typescript
+      Syntax: X >= Y
+    ```
 
 * `==` – equal operator.
 
-```typescript
-Syntax: X == Y
-```
+    ```typescript
+      Syntax: X == Y
+    ```
 
 * `!=` – not equal operator.
 
-```typescript
-Syntax: X != Y
-```
+    ```typescript
+     Syntax: X != Y
+    ```
 
 * `|` – OR operator.
 
-```typescript
-Syntax: X | Y
-```
+    ```typescript
+      Syntax: X | Y
+    ```
 
 * `&` – AND operator.
 
-```typescript
-Syntax: X & Y
-```
+     ```typescript
+      Syntax: X & Y
+     ```
 
 * `?` – conditional operator.
 
-```typescript
-Syntax: condition ? then : else
-```
+    ```typescript
+     Syntax: condition ? valueIfTrue : valueIfFalse
+    ```
+
+* `Abs` – function that returns the absolute value of a number.
+
+    ```typescript
+     Syntax: Abs(number)
+    ```
 
 * `Min` – function that returns the minimum value.
 
-```typescript
-Syntax: Min(number1, number2)
-```
+    ```typescript
+      Syntax: Min(number1, number2)
+    ```
 
 * `Max` – function that returns the maximum value.
 
@@ -367,6 +375,8 @@ Syntax: Max(number1, number2)
 ![Blazor PivotTable woth Conditional Calculate Field](images/blazor-pivottable-conditional-calculated-field.webp)
 
 ## Event
+
+The Pivot Table provides the following events to monitor calculated field operations. Each event lets you track, validate, or intercept a specific stage of the user interaction lifecycle.
 
 ### CalculatedFieldCreate
 
@@ -453,11 +463,11 @@ The event provides the following parameters to help you handle these interaction
 
 - [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_ActionName): Identifies the specific action the user is attempting to perform. The table below lists the available actions and their corresponding names:
 
-| Action | Action Name|
-|----------------|-------------|
-| [Calculated field button](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field)| Open calculated field dialog|
-| [Edit icon in calculated field](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field#editing-through-the-field-list-and-the-groupingbar)| Edit calculated field|
-| [Context menu in the tree view inside the calculated field dialog](./calculated-field)| Calculated field context menu|
+| User Action | Action Name |
+|-------------|-------------|
+| [Calculated field button click](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field) | Open calculated field dialog |
+| [Edit icon click for calculated field](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field#editing-through-the-field-list-and-the-groupingbar) | Edit calculated field |
+| [Context menu in calculated field dialog tree view](./calculated-field) | Calculated field context menu |
 
 - [FieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_FieldInfo): Provides information about the selected field when the action involves a specific field.
 
@@ -529,10 +539,10 @@ The event provides the following parameters to help you handle completed operati
 
 - [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionName): Identifies the specific action completed by the user. The table below lists the available actions and their corresponding names:
 
-| Action | Action Name|
-|----------------|-------------|
-| [Calculated field button](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field)| Calculated field applied|
-| [Edit icon in calculated field](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field#editing-through-the-field-list-and-the-groupingbar)| Calculated field edited|
+| User Action | Action Name |
+|-------------|-------------|
+| [Creating calculated field](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field) | Calculated field applied|
+| [Editing calculated field](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field#editing-through-the-field-list-and-the-groupingbar) | Calculated field edited |
 
 - [FieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_FieldInfo): Provides information about the selected field when the action involves a specific field.
 
@@ -600,11 +610,11 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pi
 
 | Action | Action Name|
 |----------------|-------------|
-| [Calculated field button](./calculated-field)| Open calculated field dialog|
+| [`Calculated field button`](./calculated-field)| Open calculated field dialog|
 | [Edit icon in calculated field](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field#editing-through-the-field-list-and-the-groupingbar)| Edit calculated field|
-| [Context menu in the tree view inside the calculated field dialog](./calculated-field)| Calculated field context menu|
+| [`Context menu in the tree view inside the calculated field dialog`](./calculated-field)| Calculated field context menu|
 
-* [ErrorInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ErrorInfo): It holds the error information of the current UI action.
+* [`ErrorInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ErrorInfo): It holds the error information of the current UI action.
 
 ```cshtml
  @using Syncfusion.Blazor.PivotView
@@ -665,4 +675,4 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pi
 }
 ```
 
-N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
+N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

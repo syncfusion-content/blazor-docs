@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Histogram in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about the Histogram Chart in Blazor Charts component and more.
+title: Blazor Histogram Chart Examples and Documentation | Syncfusion®
+description: Learn how to render Blazor Histogram Charts using Syncfusion. Display large data distributions visually with bin-based frequency aggregation.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Histogram in Blazor Charts Component
+# Histogram Chart in Blazor
 
 ## Histogram
 
@@ -65,7 +65,7 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVpXPLjednCMkiw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Histogram Chart](../images/othertypes/blazor-histogram-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBdDdseJCEZMSUR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Histogram Chart](../images/othertypes/blazor-histogram-chart.webp)" %}
 
 ## Events
 
@@ -132,7 +132,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrptbLDonwJmUEp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBnXxWSTsYhgybd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Point render
 
@@ -197,9 +197,9 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhJXbLtoGiMbJGp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVdZHiozMuzKIBX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

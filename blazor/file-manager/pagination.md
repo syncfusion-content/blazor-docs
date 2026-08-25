@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pagination in Blazor File Manager Component | Syncfusion®
-description: Checkout and learn here all about Pagination in the Blazor File Manager component and much more details.
-platform: Blazor
+title: Pagination in Blazor File Manager | Syncfusion
+description: Learn how to enable pagination in the Blazor File Manager and customize page size, current page, and the items per page dropdown.
 control: File Manager
+platform: Blazor
 documentation: ug
 ---
 
-# Pagination in Blazor File Manager Component
+# Pagination in Blazor File Manager
 
 Pagination provides an option to display files and folders in segmented pages, making it easier to navigate through large directories. This feature is particularly useful when dealing with extensive file systems in the File Manager component.
 
@@ -28,10 +28,10 @@ The following example demonstrates how to change the page size of a File Manager
 @using Syncfusion.Blazor.Navigations;
 
 <SfFileManager  TValue="FileManagerDirectoryContent" AllowPaging="true">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/Virtualization/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/Virtualization/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/Virtualization/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/Virtualization/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerPageSettings PageSize="3"></FileManagerPageSettings>
 </SfFileManager>
@@ -48,10 +48,10 @@ The [NumericItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
  @using Syncfusion.Blazor.FileManager;
 @using Syncfusion.Blazor.Navigations;
 <SfFileManager TValue="FileManagerDirectoryContent" AllowPaging="true" >
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/Virtualization/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/Virtualization/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/Virtualization/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/Virtualization/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerPageSettings NumericItemsCount="5"></FileManagerPageSettings>
 </SfFileManager>
@@ -74,10 +74,10 @@ The following example demonstrates how to implement the `CurrentPage` property.
 @using Syncfusion.Blazor.Navigations;
 
 <SfFileManager TValue="FileManagerDirectoryContent" AllowPaging="true">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/Virtualization/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/Virtualization/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/Virtualization/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/Virtualization/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerPageSettings PageSize="3" CurrentPage="2">
        
@@ -103,10 +103,10 @@ Below is an example on how to customize pagination in the File Manager by adding
 @using Syncfusion.Blazor.FileManager;
 @using Syncfusion.Blazor.Navigations;
 <SfFileManager @ref="fileManager" TValue="FileManagerDirectoryContent" AllowPaging="true">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/Virtualization/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/Virtualization/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/Virtualization/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/Virtualization/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerPageSettings PageSize="3">
         <Template>
@@ -140,10 +140,10 @@ Here is a sample demonstrating how `PageSizes` property is used when Pagination 
 @using Syncfusion.Blazor.FileManager
 
     <SfFileManager TValue="FileManagerDirectoryContent" AllowPaging="true" Path="/Text Documents/">
-        <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/FileOperations"
-                                 UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Upload"
-                                 DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Download"
-                                 GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/GetImage">
+        <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/Virtualization/FileOperations"
+                                 UploadUrl="https://physical-service.syncfusion.com/api/Virtualization/Upload"
+                                 DownloadUrl="https://physical-service.syncfusion.com/api/Virtualization/Download"
+                                 GetImageUrl="https://physical-service.syncfusion.com/api/Virtualization/GetImage">
         </FileManagerAjaxSettings>
         <FileManagerPageSettings PageSizes="@(new List<int>(){10,25,50})"></FileManagerPageSettings>
     </SfFileManager>
@@ -166,10 +166,10 @@ The [PageChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileMa
 @using Syncfusion.Blazor.FileManager;
 @using Syncfusion.Blazor.Navigations;
 <SfFileManager TValue="FileManagerDirectoryContent" AllowPaging="true">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/Virtualization/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/Virtualization/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/Virtualization/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/Virtualization/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" PageChanging="OnChanging" PageChanged="OnChanged"></FileManagerEvents>
 </SfFileManager>

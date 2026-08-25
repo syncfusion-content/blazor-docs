@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Variants with Blazor Message Component | Syncfusion®
-description: Checkout and learn about Variants with Blazor Message component in Blazor Server App and Blazor WebAssembly App.
+title: Variants in Blazor Message | Syncfusion
+description: Switch Blazor Message visual styles between Text, Outlined, and Filled variants using the Variant property.
 platform: Blazor
 control: Message
 documentation: ug

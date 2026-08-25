@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor Dialog Component | Syncfusion®
-description: Checkout and learn here all the features about Templates in Blazor Dialog component and much more details.
+title: Templates in Blazor Dialog | Syncfusion®
+description: Use header, content, and footer templates in the Blazor Dialog to render custom components and layout inside the dialog body.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Templates in Blazor Dialog Component
+# Templates in Blazor Dialog
 
 The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) component provides comprehensive template support for header, content, and footer sections. This feature enables developers to create highly customized dialog experiences by incorporating custom HTML content, interactive components, and dynamic data binding within each section.
 
@@ -218,3 +218,5 @@ N> The `DialogButton` and `FooterTemplate` properties cannot be used together. C
 
 * [How to add an icon to dialog buttons](./how-to/add-an-icons-to-dialog-buttons)
 * [How to customize the dialog appearance](./how-to/customize-the-dialog-appearance)
+* [Dialog Buttons in Blazor Dialog Component](./dialogbuttons)
+* [Visibility in Blazor Dialog Component](./visibility)

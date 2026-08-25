@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor 3D Charts in Server App | Syncfusion
-description: Check out and learn about getting started with Blazor 3D Charts component in Blazor Server App using Visual Studio and more.
+title: Getting Started with Blazor 3D Charts in Server App | Syncfusion®
+description: Learn how to get started with Syncfusion Blazor 3D Charts in a Blazor Server app, including setup, packages, and first chart.
 platform: Blazor
 control: 3D Charts
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD040 -->
 
-# Getting Started with Blazor 3D Charts Component in Blazor Server App
+# Getting Started with Blazor 3D Charts in Blazor Server App
 
 This section briefly explains how to include the [Blazor 3D Charts](https://www.syncfusion.com/blazor-components/blazor-3d-charts) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -19,7 +19,7 @@ This section briefly explains how to include the [Blazor 3D Charts](https://www.
 
 {% tabcontent Visual Studio %}
 
-Create a **Blazor Server App** by using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a **Blazor Server App** by using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 {% endtabcontent %}
 
@@ -36,7 +36,7 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-Alternatively, create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+Alternatively, create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
 {% endtabcontent %}
 
@@ -127,23 +127,19 @@ After the package is installed, open the **~/Components/_Imports.razor** file an
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in Blazor Server App and register the Blazor service.
+Open the **Program.cs** file in Blazor Server App and register the Blazor service and include the required namespace reference `using Syncfusion.Blazor;` at the top.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
+{% highlight C# tabtitle="Program.cs" %}
 
-....
-using Syncfusion.Blazor;
-....
 builder.Services.AddSyncfusionBlazor();
-....
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Add script resource
 
-The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~/Components/App.razor** file.
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **App.razor** file to enable 3D Charts functionality.
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
@@ -177,7 +173,7 @@ N> If the interactivity location is set to `Per page/component`, define a render
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor 3D Charts component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The [Blazor 3D Charts](https://www.syncfusion.com/blazor-components/blazor-3d-charts) component will render in your default web browser.
 
 {% endtabcontent %}
 
@@ -279,7 +275,7 @@ Now, map the data fields  `Month` and `Sales` to the series `XName` and `YName` 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLJZHCKiVjCNqCE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBnXHjFqigAUBMv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Add 3D Charts title
 
@@ -301,7 +297,7 @@ Using the `Title` property, you can add a title to the chart and the axes to pro
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLfNRsgCVjHdioT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVdZRZbgWJkPGWh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Enable legend
 
@@ -322,7 +318,7 @@ You can use legend for the 3D Charts by setting the `Visible` property to **true
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhpDRiKMriVAFPn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLxDdNbqVmczTuh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Add data label
 
@@ -343,7 +339,7 @@ You can add data labels to improve the readability of the 3D Charts. This can be
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrfDxCqCLizaoKV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVxXxNPKVlFPKwB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Enable tooltip
 
@@ -365,7 +361,7 @@ The tooltip is useful when you cannot display information by using the data labe
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLzXHWUiVMwxISt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLnDxZbgduLcrQe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## See also
 

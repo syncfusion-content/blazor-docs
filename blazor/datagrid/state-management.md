@@ -1,13 +1,13 @@
 ---
 layout: post
-title: State Management in Blazor DataGrid | Syncfusion®
-description: Learn how to persist, restore, and manage state in Blazor DataGrid, including saving, resetting, and versioned persistence.
+title: Blazor Grid State Management | Syncfusion
+description: Learn how to persist, save, restore, and manage state in Blazor Data Grid, including reset options and versioned persistence.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# State Management in Blazor DataGrid 
+# State Management in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports state management to preserve grid configuration across browser reloads and page navigation within the same session. Persisted settings include **paging**, **sorting**, **filtering**, **grouping**, **column visibility**, and similar configurations. State persistence applies only to grid settings; the underlying data must be reloaded when the page refreshes.
 
@@ -667,4 +667,4 @@ Update the grid state in local storage:
 await JS.InvokeVoidAsync("localStorage.setItem", localStorageKey, modelJson);
 ```
 
-N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand data presentation and manipulation.
+N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.

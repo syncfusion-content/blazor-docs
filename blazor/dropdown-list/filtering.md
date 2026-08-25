@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filtering in Blazor DropDown List Component | Syncfusion®
-description: Checkout and learn here all about Filtering in Blazor DropDown List component and much more details.
+title: Filtering in Blazor Dropdown List | Syncfusion®
+description: Enable filtering, debounce delay, case sensitivity, and match types like StartsWith, EndsWith, and Contains in Blazor Dropdown List.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Filtering in Dropdown List
+# Filtering in Blazor Dropdown List
 
 The DropDown List component supports built-in filtering when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is enabled. Filtering begins as the user types in the search box. The default value of AllowFiltering is `false`.
 
@@ -40,7 +40,7 @@ The following example demonstrates filtering with [ODataAdaptor](https://blazor.
 
 ## Debounce delay
 
-Use the [DebounceDelay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_DebounceDelay) property to control the delay (in milliseconds) before filtering is applied as the user types. Debouching reduces the frequency of requests and improves responsiveness. By default, DebounceDelay is 300 ms. To disable debouching, set this property to 0.
+Use the [DebounceDelay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_DebounceDelay) property to control the delay (in milliseconds) before filtering is applied as the user types. Debouncing reduces the frequency of requests and improves responsiveness. By default, DebounceDelay is 300 ms. To disable debouncing, set this property to 0.
 
 {% highlight cshtml %}
 

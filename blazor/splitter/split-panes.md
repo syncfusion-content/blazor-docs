@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Split Panes in Blazor Splitter Component | Syncfusion®
-description: Checkout and learn here all the features about split panes in Blazor Splitter component much more details.
+title: Split Panes in Blazor Splitter | Syncfusion
+description: Create horizontal or vertical Blazor Splitter panes and nest splitters for complex, flexible layout structures.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# Split Panes in Blazor Splitter Component
+# Split Panes in Blazor Splitter
 
 This section explains split-panes behaviors.
 
 ## Horizontal layout
 
-By default, splitter will be rendered in horizontal orientation. Splitter container will be split as panes in horizontal flow direction with vertical separator.
+By default, the Splitter is rendered in horizontal orientation. The Splitter container is split into panes in a horizontal flow direction with a vertical separator.
 
 ```cshtml
 

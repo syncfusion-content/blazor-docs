@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor DataGrid | Syncfusion®
-description: Learn all about globalization and right-to-left text support in the Blazor DataGrid component and much more details.
+title: Blazor Grid Localization and Globalization | Syncfusion
+description: Learn how to implement localization, globalization, and RTL support in Blazor Data Grid using Syncfusion controls for multilingual applications.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Globalization in Blazor DataGrid
+# Localization and Globalization in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports globalization to make applications accessible across regions and languages. Content can be displayed in the preferred culture with localized texts and culture-aware formats for a better user experience.
 
@@ -523,7 +523,7 @@ builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(Syncfus
 
 **Step 4: Enable or Disable RTL Mode with Toggle Switch**
 
-Use a [Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button) to enable or disable RTL dynamically. The switch triggers the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event, which updates the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableRtl) property of the DataGrid.
+Use a [Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started-webapp) to enable or disable RTL dynamically. The switch triggers the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event, which updates the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableRtl) property of the DataGrid.
 
 {% tabs %}
 {% highlight razor tabtitle="Counter.razor" %}

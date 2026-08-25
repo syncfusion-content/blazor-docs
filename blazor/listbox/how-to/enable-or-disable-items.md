@@ -1,15 +1,17 @@
 ---
 layout: post
-title: Enable/Disable ListBox in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all about enable or disable ListBox in Blazor ListBox component and much more details.
+title: How to enable or disable items in Blazor ListBox | Syncfusion
+description: Enable or disable specific items in Blazor ListBox at runtime using the EnableItems method dynamically.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Enable/Disable ListBox in Blazor ListBox Component
+# How to enable or disable items in Blazor ListBox
 
-Enable or disable items in the listbox, [EnableItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_EnableItems_System_Object_System_Boolean_) method can be used. In the following example, the `Bugatti Veyron Super Sport` and `SSC Ultimate Aero` items are disabled by default and by clicking `Enable Items` buttons, the disabled items will be enabled.
+The [EnableItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_EnableItems__1___0_System_Boolean_) method enables or disables specific items in the Blazor ListBox at runtime. Disabled items are rendered in a muted state, cannot be selected by the user, and are skipped when keyboard navigation is used.
+
+In the following example, the `Bugatti Veyron Super Sport` and `SSC Ultimate Aero` items are disabled by default using the `Created` event. Clicking the **Enable Items** button enables them, and clicking the **Disable Items** button disables them again.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -20,6 +22,7 @@ Enable or disable items in the listbox, [EnableItems](https://help.syncfusion.co
     <ListBoxEvents TValue="string[]" Created="created" TItem="VehicleData"></ListBoxEvents>
 </SfListBox>
 <SfButton @onclick="enableData" Content="Enable Items"></SfButton>
+<SfButton @onclick="disableData" Content="Disable Items"></SfButton>
 
 @code {
     SfListBox<string[],VehicleData> ListBoxObj;
@@ -30,13 +33,13 @@ Enable or disable items in the listbox, [EnableItems](https://help.syncfusion.co
         new VehicleData { Text = "SSC Ultimate Aero", Id = "Vehicle-04" },
         new VehicleData { Text = "Koenigsegg CCR", Id = "Vehicle-05" },
         new VehicleData { Text = "McLaren F1", Id = "Vehicle-06" },
-        new VehicleData { Text = "Aston Martin One- 77", Id = "Vehicle-07" },
+        new VehicleData { Text = "Aston Martin One-77", Id = "Vehicle-07" },
         new VehicleData { Text = "Jaguar XJ220", Id = "Vehicle-08" }
     };
 
     public class VehicleData {
-      public string Text  { get; set; }
-      public string Id  { get; set; }
+      public string Text { get; set; }
+      public string Id { get; set; }
     }
     public string[] Value = new string[] { "Bugatti Veyron Super Sport", "SSC Ultimate Aero" };
     private void created(object args)
@@ -48,8 +51,18 @@ Enable or disable items in the listbox, [EnableItems](https://help.syncfusion.co
     {
         ListBoxObj.EnableItems(this.Value, true);
     }
+
+    private void disableData()
+    {
+        ListBoxObj.EnableItems(this.Value, false);
+    }
 }
 
 ```
 
-![Disabled Items in Blazor ListBox](./../images/blazor-listbox-disable-items.webp)
+## See also
+
+* [Select Items in Blazor ListBox](./select-items.md)
+* [Get Items in Blazor ListBox](./get-items.md)
+* [Data Binding in Blazor ListBox](./../data-binding.md)
+* [Selection in Blazor ListBox](./../selection.md)

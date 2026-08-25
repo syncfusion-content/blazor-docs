@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sorting Icon Styling in Blazor TreeGrid | Syncfusion®
-description: Learn how to style sorting icons in Blazor TreeGrid using CSS, with tips on theme icon codes and CSS isolation.
+title: Blazor TreeGrid Sorting Icon Styling | Syncfusion
+description: Learn how to style sorting icons in Blazor TreeGrid using CSS, including theme icon codes, CSS isolation, and custom icon appearances.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Sorting customization in Blazor TreeGrid
+# Sorting Icon Customization in Blazor TreeGrid
 
 The appearance of sorting indicators in the Blazor TreeGrid can be customized using CSS. Styling options are available for:
 

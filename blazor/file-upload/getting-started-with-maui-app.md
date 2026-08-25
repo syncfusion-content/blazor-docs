@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with FileUpload in Blazor MAUI App | Syncfusion®
-description: Checkout and learn about the documentation for getting started with Blazor FileUpload Component in Blazor MAUI App.
+title: Getting Started with Blazor File Upload in MAUI App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor File Upload in a .NET MAUI Blazor Hybrid app with step-by-step setup.
 platform: Blazor
 control: FileUpload
 documentation: ug
 ---
 
-# Getting Started with Blazor File Upload Component
+# Getting Started with Blazor File Upload in MAUI App
 
 This section walks you through the step-by-step process of integrating the [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload) component into your Blazor MAUI application using both Visual Studio and Visual Studio Code.
 
@@ -19,9 +19,9 @@ This section walks you through the step-by-step process of integrating the [Blaz
 
 To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Create a new Blazor MAUI App in Visual Studio
+## Create a new MAUI Blazor Hybrid App in Visual Studio
 
-You can create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
+You can create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-10.0). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 ## Install Blazor Inputs and Themes NuGet packages in the app
 

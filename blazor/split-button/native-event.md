@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor SplitButton Component | Syncfusion®
-description: Checkout and learn here all the features about events in Blazor SplitButton component and much more details.
+title: Events in Blazor Split Button | Syncfusion
+description: Handle Blazor Split Button native events using @onxxx attributes with explicit event binding support.
 platform: Blazor
 control: Split Button
 documentation: ug
 ---
 
-# Events in Blazor SplitButton Component
+# Events in Blazor Split Button
 
 Handle Split Button events by defining handlers in the [SplitButtonEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SplitButtonEvents.html) tag. The assigned method names act as event handlers, and event-specific data is provided through strongly typed event argument classes.
 
@@ -20,9 +20,9 @@ The Split Button component supports the following events and corresponding event
 * OnOpen - Raised before the popup opens. Argument type: BeforeOpenCloseMenuEventArgs
 * Opened - Raised after the popup opens. Argument type: OpenCloseMenuEventArgs
 * ItemSelected - Raised when a menu item is selected. Argument type: MenuEventArgs
-* OnClose – Raised before the popup closes. Argument type: BeforeOpenCloseMenuEventArgs
-* OnItemRender – Raised while rendering each menu item. Argument type: MenuEventArgs
-* Closed – Raised after the popup closes. Argument type: OpenCloseMenuEventArgs
+* OnClose - Raised before the popup closes. Argument type: BeforeOpenCloseMenuEventArgs
+* OnItemRender - Raised while rendering each menu item. Argument type: MenuEventArgs
+* Closed - Raised after the popup closes. Argument type: OpenCloseMenuEventArgs
 
 ## How to bind event to Split Button
 

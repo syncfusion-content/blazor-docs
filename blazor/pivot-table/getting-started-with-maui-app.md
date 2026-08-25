@@ -1,31 +1,31 @@
 ---
 layout: post
-title: Getting Started with Blazor Pivot Table in MAUI App | Syncfusion®
+title: Getting Started with Blazor Pivot Table in MAUI App | Syncfusion
 description: Check out and learn all documentation for getting started with Blazor Pivot Table component in Blazor MAUI App and much more details.
 platform: Blazor
 component: Pivot Table
 documentation: ug
 ---
 
-# Getting started with Blazor Pivot Table Component in Blazor MAUI App
+# Getting Started with Blazor Pivot Table in Blazor MAUI App
 
 This section guides you through the steps to add the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component in a Blazor MAUI App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 > **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, CodeStudio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
-## Create a new Blazor MAUI App
+## Create a new MAUI Blazor Hybrid App
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-Create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
+Create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-10.0). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-Run the following command to create a new Blazor MAUI App.
+Run the following command to create a new MAUI Blazor Hybrid App.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -36,13 +36,11 @@ cd MauiBlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-Alternatively, create a **Blazor MAUI App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
-
 {% endtabcontent %}
 
 {% tabcontent .NET CLI %}
 
-Run the following command to create a new Blazor MAUI App.
+Run the following command to create a new MAUI Blazor Hybrid App.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}

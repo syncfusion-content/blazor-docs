@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Virtualization in Blazor TreeGrid Component | Syncfusion®
-description: Learn how to optimize large data rendering using virtualization features in Blazor TreeGrid component.
+title: Blazor TreeGrid Virtualization for Large Data Performance | Syncfusion
+description: Learn how to use virtualization in Blazor TreeGrid to efficiently render large datasets, improve scrolling performance, and reduce load times.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Virtualization in Blazor TreeGrid Component
+# Virtualization for Large Data Performance in Blazor TreeGrid
 
 Virtualization enables the efficient rendering of large datasets in the TreeGrid component, minimizing performance degradation and improving responsiveness. It ensures only the visible rows and columns are rendered, significantly enhancing load times and user experience when working with extensive hierarchical data.
 
 ## Row Virtualization
 
-Row virtualization renders only the rows visible in the viewport, appending additional records as the user scrolls vertically. This technique serves as an alternative to paging and improves performance by reducing the number of DOM elements. Enable row virtualization by setting the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~EnableVirtualization.html) property to `true` and specifying the content height using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~Height.html) property.
+Row virtualization renders only the rows visible in the viewport, appending additional records as the user scrolls vertically. This technique serves as an alternative to paging and improves performance by reducing the number of DOM elements. Enable row virtualization by setting the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualization) property to `true` and specifying the content height using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Height) property.
 
 The number of records displayed is determined implicitly by the content area's height, with additional buffer records maintained for smooth scrolling. Expand and Collapse states of child records are persisted during virtualization.
 

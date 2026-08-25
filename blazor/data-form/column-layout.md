@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Column and column span in Blazor DataForm Component | Syncfusion®
-description: Checkout and learn here about how to configure column and column span  with Blazor DataForm component.
+title: Column Layout in Blazor Data Form | Syncfusion®
+description: Arrange Blazor Data Form editors in a column-based layout using the ColumnCount and column span properties for structured forms.
 platform: Blazor
 control: DataForm
 documentation: ug
 ---
 
-# Column layout in DataForm component
+# Column Layout in Blazor Data Form
 
-This section explains how to arrange DataForm editors in a column-based layout. The [ColumnCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_ColumnCount) property allows us to specify the number of columns into which the DataForm should be divided. 
+This section explains how to arrange DataForm editors in a column-based layout. Use the [ColumnCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_ColumnCount) property to specify the number of columns into which the DataForm should be divided.
 
 {% tabs %}
 {% highlight razor tabtitle="razor" %}
@@ -19,9 +19,9 @@ This section explains how to arrange DataForm editors in a column-based layout. 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm column layout](images/blazor_dataform_change_form_width.webp)
+![Blazor DataForm column layout](images/blazor_dataform_column_layout.webp)
 
-## Configure the column span 
+## Configure the column span
 
 Additionally, by utilizing the [ColumnSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html#Syncfusion_Blazor_DataForm_FormItem_ColumnSpan) attribute of a `FormItem`, we can control the width of the editor, either allowing it to expand to full width or allocating it a portion of the width based on the provided column span.
 
@@ -40,4 +40,4 @@ In the following example, the DataForm is divided into six equal columns. Each e
 
 ## See Also
 
-* [Adaptive Layout structure](https://blazor.syncfusion.com/demos/data-form/adaptive-layout)
+* [Adaptive Layout structure](https://blazor.syncfusion.com/demos/data-form/adaptive-layout?theme=fluent2)

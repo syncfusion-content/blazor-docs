@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Resize in Blazor TextArea Component | Syncfusion®
-description: Check out and learn about the Resize feature of the Blazor TextArea component and explore much more functionality.
+title: Resize in Blazor TextArea | Syncfusion
+description: Control Blazor TextArea resizing with ResizeMode options for vertical, horizontal, both, or none directions.
 platform: Blazor
 control: TextArea
 documentation: ug
 ---
 
-# Resize in Blazor TextArea Component
+# Resize in Blazor TextArea
 
 The TextArea supports resizing so users can adjust the control to fit varying content lengths. Configure resizing behavior using the [ResizeMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_ResizeMode) property:
 
@@ -23,7 +23,7 @@ N> In Razor, enums are typically referenced with the @ prefix (for example, @Res
 {% tabs %}
 {% highlight razor %}
 
-<SfTextArea Placeholder='Enter the Address' ResizeMode='Resize.Both'></SfTextArea>
+<SfTextArea Placeholder='Enter the Address' ResizeMode='@Resize.Both'></SfTextArea>
 
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +37,7 @@ Customize the width of the TextArea using the [Width](https://help.syncfusion.co
 {% tabs %}
 {% highlight razor %}
 
-<SfTextArea Placeholder='Enter the Address' Width="500" ResizeMode='Resize.Both'></SfTextArea>
+<SfTextArea Placeholder='Enter the Address' Width="500" ResizeMode='@Resize.Both'></SfTextArea>
 
 {% endhighlight %}
 {% endtabs %}

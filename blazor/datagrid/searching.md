@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Searching in Blazor DataGrid | Syncfusion®
-description: Learn search options in Blazor DataGrid including toolbar, initial, external search, operators, multi-keyword, and accent-insensitive support.
+title: Blazor Grid Searching | Syncfusion
+description: Learn how to search data in Blazor Data Grid using toolbar, initial, external, multi-keyword, and operator-based search options.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Searching in Blazor DataGrid
+# Searching in Blazor Data Grid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) includes a built-in search feature that helps locate records quickly across grid data. Users can filter displayed records by entering a search key, which is especially useful for large datasets.
 
@@ -534,7 +534,7 @@ By default, the Blazor DataGrid searches across all visible columns. To exclude 
 {% endhighlight %}
 {% endtabs %}
 
-N> For a broader overview, see the Blazor DataGrid feature tour and the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5).
+N> For a broader overview, see the Blazor DataGrid feature tour and the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2).
 
 ## Ignore accents in search
 

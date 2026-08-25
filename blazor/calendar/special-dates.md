@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Special Dates in Blazor Calendar Component | Syncfusion®
-description: Checkout and learn here all features about Special Dates in Blazor Calendar component and more details.
+title: Special Dates in Blazor Calendar | Syncfusion®
+description: Customize specific dates in the Blazor Calendar by handling the OnRenderDayCell event to add CSS classes or disable particular days.
 platform: Blazor
 control: Calendar
 documentation: ug
 ---
 
-# Special Dates in Blazor Calendar Component
+# Special Dates in Blazor Calendar
 
 Customize specific dates in a [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) by handling the [OnRenderDayCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarEvents-1.html#Syncfusion_Blazor_Calendars_CalendarEvents_1_OnRenderDayCell) event. This event fires for each day cell as it is created, allowing the addition of CSS classes and, if needed, disabling particular dates. The following example highlights two sets of days in the current month with custom styles using the personal-appointment and official-appointment classes, and updates a label on selection via ValueChange.
 
@@ -93,4 +93,4 @@ Customize specific dates in a [Blazor Calendar](https://www.syncfusion.com/blazo
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNhdtRMBrlYlIhNB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Calendar with special dates](./images/blazor_calendar_special_dates.webp)" %}
 
-N> The `RenderDayCellEventArgs` includes a `CurrentView` property that identifies the active calendar view during rendering. Possible values are `Month`, `Year`, and `Decade`. Use this to apply view-specific logic within the [OnRenderDayCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarEvents-1.html#Syncfusion_Blazor_Calendars_CalendarEvents_1_OnRenderDayCell) handler. This property is useful for customizing the rendering of day cells based on the calendar's current view.
+N> The `RenderDayCellEventArgs` includes a `CurrentView` property that identifies the active calendar view during rendering. Possible values are `Month`, `Year`, and `Decade`. Use this to apply view-specific logic within the [OnRenderDayCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarEvents-1.html#Syncfusion_Blazor_Calendars_CalendarEvents_1_OnRenderDayCell) handler.

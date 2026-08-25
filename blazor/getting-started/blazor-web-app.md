@@ -22,7 +22,7 @@ To get started quickly with a Blazor Web App, watch the following video.
 
 {% playground "https://blazorplayground.syncfusion.com/" %}
 
-## Using Templates
+## Using .NET CLI Templates
 
 Quickly set up a Blazor application using the preconfigured [Syncfusion Web App Template](https://help.syncfusion.com/extension/syncfusion-blazor-webapp-template-via-nuget/installation).
 
@@ -100,22 +100,6 @@ Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microso
 
 {% endtabcontent %}
 
-{% tabcontent .NET CLI %}
-
-Run the following command to create a new Blazor Web App.
-
-{% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
-
-dotnet new blazor -o BlazorWebApp --interactivity Auto
-cd BlazorWebApp
-cd BlazorWebApp.Client
-
-{% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-
 {% endtabcontents %}
 
 N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
@@ -159,21 +143,6 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endtabcontent %}
 
-{% tabcontent .NET CLI %}
-
-Open the command prompt and run the following commands.
-
-{% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
-
-dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-
 {% endtabcontents %}
 
 ### Add import namespaces
@@ -191,30 +160,33 @@ After the packages are installed, open the **~/_Imports.razor** file in the `.Cl
 
 ### Register the Blazor service
 
-Open the **Program.cs** file in Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
+Open the **Program.cs** file in Blazor Web App and register the Blazor service and include the required namespace reference `using Syncfusion.Blazor;` at the top. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
 
-...
-using Syncfusion.Blazor;
-...
 builder.Services.AddSyncfusionBlazor();
-....
 
 {% endhighlight %}
 {% endtabs %}
 
 ### Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) at the end of the `<head>` section in the **App.razor** file.
 
 {% tabs %}
-{% highlight html tabtitle="App.razor" %}
+{% highlight razor tabtitle="App.razor" %}
 
-...
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-...
+
+{% endhighlight %}
+{% endtabs %}
+
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **App.razor** file to enable DataGrid functionality.
+
+{% tabs %}
+{% highlight razor tabtitle="App.razor" %}
+
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
@@ -280,22 +252,6 @@ Open the terminal and navigate to the main project folder (for example, `BlazorW
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
-
-cd ..
-cd BlazorWebApp
-dotnet run
-
-{% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-
-{% tabcontent .NET CLI %}
-
-Open the command prompt and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
-
-{% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
 
 cd ..
 cd BlazorWebApp

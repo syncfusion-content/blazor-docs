@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor MultiSelect Dropdown Component | Syncfusion®
-description: Checkout and learn here all about data binding in Blazor MultiSelect Dropdown component and much more details.
+title: Data Binding in Blazor MultiSelect Dropdown | Syncfusion
+description: Bind local collections or remote data services to Blazor MultiSelect Dropdown using DataSource and DataManager.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Data Binding in Blazor MultiSelect Dropdown Component
+# Data Binding in Blazor MultiSelect Dropdown
 
 The MultiSelect loads data from either local data sources or remote data services. Use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property to bind local data, or use the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) to bind remote data.
 
@@ -63,7 +63,7 @@ The following example demonstrates binding an array of integer values to the Mul
 
 The MultiSelect can generate list items from an array of complex objects. Map the appropriate fields to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html) property.
 
-In the following example, the `Code.ID` field and `Country.CountryID` field from the complex data are mapped to the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_Value) and [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_Text) fields, respectively.
+In the following example, the `Code.ID` field and the `Country.CountryID` field from the complex data are mapped to the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_Value) and [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_Text) fields, respectively.
 
 {% highlight cshtml %}
 
@@ -99,7 +99,7 @@ Bind [ObservableCollection](https://blazor.syncfusion.com/documentation/common/d
 
 ### Dynamic object binding
 
-Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-10.0) data to the MultiSelect component. In the following example, the `DynamicObject` is bound to  collection of customer data.
+Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-10.0) data to the MultiSelect component. In the following example, the `DynamicObject` is bound to a collection of customer data.
 
 {% highlight cshtml %}
 
@@ -134,7 +134,7 @@ Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple
 ![Blazor MultiSelect Dropdown ValueTuple data](./images/blazor-multiselect-dropdown-valuetuple.webp)
 
 
-## Binding remote data 
+## Binding remote data
 
 The MultiSelect supports retrieving data from remote services by using the [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started) component. Use the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property to fetch data from the server and bind it to the MultiSelect.
 
@@ -198,7 +198,7 @@ The [Web API adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#
 
 ### Custom adaptor
 
-The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) supports custom adaptors to perform manual operations on data. This can be used to implement custom data binding and editing operations in the MultiSelect component.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) supports custom adaptors to perform manual operations on data. This can be used to implement custom data binding and editing operations in the MultiSelect component.
 
 For custom data binding in the MultiSelect, use the `DataAdaptor` class. This abstract class acts as the base for a custom adaptor.
 
@@ -245,9 +245,9 @@ The following example demonstrates remote data binding with offline mode enabled
 
 ## Entity Framework
 
-Follow these steps to consume data from [Entity Framework](https://blazor.syncfusion.com/documentation/common/data-binding/bind-entity-framework) in the MultiSelect component.
+Follow these steps to consume data from [Entity Framework](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-orm/entityframework) in the MultiSelect component.
 
-#### Create DBContext class
+### Create DBContext class
 
 Create a DbContext class named `OrderContext` to connect to a Microsoft SQL Server database.
 
