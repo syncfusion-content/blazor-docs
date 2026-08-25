@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State Persistence in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table retains layout, fields, sorting, filters, and expand-collapse state in browser storage between sessions via EnablePersistence.
+description: Learn how the Blazor Pivot Table retains the current report, filters, and expanded state across browser refreshes using EnablePersistence.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # State Persistence in Blazor Pivot Table
 
-State persistence enables users to automatically retain the entire configuration of the Pivot Table component in the browser's local storage (cookies). This includes the current layout, field arrangements, sorting, applied filters, and the expanded or collapsed states of fields. By enabling the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_EnablePersistence) property in the [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class, all these interactive states and settings are saved automatically. As a result, users can refresh the browser or navigate to different pages and return at any time, knowing that all modified report settings will be retained—ensuring a seamless and uninterrupted data analysis experience.
+State persistence enables users to automatically retain the entire configuration of the Pivot Table component in the browser's local storage. This includes the current layout, field arrangements, sorting, applied filters, and the expanded or collapsed states of fields. By enabling the [`EnablePersistence`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_EnablePersistence) property in the PivotTable component, all these interactive states and settings are saved automatically. As a result, users can refresh the browser or navigate to different pages and return at any time, knowing that all modified report settings will be retained—ensuring a seamless and uninterrupted data analysis experience.
 
 N> The state of the Pivot Table is retained during page refresh and navigation based on its ID set. Make sure to set **unique ID** for each Pivot Table to store its state in browser. On duplication of ID, the state maintained will be overridden.
 
@@ -50,7 +50,15 @@ N> The state of the Pivot Table is retained during page refresh and navigation b
 
 ## Save and Load Pivot Layout
 
-In addition to automatic state persistence, the Pivot Table component allows you to save and restore the current layout programmatically. By using the [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_GetPersistData) method, you can retrieve the complete state of the Pivot Table component as a serialized string. This string can be stored and later re-applied to the component by passing it to the [LoadPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_LoadPersistData_System_String_) method. This approach offers flexibility for saving user-specific layouts, restoring previous configurations, or implementing custom workflows for managing and reloading the component’s state as needed.
+In addition to automatic state persistence, the Pivot Table component allows you to save and restore the current layout programmatically. By using the [`GetPersistDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_GetPersistData) method, you can retrieve the complete state of the Pivot Table component as a serialized string. This string can be stored and later re-applied to the component by passing it to the [`LoadPersistDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_LoadPersistData_System_String_) method. This approach offers flexibility for saving user-specific layouts, restoring previous configurations, or implementing custom workflows for managing and reloading the component’s state as needed.
+
+>The sample below uses **Save** and **Load** buttons built with the Syncfusion.Blazor.Buttons package. Import the required namespace first:
+>
+> ```bash
+> dotnet add package Syncfusion.Blazor.Buttons
+> ```
+>
+> Persist the string returned by savedata() across page refreshes by writing it to `LocalStorage`, a server endpoint, or any other application-controlled store before re-applying it through loaddata().
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
