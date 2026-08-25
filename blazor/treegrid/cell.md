@@ -9,7 +9,7 @@ documentation: ug
 
 # Cell Features in Blazor TreeGrid
 
-# Displaying HTML Content in Blazor TreeGrid
+## Displaying HTML Content in Blazor TreeGrid
 
 Displaying HTML content in the Blazor TreeGrid is useful when presenting formatted elements such as images, hyperlinks, or styled text within hierarchical tabular layouts. The TreeGrid supports rendering HTML tags in both header and content cells.
 
@@ -94,7 +94,7 @@ public class TreeData
 
 ## Customize cell styles
 
-The appearance of cells can be customized by using the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_QueryCellInfo) event. The `QueryCellInfo` event triggers for every cell, and in the event handler, **QueryCellInfoEventArgs** provides the details of the cell.
+Use the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_QueryCellInfo) event to customize cell appearance. The event is raised during cell rendering for each visible cell and is triggered again when the TreeGrid refreshes its view due to actions such as paging, sorting, filtering, or data updates. The [QueryCellInfoEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.QueryCellInfoEventArgs-1.html) parameter provides information about the current cell.
 
 {% tabs %}
 
@@ -139,13 +139,11 @@ The appearance of cells can be customized by using the [QueryCellInfo](https://h
     {
         if (Args.Column.Field == "Progress" && Args.Data.Progress > 70 && Args.Data.Progress <= 100)
         {
-            String[] s1 = new String[1] { "intro" };
-            Args.Cell.AddClass(s1);
+            Args.Cell.AddClass(new[] { "intro" })
         }
         else if (Args.Column.Field == "Progress" && Args.Data.Progress > 20)
         {
-            String[] s2 = new String[1] { "intro1" };
-            Args.Cell.AddClass(s2);
+            Args.Cell.AddClass(new[] { "intro1" })
         }
     }
 }
@@ -341,11 +339,11 @@ N> By default, the TreeGrid renders with **Default** mode.
 
 The clip mode provides options to display its overflow cell content and it can be defined by the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ClipMode) property.
 
-There are three types of `ClipMode`. They are:
+The Blazor TreeGrid supports the following `ClipMode` options to control the display of cell content when the content exceeds the available column width:
 
-* **Clip**: Truncates the cell content when it overflows its area.
-* **Ellipsis**: Displays ellipsis when the cell content overflows its area.
-* **EllipsisWithTooltip**: Displays ellipsis when the cell content overflows its area, also it will display the tooltip while hover on ellipsis is applied.
+* **Clip**: Truncates the cell content when the content exceeds the available cell width.
+* **Ellipsis**: Displays an ellipsis (...) when the content exceeds the available cell width.
+* **EllipsisWithTooltip**: Displays an ellipsis (...) when the content exceeds the available cell width and displays the full content in a tooltip on hover.
 
 {% tabs %}
 
