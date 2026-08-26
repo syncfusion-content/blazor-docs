@@ -9,13 +9,14 @@ documentation: ug
 
 # Render Blazor Data Grid Inside a Tab with Specific Height
 
-By default, the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) occupies the full size of its parent element when the Grid [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) properties are set to 100%. When placing the same Grid inside the [SfTab](https://blazor.syncfusion.com/documentation/tabs/getting-started-webapp) component, however, it may consider the entire page height and render without a horizontal scrollbar.
+By default, the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) occupies the full size of its parent element when the Data Grid [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) properties are set to 100%. When Data Grid is placed inside the [SfTab](https://blazor.syncfusion.com/documentation/tabs/getting-started-webapp) component, however, it may consider the entire page height and render without a horizontal scrollbar.
 
-To ensure the Grid scrolls within the Tab content area (keeping the tab header fixed), override the Tab content height with CSS so the Grid receives a well-defined parent height.
+To ensure the Data Grid scrolls within the Tab content area (keeping the tab header fixed), override the Tab content height with CSS so the Data Grid receives a well-defined parent height.
 
 > Notes:
-- The parent container of the Tab must have an explicit height (for example, a fixed pixel height or a flex container with a resolved height).
-- The value used to subtract the tab header (36px below) is theme-dependent and may need adjustment based on the chosen theme and device density.
+> - The parent container of the Tab must have an explicit height or a height resolved by CSS layout.
+> - The example uses a fixed wrapper height of `500px`. Change the wrapper height to match the surrounding layout.
+> - The flex layout assigns the remaining parent height to the Tab content and avoids a hard-coded tab-header offset.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -24,8 +25,8 @@ To ensure the Grid scrolls within the Tab content area (keeping the tab header f
 @using Syncfusion.Blazor.Grids
 @using System.Linq
 
-<div style="height:500px">
-    <SfTab ID="Ej2Tab" Height="100%">
+<div class="tab-grid-container">
+    <SfTab ID="GridTab" Height="100%">
         <TabItems>
             <TabItem>
                 <HeaderTemplate>
@@ -107,16 +108,26 @@ To ensure the Grid scrolls within the Tab content area (keeping the tab header f
 }
 
 <style>
-    /* Adjust the content area to fill available height below the tab header.
-       The 36px subtraction is an example and may differ by theme/density. */
-    .e-tab > .e-content {
-        height: calc(100% - 36px); /* tab height - tab header height */
+    .tab-grid-container {
+        height: 500px;
     }
-    .e-tab > .e-content .e-item {
+
+    #GridTab.e-tab {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #GridTab.e-tab > .e-content {
+        flex: 1 1 auto;
+        min-height: 0;
+        height: auto;
+    }
+
+    #GridTab.e-tab > .e-content .e-item {
         height: 100%;
     }
 </style>
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrxDGZChCBVnmsZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrnNvLRpfJREQrm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
