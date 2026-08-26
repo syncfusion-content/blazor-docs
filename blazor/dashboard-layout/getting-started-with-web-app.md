@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Dashboard Layout Web App Getting Started | Syncfusion®
-description: Learn how to get started with the Syncfusion Blazor Dashboard Layout control. Explore setup, features, examples, and customization options.
+description: Learn how to get started with the Syncfusion Blazor Dashboard Layout component in a Blazor Web App. Set up the component, configure panels, add UI components, and customize dashboard layouts.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
