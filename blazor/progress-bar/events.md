@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Blazor ProgressBar Events Examples and Reference | Syncfusion®
 description: Learn about events in Syncfusion Blazor ProgressBar such as ValueChanged, and how to handle progress changes with ProgressBarEvents.
@@ -13,7 +13,7 @@ This section describes the events of the Syncfusion Blazor [ProgressBar](https:/
 
 ## ValueChanged
 
-The [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_ValueChanged) vent is triggered when the progress value is changed.
+The [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_ValueChanged) event is triggered when the progress value is changed.
 
 ```cshtml
 @using Syncfusion.Blazor.ProgressBar
