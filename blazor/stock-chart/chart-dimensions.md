@@ -9,9 +9,9 @@ documentation: ug
 
 # Blazor Stock Chart Dimensions
 
-## Size for Container
+## Size to Fit the Container
 
-The stock chart adapts to its container size. Set the container dimensions with inline styles or CSS, as shown below.
+The [SfStockChart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html) component adapts to its container size. Set the container dimensions with inline styles or CSS, as shown below.
 
 ```cshtml
 
@@ -54,7 +54,7 @@ The stock chart adapts to its container size. Set the container dimensions with 
 
 ![Changing Blazor Stock Chart Size](images/size/blazor-stock-chart-size.webp)
 
-## Size for Stock Chart
+## Set the Stock Chart Size
 
 Set the stock chart size directly using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_Height) properties.
 
@@ -103,7 +103,7 @@ Set the stock chart size directly using the [Width](https://help.syncfusion.com/
 
 **In Percentage**
 
-When values are specified in percentages, the stock chart sizes relative to its container. For example, a height of '50%' renders at half the container height.
+When values are specified in percentages, the stock chart sizes relative to its container. For example, a height of `90%` renders at 90% of the container height.
 
 ```cshtml
 

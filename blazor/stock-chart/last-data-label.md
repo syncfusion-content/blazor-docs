@@ -9,11 +9,11 @@ documentation: ug
 
 # Blazor Stock Chart Last Data Label
 
-The last data label highlights the most recent data point in a series by displaying a label with an indicator line. This improves readability and makes the latest value easy to identify in the stock chart. The label is enabled and customized using the [StockChartLastDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html) configuration.
+The last data label highlights the most recent data point in a series by displaying a label with an indicator line. This improves readability and makes the latest value easy to identify in the Stock Chart. The label is enabled and customized using the [StockChartLastDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html) configuration within the [StockChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html).
 
 ## Enable last data label
 
-To enable the last data label, set the [ShowLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html#Syncfusion_Blazor_Charts_StockChartLastDataLabel_ShowLabel) property of `StockChartLastDataLabel` to **true** in the series settings.
+To enable the last data label, set the [ShowLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html#Syncfusion_Blazor_Charts_StockChartLastDataLabel_ShowLabel) property of [StockChartLastDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html) to `true` in the series settings.
 
 ```cshtml
 
@@ -23,7 +23,7 @@ To enable the last data label, set the [ShowLabel](https://help.syncfusion.com/c
     <StockChartPrimaryYAxis Interval="10"></StockChartPrimaryYAxis>
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Hilo" Width="3" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume">
-            <StockChartLastDataLabel ShowLabel="true" ></StockChartLastDataLabel>
+            <StockChartLastDataLabel ShowLabel="true" />
         </StockChartSeries>
     </StockChartSeriesCollection>
 </SfStockChart>

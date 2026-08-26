@@ -13,11 +13,61 @@ documentation: ug
 
 A technical indicator is a mathematical calculation based on historical price, volume, or open interest information that aims to forecast financial market direction.
 
-Stock Chart supports 10 types of technical indicators: `Accumulation Distribution`, `ATR`, `EMA`, `SMA`, `TMA`, `Momentum`, `MACD`, `RSI`, `Stochastic`, and `Bollinger Band`. Use the indicator dropdown to add or remove the required indicator types.
+The Stock Chart supports 10 types of technical indicators: `Accumulation Distribution`, `ATR`, `EMA`, `SMA`, `TMA`, `Momentum`, `MACD`, `RSI`, `Stochastic`, and `Bollinger Band`. Use the indicator dropdown, configured through the [IndicatorType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_IndicatorType) property, to add or remove the required indicator types.
+
+To add a technical indicator, include [StockChartIndicators](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicators.html) and configure a [StockChartIndicator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicator.html) with its [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicator.html#Syncfusion_Blazor_Charts_StockChartIndicator_Type), [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicator.html#Syncfusion_Blazor_Charts_StockChartIndicator_Field), and [SeriesName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicator.html#Syncfusion_Blazor_Charts_StockChartIndicator_SeriesName) properties.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfStockChart Title="AAPL Stock Price">
+	<StockChartSeriesCollection>
+		<StockChartSeries Name="AAPL" DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume"></StockChartSeries>
+	</StockChartSeriesCollection>
+	<StockChartIndicators>
+		<StockChartIndicator Type="TechnicalIndicators.Ema" Field="FinancialDataFields.Close" SeriesName="AAPL" XName="Date" Close="Close" Period="14"></StockChartIndicator>
+	</StockChartIndicators>
+</SfStockChart>
+
+@code {
+    public class ChartData
+    {
+        public DateTime Date { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
+    }
+
+    public List<ChartData> StockDetails = new()
+    {
+        new ChartData { Date = new DateTime(2024, 01, 01), Open = 100, High = 105, Low = 98, Close = 103, Volume = 1000000 },
+        new ChartData { Date = new DateTime(2024, 01, 02), Open = 103, High = 108, Low = 101, Close = 106, Volume = 1200000 },
+        new ChartData { Date = new DateTime(2024, 01, 03), Open = 106, High = 110, Low = 104, Close = 109, Volume = 1350000 },
+        new ChartData { Date = new DateTime(2024, 01, 04), Open = 109, High = 112, Low = 107, Close = 111, Volume = 1400000 },
+        new ChartData { Date = new DateTime(2024, 01, 05), Open = 111, High = 116, Low = 110, Close = 115, Volume = 1500000 },
+        new ChartData { Date = new DateTime(2024, 01, 08), Open = 115, High = 118, Low = 113, Close = 117, Volume = 1450000 },
+        new ChartData { Date = new DateTime(2024, 01, 09), Open = 117, High = 120, Low = 115, Close = 119, Volume = 1580000 },
+        new ChartData { Date = new DateTime(2024, 01, 10), Open = 119, High = 122, Low = 117, Close = 121, Volume = 1620000 },
+        new ChartData { Date = new DateTime(2024, 01, 11), Open = 121, High = 125, Low = 119, Close = 124, Volume = 1700000 },
+        new ChartData { Date = new DateTime(2024, 01, 12), Open = 124, High = 128, Low = 122, Close = 126, Volume = 1800000 },
+        new ChartData { Date = new DateTime(2024, 01, 15), Open = 126, High = 130, Low = 124, Close = 129, Volume = 1900000 },
+        new ChartData { Date = new DateTime(2024, 01, 16), Open = 129, High = 133, Low = 127, Close = 132, Volume = 2000000 },
+        new ChartData { Date = new DateTime(2024, 01, 17), Open = 132, High = 136, Low = 130, Close = 135, Volume = 2100000 },
+        new ChartData { Date = new DateTime(2024, 01, 18), Open = 135, High = 138, Low = 133, Close = 137, Volume = 2250000 },
+        new ChartData { Date = new DateTime(2024, 01, 19), Open = 137, High = 141, Low = 136, Close = 140, Volume = 2400000 }
+    };
+}
+
+```
+
+![Blazor Spline Stock Chart](images/blazor-TechnicalIndicators-stock-chart.webp)
 
 ## Accumulation Distribution
 
-Accumulation Distribution combines price and volume to show potential money flow into or out of a stock. To render an Accumulation Distribution indicator, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicator.html#Syncfusion_Blazor_Charts_StockChartIndicator_Type) to `AccumulationDistribution`. To calculate the signal line, the [Volume](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicator.html#Syncfusion_Blazor_Charts_StockChartIndicator_Volume) field must be included in the `DataSource`.
+Accumulation Distribution combines price and volume to show potential money flow into or out of a stock. To render an Accumulation Distribution indicator, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicator.html#Syncfusion_Blazor_Charts_StockChartIndicator_Type) to `AccumulationDistribution`. To calculate the signal line, the [Volume](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicator.html#Syncfusion_Blazor_Charts_StockChartIndicator_Volume) field must be included in the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicator.html#Syncfusion_Blazor_Charts_StockChartIndicator_DataSource).
 
 ## Average True Range (ATR)
 
@@ -55,4 +105,4 @@ Moving average indicators are used to define the direction of the trend. To rend
 
 <!-- markdownlint-disable MD034 -->
 
-A Stock Chart overlay that shows the upper and lower limits of normal price movements based on the standard deviation of prices. To render a Bollinger Band, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicator.html#Syncfusion_Blazor_Charts_StockChartIndicator_Type) to `BollingerBand`. The Bollinger Band is represented by three lines (`upperLine`, `lowerLine`, `signalLine`), and the default [StandardDeviations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicator.html#Syncfusion_Blazor_Charts_StockChartIndicator_StandardDeviation) value is 2.
+A Stock Chart overlay that shows the upper and lower limits of normal price movements based on the standard deviation of prices. To render a Bollinger Band, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicator.html#Syncfusion_Blazor_Charts_StockChartIndicator_Type) to `BollingerBand`. The Bollinger Band is represented by three lines (`upperLine`, `lowerLine`, `signalLine`), and the default [StandardDeviation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicator.html#Syncfusion_Blazor_Charts_StockChartIndicator_StandardDeviation) value is 2.

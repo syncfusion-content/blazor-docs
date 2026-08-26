@@ -17,7 +17,7 @@ The period selector enables selecting a range with specified periods. The period
 
 <!-- markdownlint-disable MD034 -->
 
-Periods is an array of objects that defines the range of [Periods](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartPeriods.html). The `Interval` property specifies the count value of the button, and the `Text` property specifies the text displayed on the button. The `IntervalType` property customizes the intervals of the buttons and supports the following types:
+[StockChartPeriods](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartPeriods.html) contains an array of [StockChartPeriod](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartPeriod.html) objects that define the selectable ranges. The [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartPeriod.html#Syncfusion_Blazor_Charts_StockChartPeriod_Interval) property specifies the count for the button, the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartPeriod.html#Syncfusion_Blazor_Charts_StockChartPeriod_Text) property specifies the text displayed on the button, and the [Selected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartPeriod.html#Syncfusion_Blazor_Charts_StockChartPeriod_Selected) property specifies the initially selected button. The [IntervalType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartPeriod.html#Syncfusion_Blazor_Charts_StockChartPeriod_IntervalType) property specifies the interval unit and supports the following types:
 
 * Auto
 * Years
@@ -35,10 +35,10 @@ Periods is an array of objects that defines the range of [Periods](https://help.
 
 <SfStockChart Title="AAPL Stock Price" IndicatorType="@IndicatorType" TrendlineType="@TrendlineType" SeriesType="@SeriesType" ExportType="@ExportType">
     <StockChartPeriods>
-        <StockChartPeriod IntervalType=RangeIntervalType.Minutes Interval="1" Text='1m'></StockChartPeriod>
-        <StockChartPeriod IntervalType=RangeIntervalType.Minutes Interval="30" Text='30m'></StockChartPeriod>
-        <StockChartPeriod IntervalType=RangeIntervalType.Hours Interval="1" Text='1h'></StockChartPeriod>
-        <StockChartPeriod IntervalType=RangeIntervalType.Hours Interval="12" Text='12h' Selected="true"></StockChartPeriod>
+        <StockChartPeriod IntervalType="RangeIntervalType.Minutes" Interval="1" Text="1m"></StockChartPeriod>
+        <StockChartPeriod IntervalType="RangeIntervalType.Minutes" Interval="30" Text="30m"></StockChartPeriod>
+        <StockChartPeriod IntervalType="RangeIntervalType.Hours" Interval="1" Text="1h"></StockChartPeriod>
+        <StockChartPeriod IntervalType="RangeIntervalType.Hours" Interval="12" Text="12h" Selected="true"></StockChartPeriod>
         <StockChartPeriod Text="1D"></StockChartPeriod>
     </StockChartPeriods>
     <StockChartCrosshairSettings Enable="true"></StockChartCrosshairSettings>

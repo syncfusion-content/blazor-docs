@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Stock Chart Crosshair
 
-The crosshair displays vertical and horizontal lines to show axis values at the mouse or touch position. Enable crosshair lines using the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable) property of `Crosshair`. Enabling the `SnapToData` property aligns the crosshair with the nearest data point instead of the exact pointer position.
+The crosshair displays vertical and horizontal lines to show axis values at the mouse or touch position. Enable crosshair lines using the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable) property of `StockChartCrosshairSettings`. Enabling the [SnapToData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_SnapToData) property aligns the crosshair with the nearest data point instead of the exact pointer position.
 
 ```cshtml
 
@@ -59,9 +59,9 @@ The crosshair displays vertical and horizontal lines to show axis values at the 
 
 ![SnapToData Crosshair in Blazor Stock Chart](images/common/blazor-stock-chart-crosshair.webp)
 
-## Tooltip for axis
+## Axis tooltip
 
-Axis tooltip labels can be enabled using the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable) property of `CrosshairTooltip` on the corresponding axis.
+Axis tooltip labels can be enabled using the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxisCrosshairTooltip.html#Syncfusion_Blazor_Charts_StockChartAxisCrosshairTooltip_Enable) property of `StockChartAxisCrosshairTooltip` on the corresponding axis.
 
 ```cshtml
 
@@ -117,7 +117,7 @@ Axis tooltip labels can be enabled using the [Enable](https://help.syncfusion.co
 
 ## Customization
 
-Customize the crosshair tooltip background and font using the `Fill` and `TextStyle` properties of `CrosshairTooltip`. Customize the crosshair line color and width using the [Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Line) property in `Crosshair`.
+Customize the crosshair tooltip background and font using the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxisCrosshairTooltip.html#Syncfusion_Blazor_Charts_StockChartAxisCrosshairTooltip_Fill) and [TextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxisCrosshairTooltip.html#Syncfusion_Blazor_Charts_StockChartAxisCrosshairTooltip_TextStyle) properties of `StockChartAxisCrosshairTooltip`. Customize the crosshair line color and width using the [Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Line) property in `StockChartCrosshairSettings`.
 
 ```cshtml
 
@@ -175,7 +175,7 @@ Customize the crosshair tooltip background and font using the `Fill` and `TextSt
 
 ## Add Trackball
 
-Trackball highlights the data point closest to the pointer and shows its details in the tooltip. Enable trackball behavior by setting the crosshair [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable) property to true and the `Shared` property in `Tooltip` to true.
+Trackball highlights the data point closest to the pointer and shows its details in the tooltip. Enable trackball behavior by setting the crosshair [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable) property to `true`, setting [LineType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_LineType) to `Vertical`, and setting the [Shared](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Shared) property in `StockChartTooltipSettings` to `true`.
 
 ```cshtml
 

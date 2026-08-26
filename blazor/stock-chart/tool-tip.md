@@ -15,7 +15,7 @@ The Stock Chart displays data point details using a tooltip when the pointer hov
 
 ## Default tooltip
 
-By default, the tooltip is disabled. Enable it by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Enable) property to true.
+By default, the tooltip is disabled. Enable it by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Enable) property to `true` in [StockChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html).
 
 ```cshtml
 
@@ -65,7 +65,7 @@ By default, the tooltip is disabled. Enable it by setting the [Enable](https://h
 
 <!-- markdownlint-disable MD013 -->
 
-By default, the tooltip shows the x and y values of a point. Additional information can be displayed using a format template. For example, the format `${point.x} : ${point.high}` shows the x-value and the high value.
+By default, the tooltip shows the x and y values of a point. Additional information can be displayed using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Format) property. For example, the format `${point.x} : ${point.high}` shows the x-value and the high value.
 
 ```cshtml
 
@@ -107,7 +107,7 @@ By default, the tooltip shows the x and y values of a point. Additional informat
 
 ```
 
-## Customize the appearance of tooltip
+## Customize the tooltip appearance
 
 The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Fill) and [Border](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Border) properties customize the tooltip background and border. The [TextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_TextStyle) property customizes the tooltip text font.
 
@@ -155,7 +155,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
 
 ## Tooltip position
 
-By default, the tooltip aligns to the left side of the Stock Chart. To move the tooltip with the pointer across data points, set `Nearest` to the `TooltipPosition` property in the [StockChartTooltipSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings__ctor).
+By default, the tooltip aligns to the left side of the Stock Chart. To move the tooltip with the pointer across data points, set the [TooltipPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_TooltipPosition) property to `Nearest` in [StockChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html).
 
 ```cshtml
 
@@ -209,4 +209,4 @@ By default, the tooltip aligns to the left side of the Stock Chart. To move the 
 
 ![Blazor Stock Chart with moving tooltip](images/common/blazor-stock-chart-moving-tooltip.webp)
 
-N> Refer to the [Blazor Stock Charts](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for a summary of key features and explore the [Blazor Stock Chart example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=fluent2) to learn about chart types and time based data visualization at equal intervals.
+N> Refer to the [Blazor Stock Chart](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for a summary of key features and explore the [Blazor Stock Chart example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=fluent2) to learn about chart types and time-based data visualization at equal intervals.

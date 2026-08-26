@@ -11,11 +11,11 @@ documentation: ug
 
 # Blazor Stock Chart Range Selector
 
-The range selector enables selection of a date range using specified periods. By default, the range selector is enabled in the stock chart.
+The range selector enables selecting a date range with specified periods. The range selector is enabled by default in the Stock Chart.
 
 ## Selecting Range
 
-The left and right thumbs of the RangeNavigator indicate the selected range across large datasets. The range can be selected in the following ways.
+The left and right thumbs of the [RangeNavigator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html) indicate the selected range across large datasets. The range can be selected in the following ways.
 
 * By dragging the thumbs.
 * By tapping the labels.
@@ -36,12 +36,12 @@ The following code example shows the [EnableSelector](https://help.syncfusion.co
 @code {
     public class ChartData
     {
-        public DateTime Date {get; set;}
-        public Double Open {get; set;}
-        public Double Low {get; set;}
-        public Double Close {get; set;}
-        public Double High {get; set;}
-        public Double Volume {get; set;}
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>

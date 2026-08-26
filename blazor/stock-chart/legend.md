@@ -13,7 +13,7 @@ The legend describes the series rendered in the Stock Chart. Enable the legend b
 
 ## Enable Legend
 
-To display the legend, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_Visible) property in [StockChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html) to **true**.
+To display the legend, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_Visible) property in [StockChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html) to `true`.
 
 ```cshtml
 
@@ -22,7 +22,7 @@ To display the legend, set the [Visible](https://help.syncfusion.com/cr/blazor/S
 <SfStockChart Title="AAPL Stock Price">
     <StockChartLegendSettings Visible="true"></StockChartLegendSettings>
     <StockChartSeriesCollection>
-        <StockChartSeries DataSource="@StockDetails" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple  Inc" Type="ChartSeriesType.Candle"></StockChartSeries>
+        <StockChartSeries DataSource="@StockDetails" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple Inc" Type="ChartSeriesType.Candle"></StockChartSeries>
     </StockChartSeriesCollection>
 </SfStockChart>
 
@@ -392,7 +392,7 @@ Use the [ItemPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ### Legend Paging
 
-When legend items exceed the available bounds, paging is enabled automatically. End users can navigate between pages using the navigation buttons.
+When legend items exceed the available bounds, paging is enabled automatically. End users can navigate between pages using the navigation buttons. Use the [Padding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_Padding) and [ShapePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_ShapePadding) properties to adjust the spacing.
 
 ```cshtml
 
@@ -566,7 +566,7 @@ The series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 Legend templates allow you to replace default legend icons and text with custom HTML or Blazor markup for each series. This enables branded styles, richer content (icons, multi-line text, badges), improved readability, and localization.
 
-To use, add a `LegendItemTemplate` inside any [StockChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries) you want to customize. The rendered content becomes the legend item and can be styled with CSS. Legend interactions (click to toggle series) remain unless [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_ToggleVisibility) is set to false. Templates work with all legend positions, alignments, and paging.
+To use, add the [LegendItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_LegendItemTemplate) inside any [StockChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html) you want to customize. The rendered content becomes the legend item and can be styled with CSS. Legend interactions (click to toggle series) remain unless [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_ToggleVisibility) is set to `false`. Templates work with all legend positions, alignments, and paging.
 
 ```
 @using Syncfusion.Blazor.Charts

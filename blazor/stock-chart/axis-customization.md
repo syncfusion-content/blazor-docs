@@ -13,13 +13,14 @@ documentation: ug
 
 ## Title
 
-Add a chart title using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_Title) property to provide quick information about the plotted data. Customize the title style using the [TitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTitleStyle.html) property.
+Add a chart title using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_Title) property to provide quick information about the plotted data. Customize the title style using the [StockChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTitleStyle.html).
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart Title="AAPL Stock Price">
+    <StockChartTitleStyle Size="20px" Color="#E27F2D" />
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" YName="Y"></StockChartSeries>
     </StockChartSeriesCollection>
@@ -135,7 +136,7 @@ Customize the `Width`, `Color`, and `DashArray` of minor and major grid lines us
         new ChartData { Date = new DateTime(2012, 05, 07), Y = 600 },
         new ChartData { Date = new DateTime(2012, 05, 14), Y = 50 },
         new ChartData { Date = new DateTime(2012, 05, 21), Y = 700 },
-        new ChartData { Date = new DateTime(2012, 05, 28), Y = 90}
+        new ChartData { Date = new DateTime(2012, 05, 28), Y = 90 }
     };
 }
 
@@ -143,9 +144,9 @@ Customize the `Width`, `Color`, and `DashArray` of minor and major grid lines us
 
 ![Blazor Stock Chart with Grid Lines](images/common/blazor-stock-chart-grid-lines.webp)
 
-## Multiple Axis
+## Multiple Axes
 
-In addition to the primary X and Y axes, multiple additional axes can be added to the chart. A series can be associated with an [axis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html) by mapping the series to the axis using the axis's unique `Name`.
+In addition to the primary X and Y axes, multiple additional axes can be added to the chart. A series can be associated with an [axis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html) by assigning a unique [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_Name) to the axis and mapping it to the series through the [YAxisName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_YAxisName) property.
 
 ```cshtml
 
@@ -208,7 +209,7 @@ In addition to the primary X and Y axes, multiple additional axes can be added t
 
 When an axis is inversed, the highest value of the axis is placed closer to the origin and the lowest value farther from it. To render an axis in an inversed manner, set [IsInversed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_IsInversed) to `true`.
 
- ```cshtml
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -254,15 +255,14 @@ When an axis is inversed, the highest value of the axis is placed closer to the 
 
 To place an axis opposite from its original position, set [OpposedPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_OpposedPosition) to `true`.
 
- ```cshtml
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart Title="AAPL Stock Price">
     <StockChartPrimaryXAxis OpposedPosition="true"></StockChartPrimaryXAxis>
-
     <StockChartSeriesCollection>
-        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" High="High" Low="Low" Open="Open" Close="Close"></StockChartSeries>
+        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close"></StockChartSeries>
     </StockChartSeriesCollection>
 </SfStockChart>
 

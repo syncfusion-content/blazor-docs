@@ -13,17 +13,16 @@ documentation: ug
 
 The stock chart supports three zooming interactions:
 
-* Selection – Set [EnableSelectionZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_EnableSelectionZooming) to **true** in [StockChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html) to enable rubber-band selection zooming.
-* Mouse wheel – Set [EnableMouseWheelZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_EnableMouseWheelZooming) to **true** to zoom in and out using the mouse wheel.
-* Pinch – Set [EnablePinchZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_EnablePinchZooming) to **true** to zoom using pinch gestures on touch-enabled devices.
+* Selection: Set [EnableSelectionZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_EnableSelectionZooming) to `true` in [StockChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html) to enable rubber-band selection zooming.
+* Mouse wheel: Set [EnableMouseWheelZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_EnableMouseWheelZooming) to `true` to zoom in and out using the mouse wheel.
+* Pinch: Set [EnablePinchZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_EnablePinchZooming) to `true` to zoom using pinch gestures on touch-enabled devices.
 
  N> Pinch zooming is supported only in browsers that enable multi-touch gestures.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
-@using System.IO
-@using System.Runtime.Serialization
+@using System.Net.Http.Json
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
 
@@ -74,7 +73,7 @@ After zooming, the toolbar appears with options for **Zoom**, **Zoom In**, **Zoo
 
 ## Modes
 
-The [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_Mode) property in [StockChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html) determines whether scaling occurs along the horizontal axis, vertical axis, or both. The default value is XY (both axes).
+The [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_Mode) property in [StockChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html) determines whether scaling occurs along the horizontal axis, vertical axis, or both. The default value is `XY` (both axes).
 
 There are three modes:
 
@@ -85,8 +84,7 @@ There are three modes:
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
-@using System.IO
-@using System.Runtime.Serialization
+@using System.Net.Http.Json
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
 
@@ -170,7 +168,7 @@ By default, Zoom In, Zoom Out, Pan, and Reset buttons appear in the toolbar afte
 
 @code {
     public List<ToolbarItems> ToolbarItem = new List<ToolbarItems>() { ToolbarItems.Zoom, ToolbarItems.Reset, ToolbarItems.Pan };
-    public ChartData[] DataSource{ get; set; }
+    public ChartData[] DataSource { get; set; }
 
      public class ChartData
     {
@@ -194,7 +192,7 @@ By default, Zoom In, Zoom Out, Pan, and Reset buttons appear in the toolbar afte
 
 ## Enable pan
 
-Use the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_EnablePan) property to allow panning on a zoomed stock chart without relying on toolbar items.
+Use the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_EnablePan) property to allow panning on a zoomed Stock Chart without relying on toolbar items. The [ZoomFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_ZoomFactor) and [ZoomPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_ZoomPosition) properties define the initial visible range.
 
 ```cshtml
 
@@ -226,7 +224,7 @@ Use the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 }    
 
 @code {
-    public ChartData[] DataSource{ get; set; }
+    public ChartData[] DataSource { get; set; }
 
      public class ChartData
     {
@@ -255,8 +253,7 @@ Use the [EnableScrollbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
-@using System.IO
-@using System.Runtime.Serialization
+@using System.Net.Http.Json
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
 
@@ -283,7 +280,7 @@ Use the [EnableScrollbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 }
 
 @code {
-    public ChartData[] DataSource{ get; set; }
+    public ChartData[] DataSource { get; set; }
 
      public class ChartData
     {
@@ -307,13 +304,12 @@ Use the [EnableScrollbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## Auto interval on zooming
 
-Set [EnableAutoIntervalOnZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCommonAxis.html#Syncfusion_Blazor_Charts_StockChartCommonAxis_EnableAutoIntervalOnZooming) to **true** to calculate axis intervals automatically based on the zoomed range.
+Set [EnableAutoIntervalOnZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCommonAxis.html#Syncfusion_Blazor_Charts_StockChartCommonAxis_EnableAutoIntervalOnZooming) to `true` to calculate axis intervals automatically based on the zoomed range.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
-@using System.IO
-@using System.Runtime.Serialization
+@using System.Net.Http.Json
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
 
@@ -340,7 +336,7 @@ Set [EnableAutoIntervalOnZooming](https://help.syncfusion.com/cr/blazor/Syncfusi
 }
 
 @code {
-    public ChartData[] DataSource{ get; set; }
+    public ChartData[] DataSource { get; set; }
 
      public class ChartData
     {
@@ -360,6 +356,6 @@ Set [EnableAutoIntervalOnZooming](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```
 
-![Auto Interval on Zooming in Blazor Area Chart](images/zooming/stock-chart-autointerval.webp)
+![Auto Interval on Zooming in Blazor Stock Chart](images/zooming/stock-chart-autointerval.webp)
 
-N> Refer to the [Blazor Stock Chart](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for feature overviews and the [Blazor Stock Chart example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=fluent2) to explore chart types and time based data representation.
+N> Refer to the [Blazor Stock Chart](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for feature overviews and the [Blazor Stock Chart example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=fluent2) to explore chart types and time-based data representation.
