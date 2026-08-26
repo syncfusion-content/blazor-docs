@@ -3,7 +3,7 @@ layout: post
 title: Data Binding in Blazor In-place Editor | Syncfusion
 description: Bind local or remote data to editor components inside Blazor In-place Editor using arrays or DataManager.
 platform: Blazor
-control: In-place Editor 
+control: Blazor  In-place Editor 
 documentation: ug
 ---
 

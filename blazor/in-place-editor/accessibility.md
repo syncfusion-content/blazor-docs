@@ -3,7 +3,7 @@ layout: post
 title: Accessibility in Blazor In-place Editor | Syncfusion
 description: Learn how Blazor In-place Editor supports accessibility standards, keyboard navigation, screen readers, and ARIA attributes.
 platform: Blazor
-control: In-place Editor
+control: Blazor  In-place Editor
 documentation: ug
 ---
 
@@ -40,16 +40,16 @@ Use the following key shortcuts to operate the Blazor In-place Editor efficientl
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Move focus to the In-place Editor on the page and navigate forward between consecutive In-place Editor instances. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Move focus to the previous In-place Editor instance or to the previous focusable element. |
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Switches the In-place Editor to edit mode. |
-| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Cancels the edit and switches the In-place Editor back to display mode. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Move focus to the Blazor  In-place Editor on the page and navigate forward between consecutive Blazor  In-place Editor instances. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Move focus to the previous Blazor  In-place Editor instance or to the previous focusable element. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Switches the Blazor  In-place Editor to edit mode. |
+| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Cancels the edit and switches the Blazor  In-place Editor back to display mode. |
 
 ## Ensuring accessibility
 
 The Blazor In-place editor component's accessibility is validated with the [axe-core](https://www.npmjs.com/package/axe-core) tool during automated testing.
 
-The accessibility compliance of the In-place Editor component is demonstrated in the following sample. Open the [accessibility sample for In-place Editor](https://blazor.syncfusion.com/accessibility/inplace-editor) in a new window to evaluate accessibility with your preferred tools.
+The accessibility compliance of the Blazor  In-place Editor component is demonstrated in the following sample. Open the [accessibility sample for Blazor  In-place Editor](https://blazor.syncfusion.com/accessibility/inplace-editor) in a new window to evaluate accessibility with your preferred tools.
 
 ## See also
 
