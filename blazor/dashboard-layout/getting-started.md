@@ -131,11 +131,7 @@ Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor s
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
 
-....
-using Syncfusion.Blazor;
-....
 builder.Services.AddSyncfusionBlazor();
-....
 
 {% endhighlight %}
 {% endtabs %}
