@@ -67,7 +67,7 @@ The legend provides information about the HeatMap cells. To display the legend, 
 
 ![Legend in Blazor HeatMap Chart](images/legend/blazor-heatmap-chart-legend.webp)
 
-## Legend types
+## Legend Types
 
 The HeatMap supports the following legend types:
 

@@ -17,7 +17,7 @@ youtube:https://www.youtube.com/watch?v=u27NqwNs8sw&t=78s
 
 The HeatMap supports JSON data and two-dimensional array data. You can bind data to the HeatMap using the supported data adaptors.
 
-## Data adaptor
+## Data Adaptor
 
 The HeatMap supports the following data-binding modes:
 
@@ -28,7 +28,7 @@ The HeatMap supports the following data-binding modes:
    * Table binding
    * Cell binding
 
-### Array - Table binding
+### Array - Table Binding
 
 This data-binding mode uses a two-dimensional array of numeric values, where each row represents data points for an X-axis label. This is the default data-binding mode for the HeatMap. You can bind the array directly to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SfHeatMap-1.html#Syncfusion_Blazor_HeatMap_SfHeatMap_1_DataSource) property.
 
@@ -81,7 +81,7 @@ This data-binding mode uses a two-dimensional array of numeric values, where eac
 
 ![Array - Table Binding in Blazor HeatMap Chart](images/data/blazor-heatmap-chart-data-binding.webp)
 
-### Array - Cell binding
+### Array - Cell Binding
 
 This data-binding mode uses a collection of array entries that contain the row index, column index, and value for each cell. To bind data in cell-binding mode, assign the data to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SfHeatMap-1.html#Syncfusion_Blazor_HeatMap_SfHeatMap_1_DataSource) property and set the [`AdaptorType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapDataSourceSettings.html#Syncfusion_Blazor_HeatMap_HeatMapDataSourceSettings_AdaptorType) property to **AdaptorType.Cell**.
 
@@ -154,7 +154,7 @@ This data-binding mode uses a collection of array entries that contain the row i
 
 ![Array - Cell Binding in Blazor HeatMap Chart](images/data/blazor-heatmap-chart-data-cell-binding.webp)
 
-### JSON data - Table binding
+### JSON Data - Table Binding
 
 In JSON table binding, each JSON object represents an X-axis data point and its corresponding Y-axis data values. To bind JSON table data to the HeatMap, assign the data to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SfHeatMap-1.html#Syncfusion_Blazor_HeatMap_SfHeatMap_1_DataSource) property. Then, set the [`IsJsonData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapDataSourceSettings.html#Syncfusion_Blazor_HeatMap_HeatMapDataSourceSettings_IsJsonData) property to `true` and the [`AdaptorType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapDataSourceSettings.html#Syncfusion_Blazor_HeatMap_HeatMapDataSourceSettings_AdaptorType) property to `AdaptorType.Table`. Use the [`XDataMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapDataSourceSettings.html#Syncfusion_Blazor_HeatMap_HeatMapDataSourceSettings_XDataMapping) property to map the X-axis data field in the JSON data source.
 
@@ -212,7 +212,7 @@ In JSON table binding, each JSON object represents an X-axis data point and its 
 
 ![JSON Data - Table Binding in Blazor HeatMap Chart](images/data/blazor-heatmap-chart-json-data-table-binding.webp)
 
-### JSON data - Cell binding
+### JSON Data - Cell Binding
 
 In JSON cell binding, each JSON object represents a cell and contains the cell value along with the corresponding X-axis and Y-axis mapping values. To bind JSON cell data to the HeatMap, assign the data to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SfHeatMap-1.html#Syncfusion_Blazor_HeatMap_SfHeatMap_1_DataSource) property. Then, set the [`AdaptorType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapDataSourceSettings.html#Syncfusion_Blazor_HeatMap_HeatMapDataSourceSettings_AdaptorType) property to **AdaptorType.Cell** and the [`IsJsonData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapDataSourceSettings.html#Syncfusion_Blazor_HeatMap_HeatMapDataSourceSettings_IsJsonData) property to `true`.
 
@@ -332,7 +332,7 @@ Map the JSON data fields using the [`ValueMapping`](https://help.syncfusion.com/
 
 ![JSON Data - Cell Binding in Blazor HeatMap Chart](images/data/blazor-heatmap-chart-json-data-cell-binding.webp)
 
-## Empty points
+## Empty Points
 
 Data points with a `null` value are treated as empty points. Empty points are not rendered in the HeatMap and are displayed using the default empty-point color. You can customize the empty-point color by setting the [`EmptyPointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapPaletteSettings.html#Syncfusion_Blazor_HeatMap_HeatMapPaletteSettings_EmptyPointColor) property.
 
