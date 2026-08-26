@@ -123,8 +123,5 @@ Set [EnablePieProgress](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ## See also
 
 * [Getting Started with Blazor ProgressBar](getting-started.md)
-* [Blazor ProgressBar Animation](animation.md)
-* [Blazor ProgressBar States](states.md)
 * [Blazor ProgressBar Customization](customization.md)
-* [Blazor ProgressBar Events](events.md)
 * [Blazor ProgressBar Accessibility](accessibility.md)
