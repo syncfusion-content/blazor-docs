@@ -48,7 +48,7 @@ The [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Stoc
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -92,7 +92,7 @@ The [OnPointClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -136,7 +136,7 @@ The [PointMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -180,7 +180,7 @@ The [RangeChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -223,7 +223,7 @@ The [OnStockChartMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -266,7 +266,7 @@ The [OnStockChartMouseDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -309,7 +309,7 @@ The [OnStockChartMouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -352,7 +352,7 @@ The [OnStockChartMouseMove](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -395,7 +395,7 @@ The [OnStockChartMouseUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>

@@ -30,11 +30,11 @@ To display the legend, set the [Visible](https://help.syncfusion.com/cr/blazor/S
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -70,11 +70,11 @@ Use the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -111,11 +111,11 @@ The **Custom** position allows placing the legend anywhere within the Stock Char
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -158,11 +158,11 @@ Reverse the order of legend items using the [Reversed](https://help.syncfusion.c
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -192,7 +192,7 @@ Use the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
     <StockChartLegendBorder Color="Black" Width="2"></StockChartLegendBorder>
     </StockChartLegendSettings>
     <StockChartSeriesCollection>
-        <StockChartSeries DataSource="@StockDetails"  XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple Inc" Type="ChartSeriesType.Candle"></StockChartSeries>
+        <StockChartSeries DataSource="@StockDetails" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple Inc" Type="ChartSeriesType.Candle"></StockChartSeries>
     </StockChartSeriesCollection>
 </SfStockChart>
 
@@ -200,11 +200,11 @@ Use the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -235,7 +235,7 @@ The [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
     <StockChartLegendSettings Visible="true" ShapeHeight="13" ShapeWidth="13">
     </StockChartLegendSettings>
     <StockChartSeriesCollection>
-        <StockChartSeries DataSource="@StockDetails" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple Inc" Type="ChartSeriesType.Candle"  LegendShape="LegendShape.Diamond"></StockChartSeries>
+        <StockChartSeries DataSource="@StockDetails" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple Inc" Type="ChartSeriesType.Candle" LegendShape="LegendShape.Diamond"></StockChartSeries>
     </StockChartSeriesCollection>
 </SfStockChart>
   
@@ -243,11 +243,11 @@ The [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -286,11 +286,11 @@ When placed at the top or bottom, the legend occupies approximately 20%–25% of
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -327,11 +327,11 @@ Use the [ShapeHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -369,11 +369,11 @@ Use the [ItemPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -412,11 +412,11 @@ When legend items exceed the available bounds, paging is enabled automatically. 
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -455,11 +455,11 @@ When legend text exceeds the container, enable wrapping using the [TextWrap](htt
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -476,16 +476,16 @@ When legend text exceeds the container, enable wrapping using the [TextWrap](htt
 
 ![Blazor Stock Chart with legend text wrap](images/blazor-stock-chart-legend-text-wrap.webp)
 
-## Series selection based on legend
+## Series Selection Based on Legend
 
-By default, clicking a legend item collapses the visibility of the corresponding series. The [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_ToggleVisibility) property disables this behavior when set to false.
+By default, clicking a legend item toggles the visibility of the corresponding series. The [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_ToggleVisibility) property disables this behavior when set to false.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart Title="AAPL Stock Price" SelectionMode="SelectionMode.Series">
-    <StockChartLegendSettings Visible="true"  ToggleVisibility="false">
+    <StockChartLegendSettings Visible="true" ToggleVisibility="false">
     </StockChartLegendSettings>
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple Stock Price"></StockChartSeries>
@@ -498,11 +498,11 @@ By default, clicking a legend item collapses the visibility of the corresponding
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -519,7 +519,7 @@ By default, clicking a legend item collapses the visibility of the corresponding
 
 ![Blazor Stock Chart with selection mode](images/blazor-stock-chart-selection-mode.webp)
 
-## Hiding legend item
+## Hiding Legend Item
 
 The series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Name) is used as the legend text by default. Skip the legend for a specific series by providing an empty string for the [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Name) property.
 
@@ -541,11 +541,11 @@ The series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -564,11 +564,12 @@ The series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ## Legend Template
 
-Legend templates allow you to replace default legend icons and text with custom HTML or Blazor markup for each series. This enables branded styles, richer content (icons, multi-line text, badges), improved readability, and localization.
+Legend templates replace the default legend icons and text with custom HTML or Blazor markup for each series. This enables branded styles, richer content (icons, multi-line text, badges), improved readability, and localization.
 
-To use, add the [LegendItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_LegendItemTemplate) inside any [StockChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html) you want to customize. The rendered content becomes the legend item and can be styled with CSS. Legend interactions (click to toggle series) remain unless [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_ToggleVisibility) is set to `false`. Templates work with all legend positions, alignments, and paging.
+To use a template, add the [LegendItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_LegendItemTemplate) inside the target [StockChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html). The rendered content becomes the legend item and can be styled with CSS. Legend interactions (click to toggle series) remain unless [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_ToggleVisibility) is set to `false`. Templates work with all legend positions, alignments, and paging.
 
-```
+```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 @* Initialize the stock chart component and configure its essential features *@
@@ -649,6 +650,12 @@ To use, add the [LegendItemTemplate](https://help.syncfusion.com/cr/blazor/Syncf
     };
 }
 ```
+
 ![Blazor Stock Chart legend template](images/blazor-stock-chart-legend-template.webp)
 
+## See also
+
+* [Series Types](./series-types)
+* [Appearance](./appearance)
+* [Tooltip](./tool-tip)
 

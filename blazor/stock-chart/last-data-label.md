@@ -32,11 +32,11 @@ To enable the last data label, set the [ShowLabel](https://help.syncfusion.com/c
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -45,7 +45,7 @@ To enable the last data label, set the [ShowLabel](https://help.syncfusion.com/c
         new ChartData { Date = new DateTime(2012, 04, 09), Open = 89.4471, High = 92, Low = 86.2157, Close = 86.4614, Volume = 912634864 },
         new ChartData { Date = new DateTime(2012, 04, 16), Open = 87.1514, High = 88.6071, Low = 81.4885, Close = 81.8543, Volume = 1221746066 },
         new ChartData { Date = new DateTime(2012, 04, 23), Open = 81.5157, High = 88.2857, Low = 79.2857, Close = 86.1428, Volume = 965935749 },
-        new ChartData { Date = new DateTime(2012, 04, 30), Open = 85.4, High =  85.4857, Low = 80.7385, Close = 80.75, Volume = 615249365 },
+        new ChartData { Date = new DateTime(2012, 04, 30), Open = 85.4, High = 85.4857, Low = 80.7385, Close = 80.75, Volume = 615249365 },
         new ChartData { Date = new DateTime(2012, 05, 07), Open = 80.2143, High = 82.2685, Low = 79.8185, Close = 80.9585, Volume = 541742692 },
         new ChartData { Date = new DateTime(2012, 05, 14), Open = 80.3671, High = 81.0728, Low = 74.5971, Close = 75.7685, Volume = 708126233 },
         new ChartData { Date = new DateTime(2012, 05, 21), Open = 76.3571, High = 82.3571, Low = 76.2928, Close = 80.3271, Volume = 682076215 },
@@ -61,7 +61,7 @@ To enable the last data label, set the [ShowLabel](https://help.syncfusion.com/c
 
 The appearance of the last data label can be customized using properties available in the following settings.
 
-In `StockChartLastDataLabel`:
+In [StockChartLastDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html):
 * [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html#Syncfusion_Blazor_Charts_StockChartLastDataLabel_Background): Sets the background color of the label container.
 * [LineColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html#Syncfusion_Blazor_Charts_StockChartLastDataLabel_LineColor): Sets the color of the indicator line.
 * [LineWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLastDataLabel.html#Syncfusion_Blazor_Charts_StockChartLastDataLabel_LineWidth): Sets the width of the indicator line.
@@ -100,11 +100,11 @@ In [StockChartLastDataLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusio
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -113,7 +113,7 @@ In [StockChartLastDataLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusio
         new ChartData { Date = new DateTime(2012, 04, 09), Open = 89.4471, High = 92, Low = 86.2157, Close = 86.4614, Volume = 912634864 },
         new ChartData { Date = new DateTime(2012, 04, 16), Open = 87.1514, High = 88.6071, Low = 81.4885, Close = 81.8543, Volume = 1221746066 },
         new ChartData { Date = new DateTime(2012, 04, 23), Open = 81.5157, High = 88.2857, Low = 79.2857, Close = 86.1428, Volume = 965935749 },
-        new ChartData { Date = new DateTime(2012, 04, 30), Open = 85.4, High =  85.4857, Low = 80.7385, Close = 80.75, Volume = 615249365 },
+        new ChartData { Date = new DateTime(2012, 04, 30), Open = 85.4, High = 85.4857, Low = 80.7385, Close = 80.75, Volume = 615249365 },
         new ChartData { Date = new DateTime(2012, 05, 07), Open = 80.2143, High = 82.2685, Low = 79.8185, Close = 80.9585, Volume = 541742692 },
         new ChartData { Date = new DateTime(2012, 05, 14), Open = 80.3671, High = 81.0728, Low = 74.5971, Close = 75.7685, Volume = 708126233 },
         new ChartData { Date = new DateTime(2012, 05, 21), Open = 76.3571, High = 82.3571, Low = 76.2928, Close = 80.3271, Volume = 682076215 },
@@ -124,3 +124,9 @@ In [StockChartLastDataLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusio
 ```
 
 ![Last Data Label Customization in Blazor Stock Chart](images/last-value/blazor-stock-chart-last-value-label-customization.webp)
+
+## See also
+
+* [Series Types](./series-types)
+* [Appearance](./appearance)
+* [Tooltip](./tool-tip)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Stock Chart Period Selector | Syncfusion®
-description: Learn how to add a period selector to the Blazor Stock Chart toolbar with intervals in Years, Months, Weeks, Days, Hours, or Minutes.
+description: Learn how to add a period selector to the Blazor Stock Chart toolbar with intervals in Years, Quarter, Months, Weeks, Days, Hours, Minutes, Seconds, or Auto.
 platform: Blazor
 control: Stock Chart
 documentation: ug
@@ -33,6 +33,7 @@ The period selector enables selecting a range with specified periods. The period
 
 @using Syncfusion.Blazor.Charts
 
+@* IndicatorType, TrendlineType, SeriesType, and ExportType are set to empty lists to hide their toolbar dropdowns, keeping the toolbar focused on the period selector *@
 <SfStockChart Title="AAPL Stock Price" IndicatorType="@IndicatorType" TrendlineType="@TrendlineType" SeriesType="@SeriesType" ExportType="@ExportType">
     <StockChartPeriods>
         <StockChartPeriod IntervalType="RangeIntervalType.Minutes" Interval="1" Text="1m"></StockChartPeriod>
@@ -63,11 +64,11 @@ The period selector enables selecting a range with specified periods. The period
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -83,7 +84,6 @@ The period selector enables selecting a range with specified periods. The period
         new ChartData { Date = new DateTime(2012, 05, 28), Open = 81.5571, High = 83.0714, Low = 80.0743, Close = 80.1414, Volume = 480059584 }
    };
 }
-
 
 ```
 
@@ -107,11 +107,11 @@ The [EnablePeriodSelector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -131,3 +131,7 @@ The [EnablePeriodSelector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 ```
 
 ![Visibility of Period Selector in Blazor Stock Chart](images/common/blazor-stock-chart-visibility-period-selector.webp)
+
+## See also
+
+* [Range Selector](./range-selector)

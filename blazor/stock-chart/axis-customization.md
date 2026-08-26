@@ -30,7 +30,7 @@ Add a chart title using the [Title](https://help.syncfusion.com/cr/blazor/Syncfu
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -74,7 +74,7 @@ Customize the `Width` and `Color` of minor and major tick lines using the [Major
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -97,7 +97,7 @@ Customize the `Width` and `Color` of minor and major tick lines using the [Major
 
 ## Grid Lines Customization
 
-Customize the `Width`, `Color`, and `DashArray` of minor and major grid lines using the [MajorGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_MajorGridLines) and [MinorGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_MinorGridLines) properties on the axis.
+Customize the `Width`, `Color`, and `DashArray` of minor and major grid lines using the [MajorGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_MajorGridLines) and [MinorGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_MinorGridLines) properties on the axis.
 
 ```cshtml
 
@@ -123,7 +123,7 @@ Customize the `Width`, `Color`, and `DashArray` of minor and major grid lines us
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -178,11 +178,11 @@ In addition to the primary X and Y axes, multiple additional axes can be added t
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -225,11 +225,11 @@ When an axis is inversed, the highest value of the axis is placed closer to the 
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -270,11 +270,11 @@ To place an axis opposite from its original position, set [OpposedPosition](http
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -294,3 +294,7 @@ To place an axis opposite from its original position, set [OpposedPosition](http
 ```
 
 ![Blazor Stock Chart in Opposed Position](images/common/blazor-stock-chart-in-opposed-position.webp)
+
+## See also
+
+* [Appearance](./appearance)

@@ -9,6 +9,8 @@ documentation: ug
 
 # Blazor Stock Chart Dimensions
 
+N> If no size is specified, a default height of 450px is used and the width matches the window size.
+
 ## Size to Fit the Container
 
 The [SfStockChart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html) component adapts to its container size. Set the container dimensions with inline styles or CSS, as shown below.
@@ -29,11 +31,11 @@ The [SfStockChart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -58,9 +60,7 @@ The [SfStockChart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 Set the stock chart size directly using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_Height) properties.
 
-<!-- markdownlint-disable MD036 -->
-**In Pixels**
-<!-- markdownlint-disable MD036 -->
+### In Pixels
 
 ```cshtml
 
@@ -76,11 +76,11 @@ Set the stock chart size directly using the [Width](https://help.syncfusion.com/
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -101,9 +101,11 @@ Set the stock chart size directly using the [Width](https://help.syncfusion.com/
 
 ![Changing Blazor Stock Chart Size in Pixel](images/size/blazor-stock-chart-size-in-pixel.webp)
 
-**In Percentage**
+### In Percentage
 
-When values are specified in percentages, the stock chart sizes relative to its container. For example, a height of `90%` renders at 90% of the container height.
+When values are specified in percentages, the stock chart sizes relative to its container. For example, a width of `100%` renders at the full width of the container, and a height of `90%` renders at 90% of the container height.
+
+N> When setting `Height` as a percentage, the parent container must have an explicit height defined (in pixels or percentage); otherwise, the percentage height has no effect.
 
 ```cshtml
 
@@ -119,11 +121,11 @@ When values are specified in percentages, the stock chart sizes relative to its 
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -144,4 +146,7 @@ When values are specified in percentages, the stock chart sizes relative to its 
 
 ![Changing Blazor Stock Chart Size in Percentage](images/size/blazor-stock-chart-size-in-percentage.webp)
 
-N> If no size is specified, a default height of 450px is used and the width matches the window size.
+## See also
+
+* [Getting Started](./getting-started)
+* [Appearance](./appearance)

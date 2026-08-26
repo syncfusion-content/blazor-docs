@@ -34,11 +34,11 @@ By default, the tooltip is disabled. Enable it by setting the [Enable](https://h
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -63,9 +63,7 @@ By default, the tooltip is disabled. Enable it by setting the [Enable](https://h
 
 ## Format the tooltip
 
-<!-- markdownlint-disable MD013 -->
-
-By default, the tooltip shows the x and y values of a point. Additional information can be displayed using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Format) property. For example, the format `${point.x} : ${point.high}` shows the x-value and the high value.
+By default, the tooltip shows the x and y values of a point. Additional information can be displayed using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Format) property. For example, the format `<b>${point.x} : ${point.high}</b>` shows the x-value and the high value in bold text.
 
 ```cshtml
 
@@ -84,11 +82,11 @@ By default, the tooltip shows the x and y values of a point. Additional informat
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -128,11 +126,11 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -184,11 +182,11 @@ By default, the tooltip aligns to the left side of the Stock Chart. To move the 
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -210,3 +208,8 @@ By default, the tooltip aligns to the left side of the Stock Chart. To move the 
 ![Blazor Stock Chart with moving tooltip](images/common/blazor-stock-chart-moving-tooltip.webp)
 
 N> Refer to the [Blazor Stock Chart](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for a summary of key features and explore the [Blazor Stock Chart example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=fluent2) to learn about chart types and time-based data visualization at equal intervals.
+
+## See also
+
+* [Crosshair](./cross-hair)
+* [Appearance](./appearance)

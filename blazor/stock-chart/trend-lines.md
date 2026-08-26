@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Stock Chart Trendlines
 
-Trendlines illustrate the direction and speed of price movement. The Stock Chart supports six trendline types: `Linear`, `Exponential`, `Logarithmic`, `Polynomial`, `Power`, and `Moving Average`. Use the [TrendlineType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_TrendlineType) property to configure the trendline dropdown and add or remove trendline types.
+Trendlines illustrate the direction and speed of price movement. The Stock Chart supports six trendline types: `Linear`, `Logarithmic`, `Exponential`, `Polynomial`, `Power`, and `Moving Average`. Use the [TrendlineType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_TrendlineType) property to configure the trendline dropdown and add or remove trendline types.
 
 ## Linear
 
@@ -44,11 +44,11 @@ A linear trendline is a best-fit straight line used with simpler datasets. To re
     public class StockChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<StockChartData> StockDetails = new List<StockChartData>
@@ -104,11 +104,11 @@ To render a logarithmic trendline, set the trendline [Type](https://help.syncfus
     public class StockChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<StockChartData> StockDetails = new List<StockChartData>
@@ -164,11 +164,11 @@ To render an exponential trendline, set the trendline [Type](https://help.syncfu
     public class StockChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<StockChartData> StockDetails = new List<StockChartData>
@@ -215,7 +215,6 @@ A polynomial trendline is a curved line used when data fluctuates. To render a p
 </SfStockChart>
 
 @code {
-
     public List<TechnicalIndicators> Indicator = new List<TechnicalIndicators>();
     public List<ChartSeriesType> SeriesType = new List<ChartSeriesType>();
     public List<ExportType> ExportType = new List<ExportType>();
@@ -223,11 +222,11 @@ A polynomial trendline is a curved line used when data fluctuates. To render a p
     public class StockChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<StockChartData> StockDetails = new List<StockChartData>
@@ -340,11 +339,11 @@ The [Period](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Stoc
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -365,7 +364,7 @@ The [Period](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Stoc
 
 ![Blazor Stock Chart with Moving Average Trendline](images/common/blazor-stock-chart-moving-average-trendlines.webp)
 
-## Trendline customization
+## Trendline Customization
 
 The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTrendline.html#Syncfusion_Blazor_Charts_StockChartTrendline_Fill) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTrendline.html#Syncfusion_Blazor_Charts_StockChartTrendline_Width) properties customize the appearance of the trendline. The [EnableTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTrendline.html#Syncfusion_Blazor_Charts_StockChartTrendline_EnableTooltip) property controls whether the trendline tooltip is displayed.
 
@@ -387,11 +386,11 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -408,7 +407,11 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
    };
 }
 
-
 ```
 
 ![Blazor Stock Chart with Custom Trendline](images/common/blazor-stock-chart-custom-trendline.webp)
+
+## See also
+
+* [Technical Indicators](./technical-indicators)
+* [Series Types](./series-types)

@@ -9,9 +9,9 @@ documentation: ug
 
 # Blazor Stock Chart Print and Export
 
-The rendered Stock Chart supports exporting to JPEG, PNG, SVG, PDF, XLSX, and CSV through the export dropdown in the period selector toolbar. The required format can be selected from the export dropdown in the Stock Chart toolbar. Configure the available export formats using the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_ExportType) property.
+The rendered Stock Chart supports exporting to JPEG, PNG, SVG, PDF, XLSX, and CSV through the export dropdown in the Stock Chart toolbar. Configure the available export formats using the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_ExportType) property.
 
-The rendered Stock Chart can be printed directly using the print button in the period selector toolbar.
+The rendered Stock Chart can be printed directly using the print button in the Stock Chart toolbar.
 
 ```cshtml
 
@@ -34,11 +34,11 @@ The rendered Stock Chart can be printed directly using the print button in the p
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set;} 
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -61,7 +61,7 @@ The rendered Stock Chart can be printed directly using the print button in the p
 
 ## Disable export and print
 
-Set the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_ExportType) property to an empty list to disable export options.
+Set the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_ExportType) property to an empty list to remove the export dropdown and print button from the Stock Chart toolbar.
 
 ```cshtml
 
@@ -77,11 +77,11 @@ Set the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cha
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set;} 
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -119,9 +119,9 @@ In the following example, when the stock chart is exported to Excel format, the 
 
 ```cshtml
 
-@using System.Linq;
-@using Syncfusion.PdfExport;
-@using Syncfusion.ExcelExport; 
+@using System.Linq
+@using Syncfusion.PdfExport
+@using Syncfusion.ExcelExport
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart Title="AAPL Stock Price">
@@ -142,11 +142,11 @@ In the following example, when the stock chart is exported to Excel format, the 
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set;} 
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -190,4 +190,5 @@ In the following example, when the stock chart is exported to Excel format, the 
 }
 
 ```
-![Blazor Stock Chart with Multiple Axes](images/common/blazor-stock-chart-export-print.webp)
+
+![Blazor Stock Chart with Customized Excel Export](images/common/blazor-stock-chart-export-print.webp)

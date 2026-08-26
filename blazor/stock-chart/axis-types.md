@@ -33,7 +33,7 @@ The DateTime axis uses a time-based scale and renders date-time values as axis l
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -46,8 +46,8 @@ The DateTime axis uses a time-based scale and renders date-time values as axis l
         new ChartData { Date = new DateTime(2012, 05, 07), Y = 600 },
         new ChartData { Date = new DateTime(2012, 05, 14), Y = 50 },
         new ChartData { Date = new DateTime(2012, 05, 21), Y = 700 },
-        new ChartData { Date = new DateTime(2012, 05, 28), Y = 90}
-   };
+        new ChartData { Date = new DateTime(2012, 05, 28), Y = 90 }
+    };
 }
 
 ```
@@ -72,7 +72,7 @@ The DateTimeCategory axis displays only business days by skipping non-trading da
     <StockChartTooltipSettings Enable="true" Header="AAPL Stock Price"></StockChartTooltipSettings>
     <StockChartCrosshairSettings Enable="true"></StockChartCrosshairSettings>
     <StockChartSeriesCollection>
-        <StockChartSeries DataSource="@StockInfo" Type="ChartSeriesType.Line" XName="X"  YName="Y"></StockChartSeries>
+        <StockChartSeries DataSource="@StockInfo" Type="ChartSeriesType.Line" XName="X" YName="Y"></StockChartSeries>
     </StockChartSeriesCollection>
 </SfStockChart>
 
@@ -149,7 +149,7 @@ The Logarithmic axis uses a logarithmic scale and is useful when data spans mult
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
     public List<ChartData> StockDetails = new List<ChartData>
     {
@@ -162,7 +162,7 @@ The Logarithmic axis uses a logarithmic scale and is useful when data spans mult
         new ChartData { Date = new DateTime(2012, 05, 14), Y = 50 },
         new ChartData { Date = new DateTime(2012, 05, 21), Y = 700 },
         new ChartData { Date = new DateTime(2012, 05, 28), Y = 90 }
-   };
+    };
 }
 
 ```

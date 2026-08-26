@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Stock Chart Stock Events
 
-Stock events mark notable occurrences such as market open and close, highest or lowest price, and quarter or year boundaries on specific dates. In this section, the `Spline` series is used to represent selected data values. Specific data values can be customized using [StockChartStockEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvents.html).
+Stock events mark notable occurrences such as market open and close, highest or lowest price, and quarter or year boundaries on specific dates. In this section, a `Spline` series represents the stock price data, with stock events plotted at specific dates. Configure stock events using [StockChartStockEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvents.html).
 
 ## Date
 
@@ -31,7 +31,15 @@ The [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
 The [Description](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Description) property specifies the tooltip content that appears when hovering over a stock event. For example, when [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Text) is **Q1** and the [Description](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Description) is **Quarter 1**, the tooltip displays **Quarter 1**.
 
-Use the [ShowOnSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_ShowOnSeries) property to control whether the stock event is displayed on the series. Customize the event border using [StockChartStockEventsBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEventsBorder.html) and the event text using [StockChartStockEventsTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEventsTextStyle.html).
+## Show Event on Series
+
+Use the [ShowOnSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_ShowOnSeries) property to control whether the stock event is displayed on the series.
+
+## Border and Text Style
+
+Customize the event border using [StockChartStockEventsBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEventsBorder.html) and the event text using [StockChartStockEventsTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEventsTextStyle.html).
+
+The following example demonstrates all the stock event properties described above together:
 
 ```cshtml
 
@@ -129,3 +137,8 @@ Use the [ShowOnSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 ```
 
 ![Events in Blazor Stock Chart](images/blazor-stock-chart-events.webp)
+
+## See also
+
+* [Series Types](./series-types)
+* [Tooltip](./tool-tip)

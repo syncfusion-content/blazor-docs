@@ -9,15 +9,17 @@ documentation: ug
 
 # Blazor Stock Chart Zooming
 
+Zooming lets users inspect a specific range of the Stock Chart in detail by scaling the axes.
+
 ## Enable zooming
 
-The stock chart supports three zooming interactions:
+The Stock Chart supports three zooming interactions:
 
 * Selection: Set [EnableSelectionZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_EnableSelectionZooming) to `true` in [StockChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html) to enable rubber-band selection zooming.
 * Mouse wheel: Set [EnableMouseWheelZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_EnableMouseWheelZooming) to `true` to zoom in and out using the mouse wheel.
 * Pinch: Set [EnablePinchZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_EnablePinchZooming) to `true` to zoom using pinch gestures on touch-enabled devices.
 
- N> Pinch zooming is supported only in browsers that enable multi-touch gestures.
+N> Pinch zooming is supported only in browsers that enable multi-touch gestures.
 
 ```cshtml
 
@@ -29,25 +31,25 @@ The stock chart supports three zooming interactions:
 @if (DataSource != null)
 {
     <SfStockChart Title="AAPL Stock Price">
-       <StockChartZoomSettings EnableMouseWheelZooming="true" EnablePinchZooming="true" EnableSelectionZooming="true"></StockChartZoomSettings>
-            <StockChartPrimaryXAxis>
-                <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
-            </StockChartPrimaryXAxis>
-            <StockChartPrimaryYAxis>
-                <StockChartAxisLineStyle Width="0"></StockChartAxisLineStyle>
-                <StockChartAxisMajorTickLines Width="0"></StockChartAxisMajorTickLines>
-            </StockChartPrimaryYAxis>
-            <StockChartSeriesCollection>
-                <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Candle"></StockChartSeries>
-            </StockChartSeriesCollection>
-            <StockChartChartArea>
-                <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
-            </StockChartChartArea>
+        <StockChartZoomSettings EnableMouseWheelZooming="true" EnablePinchZooming="true" EnableSelectionZooming="true"></StockChartZoomSettings>
+        <StockChartPrimaryXAxis>
+            <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
+        </StockChartPrimaryXAxis>
+        <StockChartPrimaryYAxis>
+            <StockChartAxisLineStyle Width="0"></StockChartAxisLineStyle>
+            <StockChartAxisMajorTickLines Width="0"></StockChartAxisMajorTickLines>
+        </StockChartPrimaryYAxis>
+        <StockChartSeriesCollection>
+            <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Candle"></StockChartSeries>
+        </StockChartSeriesCollection>
+        <StockChartChartArea>
+            <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
+        </StockChartChartArea>
     </SfStockChart>
-}   
+}
 
 @code {
-    public ChartData[] DataSource{ get; set; }
+    public ChartData[] DataSource { get; set; }
 
     public class ChartData
     {
@@ -61,7 +63,7 @@ The stock chart supports three zooming interactions:
 
     protected override async Task OnInitializedAsync()
     {
-        DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri +"./chart-data.json");
+        DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri + "./chart-data.json");
     }
 }
 
@@ -91,28 +93,28 @@ There are three modes:
 @if (DataSource != null)
 {
     <SfStockChart Title="AAPL Stock Price">
-       <StockChartZoomSettings EnableSelectionZooming="true" Mode="ZoomMode.X"></StockChartZoomSettings>
-            <StockChartPrimaryXAxis>
-                <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
-                <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
-            </StockChartPrimaryXAxis>
-            <StockChartPrimaryYAxis>
-                <StockChartAxisLineStyle Width="0"></StockChartAxisLineStyle>
-                <StockChartAxisMajorTickLines Width="0"></StockChartAxisMajorTickLines>
-            </StockChartPrimaryYAxis>
-            <StockChartSeriesCollection>
-                <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Candle"></StockChartSeries>
-            </StockChartSeriesCollection>
-            <StockChartChartArea>
-                <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
-            </StockChartChartArea>
+        <StockChartZoomSettings EnableSelectionZooming="true" Mode="ZoomMode.X"></StockChartZoomSettings>
+        <StockChartPrimaryXAxis>
+            <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
+            <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
+        </StockChartPrimaryXAxis>
+        <StockChartPrimaryYAxis>
+            <StockChartAxisLineStyle Width="0"></StockChartAxisLineStyle>
+            <StockChartAxisMajorTickLines Width="0"></StockChartAxisMajorTickLines>
+        </StockChartPrimaryYAxis>
+        <StockChartSeriesCollection>
+            <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Candle"></StockChartSeries>
+        </StockChartSeriesCollection>
+        <StockChartChartArea>
+            <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
+        </StockChartChartArea>
     </SfStockChart>
-}    
+}
 
 @code {
-    public ChartData[] DataSource{ get; set; }
+    public ChartData[] DataSource { get; set; }
 
-     public class ChartData
+    public class ChartData
     {
         public DateTime date { get; set; }
         public double open { get; set; }
@@ -120,11 +122,11 @@ There are three modes:
         public double close { get; set; }
         public double high { get; set; }
         public double volume { get; set; }
-    }  
+    }
 
     protected override async Task OnInitializedAsync()
     {
-        DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri +"./chart-data.json");
+        DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri + "./chart-data.json");
     }
 }
 
@@ -147,22 +149,20 @@ By default, Zoom In, Zoom Out, Pan, and Reset buttons appear in the toolbar afte
 @if (DataSource != null)
 {
     <SfStockChart Title="AAPL Stock Price">
-       <StockChartZoomSettings EnableSelectionZooming="true" EnableMouseWheelZooming="true"
-                       EnablePinchZooming="true" ToolbarItems="@ToolbarItem"></StockChartZoomSettings>
-            <StockChartPrimaryXAxis>
-                <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
-                <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
-            </StockChartPrimaryXAxis>
-            <StockChartPrimaryYAxis>
-                <StockChartAxisLineStyle Width="0"></StockChartAxisLineStyle>
-                <StockChartAxisMajorTickLines Width="0"></StockChartAxisMajorTickLines>
-            </StockChartPrimaryYAxis>
-            <StockChartSeriesCollection>
-                <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Candle"></StockChartSeries>
-            </StockChartSeriesCollection>
-            <StockChartChartArea>
-                <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
-            </StockChartChartArea>
+        <StockChartZoomSettings EnableSelectionZooming="true" EnableMouseWheelZooming="true" EnablePinchZooming="true" ToolbarItems="@ToolbarItem"></StockChartZoomSettings>
+        <StockChartPrimaryXAxis>
+            <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
+            <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
+        </StockChartPrimaryXAxis>
+        <StockChartPrimaryYAxis>
+            <StockChartAxisLineStyle Width="0"></StockChartAxisLineStyle>
+        </StockChartPrimaryYAxis>
+        <StockChartSeriesCollection>
+            <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Candle"></StockChartSeries>
+        </StockChartSeriesCollection>
+        <StockChartChartArea>
+            <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
+        </StockChartChartArea>
     </SfStockChart>
 }
 
@@ -170,7 +170,7 @@ By default, Zoom In, Zoom Out, Pan, and Reset buttons appear in the toolbar afte
     public List<ToolbarItems> ToolbarItem = new List<ToolbarItems>() { ToolbarItems.Zoom, ToolbarItems.Reset, ToolbarItems.Pan };
     public ChartData[] DataSource { get; set; }
 
-     public class ChartData
+    public class ChartData
     {
         public DateTime date { get; set; }
         public double open { get; set; }
@@ -178,11 +178,11 @@ By default, Zoom In, Zoom Out, Pan, and Reset buttons appear in the toolbar afte
         public double close { get; set; }
         public double high { get; set; }
         public double volume { get; set; }
-    }   
+    }
 
     protected override async Task OnInitializedAsync()
     {
-        DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri +"./chart-data.json");
+        DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri + "./chart-data.json");
     }
 }
 
@@ -205,28 +205,28 @@ Use the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 @if (DataSource != null)
 {
     <SfStockChart Title="AAPL Stock Price">
-       <StockChartZoomSettings EnableSelectionZooming="true" EnablePan="true"></StockChartZoomSettings>
-            <StockChartPrimaryXAxis ZoomFactor="0.2" ZoomPosition="0.6">
-                <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
-                <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
-            </StockChartPrimaryXAxis>
-            <StockChartPrimaryYAxis>
-                <StockChartAxisLineStyle Width="0"></StockChartAxisLineStyle>
-                <StockChartAxisMajorTickLines Width="0"></StockChartAxisMajorTickLines>
-            </StockChartPrimaryYAxis>
-            <StockChartSeriesCollection>
-                <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Candle"></StockChartSeries>
-            </StockChartSeriesCollection>
-            <StockChartChartArea>
-                <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
+        <StockChartZoomSettings EnableSelectionZooming="true" EnablePan="true"></StockChartZoomSettings>
+        <StockChartPrimaryXAxis ZoomFactor="0.2" ZoomPosition="0.6">
+            <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
+            <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
+        </StockChartPrimaryXAxis>
+        <StockChartPrimaryYAxis>
+            <StockChartAxisLineStyle Width="0"></StockChartAxisLineStyle>
+            <StockChartAxisMajorTickLines Width="0"></StockChartAxisMajorTickLines>
+        </StockChartPrimaryYAxis>
+        <StockChartSeriesCollection>
+            <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Candle"></StockChartSeries>
+        </StockChartSeriesCollection>
+        <StockChartChartArea>
+            <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
         </StockChartChartArea>
     </SfStockChart>
-}    
+}
 
 @code {
     public ChartData[] DataSource { get; set; }
 
-     public class ChartData
+    public class ChartData
     {
         public DateTime date { get; set; }
         public double open { get; set; }
@@ -234,11 +234,11 @@ Use the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
         public double close { get; set; }
         public double high { get; set; }
         public double volume { get; set; }
-    }   
+    }
 
     protected override async Task OnInitializedAsync()
     {
-        DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri +"./chart-data.json");
+        DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri + "./chart-data.json");
     }
 }
 
@@ -248,7 +248,7 @@ Use the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 ## Enable scrollbar
 
-Use the [EnableScrollbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_EnableScrollbar) property to add a scrollbar to a zoomed stock chart. The scrollbar allows panning and further zooming.
+Use the [EnableScrollbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_EnableScrollbar) property to add a scrollbar to a zoomed Stock Chart. The scrollbar allows panning and further zooming.
 
 ```cshtml
 
@@ -260,21 +260,19 @@ Use the [EnableScrollbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 @if (DataSource != null)
 {
     <SfStockChart Title="AAPL Stock Price">
-       <StockChartZoomSettings EnableMouseWheelZooming="true" EnableScrollbar="true" EnablePinchZooming="true"
-                       EnableSelectionZooming="true"></StockChartZoomSettings>
-            <StockChartPrimaryXAxis>
-                <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
-                <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
-            </StockChartPrimaryXAxis>
-            <StockChartPrimaryYAxis>
-                <StockChartAxisLineStyle Width="0"></StockChartAxisLineStyle>
-                <StockChartAxisMajorTickLines Width="0"></StockChartAxisMajorTickLines>
-            </StockChartPrimaryYAxis>
-            <StockChartSeriesCollection>
-                <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Candle"></StockChartSeries>
-            </StockChartSeriesCollection>
-            <StockChartChartArea>
-                <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
+        <StockChartZoomSettings EnableMouseWheelZooming="true" EnableScrollbar="true" EnablePinchZooming="true" EnableSelectionZooming="true"></StockChartZoomSettings>
+        <StockChartPrimaryXAxis>
+            <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
+            <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
+        </StockChartPrimaryXAxis>
+        <StockChartPrimaryYAxis>
+            <StockChartAxisLineStyle Width="0"></StockChartAxisLineStyle>
+        </StockChartPrimaryYAxis>
+        <StockChartSeriesCollection>
+            <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Candle"></StockChartSeries>
+        </StockChartSeriesCollection>
+        <StockChartChartArea>
+            <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
         </StockChartChartArea>
     </SfStockChart>
 }
@@ -282,7 +280,7 @@ Use the [EnableScrollbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 @code {
     public ChartData[] DataSource { get; set; }
 
-     public class ChartData
+    public class ChartData
     {
         public DateTime date { get; set; }
         public double open { get; set; }
@@ -290,11 +288,11 @@ Use the [EnableScrollbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
         public double close { get; set; }
         public double high { get; set; }
         public double volume { get; set; }
-    }   
+    }
 
     protected override async Task OnInitializedAsync()
     {
-        DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri +"./chart-data.json");
+        DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri + "./chart-data.json");
     }
 }
 
@@ -316,29 +314,27 @@ Set [EnableAutoIntervalOnZooming](https://help.syncfusion.com/cr/blazor/Syncfusi
 @if (DataSource != null)
 {
     <SfStockChart Title="AAPL Stock Price">
-       <StockChartZoomSettings EnableMouseWheelZooming="true" EnablePinchZooming="true"
-                       EnableSelectionZooming="true"></StockChartZoomSettings>
-            <StockChartPrimaryXAxis EnableAutoIntervalOnZooming="true">
-                <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
-                <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
-            </StockChartPrimaryXAxis>
-            <StockChartPrimaryYAxis>
-                <StockChartAxisLineStyle Width="0"></StockChartAxisLineStyle>
-                <StockChartAxisMajorTickLines Width="0"></StockChartAxisMajorTickLines>
-            </StockChartPrimaryYAxis>
-            <StockChartSeriesCollection>
-                <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Candle"></StockChartSeries>
-            </StockChartSeriesCollection>
-            <StockChartChartArea>
-                <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
-            </StockChartChartArea>
+        <StockChartZoomSettings EnableMouseWheelZooming="true" EnablePinchZooming="true" EnableSelectionZooming="true"></StockChartZoomSettings>
+        <StockChartPrimaryXAxis EnableAutoIntervalOnZooming="true">
+            <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
+            <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
+        </StockChartPrimaryXAxis>
+        <StockChartPrimaryYAxis>
+            <StockChartAxisLineStyle Width="0"></StockChartAxisLineStyle>
+        </StockChartPrimaryYAxis>
+        <StockChartSeriesCollection>
+            <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Candle"></StockChartSeries>
+        </StockChartSeriesCollection>
+        <StockChartChartArea>
+            <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
+        </StockChartChartArea>
     </SfStockChart>
 }
 
 @code {
     public ChartData[] DataSource { get; set; }
 
-     public class ChartData
+    public class ChartData
     {
         public DateTime date { get; set; }
         public double open { get; set; }
@@ -346,11 +342,11 @@ Set [EnableAutoIntervalOnZooming](https://help.syncfusion.com/cr/blazor/Syncfusi
         public double close { get; set; }
         public double high { get; set; }
         public double volume { get; set; }
-    }   
+    }
 
     protected override async Task OnInitializedAsync()
     {
-        DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri +"./chart-data.json");
+        DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri + "./chart-data.json");
     }
 }
 
@@ -359,3 +355,7 @@ Set [EnableAutoIntervalOnZooming](https://help.syncfusion.com/cr/blazor/Syncfusi
 ![Auto Interval on Zooming in Blazor Stock Chart](images/zooming/stock-chart-autointerval.webp)
 
 N> Refer to the [Blazor Stock Chart](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for feature overviews and the [Blazor Stock Chart example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=fluent2) to explore chart types and time-based data representation.
+
+## See also
+
+* [Panning](./panning)

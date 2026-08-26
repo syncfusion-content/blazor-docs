@@ -25,14 +25,14 @@ Gradients can be applied to:
 A linear gradient blends colors along a straight path from a defined start point to an end point. Configure it by adding [StockChartLinearGradient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLinearGradient.html) inside the target element (series, trendline, or indicator) and define one or more color stops that control how colors transition across the gradient. Set the start and end positions of the gradient using the `X1`, `Y1`, `X2`, and `Y2` properties. The color-stop values such as `Offset`, `Color`, `Opacity`, `Lighten`, and `Brighten` are set using [StockChartGradientColorStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartGradientColorStop.html).
 
 In the [StockChartLinearGradient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLinearGradient.html):
-```text
-X1 - Sets the horizontal start position of the gradient (0 to 1).
-Y1 - Sets the vertical start position of the gradient (0 to 1).
-X2 - Sets the horizontal end position of the gradient (0 to 1).
-Y2 - Sets the vertical end position of the gradient (0 to 1).
-```
+
+- X1 - Sets the horizontal start position of the gradient (0 to 1).
+- Y1 - Sets the vertical start position of the gradient (0 to 1).
+- X2 - Sets the horizontal end position of the gradient (0 to 1).
+- Y2 - Sets the vertical end position of the gradient (0 to 1).
 
 In the [StockChartGradientColorStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartGradientColorStop.html):
+
 - Offset - Specifies the position of the color stop along the gradient (0 to 100).
 - Color - Sets the color at the stop.
 - Opacity - Defines the transparency of the stop (0 to 1).
@@ -90,7 +90,7 @@ Apply a linear gradient to a series by adding `StockChartLinearGradient` inside 
     };
 }
 
-```cshtml
+```
 
 ![Linear Gradient for series in Blazor Stock Chart](images/gradient/blazor-stock-chart-linear-gradient-series.webp)
 
@@ -98,7 +98,7 @@ Apply a linear gradient to a series by adding `StockChartLinearGradient` inside 
 
 Apply a linear gradient to a stock chart trendline by adding `StockChartLinearGradient` inside the `StockChartTrendline`.
 
-```
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -154,7 +154,7 @@ Apply a linear gradient to a stock chart trendline by adding `StockChartLinearGr
 
 Apply a linear gradient to a technical indicator by adding `StockChartLinearGradient` inside the target `StockChartIndicator`.
 
-```
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -212,13 +212,12 @@ Apply a linear gradient to a technical indicator by adding `StockChartLinearGrad
 A radial gradient blends colors outward from a central point. Configure it by adding [StockChartRadialGradient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartRadialGradient.html) inside the target element (series, trendline, or indicator) and define one or more color stops to control how colors transition from the center to the outer edge. Set the gradient's center, optional focal point, and radius using the `Cx`, `Cy`, `Fx`, `Fy`, and `R` properties. The color-stop values such as `Offset`, `Color`, `Opacity`, `Lighten`, and `Brighten` are set using [StockChartGradientColorStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartGradientColorStop.html).
 
 In the [StockChartRadialGradient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartRadialGradient.html):
-```text
-Cx - Sets the normalized horizontal center of the gradient (0 to 1).
-Cy - Sets the normalized vertical center of the gradient (0 to 1).
-Fx - Sets the normalized horizontal focal point from which the gradient appears to originate (0 to 1).
-Fy - Sets the normalized vertical focal point (0 to 1).
-R - Sets the normalized radius of the gradient circle (0 to 1).
-```
+
+- Cx - Sets the normalized horizontal center of the gradient (0 to 1).
+- Cy - Sets the normalized vertical center of the gradient (0 to 1).
+- Fx - Sets the normalized horizontal focal point from which the gradient appears to originate (0 to 1).
+- Fy - Sets the normalized vertical focal point (0 to 1).
+- R - Sets the normalized radius of the gradient circle (0 to 1).
 
 In the [StockChartGradientColorStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartGradientColorStop.html):
 
@@ -232,7 +231,7 @@ In the [StockChartGradientColorStop](https://help.syncfusion.com/cr/blazor/Syncf
 
 Apply a radial gradient to a series by adding `StockChartRadialGradient` inside the target Series.
 
-```
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 

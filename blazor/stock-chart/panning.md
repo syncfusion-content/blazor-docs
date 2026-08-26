@@ -11,12 +11,14 @@ documentation: ug
 
 Panning is enabled by default in the Stock Chart. This behavior is controlled by the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_EnablePan) property of [StockChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html), which defaults to `true`.
 
+The following example loads a larger historical dataset from a `googl.json` file placed in the app's `wwwroot` folder. The file must contain an array of objects with fields matching the `ChartData` class (`x`, `open`, `high`, `low`, `close`, `volume`).
+
 ```cshtml
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Charts
-@inject NavigationManager NavigationManager
 @using System.Net.Http.Json
+@inject NavigationManager NavigationManager
 @inject HttpClient Http
 
 @if (dataSource == null)
@@ -67,3 +69,7 @@ else
 ![Blazor Stock Chart with Panning](images/panning.webp)
 
 N> Refer to the [Blazor Stock Chart](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for feature representations and explore the [Blazor Stock Chart example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=fluent2) to see various stock chart types and time-dependent data rendered at equal intervals.
+
+## See also
+
+* [Zooming](./zooming)

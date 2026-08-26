@@ -98,7 +98,7 @@ The [`StockChartTitleStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 Changing the theme affects background color, gridlines, tooltip appearance, and overall styling.
 
-Stock Chart supports several built-in themes such as `Material`, `Fabric`, `Bootstrap`, `HighContrastLight`, `MaterialDark`, `FabricDark`, `HighContrast`, and `BootstrapDark`.
+Stock Chart supports several built-in themes such as `Material3`, `Fluent2`, `Bootstrap5`, `Tailwind3`, `HighContrast`, and their corresponding dark variants.
 
 ```cshtml
 
