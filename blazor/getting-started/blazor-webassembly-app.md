@@ -17,7 +17,7 @@ This article provides step-by-step instructions for building a Blazor WebAssembl
 
 {% playground "https://blazorplayground.syncfusion.com/" %}
 
-## Using Templates
+## Using .NET CLI Templates
 
 Quickly set up a Blazor application using the preconfigured [Syncfusion WebAssembly App Template](https://help.syncfusion.com/extension/syncfusion-blazor-webassemblyapp-template-via-nuget/installation).
 
@@ -82,21 +82,6 @@ Alternatively, create a **Blazor WebAssembly App** using Visual Studio Code via 
 
 {% endtabcontent %}
 
-{% tabcontent .NET CLI %}
-
-Run the following command to create a new Blazor WebAssembly App.
-
-{% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
-
-dotnet new blazorwasm -o BlazorWasmApp
-cd BlazorWasmApp
-
-{% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-
 {% endtabcontents %}
 
 ### Install the required Blazor packages
@@ -129,21 +114,6 @@ Open the terminal and run the following commands.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
-
-dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-
-{% tabcontent .NET CLI %}
-
-Open the command prompt and run the following commands.
-
-{% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
 
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
@@ -260,20 +230,6 @@ Open the terminal and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
-
-dotnet run
-
-{% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-
-{% tabcontent .NET CLI %}
-
-Open the command prompt and run the following command.
-
-{% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
 
 dotnet run
 
