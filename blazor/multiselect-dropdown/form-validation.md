@@ -27,7 +27,7 @@ When the MultiSelect input is valid, the form can be submitted. If the input is 
 
 {% endhighlight %}
 
-![Blazor MultiSelect inside EditForm](./images/form-validation/blazor_multiselect_inside-editform.webp)
+![Blazor MultiSelect Dropdown inside EditForm](./images/form-validation/blazor_multiselect_inside-editform.webp)
 
 ## Selection Limit
 

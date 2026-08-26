@@ -40,11 +40,11 @@ The accessibility compliance for the Blazor Mention component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Blazor Mention component is designed to be compliant with `WAI-ARIA` (Web Accessibility Initiative - Accessible Rich Internet Applications) specifications, which provide guidelines and standards for making web content more accessible to people with disabilities. To achieve `WAI-ARIA` support, the Mention uses attributes such as `aria-selected` and `aria-activedescendant`. 
+The Blazor Mention component is designed to be compliant with `WAI-ARIA` (Web Accessibility Initiative - Accessible Rich Internet Applications) specifications, which provide guidelines and standards for making web content more accessible to people with disabilities. To achieve `WAI-ARIA` support, the Blazor Mention uses attributes such as `aria-selected` and `aria-activedescendant`. 
 
 The `aria-selected` attribute is used to indicate that an element is currently selected or has been selected in the past, while the `aria-activedescendent` attribute is used to indicate the currently active descendant element of a composite widget.
 
-It uses the various `ARIA attributes` (Accessible Rich Internet Applications) to denote the state of the component and provide additional information to assistive technologies such as screen readers. These attributes can help users who rely on assistive technologies to understand and interact with the Mention component more easily.
+It uses the various `ARIA attributes` (Accessible Rich Internet Applications) to denote the state of the component and provide additional information to assistive technologies such as screen readers. These attributes can help users who rely on assistive technologies to understand and interact with the Blazor Mention component more easily.
 
 Here are some of the `ARIA attributes` that might be used to denote the state of a mention list item:
 
@@ -52,7 +52,7 @@ Here are some of the `ARIA attributes` that might be used to denote the state of
 | --- | --- |
 | `aria-selected` | Indicates the currently selected option in the list of mention suggestions |
 | `aria-activedescendant` | This attribute holds the ID of the active list item to focus its descendant child element. |
-| `aria-owns` | Indicate that the Mention component owns or controls the popup list of mention suggestions. |
+| `aria-owns` | Indicate that the Blazor Mention component owns or controls the popup list of Blazor Mention suggestions. |
 
 ## Keyboard interaction
 
@@ -60,7 +60,7 @@ You can use the following key shortcuts to access the Blazor Mention without int
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
-| <kbd>↓</kbd> | <kbd>↓</kbd> | Focus the first item in the Mention list. Otherwise, focus the item next to the currently focused item. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Focus the first item in the Blazor Mention list. Otherwise, focus the item next to the currently focused item. |
 | <kbd>↑</kbd> | <kbd>↑</kbd> | Focus the item previous to the currently focused one. |
 | <kbd>Esc(Escape)</kbd> | <kbd>Esc(Escape)</kbd> | Closes the popup list when it is in an open state. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item, and when it is in an open state the popup list closes. |
@@ -77,7 +77,7 @@ You can use the following key shortcuts to access the Blazor Mention without int
 
 The Blazor Mention component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-The accessibility compliance of the Mention component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/mention) in a new window to evaluate the accessibility of the Mention component with accessibility tools.
+The accessibility compliance of the Blazor Mention component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/Blazor Mention) in a new window to evaluate the accessibility of the Blazor Mention component with accessibility tools.
 
 ## See also
 
