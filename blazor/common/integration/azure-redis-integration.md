@@ -430,5 +430,5 @@ dotnet run
 
 * [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
 * [Azure Cache for Redis documentation](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/)
-* [Azure Managed Redis](https://learn.microsoft.com/en-us/azure/redis/managed-redis/overview)
+* [Azure Managed Redis](https://learn.microsoft.com/en-us/azure/redis/overview)
 
