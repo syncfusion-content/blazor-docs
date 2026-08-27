@@ -150,7 +150,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **App.razor** file to enable Progress Button functionality.
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **App.razor** file to enable Blazor  Progress Button functionality.
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
@@ -225,5 +225,5 @@ N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting
 1. [Getting Started with Blazor WebAssembly Standalone App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 3. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-4. [Native Events in Blazor ProgressButton Component](https://blazor.syncfusion.com/documentation/progress-button/native-event)
-5. [Spinner and Progress in Blazor ProgressButton Component](https://blazor.syncfusion.com/documentation/progress-button/spinner-and-progress)
+4. [Native Events in Blazor Progress Button Component](https://blazor.syncfusion.com/documentation/progress-button/native-event)
+5. [Spinner and Progress in Blazor Progress Button Component](https://blazor.syncfusion.com/documentation/progress-button/spinner-and-progress)

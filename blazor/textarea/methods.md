@@ -9,7 +9,7 @@ documentation: ug
 
 # Methods in Blazor TextArea
 
-This section describes the methods available for interacting with the TextArea component.
+This section describes the methods available for interacting with the Blazor TextArea component.
 
 ## FocusAsync method
 
