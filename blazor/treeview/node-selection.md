@@ -669,7 +669,7 @@ In the Blazor TreeView component, you can select all TreeView nodes on initial r
 
 ## Select all Nodes Programmatically
 
-To select all TreeView nodes on initial rendering, utilize the TreeView component's `Created` event. This event fires upon successful component creation. Within this event, add all TreeView node IDs to a `TreeData` list and then assign this list to the [SelectedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_SelectedNodes) property to select all the nodes on the button click operation.
+To select all Blazor TreeView nodes on initial rendering, utilize the Blazor TreeView component's `Created` event. This event fires upon successful component creation. Within this event, add all TreeView node IDs to a `TreeData` list and then assign this list to the [SelectedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_SelectedNodes) property to select all the nodes on the button click operation.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

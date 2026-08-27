@@ -9,18 +9,18 @@ documentation: ug
 
 # How to prevent expand or collapse in Blazor Accordion
 
-You can prevent the expand and collapse actions of an accordion item for specific conditions. For example, if there is a button in the accordion header, clicking on it should prevent the accordion item from expanding or collapsing.
+You can prevent the expand and collapse actions of an Blazor Accordion item for specific conditions. For example, if there is a button in the Blazor Accordion header, clicking on it should prevent the Blazor Accordion item from expanding or collapsing.
 
 This can be achieved by adding conditional logic in the Accordion's [Expanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Expanding) and [Collapsing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Collapsing) events.
 
-The following code example demonstrates how to prevent expand and collapse actions when interacting with controls inside the accordion header:
+The following code example demonstrates how to prevent expand and collapse actions when interacting with controls inside the Blazor Accordion header:
 
-* **DropDownList** - Prevents accordion item expand/collapse when:
+* **DropDownList** - Prevents Blazor Accordion item expand/collapse when:
   * Opening the dropdown using the [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnOpen) event
   * Closing the dropdown using the [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnClose) event
   * Selecting an item using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event
 
-* **Button** - Prevents accordion item expand/collapse when clicking the button using the `onclick` event
+* **Button** - Prevents Blazor Accordion item expand/collapse when clicking the button using the `onclick` event
 
 
 ```cshtml

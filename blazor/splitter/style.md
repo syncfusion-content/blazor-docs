@@ -109,7 +109,7 @@ Use the following CSS to customize the split bar arrows.
 }
 ```
 
-## To hide the resize handle in Splitter
+## To hide the resize handle in Blazor Splitter
 
 Use the following CSS to hide the resize handler in the split bar
 

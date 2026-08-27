@@ -9,16 +9,16 @@ documentation: ug
 
 # How to show or hide an item in Blazor Accordion
 
-The Accordion component provides support to show or hide specific accordion items using two approaches:
+The Blazor Accordion provides support to show or hide specific accordion items using two approaches:
 
 * Using conditional rendering
 * Using the Visible property
 
 ## Using conditional rendering
 
-You can dynamically show or hide specific accordion items using the conditional **if** statement.
+You can dynamically show or hide specific Blazor Accordion items using the conditional **if** statement.
 
-In the following example, the specified accordion item will toggle between showing and hiding when the **Show/Hide Item** button is clicked.
+In the following example, the specified Blazor Accordion item will toggle between showing and hiding when the **Show/Hide Item** button is clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -80,9 +80,9 @@ In the following example, the specified accordion item will toggle between showi
 
 ## Using property
 
-You can dynamically show or hide specific accordion items using the accordion item's [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Visible) property.
+You can dynamically show or hide specific Blazor Accordion items using the accordion item's [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Visible) property.
 
-In the following example, the specified accordion item will toggle between showing and hiding when the **Show/Hide Item** button is clicked.
+In the following example, the specified Blazor Accordion item will toggle between showing and hiding when the **Show/Hide Item** button is clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
