@@ -19,11 +19,12 @@ To add action buttons, create a `CardFooterContent` component within the card fo
 <SfCard ID="HugeImage">
     <CardFooter>
         <CardFooterContent>
+           Footer Button
         </CardFooterContent>
     </CardFooter>
 </SfCard>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLnDnsLBkQSGAqR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBxtbrITsfLJPTc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Vertical
 
@@ -34,7 +35,7 @@ Action buttons can be combined with a vertical card layout by setting the `Orien
 @using Syncfusion.Blazor.Buttons
 
 <SfCard ID="HugeImage" Orientation="CardOrientation.Vertical">
-    <CardImage Image="images/cards/steven.png"/>
+    <CardImage Image="https://cdn.syncfusion.com/blazor/images/cards/steven.png"/>
     <CardHeader Title="Harrisburg Keith" SubTitle="@CardSubTitle"/>
     <CardContent Content="Hi, I'm creative graphic design for print, new media based in Edenbridge"/>
     <CardFooter>
@@ -44,7 +45,7 @@ Action buttons can be combined with a vertical card layout by setting the `Orien
     </CardFooter>
 </SfCard>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBdtxsrVOlDOpyD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhRDvVeJWrwqmQE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## See also
 
