@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Integrating Blazor Components with Azure Cache for Redis | Syncfusion
-description: Step-by-step guide to integrate Azure Cache for Redis as a distributed cache backend for a Blazor Server app using the Blazor component.
+description: Step-by-step guide to integrate Azure Cache for Redis as a distributed cache for a Blazor Web App with Interactive Server and Syncfusion Blazor components.
 platform: Blazor
 control: Common
 documentation: ug
@@ -57,6 +57,8 @@ Open your project's `_Imports.razor` and import the namespaces below.
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
+@using BlazorRedisServer.Models
+@using BlazorRedisServer.Services
 
 {% endhighlight %}
 {% endtabs %}
@@ -139,7 +141,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 <head>
     ...
     <!-- Blazor theme stylesheet -->
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     ...
 </head>
 <body>
@@ -183,7 +185,7 @@ public class Employee
 
 Create the service file as below. The interface defines the operations required to retrieve employee data and refresh the cache. The `EmployeeService` class implements the cache-aside pattern by using `IDistributedCache`. 
 
-When a request is received, the service attempts to read data from Azure Cache for Redis. If the requested data is not available, the service generates the employee dataset, stores it in Redis, and returns the result. Cached data remains available until it expires automatically after the configured.
+When a request is received, the service attempts to read data from Azure Cache for Redis. If the requested data is not available, the service generates the employee dataset, stores it in Redis, and returns the result. Cached data remains available until it expires automatically after the configured TTL (`CacheDuration`, 5 minutes).
 
 {% tabs %}
 {% highlight cs tabtitle="IEmployeeService.cs" %}
@@ -218,6 +220,7 @@ public class EmployeeService : IEmployeeService
 
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
+        // JSON uses camelCase (e.g., "employeeId") while C# uses PascalCase (EmployeeId).
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase
     };
 
@@ -263,7 +266,19 @@ public class EmployeeService : IEmployeeService
         if (cached is not null)
         {
             _logger.LogInformation("Employee {Id} retrieved from Azure Redis cache.", id);
-            return JsonSerializer.Deserialize<Employee>(cached, JsonOptions);
+             try
+            {
+                var fromCache = JsonSerializer.Deserialize<List<Employee>>(cached, JsonOptions);
+                if (fromCache is not null)
+                {
+                    return fromCache;
+                }
+            }
+            catch (JsonException ex)
+            {
+                _logger.LogWarning(ex, "Failed to deserialize cached employees from Azure Redis. Cache may be stale or corrupted, regenerating.");
+                // Fall through to repopulate.
+            }
         }
 
         var employees = await GetEmployeesAsync(cancellationToken);
@@ -314,6 +329,7 @@ This page consumes the employee service and displays employee records in a [Blaz
 {% highlight razor tabtitle="Employees.razor" %}
 
 @page "/employees"
+@* InteractiveServer is required because IEmployeeService is registered as a scoped service that depends on the server-side IDistributedCache. *@
 @rendermode InteractiveServer
 @inject IEmployeeService EmployeeService
 @inject ILogger<Employees> Logger
