@@ -9,18 +9,18 @@ documentation: ug
 
 # Data Binding in Blazor MultiColumn ComboBox
 
-The MultiColumn ComboBox can retrieve data from either local data sources or remote data services. To connect local data, use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_DataSource) property with an `IEnumerable`-compatible source. For remote data, create a [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) instance configured with an adaptor and assign it to `DataSource`.
+The Blazor MultiColumn ComboBox can retrieve data from either local data sources or remote data services. To connect local data, use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_DataSource) property with an `IEnumerable`-compatible source. For remote data, create a [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) instance configured with an adaptor and assign it to `DataSource`.
 
 ## Generic Type Parameters
 
 The `SfMultiColumnComboBox<TValue, TItem>` component uses the following generic type parameters:
 
 * **TValue**: Specifies the type of the selected value (for example, `string`, `int`, or a complex type matching the `ValueField`).
-* **TItem**: Specifies the data model type for items in the MultiColumn ComboBox.
+* **TItem**: Specifies the data model type for items in the Blazor MultiColumn ComboBox.
 
 ## Binding local data
 
-The MultiColumn ComboBox loads data from local sources through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_DataSource) property. Supported types include:
+The Blazor MultiColumn ComboBox loads data from local sources through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_DataSource) property. Supported types include:
 - Array of primitive type
 - Array of object
 - List of primitive type
@@ -85,7 +85,7 @@ Index value binding can be accomplished with the [`@bind-Index`](https://help.sy
 
 ### Expando object binding
 
-Bind the [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the MultiColumn ComboBox component. In the following example, an `ExpandoObject` collection of vehicles is bound. Set TextField and ValueField to the corresponding dynamic property names.
+Bind the [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the Blazor MultiColumn ComboBox component. In the following example, an `ExpandoObject` collection of vehicles is bound. Set TextField and ValueField to the corresponding dynamic property names.
 
 {% highlight cshtml %}
 
@@ -97,7 +97,7 @@ Bind the [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dyn
 
 ### Dynamic object binding
 
-Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) data to the MultiColumn ComboBox component. In the following example, a `DynamicObject` collection of customers is bound. Ensure TextField and ValueField map to the dynamic members exposed at runtime.
+Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) data to the Blazor MultiColumn ComboBox component. In the following example, a `DynamicObject` collection of customers is bound. Ensure TextField and ValueField map to the dynamic members exposed at runtime.
 
 {% highlight cshtml %}
 
@@ -109,7 +109,7 @@ Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dyn
 
 ### ValueTuple data binding
 
-Bind the [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0) data to the MultiColumn ComboBox component. The following example retrieves a string value from enumeration data using `ValueTuple`. Map TextField/ValueField to the tuple members (for example, `Item1`, `Item2`) as used in the sample.
+Bind the [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0) data to the Blazor MultiColumn ComboBox component. The following example retrieves a string value from enumeration data using `ValueTuple`. Map TextField/ValueField to the tuple members (for example, `Item1`, `Item2`) as used in the sample.
 
 {% highlight cshtml %}
 
@@ -121,9 +121,9 @@ Bind the [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuet
 
 ## Binding remote data 
 
-The MultiColumn ComboBox loads the data from remote data services through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_DataSource) property when it is assigned a [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started) instance.
+The Blazor MultiColumn ComboBox loads the data from remote data services through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_DataSource) property when it is assigned a [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started) instance.
 
-The MultiColumn ComboBox supports retrieving data from remote services with the [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started). Use the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property to shape requests and fetch data, then bind the results to the component.
+The Blazor MultiColumn ComboBox supports retrieving data from remote services with the [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started). Use the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property to shape requests and fetch data, then bind the results to the component.
 
 * [DataManager.Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) - Defines the service endpoint to fetch data.
 * [DataManager.Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) - Defines the adaptor used to communicate with the service. Choose the adaptor based on your API (for example, [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) for OData v4 endpoints, [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) for Web API endpoints, or [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) for custom REST endpoints).
@@ -194,7 +194,7 @@ The following example demonstrates remote data binding with offline mode enabled
 
 ### Entity Framework
 
-Follow these steps to consume data from the [Entity Framework](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-orm/entityframework) in the MultiColumn ComboBox component.
+Follow these steps to consume data from the [Entity Framework](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-orm/entityframework) in the Blazor MultiColumn ComboBox component.
 
 #### Create DBContext class
 
@@ -261,7 +261,7 @@ namespace EFDropDown.Shared.DataAccess
 
 #### Creating web API controller
 
- A Web API Controller has to be created, which allows the MultiColumn ComboBox to directly consume data from the Entity Framework.
+ A Web API Controller has to be created, which allows the Blazor MultiColumn ComboBox to directly consume data from the Entity Framework.
 
 ```csharp
 using EFDropDown.Shared.DataAccess;
@@ -306,9 +306,9 @@ namespace EFDropDown.Controllers
 }
 ```
 
-### Configure MultiColumn ComboBox component using Web API adaptor
+### Configure Blazor MultiColumn ComboBox component using Web API adaptor
 
-Now, configure the MultiColumn ComboBox using the [SfDataManager](https://blazor.syncfusion.com/documentation/data/getting-started) to interact with the created Web API and consume the data appropriately. To interact with web API, use the [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor).
+Now, configure the Blazor MultiColumn ComboBox using the [SfDataManager](https://blazor.syncfusion.com/documentation/data/getting-started) to interact with the created Web API and consume the data appropriately. To interact with web API, use the [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor).
 
 {% highlight cshtml %}
 
