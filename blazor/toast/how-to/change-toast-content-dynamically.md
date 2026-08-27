@@ -9,7 +9,7 @@ documentation: ug
 
 # How to show toast content dynamically in Blazor Toast
 
-The Toast component supports to change its content dynamically while displaying in newest toasts. The toast content can be changed by updating property value, before calling in the `show` method.
+The Blazor Toast component supports to change its content dynamically while displaying in newest toasts. The toast content can be changed by updating property value, before calling in the `show` method.
 
 ```cshtml
 
