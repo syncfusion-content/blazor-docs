@@ -163,7 +163,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor FileManager component
 
-Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component inside the razor file.
+Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component inside the razor file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -185,7 +185,7 @@ Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor FileManager component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor File Manager component will render in your default web browser.
 
 {% endtabcontent %}
 
@@ -219,18 +219,18 @@ dotnet run
 
 {% endtabcontents %}
 
-![Blazor FileManager Component](images/blazor-filemanager-maui-app.webp)
+![Blazor File Manager Component](images/blazor-Blazor File Manager-maui-app.webp)
 
 ## Run the application on Android
 
-To run the Blazor FileManager in a Blazor Android MAUI application using the Android emulator, follow these steps:
+To run the Blazor File Manager in a Blazor Android MAUI application using the Android emulator, follow these steps:
 
 Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to install and launch Android emulator.
 
 N> If you encounter any errors while using the Android Emulator, refer to [Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting) for guidance.
 
-![Blazor FileManager Component](images/blazor-filemanager-component.webp)
+![Blazor File Manager Component](images/blazor-filemanager-component.webp)
 
 ## See also
 
-1. [Getting Started with Blazor FileManager Data Binding](https://blazor.syncfusion.com/documentation/file-manager/data-binding)
+1. [Getting Started with Blazor File Manager Data Binding](https://blazor.syncfusion.com/documentation/file-manager/data-binding)

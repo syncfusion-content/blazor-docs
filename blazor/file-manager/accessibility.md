@@ -41,13 +41,13 @@ The accessibility compliance for the Blazor File Manager component is outlined b
 
 ## WAI-ARIA attributes
 
-The Blazor File Manager component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following ARIA attributes are used in the File Manager component:
+The Blazor File Manager component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor File Manager component:
 
 | **Attributes** | **Purpose** |
 | --- | --- |
-| aria-disabled | Indicates whether the File Manager component is in disabled state.|
+| aria-disabled | Indicates whether the Blazor File Manager component is in disabled state.|
 | aria-haspopup | Indicates whether the Toolbar element has a suggestion list. |
-| aria-orientation | Indicates whether the File Manager element is oriented horizontally or vertically. |
+| aria-orientation | Indicates whether the Blazor File Manager element is oriented horizontally or vertically. |
 | aria-expanded | Indicates whether the Treeview node has been expanded. |
 | aria-owns | Contains the ID of the suggestion list to indicate popup as a child element. |
 | aria-activedescendent | Holds the ID of the active list item to focus its descendant child element. |
@@ -70,7 +70,7 @@ The Blazor File Manager component followed the [WAI-ARIA](https://www.w3.org/WAI
 
 ## Keyboard interaction
 
-You can use the following key shortcuts to access the File Manager without interruptions.
+You can use the following key shortcuts to access the Blazor File Manager without interruptions.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
@@ -80,15 +80,15 @@ You can use the following key shortcuts to access the File Manager without inter
 | <kbd>Tab</kbd> | <kbd>Tab</kbd> | Focuses on the first element of toolbar and navigates through the next tab indexed element. |
 | <kbd>Esc(Escape)</kbd> | <kbd>Esc</kbd> | Closes the image when it is in open state. |
 | <kbd>Alt</kbd> + <kbd>N</kbd> | <kbd>⌥</kbd> + <kbd>N</kbd> | Creates a new folder dialog.|
-| <kbd>F5</kbd> | <kbd>F5</kbd> | Refresh the File Manager element. |
-| <kbd>Ctrl+Shift+1</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>1</kbd> | Changes the File Manager layout to Grid view. |
-| <kbd>Ctrl+Shift+2</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>2</kbd> | Changes the File Manager layout to Details view. |
+| <kbd>F5</kbd> | <kbd>F5</kbd> | Refresh the Blazor File Manager element. |
+| <kbd>Ctrl+Shift+1</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>1</kbd> | Changes the Blazor File Manager layout to Grid view. |
+| <kbd>Ctrl+Shift+2</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>2</kbd> | Changes the Blazor File Manager layout to Details view. |
 
 ## Ensuring accessibility
 
 The Blazor File Manager component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
-The accessibility compliance of the File Manager component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/filemanager) in a new window to evaluate the accessibility of the File Manager component with accessibility tools.
+The accessibility compliance of the Blazor File Manager component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/filemanager) in a new window to evaluate the accessibility of the Blazor File Manager component with accessibility tools.
 
 ## See also
 

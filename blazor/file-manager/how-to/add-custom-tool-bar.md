@@ -50,7 +50,7 @@ To enhance the customization of toolbar items, the [FileManagerToolbarSettings](
 ![Blazor FileManger displays Custom Item in Toolbar](../images/blazor-filemanager-custom-item.webp)
 
 
-**Case 2**: To include Blazor components in the File Manager toolbar, you can use the template tag. This enables you to seamlessly render additional components within the toolbar. By assigning the same `Name` property in the toolbar items list, you can determine the desired position of the template item within the toolbar.
+**Case 2**: To include Blazor components in the Blazor File Manager toolbar, you can use the template tag. This enables you to seamlessly render additional components within the toolbar. By assigning the same `Name` property in the toolbar items list, you can determine the desired position of the template item within the toolbar.
 
 ```cshtml
 

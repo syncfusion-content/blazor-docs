@@ -17,7 +17,7 @@ The [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Fi
 
 To enable directory upload, set the `DirectoryUpload` property to `true` in the [FileManagerUploadSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html) configuration.
 
-When set to `true`, this property enables directory upload in the FileManager, allowing users to upload entire folders. If set to `false`, only individual files can be uploaded.
+When set to `true`, this property enables directory upload in the Blazor File Manager, allowing users to upload entire folders. If set to `false`, only individual files can be uploaded.
 
 ```cshtml
 
@@ -141,7 +141,7 @@ The default value is set to `false`, the upload dialog remains open even after t
 
 ## Prevent upload based on file extensions
 
-The [AllowedExtensions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_AllowedExtensions) property specifies which file types are allowed for upload in the File Manager component by defining their extensions.
+The [AllowedExtensions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_AllowedExtensions) property specifies which file types are allowed for upload in the Blazor File Manager component by defining their extensions.
 
 This property lets you define which file types can be uploaded by specifying allowed extensions, separated by commas. For example, to allow only image files, you would set the `AllowedExtensions` property to .jpg,.png.
 
@@ -167,7 +167,7 @@ If you want to allow only image files like .jpg and .png, you would set the prop
 
 ## Upload Mode
 
-The [UploadMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_UploadMode) property defines the method used to perform the upload operation in the File Manager component.
+The [UploadMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_UploadMode) property defines the method used to perform the upload operation in the Blazor File Manager component.
 
 This property lets you choose between two upload modes. `FormSubmit` Uses the traditional form submission method for file uploads.
 `HttpClient` uses the HttpClient instance for the upload, providing more control over the request.

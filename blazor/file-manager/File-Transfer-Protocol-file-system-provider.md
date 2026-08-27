@@ -17,7 +17,7 @@ git clone https://github.com/SyncfusionExamples/ftp-aspcore-file-provider.git ej
 
 ```
 
-After cloning, open the project in Visual Studio and restore the NuGet packages. Now, register File Transfer Protocol details like *hostName*, *userName* and *password* in **SetFTPConnection** method in the File Manager controller to perform the file operations.
+After cloning, open the project in Visual Studio and restore the NuGet packages. Now, register File Transfer Protocol details like *hostName*, *userName* and *password* in **SetFTPConnection** method in the Blazor File Manager controller to perform the file operations.
 
 ```csharp
 
@@ -25,11 +25,11 @@ After cloning, open the project in Visual Studio and restore the NuGet packages.
 
 ```
 
-After registering the File Transfer Protocol details, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **ajaxSettings** property of the File Manager component to the appropriate controller methods allows you to manage the FTP's objects storage.
+After registering the File Transfer Protocol details, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **ajaxSettings** property of the Blazor File Manager component to the appropriate controller methods allows you to manage the FTP's objects storage.
 
 ```cshtml
 
-@*Initializing File Manager with File Transfer Protocol service*@
+@*Initializing Blazor File Manager with File Transfer Protocol service*@
 
 @* Replace the hosted port number in the place of "{port}" *@
 
