@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Chips in Blazor WASM App | Syncfusion®
-description: Learn how to get started with the Syncfusion Blazor Chips control. Explore setup, features, examples, and customization options.
+description: Learn how to get started with the Syncfusion Blazor Chips control.
 platform: Blazor
 component: Chips
 documentation: ug

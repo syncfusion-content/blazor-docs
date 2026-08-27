@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor FAB in Blazor WASM App | Syncfusion
-description: Learn how to get started with the Syncfusion Blazor Floating Action Button in a Blazor WebAssembly app with setup steps.
+title: Getting Started with Blazor Floating Action Button in Blazor WASM App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Floating Action Button in a Blazor WebAssembly app.
 platform: Blazor
 control: Floating Action Button
 documentation: ug
@@ -220,7 +220,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## Event click in Blazor Floating Action Button
 
-The floating action button control triggers the [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_OnClick) event when you click the floating action button. Use this event to perform the required action.
+The Blazor Floating Action Button control triggers the [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_OnClick) event when you click the Blazor Floating Action Button. Use this event to perform the required action.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
