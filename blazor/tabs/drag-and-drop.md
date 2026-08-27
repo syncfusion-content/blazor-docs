@@ -15,13 +15,13 @@ The [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs) comp
 
 * The `DragArea` defines the area in which the draggable element movement will be occurring. Outside that area will be restricted for the draggable element movement.
 
-* The `OnDragStart` event will be triggered before dragging the item from Tab.
+* The `OnDragStart` event will be triggered before dragging the item from Blazor Tabs.
 
 * The `Dragged` event will be triggered when the Tab item is dropped on the target element successfully.
 
 In the following sample, the `AllowDragAndDrop` property is enabled.
 
-N> External drag and drop is not possible in blazor Tabs.
+N> External drag and drop is not possible in Blazor Tabs.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

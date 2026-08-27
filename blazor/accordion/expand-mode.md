@@ -12,7 +12,7 @@ The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accor
 
 ## Single
 
-The property enables to expand only one Accordion item at a time. If you expand any new item, the previously expanded one is collapsed and new item changed to expanded state.
+The property enables to expand only one Blazor Accordion item at a time. If you expand any new item, the previously expanded one is collapsed and new item changed to expanded state.
 
 ```cshtml
 
@@ -54,7 +54,7 @@ The default [ExpandMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## Expanding the items
 
-By default, accordion items were in collapsed state on initial load. To expand a particular item(s) on initial load, either use the [ExpandedIndices](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html#Syncfusion_Blazor_Navigations_SfAccordion_ExpandedIndices) property or [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Expanded) option within the [AccordionItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html) tag helper. In the following code example, the `ExpandedIndices` is used to expand the second and third item.
+By default, Blazor Accordion items were in collapsed state on initial load. To expand a particular item(s) on initial load, either use the [ExpandedIndices](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html#Syncfusion_Blazor_Navigations_SfAccordion_ExpandedIndices) property or [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Expanded) option within the [AccordionItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html) tag helper. In the following code example, the `ExpandedIndices` is used to expand the second and third item.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

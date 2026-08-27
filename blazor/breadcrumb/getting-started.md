@@ -148,7 +148,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **~wwwroot/index.html** file to enable Breadcrumb functionality.
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **~wwwroot/index.html** file to enable Blazor Breadcrumb functionality.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -212,11 +212,11 @@ dotnet run
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htBHNHsWJpWBiPTh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-breadcrumb-component.webp)" %}
 
-N> The Breadcrumb component will render based on the current URL, when the Breadcrumb items are not specified.
+N> The Blazor Breadcrumb component will render based on the current URL, when the Blazor Breadcrumb items are not specified.
 
 ## Add items to the Blazor Breadcrumb component
 
-To render Breadcrumb component with items use the [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) tag directive as like below code example.
+To render Blazor Breadcrumb component with items use the [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) tag directive as like below code example.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -241,7 +241,7 @@ N> Place list of [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ## Enable or disable navigation
 
-Breadcrumb component enables or disables built-in URL navigation based on the [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableNavigation) property. By default, the navigation will be enabled when setting the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_Url) property. To prevent Breadcrumb item navigation, set the [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableNavigation) property as `false` in Breadcrumb.
+Blazor Breadcrumb component enables or disables built-in URL navigation based on the [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableNavigation) property. By default, the navigation will be enabled when setting the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_Url) property. To prevent Blazor Breadcrumb item navigation, set the [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableNavigation) property as `false` in Blazor Breadcrumb.
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Breadcrumb)
 

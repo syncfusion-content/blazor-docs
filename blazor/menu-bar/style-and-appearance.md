@@ -9,7 +9,7 @@ documentation: ug
 
 # Style and Appearance in Blazor Menu Bar
 
-To modify the Menu Bar appearance, override the default CSS of the component. The table below lists the CSS classes used by the Menu Bar and the element each class targets. You can also create a custom theme using the Syncfusion [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material), which lets you generate a downloadable theme that overrides the default Syncfusion styles for the entire app.
+To modify the Blazor Menu Bar appearance, override the default CSS of the component. The table below lists the CSS classes used by the Blazor Menu Bar and the element each class targets. You can also create a custom theme using the Syncfusion [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material), which lets you generate a downloadable theme that overrides the default Syncfusion styles for the entire app.
 
 | CSS Class | Purpose of Class |
 | ----- | ----- |
@@ -20,7 +20,7 @@ To modify the Menu Bar appearance, override the default CSS of the component. Th
 | .e-menu-container .e-ul .e-menu-item .e-caret | To customize the menu item's caret icon |
 | .e-menu-container .e-ul .e-menu-item.e-selected | To customize the selected menu item |
 
-## Customizing the appearance of the menu
+## Customizing the appearance of the Blazor Menu Bar
 
 Use the following CSS to customize the background color of the menu container, the focus state, and the selected state.
 
@@ -79,9 +79,9 @@ Use the following CSS to customize the background color of the menu container, t
 
 ```
 
-![Blazor Menubar with Style and Appearance](./images/blazor-menubar-style-and-appearance.webp)
+![Blazor Menu Bar with Style and Appearance](./images/blazor-menubar-style-and-appearance.webp)
 
 ## See also
 
-* [Menu Bar with Rounded Corner](how-to/menu-with-rounded-corner.md)
+* [Blazor Menu Bar with Rounded Corner](how-to/menu-with-rounded-corner.md)
 * [Animation in Blazor Menu Bar Component](animation.md)
