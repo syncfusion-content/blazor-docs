@@ -9,9 +9,9 @@ documentation: ug
 
 # Blazor ProgressBar Style and Appearance
 
-Style and Appearance provide options to customize the visual design of the **Blazor ProgressBar** component, ensuring consistency with your application’s branding and theme.
+Customize the visual design of the **Blazor ProgressBar** component to align with your application's branding and theme.
 
-By using CSS selectors and ID-based styling, you can customize colors, typography, spacing, borders, and other visual properties of TreeMap items, labels, and SVG elements.
+By using CSS selectors and ID-based styling, you can customize colors, typography, spacing, borders, and other visual properties of the ProgressBar progress line, track, labels, and SVG elements.
 
 **Basic ProgressBar Setup**
 
@@ -25,9 +25,9 @@ By using CSS selectors and ID-based styling, you can customize colors, typograph
 </SfProgressBar>
 ```
 
-## Customize Progress Bar - Progress Line
+## Customizing the Progress Line
 
-Style the linear progress bar to customize colors, height, and visual appearance. The linear progress bar uses CSS selectors to target and modify its presentation properties, allowing you to match your application's design system and branding guidelines.
+Change the fill color and opacity of the progress indicator (the portion that represents the completed value) for the linear and circular ProgressBar using CSS selectors.
 
 **Linear**
 ```css
@@ -45,13 +45,13 @@ Style the linear progress bar to customize colors, height, and visual appearance
 }
 ```
 
-This CSS customizes the progress bar appearance with stroke color, width, and other properties to create an engaging progress visualization.
+
 
 ![Blazor ProgressBar Progress Customization](images/style/blazor-progressbar-progress-customization.webp)
 
-## Customize Progress Bar - Track Line
+## Customizing the Track Line
 
-Modify the appearance of the progress bar track (the background area where progress is displayed) to create visual distinction and improve readability.
+Modify the appearance of the background track (the area behind the progress indicator) for the linear and circular ProgressBar using CSS selectors.
 
 **Linear**
 ```css
@@ -71,9 +71,9 @@ Modify the appearance of the progress bar track (the background area where progr
 
 ![Blazor ProgressBar Track Customization](images/style/blazor-progressbar-track-customization.webp)
 
-## Customize Progress Bar - Range Text
+## Customizing the Range Text
 
-Style the progress value text displayed in the ProgressBar for better visibility and consistency with your design system using the below CSS.
+Restyle the progress value text displayed inside the ProgressBar for better readability and consistency with your design system using the CSS below.
 
 ```css
 text[id*="_linearLabel"] {
@@ -106,4 +106,11 @@ text[id*="_linearLabel"] {
 
 ![Blazor ProgressBar Label Customization](images/style/blazor-progressbar-label-customization.webp)
 
-N> SVG presentation attributes such as fill, stroke, and font-size may require **!important** when overridden by inline SVG styles.
+N> SVG presentation attributes such as `fill`, `stroke`, and `font-size` may require the `!important` declaration when they are overridden by inline styles on the SVG element.
+
+## See also
+
+* [Getting Started with Blazor ProgressBar](getting-started.md)
+* [Blazor ProgressBar Customization](customization.md)
+* [Blazor ProgressBar Events](events.md)
+* [Blazor ProgressBar Accessibility](accessibility.md)
