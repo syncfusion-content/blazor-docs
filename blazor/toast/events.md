@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Toast
 
-This section explains the list of events of the Toast component which will be triggered for appropriate Toast actions.
+This section explains the list of events of the Blazor Toast component which will be triggered for appropriate Toast actions.
 
 ## Created
 

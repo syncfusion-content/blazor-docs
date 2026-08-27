@@ -79,7 +79,7 @@ Use the following key shortcuts to interact with the Blazor MultiColumn ComboBox
 
 The Blazor MultiColumn ComboBox component’s accessibility is validated with the [axe-core](https://www.npmjs.com/package/axe-core) tool during automated testing.
 
-The accessibility compliance of the MultiColumn ComboBox component is demonstrated in the following sample. Open the [MultiColumn ComboBox accessibility sample](https://blazor.syncfusion.com/accessibility/combobox) in a new window to evaluate accessibility with your preferred tools. The component also supports right-to-left (RTL) rendering and high-contrast themes for improved readability and usability.
+The accessibility compliance of the Blazor MultiColumn ComboBox component is demonstrated in the following sample. Open the [Blazor MultiColumn ComboBox accessibility sample](https://blazor.syncfusion.com/accessibility/combobox) in a new window to evaluate accessibility with your preferred tools. The component also supports right-to-left (RTL) rendering and high-contrast themes for improved readability and usability.
 
 ## See also
 
