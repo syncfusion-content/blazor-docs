@@ -105,6 +105,8 @@ By default, the tooltip shows the x and y values of a point. Additional informat
 
 ```
 
+![Blazor Stock Chart with Format Tooltip](images/common/blazor-stock-chart-Format-tooltip.webp)
+
 ## Customize the tooltip appearance
 
 The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Fill) and [Border](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Border) properties customize the tooltip background and border. The [TextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_TextStyle) property customizes the tooltip text font.
