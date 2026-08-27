@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hyper-link Navigation in Blazor ListView | Syncfusion
-description: Add hyperlink navigation to Blazor ListView items using anchor tags inside ListView templates for navigation today.
+description: Add hyperlink navigation to Blazor ListView items using anchor tags inside ListView templates for navigation.
 platform: Blazor
 control: Listview
 documentation: ug

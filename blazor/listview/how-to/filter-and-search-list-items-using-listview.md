@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filter and Search List Items in Blazor ListView | Syncfusion
-description: Filter and search Blazor ListView items in real time from an input control using the OnInput event handler today.
+description: Filter and search Blazor ListView items in real time from an input control using the OnInput event handler.
 platform: Blazor
 control: Listview
 documentation: ug
