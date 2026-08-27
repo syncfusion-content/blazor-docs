@@ -48,7 +48,7 @@ The following properties allow for further control over the chunk upload process
 
 ### Resumable Upload
 
-The File Upload component supports resumable uploads, allowing users to pause and resume large file transfers. This is invaluable when dealing with network interruptions or when a user needs to temporarily halt an upload. The pause icon becomes available once an upload begins.
+The Blazor File Upload component supports resumable uploads, allowing users to pause and resume large file transfers. This is invaluable when dealing with network interruptions or when a user needs to temporarily halt an upload. The pause icon becomes available once an upload begins.
 
 >**The pause and resume features are only available when chunk upload is enabled.**
 
@@ -298,7 +298,7 @@ public class Startup
 
 ## Events
 
-The Blazor Uploader component provides several events specific to chunk upload operations, allowing you to hook into different stages of the process and implement custom logic.
+The Blazor File Upload component provides several events specific to chunk upload operations, allowing you to hook into different stages of the process and implement custom logic.
 
 *   **[`OnChunkUploadStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnChunkUploadStart)**: Triggered at the beginning of each chunk's upload process. This event allows you to perform actions before a chunk is sent to the server.
 *   **[`OnChunkSuccess`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnChunkSuccess)**: Occurs when a single chunk has been successfully uploaded to the server. This can be used for tracking progress per chunk.
