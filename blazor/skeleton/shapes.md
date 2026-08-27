@@ -9,9 +9,9 @@ documentation: ug
 
 # Shapes in Blazor Skeleton
 
-The Skeleton component supports various built-in shape variants to design the layout of a page. You can use the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Shape) property to create a preview of any layout.
+The Blazor Skeleton component supports various built-in shape variants to design the layout of a page. You can use the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Shape) property to create a preview of any layout.
 
-The Skeleton component supports the following content shapes:
+The Blazor Skeleton component supports the following content shapes:
 
 ## Circle skeleton shape
 
@@ -69,7 +69,7 @@ The Skeleton component supports the following content shapes:
 
 ![Blazor Skeleton Text Shape](./images/Blazor-skeleton-text-shape.webp)
 
-Below example demonstrates the above functionalities of a Skeleton component.
+Below example demonstrates the above functionalities of a Blazor Skeleton component.
 
 {% tabs %}
 {% highlight razor %}
