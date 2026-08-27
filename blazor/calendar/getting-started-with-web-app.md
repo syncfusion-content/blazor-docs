@@ -228,7 +228,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## Setting the Value, Min, and Max dates
 
-The Blazor Calendar component provides an option to select a date within a specified range by defining the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Max) properties. You can also set a date value within a specific range using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfCalendar-1.html) property. For more information, refer to the [Date Range](./date-range) section. Min and Max are inclusive boundaries; out-of-range dates are disabled.
+The Blazor Calendar component provides an option to select a date within a specified range by defining the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Max) properties. You can also set a date value within a specific range using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfInputTextBase-1.html#Syncfusion_Blazor_Inputs_SfInputTextBase_1_Value) property. For more information, refer to the [Date Range](./date-range) section. Min and Max are inclusive boundaries; out-of-range dates are disabled.
 
 Here, the Blazor Calendar allows selecting a date from the 5th through the 27th of the current month. `TValue` specifies the type of the Blazor Calendar component.
 
