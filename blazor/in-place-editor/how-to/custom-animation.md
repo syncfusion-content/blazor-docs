@@ -3,13 +3,13 @@ layout: post
 title: How to Set Custom Animation in Blazor In-place Editor | Syncfusion
 description: Learn here all about setting custom animation for popup mode in Blazor In-place Editor component and much more details.
 platform: Blazor
-control: Blazor  In-place Editor
+control: In-place Editor
 documentation: ug
 ---
 
 # How to Set Custom Animation in Blazor In-place Editor
 
-In popup mode, the Blazor  In-place Editor is rendered with the Blazor `Tooltip` component. You can use the tooltip properties and events to customize the popup by configuring properties using the `InPlaceEditorPopupSettings` tag.
+In popup mode, the Blazor In-place Editor is rendered with the Blazor `Tooltip` component. You can use the tooltip properties and events to customize the popup by configuring properties using the `InPlaceEditorPopupSettings` tag.
 
 In the following example, the popup's open animation is configured by passing an `AnimationModel` to the `InPlaceEditorPopupSettings` tag, and the animation effect is updated at runtime from a Blazor `DropDownList` `ValueChange` event. The supported effects are `None`, `FadeIn`, `FadeZoomIn`, and `ZoomIn`.
 

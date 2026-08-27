@@ -3,13 +3,13 @@ layout: post
 title: Integrate HTML5 Components in Blazor In-place Editor | Syncfusion
 description: Integrate custom HTML5 input elements into Blazor In-place Editor using templates and handle values through events.
 platform: Blazor
-control: Blazor  In-place Editor 
+control: In-place Editor 
 documentation: ug
 ---
 
 # Integrate HTML5 Components in Blazor In-place Editor
 
-The Blazor  In-place Editor supports integrating custom HTML5 input elements by using the `InPlaceEditorTemplate` child tag. The template content can be defined as follows.
+The Blazor In-place Editor supports integrating custom HTML5 input elements by using the `InPlaceEditorTemplate` child tag. The template content can be defined as follows.
 
 ```cshtml
 <InPlaceEditorTemplate>
@@ -18,7 +18,7 @@ The Blazor  In-place Editor supports integrating custom HTML5 input elements by 
 
 ```
 
-In Template mode, the `Value` property cannot be handled by the Blazor  In-place Editor component. Therefore, before sending a value to the server, you must update the value through the `OnActionSuccess` event; otherwise, an empty string is sent.
+In Template mode, the `Value` property cannot be handled by the Blazor In-place Editor component. Therefore, before sending a value to the server, you must update the value through the `OnActionSuccess` event; otherwise, an empty string is sent.
 
 In the following template example, the input is bound to a value, and before submitting data to the server, the event argument and `Value` are updated in the `OnActionSuccess` event handler.
 

@@ -3,13 +3,13 @@ layout: post
 title: Server Actions in Blazor In-place Editor | Syncfusion
 description: Submit edited values to a remote server in Blazor In-place Editor using SaveUrl, PrimaryKey, and adaptors.
 platform: Blazor
-control: Blazor  In-place Editor 
+control: In-place Editor 
 documentation: ug
 ---
 
 # Server Actions in Blazor In-place Editor
 
-When posting the Blazor  In-place Editor value to a remote server, the `PrimaryKey` property is required to identify the record on the server. Without a `PrimaryKey`, the save action is not performed.
+When posting the Blazor In-place Editor value to a remote server, the `PrimaryKey` property is required to identify the record on the server. Without a `PrimaryKey`, the save action is not performed.
 
 If the `SaveUrl` property is not set, data changes are handled locally by the component. In this case, the `OnActionSuccess` event still fires, but the event argument value is `null` because no server response is available.
 
