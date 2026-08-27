@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Card in Blazor WASM App | Syncfusion®
-description: Learn how to add the Syncfusion Blazor Card control to a standalone WebAssembly app.
+description: Learn how to add and configure the Syncfusion Blazor Card control in a standalone WebAssembly app with NuGet packages, themes, and card content.
 platform: Blazor
 component: Card
 documentation: ug
