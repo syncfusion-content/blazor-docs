@@ -1916,9 +1916,9 @@ function saveAsFile(filename, bytesBase64) {
 
 The Blazor Data Grid can export data as a memory stream, allowing modification of the Excel workbook before the exported file is delivered to the client. Using the [XlsIO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library, worksheet formatting can be customized programmatically during the export process.
 
-The **SetRowHeightInPixels** method is used to modify the height of a specific row in the exported Excel file by providing the row index and the required height in pixels. This enables row-level customization in the exported workbook.
+The [SetRowHeightInPixels](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_SetRowHeightInPixels_System_Int32_System_Double_) method is used to modify the height of a specific row in the exported Excel file by providing the row index and the required height in pixels. This enables row-level customization in the exported workbook.
 
-In the following example, an [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html) component is used to specify the Excel row index dynamically. The selected value is updated through the `ValueChange` event and stored in the NumericValue property. During the Excel export operation, the value of NumericValue is passed to the **SetRowHeightInPixels** method, allowing the height of the corresponding row in the exported Excel document to be modified. In this sample, the height of the specified row is set to **100** pixels.
+In the following example, an [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html) component is used to specify the Excel row index dynamically. The selected value is updated through the `ValueChange` event and stored in the NumericValue property. During the Excel export operation, the value of NumericValue is passed to the `SetRowHeightInPixels` method, allowing the height of the corresponding row in the exported Excel document to be modified. In this sample, the height of the specified row is set to **100** pixels.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
