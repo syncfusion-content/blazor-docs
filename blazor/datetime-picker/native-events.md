@@ -9,9 +9,9 @@ documentation: ug
 
 # Native Events in Blazor DateTime Picker
 
-The following section explains how to attach native DOM events to the DateTimePicker component and pass event data to the handler.
+The following section explains how to attach native DOM events to the Blazor DateTime Picker component and pass event data to the handler.
 
-## Bind native events to DateTimePicker
+## Bind native events to Blazor DateTime Picker
 
 Native events can be attached by using the `@on<event>` attribute on the component. The attribute value is treated as the event handler.
 
@@ -79,4 +79,4 @@ Lambda expressions can also pass the event data to the handler.
 
 ## See also
 
-* [Events in Blazor DateTimePicker](./events)
+* [Events in Blazor DateTime Picker](./events)

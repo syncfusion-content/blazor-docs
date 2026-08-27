@@ -9,9 +9,9 @@ documentation: ug
 
 # Native Events in Blazor DatePicker
 
-This section explains how to bind native DOM events to the DatePicker component and how to pass event data to the event handler. The DatePicker component supports the standard Blazor event-binding syntax (`@on<event>`) on its root input element.
+This section explains how to bind native DOM events to the Blazor DatePicker component and how to pass event data to the event handler. The Blazor DatePicker component supports the standard Blazor event-binding syntax (`@on<event>`) on its root input element.
 
-## Bind native events to DatePicker
+## Bind native events to Blazor DatePicker
 
 You can access any native event by using on `<event>` attribute with a component. The attribute's value is treated as an event handler.
 
