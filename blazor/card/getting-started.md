@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Card in Blazor WASM App | Syncfusion®
-description: Learn how to get started with the Syncfusion Blazor Card control. Explore setup, features, examples, and customization options.
+description: Learn how to add and configure the Syncfusion Blazor Card control in a standalone WebAssembly app with NuGet packages, themes, and card content.
 platform: Blazor
 component: Card
 documentation: ug
@@ -150,7 +150,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **~wwwroot/index.html** file to enable Card functionality.
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **~wwwroot/index.html** file to enable Blazor card functionality.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}

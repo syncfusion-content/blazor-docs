@@ -11,7 +11,7 @@ documentation: ug
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.
 
-## Customizing the card
+## Customizing the Blazor card component
 
 Use the following CSS to customize the card properties.
 
@@ -34,7 +34,7 @@ Use the following CSS to customize the Header element properties.
 }
 ```
 
-## Customizing the card content
+## Customizing the Blazor card content
 
 Use the following CSS to customize the card content properties.
 

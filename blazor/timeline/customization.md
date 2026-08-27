@@ -9,13 +9,13 @@ documentation: ug
 
 # Customization in Blazor Timeline
 
-Customize the Timeline item's dot size, connectors, dot borders, and dot outer space to personalize its appearance. This section details various methods for styling the items.
+Customize the Blazor  Timeline item's dot size, connectors, dot borders, and dot outer space to personalize its appearance. This section details various methods for styling the items.
 
 ## Connector Styling
 
 ### Common Styling
 
-Define styles to apply to all Timeline item connectors. The CSS selector `.e-timeline-item.e-connector::after` targets the pseudo-element representing the connector line for each item.
+Define styles to apply to all Blazor Timeline item connectors. The CSS selector `.e-timeline-item.e-connector::after` targets the pseudo-element representing the connector line for each item.
 
 ```cshtml
 
@@ -63,7 +63,7 @@ Define styles to apply to all Timeline item connectors. The CSS selector `.e-tim
 
 ### Individual Styling
 
-Apply unique styles to individual connectors to differentiate specific items within the Timeline. 
+Apply unique styles to individual connectors to differentiate specific items within the Blazor  Timeline. 
 
 ```cshtml
 
@@ -117,7 +117,7 @@ Apply unique styles to individual connectors to differentiate specific items wit
 
 ### Dot Color
 
-Modify the color of the dots to highlight specific Timeline items. The `.e-dot` class targets the circular indicator for each item.
+Modify the color of the dots to highlight specific Blazor  Timeline items. The `.e-dot` class targets the circular indicator for each item.
 
 ```cshtml
 
@@ -241,7 +241,7 @@ Adjust the dot size using the `--dot-size` CSS variable, making it larger or sma
 
 ### Dot Shadow
 
-Add shadow effects to Timeline dots for visual engagement using the `--dot-outer-space` and `--dot-border` CSS variables to control the spacing and border around the dot, along with the `box-shadow` CSS property to define the shadow.
+Add shadow effects to Blazor  Timeline dots for visual engagement using the `--dot-outer-space` and `--dot-border` CSS variables to control the spacing and border around the dot, along with the `box-shadow` CSS property to define the shadow.
 
 ```cshtml
 
@@ -296,7 +296,7 @@ Add shadow effects to Timeline dots for visual engagement using the `--dot-outer
 
 ### Dot Variant
 
-Achieve desired dot variants by customizing the outline and background colors of Timeline dots. This example demonstrates using pseudo-elements with `content` for visual differentiation, combined with styling of `--dot-size`, `--dot-radius`, and background/outline colors.
+Achieve desired dot variants by customizing the outline and background colors of Blazor  Timeline dots. This example demonstrates using pseudo-elements with `content` for visual differentiation, combined with styling of `--dot-size`, `--dot-radius`, and background/outline colors.
 
 ```cshtml
 
@@ -372,7 +372,7 @@ Achieve desired dot variants by customizing the outline and background colors of
 
 ### Dot Outline
 
-Adding the `e-outline` class to the Timeline's [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_CssClass) property enables dots to have a distinct outline style, visually emphasizing each item.
+Adding the `e-outline` class to the Blazor Timeline's [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_CssClass) property enables dots to have a distinct outline style, visually emphasizing each item.
 
 ```cshtml
 
