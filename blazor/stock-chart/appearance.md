@@ -104,7 +104,7 @@ Stock Chart supports several built-in themes such as `Material3`, `Fluent2`, `Bo
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price" Theme="Theme.Fluent2">
+<SfStockChart Title="AAPL Stock Price" Theme="Syncfusion.Blazor.Theme.Bootstrap4">
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Line" XName="XValue" YName="YValue"></StockChartSeries>
     </StockChartSeriesCollection>

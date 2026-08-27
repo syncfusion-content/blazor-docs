@@ -11,13 +11,17 @@ documentation: ug
 
 The rendered Stock Chart supports exporting to JPEG, PNG, SVG, PDF, XLSX, and CSV through the export dropdown in the Stock Chart toolbar. Configure the available export formats using the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_ExportType) property.
 
-The rendered Stock Chart can be printed directly using the print button in the Stock Chart toolbar.
+## Print
+
+Set the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_ExportType) property to an empty list to remove the export dropdown and  show the print button from the Stock Chart toolbar.
+
+The rendered Stock Chart can be printed directly using the Stock Chart toolbar.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price">
+<SfStockChart Title="AAPL Stock Price" ExportType="new List<ExportType>() { }">
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume"></StockChartSeries>
     </StockChartSeriesCollection>
@@ -59,15 +63,15 @@ The rendered Stock Chart can be printed directly using the print button in the S
 
 ![Printing in Blazor Stock Chart](images/print/blazor-stock-chart-printing.webp)
 
-## Disable export and print
+## Export Type
 
-Set the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_ExportType) property to an empty list to remove the export dropdown and print button from the Stock Chart toolbar.
+By default, the export drop-down in the Stock Chart toolbar displays the following export options: JPEG, PNG, SVG, PDF, XLSX, CSV, and Print.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price" ExportType="new List<ExportType>() { }">
+<SfStockChart Title="AAPL Stock Price">
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="google"></StockChartSeries>
     </StockChartSeriesCollection>

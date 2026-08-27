@@ -69,18 +69,15 @@ Axis tooltip labels can be enabled using the [Enable](https://help.syncfusion.co
 
 <SfStockChart Title="AAPL Stock Price">
     <StockChartCrosshairSettings Enable="true"></StockChartCrosshairSettings>
-
     <StockChartPrimaryYAxis>
         <StockChartAxisLineStyle Color="Transparent"></StockChartAxisLineStyle>
         <StockChartAxisMajorTickLines Color="Transparent" Width="0"></StockChartAxisMajorTickLines>
         <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
     </StockChartPrimaryYAxis>
-
     <StockChartPrimaryXAxis>
         <StockChartAxisMajorGridLines Color="Transparent"></StockChartAxisMajorGridLines>
         <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
     </StockChartPrimaryXAxis>
-
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume"></StockChartSeries>
     </StockChartSeriesCollection>
@@ -127,17 +124,14 @@ Customize the crosshair tooltip background and font using the [Fill](https://hel
     <StockChartCrosshairSettings Enable="true">
         <StockChartCrosshairLine Width="2" Color="green"></StockChartCrosshairLine>
     </StockChartCrosshairSettings>
-
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume"></StockChartSeries>
     </StockChartSeriesCollection>
-
     <StockChartPrimaryYAxis>
         <StockChartAxisLineStyle Color="Transparent"></StockChartAxisLineStyle>
         <StockChartAxisMajorTickLines Color="Transparent" Width="0"></StockChartAxisMajorTickLines>
         <StockChartAxisCrosshairTooltip Enable="true" Fill="green"></StockChartAxisCrosshairTooltip>
     </StockChartPrimaryYAxis>
-
     <StockChartPrimaryXAxis>
         <StockChartAxisMajorGridLines Color="Transparent"></StockChartAxisMajorGridLines>
         <StockChartAxisCrosshairTooltip Enable="true" Fill="green"></StockChartAxisCrosshairTooltip>

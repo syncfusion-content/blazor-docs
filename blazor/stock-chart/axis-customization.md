@@ -49,7 +49,7 @@ Add a chart title using the [Title](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ```
 
-![Blazor Stock Chart with Title](images/common/blazor-stock-chart-title.webp)
+![Blazor Stock Chart with Title](images/axis-customization/blazor-stock-chart-title.webp)
 
 ## Tick Lines Customization
 
@@ -59,12 +59,11 @@ Customize the `Width` and `Color` of minor and major tick lines using the [Major
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price">
+<SfStockChart>
     <StockChartPrimaryXAxis>
         <StockChartAxisMajorTickLines Width="5" Color="blue"></StockChartAxisMajorTickLines>
         <StockChartAxisMinorTickLines Width="0" Color="red"></StockChartAxisMinorTickLines>
     </StockChartPrimaryXAxis>
-
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" YName="Y"></StockChartSeries>
     </StockChartSeriesCollection>
@@ -93,7 +92,7 @@ Customize the `Width` and `Color` of minor and major tick lines using the [Major
 
 ```
 
-![Blazor Stock Chart with Tick Lines](images/common/blazor-stock-chart-tick-lines.webp)
+![Blazor Stock Chart with Tick Lines](images/axis-customization/blazor-stock-chart-tick-lines.webp)
 
 ## Grid Lines Customization
 
@@ -103,17 +102,15 @@ Customize the `Width`, `Color`, and `DashArray` of minor and major grid lines us
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price">
+<SfStockChart>
     <StockChartPrimaryXAxis>
         <StockChartAxisMajorGridLines Width="1" Color="blue"></StockChartAxisMajorGridLines>
         <StockChartAxisMinorGridLines Width="0" Color="red"></StockChartAxisMinorGridLines>
     </StockChartPrimaryXAxis>
-
     <StockChartPrimaryYAxis>
         <StockChartAxisMajorGridLines Width="1" Color="green"></StockChartAxisMajorGridLines>
         <StockChartAxisMinorGridLines Width="0" Color="red"></StockChartAxisMinorGridLines>
     </StockChartPrimaryYAxis>
-
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" YName="Y"></StockChartSeries>
     </StockChartSeriesCollection>
@@ -142,7 +139,7 @@ Customize the `Width`, `Color`, and `DashArray` of minor and major grid lines us
 
 ```
 
-![Blazor Stock Chart with Grid Lines](images/common/blazor-stock-chart-grid-lines.webp)
+![Blazor Stock Chart with Grid Lines](images/axis-customization/blazor-stock-chart-grid-lines.webp)
 
 ## Multiple Axes
 
@@ -156,18 +153,14 @@ In addition to the primary X and Y axes, multiple additional axes can be added t
     <StockChartAxes>
         <StockChartAxis RowIndex="0" Name="yAxis"></StockChartAxis>
     </StockChartAxes>
-
     <StockChartPrimaryXAxis>
         <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
     </StockChartPrimaryXAxis>
-
     <StockChartPrimaryYAxis Interval="40">
         <StockChartAxisLineStyle Color="Transparent"></StockChartAxisLineStyle>
         <StockChartAxisMajorTickLines Width="0" Color="Transparent"></StockChartAxisMajorTickLines>
     </StockChartPrimaryYAxis>
-
     <StockChartCrosshairSettings Enable="true"></StockChartCrosshairSettings>
-
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple"></StockChartSeries>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Column" YAxisName="yAxis" XName="Date" YName="Low" Name="Google"></StockChartSeries>
@@ -201,7 +194,7 @@ In addition to the primary X and Y axes, multiple additional axes can be added t
 
 ```
 
-![Blazor Stock Chart with Multiple Axes](images/common/blazor-stock-chart-multiple-axes.webp)
+![Blazor Stock Chart with Multiple Axes](images/axis-customization/blazor-stock-chart-multiple-axes.webp)
 
 ## Inversed Axis
 
@@ -215,7 +208,6 @@ When an axis is inversed, the highest value of the axis is placed closer to the 
 
 <SfStockChart Title="Inversed Axis">
     <StockChartPrimaryXAxis IsInversed="true"></StockChartPrimaryXAxis>
-
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple"></StockChartSeries>
     </StockChartSeriesCollection>
@@ -249,7 +241,7 @@ When an axis is inversed, the highest value of the axis is placed closer to the 
 
 ```
 
-![Blazor Stock Chart with Inversed Axis](images/common/blazor-stock-chart-inversed-axis.webp)
+![Blazor Stock Chart with Inversed Axis](images/axis-customization/blazor-stock-chart-inversed-axis.webp)
 
 ## Opposed Position
 
@@ -259,7 +251,7 @@ To place an axis opposite from its original position, set [OpposedPosition](http
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price">
+<SfStockChart Title="Opposed Position">
     <StockChartPrimaryXAxis OpposedPosition="true"></StockChartPrimaryXAxis>
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close"></StockChartSeries>
@@ -293,7 +285,7 @@ To place an axis opposite from its original position, set [OpposedPosition](http
 
 ```
 
-![Blazor Stock Chart in Opposed Position](images/common/blazor-stock-chart-in-opposed-position.webp)
+![Blazor Stock Chart in Opposed Position](images/axis-customization/blazor-stock-chart-in-opposed-position.webp)
 
 ## See also
 
