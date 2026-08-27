@@ -63,7 +63,7 @@ To add a technical indicator, include [StockChartIndicators](https://help.syncfu
 
 ```
 
-![Blazor Spline Stock Chart](images/Technical-indicator/blazor-TechnicalIndicators-stock-chart.webp)
+![Blazor Spline Stock Chart](images/technical-indicator/blazor-technical-indicators-stock-chart.webp)
 
 ## Accumulation Distribution
 
@@ -115,7 +115,7 @@ Accumulation Distribution combines price and volume to show potential money flow
 
 ```
 
-![Blazor Accumulation Distribution Stock Chart](images/Technical-indicator/blazor-Accumulation-stock-chart.webp)
+![Blazor Accumulation Distribution Stock Chart](images/technical-indicator/blazor-Accumulation-stock-chart.webp)
 
 ## Average True Range (ATR)
 
@@ -183,7 +183,7 @@ RSI shows how strongly a stock is moving in its current direction. To render an 
 
 ```
 
-![Blazor RSI Stock Chart](images/Technical-indicator/blazor-RSI-stock-chart.webp)
+![Blazor RSI Stock Chart](images/technical-indicator/blazor-RSI-stock-chart.webp)
 
 ## Simple Moving Average (SMA)
 
@@ -238,7 +238,8 @@ Stochastic indicates how a stock compares to its previous state. To render a Sto
 }
 
 ```
-![Blazor stochastic Stock Chart](images/Technical-indicator/blazor-stochastic-stock-chart.webp)
+
+![Blazor stochastic Stock Chart](images/technical-indicator/blazor-stochastic-stock-chart.webp)
 
 ## Triangular Moving Average (TMA)
 
@@ -248,7 +249,7 @@ Moving average indicators are used to define the direction of the trend. To rend
 
 <!-- markdownlint-disable MD034 -->
 
-A Stock Chart overlay that shows the upper and lower limits of normal price movements based on the standard deviation of prices. To render a Bollinger Band, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicator.html#Syncfusion_Blazor_Charts_StockChartIndicator_Type) to `BollingerBand`. The Bollinger Band is represented by three lines (`upperLine`, `lowerLine`, `signalLine`), and the default [StandardDeviation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicator.html#Syncfusion_Blazor_Charts_StockChartIndicator_StandardDeviation) value is 2.
+A Stock Chart overlay that shows the upper and lower limits of normal price movements based on the standard deviation of prices. To render a Bollinger Bands, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicator.html#Syncfusion_Blazor_Charts_StockChartIndicator_Type) to `BollingerBands`. The Bollinger Band is represented by three lines (`upperLine`, `lowerLine`, `signalLine`), and the default [StandardDeviation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicator.html#Syncfusion_Blazor_Charts_StockChartIndicator_StandardDeviation) value is 2.
 
 ```cshtml
 
@@ -259,7 +260,7 @@ A Stock Chart overlay that shows the upper and lower limits of normal price move
         <StockChartSeries Name="AAPL" DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume"></StockChartSeries>
     </StockChartSeriesCollection>
     <StockChartIndicators>
-        <StockChartIndicator Type="TechnicalIndicators.BollingerBand" Field="FinancialDataFields.Close" SeriesName="AAPL" XName="Date" Close="Close" Period="14" StandardDeviation="2"></StockChartIndicator>
+        <StockChartIndicator Type="TechnicalIndicators.BollingerBands" Field="FinancialDataFields.Close" SeriesName="AAPL" XName="Date" Close="Close" Period="14" StandardDeviation="2"></StockChartIndicator>
     </StockChartIndicators>
 </SfStockChart>
 
@@ -296,7 +297,7 @@ A Stock Chart overlay that shows the upper and lower limits of normal price move
 
 ```
 
-![Blazor Bollinger Stock Chart](images/Technical-indicator/blazor-Bollinger-stock-chart.webp)
+![Blazor Bollinger Stock Chart](images/technical-indicator/blazor-Bollinger-stock-chart.webp)
 
 ## See also
 
