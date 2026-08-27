@@ -9,7 +9,7 @@ documentation: ug
 
 # Range Restriction in Blazor DateRangePicker
 
-Range selection in the DateRangePicker can be customized with restrictions based on application needs.
+Range selection in the Blazor DateRangePicker can be customized with restrictions based on application needs.
 
 ## Restrict the range within a range
 
@@ -55,7 +55,7 @@ In the following sample, the range must be between 5 and 10 days; otherwise the 
 
 ## Strict mode
 
-DateRangePicker provides an option to restrict the user to entering only valid dates. With `StrictMode` enabled, the Start and End dates are clamped to the `Min` and `Max` bounds when an invalid or out-of-range range is specified. This behavior is enabled by setting the [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_StrictMode) property to true. The `MinDays` and `MaxDays` span rules still apply when `StrictMode` is enabled.
+The Blazor DateRangePicker provides an option to restrict the user to entering only valid dates. With `StrictMode` enabled, the Start and End dates are clamped to the `Min` and `Max` bounds when an invalid or out-of-range range is specified. This behavior is enabled by setting the [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_StrictMode) property to true. The `MinDays` and `MaxDays` span rules still apply when `StrictMode` is enabled.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -81,7 +81,7 @@ If StartDate is less than Min date, it will be updated with Min date. If EndDate
 
 ![Blazor DateRangePicker in Strict Mode](./images/blazor-daterangepicker-strict-mode.webp)
 
-By default, the DateRangePicker has `StrictMode` set to false, which allows you to enter invalid or out-of-range dates in the text box.
+By default, the Blazor DateRangePicker has `StrictMode` set to false, which allows you to enter invalid or out-of-range dates in the text box.
 
 If the Start and End dates are out of the specified date range or invalid, then the model value is set to an out-of-range value or `null`, and an `error` class is applied to highlight it.
 

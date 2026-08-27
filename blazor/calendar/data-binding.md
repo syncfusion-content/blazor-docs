@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor Calendar
 
-This section explains how to bind a value to the Calendar component in the following ways:
+This section explains how to bind a value to the Blazor Calendar component in the following ways:
 
 * One-Way Data Binding
 * Two-Way Data Binding
@@ -17,7 +17,7 @@ This section explains how to bind a value to the Calendar component in the follo
 
 ## One-Way Binding
 
-In one-way binding, bind the value to the Calendar component directly for `Value` property as mentioned in the following code example. In one-way binding, you need to pass property or variable name along with `@` (For Ex: "@DateValue").
+In one-way binding, bind the value to the Blazor Calendar component directly for `Value` property as mentioned in the following code example. In one-way binding, you need to pass property or variable name along with `@` (For Ex: "@DateValue").
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -39,7 +39,7 @@ In one-way binding, bind the value to the Calendar component directly for `Value
 
 ## Two-Way data binding
 
-Use `@bind-Value` to keep the Calendar and your data source in sync. The bound field should be `DateTime` or `DateTime?`. When the component value changes, the bound variable updates automatically, and when the variable changes, the component reflects the new value.
+Use `@bind-Value` to keep the Blazor Calendar and your data source in sync. The bound field should be `DateTime` or `DateTime?`. When the component value changes, the bound variable updates automatically, and when the variable changes, the component reflects the new value.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

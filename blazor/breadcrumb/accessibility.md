@@ -42,10 +42,10 @@ The Blazor Breadcrumb component follows the [WAI-ARIA](https://www.w3.org/WAI/AR
 
 | Attributes | Purpose |
 | --- | --- |
-| `role="navigation"` | Identifies the Breadcrumb as a navigation landmark. |
-| `aria-label` | Provides an accessible name for the breadcrumb item. |
-| `aria-disabled` | Indicates whether the breadcrumb item is disabled. |
-| `aria-current="page"` | Identifies the breadcrumb item that represents the current page. |
+| `role="navigation"` | Identifies the Blazor Breadcrumb as a navigation landmark. |
+| `aria-label` | Provides an accessible name for the Blazor breadcrumb item. |
+| `aria-disabled` | Indicates whether the Blazor breadcrumb item is disabled. |
+| `aria-current="page"` | Identifies the Blazor breadcrumb item that represents the current page. |
 
 The following example shows how to set accessibility attributes on the Blazor Breadcrumb component:
 
