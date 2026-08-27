@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Card in Blazor Web App | Syncfusion®
-description: Learn how to get started with the Syncfusion Blazor Card control. Explore setup, features, examples, and customization options.
+description: Learn how to add the Syncfusion Blazor Card control to a Blazor Web App, with setup steps, examples, and customization options.
 platform: Blazor
 component: Card
 documentation: ug
