@@ -49,7 +49,7 @@ To display the legend, set the [Visible](https://help.syncfusion.com/cr/blazor/S
 
 ```
 
-![Blazor Stock Chart with legend](images/blazor-stock-chart-legend.webp)
+![Blazor Stock Chart with legend](images/legend/blazor-stock-chart-legend.webp)
 
 ## Legend Position
 
@@ -89,7 +89,7 @@ Use the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 ```
 
-![Blazor Stock Chart with legend position](images/blazor-stock-chart-legend-position.webp)
+![Blazor Stock Chart with legend position](images/legend/blazor-stock-chart-legend-position.webp)
 
 The **Custom** position allows placing the legend anywhere within the Stock Chart using x and y coordinates.
 
@@ -98,9 +98,7 @@ The **Custom** position allows placing the legend anywhere within the Stock Char
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart Title="AAPL Stock Price">
-    <StockChartLegendSettings Visible="true" Position="LegendPosition.Custom">
-        <StockChartLocation X="50" Y="50"></StockChartLocation>
-        <StockChartLegendBorder Color="Black" Width="2"></StockChartLegendBorder>
+    <StockChartLegendSettings Visible="true" Position="LegendPosition.Custom" X="50" Y="50" BorderColor="black" Width="2">
     </StockChartLegendSettings>
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple Inc" Type="ChartSeriesType.Candle"></StockChartSeries>
@@ -130,7 +128,7 @@ The **Custom** position allows placing the legend anywhere within the Stock Char
 
 ```
 
-![Blazor Stock Chart with custom legend position](images/blazor-stock-chart-legend-location.webp)
+![Blazor Stock Chart with custom legend position](images/legend/blazor-stock-chart-legend-location.webp)
 
 ## Reverse Legend
 
@@ -177,7 +175,7 @@ Reverse the order of legend items using the [Reversed](https://help.syncfusion.c
 
 ```
 
-![Blazor Stock Chart with legend reversed](images/blazor-stock-chart-legend-reversed.webp)
+![Blazor Stock Chart with legend reversed](images/legend/blazor-stock-chart-legend-reversed.webp)
 
 ## Legend Alignment
 
@@ -188,8 +186,7 @@ Use the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart Title="AAPL Stock Price">
-    <StockChartLegendSettings Visible="true" Alignment="Alignment.Near">
-    <StockChartLegendBorder Color="Black" Width="2"></StockChartLegendBorder>
+    <StockChartLegendSettings Visible="true" Alignment="Alignment.Near" BorderColor="black" BorderWidth="2">
     </StockChartLegendSettings>
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple Inc" Type="ChartSeriesType.Candle"></StockChartSeries>
@@ -219,7 +216,7 @@ Use the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 ```
 
-![Blazor Stock Chart with legend alignment](images/blazor-stock-chart-legend-alignment.webp)
+![Blazor Stock Chart with legend alignment](images/legend/blazor-stock-chart-legend-alignment.webp)
 
 ## Legend Customization
 
@@ -262,7 +259,7 @@ The [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ```
 
-![Blazor Stock Chart with legend shape](images/blazor-stock-chart-legend-shape.webp)
+![Blazor Stock Chart with legend shape](images/legend/blazor-stock-chart-legend-shape.webp)
 
 ### Legend Size
 
@@ -273,8 +270,7 @@ When placed at the top or bottom, the legend occupies approximately 20%–25% of
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart Title="AAPL Stock Price">
-    <StockChartLegendSettings Visible="true" Height="50" Width="300">
-        <StockChartLegendBorder Color="blue" Width="1"></StockChartLegendBorder>
+    <StockChartLegendSettings Visible="true" Height="50" Width="300" BorderColor="blue" BorderWidth="1">
     </StockChartLegendSettings>
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple Stock Price"></StockChartSeries>
@@ -305,7 +301,7 @@ When placed at the top or bottom, the legend occupies approximately 20%–25% of
 
 ```
 
-![Blazor Stock Chart with legend size](images/blazor-stock-chart-legend-size.webp)
+![Blazor Stock Chart with legend size](images/legend/blazor-stock-chart-legend-size.webp)
 
 ### Legend Shape Size
 
@@ -346,7 +342,7 @@ Use the [ShapeHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ```
 
-![Blazor Stock Chart with legend shape size](images/blazor-stock-chart-legend-size-shape.webp)
+![Blazor Stock Chart with legend shape size](images/legend/blazor-stock-chart-legend-size-shape.webp)
 
 ### Legend Item Padding
 
@@ -388,7 +384,7 @@ Use the [ItemPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ```
 
-![Blazor Stock Chart with legend item padding](images/Blazor-stock-chart-legend-itemPadding.webp)
+![Blazor Stock Chart with legend item padding](images/legend/blazor-stock-chart-legend-itemPadding.webp)
 
 ### Legend Paging
 
@@ -431,7 +427,7 @@ When legend items exceed the available bounds, paging is enabled automatically. 
 
 ```
 
-![Blazor Stock Chart with legend paging](images/blazor-stock-chart-legend-paging.webp)
+![Blazor Stock Chart with legend paging](images/legend/blazor-stock-chart-legend-paging.webp)
 
 ### Legend Text Wrap
 
@@ -474,7 +470,7 @@ When legend text exceeds the container, enable wrapping using the [TextWrap](htt
 
 ```
 
-![Blazor Stock Chart with legend text wrap](images/blazor-stock-chart-legend-text-wrap.webp)
+![Blazor Stock Chart with legend text wrap](images/legend/blazor-stock-chart-legend-text-wrap.webp)
 
 ## Series Selection Based on Legend
 
@@ -517,7 +513,7 @@ By default, clicking a legend item toggles the visibility of the corresponding s
 
 ```
 
-![Blazor Stock Chart with selection mode](images/blazor-stock-chart-selection-mode.webp)
+![Blazor Stock Chart with selection mode](images/legend/blazor-stock-chart-selection-mode.webp)
 
 ## Hiding Legend Item
 
@@ -560,7 +556,7 @@ The series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ```
 
-![Blazor Stock Chart hiding legend item](images/blazor-stock-chart-hidding-legend.webp)
+![Blazor Stock Chart hiding legend item](images/legend/blazor-stock-chart-hidding-legend.webp)
 
 ## Legend Template
 
@@ -651,7 +647,7 @@ To use a template, add the [LegendItemTemplate](https://help.syncfusion.com/cr/b
 }
 ```
 
-![Blazor Stock Chart legend template](images/blazor-stock-chart-legend-template.webp)
+![Blazor Stock Chart legend template](images/legend/blazor-stock-chart-legend-template.webp)
 
 ## See also
 
