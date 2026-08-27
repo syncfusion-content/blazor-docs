@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Speed Dial in Blazor WASM App | Syncfusion
-description: Learn how to get started with the Syncfusion Blazor Speed Dial in a Blazor WebAssembly app.
+description: Learn how to get started with the Syncfusion Blazor Speed Dial in a Blazor WebAssembly app with setup steps.
 platform: Blazor
 control: Speed Dial
 documentation: ug
