@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Numeric Textbox
 
-This section lists the events raised by the Numeric TextBox component and when they occur. Events are wired using the nested NumericTextBoxEvents tag inside the SfNumericTextBox.
+This section lists the events raised by the Blazor Numeric TextBox component and when they occur. Events are wired using the nested NumericTextBoxEvents tag inside the SfNumericTextBox.
 
 ## Blur
 
@@ -32,7 +32,7 @@ The `Blur` event occurs when the NumericTextBox loses focus.
 
 ## Created
 
-The `Created` event fires after the NumericTextBox component has been initialized and rendered.
+The `Created` event fires after the Blazor Numeric TextBox component has been initialized and rendered.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -51,7 +51,7 @@ The `Created` event fires after the NumericTextBox component has been initialize
 
 ## Destroyed
 
-The `Destroyed` event fires when the NumericTextBox component is disposed.
+The `Destroyed` event fires when the Blazor Numeric TextBox component is disposed.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -106,4 +106,4 @@ The `ValueChange` event triggers when the value changes or the component loses f
 }
 ```
 
-N> Numeric TextBox is limited to these events. Additional events may be added in the future based on user requests. If the event you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
+N> Blazor Numeric TextBox is limited to these events. Additional events may be added in the future based on user requests. If the event you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).

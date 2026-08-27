@@ -9,7 +9,7 @@ documentation: ug
 
 # Nested List in Blazor ListView
 
-The ListView component supports Nested list. For that, the [`Child`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html#Syncfusion_Blazor_Lists_ListViewFieldSettings_1_Child) property should be defined for the nested list in the array of JSON.
+The Blazor ListView component supports Nested list. For that, the [`Child`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html#Syncfusion_Blazor_Lists_ListViewFieldSettings_1_Child) property should be defined for the nested list in the array of JSON.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists

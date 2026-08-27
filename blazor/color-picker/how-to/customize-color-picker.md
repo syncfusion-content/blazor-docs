@@ -7,7 +7,7 @@ control: Color Picker
 documentation: ug
 ---
 
-# How to customize the Color Picker in Blazor
+# How to customize the Blazor Color Picker
 
 ## Custom palette
 
@@ -81,9 +81,9 @@ By default, the palette renders with a set of predefined colors. To load custom 
 
 ## Hide input area from picker
 
-By default, the input area is rendered in the Color Picker. To hide the input area, add the built-in class `e-hide-value` via the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_CssClass) property. This hides the input field visually while keeping the picker fully functional.
+By default, the input area is rendered in the Blazor Color Picker. To hide the input area, add the built-in class `e-hide-value` via the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_CssClass) property. This hides the input field visually while keeping the picker fully functional.
 
-In the following sample, the Color Picker is rendered without the input area.
+In the following sample, the Blazor Color Picker is rendered without the input area.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -95,7 +95,7 @@ In the following sample, the Color Picker is rendered without the input area.
 
 ## Custom handle
 
-Customize the Color Picker handle shape and UI with CSS. In this example, the handle is replaced with an SVG icon encoded as a data URL. Similar techniques can be used to style the handle to match application branding. For broad compatibility, verify styles across themes and consider contrast and focus visibility.
+Customize the Blazor Color Picker handle shape and UI with CSS. In this example, the handle is replaced with an SVG icon encoded as a data URL. Similar techniques can be used to style the handle to match application branding. For broad compatibility, verify styles across themes and consider contrast and focus visibility.
 
 The following sample shows the customized Color Picker handle.
 

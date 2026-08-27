@@ -9,7 +9,7 @@ documentation: ug
 
 # How to set the disabled state of Blazor Split Button
 
-Use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_Disabled) property to disable the SplitButton. When set to `true`.
+Use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_Disabled) property to disable the Blazor Split Button. When set to `true`.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -24,4 +24,4 @@ Use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Split
   
 ```
 
-![Blazor SplitButton in Disabled State](./../images/blazor-splitbutton-disabled-state.webp)
+![Blazor Split Button in Disabled State](./../images/blazor-splitbutton-disabled-state.webp)

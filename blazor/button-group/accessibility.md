@@ -45,10 +45,10 @@ The following keyboard shortcuts are supported by the Blazor Button Group compon
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Focuses the next button in the Button Group. |
-| <kbd>Shift + Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Focuses the previous button in the Button Group. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Focuses the next button in the Blazor Button Group. |
+| <kbd>Shift + Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Focuses the previous button in the Blazor Button Group. |
 | Arrows (<kbd>↑</kbd> , <kbd>→</kbd> , <kbd>↓</kbd> , <kbd>←</kbd>) | Arrows (<kbd>↑</kbd> , <kbd>→</kbd> , <kbd>↓</kbd> , <kbd>←</kbd>) | In `SelectionMode.Single`, moves focus and selects the next/previous button. In `SelectionMode.Multiple`, moves focus only; press <kbd>Space</kbd> to toggle the focused button. |
-| <kbd>Space</kbd> | <kbd>Space</kbd> | Activates the focused button in the default Button Group, or toggles selection of the focused button in `SelectionMode.Multiple`. |
+| <kbd>Space</kbd> | <kbd>Space</kbd> | Activates the focused button in the default Blazor Button Group, or toggles selection of the focused button in `SelectionMode.Multiple`. |
 
 ## Ensuring accessibility
 

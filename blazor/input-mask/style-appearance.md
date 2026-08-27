@@ -29,9 +29,9 @@ To scope the styling to a single instance, set the `CssClass` parameter and targ
 }
 ```
 
-## Customizing the appearance of Input Mask container element
+## Customizing the appearance of Blazor Input Mask container element
 
-Use the following CSS to customize the appearance of the Input Mask container (wrapper) and its input element.
+Use the following CSS to customize the appearance of the Blazor Input Mask container (wrapper) and its input element.
 
 ```css
 /* To specify height, font size, and border */
@@ -43,9 +43,9 @@ Use the following CSS to customize the appearance of the Input Mask container (w
 }
 ```
 
-## Customizing the Input Mask element on hovering
+## Customizing the Blazor Input Mask element on hovering
 
-Use the following CSS to customize the Input Mask element on hovering.
+Use the following CSS to customize the Blazor Input Mask element on hovering.
 
 ```css
 /* To specify border on hover */
@@ -68,7 +68,7 @@ Use the following CSS to customize the Input Mask element on hovering.
 
 ## Customizing the focused state
 
-Use the following CSS to customize the border color when the MaskedTextBox is focused.
+Use the following CSS to customize the border color when the Blazor Input Mask component is focused.
 
 ```css
 .e-input-group.e-control-wrapper input.e-input:focus,
