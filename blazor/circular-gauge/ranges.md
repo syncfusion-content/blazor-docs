@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Circular Gauge Ranges
 
-You can categorize certain interval on Circular Gauge axis using the [CircularGaugeRanges](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRanges.html) tag.
+You can categorize certain intervals on a Circular Gauge axis using the [CircularGaugeRanges](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRanges.html) tag.
 
 ## Range start and end
 
@@ -88,7 +88,7 @@ The color of a range can be customized using the [Color](https://help.syncfusion
 
 ## Range position
 
-The ranges can be placed either inside, outside or center of the axis using the [Position`] property in [CircularGaugeRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRange.html). Its possible values are 'PointerRangePosition.Inside', 'PointerRangePosition.Outside' and 'PointerRangePosition.Cross'.
+The ranges can be placed inside, outside, or at the center of the axis using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRange.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRange_Position) property in [CircularGaugeRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRange.html). Its possible values are `PointerRangePosition.Inside`, `PointerRangePosition.Outside`, and `PointerRangePosition.Cross`.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -134,7 +134,7 @@ You can customize the corner radius using the [RoundedCornerRadius](https://help
 
 ## Radius
 
-You can place a range inside or outside the axis using the [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRange.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRange_Radius) property. The radius of a range takes value either in percentage or in pixels. By default, a range take 100% of the axis radius.
+You can place a range inside or outside the axis using the [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRange.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRange_Radius) property. The radius of a range takes value either in percentage or in pixels. By default, a range takes 100% of the axis radius.
 
 ### In pixel
 
@@ -158,7 +158,7 @@ You can set a radius of the range in pixel as demonstrated below.
 
 ### In percentage
 
-By setting value in percentage, a range gets its dimension with respect to its axis radius. For example, when the radius is ‘50%’,the range is rendered to half of the axis radius.
+By setting the value in percentage, the range is positioned relative to the axis radius. For example, when the radius is `50%`, the range is rendered at half of the axis radius.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -183,7 +183,7 @@ By setting value in percentage, a range gets its dimension with respect to its a
 
 ## Dragging ranges
 
-The ranges can be dragged over the axis line by clicking and dragging the same. To enable or disable the range drag, use the [EnableRangeDrag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_EnableRangeDrag) property.
+The ranges can be dragged over the axis line by clicking and dragging them. To enable or disable the range drag, use the [EnableRangeDrag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_EnableRangeDrag) property.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -209,7 +209,7 @@ The ranges can be dragged over the axis line by clicking and dragging the same. 
 
 You can add multiple ranges to an axis with the above customization as demonstrated below.
 
-You can set the range color to ticks and labels of an axis by enabling the [UseRangeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property in [CircularGaugeAxisMajorTicks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMajorTicks.html), [CircularGaugeAxisMinorTicks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMinorTicks.html) and [CircularGaugeAxisLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html) tags.
+You can set the range color to ticks and labels of an axis by enabling the [UseRangeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLabelStyle_UseRangeColor) property in the [CircularGaugeAxisMajorTicks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMajorTicks.html), [CircularGaugeAxisMinorTicks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMinorTicks.html), and [CircularGaugeAxisLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html) tags.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -230,14 +230,14 @@ You can set the range color to ticks and labels of an axis by enabling the [UseR
                 <CircularGaugeRange Start="75" End="100" Radius="108%">
                 </CircularGaugeRange>
             </CircularGaugeRanges>
-            <CircularGaugeAxisLabelStyle UseRangeColor="true">
-            </CircularGaugeAxisLabelStyle>
-            <CircularGaugeAxisMinorTicks UseRangeColor="true"></CircularGaugeAxisMinorTicks>
+            <CircularGaugeAxisMajorTicks UseRangeColor="true" />
+            <CircularGaugeAxisMinorTicks UseRangeColor="true" />
+            <CircularGaugeAxisLabelStyle UseRangeColor="true" />
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBRDxhdLekXVZOx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge with Multiple Ranges](./images/blazor-circulargauge-multiple-ranges.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLRjPVwKYlSudgo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge with Multiple Ranges](./images/blazor-circulargauge-multiple-ranges.webp)" %}
 
 ## Gradient color
 
@@ -248,9 +248,9 @@ Gradient support allows to add multiple colors in the range and pointer of the c
 
 ### Linear gradient
 
-Using linear gradient, colors will be applied in a linear progression. The start value of the linear gradient can be set using the [StartValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeLinearGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeLinearGradient_StartValue) property. The end value of the linear gradient will be set using the [EndValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeLinearGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeLinearGradient_EndValue) property. The color stop values such as color, opacity and offset are set using [ColorStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeLinearGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeLinearGradient_ColorStop) property.
+Using linear gradient, colors will be applied in a linear progression. The start value of the linear gradient can be set using the [StartValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeLinearGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeLinearGradient_StartValue) property. The end value of the linear gradient can be set using the [EndValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeLinearGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeLinearGradient_EndValue) property. The color stop values such as color, opacity and offset are set using the [ColorStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeLinearGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeLinearGradient_ColorStop) property.
 
-To apply linear gradient to the range, follow the below code sample.
+To apply linear gradient to the range, see the following code sample.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -359,9 +359,9 @@ To apply linear gradient to the range, follow the below code sample.
 
 ### Radial gradient
 
-Using radial gradient, colors will be applied in circular progression. The inner circle position of the radial gradient will be set using the [InnerPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRadialGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRadialGradient_InnerPosition) property. The outer circle position of the radial gradient can be set using the [OuterPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRadialGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRadialGradient_OuterPosition) property. The color stop values such as color, opacity and offset are set using [ColorStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRadialGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRadialGradient_ColorStop) property.
+Using radial gradient, colors will be applied in circular progression. The inner circle position of the radial gradient can be set using the [InnerPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRadialGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRadialGradient_InnerPosition) property. The outer circle position of the radial gradient can be set using the [OuterPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRadialGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRadialGradient_OuterPosition) property. The color stop values such as color, opacity and offset are set using the [ColorStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRadialGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRadialGradient_ColorStop) property.
 
-To apply radial gradient to the range, follow the below code sample.
+To apply radial gradient to the range, see the following code sample.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -469,4 +469,4 @@ To apply radial gradient to the range, follow the below code sample.
 
 ## See also
 
-* [Tooltip for Ranges](user-interaction#tooltip-for-annotations)
+* [Tooltip for ranges](user-interaction#tooltip-for-ranges)
