@@ -11,7 +11,7 @@ documentation: ug
 
 ## Size
 
-The size of the AppBar can be set using the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Mode) property. By default, the `Mode` property is set to `AppBarMode.Regular`. The [AppBarMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AppBarMode.html) enum exposes three values:
+The size of the Blazor AppBar can be set using the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Mode) property. By default, the `Mode` property is set to `AppBarMode.Regular`. The [AppBarMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AppBarMode.html) enum exposes three values:
 
 * Regular AppBar
 * Prominent AppBar

@@ -223,7 +223,7 @@ The following example demonstrates a simple payment module that enables or disab
 </style>
 ```
 
-In this example, we've created a three-step wizard using the Accordion component:
+In this example, we've created a three-step wizard using the Blazor Accordion component:
 
 1. **Sign In** - Collects user credentials
 2. **Delivery Address** - Gathers shipping information

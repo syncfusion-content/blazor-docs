@@ -9,7 +9,7 @@ documentation: ug
 
 # Position in Blazor AppBar
 
-The position of the AppBar can be set using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position) and [IsSticky](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_IsSticky) properties. By default, the `Position` property is set to `AppBarPosition.Top` and the `IsSticky` property is set to `false`. The AppBar provides the following options for setting its position:
+The position of the Blazor AppBar can be set using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position) and [IsSticky](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_IsSticky) properties. By default, the `Position` property is set to `AppBarPosition.Top` and the `IsSticky` property is set to `false`. The AppBar provides the following options for setting its position:
 
 * Top AppBar
 * Bottom AppBar
