@@ -21,7 +21,7 @@ This guide explains how to integrate [Blazor components](https://www.syncfusion.
 
 To create a Blazor server application, follow the [Blazor Server App getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio).
 
-This guide names the project `BlazorRedisServer`, substitute your own project name in the namespaces below if different
+This guide names the project `BlazorRedisServer`. Substitute your own project name in the namespaces below if different.
 
 ## Install required NuGet packages
 
@@ -268,7 +268,7 @@ public class EmployeeService : IEmployeeService
             _logger.LogInformation("Employee {Id} retrieved from Azure Redis cache.", id);
              try
             {
-                var fromCache = JsonSerializer.Deserialize<List<Employee>>(cached, JsonOptions);
+                var fromCache = JsonSerializer.Deserialize<Employee>(cached, JsonOptions);
                 if (fromCache is not null)
                 {
                     return fromCache;
