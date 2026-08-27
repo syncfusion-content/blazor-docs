@@ -9,7 +9,7 @@ documentation: ug
 
 # Reverse in Blazor Timeline
 
-Display Timeline items in reverse order using the [`Reverse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_Reverse) property. The `Reverse` property reverses the order of the Timeline items as defined in the `TimelineItems` collection.
+Display Blazor Timeline items in reverse order using the [`Reverse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_Reverse) property. The `Reverse` property reverses the order of the Timeline items as defined in the `TimelineItems` collection.
 
 ```cshtml
 
