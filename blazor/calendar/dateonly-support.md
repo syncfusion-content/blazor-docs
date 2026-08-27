@@ -13,7 +13,7 @@ The [DateOnly](https://learn.microsoft.com/en-us/dotnet/api/system.dateonly?view
 
 > The Blazor Calendar component supports `DateOnly` in .NET 7 and later. Although `DateOnly` was introduced in .NET 6, serialization and interoperability limitations in .NET 6 prevent reliable usage in Blazor scenarios.
 
-The following example demonstrates configuring the Calendar with `TValue=DateOnly` and binding a date-only value.
+The following example demonstrates configuring the Blazor Calendar with `TValue=DateOnly` and binding a date-only value.
 
 {% highlight Razor %}
 
