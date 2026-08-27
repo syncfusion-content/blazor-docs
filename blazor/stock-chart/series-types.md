@@ -21,7 +21,7 @@ To render a line series, set the series [Type](https://help.syncfusion.com/cr/bl
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price">
+<SfStockChart Title="AAPL Stock Price" SeriesType="@AvailableSeriesTypes" IndicatorType="@IndicatorList">
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" YName="Y">
         </StockChartSeries>
@@ -29,6 +29,15 @@ To render a line series, set the series [Type](https://help.syncfusion.com/cr/bl
 </SfStockChart>
 
 @code {
+    private List<TechnicalIndicators> IndicatorList { get; set; } = new List<TechnicalIndicators>();
+    public List<ChartSeriesType> AvailableSeriesTypes { get; set; } = new List<ChartSeriesType>
+    {
+        ChartSeriesType.Line,
+        ChartSeriesType.Hilo,
+        ChartSeriesType.HiloOpenClose,
+        ChartSeriesType.Candle,
+        ChartSeriesType.Spline
+    };
     public class StockChartData
     {
         public DateTime Date { get; set; }
@@ -61,7 +70,7 @@ To render a spline series, set the series [Type](https://help.syncfusion.com/cr/
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price">
+<SfStockChart Title="AAPL Stock Price" SeriesType="@AvailableSeriesTypes" IndicatorType="@IndicatorList">
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Spline" XName="Date" YName="Y">
         </StockChartSeries>
@@ -69,6 +78,15 @@ To render a spline series, set the series [Type](https://help.syncfusion.com/cr/
 </SfStockChart>
 
 @code {
+    private List<TechnicalIndicators> IndicatorList { get; set; } = new List<TechnicalIndicators>();
+    public List<ChartSeriesType> AvailableSeriesTypes { get; set; } = new List<ChartSeriesType>
+    {
+        ChartSeriesType.Line,
+        ChartSeriesType.Hilo,
+        ChartSeriesType.HiloOpenClose,
+        ChartSeriesType.Candle,
+        ChartSeriesType.Spline
+    };
     public class StockChartData
     {
         public DateTime Date { get; set; }
@@ -101,13 +119,22 @@ To render a hollow candle series, set the series [Type](https://help.syncfusion.
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price">
+<SfStockChart Title="AAPL Stock Price" SeriesType="@AvailableSeriesTypes" IndicatorType="@IndicatorList">
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" EnableSolidCandles="true"></StockChartSeries>
     </StockChartSeriesCollection>
 </SfStockChart>
 
 @code {
+    private List<TechnicalIndicators> IndicatorList { get; set; } = new List<TechnicalIndicators>();
+    public List<ChartSeriesType> AvailableSeriesTypes { get; set; } = new List<ChartSeriesType>
+    {
+        ChartSeriesType.Line,
+        ChartSeriesType.Hilo,
+        ChartSeriesType.HiloOpenClose,
+        ChartSeriesType.Candle,
+        ChartSeriesType.Spline
+    };
     public class StockChartData
     {
         public DateTime Date { get; set; }
@@ -144,7 +171,7 @@ To render a hilo series, set the series [Type](https://help.syncfusion.com/cr/bl
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price">
+<SfStockChart Title="AAPL Stock Price" SeriesType="@AvailableSeriesTypes" IndicatorType="@IndicatorList">
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Hilo" XName="Date" High="High" Low="Low" Open="Open" Close="Close">
         </StockChartSeries>
@@ -152,6 +179,15 @@ To render a hilo series, set the series [Type](https://help.syncfusion.com/cr/bl
 </SfStockChart>
 
 @code {
+    private List<TechnicalIndicators> IndicatorList { get; set; } = new List<TechnicalIndicators>();
+    public List<ChartSeriesType> AvailableSeriesTypes { get; set; } = new List<ChartSeriesType>
+    {
+        ChartSeriesType.Line,
+        ChartSeriesType.Hilo,
+        ChartSeriesType.HiloOpenClose,
+        ChartSeriesType.Candle,
+        ChartSeriesType.Spline
+    };
     public class StockChartData
     {
         public DateTime Date { get; set; }
@@ -188,7 +224,7 @@ To render a HiloOpenClose series, set the series [Type](https://help.syncfusion.
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price">
+<SfStockChart Title="AAPL Stock Price" SeriesType="@AvailableSeriesTypes" IndicatorType="@IndicatorList">
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.HiloOpenClose" XName="Date" High="High" Low="Low" Open="Open" Close="Close">
         </StockChartSeries>
@@ -196,6 +232,15 @@ To render a HiloOpenClose series, set the series [Type](https://help.syncfusion.
 </SfStockChart>
 
 @code {
+    private List<TechnicalIndicators> IndicatorList { get; set; } = new List<TechnicalIndicators>();
+    public List<ChartSeriesType> AvailableSeriesTypes { get; set; } = new List<ChartSeriesType>
+    {
+        ChartSeriesType.Line,
+        ChartSeriesType.Hilo,
+        ChartSeriesType.HiloOpenClose,
+        ChartSeriesType.Candle,
+        ChartSeriesType.Spline
+    };
     public class StockChartData
     {
         public DateTime Date { get; set; }
@@ -232,13 +277,22 @@ To render a candle series, set the series [Type](https://help.syncfusion.com/cr/
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price">
+<SfStockChart Title="AAPL Stock Price" SeriesType="@AvailableSeriesTypes" IndicatorType="@IndicatorList">
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume" Name="Google"></StockChartSeries>
     </StockChartSeriesCollection>
 </SfStockChart>
 
 @code {
+    private List<TechnicalIndicators> IndicatorList { get; set; } = new List<TechnicalIndicators>();
+    public List<ChartSeriesType> AvailableSeriesTypes { get; set; } = new List<ChartSeriesType>
+    {
+        ChartSeriesType.Line,
+        ChartSeriesType.Hilo,
+        ChartSeriesType.HiloOpenClose,
+        ChartSeriesType.Candle,
+        ChartSeriesType.Spline
+    };
     public class StockChartData
     {
         public DateTime Date { get; set; }
@@ -265,7 +319,7 @@ To render a candle series, set the series [Type](https://help.syncfusion.com/cr/
 
 ```
 
-![Blazor Candle Stock Chart](images/common/blazor-candle-stock-chart.webp)
+![Blazor Candle Stock Chart](images/series-types/blazor-candle-stock-chart.webp)
 
 ## See also
 
