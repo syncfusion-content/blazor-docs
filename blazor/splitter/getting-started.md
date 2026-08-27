@@ -150,7 +150,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **~wwwroot/index.html** file to enable Splitter functionality.
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **~wwwroot/index.html** file to enable Blazor Splitter functionality.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -169,7 +169,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 
 @using Syncfusion.Blazor.Layouts
 
-<div>Horizontal Splitter</div>
+<div>Horizontal Blazor Splitter</div>
 
 <SfSplitter Height="240px" Width="100%">
     <SplitterPanes>
