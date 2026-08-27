@@ -19,7 +19,7 @@ A linear trendline is a best-fit straight line used with simpler datasets. To re
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price" SeriesType="@SeriesType" IndicatorType="@Indicator" ExportType="@ExportType">
+<SfStockChart Title="AAPL Stock Price" TrendlineType="@Trendlines" SeriesType="@SeriesType" IndicatorType="@Indicator" ExportType="@ExportType">
     <StockChartPrimaryXAxis>
         <StockChartAxisMajorGridLines Color="Transparent"></StockChartAxisMajorGridLines>
     </StockChartPrimaryXAxis>
@@ -40,6 +40,16 @@ A linear trendline is a best-fit straight line used with simpler datasets. To re
     public List<TechnicalIndicators> Indicator = new List<TechnicalIndicators>();
     public List<ChartSeriesType> SeriesType = new List<ChartSeriesType>();
     public List<ExportType> ExportType = new List<ExportType>();
+    public List<TrendlineTypes> Trendlines = new List<TrendlineTypes>()
+    {
+        TrendlineTypes.Linear,
+        TrendlineTypes.Exponential,
+        TrendlineTypes.Polynomial,
+        TrendlineTypes.Power,
+        TrendlineTypes.Logarithmic,
+        TrendlineTypes.MovingAverage
+    };
+
 
     public class StockChartData
     {
@@ -79,7 +89,7 @@ To render a logarithmic trendline, set the trendline [Type](https://help.syncfus
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price" SeriesType="@SeriesType" IndicatorType="@Indicator" ExportType="@ExportType">
+<SfStockChart Title="AAPL Stock Price" TrendlineType="@Trendlines" SeriesType="@SeriesType" IndicatorType="@Indicator" ExportType="@ExportType">
     <StockChartPrimaryXAxis>
         <StockChartAxisMajorGridLines Color="Transparent"></StockChartAxisMajorGridLines>
     </StockChartPrimaryXAxis>
@@ -100,6 +110,15 @@ To render a logarithmic trendline, set the trendline [Type](https://help.syncfus
     public List<TechnicalIndicators> Indicator = new List<TechnicalIndicators>();
     public List<ChartSeriesType> SeriesType = new List<ChartSeriesType>();
     public List<ExportType> ExportType = new List<ExportType>();
+    public List<TrendlineTypes> Trendlines = new List<TrendlineTypes>()
+    {
+        TrendlineTypes.Linear,
+        TrendlineTypes.Exponential,
+        TrendlineTypes.Polynomial,
+        TrendlineTypes.Power,
+        TrendlineTypes.Logarithmic,
+        TrendlineTypes.MovingAverage
+    };
 
     public class StockChartData
     {
@@ -139,7 +158,7 @@ To render an exponential trendline, set the trendline [Type](https://help.syncfu
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price" SeriesType="@SeriesType" IndicatorType="@Indicator" ExportType="@ExportType">
+<SfStockChart Title="AAPL Stock Price" TrendlineType="@Trendlines" SeriesType="@SeriesType" IndicatorType="@Indicator" ExportType="@ExportType">
     <StockChartPrimaryXAxis>
         <StockChartAxisMajorGridLines Color="Transparent"></StockChartAxisMajorGridLines>
     </StockChartPrimaryXAxis>
@@ -157,9 +176,18 @@ To render an exponential trendline, set the trendline [Type](https://help.syncfu
 </SfStockChart>
 
 @code {
-    public List<TechnicalIndicators> Indicator = new List<TechnicalIndicators>();
     public List<ChartSeriesType> SeriesType = new List<ChartSeriesType>();
     public List<ExportType> ExportType = new List<ExportType>();
+    public List<TechnicalIndicators> Indicator = new List<TechnicalIndicators>();
+    public List<TrendlineTypes> Trendlines = new List<TrendlineTypes>()
+    {
+        TrendlineTypes.Linear,
+        TrendlineTypes.Exponential,
+        TrendlineTypes.Polynomial,
+        TrendlineTypes.Power,
+        TrendlineTypes.Logarithmic,
+        TrendlineTypes.MovingAverage
+    };
 
     public class StockChartData
     {
@@ -197,7 +225,7 @@ A polynomial trendline is a curved line used when data fluctuates. To render a p
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price" SeriesType="@SeriesType" IndicatorType="@Indicator" ExportType="@ExportType">
+<SfStockChart Title="AAPL Stock Price" TrendlineType="@Trendlines" SeriesType="@SeriesType" IndicatorType="@Indicator" ExportType="@ExportType">
     <StockChartPrimaryXAxis>
         <StockChartAxisMajorGridLines Color="Transparent"></StockChartAxisMajorGridLines>
     </StockChartPrimaryXAxis>
@@ -218,6 +246,15 @@ A polynomial trendline is a curved line used when data fluctuates. To render a p
     public List<TechnicalIndicators> Indicator = new List<TechnicalIndicators>();
     public List<ChartSeriesType> SeriesType = new List<ChartSeriesType>();
     public List<ExportType> ExportType = new List<ExportType>();
+    public List<TrendlineTypes> Trendlines = new List<TrendlineTypes>()
+    {
+        TrendlineTypes.Linear,
+        TrendlineTypes.Exponential,
+        TrendlineTypes.Polynomial,
+        TrendlineTypes.Power,
+        TrendlineTypes.Logarithmic,
+        TrendlineTypes.MovingAverage
+    };
 
     public class StockChartData
     {
@@ -255,7 +292,7 @@ A power trendline is a curved line best used with datasets that compare measurem
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price">
+<SfStockChart Title="AAPL Stock Price" TrendlineType="@Trendlines" IndicatorType="@Indicator">
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" YName="Close">
             <StockChartTrendlines>
@@ -266,6 +303,16 @@ A power trendline is a curved line best used with datasets that compare measurem
 </SfStockChart>
 
 @code {
+    public List<TechnicalIndicators> Indicator = new List<TechnicalIndicators>();
+    public List<TrendlineTypes> Trendlines = new List<TrendlineTypes>()
+    {
+        TrendlineTypes.Linear,
+        TrendlineTypes.Exponential,
+        TrendlineTypes.Polynomial,
+        TrendlineTypes.Power,
+        TrendlineTypes.Logarithmic,
+        TrendlineTypes.MovingAverage
+    };
     public class ChartData
     {
         public DateTime Date { get; set; }
@@ -314,7 +361,7 @@ The [Period](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Stoc
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price" SeriesType="@SeriesType" IndicatorType="@Indicator" ExportType="@ExportType">
+<SfStockChart Title="AAPL Stock Price" TrendlineType="@Trendlines" SeriesType="@SeriesType" IndicatorType="@Indicator" ExportType="@ExportType">
     <StockChartPrimaryXAxis>
         <StockChartAxisMajorGridLines Color="Transparent"></StockChartAxisMajorGridLines>
     </StockChartPrimaryXAxis>
@@ -335,6 +382,15 @@ The [Period](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Stoc
     public List<TechnicalIndicators> Indicator = new List<TechnicalIndicators>();
     public List<ChartSeriesType> SeriesType = new List<ChartSeriesType>();
     public List<ExportType> ExportType = new List<ExportType>();
+    public List<TrendlineTypes> Trendlines = new List<TrendlineTypes>()
+    {
+        TrendlineTypes.Linear,
+        TrendlineTypes.Exponential,
+        TrendlineTypes.Polynomial,
+        TrendlineTypes.Power,
+        TrendlineTypes.Logarithmic,
+        TrendlineTypes.MovingAverage
+    };
 
     public class ChartData
     {
@@ -362,7 +418,7 @@ The [Period](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Stoc
 
 ```
 
-![Blazor Stock Chart with Moving Average Trendline](images/common/blazor-stock-chart-moving-average-trendlines.webp)
+![Blazor Stock Chart with Moving Average Trendline](images/trendlines/blazor-stock-chart-moving-average-trendlines.webp)
 
 ## Trendline Customization
 
@@ -372,7 +428,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price">
+<SfStockChart Title="AAPL Stock Price" TrendlineType="@Trendlines" IndicatorType="@Indicator">
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Close="Close" Open="Open" Name="Google">
             <StockChartTrendlines>
@@ -383,6 +439,16 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
 </SfStockChart>
 
 @code {
+    public List<TechnicalIndicators> Indicator = new List<TechnicalIndicators>();
+    public List<TrendlineTypes> Trendlines = new List<TrendlineTypes>()
+    {
+        TrendlineTypes.Linear,
+        TrendlineTypes.Exponential,
+        TrendlineTypes.Polynomial,
+        TrendlineTypes.Power,
+        TrendlineTypes.Logarithmic,
+        TrendlineTypes.MovingAverage
+    };
     public class ChartData
     {
         public DateTime Date { get; set; }
@@ -409,7 +475,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
 
 ```
 
-![Blazor Stock Chart with Custom Trendline](images/common/blazor-stock-chart-custom-trendline.webp)
+![Blazor Stock Chart with Custom Trendline](images/trendlines/blazor-stock-chart-custom-trendline.webp)
 
 ## See also
 
