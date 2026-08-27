@@ -9,14 +9,14 @@ documentation: ug
 
 # Style and Appearance in Blazor Split Button
 
-To modify the SplitButton appearance, override the component's default CSS. The following table lists key CSS classes and their purposes. To scope changes to a specific instance, add a custom class through the `CssClass` property and target that class in styles. A custom theme can also be created using the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+To modify the Blazor Split Button appearance, override the component's default CSS. The following table lists key CSS classes and their purposes. To scope changes to a specific instance, add a custom class through the `CssClass` property and target that class in styles. A custom theme can also be created using the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
 ## CSS classes
 
 | CSS Class | Purpose |
 | ----- | ----- |
 | `.e-split-btn-wrapper` | Targets the outer wrapper element that contains both the primary button and the dropdown arrow button. |
-| `.e-split-btn` | Targets the primary (left) button part of the SplitButton that displays the label. |
+| `.e-split-btn` | Targets the primary (left) button part of the Blazor Split Button that displays the label. |
 | `.e-dropdown-btn` | Targets the secondary dropdown (right) button that contains the caret arrow icon. |
 | `.e-btn-icon.e-caret` | Targets the caret/arrow icon inside the dropdown button. |
 | `.e-dropdown-popup` | Targets the popup container that appears when the dropdown arrow is clicked. |
@@ -26,11 +26,11 @@ To modify the SplitButton appearance, override the component's default CSS. The 
 | `.e-split-btn.e-active` | Targets the primary button when it is in an active/pressed state. |
 | `.e-dropdown-btn.e-active` | Targets the dropdown button when the popup is open (active state). |
 
-## Customizing the SplitButton appearance
+## Customizing the Blazor Split Button appearance
 
 ### Customizing the primary button
 
-The primary button area of the SplitButton is represented by the `.e-split-btn` CSS class. Use this class to change the background color, font, border, padding, and other visual properties of the main button.
+The primary button area of the Blazor Split Button is represented by the `.e-split-btn` CSS class. Use this class to change the background color, font, border, padding, and other visual properties of the main button.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -228,7 +228,7 @@ The font family, font size, font weight, and letter spacing of both the button l
 
 ### Customizing the width
 
-The width of the SplitButton's primary button part and the dropdown popup can be set using the `min-width` or `width` properties. Target `.e-split-btn` for the primary button width and `.e-dropdown-popup` for the popup width.
+The width of the Blazor Split Button's primary button part and the dropdown popup can be set using the `min-width` or `width` properties. Target `.e-split-btn` for the primary button width and `.e-dropdown-popup` for the popup width.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
