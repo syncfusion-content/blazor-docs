@@ -9,7 +9,7 @@ documentation: ug
 
 # Number Formats in Blazor Numeric Textbox
 
-Use the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_Format) property to control how the NumericTextBox value is displayed when the input is not focused. Formatting affects only the rendered text; the underlying value remains numeric. The component supports both standard and custom numeric format strings and respects the current culture for symbols and separators.
+Use the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_Format) property to control how the Blazor NumericTextBox value is displayed when the input is not focused. Formatting affects only the rendered text; the underlying value remains numeric. The component supports both standard and custom numeric format strings and respects the current culture for symbols and separators.
 
 ## Standard formats
 
