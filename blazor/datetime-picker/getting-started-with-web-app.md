@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor DateTime Picker in Blazor Web App
 
-This section briefly explains how to include the [Blazor DateTimePicker](https://www.syncfusion.com/blazor-components/blazor-datetime-picker) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor DateTime Picker](https://www.syncfusion.com/blazor-components/blazor-datetime-picker) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -222,7 +222,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhHNxBTWORrsSVK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor DateTimePicker Component](./images/blazor-datetimepicker-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhHNxBTWORrsSVK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor DateTime Picker Component](./images/blazor-datetimepicker-component.webp)" %}
 
 ## Setting the Value, Min and Max
 
@@ -245,7 +245,7 @@ Define the minimum and maximum date and time using the [Min](https://help.syncfu
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBHjHrzCkGjtUvz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Setting Minimum and Maximum Value in Blazor DateTimePicker](./images/blazor-datetimepicker-min-max-value.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBHjHrzCkGjtUvz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Setting Minimum and Maximum Value in Blazor DateTime Picker](./images/blazor-datetimepicker-min-max-value.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DateTimePicker).
 

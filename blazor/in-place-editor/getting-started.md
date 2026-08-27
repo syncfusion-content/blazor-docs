@@ -151,7 +151,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **~wwwroot/index.html** file to enable In-place Editor functionality.
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **~wwwroot/index.html** file to enable Blazor In-place Editor functionality.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -196,7 +196,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% endhighlight %}
 {% endtabs %}
 
-N> The type of component editor must be configured in the 'Type' Editor In-place property. Also, the two-way binding between the In-place Editor and its EditorComponent should be configured. It's used to update the editor component value into the In-place Editor component.
+N> The type of component editor must be configured in the 'Type' Editor In-place property. Also, the two-way binding between the Blazor In-place Editor and its EditorComponent should be configured. It's used to update the editor component value into the Blazor In-place Editor component.
 
 ## Run the application
 
@@ -244,7 +244,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## Render Blazor In-place Editor with popup
 
-The following example shows how to initialize a simple In-place Editor with a popup in a Blazor page.
+The following example shows how to initialize a simple Blazor In-place Editor with a popup in a Blazor page.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -463,13 +463,13 @@ Submit the editor value to the server by configuring the [SaveUrl](https://help.
 |------------|---------------------------------------------------------|
 | **`SaveUrl`**        | Gets the URL for the server submit action.        |
 | **`Adaptor`**    | Specifies the adaptor type used by DataManager to communicate with the data source.                |
-| **`PrimaryKey`** | Defines the unique primary key of the editable field used for saving data in the database.|
+| **`PrimaryKey`** | Defines the unique primary key of the editable text field used for saving data in the database.|
 
 > The `PrimaryKey` property is mandatory. If it is not set, edited data are not sent to the server.
 
 ## Refresh Blazor In-place Editor with modified value
 
-After submission, the edited data is sent to the server, and the updated value is reflected in the In-place Editor.
+After submission, the edited data is sent to the server, and the updated value is reflected in the Blazor In-place Editor.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
