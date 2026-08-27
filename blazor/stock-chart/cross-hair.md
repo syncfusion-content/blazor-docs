@@ -57,7 +57,7 @@ The crosshair displays vertical and horizontal lines to show axis values at the 
 
 ```
 
-![SnapToData Crosshair in Blazor Stock Chart](images/common/blazor-stock-chart-crosshair.webp)
+![SnapToData Crosshair in Blazor Stock Chart](images/cross-hair/blazor-stock-chart-crosshair.webp)
 
 ## Axis Tooltip
 
@@ -110,7 +110,7 @@ Axis tooltip labels can be enabled using the [Enable](https://help.syncfusion.co
 
 ```
 
-![Blazor Stock Chart with Crosshair Tooltip](images/common/blazor-stock-chart-crosshair-tooltip.webp)
+![Blazor Stock Chart with Crosshair Tooltip](images/cross-hair/blazor-stock-chart-crosshair-tooltip.webp)
 
 ## Customization
 
@@ -165,7 +165,7 @@ Customize the crosshair tooltip background and font using the [Fill](https://hel
 
 ```
 
-![Blazor Stock Chart with Custom Crosshair](images/common/blazor-stock-chart-custom-crosshair.webp)
+![Blazor Stock Chart with Custom Crosshair](images/cross-hair/blazor-stock-chart-custom-crosshair.webp)
 
 ## Add Trackball
 
@@ -212,4 +212,4 @@ Trackball highlights the data point closest to the pointer and shows its details
 
 ```
 
-![Blazor Stock Chart with Trackball](images/common/blazor-stock-chart-trackball.webp)
+![Blazor Stock Chart with Trackball](images/cross-hair/blazor-stock-chart-trackball.webp)
