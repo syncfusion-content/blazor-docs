@@ -95,7 +95,7 @@ In [`After`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.Tim
 
 ## Alternate
 
-In [`Alternate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html#Syncfusion_Blazor_Layouts_TimelineAlignment_Alternate) alignment, item content is arranged alternatively, regardless of the Timeline orientation.
+In [`Alternate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html#Syncfusion_Blazor_Layouts_TimelineAlignment_Alternate) alignment, item content is arranged alternatively, regardless of the Blazor Timeline orientation.
 
 ```cshtml
 
