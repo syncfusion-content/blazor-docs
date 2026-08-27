@@ -32,7 +32,7 @@ You can customize the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 ## Minimum and maximum
 
-The [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxis.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxis_Minimum) and [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxis.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxis_Maximum) properties enables you to customize the start and end values of an axis.
+The [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxis.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxis_Minimum) and [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxis.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxis_Maximum) properties enable you to customize the start and end values of an axis.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -87,7 +87,7 @@ You can set the radius of the Circular Gauge in pixel as shown below.
 
 ### In percentage
 
-By setting value in percentage, Circular Gauge gets its dimension with respect to its available size. For example, when the [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxis.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxis_Radius) is ‘50%’, gauge renders to the half of the available size.
+By setting value in percentage, the Circular Gauge gets its dimension with respect to its available size. For example, when the [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxis.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxis_Radius) is `50%`, the gauge renders to half the available size.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -209,7 +209,7 @@ The labels can be moved using the [Offset](https://help.syncfusion.com/cr/blazor
 
 ### Auto angle
 
-The labels can be swept along the axis angle by enabling the [AutoAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLabelStyle_AutoAngle) property.
+The labels can be rotated along the axis by enabling the [AutoAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLabelStyle_AutoAngle) property.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -227,7 +227,7 @@ The labels can be swept along the axis angle by enabling the [AutoAngle](https:/
 
 ### Smart labels
 
-When an axis makes a complete circle, then the first and last labels of the axis will overlap with each other. So, you need to either hide first or last label using the [HiddenLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLabelStyle_HiddenLabel) property. When 'HiddenLabel' value is [First](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.HiddenLabel.html), the first label will be hidden and when the 'HiddenLabel' value is [Last](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLabelStyle_HiddenLabel), the last label will be hidden.
+When an axis makes a complete circle, then the first and last labels of the axis will overlap with each other. So, you need to either hide first or last label using the [HiddenLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLabelStyle_HiddenLabel) property. When the `HiddenLabel` value is [First](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.HiddenLabel.html), the first label is hidden. When the `HiddenLabel` value is [Last](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLabelStyle_HiddenLabel), the last label is hidden.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -338,7 +338,7 @@ The following table describes the result of applying some commonly used label fo
 
 ### Custom label format
 
-Axis labels support custom label format using placeholder like {value}°C, in which the value represent the axis label. e.g., 20°C.
+Axis labels support a custom label format using a placeholder such as `{value}°C`, where `value` represents the axis label value, for example, `20°C`.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -375,27 +375,31 @@ If the maximum value does not enter the interval of major ticks, the last label 
 
 ### Hide intersecting axis labels
 
-When the axis labels overlap with each other, you can hide the intersected labels by setting the `HideIntersectingLabel` property to true in the axis.
+When axis labels overlap with each other, you can hide the intersected labels by setting the `HideIntersectingLabel` property to `true` on the axis.
 
 ```cshtml
+@using Syncfusion.Blazor.CircularGauge
+
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis Maximum="200" StartAngle="270" EndAngle="90" Minimum="0" HideIntersectingLabel="true">
-        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
+            <CircularGaugePointers>
+                <CircularGaugePointer Value="0"></CircularGaugePointer>
+            </CircularGaugePointers>
             <CircularGaugeAxisMajorTicks Interval="4"></CircularGaugeAxisMajorTicks>
             <CircularGaugeAxisMinorTicks Interval="2"></CircularGaugeAxisMinorTicks>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBxNdVRVUTKgQvf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Hiding Intersecting Axis Labels in Blazor Circular Gauge](./images/blazor-circulargauge-hide-intersecting-label.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBRtbVHJOsdxuWV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Hiding Intersecting Axis Labels in Blazor Circular Gauge](./images/blazor-circulargauge-hide-intersecting-label.webp)" %}
 
 ## Axis direction
 
-You can change the axis direction of the circular gauge using [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.GaugeDirection.html) property. Following axis directions are available in the circular gauge.
+You can change the axis direction of the Circular Gauge using the [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.GaugeDirection.html) property. The following axis directions are available:
 
-* ClockWise
-* AntiClockWise
+* `ClockWise`
+* `AntiClockWise`
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -412,7 +416,7 @@ You can change the axis direction of the circular gauge using [Direction](https:
 
 ## Multiple axes
 
-In addition to the default axis, you can add n number of axis to a gauge. Each axis will have its own ranges, pointers, annotations, and customization options.
+In addition to the default axis, you can add any number of axes to a gauge. Each axis has its own ranges, pointers, annotations, and customization options.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
