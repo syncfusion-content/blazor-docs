@@ -17,7 +17,8 @@ To display a checkbox in each Grid row, configure a column with its [Type](https
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@OrderData" Height="315">
+<SfGrid DataSource="@OrderData" Height="315">
+    <GridSelectionSettings Type="SelectionType.Multiple"></GridSelectionSettings>
     <GridColumns>
         <GridColumn Type="ColumnType.CheckBox" Width="50"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
@@ -28,7 +29,6 @@ To display a checkbox in each Grid row, configure a column with its [Type](https
 </SfGrid>
 
 @code {
-    private SfGrid<OrderDetails> Grid;
     public List<OrderDetails> OrderData { get; set; }
     protected override void OnInitialized()
     {
@@ -84,15 +84,15 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjrxNctsgcxgtyzG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> * By default, selection is allowed by clicking either a Grid row or the checkbox in that row. To restrict selection to checkbox clicks only, set the [GridSelectionSettings.CheckboxOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CheckboxOnly) property to **true**.
-> * To persist selection across Grid operations, enable the [GridSelectionSettings.PersistSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_PersistSelection) property. Ensure that one of the columns is defined as a primary key using the **GridColumn.IsPrimaryKey** property.
+> * By default, selection is allowed by clicking either a Grid row or the checkbox in the row. To restrict selection to checkbox clicks only, set the [GridSelectionSettings.CheckboxOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CheckboxOnly) property to **true**.
+> * To persist selection across Grid operations, enable the [GridSelectionSettings.PersistSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_PersistSelection) property. Ensure that a Grid column is defined as a primary key using the [GridColumn.IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property.
 
 ## Checkbox selection mode
 
-The checkbox selection mode in the Blazor DataGrid allows to select rows either by clicking on checkboxes or directly on the rows. This feature supports two selection modes, configurable via the [GridSelectionSettings.CheckboxMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CheckboxMode) property:
+The checkbox selection mode in the Blazor DataGrid supports row selection by checkbox click or row click. The [GridSelectionSettings.CheckboxMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CheckboxMode) property configures two selection modes:
 
-* **Default**: This is the default value of `CheckboxMode`. In this mode, multiple rows can be selected by clicking on them individually. When a row is clicked, its corresponding checkbox is automatically checked.
-* **ResetOnRowClick**: In this mode, clicking on a row resets the previously selected row. To perform multiple selections, hold the **Ctrl** key while clicking the desired rows. To select a range of rows, hold the **Shift** key and click the target rows.
+* **Default**: The default `CheckboxMode` value allows multiple row selection by individual row clicks. A row click automatically checks the corresponding checkbox.
+* **ResetOnRowClick**: A row click resets the previously selected row. Hold the **Ctrl** key while clicking the desired rows for multiple selections. Hold the **Shift** key and click the target rows for range selection.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -195,7 +195,7 @@ public class OrderDetails
 
 The Persist Selection feature in the Blazor DataGrid ensures that selected rows remain selected even after performing actions such as paging, sorting, filtering, and other data operations. This feature works with both local and remote data sources.
 
-To enable persist selection, set the [GridSelectionSettings.PersistSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_PersistSelection) property to **true**. Additionally, ensure that at least one column in the Grid is defined as a primary key using the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property.
+To enable persist selection, set the [GridSelectionSettings.PersistSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_PersistSelection) property to **true**. Additionally, ensure that a Grid column is defined as a primary key using the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property.
 
 The following example demonstrates how to persist checkbox selections when the Grid is bound to remote data using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and **ODataV4Adaptor**.
 
@@ -245,7 +245,7 @@ By default, setting the column [Type](https://help.syncfusion.com/cr/blazor/Sync
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@OrderData" Height="315">
+<SfGrid DataSource="@OrderData" Height="315">
     <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
     <GridColumns>
         <GridColumn Type="ColumnType.CheckBox" Width="50">
@@ -260,7 +260,6 @@ By default, setting the column [Type](https://help.syncfusion.com/cr/blazor/Sync
 </SfGrid>
 
 @code {
-    private SfGrid<OrderDetails> Grid;
     public List<OrderDetails> OrderData { get; set; }
     protected override void OnInitialized()
     {
@@ -318,14 +317,14 @@ public class OrderDetails
 
 ## Allow selection only through checkbox click
 
-By default, the Blazor DataGrid allows selection by clicking either a Grid row or the checkbox within that row. To restrict selection so that it can only be performed through checkbox clicks, set the  [GridSelectionSettings.CheckboxOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CheckboxOnly) property to **true**.
+By default, the Blazor DataGrid allows selection by clicking either a Grid row or the checkbox within the row. To restrict selection so that it can only be performed through checkbox clicks, set the  [GridSelectionSettings.CheckboxOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CheckboxOnly) property to **true**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true" AllowPaging="true" Height="315">
+<SfGrid DataSource="@OrderData" AllowSelection="true" AllowPaging="true" Height="315">
     <GridSelectionSettings CheckboxOnly="true"></GridSelectionSettings>
     <GridColumns>
         <GridColumn Type="ColumnType.CheckBox" Width="50"></GridColumn>
@@ -339,7 +338,6 @@ By default, the Blazor DataGrid allows selection by clicking either a Grid row o
 </SfGrid>
 
 @code {
-    private SfGrid<OrderDetails> Grid;
     public List<OrderDetails> OrderData { get; set; }
     protected override void OnInitialized()
     {
