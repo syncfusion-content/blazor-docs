@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Ribbon | Syncfusion
-description: Learn about the events triggered by the Blazor Ribbon in response to user interactions such as tab selection, item clicks, and ribbon expansion.
+description: Learn about the events triggered by the Blazor Ribbon in response to user interactions such as tab selection, item clicks, and Blazor Ribbon expansion.
 control: Ribbon
 platform: Blazor
 documentation: ug
@@ -9,22 +9,22 @@ documentation: ug
 
 # Events in Blazor Ribbon
 
-This section describes the Ribbon events that will be triggered when appropriate actions are performed. The following events are available in the Ribbon component.
+This section describes the Blazor Ribbon events that will be triggered when appropriate actions are performed. The following events are available in the Blazor Ribbon component.
 
 |Name|Args|Description|
 |---|---|---|
-|[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_Created)|EventCallback|Triggers when the Ribbon component's rendering is fully completed|
-|[TabSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_TabSelecting)|TabSelectingEventArgs|Triggers before a tab is selected in the Ribbon component|
-|[TabSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_TabSelected)|TabSelectedEventArgs|Triggers after a tab is successfully selected in the Ribbon component|
-|[RibbonExpanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_RibbonExpanding)|ExpandEventArgs|Triggers before the Ribbon component is expanded|
-|[RibbonCollapsing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_RibbonCollapsing)|CollapseEventArgs|Triggers before the Ribbon component is collapsed|
-|[LauncherIconClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_LauncherIconClick)|LauncherClickEventArgs|Triggers when the launcher icon in a Ribbon group is clicked|
-|[OverflowPopupOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_OverflowPopupOpening)|OverflowPopupEventArgs|before the overflow popup in the Ribbon component opens|
-|[OverflowPopupClosing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_OverflowPopupClosing)|OverflowPopupEventArgs|before the overflow popup in the Ribbon component closes|
+|[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_Created)|EventCallback|Triggers when the Blazor Ribbon component's rendering is fully completed|
+|[TabSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_TabSelecting)|TabSelectingEventArgs|Triggers before a tab is selected in the Blazor Ribbon component|
+|[TabSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_TabSelected)|TabSelectedEventArgs|Triggers after a tab is successfully selected in the Blazor Ribbon component|
+|[RibbonExpanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_RibbonExpanding)|ExpandEventArgs|Triggers before the Blazor Ribbon component is expanded|
+|[RibbonCollapsing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_RibbonCollapsing)|CollapseEventArgs|Triggers before the Blazor Ribbon component is collapsed|
+|[LauncherIconClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_LauncherIconClick)|LauncherClickEventArgs|Triggers when the launcher icon in a Blazor Ribbon group is clicked|
+|[OverflowPopupOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_OverflowPopupOpening)|OverflowPopupEventArgs|before the overflow popup in the Blazor Ribbon component opens|
+|[OverflowPopupClosing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_OverflowPopupClosing)|OverflowPopupEventArgs|before the overflow popup in the Blazor Ribbon component closes|
 
-## How to configure Ribbon events
+## How to configure Blazor Ribbon events
 
-Above defined events are available on the [SfRibbon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html) tag directive. Here, we have explained about the sample code snippets of Ribbon events.
+Above defined events are available on the [SfRibbon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html) tag directive. Here, we have explained about the sample code snippets of Blazor Ribbon events.
 
 {% tabs %}
 {% highlight razor %}
@@ -74,4 +74,4 @@ Above defined events are available on the [SfRibbon](https://help.syncfusion.com
 {% endhighlight %}
 {% endtabs %}
 
-> To know about the built-in Ribbon items supported events, please refer to the corresponding item section in [Ribbon Items](./items).
+> To know about the built-in Blazor Ribbon items supported events, please refer to the corresponding item section in [Blazor Ribbon Items](./items).

@@ -9,7 +9,7 @@ documentation: ug
 
 # Gallery Items in Blazor Ribbon
 
-The Ribbon supports a gallery view, allowing users to interact with a collection of related items such as icons, text, or images. You can render gallery items by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_Type) property of a Ribbon item to `RibbonItemType.Gallery` and customize it using the [RibbonGallerySettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html) tag directive. The settings provide options like `Groups`, `ItemCount`, `PopupHeight`, `PopupWidth`, and more.
+The Blazor Ribbon supports a gallery view, allowing users to interact with a collection of related items such as icons, text, or images. You can render gallery items by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_Type) property of a Blazor Ribbon item to `RibbonItemType.Gallery` and customize it using the [RibbonGallerySettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html) tag directive. The settings provide options like `Groups`, `ItemCount`, `PopupHeight`, `PopupWidth`, and more.
 
 ## Groups
 
@@ -98,7 +98,7 @@ Gallery items can be added using [GalleryItem](https://help.syncfusion.com/cr/bl
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Gallery Items](./images/gallery/gallery_items.webp)
+![Blazor Ribbon Gallery Items](./images/gallery/gallery_items.webp)
 
 #### CSS class
 
@@ -198,11 +198,11 @@ You can use the `CssClass` property to customize the gallery item.
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Gallery Item Customization](./images/gallery/gallery_cssClass.webp)
+![Blazor Ribbon Gallery Item Customization](./images/gallery/gallery_cssClass.webp)
 
 ### Custom header
 
-You can use the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html#Syncfusion_Blazor_Ribbon_GalleryGroup_Header) property to set header for the groups in the Ribbon gallery popup.
+You can use the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryGroup.html#Syncfusion_Blazor_Ribbon_GalleryGroup_Header) property to set header for the groups in the Blazor Ribbon gallery popup.
 
 {% tabs %}
 {% highlight razor %}
@@ -284,7 +284,7 @@ You can use the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Gallery Custom Header](./images/gallery/gallery_header.webp)
+![Blazor Ribbon Gallery Custom Header](./images/gallery/gallery_header.webp)
 
 ### Setting item dimensions
 
@@ -374,7 +374,7 @@ You can specify the width and height of gallery items using the [ItemWidth](http
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Gallery Item Dimensions](./images/gallery/gallery_itemDimensions.webp)
+![Blazor Ribbon Gallery Item Dimensions](./images/gallery/gallery_itemDimensions.webp)
 
 ### Group styling
 
@@ -466,11 +466,11 @@ You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Gallery Group Styling](./images/gallery/gallery_group_styling.webp)
+![Blazor Ribbon Gallery Group Styling](./images/gallery/gallery_group_styling.webp)
 
 ## Setting item count
 
-You can customize the number of items to be displayed in Ribbon gallery by using the [ItemCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_ItemCount) property. By default, the `ItemCount` is set to `3`. The following example showcases the utilization of the `ItemCount` property, displaying a ribbon gallery with 4 items.
+You can customize the number of items to be displayed in Blazor Ribbon gallery by using the [ItemCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_ItemCount) property. By default, the `ItemCount` is set to `3`. The following example showcases the utilization of the `ItemCount` property, displaying a Blazor Ribbon gallery with 4 items.
 
 {% tabs %}
 {% highlight razor %}
@@ -552,11 +552,11 @@ You can customize the number of items to be displayed in Ribbon gallery by using
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Gallery Item Count](./images/gallery/gallery_itemCount.webp)
+![Blazor Ribbon Gallery Item Count](./images/gallery/gallery_itemCount.webp)
 
 ## Setting selected item
 
-You can use the [SelectedItemIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_SelectedItemIndex) property to define the currently selected item in the Ribbon gallery items.
+You can use the [SelectedItemIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_SelectedItemIndex) property to define the currently selected item in the Blazor Ribbon gallery items.
 
 {% tabs %}
 {% highlight razor %}
@@ -642,7 +642,7 @@ You can use the [SelectedItemIndex](https://help.syncfusion.com/cr/blazor/Syncfu
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Gallery Selected Item](./images/gallery/gallery_selectedItem.webp)
+![Blazor Ribbon Gallery Selected Item](./images/gallery/gallery_selectedItem.webp)
 
 ## Setting popup dimensions
 
@@ -731,11 +731,11 @@ You can specify the width and height of the gallery popup by using the [PopupWid
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Gallery Popup Dimensions](./images/gallery/gallery_popupDimensions.webp)
+![Blazor Ribbon Gallery Popup Dimensions](./images/gallery/gallery_popupDimensions.webp)
 
 ## Template customization
 
-You can customize the default appearance and content of Ribbon gallery items by using [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_Template) property. Similarly, you can also customize the appearance of Ribbon gallery popup by using the [PopupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_PopupTemplate) property.
+You can customize the default appearance and content of Blazor Ribbon gallery items by using [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_Template) property. Similarly, you can also customize the appearance of Blazor Ribbon gallery popup by using the [PopupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGallerySettings.html#Syncfusion_Blazor_Ribbon_RibbonGallerySettings_PopupTemplate) property.
 
 [GalleryItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.GalleryItemContext.html) will be passed as context to both the templates. You can utilize it to create more customized gallery items. The below minimal example demonstrates the usages of both the `Template` and `PopupTemplate` properties:
 
@@ -863,11 +863,11 @@ You can customize the default appearance and content of Ribbon gallery items by 
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Gallery Template Customization](./images/gallery/gallery_templates.webp)
+![Blazor Ribbon Gallery Template Customization](./images/gallery/gallery_templates.webp)
 
 ## Events
 
-The following events are available in the Ribbon Gallery.
+The following events are available in the Blazor Ribbon Gallery.
 
 |Name|Args|Description|
 |---|---|---|

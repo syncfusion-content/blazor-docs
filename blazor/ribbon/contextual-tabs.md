@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Contextual Tabs in Blazor Ribbon | Syncfusion
-description: Learn how to add contextual tabs in the Blazor Ribbon that appear contextually for the selected item, with built-in and custom Ribbon item support.
+description: Learn how to add contextual tabs in the Blazor Ribbon that appear contextually for the selected item, with built-in and custom Blazor Ribbon item support.
 control: Ribbon
 platform: Blazor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Contextual Tabs in Blazor Ribbon
 
-The Ribbon Contextual tabs are similar to the Ribbon tabs that are displayed on demand based on their needs, such as an image or a table tabs. It supports adding all built-in and custom Ribbon items to perform specific actions.
+The Blazor Ribbon Contextual tabs are similar to the Blazor Ribbon tabs that are displayed on demand based on their needs, such as an image or a table tabs. It supports adding all built-in and custom Blazor Ribbon items to perform specific actions.
 
 ## Controlling tab visibility 
 
@@ -17,7 +17,7 @@ You can utilize the `Visible` property to control the visibility of each context
 
 ## Adding contextual tabs
 
-You can utilize the `RibbonContextualTabs` tag directive to define contextual tabs within the Ribbon. This allows you to group collection of Ribbon tabs and display them only when required.
+You can utilize the `RibbonContextualTabs` tag directive to define contextual tabs within the Blazor Ribbon. This allows you to group collection of Blazor Ribbon tabs and display them only when required.
 
 {% tabs %}
 {% highlight razor %}
@@ -190,17 +190,17 @@ By using the `IsSelected` property you can control the selected state of each co
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Selected Tabs](./images/contextual-tabs/selected-tabs.webp)
+![Blazor Ribbon Selected Tabs](./images/contextual-tabs/selected-tabs.webp)
 
 ## Methods
 
 ### Show tab
 
-You can use the `ShowTabAsync` method to programmatically display a specific contextual tab in the Ribbon.
+You can use the `ShowTabAsync` method to programmatically display a specific contextual tab in the Blazor Ribbon.
 
 ### Hide tab
 
-You can use the `HideTabAsync` method allows you to hide the specific contextual tab in the Ribbon.
+You can use the `HideTabAsync` method allows you to hide the specific contextual tab in the Blazor Ribbon.
 
 {% tabs %}
 {% highlight razor %}
@@ -283,4 +283,4 @@ You can use the `HideTabAsync` method allows you to hide the specific contextual
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Show Hide Tabs](./images/contextual-tabs/show-hide-tabs.webp)
+![Blazor Ribbon Show Hide Tabs](./images/contextual-tabs/show-hide-tabs.webp)
