@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Drag and Drop in Blazor Tabs Component | Syncfusion®
-description: Checkout and learn here all the features about drag and drop in Blazor Tabs component and much more details.
+title: Drag and Drop in Blazor Tabs | Syncfusion
+description: Enable drag and drop in Blazor Tabs to reorder tab items within a configurable drag area for custom ordering.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Drag and Drop in Blazor Tabs Component
+# Drag and Drop in Blazor Tabs
 
 The [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs) component allows you to drag and drop any tab item by setting [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_AllowDragAndDrop) to **true**. Items can be reordered by dragging and dropping them onto the desired location.
 
@@ -15,13 +15,13 @@ The [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs) comp
 
 * The `DragArea` defines the area in which the draggable element movement will be occurring. Outside that area will be restricted for the draggable element movement.
 
-* The `OnDragStart` event will be triggered before dragging the item from Tab.
+* The `OnDragStart` event will be triggered before dragging the item from Blazor Tabs.
 
 * The `Dragged` event will be triggered when the Tab item is dropped on the target element successfully.
 
 In the following sample, the `AllowDragAndDrop` property is enabled.
 
-N> External drag and drop is not possible in blazor Tabs.
+N> External drag and drop is not possible in Blazor Tabs.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

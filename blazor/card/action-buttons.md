@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Action Buttons in Blazor Card Component | Syncfusion®
-description: Checkout and learn here all features about Action Buttons in the Blazor Card component and much more details.
+title: Action Buttons in Blazor Card | Syncfusion®
+description: Add action buttons inside the Blazor Card footer using the CardFooter component with a button or anchor element rendered at the card's bottom.
 platform: Blazor
 control: Card
 documentation: ug
 ---
 
-# Action Buttons in Blazor Card Component
+# Action Buttons in Blazor Card
 
 You can include action buttons within the [Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card) and customize them. An action button is rendered inside a `div` element that uses the `CardFooter` component, followed by a button or anchor tag within the card root element.
 
@@ -19,11 +19,12 @@ To add action buttons, create a `CardFooterContent` component within the card fo
 <SfCard ID="HugeImage">
     <CardFooter>
         <CardFooterContent>
+           Footer Button
         </CardFooterContent>
     </CardFooter>
 </SfCard>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLnDnsLBkQSGAqR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBxtbrITsfLJPTc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Vertical
 
@@ -34,7 +35,7 @@ Action buttons can be combined with a vertical card layout by setting the `Orien
 @using Syncfusion.Blazor.Buttons
 
 <SfCard ID="HugeImage" Orientation="CardOrientation.Vertical">
-    <CardImage Image="images/cards/steven.png"/>
+    <CardImage Image="https://cdn.syncfusion.com/blazor/images/cards/steven.png"/>
     <CardHeader Title="Harrisburg Keith" SubTitle="@CardSubTitle"/>
     <CardContent Content="Hi, I'm creative graphic design for print, new media based in Edenbridge"/>
     <CardFooter>
@@ -44,7 +45,7 @@ Action buttons can be combined with a vertical card layout by setting the `Orien
     </CardFooter>
 </SfCard>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBdtxsrVOlDOpyD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhRDvVeJWrwqmQE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## See also
 

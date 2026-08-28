@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Lightweight in Blazor Range Selector Component | Syncfusion®
-description: Checkout and learn here all about lightweight in Blazor Range Selector component with examples and much more details.
+title: Blazor Range Selector Lightweight Guide | Syncfusion®
+description: Learn how to enable lightweight mode in Syncfusion Blazor Range Selector to render the navigator without a chart when DataSource is empty.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Lightweight in Blazor Range Selector Component
+# Blazor Range Selector Lightweight
 
 By default, when the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_DataSource) for [RangeNavigatorSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html) is empty, a lightweight Range Selector will be shown without Chart.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Dialog in Blazor WASM App | Syncfusion
-description: Check out and learn how to get started with the Blazor Dialog component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Dialog in Blazor WASM App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Dialog control. Explore setup, features, examples, and customization options.
 platform: Blazor
 control: Dialog
 documentation: ug

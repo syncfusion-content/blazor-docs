@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Islamic Calendar in Blazor DatePicker Component | Syncfusion®
-description: Checkout and learn here all the features about Islamic Calendar in the Blazor DatePicker component and much more.
+title: Islamic Calendar in Blazor DatePicker | Syncfusion®
+description: Switch the Blazor DatePicker to the Islamic (Hijri) calendar to select, display, and bind dates in the Hijri calendar system.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Islamic Calendar in Blazor DatePicker Component
+# Islamic Calendar in Blazor DatePicker
 
 In addition to the Gregorian calendar, the Blazor DatePicker component supports displaying the Islamic (Hijri) calendar. The Hijri calendar is a lunar calendar consisting of 12 months in a year of 354 or 355 days. Users can either select a date from the Islamic calendar or enter a date manually.
 

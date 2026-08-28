@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor DropDown List Component | Syncfusion®
-description: Checkout and learn here all about Data Binding in Blazor DropDown List component and much more details.
+title: Data Binding in Blazor Dropdown List | Syncfusion®
+description: Bind local collections, remote services, primitive values, complex objects, and dynamic data to the Blazor Dropdown List component.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Data Binding in Dropdown List
+# Data Binding in Blazor Dropdown List
 
 The DropDown List component supports binding data from local collections and remote services. Use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property to bind local data or configure a [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) for remote data operations. Map fields using the component’s FieldSettings to specify which properties supply item text and value.
 

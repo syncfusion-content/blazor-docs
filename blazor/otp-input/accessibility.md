@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor OTP Input Component | Syncfusion®
-description: Learn about accessibility features in Blazor OTP Input component including WAI-ARIA support, keyboard navigation, and assistive technology compatibility.
+title: Accessibility in Blazor OTP Input | Syncfusion
+description: Learn how Blazor OTP Input supports accessibility with ARIA roles, keyboard navigation, and screen reader compatibility.
 platform: Blazor
 control: OTP Input
 documentation: ug
 ---
 
-# Accessibility in Blazor OTP Input component
+# Accessibility in Blazor OTP Input
 
 The Blazor OTP Input component follows established accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -37,7 +37,7 @@ The accessibility compliance for the Blazor OTP Input component is outlined belo
 
 ## WAI-ARIA attributes
 
-The following ARIA attributes are used in the OTP Input component:
+The following ARIA attributes are used in the Blazor OTP Input component:
 
 | Attributes | Purpose |
 | ------------ | ----------------------- |
@@ -46,7 +46,7 @@ The following ARIA attributes are used in the OTP Input component:
 
 ## Keyboard interaction
 
-The following keyboard shortcuts are supported by the OTP Input component.
+The following keyboard shortcuts are supported by the Blazor OTP Input component.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
@@ -57,11 +57,11 @@ The following keyboard shortcuts are supported by the OTP Input component.
 
 ## Accessibility configuration
 
-The following properties allow you to enhance the accessibility of the OTP Input component by adding custom HTML attributes and descriptive labels for assistive technologies.
+The following properties allow you to enhance the accessibility of the Blazor OTP Input component by adding custom HTML attributes and descriptive labels for assistive technologies.
 
 ### HTML attributes
 
-The [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_HtmlAttributes) property allows specifying additional HTML attributes to be applied to the OTP input component for improved semantics and accessibility. You can pass HTML attributes as key-value pairs to the `HtmlAttributes` property.
+The [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_HtmlAttributes) property allows specifying additional HTML attributes to be applied to the Blazor OTP Input component for improved semantics and accessibility. You can pass HTML attributes as key-value pairs to the `HtmlAttributes` property.
 
 ```cshtml
 
@@ -80,7 +80,7 @@ The [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inp
 
 ### Aria labels
 
-The [AriaLabels](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_AriaLabels) property defines the `aria-label` attribute for each input field in the OTP input component. You can provide an array of strings as aria-label values to the `AriaLabels` property. Each string in the array corresponds to the `aria-label` attribute for the respective input field, providing descriptive labels for screen reader users.
+The [AriaLabels](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_AriaLabels) property defines the `aria-label` attribute for each input field in the Blazor OTP Input component. You can provide an array of strings as aria-label values to the `AriaLabels` property. Each string in the array corresponds to the `aria-label` attribute for the respective input field, providing descriptive labels for screen reader users.
 
 ```cshtml
 

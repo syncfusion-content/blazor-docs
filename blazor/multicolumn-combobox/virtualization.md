@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Virtualization in Blazor MultiColumn ComboBox Component | Syncfusion®
-description: Checkout and learn here all about Virtualization in Blazor MultiColumn ComboBox component and much more.
+title: Virtualization in Blazor MultiColumn ComboBox | Syncfusion
+description: Virtualize Blazor MultiColumn ComboBox for large datasets with EnableVirtualization and on-demand loading.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
 ---
 
-# Virtualization in Blazor MultiColumn ComboBox Component
+# Virtualization in Blazor MultiColumn ComboBox
 
 The Blazor MultiColumn ComboBox supports virtualization to improve performance with large datasets. When [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_EnableVirtualization) is enabled, the component initially renders only the items needed to fill the visible popup area. As the user scrolls, additional items are fetched and rendered on demand, creating smooth scrolling with reduced DOM size.
 
-This feature is applicable to both local and remote data scenarios, providing flexibility in its implementation. For instance, consider a case where the MultiColumn ComboBox is bound to a dataset containing 2000 items. Upon opening the dropdown, only a few items are loaded initially, based on the height of the popup. As you scroll through the list, additional items are fetched and loaded on-demand, allowing you to effortlessly explore the complete dataset.
+This feature is applicable to both local and remote data scenarios, providing flexibility in its implementation. For instance, consider a case where the Blazor MultiColumn ComboBox is bound to a dataset containing 2000 items. Upon opening the dropdown, only a few items are loaded initially, based on the height of the popup. As you scroll through the list, additional items are fetched and loaded on-demand, allowing you to effortlessly explore the complete dataset.
 
 ## Local Data
 

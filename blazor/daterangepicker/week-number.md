@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Week Numbers in Blazor DateRangePicker Component | Syncfusion®
-description: Checkout and learn here all about Week Numbers in Blazor DateRangePicker component and much more details.
+title: Week Number in Blazor DateRangePicker | Syncfusion®
+description: Display ISO or culture-specific week numbers in the Blazor DateRangePicker with a leading column, configurable via WeekRule and FirstDayOfWeek.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
 ---
 
-# Week Number in Blazor DateRangePicker Component
+# Week Number in Blazor DateRangePicker
 
-You can enable the `WeekNumber` in the DateRangePicker by setting the [WeekNumber](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_WeekNumber) property (inherited from `CalendarBase`) to `true`.
+You can enable the `WeekNumber` in the Blazor DateRangePicker by setting the [WeekNumber](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_WeekNumber) property (inherited from `CalendarBase`) to `true`.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -21,7 +21,7 @@ You can enable the `WeekNumber` in the DateRangePicker by setting the [WeekNumbe
 
 ## Week Rule
 
-You can configure the `WeekRule` in the DateRangePicker by using the [WeekRule](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_WeekRule) property (inherited from `CalendarBase`). This property provides an option to specify the rule for defining the first week of the year. The following table lists the possible values of the `WeekRule` property.
+You can configure the `WeekRule` in the Blazor DateRangePicker by using the [WeekRule](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_WeekRule) property (inherited from `CalendarBase`). This property provides an option to specify the rule for defining the first week of the year. The following table lists the possible values of the `WeekRule` property.
 
 Enum value | Description
 --- | ---

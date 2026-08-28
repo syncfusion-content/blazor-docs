@@ -32,7 +32,7 @@ documentation: ug
 
 ### ExportAsBaseImage
 
-Barcode provides support to export as an image in the specified image type and returns it as base64 string.
+Barcode provides support to export as an image in the specified image type and returns it as a base64 string. The returned string can be used to display the image directly in the application or store it for later use.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
