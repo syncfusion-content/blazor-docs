@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mask Support in Blazor DatePicker Component | Syncfusion®
-description: Checkout and learn here all the features about Mask Support in Blazor DatePicker component and much more.
+title: Mask Support in Blazor DatePicker | Syncfusion®
+description: Apply an input mask to the Blazor DatePicker to guide users as they type date values, ensuring consistent input format.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Mask Support in Blazor DatePicker Component
+# Mask Support in Blazor DatePicker
 
 The masking feature helps users enter a date in the correct format by rendering the input as a mask that follows the configured [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Format) property. Set [EnableMask](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_EnableMask) to `true` to enable masking. The default value of `EnableMask` is `false`.
 
@@ -29,7 +29,7 @@ The `DatePickerMaskPlaceholder` directive exposes the following properties:
 * [Month](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.MaskPlaceholder.html#Syncfusion_Blazor_Calendars_MaskPlaceholder_Month): Specifies the placeholder text for the month segment of the date value (matches the `M` or `MM` format specifier).
 * [Year](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.MaskPlaceholder.html#Syncfusion_Blazor_Calendars_MaskPlaceholder_Year): Specifies the placeholder text for the year segment of the date value (matches the `yy` or `yyyy` format specifier).
 
-By default, the DatePicker loads placeholder text from the current culture's resources file for each segment. To override the default, specify the segments you want through the `DatePickerMaskPlaceholder` directive.
+By default, the Blazor DatePicker loads placeholder text from the current culture's resources file for each segment. To override the default, specify the segments you want through the `DatePickerMaskPlaceholder` directive.
 
 {% highlight Razor %}
 

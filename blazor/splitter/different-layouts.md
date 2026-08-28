@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Different Layouts in Blazor Splitter Component | Syncfusion®
-description: Checkout and learn here all the features about different layouts in Blazor Splitter component much more details.
+title: Different Layouts in Blazor Splitter | Syncfusion
+description: Create code editor and Outlook-style layouts using nested and multiple Blazor Splitter panes for flexible interfaces.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# Different Layouts in Blazor Splitter Component
+# Different Layouts in Blazor Splitter
 
-By using splitter control, the different layouts can be created with multiple and nested panes.
+By using Blazor Splitter control, the different layouts can be created with multiple and nested panes.
 
 ## Code editor style layout
 
-**Step 1**: Create the element with two child to render the outer splitter.
+**Step 1**: Create the element with two child to render the outer Blazor Splitter.
 
 ```cshtml
 
@@ -426,4 +426,4 @@ Once the above configurations has been completed, the output will be displayed l
 
 ## See Also
 
-* [Multiple panes in Splitter](./split-panes)
+* [Multiple panes in Blazor Splitter](./split-panes)

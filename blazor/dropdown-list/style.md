@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and appearance in Blazor DropDown List Component | Syncfusion®
-description: Checkout and learn here all about Style and appearance in Blazor DropDown List component and much more details.
+title: Style and Appearance in Blazor Dropdown List | Syncfusion®
+description: Customize Blazor Dropdown List appearance with CSS classes, read-only and disabled states, icons, and colors.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Style and Appearance in Dropdown List
+# Style and Appearance in Blazor Dropdown List
 
 The following sections outline the CSS hooks and component properties that can be used to customize the DropDownList appearance.
 

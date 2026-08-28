@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Grouping in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn here all the features about grouping support in Blazor ComboBox component, it's elements and more.
+title: Grouping in Blazor ComboBox | Syncfusion®
+description: Group Blazor ComboBox items by a category field using ComboBoxFieldSettings.GroupBy, with inline and fixed group headers and custom templates.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Grouping in Blazor ComboBox Component
+# Grouping in Blazor ComboBox
 
 The ComboBox supports grouping items by a category field in the data source. Map the category of each list item using the [ComboBoxFieldSettings.GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_GroupBy) field. Group headers are shown inline and as a fixed (floating) header. The fixed group header updates dynamically while scrolling the popup list to reflect the current group in view.
 

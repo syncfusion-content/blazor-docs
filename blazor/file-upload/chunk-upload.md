@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Chunk Upload in Blazor File Upload Component | Syncfusion®
-description: Checkout and learn here all about Chunk Upload in Blazor File Upload component and and much more details.
+title: Chunk Upload in Blazor File Upload | Syncfusion
+description: Upload large files reliably in Blazor File Upload by splitting them into chunks with pause, resume, and retry support.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# Chunk Upload in Blazor File Upload Component 
+# Chunk Upload in Blazor File Upload
 
-### Description 
+## Description
 
 Chunk Upload in the Blazor File Upload component allows you to upload large files by splitting them into smaller, manageable chunks. This process significantly improves reliability, especially over unreliable networks, by reducing the impact of network interruptions. If a part of the file fails to upload, only that specific chunk needs to be re-transmitted, rather than the entire file. This feature is particularly useful for handling large media files, database backups, or any other substantial data transfers where interruptions are a concern. The Uploader sends these chunks to the server using AJAX, enabling the ability to pause, resume, and retry failed chunk uploads.
 
@@ -48,7 +48,7 @@ The following properties allow for further control over the chunk upload process
 
 ### Resumable Upload
 
-The File Upload component supports resumable uploads, allowing users to pause and resume large file transfers. This is invaluable when dealing with network interruptions or when a user needs to temporarily halt an upload. The pause icon becomes available once an upload begins.
+The Blazor File Upload component supports resumable uploads, allowing users to pause and resume large file transfers. This is invaluable when dealing with network interruptions or when a user needs to temporarily halt an upload. The pause icon becomes available once an upload begins.
 
 >**The pause and resume features are only available when chunk upload is enabled.**
 
@@ -298,7 +298,7 @@ public class Startup
 
 ## Events
 
-The Blazor Uploader component provides several events specific to chunk upload operations, allowing you to hook into different stages of the process and implement custom logic.
+The Blazor File Upload component provides several events specific to chunk upload operations, allowing you to hook into different stages of the process and implement custom logic.
 
 *   **[`OnChunkUploadStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnChunkUploadStart)**: Triggered at the beginning of each chunk's upload process. This event allows you to perform actions before a chunk is sent to the server.
 *   **[`OnChunkSuccess`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnChunkSuccess)**: Occurs when a single chunk has been successfully uploaded to the server. This can be used for tracking progress per chunk.

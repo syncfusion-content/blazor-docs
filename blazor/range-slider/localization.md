@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Localization in Blazor Range Slider Component | Syncfusion®
-description: Checkout and learn here all about Localization in Blazor Range Slider component with examples and much more details.
+title: Localization in Blazor Range Slider | Syncfusion
+description: Localize Blazor Range Slider UI text and formatting for different cultures and languages, ensuring a consistent and accessible experience for global users.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Localization in Blazor Range Slider Component
+# Localization in Blazor Range Slider
 
 The [Blazor Range Slider](https://www.syncfusion.com/blazor-components/blazor-range-slider) component supports localization. Refer to the [Blazor localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Blazor components.

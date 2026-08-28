@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Dynamically move In-place Editor to edit mode in Blazor | Syncfusion®
+title: How to Move In-place Editor to Edit Mode in Blazor | Syncfusion
 description: Learn here all about dynamically moving input to edit mode in Blazor In-place Editor component and much more details.
 platform: Blazor
 control: In-place Editor
 documentation: ug
 ---
 
-# Dynamically Move In-place Editor to Edit Mode in Blazor
+# How to Move Blazor In-place Editor to Edit Mode in Blazor
 
-At component initialization, the In-place Editor can enter edit mode without user interaction by setting the `EnableEditMode` property to `true`. By default, `EnableEditMode` is `false`. When `true`, the editor opens programmatically at initial render and can also be toggled at runtime. This differs from the standard user-triggered behavior (click or focus) by immediately presenting the editor for input on page load.
+At component initialization, the Blazor In-place Editor can enter edit mode without user interaction by setting the `EnableEditMode` property to `true`. By default, `EnableEditMode` is `false`. When `true`, the editor opens programmatically at initial render and can also be toggled at runtime. This differs from the standard user-triggered behavior (click or focus) by immediately presenting the editor for input on page load.
 
 In the following example, the editor opens at initial load, and toggling the checkbox removes or opens the editor.
 

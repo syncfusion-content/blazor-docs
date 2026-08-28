@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor TimePicker Component | Syncfusion®
-description: Checkout and learn here all the features about Globalization in Blazor TimePicker component and much more.
+title: Globalization in Blazor TimePicker | Syncfusion
+description: Localize Blazor TimePicker text and enable RTL layout for right-to-left language support in your application.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# Globalization in Blazor TimePicker Component
+# Globalization in Blazor TimePicker
 
 ## Localization
 
@@ -15,9 +15,9 @@ The [Blazor TimePicker](https://www.syncfusion.com/blazor-components/blazor-time
 
 ## Right-To-Left
 
-The TimePicker supports right-to-left (RTL) functionality for languages such as Arabic and Hebrew. Use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfInputTextBase-1.html#Syncfusion_Blazor_Inputs_SfInputTextBase_1_EnableRtl) property to enable RTL direction.
+The Blazor TimePicker supports right-to-left (RTL) functionality for languages such as Arabic and Hebrew. Use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfInputTextBase-1.html#Syncfusion_Blazor_Inputs_SfInputTextBase_1_EnableRtl) property to enable RTL direction.
 
-The following code example initializes the TimePicker component in the `Arabic` culture.
+The following code example initializes the Blazor TimePicker component in the `Arabic` culture.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

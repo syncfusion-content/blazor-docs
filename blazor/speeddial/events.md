@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor SpeedDial Component | Syncfusion®
-description: Checkout and learn here all about events and how to use them in Blazor Speed Dial component and much more.
+title: Events in Blazor Speed Dial | Syncfusion
+description: Handle Blazor Speed Dial events such as ItemClicked, Opened, and Closed for action item interactions.
 platform: Blazor
 control: SpeedDial
 documentation: ug
 ---
 
-# Events in Blazor SpeedDial Component
+# Events in Blazor Speed Dial
 
 This section describes the SpeedDial events that are triggered when appropriate actions are performed. The following events are available in the SpeedDial component.
 

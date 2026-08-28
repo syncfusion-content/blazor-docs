@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Accessibility in Blazor SplitButton Component | Syncfusion®
-description: Checkout and learn here all the features about accessibility in Blazor SplitButton component and more.
+title: Accessibility in Blazor Split Button | Syncfusion
+description: Learn how Blazor Split Button supports accessibility with WCAG 2.2, keyboard shortcuts, and screen readers.
 platform: Blazor
 control: Split Button
 documentation: ug
 ---
 
-# Accessibility in Blazor SplitButton Component
+# Accessibility in Blazor Split Button
 
-The Blazor SplitButton component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Split Button component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Blazor SplitButton component is outlined below.
+The accessibility compliance for the Blazor Split Button component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -38,19 +38,19 @@ The accessibility compliance for the Blazor SplitButton component is outlined be
 
 ## WAI-ARIA attributes
 
-The Blazor SplitButton component applies WAI-ARIA patterns to meet accessibility requirements. The following ARIA attributes are used in the Blazor SplitButton component:
+The Blazor Split Button component applies WAI-ARIA patterns to meet accessibility requirements. The following ARIA attributes are used in the Blazor Split Button component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `role` | Identifies the SplitButton as a `button`, the SplitButton popup as a `menu`, and popup action items as `menuitem`. |
-| `aria-haspopup` | Indicates that the button opens an interactive SplitButton popup (menu). |
-| `aria-expanded` | Reflects whether the SplitButton popup is currently expanded or collapsed. |
+| `role` | Identifies the Blazor Split Button as a `button`, the Blazor Split Button popup as a `menu`, and popup action items as `menuitem`. |
+| `aria-haspopup` | Indicates that the button opens an interactive Blazor Split Button popup (menu). |
+| `aria-expanded` | Reflects whether the Blazor Split Button popup is currently expanded or collapsed. |
 | `aria-owns` | Associates elements to define a parent/child relationship when it cannot be represented in the DOM hierarchy. |
 | `aria-disabled` | Indicates that the element is perceivable but disabled and not operable. |
 
 ## Keyboard interaction
 
-The Blazor SplitButton component follows keyboard interaction guidelines, making it usable for people who rely on assistive technologies (AT) and keyboard navigation. The following keyboard shortcuts are supported:
+The Blazor Split Button component follows keyboard interaction guidelines, making it usable for people who rely on assistive technologies (AT) and keyboard navigation. The following keyboard shortcuts are supported:
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
@@ -64,9 +64,9 @@ The Blazor SplitButton component follows keyboard interaction guidelines, making
 
 ## Ensuring accessibility
 
-The Blazor SplitButton component’s accessibility is validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
+The Blazor Split Button component’s accessibility is validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
 
-The accessibility compliance of the Blazor SplitButton component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/split-button) in a new window to evaluate the accessibility of the Blazor SplitButton component with accessibility tools.
+The accessibility compliance of the Blazor Split Button component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/split-button) in a new window to evaluate the accessibility of the Blazor Split Button component with accessibility tools.
 
 {% previewsample "https://blazor.syncfusion.com/accessibility/split-button" %}
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Set the Placeholder in Blazor DateTimePicker Component | Syncfusion®
-description: Learn how to set the Placeholder in the Blazor DateTimePicker component to display hint text in the input.
+title: How to set the Placeholder in Blazor DateTime Picker | Syncfusion®
+description: Set the Placeholder in the Blazor DateTime Picker to display hint text in the input that guides users on the expected date and time format.
 platform: Blazor
-control: DateTimePicker 
+control: DateTimePicker
 documentation: ug
 ---
 
-# Set the Placeholder in Blazor DateTimePicker Component
+# How to set the Placeholder in Blazor DateTime Picker
 
 Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Placeholder) property to display a short hint in the input that guides users before a value is selected.
 

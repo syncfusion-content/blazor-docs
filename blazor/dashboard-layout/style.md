@@ -1,19 +1,19 @@
 ---
 layout: post
-title: CSS Structure in Blazor Dashboard Layout Component | Syncfusion®
-description: Checkout and learn here all about CSS Structure in Blazor Dashboard Layout component and much more details.
+title: Style and Appearance in Blazor Dashboard Layout | Syncfusion®
+description: Customize the Blazor Dashboard Layout appearance by overriding its default CSS structure for cells, panels, headers, and content.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
 ---
 
-# CSS Structure in Blazor Dashboard Layout Component
+# Style and Appearance in Blazor Dashboard Layout
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing the Dashboard Layout Panel Header
+## Customizing the Blazor Dashboard Layout Panel Header
 
-Use the following CSS to customize the header section of the Dashboard Layout panels.
+Use the following CSS to customize the header section of the Blazor Dashboard Layout panels.
 
 ```css
 .e-dashboardlayout.e-control .e-panel .e-panel-container .e-panel-header {
@@ -23,9 +23,9 @@ Use the following CSS to customize the header section of the Dashboard Layout pa
 }
 ```
 
-## Customizing the Dashboard Layout Panel Content
+## Customizing the Blazor Dashboard Layout Panel Content
 
-Apply the following CSS to customize the main content area of the Dashboard Layout panels.
+Apply the following CSS to customize the main content area of the Blazor Dashboard Layout panels.
 
 ```css
 .e-dashboardlayout.e-control .e-panel .e-panel-container .e-panel-content {
@@ -34,7 +34,7 @@ Apply the following CSS to customize the main content area of the Dashboard Layo
 }
 ```
 
-## Customizing the Dashboard Layout Panel Resize Icon
+## Customizing the Blazor Dashboard Layout Panel Resize Icon
 
 The resize icon that appears in the corner of resizable panels can also be customized. This selector applies only when `AllowResizing` is set to `true`. Use the following CSS to modify its appearance.
 
@@ -47,9 +47,9 @@ The resize icon that appears in the corner of resizable panels can also be custo
 }
 ```
 
-## Customizing the Dashboard Layout Background
+## Customizing the Blazor Dashboard Layout Background
 
-Modify the overall background of the Dashboard Layout component using the CSS below. This targets the main container of the dashboard.
+Modify the overall background of the Blazor Dashboard Layout component using the CSS below. This targets the main container of the dashboard.
 
 ```css
 .e-dashboardlayout.e-control.e-responsive {

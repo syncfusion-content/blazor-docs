@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Data Binding in Blazor Numeric TextBox Component | Syncfusion®
-description: Explore data binding techniques for Blazor Numeric TextBox including one-way, two-way, and dynamic value binding.
+title: Data Binding in Blazor Numeric Textbox | Syncfusion
+description: Bind numeric values to Blazor Numeric TextBox using one-way, two-way, and dynamic data binding methods today.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
 ---
 
-# Data Binding in Blazor Numeric TextBox Component
+# Data Binding in Blazor Numeric Textbox
 
-This section explains how to bind values to the Numeric TextBox (SfNumericTextBox) in three common ways:
+This section explains how to bind values to the Blazor Numeric TextBox (SfNumericTextBox) in three common ways:
 - One-way data binding
 - Two-way data binding
 - Dynamic value binding
 
 ## One-way binding
 
-Bind the value to the NumericTextBox component directly for `Value` property as mentioned in the following code example. In one-way binding, you have to pass property or variable name along with `@` (For Ex: "@Name").
+Bind the value to the Blazor Numeric TextBox component directly for `Value` property as mentioned in the following code example. In one-way binding, you have to pass property or variable name along with `@` (For Ex: "@Name").
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

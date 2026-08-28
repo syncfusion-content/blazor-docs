@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Color Picker Component | Syncfusion®
-description: Checkout and learn here all the features about Accessibility in Blazor Color Picker component and more.
+title: Accessibility in Blazor Color Picker | Syncfusion®
+description: Learn how Blazor Color Picker meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA roles, keyboard navigation, and contrast support.
 platform: Blazor
 control: Color Picker
 documentation: ug
 ---
 
-# Accessibility in Blazor Color Picker Component
+# Accessibility in Blazor Color Picker
 
 The Blazor Color Picker component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -62,13 +62,13 @@ The Blazor Color Picker component follows the WAI-ARIA [keyboard interaction](ht
 | <kbd>←</kbd> | <kbd>←</kbd> | Moves the handler/tile left from the current position. |
 | <kbd>→</kbd> | <kbd>→</kbd> | Moves the handler/tile right from the current position. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Applies the selected color value. |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves focus to the next focusable element in the Color Picker popup. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves focus to the next focusable element in the Blazor Color Picker popup. |
 
 ## Ensuring accessibility
 
 The Blazor Color Picker component's accessibility levels are validated with [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) using Playwright-based tests.
 
-The accessibility compliance of the Blazor Color Picker component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/color-picker) in a new window to evaluate the component with accessibility tools such as the [Accessibility Insights extension](https://accessibilityinsights.io/) or the built-in browser developer tools.
+The accessibility compliance of the Blazor Color Picker component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/color-picker) in a new window to evaluate the Blazor Color Picker component with accessibility tools such as the [Accessibility Insights extension](https://accessibilityinsights.io/) or the built-in browser developer tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/color-picker.html" %}
 

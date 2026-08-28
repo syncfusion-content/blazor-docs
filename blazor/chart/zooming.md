@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Zooming in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about Zooming functionality in Blazor Charts component and much more.
+title: Blazor Charts Zooming and Panning Examples | Syncfusion®
+description: Learn how to enable zooming and panning in Syncfusion Blazor Charts. Use selection, mouse wheel, or pinch gestures via ChartZoomSettings.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Zooming in Blazor Charts Component
+# Blazor Charts Zooming and Panning
 
 A detailed walkthrough demonstrating how to configure and use zooming and panning in the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) is presented in the video below.
 

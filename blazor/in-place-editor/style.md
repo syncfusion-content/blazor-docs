@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and appearance in Blazor In-place Editor Component | Syncfusion®
-description: Checkout and learn here all about style and appearance in Blazor In-place Editor component and much more details.
+title: Style and Appearance in Blazor In-place Editor | Syncfusion
+description: Customize the appearance of Blazor In-place Editor with CSS selectors for text, action buttons, and container styles.
 platform: Blazor
 control: In-place Editor 
 documentation: ug
 ---
 
-# Style and Appearance in Blazor In-place Editor Component
+# Style and Appearance in Blazor In-place Editor
 
 The following sections describe the CSS selectors that can be used to customize the component's appearance to match application branding and user preferences.
 
@@ -15,9 +15,9 @@ To get started quickly with customizing the Blazor In-place Editor, watch the fo
 
 {% youtube "youtube:https://www.youtube.com/watch?v=YWRsFm32Rso"%}
 
-## Customizing the In-place Editor text
+## Customizing the Blazor In-place Editor text
 
-Use the following CSS to customize the default In-place Editor text content, including font family, font size, color, and underline/border. These selectors target the display state of the value before editing.
+Use the following CSS to customize the default Blazor In-place Editor text content, including font family, font size, color, and underline/border. These selectors target the display state of the value before editing.
 
 ```css
 /* To change color, font family and font size */
@@ -58,16 +58,16 @@ Use the following CSS to customize the default action buttons (Save and Cancel) 
 }
 ```
 
-## Customizing In-place editor outer style like material filled
+## Customizing Blazor In-place Editor outer style like material filled
 
-Use the following CSS to customize the outer container of the In-place Editor (for example, to emulate material filled text-field styles), including removing the default underline, changing background, and rounding corners. The overlay icon can also be shown persistently.
+Use the following CSS to customize the outer container of the Blazor In-place Editor (for example, to emulate material filled text-field styles), including removing the default underline, changing background, and rounding corners. The overlay icon can also be shown persistently.
 
 ```css
 /* To remove the default bottom underline */
 .e-inplaceeditor .e-editable-value-container .e-editable-value {
     border-bottom: none;
 }
-/* To change background color and border radius of in-place editor container */
+/* To change background color and border radius of Blazor In-place Editor container */
 .e-inplaceeditor .e-editable-value-container {
     background: #e9ecef;
     border-radius: 4px;

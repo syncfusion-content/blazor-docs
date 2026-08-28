@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Dropdown Menu Component | Syncfusion®
-description: Checkout and learn here all the features about Events in Blazor Dropdown Menu component and much more.
+title: Events in Blazor Dropdown Menu | Syncfusion®
+description: Handle Blazor Dropdown Menu events such as ItemSelected, OnOpen, OnClose, and BeforeOpen to react to user interactions.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
 ---
 
-# Events in Blazor Dropdown Menu Component
+# Events in Blazor Dropdown Menu
 
 Attach event handlers to the Dropdown Menu using the [DropDownButtonEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents) component. Each event accepts a handler whose parameter (if any) provides event-specific data through event arguments.
 

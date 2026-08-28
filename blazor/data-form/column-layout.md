@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column and column span in Blazor DataForm Component | Syncfusion®
-description: Checkout and learn here about how to configure column and column span  with Blazor DataForm component.
+title: Column Layout in Blazor Data Form | Syncfusion®
+description: Arrange Blazor Data Form editors in a column-based layout using the ColumnCount and column span properties for structured forms.
 platform: Blazor
 control: DataForm
 documentation: ug
 ---
 
-# Column layout in DataForm component
+# Column Layout in Blazor Data Form
 
 This section explains how to arrange DataForm editors in a column-based layout. Use the [ColumnCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_ColumnCount) property to specify the number of columns into which the DataForm should be divided.
 
