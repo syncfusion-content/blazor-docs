@@ -64,7 +64,7 @@ Accessibility in the Blazor Linear Gauge component ensures that all users, regar
 
 ## Ensuring accessibility
 
-Accessibility in the Blazor Linear Gauge component is validated using the [axe-core](https://www.deque.com/axe/core-documentation/) accessibility testing engine during automated regression testing. The integrated [Deque.AxeCore.Playwright](https://www.nuget.org/packages/Deque.AxeCore.Playwright) NuGet package is used to execute axe-core checks against the rendered Linear Gauge.
+The Blazor Linear Gauge component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
 The accessibility compliance of the Linear Gauge component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/lineargauge) in a new window to evaluate the accessibility of the Linear Gauge component with accessibility tools.
 ## See also

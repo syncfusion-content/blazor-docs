@@ -18,7 +18,7 @@ Globalization is the process of designing and developing a component that works 
 * Axis label
 * Tooltip
 
-The text on these features can be localized for any culture, such as Arabic (`ar`), German (`de`), or French (`fr`).
+The text on these features can be localized for any culture, such as Arabic, Deutsch and French.
 
 N> The `Format` property follows the `CultureInfo.CurrentCulture` of the application, so the same format specifier (for example, `"c"`) renders differently for each culture. To apply a specific culture to the application, see the Blazor [Localization](https://blazor.syncfusion.com/documentation/common/localization) documentation.
 
