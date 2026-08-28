@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor MultiSelect Dropdown for .NET MAUI | Syncfusion
+title: Blazor MultiSelect Dropdown Getting Started for .NET MAUI | Syncfusion
 description: Learn how to get started with the Syncfusion Blazor MultiSelect Dropdown in a Blazor MAUI app with installation and setup steps.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Getting Started with Blazor MultiSelect Dropdown in .NET MAUI Blazor App
+# Getting Started with Blazor MultiSelect Dropdown in .NET MAUI
 
 This guide walks through integrating the [Blazor MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) component in a Blazor MAUI App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
