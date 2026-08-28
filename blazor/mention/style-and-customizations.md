@@ -23,7 +23,7 @@ This section explains how to customize the following visual elements:
  
 ## Applying a Custom CSS Class
  
-To scope the styling changes to a specific Mention component, assign a custom CSS class using the `CssClass` property.
+To scope the styling changes to a specific Blazor Mention component, assign a custom CSS class using the `CssClass` property.
  
 ```cshtml
 <SfMention CssClass="e-custom" ...>
