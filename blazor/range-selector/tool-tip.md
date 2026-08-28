@@ -9,15 +9,13 @@ documentation: ug
 
 # Blazor Range Selector Tooltip
 
-<!-- markdownlint-disable MD036 -->
-
-The tooltip for sliders are supported by the Range Selector. Sliders are used in the Range Selector to select data from a specific range. The tooltip displays the selected start and end values.
+The Range Selector supports tooltips for its sliders. The sliders are used to select data from a specific range, and the tooltip displays the selected start and end values. Tooltips are configured through the [RangeNavigatorRangeTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings.html) component.
 
 <!-- markdownlint-disable MD013 -->
 
 ## Enable tooltip
 
-The tooltip can be used to display information about the selected data and it is enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorRangeTooltipSettings_Enable) property to **true**.
+The tooltip displays information about the selected data. It is enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorRangeTooltipSettings_Enable) property to **true**.
 
 ```cshtml
 
@@ -62,8 +60,8 @@ The tooltip can be used to display information about the selected data and it is
 
 The tooltip can be customized using the following properties:
 
-* [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorRangeTooltipSettings_Enable) - Customizes the visibility of the tooltip.
-* [DisplayMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorRangeTooltipSettings_DisplayMode) - Customizes the display mode of the tooltip.
+* [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorRangeTooltipSettings_Enable) - Shows or hides the tooltip.
+* [DisplayMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorRangeTooltipSettings_DisplayMode) - Sets the [TooltipDisplayMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TooltipDisplayMode.html) to `Always` (tooltip always shown) or `OnDemand` (tooltip shown only while a slider is dragged).
 * [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorRangeTooltipSettings_Fill) - Customizes the background color of the tooltip.
 * [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorRangeTooltipSettings_Opacity) - Customizes the opacity of the tooltip.
 * [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorRangeTooltipSettings_Format) - Customizes the format of the tooltip text.
@@ -112,7 +110,7 @@ The tooltip can be customized using the following properties:
 
 ## Label Format
 
-The [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelFormat) property in the tooltip is used to format and parse the date to all globalize formats.
+The [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorRangeTooltipSettings_Format) property of `RangeNavigatorRangeTooltipSettings` formats and parses the tooltip date using the standard globalized date formats.
 
 ```cshtml
 
@@ -153,44 +151,49 @@ The [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ![Changing Tooltip Format in Blazor RangeNavigator](images/tooltip/blazor-rangenavigator-tooltip-format.webp)
 
-The following table shows the results of applying some common date and time formats to the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelFormat) property.
+The following table shows the results of applying some common date and time formats to the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorRangeTooltipSettings_Format) property.
 
 <!-- markdownlint-disable MD033 -->
 <table>
 <tr>
 <td><b>Label Value</b></td>
-<td><b>Label Format Property Value</b></td>
+<td><b>Format Property Value</b></td>
 <td><b>Result </b></td>
 <td><b>Description </b></td>
 </tr>
 <tr>
-<td>new Date(2000, 03, 10)</td>
+<td>new DateTime(2000, 4, 10)</td>
 <td>EEEE</td>
 <td>Monday</td>
 <td>The date is displayed in the day format.</td>
 </tr>
 <tr>
-<td>new Date(2000, 03, 10)</td>
+<td>new DateTime(2000, 4, 10)</td>
 <td>yMd</td>
 <td>04/10/2000</td>
 <td>The date is displayed in the month/date/year format.</td>
 </tr>
 <tr>
-<td>new Date(2000, 03, 10)</td>
+<td>new DateTime(2000, 4, 10)</td>
 <td> MMM </td>
 <td>Apr</td>
 <td>The shorthand month for the date is displayed.</td>
 </tr>
 <tr>
-<td>new Date(2000, 03, 10)</td>
+<td>new DateTime(2000, 4, 10)</td>
 <td>hm</td>
 <td>12:00 AM</td>
-<td>Time of the date value is displayed as label.</td>
+<td>The time portion of the date value is displayed as the label.</td>
 </tr>
 <tr>
-<td>new Date(2000, 03, 10)</td>
+<td>new DateTime(2000, 4, 10)</td>
 <td>hms</td>
 <td>12:00:00 AM</td>
 <td>The label is displayed in hours:minutes:seconds format.</td>
 </tr>
 </table>
+
+## See Also
+
+* [Events](./events)
+* [Type of Data](./data)

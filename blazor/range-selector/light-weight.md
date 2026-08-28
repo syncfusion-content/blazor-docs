@@ -9,14 +9,16 @@ documentation: ug
 
 # Blazor Range Selector Lightweight
 
-By default, when the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_DataSource) for [RangeNavigatorSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html) is empty, a lightweight Range Selector will be shown without Chart.
+A lightweight Range Selector renders only the slider track, without the underlying chart. This is used when the trend chart is not required or when the series data is not available.
+
+The lightweight Range Selector is rendered when the data is bound directly to the [SfRangeNavigator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html) through its [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_DataSource), [XName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_XName), and [YName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_YName) properties, without defining a [RangeNavigatorSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html). The [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_ValueType), [IntervalType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_IntervalType), and [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelIntersectAction) properties can still be used to configure the axis.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfRangeNavigator Value="@Value" ValueType="RangeValueType.DateTime" DataSource="@DataSource" XName="X"
-                  YName="Y" IntervalType="@RangeIntervalType.Years" LabelIntersectAction="RangeLabelIntersectAction.Hide">
+                  YName="Y" IntervalType="RangeIntervalType.Years" LabelIntersectAction="RangeLabelIntersectAction.Hide">
     <RangeNavigatorRangeTooltipSettings Enable="true"></RangeNavigatorRangeTooltipSettings>
 </SfRangeNavigator>
 
@@ -49,3 +51,4 @@ By default, when the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusi
 ## See Also
 
 * [Period Selector](./period-selector)
+* [Type of Data](./data)

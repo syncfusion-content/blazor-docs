@@ -9,9 +9,9 @@ documentation: ug
 
 # Blazor Range Selector Accessibility
 
-The Blazor Range Selector component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The [Blazor Range Selector](https://www.syncfusion.com/blazor-components/blazor-range-selector) component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Blazor Range navigator component is outlined below.
+The accessibility compliance for the Blazor Range Selector component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -39,7 +39,7 @@ The accessibility compliance for the Blazor Range navigator component is outline
 
 ## WAI-ARIA attributes
 
-The Blazor Range Selector component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Range Selector component:
+The Blazor Range Selector component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) patterns to meet accessibility standards. The following ARIA roles and attributes are used in the Blazor Range Selector component:
 
 * img (role)
 * region (role)
@@ -48,14 +48,14 @@ The Blazor Range Selector component followed the [WAI-ARIA](https://www.w3.org/W
 
 ## Keyboard interaction
 
-The Blazor Range Selector component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Range Selector component.
+The Blazor Range Selector component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Range Selector component.
 
 | Windows | Mac | Description |
 | --- | --- | --- |
-| <kbd>Alt + J</kbd> | <kbd>⌥</kbd> + <kbd>J</kbd> | Moves the focus to the Range Selector element. |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves the focus to the Range Selector element. |
-| <kbd>Shift + Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the focus to the previous element in the Range Selector. |
-| <kbd>Ctrl + P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Prints the Range Selector. |
+| <kbd>Alt</kbd> + <kbd>J</kbd> | <kbd>⌥</kbd> + <kbd>J</kbd> | Moves the focus to the Range Selector element. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves the focus to the next element in the Range Selector. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the focus to the previous element in the Range Selector. |
+| <kbd>Ctrl</kbd> + <kbd>P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Prints the Range Selector. |
 
 ## Ensuring accessibility
 
