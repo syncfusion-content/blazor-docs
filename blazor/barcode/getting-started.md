@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Getting Started with Blazor Barcode in WASM App | Syncfusion®
-description: Learn how to get started with the Syncfusion Blazor Barcode Generator control. Explore setup, features, examples, and customization options.
+title: Getting Started with Blazor Barcode Component in WASM App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Barcode Component. Explore setup, features, examples, and customization options.
 platform: Blazor
 control: Barcode Generator
 documentation: ug
 ---
 
-# Getting Started with Blazor Barcode Generator Component in WASM App
+# Getting Started with Blazor Barcode Component in WASM App
 
 This section briefly explains how to include the [Blazor Barcode Generator](https://www.syncfusion.com/blazor-components/blazor-barcode) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-N> The Blazor Diagram component requires .NET 8.0 or later and a modern browser with ES6 and WebAssembly support.
+N> The Blazor Barcode Component requires .NET 8.0 or later and a modern browser with ES6 and WebAssembly support.
 
 ## Create a new Blazor WebAssembly (Standalone) App
 
@@ -159,7 +159,7 @@ Include the required [script references](https://blazor.syncfusion.com/documenta
 {% endhighlight %}
 {% endtabs %}
 
-## Add Blazor Barcode Generator component
+## Add Blazor Barcode Component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Barcode Generator](https://www.syncfusion.com/blazor-components/blazor-barcode) component inside the razor file.
 
@@ -217,7 +217,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## Add the QR Code Generator component
 
-Add a QR code to the Barcode Generator component.
+Add a QR code to the Blazor Barcode Component.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -231,7 +231,7 @@ Add a QR code to the Barcode Generator component.
 
 ## Add the Data Matrix Generator component
 
-Add a Data Matrix code to the Barcode Generator component.
+Add a Data Matrix code to the Blazor Barcode Component.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}

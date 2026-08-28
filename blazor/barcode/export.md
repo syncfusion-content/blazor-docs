@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Export in Blazor Barcode Generator | Syncfusion®
+title: Export in Blazor Barcode Component Generator | Syncfusion®
 description: Export the Blazor Barcode as JPG or PNG image, or retrieve it as a base64 string, for download or reuse in the app.
 platform: Blazor
 control: Barcode
