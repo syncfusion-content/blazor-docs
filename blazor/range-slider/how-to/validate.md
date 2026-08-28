@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Validation of Slider in Blazor Range Slider Component | Syncfusion®
-description: Checkout and learn here all about validation of Slider in Blazor Range Slider component with examples and much more details.
+title: How to validate slider in Blazor Range Slider | Syncfusion
+description: Validate Blazor Range Slider values inside an EditForm using DataAnnotations and validation messages.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Validation of Slider in Blazor Range Slider Component
+# How to validate slider in Blazor Range Slider
 
 The Range Slider component can be validated using Blazor’s built-in form validation with DataAnnotations. The steps below demonstrate how to place the slider inside an EditForm and display validation messages.
 

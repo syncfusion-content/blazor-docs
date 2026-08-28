@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Set the Disabled State in Blazor TextBox Component | Syncfusion®
-description: Checkout and learn here all about how to set the disabled state in Blazor TextBox component and much more details.
+title: How to set the disabled state in Blazor TextBox | Syncfusion
+description: Disable interaction and focus in Blazor TextBox by setting the Enabled property to false for read-only fields.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Set the Disabled State in Blazor TextBox Component
+# How to set the disabled state in Blazor TextBox
 
-Disable the TextBox by setting its [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfInputTextBase-1.html#Syncfusion_Blazor_Inputs_SfInputTextBase_1_Enabled) property to `false`. A disabled TextBox is non-interactive, excluded from keyboard focus (tab order), and does not raise input events.
+Disable the Blazor TextBox by setting its [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfInputTextBase-1.html#Syncfusion_Blazor_Inputs_SfInputTextBase_1_Enabled) property to `false`. A disabled Blazor TextBox is non-interactive, excluded from keyboard focus (tab order), and does not raise input events.
 
-The following example demonstrates the TextBox in a disabled state.
+The following example demonstrates the Blazor TextBox in a disabled state.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Columns in Blazor MultiColumn ComboBox Component | Syncfusion®
-description: Checkout and learn here the features all about columns in Blazor MultiColumn ComboBox component and much more details.
+title: Columns in Blazor MultiColumn ComboBox | Syncfusion
+description: Configure Blazor MultiColumn ComboBox columns with text wrapping, headers, and data templates for display today.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
 ---
 
-# Configuring the Columns
+# Columns in Blazor MultiColumn ComboBox
 
 ## TextWrap for a Column
 
@@ -32,7 +32,7 @@ The following example enables text wrapping for a particular column in the Blazo
 
 ## Setting the Text Alignment
 
-The MultiColumn ComboBox supports auto-generating columns, which automatically creates columns from the data source. Additionally, you can customize the column header text to reflect specific data, adjust the column [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.MultiColumnComboboxColumn.html#Syncfusion_Blazor_MultiColumnComboBox_MultiColumnComboboxColumn_Width) for optimal display, and set the [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.MultiColumnComboboxColumn.html#Syncfusion_Blazor_MultiColumnComboBox_MultiColumnComboboxColumn_TextAlign) (left, center, or right) to enhance readability.
+The Blazor MultiColumn ComboBox supports auto-generating columns, which automatically creates columns from the data source. Additionally, you can customize the column header text to reflect specific data, adjust the column [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.MultiColumnComboboxColumn.html#Syncfusion_Blazor_MultiColumnComboBox_MultiColumnComboboxColumn_Width) for optimal display, and set the [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.MultiColumnComboboxColumn.html#Syncfusion_Blazor_MultiColumnComboBox_MultiColumnComboboxColumn_TextAlign) (left, center, or right) to enhance readability.
 
 {% highlight cshtml %}
 
@@ -44,7 +44,7 @@ The MultiColumn ComboBox supports auto-generating columns, which automatically c
 
 ## Setting the Column Template
 
-The MultiColumn ComboBox supports [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.MultiColumnComboboxColumn.html#Syncfusion_Blazor_MultiColumnComboBox_MultiColumnComboboxColumn_Template) within the column, allowing you to define a column template that renders a customized element in each cell.|
+The Blazor MultiColumn ComboBox supports [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.MultiColumnComboboxColumn.html#Syncfusion_Blazor_MultiColumnComboBox_MultiColumnComboboxColumn_Template) within the column, allowing you to define a column template that renders a customized element in each cell.|
 
 In the following sample, it demonstrates how to use Template inside the column.
 
@@ -56,7 +56,7 @@ In the following sample, it demonstrates how to use Template inside the column.
 
 ## Header Template
 
-The [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.MultiColumnComboboxColumn.html#Syncfusion_Blazor_MultiColumnComboBox_MultiColumnComboboxColumn_HeaderTemplate) of the MultiColumn ComboBox component is used to customize the header element of a column. With this property, you can render custom HTML elements or Blazor components in the header. This feature allows you to add more functionality to the header, such as sorting or filtering indicators.
+The [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.MultiColumnComboboxColumn.html#Syncfusion_Blazor_MultiColumnComboBox_MultiColumnComboboxColumn_HeaderTemplate) of the Blazor MultiColumn ComboBox component is used to customize the header element of a column. With this property, you can render custom HTML elements or Blazor components in the header. This feature allows you to add more functionality to the header, such as sorting or filtering indicators.
 
 The following sample demonstrates how to use `HeaderTemplate`.
 
@@ -70,7 +70,7 @@ The following sample demonstrates how to use `HeaderTemplate`.
 
 ## Displaying Values as Checkboxes
 
-The MultiColumn ComboBox component allows you to render boolean values as checkboxes in columns. This can be achieved by using the [DisplayAsCheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.MultiColumnComboboxColumn.html#Syncfusion_Blazor_MultiColumnComboBox_MultiColumnComboboxColumn_DisplayAsCheckBox) property. This property is useful when you have a boolean column in your MultiColumn ComboBox and you want to display the values as checkboxes instead of the default text representation of **true** or **false**.
+The Blazor MultiColumn ComboBox component allows you to render boolean values as checkboxes in columns. This can be achieved by using the [DisplayAsCheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.MultiColumnComboboxColumn.html#Syncfusion_Blazor_MultiColumnComboBox_MultiColumnComboboxColumn_DisplayAsCheckBox) property. This property is useful when you have a boolean column in your Blazor MultiColumn ComboBox and you want to display the values as checkboxes instead of the default text representation of **true** or **false**.
 
 To enable the rendering of boolean values as checkboxes, set the `DisplayAsCheckBox` property to **true**.
 
@@ -84,7 +84,7 @@ To enable the rendering of boolean values as checkboxes, set the `DisplayAsCheck
 
 ## Setting Custom Attributes
 
-You can customize the appearance of the column headers in the MultiColumn ComboBox using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.MultiColumnComboboxColumn.html#Syncfusion_Blazor_MultiColumnComboBox_MultiColumnComboboxColumn_CustomAttributes) property.
+You can customize the appearance of the column headers in the Blazor MultiColumn ComboBox using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.MultiColumnComboboxColumn.html#Syncfusion_Blazor_MultiColumnComboBox_MultiColumnComboboxColumn_CustomAttributes) property.
 
 Set the `CustomAttributes` property of the target column to a dictionary that defines CSS attributes (for example, a class). The specified CSS is applied to the header cell of that column.
 
@@ -92,7 +92,7 @@ Set the `CustomAttributes` property of the target column to a dictionary that de
 <MultiColumnComboboxColumn Field="Name" Width="200px" CustomAttributes="@(new Dictionary<string, object>() { { "class", "customcss" } })"></MultiColumnComboboxColumn>
 ```
 
-The following example demonstrates how to customize the appearance of MultiColumn ComboBox columns using custom attributes.
+The following example demonstrates how to customize the appearance of Blazor MultiColumn ComboBox columns using custom attributes.
 
 {% highlight cshtml %}
 

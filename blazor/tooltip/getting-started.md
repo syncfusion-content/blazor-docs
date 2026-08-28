@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with Blazor Tooltip Component | Syncfusion
-description: Check out and learn about getting started with Blazor Tooltip component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Tooltip in Blazor WASM App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Tooltip in a Blazor WebAssembly app with setup steps.
 platform: Blazor
 control: Tooltip
 documentation: ug
 ---
 
-# Getting started with Blazor Tooltip component
+# Getting Started with Blazor Tooltip in Blazor WASM App
 
-This section briefly explains how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tooltip](https://www.syncfusion.com/blazor-components/blazor-tooltip) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Tooltip](https://www.syncfusion.com/blazor-components/blazor-tooltip) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -81,7 +81,7 @@ cd BlazorApp
 
 {% endtabcontents %}
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
+## Install the required Blazor packages
 
 Install [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
@@ -103,7 +103,7 @@ N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Popups` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Popups
@@ -111,39 +111,43 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+## Register the Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of your Blazor WebAssembly App.
+Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service and include the required namespace reference `using Syncfusion.Blazor;` at the top.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
 
-....
-using Syncfusion.Blazor;
-....
 builder.Services.AddSyncfusionBlazor();
-....
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the **~/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) at the end of the `<head>` section in the **~wwwroot/index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-....
+
+{% endhighlight %}
+{% endtabs %}
+
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **~wwwroot/index.html** file to enable Tooltip functionality.
+
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tooltip component
+## Add Blazor Tooltip component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tooltip component with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) component in the **~/Pages/Index.razor** file.
+Add the [Blazor Tooltip](https://www.syncfusion.com/blazor-components/blazor-tooltip) component with the [Blazor Button](https://blazor.syncfusion.com/documentation/button/getting-started) component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -162,7 +166,9 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tooltip componen
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tooltip component in the default web browser.
+## Run the application
+
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The [Blazor Tooltip](https://www.syncfusion.com/blazor-components/blazor-tooltip) component will render in your default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrHNGZrgxTUeScj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Tooltip Component](./images/blazor-tooltip-component.webp)" %}
 

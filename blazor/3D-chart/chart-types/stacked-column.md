@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stacked Column in Blazor 3D Chart Component | Syncfusion®
-description: Checkout and learn here all features about Stacked Column Chart in Blazor 3D Chart component and more.
+title: Blazor 3D Stacked Column Chart Examples | Syncfusion®
+description: Learn how to render a Stacked Column Chart in Syncfusion Blazor 3D Chart by setting the series Type to StackingColumn with code samples.
 platform: Blazor
 control: 3D Chart
 documentation: ug
 ---
 
-# Stacked Column in Blazor 3D Chart Component
+# Stacked Column 3D Chart in Blazor
 
 ## Stacked column chart
 

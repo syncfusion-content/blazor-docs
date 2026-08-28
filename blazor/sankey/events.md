@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events for Blazor Sankey Component | Syncfusion®
-description: Learn about the events supported by the Blazor Sankey component and how to use them for interactivity and customization.
+title: Blazor Sankey Diagram Events | Syncfusion®
+description: Learn how the Blazor Sankey Diagram exposes events for rendering, hover, click, resize, print, and export of nodes, links, labels, and tooltips.
 platform: Blazor
 control: Sankey
 documentation: ug
 ---
 
-# Events in Blazor Sankey Diagram
+# Blazor Sankey Diagram Events
 
 ## Overview
 

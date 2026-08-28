@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Icons in Blazor Dropdown Menu Component | Syncfusion®
-description: Checkout and learn here all the features about Icons in Blazor Dropdown Menu component and much more details.
+title: Icons in Blazor Dropdown Menu | Syncfusion®
+description: Add leading and popup-item icons to the Blazor Dropdown Menu using the IconCss and IconPosition properties for richer visuals.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
 ---
 
-# Icons in Blazor Dropdown Menu Component
+# Icons in Blazor Dropdown Menu
 
 ## Dropdown Menu icons
 
-Icons help communicate each action in the Dropdown Menu more effectively. Apply an icon by setting the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_IconCss) property to the required CSS class (for example, `e-icons e-message`). Syncfusion’s built-in icon font is added automatically when the theme stylesheet is referenced. By default, the icon appears on the left side of the button (IconPosition = `Left`). Change the placement using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_IconPosition) property.
+Icons help communicate each action in the Dropdown Menu more effectively. Apply an icon by setting the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_IconCss) property to the required CSS class (for example, `e-icons e-message`). Syncfusion’s built-in icon font is added automatically when the theme stylesheet is referenced. By default, the icon appears on the left of the button (IconPosition = `Left`). Change the placement using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_IconPosition) property.
 
 The following example renders one Dropdown Menu with the default icon position and another with the icon positioned above the content:
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
-<SfDropDownButton IconCss="e-icons e-message" content="Message">
+<SfDropDownButton IconCss="e-icons e-message" Content="Message">
     <DropDownMenuItems>
         <DropDownMenuItem Text="Edit"></DropDownMenuItem>
         <DropDownMenuItem Text="Delete"></DropDownMenuItem>

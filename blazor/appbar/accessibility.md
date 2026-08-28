@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor AppBar Component | Syncfusion®
-description: Check out and learn in detail about accessibility features in the Blazor AppBar component and much more.
+title: Accessibility in Blazor AppBar | Syncfusion®
+description: Learn how Blazor AppBar meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA roles, keyboard navigation, and color contrast support.
 platform: Blazor
 control: AppBar
 documentation: ug
 ---
 
-# Accessibility in Blazor AppBar Component
+# Accessibility in Blazor AppBar
 
 The [Blazor AppBar](https://www.syncfusion.com/blazor-components/blazor-appbar) component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -51,7 +51,7 @@ The Blazor AppBar component provides focus element navigation based on the tab k
 
 The accessibility levels of the Blazor AppBar component are ensured through automated testing using the [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool.
 
-The accessibility compliance of the AppBar component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/appbar) in a new window to evaluate the accessibility of the AppBar component with accessibility tools.
+The accessibility compliance of the Blazor AppBar component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/appbar) in a new window to evaluate the accessibility of the Blazor AppBar with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/appbar.html" %}
 

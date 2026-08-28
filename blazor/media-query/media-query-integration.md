@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Media Query component Integration with other components | Syncfusion®
-description: Checkout and learn here all about how to integrate the Media Query with other component like Chart and much more details.
+title: Integration in Blazor Media Query | Syncfusion
+description: Integrate Blazor Media Query with other components like DataGrid to render adaptive UIs based on active breakpoints.
 platform: Blazor
 control: Media Query
 documentation: ug
 ---
 
-# Integrating the Blazor Media Query with other components
+# Integration in Blazor Media Query
 
 The Blazor Media Query component enhances the responsiveness of the web application by enabling conditional rendering or styling for a dynamic UI that adapts to various screen sizes.
 

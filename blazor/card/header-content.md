@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Header and Content in Blazor Card Component | Syncfusion®
-description: Checkout and learn here all about Header and Content in Blazor Card component and much more details.
+title: Header and Content in Blazor Card | Syncfusion®
+description: Render header and content sections in the Blazor Card using the CardHeader and CardContent slots to organize title, subtitle, and main body.
 platform: Blazor
 control: Card
 documentation: ug
@@ -43,13 +43,13 @@ The Card header supports an optional image set via the [`ImageUrl`](https://help
 @using Syncfusion.Blazor.Cards
 
 <SfCard ID="HugeImage">
-    <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="images/cards/football.png" />
+    <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="https://cdn.syncfusion.com/blazor/images/cards/steven.png" />
 </SfCard>
 <SfCard ID="SecondCard">
-    <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="images/cards/football.png" />
+    <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="https://cdn.syncfusion.com/blazor/images/cards/steven.png" />
 </SfCard>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrRtxiVBYyfeJns?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVxZFrIpVEYZvgW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Content
 
@@ -62,7 +62,7 @@ Content in the Card holds text, images, links, and all possible HTML elements. I
 @using Syncfusion.Blazor.Cards
 
 <SfCard ID="HugeImage">
-    <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="images/cards/football.png" />
+    <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="https://cdn.syncfusion.com/blazor/images/cards/steven.png" />
 </SfCard>
 
 <SfCard ID="SecondCard">
@@ -70,7 +70,7 @@ Content in the Card holds text, images, links, and all possible HTML elements. I
 </SfCard>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrdjHsrVEycBMCY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrxZbryJgsjZCzm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Image
 

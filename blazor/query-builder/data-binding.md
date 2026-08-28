@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Data Binding in Blazor QueryBuilder Component | Syncfusion®
-description: Checkout and learn here all about data binding in Blazor QueryBuilder component with examples and much more details.
+title: Data Binding in Blazor Query Builder | Syncfusion
+description: Bind local collections or remote services to Blazor Query Builder using SfDataManager and DataSource.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Data Binding in Blazor QueryBuilder Component
+# Data Binding in Blazor Query Builder
 
 The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) uses `SfDataManager` to bind the data source and supports both RESTful JSON data services and `IEnumerable` collections. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_DataSource) property accepts either an instance of `SfDataManager` or a list of objects. It supports the following data binding methods:
 
 * List Binding
 * Remote data
 
-N> When using `DataSource` as `IEnumerable<T>`, the component type (`TValue`) is inferred from the data. When using `SfDataManager`, set `TValue` explicitly on the Query Builder component.
+N> When using `DataSource` as `IEnumerable<T>`, the component type (`TValue`) is inferred from the data. When using `SfDataManager`, set `TValue` explicitly on the Blazor Query Builder component.
 
 ## List Binding
 
@@ -189,7 +189,7 @@ Complex data binding allows you to work with nested objects and subfields. Bind 
         <QueryBuilderColumn Field="Name" Label="Name" Type="ColumnType.Object">
             <QueryBuilderColumns>
                 <QueryBuilderColumn Field="FirstName" Label="First Name" Type="ColumnType.String"></QueryBuilderColumn>
-                <QueryBuilderColumn Field="LasttName" Label="Last Name" Type="ColumnType.String"></QueryBuilderColumn>
+                <QueryBuilderColumn Field="LastName" Label="Last Name" Type="ColumnType.String"></QueryBuilderColumn>
             </QueryBuilderColumns>
         </QueryBuilderColumn>
         <QueryBuilderColumn Field="Country" Label="Country" Type="ColumnType.Object">
@@ -197,7 +197,7 @@ Complex data binding allows you to work with nested objects and subfields. Bind 
                 <QueryBuilderColumn Field="State" Label="State" Type="ColumnType.Object">
                     <QueryBuilderColumns>
                         <QueryBuilderColumn Field="City" Label="City" Type="ColumnType.String"></QueryBuilderColumn>
-                        <QueryBuilderColumn Field="ZipCode" Label="Zip Code" Type="ColumnType.String"></QueryBuilderColumn>
+                        <QueryBuilderColumn Field="Zipcode" Label="Zip Code" Type="ColumnType.String"></QueryBuilderColumn>
                     </QueryBuilderColumns>
                 </QueryBuilderColumn>
                 <QueryBuilderColumn Field="Region" Label="Region" Type="ColumnType.String"></QueryBuilderColumn>

@@ -1,20 +1,19 @@
 ---
 layout: post
-title: Model binding in Blazor Toggle Switch Button Component | Syncfusion®
-description: Learn here all the features about model binding in Blazor Toggle Switch Button component and much more.
+title: How to bind a model in Blazor Toggle Switch Button | Syncfusion
+description: Bind a strongly typed model to Blazor Toggle Switch Button for validation and form submission scenarios.
 platform: Blazor
 control: Toggle Switch Button 
 documentation: ug
 ---
 
-# Model binding in Blazor Toggle Switch Button Component
+# How to bind a model in Blazor Toggle Switch Button
 
-This section demonstrates the strongly typed extension support in Toggle Switch Button. The view that can bind with any model is called as strongly typed view. You can bind any class as model to view. The model properties can be accessed on that view. The data associated with model can be used to render the component.
+This section demonstrates the model binding support in the Blazor Toggle Switch Button. A view that can bind to any model is called a strongly typed view. You can bind any class as a model to a view. Model properties can be accessed directly in the view. The data associated with the model can be used to render the component.
 
-In this sample, first check the option and click the submit button to post the selected value in the Toggle Switch Button. When value is not checked, validation error message will be shown below the Toggle Switch Button.
+In this sample, select the option and click the **Submit** button to post the selected value in the Blazor Toggle Switch Button. When the value is not checked, a validation error message is shown below the Blazor Toggle Switch Button.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Buttons
 @using System.ComponentModel.DataAnnotations
 
@@ -39,10 +38,14 @@ In this sample, first check the option and click the submit button to post the s
     }
     public Dictionary<string, object> Submit = new Dictionary<string, object>()
     {
-        { "type", "submit"}
+        { "type", "submit" }
     };
 }
 
 ```
 
 ![Model Binding in Blazor Toggle Switch Button](./../images/blazor-toggle-switch-button-model-binding.webp)
+
+## See also
+
+* [Events in Blazor Toggle Switch Button](../native-event.md)

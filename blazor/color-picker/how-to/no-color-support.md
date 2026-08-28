@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Handle No Color Support in Blazor Color Picker Component | Syncfusion®
-description: Checkout and learn here all about Handle No Color Support in Blazor Color Picker component and more.
+title: How to handle no color support in Blazor Color Picker | Syncfusion®
+description: Allow the Blazor Color Picker to indicate no color selection, so users can clear the picked color by choosing the No-color tile in the palette.
 platform: Blazor
 control: Color Picker
 documentation: ug
 ---
 
-# Handle No Color Support in Blazor Color Picker Component
+# How to handle no color support in Blazor Color Picker
 
-The Color Picker supports a no color option. When the No color tile in the palette is selected, the chosen color is cleared (treated as no color/empty).
+The Blazor Color Picker supports a no color option. When the No color tile in the palette is selected, the chosen color is cleared (treated as no color/empty).
 
 ## Default no color
 

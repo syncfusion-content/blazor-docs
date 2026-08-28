@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization and RTL in Blazor Dropdown Tree Component | Syncfusion®
-description: Checkout and learn here all the features about Localization and RTL in Blazor Dropdown Tree component and more.
+title: Localization in Blazor Dropdown Tree | Syncfusion®
+description: Localize static text and enable right-to-left rendering in Blazor Dropdown Tree for globalized applications.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
 ---
 
 
-# Localization and RTL in Blazor Dropdown Tree Component
+# Localization in Blazor Dropdown Tree
 
 ## Localization
 

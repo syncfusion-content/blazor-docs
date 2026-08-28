@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Buttons in Blazor In-place Editor Component | Syncfusion®
-description: Checkout and learn here all about Buttons in Blazor In-place Editor component and much more details.
+title: Buttons in Blazor In-place Editor | Syncfusion
+description: Configure save and cancel buttons in Blazor In-place Editor, including visibility, content, and appearance.
 platform: Blazor
 control: In-place Editor
 documentation: ug
 ---
 
-# Buttons in Blazor In-place Editor Component
+# Buttons in Blazor In-place Editor
 
-The In-place Editor provides options to save and cancel using buttons. The `InPlaceEditorSaveButton` and `InPlaceEditorCancelButton` tags accept button properties for customizing the save and cancel buttons.
+The Blazor In-place Editor provides options to save and cancel using buttons. The `InPlaceEditorSaveButton` and `InPlaceEditorCancelButton` tags accept button properties for customizing the save and cancel buttons.
 
 Buttons can be shown or hidden by setting a Boolean value to the `ShowButtons` property.
 
@@ -87,4 +87,4 @@ N> For more details about buttons, refer to the [Button documentation](../button
 
 ## See also
 
-- [Dynamically move In-place Editor to edit mode in Blazor](./how-to/dynamic-edit-mode)
+- [Dynamically move Blazor In-place Editor to edit mode in Blazor](./how-to/dynamic-edit-mode)

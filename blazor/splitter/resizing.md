@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Resize in Blazor Splitter Component | Syncfusion®
-description: Checkout and learn here all the features about how to resize in Blazor Splitter component and much more details.
+title: Resize in Blazor Splitter | Syncfusion
+description: Resize Blazor Splitter panes using separators with minimum and maximum size validation for controlled layout changes.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# Resize in Blazor Splitter Component
+# Resize in Blazor Splitter
 
-By default, resizing will be enabled for split panes. Resizing gripper element will be added to the separator to make the resize easy.
+By default, resizing is enabled for split panes. A resizing gripper element is added to the separator to make resizing easier.
 
-N> Horizontal splitter allows to resize in horizontal directions. Vertical splitter allows to resize in vertical directions.
+N> The horizontal Blazor Splitter allows resizing in horizontal directions. The vertical Blazor Splitter allows resizing in vertical directions.
 
 While resizing, previous and next panes will adjust its dimensions automatically.
 
 ## Min and Max validation
 
-Splitter allows to set the minimum and maximum sizes for each pane. Resizing will not be occurred over the minimum and maximum values.
+Blazor Splitter allows to set the minimum and maximum sizes for each pane. Resizing will not occur beyond the minimum and maximum values.
 
 ```cshtml
 
@@ -72,7 +72,7 @@ Splitter allows to set the minimum and maximum sizes for each pane. Resizing wil
 
 The resizing for the pane can be disabled by setting `false` to the `Resizable` API within `SplitterPane`.
 
-N> Splitter resizing will be enabled only when the target of the adjacent pane's `Resizable` api should also be in `true` state.
+N> Blazor Splitter resizing will be enabled only when the target of the adjacent pane's `Resizable` api should also be in `true` state.
 
 ```cshtml
 

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Data Binding in Blazor TimePicker Component | Syncfusion®
-description: Checkout and learn here all the features about Data Binding in Blazor TimePicker component and much more.
+title: Data Binding in Blazor TimePicker | Syncfusion
+description: Bind values to Blazor TimePicker with one-way, two-way, and dynamic value binding support for form integration.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# Data Binding in Blazor TimePicker Component
+# Data Binding in Blazor TimePicker
 
-This section briefly explains how to bind the value to the TimePicker component in the following ways.
+This section briefly explains how to bind the value to the Blazor TimePicker component in the following ways.
 
 * One-Way Data Binding
 * Two-Way Data Binding
@@ -17,7 +17,7 @@ This section briefly explains how to bind the value to the TimePicker component 
 
 ## One-Way Binding
 
-You can bind a value to the TimePicker component directly through the `Value` property, as shown in the following code example. In one-way binding, pass a property or variable name prefixed with `@` (for example, `@DateValue`).
+You can bind a value to the Blazor TimePicker component directly through the `Value` property, as shown in the following code example. In one-way binding, pass a property or variable name prefixed with `@` (for example, `@DateValue`).
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

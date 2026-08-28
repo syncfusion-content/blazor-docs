@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Content Render Modes in Blazor Tabs Component | Syncfusion®
-description: Checkout and learn here all the features about content render modes in Blazor Tabs component and more.
+title: Content Render Modes in Blazor Tabs | Syncfusion
+description: Choose dynamic, on-demand, or initial render modes to control how Blazor Tabs content loads in the DOM.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Content Render Modes in Blazor Tabs Component
+# Content Render Modes in Blazor Tabs
 
-In [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs), the content of the Tabs can be rendered based on the scenario. The content rendering of tabs can be done by the following three different ways.
+In [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs), the content of the Blazor Tabs can be rendered based on the scenario. The content rendering of Blazor Tabs can be done by the following three different ways.
 
 * [Dynamic rendering](#dynamic-rendering)
 * [On Demand rendering or lazy loading](#on-demand-rendering-or-lazy-loading)
@@ -17,7 +17,7 @@ In [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs), the 
 
 ## Dynamic rendering
 
-This mode is the default one in which the content of the selected tab alone will be loaded and available in DOM initially and it will be replaced with corresponding content if you select the tab dynamically. Since in this mode, the browser maintains the DOM with current active tab content alone, page loading performance is increased with rendering DOM. But the Tabs doesn't maintain its current state since every time tab loaded with fresh content.
+This mode is the default one in which the content of the selected tab alone will be loaded and available in DOM initially and it will be replaced with corresponding content if you select the tab dynamically. Since in this mode, the browser maintains the DOM with current active tab content alone, page loading performance is increased with rendering DOM. But the Blazor Tabs doesn't maintain its current state since every time tab loaded with fresh content.
 
 In the following code example, there are two tabs. The first tab shows a login page and the second tab shows the Grid component. The second tab (Grid) is rendered in the DOM only after the login is completed. Because this mode replaces the previous tab's content, the first tab is removed from the DOM when the second tab is activated.
 
@@ -127,11 +127,11 @@ In the following code example, there are two tabs. The first tab shows a login p
 }
 ```
 
-N> In this mode, the Tab does not maintain its own state when it is replaced. If you need to preserve state, you must manage it in your application code.
+N> In this mode, the Blazor Tabs does not maintain its own state when it is replaced. If you need to preserve state, you must manage it in your application code.
 
 ## On Demand rendering or lazy loading
 
-You can enable this mode by setting `ContentLoad.Demand` on the [LoadOn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_LoadOn) property of `SfTab`. In this mode, only the content of the initially selected tab is loaded. The content of any other tab is rendered only when that tab is selected. Once a tab's content is rendered, it is kept in the DOM. This preserves state such as the scroller position, form values, and other UI state for tabs that have been visited.
+You can enable this mode by setting `ContentLoad.Demand` on the [LoadOn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_LoadOn) property of `SfTab`. In this mode, only the content of the initially selected tab is loaded. The content of any other tab is rendered only when that tab is selected. Once a tab's content is rendered, it is kept in the DOM. This preserves state such as the scroller position, form values, and other UI state for Blazor Tabs that have been visited.
 
 In the following code example, the Calendar is rendered in the first tab and the Scheduler in the second tab. Initially, the Scheduler is not available; once the second tab is selected, the Scheduler is rendered. Both the Calendar and the Scheduler are then maintained in the DOM, and changing the date in either component updates the other.
 
@@ -175,7 +175,7 @@ In the following code example, the Calendar is rendered in the first tab and the
 
 ## On initial rendering
 
-This mode can be enabled by setting `ContentLoad.Init` on the `LoadOn` property of `SfTab`. In this mode, the content of all the tabs is rendered on initial load and maintained in the DOM. Use this mode when you have a small number of tabs and you need to maintain the state of the components in each tab. In this mode, you can also access the references of components rendered in other tabs.
+This mode can be enabled by setting `ContentLoad.Init` on the `LoadOn` property of `SfTab`. In this mode, the content of all the Blazor Tabs is rendered on initial load and maintained in the DOM. Use this mode when you have a small number of tabs and you need to maintain the state of the components in each tab. In this mode, you can also access the references of components rendered in other tabs.
 
 In the following example, all three tabs are rendered on initial load. The data entered in the first tab is preserved even when the second or third tab is the active tab.
 

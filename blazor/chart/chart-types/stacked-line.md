@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stacked Line Chart in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about Stacked Line Chart in Blazor Charts component and much more.
+title: Blazor Stacked Line Chart Examples and Documentation | Syncfusion®
+description: Learn how to create Blazor Stacked Line Charts using Syncfusion. Compare each series contribution to the total over time by stacking lines.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Stacked Line Chart in Blazor Charts Component
+# Stacked Line Chart in Blazor
 
 ## Stacked Line
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with data in Blazor Mention Component | Syncfusion®
-description: Checkout and learn here all the features about working with data in Blazor Mention component and much more details.
+title: Working with Data in Blazor Mention | Syncfusion
+description: Bind local lists or remote data to Blazor Mention with DataSource and DataManager for flexible suggestion sources.
 platform: Blazor
 control: Mention
 documentation: ug
 ---
 
-# Working with Data in Blazor Mention Component
+# Working with Data in Blazor Mention
 
 The Mention allows you to bind data either from a local source or a remote data service using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. If you want to bind data from a local source, you can simply assign an enumerable list of data items to the `DataSource` property. If you want to bind data from a remote data service, you can use the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) component to fetch and bind the data to the `Mention` component.
 

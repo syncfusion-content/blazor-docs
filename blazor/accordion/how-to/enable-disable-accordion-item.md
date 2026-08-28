@@ -2,11 +2,12 @@
 layout: post
 title: Enable or Disable item in Blazor Accordion Component | Syncfusion®
 description: Checkout and learn here all features about Enable or Disable item in Blazor Accordion component and more.
+platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
-# Enable or Disable Item in Blazor Accordion Component
+# How to enable or disable an item in Blazor Accordion
 
 Enable or disable a specific [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) item by setting the [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Disabled) parameter on each [`AccordionItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html). A disabled item renders its header in a non-interactive state — the user cannot click it to expand or collapse the item.
 
