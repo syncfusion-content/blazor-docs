@@ -13,7 +13,7 @@ Cascading refers to configuring two or more DropDownList components so that the 
 
 In the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event handler of the first DropDownList, load the data for the second DropDownList based on the selected value of the first DropDownList. Apply the same approach between the second and third DropDownLists.
 
-To get started quickly with cascading in the Blazor DropDown List component, you can check the video below.
+To get started quickly with cascading in the Blazor Dropdown List component, you can check the video below.
 
 {% youtube "https://www.youtube.com/watch?v=N_xI_aE76C0" %}
 
@@ -25,6 +25,6 @@ In the following sample, selecting a country in the first DropDownList loads its
 
 {% endhighlight %}
 
-![Blazor DropdownList with cascading](./images/cascading/blazor_dropdown_cascading.gif)
+![Blazor Dropdown List with cascading](./images/cascading/blazor_dropdown_cascading.gif)
 
 N> [View Sample in Demo](https://blazor.syncfusion.com/demos/dropdown-list/cascading?theme=fluent2).

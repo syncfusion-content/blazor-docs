@@ -60,7 +60,7 @@ The Blazor Tooltip component follows the [keyboard interaction](https://www.w3.o
 
 The Blazor Tooltip component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
-The accessibility compliance of the Tooltip component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/tooltip) in a new window to evaluate the accessibility of the Tooltip component with accessibility tools.
+The accessibility compliance of the Blazor Tooltip component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/tooltip) in a new window to evaluate the accessibility of the Blazor Tooltip with accessibility tools.
 
 ## See also
 

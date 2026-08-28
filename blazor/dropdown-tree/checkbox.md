@@ -59,7 +59,7 @@ In the following example, the [AutoUpdateCheckState](https://help.syncfusion.com
 
 ## Select/Unselect All
 
-The Dropdown Tree component has built-in support to select all the tree items using the checkbox in the header.
+The Blazor Dropdown Tree component has built-in support to select all the tree items using the checkbox in the header.
 
 When the [ShowSelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ShowSelectAll) property is set to true, a checkbox will be displayed in the popup header that allows you to select or unselect all the tree items in the popup.
 
