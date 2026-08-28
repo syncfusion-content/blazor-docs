@@ -11,9 +11,9 @@ documentation: ug
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing the appearance of DateRangePicker container element
+## Customizing the appearance of the Blazor DateRangePicker container element
 
-Use the following CSS to customize the appearance like height and font size of the DateRangePicker container element.
+Use the following CSS to customize the appearance like height and font size of the Blazor DateRangePicker container element.
 
 ```css
 /* To specify height and font size */
@@ -23,9 +23,9 @@ Use the following CSS to customize the appearance like height and font size of t
 }
 ```
 
-## Customizing the DateRangePicker icon element
+## Customizing the Blazor DateRangePicker icon element
 
-Use the following CSS to customize the DateRangePicker icon element.
+Use the following CSS to customize the Blazor DateRangePicker icon element.
 
 ```css
 /* To specify background color and font size */
@@ -35,9 +35,9 @@ Use the following CSS to customize the DateRangePicker icon element.
 }
 ```
 
-## Customizing the DateRangePicker popup calendar header
+## Customizing the Blazor DateRangePicker popup calendar header
 
-Use the following CSS to customize the DateRangePicker popup calendar header.
+Use the following CSS to customize the Blazor DateRangePicker popup calendar header.
 
 ```css
 /* To specify background and height */
@@ -47,9 +47,9 @@ Use the following CSS to customize the DateRangePicker popup calendar header.
 }
 ```
 
-## Customizing the DateRangePicker popup calendar header title
+## Customizing the Blazor DateRangePicker popup calendar header title
 
-Use the following CSS to customize the DateRangePicker popup calendar header title.
+Use the following CSS to customize the Blazor DateRangePicker popup calendar header title.
 
 ```css
 /* To specify color and font size */
@@ -59,9 +59,9 @@ Use the following CSS to customize the DateRangePicker popup calendar header tit
 }
 ```
 
-## Customizing the DateRangePicker popup calendar content
+## Customizing the Blazor DateRangePicker popup calendar content
 
-Use the following CSS to customize the DateRangePicker popup calendar content.
+Use the following CSS to customize the Blazor DateRangePicker popup calendar content.
 
 ```css
 /* To specify background color */
@@ -70,9 +70,9 @@ Use the following CSS to customize the DateRangePicker popup calendar content.
 }
 ```
 
-## Customizing the DateRangePicker popup calendar content title
+## Customizing the Blazor DateRangePicker popup calendar content title
 
-Use the following CSS to customize the DateRangePicker popup calendar content title.
+Use the following CSS to customize the Blazor DateRangePicker popup calendar content title.
 
 ```css
 /* To specify color and font size */
@@ -82,9 +82,9 @@ Use the following CSS to customize the DateRangePicker popup calendar content ti
 }
 ```
 
-## Customizing the DateRangePicker popup calendar previous and next icon
+## Customizing the Blazor DateRangePicker popup calendar previous and next icon
 
-Use the following CSS to customize the DateRangePicker popup calendar previous and next icon.
+Use the following CSS to customize the Blazor DateRangePicker popup calendar previous and next icon.
 
 ```css
 /* To specify font size */
@@ -93,9 +93,9 @@ Use the following CSS to customize the DateRangePicker popup calendar previous a
 }
 ```
 
-## Customizing the DateRangePicker popup calendar date cell grid on hovering
+## Customizing the Blazor DateRangePicker popup calendar date cell grid on hovering
 
-Use the following CSS to customize the DateRangePicker popup calendar date cell grid on hovering.
+Use the following CSS to customize the Blazor DateRangePicker popup calendar date cell grid on hovering.
 
 ```css
 /* To specify background color and border */
@@ -105,9 +105,9 @@ Use the following CSS to customize the DateRangePicker popup calendar date cell 
 }
 ```
 
-## Customizing the DateRangePicker popup calendar primary button in footer
+## Customizing the Blazor DateRangePicker popup calendar primary button in footer
 
-Use the following CSS to customize the DateRangePicker popup calendar primary button in footer.
+Use the following CSS to customize the Blazor DateRangePicker popup calendar primary button in footer.
 
 ```css
 /* To specify background color and border color */
@@ -117,9 +117,9 @@ Use the following CSS to customize the DateRangePicker popup calendar primary bu
 }
 ```
 
-## Customizing the DateRangePicker popup calendar cancel button in footer
+## Customizing the Blazor DateRangePicker popup calendar cancel button in footer
 
-Use the following CSS to customize the DateRangePicker popup calendar cancel button in footer.
+Use the following CSS to customize the Blazor DateRangePicker popup calendar cancel button in footer.
 
 ```css
 /* To specify background color, color, and border color */
@@ -130,9 +130,9 @@ Use the following CSS to customize the DateRangePicker popup calendar cancel but
 }
 ```
 
-## Customizing the footer element in the DateRangePicker popup calendar 
+## Customizing the footer element in the Blazor DateRangePicker popup calendar 
 
-Use the following CSS to customize the DateRangePicker popup calendar footer element.
+Use the following CSS to customize the Blazor DateRangePicker popup calendar footer element.
 
 ```css
 /* To specify background color, color, and border color */
@@ -142,9 +142,9 @@ Use the following CSS to customize the DateRangePicker popup calendar footer ele
 }
 ```
 
-## Customizing the selected date cell grid in the DateRangePicker popup calendar 
+## Customizing the selected date cell grid in the Blazor DateRangePicker popup calendar 
 
-Use the following CSS to customize the selected date cell grid in the DateRangePicker popup calendar.
+Use the following CSS to customize the selected date cell grid in the Blazor DateRangePicker popup calendar.
 
 ```css
 /* To specify background and border */
@@ -157,7 +157,7 @@ Use the following CSS to customize the selected date cell grid in the DateRangeP
 
 ## Full screen mode support in mobiles and tablets
 
-The DateRangePicker component's full-screen mode enables users to view the popup in full-screen on mobile devices for improved visibility and a better user experience. This feature is available only on mobile devices, in both landscape and portrait orientations. The default value of the [FullScreen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_FullScreen) property is `false`. To enable full-screen mode in the DateRangePicker, set the `FullScreen` property to `true`. This extends the calendar and presets popup to occupy the entire screen on mobile devices.
+The Blazor DateRangePicker component's full-screen mode enables users to view the popup in full-screen on mobile devices for improved visibility and a better user experience. This feature is available only on mobile devices, in both landscape and portrait orientations. The default value of the [FullScreen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_FullScreen) property is `false`. To enable full-screen mode in the Blazor DateRangePicker, set the `FullScreen` property to `true`. This extends the calendar and presets popup to occupy the entire screen on mobile devices.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

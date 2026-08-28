@@ -9,7 +9,7 @@ documentation: ug
 
 # Strict Mode in Blazor DatePicker
 
-The [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_StrictMode) property controls how the DatePicker handles invalid or out-of-range values entered in the input. When `StrictMode` is enabled:
+The [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_StrictMode) property controls how the Blazor DatePicker handles invalid or out-of-range values entered in the input. When `StrictMode` is enabled:
 
 * If the entered value is invalid, the component keeps the previous value.
 * If the entered value is out of range, the component clamps the value to the nearest `Min` or `Max` boundary.
@@ -41,7 +41,7 @@ In this configuration:
 
 ## Strict mode disabled (default)
 
-The following example disables `StrictMode` (the default behavior). The DatePicker accepts invalid or out-of-range values but marks the input as invalid.
+The following example disables `StrictMode` (the default behavior). The Blazor DatePicker accepts invalid or out-of-range values but marks the input as invalid.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

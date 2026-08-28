@@ -9,7 +9,7 @@ documentation: ug
 
 # Server Actions in Blazor In-place Editor
 
-When posting the In-place Editor value to a remote server, the `PrimaryKey` property is required to identify the record on the server. Without a `PrimaryKey`, the save action is not performed.
+When posting the Blazor In-place Editor value to a remote server, the `PrimaryKey` property is required to identify the record on the server. Without a `PrimaryKey`, the save action is not performed.
 
 If the `SaveUrl` property is not set, data changes are handled locally by the component. In this case, the `OnActionSuccess` event still fires, but the event argument value is `null` because no server response is available.
 
