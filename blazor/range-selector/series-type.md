@@ -9,15 +9,17 @@ documentation: ug
 
 # Blazor Range Selector Series Type
 
-To render the data, the Range Selector supports three types of series.
+The Range Selector renders its data using one of the following [RangeNavigatorType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorType.html) series types, set through the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) property:
+
+* `Line` (default)
+* `Area`
+* `StepLine`
 
 <!-- markdownlint-disable MD036 -->
 
 ## Line
 
-<!-- markdownlint-disable MD036 -->
-
-To render a line series, use series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) as **Line**. By default, the line series is rendered in the Range Selector.
+To render a line series, set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) to `RangeNavigatorType.Line`. This is the default series type.
 
 ```cshtml
 
@@ -58,7 +60,7 @@ To render a line series, use series [Type](https://help.syncfusion.com/cr/blazor
 
 ## Area
 
-To render an area series, use series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) as **Area**.
+To render an area series, set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) to `RangeNavigatorType.Area`.
 
 ```cshtml
 
@@ -97,9 +99,9 @@ To render an area series, use series [Type](https://help.syncfusion.com/cr/blazo
 
 ![Blazor RangeNavigator with Area Series](images/series-type/blazor-rangenavigator-area-series.webp)
 
-## Step Line
+## Step line
 
-To render a Step line series, use series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) as **Step Line**.
+To render a step line series, set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) to `RangeNavigatorType.StepLine`.
 
 ```cshtml
 
@@ -136,3 +138,8 @@ To render a Step line series, use series [Type](https://help.syncfusion.com/cr/b
 ```
 
 ![Blazor RangeNavigator with StepLine Series](images/series-type/blazor-rangenavigator-stepline-series.webp)
+
+## See Also
+
+* [Working with Data](./working-with-data)
+* [Customization](./custom)

@@ -7,12 +7,12 @@ control: Range Selector
 documentation: ug
 ---
 
-# Blazor Range Selector Range
+# Selecting a Range
 
-The Range Selector's left and right thumbs are used to indicate the selected range in the large collection of data. A range can be selected in the following ways:
+The Range Selector's left and right thumbs indicate the selected range within a large collection of data. A range can be selected in the following ways:
 
 * By dragging the thumbs.
-* By tapping on the labels.
+* By clicking a label.
 * By setting the start and the end through the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Value) property.
 
 <!-- markdownlint-disable MD036 -->
@@ -26,7 +26,7 @@ This section describes how to bind the value to the Range Selector component in 
 
 ### One-way binding
 
-As shown in the following example, the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Value) property can be used directly as an object or from code-behind for the Range Selector.
+In one-way binding, the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Value) property is assigned from a field, as shown in the following example. Changes made through the UI are not written back to the field.
 
 ```cshtml
 
@@ -69,13 +69,13 @@ As shown in the following example, the [Value](https://help.syncfusion.com/cr/bl
 
 ### Two-way binding
 
-The **@bind-Value** code-behind attribute in the Range Selector can be used to achieve two-way binding. The following example shows how to achieve two-way binding for the Range Selector.
+The **@bind-Value** directive attribute is used to achieve two-way binding, so that a range selected through the UI is written back to the bound field. The bound field must be declared as `object` to match the type of the `Value` parameter. The following example shows how to achieve two-way binding for the Range Selector.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
-<SfRangeNavigator @bind-Value="@Value" ValueType="RangeValueType.DateTime"
+<SfRangeNavigator @bind-Value="Value" ValueType="RangeValueType.DateTime"
                   LabelFormat="MMM-yy" IntervalType="RangeIntervalType.Years" Interval="1">
     <RangeNavigatorRangeTooltipSettings Enable="true"></RangeNavigatorRangeTooltipSettings>
     <RangeNavigatorSeriesCollection>
@@ -109,3 +109,8 @@ The **@bind-Value** code-behind attribute in the Range Selector can be used to a
 ```
 
 ![Selecting Range in Blazor RangeNavigator](images/common/blazor-rangenavigator-range-selection.webp)
+
+## See also
+
+* [Events](./events)
+* [Type of Data](./data)
