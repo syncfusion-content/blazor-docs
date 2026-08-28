@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to troubleshoot exceptions in TextBox Blazor | Syncfusion®
+title: How to troubleshoot exceptions in Blazor TextBox | Syncfusion
 description: Checkout and learn here all about troubleshooting server and client exceptions in Blazor TextBox component and much more details.
 platform: Blazor
-component: Common
+control: TextBox
 documentation: ug
 ---
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all the features about data binding in Blazor ListBox component and much more.
+title: Data Binding in Blazor ListBox | Syncfusion
+description: Bind local or remote data to Blazor ListBox with field mappings for text, value, grouping, icons, and HTML attributes.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Data Binding in Blazor ListBox Component
+# Data Binding in Blazor ListBox
 
 The Blazor ListBox loads data from local or remote sources using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property, which accepts an `IEnumerable<TItem>`. The fields used to display each item and to map it to a unique value are configured through the [ListBoxFieldSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxFieldSettings.html) child component.
 

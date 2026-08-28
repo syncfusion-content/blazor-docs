@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor OTP Input Component | Syncfusion®
-description: Learn about events in Blazor OTP Input component including Created, OnFocus, OnBlur, and OnInput with practical examples.
+title: Events in Blazor OTP Input | Syncfusion
+description: Handle Blazor OTP Input events such as Created, OnFocus, OnBlur, and OnInput during user interactions.
 platform: Blazor
 control: OTP Input
 documentation: ug
 ---
 
-# Events in Blazor OTP Input component
+# Events in Blazor OTP Input
 
 This section describes the OTP Input events triggered by user interaction and component lifecycle. The following events are available in the OTP Input component.
 

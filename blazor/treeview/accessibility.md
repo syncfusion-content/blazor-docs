@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor TreeView Component | Syncfusion®
-description: Checkout and learn here all the features about Accessibility in Blazor TreeView component and much more details
+title: Accessibility in Blazor TreeView | Syncfusion
+description: Build accessible Blazor TreeView with WAI-ARIA roles, keyboard navigation, and screen reader support.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Accessibility in Blazor TreeView Component
+# Accessibility in Blazor TreeView
 
 The [Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) component has been designed keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/treeview/) specifications, and applies WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Blazor DropDown List | Syncfusion®
-description: Checkout and learn here all about Customization in Blazor DropDown List component and much more details.
+title: Customization in Blazor Dropdown List | Syncfusion®
+description: Explore Blazor Dropdown List customization options such as opening the popup on focus and other tailored behaviors.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Customization in Blazor DropDown List
+# Customization in Blazor Dropdown List
 
 ## Open Dropdown list dropdown on focus
 

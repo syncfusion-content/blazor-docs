@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Header and Content in Blazor Card Component | Syncfusion®
-description: Checkout and learn here all about Header and Content in Blazor Card component and much more details.
+title: Header and Content in Blazor Card | Syncfusion®
+description: Render header and content sections in the Blazor Card using the CardHeader and CardContent slots to organize title, subtitle, and main body.
 platform: Blazor
 control: Card
 documentation: ug

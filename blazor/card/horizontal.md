@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Horizontal Card in Blazor Card Component | Syncfusion®
-description: Checkout and learn here all the features about Horizontal Card in Blazor Card component and much more details.
+title: Horizontal Card in Blazor Card | Syncfusion®
+description: Switch the Blazor Card layout from vertical to horizontal by setting the Orientation property to CardOrientation.Horizontal on SfCard.
 platform: Blazor
 control: Card
 documentation: ug
 ---
 
-# Horizontal Card in Blazor Card Component
+# Horizontal Card in Blazor Card
 
 The [Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card) component lays out its child elements vertically by default. You can switch the layout to horizontal by setting the [`Orientation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.SfCard.html#Syncfusion_Blazor_Cards_SfCard_Orientation) property to [`CardOrientation.Horizontal`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardOrientation.html) on the [`SfCard`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.SfCard.html).
 

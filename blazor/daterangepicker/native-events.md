@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor DateRangePicker Component | Syncfusion®
-description: Checkout and learn here all about Native Events in Blazor DateRangePicker component and much more details.
+title: Native Events in Blazor DateRangePicker | Syncfusion®
+description: Attach native DOM events to the Blazor DateRangePicker using the on{event} attribute, and pass event argument data to the handler.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
 ---
 
-# Native Events in Blazor DateRangePicker Component
+# Native Events in Blazor DateRangePicker
 
 The following section explains the steps to bind native events to the DateRangePicker and pass data to the event handler.
 
