@@ -129,7 +129,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-<h1>Badge Component <span class="e-badge e-badge-primary">New</span></h1>
+<h1>Blazor Badge Component <span class="e-badge e-badge-primary">New</span></h1>
 
 {% endhighlight %}
 {% endtabs %}

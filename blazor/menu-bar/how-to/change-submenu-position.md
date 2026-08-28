@@ -84,4 +84,4 @@ In the below sample, the submenu opens at a custom `Top` and `Left` position rel
 
 Output be like
 
-![Menu Sample](./../images/menu-position.png)
+![Blazor Menu Bar Sample](./../images/menu-position.png)

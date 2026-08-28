@@ -60,7 +60,7 @@ This approach is useful when you want to enhance existing HTML title attributes 
 
 ## Using Template
 
-The Tooltip's Template property enables you to completely customize the layout and incorporate custom elements into the Tooltip. You can insert any content or HTML elements as Tooltip content by specifying them within the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_ContentTemplate) property of the Tooltip component. Additionally, the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_ContentTemplate) property supports the `RenderFragment` type, enabling dynamic and interactive content within the Tooltip.
+The Tooltip's Template property enables you to completely customize the layout and incorporate custom elements into the Tooltip. You can insert any content or HTML elements as Tooltip content by specifying them within the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_ContentTemplate) property of the Blazor Tooltip component. Additionally, the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_ContentTemplate) property supports the `RenderFragment` type, enabling dynamic and interactive content within the Tooltip.
 
 Check out the following code example to see how to include an HTML template inside the Tooltip.
 

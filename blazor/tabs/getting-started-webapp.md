@@ -246,9 +246,9 @@ dotnet run
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Tabs).
 
-## Initialize Blazor Tab Content using Template
+## Initialize Blazor Tabs Content using Template
 
-Tab provides support to render content using `ContentTemplate` property. You can give preferred content inside the `ContentTemplate` element.
+Blazor Tabs provides support to render content using `ContentTemplate` property. You can give preferred content inside the `ContentTemplate` element.
 
 N> `ContentTemplate` property supports `RenderFragment` type to render content.
 

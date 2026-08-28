@@ -53,7 +53,7 @@ The Blazor Sidebar component does not have any inbuilt keyboard interaction supp
 
 The Blazor Sidebar component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
-The accessibility compliance of the Sidebar component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/sidebar) in a new window to evaluate the accessibility of the Sidebar component with accessibility tools.
+The accessibility compliance of the Blazor Sidebar component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/sidebar) in a new window to evaluate the accessibility of the Blazor Sidebar with accessibility tools.
 
 ## See also
 

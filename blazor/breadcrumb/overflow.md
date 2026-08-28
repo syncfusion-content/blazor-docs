@@ -9,13 +9,13 @@ documentation: ug
 
 # Overflow in Blazor Breadcrumb
 
-In the [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) component, the [MaxItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_MaxItems) and [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_OverflowMode) properties are used to limit the number of Breadcrumb items to be displayed. By default, `MaxItems` is `0` (unlimited) and `OverflowMode` is `Default`.
+In the [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) component, the [MaxItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_MaxItems) and [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_OverflowMode) properties are used to limit the number of Blazor Breadcrumb items to be displayed. By default, `MaxItems` is `0` (unlimited) and `OverflowMode` is `Default`.
 
-N> Before using the Breadcrumb, make sure the Syncfusion Blazor package is installed and `SfBreadcrumb` is registered in your application. See the [Getting started with Blazor Breadcrumb](https://blazor.syncfusion.com/documentation/breadcrumb/getting-started) page for setup details.
+N> Before using the Blazor Breadcrumb, make sure the Syncfusion Blazor package is installed and `SfBreadcrumb` is registered in your application. See the [Getting started with Blazor Breadcrumb](https://blazor.syncfusion.com/documentation/breadcrumb/getting-started) page for setup details.
 
 In the example below, `MaxItems` is set to `3` and `OverflowMode` is set to `Default`. The [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableNavigation) property is set to `false` to prevent navigation in the playground samples (you can omit it in your own app).
 
-The following overflow modes are available in the Breadcrumb component:
+The following overflow modes are available in the Blazor Breadcrumb component:
 
 * Default
 * Collapsed
@@ -54,7 +54,7 @@ Default mode shows all items on a single line. When the container is not wide en
 
 ## Collapsed
 
-Collapsed mode shows the first and last Breadcrumb items and hides the remaining items behind a collapsed icon (a `...` button). When the collapsed icon is clicked, all items become visible.
+Collapsed mode shows the first and last Blazor Breadcrumb items and hides the remaining items behind a collapsed icon (a `...` button). When the collapsed icon is clicked, all items become visible.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -79,7 +79,7 @@ Collapsed mode shows the first and last Breadcrumb items and hides the remaining
 
 ## Menu
 
-Menu mode shows as many Breadcrumb items as fit within the container width and creates a submenu (the collapsed icon) with the remaining items. Click the collapsed icon to open the submenu.
+Menu mode shows as many Blazor Breadcrumb items as fit within the container width and creates a submenu (the collapsed icon) with the remaining items. Click the collapsed icon to open the submenu.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -104,7 +104,7 @@ Menu mode shows as many Breadcrumb items as fit within the container width and c
 
 ## Wrap
 
-Wrap mode wraps items onto multiple lines when the Breadcrumb's width exceeds the container width. To see the wrap, place the Breadcrumb in a fixed-width container.
+Wrap mode wraps items onto multiple lines when the Blazor Breadcrumb's width exceeds the container width. To see the wrap, place the Blazor Breadcrumb in a fixed-width container.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -129,7 +129,7 @@ Wrap mode wraps items onto multiple lines when the Breadcrumb's width exceeds th
 
 ## Scroll
 
-Scroll mode shows a horizontal scroll bar when the Breadcrumb's width exceeds the container width. To see the scrollbar, place the Breadcrumb in a fixed-width container.
+Scroll mode shows a horizontal scroll bar when the Blazor Breadcrumb's width exceeds the container width. To see the scrollbar, place the Blazor Breadcrumb in a fixed-width container.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

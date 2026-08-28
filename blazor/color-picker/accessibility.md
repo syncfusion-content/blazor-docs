@@ -62,13 +62,13 @@ The Blazor Color Picker component follows the WAI-ARIA [keyboard interaction](ht
 | <kbd>←</kbd> | <kbd>←</kbd> | Moves the handler/tile left from the current position. |
 | <kbd>→</kbd> | <kbd>→</kbd> | Moves the handler/tile right from the current position. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Applies the selected color value. |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves focus to the next focusable element in the Color Picker popup. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves focus to the next focusable element in the Blazor Color Picker popup. |
 
 ## Ensuring accessibility
 
 The Blazor Color Picker component's accessibility levels are validated with [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) using Playwright-based tests.
 
-The accessibility compliance of the Blazor Color Picker component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/color-picker) in a new window to evaluate the component with accessibility tools such as the [Accessibility Insights extension](https://accessibilityinsights.io/) or the built-in browser developer tools.
+The accessibility compliance of the Blazor Color Picker component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/color-picker) in a new window to evaluate the Blazor Color Picker component with accessibility tools such as the [Accessibility Insights extension](https://accessibilityinsights.io/) or the built-in browser developer tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/color-picker.html" %}
 
