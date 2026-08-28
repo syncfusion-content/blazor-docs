@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Menu in Blazor TreeGrid 
 
-The column menu has options to integrate features like sorting, filtering, and autofit. Clicking the column header’s menu icon displays a contextual menu with these options. Set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ShowColumnMenu) property to true to enable the column menu.
+The column menu has options to integrate features like sorting, filtering, and autofit. Clicking the column header’s menu icon displays a contextual menu with these options. Set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ShowColumnMenu) property to **true** to enable the column menu.
 
 The **SortAscending** and **SortDescending** menu items are rendered only when the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowSorting) property is set to **true**. Similarly, the **Filter** menu item is rendered only when the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowFiltering) property is set to **true**. 
 The following table displays the default menu items.
@@ -186,7 +186,7 @@ namespace TreeGridComponent.Data
 
 The Blazor TreeGrid allows customizing the visibility of column menu items for specific columns. This is useful when certain actions, such as filtering or grouping, should not be available for specific columns.
 
-To hide a menu item for a specific column, set the **MenuItem.Hidden** property to `true` in the **OnColumnMenuOpen** event.
+To hide a menu item for a specific column, set the **MenuItem.Hidden** property to **true** in the **OnColumnMenuOpen** event.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
