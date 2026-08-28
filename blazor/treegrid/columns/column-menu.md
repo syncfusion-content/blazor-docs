@@ -182,7 +182,7 @@ namespace TreeGridComponent.Data
 
 
 
-# Customize menu items for specific columns in TreeGrid
+## Customize menu items for specific columns in TreeGrid
 
 The Blazor TreeGrid allows customizing the visibility of column menu items for specific columns. This is useful when certain actions, such as filtering or grouping, should not be available for specific columns.
 
