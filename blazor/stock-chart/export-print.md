@@ -9,15 +9,19 @@ documentation: ug
 
 # Blazor Stock Chart Print and Export
 
-The rendered stock chart supports exporting to JPEG, PNG, SVG, PDF, XLSX, and CSV through the export dropdown in the period selector toolbar. The required format can be selected from the export dropdown in the stock chart toolbar.
+The rendered Stock Chart supports exporting to JPEG, PNG, SVG, PDF, XLSX, and CSV through the export dropdown in the Stock Chart toolbar. Configure the available export formats using the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_ExportType) property.
 
-The rendered stock chart can be printed directly using the print button in the period selector toolbar.
+## Print
+
+Set the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_ExportType) property to an empty list to remove the export dropdown and  show the print button from the Stock Chart toolbar.
+
+The rendered Stock Chart can be printed directly using the Stock Chart toolbar.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price">
+<SfStockChart Title="AAPL Stock Price" ExportType="new List<ExportType>() { }">
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume"></StockChartSeries>
     </StockChartSeriesCollection>
@@ -34,11 +38,11 @@ The rendered stock chart can be printed directly using the print button in the p
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set;} 
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -59,15 +63,15 @@ The rendered stock chart can be printed directly using the print button in the p
 
 ![Printing in Blazor Stock Chart](images/print/blazor-stock-chart-printing.webp)
 
-## Disable export and print
+## Export Type
 
-Set the `ExportType` property to an empty list to disable export options.
+By default, the export drop-down in the Stock Chart toolbar displays the following export options: JPEG, PNG, SVG, PDF, XLSX, CSV, and Print.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price" ExportType="new List<ExportType>() { }">
+<SfStockChart Title="AAPL Stock Price">
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="google"></StockChartSeries>
     </StockChartSeriesCollection>
@@ -77,11 +81,11 @@ Set the `ExportType` property to an empty list to disable export options.
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set;} 
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -104,12 +108,12 @@ Set the `ExportType` property to an empty list to disable export options.
 
 ## Customize the exported chart using the Exporting event
 
-The [Exporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_Exporting) event enables customization of the exported stock chart before file generation. The [ChartExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartExportEventArgs.html) class provides the following options:
+The [Exporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_Exporting) event enables customization of the exported Stock Chart before file generation. The [ChartExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartExportEventArgs.html) class provides the following options:
 
-- `Cancel`: Cancels the export process when set to true.
-- `Height`: Specifies the height of the exported chart. Not applicable for XLSX and CSV formats.
-- `Width`: Specifies the width of the exported chart. Not applicable for XLSX and CSV formats.
-- `Workbook`: Represents the workbook generated during export. Applicable only for XLSX and CSV formats.
+- [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartExportEventArgs.html#Syncfusion_Blazor_Charts_ChartExportEventArgs_Cancel): Cancels the export process when set to `true`.
+- [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartExportEventArgs.html#Syncfusion_Blazor_Charts_ChartExportEventArgs_Height): Specifies the height of the exported chart. Not applicable for XLSX and CSV formats.
+- [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartExportEventArgs.html#Syncfusion_Blazor_Charts_ChartExportEventArgs_Width): Specifies the width of the exported chart. Not applicable for XLSX and CSV formats.
+- [Workbook](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartExportEventArgs.html#Syncfusion_Blazor_Charts_ChartExportEventArgs_Workbook): Represents the workbook generated during export. Applicable only for XLSX and CSV formats.
 
 ### Customize the exported Excel documents
 
@@ -119,9 +123,9 @@ In the following example, when the stock chart is exported to Excel format, the 
 
 ```cshtml
 
-@using Microsoft.AspNetCore.Components.Web;
-@using Syncfusion.PdfExport;
-@using Syncfusion.ExcelExport; 
+@using System.Linq
+@using Syncfusion.PdfExport
+@using Syncfusion.ExcelExport
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart Title="AAPL Stock Price">
@@ -142,11 +146,11 @@ In the following example, when the stock chart is exported to Excel format, the 
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set;} 
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -181,10 +185,14 @@ In the following example, when the stock chart is exported to Excel format, the 
                     firstSheet.Rows[i].Cells[1].CellStyle.VAlign = VAlignType.Center;
                 }
             }
-        } else {
+        }
+        else
+        {
             args.Width = 500;
         }
     }
 }
 
 ```
+
+![Blazor Stock Chart with Customized Excel Export](images/common/blazor-stock-chart-export-print.webp)
