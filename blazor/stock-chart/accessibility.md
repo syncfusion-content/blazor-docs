@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Stock Chart Accessibility
 
-The Blazor Stock Chart component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Stock Chart component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI-ARIA roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor Stock Chart component is outlined below.
 
@@ -21,7 +21,7 @@ The accessibility compliance for the Blazor Stock Chart component is outlined be
 | [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) |<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 
 <style>
@@ -37,9 +37,9 @@ The accessibility compliance for the Blazor Stock Chart component is outlined be
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA attributes
+## WAI-ARIA attributes and roles
 
-The Blazor Stock Chart component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet accessibility requirements. The following ARIA attributes are used in the Blazor Stock Chart component:
+The Blazor Stock Chart component follows the [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/) to meet accessibility requirements. The following ARIA attributes and roles are used in the Blazor Stock Chart component:
 
 * img (role)
 * button (role)
@@ -50,20 +50,20 @@ The Blazor Stock Chart component follows the [WAI-ARIA](https://www.w3.org/WAI/A
 
 ## Keyboard interaction
 
-The Blazor Stock Chart component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, enabling effective use with assistive technologies (AT) and full keyboard navigation. The following keyboard shortcuts are supported by the Blazor Stock Chart component.
+The Blazor Stock Chart component follows the [WAI-ARIA keyboard interface](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/) guidelines, enabling effective use with assistive technologies (AT) and keyboard navigation. The following keyboard shortcuts are supported by the Blazor Stock Chart component.
 
 | Windows | Mac | Description |
 | --- | --- | --- |
 | <kbd>Alt + J</kbd> | <kbd>⌥</kbd> + <kbd>J</kbd> | Moves focus to the Stock Chart element. |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves focus to the next element in the stock chart. |
-| <kbd>Shift + Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves focus to the previous element in the stock chart. |
-| <kbd>↓</kbd> | <kbd>↓</kbd> | Moves focus to the data point to the left of the selected point. |
-| <kbd>↑</kbd> | <kbd>↑</kbd> | Moves focus to the data point to the right of the selected point. |
-| <kbd>↓</kbd> or <kbd>←</kbd> | <kbd>↓</kbd> or <kbd>←</kbd> | Moves focus to the legend item to the left of the selected legend. |
-| <kbd>↑</kbd> or <kbd>→</kbd> | <kbd>↑</kbd> or <kbd>→</kbd> | Moves focus to the legend item to the right of the selected legend. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves focus to the next element in the Stock Chart. |
+| <kbd>Shift + Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves focus to the previous element in the Stock Chart. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Moves focus to the data point to the left of the selected point. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Moves focus to the data point to the right of the selected point. |
+| <kbd>↓</kbd> or <kbd>←</kbd> | <kbd>↓</kbd> or <kbd>←</kbd> | Moves focus to the legend item to the left of the selected legend item. |
+| <kbd>↑</kbd> or <kbd>→</kbd> | <kbd>↑</kbd> or <kbd>→</kbd> | Moves focus to the legend item to the right of the selected legend item. |
 | <kbd>Enter/Space</kbd> | <kbd>Enter/Space</kbd> | Toggles the visibility of the corresponding series. |
-| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Cancels the tooltip for the data point. |
-| <kbd>Ctrl + P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Prints the stock chart. |
+| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the tooltip for the data point. |
+| <kbd>Ctrl + P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Prints the Stock Chart. |
 
 ## Ensuring accessibility
 

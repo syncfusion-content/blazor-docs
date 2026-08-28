@@ -194,11 +194,11 @@ To bind data for the Stock Chart component, assign a `IEnumerable` object to the
     public class StockChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<StockChartData> StockDetails = new List<StockChartData>

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Stock Chart Period Selector | Syncfusion®
-description: Learn how to add a period selector to the Blazor Stock Chart toolbar with intervals in Years, Months, Weeks, Days, Hours, or Minutes.
+description: Learn how to add a period selector to the Blazor Stock Chart toolbar with intervals in Years, Quarter, Months, Weeks, Days, Hours, Minutes, Seconds, or Auto.
 platform: Blazor
 control: Stock Chart
 documentation: ug
@@ -17,7 +17,7 @@ The period selector enables selecting a range with specified periods. The period
 
 <!-- markdownlint-disable MD034 -->
 
-Periods is an array of objects that defines the range of [Periods](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartPeriods.html). The `Interval` property specifies the count value of the button, and the `Text` property specifies the text displayed on the button. The `IntervalType` property customizes the intervals of the buttons and supports the following types:
+[StockChartPeriods](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartPeriods.html) contains an array of [StockChartPeriod](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartPeriod.html) objects that define the selectable ranges. The [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartPeriod.html#Syncfusion_Blazor_Charts_StockChartPeriod_Interval) property specifies the count for the button, the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartPeriod.html#Syncfusion_Blazor_Charts_StockChartPeriod_Text) property specifies the text displayed on the button, and the [Selected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartPeriod.html#Syncfusion_Blazor_Charts_StockChartPeriod_Selected) property specifies the initially selected button. The [IntervalType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartPeriod.html#Syncfusion_Blazor_Charts_StockChartPeriod_IntervalType) property specifies the interval unit and supports the following types:
 
 * Auto
 * Years
@@ -33,12 +33,13 @@ Periods is an array of objects that defines the range of [Periods](https://help.
 
 @using Syncfusion.Blazor.Charts
 
+@* IndicatorType, TrendlineType, SeriesType, and ExportType are set to empty lists to hide their toolbar dropdowns, keeping the toolbar focused on the period selector *@
 <SfStockChart Title="AAPL Stock Price" IndicatorType="@IndicatorType" TrendlineType="@TrendlineType" SeriesType="@SeriesType" ExportType="@ExportType">
     <StockChartPeriods>
-        <StockChartPeriod IntervalType=RangeIntervalType.Minutes Interval="1" Text='1m'></StockChartPeriod>
-        <StockChartPeriod IntervalType=RangeIntervalType.Minutes Interval="30" Text='30m'></StockChartPeriod>
-        <StockChartPeriod IntervalType=RangeIntervalType.Hours Interval="1" Text='1h'></StockChartPeriod>
-        <StockChartPeriod IntervalType=RangeIntervalType.Hours Interval="12" Text='12h' Selected="true"></StockChartPeriod>
+        <StockChartPeriod IntervalType="RangeIntervalType.Minutes" Interval="1" Text="1m"></StockChartPeriod>
+        <StockChartPeriod IntervalType="RangeIntervalType.Minutes" Interval="30" Text="30m"></StockChartPeriod>
+        <StockChartPeriod IntervalType="RangeIntervalType.Hours" Interval="1" Text="1h"></StockChartPeriod>
+        <StockChartPeriod IntervalType="RangeIntervalType.Hours" Interval="12" Text="12h" Selected="true"></StockChartPeriod>
         <StockChartPeriod Text="1D"></StockChartPeriod>
     </StockChartPeriods>
     <StockChartCrosshairSettings Enable="true"></StockChartCrosshairSettings>
@@ -63,11 +64,11 @@ Periods is an array of objects that defines the range of [Periods](https://help.
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -83,7 +84,6 @@ Periods is an array of objects that defines the range of [Periods](https://help.
         new ChartData { Date = new DateTime(2012, 05, 28), Open = 81.5571, High = 83.0714, Low = 80.0743, Close = 80.1414, Volume = 480059584 }
    };
 }
-
 
 ```
 
@@ -107,11 +107,11 @@ The [EnablePeriodSelector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -131,3 +131,7 @@ The [EnablePeriodSelector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 ```
 
 ![Visibility of Period Selector in Blazor Stock Chart](images/common/blazor-stock-chart-visibility-period-selector.webp)
+
+## See also
+
+* [Range Selector](./range-selector)
