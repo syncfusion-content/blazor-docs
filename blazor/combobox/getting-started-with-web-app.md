@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor ComboBox in Blazor Web App | Syncfusion
-description: Check out and learn about how to get started with the Blazor ComboBox component in a Blazor Web App.
+title: Getting Started with Blazor ComboBox in Blazor Web App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor ComboBox control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: ComboBox
 documentation: ug
 ---
 
-# Getting Started with Blazor ComboBox Component in Blazor Web App
+# Getting Started with Blazor ComboBox in Blazor Web App
 
 This section briefly explains how to include the [Blazor ComboBox](https://www.syncfusion.com/blazor-components/blazor-combobox) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

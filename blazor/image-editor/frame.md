@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Frame with Blazor Image Editor Component | Syncfusion®
-description: Explore the Frame feature in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
+title: Frame in Blazor Image Editor | Syncfusion
+description: Add decorative frames to images in Blazor Image Editor with mat, bevel, line, hook, and inset styles.
 platform: Blazor
 control: Image Editor
 documentation: ug
 ---
 
-# Frames in the Blazor Image Editor component
+# Frame in Blazor Image Editor
 
 The frame feature in the Image Editor enables adding decorative borders around images. Frames enhance visual appeal and can be styled to match the image context or design requirements.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Icons in Blazor Floating Action Button Component | Syncfusion®
-description: Checkout and learn here all about Icons in Blazor Floating Action Button component and much more details.
+title: Icons in Blazor Floating Action Button | Syncfusion
+description: Add and customize icons and text in Blazor Floating Action Button using IconCss and Content properties.
 platform: Blazor
 control: Floating Action Button
 documentation: ug
 ---
 
-# Icons in Blazor Floating Action Button Component
+# Icons in Blazor Floating Action Button
 
 The icon and text of the Blazor Floating Action Button (FAB) can be customized using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconCss) and [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_Content) properties.
 

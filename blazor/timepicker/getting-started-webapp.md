@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with TimePicker in Blazor Web App | Syncfusion
-description: Check out and learn the documentation for getting started with Blazor TimePicker Components in Blazor Web App.
+title: Getting Started with Blazor TimePicker in Blazor Web App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor TimePicker in a Blazor Web App with setup steps.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# Getting started with Blazor TimePicker in Blazor Web App
+# Getting Started with Blazor TimePicker in Blazor Web App
 
 This section briefly explains how to include [Blazor TimePicker](https://www.syncfusion.com/blazor-components/blazor-timepicker) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

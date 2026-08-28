@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Model Binding in Blazor Numeric TextBox | Syncfusion®
-description: Learn how to bind the Blazor Numeric TextBox value to a model using EditForm with data annotation validation.
+title: How to bind Numeric Textbox to a model in Blazor | Syncfusion
+description: Bind Blazor Numeric TextBox to a model inside EditForm with data annotation validation support enabled today.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
 ---
 
-# Model Binding in Blazor Numeric TextBox Component
+# How to bind Numeric Textbox to a model in Blazor
 
 This section demonstrates binding the SfNumericTextBox value to a model using EditForm, along with data annotation–based validation. The example binds to a nullable integer (int?) model property to allow an empty state and shows how validation messages are displayed for the bound field.
 

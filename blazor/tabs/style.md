@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and Appearance in Blazor Tabs Component | Syncfusion®
-description: Checkout and learn here all the features about style and appearance in Blazor Tabs component and much more details.
+title: Style and Appearance in Blazor Tabs | Syncfusion
+description: Customize Blazor Tabs appearance using CSS selectors for headers, content, and active indicators for branding.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Style and Appearance in Blazor Tabs Component
+# Style and Appearance in Blazor Tabs
 
 The following CSS classes can be used to customize the appearance of the Tab control.
 

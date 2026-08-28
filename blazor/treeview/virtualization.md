@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Virtualization in Blazor TreeView Component | Syncfusion®
-description: Checkout and learn here all the features about Virtualization in Blazor TreeView component and much more details.
+title: Virtualization in Blazor TreeView | Syncfusion
+description: Virtualize large TreeView data sets and render items while scrolling in Blazor for performance optimization.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Virtualization in Blazor TreeView Component
+# Virtualization in Blazor TreeView
 
 The Blazor TreeView component supports UI virtualization to enhance performance when handling a large amount of data. This feature optimizes rendering by initially gathering all data but only rendering a subset of it (a specific number of items, N) during the initial load. The remaining items are then loaded dynamically as the user scrolls within the TreeView container.
 

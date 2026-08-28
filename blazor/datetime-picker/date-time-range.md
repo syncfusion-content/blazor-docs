@@ -1,13 +1,13 @@
 ---
 layout: post
-title: DateTime Range in Blazor DateTimePicker Component | Syncfusion®
-description: Checkout and learn here all about DateTime Range in Blazor Datetime Picker component and much more details.
+title: DateTime Range in Blazor DateTime Picker | Syncfusion®
+description: Restrict the Blazor DateTime Picker to a specific date-time range using the Min and Max properties for validation and constraint enforcement.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
 ---
 
-# DateTime Range in Blazor DateTimePicker Component
+# DateTime Range in Blazor DateTime Picker
 
 ## DateTime Restriction
 
