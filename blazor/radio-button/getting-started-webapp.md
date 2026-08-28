@@ -152,7 +152,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **App.razor** file to enable Radio Button functionality.
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **App.razor** file to enable Blazor Radio Button functionality.
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
@@ -227,7 +227,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVxtcZCgJGWQglm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor RadioButton Component](./images/blazor-radiobutton-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVxtcZCgJGWQglm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Radio Button Component](./images/blazor-radiobutton-component.webp)" %}
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RadioButton)
 
@@ -236,5 +236,5 @@ N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting
 1. [Getting Started with Blazor WebAssembly Standalone App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 3. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-4. [Native Events in Blazor RadioButton Component](https://blazor.syncfusion.com/documentation/radio-button/native-event)
-5. [Styles and Appearances in Blazor RadioButton Component](https://blazor.syncfusion.com/documentation/radio-button/customization)
+4. [Native Events in Blazor Radio Button Component](https://blazor.syncfusion.com/documentation/radio-button/native-event)
+5. [Styles and Appearances in Blazor Radio Button Component](https://blazor.syncfusion.com/documentation/radio-button/customization)

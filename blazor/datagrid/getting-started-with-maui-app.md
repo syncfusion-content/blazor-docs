@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Grid Getting Started in Blazor MAUI App | Syncfusion
-description: Learn how to get started with Syncfusion Data Grid in a Blazor MAUI app, including project setup, package installation, configuration, and data binding.
+description: Learn how to get started with Syncfusion DataGrid in a Blazor MAUI app, including project setup, package installation, configuration, and data binding.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -126,14 +126,10 @@ After the packages are installed, open the **~/Components/_Imports.razor** file 
 
 ## Register the Blazor service
 
-Open the **MauiProgram.cs** file in Blazor MAUI App and register the Blazor service.
+Open the **MauiProgram.cs** file in Blazor MAUI App and register the Blazor service and include the required namespace reference `using Syncfusion.Blazor;` at the top.
 
 {% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" %}
-
-....
-using Syncfusion.Blazor;
-....
+{% highlight C# tabtitle="MauiProgram.cs" %}
 
 public static class MauiProgram
 {
@@ -150,14 +146,21 @@ public static class MauiProgram
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) at the end of the `<head>` section in the **~wwwroot/index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
-....
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-....
+
+{% endhighlight %}
+{% endtabs %}
+
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **~wwwroot/index.html** file to enable DataGrid functionality.
+
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <script src="_content/Syncfusion.Blazor.Grid/scripts/sf-grid.min.js" type="text/javascript"></script>
 
 {% endhighlight %}

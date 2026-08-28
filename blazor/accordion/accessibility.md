@@ -70,7 +70,7 @@ When a panel is expanded, focus remains on its header. Use the arrow keys to nav
 
 The Blazor Accordion component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
-The accessibility compliance of the Accordion component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/accordion) in a new window to evaluate the accessibility of the Accordion component with accessibility tools.
+The accessibility compliance of the Blazor Accordion component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/accordion) in a new window to evaluate the accessibility of the Blazor Accordion with accessibility tools.
 
 ## See also
 

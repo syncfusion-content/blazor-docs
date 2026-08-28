@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Rating
 
-This section describes the rating events that are triggered when appropriate actions are performed. The following events are available in the rating component.
+This section describes the rating events that are triggered when appropriate actions are performed. The following events are available in the Blazor Rating component.
 
 | Event | Triggered when | Argument type |
 | -- | -- | -- |

@@ -9,9 +9,9 @@ documentation: ug
 
 # How to customize menu bar items in Blazor Menu Bar
 
-## Add or Remove Menu Items
+## Add or Remove Blazor Menu Bar Items
 
-Menu items can be added or removed by using the [`Add`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu-1.html#Syncfusion_Blazor_Navigations_SfMenu_1_Add__1) and [`Remove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu-1.html#Syncfusion_Blazor_Navigations_SfMenu_1_Remove__1) methods on the `SfMenu` instance. The following example uses a typed model (`TValue="DataList"`) and binds the items through the `Items` parameter along with `MenuFieldSettings` to map the model fields.
+Blazor Menu Bar items can be added or removed by using the [`Add`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu-1.html#Syncfusion_Blazor_Navigations_SfMenu_1_Add__1) and [`Remove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu-1.html#Syncfusion_Blazor_Navigations_SfMenu_1_Remove__1) methods on the `SfMenu` instance. The following example uses a typed model (`TValue="DataList"`) and binds the items through the `Items` parameter along with `MenuFieldSettings` to map the model fields.
 
 In the following example, the `Corporate` menu item is added and the `Company` item is removed from the menu.
 
@@ -70,7 +70,7 @@ In the following example, the `Corporate` menu item is added and the `Company` i
 
 ```
 
-![Add or Remove Items in Blazor MenuBar](./../images/blazor-menubar-add-remove-items.webp)
+![Add or Remove Items in Blazor Menu Bar](./../images/blazor-menubar-add-remove-items.webp)
 
 ## Enable or Disable Menu Items
 
@@ -131,7 +131,7 @@ In the following example, the Directory header item, Conferences, and Music subm
 
 ```
 
-![Disabling Menu Items in Blazor MenuBar](./../images/blazor-menubar-disable-item.webp)
+![Disabling Menu Items in Blazor Menu Bar](./../images/blazor-menubar-disable-item.webp)
 
 ## Show or Hide Menu Items
 
@@ -193,4 +193,4 @@ In the following example, the Movies header item, Workshops, and Music submenu i
 
 ```
 
-![Displaying Menu Items in Blazor MenuBar](./../images/blazor-menubar-show-menu-item.webp)
+![Displaying Menu Items in Blazor Menu Bar](./../images/blazor-menubar-show-menu-item.webp)
