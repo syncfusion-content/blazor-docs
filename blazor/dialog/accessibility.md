@@ -155,7 +155,7 @@ to last focusable element</td></tr>
 
 The Blazor Dialog component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-The accessibility compliance of the Dialog component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/dialog) in a new window to evaluate the accessibility of the Dialog component with accessibility tools.
+The accessibility compliance of the Blazor Dialog component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/dialog) in a new window to evaluate the accessibility of the Blazor Dialog with accessibility tools.
 
 ## See also
 

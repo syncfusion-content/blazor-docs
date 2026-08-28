@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor DatePicker
 
-This section lists the events of the DatePicker component and the actions that trigger them. The events are exposed through the [DatePickerEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerEvents-1.html) child content and use the `Syncfusion.Blazor.Calendars` namespace for their event-argument types.
+This section lists the events of the Blazor DatePicker component and the actions that trigger them. The events are exposed through the [DatePickerEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerEvents-1.html) child content and use the `Syncfusion.Blazor.Calendars` namespace for their event-argument types.
 
 -----|-----
 change |[ValueChange](#valuechange)

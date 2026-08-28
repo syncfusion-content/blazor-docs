@@ -9,7 +9,7 @@ documentation: ug
 
 # How to customize scrolling distance in Blazor Toolbar
 
-The Toolbar's [`ScrollStep`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfToolbar.html#Syncfusion_Blazor_Navigations_SfToolbar_ScrollStep) property lets you customize the scrolling distance when the left or right navigation icons are clicked. Pass the desired value to the `ScrollStep` property to control the scroll behavior.
+The Blazor Toolbar's [`ScrollStep`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfToolbar.html#Syncfusion_Blazor_Navigations_SfToolbar_ScrollStep) property lets you customize the scrolling distance when the left or right navigation icons are clicked. Pass the desired value to the `ScrollStep` property to control the scroll behavior.
 
 N> The `ScrollStep` value applies only when the Toolbar's [`OverflowMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfToolbar.html#Syncfusion_Blazor_Navigations_SfToolbar_OverflowMode) is set to `Scrollable` (the default). The default `ScrollStep` value is `0`.
 

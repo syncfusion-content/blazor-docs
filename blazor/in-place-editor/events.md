@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor In-place Editor
 
-This section describes the events available in the In-place Editor component and when they are raised during typical actions. The events include: Created, OnActionBegin, OnActionSuccess, OnActionFailure, ValueChange, and Destroyed.
+This section describes the events available in the Blazor In-place Editor component and when they are raised during typical actions. The events include: Created, OnActionBegin, OnActionSuccess, OnActionFailure, ValueChange, and Destroyed.
 
 ## Created
 

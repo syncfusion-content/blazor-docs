@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization in Blazor In-place Editor
 
-This topic explains how to globalize the In-place Editor, including localizing UI text, enabling right-to-left (RTL) layout, and applying culture-aware formatting.
+This topic explains how to globalize the Blazor In-place Editor, including localizing UI text, enabling right-to-left (RTL) layout, and applying culture-aware formatting.
 
 ## Localization
 
@@ -17,7 +17,7 @@ This topic explains how to globalize the In-place Editor, including localizing U
 
 ## Right to left
 
-Specify the direction of the In-place Editor using the `EnableRtl` property. Use RTL layout for right-to-left languages such as Arabic, Hebrew, and Farsi. The layout direction can be switched to right-to-left independently of the current locale.
+Specify the direction of the Blazor In-place Editor using the `EnableRtl` property. Use RTL layout for right-to-left languages such as Arabic, Hebrew, and Farsi. The layout direction can be switched to right-to-left independently of the current locale.
 
 > The layout direction is not automatically changed by the `EnableRtl` property based on the current culture.
 

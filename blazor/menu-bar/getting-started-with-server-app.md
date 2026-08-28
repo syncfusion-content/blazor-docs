@@ -150,7 +150,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **App.razor** file to enable Menu Bar functionality.
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **App.razor** file to enable Blazor Menu Bar functionality.
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
@@ -251,7 +251,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLdZdgZrfrmdYts?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor MenuBar Component](./images/blazor-menubar.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLdZdgZrfrmdYts?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Menu Bar Component](./images/blazor-menubar.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MenuBar).
 

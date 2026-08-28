@@ -17,7 +17,7 @@ This section briefly explains how to include the [Blazor TextBox](https://www.sy
 
 {% tabcontent Visual Studio %}
 
-Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
+Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
 
 {% endtabcontent %}
 
@@ -35,7 +35,7 @@ cd BlazorWebApp.Client
 {% endhighlight %}
 {% endtabs %}
 
-Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
 {% endtabcontent %}
 
@@ -130,30 +130,33 @@ After the packages are installed, open the **~/_Imports.razor** file in the clie
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in the Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
+Open the **Program.cs** file in Blazor Web App and register the Blazor service and include the required namespace reference `using Syncfusion.Blazor;` at the top. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
+{% highlight C# tabtitle="Program.cs" %}
 
-....
-using Syncfusion.Blazor;
-....
 builder.Services.AddSyncfusionBlazor();
-....
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) at the end of the `<head>` section in the **App.razor** file.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
 
-...
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-...
+
+{% endhighlight %}
+{% endtabs %}
+
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **App.razor** file to enable Blazor TextBox functionality.
+
+{% tabs %}
+{% highlight razor tabtitle="App.razor" %}
+
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
@@ -161,7 +164,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor TextBox component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) component inside the `.Client` project Razor file.
 
 N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode directive at the top of the razor file (for example, `@rendermode InteractiveServer`, `@rendermode InteractiveWebAssembly`, or `@rendermode InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is configured automatically in the `App.razor` file by default.
 
@@ -183,7 +186,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor TextBox component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) component will render in your default web browser.
 
 {% endtabcontent %}
 
@@ -227,7 +230,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## Adding icons to the Blazor TextBox
 
-Add an icon to the TextBox using the [AddIconAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_AddIconAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__) method. The following example shows how to append an icon.
+Add an icon to the Blazor TextBox using the [AddIconAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_AddIconAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__) method. The following example shows how to append an icon.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -251,7 +254,7 @@ Add an icon to the TextBox using the [AddIconAsync](https://help.syncfusion.com/
     {
         if (TextBoxDropDownObj != null)
         {
-            //Add icon to the TextBox
+            //Add icon to the Blazor TextBox
             await TextBoxDropDownObj.AddIconAsync("append", "e-icons e-date-icon");
 }
     }
@@ -264,7 +267,7 @@ Add an icon to the TextBox using the [AddIconAsync](https://help.syncfusion.com/
 
 ## Floating label
 
-The floating label moves the label above the TextBox when the control is focused or contains a value. Enable the floating label by setting the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_FloatLabelType) property.
+The floating label moves the label above the Blazor TextBox when the control is focused or contains a value. Enable the floating label by setting the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_FloatLabelType) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}

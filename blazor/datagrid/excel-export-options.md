@@ -1912,6 +1912,119 @@ function saveAsFile(filename, bytesBase64) {
 {% endhighlight %}
 {% endtabs %}
 
+### Change row height in exported file
+
+The Blazor Data Grid can export data as a memory stream, allowing modification of the Excel workbook before the exported file is delivered to the client. Using the [XlsIO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library, worksheet formatting can be customized programmatically during the export process.
+
+The [SetRowHeightInPixels](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_SetRowHeightInPixels_System_Int32_System_Double_) method is used to modify the height of a specific row in the exported Excel file by providing the row index and the required height in pixels. This enables row-level customization in the exported workbook.
+
+In the following example, an [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html) component is used to specify the Excel row index dynamically. The selected value is updated through the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.NumericTextBoxEvents-1.html#Syncfusion_Blazor_Inputs_NumericTextBoxEvents_1_ValueChange) event and stored in the NumericValue property. During the Excel export operation, the value of NumericValue is passed to the `SetRowHeightInPixels` method, allowing the height of the corresponding row in the exported Excel document to be modified. In this sample, the height of the specified row is set to **100** pixels.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using System.IO
+@using Syncfusion.XlsIO
+@inject IJSRuntime JSRuntime
+@using Syncfusion.Blazor.Inputs
+
+<div>
+    <label style="padding: 30px 17px 0 0">Specify Excel row index:</label>
+    <SfNumericTextBox Width="120px" TValue="int" Value="@NumericValue">
+        <NumericTextBoxEvents TValue="int" ValueChange="OnChange"></NumericTextBoxEvents>
+    </SfNumericTextBox>
+</div>
+<br />
+
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" AllowSorting="true" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code
+{
+    private SfGrid<Order> DefaultGrid;
+    public List<Order> Orders { get; set; }
+    public int NumericValue { get; set; } = 1;
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 9).Select(x => new Order()
+        {
+            OrderID = x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+        }).ToList();
+    }
+
+    public void OnChange(Syncfusion.Blazor.Inputs.ChangeEventArgs<int> args)
+    {
+        if(args.Value != 0)
+        {
+            NumericValue = args.Value;
+            StateHasChanged();
+        }
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_excelexport")
+        {
+            ExcelExportProperties ExportProperties = new ExcelExportProperties();
+
+            using var stream = await DefaultGrid.ExportToExcelAsync(asMemoryStream: true, ExportProperties);
+
+            var copyOfStream = new MemoryStream(stream.ToArray());
+
+            using (ExcelEngine excelEngine = new ExcelEngine())
+            {
+                IApplication application = excelEngine.Excel;
+                application.DefaultVersion = ExcelVersion.Xlsx;
+
+                IWorkbook workbook = application.Workbooks.Open(copyOfStream);
+                IWorksheet worksheet = workbook.Worksheets[0];
+
+                // Set the height of the specified row in the exported Excel file.
+                worksheet.SetRowHeightInPixels(NumericValue, 100.0);
+
+                using (MemoryStream outputStream = new MemoryStream())
+                {
+                    workbook.SaveAs(outputStream);
+                    await JSRuntime.InvokeVoidAsync("saveAsFile", "GridExport.xlsx", Convert.ToBase64String(outputStream.ToArray()));
+                }
+            }
+        }
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="Javascript.js" %}
+
+function saveAsFile(filename, bytesBase64) {
+    var link = document.createElement('a');
+    link.download = filename;
+    link.href = "data:application/octet-stream;base64," + bytesBase64;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Converting Memory Stream to File Stream for Excel Export
 
 The Excel Export feature in Blazor DataGrid allows exporting Grid data to an Excel workbook. In scenarios where the exported document needs to be saved as a physical file on the system, the memory stream can be converted into a file stream. This is useful when storing or processing the file outside the browser context.

@@ -744,7 +744,7 @@ The Blazor TreeView component can render checkboxes before each node when [`Show
 
 ## Cancel the Check Action
 
-The Blazor TreeView component offers the ability to cancel the check action by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.NodeCheckEventArgs.html#Syncfusion_Blazor_Navigations_NodeCheckEventArgs_Cancel) argument value as true within the [NodeChecking](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeChecking) event. This will prevent the check action from occurring within the TreeView component.
+The Blazor TreeView component offers the ability to cancel the check action by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.NodeCheckEventArgs.html#Syncfusion_Blazor_Navigations_NodeCheckEventArgs_Cancel) argument value as true within the [NodeChecking](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeChecking) event. This will prevent the check action from occurring within the Blazor TreeView component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

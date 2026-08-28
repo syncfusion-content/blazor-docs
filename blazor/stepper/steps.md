@@ -195,7 +195,7 @@ You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ## Setting readonly
 
-You can use the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_ReadOnly) property to disable the user interactions in the Stepper.
+You can use the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_ReadOnly) property to disable the user interactions in the Blazor Stepper.
 
 ```cshtml
 

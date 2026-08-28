@@ -19,7 +19,7 @@ The [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Nav
 
 * [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_Text) - Sets the text content of the Breadcrumb item.
 
-The example below shows how to define Breadcrumb items using the `BreadcrumbItem` tag directive.
+The example below shows how to define Blazor Breadcrumb items using the `BreadcrumbItem` tag directive.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -37,9 +37,9 @@ The example below shows how to define Breadcrumb items using the `BreadcrumbItem
 
 ## Items based on current URL
 
-If no `<BreadcrumbItem>` tag directive is specified, the Breadcrumb generates items from the current URL. The component reads the URL from Blazor's `NavigationManager` and turns each path segment into a Breadcrumb item. Query strings and hash fragments are ignored.
+If no `<BreadcrumbItem>` tag directive is specified, the Blazor Breadcrumb generates items from the current URL. The component reads the URL from Blazor's `NavigationManager` and turns each path segment into a Blazor Breadcrumb item. Query strings and hash fragments are ignored.
 
-The following example shows the Breadcrumb items that are auto-generated from the current URL.
+The following example shows the Blazor Breadcrumb items that are auto-generated from the current URL.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -65,7 +65,7 @@ Set the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigation
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXBxtniiTyrTqfVz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage="[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-static-url.webp)" %}
 
-## Add or remove Breadcrumb items
+## Add or remove Blazor Breadcrumb items
 
 Use the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_Items) property of the Breadcrumb to dynamically add or remove items. The example below shows how to insert items before or after a target item and remove the last item at runtime.
 

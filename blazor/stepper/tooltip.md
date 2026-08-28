@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltips in Blazor Stepper Component
 
-The Stepper component supports tooltips to show additional information on the steps by setting the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_ShowTooltip) property to `true`.
+The Blazor Stepper component supports tooltips to show additional information on the steps by setting the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_ShowTooltip) property to `true`.
 
 The tooltip appears when the user hovers over the step, providing information such as the step's label or text. By default, the `ShowTooltip` property is `false`.
 

@@ -11,9 +11,9 @@ documentation: ug
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on the user preference.
 
-## Customizing accordion
+## Customizing Blazor Accordion
 
-Use the following CSS to customize the [Accordion](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html).
+Use the following CSS to customize the [Blazor Accordion](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html).
 
 ```CSS
 
@@ -23,11 +23,11 @@ Use the following CSS to customize the [Accordion](https://help.syncfusion.com/c
 
 ```
 
-![Accordion border](./images/blazor-accordion-border-style.webp)
+![Blazor Accordion border](./images/blazor-accordion-border-style.webp)
 
-## Customizing the accordion items
+## Customizing the Blazor Accordion items
 
-Use the following CSS to customize the items of Accordion.
+Use the following CSS to customize the items of Blazor Accordion.
 
 ```CSS
 
@@ -38,11 +38,11 @@ Use the following CSS to customize the items of Accordion.
 
 ```
 
-![Accordion item style customization](./images/blazor-accordion-item-styles.webp)
+![Blazor Accordion item style customization](./images/blazor-accordion-item-styles.webp)
 
-## Customizing accordion item header content
+## Customizing Blazor Accordion item header content
 
-Use the following CSS to customize the header content of Accordion control.
+Use the following CSS to customize the header content of Blazor Accordion control.
 
 ```CSS
 
@@ -53,11 +53,11 @@ Use the following CSS to customize the header content of Accordion control.
 
 ```
 
-![Accordion item header content style customization](./images/blazor-accordion-header-content-style.webp)
+![Blazor Accordion item header content style customization](./images/blazor-accordion-header-content-style.webp)
 
-## Customizing accordion expand and collapse icons
+## Customizing Blazor Accordion expand and collapse icons
 
-The following CSS can be viewed to customize the expand and collapse icons of the Accordion control.
+The following CSS can be viewed to customize the expand and collapse icons of the Blazor Accordion control.
 
 ```CSS
 
@@ -67,11 +67,11 @@ The following CSS can be viewed to customize the expand and collapse icons of th
 
 ```
 
-![Accordion toggle icon style customization](./images/blazor-accordion-expand-collapse-icon-style.webp)
+![Blazor Accordion toggle icon style customization](./images/blazor-accordion-expand-collapse-icon-style.webp)
 
-## Customizing the hover state of accordion
+## Customizing the hover state of Blazor Accordion
 
-Use the following CSS to customize the [accordion item](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html) when hovering.
+Use the following CSS to customize the [Blazor Accordion item](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html) when hovering.
 
 ```CSS
 
@@ -81,9 +81,9 @@ Use the following CSS to customize the [accordion item](https://help.syncfusion.
 
 ```
 
-## Customizing selected item of accordion
+## Customizing selected item of Blazor Accordion
 
-Use the following CSS to customize the selected accordion item and focus state.
+Use the following CSS to customize the selected Blazor Accordion item and focus state.
 
 ```CSS
 
@@ -96,9 +96,9 @@ Use the following CSS to customize the selected accordion item and focus state.
 
 ```
 
-![Accordion selected item header customization](./images/blazor-accordion-selected-item-style.webp)
+![Blazor Accordion selected item header customization](./images/blazor-accordion-selected-item-style.webp)
 
-Use the following CSS to customize the selected accordion item text.
+Use the following CSS to customize the selected Blazor Accordion item text.
 
 ```CSS
 
@@ -110,11 +110,11 @@ Use the following CSS to customize the selected accordion item text.
 
 ```
 
-![Accordion selected item header text customization](./images/blazor-accordion-selected-item-text-style.webp)
+![Blazor Accordion selected item header text customization](./images/blazor-accordion-selected-item-text-style.webp)
 
-## Customize each accordion item header
+## Customize each Blazor Accordion item header
 
-You can customize each accordion item header by setting [AccordionItem.CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_CssClass) property.
+You can customize each Blazor Accordion item header by setting [AccordionItem.CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_CssClass) property.
 
 ```cshtml
 
@@ -144,4 +144,4 @@ You can customize each accordion item header by setting [AccordionItem.CssClass]
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhRDxCWsbylvYtX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Accordion Item Header Appearance Customization](./images/blazor-accordion-item-cssclass-style.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhRDxCWsbylvYtX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Accordion Item Header Appearance Customization](./images/blazor-accordion-item-cssclass-style.webp)" %}
