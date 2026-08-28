@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor ComboBox in Blazor Web App | Syncfusion®
-description: Learn how to get started with the Syncfusion Blazor ComboBox control. Explore setup, features, examples, and customization options.
+description: Learn how to get started with the Syncfusion Blazor WebApp ComboBox control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: ComboBox
 documentation: ug

@@ -77,7 +77,7 @@ You can use the following key shortcuts to access the Blazor Mention without int
 
 The Blazor Mention component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-The accessibility compliance of the Blazor Mention component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/Blazor Mention) in a new window to evaluate the accessibility of the Blazor Mention component with accessibility tools.
+The accessibility compliance of the Blazor Mention component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/mention) in a new window to evaluate the accessibility of the Blazor Mention component with accessibility tools.
 
 ## See also
 

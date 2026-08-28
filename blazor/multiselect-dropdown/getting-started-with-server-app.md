@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor MultiSelect Dropdown | Syncfusion
+title: Getting Started with Blazor MultiSelect Dropdown in Blazor Server App | Syncfusion
 description: Learn how to get started with the Syncfusion Blazor MultiSelect Dropdown in a Blazor Server app with installation and setup steps.
 platform: Blazor
 control: MultiSelect Dropdown
