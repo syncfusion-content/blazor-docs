@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor AutoComplete Component | Syncfusion®
-description: Checkout and learn here all features about Data Binding in Blazor AutoComplete component and much more.
+title: Data Binding in Blazor AutoComplete | Syncfusion®
+description: Bind the Blazor AutoComplete to local arrays or remote services using the DataSource property and DataManager with adaptors like WebApi and OData.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Data Binding in AutoComplete
+# Data Binding in Blazor AutoComplete
 
 The AutoComplete loads data from local collections or remote services. Use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property to bind local data, or configure remote data using the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Orientations in Blazor Stepper Component
 
-The Stepper component supports the display of steps in both horizontal and vertical orientations by using the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Orientation) property.
+The Blazor Stepper component supports the display of steps in both horizontal and vertical orientations by using the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Orientation) property.
 
 ## Horizontal
 

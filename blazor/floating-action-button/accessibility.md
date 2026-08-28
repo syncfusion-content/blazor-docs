@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Floating Action Button | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor Floating Action Button component and much more.
+title: Accessibility in Blazor Floating Action Button | Syncfusion
+description: Learn how Blazor Floating Action Button supports accessibility standards, ARIA attributes, and keyboard interaction.
 platform: Blazor
 control: Floating Action Button
 documentation: ug
 ---
 
-# Accessibility in Blazor Floating Action Button Component
+# Accessibility in Blazor Floating Action Button
 
 The Blazor Floating Action Button component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

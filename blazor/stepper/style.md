@@ -11,9 +11,9 @@ documentation: ug
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing the stepper progress bar container
+## Customizing the Blazor stepper progress bar container
 
-Use the following CSS to customize the overall progress bar container of the Stepper.
+Use the following CSS to customize the overall progress bar container of the Blazor Stepper.
 
 ```css
     .e-stepper .e-stepper-progressbar {
@@ -22,11 +22,11 @@ Use the following CSS to customize the overall progress bar container of the Ste
         border-radius: 3px;
     }
 ```
-![Stepper progress bar value](./images/Blazor-progress-bar.webp)
+![Blazor Stepper progress bar value](./images/Blazor-progress-bar.webp)
 
-## Customizing the stepper progress bar value
+## Customizing the Blazor Stepper progress bar value
 
-The progress bar value in the Stepper component automatically increases as each step is progressed. You can customize its appearance using CSS to make it visually consistent and more appealing
+The progress bar value in the Blazor Stepper component automatically increases as each step is progressed. You can customize its appearance using CSS to make it visually consistent and more appealing
 
 ```css
 
@@ -38,11 +38,11 @@ The progress bar value in the Stepper component automatically increases as each 
 
 
 ```
-![Stepper progress bar](./images/Blazor-progressbar.webp)
+![Blazor Stepper progress bar](./images/Blazor-progressbar.webp)
 
-## Customizing stepper label content
+## Customizing Blazor Stepper label content
 
-You can customize the label text that appears next to each step in the Stepper by targeting the `.e-label` class. This allows you to change font size, weight, background, and colors for active, completed, and upcoming steps.
+You can customize the label text that appears next to each step in the Blazor Stepper by targeting the `.e-label` class. This allows you to change font size, weight, background, and colors for active, completed, and upcoming steps.
 
 ```css
 
@@ -87,9 +87,9 @@ You can customize the label text that appears next to each step in the Stepper b
 
 ```
 
-![Stepper content](./images/blazor-stepper-content.webp)
+![Blazor Stepper content](./images/blazor-stepper-content.webp)
 
-## Customizing selected stepper item
+## Customizing selected Blazor Stepper item
 
 Use the following CSS to highlight the selected step item.
 
@@ -113,12 +113,12 @@ Use the following CSS to highlight the selected step item.
 
 ```
 
-![Stepper selected item](./images/blazor-selected-step.webp)
+![Blazor Stepper selected item](./images/blazor-selected-step.webp)
 
 
-## Customizing hover state of stepper indicators
+## Customizing hover state of Blazor Stepper indicators
 
-Use the following CSS to customize the hover state of step indicators when the Stepper type is not label-based.
+Use the following CSS to customize the hover state of step indicators when the Blazor Stepper type is not label-based.
 
 ```css
 
@@ -131,7 +131,7 @@ Use the following CSS to customize the hover state of step indicators when the S
     }
 ```
 
-![Stepper hover state](./images/blazor-stepper-hover.webp)
+![Blazor Stepper hover state](./images/blazor-stepper-hover.webp)
 
 ## Customizing each step item
 
@@ -247,4 +247,4 @@ You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 
 ```
-![Stepper each item](./images/blazor-stepper-each-item.webp)
+![Blazor Stepper each item](./images/blazor-stepper-each-item.webp)

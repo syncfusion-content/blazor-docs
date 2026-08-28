@@ -1,17 +1,17 @@
 ---
 layout: post
-title: CheckBox customization in Blazor CheckBox Component | Syncfusion®
-description: Checkout and learn here all the features about Customized Checkbox in Blazor CheckBox component and more details.
+title: Customization in Blazor CheckBox | Syncfusion®
+description: Customize the Blazor CheckBox appearance and behavior, including size, color, label position, tristate, and custom CSS classes.
 platform: Blazor
 control: Checkbox
 documentation: ug
 ---
 
-# Customization in Blazor CheckBox Component
+# Customization in Blazor CheckBox
 
 ## Customize styles and appearances
 
-To modify the [Blazor CheckBox](https://www.syncfusion.com/blazor-components/blazor-checkbox) appearance, override the default CSS of the CheckBox component. The list of CSS classes and their corresponding sections in the CheckBox is shown below. A custom theme can also be created using the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+To modify the [Blazor CheckBox](https://www.syncfusion.com/blazor-components/blazor-checkbox) appearance, override the default CSS of the Blazor CheckBox component. The list of CSS classes and their corresponding sections in the Blazor CheckBox is shown below. A custom theme can also be created using the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
 |CSS Class | Purpose of Class|
 |-----|-----|
@@ -24,10 +24,10 @@ To modify the [Blazor CheckBox](https://www.syncfusion.com/blazor-components/bla
 
 ## Customize CheckBox appearance
 
-The appearance of the CheckBox component is customized using CSS rules. Custom CSS rules are defined according to requirements and the class name is assigned to the
+The appearance of the Blazor CheckBox component is customized using CSS rules. Custom CSS rules are defined according to requirements and the class name is assigned to the
 [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) property.
 
-The background and border colors of the CheckBox are customized through custom classes to create primary, success, info, warning, and danger variants.
+The background and border colors of the Blazor CheckBox are customized through custom classes to create primary, success, info, warning, and danger variants.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -93,7 +93,7 @@ The background and border colors of the CheckBox are customized through custom c
 
 ## Customize width and height
 
-The height and width of the CheckBox component can be customized using CSS. The following example shows how to apply a custom size by setting `height` and `width` on the `.e-frame` selector.
+The height and width of the Blazor CheckBox component can be customized using CSS. The following example shows how to apply a custom size by setting `height` and `width` on the `.e-frame` selector.
 
 The `HtmlAttributes` parameter can also be used to set inline `style` directly on the rendered input:
 
@@ -138,7 +138,7 @@ The `HtmlAttributes` parameter can also be used to set inline `style` directly o
 
 ## Custom frame
 
-The CheckBox frame can be customized by adding CSS rules.
+The Blazor CheckBox frame can be customized by adding CSS rules.
 
 In the following example, to-do list is displayed with round checkbox by changing `border-radius` as `100%` by adding `e-custom` class.
 
@@ -168,7 +168,7 @@ In the following example, to-do list is displayed with round checkbox by changin
 
 ## Custom check icon
 
-The CheckBox check icon can be customized by adding CSS rules.
+The Blazor CheckBox check icon can be customized by adding CSS rules.
 
 In the following example, the check icon can be customized by changing check icon content, background and border color in focus and hovered states by adding `e-checkicon` class.
 
@@ -216,9 +216,9 @@ In the following example, the check icon can be customized by changing check ico
 
 ## Right-to-left in Blazor CheckBox Component
 
-The CheckBox component has RTL (right-to-left) support. This can be achieved by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) property to `true`.
+The Blazor CheckBox component has RTL (right-to-left) support. This can be achieved by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) property to `true`.
 
-The following example illustrates how to enable right-to-left support in Checkbox component.
+The following example illustrates how to enable right-to-left support in the Blazor CheckBox component.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -239,9 +239,9 @@ To get started quickly with model binding in the Blazor CheckBox component, refe
 {% youtube
 "youtube:https://www.youtube.com/watch?v=4vMuReo0Hz4"%}
 
-The following sample demonstrates model binding with the CheckBox. A view that can bind to any model is called a strongly typed view. Any class can be bound as a model to the view, the model properties can be accessed on that view, and the data associated with the model can be used to render the component. The validation uses the standard Blazor `EditForm` with `DataAnnotationsValidator` (no additional Syncfusion registration is required).
+The following sample demonstrates model binding with the Blazor CheckBox. A view that can bind to any model is called a strongly typed view. Any class can be bound as a model to the view, the model properties can be accessed on that view, and the data associated with the model can be used to render the component. The validation uses the standard Blazor `EditForm` with `DataAnnotationsValidator` (no additional Syncfusion registration is required).
 
-In this sample, the option is checked and the Submit button is clicked to post the selected value. When the CheckBox is not checked, the validation error message is shown below it.
+In this sample, the option is checked and the Submit button is clicked to post the selected value. When the Blazor CheckBox is not checked, the validation error message is shown below it.
 
 ```csharp
 

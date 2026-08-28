@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Button Group Component | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor Button component including keyboard navigation.
+title: Accessibility in Blazor Button Group | Syncfusion®
+description: Learn how Blazor Button Group meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA roles, keyboard navigation, and screen reader support.
 platform: Blazor
-control: Button
+control: Button Group
 documentation: ug
 ---
 
-# Accessibility in Blazor Button Group component
+# Accessibility in Blazor Button Group
 
 The Blazor Button Group component follows widely accepted accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility. This document summarizes the compliance level of the component, its supported keyboard interactions, and the validation tools used to verify accessibility.
 
@@ -45,10 +45,10 @@ The following keyboard shortcuts are supported by the Blazor Button Group compon
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Focuses the next button in the Button Group. |
-| <kbd>Shift + Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Focuses the previous button in the Button Group. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Focuses the next button in the Blazor Button Group. |
+| <kbd>Shift + Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Focuses the previous button in the Blazor Button Group. |
 | Arrows (<kbd>↑</kbd> , <kbd>→</kbd> , <kbd>↓</kbd> , <kbd>←</kbd>) | Arrows (<kbd>↑</kbd> , <kbd>→</kbd> , <kbd>↓</kbd> , <kbd>←</kbd>) | In `SelectionMode.Single`, moves focus and selects the next/previous button. In `SelectionMode.Multiple`, moves focus only; press <kbd>Space</kbd> to toggle the focused button. |
-| <kbd>Space</kbd> | <kbd>Space</kbd> | Activates the focused button in the default Button Group, or toggles selection of the focused button in `SelectionMode.Multiple`. |
+| <kbd>Space</kbd> | <kbd>Space</kbd> | Activates the focused button in the default Blazor Button Group, or toggles selection of the focused button in `SelectionMode.Multiple`. |
 
 ## Ensuring accessibility
 

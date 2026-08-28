@@ -1,30 +1,30 @@
 ---
 layout: post
-title: Customization in Blazor RadioButton Component | Syncfusion®
-description: Checkout and learn here all about Customization in Syncfusion Blazor RadioButton component with examples and much more details.
+title: Customization in Blazor Radio Button | Syncfusion
+description: Customize Blazor Radio Button appearance with CSS selectors and themes using Theme Studio integration.
 platform: Blazor
 control: Radio Button
 documentation: ug
 ---
 
-# Styles and Appearances in Blazor RadioButton Component
+# Customization in Blazor Radio Button
 
-To modify the RadioButton appearance, override the component's default CSS. The following table lists common CSS selectors and their purposes within the RadioButton.
+To modify the Blazor Radio Button appearance, override the component's default CSS. The following table lists common CSS selectors and their purposes within the Blazor Radio Button component.
 
 | CSS Class | Purpose of Class |
 | ----- | ----- |
 | `.e-radio-wrapper` | To customize the radio button wrapper. |
-| `.e-radio + label:hover::before` | To customize the RadioButton on hover. |
-| `.e-radio:checked + label::after`, `.e-radio:checked + label::before` | To customize the checked RadioButton. |
-| `.e-radio:checked:focus + label::before`, `.e-radio:checked + label:hover::before` | To customize the checked RadioButton on hover. |
+| `.e-radio + label:hover::before` | To customize the Blazor Radio Button on hover. |
+| `.e-radio:checked + label::after`, `.e-radio:checked + label::before` | To customize the checked Blazor Radio Button. |
+| `.e-radio:checked:focus + label::before`, `.e-radio:checked + label:hover::before` | To customize the checked Blazor Radio Button on hover. |
 
-![Blazor RadioButton with Style and Appearance](./images/blazor-radiobutton-style-and-appearance.webp)
+![Blazor Radio Button with Style and Appearance](./images/blazor-radiobutton-style-and-appearance.webp)
 
-## Customize Blazor RadioButton Appearance
+## Customize Blazor Radio Button Appearance
 
-Customize the appearance of the RadioButton component by applying custom CSS rules and assigning a CSS class to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfInputBase-1.html#Syncfusion_Blazor_Buttons_SfInputBase_1_CssClass) property.
+Customize the appearance of the Blazor Radio Button component by applying custom CSS rules and assigning a CSS class to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfInputBase-1.html#Syncfusion_Blazor_Buttons_SfInputBase_1_CssClass) property.
 
-The background and border color of the RadioButton can be customized using custom classes to create primary, success, info, warning, and danger variants.
+The background and border color of the Blazor Radio Button can be customized using custom classes to create primary, success, info, warning, and danger variants.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -139,11 +139,11 @@ The background and border color of the RadioButton can be customized using custo
 
 ```
 
-![Customizing Blazor RadioButton Appearance](./images/blazor-radiobutton-customization.webp)
+![Customizing Blazor Radio Button Appearance](./images/blazor-radiobutton-customization.webp)
 
-## Set the Disabled State in Blazor RadioButton Component
+## Set the Disabled State in Blazor Radio Button Component
 
-Set the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfInputBase-1.html#Syncfusion_Blazor_Buttons_SfInputBase_1_Disabled) property to `true` to disable the RadioButton. When disabled, the control is rendered with reduced opacity, is skipped during keyboard navigation, and cannot be selected.
+Set the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfInputBase-1.html#Syncfusion_Blazor_Buttons_SfInputBase_1_Disabled) property to `true` to disable the Blazor Radio Button component. When disabled, the control is rendered with reduced opacity, is skipped during keyboard navigation, and cannot be selected.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -157,16 +157,16 @@ Set the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Butto
 }
 ```
 
-![Blazor RadioButton in disabled state](./images/blazor-radiobutton-disable-state.webp)
+![Blazor Radio Button in disabled state](./images/blazor-radiobutton-disable-state.webp)
 
-## Form Binding and Validation with a Strongly-Typed Model in Blazor RadioButton Component
+## Form Binding and Validation with a Strongly-Typed Model in Blazor Radio Button Component
 
-To get started quickly with model binding in the Blazor RadioButton component, watch the following video:
+To get started quickly with model binding in the Blazor Radio Button component, watch the following video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=4vMuReo0Hz4"%}
 
-This section demonstrates strongly typed view support with the RadioButton component. A strongly typed view binds to a model class, allowing access to its properties and rendering the component based on that data. In this example, the component is placed inside an EditForm and uses DataAnnotationsValidator for validation. The Name property groups the radio buttons so only one option can be selected, and `@bind-Checked` binds the model property to the selected Value.
+This section demonstrates strongly typed view support with the Blazor Radio Button component. A strongly typed view binds to a model class, allowing access to its properties and rendering the component based on that data. In this example, the component is placed inside an EditForm and uses DataAnnotationsValidator for validation. The Name property groups the radio buttons so only one option can be selected, and `@bind-Checked` binds the model property to the selected Value.
 
 In this sample, selecting Female triggers a validation error message below the radio button group because the Range attribute is configured to allow only the value "male". This demonstrates how validation rules on the model control the allowed selection and display validation feedback.
 
@@ -197,9 +197,9 @@ In this sample, selecting Female triggers a validation error message below the r
 
 ```
 
-![Data Binding in Blazor RadioButton](./images/blazor-radiobutton-data-binding.webp)
+![Data Binding in Blazor Radio Button](./images/blazor-radiobutton-data-binding.webp)
 
 ## See Also
 
-* [Label and Size in Blazor RadioButton Component](./label-and-size)
-* [Accessibility in Blazor RadioButton Component](./accessibility)
+* [Label and Size in Blazor Radio Button Component](./label-and-size)
+* [Accessibility in Blazor Radio Button Component](./accessibility)

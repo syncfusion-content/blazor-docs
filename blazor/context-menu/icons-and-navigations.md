@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Icons and Navigation in Blazor ContextMenu Component | Syncfusion®
-description: Checkout and learn here all the features about Icons and Navigation in Blazor ContextMenu component and more.
+title: Icons and Navigation in Blazor Context Menu | Syncfusion®
+description: Add icons to Blazor Context Menu items and configure navigation to URLs or click handlers, supporting external and in-app links.
 platform: Blazor
 control: Context Menu
 documentation: ug
 ---
 
-# Icons and Navigation in Blazor ContextMenu Component
+# Icons and Navigation in Blazor Context Menu
 
 ## Icons
 
-The [Blazor ContextMenu](https://www.syncfusion.com/blazor-components/blazor-context-menu) item has an icon/image in it to provide a visual representation of the action. To place the icon on a menu item, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_IconCss) property to e-icons with the required icon CSS. By default, the icon is positioned to the left side of the menu item. In the following sample, the icons for Cut, Copy and Paste menu items are added using the `IconCss` property.
+The [Blazor Context Menu](https://www.syncfusion.com/blazor-components/blazor-context-menu) item has an icon/image in it to provide a visual representation of the action. To place the icon on a menu item, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_IconCss) property to e-icons with the required icon CSS. By default, the icon is positioned to the left side of the menu item. In the following sample, the icons for Cut, Copy and Paste menu items are added using the `IconCss` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -48,7 +48,7 @@ The [Blazor ContextMenu](https://www.syncfusion.com/blazor-components/blazor-con
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLxjniETEUzIMNB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ContextMenu with Icon](./images/blazor-contextmenu-icon.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLxjniETEUzIMNB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Context Menu with Icon](./images/blazor-contextmenu-icon.webp)" %}
 
 N> The Context Menu provides a set of [icons](https://blazor.syncfusion.com/documentation/appearance/icons) that can be loaded by applying `e-icons` class name to the element.
 You can also use third party icons on the Context Menu using the `IconCss`property.
@@ -85,4 +85,4 @@ Navigation in the ContextMenu is used to navigate to another web page when a men
 
 N> For security reasons, external domains are not supported/loaded within the preview samples.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVHZdskpEUcEtAV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Navigation in Blazor ContextMenu](./images/blazor-contextmenu-navigation.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVHZdskpEUcEtAV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Navigation in Blazor Context Menu](./images/blazor-contextmenu-navigation.webp)" %}

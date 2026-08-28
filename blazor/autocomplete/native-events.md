@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native events in Blazor AutoComplete component | Syncfusion®
-description: Check out how to use native events with the Blazor AutoComplete component, including @on{event} binding and passing event argument data.
+title: Native Events in Blazor AutoComplete | Syncfusion®
+description: Attach native DOM events to the Blazor AutoComplete using the @on{event} directive and pass event argument data into the handler.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Native Events in Blazor AutoComplete Component
+# Native Events in Blazor AutoComplete
 
 The following section explains how to include native DOM events and pass data to an event handler in the [Blazor AutoComplete](https://www.syncfusion.com/blazor-components/blazor-autocomplete) component. Native events are bound using the `@on{event}` attribute syntax, and the attribute value is the event handler.
 

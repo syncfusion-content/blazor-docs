@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Image and Divider in Blazor Card Component | Syncfusion®
-description: Checkout and learn here all features about Image and Divider in Blazor Card component and much more details.
+title: Image and Divider in Blazor Card | Syncfusion®
+description: Add an image and a divider to the Blazor Card using the CardImage and CardImage with Separator, to compose richer card layouts.
 platform: Blazor
 control: Card
 documentation: ug
@@ -20,11 +20,18 @@ N> By default, card images occupy the full width of their parent element.
 ```cshtml
 @using Syncfusion.Blazor.Cards
 
-<SfCard>
-    <CardImage/>
+<SfCard ID="Steven" >
+    <CardImage Image="https://cdn.syncfusion.com/blazor/images/cards/steven.png" />
 </SfCard>
+
+<style>
+    #Steven .e-card-image {
+        height: 300px;
+        width: 300px;
+    }
+</style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrRtHsLrOnTFpDk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBdtPBITswbBYmi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Title
 

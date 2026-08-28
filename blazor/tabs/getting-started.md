@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Tabs in Blazor WASM App | Syncfusion
-description: Check out and learn about getting started with Blazor Tabs component in Blazor WebAssembly Application.
+description: Learn how to get started with the Syncfusion Blazor Tabs in a Blazor WebAssembly app with setup steps.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -234,13 +234,13 @@ dotnet run
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Tabs).
 
-## Initialize Blazor Tab Content using Template
+## Initialize Blazor Tabs Content using Template
 
-Tab provides support to render content using `ContentTemplate` property. You can give preferred content inside the `ContentTemplate` element.
+Blazor Tabs provides support to render content using `ContentTemplate` property. You can give preferred content inside the `ContentTemplate` element.
 
 N> `ContentTemplate` property supports `RenderFragment` type to render content.
 
-The following code explains how to initialize tab content using `ContentTemplate`.
+The following code explains how to initialize Blazor Tabs content using `ContentTemplate`.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}

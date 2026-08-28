@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Disabled Items in Blazor Mention Component | Syncfusion®
-description: Checkout and learn here all about how to Disabled Items in Blazor Mention component and much more details.
+title: Disabled Items in Blazor Mention | Syncfusion
+description: Enable or disable individual Blazor Mention list items using the Disabled field in MentionFieldSettings.
 platform: Blazor
 control: Mention
 documentation: ug
 ---
 
-# Disabled Items in Blazor Mention Component
+# Disabled Items in Blazor Mention
 
 The [Mention](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html) provides options for individual items to be either in an enabled or disabled state for specific scenarios. The category of each list item can be mapped through the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MentionFieldSettings.html#Syncfusion_Blazor_DropDowns_MentionFieldSettings_Disabled) field in the data table. Once an item is disabled, it cannot be selected as a value for the component. To configure the disabled item columns, use the `MentionFieldSettings.Disabled` property.
 

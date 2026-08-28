@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor MultiColumn ComboBox Component | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor MultiColumn ComboBox component and much more.
+title: Accessibility in Blazor MultiColumn ComboBox | Syncfusion
+description: Learn how Blazor MultiColumn ComboBox supports accessibility with ARIA roles, states, and full keyboard navigation.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
 ---
 
-# Accessibility in Blazor MultiColumn ComboBox Component
+# Accessibility in Blazor MultiColumn ComboBox
 
 The [Blazor MultiColumn ComboBox](https://www.syncfusion.com/blazor-components/blazor-multicolumn-combobox) is designed in accordance with WAI-ARIA specifications and applies appropriate roles, states, and properties, along with robust keyboard support. The component offers complete keyboard interaction and ARIA support to assist users who rely on assistive technologies (AT) or keyboard navigation.
 
@@ -79,7 +79,7 @@ Use the following key shortcuts to interact with the Blazor MultiColumn ComboBox
 
 The Blazor MultiColumn ComboBox component’s accessibility is validated with the [axe-core](https://www.npmjs.com/package/axe-core) tool during automated testing.
 
-The accessibility compliance of the MultiColumn ComboBox component is demonstrated in the following sample. Open the [MultiColumn ComboBox accessibility sample](https://blazor.syncfusion.com/accessibility/combobox) in a new window to evaluate accessibility with your preferred tools. The component also supports right-to-left (RTL) rendering and high-contrast themes for improved readability and usability.
+The accessibility compliance of the Blazor MultiColumn ComboBox component is demonstrated in the following sample. Open the [Blazor MultiColumn ComboBox accessibility sample](https://blazor.syncfusion.com/accessibility/combobox) in a new window to evaluate accessibility with your preferred tools. The component also supports right-to-left (RTL) rendering and high-contrast themes for improved readability and usability.
 
 ## See also
 

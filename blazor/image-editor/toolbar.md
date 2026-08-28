@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Toolbar with Blazor Image Editor Component | Syncfusion®
-description: Learn about the toolbar in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
+title: Toolbar in Blazor Image Editor | Syncfusion
+description: Customize the Blazor Image Editor toolbar by adding, removing, or replacing tools to match your editing workflow.
 platform: Blazor
 control: Image Editor
 documentation: ug
 ---
 
-# Toolbar in the Blazor Image Editor Component
+# Toolbar in Blazor Image Editor
 
 The toolbar in the Blazor Image Editor enables interaction and editing operations. It offers a range of tools and supports extensive customization to match specific requirements and workflows. Items can be added or removed to create a focused toolset, or a fully custom toolbar can be defined.
 

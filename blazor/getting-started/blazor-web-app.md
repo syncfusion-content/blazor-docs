@@ -22,7 +22,7 @@ To get started quickly with a Blazor Web App, watch the following video.
 
 {% playground "https://blazorplayground.syncfusion.com/" %}
 
-## Using Templates
+## Using .NET CLI Templates
 
 Quickly set up a Blazor application using the preconfigured [Syncfusion Web App Template](https://help.syncfusion.com/extension/syncfusion-blazor-webapp-template-via-nuget/installation).
 
@@ -39,9 +39,9 @@ dotnet new install Syncfusion.Blazor.WebApp.Templates
 Next, create a new project with one of the following interactivity modes.
 
 {% tabs %}
-{% highlight razor tabtitle="Auto" %}
+{% highlight razor tabtitle="Server" %}
 
-dotnet new syncfusionblazorwebapp --name MyApp --interactivity Auto --all-interactive PerPage/component
+dotnet new syncfusionblazorwebapp --name MyApp --interactivity Server --all-interactive Global
 
 {% endhighlight %}
 
@@ -51,9 +51,9 @@ dotnet new syncfusionblazorwebapp --name MyApp --interactivity WebAssembly --all
 
 {% endhighlight %}
 
-{% highlight razor tabtitle="Server" %}
+{% highlight razor tabtitle="Auto" %}
 
-dotnet new syncfusionblazorwebapp --name MyApp --interactivity Server --all-interactive Global
+dotnet new syncfusionblazorwebapp --name MyApp --interactivity Auto --all-interactive PerPage/component
 
 {% endhighlight %}
 
@@ -61,12 +61,29 @@ dotnet new syncfusionblazorwebapp --name MyApp --interactivity Server --all-inte
 
 After creating the project, navigate to the main project folder (for example, `MyApp`) and run the following command.
 
-{% highlight razor tabtitle=".NET CLI" %}
+{% tabs %}
+{% highlight razor tabtitle="Server" %}
 
 cd MyApp
 dotnet run
 
 {% endhighlight %}
+
+{% highlight razor tabtitle="WebAssembly" %}
+
+cd MyApp
+dotnet run
+
+{% endhighlight %}
+
+{% highlight razor tabtitle="Auto" %}
+
+cd MyApp
+cd MyApp
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Manually creating a project
 
@@ -97,22 +114,6 @@ cd BlazorWebApp.Client
 {% endtabs %}
 
 Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
-
-{% endtabcontent %}
-
-{% tabcontent .NET CLI %}
-
-Run the following command to create a new Blazor Web App.
-
-{% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
-
-dotnet new blazor -o BlazorWebApp --interactivity Auto
-cd BlazorWebApp
-cd BlazorWebApp.Client
-
-{% endhighlight %}
-{% endtabs %}
 
 {% endtabcontent %}
 
@@ -150,21 +151,6 @@ Open the terminal and run the following commands.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
-
-dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-
-{% tabcontent .NET CLI %}
-
-Open the command prompt and run the following commands.
-
-{% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
 
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
@@ -283,22 +269,6 @@ Open the terminal and navigate to the main project folder (for example, `BlazorW
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
-
-cd ..
-cd BlazorWebApp
-dotnet run
-
-{% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-
-{% tabcontent .NET CLI %}
-
-Open the command prompt and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
-
-{% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
 
 cd ..
 cd BlazorWebApp
