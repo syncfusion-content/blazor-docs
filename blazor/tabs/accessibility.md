@@ -41,7 +41,7 @@ The accessibility compliance for the Blazor Tabs component is outlined below.
 
 [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs) component is designed by considering [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/practices/) standard. Tab is supported with ARIA Accessibility which is accessible by on-screen readers, and other assistive technology devices.
 
-The following list of attributes are added in the Tab.
+The following list of attributes are added in the Blazor Tabs.
 
 | **Attributes** | **Purpose** |
 | --- | --- |
@@ -57,7 +57,7 @@ The following list of attributes are added in the Tab.
 
 ## Keyboard interaction
 
-By default, keyboard navigation is enabled. This component implements keyboard navigation support by following the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/#Tabpanel) practices. Once focused on the active Tab element, you can use the following key combination for interacting with the Tab.
+By default, keyboard navigation is enabled. This component implements keyboard navigation support by following the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/#Tabpanel) practices. Once focused on the active Tab element, you can use the following key combination for interacting with the Blazor Tabs.
 
 | Windows | Mac | Actions |
 |--- |--- | --- |
@@ -75,7 +75,7 @@ By default, keyboard navigation is enabled. This component implements keyboard n
 
 The Blazor Tabs component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
-The accessibility compliance of the Tabs component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/tab) in a new window to evaluate the accessibility of the Tabs component with accessibility tools.
+The accessibility compliance of the Blazor Tabs component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/tab) in a new window to evaluate the accessibility of the Blazor Tabs component with accessibility tools.
 
 ## See also
 

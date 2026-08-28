@@ -9,9 +9,9 @@ documentation: ug
 
 # How to enable RTL in Blazor Toggle Switch Button
 
-The Toggle Switch Button component supports right-to-left (RTL) layout. This can be achieved by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfInputBase-1.html#Syncfusion_Blazor_Buttons_SfInputBase_1_EnableRtl) property to `true`.
+The Blazor Toggle Switch Button component supports right-to-left (RTL) layout. This can be achieved by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfInputBase-1.html#Syncfusion_Blazor_Buttons_SfInputBase_1_EnableRtl) property to `true`.
 
-The following example illustrates how to enable right-to-left support in the Toggle Switch Button component.
+The following example illustrates how to enable right-to-left support in the Blazor Toggle Switch Button component.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons

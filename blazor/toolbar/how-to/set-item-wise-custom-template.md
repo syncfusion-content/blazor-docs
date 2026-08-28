@@ -9,7 +9,7 @@ documentation: ug
 
 # How to set item-wise custom template in Blazor Toolbar
 
-The Toolbar supports defining custom content for an item using its [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Template) property, which accepts either an HTML element or a `RenderFragment`.
+The Blazor Toolbar supports defining custom content for an item using its [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Template) property, which accepts either an HTML element or a `RenderFragment`.
 
 ```cshtml
 

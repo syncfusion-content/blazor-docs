@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor AutoComplete
 
-This section lists and describes the events raised by the AutoComplete component for common user interactions and lifecycle actions.
+This section lists and describes the events raised by the Blazor AutoComplete component for common user interactions and lifecycle actions.
 
 ## Blur
 
