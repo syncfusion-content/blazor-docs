@@ -555,7 +555,14 @@ An anchor tag can be defined inside the column template with a click event bound
             <Template>
                 @{
                     var Employee = (context as EmployeeData);
-                    <div><a href="#" @onclick="@(() => Navigate(Employee))">View</a></div>
+                    <div>
+                        <a href="#" 
+                        @onclick="@(() => Navigate(Employee))" 
+                        aria-label="View employee details">
+                        View
+                        </a>
+                    </div>
+
                 }
             </Template>
         </TreeGridColumn>
