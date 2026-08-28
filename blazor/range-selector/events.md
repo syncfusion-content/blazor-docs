@@ -65,7 +65,7 @@ The [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Rang
 
 ## OnPrintCompleted
 
-The [OnPrintCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_OnPrintCompleted) event triggers after the Range Selector is printed. This event receives a base [EventArgs](https://learn.microsoft.com/dotnet/api/system.eventargs) instance and does not provide any additional arguments.
+The [OnPrintCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_OnPrintCompleted) event triggers after the Range Selector is printed. This event receives a base `EventArgs` instance and does not provide any additional arguments.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts

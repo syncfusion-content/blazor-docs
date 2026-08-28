@@ -7,7 +7,7 @@ control: Range Selector
 documentation: ug
 ---
 
-# Selecting a Range
+# Selecting a Range in Blazor Range Selector
 
 The Range Selector's left and right thumbs indicate the selected range within a large collection of data. A range can be selected in the following ways:
 
