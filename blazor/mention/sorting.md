@@ -9,7 +9,7 @@ documentation: ug
 
 # Sorting in Blazor Mention
 
-The [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_SortOrder) property of the Mention component allows you to specify the order in which the suggestion list items should be displayed. By default, the `SortOrder` property is set to `None`, which means that the suggestion list items will be displayed in their original order. The `SortOrder` property can be set to one of the below three values.
+The [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_SortOrder) property of the Blazor Mention component allows you to specify the order in which the suggestion list items should be displayed. By default, the `SortOrder` property is set to `None`, which means that the suggestion list items will be displayed in their original order. The `SortOrder` property can be set to one of the below three values.
 
 SortOrder     | Description
 ------------  | -------------

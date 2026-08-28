@@ -26,7 +26,7 @@ Apply built-in text alignment classes to control alignment in each column:
 
 {% endhighlight %}
 
-![Blazor DropDownList with multi-column popup](./images/multicolumn/blazor_dropdown_multicolumn.webp)
+![Blazor Dropdown List with multi-column popup](./images/multicolumn/blazor_dropdown_multicolumn.webp)
 
 ## Limitations of the multicolumn dropdown list
 
