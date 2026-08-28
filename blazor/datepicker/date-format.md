@@ -11,7 +11,7 @@ documentation: ug
 
 ## Display Format
 
-The display format specifies how the date value is rendered in the DatePicker input. By default, the DatePicker's format is based on the current culture (for example, `M/d/yyyy` for `en-US`). You can override the default by setting your own [.NET custom](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) or [.NET standard](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings) date format string through the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Format) property. Once the `Format` is set, it is applied consistently to all cultures, regardless of their regional conventions.
+The display format specifies how the date value is rendered in the Blazor DatePicker input. By default, the Blazor DatePicker's format is based on the current culture (for example, `M/d/yyyy` for `en-US`). You can override the default by setting your own [.NET custom](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) or [.NET standard](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings) date format string through the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Format) property. Once the `Format` is set, it is applied consistently to all cultures, regardless of their regional conventions.
 
 {% highlight Razor %}
 

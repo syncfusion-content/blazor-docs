@@ -14,7 +14,7 @@ The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-q
 * List Binding
 * Remote data
 
-N> When using `DataSource` as `IEnumerable<T>`, the component type (`TValue`) is inferred from the data. When using `SfDataManager`, set `TValue` explicitly on the Query Builder component.
+N> When using `DataSource` as `IEnumerable<T>`, the component type (`TValue`) is inferred from the data. When using `SfDataManager`, set `TValue` explicitly on the Blazor Query Builder component.
 
 ## List Binding
 

@@ -9,13 +9,13 @@ documentation: ug
 
 # Align Items Using Spacer in Blazor Toolbar
 
-A Toolbar [`Spacer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemType.html#Syncfusion_Blazor_Navigations_ItemType_Spacer) manages the alignment of toolbar items. It creates an adjustable empty space within the toolbar whose size adapts to the available width.
+A Blazor Toolbar [`Spacer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemType.html#Syncfusion_Blazor_Navigations_ItemType_Spacer) manages the alignment of toolbar items. It creates an adjustable empty space within the Blazor Toolbar whose size adapts to the available width.
 
-To achieve different alignment styles, strategically place Spacer items within the toolbar items:
+To achieve different alignment styles, strategically place Spacer items within the Blazor Toolbar items:
 
 ## Left, Center, and Right alignment
 
-Insert spacers at the end of the items on the left and in the center. This will push the remaining items to the right and center, creating a balanced distribution across the toolbar.
+Insert spacers at the end of the items on the left and in the center. This will push the remaining items to the right and center, creating a balanced distribution across the Blazor Toolbar.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -38,7 +38,7 @@ Insert spacers at the end of the items on the left and in the center. This will 
 
 ## Left and Right alignment
 
-Insert a spacer between items intended for left and right alignment. This pushes the right-aligned items towards the edge of the toolbar.
+Insert a spacer between items intended for left and right alignment. This pushes the right-aligned items towards the edge of the Blazor Toolbar.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -60,7 +60,7 @@ Insert a spacer between items intended for left and right alignment. This pushes
 
 ## Right alignment
 
-Insert a spacer as the first item in the toolbar. This pushes all other items towards the right edge of the toolbar.
+Insert a spacer as the first item in the Blazor Toolbar. This pushes all other items towards the right edge of the Blazor Toolbar.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

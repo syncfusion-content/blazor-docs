@@ -60,4 +60,4 @@ The handler receives a [MenuEventArgs](https://help.syncfusion.com/cr/blazor/Syn
 ```
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVdjmiZJbXAPfth?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Binding Blazor ContextMenu Events](./../images/blazor-contextmenu-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVdjmiZJbXAPfth?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Binding Blazor Context Menu Events](./../images/blazor-contextmenu-component.webp)" %}

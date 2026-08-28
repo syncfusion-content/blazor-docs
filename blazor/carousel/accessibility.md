@@ -41,7 +41,7 @@ The accessibility compliance for the Blazor Carousel component is outlined below
 
 ## WAI-ARIA attributes
 
-The Blazor Carousel component is designed in accordance with the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) standard, making it accessible to screen readers and other assistive technology devices. The following list of attributes is added to the Carousel.
+The Blazor Carousel component is designed in accordance with the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) standard, making it accessible to screen readers and other assistive technology devices. The following list of attributes is added to the Blazor Carousel.
 
 | **Attribute** | **Purpose**                                                                                                                            |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -54,7 +54,7 @@ The Blazor Carousel component is designed in accordance with the [WAI-ARIA](http
 
 ## Keyboard interaction
 
-All Carousel actions can be controlled using keyboard keys through the [`AllowKeyboardInteraction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_AllowKeyboardInteraction) property, which is enabled by default. If you wish to disable the default keyboard interactions, you can set this property to `false`. This is particularly useful if the carousel contains input elements, as pressing the arrow keys might cause the carousel to move unexpectedly. By disabling keyboard interaction, the carousel remains static, allowing the user to focus on the input fields without any interruptions.
+All Blazor Carousel actions can be controlled using keyboard keys through the [`AllowKeyboardInteraction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_AllowKeyboardInteraction) property, which is enabled by default. If you wish to disable the default keyboard interactions, you can set this property to `false`. This is particularly useful if the carousel contains input elements, as pressing the arrow keys might cause the carousel to move unexpectedly. By disabling keyboard interaction, the carousel remains static, allowing the user to focus on the input fields without any interruptions.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -69,7 +69,7 @@ All Carousel actions can be controlled using keyboard keys through the [`AllowKe
 </SfCarousel>
 ```
 
-This control implements keyboard navigation support by following WAI-ARIA practices. When focus is on the active Carousel element, you can use the following key combinations to interact with the Carousel.
+This control implements keyboard navigation support by following WAI-ARIA practices. When focus is on the active Blazor Carousel element, you can use the following key combinations to interact with the Blazor Carousel.
 
 | Windows | Mac | Description |
 | --- | --- | --- |
@@ -84,7 +84,7 @@ This control implements keyboard navigation support by following WAI-ARIA practi
 
 The Blazor Carousel component's accessibility levels are ensured through the [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
-The accessibility compliance of the Carousel component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/carousel) in a new window to evaluate the accessibility of the Carousel component with accessibility tools.
+The accessibility compliance of the Blazor Carousel component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/carousel) in a new window to evaluate the accessibility of the Blazor Carousel component with accessibility tools.
 
 ## See also
 

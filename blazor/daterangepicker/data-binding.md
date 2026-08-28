@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor DateRangePicker
 
-This section briefly explains how to bind the value to the DateRangePicker component in the following ways.
+This section briefly explains how to bind the value to the Blazor DateRangePicker component in the following ways.
 
 * One-way binding
 * Two-way data binding
@@ -17,7 +17,7 @@ This section briefly explains how to bind the value to the DateRangePicker compo
 
 ## One-way binding
 
-You can bind the value to the DateRangePicker component directly for `StartDate` and `EndDate` properties as mentioned in the following code example. In one-way binding, you need to pass the property or variable name along with `@` (for example: `@StartValue`).
+You can bind the value to the Blazor DateRangePicker component directly for `StartDate` and `EndDate` properties as mentioned in the following code example. In one-way binding, you need to pass the property or variable name along with `@` (for example: `@StartValue`).
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -61,7 +61,7 @@ public DateTime? EndValue { get; set; } = DateTime.Now;
 
 ## Dynamic value binding
 
-You can change the property value dynamically by manually calling the `StateHasChanged()` method inside an event handler of the DateRangePicker component. This method notifies the component that its state has changed and queues a re-render. Refer to the following code example.
+You can change the property value dynamically by manually calling the `StateHasChanged()` method inside an event handler of the Blazor DateRangePicker component. This method notifies the component that its state has changed and queues a re-render. Refer to the following code example.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

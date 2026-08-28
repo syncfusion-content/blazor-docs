@@ -39,17 +39,17 @@ The accessibility compliance for the Blazor Stepper component is outlined below.
 
 ## WAI-ARIA attributes
 
-The following ARIA attributes are used in the Stepper component:
+The following ARIA attributes are used in the Blazor Stepper component:
 
 | Attributes | Purpose |
 | --- | --- |
 | `aria-label` | Attribute provide a descriptive text that labels the interactive element for accessibility. |
-| `aria-current` | Attribute denotes the currently active step in the Stepper. |
+| `aria-current` | Attribute denotes the currently active step in the Blazor Stepper. |
 | `aria-disabled`| Indicates when the step is disabled and cannot be interacted. |
 
 ## Keyboard interaction
 
-The following keyboard shortcuts are supported by the Stepper component.
+The following keyboard shortcuts are supported by the Blazor Stepper component.
 
 | Windows | Mac | **To do this** |
 | --- | --- | --- |

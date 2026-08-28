@@ -9,7 +9,7 @@ documentation: ug
 
 # List of Components in Blazor In-place Editor
 
-The In-place Editor renders different editor components based on the `Type` property. Each editor component must be placed inside the In-place Editor and configured with two-way data binding between the In-place Editor and the embedded editor component to keep values in sync.
+The Blazor In-place Editor renders different editor components based on the `Type` property. Each editor component must be placed inside the Blazor In-place Editor and configured with two-way data binding between the Blazor In-place Editor and the embedded editor component to keep values in sync.
 
 The following table lists the supported editor components and their corresponding `Type` values.
 
@@ -21,7 +21,7 @@ The following table lists the supported editor components and their correspondin
 | [Slider](../range-slider/getting-started)   (`Slider`)             | [NumericTextBox](../numeric-textbox/getting-started)   (`Numeric`)    |
 | [RichTextEditor](../rich-text-editor/getting-started)     (`RichTextEditor`)  |   [ColorPicker](../color-picker/getting-started)    (`Color`)    |
 
-The following example demonstrates how to render the editor components in the In-place Editor.
+The following example demonstrates how to render the editor components in the Blazor In-place Editor.
 
 ```cshtml
 

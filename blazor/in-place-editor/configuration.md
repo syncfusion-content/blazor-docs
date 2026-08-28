@@ -11,7 +11,7 @@ documentation: ug
 
 ## Rendering modes
 
-This section explains the supported rendering modes of the In-place Editor. The supported rendering modes are:
+This section explains the supported rendering modes of the Blazor In-place Editor. The supported rendering modes are:
 
 - **Popup**
 - **Inline**
@@ -21,7 +21,7 @@ N> Inline is the default rendering mode.
 - **Popup** mode displays the editable container like a tooltip or popover above the target element.
 - **Inline** mode replaces the element with the editable container. To open the editor in Inline mode, set the `Mode` property to `Inline`.
 
-In the following example, the In-place Editor renders in Inline mode. The rendering mode can be switched dynamically by changing the drop-down value.
+In the following example, the Blazor In-place Editor renders in Inline mode. The rendering mode can be switched dynamically by changing the drop-down value.
 
 ```cshtml
 
@@ -112,7 +112,7 @@ The following options are also supported:
 * **DoubleClick**: Opens the editor on a double click. This option does not apply to the edit icon.
 * **EditIconClick**: Disables input-triggered editing and allows editing only through the edit icon.
 
-N> The In-place Editor receives focus by pressing the Tab key from the previous focusable element. Press `Enter` to open the editor.
+N> The Blazor In-place Editor receives focus by pressing the Tab key from the previous focusable element. Press `Enter` to open the editor.
 
 In the following code block, when switching the drop-down item, the selected value is assigned to the `EditableOn` property. The editor is opened when you double click on the input.
 
@@ -297,7 +297,7 @@ In the following example, the selected drop-down value is assigned to the `Actio
 
 ## Display modes
 
-By default, the In-place Editor input element is highlighted with a dotted underline. To remove the dotted underline from the input element, add the `{"data-underline", "false"}` attribute to the In-place Editor root element.
+By default, the Blazor In-place Editor input element is highlighted with a dotted underline. To remove the dotted underline from the input element, add the `{"data-underline", "false"}` attribute to the Blazor In-place Editor root element.
 
 The following example shows interactive and normal display modes.
 
