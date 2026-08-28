@@ -11,7 +11,7 @@ documentation: ug
 
 ## Popup resize 
 
-Can dynamically adjust the size of the popup in the AutoComplete component by using the [AllowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowResize) property. When enabled, users can resize the popup by dragging the resize handle to improve visibility and control.
+Can dynamically adjust the size of the popup in the Blazor AutoComplete component by using the [AllowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowResize) property. When enabled, users can resize the popup by dragging the resize handle to improve visibility and control.
 
 {% highlight Razor %}
 
@@ -24,7 +24,7 @@ Can dynamically adjust the size of the popup in the AutoComplete component by us
 
 ## Change the popup width
 
-Customize the width of the popup using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property. The default value of `PopupWidth` is `100%`. When unspecified, the popup width is based on the AutoComplete component’s width. This property accepts standard CSS units (for example, px, %, rem).
+Customize the width of the popup using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property. The default value of `PopupWidth` is `100%`. When unspecified, the popup width is based on the Blazor AutoComplete component’s width. This property accepts standard CSS units (for example, px, %, rem).
 
 In the following sample, the `PopupWidth` is set as `300px`.
 

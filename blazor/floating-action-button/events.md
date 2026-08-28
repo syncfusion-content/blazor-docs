@@ -9,11 +9,11 @@ documentation: ug
 
 # Events in Blazor Floating Action Button
 
-The Floating Action Button component exposes the following events: `OnClick` and `Created`. Use these events to handle user interactions and component lifecycle.
+The Blazor Floating Action Button component exposes the following events: `OnClick` and `Created`. Use these events to handle user interactions and component lifecycle.
 
 ## OnClick
 
-Raised when the Floating Action Button is activated by a user action, including mouse click, keyboard activation (Enter/Space), or touch. The example below demonstrates handling the click event.
+Raised when the Blazor Floating Action Button is activated by a user action, including mouse click, keyboard activation (Enter/Space), or touch. The example below demonstrates handling the click event.
 
 ```cshtml
 
@@ -37,7 +37,7 @@ Raised when the Floating Action Button is activated by a user action, including 
 
 ## Created
 
-Raised after the Floating Action Button has been created and its initial rendering is complete. Use this event to run setup logic or access the component once it is available in the UI.
+Raised after the Blazor Floating Action Button has been created and its initial rendering is complete. Use this event to run setup logic or access the component once it is available in the UI.
 
 ```cshtml
 
