@@ -46,13 +46,13 @@ The component's `aria-disabled` state reflects the [Enabled](https://help.syncfu
 
 * **aria-expanded**: Indicates whether the popup is open or collapsed.
 
-* **aria-disabled**: Indicates the disabled state of the DatePicker component, reflecting the `Enabled` property.
+* **aria-disabled**: Indicates the disabled state of the Blazor DatePicker component, reflecting the `Enabled` property.
 
-* **aria-activedescendant**: Identifies the currently focused child element (such as the active date) inside the DatePicker popup.
+* **aria-activedescendant**: Identifies the currently focused child element (such as the active date) inside the Blazor DatePicker popup.
 
 ## Keyboard interaction
 
-The Blazor DatePicker implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/). You can use the following keys to interact with the DatePicker.
+The Blazor DatePicker implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/). You can use the following keys to interact with the Blazor DatePicker.
 
 ### Input navigation
 
@@ -86,7 +86,7 @@ Use the following keys to navigate the Calendar after the popup has been opened:
 | <kbd>Control</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Home</kbd> | Focuses the starting date in the current year. |
 | <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>End</kbd> | Focuses the ending date in the current year. |
 
-N> To demonstrate custom keyboard interaction, the following example shows how to press the `t` key (lowercase) to move focus out of the DatePicker component. This is a user-defined example and not a built-in shortcut. For additional information about native events, see [Native Events](https://blazor.syncfusion.com/documentation/datepicker/native-events).
+N> To demonstrate custom keyboard interaction, the following example shows how to press the `t` key (lowercase) to move focus out of the Blazor DatePicker component. This is a user-defined example and not a built-in shortcut. For additional information about native events, see [Native Events](https://blazor.syncfusion.com/documentation/datepicker/native-events).
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -109,7 +109,7 @@ N> To demonstrate custom keyboard interaction, the following example shows how t
 
 The Blazor DatePicker component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-The accessibility compliance of the DatePicker component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/datepicker) in a new window to evaluate the accessibility of the DatePicker component with accessibility tools.
+The accessibility compliance of the Blazor DatePicker component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/datepicker) in a new window to evaluate the accessibility of the Blazor DatePicker component with accessibility tools.
 
 ## See also
 

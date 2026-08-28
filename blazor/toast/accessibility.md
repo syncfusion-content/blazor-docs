@@ -82,7 +82,7 @@ The Blazor Toast component implements the keyboard navigation support by using t
 
 The Blazor Toast component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-The accessibility compliance of the Toast component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/toast) in a new window to evaluate the accessibility of the Toast component with accessibility tools.
+The accessibility compliance of the Blazor Toast component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/toast) in a new window to evaluate the accessibility of the Blazor Toast component with accessibility tools.
 
 ## See also
 
