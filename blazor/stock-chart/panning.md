@@ -11,7 +11,7 @@ documentation: ug
 
 Panning is enabled by default in the Stock Chart. This behavior is controlled by the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_EnablePan) property of [StockChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html), which defaults to `true`.
 
-The following example loads a larger historical dataset from a `googl.json` file placed in the app's `wwwroot` folder. The file must contain an array of objects with fields matching the `ChartData` class (`x`, `open`, `high`, `low`, `close`, `volume`).
+The following example loads a larger historical dataset from a `google.json` file placed in the app's `wwwroot` folder. The file must contain an array of objects with fields matching the `ChartData` class (`x`, `open`, `high`, `low`, `close`, `volume`).
 
 ```cshtml
 
@@ -50,7 +50,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        dataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri + "./googl.json");
+        dataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri + "./google.json");
     }
 
     public class ChartData
