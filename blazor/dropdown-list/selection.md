@@ -37,7 +37,7 @@ Bind a preselected value to the `DropDownList` using the [`@bind-Value`](https:/
 
 {% endhighlight %}
 
-![Blazor DropDownList with preselected value](./images/selection/blazor_dropdown_preselect-value.webp)
+![Blazor Dropdown List with preselected value](./images/selection/blazor_dropdown_preselect-value.webp)
 
 ## Programmatically change the selected value
 
@@ -49,7 +49,7 @@ Change the selected value programmatically using two-way binding with [`@bind-Va
 
 {% endhighlight %}
 
-![Blazor DropDownList with programmatic value change](./images/selection/blazor_dropdown_changing-selected-value.gif)
+![Blazor Dropdown List with programmatic value change](./images/selection/blazor_dropdown_changing-selected-value.gif)
 
 When the value changes through user action or programmatically, the following events are raised.
 
@@ -87,7 +87,7 @@ The following sample binds the index during initial rendering.
 
 {% endhighlight %}
 
-![Blazor DropDownList with index-based preselection](./images/selection/blazor_dropdown_preselect-value-index.webp)
+![Blazor Dropdown List with index-based preselection](./images/selection/blazor_dropdown_preselect-value-index.webp)
 
 ## Get selected item by value
 
@@ -129,7 +129,7 @@ In order to trigger the `FocusAsync()` and `FocusOutAsync()` methods using the i
 
 {% endhighlight %}
 
-![Blazor DropDownList with dynamic focus in and out](./images/selection/blazor_dropdown_focus-in-out.gif)
+![Blazor Dropdown List with dynamic focus in and out](./images/selection/blazor_dropdown_focus-in-out.gif)
 
 When focusing and blurring, the following events are raised.
 

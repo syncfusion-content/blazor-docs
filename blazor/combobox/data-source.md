@@ -186,7 +186,7 @@ Use the WebApiAdaptor to bind the ComboBox to a Web API endpoint (including serv
 
 ### Custom adaptor
 
-The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) supports custom adaptors, which allow performing manual operations on the data. This is useful for implementing custom data binding and editing operations in the ComboBox component.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) supports custom adaptors, which allow performing manual operations on the data. This is useful for implementing custom data binding and editing operations in the Blazor ComboBox component.
 
 For custom data binding in the ComboBox, the DataAdaptor class is used as the base class for a custom adaptor.
 
@@ -298,7 +298,7 @@ The following example demonstrates remote data binding with offline mode enabled
 
 ### ValueTuple data binding
 
-Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-10.0) data to the ComboBox component. The following code helps you to get a string value from the enumeration data by using [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-10.0).
+Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-10.0) data to the Blazor ComboBox component. The following code helps you to get a string value from the enumeration data by using [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-10.0).
 
 ```csharp
 
@@ -314,7 +314,7 @@ Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple
 
 ## Binding ExpandoObject
 
-Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-10.0) data to the ComboBox component. The following example `ExpandoObject` is bound to the collection of vehicles data.
+Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-10.0) data to the Blazor ComboBox component. The following example `ExpandoObject` is bound to the collection of vehicles data.
 
 ```csharp
 
@@ -345,7 +345,7 @@ Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 ## Binding DynamicObject
 
-Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-10.0) data to the ComboBox component. The following example `DynamicObject` is bound to the collection of customers data.
+Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-10.0) data to the Blazor ComboBox component. The following example `DynamicObject` is bound to the collection of customers data.
 
 ```csharp
 
@@ -395,7 +395,7 @@ Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 ## Binding ObservableCollection
 
-Bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-10.0) data to the ComboBox component. The following example `Observable Data` is bound to a collection of colors data.
+Bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-10.0) data to the Blazor ComboBox component. The following example `Observable Data` is bound to a collection of colors data.
 
 ```csharp
 
@@ -437,7 +437,7 @@ Bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.
 
 ## Entity Framework
 
-You need to follow the below steps to consume data from the **Entity Framework** in the ComboBox component.
+You need to follow the below steps to consume data from the **Entity Framework** in the Blazor ComboBox component.
 
 ### Create DBContext class
 
@@ -549,7 +549,7 @@ namespace EFDropDown.Controllers
 }
 ```
 
-### Configure ComboBox component using Web API adaptor
+### Configure Blazor ComboBox component using Web API adaptor
 
 Now, configure the ComboBox using the **SfDataManager** to interact with the created Web API and consume data. To interact with a Web API, use WebApiAdaptor.
 

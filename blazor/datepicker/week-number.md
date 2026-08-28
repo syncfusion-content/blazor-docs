@@ -9,7 +9,7 @@ documentation: ug
 
 # Week Number in Blazor DatePicker
 
-The DatePicker can display the week number alongside each row of the calendar. Use the [WeekNumber](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_WeekNumber) property to toggle the display. The default value of `WeekNumber` is `false`.
+The Blazor DatePicker can display the week number alongside each row of the calendar. Use the [WeekNumber](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_WeekNumber) property to toggle the display. The default value of `WeekNumber` is `false`.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

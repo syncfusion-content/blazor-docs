@@ -9,13 +9,13 @@ documentation: ug
 
 # Resize Icon Template in Blazor Splitter
 
-The Splitter allows to customize the resize icon of the separator using the template, where any image or other templates can be rendered as resize icon.
+The Blazor Splitter allows to customize the resize icon of the separator using the template, where any image or other templates can be rendered as resize icon.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
-<div>Horizontal Splitter</div>
+<div>Horizontal Blazor Splitter</div>
 <SfSplitter Height="240px" Width="100%">
     <SplitterTemplates>
         <Separator>

@@ -9,7 +9,7 @@ documentation: ug
 
 # Orientations in Blazor Timeline
 
-The Timeline component supports displaying items in horizontal and vertical directions using the [`Orientation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_Orientation) property.
+The Blazor Timeline component supports displaying items in horizontal and vertical directions using the [`Orientation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_Orientation) property.
 
 ## Vertical
 

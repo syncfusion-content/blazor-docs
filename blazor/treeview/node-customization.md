@@ -11,7 +11,7 @@ documentation: ug
 
 The TreeView nodes in the Blazor TreeView component can be customized based on your needs.
 
-The TreeView component offers customization for the appearance of each node. This includes using images by mapping the [**ImageUrl**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_ImageUrl) field, enable or disable wrapping the text using the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowTextWrap) property, enable or disable the nodes on initial load or dynamically, show or hide the nodes on initial load or dynamically, and enable or customize the tooltip for tree nodes, and more.
+The Blazor TreeView component offers customization for the appearance of each node. This includes using images by mapping the [**ImageUrl**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_ImageUrl) field, enable or disable wrapping the text using the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowTextWrap) property, enable or disable the nodes on initial load or dynamically, show or hide the nodes on initial load or dynamically, and enable or customize the tooltip for tree nodes, and more.
 
 ## Images in Blazor TreeView Component
 
@@ -528,7 +528,7 @@ Particular TreeView nodes are shown or hidden dynamically on a button click by a
 
 ## Enable Tooltip in Blazor TreeView Component
 
-The TreeView component provides a straightforward way to enable tooltips for tree nodes using the [`Tooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Tooltip) property.
+The Blazor TreeView component provides a straightforward way to enable tooltips for tree nodes using the [`Tooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Tooltip) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

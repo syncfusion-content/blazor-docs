@@ -9,11 +9,11 @@ documentation: ug
 
 # Layout Customization in Blazor Data Form
 
-This section explains how to position buttons and labels in the DataForm component, customize button areas, and display validation messages. It also describes how to enable floating labels and adjust the overall form width.
+This section explains how to position buttons and labels in the Blazor Data Form component, customize button areas, and display validation messages. It also describes how to enable floating labels and adjust the overall form width.
 
 ## Button alignment
 
-The DataForm component can align form buttons horizontally within the form container by using the [ButtonsAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormButtonsAlignment.html) property. The `ButtonsAlignment` options are:
+The Blazor Data Form component can align form buttons horizontally within the form container by using the [ButtonsAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormButtonsAlignment.html) property. The `ButtonsAlignment` options are:
 
 - Center: centers the buttons within the container
 - Left: left-aligns the buttons
@@ -27,7 +27,7 @@ The DataForm component can align form buttons horizontally within the form conta
 |[FormButtonsAlignment.Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormButtonsAlignment.html#Syncfusion_Blazor_DataForm_FormButtonsAlignment_Right)|![DataForm with buttons aligned to the right](images/blazor_dataform_button_alignment_right.webp)|
 |[FormButtonsAlignment.Stretch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormButtonsAlignment.html#Syncfusion_Blazor_DataForm_FormButtonsAlignment_Stretch)|![DataForm with buttons stretched to full width](images/blazor_dataform_button_alignment_stretch.webp)|
 
-The following example shows how to use the `ButtonsAlignment` property in the DataForm component.
+The following example shows how to use the `ButtonsAlignment` property in the Blazor Data Form component.
 
 {% tabs %}
 {% highlight razor tabtitle="ButtonsAlignment"  %}
@@ -39,7 +39,7 @@ The following example shows how to use the `ButtonsAlignment` property in the Da
 
 ## Add additional buttons and customization
 
-Add custom buttons or other elements by using the [FormButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormButtons.html) `RenderFragment` within the DataForm component.
+Add custom buttons or other elements by using the [FormButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormButtons.html) `RenderFragment` within the Blazor Data Form component.
 
 In the following example, an additional button is added to reset input fields by handling the [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick) event of the [SfButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick).
 
@@ -55,7 +55,7 @@ In the following example, an additional button is added to reset input fields by
 
 ## Label position
 
-The DataForm component aligns labels either at the top or to the left of the field editors using the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_LabelPosition) property. The available options are shown below.
+The Blazor Data Form component aligns labels either at the top or to the left of the field editors using the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_LabelPosition) property. The available options are shown below.
 
 | LabelPosition | Snapshot |
 | ------------ | ----------------------- |
@@ -63,7 +63,7 @@ The DataForm component aligns labels either at the top or to the left of the fie
 |[FormLabelPosition.Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormLabelPosition.html#Syncfusion_Blazor_DataForm_FormLabelPosition_Left)|![DataForm with labels positioned to the left of editors](images/blazor_dataform_label_position_left.webp)|
 |When no specific value is provided, the layout defaults to `FormLabelPosition.Top`. For boolean editors such as [SfCheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) and [SfSwitch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html), labels are positioned to the right of the control.|![DataForm default label positioning and boolean editor label placement](images/blazor_dataform_default_label_position.webp)|
 
-The following example demonstrates how to configure the `LabelPosition` in the DataForm component.
+The following example demonstrates how to configure the `LabelPosition` in the Blazor Data Form component.
 
 {% tabs %}
 {% highlight razor tabtitle="Label Position"  %}
@@ -92,7 +92,7 @@ Enable floating labels to move the label to the top of the input when focused by
 
 {% endtabs %}
 
-![Blazor DataForm floating label behavior when focusing inputs](images/blazor_dataform_floating_label.gif)
+![Blazor Data Form floating label behavior when focusing inputs](images/blazor_dataform_floating_label.gif)
 
 N> The floating label feature applies only when [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_LabelPosition) is set to [FormLabelPosition.Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormLabelPosition.html#Syncfusion_Blazor_DataForm_FormLabelPosition_Top).
 
@@ -108,4 +108,4 @@ Customize the width of the form container by using the [Width](https://help.sync
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm with custom form width applied](images/blazor_dataform_change_form_width.webp)
+![Blazor Data Form with custom form width applied](images/blazor_dataform_change_form_width.webp)

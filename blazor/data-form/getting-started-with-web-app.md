@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Data Form in Blazor Web App | Syncfusion®
-description: Learn how to get started with the Syncfusion Blazor Data Form control. Explore setup, features, examples, and customization options.
+description: Learn how to get started with the Syncfusion Blazor WebApp Data Form control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Data Form
 documentation: ug
@@ -258,7 +258,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVHNxVKTJFKGNAG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor DataForm Component](images/blazor-dataform.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVHNxVKTJFKGNAG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Data Form Component](images/blazor-dataform.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DataForm).
 
