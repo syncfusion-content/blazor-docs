@@ -16,7 +16,7 @@ This section briefly explains how to include the [Blazor Chart Wizard](https://w
 
 > **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Code Studio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
-## Create a new Blazor Server App 
+## Create a new Blazor Server App
 
 {% tabcontents %}
 
@@ -133,7 +133,7 @@ After the packages are installed, open the **~/Components/_Imports.razor** file 
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in Blazor Server App and register the Blazor service and include the required namespace reference `using Syncfusion.Blazor;` at the top.
+Open the **Program.cs** file in the Blazor Server App, register the Syncfusion Blazor service, and add the namespace reference `using Syncfusion.Blazor;` at the top of the file.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -227,10 +227,12 @@ dotnet run
 
 ## Populate Blazor Chart Wizard data
 
-To bind data for the chart wizard component, you can assign an IEnumerable object to the `DataSource` property.
+To bind data to the Chart Wizard component, assign any `IEnumerable` collection to the `DataSource` property. First, define the data model and populate the collection in the `@code` block of **Home.razor**.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@code {
 
 public class OlympicsData
 {
@@ -255,13 +257,14 @@ private readonly List<OlympicsData> OlympicsDataSource = new()
     new OlympicsData { Country = "South Korea", CountryCode = "KOR", Gold = 13, Silver = 9,  Bronze = 10 }
 };
 
+}
+
 {% endhighlight %}
 {% endtabs %}
 
-Now, populate the categories and chartSeries collections with the appropriate data defining the chart’s categories and series. Then, assign these values to the `CategoryFields` and `SeriesFields` properties of the `ChartSettings`, respectively.
+Next, populate the `categories` and `chartSeries` collections with the field names that define the chart's categories and series. Then assign these collections to the `CategoryFields` and `SeriesFields` properties of `ChartSettings`, respectively. The complete page is shown below.
 
-N>
-The default series type is Line. Use the `SeriesType` property to change the series type.
+N> The default series type is `Line`. Use the `SeriesType` property to change the series type.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -314,7 +317,7 @@ The default series type is Line. Use the `SeriesType` property to change the ser
 
 ## Prerequisites
 
-In order to apply same theme update for the overall Chart Wizard UI, include the same theme [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) (this can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets)) in the **<head>** tag in the **~/Components/App.razor** file as shown below:
+To apply the same theme across the entire Chart Wizard UI, include the matching theme [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) (available from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets)) in the `<head>` tag of the **~/Components/App.razor** file, as shown below:
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
@@ -327,11 +330,12 @@ In order to apply same theme update for the overall Chart Wizard UI, include the
 {% endhighlight %}
 {% endtabs %}
 
-The `Theme` property is used to specify the visual theme applied to the chart.
+Use the `Theme` property to specify the visual theme applied to the chart, and make sure the theme stylesheet included in **App.razor** matches the selected value.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.ChartWizard
 
 <div class="control-section">
@@ -378,7 +382,9 @@ The `Theme` property is used to specify the visual theme applied to the chart.
 
 ![Chart Wizard appearance - theme](images/chart-wizard-appearance-theme.webp)
 
-## See also
+## See Also
 
-1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+* [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+* [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+* [Working with Data in Blazor Chart Wizard](./working-with-data)
+* [Appearance in Blazor Chart Wizard](./appearance)
