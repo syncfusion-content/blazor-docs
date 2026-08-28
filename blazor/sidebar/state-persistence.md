@@ -1,19 +1,19 @@
 ---
 layout: post
-title: State Persistence in Blazor Sidebar Component | Syncfusion®
-description: Checkout and learn about State Persistence in Blazor Sidebar component in Blazor Server App and Blazor WebAssembly App.
+title: State Persistence in Blazor Sidebar | Syncfusion
+description: Persist Blazor Sidebar open or close state in localStorage using EnablePersistence to maintain user preferences across sessions.
 platform: Blazor
 control: Sidebar
 documentation: ug
 ---
 
-# State Persistence in Blazor Sidebar Component
+# State Persistence in Blazor Sidebar
 
-State persistence allows the Sidebar component to retain the [`IsOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_IsOpen) property value in [`localStorage`](https://www.w3schools.com/html/html5_webstorage.asp) for maintaining its state, even if the browser is refreshed or when navigating to a different page within the browser.
+State persistence allows the Blazor Sidebar component to retain the [`IsOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_IsOpen) property value in [`localStorage`](https://www.w3schools.com/html/html5_webstorage.asp) for maintaining its state, even when the browser is refreshed or when navigating to a different page within the same browser session.
 
-This behavior is controlled by the [`EnablePersistence`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_EnablePersistence) property, which is set to **false** by default. When set to **true**, the [`IsOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_IsOpen) property value of the Sidebar component will be retained even after a page refresh.
+This behavior is controlled by the [`EnablePersistence`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_EnablePersistence) property, which is set to **false** by default. When set to **true**, the [`IsOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_IsOpen) property value of the Blazor Sidebar component will be retained even after a page refresh.
 
-N> The Sidebar component's [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_ID) is essential for enabling state persistence, as the persisted data is stored and retrieved based on the component's [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_ID).
+N> The Blazor Sidebar component's [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_ID) is essential for enabling state persistence, as the persisted data is stored and retrieved based on the component's [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_ID).
 
 ```cshtml
 

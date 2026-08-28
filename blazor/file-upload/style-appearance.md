@@ -1,19 +1,19 @@
 ---
 layout: post
-title: File Upload Customization in Blazor File Upload | Syncfusion®
-description: Learn how to style the Blazor File Upload component using CSS to customize its container, buttons, file list, content area, and progress bar.
+title: File Upload Customization in Blazor File Upload | Syncfusion
+description: Customize Blazor File Upload appearance with CSS classes for the container, buttons, drop area, file list, and progress bar.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# File Uploader Customization in Blazor
+# File Upload Customization in Blazor File Upload
 
 The visual appearance of the Blazor File Upload component can be extensively customized using CSS to align with your application's theme and style. This document provides a detailed guide to the component's CSS structure, enabling you to tailor its look and feel. By targeting specific CSS classes, you can modify elements such as the container, buttons, drop area, file list, and progress bar. For best results, it is recommended to use the CssClass property to apply a custom class, which helps scope your styles and prevent them from affecting other components.
 
 ## CssClass Property
 
-The File Upload component allows you to add a custom CSS class to its wrapper element using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_CssClass) property. This approach helps scope customizations and prevents unintended global style changes.
+The Blazor File Upload component allows you to add a custom CSS class to its wrapper element using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_CssClass) property. This approach helps scope customizations and prevents unintended global style changes.
 
 ```csharp
 @using Syncfusion.Blazor.Inputs
@@ -40,11 +40,11 @@ The File Upload component allows you to add a custom CSS class to its wrapper el
 
 ![Blazor File Upload with custom styles applied using CssClass](./images/blazor-file-upload-cssclass.webp)
 
-By using the `e-custom-uploader` class, you can target specific elements within the File Upload component.
+By using the `e-custom-uploader` class, you can target specific elements within the Blazor File Upload component.
 
 ## Customizing the Container
 
-Customize the main container of the File Upload component to control its overall dimensions and spacing. To scope your changes, target the custom class assigned via the `CssClass` property followed by the component's default class selectors.
+Customize the main container of the Blazor File Upload component to control its overall dimensions and spacing. To scope your changes, target the custom class assigned via the `CssClass` property followed by the component's default class selectors.
 
 ```css
 /* To specify a custom height, width and padding */

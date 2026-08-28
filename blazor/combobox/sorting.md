@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sorting in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn here all the features about Sorting functionality in Blazor ComboBox component and much more.
+title: Sorting in Blazor ComboBox | Syncfusion®
+description: Sort Blazor ComboBox items in ascending or descending order using the SortOrder property, with None, Ascending, and Descending options.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Sorting in Blazor ComboBox Component
+# Sorting in Blazor ComboBox
 
 Sorting enables displaying items in ascending or descending order. To enable sorting in the ComboBox, set the [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_SortOrder) property to the required value.
 

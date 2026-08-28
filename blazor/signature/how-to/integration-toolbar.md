@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Integration Toolbar with Blazor Signature Component | Syncfusion®
-description: Integrate Blazor Signature with Toolbar to enable undo, redo, save, clear, and color customization features.
+title: How to integrate Blazor Signature with Toolbar | Syncfusion
+description: Integrate Blazor Signature with Toolbar to enable undo, redo, save, clear, and color actions for a comprehensive editing experience.
 platform: Blazor
 control: Signature
 documentation: ug
 ---
 
-# Integration Signature with Toolbar
+# How to integrate Blazor Signature with Toolbar
 
-The Signature component integrates with the toolbar and updates the toolbar button state using the [`Changed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_Changed) event of the Signature component. In this integration, [`CanUndoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanUndoAsync), [`CanRedoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanRedoAsync), and [`IsEmptyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_IsEmptyAsync) methods are used to enable or disable the undo, redo, and clear buttons based on the current state of the signature.
+The Blazor Signature component integrates with the toolbar and updates the toolbar button state using the [`Changed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_Changed) event of the Blazor Signature component. In this integration, [`CanUndoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanUndoAsync), [`CanRedoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanRedoAsync), and [`IsEmptyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_IsEmptyAsync) methods are used to enable or disable the undo, redo, and clear buttons based on the current state of the signature.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

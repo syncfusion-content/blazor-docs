@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Breadcrumb Component | Syncfusion®
-description: Checkout and learn here all about features Accessibility in Blazor Breadcrumb component and much more.
+title: Accessibility in Blazor Breadcrumb | Syncfusion®
+description: Learn how Blazor Breadcrumb meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA roles, keyboard navigation, and screen reader support.
 platform: Blazor
-control: Button
+control: Breadcrumb
 documentation: ug
 ---
 
-# Accessibility in Blazor Breadcrumb Component
+# Accessibility in Blazor Breadcrumb
 
 The Blazor Breadcrumb component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -42,10 +42,10 @@ The Blazor Breadcrumb component follows the [WAI-ARIA](https://www.w3.org/WAI/AR
 
 | Attributes | Purpose |
 | --- | --- |
-| `role="navigation"` | Identifies the Breadcrumb as a navigation landmark. |
-| `aria-label` | Provides an accessible name for the breadcrumb item. |
-| `aria-disabled` | Indicates whether the breadcrumb item is disabled. |
-| `aria-current="page"` | Identifies the breadcrumb item that represents the current page. |
+| `role="navigation"` | Identifies the Blazor Breadcrumb as a navigation landmark. |
+| `aria-label` | Provides an accessible name for the Blazor breadcrumb item. |
+| `aria-disabled` | Indicates whether the Blazor breadcrumb item is disabled. |
+| `aria-current="page"` | Identifies the Blazor breadcrumb item that represents the current page. |
 
 The following example shows how to set accessibility attributes on the Blazor Breadcrumb component:
 

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Events in Blazor Toast Component | Syncfusion®
-description: Checkout and learn here all about the features events in Blazor Toast component and much more details.
+title: Events in Blazor Toast | Syncfusion
+description: Handle Blazor Toast events including Created, OnOpen, OnClose, Destroyed, and Clicked event types for custom behavior.
 platform: Blazor
 control: Toast
 documentation: ug
 ---
 
-# Events in Blazor Toast Component
+# Events in Blazor Toast
 
-This section explains the list of events of the Toast component which will be triggered for appropriate Toast actions.
+This section explains the list of events of the Blazor Toast component which will be triggered for appropriate Toast actions.
 
 ## Created
 
@@ -55,7 +55,7 @@ This section explains the list of events of the Toast component which will be tr
 
 ## Opened
 
-`Opened` event triggers after the Toast shown on the target container.
+`Opened` event triggers after the Toast is shown on the target container.
 
 ```cshtml
 
@@ -76,7 +76,7 @@ This section explains the list of events of the Toast component which will be tr
 
 ## OnOpen
 
-`OnOpen` event triggers before the toast shown.
+`OnOpen` event triggers before the Toast is shown.
 
 ```cshtml
 

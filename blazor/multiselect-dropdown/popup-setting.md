@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup Setting in Blazor MultiSelect Component | Syncfusion®
-description: Checkout and learn here all about Popup Setting in Blazor MultiSelect component and much more details.
+title: Popup Setting in Blazor MultiSelect Dropdown | Syncfusion
+description: Allow users to resize and configure the Blazor MultiSelect Dropdown popup for better visibility today easily.
 platform: Blazor
-control: MultiSelect
+control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Popup Setting in MultiSelect
+# Popup Setting in Blazor MultiSelect Dropdown
 
 ## Popup resize
 
@@ -147,7 +147,7 @@ Adjust the popup height based on the available viewport space by handling the wi
 
 ## Programmatically opening and closing popup
 
-Open and close the popup programmatically by calling `ShowPopupAsync()` and `HidePopupAsync()` on the component instance. For example, bind button click events to these methods to toggle the popup.
+Open and close the popup programmatically by calling [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_ShowPopupAsync) and [HidePopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_HidePopupAsync) on the component instance. For example, bind button click events to these methods to toggle the popup.
 
 {% highlight Razor %}
 

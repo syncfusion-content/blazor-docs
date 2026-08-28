@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Layout customization in Blazor DataForm | Syncfusion®
-description: Checkout and learn here about layout customization such button and label positioning and validation message display with Blazor DataForm component.
+title: Layout Customization in Blazor Data Form | Syncfusion®
+description: Customize the Blazor Data Form layout by positioning buttons and labels, displaying validation messages, and enabling floating labels.
 platform: Blazor
 control: DataForm
 documentation: ug
 ---
 
-# Layout customization
+# Layout Customization in Blazor Data Form
 
 This section explains how to position buttons and labels in the DataForm component, customize button areas, and display validation messages. It also describes how to enable floating labels and adjust the overall form width.
 

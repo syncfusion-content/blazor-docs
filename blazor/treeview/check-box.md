@@ -1,13 +1,13 @@
 ---
 layout: post
-title: CheckBox in Blazor TreeView Component | Syncfusion®
-description: Checkout and learn here all the features about CheckBox in Blazor TreeView component and much more details.
+title: CheckBox in Blazor TreeView | Syncfusion
+description: Show checkboxes and enable parent-child auto check states in Blazor TreeView with built-in properties.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# CheckBox in Blazor TreeView Component
+# CheckBox in Blazor TreeView
 
 The Blazor TreeView component enables multiple node selection through checkboxes by activating the [`ShowCheckBox`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ShowCheckBox) property. When this property is enabled, a checkbox appears before the text of each TreeView node.
 
@@ -744,7 +744,7 @@ The Blazor TreeView component can render checkboxes before each node when [`Show
 
 ## Cancel the Check Action
 
-The Blazor TreeView component offers the ability to cancel the check action by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.NodeCheckEventArgs.html#Syncfusion_Blazor_Navigations_NodeCheckEventArgs_Cancel) argument value as true within the [NodeChecking](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeChecking) event. This will prevent the check action from occurring within the TreeView component.
+The Blazor TreeView component offers the ability to cancel the check action by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.NodeCheckEventArgs.html#Syncfusion_Blazor_Navigations_NodeCheckEventArgs_Cancel) argument value as true within the [NodeChecking](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeChecking) event. This will prevent the check action from occurring within the Blazor TreeView component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

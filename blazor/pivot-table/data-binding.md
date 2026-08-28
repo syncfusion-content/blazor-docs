@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Data Binding in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table binds to local JSON, remote services, and custom data sources via PivotViewDataSourceSettings with CRUD-enabled adaptors.
+title: Data binding in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table binds local JSON arrays, remote services, and OLAP cubes for data visualization and analysis.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Data Binding in Blazor Pivot Table
+# Data binding in Blazor Pivot Table
 
 ## JSON
 
-For JSON data binding, the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Type) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) needs to be set as `DataSourceType.JSON`. Since JSON is the default data type, you can bind JSON data without setting this property.
+The Pivot Table supports JSON data binding by setting the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Type) property under [`PivotViewDataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) to `DataSourceType.JSON`. Since JSON is the default data type, you can bind JSON data without setting this property.
 
 ### Binding JSON data via local
 
-You can bind local JSON data to the Pivot Table by assigning a local variable containing the JSON data to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
+You can bind local JSON data to the Pivot Table by assigning a local variable containing the JSON data to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -52,7 +52,7 @@ You can bind local JSON data to the Pivot Table by assigning a local variable co
 
 ![Blazor PivotTable with DataBinding](images/blazor-pivottable-data-binding.webp)
 
-You can also bind JSON data using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) with `JsonAdaptor`. In this approach, assign the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) instance containing JSON data to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html). Using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) is optional for local JSON data binding.
+You can also bind JSON data using the [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) with `JsonAdaptor`. In this approach, assign the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) instance containing JSON data to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html). Using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) is optional for local JSON data binding.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -92,7 +92,7 @@ You can also bind JSON data using the [SfDataManager](https://help.syncfusion.co
 
 ![Blazor PivotTable with Local Data Binding](images/blazor-pivottable-data-binding.webp)
 
-You can also load JSON data from a local *.json file to the Pivot Table. The file can be read using the **StreamReader**, which outputs the data as a string. This string must then be converted to JSON format and assigned to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
+You can also load JSON data from a local *.json file using the file uploader option. After uploading the file, convert the resulting string to JSON data and assign it to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [`PivotViewDataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -152,7 +152,7 @@ You can also load JSON data from a local *.json file to the Pivot Table. The fil
 
 ### Binding JSON data via remote
 
-To bind remote JSON data to the Pivot Table, set the endpoint [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) property. The [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property accepts both direct downloadable JSON files (*.json) and web service URLs.
+To bind remote JSON data to the Pivot Table, set the endpoint [`Url`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) in the [`PivotViewDataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) property. The [`Url`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property accepts both direct downloadable JSON files (*.json) and web service URLs.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -192,13 +192,13 @@ To bind remote JSON data to the Pivot Table, set the endpoint [Url](https://help
 
 ## CSV
 
-To bind CSV data, set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Type) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) to `DataSourceType.CSV`.
+To bind CSV data, set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Type) property under [`PivotViewDataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) to `DataSourceType.CSV`.
 
 N> The CSV format is more compact than JSON, using approximately half the size. This reduces bandwidth usage when transferring data to the browser.
 
 ### Binding CSV data via local
 
-To bind local CSV data to the Pivot Table, convert the data into a string array and assign it directly to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
+To bind local CSV data to the Pivot Table, convert the data into a string array and assign it directly to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [`PivotViewDataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -256,7 +256,7 @@ To bind local CSV data to the Pivot Table, convert the data into a string array 
 
 ![Blazor PivotTable with CSV Data Binding](images/blazor-pivottable-csv-data-binding.webp)
 
-You can also connect CSV data from a local *.csv file to the Pivot Table. The file can be read using the **StreamReader**, which outputs the data as a string. This string must then be converted to a string array and assigned to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
+You can also connect CSV data from a local *.csv file to the Pivot Table using the file uploader option. After uploading the file, convert the resulting string to a string array and assign it to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html). The following code example shows how to implement this:
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -327,7 +327,7 @@ You can also connect CSV data from a local *.csv file to the Pivot Table. The fi
 
 Remote CSV data binding allows you to load data directly from external sources without storing large datasets locally, which improves application performance and reduces memory usage.
 
-To bind remote CSV data, set the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) to point to your data source endpoint. The [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property accepts both direct downloadable CSV files (*.csv) and web service URLs that return CSV data.
+To bind remote CSV data, set the [`Url`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property under [`PivotViewDataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) to point to your data source endpoint. The [`Url`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property accepts both direct downloadable CSV files (*.csv) and web service URLs that return CSV data.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -374,13 +374,13 @@ To bind remote CSV data, set the [Url](https://help.syncfusion.com/cr/blazor/Syn
 
 Remote data binding allows you to connect your Pivot Table component to data sources that are hosted on remote servers, enabling you to work with data from web services, databases, and other external sources.
 
-To bind remote data, specify the endpoint [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) within [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with the appropriate [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors). By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) uses [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors?no-cache=1#odata-adaptor) for remote data binding.
+To bind remote data, specify the endpoint [`Url`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) within [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with the appropriate [`Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors). By default, [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) uses [`ODataAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors?no-cache=1#odata-adaptor) for remote data binding.
 
 N> When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) for data binding then the TValue must be provided explicitly in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class.
 
 ### Binding with OData services
 
-OData (Open Data Protocol) is a web-based protocol that provides a standard way to create and consume data APIs. You can easily connect your Pivot Table to OData services using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html), which handles the communication and data retrieval automatically.
+OData (Open Data Protocol) is a web-based protocol that provides a standard way to create and consume data APIs. You can easily connect your Pivot Table to OData services using the [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html), which handles the communication and data retrieval automatically.
 
 The following example demonstrates how to bind the Pivot Table to an OData service:
 
@@ -419,7 +419,7 @@ The following example demonstrates how to bind the Pivot Table to an OData servi
 
 ### Binding with OData V4 services
 
-OData V4 services provide enhanced query capabilities and improved performance for data retrieval operations. The OData V4 is an improved version of OData protocols, and the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) can retrieve and consume OData V4 services. For more details on OData V4 services, refer to the [OData documentation](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData V4 service, use the [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors?no-cache=1#odatav4-adaptor).
+OData V4 services provide enhanced query capabilities and improved performance for data retrieval operations. The OData V4 is an improved version of OData protocols, and the [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) can retrieve and consume OData V4 services. For more details on OData V4 services, refer to the [`OData documentation`](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData V4 service, use the [`ODataV4Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors?no-cache=1#odatav4-adaptor).
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -456,7 +456,7 @@ OData V4 services provide enhanced query capabilities and improved performance f
 
 ### Web API
 
-Web API binding allows you to connect the Pivot Table directly to RESTful web services for dynamic data loading. Users can use [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) to bind the Pivot Table with Web API created using OData endpoint.
+Web API binding allows you to connect the Pivot Table directly to RESTful web services for dynamic data loading. Users can use [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) to bind the Pivot Table with Web API created using OData endpoint.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -730,41 +730,42 @@ Here, **ProductDetails** class implements the interface of **INotifyPropertyChan
 
 ## Mapping
 
-Field mapping allows you to customize how fields appear and behave in the Pivot Table without changing the original data source. You can define field properties such as display names, data types, aggregation methods, and visibility settings using the [FieldMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.IPivotViewDataSourceSettings.html#Syncfusion_Blazor_PivotView_IPivotViewDataSourceSettings_FieldMapping) property within [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
+Field mapping allows you to customize how fields appear and behave in the Pivot Table without changing the original data source. You can define field properties such as display names, data types, aggregation methods, and visibility settings using the [`FieldMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.IPivotViewDataSourceSettings.html#Syncfusion_Blazor_PivotView_IPivotViewDataSourceSettings_FieldMapping) property within [`PivotViewDataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
 
 The following options are available for field mapping:
 
 **Field identification and display**
 
-* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_Name) - Specifies the field name from your data source.
-* [Caption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_Caption) - Sets a user-friendly display name for the field. This display name will appear in the Pivot Table UI instead of the original field name.
-* [DataType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_DataType) - Specifies the field data type such as 'string', 'number', 'datetime', 'date', or 'boolean'.
+* [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_Name) - Specifies the field name from your data source.
+* [`Caption`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_Caption) - Sets a user-friendly display name for the field. This display name will appear in the Pivot Table UI instead of the original field name.
+* [`DataType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_DataType) - Specifies the field data type such as 'string', 'number', 'datetime', 'date', or 'boolean'.
 
 **Aggregation and calculation**
 
-* [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_Type) - Defines how values are aggregated in the Pivot Table, such as sum, product, count, average, minimum, or maximum. The default value is **sum**. This option applies only to relational data sources.
-* [BaseField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_BaseField) - Specifies a comparison field for aggregate types like "DifferenceFrom", "PercentageOfDifferenceFrom", or "PercentageOfParentTotal".
-* [BaseItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_BaseItem) - Specifies a comparison member within a field for aggregate types like "DifferenceFrom", "PercentageOfDifferenceFrom", or "PercentageOfParentTotal".
+* [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_Type) - Defines how values are aggregated in the Pivot Table, such as sum, product, count, average, minimum, or maximum. The default value is **sum**. This option applies only to relational data sources.
+* [`BaseField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_BaseField) - Specifies a comparison field for aggregate types like "DifferenceFrom", "PercentageOfDifferenceFrom", or "PercentageOfParentTotal".
+* [`BaseItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_BaseItem) - Specifies a comparison member within a field for aggregate types like "DifferenceFrom", "PercentageOfDifferenceFrom", or "PercentageOfParentTotal".
 
 **Field positioning and behavior**
 
-* [Axis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_Axis) - Determines where the field appears in the Pivot Table (row, column, value, or filter axis).
-* [ShowNoDataItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_ShowNoDataItems) - Shows all field members in the Pivot Table, even when no data exists at row and column intersections. The default value is **false**. This option applies only to relational data sources.
-* [ShowSubTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_ShowSubTotals) - Controls the visibility of subtotals for the field in row and column axes. The default value is **true**.
+* [`Axis`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_Axis) - Determines where the field appears in the Pivot Table (row, column, value, or filter axis).
+* [`ShowNoDataItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_ShowNoDataItems) - Shows all field members in the Pivot Table, even when no data exists at row and column intersections. The default value is **false**. This option applies only to relational data sources.
+* [`ExpandAll`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_ExpandAll) - Expands or collapses all headers for the field in row and column axes. The default value is **false**.
+* [`ShowSubTotals`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_ShowSubTotals) - Controls the visibility of subtotals for the field in row and column axes. The default value is **true**.
 
 **OLAP-specific options**
 
-* [IsNamedSet](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_IsNamedSet) - It is to set whether the specified field is named set or not. In general, the named set is a set of dimension members or a set expression (MDX query) to be created as a dimension in the SSAS OLAP cube itself. The default value is **false** and this option is applicable only for OLAP data source.
-* [IsCalculatedField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_IsCalculatedField) - It is to set whether the specified field is a calculated field or not. In general, a calculated field is created from the bound data source or using simple formula with basic arithmetic operators in the Pivot Table. The default value is **false** and this option is applicable only for OLAP data source.
+* [`IsNamedSet`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_IsNamedSet) - It is to set whether the specified field is named set or not. In general, the named set is a set of dimension members or a set expression (MDX query) to be created as a dimension in the SSAS OLAP cube itself. The default value is **false** and this option is applicable only for OLAP data source.
+* [`IsCalculatedField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_IsCalculatedField) - It is to set whether the specified field is a calculated field or not. In general, a calculated field is created from the bound data source or using simple formula with basic arithmetic operators in the Pivot Table. The default value is **false** and this option is applicable only for OLAP data source.
 
 **UI interaction controls**
 
-* [ShowFilterIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_ShowFilterIcon) - Controls the visibility of the filter icon on field buttons in the grouping bar and field list. Users can filter field members at runtime using this icon. The default value is **true**.
-* [ShowSortIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_ShowSortIcon) - Controls the visibility of the sort icon on field buttons in the grouping bar and field list. Users can sort field members in ascending or descending order at runtime. The default value is **true**.
-* [ShowRemoveIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_ShowRemoveIcon) - Controls the visibility of the remove icon on field buttons in the grouping bar and field list. Users can remove fields from the report at runtime. The default value is **true**.
-* [ShowValueTypeIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_ShowValueTypeIcon) - Controls the visibility of the value type icon on field buttons in the grouping bar and field list. Users can change the aggregation type for value fields at runtime. The default value is **true**.
-* [ShowEditIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_ShowEditIcon) - Controls the visibility of the edit icon on field buttons in the grouping bar and field list. Users can modify the caption, formula, and format of calculated fields at runtime. The default value is **true**.
-* [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_AllowDragAndDrop) - Controls whether field buttons can be dragged in the grouping bar and field list UI. Setting this to **false** prevents users from modifying the current report structure. The default value is **true**.
+* [`ShowFilterIcon`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_ShowFilterIcon) - Controls the visibility of the filter icon on field buttons in the grouping bar and field list. Users can filter field members at runtime using this icon. The default value is **true**.
+* [`ShowSortIcon`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_ShowSortIcon) - Controls the visibility of the sort icon on field buttons in the grouping bar and field list. Users can sort field members in ascending or descending order at runtime. The default value is **true**.
+* [`ShowRemoveIcon`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_ShowRemoveIcon) - Controls the visibility of the remove icon on field buttons in the grouping bar and field list. Users can remove fields from the report at runtime. The default value is **true**.
+* [`ShowValueTypeIcon`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_ShowValueTypeIcon) - Controls the visibility of the value type icon on field buttons in the grouping bar and field list. Users can change the aggregation type for value fields at runtime. The default value is **true**.
+* [`ShowEditIcon`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_ShowEditIcon) - Controls the visibility of the edit icon on field buttons in the grouping bar and field list. Users can modify the caption, formula, and format of calculated fields at runtime. The default value is **true**.
+* [`AllowDragAndDrop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_AllowDragAndDrop) - Controls whether field buttons can be dragged in the grouping bar and field list UI. Setting this to **false** prevents users from modifying the current report structure. The default value is **true**.
 
 Field mapping is particularly useful for configuring fields that are not part of your initial pivot report. When a field appears in both the initial report and field mapping, the initial report settings take priority.
 
@@ -1065,7 +1066,7 @@ You can display value fields in the row axis of the Pivot Table to make your dat
 
 ## Show 'no data' items
 
-Display all field items in your Pivot Table, even when they lack data in certain row and column combinations, for a complete view of your data structure. By default, the Pivot Table displays field items only when they contain data in their respective row or column combinations. However, you can show all items, including those without data, by setting the [ShowNoDataItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowNoDataItems) property to **true** for the desired fields.
+Display all field items in your Pivot Table, even when they lack data in certain row and column combinations, for a complete view of your data structure. By default, the Pivot Table displays field items only when they contain data in their respective row or column combinations. However, you can show all items, including those without data, by setting the  [`ShowNoDataItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowNoDataItems) property to **true** for the desired fields.
 
 In the following example, the "Country" and "Products" field rows are displayed even when they don't have data in all combinations with the "Year" and "Quarter" column field.
 
@@ -1106,7 +1107,7 @@ In the following example, the "Country" and "Products" field rows are displayed 
 
 ## Show value headers always
 
-Ensure value headers remain visible in your Pivot Table at all times, providing consistent column identification even with single value scenarios. The Pivot Table typically hides value headers when displaying only one value. To maintain consistent header visibility regardless of the number of values, set the [AlwaysShowValueHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_AlwaysShowValueHeader) property to **true**.
+Ensure value headers remain visible in your Pivot Table at all times, providing consistent column identification even with single value scenarios. The Pivot Table typically hides value headers when displaying only one value. To maintain consistent header visibility regardless of the number of values, set the [`AlwaysShowValueHeader`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_AlwaysShowValueHeader) property to **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -1144,7 +1145,7 @@ Ensure value headers remain visible in your Pivot Table at all times, providing 
 
 ## Customize empty value cells
 
-Show custom text in cells that contain no data to make your Pivot Table more informative and user-friendly. By default, empty value cells appear blank in the Pivot Table. However, you can display meaningful text in these cells using the [EmptyCellsTextContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_EmptyCellsTextContent) property within the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html). Since this property accepts string values, you can fill empty cells with any text such as "0", "-", "*", "(blank)", or other meaningful indicators. This setting applies to all value fields and can be configured in your code behind.
+Show custom text in cells that contain no data to make your Pivot Table more informative and user-friendly. By default, empty value cells appear blank in the Pivot Table. However, you can display meaningful text in these cells using the [`EmptyCellsTextContent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_EmptyCellsTextContent) property within the [`PivotViewDataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html). Since this property accepts string values, you can fill empty cells with any text such as "0", "-", "*", "(blank)", or other meaningful indicators. This setting applies to all value fields and can be configured in your code behind.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -1270,15 +1271,19 @@ In the following example, `true` is passed to the [`RefreshAsync`](https://help.
 
 ## Event
 
+The Pivot Table component provides essential events that help you monitor and control the data binding process. These events give you access to the underlying data and allow you to customize how the pivot engine handles your data.
+
+### OnLoad
+
 The [OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnLoad) event fires before the Pivot Table begins rendering and provides access to key parameters that you can use to customize your data source configuration, apply filters, or modify field settings before the table displays.
 
 **Event Parameters**
 
 The load event provides the following parameters:
 
-- [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.LoadEventArgs-1.html#Syncfusion_Blazor_PivotView_LoadEventArgs_1_DataSourceSettings): Defines the current report configuration including data source, rows, columns, values, and filters.
-- [FieldsType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.LoadEventArgs-1.html#Syncfusion_Blazor_PivotView_LoadEventArgs_1_FieldsType): Defines the type of specific fields, such as whether they should be treated as numbers, dates, or text.
-- [PivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.LoadEventArgs-1.html#Syncfusion_Blazor_PivotView_LoadEventArgs_1__ctor): Defines the Pivot Table instance object that provides access to all component methods and properties.
+- [`DataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.LoadEventArgs-1.html#Syncfusion_Blazor_PivotView_LoadEventArgs_1_DataSourceSettings): Defines the current report configuration including data source, rows, columns, values, and filters.
+- [`FieldsType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.LoadEventArgs-1.html#Syncfusion_Blazor_PivotView_LoadEventArgs_1_FieldsType): Defines the type of specific fields, such as whether they should be treated as numbers, dates, or text.
+- [`PivotView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.LoadEventArgs-1.html#Syncfusion_Blazor_PivotView_LoadEventArgs_1__ctor): Defines the Pivot Table instance object that provides access to all component methods and properties.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -1324,6 +1329,8 @@ The load event provides the following parameters:
 
 ## See also
 
+* [Aggregation](https://blazor.syncfusion.com/documentation/pivot-table/aggregation)
+* [Server Side Pivot Engine](https://blazor.syncfusion.com/documentation/pivot-table/server-side-pivot-engine)
 * [How to convert complex data to flat data and assign it to the Blazor Pivot Table](https://blazor.syncfusion.com/documentation/pivot-table/how-to/bind-complex-data-to-the-pivot-table)
 
 N> You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=fluent2) to know how to render and configure the pivot table.

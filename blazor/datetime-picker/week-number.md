@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Week Numbers in Blazor DateTimePicker Component | Syncfusion®
-description: Checkout and learn here all about Week Numbers in Blazor DateTimePicker component and much more details.
+title: Week Number in Blazor DateTime Picker | Syncfusion®
+description: Display ISO or culture-specific week numbers in the Blazor DateTime Picker with a leading column, configurable via WeekRule and FirstDayOfWeek.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
 ---
 
-# Week Number in Blazor DateTimePicker Component
+# Week Number in Blazor DateTime Picker
 
 Display the week index in the calendar's left column by setting `WeekNumber="true"` (default is `false`). The `Width` is increased to make room for the new column.
 
@@ -17,7 +17,7 @@ Display the week index in the calendar's left column by setting `WeekNumber="tru
 <SfDateTimePicker TValue="DateTime?" Width="250px" WeekNumber="true"></SfDateTimePicker>
 ```
 
-![Blazor DateTimePicker with week numbers](./images/blazor_datetimepicker_weeknumber.webp)
+![Blazor DateTime Picker with week numbers](./images/blazor_datetimepicker_weeknumber.webp)
 
 ## Week Rule
 
@@ -33,14 +33,14 @@ Configure how the first week of the year is determined using the [WeekRule](http
 <SfDateTimePicker TValue="DateTime?" WeekNumber="true" WeekRule="CalendarWeekRule.FirstFourDayWeek" FirstDayOfWeek="DayOfWeek.Monday"></SfDateTimePicker>
 ```
 
-N> The `Locale` and the first day of the week (`FirstDayOfWeek`) influence week numbering. By default, the DateTimePicker uses the culture's settings unless overridden.
+N> The `Locale` and the first day of the week (`FirstDayOfWeek`) influence week numbering. By default, the Blazor DateTime Picker uses the culture's settings unless overridden.
 
-![Blazor DateTimePicker displays Week Rule of FirstDay](./images/blazor-datetimepicker-first-day.webp)
+![Blazor DateTime Picker displays Week Rule of FirstDay](./images/blazor-datetimepicker-first-day.webp)
 
-![Blazor DateTimePicker displays Week Rule of FirstFullWeek](./images/blazor-datetimepicker-first-full-week.webp)
+![Blazor DateTime Picker displays Week Rule of FirstFullWeek](./images/blazor-datetimepicker-first-full-week.webp)
 
-![Blazor DateTimePicker displays Week Rule of FirstFourDayWeek](./images/blazor-datetimepicker-first-four-Day-Week.webp)
+![Blazor DateTime Picker displays Week Rule of FirstFourDayWeek](./images/blazor-datetimepicker-first-four-Day-Week.webp)
 
 ## See also
 
-* [Globalization in Blazor DateTimePicker](./globalization)
+* [Globalization in Blazor DateTime Picker](./globalization)

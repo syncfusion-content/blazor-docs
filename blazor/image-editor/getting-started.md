@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Image Editor in WASM App | Syncfusion
-description: Learn how to add and configure the Blazor Image Editor component in a Blazor WebAssembly App using Visual Studio or Visual Studio Code.
+description: Learn how to get started with the Syncfusion Blazor Image Editor in a Blazor WebAssembly app with installation and setup steps.
 platform: Blazor
 control: Image Editor
 documentation: ug

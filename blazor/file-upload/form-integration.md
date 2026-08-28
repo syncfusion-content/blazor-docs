@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Form Integration in Blazor File Upload Component | Syncfusion®
-description: Learn how to integrate the Blazor File Upload component with Blazor's EditForm and DataForm for seamless form-based file management.
+title: Form Integration in Blazor File Upload | Syncfusion
+description: Integrate Blazor File Upload with EditForm and DataForm for validated, model-bound file uploads today.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# Form Integration in Blazor File Upload Component
+# Form Integration in Blazor File Upload
 
 The Blazor File Upload component seamlessly integrates with Blazor's [EditForm](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/?view=aspnetcore-9.0) and the [DataForm](https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app), enabling you to build robust forms with file upload functionality. This integration associates the uploaded file information with a data model, leveraging the form's built-in validation.
 
@@ -15,9 +15,9 @@ When a file is selected, its information is added to the model property bound to
 
 ## File Upload with EditForm Integration
 
-Integrating the File Upload component into a Blazor `EditForm` streamlines data entry by including file management directly within the form.
+Integrating the Blazor File Upload component into a Blazor `EditForm` streamlines data entry by including file management directly within the form.
 
-Validation for the file input is achieved by binding the component to a model property. The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) and [OnRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnRemove) events are used to update this property with the current list of files. Within these events, it is crucial to call `EditContext.NotifyFieldChanged` to trigger the form's validation logic immediately after the file list changes.
+Validation for the file input is achieved by binding the Blazor File Upload component to a model property. The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) and [OnRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnRemove) events are used to update this property with the current list of files. Within these events, it is crucial to call `EditContext.NotifyFieldChanged` to trigger the form's validation logic immediately after the file list changes.
 
 When the form is successfully submitted, the `OnValidSubmit` event handler receives the `EditContext`, which contains the complete form model.
 
@@ -81,9 +81,9 @@ When the form is successfully submitted, the `OnValidSubmit` event handler recei
 
 ## File Upload with DataForm Integration
 
-The File Upload component can also be integrated into a `DataForm` to automatically build a form from a model that includes file upload capabilities.
+The Blazor File Upload component can also be integrated into a `DataForm` to automatically build a form from a model that includes file upload capabilities.
 
-When the `DataForm` is submitted, the [OnSubmit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_OnSubmit) event handler receives the `EditContext`. The `EditContext.Model` property contains the complete form data, including the list of `FileInfo` objects from the File Upload component. This allows you to access and process the file information as part of the form's submission logic.
+When the `DataForm` is submitted, the [OnSubmit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_OnSubmit) event handler receives the `EditContext`. The `EditContext.Model` property contains the complete form data, including the list of `FileInfo` objects from the Blazor File Upload component. This allows you to access and process the file information as part of the form's submission logic.
 
 
 ```cshtml

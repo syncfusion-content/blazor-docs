@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stacked Column in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all the features about Stacked Column Chart in Blazor Charts component and more.
+title: Blazor Stacked Column Chart Examples and Documentation | Syncfusion®
+description: Learn how to create Blazor Stacked Column Charts using Syncfusion. Show individual Y values contributing to a total per category as vertical bars.
 platform: Blazor
-control: Chart
+control: Charts
 documentation: ug
 ---
 
-# Stacked Column in Blazor Charts Component
+# Stacked Column Chart in Blazor
 
 ## Stacked Column
 

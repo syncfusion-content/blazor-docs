@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Fine-tune with Blazor Image Editor Component | Syncfusion®
-description: Discover the Finetune feature available in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
+title: Finetune in Blazor Image Editor | Syncfusion
+description: Fine-tune image settings in Blazor Image Editor by adjusting brightness, contrast, saturation, and other attributes.
 platform: Blazor
 control: Image Editor
 documentation: ug
 ---
 
-# Fine-tune in the Blazor Image Editor component
+# Finetune in Blazor Image Editor
 
 Fine-tuning provides precise control over image filter settings to achieve a specific visual result. It adjusts the intensity and key attributes of a filter’s effect, such as brightness or saturation, to refine the final output.
 
@@ -24,7 +24,7 @@ The following example demonstrates brightness, contrast, and saturation fine-tun
 <div style="padding-bottom: 15px">
     <SfButton OnClick="BrightnessClick">Brightness</SfButton>
     <SfButton OnClick="ContrastClick">Contrast</SfButton>
-    <SfButton OnClick="SaturationClick">Contrast</SfButton>
+    <SfButton OnClick="SaturationClick">Saturation</SfButton>
 </div>
 
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">

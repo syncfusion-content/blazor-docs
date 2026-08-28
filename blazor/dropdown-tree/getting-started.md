@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Dropdown Tree in WASM App | Syncfusion
-description: Check out and learn about getting started with Blazor Dropdown Tree component in Blazor WebAssembly Application.
+title: Blazor Dropdown Tree WASM App Getting Started | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Dropdown Tree in a Blazor WebAssembly app with installation and setup steps.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
 ---
 
-# Getting Started with Dropdown Tree in Blazor WASM App
+# Getting Started with Blazor Dropdown Tree in Blazor WASM App
 
 This section briefly explains how to include the [Blazor Dropdown Tree](https://www.syncfusion.com/blazor-components/blazor-dropdowntree) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
