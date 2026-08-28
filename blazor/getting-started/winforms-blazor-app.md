@@ -13,25 +13,25 @@ This section explains how to create and run a WinForms Blazor App (.NET WinForms
 
 ## What is WinForms Blazor App?
 
-A WinForms Blazor app hosts a Blazor web app inside a Windows Forms Application using the `BlazorWebView` control. This enables a Blazor Web App to integrate with desktop platform features and UI controls. The `BlazorWebView` control can be added on any form in the WinForms app and pointed to the Blazor app's root component. Blazor components execute in the .NET process and render their web UI into the embedded web view control. WinForms Blazor apps run on platforms supported by WinForms (Windows).
+A WinForms Blazor app hosts a Blazor Web App inside a Windows Forms Application using the `BlazorWebView` control. This enables a Blazor Web App to integrate with desktop platform features and UI controls. The `BlazorWebView` control can be added on any form in the WinForms app and pointed to the Blazor app's root component. Blazor components execute in the .NET process and render their web UI into the embedded web view control. WinForms Blazor apps run on platforms supported by WinForms (Windows).
 
 Visual Studio provides the **WinForms Application** template to create WinForms Blazor Apps.
 
 ## Prerequisites
 
-* [Supported platforms (WinForms documentation)](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/overview/?view=netdesktop-8.0)
+* [Supported platforms (WinForms documentation)](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/overview/)
 * [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) or [Visual Studio 2026](https://visualstudio.microsoft.com/downloads/)
 
 ## Create a new WinForms Blazor App in Visual Studio
 
-To create a **WinForms Blazor App** using Visual Studio, follow the comprehensive steps in the [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/windows-forms?view=aspnetcore-8.0) documentation. Ensuring and understanding each step in the official guide establishes the foundation required to continue with this documentation.
+To create a **WinForms Blazor App** using Visual Studio, follow the comprehensive steps in the [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/windows-forms?view=aspnetcore-10.0) documentation. Ensuring and understanding each step in the official guide establishes the foundation required to continue with this documentation.
 
 ## Install Blazor Grid and Themes NuGet in the App
 
-To add the **Blazor DataGrid** component in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, run the following commands in the Package Manager Console to achieve the same.
+To add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, run the following commands in the Package Manager Console to achieve the same.
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight C# tabtitle="Package Manager Console" %}
 
 Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
@@ -45,9 +45,9 @@ N> Ensure that the package [Microsoft.AspNetCore.Components.WebView.WindowsForms
 
 N> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
 
-## Add Import Namespaces
+## Add import namespaces
 
-Open the `~/_Imports.razor` file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces:
+After the packages are installed, open the `~/_Imports.razor` file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces:
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -58,7 +58,7 @@ Open the `~/_Imports.razor` file and import the `Syncfusion.Blazor` and `Syncfus
 {% endhighlight %}
 {% endtabs %}
 
-## Register Blazor Service
+## Register the Blazor service
 
 Register the Blazor service in the `Form1.cs` file of the WinForms Blazor App.
 

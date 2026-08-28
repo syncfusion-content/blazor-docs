@@ -38,18 +38,18 @@ The accessibility compliance for the Blazor TextBox component is outlined below.
 
 The Blazor TextBox provides complete ARIA support that helps to access through on-screen readers and other assistive technology devices. This component is designed with the reference of the guidelines document given in [WAI-ARIA Accessibility practices](https://www.w3.org/TR/wai-aria/#textbox).
 
-The TextBox uses the `textbox` role and the following ARIA properties for its element based on its state.
+The Blazor TextBox uses the `textbox` role and the following ARIA properties for its element based on its state.
 
 | **Property** | **Functionality** |
 | --- | --- |
-| aria-placeholder | The `aria-placeholder` is a short hint to help the users with data entry when the Textbox has no value. |
-| aria-labelledby | The `aria-labelledby` property indicates the floating label element of the Textbox. |
+| aria-placeholder | The `aria-placeholder` is a short hint to help the users with data entry when the Blazor TextBox has no value. |
+| aria-labelledby | The `aria-labelledby` property indicates the floating label element of the Blazor TextBox. |
 
 ## Ensuring accessibility
 
 The Blazor TextBox component’s accessibility is validated with the [axe-core](https://www.npmjs.com/package/axe-core) tool during automated testing.
 
-The accessibility compliance of the TextBox component is demonstrated in the following sample. Open the [accessibility sample for TextBox](https://blazor.syncfusion.com/accessibility/textbox) in a new window to evaluate accessibility with your preferred tools. The component also supports right-to-left (RTL) rendering and high-contrast themes for improved readability and usability.
+The accessibility compliance of the Blazor TextBox component is demonstrated in the following sample. Open the [accessibility sample for TextBox](https://blazor.syncfusion.com/accessibility/textbox) in a new window to evaluate accessibility with your preferred tools. The component also supports right-to-left (RTL) rendering and high-contrast themes for improved readability and usability.
 
 ## See also
 

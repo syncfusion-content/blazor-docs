@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization in Blazor Signature
 
-The [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) component draws a stroke/path to connect one or more points while drawing on the canvas. This path is drawn using the `moveTo()` and `lineTo()` methods. You can customize the stroke by modifying its color and width. The background of the signature is also customizable by using its color and image. Customization allows you to match the Signature component to your application's branding and visual style.
+The [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) component draws a stroke/path to connect one or more points while drawing on the canvas. This path is drawn using the `moveTo()` and `lineTo()` methods. You can customize the stroke by modifying its color and width. The background of the signature is also customizable by using its color and image. Customization allows you to match the Blazor Signature component to your application's branding and visual style.
 
 ## Stroke Width
 

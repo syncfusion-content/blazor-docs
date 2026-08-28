@@ -62,4 +62,4 @@ When using `MenuFieldSettings`, the following properties are available to map fi
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthxjRWETkHNUovq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Binding in Blazor ContextMenu](./../images/blazor-contextmenu-databinding.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthxjRWETkHNUovq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Binding in Blazor Context Menu](./../images/blazor-contextmenu-databinding.webp)" %}

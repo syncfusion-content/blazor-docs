@@ -15,7 +15,7 @@ N> All the events should be provided in a single **TreeViewEvents** component.
 
 ## Created Event
 
-The [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_Created) event is triggered once the TreeView component has been successfully created and rendered.
+The [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_Created) event is triggered once the Blazor TreeView component has been successfully created and rendered.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -216,7 +216,7 @@ The [`DataSourceChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## Destroyed Event
 
-The [`Destroyed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_Destroyed) event is triggered when the TreeView component is completely disposed of.
+The [`Destroyed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_Destroyed) event is triggered when the Blazor TreeView component is completely disposed of.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
