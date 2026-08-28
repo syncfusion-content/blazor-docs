@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Server MultiSelect Dropdown | Syncfusion
+title: Getting Started Blazor MultiSelect Dropdown in Server App | Syncfusion
 description: Learn how to get started with the Syncfusion Blazor MultiSelect Dropdown in a Blazor Server app with installation and setup steps.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Getting Started with Blazor MultiSelect Dropdown in Server App
+# Getting Started with Blazor MultiSelect Dropdown in Blazor Server App
 
 This section explains how to include the [Blazor MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) component in a Blazor Server app using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
