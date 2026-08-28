@@ -1,19 +1,19 @@
 ---
 layout: post
-title: DataSource Binding and Custom Items in Blazor Menu Bar | Syncfusion®
-description: Learn here all about data source binding and custom items in Blazor Menu Bar component and much more details.
+title: DataSource Binding and Custom Items in Blazor Menu Bar | Syncfusion
+description: Bind self-referential or hierarchical data to Blazor Menu Bar and customize menu fields and menu items.
 platform: Blazor
-control: Menu Bar
+control: Menu Bar 
 documentation: ug
 ---
 
-# DataSource Binding and Custom Items in Blazor Menu Bar Component
+# DataSource Binding and Custom Items in Blazor Menu Bar
 
 The [Blazor Menu Bar](https://www.syncfusion.com/blazor-components/blazor-menu-bar) supports data source binding, including self-referential data structures.
 
 ## Self-referential data
 
-Menu Bar can be populated from a self-referential data structure that contains data with `ParentId` mapping.
+Blazor Menu Bar can be populated from a self-referential data structure that contains data with `ParentId` mapping.
 
 In the following example, the `Id`, `ParentId`, and `Text` properties of the `CustomMenuItem` model are mapped to the [ItemId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_ItemId), [ParentId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_ParentId), and [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_Text) fields, respectively.
 
@@ -70,7 +70,7 @@ In the following example, the `Id`, `ParentId`, and `Text` properties of the `Cu
     }
 }
 
-N> In the above example, `TValue` is specified as `CustomMenuItem` because the menu is rendered using the `Items` property, which is a generic `List<TValue>` source
+N> In the above example, `TValue` is specified as `CustomMenuItem` because the Blazor Menu is rendered using the `Items` property, which is a generic `List<TValue>` source
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZhxDxAZVKMkqGfi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Binding in Blazor MenuBar](./images/blazor-menubar-data-binding.webp)" %}
 
@@ -196,11 +196,11 @@ When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfu
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrdZnAtLAdDGBiO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage="./images/blazor-menubar-self-referential-data.webp" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrdZnAtLAdDGBiO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Self-Referential Data in Blazor Menu Bar](./images/blazor-menubar-self-referential-data.webp)" %}
 
-## Custom Menu Bar Items
+## Custom Blazor Menu Bar Items
 
-To customize Menu Bar items in your application, set a custom template using [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuTemplates-1.html). The `Template` block in the example below renders three different layouts based on the data: a plain label when only `Value` is set, a row with an avatar / badge when `Url` or `Count` is present, and a card-style "About Us" item when `About` is provided. The accompanying `<style>` block provides the avatar, badge, and card CSS used by these layouts. In the following example, the Menu Bar has been rendered with customized Menu Bar items.
+To customize Blazor Menu Bar items in your application, set a custom template using [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuTemplates-1.html). The `Template` block in the example below renders three different layouts based on the data: a plain label when only `Value` is set, a row with an avatar / badge when `Url` or `Count` is present, and a card-style "About Us" item when `About` is provided. The accompanying `<style>` block provides the avatar, badge, and card CSS used by these layouts. In the following example, the Blazor Menu Bar has been rendered with customized Blazor Menu Bar items.
 
 ```cshtml
 
@@ -374,4 +374,4 @@ To customize Menu Bar items in your application, set a custom template using [Me
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVxZdqNhAFduDpz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor MenuBar with Custom Item](./images/blazor-menubar-custom-item.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVxZdqNhAFduDpz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Menu Bar with Custom Item](./images/blazor-menubar-custom-item.webp)" %}

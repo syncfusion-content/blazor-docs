@@ -9,7 +9,7 @@ documentation: ug
 
 # Steps validation in Blazor Stepper Component
 
-The Stepper component allows you to set the validation state for each step, displaying either a success or error icon. You can define the success state of a step by setting the [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IsValid) property to `true`. If set to `false`, the step will display an error state. By default, the `IsValid` property is `null`.
+The Blazor Stepper component allows you to set the validation state for each step, displaying either a success or error icon. You can define the success state of a step by setting the [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IsValid) property to `true`. If set to `false`, the step will display an error state. By default, the `IsValid` property is `null`.
 
 > Based on the `StepType`, the validation state icon will be displayed either as an indicator or as part of the step label/text.
 
@@ -72,7 +72,7 @@ The Stepper component allows you to set the validation state for each step, disp
 
 ## Validating fields
 
-You can validate the fields within the stepper component. In the below shared example, as the user progress through steps they enter information, receive feedback, and confirm submission. Validation messages will appear for errors, and a success message confirms the completion.
+You can validate the fields within the Blazor stepper component. In the below shared example, as the user progress through steps they enter information, receive feedback, and confirm submission. Validation messages will appear for errors, and a success message confirms the completion.
 
 ```cshtml
 

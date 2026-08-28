@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn here all the features about Data Binding in Blazor ComboBox component and much more.
+title: Data Binding in Blazor ComboBox | Syncfusion®
+description: Bind the Blazor ComboBox to local arrays or remote services using the DataSource property and DataManager with adaptors like WebApi and OData.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Data Binding in Blazor ComboBox Component
+# Data Binding in Blazor ComboBox
 
 The ComboBox supports binding data from local sources or remote services. Use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property to bind local data. For remote data, use the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) to configure endpoints and adaptors.
 

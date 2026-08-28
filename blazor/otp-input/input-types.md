@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Input Types in Blazor OTP Input Component | Syncfusion®
-description: Learn about input types in Blazor OTP Input component including Number, Text, and Password types with examples.
+title: Input Types in Blazor OTP Input | Syncfusion
+description: Set Blazor OTP Input type to Number, Text, or Password to match the expected one-time password format.
 platform: Blazor
 control: OTP Input
 documentation: ug
 ---
 
-# Input Types in Blazor OTP Input component
+# Input Types in Blazor OTP Input
 
 ## Types
 

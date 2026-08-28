@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Events in Blazor Toggle Switch Button Component | Syncfusion®
-description: Checkout and learn here all the features about events in Blazor Toggle Switch Button component and more.
+title: Native Event in Blazor Toggle Switch Button | Syncfusion
+description: Handle ValueChange and native DOM events for Blazor Toggle Switch Button interactions and custom triggers.
 platform: Blazor
 control: Toggle Switch Button 
 documentation: ug
 ---
 
-# Events in Blazor Toggle Switch Button Component
+# Native Event in Blazor Toggle Switch Button
 
-This section describes how to handle the ValueChange event and bind standard Blazor native DOM events to the Toggle Switch Button component for common interaction scenarios such as focus, keyboard, mouse, and touch.
+This section describes how to handle the ValueChange event and bind standard Blazor native DOM events to the Blazor Toggle Switch Button component for common interaction scenarios such as focus, keyboard, mouse, and touch.
 
 ## ValueChange Event
 
@@ -31,11 +31,11 @@ The ValueChange event is triggered when the switch state changes through user in
 
 ```
 
-N> Toggle Switch Button supports a nullable boolean value (true, false, or null).
+N> The Blazor Toggle Switch Button supports a nullable boolean value (true, false, or null).
 
 ## How to bind native events
 
-In addition to the ValueChange component event, the Toggle Switch Button supports standard Blazor native DOM events for detailed control over user interactions. Attach native event handlers using Blazor's `@on*` directives (for example, `@onfocus`, `@onkeydown`), and access event-specific data through the corresponding event argument type.
+In addition to the ValueChange component event, the Blazor Toggle Switch Button supports standard native Blazor DOM events for detailed control over user interactions. Attach native event handlers using Blazor's `@on*` directives (for example, `@onfocus`, `@onkeydown`), and access event-specific data through the corresponding event argument type.
 
 The following native events are supported:
 
@@ -48,7 +48,7 @@ The following native events are supported:
 
 ### Focus Events
 
-Focus events fire when the Toggle Switch Button receives or loses focus. The `FocusEventArgs` parameter provides access to focus state information for implementing accessibility features and focus-dependent logic.
+Focus events fire when the Blazor Toggle Switch Button receives or loses focus. The `FocusEventArgs` parameter provides access to focus state information for implementing accessibility features and focus-dependent logic.
 
 | Event | Behavior |
 |---|---|
@@ -56,7 +56,7 @@ Focus events fire when the Toggle Switch Button receives or loses focus. The `Fo
 | **onfocusin** | Fires when the component gains focus, including during event bubbling |
 | **onfocusout** | Fires when the component loses focus |
 
-The following example demonstrates handling focus events on the Toggle Switch Button:
+The following example demonstrates handling focus events on the Blazor Toggle Switch Button:
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -90,7 +90,7 @@ The following example demonstrates handling focus events on the Toggle Switch Bu
 
 ### Keyboard Events
 
-Keyboard events are raised during a keyboard interaction with the Toggle Switch Button component. The `KeyboardEventArgs` event argument provides information about the key that was pressed and the active keyboard modifiers, allowing you to handle keyboard navigation and shortcuts.
+Keyboard events are raised during a keyboard interaction with the Blazor Toggle Switch Button component. The `KeyboardEventArgs` event argument provides information about the key that was pressed and the active keyboard modifiers, allowing you to handle keyboard navigation and shortcuts.
 
 | Event | Behavior |
 |---|---|
@@ -132,7 +132,7 @@ The following example demonstrates handling keyboard events:
 
 ### Mouse Events
 
-Mouse events fire when the user interacts with the Toggle Switch Button using the mouse. The `MouseEventArgs` parameter provides positional data, button information, and other mouse-related properties.
+Mouse events fire when the user interacts with the Blazor Toggle Switch Button using the mouse. The `MouseEventArgs` parameter provides positional data, button information, and other mouse-related properties.
 
 | Event | Behavior |
 |---|---|
@@ -198,7 +198,7 @@ The following example demonstrates handling mouse events:
 
 ### Touch Events
 
-Touch events fire when the user interacts with the Toggle Switch Button using touch input on touch-enabled devices (tablets, smart phones, etc.). The `TouchEventArgs` parameter provides information about touch points and their positions.
+Touch events fire when the user interacts with the Blazor Toggle Switch Button using touch input on touch-enabled devices (tablets, smart phones, etc.). The `TouchEventArgs` parameter provides information about touch points and their positions.
 
 | Event | Behavior |
 |---|---|
@@ -241,6 +241,5 @@ The following example demonstrates handling touch events:
 ## See also
 
 * [Accessibility in Blazor Toggle Switch Button](./accessibility.md)
-
 
 

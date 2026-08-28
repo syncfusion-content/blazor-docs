@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip for Button in Blazor Button Component | Syncfusion®
-description: Checkout and learn here all feature about Tooltip for Button in Blazor Button component and much more.
+title: How to add tooltip in Blazor Button | Syncfusion®
+description: Show a tooltip on Blazor Button hover by using the native HTML title attribute, or by binding a custom element and toggling a tooltip component.
 platform: Blazor
 control: Button
 documentation: ug
 ---
 
-# Tooltip for Button in Blazor Button Component
+# How to add tooltip in Blazor Button
 
 A tooltip can be shown on Button hover by using the native HTML `title` attribute. This provides a quick, browser-native tooltip with no additional setup.
 

@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Template in Blazor Timeline Component | Syncfusion®
-description: Checkout and learn here all the features about the template in Blazor Timeline component and more details.
+title: Template in Blazor Timeline | Syncfusion
+description: Customize each Blazor Timeline item using the Template directive with access to item data and index.
 platform: Blazor
 control: Timeline
 documentation: ug
 ---
 
-# Template in Blazor Timeline component
+# Template in Blazor Timeline
 
-The Timeline component allows customization of each item's appearance using the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_Template) tag directive. Use the `Template` to customize dot items, render templated content, style progress bars, and more.
+The Blazor Timeline component allows customization of each item's appearance using the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_Template) tag directive. Use the `Template` to customize dot items, render templated content, style progress bars, and more.
 
 The `Template` context receives the following information:
 
 | Type | Purpose |
 | --- | --- |
-| `Item` | Indicates the current data of the Timeline item. |
-| `ItemIndex` | Indicates the current index of the Timeline item. |
+| `Item` | Indicates the current data of the Blazor  Timeline item. |
+| `ItemIndex` | Indicates the current index of the Blazor  Timeline item. |
 
 ```cshtml
 

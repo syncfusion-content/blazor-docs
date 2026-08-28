@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Validation in Blazor In-place Editor Component | Syncfusion®
-description: Checkout and learn here all about Validation in Blazor In-place Editor component and much more details.
+title: Validation in Blazor In-place Editor | Syncfusion
+description: Validate Blazor In-place Editor values using Blazor EditForm with DataAnnotations and custom validation rules.
 platform: Blazor
 control: In-place Editor 
 documentation: ug
 ---
 
-# Validation in Blazor In-place Editor Component
+# Validation in Blazor In-place Editor
 
-Validate the In-place Editor by using Blazor EditForm with DataAnnotations. Validation can be handled at the application level, and custom validation logic can also be implemented as needed. This approach works in both Blazor WebAssembly and Blazor Server apps.
+Validate the Blazor In-place Editor by using Blazor EditForm with DataAnnotations. Validation can be handled at the application level, and custom validation logic can also be implemented as needed. This approach works in both Blazor WebAssembly and Blazor Server apps.
 
 To get started quickly with validation in the Blazor In-place Editor, watch the following video or explore the [GitHub](https://github.com/SyncfusionExamples/how-to-validate-a-textbox-in-blazor-in-place-editor-component) sample:
 

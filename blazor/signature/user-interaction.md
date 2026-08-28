@@ -1,13 +1,13 @@
 ---
 layout: post
-title: User Interaction with Blazor Signature Component | Syncfusion®
-description: Checkout and learn about the user interactions available in Blazor Signature component in Blazor Server App and Blazor WebAssembly App.
+title: User Interaction in Blazor Signature | Syncfusion
+description: Perform undo, redo, clear, and read-only actions in Blazor Signature with built-in async methods for signature editing control.
 platform: Blazor
 control: Signature
 documentation: ug
 ---
 
-# User Interactions in Blazor Signature component
+# User Interaction in Blazor Signature
 
 The [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) component supports various interactions such as Undo, Redo, Clear, Disabled, and ReadOnly. Every change that occurs in the signature is captured as a snap and saved to a collection to enable the above user interactions. These interactions are split into two groups: **Runtime Methods** (Undo, Redo, Clear) and **State Properties** (Disabled, ReadOnly).
 
@@ -37,7 +37,7 @@ It prevents the signature from being edited using the [`IsReadOnly`](https://hel
 
 ## Toggling User Interactions
 
-The following example demonstrates how to wire up the user interactions available in the Signature component. The example uses the [`Changed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_Changed) event along with the `CanUndoAsync`, `CanRedoAsync`, and `IsEmptyAsync` methods to enable or disable the action buttons, and uses checkboxes to toggle the `Disabled` and `IsReadOnly` state properties of the component.
+The following example demonstrates how to wire up the user interactions available in the Blazor Signature component. The example uses the [`Changed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_Changed) event along with the `CanUndoAsync`, `CanRedoAsync`, and `IsEmptyAsync` methods to enable or disable the action buttons, and uses checkboxes to toggle the `Disabled` and `IsReadOnly` state properties of the component.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

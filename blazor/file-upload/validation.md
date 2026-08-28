@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Validation in Blazor File Upload Component | Syncfusion®
-description: Checkout and learn here all the features about Validation in Blazor File Upload component and much more details.
+title: Validation in Blazor File Upload | Syncfusion
+description: Validate file type, size, and required fields in Blazor File Upload using built-in rules and EditForm integration.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# Validation in Blazor File Upload Component
+# Validation in Blazor File Upload
 
-The File Upload component validates selected files by type and size using the [AllowedExtensions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AllowedExtensions), [MinFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_MinFileSize), and [MaxFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_MaxFileSize) properties. Validation is applied when files are selected or dragged and dropped. Files that do not meet the criteria can be prevented from uploading. In addition, file type filtering can be reinforced by setting the accept attribute on the underlying input element. Always perform server-side validation as a defense-in-depth measure.
+The Blazor File Upload component validates selected files by type and size using the [AllowedExtensions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AllowedExtensions), [MinFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_MinFileSize), and [MaxFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_MaxFileSize) properties. Validation is applied when files are selected or dragged and dropped. Files that do not meet the criteria can be prevented from uploading. In addition, file type filtering can be reinforced by setting the accept attribute on the underlying input element. Always perform server-side validation as a defense-in-depth measure.
 
 ## File type
 
