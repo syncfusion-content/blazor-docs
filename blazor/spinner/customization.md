@@ -11,9 +11,9 @@ documentation: ug
 
 The Blazor Spinner component can be customized when initializing it or after it is rendered.
 
-## Customize when initializing the Spinner component
+## Customize when initializing the Blazor Spinner component
 
-Provided support to change the default Spinner appearance when initializing Spinner component using the following properties.
+Provided support to change the default Blazor Spinner appearance when initializing Blazor Spinner component using the following properties.
 
 * [CssClass](#cssclass)
 * [Label](#label)
@@ -22,7 +22,7 @@ Provided support to change the default Spinner appearance when initializing Spin
 
 ### CssClass
 
-Add a customized CSS class name to the Spinner root element to customize the Blazor Spinner component's UI styles. The following example shows how to initialize a Spinner with a custom class name in a Blazor Razor page.
+Add a customized CSS class name to the Blazor Spinner root element to customize the Blazor Spinner component's UI styles. The following example shows how to initialize a Blazor Spinner with a custom class name in a Blazor Razor page.
 
 ```cshtml
 
@@ -62,7 +62,7 @@ Add a customized CSS class name to the Spinner root element to customize the Bla
 
 #### Modal Spinner
 
-A modal spinner can be initialized by adding the class `e-spin-overlay` to the `CssClass` property of the spinner.
+A modal Blazor Spinner can be initialized by adding the class `e-spin-overlay` to the `CssClass` property of the Blazor Spinner.
 
 ```cshtml
 
@@ -134,7 +134,7 @@ The following example shows how to set the `Label` on the Spinner in a Blazor Ra
 
 ### Type
 
-By default, the `Type` is `None` where the Blazor Spinner is loaded based on the theme used in the application. The type can also be customized and shown on Spinner using the `Type` property. The available types are:
+By default, the `Type` is `None` where the Blazor Spinner is loaded based on the theme used in the application. The type can also be customized and shown on Blazor Spinner using the `Type` property. The available types are:
 
 * None
 * Material
@@ -209,16 +209,16 @@ The following example shows how to use the `Size` property when initializing the
 
 ![Changing Blazor Spinner Width](./images/blazor-spinner-width.webp)
 
-## Customize after creating the Spinner component
+## Customize after creating the Blazor Spinner component
 
-The Spinner component can be customized dynamically after it has been initialized by using the following properties:
+The Blazor Spinner component can be customized dynamically after it has been initialized by using the following properties:
 
 * Type
 * CssClass
 
 ### Type
 
-The type of the Spinner can be changed dynamically using the `Type` property.
+The type of the Blazor Spinner can be changed dynamically using the `Type` property.
 
 The following example shows how to use the `Type` property after creating the Spinner in a Blazor Razor page.
 

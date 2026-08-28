@@ -9,7 +9,7 @@ documentation: ug
 
 # State Management in Blazor Splitter
 
-State management allows users to save and load Splitter state. The splitter will use user-provided state to render instead of its properties provided declaratively.
+State management allows users to save and load Splitter state. The Blazor Splitter will use user-provided state to render instead of its properties provided declaratively.
 
 The following properties can be saved and loaded into each **SplitterPane** later.
 
@@ -20,11 +20,11 @@ The following properties can be saved and loaded into each **SplitterPane** late
 | Max | Maximum size of the pane. |
 | Size | Current size of the pane. |
 
-## Enabling persistence in Splitter
+## Enabling persistence in Blazor Splitter
 
-State persistence allows the Splitter to retain the current splitter panes state in the browser local storage for state maintenance. This action is handled through the `EnablePersistence` property which is set to false by default. When it is set to true, some properties of the `SplitterPane` will be retained even after refreshing the page.
+State persistence allows the Blazor Splitter to retain the current splitter panes state in the browser local storage for state maintenance. This action is handled through the `EnablePersistence` property which is set to false by default. When it is set to true, some properties of the `SplitterPane` will be retained even after refreshing the page.
 
-N> The state will be persisted based on **ID** property. So, it is recommended to explicitly set the **ID** property for Splitter.
+N> The state will be persisted based on **ID** property. So, it is recommended to explicitly set the **ID** property for Blazor Splitter.
 
 ```cshtml
 
