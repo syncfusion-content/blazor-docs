@@ -11,7 +11,7 @@ documentation: ug
 
 The Blazor Pivot Table component provides extensive CSS customization options, allowing users to modify the visual appearance and layout of various pivot table elements. This includes styling row headers, column headers, value cells, summary cells, Field List components, and Grouping Bar areas to match application themes and design requirements.
 
-## Hiding Axis
+## Hiding axis
 
 The visibility of the row, column, value, and filter axis areas in both the Field List dialog and Grouping Bar can be controlled using custom CSS styling. Each axis area has specific CSS classes that allow precise targeting for customization.
 
@@ -119,7 +119,7 @@ The CSS selectors target the following Pivot Table elements:
 
 ![Hiding Columns in Blazor PivotTable Field List](images/blazor-pivottable-hide-columns-in-fieldlist.webp)
 
-## Text Alignment
+## Text alignment
 
 The alignment of text inside row headers, column headers, value cells, and summary cells can be customized using CSS styling. The following example demonstrates how to center-align text in value cells (additional selectors for column headers, row headers, and summary cells are included as commented CSS in the sample):
 

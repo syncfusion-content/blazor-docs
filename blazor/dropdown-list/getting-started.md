@@ -210,7 +210,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBdNxBkAVJwRyuP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor DropDownList Component](./images/blazor-dropdownlist-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBdNxBkAVJwRyuP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dropdown List Component](./images/blazor-dropdownlist-component.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropDownList).
 
@@ -249,7 +249,7 @@ After initialization, populate the DropDownList with data using the [DataSource]
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrdtRVaKhyQFbXP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Binding in Blazor DropDownList](./images/blazor-dropdownlist-data-binding.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrdtRVaKhyQFbXP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Binding in Blazor Dropdown List](./images/blazor-dropdownlist-data-binding.webp)" %}
 
 ## Configure the popup list
 
@@ -286,7 +286,7 @@ By default, the popup list width automatically adjusts to the Dropdown List inpu
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthHtdVOgLnzzzff?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Popup List Height in Blazor DropDownList](./images/blazor-dropdownlist-popup-height.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthHtdVOgLnzzzff?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Popup List Height in Blazor Dropdown List](./images/blazor-dropdownlist-popup-height.webp)" %}
 
 ## Get selected value
 

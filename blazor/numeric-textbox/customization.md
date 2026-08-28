@@ -11,7 +11,7 @@ documentation: ug
 
 ## Read-only input
 
-Make the Numeric TextBox non-editable by setting the [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_Readonly) property. In read-only mode, users can still focus the field and select its content, but they cannot modify the value. This state maps to `aria-readonly` for assistive technologies. To completely disable user interaction (including focus), use the `Enabled` property instead, which maps to `aria-disabled`.
+Make the Blazor Numeric TextBox non-editable by setting the [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_Readonly) property. In read-only mode, users can still focus the field and select its content, but they cannot modify the value. This state maps to `aria-readonly` for assistive technologies. To completely disable user interaction (including focus), use the `Enabled` property instead, which maps to `aria-disabled`.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Native Events in Blazor Progress Button | Syncfusion
-description: Bind native DOM events such as focus, mouse, keyboard, and touch to Blazor ProgressButton for advanced interactivity and custom integration.
+description: Bind native DOM events such as focus, mouse, keyboard, and touch to Blazor Progress Button for advanced interactivity and custom integration.
 platform: Blazor
 control: Progress Button
 documentation: ug
@@ -20,7 +20,7 @@ The different event argument types for each event are:
 
 ## List of native events supported
 
-The following native events are supported by the ProgressButton component:
+The following native events are supported by the Blazor  Progress Button component:
 
 | List of Native events | | | |
 | --- | --- | --- | --- | --- |
@@ -29,9 +29,9 @@ The following native events are supported by the ProgressButton component:
 | onkeyup | onfocus | onblur | onfocusin |
 | onfocusout | ontouchstart | ontouchend | |
 
-## How to bind click event to ProgressButton
+## How to bind click event to Blazor  Progress Button
 
-The `onclick` event fires when the ProgressButton is clicked with a mouse or activated via keyboard. It is the primary event used to trigger the button's action, initiate an async operation, or start the progress animation.
+The `onclick` event fires when the Blazor  Progress Button is clicked with a mouse or activated via keyboard. It is the primary event used to trigger the button's action, initiate an async operation, or start the progress animation.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -49,9 +49,9 @@ The `onclick` event fires when the ProgressButton is clicked with a mouse or act
 }
 ```
 
-## How to bind mousedown event to ProgressButton
+## How to bind mousedown event to Blazor  Progress Button
 
-The `onmousedown` event fires the moment a mouse button is pressed down on the ProgressButton, before it is released. It is used for press-and-hold interactions or to track when the user begins pressing the button.
+The `onmousedown` event fires the moment a mouse button is pressed down on the Blazor  Progress Button, before it is released. It is used for press-and-hold interactions or to track when the user begins pressing the button.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -69,9 +69,9 @@ The `onmousedown` event fires the moment a mouse button is pressed down on the P
 }
 ```
 
-## How to bind mouseup event to ProgressButton
+## How to bind mouseup event to Blazor  Progress Button
 
-The `onmouseup` event fires when a mouse button is released after being pressed on the ProgressButton. It complements `onmousedown` and is used to detect the end of a press interaction.
+The `onmouseup` event fires when a mouse button is released after being pressed on the Blazor  Progress Button. It complements `onmousedown` and is used to detect the end of a press interaction.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -89,9 +89,9 @@ The `onmouseup` event fires when a mouse button is released after being pressed 
 }
 ```
 
-## How to bind mouseover event to ProgressButton
+## How to bind mouseover event to Blazor  Progress Button
 
-The `onmouseover` event fires when the mouse pointer enters the ProgressButton or any of its child elements. It is typically used to show tooltips or apply hover-based visual changes.
+The `onmouseover` event fires when the mouse pointer enters the Blazor  Progress Button or any of its child elements. It is typically used to show tooltips or apply hover-based visual changes.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -109,9 +109,9 @@ The `onmouseover` event fires when the mouse pointer enters the ProgressButton o
 }
 ```
 
-## How to bind mouseout event to ProgressButton
+## How to bind mouseout event to Blazor  Progress Button
 
-The `onmouseout` event fires when the mouse pointer leaves the ProgressButton or one of its child elements. It is commonly paired with `onmouseover` to reset hover-based styles or hide tooltips.
+The `onmouseout` event fires when the mouse pointer leaves the Blazor  Progress Button or one of its child elements. It is commonly paired with `onmouseover` to reset hover-based styles or hide tooltips.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -129,9 +129,9 @@ The `onmouseout` event fires when the mouse pointer leaves the ProgressButton or
 }
 ```
 
-## How to bind mousemove event to ProgressButton
+## How to bind mousemove event to Blazor  Progress Button
 
-The `onmousemove` event fires continuously as the mouse pointer moves over the ProgressButton. It is useful for tracking the cursor position within the button area or implementing custom interactive hover effects.
+The `onmousemove` event fires continuously as the mouse pointer moves over the Blazor  Progress Button. It is useful for tracking the cursor position within the button area or implementing custom interactive hover effects.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -149,9 +149,9 @@ The `onmousemove` event fires continuously as the mouse pointer moves over the P
 }
 ```
 
-## How to bind keydown event to ProgressButton
+## How to bind keydown event to Blazor  Progress Button
 
-The `onkeydown` event fires when any key is pressed while the ProgressButton has focus. It is used to implement keyboard shortcuts, intercept specific key presses, or prevent default key behavior.
+The `onkeydown` event fires when any key is pressed while the Blazor  Progress Button has focus. It is used to implement keyboard shortcuts, intercept specific key presses, or prevent default key behavior.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -169,9 +169,9 @@ The `onkeydown` event fires when any key is pressed while the ProgressButton has
 }
 ```
 
-## How to bind keypress event to ProgressButton 
+## How to bind keypress event to Blazor  Progress Button 
 
-The `onkeypress` event fires when a key that produces a character value is pressed while the ProgressButton has focus. Note that this event is deprecated in modern web standards and does not fire for non-printable keys such as `Shift`, `Ctrl`, or arrow keys. Use `onkeydown` for broader key handling.
+The `onkeypress` event fires when a key that produces a character value is pressed while the Blazor  Progress Button has focus. Note that this event is deprecated in modern web standards and does not fire for non-printable keys such as `Shift`, `Ctrl`, or arrow keys. Use `onkeydown` for broader key handling.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -189,9 +189,9 @@ The `onkeypress` event fires when a key that produces a character value is press
 }
 ```
 
-## How to bind keyup event to ProgressButton 
+## How to bind keyup event to Blazor  Progress Button 
 
-The `onkeyup` event fires when a key is released after being pressed while the ProgressButton has focus. It is used to detect the completion of a key interaction or to trigger an action when a specific key is released.
+The `onkeyup` event fires when a key is released after being pressed while the Blazor  Progress Button has focus. It is used to detect the completion of a key interaction or to trigger an action when a specific key is released.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -209,9 +209,9 @@ The `onkeyup` event fires when a key is released after being pressed while the P
 }
 ```
 
-## How to bind focus event to ProgressButton
+## How to bind focus event to Blazor  Progress Button
 
-The `onfocus` event fires when the ProgressButton receives focus, either through a mouse click or keyboard navigation (e.g., `Tab` key). It is used to display contextual hints or apply focus-related visual changes.
+The `onfocus` event fires when the Blazor  Progress Button receives focus, either through a mouse click or keyboard navigation (e.g., `Tab` key). It is used to display contextual hints or apply focus-related visual changes.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -229,9 +229,9 @@ The `onfocus` event fires when the ProgressButton receives focus, either through
 }
 ```
 
-## How to bind blur event to ProgressButton
+## How to bind blur event to Blazor  Progress Button
 
-The `onblur` event fires when the ProgressButton loses focus, typically when the user clicks elsewhere or tabs to another element. It is used to validate state, hide focus indicators, or reset UI changes applied during focus.
+The `onblur` event fires when the Blazor  Progress Button loses focus, typically when the user clicks elsewhere or tabs to another element. It is used to validate state, hide focus indicators, or reset UI changes applied during focus.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -249,9 +249,9 @@ The `onblur` event fires when the ProgressButton loses focus, typically when the
 }
 ```
 
-## How to bind focusin event to ProgressButton
+## How to bind focusin event to Blazor  Progress Button
 
-The `onfocusin` event fires when the ProgressButton or any of its child elements receives focus. Unlike `onfocus`, this event bubbles up the DOM, making it suitable for detecting focus within a container or handling delegated focus scenarios.
+The `onfocusin` event fires when the Blazor  Progress Button or any of its child elements receives focus. Unlike `onfocus`, this event bubbles up the DOM, making it suitable for detecting focus within a container or handling delegated focus scenarios.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -269,9 +269,9 @@ The `onfocusin` event fires when the ProgressButton or any of its child elements
 }
 ```
 
-## How to bind focusout event to ProgressButton
+## How to bind focusout event to Blazor  Progress Button
 
-The `onfocusout` event fires when the ProgressButton or any of its child elements loses focus. Unlike `onblur`, this event bubbles, making it useful for tracking when focus leaves a group of related elements.
+The `onfocusout` event fires when the Blazor  Progress Button or any of its child elements loses focus. Unlike `onblur`, this event bubbles, making it useful for tracking when focus leaves a group of related elements.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -289,11 +289,11 @@ The `onfocusout` event fires when the ProgressButton or any of its child element
 }
 ```
 
-## Trace Events in Blazor ProgressButton  
+## Trace Events in Blazor Progress Button  
 
-The ProgressButton  component triggers lifecycle events that can be used as extension points to perform custom logic and update the UI.
+The Blazor  Progress Button  component triggers lifecycle events that can be used as extension points to perform custom logic and update the UI.
 
-The events available in ProgressButton  are [OnFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_OnFailure), [OnBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_OnBegin), [Progressing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_Progressing), and [OnEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_OnEnd). OnBegin fires when progress starts, Progressing fires while the progress updates, OnEnd fires when progress completes, and OnFailure fires if the operation fails.
+The events available in Blazor  Progress Button  are [OnFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_OnFailure), [OnBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_OnBegin), [Progressing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_Progressing), and [OnEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_OnEnd). OnBegin fires when progress starts, Progressing fires while the progress updates, OnEnd fires when progress completes, and OnFailure fires if the operation fails.
 
 The following example wires the OnBegin, Progressing, and OnEnd events and starts the progress programmatically so the events fire. OnFailure is available but not shown in this sample.
 
@@ -337,4 +337,4 @@ The following example wires the OnBegin, Progressing, and OnEnd events and start
 
 ```
 
-![Tracing Events in Blazor ProgressButton](./images/blazor-progressbutton-trace-event.webp)
+![Tracing Events in Blazor Progress Button](./images/blazor-progressbutton-trace-event.webp)

@@ -42,7 +42,7 @@ The Blazor Menu Bar component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA
 
 | Attributes | Purpose |
 | --- | --- |
-| `role` | Identifies the Menu Bar's root as `menubar`, the popup as `menu`, and each popup item as `menuitem`. |
+| `role` | Identifies the Blazor Menu Bar's root as `menubar`, the popup as `menu`, and each popup item as `menuitem`. |
 | `aria-haspopup` | Indicates the availability and type of interactive popup element. |
 | `aria-expanded` | Indicates whether the subtree is expanded or collapsed. |
 | `aria-orientation` | Indicates whether the orientation is horizontal or vertical. The default orientation is horizontal. |

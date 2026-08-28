@@ -9,7 +9,7 @@ documentation: ug
 
 # Native Events in Blazor Button Group
 
-Native DOM events (such as click, change, focus, mouse, keyboard, and touch events) can be handled on the Button Group component through Blazor's `@on{event}` directive (for example, `@onclick`, `@onchange`). The value of the directive is treated as an event handler. The event-specific data is passed to the handler through the event arguments.
+Native DOM events (such as click, change, focus, mouse, keyboard, and touch events) can be handled on the Blazor Button Group component through Blazor's `@on{event}` directive (for example, `@onclick`, `@onchange`). The value of the directive is treated as an event handler. The event-specific data is passed to the handler through the event arguments.
 
 The following event argument types are available for the corresponding native events:
 
@@ -20,9 +20,9 @@ The following event argument types are available for the corresponding native ev
 
 > All event argument types are from the `Microsoft.AspNetCore.Components.Web` namespace.
 
-## List of native events supported for default Button Group
+## List of native events supported for default Blazor Button Group
 
-The following native events are supported by the default Button Group component:
+The following native events are supported by the default Blazor Button Group component:
 
 | List of Native events |  |  |  |
 | --- | --- | --- | --- |
@@ -31,9 +31,9 @@ The following native events are supported by the default Button Group component:
 | onmouseup | ondblclick | onkeydown | onkeyup |
 | onkeypress | ontouchend | onfocusin | ontouchstart |
 
-## How to bind click event to Button Group
+## How to bind click event to Blazor Button Group
 
-The `@onclick` directive is used to bind the click event for the Button Group. The following code snippet demonstrates binding a click event to each button in the group.
+The `@onclick` directive is used to bind the click event for the Blazor Button Group. The following code snippet demonstrates binding a click event to each button in the group.
 
 ```cshtml
 
@@ -61,7 +61,7 @@ The `@onclick` directive is used to bind the click event for the Button Group. T
 }
 ```
 
-## How to bind a mouse event with arguments to Button Group
+## How to bind a mouse event with arguments to Blazor Button Group
 
 The following code snippet demonstrates how to handle a mouse event and read the `MouseEventArgs` payload.
 
@@ -91,16 +91,16 @@ The following code snippet demonstrates how to handle a mouse event and read the
 }
 ```
 
-## List of native events supported for Single / Multiple selection mode Button Group
+## List of native events supported for Single / Multiple selection mode Blazor Button Group
 
-The following native events are supported when the Button Group is in single or multiple selection mode (`Mode="SelectionMode.Single"` or `Mode="SelectionMode.Multiple"`):
+The following native events are supported when the Blazor Button Group is in single or multiple selection mode (`Mode="SelectionMode.Single"` or `Mode="SelectionMode.Multiple"`):
 
 | List of Native events |  |  |  |  |
 | --- | --- | --- | --- | --- |
 | onchange | oninput | onblur | onfocusout | onfocusin |
 | onfocus | onclick | onkeydown | onkeyup | onkeypress |
 
-## How to bind onchange event to Button Group
+## How to bind onchange event to Blazor Button Group
 
 The `@onchange` directive is used to bind the change event for the Button Group in selection mode. The following code snippet demonstrates binding an `onchange` event to each button in a single-selection Button Group.
 

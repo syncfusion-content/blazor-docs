@@ -152,7 +152,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **App.razor** file to enable Splitter functionality.
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **App.razor** file to enable Blazor Splitter functionality.
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
@@ -175,7 +175,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 @using Syncfusion.Blazor.Layouts
 
-<div>Horizontal Splitter</div>
+<div>Horizontal Blazor Splitter</div>
 
 <SfSplitter Height="240px" Width="100%">
     <SplitterPanes>
