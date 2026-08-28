@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Items in Blazor Timeline Component | Syncfusion®
-description: Checkout and learn here all about items and how to configure action items in Blazor Timeline component and much more.
+title: Items in Blazor Timeline | Syncfusion
+description: Configure Blazor Timeline items with content, opposite content, dot CSS, disabled, and CSS class options.
 platform: Blazor
 control: Timeline
 documentation: ug
 ---
 
-# Items in Blazor Timeline Component
+# Items in Blazor Timeline
 
-Timeline items are added using the [TimelineItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html) tag directive. Each item can be configured with options such as [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_Content), [`OppositeContent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_OppositeContent), [`DotCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_DotCss), [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_Disabled) and [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_CssClass).
+Blazor Timeline items are added using the [TimelineItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html) tag directive. Each item can be configured with options such as [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_Content), [`OppositeContent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_OppositeContent), [`DotCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_DotCss), [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_Disabled) and [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_CssClass).
 
 ## Adding Content
 
@@ -17,7 +17,7 @@ Define the item's content using the [`Content`](https://help.syncfusion.com/cr/b
 
 ### String Content
 
-Define string content for the Timeline items.
+Define string content for the Blazor  Timeline items.
 
 ```cshtml
 
@@ -150,7 +150,7 @@ Use template content inside the [`Content`](https://help.syncfusion.com/cr/blazo
 
 ## Adding Opposite Content
 
-Additional information can be added to each Timeline item using the [`OppositeContent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_OppositeContent) tag directive as a child to [`TimelineItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html). This content is positioned opposite to the item's main `Content`. Like [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_Content), `OppositeContent` supports both string and template content.
+Additional information can be added to each Blazor Timeline item using the [`OppositeContent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_OppositeContent) tag directive as a child to [`TimelineItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html). This content is positioned opposite to the item's main `Content`. Like [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_Content), `OppositeContent` supports both string and template content.
 
 ```cshtml
 
@@ -201,11 +201,11 @@ Define a CSS class to display an icon for each item using the `DotCss` property.
 
 ### Adding Images
 
-Include images for Timeline items using the `DotCss` property by setting the CSS `background-image` property.
+Include images for Blazor  Timeline items using the `DotCss` property by setting the CSS `background-image` property.
 
 ### Adding Text
 
-Display text for Timeline items using the `DotCss` property by adding text to the CSS `content` property.
+Display text for Blazor  Timeline items using the `DotCss` property by adding text to the CSS `content` property.
 
 ```cshtml
 
@@ -299,4 +299,4 @@ Use the [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lay
 
 ## CSS Class
 
-Customize the appearance of a Timeline item by specifying a custom CSS class using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_CssClass) property.
+Customize the appearance of a Blazor Timeline item by specifying a custom CSS class using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_CssClass) property.

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and appearance in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn here all the features about Style and appearance in Blazor ComboBox component and more.
+title: Style and Appearance in Blazor ComboBox | Syncfusion®
+description: Customize the Blazor ComboBox appearance by overriding its default CSS structure to adjust input, popup, list items, and theming for user preferences.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Style and appearance in Blazor ComboBox Component
+# Style and Appearance in Blazor ComboBox
 
 The following content provides the CSS structure and options that can be used to modify the component’s appearance based on user preference.
 
@@ -105,7 +105,7 @@ Customize the component color when it is focused by targeting its CSS class `.e-
 
 ## Customizing the outline theme’s focus color
 
-Customize the color of the combobox component when it is in a focused state and rendered with an outline theme,  by targeting its CSS class `e-outline` which indicates the input element when it is focused, and allows you to set the desired color to the `color` property.
+Customize the color of the Blazor ComboBox component when it is in a focused state and rendered with an outline theme,  by targeting its CSS class `e-outline` which indicates the input element when it is focused, and allows you to set the desired color to the `color` property.
 
 {% highlight cshtml %}
 
@@ -233,7 +233,7 @@ Append a visual mandatory indicator to the floating placeholder by targeting `.e
 
 ## Customizing the text selection color
 
-The appearance of a selected item within a combobox component can be customized by targeting the CSS class `input.e-input::selection` and set the desired background color and text color. This customization will only be applied when the item is selected manually. To achieve this, use the `background-color` and `color` properties of the CSS class `input.e-input::selection`.
+The appearance of a selected item within a Blazor ComboBox component can be customized by targeting the CSS class `input.e-input::selection` and set the desired background color and text color. This customization will only be applied when the item is selected manually. To achieve this, use the `background-color` and `color` properties of the CSS class `input.e-input::selection`.
 
 {% highlight cshtml %}
 

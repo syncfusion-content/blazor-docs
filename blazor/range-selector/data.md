@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Type of Data in Blazor Range Selector Component | Syncfusion®
-description: Checkout and learn here all about type of data in Blazor Range Selector component with examples and much more details.
+title: Blazor Range Selector Type of Data Examples | Syncfusion®
+description: Learn about the supported data types in Syncfusion Blazor Range Selector, including Numeric, DateTime, and logarithmic value types.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Type of Data in Blazor Range Selector Component
+# Blazor Range Selector Type of Data
 
 ## Numeric
 

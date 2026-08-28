@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Value Binding in Blazor AutoComplete Component | Syncfusion®
-description: Checkout and Learn how to bind and manage selected values in the Blazor AutoComplete component and much more.
+title: Value Binding in Blazor AutoComplete | Syncfusion®
+description: Bind values to the Blazor AutoComplete using one-way and two-way binding with Value, Text, or Index, and synchronize state with the parent component.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Value Binding in AutoComplete
+# Value Binding in Blazor AutoComplete
 
 Value binding is the process of passing values between a component and its parent. There are two methods for binding values.These are.
 
@@ -120,7 +120,7 @@ The following sample demonstrates the `string` used as `TValue`. So, clear the v
 
 ## Dynamically change TItem
 
-The `TItem` property can be changed dynamically by defining the datasource type of the AutoComplete component with the help of the `@typeparam` directive. The following sample demonstration explains how to change  the TItem dynamically with different type of datasource.
+The `TItem` property can be changed dynamically by defining the datasource type of the Blazor AutoComplete component with the help of the `@typeparam` directive. The following sample demonstration explains how to change  the TItem dynamically with different type of datasource.
 
 ### Creating generic AutoComplete component
 
@@ -153,7 +153,7 @@ First, create a `AutoComplete.razor` file as a parent component in the `/Pages` 
 
 ### Usage of generic component with different type
 
-Render the generic AutoComplete component with the required `TValue` and `TItem` in the corresponding Razor components.
+Render the generic Blazor AutoComplete component with the required `TValue` and `TItem` in the corresponding Razor components.
 
 Here, the AutoComplete component uses `TValue` as `string` in `/Index.razor` and `TValue` as nullable `int` in `/Counter.razor`.
 

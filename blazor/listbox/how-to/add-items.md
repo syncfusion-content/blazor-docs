@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Add/Remove Items in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all about add/remove items in Blazor ListBox component and much more details.
+title: How to add/remove items in Blazor ListBox | Syncfusion
+description: Add or remove items programmatically in Blazor ListBox using AddItemsAsync, RemoveItemAsync, and optional index parameters.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Add/Remove Items in Blazor ListBox Component
+# How to add/remove items in Blazor ListBox
 
 This section explains how to programmatically add and remove items in the Syncfusion Blazor ListBox component using the [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_AddItemsAsync_System_Collections_Generic_IEnumerable__0__System_Nullable_System_Int32__) and [RemoveItemAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_RemoveItemAsync_System_Collections_Generic_IEnumerable__1__System_Nullable_System_Int32__) methods.
 

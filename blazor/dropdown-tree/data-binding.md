@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor Dropdown Tree Component | Syncfusion®
-description: Checkout and learn here all the features about Data Binding in Blazor Dropdown Tree component and much more.
+title: Data Binding in Blazor Dropdown Tree | Syncfusion®
+description: Bind hierarchical, self-referential, local, and remote data sources to the Blazor Dropdown Tree component.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
 ---
 
-# Data Binding in Blazor Dropdown Tree Component
+# Data Binding in Blazor Dropdown Tree
 
 The Blazor Dropdown Tree component provides the option to load data either from the local data sources or from remote data services. This can be done through [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource) property that is a member of the [DropDownTreeField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#constructors) property. The `DataSource` property supports list of objects and [`DataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 
@@ -698,7 +698,7 @@ namespace DropDownTreeSample.Data
 
 ### Entity Framework
 
-Follow these steps to consume data from the [Entity Framework](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-orm/entityframework) in the Dropdown Tree component.
+Follow these steps to consume data from the [Entity Framework](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-orm/entityframework) in the Blazor Dropdown Tree component.
 
 #### Create DBContext class
 

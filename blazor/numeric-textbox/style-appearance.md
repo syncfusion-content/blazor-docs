@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Style and appearance in Blazor Numeric TextBox Component | Syncfusion®
-description: Learn how to customize the style and appearance of Blazor Numeric TextBox with CSS for container elements, icons, and visual polish.
+title: Style and Appearance in Blazor Numeric Textbox | Syncfusion
+description: Customize Blazor Numeric TextBox appearance with CSS for container elements, icons, and focus states.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
 ---
 
-# Style and appearance in Blazor Numeric TextBox Component
+# Style and Appearance in Blazor Numeric Textbox
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing the appearance of Numeric TextBox container element
+## Customizing the appearance of Blazor Numeric TextBox container element
 
-Use the following CSS to customize the appearance of the Numeric TextBox container element. This example adjusts the input’s height and font size. Note that the selectors shown apply to all inputs using the same theme classes; scope them with a custom class or the .e-numeric root to limit the impact to specific instances.
+Use the following CSS to customize the appearance of the Blazor Numeric TextBox container element. This example adjusts the input’s height and font size. Note that the selectors shown apply to all inputs using the same theme classes; scope them with a custom class or the .e-numeric root to limit the impact to specific instances.
 
 ```css
 /* To specify height and font size */
@@ -24,9 +24,9 @@ Use the following CSS to customize the appearance of the Numeric TextBox contain
 }
 ```
 
-## Customizing the Numeric TextBox icons
+## Customizing the Blazor Numeric TextBox icons
 
-Use the following CSS to customize the Numeric TextBox icons. This selector adjusts the size and background of the spin button icons; for finer control, target .e-spin-up and .e-spin-down individually. Ensure sufficient color contrast and preserve visible focus/hover states for accessibility.
+Use the following CSS to customize the Blazor Numeric TextBox icons. This selector adjusts the size and background of the spin button icons; for finer control, target .e-spin-up and .e-spin-down individually. Ensure sufficient color contrast and preserve visible focus/hover states for accessibility.
 
 ```css
 /* To specify font size and background color */

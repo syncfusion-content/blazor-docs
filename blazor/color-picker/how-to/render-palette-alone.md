@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Render palette alone in Blazor Color Picker Component | Syncfusion®
-description: Checkout and learn here all the features about Render palette alone in Blazor Color Picker component and much more.
+title: How to render palette alone in Blazor Color Picker | Syncfusion®
+description: Render only the palette in the Blazor Color Picker by setting Mode to Palette and disabling the ModeSwitcher to prevent switching to the picker.
 platform: Blazor
 control: Color Picker
 documentation: ug
 ---
 
-# Render palette alone in Blazor Color Picker Component
+# How to render palette alone in Blazor Color Picker
 
-Render only the palette in the Color Picker by setting the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Mode) property to `ColorPickerMode.Palette` and disabling the [ModeSwitcher](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ModeSwitcher) to prevent switching to the picker view.
+Render only the palette in the Blazor Color Picker by setting the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Mode) property to `ColorPickerMode.Palette` and disabling the [ModeSwitcher](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ModeSwitcher) to prevent switching to the picker view.
 
 In the following sample, the [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowButtons) property is set to `false` to hide the control buttons, so only the palette area is displayed and color selection applies immediately.
 

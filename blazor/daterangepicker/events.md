@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Events in Blazor DateRangePicker Component | Syncfusion®
-description: Checkout and learn here all about Events in Blazor DateRangePicker component and and much more details.
+title: Events in Blazor DateRangePicker | Syncfusion®
+description: Handle Blazor DateRangePicker events such as ValueChange, RangeSelected, OnOpen, OnClose, and Navigated to react to user input.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
 ---
 
-# Events in Blazor DateRangePicker Component
+# Events in Blazor DateRangePicker
 
-This section lists the events of the DateRangePicker component that are triggered by corresponding user actions.
+This section lists the events of the Blazor DateRangePicker component that are triggered by corresponding user actions.
 
-The events should be provided to the DateRangePicker using the **DateRangePickerEvents** component, which is available in the `Syncfusion.Blazor.Calendars` namespace.
+The events should be provided to the Blazor DateRangePicker using the **DateRangePickerEvents** component, which is available in the `Syncfusion.Blazor.Calendars` namespace.
 
-N> Starting with `v17.2.*`, the DateRangePicker supports a defined set of events. The event names have changed from previous releases, and several events have been removed. The following are the event name changes from `v17.1.*` to `v17.2.*`.
+N> Starting with `v17.2.*`, the Blazor DateRangePicker supports a defined set of events. The event names have changed from previous releases, and several events have been removed. The following are the event name changes from `v17.1.*` to `v17.2.*`.
 
 Event Name(`v17.1.*`) |Event Name(`v17.2.*`)
 -----|-----
@@ -63,7 +63,7 @@ The `ValueChange` event triggers when the calendar value changes. The `RangePick
 
 ## OnClose
 
-The `OnClose` event triggers when the DateRangePicker popup is closed. The `RangePopupEventArgs` provides event details for handling the close action.
+The `OnClose` event triggers when the Blazor DateRangePicker popup is closed. The `RangePopupEventArgs` provides event details for handling the close action.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -160,7 +160,7 @@ The `Navigated` event triggers when the calendar is navigated to another level o
 
 ## OnOpen
 
-The `OnOpen` event triggers when the DateRangePicker popup is opened. The `RangePopupEventArgs` provides event details for handling the open action.
+The `OnOpen` event triggers when the Blazor DateRangePicker popup is opened. The `RangePopupEventArgs` provides event details for handling the open action.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -218,4 +218,4 @@ The `RangeSelected` event triggers when both the start and end dates of a range 
 }
 ```
 
-N> The DateRangePicker is limited to the events listed above, and new events will be added in the future based on user requests. If the event you are looking for is not in the list, you can request it [here](https://www.syncfusion.com/feedback/blazor-components).
+N> The Blazor DateRangePicker is limited to the events listed above, and new events will be added in the future based on user requests. If the event you are looking for is not in the list, you can request it [here](https://www.syncfusion.com/feedback/blazor-components).

@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Pane Sizing in Blazor Splitter Component | Syncfusion®
-description: Checkout and learn here all the features about pane sizing in Blazor Splitter component much more details.
+title: Pane Sizing in Blazor Splitter | Syncfusion
+description: Set Blazor Splitter pane sizes in pixels or percentages and enable auto sizing for flexible layouts.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# Pane Sizing in Blazor Splitter Component
+# Pane Sizing in Blazor Splitter
 
-The Splitter allows you to provide pane sizes in either `Pixel` or `Percentage` formats.
+The Blazor Splitter allows you to provide pane sizes in either `Pixel` or `Percentage` formats.
 
 ## Auto size panes
 
-The splitter's panes are adjusted automatically during resizing if the size is not specified externally to panes, because the panes are designed based on flex layout by default. When you add/remove or show/hide the panes, the panes are auto aligned within its container.
+The Blazor Splitter's panes are adjusted automatically during resizing if the size is not specified externally to panes, because the panes are designed based on flex layout by default. When you add/remove or show/hide the panes, the panes are auto aligned within its container.
 
 ```cshtml
 

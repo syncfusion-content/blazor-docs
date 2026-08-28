@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create Blazor TextBox component dynamically | Syncfusion®
-description: Learn here all about how to create TextBox component dynamically in Blazor TextBox component and much more details.
+title: How to create TextBox dynamically in Blazor TextBox | Syncfusion
+description: Render Blazor TextBox at runtime using RenderTreeBuilder or RenderFragment in dynamic Blazor code scenarios.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Create TextBox component dynamically in Blazor TextBox Component
+# How to create TextBox dynamically in Blazor TextBox
 
 The Blazor TextBox can be rendered at runtime in two common ways:
 1. Using RenderTreeBuilder (imperative component construction)
@@ -15,7 +15,7 @@ The Blazor TextBox can be rendered at runtime in two common ways:
 
 ## Dynamic rendering using RenderTreeBuilder
 
-Use `RenderTreeBuilder` to construct a component tree programmatically. In the following example, a TextBox component is created at runtime when a button is clicked and rendered into a placeholder fragment.
+Use `RenderTreeBuilder` to construct a component tree programmatically. In the following example, a Blazor TextBox component is created at runtime when a button is clicked and rendered into a placeholder fragment.
 
 ```cshtml
 
@@ -51,7 +51,7 @@ Use `RenderTreeBuilder` to construct a component tree programmatically. In the f
 
 ## Dynamic rendering using RenderFragment
 
-Use a `RenderFragment` when you want to reuse a templated block and update parameters without reconstructing the component tree. In the next example, a single TextBox is created and its placeholder is updated at runtime.
+Use a `RenderFragment` when you want to reuse a templated block and update parameters without reconstructing the component tree. In the next example, a single Blazor TextBox is created and its placeholder is updated at runtime.
 
 ```csharp
 

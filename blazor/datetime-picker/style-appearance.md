@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Style and appearance in Blazor Datetime Picker Component | Syncfusion®
-description: Checkout and learn here all about Style and appearance in Blazor Datetime Picker component and more.
+title: Style and Appearance in Blazor DateTime Picker | Syncfusion®
+description: Customize the Blazor DateTime Picker appearance by overriding its default CSS structure to adjust input, popup, calendar, and time list styles.
 platform: Blazor
-control: Datetime Picker
+control: DateTimePicker
 documentation: ug
 ---
 
-# Style and Appearance in Blazor Datetime Picker Component
+# Style and Appearance in Blazor DateTime Picker
 
-Use the following CSS selectors to modify the DateTimePicker component’s appearance based on user preferences.
+Use the following CSS selectors to modify the Blazor DateTime Picker component’s appearance based on user preferences.
 
-## Customizing the appearance of Datetime Picker container element
+## Customizing the appearance of the DateTime Picker container element
 
-Apply the following CSS to adjust the input height and font size for the DateTimePicker container element. The `.e-input-group` wrapper class is rendered by Syncfusion input components.
+Apply the following CSS to adjust the input height and font size for the Blazor DateTime Picker container element. The `.e-input-group` wrapper class is rendered by Syncfusion input components.
 
 ```css
 /* To specify height and font size */
@@ -23,9 +23,9 @@ Apply the following CSS to adjust the input height and font size for the DateTim
     }
 ```
 
-## Customizing the Datetime Picker icons element
+## Customizing the DateTime Picker icons element
 
-Use the following CSS to style the DateTimePicker’s date and time icon elements.
+Use the following CSS to style the Blazor DateTime Picker’s date and time icon elements.
 
 ```css
 /* To specify background color and font size */
@@ -35,9 +35,9 @@ Use the following CSS to style the DateTimePicker’s date and time icon element
     }
 ```
 
-## Customizing the time picker popup in the Datetime Picker 
+## Customizing the time picker popup in the DateTime Picker 
 
-Use the following CSS to adjust the height of the time picker popup in the DateTimePicker.
+Use the following CSS to adjust the height of the time picker popup in the Blazor DateTime Picker.
 
 ```css
 /* To specify height */
@@ -46,12 +46,12 @@ Use the following CSS to adjust the height of the time picker popup in the DateT
 }
 ```
 
-## Customizing the Calendar popup of the Datetime Picker
+## Customizing the Calendar popup of the DateTime Picker
 
-See the following section to customize the Calendar’s style and appearance when used within the DateTimePicker.
+See the following section to customize the Calendar’s style and appearance when used within the Blazor DateTime Picker.
 
 [Customizing Calendar's style and appearance](../calendar/style-appearance)
 
 ## See also
 
-* [Getting started with Blazor DateTimePicker](./getting-started)
+* [Getting started with Blazor DateTime Picker](./getting-started)

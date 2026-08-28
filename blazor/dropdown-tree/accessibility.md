@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Dropdown Tree Component | Syncfusion®
-description: Checkout and learn here all the features about Accessibility in Blazor Dropdown Tree component and more.
+title: Accessibility in Blazor Dropdown Tree | Syncfusion®
+description: Learn how Blazor Dropdown Tree supports accessibility standards, ARIA attributes, keyboard navigation, and assistive technologies.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
 ---
 
-# Accessibility in Blazor Dropdown Tree Component
+# Accessibility in Blazor Dropdown Tree
 
 The [Blazor Dropdown Tree](https://www.syncfusion.com/blazor-components/blazor-dropdowntree) component has been designed, keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications, and applied the WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
 
@@ -48,7 +48,7 @@ The Blazor Dropdown Tree component follows the [WAI-ARIA](https://www.w3.org/WAI
 | `aria-haspopup` | Indicates the availability and type of interactive popup element |
 | `aria-expanded` | Indicates whether the popup list has expanded or not. |
 | `aria-selected` | Indicates the selected tree item. |
-| `aria-disabled` | Indicates whether the Dropdown Tree component is in a disabled state or not. |
+| `aria-disabled` | Indicates whether the Blazor Dropdown Tree component is in a disabled state or not. |
 | `aria-controls` | This attribute contains the ID of the popup list to indicate this element is controlled by the popup list element |
 
 ## Keyboard interaction
@@ -79,7 +79,7 @@ You can use the following key shortcuts to access the Dropdown Tree without inte
 
 The Blazor Dropdown Tree component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
-The accessibility compliance of the Dropdown Tree component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/dropdowntree) in a new window to evaluate the accessibility of the Dropdown Tree component with accessibility tools.
+The accessibility compliance of the Blazor Dropdown Tree component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/dropdowntree) in a new window to evaluate the accessibility of the Blazor Dropdown Tree with accessibility tools.
 
 ## See also
 

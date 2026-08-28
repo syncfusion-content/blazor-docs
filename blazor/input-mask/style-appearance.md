@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Style and appearance in Blazor Input Mask Component | Syncfusion®
-description: Checkout and learn here all about Style and appearance in Blazor Input Mask component and much more details.
+title: Style and Appearance in Blazor Input Mask | Syncfusion
+description: Customize the appearance of Blazor Input Mask with CSS selectors for the input wrapper, hover states, and isolated styles.
 platform: Blazor
 control: Input Mask
 documentation: ug
 ---
 
-# Style and appearance in Blazor Input Mask Component
+# Style and Appearance in Blazor Input Mask
 
 The following sections describe the CSS selector patterns you can target to modify the control's appearance based on user preferences. The MaskedTextBox renders a wrapper element and an input element; styles can be applied to either. For scoped customization, assign a custom `CssClass` to the component and define styles for that class, or use CSS isolation (`.razor.css`). Refer to the [SfMaskedTextBox CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_CssClass) API and the [Themes and Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation for additional guidance.
 
-### Customizing with a custom CSS class
+## Customizing with a custom CSS class
 
 To scope the styling to a single instance, set the `CssClass` parameter and target that class in your stylesheet.
 
@@ -29,9 +29,9 @@ To scope the styling to a single instance, set the `CssClass` parameter and targ
 }
 ```
 
-## Customizing the appearance of Input Mask container element
+## Customizing the appearance of Blazor Input Mask container element
 
-Use the following CSS to customize the appearance of the Input Mask container (wrapper) and its input element.
+Use the following CSS to customize the appearance of the Blazor Input Mask container (wrapper) and its input element.
 
 ```css
 /* To specify height, font size, and border */
@@ -43,9 +43,9 @@ Use the following CSS to customize the appearance of the Input Mask container (w
 }
 ```
 
-## Customizing the Input Mask element on hovering
+## Customizing the Blazor Input Mask element on hovering
 
-Use the following CSS to customize the Input Mask element on hovering.
+Use the following CSS to customize the Blazor Input Mask element on hovering.
 
 ```css
 /* To specify border on hover */
@@ -68,7 +68,7 @@ Use the following CSS to customize the Input Mask element on hovering.
 
 ## Customizing the focused state
 
-Use the following CSS to customize the border color when the MaskedTextBox is focused.
+Use the following CSS to customize the border color when the Blazor Input Mask component is focused.
 
 ```css
 .e-input-group.e-control-wrapper input.e-input:focus,

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup Setting in Blazor MultiSelect Component | Syncfusion®
-description: Checkout and learn here all about Popup Setting in Blazor MultiSelect component and much more details.
+title: Popup Setting in Blazor MultiSelect Dropdown | Syncfusion
+description: Allow users to resize and configure the Blazor MultiSelect Dropdown popup for better visibility today easily.
 platform: Blazor
-control: MultiSelect
+control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Popup Setting in MultiSelect
+# Popup Setting in Blazor MultiSelect Dropdown
 
 ## Popup resize
 
@@ -19,7 +19,7 @@ Dynamically adjust the size of the popup in the MultiSelect component by using t
 
 {% endhighlight %} 
 
-![Blazor MultiSelect with AllowResize property](./images/popup-setting/blazor_multiselect_resize.gif)
+![Blazor MultiSelect Dropdown with AllowResize property](./images/popup-setting/blazor_multiselect_resize.gif)
 
 ## Change the PopupHeight
 
@@ -69,7 +69,7 @@ Prevent the popup from opening or closing by setting [BeforeOpenEventArgs.Cancel
 
 {% endhighlight %}
 
-![Blazor MultiSelect with preventing opening and closing](./images/popup-setting/blazor_MultiSelect_preventing-opening-closing.webp)
+![Blazor MultiSelect Dropdown with preventing opening and closing](./images/popup-setting/blazor_MultiSelect_preventing-opening-closing.webp)
 
 The following events are raised when opening and closing the popup.
 
@@ -143,7 +143,7 @@ Adjust the popup height based on the available viewport space by handling the wi
 {% endhighlight %}
 {% endtabs %}
 
-![Popup height based on available space in Blazor MultiSelect](./images/popup-setting/blazor_multiselect_popup_resize.gif)
+![Popup height based on available space in Blazor MultiSelect Dropdown](./images/popup-setting/blazor_multiselect_popup_resize.gif)
 
 ## Programmatically opening and closing popup
 
@@ -155,4 +155,4 @@ Open and close the popup programmatically by calling [ShowPopupAsync()](https://
 
 {% endhighlight %} 
 
-![Show or hide popup in Blazor MultiSelect](./images/popup-setting/blazor_multiselect_show-or-hide-popup.gif)
+![Show or hide popup in Blazor MultiSelect Dropdown](./images/popup-setting/blazor_multiselect_show-or-hide-popup.gif)

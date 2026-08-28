@@ -1,17 +1,17 @@
 ---
 layout: post
 title: PDF Export in Blazor Pivot Table | Syncfusion
-description: Learn how the Blazor Pivot Table exports data to a PDF document through ExportToPdfAsync when AllowPdfExport is true, with direct download or memory stream.
+description: Learn how the Blazor Pivot Table exports pivot data to PDF using the PdfExport module, with options to customize page size, orientation, and styling.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# PDF Export in Blazor Pivot Table
+# PDF export in Blazor Pivot Table
 
-The PDF export allows users to easily export their Pivot Table data as a PDF document. To enable PDF export in the Pivot Table, set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowPdfExport) property to **true** in the [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) configuration. Once enabled, you can use the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method to generate and download the PDF file.
+The Blazor Pivot Table allows you to export Pivot Table data as a PDF document. To enable PDF export in the Pivot Table, set the [`AllowPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowPdfExport) property to **true**. Once enabled, use the [`ExportToPdfAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method to generate and download the file.
 
-In the following example, an external button is used to start the PDF export process. When the user clicks the button, the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method is called so that the Pivot Table data can be saved as a PDF file.
+In the following example, an external button is used to start the PDF export process. When the user clicks the button, the [`ExportToPdfAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method is called so that the Pivot Table data can be saved as a PDF file.
 
 N> The Pivot Table component can be exported to PDF format using options available in the toolbar. For more details [refer](./tool-bar) here.
 
@@ -59,9 +59,11 @@ N> The Pivot Table component can be exported to PDF format using options availab
 
 ## Export table and chart into the same document
 
-If you want to export both the table and the chart from the Pivot Table into a single PDF file, set the [View](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDisplayOption.html#Syncfusion_Blazor_PivotView_PivotViewDisplayOption_View) property to [View.Both](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.View.html#Syncfusion_Blazor_PivotView_View_Both) within the [PivotViewDisplayOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDisplayOption.html) tag. Then, when you use the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_System_Nullable_System_Boolean__) method, make sure to set the **exportTableAndChart** parameter to **true**. This will include both the data table and its chart in one PDF document when you export.
+If you want to export both the table and the chart from the Pivot Table into a single PDF file, set the [`View`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDisplayOption.html#Syncfusion_Blazor_PivotView_PivotViewDisplayOption_View) property to [`View.Both`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.View.html#Syncfusion_Blazor_PivotView_View_Both). Then, when you use the [`ExportToPdfAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_System_Nullable_System_Boolean__) method, make sure to set the **exportTableAndChart** option to **true**. This will include both the data table and its chart in one PDF document when you export.
 
 N> This support is applicable only when the virtual scrolling is enabled.
+
+The following example shows how you can set this up in your application:
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -119,15 +121,19 @@ Additionally, we recommend configuring the maximum incoming SignalR message size
 builder.Services.AddServerSideBlazor().AddHubOptions(options => { options.MaximumReceiveMessageSize = 1024 * 128; });
 ```
 
-## To add header and footer while exporting
+## Customization during PDF export
+
+PDF export provides option to customize mapping of pivot table to the exported PDF document.
+
+### To add header and footer while exporting
 
 When exporting data from the Pivot Table to a PDF document, you can include additional information in the header or footer. You can add text, lines, page numbers, or images to ensure your exported document includes important details, such as your organization's name or branding, and to improve readability.
 
-To do this, you can use the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeader.html) or [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfFooter.html) options in the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html). These options allow you to specify what content to display at the top or bottom of each PDF page when exporting.
+To do this, you can use the [`Header`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeader.html) or [`Footer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfFooter.html) options in the [`PdfExportProperties`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html). These options allow you to specify what content to display at the top or bottom of each PDF page when exporting.
 
-### To add a text in header/footer
+#### To add a text in header/footer
 
-You can include custom text in the header or footer of the exported PDF document. Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterElement.html#Syncfusion_Blazor_Grids_PdfHeaderFooterElement_Type) property to **Text** in the contents array to add text. The following example shows how to add the text "Northwind Traders" to the header:
+You can include custom text in the header or footer of the exported PDF document. Set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterElement.html#Syncfusion_Blazor_Grids_PdfHeaderFooterElement_Type) property to **Text** in the contents array to add text. The following example shows how to add the text "Northwind Traders" to the header:
 
 ```cshtml
 @code {
@@ -155,16 +161,18 @@ You can include custom text in the header or footer of the exported PDF document
 }
 ```
 
-### To draw a line in header/footer
+#### To draw a line in header/footer
 
-You can draw lines in the header or footer to create visual separators or decorative elements. Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterElement.html#Syncfusion_Blazor_Grids_PdfHeaderFooterElement_Type) property to **Line** in the contents array to add line elements. The line can be styled with different dash patterns and colors.
+You can draw lines in the header or footer to create visual separators or decorative elements. Set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterElement.html#Syncfusion_Blazor_Grids_PdfHeaderFooterElement_Type) property to **Line** in the contents array to add line elements. The line can be styled with different dash patterns and colors.
 
 **Supported line styles:**
-* Dash
-* Dot
-* DashDot
-* DashDotDot
-* Solid
+* `Solid` - Continuous line
+* `Dash` - Dashed line
+* `Dot` - Dotted line
+* `DashDot` - Alternating dash and dot pattern
+* `DashDotDot` - Dash followed by two dots pattern
+
+The following example demonstrates how to add a solid line in the header:
 
 ```cshtml
 @code {
@@ -192,16 +200,18 @@ You can draw lines in the header or footer to create visual separators or decora
 }
 ```
 
-### Add page number in header/footer
+#### Add page number in header/footer
 
-You can display page numbers in the header or footer using various numbering formats. Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterElement.html#Syncfusion_Blazor_Grids_PdfHeaderFooterElement_Type) property to **PageNumber** in the contents array to add page number elements. This helps users navigate through multi-page PDF documents easily.
+You can display page numbers in the header or footer using various numbering formats. Set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterElement.html#Syncfusion_Blazor_Grids_PdfHeaderFooterElement_Type) property to **PageNumber** in the contents array to add page number elements. This helps users navigate through multi-page PDF documents easily.
 
 **Supported page number types:**
-* LowerLatin - a, b, c
-* UpperLatin - A, B, C
-* LowerRoman - i, ii, iii
-* UpperRoman - I, II, III
-* Arabic - 1, 2, 3
+* `LowerLatin` - Lowercase letters (a, b, c)
+* `UpperLatin` - Uppercase letters (A, B, C)
+* `LowerRoman` - Lowercase Roman numerals (i, ii, iii)
+* `UpperRoman` - Uppercase Roman numerals (I, II, III)
+* `Arabic` - Numbers (1, 2, 3)
+
+The following example shows how to add page numbers with Arabic format in the header:
 
 ```cshtml
 @code {
@@ -340,9 +350,222 @@ The below code illustrates the PDF export customization options.
 }
 ```
 
+### Changing the file name while exporting
+
+The PDF export provides an option to change the file name of the exported document before exporting. To change the file name, define the [`FileName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_FileName) property in the [`PdfExportProperties`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class and pass it as a parameter to the [`ExportToPdfAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
+<SfPivotView TValue="ProductDetails" @ref="@pivot" AllowPdfExport="true">
+    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code {
+    SfPivotView<ProductDetails> pivot;
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind your dataSource collection here, refer the getting started section for more information.
+    }
+    public void OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        Syncfusion.Blazor.Grids.PdfExportProperties pdfExportProperties = new Syncfusion.Blazor.Grids.PdfExportProperties() { FileName = "sample.pdf" };
+        this.pivot.ExportToPdfAsync(pdfExportProperties);
+    }
+}
+```
+
+![Changing Blazor PivotTable File Name while Exporting](images/blazor-pivottable-change-pdf-file-name.webp)
+
+### Changing page orientation while exporting
+
+When exporting the Pivot Table as a PDF, users can choose the page orientation of the document. By default, the PDF is exported in **Portrait** orientation. If you want to change the orientation to **Landscape**, set the [`PageOrientation` ](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_PageOrientation) property in the [`PdfExportProperties`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class. Then, pass this object as a parameter to the [`ExportToPdfAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method. This lets you select either Portrait or Landscape orientation based on your needs before saving the exported PDF.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
+<SfPivotView TValue="ProductDetails" @ref="@pivot" AllowPdfExport="true">
+    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code {
+    SfPivotView<ProductDetails> pivot;
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+    public void OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        Syncfusion.Blazor.Grids.PdfExportProperties pdfExportProperties = new Syncfusion.Blazor.Grids.PdfExportProperties() { PageOrientation = Syncfusion.Blazor.Grids.PageOrientation.Landscape };
+        this.pivot.ExportToPdfAsync(pdfExportProperties);
+    }
+}
+```
+
+![Changing Blazor PivotTable Page Orientation while Exporting](images/blazor-pivottable-change-pdf-orientation.webp)
+
+### Changing page size while exporting
+
+When exporting Pivot Table data to PDF, users can select a specific page size for the PDF document. To set the page size, define the [`PageSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_PageSize) property within the [`PdfExportProperties`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class, and pass this object as a parameter to the [`ExportToPdfAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method.
+
+You can choose from various page sizes, such as Letter, Note, Legal, A0, A1, A2, A3, A5, A6, A7, A8, A9, B0, B1, B2, B3, B4, B5, Archa, Archb, Archc, Archd, Arche, Flsa, HalfLetter, Letter11x17, and Ledger.
+
+This option lets users easily adjust the PDF layout to fit their specific needs before exporting the data from the Pivot Table.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
+<SfPivotView TValue="ProductDetails" @ref="@pivot" AllowPdfExport="true" >
+    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code{
+    SfPivotView<ProductDetails> pivot;
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+       //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+    public void OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        Syncfusion.Blazor.Grids.PdfExportProperties pdfExportProperties = new Syncfusion.Blazor.Grids.PdfExportProperties() {  PageSize = Syncfusion.Blazor.Grids.PdfPageSize.A3 };
+        this.pivot.ExportToPdfAsync(pdfExportProperties);
+    }
+}
+```
+
+![Changing Blazor PivotTable Page Size while Exporting](images/blazor-pivottable-change-pdf-page-size.webp)
+
+## Saving PDF document to stream
+
+Rather than exporting the Pivot Table as a downloadable file, users can save the PDF document as a memory stream. This is achieved by setting the **asBlob** option to **true** in the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_System_Nullable_System_Boolean__System_Nullable_System_Boolean__) method. The resulting memory stream can then be further processed and customized by the user before being exported as a document.
+
+N> This option is only available if virtualization is enabled in the Pivot Table.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Grids
+@inject IJSRuntime JSRuntime
+
+<SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
+<SfPivotView @ref="@pivot" TValue="ProductDetails" AllowPdfExport=true EnableVirtualization="true">
+    <PivotViewDataSourceSettings DataSource="@dataSource" EnableSorting=true>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewDrilledMembers>
+            <PivotViewDrilledMember Name="Country" Items="@(new string[]{"France"})"></PivotViewDrilledMember>
+        </PivotViewDrilledMembers>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+<script type="text/javascript">
+    function saveAsFile(filename, bytesBase64) {
+        var link = document.createElement("a");
+        link.download = filename;
+        link.href = "data:application/octet-stream;base64," + bytesBase64;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+</script>
+
+@code {
+    private SfPivotView<ProductDetails> pivot;
+    private List<ProductDetails> dataSource { get; set; }
+    protected override void OnInitialized()
+    {
+        this.dataSource = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+    private async Task OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        System.IO.MemoryStream memoryStream = new System.IO.MemoryStream();
+        // Here you can obtain the PDF document as a memory stream by setting the last parameter as "true" in the "ExportToPdfAsync" method.
+        memoryStream = await this.pivot.ExportToPdfAsync(null, false, true);
+        // You can then process the memory stream based on your needs and save it as mentioned in the last statement.
+        await JSRuntime.InvokeVoidAsync("saveAsFile", new object[] { "default.pdf", Convert.ToBase64String(memoryStream.ToArray()) });
+    }
+}
+```
+
 ## Changing the pivot table style while exporting
 
-When you export the Pivot Table as a PDF document, you can change the colors used for headers, captions, and records. To do this, use the [Theme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfTheme.html) property inside the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class. Pass this object to the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method. This allows you to adjust how the Pivot Table looks in the exported PDF.
+When you export the Pivot Table as a PDF document, you can change the colors used for headers, captions, and records. To do this, use the [`Theme`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfTheme.html) property inside the [`PdfExportProperties`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class. Pass this object to the [`ExportToPdfAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method. This allows you to adjust how the Pivot Table looks in the exported PDF.
+
+The available built-in `theme` values are: `Material`, `Fabric`, `Bootstrap`, `Bootstrap4`, `Tailwind`, `Fluent`, `Fluent2`, `Material3`, `MaterialDark`, `FabricDark`, `BootstrapDark`, `TailwindDark`, `FluentDark`, and `HighContrast`.
 
 N> By default, the Material theme is applied to the exported PDF document.
 
@@ -414,231 +637,20 @@ N> By default, the Material theme is applied to the exported PDF document.
 
 ![Changing Blazor PivotTable Style while Exporting](images/blazor-pivottable-pdf-formatting.webp)
 
-## Changing the file name while exporting
-
-The PDF export provides an option to change the file name of the document before exporting. To change the file name, define the [FileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_FileName) property in the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class and pass it as a parameter to the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method.
-
-```cshtml
-@using Syncfusion.Blazor.PivotView
-@using Syncfusion.Blazor.Buttons
-
-<SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
-<SfPivotView TValue="ProductDetails" @ref="@pivot" AllowPdfExport="true">
-    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
-</SfPivotView>
-
-@code {
-    SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> data { get; set; }
-    protected override void OnInitialized()
-    {
-        this.data = ProductDetails.GetProductData().ToList();
-        //Bind your dataSource collection here, refer the getting started section for more information.
-    }
-    public void OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
-    {
-        Syncfusion.Blazor.Grids.PdfExportProperties pdfExportProperties = new Syncfusion.Blazor.Grids.PdfExportProperties() { FileName = "sample.pdf" };
-        this.pivot.ExportToPdfAsync(pdfExportProperties);
-    }
-}
-```
-
-![Changing Blazor PivotTable File Name while Exporting](images/blazor-pivottable-change-pdf-file-name.webp)
-
-## Changing page size while exporting
-
-When exporting Pivot Table data to PDF, users can select a specific page size for the PDF document. To set the page size, define the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_PageSize) property within the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class, and pass this object as a parameter to the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method.
-
-You can choose from various page sizes, such as Letter, Note, Legal, A0, A1, A2, A3, A5, A6, A7, A8, A9, B0, B1, B2, B3, B4, B5, Archa, Archb, Archc, Archd, Arche, Flsa, HalfLetter, Letter11x17, and Ledger.
-
-This option lets users easily adjust the PDF layout to fit their specific needs before exporting the data from the Pivot Table.
-
-```cshtml
-@using Syncfusion.Blazor.PivotView
-@using Syncfusion.Blazor.Buttons
-
-<SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
-<SfPivotView TValue="ProductDetails" @ref="@pivot" AllowPdfExport="true" >
-    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
-</SfPivotView>
-
-@code{
-    SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> data { get; set; }
-    protected override void OnInitialized()
-    {
-        this.data = ProductDetails.GetProductData().ToList();
-       //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-    }
-    public void OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
-    {
-        Syncfusion.Blazor.Grids.PdfExportProperties pdfExportProperties = new Syncfusion.Blazor.Grids.PdfExportProperties() {  PageSize = Syncfusion.Blazor.Grids.PdfPageSize.A3 };
-        this.pivot.ExportToPdfAsync(pdfExportProperties);
-    }
-}
-```
-
-![Changing Blazor PivotTable Page Size while Exporting](images/blazor-pivottable-change-pdf-page-size.webp)
-
-## Changing page orientation while exporting
-
-When exporting the Pivot Table as a PDF, users can choose the page orientation of the document. By default, the PDF is exported in **Portrait** orientation. If you want to change the orientation to **Landscape**, set the [PageOrientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_PageOrientation) property in the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class. Then, pass this object as a parameter to the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method. This lets you select either Portrait or Landscape orientation based on your needs before saving the exported PDF.
-
-```cshtml
-@using Syncfusion.Blazor.PivotView
-@using Syncfusion.Blazor.Buttons
-
-<SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
-<SfPivotView TValue="ProductDetails" @ref="@pivot" AllowPdfExport="true">
-    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
-</SfPivotView>
-
-@code {
-    SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> data { get; set; }
-    protected override void OnInitialized()
-    {
-        this.data = ProductDetails.GetProductData().ToList();
-        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-    }
-    public void OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
-    {
-        Syncfusion.Blazor.Grids.PdfExportProperties pdfExportProperties = new Syncfusion.Blazor.Grids.PdfExportProperties() { PageOrientation = Syncfusion.Blazor.Grids.PageOrientation.Landscape };
-        this.pivot.ExportToPdfAsync(pdfExportProperties);
-    }
-}
-```
-
-![Changing Blazor PivotTable Page Orientation while Exporting](images/blazor-pivottable-change-pdf-orientation.webp)
-
-## Saving PDF document to stream
-
-Rather than exporting the Pivot Table as a downloadable file, users can save the PDF document as a memory stream. This is achieved by setting the **asBlob** option to **true** in the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_System_Nullable_System_Boolean__System_Nullable_System_Boolean__) method. The resulting memory stream can then be further processed and customized by the user before being exported as a document.
-
-N> This option is only available if virtualization is enabled in the Pivot Table.
-
-```cshtml
-@using Syncfusion.Blazor.PivotView
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.Grids
-@inject IJSRuntime JSRuntime
-
-<SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
-<SfPivotView @ref="@pivot" TValue="ProductDetails" AllowPdfExport=true EnableVirtualization="true">
-    <PivotViewDataSourceSettings DataSource="@dataSource" EnableSorting=true>
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewDrilledMembers>
-            <PivotViewDrilledMember Name="Country" Items="@(new string[]{"France"})"></PivotViewDrilledMember>
-        </PivotViewDrilledMembers>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
-</SfPivotView>
-
-<script type="text/javascript">
-    function saveAsFile(filename, bytesBase64) {
-        var link = document.createElement("a");
-        link.download = filename;
-        link.href = "data:application/octet-stream;base64," + bytesBase64;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    }
-</script>
-
-@code {
-    private SfPivotView<ProductDetails> pivot;
-    private List<ProductDetails> dataSource { get; set; }
-    protected override void OnInitialized()
-    {
-        this.dataSource = ProductDetails.GetProductData().ToList();
-        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-    }
-    private async Task OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
-    {
-        System.IO.MemoryStream memoryStream = new System.IO.MemoryStream();
-        // Here you can obtain the PDF document as a memory stream by setting the last parameter as "true" in the "ExportToPdfAsync" method.
-        memoryStream = await this.pivot.ExportToPdfAsync(null, false, true);
-        // You can then process the memory stream based on your needs and save it as mentioned in the last statement.
-        await JSRuntime.InvokeVoidAsync("saveAsFile", new object[] { "default.pdf", Convert.ToBase64String(memoryStream.ToArray()) });
-    }
-}
-```
-
 ## Events
 
 ### PdfQueryCellInfo
 
-The [PdfQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_PdfQueryCellInfo) event occurs for each row and value cell while exporting the Pivot Table to a PDF. This event allows users to change the value, appearance, or other details of the current cell in the PDF file. The following parameters are available in this event:
+The [`PdfQueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_PdfQueryCellInfo) event occurs for each row and value cell while exporting the Pivot Table to a PDF. This event allows users to change the value, appearance, or other details of the current cell in the PDF file. The following parameters are available in this event:
 
-- [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfQueryCellInfoEventArgs-1.html#Syncfusion_Blazor_Grids_PdfQueryCellInfoEventArgs_1_Value): The content displayed in the cell.
-- [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfQueryCellInfoEventArgs-1.html#Syncfusion_Blazor_Grids_PdfQueryCellInfoEventArgs_1_Column): The column information for the current cell. **Note:** This option is applicable only when virtualization is disabled.
-- [Cell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfQueryCellInfoEventArgs-1.html#Syncfusion_Blazor_Grids_PdfQueryCellInfoEventArgs_1_Cell): The complete cell information for the cell.
-- [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfQueryCellInfoEventArgs-1.html#Syncfusion_Blazor_Grids_PdfQueryCellInfoEventArgs_1_Style): The style properties that control how the cell looks in the PDF.
-- [RowIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfQueryCellInfoEventArgs-1.html#Syncfusion_Blazor_Grids_PdfQueryCellInfoEventArgs_1_RowIndex): It holds the row index required to get the current cell information. **Note:** When virtualization is enabled, this option is applicable.
-- [ColumnIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfQueryCellInfoEventArgs-1.html#Syncfusion_Blazor_Grids_PdfQueryCellInfoEventArgs_1_ColumnIndex): It holds the column index required to get the current cell information. **Note:** When virtualization is enabled, this option is applicable.
+- [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfQueryCellInfoEventArgs-1.html#Syncfusion_Blazor_Grids_PdfQueryCellInfoEventArgs_1_Value): The content displayed in the cell.
+- [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfQueryCellInfoEventArgs-1.html#Syncfusion_Blazor_Grids_PdfQueryCellInfoEventArgs_1_Column): The column information for the current cell. **Note:** This option is applicable only when virtualization is disabled.
+- [`Cell`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfQueryCellInfoEventArgs-1.html#Syncfusion_Blazor_Grids_PdfQueryCellInfoEventArgs_1_Cell): The complete cell information for the cell.
+- [`Style`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfQueryCellInfoEventArgs-1.html#Syncfusion_Blazor_Grids_PdfQueryCellInfoEventArgs_1_Style): The style properties that control how the cell looks in the PDF.
+- [`RowIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfQueryCellInfoEventArgs-1.html#Syncfusion_Blazor_Grids_PdfQueryCellInfoEventArgs_1_RowIndex): It holds the row index required to get the current cell information. **Note:** When virtualization is enabled, this option is applicable.
+- [`ColumnIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfQueryCellInfoEventArgs-1.html#Syncfusion_Blazor_Grids_PdfQueryCellInfoEventArgs_1_ColumnIndex): It holds the column index required to get the current cell information. **Note:** When virtualization is enabled, this option is applicable.
 
-By using this event, users can easily update the cell text, apply different styles such as font or background color, or adjust other settings as needed during PDF export.
+By using this event, you can update the cell text, apply different styles such as font or background color, or adjust other settings as needed during PDF export.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -719,15 +731,15 @@ By using this event, users can easily update the cell text, apply different styl
 
 N> The row header cell can be obtained by using the `PdfQueryCellInfo` event. It can be identified using `AxisSet.Axis == "row"` and for reference, see the code snippet in the previous topic.
 
-The [PdfHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_PdfHeaderQueryCellInfo) event is triggered for each column header cell when exporting the Pivot Table to a PDF document. This event allows users to easily change values or apply styles to the column header cells in the exported PDF file.
+The [`PdfHeaderQueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_PdfHeaderQueryCellInfo) event is triggered for each column header cell when exporting the Pivot Table to a PDF document. This event allows you to change values or apply styles to the column header cells in the exported PDF file.
 
 The event provides the following parameters:
 
-- [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_PdfHeaderQueryCellInfoEventArgs_Column): Gives information about the current header cell being exported. **Note:** This option is applicable only when virtualization is disabled.
-- [Cell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_PdfHeaderQueryCellInfoEventArgs_Cell): Contains the current cell information.
-- [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_PdfHeaderQueryCellInfoEventArgs_Style): Contains style properties that can be used to format the cell.
-- [RowIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_PdfHeaderQueryCellInfoEventArgs_RowIndex): It holds the row index required to get the current cell information. **Note:** When virtualization is enabled, this option is applicable.
-- [ColumnIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_PdfHeaderQueryCellInfoEventArgs_ColumnIndex): It holds the column index required to get the current cell information. **Note:** When virtualization is enabled, this option is applicable.
+- [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_PdfHeaderQueryCellInfoEventArgs_Column): Gives information about the current header cell being exported. **Note:** This option is applicable only when virtualization is disabled.
+- [`Cell`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_PdfHeaderQueryCellInfoEventArgs_Cell): Gives information about the current header cell being exported.
+- [`Style`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_PdfHeaderQueryCellInfoEventArgs_Style): Contains style properties that can be used to format the cell.
+- [`RowIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_PdfHeaderQueryCellInfoEventArgs_RowIndex): It holds the row index required to get the current cell information. **Note:** When virtualization is enabled, this option is applicable.
+- [`ColumnIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_PdfHeaderQueryCellInfoEventArgs_ColumnIndex): It holds the column index required to get the current cell information. **Note:** When virtualization is enabled, this option is applicable.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView

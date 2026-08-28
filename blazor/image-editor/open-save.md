@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open save with Blazor Image Editor Component | Syncfusion®
-description: Learn how to open, edit, and save images in the Blazor Image Editor component in Blazor Server and WebAssembly applications.
+title: Open and Save in Blazor Image Editor | Syncfusion
+description: Open images from URLs, base64, or local files and save edited results in multiple formats with Blazor Image Editor.
 platform: Blazor
 control: Image Editor
 documentation: ug
 ---
 
-# Open and Save in the Blazor Image Editor component
+# Open and Save in Blazor Image Editor
 
 The [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) component supports importing an image into the canvas by converting it into a blob object. The Uploader component facilitates uploading an image from the user interface. After the upload, the image can be converted into a blob and drawn onto the canvas.
 

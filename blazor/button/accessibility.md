@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Button Component | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor Button component including keyboard navigation, ARIA attributes, and usability features.
+title: Accessibility in Blazor Button | Syncfusion®
+description: Learn how Blazor Button meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA attributes, keyboard navigation, and screen reader support.
 platform: Blazor
 control: Button
 documentation: ug
 ---
 
-# Accessibility in Blazor Button component
+# Accessibility in Blazor Button
 
 The Blazor Button component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -42,7 +42,7 @@ The Blazor Button component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/a
 
 | Attributes | Purpose |
 | --- | --- |
-| `aria-label` | Provides an accessible name for the icon only button. |
+| `aria-label` | Provides an accessible name for the icon only Blazor Button. |
 
 ## Keyboard interaction
 
@@ -50,8 +50,8 @@ The Blazor Button component follows the [keyboard interaction](https://www.w3.or
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
-| <kbd>Space</kbd> | <kbd>Space</kbd> | When the button has focus, pressing the <kbd>Space</kbd> key activates the button. |
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | When the button has focus, pressing the <kbd>Enter</kbd> key activates the button. |
+| <kbd>Space</kbd> | <kbd>Space</kbd> | When the Blazor button has focus, pressing the <kbd>Space</kbd> key activates the button. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | When the Blazor button has focus, pressing the <kbd>Enter</kbd> key activates the button. |
 
 ## Ensuring accessibility
 

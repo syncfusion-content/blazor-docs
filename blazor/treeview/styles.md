@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles and Appearance in Blazor TreeView Component | Syncfusion®
-description: Checkout and learn here all the features about styles and appearance in Blazor TreeView component and more.
+title: Styles and Appearance in Blazor TreeView | Syncfusion
+description: Style Blazor TreeView nodes, lines, and icons with custom CSS selectors for full visual customization.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Styles and Appearance in Blazor TreeView Component
+# Styles and Appearance in Blazor TreeView
 
 The following content provides the exact CSS structure that can be used to modify the component's appearance based on the user preference.
 

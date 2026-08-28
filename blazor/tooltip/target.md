@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Target support in Blazor Tooltip Component | Syncfusion®
-description: Checkout and learn here all about setting target elements in the Blazor Tooltip component and much more details.
+title: Target Support in Blazor Tooltip | Syncfusion
+description: Attach Blazor Tooltip to specific target DOM elements using the Target property and CSS selectors for placement.
 platform: Blazor
 control: Tooltip
 documentation: ug
 ---
 
-# Target support in Blazor Tooltip Component
+# Target Support in Blazor Tooltip
 
 The [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Target) property specifies the target selector where the Tooltip needs to be displayed. It enables Tooltip activation on specific DOM elements based on user interactions like hover or focus.
 
@@ -24,7 +24,7 @@ The [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.Sf
 
 ## Displaying Tooltip for dynamically created target element
 
-The Tooltip component can be configured to display Tooltips for elements that are added to the DOM after the initial page load. This behavior is useful in applications where target is rendered dynamically, such as in response to user actions, API calls, or conditional logic.
+The Blazor Tooltip component can be configured to display Tooltips for elements that are added to the DOM after the initial page load. This behavior is useful in applications where target is rendered dynamically, such as in response to user actions, API calls, or conditional logic.
 
 Set the [`TargetContainer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_TargetContainer) property using a CSS selector that defines the container in which Tooltip target elements will be automatically display Tooltips. All elements inside this container that match the Target selector will automatically show Tooltips, including those added after the component is rendered—no extra setup needed.
 

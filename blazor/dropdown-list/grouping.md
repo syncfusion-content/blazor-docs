@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Grouping in Blazor DropDown List Component | Syncfusion®
-description: Checkout and learn here all the features about Grouping in Blazor DropDown List component and much more details.
+title: Grouping in Blazor Dropdown List | Syncfusion®
+description: Group Blazor Dropdown List items by category with fixed headers and group templates for organized data display.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Grouping in Dropdown List
+# Grouping in Blazor Dropdown List
 
 The DropDownList supports grouping items by category using a field from the data source. Assign the category field through the [DropDownListFieldSettings.GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListFieldSettings.html#Syncfusion_Blazor_DropDowns_DropDownListFieldSettings_GroupBy) property. Group headers are shown both inline and as fixed (floating) headers. While scrolling the popup list, the fixed group header updates dynamically to reflect the current group.
 
-To get started quickly with grouping in the Blazor DropDown List component, you can check the video below.
+To get started quickly with grouping in the Blazor Dropdown List component, you can check the video below.
 
 {% youtube "https://www.youtube.com/watch?v=9Ouje7KEOEU" %}
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Get Started with Blazor MultiSelect Dropdown in Web App | Syncfusion
-description: Check out and learn the documentation for getting started with Blazor MultiSelect Dropdown Components in Web App.
+title: Blazor MultiSelect Dropdown Getting Started for Web App | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor MultiSelect Dropdown in a Blazor Web App with installation and setup steps.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
@@ -222,7 +222,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBdZQXlKSrCzTtl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor MultiSelect DropDown Component](./images/blazing-fast-multiselect-dropdown-blazor.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBdZQXlKSrCzTtl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor MultiSelect Dropdown Component](./images/blazing-fast-multiselect-dropdown-blazor.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MultiSelectDropDown).
 
@@ -263,7 +263,7 @@ After initialization, populate the MultiSelect using the [DataSource](https://he
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLHjQNPqSIHCQFE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Binding in Blazor MultiSelect DropDown](./images/blazing-fast-multiselect-dropdown-data-binding.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLHjQNPqSIHCQFE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Binding in Blazor MultiSelect Dropdown](./images/blazing-fast-multiselect-dropdown-data-binding.webp)" %}
 
 ## Configure the popup list
 
@@ -283,7 +283,7 @@ The height and width of the popup list can also be customized using the [PopupHe
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVnjQXPKIcpnXRd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Configuring Popup List in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-configure-poup-list.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVnjQXPKIcpnXRd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Configuring Popup List in Blazor MultiSelect Dropdown](./images/blazor-multiselect-dropdown-configure-poup-list.webp)" %}
 
 ## Get selected value
 

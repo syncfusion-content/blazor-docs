@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Placeholder/FloatLabel in Blazor AutoComplete Component | Syncfusion®
-description: Checkout and learn here all about Placeholder and FloatLabel in Blazor AutoComplete component and more.
+title: Placeholder and Float Label in Blazor AutoComplete | Syncfusion®
+description: Configure the Blazor AutoComplete Placeholder and choose Auto, Always, or Never float label behavior with custom CSS styling.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Placeholder and Float Label in AutoComplete
+# Placeholder and Float Label in Blazor AutoComplete
 
 This section describes how to configure the placeholder and float label behavior in the Blazor AutoComplete component and how to customize their styles.
 

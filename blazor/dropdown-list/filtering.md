@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Filtering in Blazor DropDown List Component | Syncfusion®
-description: Checkout and learn here all about Filtering in Blazor DropDown List component and much more details.
+title: Filtering in Blazor Dropdown List | Syncfusion®
+description: Enable filtering, debounce delay, case sensitivity, and match types like StartsWith, EndsWith, and Contains in Blazor Dropdown List.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Filtering in Dropdown List
+# Filtering in Blazor Dropdown List
 
-The DropDown List component supports built-in filtering when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is enabled. Filtering begins as the user types in the search box. The default value of AllowFiltering is `false`.
+The Blazor Dropdown List component supports built-in filtering when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is enabled. Filtering begins as the user types in the search box. The default value of AllowFiltering is `false`.
 
 ## Local data
 
-The following example demonstrates filtering with local data in the DropDown List component.
+The following example demonstrates filtering with local data in the Blazor Dropdown List component.
 
 {% highlight cshtml %}
 
@@ -21,7 +21,7 @@ The following example demonstrates filtering with local data in the DropDown Lis
 
 {% endhighlight %}
 
-![Blazor DropdownList with local data filtering](./images/filtering/blazor_dropdown_local-data.webp)
+![Blazor Dropdown List with local data filtering](./images/filtering/blazor_dropdown_local-data.webp)
 
 ## Remote data
 
@@ -35,7 +35,7 @@ The following example demonstrates filtering with [ODataAdaptor](https://blazor.
 
 {% endhighlight %}
 
-![Blazor DropdownList with Remote Data filtering](./images/filtering/blazor_dropdown_remote-data.webp)
+![Blazor Dropdown List with Remote Data filtering](./images/filtering/blazor_dropdown_remote-data.webp)
 
 
 ## Debounce delay
@@ -48,7 +48,7 @@ Use the [DebounceDelay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 {% endhighlight %}
 
-![Blazor DropdownList with DebounceDelay in filtering](./images/filtering/blazor_dropdownlist_debounce-delay.gif)
+![Blazor Dropdown List with DebounceDelay in filtering](./images/filtering/blazor_dropdownlist_debounce-delay.gif)
 
 ## Filter type
 
@@ -68,7 +68,7 @@ In the following example, `EndsWith` is assigned to `FilterType`.
 
 {% endhighlight %}
 
-![Blazor DropdownList with Filter Type](./images/filtering/blazor_dropdown_filter-type.webp)
+![Blazor Dropdown List with Filter Type](./images/filtering/blazor_dropdown_filter-type.webp)
 
 ## Case sensitive filtering
 
@@ -92,7 +92,7 @@ Use [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 {% endhighlight %}
 
-![Blazor DropdownList with Filter Textbox Placeholder](./images/filtering/blazor_dropdown_filter-textbox-placeholder.webp)
+![Blazor Dropdown List with Filter Textbox Placeholder](./images/filtering/blazor_dropdown_filter-textbox-placeholder.webp)
 
 ## Custom filtering
 
@@ -106,7 +106,7 @@ In the following example, the data is filtered by matching text in both the `Fir
 
 {% endhighlight %}
 
-![Blazor DropdownList with custom filtering](./images/filtering/blazor_dropdown_custom-filtering.webp)
+![Blazor Dropdown List with custom filtering](./images/filtering/blazor_dropdown_custom-filtering.webp)
 
 ## Multi column filtering 
 
@@ -118,7 +118,7 @@ To enable multi-column layout in the built-in Blazor themes, add the `e-multi-co
 
 {% endhighlight %}
 
-![Blazor DropdownList with Multi Column filtering](./images/filtering/blazor_dropdown_multi-column.webp)
+![Blazor Dropdown List with Multi Column filtering](./images/filtering/blazor_dropdown_multi-column.webp)
 
 To filter by multiple fields, pass a list of [predicates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_predicates) to the [And](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_And_Syncfusion_Blazor_Data_WhereFilter_) or [Or](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Or_Syncfusion_Blazor_Data_WhereFilter_) methods of [WhereFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter__ctor).
 
@@ -128,7 +128,7 @@ To filter by multiple fields, pass a list of [predicates](https://help.syncfusio
 
 {% endhighlight %}
 
-![Blazor DropdownList with Multi Column filtering](./images/filtering/blazor_dropdown_multi-colum-filtering.gif)
+![Blazor Dropdown List with Multi Column filtering](./images/filtering/blazor_dropdown_multi-colum-filtering.gif)
 
 ## Minimum filter length
 
@@ -142,4 +142,4 @@ In the following example, the remote request is not made until at least three ch
 
 {% endhighlight %}
 
-![Blazor DropdownList with Minimum filter length](./images/filtering/blazor_dropdown_minimum-filter-length.webp)
+![Blazor Dropdown List with Minimum filter length](./images/filtering/blazor_dropdown_minimum-filter-length.webp)
