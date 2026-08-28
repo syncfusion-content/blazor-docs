@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Dialog in Blazor Web App | Syncfusion®
-description: Learn how to get started with the Syncfusion Blazor WebApp Dialog  control. Explore setup, features, examples, and customization options.
+description: Learn how to get started with the Syncfusion Blazor Dialog control in a Blazor Web App. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Dialog
 documentation: ug
