@@ -111,7 +111,7 @@ Get the entire data object for the selected value using the [GetDataByValue](htt
 
 ## Focus the next component on selection
 
-Set focus programmatically using the [FocusAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusAsync) method. This immediately moves focus to the AutoComplete component when invoked, enabling workflows that shift focus to the next interactive element after selection.
+Set focus programmatically using the [FocusAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusAsync) method. This immediately moves focus to the Blazor AutoComplete component when invoked, enabling workflows that shift focus to the next interactive element after selection.
 
 {% highlight cshtml %}
 
@@ -121,7 +121,7 @@ Set focus programmatically using the [FocusAsync](https://help.syncfusion.com/cr
 
 ## Prevent reload on form submit
 
-To prevent the page from reloading when the AutoComplete component is used inside a form, set the button type to "button" using the `HTMLAttributes` property. This prevents the default form submit behavior when the button is clicked.
+To prevent the page from reloading when the Blazor AutoComplete component is used inside a form, set the button type to "button" using the `HTMLAttributes` property. This prevents the default form submit behavior when the button is clicked.
 
 {% highlight cshtml %}
 

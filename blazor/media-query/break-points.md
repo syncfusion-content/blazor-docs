@@ -23,7 +23,7 @@ The built-in breakpoint values for the Media Query component are:
 
 ### Modifying built-in breakpoints
 
-You can modify the media query for a built-in breakpoint by setting the [MediaQuery](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MediaBreakpoint.html#Syncfusion_Blazor_MediaBreakpoint_MediaQuery) property of the corresponding [MediaBreakpoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MediaBreakpoint.html) on `SfMediaQuery` (for example, `SfMediaQuery.Small`, `SfMediaQuery.Medium`, and `SfMediaQuery.Large`).
+You can modify the media query for a built-in breakpoint by setting the [Blazor Media Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MediaBreakpoint.html#Syncfusion_Blazor_MediaBreakpoint_MediaQuery) property of the corresponding [MediaBreakpoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MediaBreakpoint.html) on `SfMediaQuery` (for example, `SfMediaQuery.Small`, `SfMediaQuery.Medium`, and `SfMediaQuery.Large`).
 
 ```cshtml
 
