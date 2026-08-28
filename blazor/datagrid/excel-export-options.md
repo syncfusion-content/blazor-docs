@@ -1927,9 +1927,7 @@ In the following example, an [SfNumericTextBox](https://help.syncfusion.com/cr/b
 @using System.IO
 @using Syncfusion.XlsIO
 @inject IJSRuntime JSRuntime
-@inject HttpClient client
 @using Syncfusion.Blazor.Inputs
-
 
 <div>
     <label style="padding: 30px 17px 0 0">Specify Excel row index:</label>
@@ -1939,7 +1937,7 @@ In the following example, an [SfNumericTextBox](https://help.syncfusion.com/cr/b
 </div>
 <br />
 
-<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" AllowSorting="true" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true" AllowPaging="true">
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" AllowSorting="true" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true">
     <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
     <GridColumns>
         <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -1952,7 +1950,6 @@ In the following example, an [SfNumericTextBox](https://help.syncfusion.com/cr/b
 {
     private SfGrid<Order> DefaultGrid;
     public List<Order> Orders { get; set; }
-
     public int NumericValue { get; set; } = 1;
 
     protected override void OnInitialized()
@@ -1967,7 +1964,7 @@ In the following example, an [SfNumericTextBox](https://help.syncfusion.com/cr/b
 
     public void OnChange(Syncfusion.Blazor.Inputs.ChangeEventArgs<int> args)
     {
-        if(args.Value != null && args.Value != 0)
+        if(args.Value != 0)
         {
             NumericValue = args.Value;
             StateHasChanged();
