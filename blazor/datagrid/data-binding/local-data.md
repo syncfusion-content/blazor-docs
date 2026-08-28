@@ -1747,7 +1747,7 @@ Use [`ObservableCollection<T>`](https://learn.microsoft.com/en-us/dotnet/api/sys
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Data Grid with ObservableCollection<T>](../images/blazor-datagrid-observable.webp)
+![Blazor Data Grid with ObservableCollection](../images/blazor-datagrid-observable.webp)
 
 > * The Grid automatically reflects changes when records are added, removed, or updated.
 > * When updating the collection using external triggers (e.g., timers, events), call **StateHasChanged()** to refresh the UI.
