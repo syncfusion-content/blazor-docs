@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in Blazor Context Menu
 
-The Blazor ContextMenu component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Context Menu component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Blazor ContextMenu component is outlined below.
+The accessibility compliance for the Blazor Context Menu component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -39,18 +39,18 @@ The accessibility compliance for the Blazor ContextMenu component is outlined be
 
 ## WAI-ARIA attributes
 
-The Blazor ContextMenu component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor ContextMenu component:
+The Blazor Context Menu component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Context Menu component:
 
 | Attributes | Purpose | Example Value |
 | --- | --- | --- |
-| `role` | Indicates the ContextMenu component popup as `menu`, and the popup items as `menuitem`. | `role="menu"` (popup), `role="menuitem"` (item) |
+| `role` | Indicates the Blazor Context Menu component popup as `menu`, and the popup items as `menuitem`. | `role="menu"` (popup), `role="menuitem"` (item) |
 | `aria-haspopup` | Indicates the availability and type of interactive popup element. | `aria-haspopup="true"` |
 | `aria-expanded` | Indicates whether the subtree is currently expanded or collapsed. | `aria-expanded="true"` / `aria-expanded="false"` |
 | `aria-label` | Provides an accessible name for the menu item when the visible text is not sufficient. | `aria-label="Cut"` |
 
 ## Keyboard interaction
 
-The Blazor ContextMenu component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor ContextMenu component.
+The Blazor Context Menu component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Context Menu component.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
@@ -63,9 +63,9 @@ The Blazor ContextMenu component followed the [keyboard interaction](https://www
 
 ## Ensuring accessibility
 
-The Blazor ContextMenu component's accessibility levels are ensured through [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
+The Blazor Context Menu component's accessibility levels are ensured through [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
 
-The accessibility compliance of the Blazor ContextMenu component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/context-menu) in a new window to evaluate the accessibility of the Blazor ContextMenu component with accessibility tools.
+The accessibility compliance of the Blazor Context Menu component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/context-menu) in a new window to evaluate the accessibility of the Blazor Context Menu component with accessibility tools.
 
 {% previewsample "https://blazor.syncfusion.com/accessibility/context-menu" %}
 

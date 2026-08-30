@@ -21,7 +21,7 @@ By default, the previous tab transition uses the `SlideLeftIn` effect and the ne
 
 ```
 
-The following sample demonstrates the available animation effects for the Tab transitions. Use the dropdowns to change the previous and next animation effects at runtime.
+The following sample demonstrates the available animation effects for the Blazor Tabs transitions. Use the dropdowns to change the previous and next animation effects at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor

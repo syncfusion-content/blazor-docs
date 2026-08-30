@@ -42,9 +42,9 @@ In the following sample, the icons for Cut, Copy, and Paste menu items are added
 </style>
 
 ```
-The following image shows Split Button popup items with icons.
+The following image shows Blazor Split Button popup items with icons.
 
-![Blazor SplitButton Items with Icon](./images/blazor-splitbutton-item-with-icon.webp)
+![Blazor Split Button Items with Icon](./images/blazor-splitbutton-item-with-icon.webp)
 
 ## Template
 
@@ -76,4 +76,4 @@ Popup items can be customized using the `CssClass` property. Apply custom styles
 
 ```
 
-![Blazor SplitButton with Item Template](./images/blazor-splitbutton-item-template.webp)
+![Blazor Split Button with Item Template](./images/blazor-splitbutton-item-template.webp)

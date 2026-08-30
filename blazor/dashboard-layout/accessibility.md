@@ -50,14 +50,14 @@ The Blazor Dashboard Layout component integrates [WAI-ARIA](https://www.w3.org/W
 
 ## Keyboard Interaction
 
-Keyboard support is not applicable for the Dashboard Layout.
+Keyboard support is not applicable for the Blazor Dashboard Layout.
 
 ## Ensuring Accessibility
 
 The accessibility levels of the Blazor Dashboard Layout component are verified through automated testing using the [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool.
 
 
-A sample demonstrating the accessibility compliance of the Dashboard Layout component is available. Open the [sample](https://blazor.syncfusion.com/accessibility/dashboardlayout) in a new window to evaluate its accessibility using various tools.
+A sample demonstrating the accessibility compliance of the Blazor Dashboard Layout component is available. Open the [sample](https://blazor.syncfusion.com/accessibility/dashboardlayout) in a new window to evaluate its accessibility using various tools.
 
 ## See Also
 

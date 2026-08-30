@@ -9,13 +9,13 @@ documentation: ug
 
 # Design in Blazor AppBar
 
-The Blazor AppBar can host a variety of child components to build a fully functional application header. This section covers the common UI design patterns available with the AppBar component, including spacers, separators, media queries, menus, buttons, and integration with the Sidebar component.
+The Blazor AppBar can host a variety of child components to build a fully functional application header. This section covers the common UI design patterns available with the Blazor AppBar component, including spacers, separators, media queries, menus, buttons, and integration with the Sidebar component.
 
 ## Spacer
 
 [AppBarSpacer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AppBarSpacer.html) is used to provide spacing between the AppBar contents, which gives additional space to the content layout.
 
-The following example depicts the code to provide spacing between the home and pan buttons in the AppBar:
+The following example depicts the code to provide spacing between the home and pan buttons in the Blazor AppBar:
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -38,7 +38,7 @@ The following example depicts the code to provide spacing between the home and p
 
 [AppBarSeparator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AppBarSeparator.html) shows a vertical line to visually group or separate the AppBar contents.
 
-The following example depicts the code to provide a vertical line between a group of buttons in the AppBar.
+The following example depicts the code to provide a vertical line between a group of buttons in the Blazor AppBar.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -71,7 +71,7 @@ The following example depicts the code to provide a vertical line between a grou
 
 ## Media Query
 
-Media Query is used to adjust the AppBar for different screen sizes. Resize the screen to observe the responsive layout of the AppBar.
+Media Query is used to adjust the Blazor AppBar for different screen sizes. Resize the screen to observe the responsive layout of the Blazor AppBar.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -115,9 +115,9 @@ Media Query is used to adjust the AppBar for different screen sizes. Resize the 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjrnDnWsrQVIhsPP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Media Query.](./images/blazor-appbar-media-quary.webp)" %}
 
-## Designing AppBar with Menu
+## Designing Blazor AppBar with Menu
 
-The **SfMenu** component can be rendered as a child content of the AppBar. You can inherit the AppBar component styles by setting the CSS class as `e-inherit` on the SfMenu component. 
+The **SfMenu** component can be rendered as a child content of the Blazor AppBar. You can inherit the Blazor AppBar component styles by setting the CSS class as `e-inherit` on the SfMenu component. 
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -174,9 +174,9 @@ The **SfMenu** component can be rendered as a child content of the AppBar. You c
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhdjnMMhGLbFbGq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Menu.](./images/blazor-appbar-menu.webp)" %}
 
-## Designing AppBar with Buttons
+## Designing Blazor AppBar with Buttons
 
-The **SfButton** and **SfDropDownButton** components can be rendered as a child content of the AppBar. You can inherit the AppBar component styles by setting the CSS class as `e-inherit` on the SfButton and SfDropDownButton components.
+The **SfButton** and **SfDropDownButton** components can be rendered as a child content of the Blazor AppBar. You can inherit the Blazor AppBar component styles by setting the CSS class as `e-inherit` on the SfButton and SfDropDownButton components.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -209,9 +209,9 @@ The **SfButton** and **SfDropDownButton** components can be rendered as a child 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZLHDxCMLcgrSrvt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Buttons.](./images/blazor-appbar-buttons.webp)" %}
 
-## Designing AppBar with SideBar
+## Designing Blazor AppBar with SideBar
 
-The AppBar toggle button is used to control the expand and collapse state of the **SfSidebar** component. Click on the menu icon to expand/collapse the Sidebar. In the following sample, the `IsOpen` property has been used to show or hide the Sidebar on the AppBar button click.
+The Blazor AppBar toggle button is used to control the expand and collapse state of the **SfSidebar** component. Click on the menu icon to expand/collapse the Sidebar. In the following sample, the `IsOpen` property has been used to show or hide the Sidebar on the Blazor AppBar button click.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

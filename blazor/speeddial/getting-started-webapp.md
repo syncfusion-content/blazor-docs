@@ -230,7 +230,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLHZQZAsztbTecW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor SpeedDial Component](./images/blazor-speeddial-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLHZQZAsztbTecW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Speed Dial Component](./images/blazor-speeddial-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/SpeedDial).
 
@@ -262,11 +262,11 @@ You can use the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.B
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVnZQDgCffpfsNP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "![Blazor SpeedDial Component](./images/blazor-speeddial-linear-sample.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVnZQDgCffpfsNP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "![Blazor Speed Dial Component](./images/blazor-speeddial-linear-sample.webp)" %}
 
 ## Item clicked event
 
-The speed dial control triggers the [ItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemClicked) event with [SpeedDialItemEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItemEventArgs.html) argument when an action item is clicked. You can use this event to perform the required action.
+The Blazor Speed Dial component triggers the [ItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemClicked) event with [SpeedDialItemEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItemEventArgs.html) argument when an action item is clicked. You can use this event to perform the required action.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -290,11 +290,11 @@ The speed dial control triggers the [ItemClicked](https://help.syncfusion.com/cr
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBdXctgsfnpuDok?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor SpeedDial Component](./images/blazor-speeddial-event-sample.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBdXctgsfnpuDok?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Speed Dial Component](./images/blazor-speeddial-event-sample.webp)" %}
 
 ## See also
 
 1. [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-3. [Getting Started with Blazor SpeedDial Events](https://blazor.syncfusion.com/documentation/speeddial/events)
+3. [Getting Started with Blazor Speed Dial Events](https://blazor.syncfusion.com/documentation/speeddial/events)
 

@@ -28,6 +28,8 @@ Use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropD
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.DropDowns
+
 <div id="listbox-control">
     <h6>Select your favorite car:</h6>
     <SfListBox Value=@Value CssClass="e-horizontal-listbox" DataSource="@Data" TValue="string[]" TItem="DataValues"></SfListBox>

@@ -15,9 +15,9 @@ The [Blazor TimePicker](https://www.syncfusion.com/blazor-components/blazor-time
 
 ## Right-To-Left
 
-The TimePicker supports right-to-left (RTL) functionality for languages such as Arabic and Hebrew. Use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfInputTextBase-1.html#Syncfusion_Blazor_Inputs_SfInputTextBase_1_EnableRtl) property to enable RTL direction.
+The Blazor TimePicker supports right-to-left (RTL) functionality for languages such as Arabic and Hebrew. Use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfInputTextBase-1.html#Syncfusion_Blazor_Inputs_SfInputTextBase_1_EnableRtl) property to enable RTL direction.
 
-The following code example initializes the TimePicker component in the `Arabic` culture.
+The following code example initializes the Blazor TimePicker component in the `Arabic` culture.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

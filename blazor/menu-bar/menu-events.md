@@ -17,7 +17,7 @@ The following table summarizes each event and when it fires. The `args` paramete
 
 | Event | When it fires |
 | --- | --- |
-| [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_Created) | After the Menu Bar has been successfully created. |
+| [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_Created) | After the Blazor Menu Bar has been successfully created. |
 | [OnItemRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_OnItemRender) | While rendering each menu item (fires for every item, including nested submenu items). |
 | [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_OnOpen) | Before the menu item opens. Cancellable: set `args.Cancel = true` to prevent the open. |
 | [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_OnClose) | Before the submenu closes. Cancellable: set `args.Cancel = true` to prevent the close. |
@@ -117,4 +117,4 @@ The following table summarizes each event and when it fires. The `args` paramete
 
 ```
 
-![Customizing Blazor MenuBar Items using Event](./images/blazor-menubar-events.webp)
+![Customizing Blazor Menu Bar Items using Event](./images/blazor-menubar-events.webp)

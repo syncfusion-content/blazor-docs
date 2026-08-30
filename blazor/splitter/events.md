@@ -9,11 +9,11 @@ documentation: ug
 
 # Events in Blazor Splitter
 
-This section explains the list of events of the splitter component which will be triggered for appropriate splitter actions.
+This section explains the list of events of the Blazor Splitter component which will be triggered for appropriate Blazor Splitter actions.
 
 ## Created
 
-The `Created` event triggers after the Splitter component is created with its panes.
+The `Created` event triggers after the Blazor Splitter component is created with its panes.
 
 ```cshtml
 

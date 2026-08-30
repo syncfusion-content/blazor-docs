@@ -68,7 +68,7 @@ The following example demonstrates how to hide the navigators.
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrRXHMhgVvjpWIz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel Navigators](images/navigators_hidden.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrRXHMhgVvjpWIz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Carousel Navigators](images/navigators_hidden.webp)" %}
 
 ### Show previous and next buttons on hover
 
@@ -196,7 +196,7 @@ You can customize the previous and next buttons using the [PreviousButtonTemplat
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhRjxihqwIdLwvS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel Navigators Template](images/navigators_template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhRjxihqwIdLwvS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Carousel Navigators Template](images/navigators_template.webp)" %}
 
 ## Indicators
 
@@ -244,7 +244,7 @@ Indicators display the total number of slides and the current slide position. Yo
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLnXxMLKwHjTyeK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel Indicators](images/indicators_hidden.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLnXxMLKwHjTyeK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Carousel Indicators](images/indicators_hidden.webp)" %}
 
 ### Indicators template
 
@@ -320,7 +320,7 @@ You can customize the indicators using the [IndicatorsTemplate](https://help.syn
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBHXdirUGRTCSEU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel Indicators](images/indicators_template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBHXdirUGRTCSEU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Carousel Indicators](images/indicators_template.webp)" %}
 
 ### Showing preview of slide in indicator
 
@@ -395,7 +395,7 @@ You can display a preview image of each slide inside the indicator by combining 
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrRZRMLgGRcEJmC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel Indicators](images/indicators_preview.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrRZRMLgGRcEJmC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Carousel Indicators](images/indicators_preview.webp)" %}
 
 ### Indicator types
 
@@ -450,7 +450,7 @@ The Default indicator displays a set of dots that represent the current slide po
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLnDnMLUcGzJkqk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel indicators type default](images/indicator-default.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLnDnMLUcGzJkqk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Carousel indicators type default](images/indicator-default.webp)" %}
 
 #### Dynamic Indicator
 
@@ -496,7 +496,7 @@ The Dynamic indicator provides visual cues that update to indicate the current s
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhRDxMLUQcvmJUr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel indicators type dynamic](images/indicator-dynamic.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhRDxMLUQcvmJUr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Carousel indicators type dynamic](images/indicator-dynamic.webp)" %}
 
 #### Fraction Indicator
 
@@ -542,7 +542,7 @@ The Fraction indicator displays the current slide index and the total slide coun
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhxXdWBKclxjGmG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel indicators type fraction](images/indicator-fraction.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhxXdWBKclxjGmG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Carousel indicators type fraction](images/indicator-fraction.webp)" %}
 
 #### Progress Indicator
 
@@ -588,7 +588,7 @@ The Progress indicator displays a progress bar that reflects the current slide's
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrdtRirgmaDwhqA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel indicators type progress](images/indicator-progress.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrdtRirgmaDwhqA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Carousel indicators type progress](images/indicator-progress.webp)" %}
 
 ## Play button
 
@@ -636,7 +636,7 @@ Use the [ShowPlayButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhnNRCBgmuxgyfO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel Indicators](images/play_button.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhnNRCBgmuxgyfO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Carousel Indicators](images/play_button.webp)" %}
 
 ### Play button template
 
@@ -715,4 +715,4 @@ You can customize the play button using the [PlayButtonTemplate](https://help.sy
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrdjnsBqmaaYvtc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel Indicators](images/play_button_template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrdjnsBqmaaYvtc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Carousel Indicators](images/play_button_template.webp)" %}

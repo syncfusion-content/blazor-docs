@@ -38,4 +38,4 @@ To manually close the Context Menu, the [Close](https://help.syncfusion.com/cr/b
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrHZRCYfOmvpisg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ContextMenu displays Dialog Menu](./../images/blazor-contextmenu-dialog.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrHZRCYfOmvpisg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Context Menu displays Dialog Menu](./../images/blazor-contextmenu-dialog.webp)" %}

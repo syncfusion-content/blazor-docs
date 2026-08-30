@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor ComboBox
 
-This section lists the events available in the ComboBox component and when they are triggered during typical interactions.
+This section lists the events available in the Blazor ComboBox component and when they are triggered during typical interactions.
 
 ## Blur
 
