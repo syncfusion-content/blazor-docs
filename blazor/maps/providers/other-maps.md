@@ -195,7 +195,7 @@ A legend can be added to a tile map by setting the [Visible](https://help.syncfu
 
 ## Other supported online map providers
 
-The Maps component can render maps from other providers such as Mapbox and ESRI by assigning their tile URL (with the `z`/`x`/`y` placeholders and an access token) to `UrlTemplate`.
+The Maps component can render maps from other providers such as MapBox and ESRI by assigning their tile URL (with the `z`/`x`/`y` placeholders and an access token) to `UrlTemplate`.
 
 ```cshtml
 
@@ -203,7 +203,7 @@ The Maps component can render maps from other providers such as Mapbox and ESRI 
 
 <SfMaps>
     <MapsLayers>
-        @* Renders Mapbox map *@
+        @* Renders MapBox map *@
         <MapsLayer UrlTemplate="https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/level/tileX/tileY?access_token=" TValue="string">
         </MapsLayer>
         @* Renders ESRI map *@

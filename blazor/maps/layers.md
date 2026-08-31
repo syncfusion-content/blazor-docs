@@ -13,13 +13,13 @@ The [Maps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.h
 
 ## Multilayer
 
-The multilayer feature supports loading multiple shape files and map providers in a single container, enabling Maps to display more information. The first shape layer or map provider is the **main layer**; additional layers are added as **sublayers** over it by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to `SubLayer` (from the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.Type.html) enum).
+The multilayer feature supports loading multiple shape files and map providers in a single container, enabling Maps to display more information. The first shape layer or map provider is the **main layer**; each additional layer is added as a **sublayer** over it by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to `SubLayer` (from the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.Type.html) enum).
 
 ## Sublayer
 
 A sublayer is a type of shape-file layer. It supports loading multiple shape files in a single map view. For example, a sublayer can be added over the main layer to display geographic features such as rivers, valleys, and cities in a country map. Similar to the main layer, elements such as markers, bubbles, color mapping, and legends can be added to the sublayer.
 
-In the following example, the United States map shape is used as shape data from the **usa.json** file, and **texas.json** and **california.json** files are used as sublayers in the United States map.
+In the following example, the United States map shape is used as shape data from the **usa.json** file, and the **texas.json** and **california.json** files are each added as a sublayer over the United States map.
 
 ```cshtml
 
