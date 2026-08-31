@@ -141,7 +141,7 @@ When the pointer drag begins, the [OnDragStart](https://help.syncfusion.com/cr/b
 
 ## OnGaugeMouseDown
 
-When mouse is pressed down on the gauge, the [OnGaugeMouseDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_OnGaugeMouseDown) event is triggered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.MouseEventArgs.html#properties).
+When the mouse is pressed down on the gauge, the [OnGaugeMouseDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_OnGaugeMouseDown) event is triggered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.MouseEventArgs.html#properties).
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -157,14 +157,14 @@ When mouse is pressed down on the gauge, the [OnGaugeMouseDown](https://help.syn
 @code {
     public void MouseDown(Syncfusion.Blazor.LinearGauge.MouseEventArgs args)
     {
-        //Code here
+        // Code here
     }
 }
 ```
 
 ## OnGaugeMouseLeave
 
-When mouse pointer leaves the gauge, the [OnGaugeMouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_OnGaugeMouseLeave) event is triggered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.MouseEventArgs.html#properties).
+When the mouse pointer leaves the gauge, the [OnGaugeMouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_OnGaugeMouseLeave) event is triggered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.MouseEventArgs.html#properties).
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -180,7 +180,7 @@ When mouse pointer leaves the gauge, the [OnGaugeMouseLeave](https://help.syncfu
 @code {
     public void MouseLeave(Syncfusion.Blazor.LinearGauge.MouseEventArgs args)
     {
-        //Code here
+        // Code here
     }
 }
 ```
@@ -203,7 +203,7 @@ When the mouse pointer is released over the Linear Gauge, the [OnGaugeMouseUp](h
 @code {
     public void MouseUp(Syncfusion.Blazor.LinearGauge.MouseEventArgs args)
     {
-        //Code here
+        // Code here
     }
 }
 ```
@@ -254,7 +254,7 @@ The [OnPrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGaug
     SfLinearGauge gauge;
     public void PrintGauge()
     {
-        this.gauge.Print();
+        this.gauge.PrintAsync();
     }
 
     public void Print(PrintEventArgs args)
