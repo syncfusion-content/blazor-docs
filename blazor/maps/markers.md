@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Maps Markers Support
 
-Markers annotate locations on Maps with symbols. Enable markers by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_Visible) property of [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) to **true**.
+Markers annotate locations on Maps with symbols. Add markers by placing [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) elements inside [MapsMarkerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerSettings.html) on a layer, and enable each one by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_Visible) property of [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) to **true**.
 
 ## Adding marker
 
@@ -173,7 +173,7 @@ Use the following properties and class in [MapsMarker](https://help.syncfusion.c
 
 ## Marker shapes
 
-The Maps component supports the following marker shapes. Set the marker shape using the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_Shape) property of [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html).
+The Maps component supports the following marker shapes. Set the marker shape using the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_Shape) property of [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) with the [MarkerType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MarkerType.html) enum.
 
 * Balloon
 * Circle
@@ -215,7 +215,7 @@ To render a marker as an image, set the [Shape](https://help.syncfusion.com/cr/b
     }
 
     public List<City> MarkerData = new List<City> {
-        new City { Latitude  = 35.145083, Longitude = -117.960260 },
+        new City { Latitude = 35.145083, Longitude = -117.960260 },
         new City { Latitude = 40.724546, Longitude = -73.850344 },
         new City { Latitude = 41.657782, Longitude = -91.533857 }
     };
@@ -436,7 +436,7 @@ Markers can be repositioned by dragging and dropping. Enable drag-and-drop by se
 
 ![Marker with drag and drop functionality in Blazor Maps](./images/Marker/marker-drag-and-drop.webp)
 
-The marker data can be updated during drag operations using the [OnMarkerDragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnMarkerDragStart) and [OnMarkerDragEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnMarkerDragEnd) events. Updating the relevant marker data automatically refreshes tooltip and legend text for that marker. The following properties are available in the event arguments:
+The marker data can be updated during drag operations using the [OnMarkerDragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnMarkerDragStart) and [OnMarkerDragEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnMarkerDragEnd) events, whose arguments are described by [MarkerDragStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MarkerDragStartEventArgs.html) and [MarkerDragEndEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MarkerDragEndEventArgs.html). Updating the relevant marker data automatically refreshes tooltip and legend text for that marker. The following properties are available in the event arguments:
 
 |   Argument Name      |   Description                               |
 |----------------------| --------------------------------------------|
@@ -485,7 +485,7 @@ The example below demonstrates customizing marker data in response to drag event
     public List<City> MarkerDataSource = new List<City> {
         new City { Latitude = 49.95121990866204, Longitude = 18.468749999999998, Name = "Europe" },
         new City { Latitude = 59.88893689676585, Longitude = -109.3359375, Name = "North America" },
-        new City { Latitude = -6.64607562172573, Longitude = -55.54687499999999, Name = "Sout America" },
+        new City { Latitude = -6.64607562172573, Longitude = -55.54687499999999, Name = "South America" },
         new City { Latitude = 23.644385824912135, Longitude = 77.83189239539234, Name = "India" },
         new City { Latitude = 63.66569332894224, Longitude = 98.2225173953924, Name = "China" }
     };
@@ -640,7 +640,7 @@ To enable clustering within a layer, set [AllowClustering](https://help.syncfusi
 
 ```
 
-![Blazr Maps Marker with Clustering](./images/Marker/blazor-maps-marker-clustering.webp)
+![Blazor Maps Marker with Clustering](./images/Marker/blazor-maps-marker-clustering.webp)
 
 ### Customization of marker cluster
 

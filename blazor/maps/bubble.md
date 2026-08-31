@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Maps Bubble Visualization
 
-Bubbles in the Maps control represent underlying data values. They render over map shapes that have corresponding data in the data source. Enable bubbles by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_Visible) property of [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) to **true**. To add bubbles, bind the data source to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_DataSource) property of [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) and set the numeric field name in the [ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_ValuePath) property.
+Bubbles in the Maps component represent underlying data values. They render over map shapes that have corresponding data in the data source. Enable bubbles by adding a [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) within [MapsBubbleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleSettings.html) and setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_Visible) property of [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) to **true**. To add bubbles, bind the data source to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_DataSource) property of [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) and set the numeric field name in the [ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_ValuePath) property.
 
 ```cshtml
 
@@ -63,7 +63,7 @@ The following bubble shapes are available in Maps:
 - Circle
 - Square
 
-By default, bubbles render as **Circle**. To render squares, set the [BubbleType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_BubbleType) property of [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) to **Square**.
+By default, bubbles render as **Circle**. To render squares, set the [BubbleType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_BubbleType) property of [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) to **Square** using the [BubbleType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.BubbleType.html) enum.
 
 ```cshtml
 
@@ -130,8 +130,8 @@ Use the following [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.
                    ShapeDataPath="Name" ShapePropertyPath='new string[] {"name"}' TValue="Country">
             @* To add bubbles based on population count *@
             <MapsBubbleSettings>
-                <MapsBubble Visible="true" ValuePath="Population" Fill="green" MinRadius=5 MaxRadius=40 AnimationDelay=100 AnimationDuration=1000 Opacity=1 DataSource="PopulationDetails" TValue="Country">
-                    <MapsBubbleBorder Color="blue" Width=2></MapsBubbleBorder>
+                <MapsBubble Visible="true" ValuePath="Population" Fill="green" MinRadius="5" MaxRadius="40" AnimationDelay="100" AnimationDuration="1000" Opacity="1" DataSource="PopulationDetails" TValue="Country">
+                    <MapsBubbleBorder Color="blue" Width="2"></MapsBubbleBorder>
                 </MapsBubble>
             </MapsBubbleSettings>
         </MapsLayer>
@@ -165,7 +165,7 @@ Use the following [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ![Blazor Maps with Custom Bubbles](./images/Bubble/blazor-maps-custom-bubble.webp)
 
-## Setting colors to the bubbles from the data source
+## Setting bubble colors from the data source
 
 Assign each bubble colors using the [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_ColorValuePath) property of [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html). Set this to the field in the bubble data source that contains color values.
 
@@ -215,7 +215,7 @@ Assign each bubble colors using the [ColorValuePath](https://help.syncfusion.com
 
 ![Changing Bubbles Color in Blazor Maps](./images/Bubble/blazor-maps-change-bubble-color.webp)
 
-## Setting the range of the bubble size
+## Setting the bubble size range
 
 Bubble size is computed from the values specified by [ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_ValuePath) property. Control the radius range using [MinRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_MinRadius) and [MaxRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_MaxRadius) properties.
 
@@ -282,7 +282,7 @@ Add multiple bubble groups by defining more than one [MapsBubble](https://help.s
                 <MapsBubble Visible="true" MinRadius="5" MaxRadius="20" ValuePath="FemaleRatio" ColorValuePath="FemaleRatioColor"
                             DataSource="GenderRatios" TValue="GenderRatio">
                 </MapsBubble>
-                <MapsBubble Visible="true" BubbleType="BubbleType.Circle" Opacity="0.4" MinRadius="15" MaxRadius="25" ValuePath="MaleRatio"
+                <MapsBubble Visible="true" BubbleType="Syncfusion.Blazor.Maps.BubbleType.Circle" Opacity="0.4" MinRadius="15" MaxRadius="25" ValuePath="MaleRatio"
                             ColorValuePath="MaleRatioColor" DataSource="GenderRatios" TValue="GenderRatio">
                 </MapsBubble>
             </MapsBubbleSettings>
@@ -320,7 +320,7 @@ Add multiple bubble groups by defining more than one [MapsBubble](https://help.s
 
 ![Blazor Maps with Multiple Bubble Groups](./images/Bubble/blazor-maps-multiple-bubble-group.webp)
 
-## Enable tooltip for bubble
+## Enable tooltip for bubbles
 
 Enable bubble tooltips by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTooltipSettings.html#Syncfusion_Blazor_Maps_MapsTooltipSettings_Visible) property of [MapsBubbleTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleTooltipSettings.html) to **true**. Specify the tooltip content using the [ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTooltipSettings.html#Syncfusion_Blazor_Maps_MapsTooltipSettings_ValuePath) property. Use [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleTooltipSettings.html#Syncfusion_Blazor_Maps_MapsBubbleTooltipSettings_TooltipTemplate) to define custom HTML content.
 

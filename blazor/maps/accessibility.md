@@ -39,17 +39,17 @@ The accessibility compliance for the Blazor Maps component is summarized below.
 
 ## WAI-ARIA attributes
 
-To meet accessibility standards, the Blazor Maps component adheres to [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns. The following `WAI-ARIA` attributes are used in the Maps component:
+To meet accessibility standards, the Blazor Maps component adheres to [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns. The following WAI-ARIA attributes are used in the Maps component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `role=region` | Identifies map areas that do not support interactive functions such as selection and highlighting. |
-| `role=button` | Identifies map areas where interactive functions such as selection and highlighting are available. |
-| `aria-label` | Provides accessible names for map elements including geometric shapes, title, subtitle, legend title, legend item labels, and data labels. See the next section for details. |
+| `role="region"` | Identifies non-interactive map areas (shapes without selection or highlighting). |
+| `role="button"` | Identifies interactive map areas that support selection and highlighting. |
+| `aria-label` | Provides accessible names for map elements including geometric shapes, title, subtitle, legend title, legend item labels, and data labels. The announced text is listed in the [Screen reader support](#screen-reader-support) section. |
 
-## Screen reading in Maps
+## Screen reader support
 
-Accessibility in the Blazor Maps component ensures compatibility with screen readers. The following map elements are announced by screen readers such as Narrator on Windows.
+Accessibility in the Blazor Maps component ensures compatibility with screen readers. The following map elements are announced by screen readers such as Narrator (Windows), NVDA, JAWS, and VoiceOver (macOS).
 
 | Elements | Description |
 | --- | --- |
@@ -66,23 +66,23 @@ Accessibility in the Blazor Maps component ensures compatibility with screen rea
 
 ## Keyboard Navigation
 
-All Blazor Maps actions can be controlled using the keyboard. The following key combinations apply to the available UI interactions.
+All Blazor Maps actions can be controlled using the keyboard. The zoom in, zoom out, reset, and arrow-key panning shortcuts require zooming to be enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property of [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) to **true**. The following key combinations apply to the available UI interactions.
 
-| Windows | Mac | Description|
+| Windows | Mac | Description |
 |-----|-----|----|
-|<kbd>Tab</kbd> | <kbd>Tab</kbd> |Moves focus to the next focusable element on the map, such as the legend or a shape.|
-|<kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> |Moves focus to the previous focusable element on the map, such as the legend or a shape.|
-|<kbd> + </kbd> | <kbd>+</kbd> |Performs zoom in when zooming is enabled.|
-|<kbd> - </kbd> | <kbd>-</kbd> |Performs zoom out when zooming is enabled.|
-|<kbd>←</kbd> | <kbd>←</kbd> |When zoomed in, scrolls the map to the left.|
-|<kbd>→</kbd> | <kbd>→</kbd> |When zoomed in, scrolls the map to the right.|
-|<kbd>↑</kbd> | <kbd>↑</kbd> |When zoomed in, scrolls the map upward.|
-|<kbd>↓</kbd> | <kbd>↓</kbd> |When zoomed in, scrolls the map downward.|
-|<kbd> R </kbd> | <kbd>R</kbd> |Performs reset when zooming is enabled.|
-|<kbd>Enter</kbd> | <kbd>Enter</kbd> |Navigates through legend items and confirms selection when focusing a shape.|
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves focus to the next focusable element on the map, such as the legend or a shape. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves focus to the previous focusable element on the map, such as the legend or a shape. |
+| <kbd>+</kbd> | <kbd>+</kbd> | Performs zoom in when zooming is enabled. |
+| <kbd>-</kbd> | <kbd>-</kbd> | Performs zoom out when zooming is enabled. |
+| <kbd>←</kbd> | <kbd>←</kbd> | When zoomed in, scrolls the map to the left. |
+| <kbd>→</kbd> | <kbd>→</kbd> | When zoomed in, scrolls the map to the right. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | When zoomed in, scrolls the map upward. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | When zoomed in, scrolls the map downward. |
+| <kbd>R</kbd> | <kbd>R</kbd> | Performs reset when zooming is enabled. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Moves through legend items, and selects the focused shape. |
 
-## Ensuring accessibility
+## Accessibility validation
 
-Accessibility compliance for the Blazor Maps component is validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
+Accessibility compliance for the Blazor Maps component is validated with the [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) tool during automated testing.
 
 The component’s accessibility compliance is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/maps) in a new window to evaluate the component with accessibility tools.
