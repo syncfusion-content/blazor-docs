@@ -14,7 +14,7 @@ The Blazor [File Manager](https://www.syncfusion.com/blazor-components/blazor-fi
 
 This Docker image provides a preconfigured Docker container for the Syncfusion File Manager Azure file provider backend. The server-side Web API targets ASP.NET Core 10.0 and connects to Azure Blob Storage
 
-You can quickly deploy the Docker image to your infrastructure. To add custom functionality, create your own Dockerfile based on the existing [File Manager Azure Docker project](https://github.com/SyncfusionExamples/azure-aspcore-file-provider).
+You can quickly deploy the Docker image to your infrastructure. To add custom functionality, create your own Docker file based on the existing [File Manager Azure Docker project](https://github.com/SyncfusionExamples/azure-aspcore-file-provider).
 
 ## Prerequisites
 
