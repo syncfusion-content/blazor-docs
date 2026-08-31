@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Popup Setting in Blazor DateTimePicker | Syncfusion®
-description: Configure the Blazor DateTimePicker popup rendering using the AppendTo property to control where the popup appears, ensuring proper display in custom containers.
+description: Learn how to use the AppendTo property in Blazor DateTimePicker to control popup placement and ensure correct display in custom containers.
 platform: Blazor
 control: DateTimePicker
 documentation: ug

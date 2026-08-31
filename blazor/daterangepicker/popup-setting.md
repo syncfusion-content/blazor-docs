@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Popup Setting in Blazor DateRangePicker | Syncfusion®
-description: Configure the Blazor DateRangePicker popup rendering using the AppendTo property to control where the popup appears, ensuring proper display in custom containers.
+description: Learn how to use the AppendTo property in Blazor DateRangePicker to control popup placement and ensure correct display in custom containers.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
