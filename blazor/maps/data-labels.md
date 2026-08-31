@@ -114,7 +114,7 @@ Customize the appearance of data labels using the following properties in [MapsD
 
 ## Label animation
 
-Animate data labels on initial render by setting the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_AnimationDuration) property in `MapsDataLabelSettings`. The duration is specified in milliseconds.
+Animate data labels on initial render by setting the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_AnimationDuration) property in [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html). The duration is specified in milliseconds.
 
 ```cshtml
 
@@ -137,7 +137,7 @@ Animate data labels on initial render by setting the [AnimationDuration](https:/
 
 ## Smart labels
 
-Manage labels that intersect shape borders by using the [SmartLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_SmartLabelMode) property. Available options:
+Manage labels that intersect shape borders by using the [SmartLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_SmartLabelMode) property with the [SmartLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SmartLabelMode.html) enum. Available options:
 
 - None
 - Hide
@@ -164,7 +164,7 @@ Manage labels that intersect shape borders by using the [SmartLabelMode](https:/
 
 ## Intersect action
 
-Manage labels that intersect with other labels by using the [IntersectionAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_IntersectionAction) property. Available options:
+Manage labels that intersect with other labels by using the [IntersectionAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_IntersectionAction) property with the [IntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.IntersectAction.html) enum. Available options:
 
 - None
 - Hide

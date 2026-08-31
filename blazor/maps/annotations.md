@@ -9,11 +9,11 @@ documentation: ug
 
 # Blazor Maps Annotations
 
-Annotations mark areas of interest on the map using text, shapes, or images. Any number of annotations can be added to the Maps component.
+Annotations mark areas of interest on the map using text, shapes, or images. Any number of annotations can be added to the Maps component using the [MapsAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html) elements within [MapsAnnotations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotations.html).
 
 ## Annotation
 
-Use the `ContentTemplate` property of [MapsAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html) to render text content or an HTML element as an annotation in Maps.
+Use the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html#Syncfusion_Blazor_Maps_MapsAnnotation_ContentTemplate) property of [MapsAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html) to render text content or an HTML element as an annotation in Maps.
 
 ```cshtml
 

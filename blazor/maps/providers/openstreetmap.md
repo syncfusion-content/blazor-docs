@@ -13,7 +13,7 @@ OpenStreetMap (OSM) is a collaborative map provider that offers free, openly lic
 
 ## Adding OpenStreetMap
 
-Render OSM tiles by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property to the OSM tile server URL. For details about OSM tile servers, see the OpenStreetMap tiles documentation.
+Render OSM tiles by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to the OSM tile server URL. For details about OSM tile servers, see the [OpenStreetMap tile usage policy](https://operations.osmfoundation.org/policies/tiles/).
 
 ```cshtml
 
@@ -56,7 +56,7 @@ The OSM layer supports zooming and panning. Zooming provides a closer view of sp
 
 ## Adding markers and navigation line
 
-Markers can be added to OSM layers by providing latitude and longitude for each location using [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html). A navigation line can be drawn to highlight a path between locations by supplying coordinate arrays in [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
+Markers can be added to OSM layers by supplying a [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_DataSource) of latitude and longitude values to [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html). A navigation line can be drawn to highlight a path between locations by supplying coordinate arrays to the [Latitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Latitude) and [Longitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Longitude) properties of [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
 
 ```cshtml
 

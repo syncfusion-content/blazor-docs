@@ -13,7 +13,7 @@ Bing Maps is an online map provider from Microsoft that offers external geospati
 
 ## Adding Bing Maps
 
-Bing Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property with the URL generated from the `GetBingUrlTemplate` method in the Maps component. The required Bing Maps URL format differs from other providers; therefore, the built-in `GetBingUrlTemplate` method returns a URL in a generic format. A subscription key is required for Bing Maps. Follow the steps in the Bing Maps key creation page to generate an API key, then append it to the Bing Maps URL before passing it to the `GetBingUrlTemplate` method. The URL returned by this method must be assigned to the `UrlTemplate` property.
+Bing Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) with the URL generated from the [GetBingUrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_GetBingUrlTemplate_System_String_) method of [SfMaps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html). The required Bing Maps URL format differs from other providers; therefore, the built-in `GetBingUrlTemplate` method returns a URL in a generic format. A subscription key is required for Bing Maps. Follow the steps in the Bing Maps key creation page to generate an API key, then append it to the Bing Maps URL before passing it to the `GetBingUrlTemplate` method. The URL returned by this method must be assigned to the `UrlTemplate` property.
 
 ```cshtml
 
@@ -116,7 +116,7 @@ N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing 
 
 ## Adding markers and navigation line
 
-Markers can be added to Bing Maps layers by setting the location coordinates (latitude and longitude) using [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html). Navigation lines can be drawn on top of a Bing Maps layer to highlight a path between locations by setting the location coordinates in [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
+Markers can be added to Bing Maps layers by supplying a [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_DataSource) of latitude and longitude values to [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html). Navigation lines can be drawn on top of a Bing Maps layer to highlight a path between locations by setting the [Latitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Latitude) and [Longitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Longitude) properties of [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
 
 ```cshtml
 

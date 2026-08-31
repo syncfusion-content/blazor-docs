@@ -13,7 +13,7 @@ This section explains the list of events that will be triggered for appropriate 
 
 ## AnimationCompleted
 
-When the animation in the component is completed, the [AnimationCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_AnimationCompleted) event is triggered. For details about the event arguments, see AnimationCompleteEventArgs. [AnimationCompleteEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.AnimationCompleteEventArgs.html).
+When the animation in the component is completed, the [AnimationCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_AnimationCompleted) event is triggered. For details about the event arguments, see [AnimationCompleteEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.AnimationCompleteEventArgs.html).
 
 ```cshtml
 
@@ -134,8 +134,8 @@ The [DataLabelRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
+    <MapsEvents DataLabelRendering="@DataLabelRenderingEvent"></MapsEvents>
     <MapsLayers>
-        <MapsEvents DataLabelRendering="@DataLabelRenderingEvent"></MapsEvents>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
             @* To add data labels *@
             <MapsDataLabelSettings Visible="true" LabelPath="name"></MapsDataLabelSettings>
@@ -464,7 +464,7 @@ The [MouseMove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.Map
 
 ## OnBubbleClick
 
-The [OnBubbleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_MarkerClusterMouseMove) event is triggered when a bubble is clicked. For details about the event arguments, see [BubbleClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.BubbleClickEventArgs.html).
+The [OnBubbleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnBubbleClick) event is triggered when a bubble is clicked. For details about the event arguments, see [BubbleClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.BubbleClickEventArgs.html).
 
 ```cshtml
 
@@ -621,9 +621,9 @@ When a double-click operation is performed on an element, the [OnDoubleClick](ht
 
 The [OnItemHighlight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnItemHighlight) event occurs when the cursor moves over shapes. For details about the event arguments, see [SelectionEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SelectionEventArgs.html).
 
-@using Syncfusion.Blazor.Maps
-
 ```cshtml
+
+@using Syncfusion.Blazor.Maps
 
 <SfMaps>
     <MapsEvents OnItemHighlight="@OnItemHighlightEvent"></MapsEvents>
@@ -748,7 +748,7 @@ The [OnMarkerClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps
 
 ## OnMarkerMouseLeave
 
-The [OnMarkerMouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnMarkerMouseMove) event is triggered when the cursor moves away from a marker. For details about the event arguments, see [MarkerMoveEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MarkerMoveEventArgs.html).
+The [OnMarkerMouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnMarkerMouseLeave) event is triggered when the cursor moves away from a marker. For details about the event arguments, see [MarkerMoveEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MarkerMoveEventArgs.html).
 
 ```cshtml
 
@@ -846,7 +846,7 @@ The [OnMarkerMouseMove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ## OnPan
 
-When panning the map, the [OnPan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnPan) event is triggered. For details about the event arguments, see [OnPan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnPan) in the MapsEvents API reference to know more about the arguments of this event.
+When panning the map, the [OnPan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnPan) event is triggered. For details about the event arguments, see [MapPanEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapPanEventArgs.html).
 
 ```cshtml
 
@@ -876,7 +876,7 @@ When panning the map, the [OnPan](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ## OnPanComplete
 
-The [OnPanComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnPanComplete) event is triggered after panning completes. For details about the event arguments, see [OnPanComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnPanComplete) in the MapsEvents API reference to know more about the arguments of this event.
+The [OnPanComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnPanComplete) event is triggered after panning completes. For details about the event arguments, see [MapPanEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapPanEventArgs.html).
 
 ```cshtml
 

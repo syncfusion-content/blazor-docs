@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Maps Other Tile Providers
 
-Apart from OpenStreetMap and Bing Maps, maps from other online providers can be rendered by assigning the provider’s tile URL to the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property. The URL template design supports any provider that follows the standard tile format shown below.
+Apart from OpenStreetMap and Bing Maps, maps from other online providers can be rendered by assigning the provider’s tile URL to the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html). The URL template design supports any provider that follows the standard tile format shown below.
 
 Sample Template: https://< domain_name >/maps/basic/{z}/{x}/{y}.png
 
@@ -64,9 +64,9 @@ Tile map layers support zooming and panning. Zooming provides a closer view for 
 
 **Adding markers and navigation line**
 
-Markers can be added to tile layers by providing the latitude and longitude for each location using the [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) class. Navigation lines can be drawn to highlight a path between locations using [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
+Markers can be added to tile layers by supplying a [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_DataSource) of latitude and longitude values to the [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) class. Navigation lines can be drawn to highlight a path between locations by setting the [Latitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Latitude) and [Longitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Longitude) properties of [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Maps
 

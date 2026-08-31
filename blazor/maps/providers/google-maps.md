@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Maps Google Maps Provider
 
-Google Maps is an online map provider owned by Google. It provides map tile images based on requests. The Blazor Maps component composes these tiles into a single view to render the map. Google Maps tiles can be displayed by specifying the tile service URL in the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property.
+Google Maps is an online map provider owned by Google. It provides map tile images based on requests. The Blazor Maps component composes these tiles into a single view to render the map. Google Maps tiles can be displayed by specifying the tile service URL in the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html).
 
 ## Displaying Google Maps
 
@@ -267,7 +267,7 @@ N> Refer to the session token retrieval method described in the [Displaying Goog
 
 ## Adding markers and navigation line
 
-Markers can be added to the Google Maps layer by setting the latitude and longitude of the location using the [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) class. Navigation lines can be overlaid on the Google Maps layer to highlight paths between locations by providing the corresponding latitude and longitude values in [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
+Markers can be added to the Google Maps layer by supplying a [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_DataSource) of latitude and longitude values to the [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) class. Navigation lines can be overlaid on the Google Maps layer to highlight paths between locations by setting the [Latitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Latitude) and [Longitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Longitude) properties of [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
 
 ```cshtml
 

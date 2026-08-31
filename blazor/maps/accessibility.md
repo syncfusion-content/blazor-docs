@@ -66,7 +66,7 @@ Accessibility in the Blazor Maps component ensures compatibility with screen rea
 
 ## Keyboard Navigation
 
-All Blazor Maps actions can be controlled using the keyboard. The following key combinations apply to the available UI interactions.
+All Blazor Maps actions can be controlled using the keyboard. The zoom in, zoom out, reset, and arrow-key panning shortcuts require zooming to be enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property of [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) to **true**. The following key combinations apply to the available UI interactions.
 
 | Windows | Mac | Description|
 |-----|-----|----|

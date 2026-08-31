@@ -48,7 +48,7 @@ Interactive legends display an arrow pointer indicating the exact range color wh
 
 @code {
     private List<UNCouncilCountry> SecurityCouncilDetails = new List<UNCouncilCountry>{
-         new UNCouncilCountry { Name  "China", Membership = "Permanent" },
+         new UNCouncilCountry { Name = "China", Membership = "Permanent" },
          new UNCouncilCountry { Name = "France", Membership = "Permanent" },
          new UNCouncilCountry { Name = "Russia", Membership = "Permanent" },
          new UNCouncilCountry { Name = "Kazakhstan", Membership = "Non-Permanent" },
@@ -82,7 +82,7 @@ Position the legend using the [X](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 <b>Dock position</b>
 
-Legends can be docked within the container using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Position) property in [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) at the following locations:
+Legends can be docked within the container using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Position) property in [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) with the [LegendPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.LegendPosition.html) enum at the following locations:
 
 * Top
 * Left
@@ -167,7 +167,7 @@ The following code demonstrates equal color mapping legends for shapes. To bind 
 
 ### Legend shape
 
-Maps supports the following legend shapes. Use the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Shape) property in [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) to change the legend shape.
+Maps supports the following legend shapes. Use the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Shape) property in [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) with the [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.LegendShape.html) enum to change the legend shape.
 
 * Circle
 * Rectangle
@@ -507,7 +507,7 @@ The following properties and components customize the toggle option:
     @*  To hide legend based in data source fields  *@
     <MapsLegendSettings Visible="true">
     <MapsToggleLegendSettings Enable="true" ApplyShapeSettings="false">
-    <MapsLegendBorder Width="2" Color="green"></MapsLegendBorder></MapsToggleLegendSettings>
+    <MapsToggleLegendBorder Width="2" Color="green"></MapsToggleLegendBorder></MapsToggleLegendSettings>
     </MapsLegendSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' ShapeDataPath="Name"
@@ -553,7 +553,7 @@ The following properties and components customize the toggle option:
 
 ## Enable legend for bubbles
 
-Enable legends for bubbles by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) to **true** and the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Type) property to **Bubbles**.
+Enable legends for bubbles by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) to **true** and the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Type) property to **Bubbles** using the [LegendType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.LegendType.html) enum.
 
 ```cshtml
 

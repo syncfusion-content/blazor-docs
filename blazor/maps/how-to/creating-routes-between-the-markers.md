@@ -9,7 +9,7 @@ documentation: ug
 
 # How to Create Routes Between Markers in Blazor Maps
 
-The Maps component supports plotting routes between two locations (source and destination) using the navigation line feature. Markers can be placed at these locations to indicate the source and destination, providing a clear view of the path on the map.
+The Maps component supports plotting routes between two locations (source and destination) using the [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html) feature. [Markers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) can be placed at these locations to indicate the source and destination, providing a clear view of the path on the map.
 
 The data for navigation routes must be retrieved from an external source, such as the Google Maps Directions API. The following steps outline how to create a route using coordinates obtained from the Google Maps Directions API.
 
@@ -94,7 +94,7 @@ Coordinates can be retrieved based on different travel modes, such as DRIVING, W
 
 ## Plot markers on the Map
 
-To plot markers on the map, use the retrieved geographic coordinates to place markers at the source and destination locations. This makes the key points along the route easy to identify.
+To plot markers on the map, use the retrieved geographic coordinates to place markers at the source and destination locations using the [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) within [MapsMarkerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerSettings.html). The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_Shape) property is set to `MarkerType.Image` and the [ImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_ImageUrl) property points to the marker image. This makes the key points along the route easy to identify.
 
 ```
 
@@ -128,7 +128,7 @@ To plot markers on the map, use the retrieved geographic coordinates to place ma
 
 ## Generate and visualize the route
 
-To generate and visualize the route, use the geographic coordinates obtained from the Google Directions API to draw a navigation line between the source and destination markers on the map. This provides a clear representation of the path to follow.
+To generate and visualize the route, use the geographic coordinates obtained from the Google Directions API to draw a [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html) between the source and destination markers on the map. The [Latitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Latitude) and [Longitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Longitude) properties define the points along the path. This provides a clear representation of the path to follow.
 
 ```
 
@@ -155,3 +155,10 @@ To generate and visualize the route, use the geographic coordinates obtained fro
 A demonstration of integrating the Google Maps Directions API with the Maps component to render navigation routes is available at the following link.
 
 [Sample in the GitHub](https://github.com/SyncfusionExamples/how-to-create-a-route-between-the-markers-in-the-Blazor-maps)
+
+## See also
+
+* [Navigation lines in Blazor Maps](../navigation-line)
+* [Markers in Blazor Maps](../markers)
+* [MapsNavigationLine API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html)
+* [MapsMarker API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html)

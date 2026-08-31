@@ -74,7 +74,7 @@ The Maps control supports the following themes.
 * HighContrastLight
 * Tailwind
 
-By default, Maps renders with the **Material** theme. Change the theme by using the [Theme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Theme) property.
+By default, Maps renders with the **Material** theme. Change the theme by using the [Theme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Theme) property with the [Theme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Theme.html) enum.
 
 ```cshtml
 
@@ -260,7 +260,7 @@ The Maps control supports the following projection types:
 * Winkel3
 * AitOff
 
-By default, Maps renders with the **Mercator** projection, which draws shapes based on geographic coordinates. Change the projection by using the [ProjectionType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ProjectionType) property.
+By default, Maps renders with the **Mercator** projection, which draws shapes based on geographic coordinates. Change the projection by using the [ProjectionType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ProjectionType) property with the [ProjectionType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.ProjectionType.html) enum.
 
 ```cshtml
 

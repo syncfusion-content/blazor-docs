@@ -13,7 +13,7 @@ A shapefile is a widely used geospatial vector data format for storing geographi
 
 ## Importing and viewing shapefile
 
-A shapefile can render a vector shape map in the Maps component by providing the remotely hosted file path in the [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) property.
+A shapefile can render a vector shape map in the [SfMaps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html) component by providing the remotely hosted file path in the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html).
 
 > Only shapefiles hosted on a remote server are currently supported by the Maps component.
 
@@ -81,11 +81,11 @@ A shapefile map, like a GeoJSON map, can be rendered using a multilayer structur
 3. Display the GeoJSON map as a sublayer over the shapefile map.
 4. Use shapefiles as both main and sublayer.
 
-The following example demonstrates a shapefile map as a sublayer above the GeoJSON map.
+The following example demonstrates a shapefile map as a sublayer above the GeoJSON map by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **SubLayer** using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.Type.html) enum.
 
 ```cshtml
 
-@using Syncfusion.Blazor.Maps;
+@using Syncfusion.Blazor.Maps
 
 <SfMaps>
     <MapsLayers>

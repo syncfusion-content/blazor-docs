@@ -77,8 +77,8 @@ The data source is populated with a list of objects related to the shape data. I
 
 The following properties in the [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) are used to bind data in the Maps component. These properties work together.
 
-* ShapePropertyPath
-* ShapeDataPath
+* [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapePropertyPath)
+* [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath)
 
 ### ShapePropertyPath
 

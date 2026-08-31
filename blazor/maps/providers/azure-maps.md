@@ -13,7 +13,7 @@ Azure Maps is an online map tile provider from Microsoft. Similar to OSM and Bin
 
 ## Adding Azure Maps
 
-Azure Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property with the tile server URL provided by the online map provider. A subscription key is required for Azure Maps. Follow the steps in this [link](https://learn.microsoft.com/en-us/azure/search/search-security-api-keys?tabs=portal-find%2Cportal-use%2Cportal-query) to generate an API key, and then add the key to the URL.
+Azure Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) with the tile server URL provided by the online map provider. A subscription key is required for Azure Maps. Follow the steps in [Manage authentication in Azure Maps](https://learn.microsoft.com/en-us/azure/azure-maps/how-to-manage-authentication) to generate a subscription key, and then add the key to the URL.
 
 N>Refer to [Azure Maps Licensing](https://azure.microsoft.com/en-in/support/legal/).
 
@@ -23,7 +23,7 @@ N>Refer to [Azure Maps Licensing](https://azure.microsoft.com/en-in/support/lega
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/imagery/png?subscription-key=Your-Key &api-version=1.0&style=satellite&zoom=level&x=tileX&y=tileY" TValue="string">
+        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/imagery/png?subscription-key=Your-Key&api-version=1.0&style=satellite&zoom=level&x=tileX&y=tileY" TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -49,7 +49,7 @@ The Azure Maps layer supports zooming and panning. Zooming provides a closer vie
         </MapsZoomToolbarSettings>
     </MapsZoomSettings>
     <MapsLayers>
-        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/imagery/png?subscription-key=Your-Key &api-version=1.0&style=satellite&zoom=level&x=tileX&y=tileY" TValue="string">
+        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/imagery/png?subscription-key=Your-Key&api-version=1.0&style=satellite&zoom=level&x=tileX&y=tileY" TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -60,9 +60,9 @@ The Azure Maps layer supports zooming and panning. Zooming provides a closer vie
 
 ## Adding markers and navigation line
 
-Markers can be added to Azure Maps layers by providing latitude and longitude coordinates in [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html). Navigation lines can be drawn over the Azure Maps layer to highlight paths between locations by providing latitude and longitude coordinates in [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
+Markers can be added to Azure Maps layers by supplying a [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_DataSource) of latitude and longitude values to [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html). Navigation lines can be drawn over the Azure Maps layer to highlight paths between locations by setting the [Latitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Latitude) and [Longitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Longitude) properties of [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Maps
 
@@ -70,7 +70,7 @@ Markers can be added to Azure Maps layers by providing latitude and longitude co
     <MapsZoomSettings ZoomFactor="4"></MapsZoomSettings>
     <MapsCenterPosition Latitude="29.394708" Longitude="-94.954653"></MapsCenterPosition>
     <MapsLayers>
-        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/imagery/png?subscription-key=Your-Key &api-version=1.0&style=satellite&zoom=level&x=tileX&y=tileY" TValue="string">
+        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/imagery/png?subscription-key=Your-Key&api-version=1.0&style=satellite&zoom=level&x=tileX&y=tileY" TValue="string">
             @* Add markers *@
             <MapsMarkerSettings>
                 <MapsMarker Visible="true" Height="25" Width="15" DataSource="Cities" TValue="City">
@@ -114,7 +114,7 @@ Any GeoJSON shape can be rendered as a sublayer over the Azure Maps layer to hig
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/imagery/png?subscription-key=Your-Key &api-version=1.0&style=satellite&zoom=level&x=tileX&y=tileY" TValue="string">
+        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/imagery/png?subscription-key=Your-Key&api-version=1.0&style=satellite&zoom=level&x=tileX&y=tileY" TValue="string">
         </MapsLayer>
         @* To add geometry shape as sublayer *@
         <MapsLayer ShapeData='new {dataOptions = "https://cdn.syncfusion.com/maps/map-data/africa.json"}'
@@ -149,7 +149,7 @@ A legend can be added to Azure Maps by setting the [Visible](https://help.syncfu
         <MapsTitleTextStyle Size="16px" FontFamily="inherit" />
     </MapsTitleSettings>
     <MapsLayers>
-        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/imagery/png?subscription-key=Your-Key &api-version=1.0&style=satellite&zoom=level&x=tileX&y=tileY" TValue="string">
+        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/imagery/png?subscription-key=Your-Key&api-version=1.0&style=satellite&zoom=level&x=tileX&y=tileY" TValue="string">
         <MapsMarkerSettings>
                 <MapsMarker Visible="true" TValue="PopulationCityDetails" DataSource="@PopulatedCities" Shape="MarkerType.Circle" Fill="#FFFFFF" ColorValuePath="Color" LegendText="Name" Height="15" Width="15">
                     <MapsMarkerTooltipSettings Visible="true" ValuePath="Population" Format="City Name: ${Name}</br>Population: ${Population} million">

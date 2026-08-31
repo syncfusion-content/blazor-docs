@@ -11,7 +11,7 @@ documentation: ug
 
 ## State Persistence
 
-State persistence retains selected Maps model values in browser storage for state maintenance. This behavior is controlled by the `EnablePersistence` property, which is set to **false** by default. When set to **true**, selected Maps component model values are retained after refreshing the page.
+State persistence retains selected Maps model values in browser storage for state maintenance. This behavior is controlled by the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_EnablePersistence) property of [SfMaps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html), which is set to **false** by default. When set to **true**, selected Maps component model values are retained after refreshing the page.
 
 ```cshtml
 

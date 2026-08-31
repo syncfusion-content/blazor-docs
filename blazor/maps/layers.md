@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Maps Layers Support
 
-The Maps component is rendered through [MapsLayers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayers.html), and any number of layers can be added to Maps.
+The [Maps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html) component is rendered through one or more [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) elements within [MapsLayers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayers.html), and any number of layers can be added to the Maps component.
 
 ## Multilayer
 
@@ -19,9 +19,9 @@ The multilayer feature supports loading multiple shape files and map providers i
 
 Sublayer is a type of shape file layer. It supports loading multiple shape files in a single map view. For example, a sublayer can be added over the main layer to display geographic features such as rivers, valleys, and cities in a country map. Similar to the main layer, elements such as markers, bubbles, color mapping, and legends can be added to the sublayer.
 
-In the following example, the United States map shape is used as shape data from the **usa.ts** file, and **texas.ts** and **california.ts** files are used as sublayer in the United States map.
+In the following example, the United States map shape is used as shape data from the **usa.json** file, and **texas.json** and **california.json** files are used as sublayers in the United States map.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Maps
 
@@ -55,15 +55,15 @@ In the following example, the United States map shape is used as shape data from
 
 Multiple shape files and map providers can be loaded simultaneously. The [BaseLayerIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_BaseLayerIndex) property determines which layer is displayed. This property also supports the drill-down feature; when the [BaseLayerIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_BaseLayerIndex) value changes, the corresponding shape is loaded. In this example, two layers are configured for the world map and the United States map. Based on the [BaseLayerIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_BaseLayerIndex) value, the corresponding shape is rendered. If [BaseLayerIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_BaseLayerIndex) is set to **0**, the world map is loaded.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Maps
 
-@*  To switch the layer, set `BaseLayerIndex`  *@
 <SfMaps BaseLayerIndex="1">
     <MapsLayers>
-        <MapsLayer ShapeData='new { dataOptions = "https://cdn.syncfusion.com/maps/map-data/world-map.json" }' TValue="string"/>
-        <MapsLayer ShapeData='new { dataOptions = "https://cdn.syncfusion.com/maps/map-data/usa.json" }'TValue="string"/>
+        @* To switch the layer, change the BaseLayerIndex value *@
+        <MapsLayer ShapeData='new { dataOptions = "https://cdn.syncfusion.com/maps/map-data/world-map.json" }' TValue="string" />
+        <MapsLayer ShapeData='new { dataOptions = "https://cdn.syncfusion.com/maps/map-data/usa.json" }' TValue="string" />
     </MapsLayers>
 </SfMaps>
 

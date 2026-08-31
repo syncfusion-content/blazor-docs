@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Maps Navigation Lines
 
-Navigation lines denote the path between two locations and can represent flight or sea routes. Enable navigation lines by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Visible) property of [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html) to **true**.
+Navigation lines denote the path between two locations and can represent flight or sea routes. Enable navigation lines by adding a [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html) within [MapsNavigationLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLines.html) and setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Visible) property of [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html) to **true**.
 
 ## Customization
 
