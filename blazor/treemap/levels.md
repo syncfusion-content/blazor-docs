@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor TreeMap Levels
 
-TreeMap supports **n** number of levels and each level is separated by using the [GroupPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_GroupPath) property.
+TreeMap supports **n** number of levels and each level is separated by using the [GroupPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_GroupPath) property. Each level can be configured using the [TreeMapLevel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html) tag.
 
 ## Group path
 
@@ -37,7 +37,7 @@ In the following example, three levels are added and each level is configured us
     </TreeMapLevels>
 </SfTreeMap>
 
-@code{
+@code {
     public class Employee
     {
         public string Country { get; set; }
@@ -64,7 +64,7 @@ In the following example, three levels are added and each level is configured us
 
 ## Gap between groups
 
-The [GroupGap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_GroupGap) property is used to separate an item from each group or another item to differentiate the levels mentioned in the TreeMap.
+The [GroupGap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_GroupGap) property is used to set the gap between groups and differentiate the levels in the TreeMap.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -127,8 +127,8 @@ N> Refer to the [code block](#group-path) to know about the property value of **
 
 The following properties are available to customize the header content in the [TreeMapLevel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html).
 
-* [HeaderFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_HeaderFormat) - Represents the header name, which is available in the data source.
-* [ShowHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_ShowHeader) - Specifies to visibility of the header.
+* [HeaderFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_HeaderFormat) - Specifies the format string for the header text, using property names from the data source.
+* [ShowHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_ShowHeader) - Specifies the visibility of the header.
 * [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_HeaderTemplate) - Specifies the template of the header and the position of the template to be customized using the [TemplatePosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_TemplatePosition) property.
 * [TreeMapLevelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevelBorder.html) - Specifies TreeMap level border color and width.
 * [HeaderAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_HeaderAlignment) - Align the header to [Near](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.Alignment.html#Syncfusion_Blazor_TreeMap_Alignment_Near), [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.Alignment.html#Syncfusion_Blazor_TreeMap_Alignment_Center) and [Far](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.Alignment.html#Syncfusion_Blazor_TreeMap_Alignment_Far).
@@ -154,6 +154,14 @@ The following properties are available to customize the header content in the [T
 </SfTreeMap>
 ```
 
-N> Refer to the [code block](#group-path) to know about the property value of `Employees`.
+N> Refer to the [code block](#group-path) to know about the property value of **Employees**.
 
 ![Customizing Header Alignment in Blazor TreeMap](images/Levels/blazor-treemap-header-alignment.webp)
+
+## See also
+
+* [Data binding](data-binding.md)
+* [Drill-down](drill-down.md)
+* [Legend](legend.md)
+* [Leaf item customization](leaf-item.md)
+* [Labels](labels.md)

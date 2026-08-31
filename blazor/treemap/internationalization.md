@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor TreeMap Internationalization | Syncfusion®
-description: Learn how to localize the Blazor TreeMap by formatting numbers, dates, and times for different cultures using the Format property.
+description: Learn how to localize the Blazor TreeMap by formatting numbers and currencies for different cultures using the Format property.
 platform: Blazor
 control: TreeMap
 documentation: ug
@@ -16,7 +16,7 @@ The [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap
 
 Globalization is the process of designing and developing a component that works in different cultures or locales. The [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_Format) property is used to globalize number, date, and time values in the TreeMap component.
 
-In the following code example, tooltip and Data Label is globalized to currency format in Deutsch culture.
+In the following code example, the tooltip and data labels are globalized to currency format. The values are formatted according to the application's current culture; see the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to configure a specific culture.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -52,3 +52,9 @@ In the following code example, tooltip and Data Label is globalized to currency 
 N> Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Blazor components.
 
 ![Localization in Blazor TreeMap](images/Internationalization/blazor-treemap-localization.webp)
+
+## See also
+
+* [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization)
+* [Formatting tooltip content](tooltip.md#formatting-tooltip-content)
+* [Formatting labels](labels.md#formatting-labels)
