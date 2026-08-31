@@ -7,7 +7,7 @@ control: Barcode
 documentation: ug
 ---
 
-# QR Code Generator in Blazor Barcode Component Component
+# QR Code Generator in Blazor Barcode Component
 
 ## QR Code
 
