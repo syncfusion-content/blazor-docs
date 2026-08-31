@@ -35,9 +35,9 @@ The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.Ma
 
 The data source is populated with a list of objects related to the shape data. In the following example, **PopulationDetails** is used as the data source for Maps.
 
-```cshtml
+```csharp
 
-@code{
+@code {
     public class PopulationDetail
     {
         public string Code { get; set; }
@@ -134,21 +134,21 @@ The [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps
     </MapsLayers>
 </SfMaps>
 
-@code{
+@code {
     public class PopulationDetail
     {
         public string Name { get; set; }
         public double Population { get; set; }
         public double Density { get; set; }
-    };
+    }
 
     private List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
         new PopulationDetail {
-            Name= "Afghanistan",
-            Population= 29863010,
-            Density= 119
-        },
-        ...
+            Name = "Afghanistan",
+            Population = 29863010,
+            Density = 119
+        }
+        // Add the remaining records here.
     };
 }
 
@@ -166,7 +166,7 @@ In the above example, both **name** fields contain the value **Afghanistan**. Th
             DataSource="PopulationDetails"
             ShapeDataPath="Name"
             ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
-            @*  It display data label for bounded items  *@
+            @* Display data labels for the bound items *@
             <MapsDataLabelSettings Visible="true" LabelPath="Name"></MapsDataLabelSettings>
         </MapsLayer>
     </MapsLayers>
@@ -221,8 +221,9 @@ The **Http.GetFromJsonAsync** method is used in the **OnInitializedAsync** lifec
 
 ```cshtml
 
-@inject HttpClient Http;
 @using Syncfusion.Blazor.Maps
+@using System.Net.Http.Json
+@inject HttpClient Http
 @inject NavigationManager NavigationManager
 
 @if (PopulationDensity == null)
@@ -248,7 +249,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        PopulationDensity = await Http.GetFromJsonAsync<PopulationData[]>(NavigationManager.Uri + "sample-data/PopulationDensity.json");
+        PopulationDensity = await Http.GetFromJsonAsync<PopulationData[]>(NavigationManager.BaseUri + "sample-data/PopulationDensity.json");
     }
 
     public class PopulationData
@@ -257,7 +258,7 @@ else
         public double Value { get; set; }
         public string Name { get; set; }
         public double Population { get; set; }
-        public float Density { get; set; }
+        public double Density { get; set; }
     }
 }
 
@@ -295,18 +296,16 @@ Here, the `PopulationDensity.json` file contains the following data.
 
 ![Blazor Maps with JSON Data Source using WASM App](./images/populatedata/blazor-map-data-binding.webp)
 
-### Fetching data from JSON file using  Blazor Server App
+### Fetching data from JSON file using Blazor Server App
 
 The **Http.GetAsync** method is used in the **OnInitializedAsync** lifecycle method to get the JSON file as a response and read it as a string. Then, the JSON data is deserialized to a list of objects and assigned to the **DataSource** property of the Maps component. Because this executes asynchronously, check whether **PopulationDensity** is available; then render the Maps component or display a loading message.
 
-
 ```cshtml
 
-@inject HttpClient Http;
 @using Syncfusion.Blazor.Maps
-@using System.Net.Http.Json
-@using System.Text.Json;
-@using Newtonsoft.Json;
+@using System.Text.Json
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
 @inject NavigationManager NavigationManager
 
 @if (PopulationDensity == null)
@@ -333,11 +332,11 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        string path = NavigationManager.Uri + "sample-data/PopulationDensity.json";
-        HttpClient httpClient = new HttpClient();
+        string path = NavigationManager.BaseUri + "sample-data/PopulationDensity.json";
         HttpResponseMessage response = await Http.GetAsync(path);
-        result = response.Content.ReadAsStringAsync().Result;
-        PopulationDensity = JsonConvert.DeserializeObject<List<PopulationData>>(result);
+        result = await response.Content.ReadAsStringAsync();
+        PopulationDensity = JsonSerializer.Deserialize<List<PopulationData>>(
+                result, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
     }
 
     public class PopulationData
@@ -346,7 +345,7 @@ else
         public double Value { get; set; }
         public string Name { get; set; }
         public double Population { get; set; }
-        public float Density { get; set; }
+        public double Density { get; set; }
     }
 }
 

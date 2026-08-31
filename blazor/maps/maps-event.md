@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Maps Events Support
  
-This section explains the list of events that will be triggered for appropriate actions in Maps. The events are configured using the [MapsEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html).
+This section lists the events triggered by the Maps component. Events are wired through the [MapsEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html) component placed inside `SfMaps`. Handlers can be synchronous (`void`) or asynchronous (`Task`). Several `*Rendering` event argument classes expose a `Cancel` property; set it to `true` to stop that element from rendering.
 
 ## AnimationCompleted
 
@@ -909,11 +909,12 @@ The [OnPrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsE
 
 ```cshtml
 
+@using Syncfusion.Blazor.Maps
+
 <button @onclick="PrintMap">Print</button>
 
-@using Syncfusion.Blazor.Maps
 <SfMaps @ref="maps" AllowPrint="true">
-    <MapsEvents OnPrint="@GetGEOLocation"></MapsEvents>
+    <MapsEvents OnPrint="@OnPrintEvent"></MapsEvents>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
         </MapsLayer>
@@ -925,11 +926,11 @@ The [OnPrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsE
 
     public async Task PrintMap()
     {
-        // using Maps component reference call 'Print' method
+        // Call the PrintAsync method using the Maps component reference.
         await this.maps.PrintAsync();
     }
 
-    public void GetGEOLocation(Syncfusion.Blazor.Maps.PrintEventArgs args)
+    public void OnPrintEvent(Syncfusion.Blazor.Maps.PrintEventArgs args)
     {
         // Here you can customize your code
     }

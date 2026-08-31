@@ -22,7 +22,7 @@ By default, [ZoomFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 * **Zoom in**: Increasing ZoomFactor enlarges the content around the current center. Example: going from 1 to 2 approximately doubles the scale.
 * **Zoom out**: Decreasing ZoomFactor reduces the scale, showing a larger area.
 
-<b>Enable zooming</b>
+### Enable zooming
 
 Enable zooming by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property of [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) to **true**.
 
@@ -42,7 +42,7 @@ Enable zooming by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syn
 
 ![Blazor Maps with Zooming](./images/UserInteraction/blazor-maps-zooming.webp)
 
-<b>Enable panning</b>
+### Enable panning
 
 Enable panning by setting the [EnablePanning](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_EnablePanning) property of [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) to **true**.
 
@@ -614,12 +614,14 @@ Use the [ShapeSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 @code {
     SfMaps mapsref;
 
-    public void Select() {
-        mapsref.ShapeSelectionAsync(0, "continent", "Asia", true);
+    public async Task Select()
+    {
+        await mapsref.ShapeSelectionAsync(0, "continent", "Asia", true);
     }
 
-    public void Unselect() {
-        mapsref.ShapeSelectionAsync(0, "continent", "Asia", false);
+    public async Task Unselect()
+    {
+        await mapsref.ShapeSelectionAsync(0, "continent", "Asia", false);
     }
 }
 
@@ -975,7 +977,7 @@ Use the following properties to customize tooltips:
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' ShapeDataPath="Name"
                    ShapePropertyPath='new string[] {"name"}' DataSource='PerformanceReport' TValue="Country">
             <MapsLayerTooltipSettings Visible="true" ValuePath="CountryName"
-                                  Format="<b>${CountryName}</b><br>Finalist: <b>${Winner}</b><br>Win: <b>${Finalist}">
+                                  Format="<b>${CountryName}</b><br>Wins: <b>${Winner}</b><br>Finals: <b>${Finalist}</b>">
             </MapsLayerTooltipSettings>
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Finalist">
                 <MapsShapeColorMappings>
@@ -1010,7 +1012,7 @@ Use the following properties to customize tooltips:
         new Country { CountryName = "West Indies", Name = "Cuba", Finalist = "3", Winner = "2" },
         new Country { CountryName = "West Indies", Name = "Jamaica", Finalist = "3", Winner = "2" },
         new Country { CountryName = "West Indies", Name = "Haiti", Finalist = "3", Winner = "2" },
-        new Country { CountryName = "West Indies", Name = "Gayana", Finalist = "3", Winner = "2" },
+        new Country { CountryName = "West Indies", Name = "Guyana", Finalist = "3", Winner = "2" },
         new Country { CountryName = "West Indies", Name = "Suriname", Finalist = "3", Winner = "2" },
         new Country { CountryName = "West Indies", Name = "Trinidad and Tobago", Finalist = "3", Winner = "2" }
     };

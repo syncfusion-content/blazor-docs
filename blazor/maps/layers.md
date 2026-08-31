@@ -13,11 +13,11 @@ The [Maps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.h
 
 ## Multilayer
 
-The multilayer feature supports loading multiple shape files and map providers in a single container, enabling Maps to display more information. The shape layer or map providers are the main layers. Multiple layers can be added as a **SubLayer** over the main layers using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.Type.html) property in [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html).
+The multilayer feature supports loading multiple shape files and map providers in a single container, enabling Maps to display more information. The first shape layer or map provider is the **main layer**; additional layers are added as **sublayers** over it by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to `SubLayer` (from the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.Type.html) enum).
 
 ## Sublayer
 
-Sublayer is a type of shape file layer. It supports loading multiple shape files in a single map view. For example, a sublayer can be added over the main layer to display geographic features such as rivers, valleys, and cities in a country map. Similar to the main layer, elements such as markers, bubbles, color mapping, and legends can be added to the sublayer.
+A sublayer is a type of shape-file layer. It supports loading multiple shape files in a single map view. For example, a sublayer can be added over the main layer to display geographic features such as rivers, valleys, and cities in a country map. Similar to the main layer, elements such as markers, bubbles, color mapping, and legends can be added to the sublayer.
 
 In the following example, the United States map shape is used as shape data from the **usa.json** file, and **texas.json** and **california.json** files are used as sublayers in the United States map.
 
@@ -51,9 +51,9 @@ In the following example, the United States map shape is used as shape data from
 
 ![Blazor Maps with Sublayer](./images/Layers/blazor-maps-sublayer.webp)
 
-## Displaying different layer in the view
+## Displaying a different layer in the view
 
-Multiple shape files and map providers can be loaded simultaneously. The [BaseLayerIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_BaseLayerIndex) property determines which layer is displayed. This property also supports the drill-down feature; when the [BaseLayerIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_BaseLayerIndex) value changes, the corresponding shape is loaded. In this example, two layers are configured for the world map and the United States map. Based on the [BaseLayerIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_BaseLayerIndex) value, the corresponding shape is rendered. If [BaseLayerIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_BaseLayerIndex) is set to **0**, the world map is loaded.
+Multiple shape files and map providers can be loaded simultaneously. The [BaseLayerIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_BaseLayerIndex) property (zero-based) determines which layer is displayed. This property also supports the drill-down feature; when the `BaseLayerIndex` value changes at runtime, the corresponding shape is loaded. In the following example, two layers are configured — the world map (index **0**) and the United States map (index **1**). The sample sets `BaseLayerIndex="1"`, so the United States map is shown; set it to **0** to show the world map.
 
 ```cshtml
 
@@ -69,11 +69,30 @@ Multiple shape files and map providers can be loaded simultaneously. The [BaseLa
 
 ```
 
-![Blazor Maps with Multiple Layer](./images/Layers/blazor-maps-multiple-layer.webp)
+![Blazor Maps with Multiple Layers](./images/Layers/blazor-maps-multiple-layer.webp)
 
 ## Rendering custom shapes
 
-Custom shapes (also known as custom maps) can be rendered in Maps to represent bus seat booking, cricket stadiums, basic home plans/sketches, and similar layouts. To achieve this, create a JSON file in GeoJSON format with proper geometries manually or with an online map vendor. Set the created GeoJSON file to the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) property in the Maps layer, and set [GeometryType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_GeometryType) to **GeometryType.Normal**.
+Custom shapes (also known as custom maps) can be rendered in Maps to represent bus seat booking, cricket stadiums, basic home plans/sketches, and similar layouts. To achieve this, create a JSON file in GeoJSON format with the required geometries manually or with an online map vendor. Set the GeoJSON file to the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) property of the layer, and set the [GeometryType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_GeometryType) property to `Normal` (from the [GeometryType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.GeometryType.html) enum) so the shapes are drawn from raw coordinates rather than projected as geographic data.
+
+```cshtml
+
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/seat.json"}'
+                   GeometryType="GeometryType.Normal" TValue="string">
+            <MapsShapeSettings Fill="#A6A6A6">
+                <MapsShapeBorder Color="black" Width="0.5"></MapsShapeBorder>
+            </MapsShapeSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+
+```
+
+![Blazor Maps with Multiple Layers](./images/Layers/blazor-custom-maps.webp)
 
 Refer to the sample GeoJSON file for bus seat selection: [Seat selection GeoJSON](https://cdn.syncfusion.com/maps/map-data/seat.json).
 
@@ -81,4 +100,6 @@ For a live demonstration, see [Bus seat selection demo](https://blazor.syncfusio
 
 ## See also
 
-* [Display geometry shapes in Bing maps](https://blazor.syncfusion.com/documentation/maps/providers/bing-maps#adding-sublayer)
+* [Add a sublayer over a tile provider](providers/bing-maps#adding-sublayer)
+* [Shapefile support in Blazor Maps](shapefile)
+* [Populate data in Blazor Maps](populate-data)

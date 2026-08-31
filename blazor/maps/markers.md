@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Maps Markers Support
 
-Markers annotate locations on Maps with symbols. Enable markers by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_Visible) property of [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) to **true**.
+Markers annotate locations on Maps with symbols. Add markers by placing [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) elements inside [MapsMarkerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerSettings.html) on a layer, and enable each one by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_Visible) property of [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) to **true**.
 
 ## Adding marker
 
@@ -215,7 +215,7 @@ To render a marker as an image, set the [Shape](https://help.syncfusion.com/cr/b
     }
 
     public List<City> MarkerData = new List<City> {
-        new City { Latitude  = 35.145083, Longitude = -117.960260 },
+        new City { Latitude = 35.145083, Longitude = -117.960260 },
         new City { Latitude = 40.724546, Longitude = -73.850344 },
         new City { Latitude = 41.657782, Longitude = -91.533857 }
     };
@@ -640,7 +640,7 @@ To enable clustering within a layer, set [AllowClustering](https://help.syncfusi
 
 ```
 
-![Blazr Maps Marker with Clustering](./images/Marker/blazor-maps-marker-clustering.webp)
+![Blazor Maps Marker with Clustering](./images/Marker/blazor-maps-marker-clustering.webp)
 
 ### Customization of marker cluster
 

@@ -9,9 +9,11 @@ documentation: ug
 
 # Blazor Maps Customization
 
+The Maps component can be customized at several levels — the overall size, title and subtitle, theme, the container and map area, and the individual shapes. The following sections describe each option.
+
 ## Setting the size for Maps
 
-Set the Maps width and height by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Height) properties. Specify values in percentage or pixels.
+Set the Maps width and height by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Height) properties. Specify values in percentage or pixels. By default, `Width` is **100%** and `Height` is **450px**.
 
 ```cshtml
 
@@ -61,7 +63,7 @@ Configure the title using [MapsTitleSettings](https://help.syncfusion.com/cr/bla
 
 ## Setting theme
 
-The Maps control supports the following themes.
+The Maps component supports the following themes.
 
 * Material
 * Fabric
@@ -128,7 +130,7 @@ The shape map background color is **white** by default. Modify the background co
 
 <SfMaps>
    <MapsAreaSettings Background="#e6e2d3">
-       <MapsBorder Color="green" Width="2"></MapsBorder>
+       <MapsAreaBorder Color="green" Width="2"></MapsAreaBorder>
    </MapsAreaSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
@@ -161,7 +163,7 @@ The following properties and class in [MapsShapeSettings](https://help.syncfusio
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             @* To customize map shape *@
-            <MapsShapeSettings Autofill="true" Palette='new string[] {"#d6cbd3", "#eca1a6", "#bdcebe", "#ada397", "#d5e1df"}' DashArray="1" Opacity=0.9>
+            <MapsShapeSettings Autofill="true" Palette='new string[] {"#d6cbd3", "#eca1a6", "#bdcebe", "#ada397", "#d5e1df"}' DashArray="1" Opacity="0.9">
                 <MapsShapeBorder Color="#FFFFFF" Width="2"></MapsShapeBorder>
             </MapsShapeSettings>
         </MapsLayer>
@@ -172,7 +174,7 @@ The following properties and class in [MapsShapeSettings](https://help.syncfusio
 
 ![Blazor Maps with Custom Shape](./images/Customization/blazor-maps-custom-shape.webp)
 
-## Setting color to the shapes from the data source
+## Setting shape color from the data source
 
 Set a shape color from data by using the [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) property of [MapsShapeSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html). Provide a field name from the layer data source that contains color values.
 
@@ -210,7 +212,7 @@ Set a shape color from data by using the [ColorValuePath](https://help.syncfusio
 
 ## Applying border to individual shapes
 
-Customize the border of each shape by using [BorderColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_BorderColorValuePath) and [BorderWidthValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_BorderWidthValuePath) properties to define color and width from the layer data source. If these path values do not match a data field, the shape border configuration in shape settings is applied.
+Customize the border of each shape by using the [BorderColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_BorderColorValuePath) and [BorderWidthValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_BorderWidthValuePath) properties to bind the border color and width from the layer data source. If a path does not match a data field, the border defined by `MapsShapeBorder` is used instead.
 
 ```cshtml
 
@@ -249,7 +251,7 @@ Customize the border of each shape by using [BorderColorValuePath](https://help.
 
 ## Projection type
 
-The Maps control supports the following projection types:
+The Maps component supports the following projection types:
 
 * Mercator
 * Equirectangular
