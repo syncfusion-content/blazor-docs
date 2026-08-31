@@ -32,7 +32,7 @@ dotnet new install Syncfusion.Blazor.WebApp.Templates
 {% endhighlight %}
 {% endtabs %}
 
-Next, create a new project with one of the following interactivity modes.
+Next, create a new project with following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Server" %}
@@ -40,20 +40,19 @@ Next, create a new project with one of the following interactivity modes.
 dotnet new syncfusionblazorwebapp --name MyApp --interactivity Server --all-interactive Global
 
 {% endhighlight %}
-
 {% highlight razor tabtitle="WebAssembly" %}
 
-dotnet new syncfusionblazorwebapp --name MyApp --interactivity WebAssembly --all-interactive PerPage/component
+dotnet new syncfusionblazorwebapp --name MyApp --interactivity WebAssembly --all-interactive Global
 
 {% endhighlight %}
-
 {% highlight razor tabtitle="Auto" %}
 
-dotnet new syncfusionblazorwebapp --name MyApp --interactivity Auto --all-interactive PerPage/component
+dotnet new syncfusionblazorwebapp --name MyApp --interactivity Auto --all-interactive Global
 
 {% endhighlight %}
-
 {% endtabs %}
+
+> If you prefer per-page/component interactivity instead of global interactivity, replace `--all-interactive Global` with `--all-interactive PerPage/component` (or omit the `--all-interactive` flag).
 
 After creating the project, navigate to the main project folder (for example, `MyApp`) and run the following command.
 
@@ -64,14 +63,12 @@ cd MyApp
 dotnet run
 
 {% endhighlight %}
-
 {% highlight razor tabtitle="WebAssembly" %}
 
 cd MyApp
 dotnet run
 
 {% endhighlight %}
-
 {% highlight razor tabtitle="Auto" %}
 
 cd MyApp

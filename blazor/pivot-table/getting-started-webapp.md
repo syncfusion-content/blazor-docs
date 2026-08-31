@@ -55,6 +55,7 @@ dotnet new syncfusionblazorwebapp --name MyApp --interactivity Auto --all-intera
 
 After creating the project, navigate to the main project folder (for example, `MyApp`) and run the following command.
 
+{% tabs %}
 {% highlight razor tabtitle="Server" %}
 
 cd MyApp
@@ -74,6 +75,7 @@ cd MyApp
 dotnet run
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Manually creating a new Blazor Web App
 
