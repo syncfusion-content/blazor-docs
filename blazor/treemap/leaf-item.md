@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor TreeMap Leaf Item
 
-A leaf item defines a visualized data element and does not contain child nodes but contains parent node if the levels are specified in the TreeMap.
+A leaf item defines a visualized data element and does not contain child nodes but contains a parent node if the [levels](levels.md) are specified in the TreeMap.
 
 ## Customization
 
@@ -18,12 +18,12 @@ The following properties are available to customize the leaf item in the [TreeMa
 * [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) - Specifies the fill color for the leaf items.
 * [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) - Specifies the opacity of leaf item fill color.
 * [ShowLabels](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_ShowLabels) - Specifies the visibility of the leaf item label.
-* [Padding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) - Specifies the padding of leaf items
+* [Padding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) - Specifies the padding of leaf items.
 * [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_LabelTemplate) - Specifies the template of leaf item label and the position of the template to be customized using the [TemplatePosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_TemplatePosition) property.
 * [TreeMapLeafLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafLabelStyle.html) - To customize the label color, opacity, font size, font family, font weight and font style.
 * [TreeMapLeafBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafBorder.html) - Specifies leaf item border color and width.
 
-In the following example, the name of the property **CountryName** from data source is mapped to [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) property, so corresponding country name will be displayed in the label.
+In the following example, the name of the property **CountryName** from the data source is mapped to [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) property, so corresponding country name will be displayed in the label.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -35,14 +35,14 @@ In the following example, the name of the property **CountryName** from data sou
     </TreeMapLeafItemSettings>
 </SfTreeMap>
 
-@code{
+@code {
     public class GDPReport
     {
         public string CountryName { get; set; }
         public double GDP { get; set; }
         public double Percentage { get; set; }
         public int Rank { get; set; }
-    };
+    }
     public List<GDPReport> GrowthReports = new List<GDPReport> {
             new GDPReport {CountryName="United States", GDP=17946, Percentage=11.08, Rank=1},
             new GDPReport {CountryName="China", GDP=10866, Percentage= 28.42, Rank=2},
@@ -62,7 +62,17 @@ In the following example, the name of the property **CountryName** from data sou
 
 ## Label position and format
 
-Positioning the leaf item label using the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_LabelPosition) property and the text format can be customized by specifying data source properties name in the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_LabelFormat) property.
+Position the leaf item label using the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_LabelPosition) property and the text format can be customized by specifying data source properties name in the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_LabelFormat) property. The supported [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LabelPosition.html) values are listed below.
+
+* [BottomCenter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LabelPosition.html#Syncfusion_Blazor_TreeMap_LabelPosition_BottomCenter)
+* [BottomLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LabelPosition.html#Syncfusion_Blazor_TreeMap_LabelPosition_BottomLeft)
+* [BottomRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LabelPosition.html#Syncfusion_Blazor_TreeMap_LabelPosition_BottomRight)
+* [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LabelPosition.html#Syncfusion_Blazor_TreeMap_LabelPosition_Center)
+* [CenterLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LabelPosition.html#Syncfusion_Blazor_TreeMap_LabelPosition_CenterLeft)
+* [CenterRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LabelPosition.html#Syncfusion_Blazor_TreeMap_LabelPosition_CenterRight)
+* [TopCenter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LabelPosition.html#Syncfusion_Blazor_TreeMap_LabelPosition_TopCenter)
+* [TopLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LabelPosition.html#Syncfusion_Blazor_TreeMap_LabelPosition_TopLeft)
+* [TopRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LabelPosition.html#Syncfusion_Blazor_TreeMap_LabelPosition_TopRight)
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -75,7 +85,7 @@ Positioning the leaf item label using the [LabelPosition](https://help.syncfusio
 </SfTreeMap>
 ```
 
-N> Refer to the [code block](#customization) to know about the property value of the **GrowthReports**.
+N> Refer to the [code block](#customization) to know about the property value of the **GrowthReports**. For more label options such as intersect action, see [labels](labels.md).
 
 ![Changing Label Position and Format in Blazor TreeMap](images/LeafItem/blazor-treemap-change-label-position-format.webp)
 
@@ -95,3 +105,11 @@ The [Gap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMa
 N> Refer to the [code block](#customization) to know about the property value of the **GrowthReports**.
 
 ![Gap in Blazor TreeMap Items](images/LeafItem/blazor-treemap-gap-between-item.webp)
+
+## See also
+
+* [Labels](labels.md)
+* [Color mapping](color-mapping.md)
+* [Levels](levels.md)
+* [Tooltip](tooltip.md)
+* [Legend](legend.md)

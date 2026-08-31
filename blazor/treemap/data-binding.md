@@ -186,7 +186,7 @@ The following code example shows, how to bind a hierarchical collection as data 
 
 ### Fetching data from the collection
 
-The following code example shows, how to bind a `IEnumerable` object to the TreeMap component as a data source.
+The following code example shows, how to bind an `IEnumerable` object to the TreeMap component as a data source.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -227,7 +227,7 @@ The following code example shows, how to bind a `IEnumerable` object to the Tree
 
 Read the JSON file data and it can be converted to the C# object, and assign it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource) property of the TreeMap component.
 
-The `Http.GetJsonAsync` method is used in the  `OnInitializedAsync` life cycle method to load the JSON file data.
+The `Http.GetFromJsonAsync` method is used in the  `OnInitializedAsync` life cycle method to load the JSON file data.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -263,7 +263,7 @@ else
 
 ![Loading Blazor TreeMap Data from JSON File](images/Databinding/blazor-treemap-flat-data.webp)
 
-N> Refer the data values for [product_growth](https://www.syncfusion.com/downloads/support/directtrac/general/ze/product-growth-360857189) here. 
+N> Refer to the data values for [product_growth](https://www.syncfusion.com/downloads/support/directtrac/general/ze/product-growth-360857189) here. 
 
 ## Remote data
 
@@ -311,7 +311,7 @@ N> If [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Da
 
 The [OData V4](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) is an improved version of [OData](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) protocols, and the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) can be used to retrieve and consume [OData V4](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) services.
 
-N> For more details on OData V4 services, refer to the [OData documentation](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) to bind [OData V4](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) service using the [OData V4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor).
+N> For more details on OData V4 services, refer to the [OData V4 Adaptor documentation](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) to bind OData V4 service.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -381,7 +381,7 @@ Use [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#we
 
 ## Entity Framework
 
-Entity Framework acts as a modern object-database mapped for .NET. This section explains, how to consume data from the **Microsoft SQL Server** database and bind it to the TreeMap component.
+Entity Framework acts as a modern object-database mapper for .NET. This section explains, how to consume data from the **Microsoft SQL Server** database and bind it to the TreeMap component.
 
 ### Create DBContext class
 
@@ -405,7 +405,7 @@ The first step is to create a DBContext class called **OrderContext** for establ
             {
                 if (!optionsBuilder.IsConfigured)
                 {
-                    // Configures the context to connect to a Microsoft SQL Serve database
+                    // Configures the context to connect to a Microsoft SQL Server database
                     optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='D:\blazor\EFTreeMap\App_Data\NORTHWND.MDF';Integrated Security=True;Connect Timeout=30");
                 }
             }

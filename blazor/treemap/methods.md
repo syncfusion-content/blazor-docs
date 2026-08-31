@@ -13,7 +13,7 @@ Create an object for the TreeMap component using `@ref` property and call the de
 
 ## Print
 
-To print the rendered TreeMap component by setting the [AllowPrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPrint) property to **true** and using the `PrintAsync` method.
+To print the rendered TreeMap component, set the [AllowPrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPrint) property to **true** and call the `PrintAsync` method.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap;
@@ -45,18 +45,18 @@ To print the rendered TreeMap component by setting the [AllowPrint](https://help
 
 ## Export
 
-Using `ExportAsync` method the current TreeMap component will be exported to different file formats such as [PNG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_PNG), [PDF](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_PDF), [JPEG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_JPEG) and [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_SVG).
+The [`ExportAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_ExportAsync) method exports the current TreeMap component to different file formats such as [PNG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_PNG), [PDF](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_PDF), [JPEG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_JPEG), and [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_SVG).
 
-The [AllowImageExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowImageExport) and [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPdfExport) property represents to allow the file to be downloaded in an image and pdf type export.
+The [AllowImageExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowImageExport) and [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPdfExport) properties allow the TreeMap to be exported in image and PDF formats, respectively.
 
 |   Arguments      |   Description                                       |
 |----------------------| ----------------------------------------------------|
-|     type             |    Defines the export type such as **PNG**, **PDF**, **JPEG** and **SVG**.   |
+|     type             |    Defines the export type such as **PNG**, **PDF**, **JPEG**, and **SVG**.   |
 |     fileName        |    Defines the file name.                             |
 |     orientation      |    Defines the orientation such as **horizontal** and **vertical**.     |
-| allowDownload | Defines the export file to be downloaded or not. |
+| allowDownload | Defines whether the export file should be downloaded. |
 
-N> Export method returns the **Base64** string, if **allowDownload** argument is set to **false**. To download the file, paste the returned **Base64** string in the browser URL bar and press the enter button.
+N> The `ExportAsync` method returns a **Base64** string when the **allowDownload** argument is set to **false**. The returned string can be captured in a variable and processed further as needed.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap;
@@ -88,7 +88,7 @@ N> Export method returns the **Base64** string, if **allowDownload** argument is
 
 ## Refresh
 
-The `RefreshAsync` method helps to refresh the TreeMap component.
+The `RefreshAsync` method helps to refresh the TreeMap component. Use this method when the underlying data or configuration changes and the TreeMap needs to be re-rendered.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap;
@@ -122,8 +122,8 @@ The `SelectItemAsync` method can be used to select or unselect the TreeMap item 
 
 |   Arguments      |   Description                                       |
 |----------------------| ----------------------------------------------------|
-| levelOrder | Defines the level order name for the treemap item. |
-| isSelected | Defines whether it has to select or unselect. |
+| treeMapItem | Defines the level order names of the TreeMap item(s) to be selected or unselected. |
+| isSelected | Defines whether the item has to be selected or unselected. |
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap;
@@ -154,3 +154,8 @@ The `SelectItemAsync` method can be used to select or unselect the TreeMap item 
     };
 }
 ```
+
+## See also
+
+* [Print and Export](./print-and-export.md)
+* [Selection and Highlight](./selection-and-highlight.md)

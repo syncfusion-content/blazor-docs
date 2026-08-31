@@ -9,16 +9,16 @@ documentation: ug
 
 # Blazor TreeMap Legend
 
-Legend is used to provide valuable information for interpreting what the TreeMap displays. The legends can be represented in various colors, shapes or other identifiers based on the data.
+A legend provides valuable information for interpreting what the TreeMap displays. The legends can be represented in various colors, shapes or other identifiers based on the data.
 
-The below video demonstrates the customization of legend in Blazor TreeMap component.
+The following video demonstrates the customization of legend in the Blazor TreeMap component.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=2ilArsWz9u0"%}
 
 ## Types of legend
 
-TreeMap component supports two different types of legend mode as following.
+The TreeMap component supports the following two legend modes.
 
 * [Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LegendMode.html#Syncfusion_Blazor_TreeMap_LegendMode_Default)
 * [Interactive](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LegendMode.html#Syncfusion_Blazor_TreeMap_LegendMode_Interactive)
@@ -64,7 +64,7 @@ In the default mode, the legends have symbols with legend labels that are used t
 
 ### Interactive legend
 
-The legends can be made interactive with an arrow mark that indicates exact range color in the legend when the mouse hovers on the TreeMap item. Enable this option by setting the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLegendSettings_Mode) property in the [TreeMapLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html) to [Interactive](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LegendMode.html#Syncfusion_Blazor_TreeMap_LegendMode_Interactive).
+The legends can be made interactive with an arrow mark that indicates the exact range color in the legend when the mouse hovers on the TreeMap item. Enable this option by setting the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLegendSettings_Mode) property in the [TreeMapLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html) to [Interactive](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LegendMode.html#Syncfusion_Blazor_TreeMap_LegendMode_Interactive).
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -279,7 +279,7 @@ Based on the mapping ranges in the data source, get the excluded ranges from the
 
 ## Hide desired legend items
 
-To enable or disable the desired legend item for each color mapping, set the [ShowLegend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html) property to **true** in the [TreeMapLeafColorMappings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_ColorMapping).
+To enable or disable the desired legend item for each color mapping, set the [ShowLegend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafColorMapping.html#Syncfusion_Blazor_TreeMap_TreeMapLeafColorMapping_ShowLegend) property in the [TreeMapLeafColorMappings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_ColorMapping). Set it to **true** to show the legend item, or **false** to hide it.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -330,7 +330,7 @@ To enable or disable the legend visibility for each item through the data source
     </TreeMapLegendSettings>
 </SfTreeMap>
 
-@code{
+@code {
     public class Fruit
     {
         public string Name { get; set; }
@@ -366,7 +366,7 @@ To show the legend item text from the data source, bind the property name from t
     </TreeMapLegendSettings>
 </SfTreeMap>
 
-@code{
+@code {
     public class Fruit
     {
         public string Name { get; set; }
@@ -401,7 +401,7 @@ To enable or disable the duplicate legend items, set the [RemoveDuplicateLegend]
     </TreeMapLegendSettings>
 </SfTreeMap>
 
-@code{
+@code {
     public class Fruit
     {
         public string Name { get; set; }
@@ -437,7 +437,7 @@ Use a responsive legend that switches positions between the right and the bottom
     </TreeMapLegendSettings>
 </SfTreeMap>
 
-@code{
+@code {
     public class Fruit
     {
         public string Name { get; set; }
@@ -491,3 +491,11 @@ Set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tree
 ```
 
 ![Right to Left in Blazor TreeMap Legend](images/Internationalization/blazor-treemap-legend-right-to-left.webp)
+
+## See also
+
+* [Color mapping](color-mapping.md)
+* [Data binding](data-binding.md)
+* [Selection and highlight](selection-and-highlight.md)
+* [Drill-down](drill-down.md)
+* [Internationalization](internationalization.md)

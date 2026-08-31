@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor TreeMap Drill-down
 
-The [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component supports drill-down to expose the hierarchy, achieved by clicking a node. If an item is clicked in the TreeMap, it will be moved to the next level or sub level hierarchy and returned back to the previous level by clicking the node.
+The [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component supports drill-down to expose the hierarchy by clicking a node. When an item is clicked in the TreeMap, it navigates to the next level of the hierarchy, and clicking the parent header returns to the previous level.
 
 ## Perform drill-down
 
@@ -35,7 +35,7 @@ The TreeMap items can be drilled by setting the [EnableDrillDown](https://help.s
     </TreeMapLevels>
 </SfTreeMap>
 
-@code{
+@code {
     public class Employee
     {
         public string Country { get; set; }
@@ -67,7 +67,7 @@ All the child items are rendered during the normal drill-down process, and visib
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
 
-<SfTreeMap WeightValuePath="EmployeeCount" TValue="Employee" DataSource="Employees" EnableDrillDown=true DrillDownView ="true" Palette='new string[] {"#f44336", "#29b6f6", "#ab47bc", "#ffc107", "#5c6bc0", "#009688"}'>
+<SfTreeMap WeightValuePath="EmployeeCount" TValue="Employee" DataSource="Employees" EnableDrillDown=true DrillDownView="true" Palette='new string[] {"#f44336", "#29b6f6", "#ab47bc", "#ffc107", "#5c6bc0", "#009688"}'>
     <TreeMapLevels>
         <TreeMapLevel GroupPath="Country">
             <TreeMapLevelBorder Color="black" Width="0.5">
@@ -91,7 +91,7 @@ N> Refer to the [code block](#perform-drill-down) to know about the property val
 
 ## Breadcrumb support
 
-TreeMap items are drilled, up to any level of parent using breadcrumb navigation and the level from root parent to current level is displayed at the top of item layout. It can be enabled by using the [EnableBreadcrumb](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_EnableBreadcrumb) property to **true** and customize the breadcrumb connector using the [BreadcrumbConnector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_BreadcrumbConnector) property. By default, **-**(hyphen) is the connector.
+TreeMap items are drilled, up to any level of parent using breadcrumb navigation and the level from root parent to current level is displayed at the top of item layout. It can be enabled by setting the [EnableBreadcrumb](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_EnableBreadcrumb) property to **true** and the breadcrumb connector can be customized using the [BreadcrumbConnector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_BreadcrumbConnector) property. By default, **-** (hyphen) is the connector.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -114,7 +114,7 @@ TreeMap items are drilled, up to any level of parent using breadcrumb navigation
 </SfTreeMap>
 ```
 
-N> Refer to the [code block](#perform-drill-down) to know about the property value of the **Employees**.
+N> Refer to the [code block](#perform-drill-down) to know about the property value of **Employees**.
 
 ![Blazor TreeMap with Breadcrumb](images/drilldown/blazor-treemap-breadcrumb.webp)
 
@@ -144,6 +144,12 @@ TreeMap items can be drilled on initial rendering and it can be enabled by speci
 </SfTreeMap>
 ```
 
-N> Refer to the [code block](#perform-drill-down) to know about the property value of **Employees**.
+N> Refer to the [code block](#perform-drill-down) to know about the property value of the **Employees**.
 
 ![Blazor TreeMap with Initial Drill-down](images/drilldown/blazor-treemap-initial-drill-down.webp)
+
+## See also
+
+* [Events](events.md#ondrillstart)
+* [Levels](levels.md)
+* [Data binding](data-binding.md)
