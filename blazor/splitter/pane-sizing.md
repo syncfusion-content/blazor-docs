@@ -9,11 +9,11 @@ documentation: ug
 
 # Pane Sizing in Blazor Splitter
 
-The Splitter allows you to provide pane sizes in either `Pixel` or `Percentage` formats.
+The Blazor Splitter allows you to provide pane sizes in either `Pixel` or `Percentage` formats.
 
 ## Auto size panes
 
-The splitter's panes are adjusted automatically during resizing if the size is not specified externally to panes, because the panes are designed based on flex layout by default. When you add/remove or show/hide the panes, the panes are auto aligned within its container.
+The Blazor Splitter's panes are adjusted automatically during resizing if the size is not specified externally to panes, because the panes are designed based on flex layout by default. When you add/remove or show/hide the panes, the panes are auto aligned within its container.
 
 ```cshtml
 

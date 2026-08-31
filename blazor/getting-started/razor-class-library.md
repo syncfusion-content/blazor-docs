@@ -270,4 +270,4 @@ dotnet run
 
 {% endtabcontents %}
 
-    ![RCL output](images/blazor-grid-with-rcl.webp)
+![RCL output](images/blazor-grid-with-rcl.webp)

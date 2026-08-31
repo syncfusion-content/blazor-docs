@@ -11,9 +11,9 @@ documentation: ug
 
 The following sections explain how to bind native HTML events to the Blazor TimePicker component and how to pass event data to the handler.
 
-## Bind native events to TimePicker
+## Bind native events to Blazor TimePicker
 
-Any native event can be bound to the TimePicker by using an `on<event>` attribute on the component. The attribute's value is treated as an event handler.
+Any native event can be bound to the Blazor TimePicker by using an `on<event>` attribute on the component. The attribute's value is treated as an event handler.
 
 In the following example, the `KeyPressed` method is invoked every time a key is pressed inside the input.
 

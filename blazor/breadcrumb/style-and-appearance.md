@@ -9,25 +9,25 @@ documentation: ug
 
 # Style and Appearance in Blazor Breadcrumb
 
-To modify the Breadcrumb appearance, override the default CSS classes of the component. The table below lists the available CSS classes and the section of the Breadcrumb each one targets. You can also create a custom theme for the component using the [Theme Studio](https://blazor.syncfusion.com/themestudio/).
+To modify the Blazor Breadcrumb appearance, override the default CSS classes of the component. The table below lists the available CSS classes and the section of the Blazor Breadcrumb each one targets. You can also create a custom theme for the component using the [Theme Studio](https://blazor.syncfusion.com/themestudio/).
 
 ## CSS classes
 
 | CSS Class | Targets | Purpose |
 | --- | --- | --- |
-| `.e-breadcrumb` | Root container | Customizes the background of the entire Breadcrumb. |
-| `.e-breadcrumb .e-breadcrumb-item` | Each item | Customizes the background of a Breadcrumb item. |
-| `.e-breadcrumb .e-breadcrumb-text` | Item label | Customizes the color of a Breadcrumb item's text. |
-| `.e-breadcrumb .e-breadcrumb-link` | Item anchor | Customizes the color and text decoration of a Breadcrumb item's link. |
-| `.e-breadcrumb .e-breadcrumb-icon` | Item icon | Customizes the color of a Breadcrumb item's icon. |
-| `.e-breadcrumb .e-breadcrumb-separator` | Item separator | Customizes the color and style of the Breadcrumb separator. |
-| `.e-breadcrumb .e-breadcrumb-item.e-disabled` | Disabled item | Customizes the appearance of a disabled Breadcrumb item. |
+| `.e-breadcrumb` | Root container | Customizes the background of the entire Blazor Breadcrumb. |
+| `.e-breadcrumb .e-breadcrumb-item` | Each item | Customizes the background of a Blazor Breadcrumb item. |
+| `.e-breadcrumb .e-breadcrumb-text` | Item label | Customizes the color of a Blazor Breadcrumb item's text. |
+| `.e-breadcrumb .e-breadcrumb-link` | Item anchor | Customizes the color and text decoration of a Blazor Breadcrumb item's link. |
+| `.e-breadcrumb .e-breadcrumb-icon` | Item icon | Customizes the color of a Blazor Breadcrumb item's icon. |
+| `.e-breadcrumb .e-breadcrumb-separator` | Item separator | Customizes the color and style of the Blazor Breadcrumb separator. |
+| `.e-breadcrumb .e-breadcrumb-item.e-disabled` | Disabled item | Customizes the appearance of a disabled Blazor Breadcrumb item. |
 
-N> To scope a custom style to a single Breadcrumb instance, apply a custom class (for example, `CssClass="e-custom"`) to the component and prefix each selector with that class: `.e-custom.e-breadcrumb .e-breadcrumb-text { ... }`.
+N> To scope a custom style to a single Blazor Breadcrumb instance, apply a custom class (for example, `CssClass="e-custom"`) to the component and prefix each selector with that class: `.e-custom.e-breadcrumb .e-breadcrumb-text { ... }`.
 
 ## Customizing the appearance
 
-Use the following CSS to customize the background, text color, icon color, and separator color of the Breadcrumb. Place the `<style>` block in the same `.razor` file (or in a global stylesheet under `wwwroot/css/`) so the styles are applied when the component renders.
+Use the following CSS to customize the background, text color, icon color, and separator color of the Blazor Breadcrumb. Place the `<style>` block in the same `.razor` file (or in a global stylesheet under `wwwroot/css/`) so the styles are applied when the component renders.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

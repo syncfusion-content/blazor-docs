@@ -9,13 +9,13 @@ documentation: ug
 
 # Multiline in Blazor TextBox
 
-This feature enables the TextBox to accept multiple lines of text for scenarios such as addresses, descriptions, and comments. When Multiline is enabled, the component renders an HTML textarea element under the hood and supports vertical resizing by default.
+This feature enables the Blazor TextBox to accept multiple lines of text for scenarios such as addresses, descriptions, and comments. When Multiline is enabled, the component renders an HTML textarea element under the hood and supports vertical resizing by default.
 
-## Create multiline textbox
+## Create multiline Blazor TextBox
 
-The default TextBox can be converted into a multiline TextBox by setting the [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Multiline) property to true or by passing an HTML5 textarea element to the TextBox.
+The default Blazor TextBox can be converted into a multiline Blazor TextBox by setting the [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Multiline) property to true or by passing an HTML5 textarea element to the Blazor TextBox.
 
-N> The multiline TextBox allows resizing in the vertical direction only by default.
+N> The multiline Blazor TextBox allows resizing in the vertical direction only by default.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -35,7 +35,7 @@ N> The multiline TextBox allows resizing in the vertical direction only by defau
 
 ## Implementing floating label
 
-Floating label behavior can be applied to a multiline TextBox by setting [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_FloatLabelType) to `Auto`. In this mode, the Placeholder text acts as the floating label for the multiline TextBox. The placeholder can be specified using the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Placeholder) property or the `Placeholder` attribute. Use descriptive placeholder text or an associated `<label>` element to improve accessibility.
+Floating label behavior can be applied to a multiline Blazor TextBox by setting [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_FloatLabelType) to `Auto`. In this mode, the Placeholder text acts as the floating label for the multiline Blazor TextBox. The placeholder can be specified using the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Placeholder) property or the `Placeholder` attribute. Use descriptive placeholder text or an associated `<label>` element to improve accessibility.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -67,7 +67,7 @@ Floating label behavior can be applied to a multiline TextBox by setting [FloatL
 
 ## Disable resizing
 
-By default, the multiline TextBox is resizable vertically. Resizing can be disabled by applying the following CSS styles (using the CSS resize property set to none).
+By default, the multiline Blazor TextBox is resizable vertically. Resizing can be disabled by applying the following CSS styles (using the CSS resize property set to none).
 
 ```CSS
 textarea.e-input,

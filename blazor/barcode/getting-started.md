@@ -154,9 +154,7 @@ Include the required [script references](https://blazor.syncfusion.com/documenta
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
-<body>
-    <script src="_content/Syncfusion.Blazor.BarcodeGenerator/scripts/sf-barcode.min.js" type="text/javascript"></script>
-</body>
+<script src="_content/Syncfusion.Blazor.BarcodeGenerator/scripts/sf-barcode.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}

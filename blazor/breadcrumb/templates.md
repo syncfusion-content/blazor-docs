@@ -18,11 +18,11 @@ The available template options in the Blazor Breadcrumb are:
 
 ## Template context
 
-The templates used by Breadcrumb are of type `RenderFragment` and they will be passed with parameters. You can access the parameters passed to the templates using implicit parameter named `context`. You can also change this implicit parameter name using `Context` attribute.
+The templates used by Blazor Breadcrumb are of type `RenderFragment` and they will be passed with parameters. You can access the parameters passed to the templates using implicit parameter named `context`. You can also change this implicit parameter name using `Context` attribute.
 
 ## Item template
 
-In the following example, shopping cart details are used as Breadcrumb items and each item is rendered as a `SfChip` using the `ItemTemplate` tag directive. Access the current item through the `context` parameter.
+In the following example, shopping cart details are used as Blazor Breadcrumb items and each item is rendered as a `SfChip` using the `ItemTemplate` tag directive. Access the current item through the `context` parameter.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -77,7 +77,7 @@ In the following example, the separators are customized with an icon using the `
 
 ## Customize a specific item
 
-Customize a single Breadcrumb item by providing custom content as the `BreadcrumbItem` child content. The default `Text` rendering is replaced by your custom content. In the following example, a `<span>` element with a label and link is rendered only on the last item.
+Customize a single Blazor Breadcrumb item by providing custom content as the `BreadcrumbItem` child content. The default `Text` rendering is replaced by your custom content. In the following example, a `<span>` element with a label and link is rendered only on the last item.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

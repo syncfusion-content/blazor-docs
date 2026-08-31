@@ -15,9 +15,9 @@ The [Blazor DatePicker](https://www.syncfusion.com/blazor-components/blazor-date
 
 ## Right-To-Left
 
-The DatePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew. Use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerModel.html#Syncfusion_Blazor_Calendars_DatePickerModel_EnableRtl) property to set the RTL direction. The component renders based on the system culture.
+The Blazor DatePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew. Use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerModel.html#Syncfusion_Blazor_Calendars_DatePickerModel_EnableRtl) property to set the RTL direction. The component renders based on the system culture.
 
-The following code example initializes the DatePicker component in RTL mode.
+The following code example initializes the Blazor DatePicker component in RTL mode.
 
 ```cshtml
 @using Syncfusion.Blazor
