@@ -13,7 +13,7 @@ Markers can be added in the Maps component using the [MapsMarker](https://help.s
 
 <b>Step 1</b>
 
-Initialize the Maps component with marker settings. A marker is added with the specified latitude and longitude of New York using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_DataSource) property. The shape of the marker can be customized using the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_Shape) property with the [MarkerType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MarkerType.html) enum, and the border color and width can be changed using the [MapsMarkerBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerBorder.html).
+Initialize the Maps component with marker settings. A marker is added with the specified latitude and longitude of New York using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_DataSource) property. The shape of the marker can be customized using the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_Shape) property with the [MarkerType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MarkerType.html) enum (when `Syncfusion.Blazor.Maps` is imported, the short form `MarkerType.Circle` can be used). The marker size and color are set using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_Width) and [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_Fill) properties, and the border color and width can be changed using the [MapsMarkerBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerBorder.html).
 
 ```cshtml
 
@@ -53,7 +53,7 @@ Initialize the Maps component with marker settings. A marker is added with the s
 
 <b>Step 2</b>
 
-Customize the above option for multiple markers as shown in the following example.
+Add multiple marker groups with different shapes as shown in the following example. The second group uses the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_Height) property together with [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_Width) to render a rectangle marker.
 
 ```cshtml
 
@@ -89,11 +89,11 @@ Customize the above option for multiple markers as shown in the following exampl
         public string Name { get; set; }
     }
 
-    public List<City> HighestPopulation = new List<City> {
+    private List<City> HighestPopulation = new List<City> {
         new City { Latitude = 40.7424509, Longitude = -74.0081468, Name = "New York" }
     };
 
-    public List<City> LowestPopulation = new List<City> {
+    private List<City> LowestPopulation = new List<City> {
         new City { Latitude = 33.5302186, Longitude = -117.7418381, Name = "Laguna Niguel" }
     };
 }
@@ -134,7 +134,7 @@ A tooltip displays additional information about a marker on mouseover or touch e
         public string Name { get; set; }
     }
 
-    public List<City> HighestPopulation = new List<City> {
+    private List<City> HighestPopulation = new List<City> {
         new City { Latitude = 40.7424509, Longitude = -74.0081468, Name = "New York" }
     };
 }

@@ -9,11 +9,13 @@ documentation: ug
 
 # Blazor Maps Bing Maps Provider
 
-Bing Maps is an online map provider from Microsoft that offers external geospatial imagery services for deep-zoom satellite views supported by the Blazor Maps component. It enables visualization of satellite, aerial, and street maps without external shapefiles. Similar to OSM, it supplies map tile images based on requests and combines them to display the required map area.
+Bing Maps is an online map provider from Microsoft. It enables visualization of satellite, aerial, and street maps without external shapefiles. Similar to OSM, it supplies map tile images on request and combines them to display the required map area.
+
+N> Bing Maps for Enterprise is being retired by Microsoft. New Bing Maps keys are no longer issued and the service is scheduled for end of life; use the [Azure Maps provider](azure-maps) for new applications.
 
 ## Adding Bing Maps
 
-Bing Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) with the URL generated from the [GetBingUrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_GetBingUrlTemplate_System_String_) method of [SfMaps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html). The required Bing Maps URL format differs from other providers; therefore, the built-in `GetBingUrlTemplate` method returns a URL in a generic format. A subscription key is required for Bing Maps. Follow the steps in the Bing Maps key creation page to generate an API key, then append it to the Bing Maps URL before passing it to the `GetBingUrlTemplate` method. The URL returned by this method must be assigned to the `UrlTemplate` property.
+Bing Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) with the URL generated from the [GetBingUrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_GetBingUrlTemplate_System_String_) method of [SfMaps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html). The required Bing Maps URL format differs from other providers; therefore, the built-in `GetBingUrlTemplate` method returns a URL in a generic format. A subscription key is required for Bing Maps. Follow the steps in [Getting a Bing Maps key](https://learn.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key) to generate an API key, then append it to the Bing Maps URL before passing it to the `GetBingUrlTemplate` method. The URL returned by this method must be assigned to the `UrlTemplate` property.
 
 ```cshtml
 
@@ -42,16 +44,25 @@ N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing 
 
 ## Types of Bing Maps
 
-Bing Maps provides multiple map types that can be displayed in the Maps component.
+Bing Maps provides multiple imagery types that can be displayed in the Maps component.
 
-* **Aerial** - Displays satellite imagery highlighting roads and major landmarks for easy identification.
-* **AerialWithLabelsOnDemand** - Displays aerial maps with labels for continents, countries, oceans, and more.
-* **Road** - Displays the default view of roads, buildings, and geography.
-* **CanvasDark** - Displays a dark-themed version of the road map.
-* **CanvasLight** - Displays a light-themed version of the road map.
-* **CanvasGray** - Displays a grayscale version of the road map.
+**Aerial** - Displays satellite imagery that highlights roads and major landmarks for easy identification.
+**AerialWithLabelsOnDemand** - Displays aerial imagery with labels for continents, countries, oceans, roads, and other map features.
+**RoadOnDemand** - Displays the standard road map view, including roads, buildings, and geographic features.
+**CanvasDark** - Displays a dark-themed road map.
+**CanvasLight** - Displays a light-themed road map.
+**CanvasGray** - Displays a grayscale road map.
 
-These types can be rendered by specifying their URLs in the `UrlTemplate` property of the `MapsLayer` class. For available types and corresponding URLs, refer to the official Bing Maps documentation.
+To render a specific Bing Maps imagery type, pass the corresponding imagery set name in the metadata URL used by the [GetBingUrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_GetBingUrlTemplate_System_String_) method. The returned URL template can then be assigned to the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property of the [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) class.
+
+The following imagery sets are commonly used:
+
+**RoadOnDemand**
+**Aerial**
+**AerialWithLabelsOnDemand**
+**CanvasDark**
+**CanvasLight**
+**CanvasGray**
 
 ```cshtml
 
@@ -114,7 +125,7 @@ N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing 
 
 ![Blazor Bing Maps with Zooming](../images/MapProviders/blazor-bing-maps-zooming.webp)
 
-## Adding markers and navigation line
+## Adding markers and navigation lines
 
 Markers can be added to Bing Maps layers by supplying a [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_DataSource) of latitude and longitude values to [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html). Navigation lines can be drawn on top of a Bing Maps layer to highlight a path between locations by setting the [Latitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Latitude) and [Longitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Longitude) properties of [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
 
@@ -228,7 +239,7 @@ A legend can be added to tile maps by setting the [Visible](https://help.syncfus
         <MapsLayer UrlTemplate="@UrlTemplate" TValue="string">
         <MapsMarkerSettings>
                 <MapsMarker Visible="true" TValue="PopulationCityDetails" DataSource="@PopulatedCities" Shape="MarkerType.Circle" Fill="#FFFFFF" ColorValuePath="Color" LegendText="Name" Height="15" Width="15">
-                    <MapsMarkerTooltipSettings Visible="true" ValuePath="Population" Format="City Name: ${Name}</br>Population: ${Population} million">
+                    <MapsMarkerTooltipSettings Visible="true" ValuePath="Population" Format="City Name: ${Name}<br/>Population: ${Population} million">
                         <MapsMarkerTooltipTextStyle FontFamily="inherit"></MapsMarkerTooltipTextStyle>
                     </MapsMarkerTooltipSettings>
                 </MapsMarker>

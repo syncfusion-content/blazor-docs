@@ -13,9 +13,11 @@ Azure Maps is an online map tile provider from Microsoft. Similar to OSM and Bin
 
 ## Adding Azure Maps
 
-Azure Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) with the tile server URL provided by the online map provider. A subscription key is required for Azure Maps. Follow the steps in [Manage authentication in Azure Maps](https://learn.microsoft.com/en-us/azure/azure-maps/how-to-manage-authentication) to generate a subscription key, and then add the key to the URL.
+Azure Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) with the Azure Maps tile URL. A subscription key is required for Azure Maps. Follow the steps in [Manage authentication in Azure Maps](https://learn.microsoft.com/en-us/azure/azure-maps/how-to-manage-authentication) to generate a subscription key, and then replace `Your-Key` in the URL with the generated key. The component substitutes the `level`, `tileX`, and `tileY` placeholders with the current zoom level and tile indices at runtime.
 
-N>Refer to [Azure Maps Licensing](https://azure.microsoft.com/en-in/support/legal/).
+N> The examples use the Azure Maps Render v1 endpoint (`map/imagery/png?api-version=1.0`). Verify the current [Render service](https://learn.microsoft.com/en-us/rest/api/maps/render) version for your account, as Microsoft periodically retires older API versions.
+
+N> Refer to [Azure Maps Licensing](https://azure.microsoft.com/en-in/support/legal/).
 
 ```cshtml
 
@@ -58,7 +60,7 @@ The Azure Maps layer supports zooming and panning. Zooming provides a closer vie
 
 ![Blazor Azure Maps with zooming and panning](../images/MapProviders/blazor-azure-map-zooming.webp)
 
-## Adding markers and navigation line
+## Adding markers and navigation lines
 
 Markers can be added to Azure Maps layers by supplying a [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_DataSource) of latitude and longitude values to [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html). Navigation lines can be drawn over the Azure Maps layer to highlight paths between locations by setting the [Latitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Latitude) and [Longitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Longitude) properties of [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
 
@@ -152,7 +154,7 @@ A legend can be added to Azure Maps by setting the [Visible](https://help.syncfu
         <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/imagery/png?subscription-key=Your-Key&api-version=1.0&style=satellite&zoom=level&x=tileX&y=tileY" TValue="string">
         <MapsMarkerSettings>
                 <MapsMarker Visible="true" TValue="PopulationCityDetails" DataSource="@PopulatedCities" Shape="MarkerType.Circle" Fill="#FFFFFF" ColorValuePath="Color" LegendText="Name" Height="15" Width="15">
-                    <MapsMarkerTooltipSettings Visible="true" ValuePath="Population" Format="City Name: ${Name}</br>Population: ${Population} million">
+                    <MapsMarkerTooltipSettings Visible="true" ValuePath="Population" Format="City Name: ${Name}<br/>Population: ${Population} million">
                         <MapsMarkerTooltipTextStyle FontFamily="inherit"></MapsMarkerTooltipTextStyle>
                     </MapsMarkerTooltipSettings>
                 </MapsMarker>

@@ -13,7 +13,9 @@ OpenStreetMap (OSM) is a collaborative map provider that offers free, openly lic
 
 ## Adding OpenStreetMap
 
-Render OSM tiles by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to the OSM tile server URL. For details about OSM tile servers, see the [OpenStreetMap tile usage policy](https://operations.osmfoundation.org/policies/tiles/).
+Render OSM tiles by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to the OSM tile server URL. OpenStreetMap tiles are free and require no API key or subscription. The component substitutes the `level`, `tileX`, and `tileY` placeholders with the current zoom level and tile indices at runtime.
+
+N> Production use must comply with the [OpenStreetMap tile usage policy](https://operations.osmfoundation.org/policies/tiles/), including a valid identifying `User-Agent` and required attribution; heavy traffic should use a dedicated or self-hosted tile server.
 
 ```cshtml
 
@@ -54,7 +56,7 @@ The OSM layer supports zooming and panning. Zooming provides a closer view of sp
 
 ![Blazor OpenStreetMap with zooming](../images/MapProviders/blazor-open-street-map-zooming.webp)
 
-## Adding markers and navigation line
+## Adding markers and navigation lines
 
 Markers can be added to OSM layers by supplying a [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_DataSource) of latitude and longitude values to [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html). A navigation line can be drawn to highlight a path between locations by supplying coordinate arrays to the [Latitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Latitude) and [Longitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Longitude) properties of [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
 
@@ -148,7 +150,7 @@ A legend can be added to tile maps by setting the [Visible](https://help.syncfus
         <MapsLayer UrlTemplate="https://a.tile.openstreetmap.org/level/tileX/tileY.png" TValue="string">
         <MapsMarkerSettings>
                 <MapsMarker Visible="true" TValue="PopulationCityDetails" DataSource="@PopulatedCities" Shape="MarkerType.Circle" Fill="#FFFFFF" ColorValuePath="Color" LegendText="Name" Height="15" Width="15">
-                    <MapsMarkerTooltipSettings Visible="true" ValuePath="Population" Format="City Name: ${Name}</br>Population: ${Population} million">
+                    <MapsMarkerTooltipSettings Visible="true" ValuePath="Population" Format="City Name: ${Name}<br/>Population: ${Population} million">
                         <MapsMarkerTooltipTextStyle FontFamily="inherit"></MapsMarkerTooltipTextStyle>
                     </MapsMarkerTooltipSettings>
                 </MapsMarker>
@@ -173,7 +175,7 @@ A legend can be added to tile maps by setting the [Visible](https://help.syncfus
         new PopulationCityDetails { Name = "Shanghai", Latitude = 31.224361, Longitude = 121.469170, Population = 26317104, Color = "#498082"},
         new PopulationCityDetails { Name = "Sao Paulo", Latitude = -23.550424484747914, Longitude = -46.646471636488315, Population = 21846507, Color = "#FB9E67"},
         new PopulationCityDetails { Name = "Mexico City", Latitude = 19.427402397418774, Longitude = -99.131123716666, Population = 21671908, Color = "#8F9DE3"},
-        new PopulationCityDetails { Name = "Cairo ", Latitude = 30.033333, Longitude = 31.233334, Population = 20484965, Color = "#7B9FB0"},
+        new PopulationCityDetails { Name = "Cairo", Latitude = 30.033333, Longitude = 31.233334, Population = 20484965, Color = "#7B9FB0"},
         new PopulationCityDetails { Name = "Dhaka", Latitude = 23.777176, Longitude = 90.399452, Population = 20283552, Color = "#4DB647"},
         new PopulationCityDetails { Name = "Mumbai", Latitude = 19.08492049646163, Longitude = 72.87449446319248, Population = 20185064, Color = "#30BEFF"},
         new PopulationCityDetails { Name = "Beijing", Latitude = 39.90395970055848, Longitude = 116.38831272088059, Population = 20035455, Color = "#Ac72AD"},

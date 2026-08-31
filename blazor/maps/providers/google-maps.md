@@ -13,18 +13,21 @@ Google Maps is an online map provider owned by Google. It provides map tile imag
 
 ## Displaying Google Maps
 
-The Google Maps tile service can be accessed using the following URL:
-https://tile.googleapis.com/v1/2dtiles/z/x/y?session=YOUR_SESSION_TOKEN&key=YOUR_API_KEY
+The Google Maps tile service is accessed using the following URL:
+
+`https://tile.googleapis.com/v1/2dtiles/{z}/{x}/{y}?session=YOUR_SESSION_TOKEN&key=YOUR_API_KEY`
 
 In this URL template:
 
-* {z} - Represents the map zoom level.
-* {x} - Represents the horizontal tile index.
-* {y} - Represents the vertical tile index.
+* `{z}` - Represents the map zoom level.
+* `{x}` - Represents the horizontal tile index.
+* `{y}` - Represents the vertical tile index.
 
-These placeholders map to **level**, **tileX**, and **tileY**, respectively, to fetch the correct map tile.
+Replace `{z}`, `{x}`, and `{y}` with the `level`, `tileX`, and `tileY` placeholders that the Maps component substitutes at runtime.
 
-N> Refer to the Google documentation at https://developers.google.com/maps/documentation/tile/roadmap for the latest Google Maps URL template.
+N> Refer to the [Google Maps 2D tiles documentation](https://developers.google.com/maps/documentation/tile/2d-tiles-overview) for the latest tile URL format.
+
+CORS note: the `createSession` request must be made from a server (Blazor Server, or a backend API for a WebAssembly app). Calling it directly from a browser is blocked by CORS.
 
 Below are the steps to integrate Google Maps tiles into the Maps component.
 
@@ -34,7 +37,7 @@ Below are the steps to integrate Google Maps tiles into the Maps component.
 
 The following walkthrough explains how to integrate Google Maps tiles into the Maps component using the provided code.
 
-**STEP 1**: Generate an API key from Google Cloud Platform by enabling the necessary APIs, such as the Google Maps Tile API and Google Maps API. This key is required for authentication and must be included in each API call. Follow the steps in https://developers.google.com/maps/documentation/tile/get-api-key to generate an API key.
+**STEP 1**: Generate an API key from the Google Cloud Console and enable the **Map Tiles API** for the project. This key is required for authentication and must be included in each API call. Follow the steps in [Use API keys with Map Tiles API](https://developers.google.com/maps/documentation/tile/get-api-key) to generate a key.
 
 ```cshtml
 
@@ -90,7 +93,8 @@ private async Task<string> FetchSessionToken(string apiKey)
         if (!response.IsSuccessStatusCode)
         {
             var errorData = JsonSerializer.Deserialize<ErrorResponse>(
-                await response.Content.ReadAsStringAsync()
+                await response.Content.ReadAsStringAsync(),
+                new JsonSerializerOptions(JsonSerializerDefaults.Web)
             );
             throw new Exception($"Error generating session token: {errorData?.Error?.Message}");
         }
@@ -143,6 +147,7 @@ In the following example, Google Maps tiles are displayed by setting the `UrlTem
 @using Syncfusion.Blazor.Maps
 @using System.Text.Json
 @using System.Text
+@using System.Net.Http.Json
 @inject HttpClient Http
 
 <SfMaps>
@@ -265,7 +270,7 @@ To enable zooming, set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfu
 
 N> Refer to the session token retrieval method described in the [Displaying Google Maps](https://blazor.syncfusion.com/documentation/maps/providers/google-maps#displaying-google-maps) section.
 
-## Adding markers and navigation line
+## Adding markers and navigation lines
 
 Markers can be added to the Google Maps layer by supplying a [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_DataSource) of latitude and longitude values to the [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) class. Navigation lines can be overlaid on the Google Maps layer to highlight paths between locations by setting the [Latitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Latitude) and [Longitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Longitude) properties of [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
 
@@ -365,7 +370,7 @@ In the following example, the legend is associated with markers on the Google Ma
         <MapsLayer UrlTemplate="https://tile.googleapis.com/v1/2dtiles/level/tileX/tileY?session=Your_sessionToken&key=Your_apiKey" TValue="string">
         <MapsMarkerSettings>
                 <MapsMarker Visible="true" TValue="PopulationCityDetails" DataSource="@PopulatedCities" Shape="MarkerType.Circle" Fill="#FFFFFF" ColorValuePath="Color" LegendText="Name" Height="15" Width="15">
-                    <MapsMarkerTooltipSettings Visible="true" ValuePath="Population" Format="City Name: ${Name}</br>Population: ${Population} million">
+                    <MapsMarkerTooltipSettings Visible="true" ValuePath="Population" Format="City Name: ${Name}<br/>Population: ${Population} million">
                         <MapsMarkerTooltipTextStyle FontFamily="inherit"></MapsMarkerTooltipTextStyle>
                     </MapsMarkerTooltipSettings>
                 </MapsMarker>
