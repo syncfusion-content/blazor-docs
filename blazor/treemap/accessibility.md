@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Blazor TreeMap Accessibility | Syncfusion®
 description: Learn how to make the Blazor TreeMap accessible with WAI-ARIA roles, screen-reader support for labels and legends, and accessibility validation.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Blazor TreeMap Legend | Syncfusion®
 description: Learn how to add and customize the Blazor TreeMap legend with default or interactive modes, custom position, alignment, and paging.
