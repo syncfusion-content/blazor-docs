@@ -83,12 +83,12 @@ The [RefreshPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 <style>
     #target {
-    height: 500px;
+        height: 500px;
     }
 </style>
 
 @code {
-    private SfDialog DialogObj;
+    private SfDialog? DialogObj;
     private string XPosition = "left";
     private string YPosition = "top";
     private bool Visibility { get; set; } = false;
@@ -102,7 +102,10 @@ The [RefreshPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
     {
         XPosition = "right";
         YPosition = "bottom";
-        await DialogObj.RefreshPositionAsync();
+        if (DialogObj != null)
+        {
+            await DialogObj.RefreshPositionAsync();
+        }
     }
 }
 
@@ -151,7 +154,7 @@ By default, when scrolling the page or container, the Dialog scrolls along with 
 </style>
 
 @code {
-    private string DialogClass { get; set; }
+    private string? DialogClass { get; set; }
     private bool Visibility { get; set; } = false;
 
     private void OnClicked()
