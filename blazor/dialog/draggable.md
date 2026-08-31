@@ -74,15 +74,15 @@ The Blazor Dialog component provides three essential events to monitor and respo
 
 ### OnDragStart Event
 
-The [`OnDragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DragStartEventArgs.html) event fires when the user initiates dragging by clicking and holding the dialog header. This event is ideal for performing initial setup, validation, or preparing the application state for the drag operation.
+The [`OnDragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnDragStart) event fires when the user initiates dragging by clicking and holding the dialog header. This event is ideal for performing initial setup, validation, or preparing the application state for the drag operation.
 
 ### OnDrag Event
 
-The [`OnDrag`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DragEventArgs.html) event triggers continuously throughout the drag operation, providing real-time updates as the user moves the dialog. This event is useful for implementing dynamic feedback, position tracking, or live validation of the dialog's new position.
+The [`OnDrag`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnDrag) event triggers continuously throughout the drag operation, providing real-time updates as the user moves the dialog. This event is useful for implementing dynamic feedback, position tracking, or live validation of the dialog's new position.
 
 ### OnDragStop Event
 
-The [`OnDragStop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DragStopEventArgs.html) event fires when the user releases the dialog and completes the drag operation. This event is perfect for finalizing position changes, saving state, or performing cleanup operations.
+The [`OnDragStop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnDragStop) event fires when the user releases the dialog and completes the drag operation. This event is perfect for finalizing position changes, saving state, or performing cleanup operations.
 
 ```cshtml
 
