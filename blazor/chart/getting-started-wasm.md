@@ -15,7 +15,41 @@ This section briefly explains how to include the [Blazor Charts](https://www.syn
 
 > **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Code Studio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
-## Create a new Blazor WebAssembly (Standalone) App
+## Using .NET CLI Templates
+
+Quickly set up a Blazor application using the preconfigured [Syncfusion WebAssembly App Template](https://help.syncfusion.com/extension/syncfusion-blazor-webassemblyapp-template-via-nuget/installation).
+
+First, install the template using the .NET CLI.
+
+{% tabs %}
+{% highlight razor tabtitle=".NET CLI" %}
+
+dotnet new install Syncfusion.Blazor.WebAssemblyApp.Templates
+
+{% endhighlight %}
+{% endtabs %}
+
+Next, create a new project with following command.
+
+{% tabs %}
+{% highlight razor tabtitle="WebAssembly" %}
+
+dotnet new syncfusionblazorwasmapp --name MyApp --pwa true
+
+{% endhighlight %}
+
+{% endtabs %}
+
+After creating the project, navigate to the main project folder (for example, `MyApp`) and run the following command.
+
+{% highlight razor tabtitle=".NET CLI" %}
+
+cd MyApp
+dotnet run
+
+{% endhighlight %}
+
+## Manually creating a new Blazor WebAssembly (Standalone) App
 
 {% tabcontents %}
 
@@ -42,24 +76,9 @@ Alternatively, create a **Blazor WebAssembly App** using Visual Studio Code via 
 
 {% endtabcontent %}
 
-{% tabcontent .NET CLI %}
-
-Run the following command to create a new Blazor WebAssembly App.
-
-{% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
-
-dotnet new blazorwasm -o BlazorApp
-cd BlazorApp
-
-{% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-
 {% endtabcontents %}
 
-## Install the required Blazor package
+### Install the required Blazor package
 
 Install the [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts/) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
@@ -96,23 +115,9 @@ dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
 
 {% endtabcontent %}
 
-{% tabcontent .NET CLI %}
-
-Open the command prompt and run the following command.
-
-{% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
-
-dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-
 {% endtabcontents %}
 
-## Add import namespaces
+### Add import namespaces
 
 After the package is installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
 
@@ -125,7 +130,7 @@ After the package is installed, open the **~/_Imports.razor** file and import th
 {% endhighlight %}
 {% endtabs %}
 
-## Register the Blazor service
+### Register the Blazor service
 
 Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service and include the required namespace reference `using Syncfusion.Blazor;` at the top.
 
@@ -137,7 +142,7 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-## Add script resource
+### Add script resource
 
 Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **~wwwroot/index.html** file to enable Charts functionality.
 
@@ -149,7 +154,7 @@ Include the required [script references](https://blazor.syncfusion.com/documenta
 {% endhighlight %}
 {% endtabs %}
 
-## Add Blazor Charts component
+### Add Blazor Charts component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component inside the razor file.
 
@@ -164,7 +169,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% endhighlight %}
 {% endtabs %}
 
-## Run the application
+### Run the application
 
 {% tabcontents %}
 
@@ -180,20 +185,6 @@ Open the terminal and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
-
-dotnet run
-
-{% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-
-{% tabcontent .NET CLI %}
-
-Open the command prompt and run the following command.
-
-{% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
 
 dotnet run
 
