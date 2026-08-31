@@ -20,17 +20,17 @@ Specify a valid CSS selector in the `AppendTo` property. When the selector match
 @using Syncfusion.Blazor.SplitButtons
 
 <div id="popupHost">
-    <SfDropDownButton Items="@Items" AppendTo="@AppendTarget"></SfDropDownButton>
+    <SfDropDownButton Content="Edit" AppendTo="@AppendTarget">
+        <DropDownMenuItems>
+            <DropDownMenuItem Text="Cut"></DropDownMenuItem>
+            <DropDownMenuItem Text="Copy"></DropDownMenuItem>
+            <DropDownMenuItem Text="Paste"></DropDownMenuItem>
+        </DropDownMenuItems>
+    </SfDropDownButton>
 </div>
 
 @code {
     private string AppendTarget = "#popupHost";
-    List<ItemModel> Items = new List<ItemModel>
-    {
-        new ItemModel { Text = "Save" },
-        new ItemModel { Text = "Open" },
-        new ItemModel { Text = "Exit" }
-    };
 }
 
 {% endhighlight %}

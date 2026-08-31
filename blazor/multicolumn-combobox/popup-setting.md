@@ -81,15 +81,35 @@ Specify a valid CSS selector in the `AppendTo` property. When the selector match
 
 {% highlight cshtml %}
 
-@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.MultiColumnComboBox
 
 <div id="popupHost">
-    <SfMultiColumnComboBox TValue="string" TItem="string" DataSource="@Items" AppendTo="@AppendTarget" Placeholder="Select an item"></SfMultiColumnComboBox>
+    <SfMultiColumnComboBox @bind-Value="@Value" AppendTo="@AppendTarget" DataSource="@Products" ValueField="Name" TextField="Name" Placeholder="Select any product"></SfMultiColumnComboBox>
 </div>
 
 @code {
     private string AppendTarget = "#popupHost";
-    private List<string> Items = new() { "One", "Two", "Three" };
+    public class Product
+    {
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public string Availability { get; set; }
+        public string Category { get; set; }
+        public double Rating { get; set; }
+    }
+    private List<Product> Products = new List<Product>();
+    private string Value { get; set; } = "Smartphone";
+    protected override Task OnInitializedAsync ()
+    {
+        Products = new List<Product>
+        {
+            new Product { Name = "Laptop", Price = 999.99m, Availability = "In Stock", Category = "Electronics", Rating = 4.5 },
+            new Product { Name = "Smartphone", Price = 599.99m, Availability = "Out of Stock", Category = "Electronics", Rating = 4.3 },
+            new Product { Name = "Tablet", Price = 299.99m, Availability = "In Stock", Category = "Electronics", Rating = 4.2 },
+            new Product { Name = "Headphones", Price = 49.99m, Availability = "In Stock", Category = "Accessories", Rating = 4.0 }
+        };
+        return base.OnInitializedAsync();
+    }
 }
 
 {% endhighlight %}

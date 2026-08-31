@@ -20,11 +20,10 @@ Specify a valid CSS selector in the `AppendTo` property. When the selector match
 @using Syncfusion.Blazor.DropDowns
 
 <div id="popupHost">
-    <SfMention TItem="PersonData"
-               DataSource="@Users"
-               AppendTo="@AppendTarget">
+    <SfMention TItem="PersonData" DataSource="@EmailData" AppendTo="@AppendTarget">
         <TargetComponent>
-            <div id="commentsMention" aria-label="Mention Target" role="textbox"></div>
+            <div id="commentsMention" placeholder="Type @@ to tag user">
+            </div>
         </TargetComponent>
         <ChildContent>
             <MentionFieldSettings Text="Name"></MentionFieldSettings>
@@ -37,17 +36,30 @@ Specify a valid CSS selector in the `AppendTo` property. When the selector match
 
     public class PersonData
     {
-        public string? Name { get; set; }
+        public string Name { get; set; }
+        public string EmailId { get; set; }
+        public string EmployeeImage { get; set; }
     }
-
-    private List<PersonData> Users = new()
-    {
-        new() { Name = "Andrew" },
-        new() { Name = "Robert" },
-        new() { Name = "Laura" },
-        new() { Name = "Richard" }
+    List<PersonData> EmailData = new List<PersonData> {
+        new PersonData() { Name="Selma Rose", EmployeeImage="7", EmailId="[EmailProtected]" },
+        new PersonData() { Name="Russo Kay", EmployeeImage="8", EmailId="[EmailProtected]" },
+        new PersonData() { Name="Camden Kate", EmployeeImage="9", EmailId="[EmailProtected]" }
     };
 }
+<style>
+    #commentsMention {
+        min-height: 100px;
+        border: 1px solid #d7d7d7;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 14px;
+        width: 600px;
+    }
+    div#commentsMention[placeholder]:empty:before {
+        content: attr(placeholder);
+        color: #555;
+    }
+</style>
 
 {% endhighlight %}
 

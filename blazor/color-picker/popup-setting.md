@@ -20,7 +20,7 @@ Specify a valid CSS selector in the `AppendTo` property. When the selector match
 @using Syncfusion.Blazor.Inputs
 
 <div id="popupHost">
-    <SfColorPicker Mode="PickerMode.Palette" AppendTo="@AppendTarget"></SfColorPicker>
+    <SfColorPicker Mode="ColorPickerMode.Palette" AppendTo="@AppendTarget"></SfColorPicker>
 </div>
 
 @code {

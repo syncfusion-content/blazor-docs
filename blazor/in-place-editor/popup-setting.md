@@ -18,13 +18,30 @@ Specify a valid CSS selector in the `AppendTo` property. When the selector match
 {% highlight cshtml %}
 
 @using Syncfusion.Blazor.InPlaceEditor
+@using Syncfusion.Blazor.Inputs
 
 <div id="popupHost">
-    <SfInPlaceEditor Mode="Inline" AppendTo="@AppendTarget" Value="Andrew" Type="InPlaceEditorType.Text"></SfInPlaceEditor>
+<table>
+    <tr>
+        <td>
+            <label class="control-label" style="text-align: left;font-size: 14px;font-weight: 400">
+                TextBox
+            </label>
+        </td>
+        <td>
+            <SfInPlaceEditor @bind-Value="@TextValue" TValue="string" AppendTo="@AppendTarget">
+                <EditorComponent>
+                    <SfTextBox @bind-Value="@TextValue" Placeholder="Enter employee name"></SfTextBox>
+                </EditorComponent>
+            </SfInPlaceEditor>
+        </td>
+    </tr>
+</table>
 </div>
 
 @code {
     private string AppendTarget = "#popupHost";
+    public string TextValue = "Andrew";
 }
 
 {% endhighlight %}

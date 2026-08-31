@@ -61,8 +61,8 @@ Specify a valid CSS selector in the `AppendTo` property. When the selector match
 @using Syncfusion.Blazor.Navigations
 
 <div id="popupHost">
-    <SfDropDownTree TItem="EmployeeData" TValue="string" DataSource="@Data" AppendTo="@AppendTarget" Placeholder="Select an employee">
-        <DropDownTreeField TItem="EmployeeData" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
+    <SfDropDownTree TItem="EmployeeData" TValue="string"  AppendTo="@AppendTarget" Placeholder="Select an employee">
+        <DropDownTreeField TItem="EmployeeData" ID="Id" DataSource="@Data" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
     </SfDropDownTree>
 </div>
 

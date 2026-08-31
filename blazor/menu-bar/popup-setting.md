@@ -20,17 +20,44 @@ Specify a valid CSS selector in the `AppendTo` property. When the selector match
 @using Syncfusion.Blazor.Navigations
 
 <div id="popupHost">
-    <SfMenu Items="@MenuItems" AppendTo="@AppendTarget"></SfMenu>
+    <SfMenu TValue="MenuItem" AppendTo="@AppendTarget">
+        <MenuItems>
+            <MenuItem Text="File">
+                <MenuItems>
+                    <MenuItem Text="Open"></MenuItem>
+                    <MenuItem Text="Save"></MenuItem>
+                    <MenuItem Text="Exit"></MenuItem>
+                </MenuItems>
+            </MenuItem>
+            <MenuItem Text="Edit">
+                <MenuItems>
+                    <MenuItem Text="Cut"></MenuItem>
+                    <MenuItem Text="Copy"></MenuItem>
+                    <MenuItem Text="Paste"></MenuItem>
+                </MenuItems>
+            </MenuItem>
+            <MenuItem Text="View">
+                <MenuItems>
+                    <MenuItem Text="Toolbars"></MenuItem>
+                    <MenuItem Text="Zoom"></MenuItem>
+                    <MenuItem Text="Full Screen"></MenuItem>
+                </MenuItems>
+            </MenuItem>
+            <MenuItem Text="Tools">
+                <MenuItems>
+                    <MenuItem Text="Spelling & Grammar"></MenuItem>
+                    <MenuItem Text="Customize"></MenuItem>
+                    <MenuItem Text="Options"></MenuItem>
+                </MenuItems>
+            </MenuItem>
+            <MenuItem Text="Go"></MenuItem>
+            <MenuItem Text="Help"></MenuItem>
+        </MenuItems>
+    </SfMenu>
 </div>
 
 @code {
     private string AppendTarget = "#popupHost";
-    List<MenuItem> MenuItems = new List<MenuItem>
-    {
-        new MenuItem { Text = "File" },
-        new MenuItem { Text = "Edit" },
-        new MenuItem { Text = "View" }
-    };
 }
 
 {% endhighlight %}
