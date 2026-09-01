@@ -9,7 +9,7 @@ documentation: ug
 
 # Header Customization in Blazor TreeGrid
 
-The appearance of header elements in the Blazor TreeGrid can be customized using CSS. Styling options are available for different parts of the header interface:
+Customize the appearance of header elements in the Blazor TreeGrid using CSS. Styling options are available for different parts of the header interface:
 
 - **Header container**: The outer wrapper that holds all column headers.
 - **Header cells**: Individual containers for each column title and associated icons.
@@ -17,7 +17,7 @@ The appearance of header elements in the Blazor TreeGrid can be customized using
 
 ## Customize the Blazor TreeGrid header
 
-The **.e-gridheader** class styles the header container in the Blazor TreeGrid. Use CSS to adjust its appearance:
+The **.e-gridheader** class styles the header container in the Blazor TreeGrid. Apply the following CSS:
 
 ```css
 .e-treegrid .e-gridheader {
@@ -25,13 +25,13 @@ The **.e-gridheader** class styles the header container in the Blazor TreeGrid. 
 }
 ```
 
-Style Properties like  **border**, **padding**, and **background-color** can be changed to fit the TreeGrid layout design.
+Modify properties such as **border**, **padding**, and **background-color** to fit the TreeGrid layout design.
 
 ![TreeGrid header](../images/style-and-appearance/grid-header.webp)
 
 ## Customize the Blazor TreeGrid header cell
 
-The **.e-headercell** class styles individual header cells in the Blazor TreeGrid. Apply CSS to modify its look:
+The **.e-headercell** class styles individual header cells in the Blazor TreeGrid. Apply the following CSS:
 
 ```css
 .e-treegrid .e-headercell {
@@ -40,13 +40,13 @@ The **.e-headercell** class styles individual header cells in the Blazor TreeGri
 }
 ```
 
-Properties such as **color**, **background-color**, **font**, and alignment can be adjusted to align with the TreeGrid design.
+Modify properties such as **color**, **background-color**, **font**, and alignment to align with the TreeGrid design.
 
 ![TreeGrid header cell](../images/style-and-appearance/grid-header-cell.webp)
 
 ## Customize the Blazor TreeGrid header cell div element
 
-The **.e-headercelldiv** class styles the text container inside each header cell. Apply CSS to change its appearance:
+The **.e-headercelldiv** class styles the text container inside each header cell. Apply the following CSS:
 
 ```css
 .e-treegrid .e-headercelldiv {
@@ -56,7 +56,7 @@ The **.e-headercelldiv** class styles the text container inside each header cell
 }
 ```
 
-Change properties like **font-size**, **font-weight**, and **color** to highlight the header text and improve clarity.
+Modify properties such as **font-size**, **font-weight**, and **color** to highlight header text and improve header text visibility.
 
 ![Grid header cell div element](../images/style-and-appearance/grid-header-cell-div-element.webp)
 
@@ -76,7 +76,7 @@ Change properties like **font-size**, **font-weight**, and **color** to highligh
     </TreeGridColumns>
 </SfTreeGrid>
 <style>
-    .e-grid .e-headercelldiv {
+    .e-treegrid .e-headercelldiv {
         font-size: 15px;
         font-weight: bold;
         color: darkblue;

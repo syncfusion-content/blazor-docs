@@ -9,7 +9,7 @@ documentation: ug
 
 # Editing Customization in Blazor TreeGrid
 
-The appearance of editing elements in the Blazor TreeGrid can be customized using CSS. Styling options are available for different parts of the editing interface:
+Customize the appearance of editing elements in the Blazor TreeGrid using CSS. Styling options are available for different parts of the editing interface:
 
 - **Edited and newly added rows:** Highlights rows that are being modified or newly inserted.
 - **Edit form input fields:** Displays text boxes used to enter or update values during editing.
@@ -18,7 +18,7 @@ The appearance of editing elements in the Blazor TreeGrid can be customized usin
 
 ## Customize edited and added row elements
 
-The **.e-editedrow** and **.e-addedrow** classes style edited and newly added rows. Apply CSS to make these rows stand out:
+Use the **.e-editedrow** and **.e-addedrow** classes to style edited and newly added rows. Apply CSS to make these rows stand out:
 
 ```css
 .e-treegrid .e-editedrow table, .e-treegrid .e-addedrow table {
@@ -32,7 +32,7 @@ Adjust properties such as **background-color** or **border** styles to highlight
 
 ## Customize edited row input elements
 
-The **.e-treegridform** and **.e-input** classes style inputs inside the inline edit form in the Blazor TreeGrid. Use CSS to adjust their appearance:
+Use the **.e-treegridform** and **.e-input** classes to style inputs inside the inline edit form in the Blazor TreeGrid. Apply CSS to adjust their appearance:
 
 ```css
 
@@ -43,7 +43,7 @@ The **.e-treegridform** and **.e-input** classes style inputs inside the inline 
 
 ```
 
-Modify properties such as **font-family**, **color**, or **padding** to improve readability.
+Modify properties such as **font-family**, **color**, or **padding** to improve input visibility.
 
 ![Edited row inputs with custom font and text color](../images/style-and-appearance/edited-row-input-element.webp)
 
@@ -117,7 +117,7 @@ namespace TreeGridComponent.Data
 
 ## Customize the edit dialog header
 
-The **.e-edit-dialog** and **.e-dlg-header-content** classes style the dialog header when dialog editing is enabled. Apply CSS to differentiate the header:
+Use the **.e-edit-dialog** and **.e-dlg-header-content** classes to style the dialog header when dialog editing is enabled. Apply CSS to differentiate the header:
 
 ```css
 
@@ -198,7 +198,7 @@ namespace TreeGridComponent.Data
 
 ## Customize command column buttons
 
-The **.e-edit**, **.e-delete**, **.e-update**, and **.e-cancel-icon** classes style the command column buttons in the Blazor TreeGrid. Use CSS to adjust their appearance:
+Use the **.e-edit**, **.e-delete**, **.e-update**, and **.e-cancel-icon** classes to style the command column buttons in the Blazor TreeGrid. Apply CSS to adjust their appearance:
 
 ```css
 
