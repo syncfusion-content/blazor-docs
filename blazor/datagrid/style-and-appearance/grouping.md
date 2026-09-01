@@ -9,32 +9,43 @@ documentation: ug
 
 # Customize Grouping in Blazor Data Grid
 
-The appearance of grouping elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. Styling options are available for different parts of the grouping interface:
+The appearance of grouping elements in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS.
 
-- **Group header container and text:** Displays grouped column names and allows drag-and-drop grouping actions.
+Styling options are available for different parts of the grouping interface:
+
+- **Group drop area:** Displays grouped column names and allows drag-and-drop grouping actions.
 - **Expand and collapse icons:** Controls used to toggle visibility of grouped rows.
 - **Group caption row:** Shows summary information for each group, such as group key and item count.
 - **Grouping indent cell:** Adds visual indentation to grouped rows to indicate hierarchy.
 
-## Customize the group header
+## Customize the group drop area
 
-The **.e-groupdroparea** class styles the group header area in the Blazor DataGrid. Use CSS to adjust its appearance:
+The `.e-groupdroparea` class styles the group drop area in the Blazor Data Grid. Use CSS to adjust the appearance:
 
 ```css
 .e-grid .e-groupdroparea {
     background-color: #132f49;
+    color: #ffffff;
+}
+
+.e-grid .e-groupheadercell {
+    background-color: #1c4267;
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 4px 8px;
 }
 ```
 
-Properties like **background-color**, **padding**, **border**, and **font** can be changed to fit the grid layout design.
+Properties like `background-color`, `padding`, `border`, and `font` can be changed to fit the Data Grid layout design.
 
 ![Group header](../images/style-and-appearance/group-header.webp)
 
 ## Customize the expand and collapse icons
 
-The **.e-icon-gdownarrow** and **.e-icon-grightarrow** classes define the expand and collapse icons in grouped rows. Apply CSS to modify their look:
+The `.e-icon-gdownarrow` and `.e-icon-grightarrow` classes define the expand and collapse icons in grouped rows. Apply CSS to modify the look:
 
 ```css
+
 .e-grid .e-icon-gdownarrow::before {
     content: '\e7c9';
 }
@@ -44,13 +55,13 @@ The **.e-icon-gdownarrow** and **.e-icon-grightarrow** classes define the expand
 }
 ```
 
-Modify the `content`, color, or size to align with custom icon sets. Confirm that the appropriate icon font family is available so glyphs render correctly. Refer to the [icons](https://blazor.syncfusion.com/documentation/appearance/icons) documentation to choose glyphs for your theme.
+Modify the `content`, `color`, or `font-size` to align with custom icon sets. Confirm that the `e-icons` font family is available so glyphs render correctly. Refer to the [icons](https://blazor.syncfusion.com/documentation/appearance/icons) documentation to choose glyphs for your theme.
 
 ![Expand and collapse icons](../images/style-and-appearance/group-expand-or-collapse-icons.webp)
 
 ## Customize the group caption row
 
-The **.e-groupcaption** class styles the caption row, and **.e-recordplusexpand** and **.e-recordpluscollapse** classes style the record-level expand and collapse indicators:
+The `.e-groupcaption` class styles the group caption row, and the `.e-recordplusexpand` and `.e-recordpluscollapse` classes style the record-level expand and collapse indicators:
 
 ```css
 .e-grid .e-groupcaption {
@@ -63,13 +74,13 @@ The **.e-groupcaption** class styles the caption row, and **.e-recordplusexpand*
 }
 ```
 
-Adjust properties such as **background-color**, **padding**, **border**, and **font** to maintain consistency with the rest of the grid.
+Adjust properties such as `background-color`, `padding`, `border`, and `font` to maintain consistency with the rest of the Data Grid.
 
 ![Group caption row](../images/style-and-appearance/group-caption-row.webp)
 
 ## Customize the grouping indent cell
 
-The **.e-indentcell** class styles the indent cell used in grouped rows. Apply CSS to change its appearance:
+The `.e-indentcell` class styles the indent cell used in grouped rows. Apply CSS to change the appearance:
 
 ```css
 .e-grid .e-indentcell {
@@ -77,7 +88,7 @@ The **.e-indentcell** class styles the indent cell used in grouped rows. Apply C
 }
 ```
 
-Modify properties such as **background-color**, **padding**, and **border** to match the overall layout and maintain consistency.
+Modify properties such as `background-color`, `padding`, and `border` to match the overall layout and maintain consistency.
 
 ![Indent cell](../images/style-and-appearance/indent-cell.webp)
 
@@ -105,7 +116,14 @@ Modify properties such as **background-color**, **padding**, and **border** to m
         background-color: #132f49;
         color: #ffffff;
     }
-
+    .e-grid .e-groupheadercell {
+        background-color: #1c4267;
+        color: #ffffff;
+        border-radius: 4px;
+        padding: 4px 8px;
+    }
+    /* Refer to the icons documentation for valid glyph codes:
+       https://blazor.syncfusion.com/documentation/appearance/icons */
     .e-grid .e-icon-gdownarrow::before,
     .e-grid .e-icon-grightarrow::before {
         font-family: 'e-icons' !important;
@@ -154,7 +172,7 @@ Modify properties such as **background-color**, **padding**, and **border** to m
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-internal sealed class OrderData
+public class OrderData
 {
     private static readonly List<OrderData> Data = new();
 
@@ -166,7 +184,7 @@ internal sealed class OrderData
         ShipName = shipName;
     }
 
-    internal static List<OrderData> GetAllRecords()
+    public static List<OrderData> GetAllRecords()
     {
         if (Data.Count == 0)
         {
