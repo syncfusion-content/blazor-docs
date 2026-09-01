@@ -11,8 +11,7 @@ keywords: chart wizard, blazor, chart
 
 # Blazor Chart Wizard Appearance
 
-This guide explains how to tailor the appearance of the `Chart Wizard` component in Blazor. Discover the available properties and see practical examples for each customization option.
-
+This guide explains how to customize the appearance of the `Chart Wizard` component in Blazor. It describes the available customization properties and provides examples for each option.
 
 ## Appearance Properties Overview
 
@@ -20,20 +19,22 @@ This guide explains how to tailor the appearance of the `Chart Wizard` component
 |-------------------------|---------|------------|-------------|
 | `Width`                 | string  | "100%"     | Sets the width of the Chart Wizard (e.g., "800px", "50%"). |
 | `Height`                | string  | "100%"     | Sets the height of the Chart Wizard (e.g., "600px", "75%"). |
-| `Theme`                 | Theme   | Material   | Sets the visual theme for the component and its sub-components. |
+| `Theme`                 | [`Theme`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Theme.html) | `Material` | Sets the visual theme applied to the chart area. Common values include `Material3`, `Fluent2`, `Bootstrap5`, and `Tailwind3`. |
 | `EnableRtl`             | bool    | false      | Enables right-to-left layout for RTL languages. |
-| `PropertyPanelExpanded` | bool    | true       | Shows or hides the property panel on initial render. |
+| `PropertyPanelExpanded` | bool    | true       | Determines whether the property panel is expanded on initial render. |
 
 ### Width and Height
 
-You can control the size of the `Chart Wizard` by specifying the `Width` and `Height` properties. Use pixel values for fixed sizing or percentages for responsive layouts.
+You can control the size of the Chart Wizard by specifying the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ChartWizard.SfChartWizard.html#Syncfusion_Blazor_ChartWizard_SfChartWizard_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ChartWizard.SfChartWizard.html#Syncfusion_Blazor_ChartWizard_SfChartWizard_Height) properties. Use pixel values for fixed sizing or percentages for responsive layouts.
 
-### In percentage
+### In Percentage
 
 ```cshtml
 
+@using Syncfusion.Blazor.ChartWizard
+
 <div class="control-section">
-    <SfChartWizard Width="60%" Height="">
+    <SfChartWizard Width="60%" Height="60%">
         <ChartSettings DataSource="@OlympicsDataSource"
                        CategoryFields="@categories"
                        SeriesType="ChartWizardSeriesType.Bar"
@@ -74,9 +75,11 @@ You can control the size of the `Chart Wizard` by specifying the `Width` and `He
 
 ![Chart Wizard dimensions in percentage](images/chart-wizard-dimension-in-percentage.webp)
 
-### In pixel
+### In Pixels
 
 ```cshtml
+
+@using Syncfusion.Blazor.ChartWizard
 
 <div class="control-section">
     <SfChartWizard Width="650px" Height="400px">
@@ -123,9 +126,12 @@ You can control the size of the `Chart Wizard` by specifying the `Width` and `He
 
 ### Theme
 
-The `Theme` property applies a built-in visual style to the chart. Choose from available themes to match the application's look and feel.
+The [`Theme`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ChartWizard.SfChartWizard.html#Syncfusion_Blazor_ChartWizard_SfChartWizard_Theme) property applies a built-in visual theme to the chart area. It accepts a value from the [`Theme`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Theme.html) enumeration, such as `Theme.Material3`, `Theme.Fluent2`, `Theme.Bootstrap5`, or `Theme.Tailwind3`. Select a theme that matches the look and feel of your application. The `Theme` enum is defined in the `Syncfusion.Blazor` namespace.
 
 ```cshtml
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.ChartWizard
 
 <div class="control-section">
     <SfChartWizard Theme="Theme.Material3">
@@ -175,9 +181,11 @@ N> The `Theme` property applies the selected theme to the chart area, not the en
 
 ### EnableRtl
 
-Set `EnableRtl` to `true` to support right-to-left languages such as Arabic or Hebrew. This option automatically adjusts the alignment of headers, panels, and controls for RTL layouts.
+Set the [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ChartWizard.SfChartWizard.html#Syncfusion_Blazor_ChartWizard_SfChartWizard_EnableRtl) property to `true` to enable right-to-left (RTL) layout support. When enabled, the Chart Wizard automatically adjusts the alignment and layout of its elements to support RTL languages such as Arabic and Hebrew.
 
 ```cshtml
+
+@using Syncfusion.Blazor.ChartWizard
 
 <div class="control-section">
     <SfChartWizard EnableRtl="true">
@@ -224,9 +232,11 @@ Set `EnableRtl` to `true` to support right-to-left languages such as Arabic or H
 
 ### PropertyPanelExpanded
 
-The `PropertyPanelExpanded` property controls whether the property panel is open when the Chart Wizard first loads. Set it to `false` to start with the panel collapsed, giving more space to the chart area.
+The [`PropertyPanelExpanded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ChartWizard.SfChartWizard.html#Syncfusion_Blazor_ChartWizard_SfChartWizard_PropertyPanelExpanded) property determines whether the property panel is expanded when the Chart Wizard is initially rendered. Set the property to `false` to display the property panel in a collapsed state and provide more space for the chart area.
 
 ```cshtml
+
+@using Syncfusion.Blazor.ChartWizard
 
 <div class="control-section">
     <SfChartWizard PropertyPanelExpanded="false">
@@ -270,8 +280,8 @@ The `PropertyPanelExpanded` property controls whether the property panel is open
 
 ![Chart Wizard appearance property panel](images/chart-wizard-appearance-property-panel.webp)
 
-
-
 ## See Also
 
 - Explore the [Chart Wizard Demo](#) for interactive samples.
+- [Working with Data in Blazor Chart Wizard](./working-with-data)
+- [Print and Export in Blazor Chart Wizard](./print-export)

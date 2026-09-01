@@ -10,17 +10,17 @@ keywords: chart wizard, blazor, serialization
 
 # Blazor Chart Wizard Serialization
 
-The `Chart Wizard` component makes it simple to save and restore your entire chart wizard configuration. This is useful for persisting user settings, sharing chart setups, or restoring previous states.
+The `Chart Wizard` component makes it simple to save and restore your entire Chart Wizard configuration. This is useful for persisting user settings, sharing chart setups, or restoring previous states.
 
-Serialization can be achieved using the following key methods:
+Serialization can be achieved using the following key methods of [`SfChartWizard`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ChartWizard.SfChartWizard.html):
 
-- `SaveChart()` — Serializes the current chart state (including settings, series, axes, titles, styles, and more) and returns it as a JSON string.
-- `LoadChartAsync(string data)` — Loads a chart configuration from a JSON string (produced by `SaveChart()`) and applies it to the wizard instance.
+- [`SaveChart()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ChartWizard.SfChartWizard.html#Syncfusion_Blazor_ChartWizard_SfChartWizard_SaveChart) — Serializes the current chart state (including settings, series, axes, titles, and styles) and returns it as a JSON `string`.
+- [`LoadChartAsync(string data)`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ChartWizard.SfChartWizard.html#Syncfusion_Blazor_ChartWizard_SfChartWizard_LoadChartAsync_System_String_) — Loads a chart configuration from a JSON string (produced by `SaveChart()`) and applies it to the Chart Wizard instance. Returns a `Task` that completes when the configuration has been applied.
 
 N>
-- The serialized JSON captures the full runtime state of the chart wizard. You can store this string in a database, file, or browser storage for later use.
-- `LoadChartAsync` resets the chart to its default state before applying the values from the JSON.
-- Always use the JSON string produced by `SaveChart()` as input for `LoadChartAsync()`.
+- The serialized JSON captures the full runtime state of the Chart Wizard, including the data-binding configuration. You can store this string in a database, file, or browser storage for later use.
+- `LoadChartAsync` resets the Chart Wizard to its default state before applying the values from the JSON.
+- Always use the unmodified JSON string produced by `SaveChart()` as input for `LoadChartAsync()`. Passing `null`, an empty string, or malformed JSON throws an exception, so validate the input (for example, with a `try/catch` block) before calling the method.
 
 ```cshtml
 
@@ -29,8 +29,8 @@ N>
 <div class="control-section">
     <div class="toolbar-container">
         <div>
-            <button class="btn btn-primary" @onclick="SaveChartAsync">Save</button>
-            <button class="btn btn-primary" @onclick="OpenChartAsync">Load</button>
+            <button class="btn btn-primary" @onclick="SaveChart">Save</button>
+            <button class="btn btn-primary" @onclick="LoadChart">Load</button>
         </div>
     </div>
     <div class="content-wrapper">
@@ -54,7 +54,7 @@ N>
     private readonly List<string> chartSeries = new() { "Population" };
     private readonly List<string> categories = new() { "City", "Country" };
     private ChartWizardSeriesType chartWizardSeriesType = ChartWizardSeriesType.Bar;
-    public string? serializedString;
+    private string? serializedString;
 
     public class GlobalCityPopulationItem
     {
@@ -77,16 +77,20 @@ N>
         new() { City = "Osaka", Country = "Japan", Population = 19.2 }
     };
 
-    private async Task SaveChartAsync()
+    private void SaveChart()
     {
-        if(ChartWizard != null)
+        if (ChartWizard != null)
+        {
             serializedString = ChartWizard.SaveChart();
+        }
     }
 
-    private async Task OpenChartAsync()
+    private async Task LoadChart()
     {
-        if(ChartWizard != null)
+        if (ChartWizard != null && !string.IsNullOrEmpty(serializedString))
+        {
             await ChartWizard.LoadChartAsync(serializedString);
+        }
     }
 }
 
@@ -98,3 +102,5 @@ N>
 ## See Also
 
 - Explore the [Chart Wizard Demo](#) for interactive samples.
+- [Working with Data in Blazor Chart Wizard](./working-with-data)
+- [Print and Export in Blazor Chart Wizard](./print-export)
