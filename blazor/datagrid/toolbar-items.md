@@ -11,11 +11,13 @@ documentation: ug
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) offers a flexible toolbar that enables the addition of custom toolbar items or modification of existing ones. The toolbar appears above the DataGrid, providing convenient access to common actions and custom functionality.
 
-## Built-in Toolbar item
+## Built-in Toolbar items
 
 Built-in toolbar items in the Blazor DataGrid use predefined actions to perform standard operations.
 
-Add them by defining the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property as a collection of built-in item names (strings). Each item is rendered as a button with an icon and text. The following table lists the built-in toolbar items and their actions:
+Add built-in toolbar items by defining the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property as a collection of built-in item names (strings). Each item is rendered as a button with an icon and text. The following table lists the built-in toolbar items and their actions.
+
+Add, Edit, Update, Delete, and Cancel require editing to be enabled through [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html). Configure the needed settings such as [AllowAdding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowAdding), [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowEditing), and [AllowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowDeleting) before using those items.
 
 | Built-in Toolbar Items | Actions |
 |------------------------|---------|
@@ -193,7 +195,7 @@ To show only icons, hide the text part of the buttons using CSS. For accessibili
 
 The Blazor DataGrid allows customizing built-in toolbar items, including disabling default actions and executing custom logic when a button is clicked.
 
-Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event to intercept actions. Prefer checking **args.Item.Id** for reliability (IDs are stable and not affected by localization), although Text is also available.
+Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event to intercept actions. For custom ItemModel items, **args.Item.Id** is explicit and reliable. For built-in string items, the item ID can be generated automatically, so the ID should be treated as a convenience rather than a fixed contract.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -283,7 +285,7 @@ public class OrderData
 
 Adding custom toolbar items to the Blazor DataGrid enables personalized functionality.
 
-Define custom items by setting the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property to a collection of [ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor) objects, and handle actions in the [OnToolbarClick](https://blazor.syncfusion.com/documentation/datagrid/events#ontoolbarclick) event.
+Use the Syncfusion.Blazor.Navigations namespace to access ItemModel. Define custom items by setting the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property to a collection of [ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor) objects, and handle actions in the [OnToolbarClick](https://blazor.syncfusion.com/documentation/datagrid/events#ontoolbarclick) event.
 
 By default, custom toolbar items are positioned on the **left** side. Change the position using the [Align](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel_Align) property of ItemModel.
 
@@ -472,7 +474,7 @@ Define the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjLntwZnrFTpmyLK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Custom Toolbar Items in a specific position
+## Position custom toolbar items
 
 Customizing the position of a custom toolbar item modifies its default placement, allowing precise control over layout.
 
@@ -571,7 +573,7 @@ By default, custom toolbar items are aligned on the left. Modify the position by
 
 When creating custom toolbar items using the same text as default items (such as Add, Edit, or Delete), the DataGrid may treat them as default items. This can lead to unexpected behavior—for example, the buttons may be disabled in certain states.
 
-To avoid this behavior and ensure proper functionality:
+To avoid such behavior and ensure proper functionality:
 
 - Assign a unique **Id** to each custom toolbar item to distinguish it from default items.
 - Use the **Text**, **PrefixIcon**, and **TooltipText** properties of [ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor) to define appearance.

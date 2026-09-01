@@ -50,11 +50,11 @@ This is implemented by using the `Template` property, which provides extensive c
     {
         if (args.Item.Text == "Collapse All")
         {
-            this.Grid.CollapseAllGroupAsync();
+            await this.Grid.CollapseAllGroupAsync();
         }
         if (args.Item.Text == "Expand All")
         {
-            this.Grid.ExpandAllGroupAsync();
+            await this.Grid.ExpandAllGroupAsync();
         }
     }
 }
@@ -113,11 +113,11 @@ This is implemented by using the `Template` property, which provides extensive c
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDhRXQZLBCsmUVxW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Render image with text in custom Toolbar
+## Render Image With Text in Custom Toolbar
 
-Rendering an image with text in the custom toolbar of the Blazor DataGrid helps provide context and improves visual clarity for actions.
+Rendering an image with text in the custom toolbar of the Blazor DataGrid adds context and improves visual clarity for actions.
 
-To render an image with text in the custom toolbar, use the `Template` in [SfToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfToolbar.html).
+To render an image with text in the custom toolbar, use the `Template` property in [SfToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfToolbar.html).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -220,9 +220,9 @@ To render an image with text in the custom toolbar, use the `Template` in [SfToo
 
 ## Render SfDropDownList in Custom Toolbar
 
-Rendering an [SfDropdownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) in the custom toolbar of the Blazor DataGrid extends toolbar functionality and enables actions based on user selection.
+Rendering an [SfDropDownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) in the custom toolbar of the Blazor DataGrid extends toolbar functionality and enables actions based on user selection.
 
-This is achieved by using the `Template`. The example below shows how to render the `SfDropDownList` in the custom toolbar, where the toolbar template binds the [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ValueChanged) event to the **OnChange** method.
+This is achieved by using the `Template` property. The example below shows how to render the `SfDropDownList` in the custom toolbar and bind the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ValueChanged) event to the **OnChange** method.
 
 In the **OnChange** method, the selected item text determines the action. For example, if **Update** is chosen, the [EndEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EndEditAsync) method exits edit mode. If **Edit** is selected, the selected record is passed to [StartEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_StartEditAsync) to start editing dynamically. Similarly, if **Delete** is chosen, the selected record is passed to [DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DeleteRecordAsync) to remove it from the Grid.
 
@@ -466,7 +466,7 @@ In the **OnSearch** method, the selected value from `SfAutoComplete` is used as 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjLntGDLBsLGXeDQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Render a component or element using the Toolbar Template
+## Render a Component or Element Using the Toolbar Template
 
 Rendering a component or element by using the toolbar template in the Blazor DataGrid extends the toolbar with custom components such as buttons, dropdowns, input fields, icons, or other UI elements. Event handlers can be bound within the template to enable actions for the added components.
 
