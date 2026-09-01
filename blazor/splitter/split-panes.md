@@ -13,7 +13,7 @@ This section explains split-panes behaviors.
 
 ## Horizontal layout
 
-By default, the Splitter is rendered in horizontal orientation. The Splitter container is split into panes in a horizontal flow direction with a vertical separator.
+By default, the Blazor Splitter is rendered in horizontal orientation. The Splitter container is split into panes in a horizontal flow direction with a vertical separator.
 
 ```cshtml
 
@@ -66,7 +66,7 @@ By default, the Splitter is rendered in horizontal orientation. The Splitter con
 
 ## Vertical layout
 
-By setting value to `Orientation` API as `Vertical`, splitter will be rendered in vertical orientation. Splitter container will be split as panes in vertical flow direction with horizontal separator.
+By setting value to `Orientation` API as `Vertical`, Blazor Splitter will be rendered in vertical orientation. Blazor Splitter container will be split as panes in vertical flow direction with horizontal separator.
 
 ```cshtml
 
@@ -117,7 +117,7 @@ By setting value to `Orientation` API as `Vertical`, splitter will be rendered i
 
 ![Blazor Splitter with Vertical Orientation](./images/blazor-splitter-vertical-orientation.webp)
 
-N> Multiple panes can also be rendered in splitter with both `Horizontal/Vertical` orientations.
+N> Multiple panes can also be rendered in Blazor Splitter with both `Horizontal/Vertical` orientations.
 
 ## Separator
 
@@ -174,11 +174,11 @@ N> For horizontal orientation, it will be considered as separator width. For ver
 
 ![Blazor Splitter with Separator](./images/blazor-splitter-separator.webp)
 
-## Nested Splitter
+## Nested Blazor Splitter
 
-Splitter provides support to render the nested pane to achieve the complex layouts. The same `SplitterPane` tag can be used for splitter pane and nested splitter.
+Blazor Splitter provides support to render the nested pane to achieve the complex layouts. The same `SplitterPane` tag can be used for splitter pane and nested splitter.
 
-N> Also the nested splitter can be rendered using direct child of the splitter pane. For this, nested splitter should have `100%` width and height to match with the parent pane dimensions.
+N> Also the nested Blazor Splitter can be rendered using direct child of the splitter pane. For this, nested splitter should have `100%` width and height to match with the parent pane dimensions.
 
 ```cshtml
 
@@ -252,11 +252,11 @@ N> Also the nested splitter can be rendered using direct child of the splitter p
 
 ## Add or remove pane
 
-The panes can be added programmatically but it will be complex. For this, use the `AddPane/RemovePane` methods to add and remove the panes dynamically in the splitter.
+The panes can be added programmatically but it will be complex. For this, use the `AddPane/RemovePane` methods to add and remove the panes dynamically in the Blazor Splitter.
 
 ### Add pane
 
-The panes can be added dynamically in the splitter by passing `PaneProperties` along with index to the `AddPane` method.
+The panes can be added dynamically in the Blazor Splitter by passing `PaneProperties` along with index to the `AddPane` method.
 
 ```cshtml
 

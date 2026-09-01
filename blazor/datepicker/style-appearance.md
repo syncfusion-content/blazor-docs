@@ -11,9 +11,9 @@ documentation: ug
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing the appearance of DatePicker container element
+## Customizing the appearance of the Blazor DatePicker container element
 
-Use the following CSS to customize the appearance of the DatePicker container element
+Use the following CSS to customize the appearance of the Blazor DatePicker container element
 
 ```css
 /* To specify height and font size */
@@ -23,9 +23,9 @@ Use the following CSS to customize the appearance of the DatePicker container el
 }
 ```
 
-## Customizing the DatePicker icon element
+## Customizing the Blazor DatePicker icon element
 
-Use the following CSS to customize the DatePicker icon element
+Use the following CSS to customize the Blazor DatePicker icon element
 
 ```css
 /* To specify background color and font size */
@@ -35,9 +35,9 @@ Use the following CSS to customize the DatePicker icon element
 }
 ```
 
-## Customizing the appearance of the DatePicker label
+## Customizing the appearance of the Blazor DatePicker label
 
-To customize the appearance of the DatePicker label, use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfInputTextBase-1.html#Syncfusion_Blazor_Inputs_SfInputTextBase_1_CssClass) property in combination with custom CSS.
+To customize the appearance of the Blazor DatePicker label, use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfInputTextBase-1.html#Syncfusion_Blazor_Inputs_SfInputTextBase_1_CssClass) property in combination with custom CSS.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -59,9 +59,9 @@ To customize the appearance of the DatePicker label, use the [CssClass](https://
     }
 ```
 
-## Adding background color to DatePicker container element
+## Adding background color to the Blazor DatePicker container element
 
-You can set the background color of the DatePicker container by targeting the `input.e-input` class with the `background-color` property.
+You can set the background color of the Blazor DatePicker container by targeting the `input.e-input` class with the `background-color` property.
 
 {% tabs %}
 {% highlight razor %}
@@ -75,7 +75,7 @@ You can set the background color of the DatePicker container by targeting the `i
 
 ## Full screen mode support in mobiles and tablets
 
-The DatePicker can render its popup in full-screen mode on mobile and tablet devices, in both landscape and portrait orientations. Enable full-screen mode by setting the [FullScreen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_FullScreen) property to `true`. The default value of `FullScreen` is `false`.
+The Blazor DatePicker can render its popup in full-screen mode on mobile and tablet devices, in both landscape and portrait orientations. Enable full-screen mode by setting the [FullScreen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_FullScreen) property to `true`. The default value of `FullScreen` is `false`.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

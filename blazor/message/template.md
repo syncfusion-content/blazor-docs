@@ -12,7 +12,7 @@ documentation: ug
 The message supports templates that allow the user to customize the content with a custom structure. The content can be a string, a paragraph, or any other HTML element. The template can be added directly to the `SfMessage` tag.
 
 
-In the following sample, the Message component content is customized with HTML elements and Blazor Buttons, which are directly added to the `SfMessage` tag.
+In the following sample, the Blazor Message component content is customized with HTML elements and Blazor Buttons, which are directly added to the `SfMessage` tag.
 
 {% tabs %}
 {% highlight razor %}

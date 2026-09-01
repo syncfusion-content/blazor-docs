@@ -9,7 +9,7 @@ documentation: ug
 
 # How to open a dialog on Blazor Split Button popup click
 
-This section explains how to open a dialog on a SplitButton popup item click. This can be achieved by handling dialog open in [ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SplitButtonEvents.html#Syncfusion_Blazor_SplitButtons_SplitButtonEvents_ItemSelected) event of the Split Button.
+This section explains how to open a dialog on a Blazor Split Button popup item click. This can be achieved by handling dialog open in [ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SplitButtonEvents.html#Syncfusion_Blazor_SplitButtons_SplitButtonEvents_ItemSelected) event of the Blazor Split Button.
 
 In the following example, the dialog opens when selecting the Update item.
 
@@ -65,4 +65,4 @@ In the following example, the dialog opens when selecting the Update item.
 
 ```
 
-![Opening a dialog from a Blazor SplitButton popup item Popup Item Click](./../images/blazor-splitbutton-dialog.webp)
+![Opening a dialog from a Blazor Split Button popup item Popup Item Click](./../images/blazor-splitbutton-dialog.webp)

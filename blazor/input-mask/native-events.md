@@ -9,7 +9,7 @@ documentation: ug
 
 # Native Events in Blazor Input Mask
 
-This section describes how to bind native DOM events to the MaskedTextBox component and how to pass event data to event handlers.
+This section describes how to bind native DOM events to the Blazor Input Mask component and how to pass event data to event handlers.
 
 ## Bind native events to MaskedTextBox
 

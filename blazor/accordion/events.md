@@ -17,7 +17,7 @@ N> All events should be configured within a single **AccordionEvents** component
 
 ## Created
 
-The [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Created) event is triggered once the Accordion component has been successfully created and rendered.
+The [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Created) event is triggered once the Blazor Accordion component has been successfully created and rendered.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -43,7 +43,7 @@ The [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigati
 
 ## Destroyed
 
-[`Destroyed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Destroyed) event triggers when the Accordion is destroyed.
+[`Destroyed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Destroyed) event triggers when the Blazor Accordion is destroyed.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

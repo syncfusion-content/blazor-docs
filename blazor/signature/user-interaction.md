@@ -37,7 +37,7 @@ It prevents the signature from being edited using the [`IsReadOnly`](https://hel
 
 ## Toggling User Interactions
 
-The following example demonstrates how to wire up the user interactions available in the Signature component. The example uses the [`Changed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_Changed) event along with the `CanUndoAsync`, `CanRedoAsync`, and `IsEmptyAsync` methods to enable or disable the action buttons, and uses checkboxes to toggle the `Disabled` and `IsReadOnly` state properties of the component.
+The following example demonstrates how to wire up the user interactions available in the Blazor Signature component. The example uses the [`Changed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_Changed) event along with the `CanUndoAsync`, `CanRedoAsync`, and `IsEmptyAsync` methods to enable or disable the action buttons, and uses checkboxes to toggle the `Disabled` and `IsReadOnly` state properties of the component.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

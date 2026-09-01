@@ -212,7 +212,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBdDwjlgyBlqRii?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor MultiSelect DropDown Component](./images/blazing-fast-multiselect-dropdown-blazor.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBdDwjlgyBlqRii?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor MultiSelect Dropdown Component](./images/blazing-fast-multiselect-dropdown-blazor.webp)" %}
 
 ## Binding data source
 
@@ -251,7 +251,7 @@ After initialization, populate the MultiSelect using the [DataSource](https://he
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBxXmjlUeRDCOaS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Binding in Blazor MultiSelect DropDown](./images/blazing-fast-multiselect-dropdown-data-binding.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBxXmjlUeRDCOaS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Binding in Blazor MultiSelect Dropdown](./images/blazing-fast-multiselect-dropdown-data-binding.webp)" %}
 
 ## Configure the popup list
 

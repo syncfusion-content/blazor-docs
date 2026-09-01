@@ -9,7 +9,7 @@ documentation: ug
 
 # How to add nested tabs in Blazor Tabs
 
-The Tabs component supports rendering nested levels of tabs by using the `ContentTemplate` property. To render nested tabs, define the nested Tab elements within the `ContentTemplate` of the parent tab.
+The Blazor Tabs component supports rendering nested levels of Blazor Tabs by using the `ContentTemplate` property. To render Blazor nested Tabs, define the Blazor nested Tabs elements within the `ContentTemplate` of the parent Blazor tabs.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
