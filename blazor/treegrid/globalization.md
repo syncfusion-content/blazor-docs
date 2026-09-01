@@ -15,7 +15,12 @@ documentation: ug
 
 ### Loading translations
 
-The following example demonstrates the Tree Grid in **Deutsch** culture. Here use **LoadLocaleData** method to load the **locale.json** file and **SetCulture** method to set the culture of the Tree Grid.
+The following example demonstrates the TreeGrid in **German (de-DE)** culture. This example uses the **LoadLocaleData** method to load the **locale.json** file and the **SetCulture** method to set the TreeGrid culture.
+
+The following methods are used for localization:
+- **LoadLocaleData**: Loads the locale-specific translation strings from a JSON file
+- **SetCulture**: Sets the culture/language for the TreeGrid display
+- **SetCurrencyCode**: (Used in Internationalization) Sets the currency format for number values
 
 {% tabs %}
 
@@ -148,7 +153,7 @@ public class TreeData
 
 ## Internationalization
 
-The **Internationalization** library is used to globalize number, date, and time values in Tree Grid component using format strings in the **Format**. In the below sample we set the culture and currency using the **SetCulture** and **SetCurrencyCode** methods.
+The **Internationalization** library globalize number, date, and time values in the TreeGrid component using format strings in the **Format** property.
 
 {% tabs %}
 
@@ -2383,7 +2388,7 @@ N> * In the above sample, **Duration** column is formatted by **NumberFormatOpti
 
 ## Right to left (RTL)
 
-RTL provides an option to switch the text direction and layout of the Tree Grid component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). In the below sample [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableRtl) method is used to enable RTL in the Tree Grid.
+RTL enables right-to-left text direction and layout for the TreeGrid component. This improves user experience and accessibility for users who work with right-to-left languages (Arabic, Farsi, Urdu, etc.). The following sample uses the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableRtl) method to enable RTL in the TreeGrid.
 
 {% tabs %}
 
