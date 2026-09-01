@@ -9,15 +9,15 @@ documentation: ug
 
 # Define events programmatically in Blazor Data Grid
 
-In the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), events are typically defined using the [GridEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#) child Razor component. As an alternative, Grid events can also be configured programmatically by accessing the Grid instance through a component reference. This approach is useful when events need to be assigned dynamically during the application lifecycle.
+In the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), events are typically defined using the [GridEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#) child Razor component. Programmatic configuration provides an alternative when Grid events must be assigned dynamically during the application lifecycle. Programmatic assignment uses a component reference to access the Grid instance and assign the GridEvents property from code.
 
 > Note: Assigning **Grid.GridEvents** programmatically replaces any events declared via the `<GridEvents>` markup for that Grid instance.
 
 To define events programmatically:
 
-- Set a reference to the Grid using the **@ref** directive.
-- After the Grid is rendered, assign the **GridEvents** property within the **OnAfterRenderAsync** lifecycle method (guarded by **firstRender**).
-- Use the **EventCallbackFactory** to create event handlers bound to the component context.
+- Set a reference to the Grid by using the **@ref** directive.
+- Assign the **GridEvents** property inside **OnAfterRenderAsync**, guarded by checking the **firstRender** parameter.
+- Use **EventCallbackFactory** to bind handlers to the current component context.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

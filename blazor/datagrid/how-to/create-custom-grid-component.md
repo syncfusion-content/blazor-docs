@@ -10,9 +10,10 @@ documentation: ug
 
 # Creating a Reusable Custom Blazor Data Grid Component
 
-Creating a reusable custom Blazor DataGrid by wrapping the `SfGrid` inside a Razor component helps standardize configuration and improve maintainability across applications. This approach is particularly useful in modern web applications where multiple Grid instances are used across different pages or modules.
+Creating a reusable custom Blazor DataGrid by wrapping the `SfGrid` in a reusable Razor component standardizes configuration and improves maintainability across applications. This pattern is useful when multiple pages or modules use the same Grid settings.
 
-In such scenarios, manually configuring features such as paging, sorting, filtering, and layout for each Grid can result in duplicated code and inconsistent behavior. Over time, this repetitive setup increases development effort and makes updates more difficult. By introducing a wrapper component, common configurations can be centralized and reused efficiently, ensuring uniform behavior throughout the application.
+In such scenarios, manually configuring paging, sorting, filtering, and layout for each Grid can result in duplicated code and inconsistent behavior. Repetitive setup increases development effort and makes updates more difficult. By using a wrapper component, common settings can be centralized and reused, ensuring uniform behavior throughout the application.
+
 
 ## Why create a custom Blazor DataGrid component
 
@@ -28,13 +29,11 @@ Additionally, a reusable component enhances code readability. By abstracting rep
 
 The custom component internally renders the `SfGrid` and applies predefined settings that are shared across all usages. It acts as a wrapper that encapsulates default behavior while allowing flexibility for customization.
 
-* Generic type support **TItem** enables strongly typed data binding, improving type safety and providing compile-time validation.
-
-* Child content projection using **ChildContent** allows dynamic column definitions, templates, and other elements to be passed into the Grid.
-
+* Generic type support with **TItem** enables strongly typed data binding, improving type safety and providing compile-time validation.
+* Child content projection using **ChildContent** allows column definitions, templates, and other markup to be passed into the Grid.
 * Attribute forwarding ensures that additional parameters, properties, or events passed to the custom component are automatically applied to the underlying `SfGrid`.
 
-This design approach provides a balance between reusable and flexibility. Developers can rely on the predefined defaults while still having the ability to extend or override behavior when needed.
+This design approach provides a balance between reusable and flexibility. Developers can rely on the default configuration while still having the option to extend or override behavior when needed.
 
 ## When to use a custom Blazor DataGrid
 
@@ -51,7 +50,8 @@ Adopting this pattern helps enforce development standards, reduces duplication, 
 
 ## Implement a custom Blazor DataGrid component
 
-The following example demonstrates how to create a reusable CustomGrid component with predefined [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings). This component centralizes common configuration options, such as [PageCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageCount) and [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize), while still allowing external customization through parameters and projected content.
+The following example demonstrates how to create a reusable `CustomGrid` component with predefined [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings). The wrapper component centralizes common configuration options, such as [PageCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageCount) and [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize), while still allowing external customization through parameters and projected content.
+
 
 **CustomGrid.razor:**
 

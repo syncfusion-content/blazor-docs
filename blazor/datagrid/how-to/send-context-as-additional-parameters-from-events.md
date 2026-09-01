@@ -9,13 +9,13 @@ documentation: ug
 
 # Passing Context as Additional Parameters in Events in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports passing the current row context to event handlers. This approach is useful for updating Grid fields based on interactions inside the edit dialog, enabling immediate, in-place updates to the bound data.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports passing the current row context to event handlers. Passing row context supports field updates from interactions inside the edit dialog and keeps the bound data in sync.
 
-To implement this, follow these steps:
+To implement the scenario, follow these steps:
 
-   1. Place the [ComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started-with-web-app) inside the Grid's `GridEditSettings.Template` to customize the edit form.
+   1. Add the [ComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started-with-web-app) inside the Grid's `GridEditSettings.Template` and set `Context="context"` so the current row object is available inside the template.
 
-   2. Bind the ComboBox’s `ValueChange` event to a handler method.
+   2. Bind the ComboBox `ValueChange` event to a handler method.
 
    3. The handler receives:
       * args: Event arguments that include the new ComboBox value and the selected item.

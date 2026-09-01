@@ -9,9 +9,9 @@ documentation: ug
 
 # Enable or Disable Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be dynamically enabled or disabled by toggling a button. This is useful to restrict user interaction with the Grid during certain application states or processes. The approach below disables interaction at the UI level by applying a CSS class to a wrapper and setting an attribute for styling or accessibility.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be enabled or disabled at the UI level by toggling a button. This approach is useful when user interaction needs to be restricted during specific application states or processes. The sample below applies a CSS class to a wrapper and updates an accessibility attribute. The wrapper style prevents pointer and touch interaction and shows a disabled appearance. The approach does not change the Grid component internal enabled state or keyboard behavior.
 
-To implement this:
+To implement the behavior:
 
 * Define a CSS class on the wrapper (`.grid-wrapper.disabled`) to visually and functionally disable the Grid.
 
@@ -72,14 +72,6 @@ To implement this:
     {
         isGridDisabled = !isGridDisabled;
         GridAttributes["aria-disabled"] = isGridDisabled ? "true" : "false";
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
     }
 }
 {% endhighlight %}
