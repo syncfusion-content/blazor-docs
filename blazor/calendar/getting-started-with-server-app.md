@@ -170,6 +170,7 @@ N> If the interactivity location is set to `Per page/component`, define a render
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveServer
+@using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime"></SfCalendar>
 
@@ -249,8 +250,9 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-1. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-2. [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-3. [Getting Started with Blazor Calendar Events](https://blazor.syncfusion.com/documentation/calendar/events)
+1. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+2. [Getting Started with Blazor Server App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor WebAssembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+4. [Getting Started with Blazor Calendar Events](https://blazor.syncfusion.com/documentation/calendar/events)
 
 
