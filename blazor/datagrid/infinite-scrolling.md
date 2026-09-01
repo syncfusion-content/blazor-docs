@@ -9,12 +9,14 @@ documentation: ug
 
 # Infinite Scrolling for Large Data Performance in Blazor Data Grid
 
-The infinite scrolling feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides load-on-demand data retrieval to handle large datasets without degrading performance. In default infinite scrolling, the Grid fetches the next block of data when the vertical scrollbar reaches the end of the scroller, creating a seamless browsing experience across extensive data.
+The infinite scrolling feature in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides load-on-demand data retrieval for large datasets. The Data Grid loads the next block of data when the vertical scrollbar reaches the end of the scroller.
 
-In this feature, a block is equivalent to the Grid’s [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize). If `PageSize` is not set, the Grid calculates it from the viewport height and row height. To enable infinite scrolling, set [EnableInfiniteScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableInfiniteScrolling) to **true** and define a content [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height).
+In this feature, a block is equivalent to the Grid’s [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize). If `PageSize` is not set, the Data Grid calculates it from the viewport height and row height. To enable infinite scrolling, set [EnableInfiniteScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableInfiniteScrolling) to **true** and define a content [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height).
 
-> - With this feature, the Grid does not issue a new data request when revisiting a previously loaded page.
+> - With this feature, the Data Grid does not issue a new data request when revisiting a previously loaded page.
+> - When `EnableCache` is set to **false** (default), the Data Grid keeps the requested blocks in memory and reuses them when scrolled back into view, so revisiting a page does not trigger a new data request. When `EnableCache` is set to **true**, the Data Grid additionally reuses the rendered DOM row elements for those blocks (subject to the `MaximumBlocks` limit), which avoids recreating rows on revisit.
 > - The `Height` property must be specified when `EnableInfiniteScrolling` is enabled (a fixed container height is required).
+> - For large datasets served from a remote endpoint, bind the Data Grid through [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) with a suitable adaptor such as [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/odatav4-adaptor), [WebApiAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/web-api-adaptor), [UrlAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/url-adaptor), or [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor). For more details and examples, refer to [Remote data binding](remote-data.md).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -82,9 +84,9 @@ public class TaskDetails
 
 ## Number of blocks rendered during initial loading
 
-At initial load, the Grid renders a specified number of data blocks (pages), which equates to the `InitialBlocks` value multiplied by the page size.
+At initial load, the Data Grid renders a specified number of data blocks. The rendered row count is equal to the [InitialBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_InitialBlocks) value multiplied by the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) value. The `InitialBlocks` value can also be reconfigured at runtime through the `GridInfiniteScrollSettings` to change how many blocks render on the next refresh.
 
-Configure this using [InitialBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_InitialBlocks) on [GridInfiniteScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html). By default, three pages are rendered initially. Afterwards, additional data is buffered and loaded based on page size or the number of rows that fit within the given height.
+Configure this setting through [InitialBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_InitialBlocks) on [GridInfiniteScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html). The default value is three blocks. After the initial load, additional data is buffered and loaded based on the page size or the number of rows that fit in the current height.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -181,9 +183,9 @@ public class TaskDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrxNcNUeLCWkTqi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Efficient data caching and DOM management in Grid cache mode
+## Efficient data caching and DOM management in Data Grid cache mode
 
-In Blazor DataGrid cache mode, previously loaded blocks are reused when revisited, reducing repeat data requests. The Grid manages the number of rendered DOM row elements using [GridInfiniteScrollSettings.MaximumBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_MaximumBlocks). When this limit is reached, the Grid removes an older block of row elements to render new ones.
+In Blazor Data Grid cache mode, the Data Grid reuses the rendered DOM row elements of previously loaded blocks when those blocks are scrolled back into view, in addition to avoiding repeat data requests. The Data Grid manages the number of rendered DOM row elements using [GridInfiniteScrollSettings.MaximumBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_MaximumBlocks). When this limit is reached, the Data Grid removes an older block of row elements to render new ones.
 
 Enable cache mode by setting [EnableCache](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_EnableCache) to **true** on [GridInfiniteScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html).
 
@@ -199,7 +201,7 @@ Configure the maximum cached blocks with `MaximumBlocks` (**default: 3**).
     <label> Enable or Disable Cache mode:</label>
     <SfSwitch ValueChange="Change" TChecked="bool"></SfSwitch>
 </div>
-<SfGrid @ref="Grid" DataSource="@TaskData" Height="300" EnableVirtualization="true">
+<SfGrid @ref="Grid" DataSource="@TaskData" Height="300" /EnableInfiniteScrolling="true">
     <GridPageSettings PageSize="50"></GridPageSettings>
     <GridInfiniteScrollSettings EnableCache="@IsEnabled"></GridInfiniteScrollSettings>
     <GridColumns>
@@ -268,9 +270,9 @@ public class TaskDetails
 
 ## Limitations
 
-* Due to browser element height limitations, the maximum number of records the Grid can load is constrained by browser capabilities.
-* A static height must be set for the component or its parent container when using infinite scrolling. Using 100% height works only if both the Grid and its parent have explicit heights.
-* The combined height of the initially loaded rows must exceed the viewport height for content to scroll.
+* Due to browser element height limitations, the maximum number of records the Data Grid can load is constrained by browser capabilities.
+* A static height must be set for the component or its parent container when using infinite scrolling. Using 100% height works only if both the Data Grid and its parent have explicit heights.
+* The combined height of the initially loaded rows must exceed the viewport height for content to scroll. If the vertical scrollbar does not appear, increase the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) or [InitialBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_InitialBlocks) value so that more rows are loaded on first render, or reduce the Grid's container [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) so the viewport is smaller relative to the rendered rows.
 * With infinite scrolling, copy-paste and drag-and-drop apply only to items within the current viewport.
 * Cell selection is not persisted in cache mode.
 * Group records cannot be collapsed in cache mode.
@@ -280,17 +282,19 @@ public class TaskDetails
 * Programmatic selection using [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsAsync_System_Int32___) and [SelectRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowAsync_System_Int32_System_Nullable_System_Boolean__System_Boolean_) is not supported in infinite scrolling.
 * Infinite scrolling is not compatible with:
     1. Batch editing
-    2. Normal editing
+    2. Inline (normal) editing
     3. Row template
     4. Row virtual scrolling
     5. Detail template
     6. Hierarchy features
     7. Autofill
 * Limitations of row drag and drop with infinite scrolling:
-    1. In cache mode, the Grid refreshes automatically if the number of content `<tr>` elements exceeds the cache limit after the drop action.
-    2. With lazy load grouping, the Grid refreshes automatically after row drag and drop.
+    1. In cache mode, the Data Grid refreshes automatically if the number of content `<tr>` elements exceeds the cache limit after the drop action.
+    2. With lazy load grouping, the Data Grid refreshes automatically after row drag and drop.
     3. For remote data, changes from drag and drop are applied only in the UI and are lost after refresh unless persisted to the server. Use the [RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDropped) event to commit changes server-side, then refresh the Grid.
 
 ## See also
 
-* [Infinite scrolling with Lazy load grouping in Grid](https://blazor.syncfusion.com/documentation/datagrid/lazy-load-grouping#lazy-load-grouping-with-infinite-scrolling)
+* [Virtual scrolling in Data Grid](virtual-scrolling.md)
+* [Paging in Data Grid](paging.md)
+* [Infinite scrolling with Lazy load grouping in Data Grid](https://blazor.syncfusion.com/documentation/datagrid/lazy-load-grouping#lazy-load-grouping-with-infinite-scrolling)
