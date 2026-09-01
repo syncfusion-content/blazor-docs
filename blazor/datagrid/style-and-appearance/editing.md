@@ -9,39 +9,43 @@ documentation: ug
 
 # Editing Customization in Blazor Data Grid
 
-The appearance of editing elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. Styling options are available for different parts of the editing interface:
+The appearance of editing elements in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS.
 
 - **Edited and newly added rows:** Highlights rows that are being modified or newly inserted.
-- **Edit form input fields:** Displays text boxes used to enter or update values during editing.
+- **Edited row input elements:** Displays text boxes used to enter or update values during editing.
 - **Edit dialog header:** Shows the title or context of the current editing operation.
-- **Command column buttons:** Displays action buttons such as Edit, Delete, Update, and Cancel.
+- **Command column buttons:** Displays action buttons such as Edit, Delete, Save, and Cancel.
 
 ## Customize edited and added row elements
 
 The **.e-editedrow** and **.e-addedrow** classes style edited and newly added rows. Apply CSS to make these rows stand out:
 
 ```css
-.e-grid .e-editedrow table, .e-grid .e-addedrow table {
-	    background-color: #62b2eb;
+.e-grid .e-editedrow table,
+.e-grid .e-addedrow table {
+    background-color: #62b2eb;
 }
 ```
 
-Adjust properties such as **background-color** or **border** styles to highlight rows that are in edit mode.
+Adjust properties such as **background-color** or **border** to highlight rows in edit mode.
 
 ![Edited and added rows](../images/style-and-appearance/edited-added-row-element.webp) 
 ![Edited row styling](../images/style-and-appearance/edited-added-row-element-2.webp)
 
 ## Customize edited row input elements
 
-The **.e-gridform** and **.e-input** classes style inputs inside the inline edit form in the Blazor DataGrid. Use CSS to adjust their appearance:
+The **.e-gridform** and **.e-input** classes style input elements inside the inline edit form in the Blazor DataGrid. Use CSS to adjust their appearance:
 
 ```css
-
 .e-grid .e-gridform .e-rowcell .e-input-group .e-input {
     font-family: cursive;
-    color:rgb(214, 33, 123)
+    color: rgb(214, 33, 123);
 }
 
+.e-grid .e-gridform .e-rowcell:focus-visible {
+    outline: 2px solid #005a9e;
+    outline-offset: -2px;
+}
 ```
 
 Modify properties such as **font-family**, **color**, or **padding** to improve readability.
@@ -65,15 +69,21 @@ Modify properties such as **font-family**, **color**, or **padding** to improve 
 </SfGrid>
 
 <style>
-    .e-grid .e-editedrow table,
-    .e-grid .e-addedrow table { background-color: #62b2eb; }
-    .e-grid .e-gridform .e-rowcell .e-input-group .e-input { font-family: cursive; color: rgb(214,33,123); }
-    .e-grid .e-gridform .e-rowcell:focus-visible { outline: 2px solid #005a9e; outline-offset: -2px; }
+    .e-grid .e-gridform .e-rowcell .e-input-group .e-input {
+        font-family: cursive;
+        color: rgb(214, 33, 123);
+    }
+
+    .e-grid .e-gridform .e-rowcell:focus-visible {
+        outline: 2px solid #005a9e;
+        outline-offset: -2px;
+    }
 </style>
 
 @code {
     private List<OrderData> Orders { get; set; }
     private readonly List<string> ToolbarItems = new() { "Add", "Edit", "Delete", "Update", "Cancel" };
+
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
@@ -134,16 +144,22 @@ internal sealed class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBdtwDMLHDBMvAD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Customize the edit dialog header
+## Customize edit dialog header
 
-The **.e-edit-dialog** and **.e-dlg-header-content** classes style the dialog header when dialog editing is enabled. Apply CSS to differentiate the header:
+The **.e-edit-dialog** and **.e-dlg-header-content** classes style the dialog header when dialog editing is enabled.
+
+> The edit dialog appears only when `GridEditSettings Mode="EditMode.Dialog"` is set on the Data Grid. Set this property to render the dialog and apply the styles in this section. Apply CSS to differentiate the header:
 
 ```css
-
 .e-edit-dialog .e-dlg-header-content {
     background-color: #deecf9;
+    color: #0b345d;
 }
 
+.e-edit-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:focus-visible {
+    outline: 2px solid #005a9e;
+    outline-offset: 2px;
+}
 ```
 
 Change properties such as **background-color** to visually separate the header from the rest of the dialog content.
@@ -166,8 +182,15 @@ Change properties such as **background-color** to visually separate the header f
 </SfGrid>
 
 <style>
-    .e-edit-dialog .e-dlg-header-content { background-color: #deecf9; color: #0b345d; }
-    .e-edit-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:focus-visible { outline: 2px solid #005a9e; outline-offset: 2px; }
+    .e-edit-dialog .e-dlg-header-content {
+        background-color: #deecf9;
+        color: #0b345d;
+    }
+
+    .e-edit-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:focus-visible {
+        outline: 2px solid #005a9e;
+        outline-offset: 2px;
+    }
 </style>
 
 @code {
@@ -236,17 +259,18 @@ internal sealed class OrderData
 
 ## Customize command column buttons
 
-The **.e-edit**, **.e-delete**, **.e-update**, and **.e-cancel-icon** classes style the command column buttons in the Blazor DataGrid. Use CSS to adjust their appearance:
+The **.e-edit**, **.e-delete**, **.e-update**, and **.e-cancel-icon** classes style the command column buttons in the Blazor Data Grid. Use CSS to adjust their appearance:
 
 ```css
-
-.e-grid .e-delete::before ,.e-grid .e-cancel-icon::before{
+.e-grid .e-delete::before,
+.e-grid .e-cancel-icon::before {
     color: #f51717;
 }
-.e-grid .e-edit::before, .e-grid .e-update::before {
+
+.e-grid .e-edit::before,
+.e-grid .e-update::before {
     color: #077005;
 }
-
 ```
 
 Style properties like **color**, **font-size**, and **font-weight** can be adjusted to differentiate action icons and enhance visibility during interaction.
@@ -278,10 +302,13 @@ Style properties like **color**, **font-size**, and **font-weight** can be adjus
     </GridColumns>
 </SfGrid>
 <style>
-    .e-grid .e-delete::before ,.e-grid .e-cancel-icon::before{
+    .e-grid .e-delete::before,
+    .e-grid .e-cancel-icon::before {
         color: #f51717;
     }
-    .e-grid .e-edit::before, .e-grid .e-update::before {
+
+    .e-grid .e-edit::before,
+    .e-grid .e-update::before {
         color: #077005;
     }
 </style>
