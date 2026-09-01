@@ -12,7 +12,7 @@ documentation: ug
 Aggregates are displayed as summary rows in the DataGrid footer, providing a consolidated view of totals, averages, or counts. These rows can be styled using CSS to match the layout and design of the grid. Styling options are available for:
 
 - **Aggregate root container:** The outer wrapper of the footer row.
-- **Aggregate summary row and cells:** The row that shows summary values, and the cells that display each result.
+- **Aggregate summary row and cells:** The row that shows summary values and the cells that display each result.
 
 ## Customize the aggregate root element
 The **.e-gridfooter** class styles the root container of the aggregate footer row. Use CSS to adjust its appearance:
@@ -29,7 +29,7 @@ Properties like **font-family**, **font-size**, and **padding** can be changed t
 
 ## Customize the aggregate cell elements
 
-The **.e-summaryrow** and **.e-summarycell** classes define the appearance of the summary row and its individual cells in the Blazor DataGrid. Apply CSS to modify their look:
+The **.e-summaryrow** and **.e-summarycell** classes define the appearance of the summary row and its individual cells in the Blazor DataGrid. Use `.e-gridfooter` to style the footer container and `.e-summaryrow .e-summarycell` to style the cells inside that footer.
 
 ```css
 .e-grid .e-summaryrow .e-summarycell {
@@ -37,7 +37,7 @@ The **.e-summaryrow** and **.e-summarycell** classes define the appearance of th
 }
 ```
 
-Properties such as **background-color**, **color**, and **text-align** can be adjusted to improve clarity and interaction.
+Properties such as **background-color**, **color**, and **text-align** can be adjusted to improve visual clarity and alignment.
 
 ![Aggregate summary cell with custom background color](../images/style-and-appearance/aggregate-cell-element.webp)
 

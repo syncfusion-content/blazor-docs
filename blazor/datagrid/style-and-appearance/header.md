@@ -25,13 +25,13 @@ The **.e-gridheader** class styles the header container in the Blazor DataGrid. 
 }
 ```
 
-Style Properties like  **border**, **padding**, and **background-color** can be changed to fit the grid layout design.
+Style properties such as **border**, **padding**, and **background-color** can be changed to fit the grid layout design.
 
 ![Grid header](../images/style-and-appearance/grid-header.webp)
 
 ## Customize the Blazor DataGrid header cell
 
-The **.e-headercell** class styles individual header cells in the Blazor DataGrid. Apply CSS to modify its look:
+The **.e-headercell** class styles individual header cells in the Blazor DataGrid. Apply CSS to change the appearance:
 
 ```css
 .e-grid .e-headercell {
@@ -196,7 +196,7 @@ Properties such as **color**, **background-color**, **font**, and alignment can 
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsFrozen="true" Freeze="FreezeDirection.Left" TextAlign="TextAlign.Right" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" IsFrozen="true" Freeze="FreezeDirection.Left" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="160"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="160"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.ShipName) HeaderText="Ship Name" Width="130"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.ShipAddress) HeaderText="Ship Address" Width="150"></GridColumn>
@@ -301,7 +301,7 @@ public class OrderDetails
 
 ## Hide the Blazor DataGrid header
 
-The **.e-gridheader .e-columnheader** class combination targets the column header row in the Blazor DataGrid. Use CSS to hide the header:
+The **.e-gridheader .e-columnheader** selector targets the column header row in the Blazor DataGrid. Use CSS to hide the header:
 
 ```css
 .e-grid .e-gridheader .e-columnheader {
