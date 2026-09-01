@@ -9,7 +9,7 @@ documentation: ug
 
 # Figma UI Kits for Blazor Components with Design Tokens
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> provides [Figma UI kits](https://www.figma.com/@syncfusion) to streamline collaboration between designers and developers. The kits match the themes used by [Blazor components](https://www.syncfusion.com/blazor-components) and are available for [Material 3](https://www.figma.com/community/file/1454123774600129202/syncfusion-ui-kit-material-3-theme), [Fluent](https://www.figma.com/community/file/1385969120047188707/syncfusion-ui-kit-fluent-theme), [Tailwind](https://www.figma.com/community/file/1385969065626384098/syncfusion-ui-kit-tailwind-theme), and [Bootstrap 5](https://www.figma.com/community/file/1385968977953858272/syncfusion-ui-kit-bootstrap-5-theme).
+Syncfusion<sup style="font-size:70%">&reg;</sup> provides [Figma UI kits](https://www.figma.com/@syncfusion) to streamline collaboration between designers and developers. The kits match the themes used by [Blazor components](https://www.syncfusion.com/blazor-components) and are available for [Material 3](https://www.figma.com/community/file/1454123774600129202/syncfusion-ui-kit-material-3-theme), [Fluent](https://www.figma.com/community/file/1385969120047188707/syncfusion-web-ui-kit-fluent-theme), [Tailwind](https://www.figma.com/community/file/1385969065626384098/syncfusion-web-ui-kit-tailwind-theme), and [Bootstrap 5](https://www.figma.com/community/file/1385968977953858272/syncfusion-web-ui-kit-bootstrap-5-theme).
 
 Each kit contains reusable design components with states and variants, along with detailed figures, measurements, and icons that represent Blazor components.
 
@@ -28,9 +28,9 @@ The Figma UI kits offer the following advantages:
 The Figma UI kits are available in the [Figma community](https://www.figma.com/@syncfusion). Download the theme-specific kits from the following links:
 
 - [Material 3](https://www.figma.com/community/file/1454123774600129202/syncfusion-ui-kit-material-3-theme)
-- [Fluent](https://www.figma.com/community/file/1385969120047188707/syncfusion-ui-kit-fluent-theme)
-- [Tailwind](https://www.figma.com/community/file/1385969065626384098/syncfusion-ui-kit-tailwind-theme)
-- [Bootstrap 5](https://www.figma.com/community/file/1385968977953858272/syncfusion-ui-kit-bootstrap-5-theme)
+- [Fluent](https://www.figma.com/community/file/1385969120047188707/syncfusion-web-ui-kit-fluent-theme)
+- [Tailwind](https://www.figma.com/community/file/1385969065626384098/syncfusion-web-ui-kit-tailwind-theme)
+- [Bootstrap 5](https://www.figma.com/community/file/1385968977953858272/syncfusion-web-ui-kit-bootstrap-5-theme)
 
 ## Structure of the UI kits
 

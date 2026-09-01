@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to display string values in Blazor Pivot Table | Syncfusion
-description: Step-by-step example showing how to display string values in the Blazor Pivot Table, using CellTemplate to set AxisSet.FormattedText per value cell.
+description: Code example showing how to display string values in the Blazor Pivot Table, using CellTemplate to set AxisSet.FormattedText per value cell.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -11,7 +11,13 @@ documentation: ug
 
 String values can be displayed in value cells by using the [CellTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewTemplates.html#Syncfusion_Blazor_PivotView_PivotViewTemplates_CellTemplate) property of the [PivotViewTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewTemplates.html) class. The template receives an [AxisSet](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.AxisSet.html) context that contains the cell information (for example, Axis, Value, ActualText, and FormattedText). Setting [AxisSet.FormattedText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.AxisSet.html#Syncfusion_Blazor_PivotView_AxisSet_FormattedText) determines the text rendered for that cell without altering the underlying value.
 
-In the following example, each value cell for the **Sold** field is converted to the string format **{hours:D2}:{minutes:D2}:{seconds:D2}** (HH:mm:ss), and the result is assigned to `data.FormattedText` so the cell displays the custom string.
+In the following example, each value cell for the **Sold** field is converted to the string format **{hours:D2}:{minutes:D2}:{seconds:D2}** (HH:mm:ss), and the formatted string is assigned to `data.FormattedText` so the cell displays the custom value.
+
+## Prerequisites
+
+Before adding the template, confirm the following:
+
+- `@using Syncfusion.Blazor.PivotView` is added to `_Imports.razor` so that `SfPivotView`, `PivotViewTemplates`, `CellTemplate`, `AxisSet`, and the data-source settings (`PivotViewDataSourceSettings`, `PivotViewColumn`, `PivotViewRow`, `PivotViewValue`, `PivotViewFormatSetting`) are available application-wide.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView

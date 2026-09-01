@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Form Groups in Blazor DataForm Component | Syncfusion®
-description: Checkout and learn here about the single and multiple form group configuration  with Blazor DataForm component.
+title: Form Group in Blazor Data Form | Syncfusion®
+description: Organize Blazor Data Form fields into single or multiple form groups using FormGroup for descriptive group labels and column-based layouts.
 platform: Blazor
 control: DataForm
 documentation: ug
 ---
 
-# Form group in DataForm component
+# Form Group in Blazor Data Form
 
 In the DataForm, the [FormGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormGroup.html) feature organizes `FormItem` and `FormAutoGenerateItems` under a descriptive group label with an optional identifier, and supports a column-based layout within each group.
 
@@ -23,7 +23,7 @@ The following example shows how to configure a `FormGroup` within the DataForm u
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm showing a single form group with label and items](images/blazor_dataform_single_formgroup.webp)
+![Blazor Data Form showing a single form group with label and items](images/blazor_dataform_single_formgroup.webp)
 
 ## Column layout for the group
 
@@ -42,7 +42,7 @@ The DataForm can arrange multiple form groups across columns using the form-leve
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm Form Group](images/blazor_dataform_multiple_formgroup.webp)
+![Blazor Data Form Form Group](images/blazor_dataform_multiple_formgroup.webp)
 
 ## Configure the column spacing 
 
@@ -63,7 +63,7 @@ This section explains how to divide the collection of [FormGroups](https://help.
 
 In the example, the DataForm contains two groups. The first group uses six internal columns and distributes its fields by their column spans. The second group uses two internal columns and arranges its fields accordingly.
 
-![Blazor DataForm form group column layout with per-group column counts and spacing](images/blazor_dataform_formgroup_column_layout.webp)
+![Blazor Data Form form group column layout with per-group column counts and spacing](images/blazor_dataform_formgroup_column_layout.webp)
 
 ## Change the appearance of the form group
 
@@ -83,4 +83,4 @@ Customize the appearance of a form group using the [CssClass](https://help.syncf
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm form group customized with background color and padding](images/blazor_dataform_formgroup_customization.webp)
+![Blazor Data Form form group customized with background color and padding](images/blazor_dataform_formgroup_customization.webp)

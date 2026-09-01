@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Content Render Mode in Blazor Accordion Component | Syncfusion®
-description: Checkout and learn here all features about Content Render Mode in Blazor Accordion component and more.
+title: Content Render Mode in Blazor Accordion | Syncfusion®
+description: Render all Blazor Accordion item content at initial load by setting LoadOnDemand to false, keeping the full DOM available for stateful interactions.
 platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
-# Content Render Mode in Blazor Accordion Component
+# Content Render Mode in Blazor Accordion
 
 The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) lets you render all [AccordionItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html) contents at initial load and keep them in the DOM. To enable this behavior, set the [LoadOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html#Syncfusion_Blazor_Navigations_SfAccordion_LoadOnDemand) property of the [SfAccordion](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html) to `false`.
 

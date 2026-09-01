@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Templates in Blazor Rating Component | Syncfusion®
-description: Checkout and learn here all about Templates with Blazor Rating component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
+title: Templates in Blazor Rating | Syncfusion
+description: Customize Blazor Rating items with EmptyTemplate and FullTemplate for unique, branded, and accessible rating displays.
 platform: Blazor
 control: Rating
 documentation: ug
 ---
 
-# Templates in Blazor Rating Component
+# Templates in Blazor Rating
 
 The Blazor Rating component supports templates to customize the appearance of rating items.
 
-The rating component supports the following templates for item customization:
+The Blazor Rating component supports the following templates for item customization:
 
 * [EmptyTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_EmptyTemplate): Template applied to unrated items.
 * [FullTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_FullTemplate): Template applied to rated items.

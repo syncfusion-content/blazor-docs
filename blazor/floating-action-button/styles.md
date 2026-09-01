@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles in Blazor Floating Action Button Component | Syncfusion®
-description: Checkout and learn here all about Styles in Blazor Floating Action Button component and much more details.
+title: Styles in Blazor Floating Action Button | Syncfusion
+description: Apply predefined styles and custom CSS to the Blazor Floating Action Button, including hover text and outline effects.
 platform: Blazor
 control: Floating Action Button
 documentation: ug
 ---
 
-# Styles in Blazor Floating Action Button Component
+# Styles in Blazor Floating Action Button
 
 This section explains the style options for the Blazor Floating Action Button (FAB), including predefined style classes, custom CSS, showing text on hover, and outline customization.
 
@@ -31,7 +31,7 @@ The Blazor Floating Action Button supports the following predefined styles. Appl
 
 ```
 
-![Blazor FAB Component with Styles](./images/Style.webp)
+![Blazor Floating Action Button Component with Styles](./images/Style.webp)
 
 N> Predefined Floating Action Button styles provide only a visual indication. Therefore, the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_Content) property should describe the action for users of assistive technologies such as screen readers.
 
@@ -80,7 +80,7 @@ Use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Butto
 
 ```
 
-![Blazor FAB Component with Hover](./images/onhover.webp)
+![Blazor Floating Action Button Component with Hover](./images/onhover.webp)
 
 ## Outline customization
 
@@ -103,4 +103,4 @@ Use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Butto
 
 ```
 
-![Blazor FAB Component with Outline](./images/FabOutline.webp)
+![Blazor Floating Action Button Component with Outline](./images/FabOutline.webp)

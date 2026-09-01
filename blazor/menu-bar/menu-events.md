@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Menu Bar Events in Blazor Menu Bar | Syncfusion®
-description: Checkout and learn here all the features about Events in the Blazor MenuBar component and much more details.
+title: Events in Blazor Menu Bar | Syncfusion
+description: Handle Blazor Menu Bar events such as Created, OnItemRender, and OnOpen to respond to menu interactions.
 platform: Blazor
-control: Menu Bar
+control: Menu Bar 
 documentation: ug
 ---
 
-# Events in Blazor Menu Bar Component
+# Events in Blazor Menu Bar
 
 The Blazor Menu Bar component exposes a list of events that fire in response to user actions. The events are wired through the `MenuEvents` child tag of `SfMenu`. When using the `MenuEvents` tag, the `TValue` parameter must be supplied, and it must match the `TValue` of the parent `SfMenu`.
 
@@ -17,7 +17,7 @@ The following table summarizes each event and when it fires. The `args` paramete
 
 | Event | When it fires |
 | --- | --- |
-| [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_Created) | After the Menu Bar has been successfully created. |
+| [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_Created) | After the Blazor Menu Bar has been successfully created. |
 | [OnItemRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_OnItemRender) | While rendering each menu item (fires for every item, including nested submenu items). |
 | [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_OnOpen) | Before the menu item opens. Cancellable: set `args.Cancel = true` to prevent the open. |
 | [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_OnClose) | Before the submenu closes. Cancellable: set `args.Cancel = true` to prevent the close. |
@@ -117,4 +117,4 @@ The following table summarizes each event and when it fires. The `args` paramete
 
 ```
 
-![Customizing Blazor MenuBar Items using Event](./images/blazor-menubar-events.webp)
+![Customizing Blazor Menu Bar Items using Event](./images/blazor-menubar-events.webp)

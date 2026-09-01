@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Header in Blazor Tabs Component | Syncfusion®
-description: Checkout and learn here all the features about header in Blazor Tabs component and much more details.
+title: Header in Blazor Tabs | Syncfusion
+description: Customize Blazor Tabs header styles with predefined CSS classes for fill and accent backgrounds for visual variety.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Header in Blazor Tabs Component
+# Header in Blazor Tabs
 
 This section explains about modifying the style of Tab header.
 
@@ -247,9 +247,9 @@ The position of the Tab header icons can be customized using the [IconPosition](
 ![Blazor Tabs with Icon](./images/blazor-tabs-icon.webp)
 
 
-## Add floating button to the right of existing tabs
+## Add floating button to the right of existing Blazor Tabs
 
-You can add a floating button to the right of the existing tabs by placing a button inside the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_HeaderTemplate) of the last `TabItem`.
+You can add a floating button to the right of the existing Blazor Tabs by placing a button inside the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_HeaderTemplate) of the last `TabItem`.
 
 When the user clicks the button inside `HeaderTemplate`, a new tab item with the provided content is added.
 

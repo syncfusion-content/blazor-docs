@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Data Form in Blazor WASM App | Syncfusion
-description: Check out and learn about how to get started with the Blazor Data Form component in a Blazor WebAssembly App.
+title: Getting Started with Blazor Data Form in Blazor WASM App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Data Form control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Data Form
 documentation: ug
 ---
 
-# Getting Started with Blazor Data Form Component in Blazor WASM App
+# Getting Started with Blazor Data Form in Blazor WASM App
 
 This section briefly explains how to add the [Blazor Data Form](https://www.syncfusion.com/blazor-components/blazor-data-form) component to a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -249,7 +249,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVHNxVKTJFKGNAG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor DataForm getting started example](images/blazor-dataform.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVHNxVKTJFKGNAG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Data Form getting started example](images/blazor-dataform.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DataForm).
 

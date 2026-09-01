@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Customization in Blazor Mention Component | Syncfusion®
-description: Checkout and learn here all about the customization in Blazor Mention component and much more details.
+title: Customization in Blazor Mention | Syncfusion
+description: Customize Blazor Mention behavior with show or hide mention character, suffix text, and CSS styling options.
 platform: Blazor
 control: Mention
 documentation: ug
 ---
 
-# Customization in Blazor Mention Component
+# Customization in Blazor Mention
 
 ## Show or hide mention character
 
-To show the mentioned character along with the text when displaying the selected mention item in the target element, you can set the [ShowMentionChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_ShowMentionChar) property of the Mention component to `true`. This can be useful in cases where you want to clearly differentiate between the selected mention item and the rest of the text in the Mention component.
+To show the mentioned character along with the text when displaying the selected mention item in the target element, you can set the [ShowMentionChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_ShowMentionChar) property of the Blazor Mention component to `true`. This can be useful in cases where you want to clearly differentiate between the selected mention item and the rest of the text in the Blazor Mention component.
 
 {% highlight razor %}
 
@@ -23,7 +23,7 @@ To show the mentioned character along with the text when displaying the selected
 
 ## Adding the suffix character after selection
 
-The [SuffixText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_SuffixText) property in the Mention component allows you to specify a string that should be appended to the end of the selected mention item when it is inserted into the input field. You can use this property to add a `space` or a `new line` after the mention, or any other string that you want to include.
+The [SuffixText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_SuffixText) property in the Blazor Mention component allows you to specify a string that should be appended to the end of the selected mention item when it is inserted into the input field. You can use this property to add a `space` or a `new line` after the mention, or any other string that you want to include.
 
 {% highlight razor %}
 
@@ -47,7 +47,7 @@ By default, the popup list width value is set to `auto`. Depending on the mentio
 
 ## Trigger character
 
-The [MentionChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_MentionChar) property in the Mention component allows you to specify the character that will trigger the suggestion list to display in the target area. By default, the `@` character is used as the trigger character, but you can customize it to any other character by setting the `MentionChar` property.
+The [MentionChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_MentionChar) property in the Blazor Mention component allows you to specify the character that will trigger the suggestion list to display in the target area. By default, the `@` character is used as the trigger character, but you can customize it to any other character by setting the `MentionChar` property.
 
 {% highlight razor %}
 
@@ -59,7 +59,7 @@ The [MentionChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDo
 
 ## Leading Space Requirement
 
-You can control whether a space is required before the mention character using the [RequireLeadingSpace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_RequireLeadingSpace) property in the Mention component. When set to `true` , a space must precede the mention character to trigger the suggestion popup. When set to `false`, the mention character can trigger suggestions without requiring a leading space.
+You can control whether a space is required before the mention character using the [RequireLeadingSpace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_RequireLeadingSpace) property in the Blazor Mention component. When set to `true` , a space must precede the mention character to trigger the suggestion popup. When set to `false`, the mention character can trigger suggestions without requiring a leading space.
 
 {% highlight razor %}
 

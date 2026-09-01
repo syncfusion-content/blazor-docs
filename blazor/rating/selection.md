@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in Blazor Rating Component | Syncfusion®
-description: Checkout and learn here all about Selection with Blazor Rating component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
+title: Selection in Blazor Rating | Syncfusion
+description: Control Blazor Rating selection with Value, Min, EnableSingleSelection, and reset options for flexible, user-friendly rating experiences.
 platform: Blazor
 control: Rating
 documentation: ug
 ---
 
-# Selection in Blazor Rating Component
+# Selection in Blazor Rating
 
 The Blazor Rating component lets users choose a value using a visual scale. Selection can be changed by clicking or tapping the icons, or programmatically. The key options are the current value, minimum value, single-selection behavior, and an optional reset button.
 

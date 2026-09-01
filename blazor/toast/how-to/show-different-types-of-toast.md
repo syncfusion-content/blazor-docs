@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Show different types of toast in Blazor Toast Component | Syncfusion®
-description: Checkout and learn here all about how to show different types of toast in Blazor Toast component and more.
+title: How to show different types of toast in Blazor Toast | Syncfusion
+description: Show success, info, warning, and danger Blazor Toast notifications using built-in CSS classes for severity.
 platform: Blazor
 control: Toast
 documentation: ug
 ---
 
-# Show different types of toast in Blazor Toast Component
+# How to show different types of toast in Blazor Toast
 
 The Blazor toast has the following predefined styles that can be defined using the `CssClass` property for achieving different types of toast:
 

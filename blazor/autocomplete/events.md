@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Events in Blazor AutoComplete Component | Syncfusion®
-description: Learn about events in the Blazor AutoComplete component, including ValueChange, OnOpen, OnClose, DataBound, Filtering, selection events, and more.
+title: Events in Blazor AutoComplete | Syncfusion®
+description: Handle Blazor AutoComplete lifecycle and user actions through events such as ValueChange, OnOpen, OnClose, DataBound, Filtering, and selection callbacks.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Events in Blazor AutoComplete Component
+# Events in Blazor AutoComplete
 
-This section lists and describes the events raised by the AutoComplete component for common user interactions and lifecycle actions.
+This section lists and describes the events raised by the Blazor AutoComplete component for common user interactions and lifecycle actions.
 
 ## Blur
 

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Events in Blazor In-place Editor Component | Syncfusion®
-description: Checkout and learn here all about the features and Events in Blazor In-place Editor component and much more details.
+title: Events in Blazor In-place Editor | Syncfusion
+description: Use Blazor In-place Editor events such as Created, OnActionBegin, OnActionSuccess, ValueChange, and Destroyed.
 platform: Blazor
 control: In-place Editor  
 documentation: ug
 ---
 
-# Events in Blazor In-place Editor Component
+# Events in Blazor In-place Editor
 
-This section describes the events available in the In-place Editor component and when they are raised during typical actions. The events include: Created, OnActionBegin, OnActionSuccess, OnActionFailure, ValueChange, and Destroyed.
+This section describes the events available in the Blazor In-place Editor component and when they are raised during typical actions. The events include: Created, OnActionBegin, OnActionSuccess, OnActionFailure, ValueChange, and Destroyed.
 
 ## Created
 

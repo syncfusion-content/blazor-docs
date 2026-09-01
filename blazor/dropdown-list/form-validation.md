@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Form validation in Blazor DropDown List component | Syncfusion®
-description: Checkout and learn here all about Form Validation in Blazor DropDown List component and much more details.
+title: Form Validation in Blazor Dropdown List | Syncfusion®
+description: Use Blazor Dropdown List inside EditForm with data annotations, validation messages, and submit handling.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Form Validation in Dropdown List
+# Form Validation in Blazor Dropdown List
 
-This article explains how to use the Blazor DropDownList component in a validated form. It shows how to bind to a model, apply data annotations, and display validation errors so the form can be submitted only when required fields are valid.
+This article explains how to use the Blazor Dropdown List component in a validated form. It shows how to bind to a model, apply data annotations, and display validation errors so the form can be submitted only when required fields are valid.
 
 ## Dropdown List inside edit form
 
@@ -27,4 +27,4 @@ The `DropDownList` component can be placed inside an `EditForm` to enable data a
 
 {% endhighlight %}
 
-![Blazor DropDownList inside EditForm with validation](./images/form-validation/blazor_dropodown_with-editform.webp)
+![Blazor Dropdown List inside EditForm with validation](./images/form-validation/blazor_dropodown_with-editform.webp)

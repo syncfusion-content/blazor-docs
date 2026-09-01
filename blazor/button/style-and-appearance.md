@@ -1,27 +1,27 @@
 ---
 layout: post
-title: Styles and Appearances in Blazor Button Component | Syncfusion®
-description: Checkout and learn here all features about Styles and Appearances in Blazor Button component and much more.
+title: Style and Appearance in Blazor Button | Syncfusion®
+description: Customize the Blazor Button appearance by overriding its default CSS classes or by building a custom theme with the Syncfusion Theme Studio.
 platform: Blazor
 control: Button
 documentation: ug
 ---
 
-# Styles and Appearances in Blazor Button Component
+# Style and Appearance in Blazor Button
 
-To modify the Button appearance, you need to override the default CSS of the Button component. The following table lists the available CSS classes and their corresponding section in the Button component. You can also create your own custom theme for the controls using the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+To modify the Blazor Button appearance, you need to override the default CSS of the Button component. The following table lists the available CSS classes and their corresponding section in the Button component. You can also create your own custom theme for the controls using the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
 | CSS Class | Purpose of Class |
 | --- | --- |
-| .e-btn | To customize the button. |
-| .e-btn:hover | To customize the button on hover. |
-| .e-btn:focus | To customize the button on focus. |
-| .e-btn:active | To customize the button on active. |
-| .e-btn:disabled | To customize the button in the disabled state. |
+| .e-btn | To customize the Blazor Button. |
+| .e-btn:hover | To customize the Blazor Button on hover. |
+| .e-btn:focus | To customize the Blazor Button on focus. |
+| .e-btn:active | To customize the Blazor Button on active. |
+| .e-btn:disabled | To customize the Blazor Button in the disabled state. |
 
-## Customizing the appearance of button
+## Customizing the appearance of Blazor Button
 
-Use the following CSS to customize the background color of the button while clicking, hovering, and focusing.
+Use the following CSS to customize the background color of the Blazor Button while clicking, hovering, and focusing.
 
 ```cshtml
 

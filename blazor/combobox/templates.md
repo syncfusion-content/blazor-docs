@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Templates in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn here all the features about Templates in the Blazor ComboBox component and much more.
+title: Templates in Blazor ComboBox | Syncfusion®
+description: Customize the Blazor ComboBox with item, group header, header, footer, value, and no-records templates to render rich content in the popup.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Templates in Blazor ComboBox Component
+# Templates in Blazor ComboBox
 
 The ComboBox provides several options to customize the appearance and content of list items, group headers, the selected value, and the popup’s header and footer elements.
 
-To quickly get started with templates in the Blazor ComboBox component, watch the following video.
+To quickly get started with templates in the Blazor Blazor ComboBox component, watch the following video.
 
 {% youtube "https://www.youtube.com/watch?v=Powq8aAGeAA" %}
 

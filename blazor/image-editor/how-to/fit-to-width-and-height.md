@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Fit to Width and Height with Blazor Image Editor | Syncfusion®
+title: How to Fit to Width and Height in Blazor Image Editor | Syncfusion
 description: Learn how to fit to width and height in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor
 documentation: ug
 ---
 
-# Fit Image to Editor Width and Height
+# How to Fit to Width and Height in Blazor Image Editor
 
 The Image Editor uses the [ZoomAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ZoomAsync_System_Double_Syncfusion_Blazor_ImageEditor_ImageEditorPoint_) method to fit an image to the editor by width or height. Programmatically increase the zoom level until the image dimension matches the editor container's width or height.
 

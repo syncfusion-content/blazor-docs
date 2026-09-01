@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Styles and Appearances in Blazor AppBar Component | Syncfusion®
-description: Check out and learn in detail about Styles and Appearances in Blazor AppBar component and more here.
+title: Style and Appearance in Blazor AppBar | Syncfusion®
+description: Customize the Blazor AppBar appearance by overriding its default CSS classes or by building a custom theme with the Syncfusion Theme Studio.
 platform: Blazor
 control: AppBar
 documentation: ug
 ---
 
-# Styles and Appearances in Blazor AppBar Component
+# Style and Appearance in Blazor AppBar
 
-To modify the AppBar appearance, override the default CSS of the AppBar component. The following table lists the built-in CSS classes and their corresponding sections in the AppBar component. These classes are state modifiers that are applied automatically based on the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Mode) and [ColorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_ColorMode) property values, so they can be combined with a custom class to scope overrides. Alternatively, create a custom theme using the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+To modify the Blazor AppBar appearance, override the default CSS of the Blazor AppBar. The following table lists the built-in CSS classes and their corresponding sections in the Blazor AppBar. These classes are state modifiers that are applied automatically based on the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Mode) and [ColorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_ColorMode) property values, so they can be combined with a custom class to scope overrides. Alternatively, create a custom theme using the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
 | CSS Class | Description |
 |-----|----- |

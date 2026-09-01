@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup Setting in Blazor DropDownList Component | Syncfusion®
-description: Checkout and learn here all about Popup Setting in Blazor DropDown List component and much more details.
+title: Popup Setting in Blazor Dropdown List | Syncfusion®
+description: Customize Blazor Dropdown List popup dimensions, resize behavior, z-index, text overflow, and open-close behavior.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Popup Setting in Dropdown List
+# Popup Setting in Blazor Dropdown List
 
 ## Popup resize
 
@@ -19,7 +19,7 @@ Dynamically resize the popup in the DropDownList component by using the [AllowRe
 
 {% endhighlight %} 
 
-![Blazor DropDownList with resizable popup](./images/popup-setting/blazor_dropdownlist_resize.gif)
+![Blazor Dropdown List with resizable popup](./images/popup-setting/blazor_dropdownlist_resize.gif)
 
 ## Change the popup width
 
@@ -33,7 +33,7 @@ In the following sample, `PopupWidth` is set to `300px`.
 
 {% endhighlight %}
 
-![Blazor DropDownList with customized popup width](./images/popup-setting/blazor_dropdown_popup-width.webp)
+![Blazor Dropdown List with customized popup width](./images/popup-setting/blazor_dropdown_popup-width.webp)
 
 ## Handling text overflow
 
@@ -47,7 +47,7 @@ In the following sample, `PopupWidth` is set to `100px`, so ellipsis is automati
 
 {% endhighlight %}
 
-![Text overflow handling in Blazor DropDownList](./images/popup-setting/blazor_dropdown_text-overflow.webp)
+![Text overflow handling in Blazor Dropdown List](./images/popup-setting/blazor_dropdown_text-overflow.webp)
 
 ## Change the popup height
 
@@ -59,7 +59,7 @@ Customize the height of the popup using the [PopupHeight](https://help.syncfusio
 
 {% endhighlight %}
 
-![Blazor DropDownList with customized popup height](./images/popup-setting/blazor_dropdown_popup-height.webp)
+![Blazor Dropdown List with customized popup height](./images/popup-setting/blazor_dropdown_popup-height.webp)
 
 ## Change the popup z-index
 
@@ -75,7 +75,7 @@ Show the popup on initial render by invoking [ShowPopupAsync()](https://help.syn
 
 {% endhighlight %}
 
-![Blazor DropDownList with popup shown on initial loading](./images/popup-setting/blazor_dropdown_popup-initial-loading.webp)
+![Blazor Dropdown List with popup shown on initial loading](./images/popup-setting/blazor_dropdown_popup-initial-loading.webp)
 
 ## Preventing opening and closing
 
@@ -87,7 +87,7 @@ Prevent the popup from opening or closing by setting the event argument’s canc
 
 {% endhighlight %}
 
-![Blazor DropDownList with prevented opening and closing](./images/popup-setting/blazor_dropdown_preventing-opening-closing.webp)
+![Blazor Dropdown List with prevented opening and closing](./images/popup-setting/blazor_dropdown_preventing-opening-closing.webp)
 
 The following events are used to trigger when opening and closing popup.
 
@@ -161,7 +161,7 @@ Adjust the popup height based on available viewport space by handling the window
 {% endhighlight %}
 {% endtabs %}
 
-![Popup height adjusts to available space in Blazor DropDownList](./images/popup-setting/blazor_dropdown_popup_resize.gif)
+![Popup height adjusts to available space in Blazor Dropdown List](./images/popup-setting/blazor_dropdown_popup_resize.gif)
 
 ## Programmatically opening and closing popup
 
@@ -173,4 +173,4 @@ You can programmatically open and close the popup by accessing the `ShowPopupAsy
 
 {% endhighlight %} 
 
-![Show or hide popup programmatically in Blazor DropDownList](./images/popup-setting/blazor_dropdown_show-or-hide-popup.gif)
+![Show or hide popup programmatically in Blazor Dropdown List](./images/popup-setting/blazor_dropdown_show-or-hide-popup.gif)

@@ -32,7 +32,7 @@ The 30‑day trial installer can be downloaded from your Syncfusion account. If 
    ![Trials and Downloads page with Download button for the Blazor offline installer](images/start-trial-download-installer.webp)
 
 4. With a trial license, only the latest version’s trial installer can be downloaded. Historic versions are not available for trial.
-5. After downloading, unlock the installer by using either the trial unlock key or by signing in with your Syncfusion<sup style="font-size:70%">&reg;</sup> account credentials. See [How to generate an unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) for more information.
+5. After downloading, unlock the installer by using either the trial unlock key or by signing in with your Syncfusion<sup style="font-size:70%">&reg;</sup> account credentials. See [How to generate an unlock key](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) for more information.
 6. During the 30‑day trial period, you can re-download the trial installer at any time from the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
 
    ![Trial Download Offline Installer](images/start-trial-download-offline-installer.webp)
@@ -47,7 +47,7 @@ Use this path if you obtained Syncfusion components from [NuGet.org](https://www
 
    N> If an existing Blazor trial is still active, a new trial for the same product cannot be started.
 
-4. After starting the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest trial installer. Generate the installer [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) and the project [license key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate) before the trial expires.
+4. After starting the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest trial installer. Generate the installer [unlock key](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) and the project [license key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate) before the trial expires.
 
    ![Trials and Downloads page showing trial installer and key generation options](images/start-trial-download-installer.webp)
 

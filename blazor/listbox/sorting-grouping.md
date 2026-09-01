@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sorting and Grouping in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all the features about sorting and grouping in Blazor ListBox component and much more.
+title: Sorting and Grouping in Blazor ListBox | Syncfusion
+description: Sort and group Blazor ListBox items by category using SortOrder and the GroupBy field mapping easily today.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Sorting and Grouping in Blazor ListBox Component
+# Sorting and Grouping in Blazor ListBox
 
 ## Sorting
 
@@ -19,7 +19,7 @@ In the following example, `SortOrder` is set to `Descending`.
 @using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" DataSource="@CountryData" SortOrder="Syncfusion.Blazor.DropDowns.SortOrder.Descending" TItem="CountryCode">
-  <ListBoxFieldSettings Text="Name" Value="Code" />
+    <ListBoxFieldSettings Text="Name" Value="Code" />
 </SfListBox>
 
 @code {
@@ -58,7 +58,7 @@ Watch the video below for a quick introduction to grouping in the Blazor ListBox
 @using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" DataSource="@VegetableData" TItem="VegetableDetail">
-  <ListBoxFieldSettings GroupBy = "Category" Text="Vegetable" Value="Id" />
+    <ListBoxFieldSettings GroupBy="Category" Text="Vegetable" Value="Id" />
 </SfListBox>
 
 @code {

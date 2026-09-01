@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and appearance in Blazor Dropdown Tree Component | Syncfusion®
-description: Checkout and learn here all the features about Style and appearance in Blazor Dropdown Tree component and more.
+title: Style and Appearance in Blazor Dropdown Tree | Syncfusion®
+description: Customize Blazor Dropdown Tree appearance using CSS classes, disabled states, and visual styles today.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
 ---
 
-# Style and Appearance in Dropdown Tree
+# Style and Appearance in Blazor Dropdown Tree
 
 The following content provides the exact CSS structure that can be used to modify the component's appearance based on the user preference.
 
