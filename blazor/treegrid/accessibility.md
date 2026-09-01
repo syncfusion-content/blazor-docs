@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in Blazor TreeGrid
 
-The Blazor Tree Grid component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor TreeGrid component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Blazor Tree Grid component is outlined below.
+The accessibility compliance for the Blazor TreeGrid component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -38,23 +38,23 @@ The accessibility compliance for the Blazor Tree Grid component is outlined belo
 
 ## WAI-ARIA
 
-The Blazor Tree Grid component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Tree Grid component:
+The Blazor TreeGrid component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor TreeGrid component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `role=treegrid` | Used to convey a significant and contextual message to the user. |
+| `role=treegrid` | Identifies the component as a treegrid to assistive technologies. |
 | `aria-selected` | Accurately reflect the selection state, whether it's single-select or multi-select. |
-| `aria-expanded` | It can be used to show whether a node is expanded or collapsed, making it easier for screen reader users to navigate and understand the hierarchy. |
-| `aria-sort` | Indicate the current sorting order of a table column for users with disabilities, facilitating accessible data presentation and interaction. |
-| `aria-busy` |  Loading state to improve accessibility for users, particularly those relying on screen readers. |
-| `aria-invalid` | To indicate whether the user's input in a form field is valid or invalid, aiding users, including those with disabilities, in understanding and correcting their input. |
-| `aria-grabbed` | Provides accessibility information for users interacting with draggable elements |
+| `aria-expanded` | Indicates whether a node is expanded or collapsed, making navigation and hierarchy comprehension easier for screen readers. |
+| `aria-sort` | Indicates the current sorting order of a table column, facilitating accessible data presentation and interaction. |
+| `aria-busy` |  Represents the loading state to improve accessibility, particularly for those relying on screen readers. |
+| `aria-invalid` | Indicates whether input in a form field is valid or invalid, helping to ensure the input can be understood and corrected. |
+| `aria-grabbed` | Provides accessibility information when interacting with draggable elements. |
 | `aria-owns` | Establishing relationships between an element and the elements it owns or controls. |
 | `aria-label` | Provides an accessible name for the close icon. |
 
 ## Keyboard interaction
 
-The Blazor Tree Grid component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Tree Grid component.
+The Blazor TreeGrid component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/) guideline,making it easy for people using assistive technologies or keyboard navigation. The following keyboard shortcuts are supported by the Blazor TreeGrid component.
 
 | Windows | Mac | Description |
 | ----- | ----- | ---- |
@@ -91,13 +91,23 @@ The Blazor Tree Grid component followed the [keyboard interaction](https://www.w
 |<kbd>Ctrl + Shift + DownArrow</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>↓</kbd> | Expands the selected group.|
 |<kbd>Ctrl + UpArrow</kbd> | <kbd>⌘</kbd> + <kbd>↑</kbd> | Collapses all the visible groups.|
 |<kbd>Ctrl + Shift + UpArrow</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>↑</kbd> | Collapses the selected group.|
-|<kbd>Ctrl + P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Prints the Tree Grid.|
+|<kbd>Ctrl + P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Prints the TreeGrid.|
 
 ## Ensuring accessibility
 
-The Blazor Tree Grid component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The Blazor TreeGrid component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
-The accessibility compliance of the Blazor Tree Grid component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/treegrid) in a new window to evaluate the accessibility of the Blazor Tree Grid component with accessibility tools.
+The accessibility compliance of the Blazor TreeGrid component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/treegrid) in a new window to evaluate the accessibility of the Blazor TreeGrid component with accessibility tools.
+
+**Steps to test accessibility using axe‑core DevTools**
+
+1. Install the axe DevTools extension in Chrome or Edge.
+
+2. Open the TreeGrid accessibility sample: TreeGrid sample.
+
+3. Run analysis from the axe DevTools tab in Developer Tools.
+
+4. Review and fix violations in the TreeGrid implementation, then re‑run until compliance is achieved.
 
 {% previewsample "https://blazor.syncfusion.com/accessibility/treegrid" %}
 
