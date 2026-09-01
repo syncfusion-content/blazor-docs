@@ -17,12 +17,12 @@ The default column menu items are listed in the table:
 
 | Item | Description |
 |-----|-----|
-| **SortAscending** | Sort the current column in ascending order. |
-| **SortDescending** | Sort the current column in descending order. |
+| **SortAscending** | Sorts the current column in ascending order. |
+| **SortDescending** | Sorts the current column in descending order. |
 | **Group** | Groups the current column. |
 | **Ungroup** | Ungroups the current column. |
-| **AutoFit** | Adjusts the width of the current column to fit its content. |
-| **AutoFitAll** | Adjusts the width of all columns to fit their content. |
+| **AutoFit** | Resizes the current column to fit its content. |
+| **AutoFitAll** | Resizes all columns to fit their content. |
 | **ColumnChooser** | Opens the column chooser to manage column visibility. |
 | **Filter** | Displays the filter option as defined in the [FilterSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) property. |
 
@@ -100,7 +100,7 @@ The Blazor DataGrid provides the ability to prevent the column menu from appeari
 
 To disable the column menu for a specific column, set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
 
-The column menu is disabled for the **OrderID** column:
+In the following example, the column menu is disabled for the **OrderID** column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -173,7 +173,7 @@ The Blazor DataGrid supports adding custom items to the column menu using the [C
 
 Custom actions for these items can be defined in the [ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked) event.
 
-In this configuration, two custom column menu items are added to clear sorting and grouping using the [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync_System_Collections_Generic_List_System_String__) and [ClearGroupingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearGroupingAsync) methods:
+In the following example, two custom column menu items are added to clear sorting and grouping using the [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync_System_Collections_Generic_List_System_String__) and [ClearGroupingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearGroupingAsync) methods:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -661,3 +661,9 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDrdNGNWppVmuQGI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+## See also
+
+* [Column Chooser in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/column-chooser)
+* [Sorting in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/sorting)
+* [Filtering in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/filtering)

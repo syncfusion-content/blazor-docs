@@ -88,7 +88,7 @@ The Blazor DataGrid allows hiding specific columns from the column chooser dialo
 
 To enable this, set the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowInColumnChooser) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
 
-In this configuration, the `ShowInColumnChooser` property is set to **false** for the **OrderID** column. As a result, the **OrderID** column will not appear in the column chooser dialog.
+In the following example, the `ShowInColumnChooser` property is set to **false** for the **OrderID** column, excluding it from the chooser.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -418,7 +418,7 @@ The Blazor DataGrid allows customizing the column chooser dialog using the [Temp
 
 The parameters passed to the templates can be accessed using the implicit **context** parameter.
 
-> Use the `e-ccdlg-mention` class in the [CSSClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_CssClass) property of the SfMention component when placing the SfMention component inside the column chooser template. This approach ensures proper functioning of the column chooser.
+> When placing the `SfMention` component inside the column chooser template, set the [CSSClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_CssClass) property to `e-ccdlg-mention` to ensure proper rendering within the dialog.
 
 ### Customize the content of column chooser
 
@@ -872,3 +872,9 @@ public class Order
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBdtwDizibeexoc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+## See also
+
+* [Column Reorder in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/column-reorder)
+* [Column Resizing in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/column-resizing)
+* [Column Pinning in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/frozen-column)

@@ -14,7 +14,7 @@ The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagr
 {% youtube
 "youtube:https://www.youtube.com/watch?v=9YF9HnFY5Ew"%}
 
-> Template columns are primarily intended for rendering custom content and do not provide built-in support for actions such as sorting, filtering, or editing. To enable these actions, it is required to define the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property for the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
+> Template columns are intended for custom content and do not provide built-in sorting, filtering, or editing support. To enable those actions, define the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property for the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
 ## Render HTML Elements in a Column
 
@@ -22,7 +22,7 @@ The Blazor DataGrid allows rendering HTML elements inside a column using the [Te
 
 ### Render image in a column
 
-To display an image in a DataGrid column, define the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property for the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `Template` property allows rendering custom HTML or Blazor components instead of the default field value.
+To display an image in a DataGrid column, define the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property for the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -613,7 +613,7 @@ public class OrderDetails
 
 The Blazor DataGrid supports conditional rendering within a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature allows displaying template elements based on specific conditions in the data source.
 
-The `Template` property provides access to the current row’s data through the implicit **context** parameter, enabling conditional logic for rendering elements such as checkboxes, icons, or status indicators.
+Use the implicit **context** parameter to check values in the current row and render icons, checkboxes, or status indicators based on those values.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -854,7 +854,7 @@ public class EmployeeDetails
 
 The Blazor DataGrid supports using custom helper functions inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property of a column. This feature is useful for creating complex templates that require additional logic beyond the default template syntax.
 
-Custom helper functions can be defined in the component’s code section and invoked within the template using the **context** parameter. This approach allows implementing dynamic behaviors such as formatting values, applying conditional styles, or rendering custom UI elements based on row data.
+Use the **context** parameter to access the current row and format values, apply conditional styling, or render custom UI elements.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1035,7 +1035,7 @@ public class OrderDetails
 
 The Blazor DataGrid supports adding routing links inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature enables navigation to different pages or routes when interacting with template elements.
 
-Routing can be implemented by defining an **anchor tag** or clickable element inside the column template and handling navigation through the [UriHelper](https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/routing?view=aspnetcore-7.0&viewFallbackFrom=aspnetcore-3.0#uri-and-navigation-state-helpers). The **context** parameter provides access to the current row data, allowing dynamic route generation based on record values.
+Define an **anchor tag** or clickable element inside the template and handle navigation through [UriHelper](https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/routing?view=aspnetcore-7.0&viewFallbackFrom=aspnetcore-3.0#uri-and-navigation-state-helpers). The **context** parameter provides access to the current row data, which lets you generate dynamic routes.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1057,8 +1057,6 @@ Routing can be implemented by defining an **anchor tag** or clickable element in
         </GridColumn>
     </GridColumns>
 </SfGrid>
-
-
 @code {
     public List<OrderData> Orders { get; set; }
      

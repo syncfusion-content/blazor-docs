@@ -95,7 +95,7 @@ public class OrderDetails
 
 ## Restrict the resizing based on minimum and maximum width
 
-The Blazor DataGrid allows restricting column resizing between a defined minimum and maximum width. This ensures that columns remain within a specific size range, maintaining layout consistency and readability.
+The Blazor DataGrid supports restricting column resizing to a defined min-max range. This ensures that columns remain within a specific size range, maintaining layout consistency and readability.
 
 To configure this behavior, set the [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_MinWidth) and [MaxWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_MaxWidth) properties for the respective [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
@@ -182,7 +182,7 @@ The Blazor DataGrid provides the ability to restrict resizing for individual col
 
 To disable resizing for a specific column, set the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) property of that [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
 
-In this configuration, resizing is disabled for the **CustomerID** column.
+In the following example, resizing is disabled for the **CustomerID** column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -255,7 +255,7 @@ The Blazor DataGrid allows resizing stacked columns by dragging the right edge o
 
 To disable resizing for a specific stacked column, set the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) property of that [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
 
-In this configuration, resizing is disabled for the **ShipCity** column.
+In the following example, resizing is disabled for the **ShipCity** column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -340,14 +340,14 @@ The Blazor DataGrid supports touch interactions, enabling column resizing on mob
 To resize a column:
 
 1. Tap the right edge of the column header.
-2. A floating handler appears over the column’s right border.
+2. A resize handler appears over the column’s right border.
 3. Tap and drag the handler to adjust the column width.
 
 ![Blazor DataGrid column resizing in touch interaction.](./images/blazor-datagrid-column-resizing.webp)
 
 ## Resize columns via programmatically
 
-The Blazor DataGrid supports column resizing through external UI interactions such as dropdowns or buttons. This allows dynamic control over column widths without relying on the Grid’s built-in UI handlers.
+The Blazor DataGrid supports programmatic column resizing through external UI such as dropdowns or buttons. This enables dynamic column width control outside the Grid’s built-in resize UI.
 
 To resize a column externally, update the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width)  property of the target [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), and invoke the [RefreshColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RefreshColumnsAsync) method to apply the changes.
 
@@ -475,7 +475,7 @@ The Blazor DataGrid provides events that are triggered during column resizing op
 
 ### OnResizeStart
 
-The `OnResizeStart` event is triggered before a column is resized. This event can be used to inspect or cancel the resizing operation based on custom logic.
+The `OnResizeStart` event is triggered before a column is resized. Use this event to inspect the target column or cancel the resizing based on custom logic.
 
 **Event Arguments**
 
@@ -489,7 +489,7 @@ The event uses the [ResizeArgs](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ### ResizeStopped
 
-The `ResizeStopped` event is triggered after a column has been resized. This event provides details about the resized column and can be used to display messages or perform post-resize actions.
+The `ResizeStopped` event is triggered after a column has been resized. Use this event to display messages or perform post-resize actions.
 
 **Event Arguments**
 
@@ -590,3 +590,9 @@ public class OrderDetails
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrnNcZiTemxmKLj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+## See also
+
+* [Column Reorder in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/column-reorder)
+* [Column Chooser in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/column-chooser)
+* [Column Template in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/column-template)
