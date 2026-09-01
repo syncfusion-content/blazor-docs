@@ -2584,10 +2584,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/toolbar" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/toolbar" target="_blank" aria-label="Toolbar accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/toolbar/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/toolbar/accessibility" target="_blank" aria-label="Toolbar accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2616,10 +2616,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/tooltip" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/tooltip" target="_blank" aria-label="Tooltip accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/tooltip/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/tooltip/accessibility" target="_blank" aria-label="Tooltip accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2648,10 +2648,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/treegrid" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/treegrid" target="_blank" aria-label="TreeGrid accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/treegrid/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/treegrid/accessibility" target="_blank" aria-label="TreeGrid accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2680,10 +2680,10 @@ AA
 N/A
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/treemap" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/treemap" target="_blank" aria-label="TreeMap accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/treemap/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/treemap/accessibility" target="_blank" aria-label="TreeMap accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2712,10 +2712,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/treeview" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/treeview" target="_blank" aria-label="TreeView accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/treeview/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/treeview/accessibility" target="_blank" aria-label="TreeView accessibility documentation">Documentation</a>
 </td>
 </tr>
 </table>
