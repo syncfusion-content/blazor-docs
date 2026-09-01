@@ -11,7 +11,7 @@ documentation: ug
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) includes a built-in search feature that helps locate records quickly across grid data. Users can filter displayed records by entering a search key, which is especially useful for large datasets.
 
-To provide a search box in the UI, add the Search item to the toolbar using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property. Searching can also be performed programmatically using [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) method. The [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching) property is column-level and is used to include or exclude specific columns from search; it is not required to enable global search.
+To provide a search box in the UI, add the Search item to the toolbar using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property. Searching can also be performed programmatically using the [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) method. The [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching) property is column-level and is used to include or exclude specific columns from search, it is not required to enable global search.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -38,49 +38,49 @@ To provide a search box in the UI, add the Search item to the toolbar using the 
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-    public class OrderData
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData()
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-        public OrderData()
-        {
 
-        }
-        public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double Freight)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.OrderDate = OrderDate;
-            this.Freight = Freight;
-
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", new DateTime(1996,04,17), 32.38));
-                    Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996,05,07), 11.61));
-                    Orders.Add(new OrderData(10250, "HANAR", new DateTime(1996,08,07), 65.83));
-                    Orders.Add(new OrderData(10251, "VICTE", new DateTime(1996, 08, 07), 41.34));
-                    Orders.Add(new OrderData(10252, "SUPRD", new DateTime(1996,09,07), 51.30));
-                    Orders.Add(new OrderData(10253, "HANAR", new DateTime(1996,07,10), 58.17));
-                    Orders.Add(new OrderData(10254, "CHOPS",new DateTime(1996,07,11), 22.98));
-                    Orders.Add(new OrderData(10255, "RICSU", new DateTime(1996,07,12), 148.33));
-                    Orders.Add(new OrderData(10256, "WELLI", new DateTime(1996,07,15), 13.97));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double Freight { get; set; }
     }
+    public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double Freight)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.Freight = Freight;
+
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(10248, "VINET", new DateTime(1996,04,17), 32.38));
+                Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996,05,07), 11.61));
+                Orders.Add(new OrderData(10250, "HANAR", new DateTime(1996,08,07), 65.83));
+                Orders.Add(new OrderData(10251, "VICTE", new DateTime(1996, 08, 07), 41.34));
+                Orders.Add(new OrderData(10252, "SUPRD", new DateTime(1996,09,07), 51.30));
+                Orders.Add(new OrderData(10253, "HANAR", new DateTime(1996,07,10), 58.17));
+                Orders.Add(new OrderData(10254, "CHOPS",new DateTime(1996,07,11), 22.98));
+                Orders.Add(new OrderData(10255, "RICSU", new DateTime(1996,07,12), 148.33));
+                Orders.Add(new OrderData(10256, "WELLI", new DateTime(1996,07,15), 13.97));
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public double Freight { get; set; }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -126,49 +126,49 @@ By default, search is performed after the grid renders and a search action is tr
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-    public class OrderData
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData()
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-        public OrderData()
-        {
 
-        }
-        public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double Freight)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.OrderDate = OrderDate;
-            this.Freight = Freight;
-
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", new DateTime(1996,04,17), 32.38));
-                    Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996,05,07), 11.61));
-                    Orders.Add(new OrderData(10250, "HANAR", new DateTime(1996,08,07), 65.83));
-                    Orders.Add(new OrderData(10251, "VICTE", new DateTime(1996, 08, 07), 41.34));
-                    Orders.Add(new OrderData(10252, "SUPRD", new DateTime(1996,09,07), 51.30));
-                    Orders.Add(new OrderData(10253, "HANAR", new DateTime(1996,07,10), 58.17));
-                    Orders.Add(new OrderData(10254, "CHOPS",new DateTime(1996,07,11), 22.98));
-                    Orders.Add(new OrderData(10255, "RICSU", new DateTime(1996,07,12), 148.33));
-                    Orders.Add(new OrderData(10256, "WELLI", new DateTime(1996,07,15), 13.97));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double Freight { get; set; }
     }
+    public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double Freight)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.Freight = Freight;
+
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(10248, "VINET", new DateTime(1996,04,17), 32.38));
+                Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996,05,07), 11.61));
+                Orders.Add(new OrderData(10250, "HANAR", new DateTime(1996,08,07), 65.83));
+                Orders.Add(new OrderData(10251, "VICTE", new DateTime(1996, 08, 07), 41.34));
+                Orders.Add(new OrderData(10252, "SUPRD", new DateTime(1996,09,07), 51.30));
+                Orders.Add(new OrderData(10253, "HANAR", new DateTime(1996,07,10), 58.17));
+                Orders.Add(new OrderData(10254, "CHOPS",new DateTime(1996,07,11), 22.98));
+                Orders.Add(new OrderData(10255, "RICSU", new DateTime(1996,07,12), 148.33));
+                Orders.Add(new OrderData(10256, "WELLI", new DateTime(1996,07,15), 13.97));
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public double Freight { get; set; }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -240,49 +240,49 @@ Search operators define how the search key is compared to data values. Configure
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-    public class OrderData
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData()
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-        public OrderData()
-        {
 
-        }
-        public OrderData(int? OrderID, string CustomerID, string ShipName, string ShipCountry)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.ShipName = ShipName;
-            this.ShipCountry = ShipCountry;
-
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", "France"));
-                    Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", "Germany"));
-                    Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", "Brazil"));
-                    Orders.Add(new OrderData(10251, "VICTE", "Victuailles en stock", "France"));
-                    Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", "Belgium"));
-                    Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", "Brazil"));
-                    Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chines", "Switzerland"));
-                    Orders.Add(new OrderData(10255, "RICSU", "Vins et alcools Chevalier", "France"));
-                    Orders.Add(new OrderData(10256, "WELLI", "Richter Supermar", "Switzerland"));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipName { get; set; }
-        public string ShipCountry { get; set; }
     }
+    public OrderData(int? OrderID, string CustomerID, string ShipName, string ShipCountry)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.ShipName = ShipName;
+        this.ShipCountry = ShipCountry;
+
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", "France"));
+                Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", "Germany"));
+                Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", "Brazil"));
+                Orders.Add(new OrderData(10251, "VICTE", "Victuailles en stock", "France"));
+                Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", "Belgium"));
+                Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", "Brazil"));
+                Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chines", "Switzerland"));
+                Orders.Add(new OrderData(10255, "RICSU", "Vins et alcools Chevalier", "France"));
+                Orders.Add(new OrderData(10256, "WELLI", "Richter Supermar", "Switzerland"));
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipName { get; set; }
+    public string ShipCountry { get; set; }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -296,7 +296,7 @@ Steps:
 
 1. Render a [Button](https://blazor.syncfusion.com/documentation/button/getting-started-with-web-app) outside the grid UI.
 2. Handle the button’s [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick) event.
-3. Access the grid reference.
+3. Access the grid using the `@ref` template directive (e.g., `@ref="DefaultGrid"`).
 4. Call `SearchAsync` with the search key.
 
 {% tabs %}
@@ -334,49 +334,49 @@ Steps:
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-    public class OrderData
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData()
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-        public OrderData()
-        {
 
-        }
-        public OrderData(int? OrderID, string CustomerID, string ShipCity, string ShipName)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.ShipCity = ShipCity;
-            this.ShipName = ShipName;
-
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
-                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-                    Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chines", "Switzerland"));
-                    Orders.Add(new OrderData(10255, "RICSU", "Bern", "Vins et alcools Chevalier"));
-                    Orders.Add(new OrderData(10256, "WELLI", "Genève", "Richter Supermar"));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipName { get; set; }
     }
+    public OrderData(int? OrderID, string CustomerID, string ShipCity, string ShipName)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.ShipCity = ShipCity;
+        this.ShipName = ShipName;
+
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
+                Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chines", "Switzerland"));
+                Orders.Add(new OrderData(10255, "RICSU", "Bern", "Vins et alcools Chevalier"));
+                Orders.Add(new OrderData(10256, "WELLI", "Genève", "Richter Supermar"));
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -384,7 +384,7 @@ Steps:
 
 ## Search specific columns
 
-By default, the search scans all visible columns. To restrict the search to specific columns, set the field names in [GridSearchSettings.Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields).
+By default, the search scans all visible columns. Restrict search to specific columns by setting `GridSearchSettings.Fields` to the desired column names.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -412,49 +412,49 @@ By default, the search scans all visible columns. To restrict the search to spec
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-    public class OrderData
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData()
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-        public OrderData()
-        {
 
-        }
-        public OrderData(int? OrderID, string CustomerID, string ShipCity, double Freight)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.ShipCity = ShipCity;
-            this.Freight = Freight;
-
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", "Reims", 32.38));
-                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", 11.61));
-                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", 65.83));
-                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", 41.34));
-                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", 51.30));
-                    Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", 58.17));
-                    Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chines", 22.98));
-                    Orders.Add(new OrderData(10255, "RICSU", "Bern", 148.33));
-                    Orders.Add(new OrderData(10256, "WELLI", "Genève", 13.97));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public double Freight { get; set; }
     }
+    public OrderData(int? OrderID, string CustomerID, string ShipCity, double Freight)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.ShipCity = ShipCity;
+        this.Freight = Freight;
+
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(10248, "VINET", "Reims", 32.38));
+                Orders.Add(new OrderData(10249, "TOMSP", "Münster", 11.61));
+                Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", 65.83));
+                Orders.Add(new OrderData(10251, "VICTE", "Lyon", 41.34));
+                Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", 51.30));
+                Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", 58.17));
+                Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chines", 22.98));
+                Orders.Add(new OrderData(10255, "RICSU", "Bern", 148.33));
+                Orders.Add(new OrderData(10256, "WELLI", "Genève", 13.97));
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public double Freight { get; set; }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -462,7 +462,7 @@ By default, the search scans all visible columns. To restrict the search to spec
 
 ## Disable search for particular column
 
-By default, the Blazor DataGrid searches across all visible columns. To exclude a column, set the column’s [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching) property to false.
+To exclude a column from search, set the column’s [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching) property to `false`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -488,49 +488,49 @@ By default, the Blazor DataGrid searches across all visible columns. To exclude 
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-    public class OrderData
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData()
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-        public OrderData()
-        {
 
-        }
-        public OrderData(int? OrderID, string CustomerID, string ShipCity, string ShipName)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.ShipCity = ShipCity;
-            this.ShipName = ShipName;
-
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
-                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-                    Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-                    Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chines", "Switzerland"));
-                    Orders.Add(new OrderData(10255, "RICSU", "Bern", "Vins et alcools Chevalier"));
-                    Orders.Add(new OrderData(10256, "WELLI", "Genève", "Richter Supermar"));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipName { get; set; }
     }
+    public OrderData(int? OrderID, string CustomerID, string ShipCity, string ShipName)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.ShipCity = ShipCity;
+        this.ShipName = ShipName;
+
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
+                Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chines", "Switzerland"));
+                Orders.Add(new OrderData(10255, "RICSU", "Bern", "Vins et alcools Chevalier"));
+                Orders.Add(new OrderData(10256, "WELLI", "Genève", "Richter Supermar"));
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -538,7 +538,7 @@ N> For a broader overview, see the Blazor DataGrid feature tour and the [Blazor 
 
 ## Ignore accents in search
 
-By default, the DataGrid’s search does not treat accented and unaccented characters as equivalent. To support accent-insensitive search, set [GridSearchSettings.IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreAccent) to **true**. This improves usability when data contains diacritic characters.
+By default, the DataGrid’s search does not treat accented and unaccented characters as equivalent. To support accent-insensitive search, set [GridSearchSettings.IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreAccent) to **true**. This enables record lookup without accent marks, such as searching for `cafe` to find `café`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -620,7 +620,7 @@ public class InventorDetails
 
 ## Search on each key stroke
 
-The search-on-keystroke approach enables real-time results while typing in the search box. By default, search is executed on Enter. To trigger search as the user types, render an [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox__ctor) in the toolbar template and call [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) in the TextBox [Input](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Input) event.
+The search-on-keystroke approach enables real-time results while typing in the search box. By default, search is triggered when the user presses Enter, keystroke search triggers on every character input. To trigger search as the user types, render an [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox__ctor) in the toolbar template and call [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) in the TextBox [Input](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Input) event.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -720,7 +720,7 @@ The search-on-keystroke approach enables real-time results while typing in the s
 
 ## Perform search operation in Grid using multiple keywords
 
-The DataGrid can also be searched using multiple criteria. Build compound predicates with the grid’s [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property and Data query helpers (**WhereFilter**, **And/Or**) to combine conditions. This approach is particularly useful for remote data scenarios where the server executes filtering.
+The DataGrid can also be searched using multiple criteria. Combine multiple search conditions using the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property with `WhereFilter`, `And`, and `Or` methods. This approach is particularly useful for remote data scenarios where the server executes filtering.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -915,4 +915,4 @@ The Blazor DataGrid provides the ability to clear the current search programmati
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhnjQDHhrjxViih?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> Also clear the searched records using the clear icon in the search input field.
+> Alternatively, users can click the clear icon in the search box to reset results.
