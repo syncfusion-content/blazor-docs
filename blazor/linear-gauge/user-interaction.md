@@ -9,9 +9,11 @@ documentation: ug
 
 # Blazor Linear Gauge User Interaction
 
+This section covers the user interaction features available in the Blazor Linear Gauge component, including tooltip display for pointer values, pointer-drag behavior, and the events raised during interaction.
+
 ## Tooltip
 
-Linear Gauge displays the details about a pointer value through [LinearGaugeTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTooltipSettings.html), when the mouse hovers over the pointer. To enable the tooltip, set [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTooltipSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeTooltipSettings_Enable) property as **true**.
+Linear Gauge displays the details about a pointer value through [LinearGaugeTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTooltipSettings.html) when the mouse hovers over the pointer. To enable the tooltip, set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTooltipSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeTooltipSettings_Enable) property to **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -34,7 +36,7 @@ Linear Gauge displays the details about a pointer value through [LinearGaugeTool
 
 ### Tooltip format
 
-Tooltip in the Linear Gauge control can be formatted using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTooltipSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeTooltipSettings_Format) property in [LinearGaugeTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTooltipSettings.html). It is used to render the tooltip in certain format or to add a user-defined unit in the tooltip. By default, the tooltip shows the pointer value only. In addition to that, more information can be added in the tooltip. For example, the format **{value}km** shows pointer value with kilometer unit in the tooltip.
+Tooltip in the Linear Gauge control can be formatted using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTooltipSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeTooltipSettings_Format) property in [LinearGaugeTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTooltipSettings.html). It is used to render the tooltip in a specific format or to add a user-defined unit to the tooltip. By default, the tooltip shows the pointer value only. In addition to that, more information can be added in the tooltip. For example, the format **{value}km** shows the pointer value with the kilometer unit in the tooltip.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -55,9 +57,9 @@ Tooltip in the Linear Gauge control can be formatted using the [Format](https://
 
 ![Blazor Linear Gauge with Tooltip Format](images/blazor-linear-gauge-tooltip-format.webp)
 
-### Tooltip Template
+### Tooltip template
 
-The HTML element can be rendered in the tooltip of the Linear Gauge using the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTooltipSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeTooltipSettings_TooltipTemplate) in the [LinearGaugeTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTooltipSettings.html).
+HTML elements can be rendered inside the tooltip of the Linear Gauge using the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTooltipSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeTooltipSettings_TooltipTemplate) in the [LinearGaugeTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTooltipSettings.html).
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -85,11 +87,11 @@ The HTML element can be rendered in the tooltip of the Linear Gauge using the [T
 
 The tooltip can be customized using the following properties in [LinearGaugeTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTooltipSettings.html).
 
-* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTooltipSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeTooltipSettings_Fill) - To fill the color for tooltip.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTooltipSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeTooltipSettings_Fill) - To set the fill color for the tooltip.
 * [EnableAnimation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTooltipSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeTooltipSettings_EnableAnimation) - To enable or disable the tooltip animation.
 * [LinearGaugeTooltipBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTooltipBorder.html) - To set the border color and width of the tooltip.
-* [LinearGaugeTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTooltipTextStyle.html) - To customize the style of the text in tooltip.
-* [ShowAtMousePosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeRangeTooltipSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeRangeTooltipSettings_ShowAtMousePosition) - To show the tooltip at the mouse position.
+* [LinearGaugeTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTooltipTextStyle.html) - To customize the style of the tooltip text.
+* [ShowAtMousePosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTooltipSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeTooltipSettings_ShowAtMousePosition) - To show the tooltip at the mouse position.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -118,7 +120,7 @@ The tooltip can be customized using the following properties in [LinearGaugeTool
 
 ### Positioning the tooltip
 
-The tooltip is positioned at the [End](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.TooltipPosition.html#Syncfusion_Blazor_LinearGauge_TooltipPosition_End) of the pointer. To change the position of the tooltip at the start, or center of the pointer, set the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeRangeTooltipSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeRangeTooltipSettings_Position) property to [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.TooltipPosition.html#Syncfusion_Blazor_LinearGauge_TooltipPosition_Start) or [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.TooltipPosition.html#Syncfusion_Blazor_LinearGauge_TooltipPosition_Center).
+The tooltip is positioned at the [End](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.TooltipPosition.html#Syncfusion_Blazor_LinearGauge_TooltipPosition_End) of the pointer. To position the tooltip at the start or center of the pointer, set the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTooltipSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeTooltipSettings_Position) property to [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.TooltipPosition.html#Syncfusion_Blazor_LinearGauge_TooltipPosition_Start) or [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.TooltipPosition.html#Syncfusion_Blazor_LinearGauge_TooltipPosition_Center).
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -141,7 +143,7 @@ The tooltip is positioned at the [End](https://help.syncfusion.com/cr/blazor/Syn
 
 ## Pointer drag
 
-To drag either marker or bar pointer to the desired axis value, set the [EnableDrag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html#Syncfusion_Blazor_LinearGauge_LinearGaugePointer_EnableDrag) property as **true** in the [LinearGaugePointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html).
+To drag a marker or bar pointer to a new axis value, set the [EnableDrag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html#Syncfusion_Blazor_LinearGauge_LinearGaugePointer_EnableDrag) property to **true** in the [LinearGaugePointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html). By default, the pointer is clamped within the axis `Minimum` and `Maximum` range (0–100).
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -159,3 +161,10 @@ To drag either marker or bar pointer to the desired axis value, set the [EnableD
 ```
 
 ![Blazor Linear Gauge with Drag Pointer](images/blazor-linear-gauge-drag-pointer.webp)
+
+## See also
+
+* [Axis in Blazor Linear Gauge](axis.md)
+* [Pointers in Blazor Linear Gauge](pointers.md)
+* [Ranges in Blazor Linear Gauge](ranges.md)
+* [Events in Blazor Linear Gauge](events.md)

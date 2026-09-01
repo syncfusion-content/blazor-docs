@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Linear Gauge Methods
 
-The following methods are available in the Linear Gauge component.
+The following methods are available in the Linear Gauge component for runtime updates: [SetPointerValue](#setpointervalue) updates a pointer value, [SetAnnotationValue](#setannotationvalue) updates annotation text, and [RefreshAsync](#refreshasync) re-renders the component after a state change.
 
 ## SetPointerValue
 
@@ -24,8 +24,7 @@ To change the pointer value dynamically, use the [SetPointerValue](https://help.
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
-<button style="margin-left:34px" @onclick="ChangePoinerValue">Update pointer value
-</button>
+<button style="margin-left:34px" @onclick="ChangePointerValue">Update pointer value</button>
 <SfLinearGauge @ref="lineargauge" Width="250px" Height="250px">
     <LinearGaugeAxes>
         <LinearGaugeAxis>
@@ -38,7 +37,7 @@ To change the pointer value dynamically, use the [SetPointerValue](https://help.
 
 @code {
     SfLinearGauge lineargauge;
-    public void ChangePoinerValue()
+    public void ChangePointerValue()
     {
         lineargauge.SetPointerValue(0, 0, 30);
     }
@@ -85,7 +84,7 @@ N> This method will not be applicable for the [ContentTemplate](https://help.syn
 
 ## RefreshAsync
 
-The [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method can be used to change the state of the component and render it again.
+The [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_RefreshAsync) method can be used to change the state of the component and render it again.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -109,3 +108,9 @@ The [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Linea
     }
 }
 ```
+
+## See also
+
+* [Pointers in Blazor Linear Gauge](./pointers.md)
+* [Annotations in Blazor Linear Gauge](./annotations.md)
+* [Getting Started with Blazor Linear Gauge](./getting-started.md)
