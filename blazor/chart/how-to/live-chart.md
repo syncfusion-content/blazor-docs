@@ -11,11 +11,13 @@ documentation: ug
 
 # How to Update Live Data in Blazor Charts
 
-Live update in a chart can be achieved using the timer to update the datasource with real-time data and refresh the chart. Follow the steps below to update a chart with real-time data.
+A Blazor Chart can be updated with real-time data by using a `System.Timers.Timer` to periodically update the data source and refresh the chart. Follow the steps below to display live data updates in a Blazor Server or Blazor WebAssembly application using Syncfusion® Blazor Charts v20.x or later.
+ 
+Live updates are achieved by modifying the data in an `ObservableCollection` that is bound to the chart. Since `ObservableCollection` notifies the UI when items are added, removed, or updated, the chart automatically reflects those changes when updates are performed on the renderer's dispatch context.
 
-**Step 1:**
+**Step 1: Render the chart**
 
-Render a chart with the required series using [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html).
+Start by rendering the chart with the required series using [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html). The X axis uses `ValueType.DateTime` because the live samples will be timestamped in seconds.
 
 ```cshtml
 <SfChart @ref="liveChart" Title="CPU Usage" Width="100%" >
@@ -34,9 +36,9 @@ Render a chart with the required series using [ChartSeriesCollection](https://he
 </SfChart>
 ```
 
-**Step 2:**
+**Step 2: Format the axis labels**
 
-Labels of the axes can be formatted based on our need using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelFormat) property of the [ChartAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html). Since the chart will be updated in seconds, the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelFormat) has been set as **mm:ss** for the [ChartPrimaryXAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryXAxis.html) to display minutes and second in the axis labels. Similarly [ChartPrimaryYAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryYAxis.html) labels can also be formatted as shown below using its [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelFormat) property.
+Labels of the axes can be customized with the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelFormat) property of [ChartAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html). Because the chart updates every second, the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelFormat) is set to **mm:ss** on the [ChartPrimaryXAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryXAxis.html) so labels show minutes and seconds. The [ChartPrimaryYAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryYAxis.html) uses `{value}%` as shown below.
 
 ```cshtml
 <SfChart @ref="liveChart" Title="CPU Usage" Width="100%" >
@@ -55,9 +57,9 @@ Labels of the axes can be formatted based on our need using the [LabelFormat](ht
 </SfChart>
 ```
 
-**Step 3:**
+**Step 3: Update the chart on a timer**
 
-Add a timer to automatically update the chart every 500 milliseconds by calling the **AddData** function, which removes the first data from the data points collection, which is of the `ObservableCollection` type, and adds a new data to it. Since this `ObservableCollection` type is used as the data source, it is triggered whenever there is a data update within it.
+Add a timer that updates the chart every 500 milliseconds. The `AddData` callback removes the oldest data point from the `ObservableCollection` and adds a new one. Because the chart is bound to an `ObservableCollection`, it is automatically notified when the data changes. The chart is then refreshed on the renderer's dispatch context by using `InvokeAsync`.
 
 ```cshtml
 protected override void OnInitialized()
@@ -70,36 +72,55 @@ protected override void OnInitialized()
             Time = DateTime.Now.AddSeconds(i + 10),
             CPU_Usage = randomNum.Next(30, 80)
         });
-    // Starting live update in the chart.
+
+    // Start the live update timer.
     timer = new Timer(500);
-    timer.Elapsed += AddData;
+    timer.Elapsed += OnTimerElapsed;
     timer.AutoReset = true;
     timer.Enabled = true;
 }
 
-private void AddData(Object source, ElapsedEventArgs e)
+private async void OnTimerElapsed(object source, ElapsedEventArgs e)
 {
-    dataLength++;
-    DataPoints.RemoveAt(0);
-    DataPoints.Add(new ChartDataPoint
+    if (liveChart == null)
     {
-        Time = DateTime.Now.AddSeconds(dataLength + 10),
-        CPU_Usage = randomNum.Next(30, 80)
+        return;
+    }
+
+    await InvokeAsync(() =>
+    {
+        dataLength++;
+        DataPoints.RemoveAt(0);
+        DataPoints.Add(new ChartDataPoint
+        {
+            Time = DateTime.Now.AddSeconds(dataLength + 10),
+            CPU_Usage = randomNum.Next(30, 80)
+        });
     });
+}
+
+public void Dispose()
+{
+    if (timer != null)
+    {
+        timer.Elapsed -= OnTimerElapsed;
+        timer.Dispose();
+        timer = null;
+    }
 }
 ```
 
 The complete code snippet for the preceding steps is available below.
 
 ```cshtml
-
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Charts
 @using System.Collections.ObjectModel
 @using System.Timers
 
 <div class="control-section" align="center">
-    <SfChart @ref="liveChart" Title="CPU Usage" Width="100%" >
-        <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" LabelFormat="mm:ss" Title="Time (s)">
+    <SfChart @ref="liveChart" Title="CPU Usage" Width="100%">
+        <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" LabelFormat="mm:ss" Title="Time (mm:ss)">
             <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
         </ChartPrimaryXAxis>
         <ChartPrimaryYAxis Title="Usage" Minimum="0" Interval="20" Maximum="100" LabelFormat="{value}%">
@@ -114,42 +135,57 @@ The complete code snippet for the preceding steps is available below.
     </SfChart>
 </div>
 
-@code{
+@implements IDisposable
+@code {
 
-    private static Timer timer;
+    private Timer timer;
     private SfChart liveChart;
     private double dataLength = 100;
-    private Random randomNum = new Random();
-    public ObservableCollection<ChartDataPoint> DataPoints;
+    private readonly Random randomNum = new Random();
+    public ObservableCollection<ChartDataPoint> DataPoints = new ObservableCollection<ChartDataPoint>();
 
     protected override void OnInitialized()
     {
         // Provide the chart with initial data during page load.
-        DataPoints = new ObservableCollection<ChartDataPoint>();
         for (int i = 0; i < dataLength; i++)
             DataPoints.Add(new ChartDataPoint
             {
                 Time = DateTime.Now.AddSeconds(i + 10),
                 CPU_Usage = randomNum.Next(30, 80)
             });
-        // Starting live update in the chart.
+
+        // Start the live update timer.
         timer = new Timer(500);
-        timer.Elapsed += AddData;
+        timer.Elapsed += OnTimerElapsed;
         timer.AutoReset = true;
         timer.Enabled = true;
     }
 
-    private void AddData(Object source, ElapsedEventArgs e)
+    private async void OnTimerElapsed(object source, ElapsedEventArgs e)
     {
         if (liveChart == null)
             return;
-        dataLength++;
-        DataPoints.RemoveAt(0);
-        DataPoints.Add(new ChartDataPoint
+
+        await InvokeAsync(() =>
         {
-            Time = DateTime.Now.AddSeconds(dataLength + 10),
-            CPU_Usage = randomNum.Next(30, 80)
+            dataLength++;
+            DataPoints.RemoveAt(0);
+            DataPoints.Add(new ChartDataPoint
+            {
+                Time = DateTime.Now.AddSeconds(dataLength + 10),
+                CPU_Usage = randomNum.Next(30, 80)
+            });
         });
+    }
+
+    public void Dispose()
+    {
+        if (timer != null)
+        {
+            timer.Elapsed -= OnTimerElapsed;
+            timer.Dispose();
+            timer = null;
+        }
     }
 
     public class ChartDataPoint
@@ -158,7 +194,6 @@ The complete code snippet for the preceding steps is available below.
         public double CPU_Usage { get; set; }
     }
 }
-
 ```
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
