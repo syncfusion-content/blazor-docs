@@ -9,15 +9,15 @@ documentation: ug
 
 # Header Customization in Blazor Data Grid
 
-The appearance of header elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. Styling options are available for different parts of the header interface:
+The appearance of header elements in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. The following parts of the header interface can be styled:
 
 - **Header container**: The outer wrapper that holds all column headers.
 - **Header cells**: Individual containers for each column title and associated icons.
 - **Header text container**: The inner element that holds the header text content.
 
-## Customize the Blazor DataGrid header
+## Customize the Blazor Data Grid header
 
-The **.e-gridheader** class styles the header container in the Blazor DataGrid. Use CSS to adjust its appearance:
+The **.e-gridheader** class styles the header container in the Blazor Data Grid. Use CSS to adjust its appearance:
 
 ```css
 .e-grid .e-gridheader {
@@ -25,13 +25,13 @@ The **.e-gridheader** class styles the header container in the Blazor DataGrid. 
 }
 ```
 
-Style Properties like  **border**, **padding**, and **background-color** can be changed to fit the grid layout design.
+Style properties such as **border**, **padding**, and **background-color** can be changed to fit the Data Grid layout design.
 
-![Grid header](../images/style-and-appearance/grid-header.webp)
+![Data Grid header](../images/style-and-appearance/grid-header.webp)
 
-## Customize the Blazor DataGrid header cell
+## Customize the Blazor Data Grid header cell
 
-The **.e-headercell** class styles individual header cells in the Blazor DataGrid. Apply CSS to modify its look:
+The **.e-headercell** class styles individual header cells in the Blazor Data Grid. Apply CSS to change the appearance:
 
 ```css
 .e-grid .e-headercell {
@@ -40,11 +40,11 @@ The **.e-headercell** class styles individual header cells in the Blazor DataGri
 }
 ```
 
-Properties such as **color**, **background-color**, **font**, and alignment can be adjusted to align with the grid design.
+Properties such as **color**, **background-color**, and **font** can be adjusted to match the Data Grid design.
 
-![Grid header cell](../images/style-and-appearance/grid-header-cell.webp)
+![Data Grid header cell](../images/style-and-appearance/grid-header-cell.webp)
 
-## Customize the Blazor DataGrid header cell div element
+## Customize the Blazor Data Grid header cell div element
 
 The **.e-headercelldiv** class styles the text container inside each header cell. Apply CSS to change its appearance:
 
@@ -58,7 +58,7 @@ The **.e-headercelldiv** class styles the text container inside each header cell
 
 Change properties like **font-size**, **font-weight**, and **color** to highlight the header text and improve clarity.
 
-![Grid header cell div element](../images/style-and-appearance/grid-header-cell-div-element.webp)
+![Data Grid header cell div element](../images/style-and-appearance/grid-header-cell-div-element.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -145,12 +145,13 @@ internal sealed class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXVdDmDiBReioGup?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Customize the Blazor DataGrid frozen header cells
+## Customize the Blazor Data Grid frozen header cells
 
-The **.e-leftfreeze** class styles all the left frozen header cells in the Blazor DataGrid. 
+The Data Grid adds an alignment class (`e-leftalign`, `e-centeralign`, or `e-rightalign`) to each header cell based on the column's `TextAlign` value. The selectors below combine the freeze class with the alignment class, so the same color applies to both left-aligned and right-aligned frozen cells. Use the alignment class that matches the `TextAlign` set on each frozen column.
+
+The **.e-leftfreeze** class styles all left-frozen header cells in the Blazor Data Grid. 
 
 ```css
-
 .e-headercell.e-leftalign.e-leftfreeze {
     background-color: lightgreen;
 }
@@ -158,32 +159,27 @@ The **.e-leftfreeze** class styles all the left frozen header cells in the Blazo
 .e-headercell.e-rightalign.e-leftfreeze {
     background-color: lightgreen;
 }
-
 ```
 
-The **.e-rightfreeze** class styles all the right frozen header cells in the Blazor DataGrid. 
+The **.e-rightfreeze** class styles all right-frozen header cells in the Blazor Data Grid. 
 
 ```css
-
 .e-headercell.e-rightalign.e-rightfreeze {
     background-color: lightblue;
 }
-
 ```
 
-The **.e-fixedfreeze** class styles all the fixed frozen header cells in the Blazor DataGrid. 
+The **.e-fixedfreeze** class styles all fixed-frozen header cells in the Blazor Data Grid. 
 
 ```css
-
 .e-headercell.e-leftalign.e-fixedfreeze {
     background-color: lightgrey;
 }
-
 ```
 
-Properties such as **color**, **background-color**, **font**, and alignment can be adjusted to align with the grid design.
+Properties such as **color**, **background-color**, and **font** can be adjusted to match the Data Grid design.
 
-![Frozen Grid Header cells](../images/style-and-appearance/grid-frozenHeader-css.webp)
+![Frozen Data Grid header cells](../images/style-and-appearance/grid-frozenHeader-css.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -196,7 +192,7 @@ Properties such as **color**, **background-color**, **font**, and alignment can 
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsFrozen="true" Freeze="FreezeDirection.Left" TextAlign="TextAlign.Right" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" IsFrozen="true" Freeze="FreezeDirection.Left" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="160"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="160"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.ShipName) HeaderText="Ship Name" Width="130"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.ShipAddress) HeaderText="Ship Address" Width="150"></GridColumn>
@@ -244,7 +240,7 @@ Properties such as **color**, **background-color**, **font**, and alignment can 
 public class OrderDetails
 {
     public static List<OrderDetails> order = new List<OrderDetails>();
-    public OrderDetails(int OrderID, string CustomerId, int EmployeeId, double Freight, DateTime OrderDate, string ShipCity, string ShipName, string ShipCountry, string ShipAddress, string shipRegion, string shipPostalCode)
+    public OrderDetails(int OrderID, string CustomerId, int EmployeeId, double Freight, DateTime OrderDate, string ShipCity, string ShipName, string ShipCountry, string ShipAddress, string ShipRegion, string ShipPostalCode)
     {
         this.OrderID = OrderID;
         this.CustomerID = CustomerId;
@@ -255,8 +251,8 @@ public class OrderDetails
         this.ShipName = ShipName;
         this.ShipCountry = ShipCountry;
         this.ShipAddress = ShipAddress;
-        this.ShipRegion = shipRegion;
-        this.ShipPostalCode = shipPostalCode;
+        this.ShipRegion = ShipRegion;
+        this.ShipPostalCode = ShipPostalCode;
 
     }
     public static List<OrderDetails> GetAllRecords()
@@ -299,9 +295,9 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBRXmXCVnyfDLZr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Hide the Blazor DataGrid header
+## Hide the Blazor Data Grid header
 
-The **.e-gridheader .e-columnheader** class combination targets the column header row in the Blazor DataGrid. Use CSS to hide the header:
+The **.e-grid .e-gridheader .e-columnheader** selector targets the column header row in the Blazor Data Grid. Use CSS to hide the header:
 
 ```css
 .e-grid .e-gridheader .e-columnheader {
@@ -309,7 +305,7 @@ The **.e-gridheader .e-columnheader** class combination targets the column heade
 }
 ```
 
-To hide the header for a specific grid only, apply the style using the grid’s ID:
+To hide the header for a specific Data Grid only, scope the selector with the Data Grid's `ID`. The `SfGrid` must be assigned `ID="Grid"` for the rule below to match:
 
 ```css
 #Grid.e-grid .e-gridheader .e-columnheader {
@@ -317,7 +313,7 @@ To hide the header for a specific grid only, apply the style using the grid’s 
 }
 ```
 
-> Hiding headers also removes visual elements such as sorting arrows, filter icons, and column menu buttons. This may affect accessibility. If headers are hidden, ensure alternative labels are provided using attributes like `aria-label` or `aria-labelledby`.
+> Hiding the header also removes visual elements such as sorting arrows, filter icons, and column menu buttons. This affects accessibility. When the header is hidden, provide alternative labels using attributes like `aria-label` or `aria-labelledby`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
