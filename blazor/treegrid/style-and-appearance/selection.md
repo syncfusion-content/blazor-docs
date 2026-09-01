@@ -9,14 +9,16 @@ documentation: ug
 
 # Selection Customization in Blazor TreeGrid
 
-The appearance of selection elements in the Blazor TreeGrid can be customized using CSS. Styling options are available for:
+The appearance of selection elements in the Blazor TreeGrid can be customized using CSS. To enable selection, set `AllowSelection="true"` and configure the selection mode via `TreeGridSelectionSettings`. Styling options are available for:
 
 - **Row selection background:** Highlights the entire row when selected.
 - **Cell selection background:** Highlights individual cells when selected.
 
+For more information on selection configuration options and `SelectionType` property, refer to [Selection documentation](../selection.md).
+
 ## Customize row selection background
 
-The **.e-selectionbackground** class styles the background of selected rows in the TreeGrid. Use CSS to modify its appearance:
+The **.e-selectionbackground** class styles the background of selected rows in the TreeGrid. Apply CSS styling with the `.e-selectionbackground` class to customize row selection appearance:
 
 ```css
 .e-treegrid td.e-selectionbackground {
@@ -24,7 +26,7 @@ The **.e-selectionbackground** class styles the background of selected rows in t
 }
 ```
 
-Properties such as **background-color**, **color**, and **font-weight** can be adjusted to match the TreeGrid's design.
+CSS properties such as background-color, color, and font-weight can customize the appearance and match the TreeGrid's design.
 
 ![Row selection](../images/style-and-appearance/row-selection.webp)
 
@@ -175,7 +177,7 @@ public class ShipmentData
 
 ## Customize cell selection background
 
-The **.e-cellselectionbackground** class styles the background of selected cells in the TreeGrid. Apply CSS to customize its appearance:
+The **.e-cellselectionbackground** class styles the background of selected cells in the TreeGrid. Apply CSS styling with the `.e-cellselectionbackground` class to customize cell selection appearance. This requires `SelectionType="Cell"` in `TreeGridSelectionSettings`:
 
 ```css
 .e-treegrid td.e-cellselectionbackground {
@@ -183,7 +185,7 @@ The **.e-cellselectionbackground** class styles the background of selected cells
 }
 ```
 
-Modify visual properties to align with the overall layout and improve clarity.
+CSS properties such as background-color can be adjusted to align with the overall design and improve clarity.
 
 ![Cell selection](../images/style-and-appearance/cell-selection.webp)
 
