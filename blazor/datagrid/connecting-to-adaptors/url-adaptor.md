@@ -12,7 +12,7 @@ documentation: ug
 
 The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) serves as the base adaptor for facilitating communication between remote data services and a UI component. It enables seamless data binding and interaction with custom API services or any remote service through URLs. The `UrlAdaptor` is particularly useful in scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data, with the resultant data returned in the `result` and `count` format for display in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid).
 
-This section describes a step-by-step process for retrieving data using the `UrlAdaptor` and binding it to the Blazor DataGrid to facilitate data and CRUD operations.
+This section explains how to retrieve data with the `UrlAdaptor` and bind it to the Blazor DataGrid for data operations and CRUD actions.
 
 ## Creating an API Service
  
@@ -20,7 +20,7 @@ To configure a server with the Blazor DataGrid, follow these steps:
  
 **1. Create a Blazor web app**
  
-You can create a **Blazor Web App** named **URLAdaptor** using Visual Studio 2022, either via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
+Create a **Blazor Web App** named **URLAdaptor** using Visual Studio 2022, either by using [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
 
 **2. Create a model class**
  
@@ -147,7 +147,7 @@ app.MapControllers();
  
 **5. Run the application**
  
-Run the application in Visual Studio. The API will be accessible at a URL like **https://localhost:xxxx/api/grid** (where **xxxx** represents the port number). Please verify that the API returns the order data.
+Run the application in Visual Studio. The API endpoint is available at a URL such as **https://localhost:xxxx/api/grid**, where **xxxx** is the actual port number assigned to the app. Verify that the API returns the order data before connecting the DataGrid.
  
 ![UrlAdaptor Data](../images/blazor-datagrid-adaptors-data.webp)
 
@@ -279,11 +279,11 @@ namespace URLAdaptor.Controllers
 {% endhighlight %}
 {% endtabs %}
  
-> Replace https://localhost:xxxx/api/grid with the actual URL of your API endpoint that provides the data in a consumable format (e.g., JSON).
+> Replace `https://localhost:xxxx/api/grid` with the actual URL of the API endpoint that returns JSON data for the grid.
  
 **5. Run the application**
  
-When you run the application, the Blazor DataGrid  will display data fetched from the API.
+When the application runs, the Blazor DataGrid displays data from the API.
  
 ![UrlAdaptor Data](../images/blazor-datagrid-adaptors.webp)
  
@@ -535,7 +535,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 ## Handling CRUD operations
 
-The Blazor DataGrid seamlessly integrates CRUD (Create, Read, Update, and Delete) operations with server-side controller actions through specific properties: [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl), [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_RemoveUrl), [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl), [CrudUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_CrudUrl), and [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl). These properties enable the Grid to communicate with the data service for every Grid action, facilitating server-side operations.
+The Blazor DataGrid integrates CRUD (Create, Read, Update, and Delete) operations with server-side controller actions through specific properties: [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl), [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_RemoveUrl), [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl), [CrudUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_CrudUrl), and [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl). These properties enable the Grid to send requests to the data service for each Grid action.
 
 **CRUD Operations Mapping**
 
@@ -666,7 +666,7 @@ To delete existing records, use the [RemoveUrl](https://help.syncfusion.com/cr/b
 /// Remove a specific data item from the data collection.
 /// </summary>
 /// <param name="deletedRecord">It contains the specific record detail which is need to be removed.</param>
-/// <return>Returns void.</return>
+/// <returns>Returns void.</returns>
 [HttpPost]
 [Route("api/[controller]/Remove")]
 public void Remove([FromBody] CRUDModel<OrdersDetails> deletedRecord)
