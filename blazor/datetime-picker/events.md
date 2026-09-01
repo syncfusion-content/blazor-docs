@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Events in Blazor DateTimePicker Component | Syncfusion®
-description: Learn about events in the Blazor DateTimePicker component, including ValueChange, OnOpen, OnClose, OnRenderDayCell, and more.
+title: Events in Blazor DateTime Picker | Syncfusion®
+description: Handle Blazor DateTime Picker events such as ValueChange, OnOpen, OnClose, OnRenderDayCell, and Navigated to react to user input and rendering.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
 ---
 
-# Events in Blazor Datetime Picker Component
+# Events in Blazor DateTime Picker
 
-This section lists and describes the events raised by the DateTimePicker component for user interactions and lifecycle actions.
+This section lists and describes the events raised by the Blazor DateTime Picker component for user interactions and lifecycle actions.
 
-N> Starting with `v17.2.*`, the DateTimePicker exposes a renamed set of events, and several new lifecycle and input events were introduced. The following table shows the event name changes from `v17.1.*` to `v17.2.*`.
+N> Starting with `v17.2.*`, the Blazor DateTime Picker exposes a renamed set of events, and several new lifecycle and input events were introduced. The following table shows the event name changes from `v17.1.*` to `v17.2.*`.
 
 Event Name(`v17.1.*`) |Event Name(`v17.2.*`)
 -----|-----
@@ -42,7 +42,7 @@ The `Blur` event is triggered when the input loses focus.
 
 ## ValueChange
 
-The `ValueChange` event is triggered when the DateTimePicker value (date and time) changes.
+The `ValueChange` event is triggered when the Blazor DateTime Picker value (date and time) changes.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -202,4 +202,4 @@ The `OnRenderDayCell` event is triggered when each day cell of the calendar is r
 }
 ```
 
-N> The DateTimePicker currently supports the events listed above. Additional events may be introduced in future releases based on user requests. If the required event is not listed, submit a request on the [Feedback](https://www.syncfusion.com/feedback/blazor-components) portal.
+N> The Blazor DateTime Picker currently supports the events listed above. Additional events may be introduced in future releases based on user requests. If the required event is not listed, submit a request on the [Feedback](https://www.syncfusion.com/feedback/blazor-components) portal.

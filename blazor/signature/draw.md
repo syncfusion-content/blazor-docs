@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Draw with Blazor Signature Component | Syncfusion®
-description: Checkout how to draw the text as a signature with Blazor Signature component in Blazor Server App and Blazor WebAssembly App.
+title: Draw in Blazor Signature | Syncfusion
+description: Draw text as a signature in Blazor Signature with custom font family and size using DrawAsync for personalized, accessible capture.
 platform: Blazor
 control: Signature
 documentation: ug
 ---
 
-# Draw Text as a Signature in Blazor Signature component
+# Draw in Blazor Signature
 
 Text can be drawn as a [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) using the [`DrawAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_DrawAsync_System_String_System_String_System_Int32_System_Nullable_System_Double__System_Nullable_System_Double__) method with different font families such as Arial and Serif, and with different font sizes. This method accepts the signature text, font family, font size, and optional x/y coordinates as its parameters. The default font family is "Arial" and the default font size is "30".
 

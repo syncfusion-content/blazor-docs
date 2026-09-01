@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Blazor Dropdown List in Server App | Syncfusion
-description: Check out and learn about how to get started with the Blazor Dropdown List component in Blazor Server Application.
+title: Blazor Dropdown List Server App Getting Started | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Dropdown List in a Blazor Server app with installation and configuration steps.
 platform: Blazor
 control: Dropdown List
 documentation: ug
@@ -216,7 +216,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBxNdhEKCoekmqt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor DropDownList Component](./images/blazor-dropdownlist-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBxNdhEKCoekmqt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dropdown List Component](./images/blazor-dropdownlist-component.webp)" %}
 
 ## Binding data source
 
@@ -253,7 +253,7 @@ After initialization, populate the DropDownList with data using the [DataSource]
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBntdBEUiuLSoxk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Binding in Blazor DropDownList](./images/blazor-dropdownlist-data-binding.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBntdBEUiuLSoxk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Binding in Blazor Dropdown List](./images/blazor-dropdownlist-data-binding.webp)" %}
 
 ## Configure the popup list
 
@@ -290,7 +290,7 @@ By default, the popup list width adjusts to match the DropDownList input width, 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBxjdhYABCsgmRY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Popup List Height in Blazor DropDownList](./images/blazor-dropdownlist-popup-height.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBxjdhYABCsgmRY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Popup List Height in Blazor Dropdown List](./images/blazor-dropdownlist-popup-height.webp)" %}
 
 ## Get selected value
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Dropdown List in Web App | Syncfusion
-description: Check out and learn about how to get started with the Blazor Dropdown List Component in Blazor Web App.
+title: Blazor Dropdown List Web App Getting Started | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Dropdown List in a Blazor Web App with installation and setup steps.
 platform: Blazor
 component: Dropdown List
 documentation: ug
 ---
 
-# Getting Started with Blazor Dropdown List Component in Blazor Web App
+# Getting Started with Blazor Dropdown List in Blazor Web App
 
 This section briefly explains how to include the [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -222,7 +222,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBRNnrYABLrTQjF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor DropDownList Component](./images/blazor-dropdownlist-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBRNnrYABLrTQjF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dropdown List Component](./images/blazor-dropdownlist-component.webp)" %}
 
 ## Binding data source
 
@@ -259,7 +259,7 @@ After initialization, populate the DropDownList with data using the [DataSource]
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLdtxruKVhbiDiW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Binding in Blazor DropDownList](./images/blazor-dropdownlist-data-binding.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLdtxruKVhbiDiW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Binding in Blazor Dropdown List](./images/blazor-dropdownlist-data-binding.webp)" %}
 
 ## Configure the popup list
 
@@ -300,7 +300,7 @@ By default, the popup list width adjusts to the Dropdown List input width, and t
 
 ## Get selected value
 
-Get the selected value of the Dropdown List component in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using [ChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Value) property.
+Get the selected value of the Blazor Dropdown List component in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using [ChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Value) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}

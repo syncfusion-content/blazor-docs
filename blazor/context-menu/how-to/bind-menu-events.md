@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bind Context Menu Events in Blazor ContextMenu Component | Syncfusion®
-description: Checkout and learn here all about Bind Context Menu Events in Blazor ContextMenu component and more.
+title: How to bind Context Menu events in Blazor | Syncfusion®
+description: Bind Blazor Context Menu events such as ItemSelected, OnOpen, OnClose, and BeforeOpen to react to user interactions with the menu.
 platform: Blazor
 control: Context Menu
 documentation: ug
 ---
 
-# Bind Events in the Blazor ContextMenu Component
+# How to bind Context Menu events in Blazor
 
 To bind a menu event in the ContextMenu, the [ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_ItemSelected) event is used and is triggered when an item in the ContextMenu is selected.
 
@@ -60,4 +60,4 @@ The handler receives a [MenuEventArgs](https://help.syncfusion.com/cr/blazor/Syn
 ```
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVdjmiZJbXAPfth?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Binding Blazor ContextMenu Events](./../images/blazor-contextmenu-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVdjmiZJbXAPfth?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Binding Blazor Context Menu Events](./../images/blazor-contextmenu-component.webp)" %}

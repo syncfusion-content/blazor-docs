@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Calendar Component | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor Calendar component including keyboard navigation, ARIA attributes, and usability features.
+title: Accessibility in Blazor Calendar | Syncfusion®
+description: Learn how Blazor Calendar meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA attributes, keyboard navigation, and screen reader support.
 platform: Blazor
 control: Calendar
 documentation: ug
 ---
 
-# Accessibility in Blazor Calendar Component
+# Accessibility in Blazor Calendar
 
 The [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -44,11 +44,11 @@ It helps disabled persons by providing information about the widget for assistiv
 
 * **aria-label**: Provides text labels for an object for the previous and next month's elements. It helps the screen reader object to read.
 
-* **aria-selected**: Indicates the currently selected date of the Calendar component.
+* **aria-selected**: Indicates the currently selected date of the Blazor Calendar component.
 
-* **aria-disabled**: Indicates the disabled state of the Calendar component.
+* **aria-disabled**: Indicates the disabled state of the Blazor Calendar component.
 
-* **aria-activedescendant**: Helps in managing the current active child of the Calendar component.
+* **aria-activedescendant**: Helps in managing the current active child of the Blazor Calendar component.
 
 * **role**: Gives information to assistive technologies about how to handle each element in a widget.
 
@@ -56,7 +56,7 @@ It helps disabled persons by providing information about the widget for assistiv
 
 ## Keyboard interaction
 
-You can use the following keys to interact with the Calendar. This control implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/).
+You can use the following keys to interact with the Blazor Calendar. This control implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/).
 
 It supports the following list of shortcut keys:
 
@@ -82,7 +82,7 @@ It supports the following list of shortcut keys:
 
 The Blazor Calendar component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-The accessibility compliance of the Calendar component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/calendar) in a new window to evaluate the accessibility of the Calendar component with accessibility tools.
+The accessibility compliance of the Blazor Calendar component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/calendar) in a new window to evaluate the accessibility of the Blazor Calendar component with accessibility tools.
 
 ## See also
 

@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Repeat Button in Blazor Button Component | Syncfusion®
-description: Learn how to implement and customize the Repeat Button in the Blazor Button component with mouse, touch, and timer-based events.
+title: How to create a repeat button in Blazor Button | Syncfusion®
+description: Implement a Blazor Repeat Button that fires click events at regular intervals while pressed, and customize it with mouse, touch, and timer-based events.
 platform: Blazor
 control: Button
 documentation: ug
 ---
 
-# Repeat Button in Blazor Button Component
+# How to create a repeat button in Blazor Button
 
-A Repeat Button is a type of Button in which the click event is triggered at regular time intervals from the pressed state until the released state.
+A Blazor Repeat Button is a type of Button in which the click event is triggered at regular time intervals from the pressed state until the released state.
 
-The following example demonstrates how to implement a Repeat Button using both mouse and touch events.
+The following example demonstrates how to implement a Blazor Repeat Button using both mouse and touch events.
 
 ```csharp
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Draggable in Blazor Dialog Component | Syncfusion®
-description: Checkout and learn here all the features about Draggable in Blazor Dialog component and much more details.
+title: Draggable in Blazor Dialog | Syncfusion®
+description: Enable draggable behavior in the Blazor Dialog so users can move the dialog within the viewport by dragging its header.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Draggable in Blazor Dialog Component
+# Draggable in Blazor Dialog
 
 The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) component supports draggable functionality, allowing users to reposition dialogs within their target container by clicking and dragging the dialog header. This feature enhances user experience by providing flexible dialog placement, particularly useful in applications with multiple dialogs or when users need to access content beneath the dialog while keeping it visible.
 
@@ -15,7 +15,7 @@ The dragging operation is constrained to the boundaries of the target container,
 
 ## Enable Draggable Functionality
 
-To enable dragging capabilities, set the [`AllowDragging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowDragging) property to `true` on the Dialog component. When enabled, users can drag the dialog by clicking and holding the dialog header area.
+To enable dragging capabilities, set the [`AllowDragging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowDragging) property to `true` on the Blazor Dialog component. When enabled, users can drag the dialog by clicking and holding the dialog header area.
 
 To get started quickly with draggable in Blazor Dialog Component, you can check the video below.
 
@@ -70,7 +70,7 @@ To get started quickly with draggable in Blazor Dialog Component, you can check 
 
 ## Draggable Events in Blazor Dialog Component
 
-The Dialog component provides three essential events to monitor and respond to drag interactions. These events enable developers to implement custom logic during different phases of the drag operation, such as validation, logging, or UI updates.
+The Blazor Dialog component provides three essential events to monitor and respond to drag interactions. These events enable developers to implement custom logic during different phases of the drag operation, such as validation, logging, or UI updates.
 
 ### OnDragStart Event
 

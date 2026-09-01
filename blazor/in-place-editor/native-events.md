@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor In-place Editor Component | Syncfusion®
-description: Checkout and learn here all about Native Events in Blazor In-place Editor component and much more details.
+title: Native Events in Blazor In-place Editor | Syncfusion
+description: Bind native mouse and keyboard events such as onmousedown and onkeydown to Blazor In-place Editor input field.
 platform: Blazor
 control: In-place Editor  
 documentation: ug
 ---
 
-# Overview of Native Events
+# Native Events in Blazor In-place Editor
 
 You can define a native event by using the `on<event>` attribute on a component. The value of the attribute is treated as an event handler. The event-specific data is available in the event arguments.
 
@@ -18,16 +18,16 @@ The supported event argument types for each event are:
 
 ## List of native events supported
 
-The following native events are supported by the In-place Editor component:
+The following native events are supported by the Blazor In-place Editor component:
 
 | List of native events |  |  | |
 | --- | --- | --- | --- |
 | onmousedown | onmouseup | onmouseover | onmousemove |
 | onmouseout | onkeydown | onkeypress | onkeyup |
 
-## How to bind the onmousedown event to the In-place Editor
+## How to bind the onmousedown event to the Blazor In-place Editor
 
-The `onmousedown` attribute is used to bind the mouse-down event for the In-place Editor. The following sample shows how to use `onmousedown` in the In-place Editor to toggle the rendering mode between `Inline` and `Popup`.
+The `onmousedown` attribute is used to bind the mouse-down event for the Blazor In-place Editor. The following sample shows how to use `onmousedown` in the Blazor In-place Editor to toggle the rendering mode between `Inline` and `Popup`.
 
 ```cshtml
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup Setting in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn here all the features about Popup Setting in BlazorComboBox component and much more.
+title: Popup Setting in Blazor ComboBox | Syncfusion®
+description: Configure the Blazor ComboBox popup with resizing, custom width and height, z-index, and showPopupOnFocus behavior, plus open and close events.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Popup Setting in ComboBox
+# Popup Setting in Blazor ComboBox
 
 ## Popup resize
 
@@ -23,7 +23,7 @@ Dynamically adjust the size of the popup by using the [AllowResize](https://help
 
 ## Change the popup width
 
-Customize the width of the popup using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property. The default value of the `PopupWidth` is `100%`. If popup width unspecified, it sets based on the width of the ComboBox component.
+Customize the width of the popup using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property. The default value of the `PopupWidth` is `100%`. If popup width unspecified, it sets based on the width of the Blazor ComboBox component.
 
 In the following sample, `PopupWidth` is set to `300px`.
 

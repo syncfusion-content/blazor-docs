@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Value Binding in Blazor MultiColumn ComboBox Component | Syncfusion®
-description: Checkout and learn here all the features about value binding in Blazor MultiColumn ComboBox component and much more details.
+title: Value Binding in Blazor MultiColumn ComboBox | Syncfusion
+description: Bind selected values and indexes in Blazor MultiColumn ComboBox with @bind-Value and @bind-Index for selection today.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
 ---
 
-# Value Binding in MultiColumn ComboBox
+# Value Binding in Blazor MultiColumn ComboBox
 
 Value binding synchronizes the selected value between the Blazor MultiColumn ComboBox and the parent component. The control supports two binding approaches:
 - `@bind-Value` to bind the selected value
@@ -44,7 +44,7 @@ The index value binding is accomplished through the [@bind-Index](https://help.s
 
 <!-- ## Object binding
 
-Bind the Object data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Value) attribute of the MultiColumn ComboBox component, allowing you to associate the class name with `TValue`.
+Bind the Object data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Value) attribute of the Blazor MultiColumn ComboBox component, allowing you to associate the class name with `TValue`.
 
 In the example provided, the `Name` column is linked to the [ValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ValueField) property.
 
@@ -72,9 +72,9 @@ The following example uses `string` as the `TValue`, so clearing sets the value 
 
 ## Dynamically Change TItem
 
-`TItem` can be changed dynamically by wrapping the MultiColumn ComboBox in a generic component that declares `@typeparam` parameters for `TValue` and `TItem`, and exposes parameters for the data source and bound value. The following sample demonstrates using a generic component to switch data types.
+`TItem` can be changed dynamically by wrapping the Blazor MultiColumn ComboBox in a generic component that declares `@typeparam` parameters for `TValue` and `TItem`, and exposes parameters for the data source and bound value. The following sample demonstrates using a generic component to switch data types.
 
-### Creating a Generic MultiColumn ComboBox Component
+### Creating a Generic Blazor MultiColumn ComboBox Component
 
 Create a `MultiColumnComboBox.razor` file that defines `@typeparam` for `TValue` and `TItem`, and exposes parameters for `customData` and `ComboBoxValue`.
 

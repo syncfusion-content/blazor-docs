@@ -1,15 +1,15 @@
 ---
 layout: post
-title: CSS Structure in Blazor Chip Component | Syncfusion®
-description: Checkout and learn here all the features about CSS Structure in Blazor Chip component and much more details.
+title: CSS Structure in Blazor Chips | Syncfusion®
+description: Override the Blazor Chips default CSS structure to customize avatar, leading icon, trailing icon, selection, and deletion state styles.
 platform: Blazor
-control: Chip
+control: Chips
 documentation: ug
 ---
 
-# CSS Customization in Blazor Chip Component
+# CSS Structure in Blazor Chips
 
-Use the following CSS to customize the appearance of the Blazor Chip component. 
+Use the following CSS to customize the appearance of the Blazor Chips component. 
 
 | Class / Element | Applies to | Purpose |
 | -- | -- | -- |
@@ -98,7 +98,7 @@ The `.e-chip-avatar` element is the leading content area of an avatar chip. Use 
 
 ## See also
 
-* [Getting Started with Blazor Chip](getting-started.md)
-* [Types in Blazor Chip](types.md)
-* [Customization in Blazor Chip](customization.md)
+* [Getting Started with Blazor Chips](getting-started.md)
+* [Types in Blazor Chips](types.md)
+* [Customization in Blazor Chips](customization.md)
 

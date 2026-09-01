@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Value Binding in Blazor MultiSelect Component | Syncfusion®
-description: Checkout and learn here all about Value Binding in Blazor MultiSelect component and much more details.
+title: Value Binding in Blazor MultiSelect Dropdown | Syncfusion
+description: Bind single or multiple selected values in Blazor MultiSelect Dropdown using @bind-Value for selection today.
 platform: Blazor
-control: MultiSelect
+control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Value Binding in MultiSelect
+# Value Binding in Blazor MultiSelect Dropdown
 
 Value binding is the process of passing values between a component and its parent. There are two methods for binding values. These are:
 
@@ -26,7 +26,7 @@ Value binding is achieved by using the [@bind-Value](https://help.syncfusion.com
 
 {% endhighlight %}
 
-![Blazor MultiSelect with Bind Value](./images/value-binding/blazor_multiselect_bind-value.webp)
+![Blazor MultiSelect Dropdown with Bind Value](./images/value-binding/blazor_multiselect_bind-value.webp)
 
 ## Text and value
 
@@ -40,7 +40,7 @@ The following example demonstrates Text and Value field mapping. For instance, t
 
 {% endhighlight %}
 
-![Blazor MultiSelect with Text and Value](./images/value-binding/blazor_MultiSelect_text-and-value.webp)
+![Blazor MultiSelect Dropdown with Text and Value](./images/value-binding/blazor_MultiSelect_text-and-value.webp)
 
 ## Primitive type binding
 
@@ -54,7 +54,7 @@ The following example demonstrates an array of strings as the data source.
 
 {% endhighlight %}
 
-![Blazor MultiSelect with Primitive Type as string](./images/value-binding/blazor_MultiSelect_primitive-type-string.webp)
+![Blazor MultiSelect Dropdown with Primitive Type as string](./images/value-binding/blazor_MultiSelect_primitive-type-string.webp)
 
 The following example demonstrates an array of integers as the data source.
 
@@ -76,7 +76,7 @@ In the following example, the `ID` column is mapped to the Value field, and `TVa
 
 {% endhighlight %}
 
-![Blazor MultiSelect with object values](./images/value-binding/blazor_MultiSelect_object-binding.webp)
+![Blazor MultiSelect Dropdown with object values](./images/value-binding/blazor_MultiSelect_object-binding.webp)
 
 ## Enum binding
 
@@ -88,7 +88,7 @@ Bind enum values to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Sync
 
 {% endhighlight %}
 
-![Blazor MultiSelect with Enum Data](./images/value-binding/blazor_MultiSelect_enum-binding.webp)
+![Blazor MultiSelect Dropdown with Enum Data](./images/value-binding/blazor_MultiSelect_enum-binding.webp)
 
 ## Show or hide clear button
 
@@ -104,7 +104,7 @@ The following example uses `int?` as `TValue`, so clearing sets the value to `nu
 
 {% endhighlight %}
 
-![Blazor MultiSelect with clear button](./images/value-binding/blazor_MultiSelect_show-hide-clear-button.webp)
+![Blazor MultiSelect Dropdown with clear button](./images/value-binding/blazor_MultiSelect_show-hide-clear-button.webp)
 
 ## Dynamically change TItem
 

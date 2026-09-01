@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Multiple Selection Modes in Blazor MultiSelect Component | Syncfusion®
-description: Checkout and learn here all about Multiple selection display modes in Blazor MultiSelect component and much more details.
+title: Multiple Selection Modes in Blazor MultiSelect Dropdown | Syncfusion
+description: Configure Blazor MultiSelect Dropdown selection display as Default, Box, Delimiter, or Chip display modes today.
 platform: Blazor
-control: MultiSelect
+control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Multiple Selection Display Modes
+# Multiple Selection Modes in Blazor MultiSelect Dropdown
 
 ## Basic modes
 
@@ -97,9 +97,9 @@ For the UnSelect All option, the "Unselect All" text is shown by default. You ca
 
 {% endhighlight %}
 
-![Blazor MultiSelect DropDown with CheckBox Selection](./images/blazor-multiselect-dropdown-checkbox-selection.webp)
+![Blazor MultiSelect Dropdown with CheckBox Selection](./images/blazor-multiselect-dropdown-checkbox-selection.webp)
 
 ## See also
 
-- [Blazor MultiSelect DropDown with selection stacked vertically in CheckBox](https://www.syncfusion.com/forums/172062/how-to-stack-selected-items-vertically-in-a-multiselct-dropdown)
-- [Disable CheckBox for certain values in Blazor MultiSelect DropDown](https://www.syncfusion.com/forums/157795/is-it-possible-to-disable-checkbox-for-certain-values-in-multiselect-dropdown)
+- [Blazor MultiSelect Dropdown with selection stacked vertically in CheckBox](https://www.syncfusion.com/forums/172062/how-to-stack-selected-items-vertically-in-a-multiselct-dropdown)
+- [Disable CheckBox for certain values in Blazor MultiSelect Dropdown](https://www.syncfusion.com/forums/157795/is-it-possible-to-disable-checkbox-for-certain-values-in-multiselect-dropdown)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Form Items in Blazor DataForm Component | Syncfusion®
-description: Checkout and learn here about how to configure Form Item and its customization in Blazor DataForm component.
+title: Form Items in Blazor Data Form | Syncfusion®
+description: Configure individual Blazor Data Form FormItem fields with editor types, IDs, placeholders, labels, CSS classes, and enable or disable state.
 platform: Blazor
 control: DataForm
 documentation: ug
 ---
 
-# Form items in DataForm component
+# Form Items in Blazor Data Form
 
 The [FormItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html) configures the editor for a specific model field. It supports setting a unique identifier (ID), selecting the editor type, applying CSS classes, specifying placeholder and label text, and enabling or disabling the field. The following sections demonstrate common property usage:
 - Field: map the model property to an editor
@@ -36,7 +36,7 @@ The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.For
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm form item showing mapped field and custom ID](images/blazor_dataform_configure_model_ID.webp)
+![Blazor Data Form form item showing mapped field and custom ID](images/blazor_dataform_configure_model_ID.webp)
 
 ## Set the placeholder
 
@@ -56,7 +56,7 @@ The [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataFo
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm form item with placeholder text in the editor](./images/blazor_dataform_placeholder.webp)
+![Blazor Data Form form item with placeholder text in the editor](./images/blazor_dataform_placeholder.webp)
 
 ## Change the editor type
 
@@ -86,7 +86,7 @@ The [EditorType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataFor
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm form items rendered with different editor types](images/blazor_dataform_formitem.webp)
+![Blazor Data Form form items rendered with different editor types](images/blazor_dataform_formitem.webp)
 
 ## Disable a form item
 
@@ -106,7 +106,7 @@ The [IsEnabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm form item in a disabled state](images/blazor_dataform_formitem_disabled.webp)
+![Blazor Data Form form item in a disabled state](images/blazor_dataform_formitem_disabled.webp)
 
 ## Change the label text 
 
@@ -128,7 +128,7 @@ Set the label using the [LabelText](https://help.syncfusion.com/cr/blazor/Syncfu
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm form item with customized label text](./images/blazor_dataform_label_text.webp)
+![Blazor Data Form form item with customized label text](./images/blazor_dataform_label_text.webp)
 
 
 ## Change the appearance of the field editor
@@ -148,7 +148,7 @@ Use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataF
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm form item styled using a custom CSS class](images/blazor_dataform_formitem_cssclass.webp)
+![Blazor Data Form form item styled using a custom CSS class](images/blazor_dataform_formitem_cssclass.webp)
 
 ## See also
 

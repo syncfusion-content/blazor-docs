@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Virtualization in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn here all the features about Virtualization in Blazor ComboBox component and much more.
+title: Virtualization in Blazor ComboBox | Syncfusion®
+description: Enable virtual scrolling in the Blazor ComboBox to render only a window of items, then load more on scroll for smooth performance with large datasets.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Virtualization in Blazor ComboBox Component
+# Virtualization in Blazor ComboBox
 
-The ComboBox component includes a virtual scrolling feature designed to enhance UI performance, particularly for handling large datasets. By enabling the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_EnableVirtualization) option, the ComboBox intelligently manages data rendering, ensuring only a subset of items is initially loaded when the component is rendered. As you interact with the dropdown, additional items are dynamically loaded as you scroll, creating a smooth and efficient user experience.
+The Blazor ComboBox component includes a virtual scrolling feature designed to enhance UI performance, particularly for handling large datasets. By enabling the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_EnableVirtualization) option, the ComboBox intelligently manages data rendering, ensuring only a subset of items is initially loaded when the component is rendered. As you interact with the dropdown, additional items are dynamically loaded as you scroll, creating a smooth and efficient user experience.
 
 This feature is applicable to both local and remote data scenarios, providing flexibility in its implementation. For instance, consider a case where the ComboBox is bound to a dataset containing 150 items. Upon opening the dropdown, only a few items are loaded initially, based on the height of the popup. As you scroll through the list, additional items are fetched and loaded on-demand, allowing you to effortlessly explore the complete dataset.
 

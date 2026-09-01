@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Form Validation in Blazor MultiColumn ComboBox Component | Syncfusion®
-description: Checkout and learn about Form validation with Blazor MultiColumn ComboBox component in Blazor Sever App and Blazor WebAssembly App.
+title: Form Validation in Blazor MultiColumn ComboBox | Syncfusion
+description: Validate Blazor MultiColumn ComboBox inside Blazor EditForm with data annotations and validation messages.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
 ---
 
-# Form Validation in MultiColumn ComboBox
+# Form Validation in Blazor MultiColumn ComboBox
 
 This article demonstrates how to use the Blazor MultiColumn ComboBox in a validated form with Blazor's `EditForm`. It covers binding to a model, applying data annotations, and showing validation messages so the form submits only when required fields are valid.
 

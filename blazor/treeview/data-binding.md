@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor TreeView Component | Syncfusion®
-description: Checkout and learn here all the features about data binding support in Blazor TreeView component, it's elements and more.
+title: Data Binding in Blazor TreeView | Syncfusion
+description: Bind local lists or remote services with load-on-demand support in Blazor TreeView using data adapters.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Data Binding in Blazor TreeView Component
+# Data Binding in Blazor TreeView
 
 The Blazor TreeView component provides the option to load data either from the local data sources or from remote data services. This can be done through [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property that is a member of the [`TreeViewFieldsSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldsSettings-1.html) property. The `DataSource` property supports list of objects and `DataManager`. It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 
@@ -892,7 +892,7 @@ namespace BlazorTreeView.Data
 
 ## Entity Framework
 
-The following steps must be followed to consume data from the **Entity Framework** in the TreeView component.
+The following steps must be followed to consume data from the **Entity Framework** in the Blazor TreeView component.
 
 ### Create DBContext class
 
@@ -1127,7 +1127,7 @@ namespace WebApplication1.Server.Controllers
 
 Now, the Blazor TreeView is configured using the `SfDataManager` to interact with the created Web API and consume the data appropriately. To interact with a web API, use the `WebApiAdaptor`.
 
-N> CRUD operations are performed in the TreeView component using the context menu.
+N> CRUD operations are performed in the Blazor TreeView component using the context menu.
 
 ```csharp
 
@@ -1481,7 +1481,7 @@ namespace BlazorTreeView.Controller
 
 ### Render more Nodes with more Levels
 
-By default, the TreeView component includes performance optimization features. Additionally, the [LoadOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_LoadOnDemand) feature further enhances performance and reduces data transmission when working with large datasets.
+By default, the Blazor TreeView component includes performance optimization features. Additionally, the [LoadOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_LoadOnDemand) feature further enhances performance and reduces data transmission when working with large datasets.
 
 In this example, a tree node is being rendered with 25 levels of child nodes.
 
@@ -1715,7 +1715,7 @@ In this example, a tree node is being rendered with 25 levels of child nodes.
 
 ## Render Nodes with GUID
 
-The Blazor TreeView component allows the rendering of tree nodes with a `GUID`. Since the `Id` field in the TreeView component expects a string data type, the `GUID` must be passed as a string.
+The Blazor TreeView component allows the rendering of tree nodes with a `GUID`. Since the `Id` field in the Blazor TreeView component expects a string data type, the `GUID` must be passed as a string.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

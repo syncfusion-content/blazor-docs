@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Labels in Blazor Range Selector Component | Syncfusion®
-description: Checkout and learn here all about labels in Blazor Range Selector component with examples and much more details.
+title: Blazor Range Selector Labels Examples and Overview | Syncfusion®
+description: Learn how to configure labels in Syncfusion Blazor Range Selector, including multi-level labels, format, and LabelPosition options.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Labels in Blazor Range Selector Component
+# Blazor Range Selector Labels
 
 ## Multi-level labels
 

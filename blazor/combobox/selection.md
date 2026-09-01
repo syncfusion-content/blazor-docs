@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Selection in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn here all the features about the Selection feature in Blazor ComboBox component and more.
+title: Selection in Blazor ComboBox | Syncfusion®
+description: Read and set the selected text and value in the Blazor ComboBox using Value, Text, or Index binding, and react to user selection with ValueChange.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Selection in ComboBox
+# Selection in Blazor ComboBox
 
 ## Get selected value
 
-Get the selected value of the ComboBox component in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event using the [ChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Value) property.
+Get the selected value of the Blazor ComboBox component in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event using the [ChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Value) property.
 
 {% highlight cshtml %}
 
@@ -29,7 +29,7 @@ Get the complete data item for the selected value in the [ValueChange](https://h
 
 ## Preselected value on OnInitializedAsync
 
-Bind the preselected value to the ComboBox component using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_Value) attribute. Assign the bound value in the [OnInitializedAsync](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-10.0#component-initialization-oninitializedasync) lifecycle so the component renders with the initial selection.
+Bind the preselected value to the Blazor ComboBox component using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_Value) attribute. Assign the bound value in the [OnInitializedAsync](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-10.0#component-initialization-oninitializedasync) lifecycle so the component renders with the initial selection.
 
 {% highlight cshtml %}
 
@@ -111,7 +111,7 @@ Retrieve the full data item corresponding to a selected value by using the [GetD
 
 ## Focus the next component on selection
 
-Focus the component programmatically using the [FocusAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusAsync) public method. It will set focus instantly to the ComboBox component when invoking it. 
+Focus the component programmatically using the [FocusAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusAsync) public method. It will set focus instantly to the Blazor ComboBox component when invoking it. 
 
 {% highlight cshtml %}
 

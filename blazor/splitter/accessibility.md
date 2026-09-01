@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Keyboard Shortcuts in Blazor Splitter Component | Syncfusion®
-description: Checkout and learn here all about keyboard shortcuts in Blazor Splitter component and much more details.
+title: Accessibility in Blazor Splitter | Syncfusion
+description: Learn how Blazor Splitter supports accessibility with keyboard navigation and screen reader support.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# Accessibility in Blazor Splitter Component
+# Accessibility in Blazor Splitter
 
 The [Blazor Splitter](https://www.syncfusion.com/blazor-components/blazor-splitter) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -43,19 +43,19 @@ The following key shortcuts can be used to access the Blazor Splitter without in
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Helps in focusing the splitter on the page and switching between the consecutive splitter bars. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Helps in focusing the previous splitter bar element on the splitter. |
-| <kbd>→</kbd> | <kbd>→</kbd> | Helps in moving the active `Horizontal` orientated splitter bar to its `Right` side. |
-| <kbd>←</kbd> | <kbd>←</kbd> | Helps in moving the active `Horizontal` orientated splitter bar to its `Left` side. |
-| <kbd>↑</kbd> | <kbd>↑</kbd> | Helps in moving the active `Vertical` orientated splitter bar to its `Up` side. |
-| <kbd>↓</kbd> | <kbd>↓</kbd> | Helps in moving the active `Vertical` orientated splitter bar to its `Down` side. |
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Helps to toggle between `Expand` and `Collapse` actions of the splitter bar when it is active. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Helps in focusing the Blazor Splitter on the page and switching between the consecutive splitter bars. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Helps in focusing the previous Blazor Splitter bar element on the splitter. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Helps in moving the active `Horizontal` orientated Blazor Splitter bar to its `Right` side. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Helps in moving the active `Horizontal` orientated Blazor Splitter bar to its `Left` side. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Helps in moving the active `Vertical` orientated Blazor Splitter bar to its `Up` side. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Helps in moving the active `Vertical` orientated Blazor Splitter bar to its `Down` side. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Helps to toggle between `Expand` and `Collapse` actions of the Blazor Splitter bar when it is active. |
 
 ## Ensuring accessibility
 
 The Blazor Splitter component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-The accessibility compliance of the Splitter component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/splitter) in a new window to evaluate the accessibility of the Splitter component with accessibility tools.
+The accessibility compliance of the Blazor Splitter component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/splitter) in a new window to evaluate the accessibility of the Blazor Splitter component with accessibility tools.
 
 ## See also
 

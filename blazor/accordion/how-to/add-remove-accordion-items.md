@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Add/Remove Accordion items in Blazor Accordion Component | Syncfusion®
-description: Checkout and learn here all about how to add/remove Accordion items in Blazor Accordion component and more.
+title: How to add or remove items in Blazor Accordion | Syncfusion®
+description: Add or remove Blazor Accordion items at runtime by adding or removing entries in the AccordionItems collection behind Add and Remove buttons.
 platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
-# Add/Remove Accordion Items in Blazor Accordion Component
+# How to add or remove items in Blazor Accordion
 
-You can dynamically add or remove Accordion items by binding the [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) to a list and updating that list from a button click. Blazor's diffing algorithm re-renders the Accordion to match the new contents.
+You can dynamically add or remove Blazor Accordion items by binding the [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) to a list and updating that list from a button click. Blazor's diffing algorithm re-renders the Blazor Accordion to match the new contents.
 
-In the following example, the Accordion starts with three items in the [`AccordionItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItems.html) collection. Clicking **Add Item** appends a new item; clicking **Remove Item** removes the first item.
+In the following example, the Blazor Accordion starts with three items in the [`AccordionItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItems.html) collection. Clicking **Add Item** appends a new item; clicking **Remove Item** removes the first item.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

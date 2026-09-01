@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Set the Readonly in Blazor DatePicker Component | Syncfusion®
-description: Checkout and learn here all the features about Set the Readonly in Blazor DatePicker component and more.
+title: How to set the Readonly in Blazor DatePicker | Syncfusion®
+description: Set the Blazor DatePicker as read-only so users can view the selected date without editing it, by using the Readonly property.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Set the Readonly in Blazor DatePicker Component
+# How to set the Readonly in Blazor DatePicker
 
 The DatePicker component exposes three related properties that control user interaction: [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Enabled), [AllowEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_AllowEdit), and [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Readonly). Together they determine whether the input can be focused, edited, and whether the popup can be opened.
 

@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Style and appearance in Blazor TextBox Component | Syncfusion®
-description: Checkout and learn here all about Style and appearance in Blazor TextBox component and much more details.
+title: Style and Appearance in Blazor TextBox | Syncfusion
+description: Customize Blazor TextBox appearance using CSS selectors for height, font size, and theme overrides for branding.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Style and appearance in Blazor TextBox Component
+# Style and Appearance in Blazor TextBox
 
 The following guidance outlines CSS selectors and examples that can be used to modify the control’s appearance according to user preferences and design requirements.
 
 ## Customizing the appearance of TextBox container element
 
-Use the following CSS to customize the appearance of the TextBox container element, including input height and font size. These selectors target the input/textarea elements within the floating label and input group wrappers, which may be required to override theme defaults.
+Use the following CSS to customize the appearance of the Blazor TextBox container element, including input height and font size. These selectors target the input/textarea elements within the floating label and input group wrappers, which may be required to override theme defaults.
 
 ```css
 /* To specify height and font size */
@@ -23,9 +23,9 @@ Use the following CSS to customize the appearance of the TextBox container eleme
 }
 ```
 
-## Customizing the TextBox placeholder
+## Customizing the Blazor TextBox placeholder
 
-Use the following CSS to customize the TextBox placeholder.
+Use the following CSS to customize the Blazor TextBox placeholder.
 
 ```css
 /* To specify font size and color */
@@ -54,7 +54,7 @@ text-align: right;
 
 ![Blazor TextBox Text Alignment](./images/blazor-textbox-align-right.webp)
 
-To align text in a specific TextBox only, set text-align via a custom class using the CssClass property.
+To align text in a specific Blazor TextBox only, set text-align via a custom class using the CssClass property.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

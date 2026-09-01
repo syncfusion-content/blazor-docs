@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Positions in Blazor Floating Action Button Component | Syncfusion®
-description: Checkout and learn here all about Positions in Blazor Floating Action Button component and much more.
+title: Positions in Blazor Floating Action Button | Syncfusion
+description: Position the Blazor Floating Action Button within a target or viewport using built-in position values.
 platform: Blazor
 control: Floating Action Button
 documentation: ug
 ---
 
-# Positions in Blazor Floating Action Button Component
+# Positions in Blazor Floating Action Button
 
 Use the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_Position) property to place the Floating Action Button (FAB) anywhere within the specified [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_Target). If `Target` is not defined, the FAB is positioned relative to the browser viewport. When using `Target`, ensure the container is positioned (for example, `position: relative`) so the FAB aligns within its bounds. The default `Position` value is `BottomRight`.
 
@@ -62,7 +62,7 @@ The following example demonstrates the Bottom Left position of the FAB.
 
 ```
 
-![Blazor FAB component at bottom-left position](./images/BottomLeftPosition.webp)
+![Blazor Floating Action Button component at bottom-left position](./images/BottomLeftPosition.webp)
 
 The following example demonstrates the multiple supported positions of the FAB.
 
@@ -111,7 +111,7 @@ The following example demonstrates the multiple supported positions of the FAB.
 
 ```
 
-![Blazor FAB component demonstrating all built-in positions](./images/FabPositions.webp)
+![Blazor Floating Action Button component demonstrating all built-in positions](./images/FabPositions.webp)
 
 ## Custom position
 
@@ -136,4 +136,4 @@ A custom position for the Floating Action Button is defined by overriding the `t
 
 ```
 
-![Blazor FAB component with custom position](./images/CustomPosition.webp)
+![Blazor Floating Action Button component with custom position](./images/CustomPosition.webp)

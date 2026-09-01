@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Localization in Blazor DropDownList Component | Syncfusion®
-description: Checkout and learn here all about Localization in Blazor DropDown List component and much more details.
+title: Localization in Blazor Dropdown List | Syncfusion®
+description: Localize UI text and enable right-to-left rendering in Blazor Dropdown List for globalized applications.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Globalization and Localization in Dropdown List
+# Localization in Blazor Dropdown List
 
 ## Localization
 
-The [Blazor DropDownList](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component supports localization of UI text and messages. Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) documentation for configuring culture, resource files, and translations across Blazor components.
+The [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component supports localization of UI text and messages. Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) documentation for configuring culture, resource files, and translations across Blazor components.
 
 ## Globalization
 
@@ -27,4 +27,4 @@ Specifies the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% endhighlight %}
 
-![Blazor DropDownList rendered in RTL mode](./images/localization/blazor_dropdown_enableRtl.png)
+![Blazor Dropdown List rendered in RTL mode](./images/localization/blazor_dropdown_enableRtl.png)
