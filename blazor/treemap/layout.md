@@ -111,9 +111,9 @@ The TreeMap can be rendered in the following directions:
 * [BottomRightTopLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html)
 * [BottomLeftTopRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html)
 
-The following example shows, how to render the TreeMap in the RTL direction with [TopLeftBottomRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html).
+The following example shows how to render the TreeMap with [TopLeftBottomRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html) direction.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap;
 
 <SfTreeMap DataSource="Fruits" TValue="Fruit" WeightValuePath="Count" Palette='new string[]{"#71B081","#5A9A77", "#498770", "#39776C", "#266665","#124F5E"}' RenderDirection="RenderingMode.TopLeftBottomRight">
@@ -123,7 +123,7 @@ The following example shows, how to render the TreeMap in the RTL direction with
     </TreeMapTooltipSettings>
 </SfTreeMap>
 
-@code{
+@code {
     public class Fruit
     {
         public string Name { get; set; }
@@ -143,7 +143,7 @@ The following example shows, how to render the TreeMap in the RTL direction with
 
 ![Blazor TreeMap in TopLeftBottomRight Direction](images/Internationalization/blazor-treemap-top-left-bottom-right-direction.webp)
 
-The following example shows, how to render the TreeMap in the RTL direction with [TopRightBottomLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html).
+The following example shows how to render the TreeMap with [TopRightBottomLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html) direction.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap;
@@ -160,7 +160,7 @@ N> Refer to the [code block](#rendering-direction) to know about the property va
 
 ![Blazor TreeMap in TopRightBottomLeft Direction](images/Internationalization/blazor-treemap-top-right-bottom-left-direction.webp)
 
-The following example shows, how to render the TreeMap in the RTL direction with [BottomRightTopLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html).
+The following example shows how to render the TreeMap with [BottomRightTopLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html) direction.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap;
@@ -177,7 +177,7 @@ N> Refer to the [code block](#rendering-direction) to know about the property va
 
 ![Blazor TreeMap with BottomRightTopLeft Direction](images/Internationalization/blazor-treemap-bottom-right-top-left-direction.webp)
 
-The following example shows, how to render the TreeMap in the RTL direction with [BottomLeftTopRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html).
+The following example shows how to render the TreeMap with [BottomLeftTopRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html) direction.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap;

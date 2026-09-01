@@ -9,11 +9,11 @@ documentation: ug
 
 # Blazor TreeMap Tooltip
 
-Tooltip is used to display details about the items in the TreeMap. When space constraints prevents from displaying the information using Data Labels, the tooltip comes in handy.
+The tooltip displays additional information about items in the TreeMap. It is useful when space constraints prevent information from being displayed using data labels.
 
 ## Default tooltip
 
-The tooltip is not visible by default, to make it visible, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Visible) property in the [TreeMapTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html) to **true**.
+The tooltip is not visible by default. To display it, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Visible) property of [TreeMapTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html) to `true`.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -41,16 +41,16 @@ The tooltip is not visible by default, to make it visible, set the [Visible](htt
 }
 ```
 
-![Blazor TreeMap with Tooltip](images/Tooltip/blazor-treemap-tooltip.webp)
+![Blazor TreeMap with tooltip](images/Tooltip/blazor-treemap-tooltip.webp)
 
-## Customization
+## Customize tooltip appearance
 
-Customize the TreeMap tooltip using the following properties.
+Use the following properties to customize the appearance of the TreeMap tooltip:
 
-* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Fill) - Specifies the color of the tooltip.
-* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Opacity) - Specifies the opacity of the tooltip.
-* [TreeMapTooltipBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipBorder.html) - Specifies the tooltip border color and width.
-* [TreeMapTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipTextStyle.html) - Specifies the tooltip font family, style, weight, color and size.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Fill): Specifies the background color of the tooltip.
+* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Opacity): Specifies the opacity of the tooltip. The value ranges from `0` to `1`, and the default value is `1`.
+* [TreeMapTooltipBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipBorder.html): Specifies the color and width of the tooltip border.
+* [TreeMapTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipTextStyle.html): Specifies the font family, style, weight, color, and size of the tooltip text.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -83,11 +83,11 @@ The tooltip content is displayed by default based on the [WeightValuePath](https
 
 N> Refer to the [code block](#default-tooltip) to know about the property value of **Fruits**.
 
-![Changing Tooltip Format in Blazor TreeMap](images/Tooltip/blazor-treemap-tooltip-format.webp)
+![Formatted tooltip content in Blazor TreeMap](images/Tooltip/blazor-treemap-tooltip-format.webp)
 
 ## Tooltip template
 
-Tooltip can be rendered as a custom component using the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_TooltipTemplate) property in the [TreeMapTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html) which accepts one or more UI elements as an input, that can be rendered as a part of the tooltip rendering.
+Use the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_TooltipTemplate) property of [TreeMapTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html) to render custom UI elements in the tooltip.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
