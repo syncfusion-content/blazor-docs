@@ -9,15 +9,17 @@ documentation: ug
 
 # Define events programmatically in Blazor Data Grid
 
-In the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), events are typically defined using the [GridEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#) child Razor component. As an alternative, Grid events can also be configured programmatically by accessing the Grid instance through a component reference. This approach is useful when events need to be assigned dynamically during the application lifecycle.
+In the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid), events are typically defined using the [GridEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html) child Razor component. For scenarios where Data Grid events must be assigned dynamically during the application lifecycle, a component reference can be used to access the Data Grid instance and assign the `GridEvents` property from code.
 
-> Note: Assigning **Grid.GridEvents** programmatically replaces any events declared via the `<GridEvents>` markup for that Grid instance.
+> Note: Assigning **Grid.GridEvents** programmatically replaces any events declared via the `<GridEvents>` markup for that Data Grid instance.
 
 To define events programmatically:
 
-- Set a reference to the Grid using the **@ref** directive.
-- After the Grid is rendered, assign the **GridEvents** property within the **OnAfterRenderAsync** lifecycle method (guarded by **firstRender**).
-- Use the **EventCallbackFactory** to create event handlers bound to the component context.
+- Set a reference to the Data Grid by using the **@ref** directive.
+- Assign the **GridEvents** property inside **OnAfterRenderAsync**, guarded by checking the **firstRender** parameter.
+- Use **EventCallbackFactory** to bind handlers to the current component context.
+
+> Columns in the following example are auto-generated from the **Order** model when the `Data Grid` renders, so `<GridColumns>` markup is not required.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -27,7 +29,7 @@ To define events programmatically:
 <SfGrid @ref="Grid" DataSource="@Orders">
 </SfGrid>
 
-@code{
+@code {
     SfGrid<Order> Grid { get; set; }
     public List<Order> Orders { get; set; }
 
@@ -76,3 +78,8 @@ To define events programmatically:
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBHjGjsskxheQCa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+## See also
+
+* [Events in Blazor Data Grid](https://blazor.syncfusion.com/documentation/datagrid/events)
+* [GridEvents<TValue> API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html)

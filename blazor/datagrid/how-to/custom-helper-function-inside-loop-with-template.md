@@ -9,9 +9,9 @@ documentation: ug
 
 # Use Custom Helper with Templates in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports using custom helpers inside the loop within a column [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template). This enables building flexible templates that incorporate additional logic and helper functions.
+The [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports calling custom helper methods inside a loop within a column [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template). This enables building flexible templates that incorporate additional logic and custom helper methods.
 
-The following example renders a customer rating column with a custom template. Inside the template, the code iterates over a fixed range and generates star elements. The **IsRatingGreater** helper method determines which stars to highlight.
+The following example renders a customer rating column with a custom template. Inside the template, the code iterates from 1 to 5 using `Enumerable.Range` and generates star elements. The `context` object refers to the current row data item, and the **IsRatingGreater** custom helper method determines which stars to highlight.
 
 ```css
 .e-grid .rating .star:before {
