@@ -10,9 +10,9 @@ keywords: chart wizard, blazor, accessibility
 
 # Blazor Chart Wizard Accessibility
 
-The Blazor Chart Wizard component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Chart Wizard component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles), which are commonly used to evaluate accessibility.
 
-The accessibility compliance for the  Blazor Chart Wizard component is outlined below.
+The accessibility compliance of the Blazor Chart Wizard component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,7 +40,11 @@ The accessibility compliance for the  Blazor Chart Wizard component is outlined 
 
 ## WAI-ARIA attributes
 
-WAI-ARIA(Accessibility Initiative - Accessible Rich Internet Applications) defines a way to increase the accessibility of web pages, dynamic content, and user interface components developed with AJAX, HTML, JavaScript, and related technologies. ARIA provides additional semantics to describe the role, state, and functionality of web components.
+WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications) defines a way to improve the accessibility of web pages, dynamic content, and user interface components. ARIA provides additional semantics to describe the role, state, and functionality of web components.
+
+The Blazor Chart Wizard component follows standard WAI-ARIA design patterns to support accessibility.
+
+The elements and interactive components provide the following default screen reader announcements:
 
 Element |Default description
 -----|-----

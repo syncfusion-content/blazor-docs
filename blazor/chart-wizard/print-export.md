@@ -10,17 +10,16 @@ keywords: chart wizard, blazor, chart
 
 # Blazor Chart Wizard Print and Export
 
-The Chart Wizard support the export of current chart to a variety of popular file formats. Supported export options include: `PNG`, `JPEG`, `SVG`, `PDF`, `CSV`, `XLSX`, and `PRINT`.
-
+The Chart Wizard supports exporting the current chart to the following file formats: `PNG`, `JPEG`, `SVG`, `PDF`, `CSV`, and `XLSX`. It also supports printing the chart. Export and print actions are initiated from the export and print options in the Chart Wizard toolbar at runtime; the settings described below control the generated output.
 
 ## Configuring Export Options
 
-Configure export behavior declaratively using the `ChartExportSettings` within `ChartSettings`. The main properties include:
+Configure export settings using [`ChartExportSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ChartWizard.ChartExportSettings.html) in [`ChartSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ChartWizard.ChartSettings.html). The following properties are available:
 
-- `FileName` — Sets the file name of the export.
-- `Width` — Sets the requested output width in pixels for image/PDF exports.
-- `Height` — Sets the requested output height in pixels for image/PDF exports.
-- `Orientation` — Sets the page orientation for PDF/print (`Portrait` or `Landscape`).
+- `FileName` - Specifies the file name for the exported file, without the file extension. The appropriate extension is appended automatically based on the selected format.
+- `Width` - Specifies the output width, in pixels, for image and PDF exports.
+- `Height` - Specifies the output height, in pixels, for image and PDF exports.
+- `Orientation` - Specifies the page orientation for PDF and print exports. This property is of type `PageOrientation`; supported values are `PageOrientation.Portrait` and `PageOrientation.Landscape`.
 
 ```cshtml
 
@@ -70,7 +69,7 @@ Configure export behavior declaratively using the `ChartExportSettings` within `
 ![Chart Wizard export](images/chart-wizard-export.webp)
 
 
-N> `PRINT` opens the browser's print dialog and prints the rendered chart. This does not generate a downloadable file, but is ideal for creating physical copies or printing to PDF using your browser's print-to-PDF feature.
+N> The **Print** option opens the browser's print dialog and prints the rendered chart. It does not generate a downloadable file. Use it to print the chart directly or to save it as a PDF using the browser's print-to-PDF feature.
 
 
 ![Chart Wizard print](images/chart-wizard-print.webp)
@@ -78,19 +77,18 @@ N> `PRINT` opens the browser's print dialog and prints the rendered chart. This 
 
 ## Customizing the Exported Chart with the Exporting Event
 
-When an export is triggered, the component fires an `Exporting` event and supplies a `ChartExportingEventArgs` instance. You can use this to customize the export process. Available fields include:
+When an export operation is initiated, the component triggers the `Exporting` event and provides a [`ChartExportingEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ChartWizard.ChartExportingEventArgs.html) object. Use this event to customize the export operation.
 
-- `FileName` — sets the filename to use for the exported file (without extension). The component will append the appropriate extension for the selected export type.
-- `Cancel` — set to `true` to cancel the export operation.
-- `Width` — sets width in pixels to use for the exported output (when supported by the export type); useful to control output resolution.
-- `Height` — sets height in pixels to use for the exported output (when supported by the export type).
-- `Orientation` — sets page orientation for printable exports (`Portrait` or `Landscape`). Applies primarily to PDF/Print workflows.
+The `ChartExportingEventArgs` object exposes the same `FileName`, `Width`, `Height`, and `Orientation` values as `ChartExportSettings` (pre-populated from those settings), plus:
+
+- `Cancel` - Determines whether to cancel the export operation. Set this property to `true` to prevent the export.
+
+Any changes made to `FileName`, `Width`, `Height`, or `Orientation` in the event handler override the configured `ChartExportSettings` values for the current export. `Orientation` is of type `PageOrientation` (`PageOrientation.Portrait` or `PageOrientation.Landscape`).
 
 
-Here’s an example of handling the `Exporting` event:
+The following example shows how to handle the `Exporting` event:
 
-```
-
+```cshtml
 
 @using Syncfusion.Blazor.ChartWizard
 
@@ -119,7 +117,7 @@ Here’s an example of handling the `Exporting` event:
         args.Height = 650; // pixels
 
         // Set page orientation for PDF/print exports
-        args.Orientation = PageOrientation.Landscape; // or "Portrait"
+        args.Orientation = PageOrientation.Landscape; // or PageOrientation.Portrait
 
         if (OlympicsDataSource == null || OlympicsDataSource.Count == 0)
         {
@@ -155,11 +153,13 @@ Here’s an example of handling the `Exporting` event:
 
 
 N>
-- Use `args.Cancel = true` to prevent exporting when needed.
-- The `FileName` property should not include a file extension; the component will add the correct extension based on the selected `ExportType`.
-- Data export formats like `CSV` and `XLSX` export the underlying data table and do not use `Width`, `Height`, or `Orientation`.
+- Set `args.Cancel` to `true` to cancel the export operation.
+- Data export formats such as `CSV` and `XLSX` export the underlying data and do not use the `Width`, `Height`, or `Orientation` properties.
+- `CSV` and `XLSX` exports are not affected by the `Exporting` event's dimension and orientation settings.
 
 
 ## See Also
 
 - Explore the [Chart Wizard Demo](#) for interactive samples.
+- [Working with Data in Blazor Chart Wizard](./working-with-data)
+- [Serialization in Blazor Chart Wizard](./serialization)
