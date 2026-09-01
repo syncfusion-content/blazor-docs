@@ -11,11 +11,11 @@ documentation: ug
 
 The annotation is used to place text, shapes or images in the center of the doughnut chart.
 
-The [AccumulationChartAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html) property allows to add annotations to the chart. Specify the content that needs to be displayed in the accumulation chart area by using the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_ContentTemplate) property of the annotation.
+The [AccumulationChartAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html) property lets you add annotations to the chart. Specify the content that needs to be displayed in the accumulation chart area by using the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_ContentTemplate) property of the annotation.
 
 **Step 1:**
 
-Render a doughnut chart with the required series using the [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html).
+Render a doughnut chart with the required series using the [AccumulationChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeriesCollection.html).
 
 ```cshtml
 <AccumulationChartSeriesCollection>
@@ -30,17 +30,18 @@ Render a doughnut chart with the required series using the [ChartSeriesCollectio
 Create a div element inside the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_ContentTemplate) to display the text placing the centre of the doughnut.
 
 ```cshtml
-<AccumulationChartAnnotation>
-        <ContentTemplate>
-            <div class="donut-text">Chart Annotation</div>
-        </ContentTemplate>
-    </AccumulationChartAnnotation>
+<AccumulationChartAnnotations>
+        <AccumulationChartAnnotation>
+            <ContentTemplate>
+                <div class="donut-text">Chart Annotation</div>
+            </ContentTemplate>
+        </AccumulationChartAnnotation>
 </AccumulationChartAnnotations>
 ```
 
 **Step 3:**
 
-Since the text need to be placed in the center of the doughnut chart the [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_Region) property need to be set to **Regions.Chart**. Specify the [CoordinateUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_CoordinateUnits) in [Pixel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Units.html#Syncfusion_Blazor_Charts_Units_Pixel) and set the X and Y coordinate values in percentage as shown in the following.
+Since the text needs to be placed in the center of the doughnut chart, the [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_Region) property needs to be set to **Regions.Chart**. Specify the [CoordinateUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_CoordinateUnits) in [Pixel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Units.html#Syncfusion_Blazor_Charts_Units_Percent) and set the X and Y coordinate values in Pixel as shown in the following example.
 
 ```cshtml
 <AccumulationChartAnnotations>
@@ -58,8 +59,7 @@ The complete code snippet for the preceding steps is as follows.
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart>
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
+    <AccumulationChartLegendSettings Visible="false" />
     <AccumulationChartAnnotations>
         <AccumulationChartAnnotation X="50%" Y="50%" CoordinateUnits="Units.Pixel" Region="Regions.Chart">
             <ContentTemplate>
@@ -67,7 +67,6 @@ The complete code snippet for the preceding steps is as follows.
             </ContentTemplate>
         </AccumulationChartAnnotation>
     </AccumulationChartAnnotations>
-
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries InnerRadius="60%" Name="@nameof(MyDataModel.XValue)" DataSource="@chartData" YName="@nameof(MyDataModel.YValue)" XName="@nameof(MyDataModel.XValue)"></AccumulationChartSeries>
     </AccumulationChartSeriesCollection>

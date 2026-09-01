@@ -9,28 +9,26 @@ documentation: ug
 
 # Blazor Accumulation Chart Animation
 
-You can customize animation for a series using [`Animation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnimation.html) property. You can enable or disable animation of the series using [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnimation.html#Syncfusion_Blazor_Charts_AccumulationChartAnimation_Enable) property. [`Duration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnimation.html#Syncfusion_Blazor_Charts_AccumulationChartAnimation_Duration) specifies the duration of an animation and [`Delay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnimation.html#Syncfusion_Blazor_Charts_AccumulationChartAnimation_Delay) allows us to start the animation at desire time.
+You can customize animation for a series using [`Animation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnimation.html) property. You can enable or disable animation of the series using [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnimation.html#Syncfusion_Blazor_Charts_AccumulationChartAnimation_Enable) property. [`Duration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnimation.html#Syncfusion_Blazor_Charts_AccumulationChartAnimation_Duration) specifies the duration of an animation and [`Delay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnimation.html#Syncfusion_Blazor_Charts_AccumulationChartAnimation_Delay) allows us to start the animation at the desired time.
 
 ```cshtml 
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
+    <AccumulationChartLegendSettings Visible="false" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser">
             <AccumulationDataLabelSettings Visible="true"></AccumulationDataLabelSettings>
             <AccumulationChartAnimation Enable="false"></AccumulationChartAnimation>
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
-        public string Browser;
-        public double Users;
+        public string Browser { get; set; }
+        public double Users { get; set; }
     }
 
     public List<Statistics> StatisticsDetails = new List<Statistics>
@@ -57,11 +55,11 @@ You can programmatically refresh chart using [Refresh](https://help.syncfusion.c
        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser">
       </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-   <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
+   <AccumulationChartLegendSettings Visible="true" />
 </SfAccumulationChart>
 <button  @onclick="ButtonClick">Click me</button>
 
-@code{
+@code {
     SfAccumulationChart accumulationChart;
     public class Statistics
     {

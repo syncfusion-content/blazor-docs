@@ -19,8 +19,7 @@ The `PrintAsync` method can be used to print a rendered chart directly from the 
 @using Syncfusion.Blazor.Buttons
 
 <SfAccumulationChart @ref="ChartObj" Title="Mobile Browser Statistics" EnableSmartLabels="true">
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
+    <AccumulationChartLegendSettings Visible="false" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="RIO" GroupTo="10">
             <AccumulationDataLabelSettings Visible="true" Name="Text" Position="AccumulationLabelPosition.Outside">
@@ -31,7 +30,7 @@ The `PrintAsync` method can be used to print a rendered chart directly from the 
 
 <SfButton ID="button" Content="Print" @onclick="@Click" IsPrimary="true" CssClass="e-flat"></SfButton>
 
-@code{
+@code {
     SfAccumulationChart ChartObj;
 
     private async Task Click()
@@ -77,8 +76,7 @@ The optional parameters for this method are,
 @using Syncfusion.ExcelExport;
 
 <SfAccumulationChart @ref="ChartObj" Title="Mobile Browser Statistics" EnableSmartLabels="true">
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
+    <AccumulationChartLegendSettings Visible="false" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="RIO" GroupTo="10">
             <AccumulationDataLabelSettings Visible="true" Name="Text" Position="AccumulationLabelPosition.Outside">
@@ -90,7 +88,7 @@ The optional parameters for this method are,
 
 <SfButton ID="button" Content="Export" @onclick="@Click" IsPrimary="true" CssClass="e-flat"></SfButton>
 
-@code{
+@code {
     SfAccumulationChart ChartObj;
 
     private async Task Click()
@@ -119,7 +117,7 @@ The optional parameters for this method are,
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXrRDcBDJBahYjoF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Customizing the exported chart using Exporting event
+## Customizing the Exported Chart Using the Exporting Event
 
 The [Exporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_Exporting) event allows users to customize the exported accumulation chart before it is generated. The [ChartExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartExportEventArgs.html) class provides the following options for customizing the exported accumulation chart:
 
@@ -141,14 +139,14 @@ In the code example below, the accumulation chart is exported to Excel format. T
 @using Syncfusion.ExcelExport;
 
 <div id="button">
-    <button onclick="@ExportChart">
+    <button @onclick="ExportChart">
         Export
     </button>
 </div>
 
 <SfAccumulationChart @ref="accumulationChart" EnableBorderOnMouseMove="false" Title="Browser Market Share" EnableAnimation="true" Theme="Syncfusion.Blazor.Theme.Tailwind3">
     <AccumulationChartTooltipSettings Header="" Format="<b>${point.x}</b><br>Browser Share: <b>${point.y}%</b>" Enable="true"></AccumulationChartTooltipSettings>
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+    <AccumulationChartLegendSettings Visible="false" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@PieChartPoints" XName="Browser" YName="Users" Radius="@Radius" Name="Browser" StartAngle="@StartAngle"
                                  InnerRadius="0%" ExplodeIndex="0" Explode="true" ExplodeOffset="@ExplodeRadius">
@@ -238,7 +236,7 @@ In the code example below, the accumulation chart is exported to Excel format. T
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZBHjwBNprxkwsFa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=fluent2) to know about the various features of accumulation charts and how they are used to represent numeric proportional data.
 
 ## See also
 
