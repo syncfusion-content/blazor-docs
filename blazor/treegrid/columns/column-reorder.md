@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Reordering in Blazor TreeGrid 
 
-Reordering can be done by drag and drop of a particular column header from one index to another index within the tree grid. To enable reordering, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowReordering) property to true.
+To reorder columns in the Blazor TreeGrid, drag and drop a column header to the desired position. To enable reordering, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowReordering) property to **true**.
 
 {% tabs %}
 
@@ -77,13 +77,20 @@ namespace TreeGridComponent.Data
 
 {% endtabs %}
 
-![Reordering Columns in Blazor Tree Grid](../images/blazor-treegrid-column-reorder.webp)
+![Reordering Columns in Blazor TreeGrid](../images/blazor-treegrid-column-reorder.webp)
 
-N> You can disable reordering a particular column by setting the `AllowReordering` property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) tag helper to false.
+N> To prevent reordering of a specific column, set the `AllowReordering` property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) to **false**.
 
 ## Reorder single column
 
-Tree Grid has option to reorder a column either by interaction or by using the [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ReorderColumnsAsync_System_Collections_Generic_List_System_String__System_String_) method. In the following sample, **TaskName** column is reordered to third column position by using the method on button click.
+TreeGrid has option to reorder a column through user interaction or programmatically using the [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ReorderColumnsAsync_System_Collections_Generic_List_System_String__System_String_) method.
+
+**Parameters**
+
+| **Type**       | **Name**   | **Description**                                                                 |
+|----------------|------------|---------------------------------------------------------------------------------|
+| List<string>   | fromFName  | The list of column field names to move. Multiple columns can be passed together. |
+| string         | toFName    | The field name of the destination column. The source columns are placed before it. |
 
 {% tabs %}
 
@@ -91,8 +98,10 @@ Tree Grid has option to reorder a column either by interaction or by using the [
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Buttons;
 
-<SfTreeGrid IdMapping="TaskId" ParentIdMapping="ParentId" AllowReordering="true" DataSource="@TreeGridData" TreeColumnIndex="1">
+<SfButton OnClick="ReorderColumn" CssClass="e-primary" IsPrimary="true" Content="Reorder TaskName Column"></SfButton>
+<SfTreeGrid @ref="TreeGrid" IdMapping="TaskId" ParentIdMapping="ParentId" AllowReordering="true" DataSource="@TreeGridData" TreeColumnIndex="1">
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" MinWidth="170" MaxWidth="250" Width="180"></TreeGridColumn>
@@ -103,9 +112,15 @@ Tree Grid has option to reorder a column either by interaction or by using the [
 
 @code{
     public List<TreeData.BusinessObject> TreeGridData { get; set; }
+    private SfTreeGrid<TreeData.BusinessObject> TreeGrid;
     protected override void OnInitialized()
     {
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
+    }
+    private async Task ReorderColumn()
+    {
+        // Move TaskName column before Progress column (third position)
+        await TreeGrid.ReorderColumnsAsync(new List<string> { "TaskName" }, "Progress");
     }
 }
 
@@ -147,14 +162,11 @@ public class TreeData
 
 {% endtabs %}
 
-The following GIF represents the Reordering column **TaskName** by using the method,
-![Reordering Single Column in Blazor Tree Grid](../images/blazor-treegrid-reorder-single-column.webp)
+![Reordering Single Column in Blazor TreeGrid](../images/blazor-treegrid-reorder-single-column.webp)
 
 ## Reorder multiple columns
 
-User can reorder a single column at a time by Interaction. Sometimes, you need to reorder multiple columns at the same time by passing list of columns programmatically in the [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ReorderColumnsAsync_System_Collections_Generic_List_System_String__System_String_) method.
-
-In the following sample, **TaskName** and **Duration** columns are reordered to the last column position using this method on the click button.
+A single column can be reordered through user interaction. Multiple columns can be reordered at the same time by passing a list of columns programmatically into the [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ReorderColumnsAsync_System_Collections_Generic_List_System_String__System_String_) method.
 
 {% tabs %}
 
@@ -225,4 +237,127 @@ public class TreeData
 
 {% endtabs %}
 
-![Reordering Multiple Columns in Blazor Tree Grid](../images/blazor-treegrid-reorder-multiple-columns.webp)
+![Reordering Multiple Columns in Blazor TreeGrid](../images/blazor-treegrid-reorder-multiple-columns.webp)
+
+N>  In the `ReorderColumnsAsync` method, the second parameter specifies the destination column, and the reordered columns will always be placed before this column in the TreeGrid.
+
+## Reorder events in TreeGrid
+
+The Blazor TreeGrid provides events to handle column reordering interactions. These events allow executing custom logic during drag-and-drop operations.
+
+1. [ColumnReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ColumnReordering) – Triggered while a column header is being dragged.  
+2. [ColumnReordered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ColumnReordered) – Triggered when a column header is dropped on the target column.
+
+---
+
+### ColumnReordering
+
+The `ColumnReordering` event is triggered while a column header is being dragged during a reordering operation. This event can be used to inspect the column being moved and optionally cancel the reordering based on custom logic.
+
+**Event Arguments**
+
+The event uses the [ColumnReorderingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnReorderingEventArgs.html) class, which includes:
+
+| Event Argument     | Type                   | Description                                                                 |
+|--------------------|------------------------|------------------------------------------------------------------------------|
+| Cancel             | bool                   | Set to **true** to cancel the reordering operation.                         |
+
+---
+
+### ColumnReordered
+
+The `ColumnReordered` event is triggered after a column header is dropped on the target column during a reordering operation. This event allows executing custom logic after the reordering is completed, such as updating UI elements or logging changes.
+
+**Event Arguments**
+
+The event uses the [ColumnReorderedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnReorderedEventArgs.html) class, which includes:
+
+| Parameter           | Type                   | Description                                                                 |
+|---------------------|------------------------|-----------------------------------------------------------------------------|
+| ReorderingColumns   | List<GridColumn>   | Represents the columns that were reordered.                                 |
+| ToColumn            | GridColumn         | Destination column where the reordered columns are placed.                  |
+
+---
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using TreeGridComponent.Data;
+@using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Buttons;
+
+<div style="text-align: center; color: red">
+    <span>@ReorderMessage</span>
+</div>
+
+<SfButton OnClick="ReorderColumn" CssClass="e-primary" IsPrimary="true" Content="Reorder TaskName Column"></SfButton>
+
+<SfTreeGrid @ref="TreeGrid" IdMapping="TaskId" ParentIdMapping="ParentId" AllowReordering="true" DataSource="@TreeGridData" TreeColumnIndex="1">
+    <TreeGridEvents TValue="TreeData.BusinessObject" ColumnReordering="OnColumnReordering" ColumnReordered="OnColumnReordered"></TreeGridEvents>
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" MinWidth="170" MaxWidth="250" Width="180"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" MinWidth="50" MaxWidth="150" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="80"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="80"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+@code {
+    private SfTreeGrid<TreeData.BusinessObject> TreeGrid;
+    public string ReorderMessage;
+    public List<TreeData.BusinessObject> TreeGridData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        TreeGridData = TreeData.GetSelfDataSource().ToList();
+    }
+
+    private async Task ReorderColumn()
+    {
+        // Move TaskName column before Progress column (third position)
+        await TreeGrid.ReorderColumnsAsync(new List<string> { "TaskName" }, "Progress");
+    }
+
+    public void OnColumnReordering(ColumnReorderingEventArgs args)
+    {
+        if (args.ReorderingColumns[0].Field == "TaskId")
+        {
+            args.Cancel = true;
+            ReorderMessage = "ColumnReordering event triggered. Reordering cancelled for " + args.ReorderingColumns[0].HeaderText + " column.";
+        }
+    }
+
+    public void OnColumnReordered(ColumnReorderedEventArgs args)
+    {
+        ReorderMessage = "ColumnReordered event triggered. " + args.ReorderingColumns[0].HeaderText + " column moved to index " + args.ReorderingColumns[0].Index;
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="TreeData.cs" %}
+namespace TreeGridComponent.Data {
+    public class TreeData {
+        public class BusinessObject {
+            public int TaskId { get; set; }
+            public string TaskName { get; set; }
+            public int? Duration { get; set; }
+            public int? Progress { get; set; }
+            public int? ParentId { get; set; }
+        }
+
+        public static List<BusinessObject> GetSelfDataSource() {
+            return new List<BusinessObject> {
+                new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, ParentId = null },
+                new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Duration = 4, Progress = 80, ParentId = 1 },
+                new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, ParentId = 2 },
+                new BusinessObject() { TaskId = 4, TaskName = "Child task 3", Duration = 6, Progress = 77, ParentId = 3 },
+                new BusinessObject() { TaskId = 5, TaskName = "Parent Task 2", Duration = 10, Progress = 70, ParentId = null },
+                new BusinessObject() { TaskId = 6, TaskName = "Child task 1", Duration = 4, Progress = 80, ParentId = 5 },
+                new BusinessObject() { TaskId = 7, TaskName = "Child Task 2", Duration = 5, Progress = 65, ParentId = 5 },
+                new BusinessObject() { TaskId = 8, TaskName = "Child task 3", Duration = 6, Progress = 77, ParentId = 5 },
+                new BusinessObject() { TaskId = 9, TaskName = "Child task 4", Duration = 6, Progress = 77, ParentId = 5 }
+            };
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
