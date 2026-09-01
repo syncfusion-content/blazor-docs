@@ -16,7 +16,7 @@ The appearance of sorting indicators in the [Blazor DataGrid](https://www.syncfu
 
 ## Customize sorting icons
 
-The **.e-icon-ascending** and **.e-icon-descending** classes define the icons shown in the DataGrid header when a column is sorted in `ascending` or `descending` order. Use CSS to adjust its appearance:
+The **.e-icon-ascending** and **.e-icon-descending** classes define the icons displayed in the DataGrid header when a column is sorted in `ascending` or `descending` order. CSS can customize the icon appearance:
 
 ```css
 .e-grid .e-icon-ascending::before {
@@ -28,13 +28,13 @@ The **.e-icon-ascending** and **.e-icon-descending** classes define the icons sh
 }
 ```
 
-Adjust properties such as **content**, **color**, **font-size**, and **margin** to match the grid design. Ensure the correct icon font family is loaded to display the icons properly.
+Modify properties such as **content**, **color**, **font-size**, and **margin** to match the grid design. The `font-family: 'e-icons'` property is required to display the icons correctly.
 
 ![Grid sorting icon](../images/style-and-appearance/grid-sorting-icons.webp)
 
 ## Customize multi-sorting indicators
 
-The **.e-sortnumber** class styles the numeric indicator shown when multiple columns are sorted. Apply CSS to change their appearance:
+The **.e-sortnumber** class styles the numeric indicator displayed when multiple columns are sorted. CSS can modify the indicator appearance:
 
 ```css
 .e-grid .e-sortnumber {
@@ -43,7 +43,7 @@ The **.e-sortnumber** class styles the numeric indicator shown when multiple col
 }
 ```
 
-Modify properties such as **background-color**, **font-family**, **font-size**, and **border-radius** to align with the grid layout. Ensure accessibility by maintaining clear contrast and focus styles.
+Modify properties such as **background-color**, **font-family**, **font-size**, and **border-radius** to align with the grid layout. Maintain clear contrast and visible focus styles to ensure accessibility.
 
 ![Grid multi sorting icon](../images/style-and-appearance/grid-multi-sorting-icon.webp)
 
@@ -78,7 +78,7 @@ Modify properties such as **background-color**, **font-family**, **font-size**, 
         margin-left: 4px;
     }
 
-    /* Override sorting icons (ensure correct icon font family) */
+    /* Override sorting icons */
     .e-grid .e-icon-ascending::before,
     .e-grid .e-icon-descending::before {
         font-family: 'e-icons' !important; /* required for glyphs to render */
@@ -86,10 +86,10 @@ Modify properties such as **background-color**, **font-family**, **font-size**, 
         speak: none;
     }
     .e-grid .e-icon-ascending::before {
-        content: '\e7a3'; /* Ascending icon code (verify for your theme/version) */
+        content: '\e7a3'; /* Ascending icon code */
     }
     .e-grid .e-icon-descending::before {
-        content: '\e7b6'; /* Descending icon code (verify for your theme/version) */
+        content: '\e7b6'; /* Descending icon code */
     }
 
     /* Optional: emphasize sorted header and provide better focus visibility */
