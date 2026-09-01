@@ -9,9 +9,9 @@ documentation: ug
 
 # Column Chooser in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides a column chooser feature that allows dynamically showing or hiding columns.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides a column chooser feature that allows users to dynamically show or hide columns.
 
-To enable this feature, set the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnChooser)  property of the [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **true**.
+To enable this feature, set the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnChooser) property of the [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **true** and include **"ColumnChooser"** in the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) collection to open the column chooser dialog.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -82,13 +82,13 @@ To enable this feature, set the [ShowColumnChooser](https://help.syncfusion.com/
 
 > The column chooser dialog displays the header text of each column by default. If the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) is not defined, the corresponding [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) name is shown instead.
 
-## Hide column in column chooser dialog
+## Hide a column in the column chooser dialog
 
-The Blazor DataGrid allows hiding specific columns from the column chooser dialog. This is useful when working with a large number of columns or when limiting the columns available for selection. 
+The Blazor Data Grid allows hiding specific columns from the column chooser dialog. This is useful when working with a large number of columns or when limiting the columns available for selection.
 
-To enable this, set the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowInColumnChooser) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
+To hide a column, set the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowInColumnChooser) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
 
-In this configuration, the `ShowInColumnChooser` property is set to **false** for the **OrderID** column. As a result, the **OrderID** column will not appear in the column chooser dialog.
+In the following example, `ShowInColumnChooser` is set to **false** for the **OrderID** column, so the column does not appear in the column chooser dialog.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -99,8 +99,8 @@ In this configuration, the `ShowInColumnChooser` property is set to **false** fo
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" ShowInColumnChooser="false" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Visible="false" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Visible="false" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 @code {
@@ -155,14 +155,14 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBxNGXCzCeFriuA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthnZPhNfzkdbaNK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * The `ShowInColumnChooser` property is applied to each column individually. By setting it to **false**, specific columns can be excluded from the column chooser dialog.
-> * At least one column must remain visible in the Grid to ensure proper rendering and interaction.
+> * At least one column must remain visible in the Data Grid to ensure proper rendering and interaction.
 
-## Open column chooser via programmatically
+## Open column chooser programmatically
 
-The Blazor DataGrid allows opening the column chooser dialog programmatically using an external button. Use the [OpenColumnChooserAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_OpenColumnChooserAsync_System_Nullable_System_Double__System_Nullable_System_Double__) method to display the dialog at a specific position on the page.
+The Blazor Data Grid allows opening the column chooser dialog programmatically using an external button. Use the [OpenColumnChooserAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_OpenColumnChooserAsync_System_Nullable_System_Double__System_Nullable_System_Double__) method to display the dialog at a specific position on the page.
 
 | Parameter | Type     | Description                                                                 |
 |-----------|----------|-----------------------------------------------------------------------------|
@@ -191,9 +191,9 @@ The Blazor DataGrid allows opening the column chooser dialog programmatically us
     {
         Orders = OrderData.GetAllRecords();       
     }  
-    public void Show()
+    public async Task Show()
     {
-        Grid.OpenColumnChooserAsync(100, 40);
+        await Grid.OpenColumnChooserAsync(100, 40);
     }
 }
 {% endhighlight %}
@@ -244,9 +244,9 @@ public class OrderData
 
 ## Customize column chooser dialog size
 
-The Blazor DataGrid displays the column chooser dialog with a default size. To adjust its dimensions, apply custom CSS styles to override the default height and width.
+The Blazor Data Grid displays the column chooser dialog with a default size. To adjust its dimensions, apply custom CSS styles to override the default height and width.
 
-```csharp
+```css
 <style> 
     .e-grid .e-dialog.e-ccdlg {         
         max-height: 600px !important; 
@@ -338,11 +338,11 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjLRXwNCJCneGwlK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Change default search operator of the column chooser
+## Change the default search operator of the column chooser
 
-The Blazor DataGrid provides a search box in the column chooser dialog to filter column names. By default, the search uses the **StartsWith** operator. 
+The Blazor Data Grid provides a search box in the column chooser dialog to filter column names. By default, the search uses the **StartsWith** operator.
 
-To modify this behavior, use the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Operator.html) property of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html).
+To modify this behavior, use the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Operator.html) property of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html). Applicable search operators include **Contains**, **StartsWith**, and **EndsWith**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -414,11 +414,9 @@ public class OrderData
 
 ## Column chooser template
 
-The Blazor DataGrid allows customizing the column chooser dialog using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_Template) and [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_FooterTemplate) properties of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html). These templates enable injecting custom content into the body and footer of the column chooser.
+The Blazor Data Grid allows customizing the column chooser dialog using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_Template) and [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_FooterTemplate) properties of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html). These templates support custom content in the body and footer of the column chooser.
 
 The parameters passed to the templates can be accessed using the implicit **context** parameter.
-
-> Use the `e-ccdlg-mention` class in the [CSSClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_CssClass) property of the SfMention component when placing the SfMention component inside the column chooser template. This approach ensures proper functioning of the column chooser.
 
 ### Customize the content of column chooser
 
@@ -447,7 +445,7 @@ The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Gri
         <GridColumn Field=@nameof(OrderData.Freight) Visible="false" HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.EmployeeID) Visible="false" HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="120"> </GridColumn>
         <GridColumn Field=@nameof(OrderData.FirstName) Visible="false" HeaderText="First Name" Width="150"> </GridColumn>
-        <GridColumn Field=@nameof(OrderData.LastName) HeaderText="Last Name" Visible="false" Format="d" Type="ColumnType.Date" Width="130"> </GridColumn>
+        <GridColumn Field=@nameof(OrderData.LastName) HeaderText="Last Name" Visible="false" Width="130"> </GridColumn>
         <GridColumn Field=@nameof(OrderData.Title) HeaderText="Title" Visible="false" Width="120"> </GridColumn>
         <GridColumn Field=@nameof(OrderData.HireDate) HeaderText="Hire Date" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
@@ -626,7 +624,7 @@ The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Gri
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjBxNwXMfCmdjjbl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-![Column chooser content template in Blazor DataGrid.](images/blazor-datagrid-column-chooser-content-template.webp)
+![Column chooser content template in Blazor Data Grid.](images/blazor-datagrid-column-chooser-content-template.webp)
 
 ### Customize the footer of column chooser
 
@@ -648,12 +646,12 @@ The [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
             <SfButton IsPrimary="true" OnClick="@(async () => {
             await grid.ShowColumnsAsync(visibles);
             await grid.HideColumnsAsync(hiddens); })">Submit</SfButton>
-            <SfButton @onclick="@(async () => await ContextData.CancelAsync())">Abort</SfButton>
+            <SfButton OnClick="@(async () => await ContextData.CancelAsync())">Abort</SfButton>
         </FooterTemplate>
     </GridColumnChooserSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" IsPrimaryKey="true" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
         <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShippedDate) HeaderText="Shipped Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="150"></GridColumn>
@@ -718,15 +716,15 @@ The [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDLnjmXCTWQkSMHS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Group column chooser items in Blazor DataGrid
+## Group column chooser items
 
-The Blazor DataGrid supports grouping items in the column chooser dialog using the [GridColumnChooserItemGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserItemGroup.html) component. This improves usability by organizing columns into logical sections. 
+The Blazor Data Grid supports grouping items in the column chooser dialog using the [GridColumnChooserItemGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserItemGroup.html) component. This improves usability by organizing columns into logical sections.
 
 To configure this:
 
 1. Set the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnChooser)  property to **true** and include **"ColumnChooser"** in the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) collection.
 2. Use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_Template)  property of [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) to define the layout of chooser items.
-3. Define logical groups using the `GridColumnChooserItemGroup` component and assign a Title for each group.
+3. Define logical groups using the `GridColumnChooserItemGroup` component and assign a `Title` for each group.
 4. Use helper methods to filter and render columns dynamically within each group.
 
 {% tabs %}
@@ -776,12 +774,12 @@ To configure this:
                 var hiddens = ContextFooterData.Columns.Where(x => !x.Visible).Select(x => x.HeaderText).ToArray();
             }
             <SfButton IsPrimary="true" OnClick="@(async () => { await grid.ShowColumnsAsync(visibles); await grid.HideColumnsAsync(hiddens); })"> Submit</SfButton>
-            <SfButton @onclick="@(async () => await ContextFooterData.CancelAsync())">Abort</SfButton>
+            <SfButton OnClick="@(async () => await ContextFooterData.CancelAsync())">Abort</SfButton>
         </FooterTemplate>
     </GridColumnChooserSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" IsPrimaryKey="true" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.ShippedDate) HeaderText="Shipped Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="150"></GridColumn>
@@ -871,4 +869,4 @@ public class Order
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBdtwDizibeexoc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVHNFrXpIvVpUob?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
