@@ -9,13 +9,13 @@ documentation: ug
 
 # Blazor Linear Gauge Dimensions
 
-## Size for Linear Gauge
+The height and width of the Linear Gauge can be set using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_Height) properties in [SfLinearGauge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html) class. Use pixel values for fixed-size layouts and percentage values for fluid or responsive layouts.
 
-The height and width of the Linear Gauge can be set using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_Height) properties in [SfLinearGauge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html) class.
+N> When the component's dimensions are not specified, the height will be **450px** and the width will be the same as the parent element's width.
 
-### In Pixel
+## Sizing in Pixel
 
-The size of the Linear Gauge can be set in pixel.
+The size of the Linear Gauge can be set in pixels for fixed layouts.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -33,24 +33,30 @@ The size of the Linear Gauge can be set in pixel.
 
 ![Changing Blazor Linear Gauge Size in Pixel](images/blazor-linear-gauge-component.webp)
 
-### In Percentage
+## Sizing in Percentage
 
-By setting value in percentage, Linear Gauge receives its dimension matching to its parent. For example, when the height is set as **50%**, Linear Gauge renders to half of the parent height. The Linear Gauge will be responsive when the width is set as **100%**.
+By setting a value in percentage, the Linear Gauge receives its dimensions matching its parent. For example, when the height is set as **50%**, the Linear Gauge renders at 50% of the parent height. 
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
-<SfLinearGauge Width="100%" Height="50%">
-    <LinearGaugeAxes>
-        <LinearGaugeAxis>
-            <LinearGaugePointers>
-                <LinearGaugePointer></LinearGaugePointer>
-            </LinearGaugePointers>
-        </LinearGaugeAxis>
-    </LinearGaugeAxes>
-</SfLinearGauge>
+<div style="width:600px;height:400px;">
+    <SfLinearGauge Width="100%" Height="50%">
+        <LinearGaugeAxes>
+            <LinearGaugeAxis>
+                <LinearGaugePointers>
+                    <LinearGaugePointer></LinearGaugePointer>
+                </LinearGaugePointers>
+            </LinearGaugeAxis>
+        </LinearGaugeAxes>
+    </SfLinearGauge>
+</div>
 ```
 
 ![Changing Blazor Linear Gauge Size in Percentage](images/blazor-linear-gauge-size-in-percentage.webp)
 
-N> When the component's size is not specified, the height will be **450px** and the width will be the same as the parent element's width.
+## See also
+
+* [How to place Linear Gauge inside other components](how-to/place-gauge-inside-other-components.md)
+* [Linear Gauge appearance](linear-gauge-appearance.md)
+* [Getting started with Blazor Linear Gauge](getting-started.md)

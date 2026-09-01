@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Linear Gauge Axis | Syncfusion®
-description: Learn how to configure the Blazor Linear Gauge axis with minimum, maximum, ticks, labels, and custom formats for numeric scales.
+description: Learn how to configure the axis in the Blazor Linear Gauge component, including minimum, maximum, ticks, labels, and label formats.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Linear Gauge Axis
 
-Axis is used to indicate the numeric values in the linear scale. The Linear Gauge component can have any number of axes. The sub-elements of an axis are line, ticks, labels, ranges, and pointers.
+An axis indicates the numeric values along the linear scale. The Linear Gauge component can contain any number of axes. The sub-elements of an axis are the line, ticks, labels, ranges, and pointers.
 
 ## Setting the start value and end value of the axis
 
@@ -185,15 +185,15 @@ If the last label is not in the visible range, it will be hidden by default. The
 
 ### Label Format
 
-Axis labels in the Linear Gauge control can be formatted using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxisLabelStyle.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxisLabelStyle_Format) property in the [LinearGaugeAxisLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxisLabelStyle.html) class. It is used to render the axis labels in a certain format or to add a user-defined unit in the label. It works with the help of placeholder like **{value}°C**, where **value** represents the axis value. For example, 20°C.
+Axis labels in the Linear Gauge control can be formatted using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxisLabelStyle.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxisLabelStyle_Format) property in the [LinearGaugeAxisLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxisLabelStyle.html) class. It is used to render the axis labels in a certain format or to add a user-defined unit in the label. The format uses the `{value}` placeholder, where `value` represents the axis label value. For example, `"{value}°C"` renders as `20°C`.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
     <LinearGaugeAxes>
-        <LinearGaugeAxis Minimum =20 Maximum =140>
-            <LinearGaugeAxisLabelStyle Format= "{value}°C">
+        <LinearGaugeAxis Minimum="20" Maximum="140">
+            <LinearGaugeAxisLabelStyle Format="{value}°C">
             </LinearGaugeAxisLabelStyle>
             <LinearGaugePointers>
                 <LinearGaugePointer></LinearGaugePointer>
@@ -302,7 +302,7 @@ By default, the Linear Gauge is rendered vertically. To change its orientation, 
 
 ## Inverted Axis
 
-The axis of the Linear Gauge component can be inversed by setting the [IsInversed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxis_IsInversed) property to **true** in the [LinearGaugeAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html).
+The axis of the Linear Gauge component can be inverted by setting the [IsInversed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxis_IsInversed) property to **true** in the [LinearGaugeAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html). Setting `IsInversed` reverses the axis direction; it does not swap the `Minimum` and `Maximum` values.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -322,7 +322,9 @@ The axis of the Linear Gauge component can be inversed by setting the [IsInverse
 
 ## Opposed Axis
 
-To place an axis opposite from its original position, [OpposedPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxis_OpposedPosition) property in the [LinearGaugeAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html) class must be set as **true**.
+To place an axis opposite from its original position, the [OpposedPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxis_OpposedPosition) property in the [LinearGaugeAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html) class must be set to **true**. Ensure the container has enough space to render the opposed axis. For more information, see [Linear Gauge Dimensions](linear-gauge-dimensions.md).
+
+N> `IsInversed` reverses the axis direction, while `OpposedPosition` moves the axis to the opposite side of the gauge. These settings can be combined but produce different visual effects.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -342,21 +344,21 @@ To place an axis opposite from its original position, [OpposedPosition](https://
 
 ## Multiple Axes
 
-Multiple axes can be added to the Linear Gauge by adding multiple [LinearGaugeAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html) classes in the [LinearGaugeAxes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxes.html) class and customization can be done with the [LinearGaugeAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html) class. Each axis can be customized separately.
+Add multiple [LinearGaugeAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html) instances to the [LinearGaugeAxes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxes.html) collection to render multiple axes. Each axis can be customized independently.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
     <LinearGaugeAxes>
-        <LinearGaugeAxis Minimum=20 Maximum=100>
+        <LinearGaugeAxis Minimum="20" Maximum="100">
             <LinearGaugeAxisLabelStyle Format="{value}°C">
             </LinearGaugeAxisLabelStyle>
             <LinearGaugePointers>
-                <LinearGaugePointer PointerValue=20></LinearGaugePointer>
+                <LinearGaugePointer PointerValue="20"></LinearGaugePointer>
             </LinearGaugePointers>
         </LinearGaugeAxis>
-        <LinearGaugeAxis Minimum=20 Maximum=100 OpposedPosition=true>
+        <LinearGaugeAxis Minimum="20" Maximum="100" OpposedPosition="true">
             <LinearGaugeMajorTicks Interval="20" Height="20">
             </LinearGaugeMajorTicks>
             <LinearGaugeMinorTicks Interval="5" Height="10">
@@ -364,7 +366,7 @@ Multiple axes can be added to the Linear Gauge by adding multiple [LinearGaugeAx
             <LinearGaugeAxisLabelStyle Format="{value}°C">
             </LinearGaugeAxisLabelStyle>
             <LinearGaugePointers>
-                <LinearGaugePointer PointerValue=20></LinearGaugePointer>
+                <LinearGaugePointer PointerValue="20"></LinearGaugePointer>
             </LinearGaugePointers>
         </LinearGaugeAxis>
     </LinearGaugeAxes>
@@ -372,3 +374,11 @@ Multiple axes can be added to the Linear Gauge by adding multiple [LinearGaugeAx
 ```
 
 ![Blazor Linear Gauge with Multiple Axes](images/blazor-linear-gauge-multiple-axes.webp)
+
+## See also
+
+* [Ranges in Blazor Linear Gauge](ranges.md)
+* [Pointers in Blazor Linear Gauge](pointers.md)
+* [Annotations in Blazor Linear Gauge](annotations.md)
+* [Internationalization in Blazor Linear Gauge](internationalization.md)
+* [Blazor Linear Gauge Dimensions](linear-gauge-dimensions.md)
