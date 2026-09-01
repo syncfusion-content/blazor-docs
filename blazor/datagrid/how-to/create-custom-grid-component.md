@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Grid:Create a Custom Blazor Data Grid Component | Syncfusion
+title: Blazor Grid: Create a Custom Blazor Data Grid Component | Syncfusion
 canonical_url: "https://www.syncfusion.com/blazor-components/blazor-datagrid"
 description: Learn how to create a reusable custom Blazor Data Grid component that wraps SfGrid and shares paging, sorting, and layout settings across applications.
 platform: Blazor
@@ -10,48 +10,51 @@ documentation: ug
 
 # Creating a Reusable Custom Blazor Data Grid Component
 
-Creating a reusable custom Blazor DataGrid by wrapping the `SfGrid` inside a Razor component helps standardize configuration and improve maintainability across applications. This approach is particularly useful in modern web applications where multiple Grid instances are used across different pages or modules.
+Creating a reusable custom Blazor Data Grid by wrapping the `SfGrid` in a reusable Razor component standardizes configuration and improves maintainability across applications. The pattern supports consistent Data Grid settings across multiple pages or modules.
 
-In such scenarios, manually configuring features such as paging, sorting, filtering, and layout for each Grid can result in duplicated code and inconsistent behavior. Over time, this repetitive setup increases development effort and makes updates more difficult. By introducing a wrapper component, common configurations can be centralized and reused efficiently, ensuring uniform behavior throughout the application.
+Manual configuration of paging, sorting, filtering, and layout for each Data Grid can result in duplicated code and inconsistent behavior. Repetitive setup increases development effort and makes updates more difficult. A wrapper component centralizes common settings and supports uniform behavior throughout the application.
 
-## Why create a custom Blazor DataGrid component
+## Why create a custom Blazor Data Grid component
 
-A custom DataGrid component simplifies development by reducing repetitive configuration. Instead of defining the same settings for each Grid instance, properties such as paging, sorting, and layout can be configured once and reused across the application.
+A custom Data Grid component simplifies development by reducing repetitive configuration. Instead of defining the same settings for each Grid instance, properties such as paging, sorting, and layout can be configured once and reused across the application.
 
-This approach is especially beneficial in team environments where multiple developers contribute to different modules. It ensures that all Grid implementations follow consistent design patterns and behavior. Centralizing configurations also reduces the chances of errors or inconsistencies caused by manual setup.
+The approach is especially beneficial in team environments where multiple developers contribute to different modules. The pattern keeps all Data Grid implementations consistent in design and behavior. Centralized configuration also reduces errors and inconsistencies caused by manual setup.
 
-Another advantage is improved maintainability. When updates are required, such as modifying page size or enabling additional features, changes can be applied in a single location without affecting multiple files. This significantly reduces maintenance overhead and improves development efficiency.
+Another advantage is improved maintainability. Updates such as modifying page size or enabling additional features can be applied in a single location without changing multiple files. Centralized updates reduce maintenance overhead and improve development efficiency.
 
-Additionally, a reusable component enhances code readability. By abstracting repetitive logic into a single component, page-level code becomes cleaner and easier to understand.
+A reusable component also enhances code readability. Abstracting repetitive logic into a single component makes page-level code cleaner and easier to understand.
 
-## How the custom Blazor DataGrid works
+## How the custom Blazor Data Grid works
 
-The custom component internally renders the `SfGrid` and applies predefined settings that are shared across all usages. It acts as a wrapper that encapsulates default behavior while allowing flexibility for customization.
+The custom component internally renders the `SfGrid` and applies predefined settings shared across all usages. The wrapper encapsulates default behavior while allowing customization.
 
-* Generic type support **TItem** enables strongly typed data binding, improving type safety and providing compile-time validation.
+* Generic type support with **TItem** enables strongly typed data binding, improving type safety and providing compile-time validation.
+* Child content projection using **ChildContent** allows column definitions, templates, and other markup to be passed into the Data Grid.
+* Attribute forwarding applies additional parameters, properties, or events from the custom component to the underlying `SfGrid`.
 
-* Child content projection using **ChildContent** allows dynamic column definitions, templates, and other elements to be passed into the Grid.
+The design provides reusable grid behavior with configurable component parameters and projected column content.
 
-* Attribute forwarding ensures that additional parameters, properties, or events passed to the custom component are automatically applied to the underlying `SfGrid`.
+## When to use a custom Blazor Data Grid
 
-This design approach provides a balance between reusable and flexibility. Developers can rely on the predefined defaults while still having the ability to extend or override behavior when needed.
-
-## When to use a custom Blazor DataGrid
-
-Using a custom DataGrid component is recommended in scenarios where consistency, scalability, and maintainability are key requirements.
+Use a custom Data Grid component when consistency, scalability, and maintainability are key requirements.
 
 Common use cases include:
 
-* Applications with multiple Grid instances across various pages
+* Applications with multiple Data Grid instances across various pages
 * Requirements for consistent paging, sorting, or layout behavior
-* Projects where Grid configurations are frequently updated
-* Large-scale applications that demand reusable and structured components
+* Projects where Data Grid configurations are frequently updated
+* Large-scale applications requiring reusable and structured components
 
-Adopting this pattern helps enforce development standards, reduces duplication, and improves overall code quality.
+The pattern helps enforce development standards, reduce duplication, and improve overall code quality.
 
-## Implement a custom Blazor DataGrid component
+## Implement a custom Blazor Data Grid component
 
-The following example demonstrates how to create a reusable CustomGrid component with predefined [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings). This component centralizes common configuration options, such as [PageCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageCount) and [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize), while still allowing external customization through parameters and projected content.
+The reusable `CustomGrid` component uses predefined [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings). The wrapper component centralizes common configuration options, such as [PageCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageCount) and [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize), while allowing external customization through parameters and projected content.
+
+1. Create `CustomGrid.razor` for the Data Grid markup and projected column content.
+2. Add `CustomGrid.razor.cs` for the generic type and component parameters.
+3. Add the `CustomGrid` component to a page and provide a data source and column definitions.
+
 
 **CustomGrid.razor:**
 
@@ -62,13 +65,13 @@ The following example demonstrates how to create a reusable CustomGrid component
 @typeparam TItem
 
 <SfGrid TValue="TItem"
-        DataSource="DataSource"
-        AllowSorting="AllowSorting"
-        AllowPaging="AllowPaging"
+        DataSource="@DataSource"
+        AllowSorting="@AllowSorting"
+        AllowPaging="@AllowPaging"
         @attributes="AdditionalAttributes">
-    <GridPageSettings PageCount="@PAGE_COUNT"
-                      PageSize="@DEFAULT_PAGE_SIZE"
-                      PageSizes="PageSizes">
+    <GridPageSettings PageCount="@PageCount"
+                      PageSize="@PageSize"
+                      PageSizes="@PageSizes">
     </GridPageSettings>
     @ChildContent
 </SfGrid>
@@ -92,16 +95,14 @@ namespace SF_Grid_Inheritance.Shared
 {
     public partial class CustomGrid<TItem> : ComponentBase
     {
-        public const int PAGE_COUNT = 5;
-        public const int DEFAULT_PAGE_SIZE = 10;
-
         [Parameter] public IEnumerable<TItem>? DataSource { get; set; }
         [Parameter] public bool AllowPaging { get; set; } = true;
         [Parameter] public bool AllowSorting { get; set; } = true;
+        [Parameter] public int PageCount { get; set; } = 5;
+        [Parameter] public int PageSize { get; set; } = 10;
         [Parameter] public string[] PageSizes { get; set; } = new[] { "10", "20", "50" };
         [Parameter] public RenderFragment? ChildContent { get; set; }
 
-        // Forwards any additional attributes/events to the inner SfGrid
         [Parameter(CaptureUnmatchedValues = true)]
         public IReadOnlyDictionary<string, object>? AdditionalAttributes { get; set; }
     }
@@ -110,11 +111,11 @@ namespace SF_Grid_Inheritance.Shared
 {% endhighlight %}
 {% endtabs %}
 
-## Use the Reusable DataGrid Component in Blazor
+## Use the Reusable Data Grid Component in Blazor
 
-Once the custom component is defined, it can be reused across different pages by supplying the required data source and defining column structures. The predefined settings are automatically applied, which reduces setup time and ensures consistent behavior.
+After the custom component is defined, developers can reuse the component across different pages by supplying a data source and defining column structures. Predefined settings are applied automatically, reducing setup time and supporting consistent behavior.
 
-This approach allows developers to focus more on application logic rather than repetitive Grid configuration. It also ensures a consistent user experience across all parts of the application and simplifies long-term maintenance as the project evolves.
+The reusable component lets developers focus on application logic instead of repetitive Data Grid configuration. The pattern also supports a consistent user experience and simplifies long-term maintenance.
 
 **Index.razor:**
 
@@ -133,25 +134,24 @@ This approach allows developers to focus more on application logic rather than r
     </GridColumns>
 </CustomGrid>
 
-@code{
+@code {
     public List<Order> Orders { get; set; } = new();
-    private static readonly Random _random = new Random();
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
         {
             OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[_random.Next(5)],
+            CustomerID = new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" }[(x - 1) % 5],
             Freight = Math.Round(2.1 * x, 2),
-            OrderDate = DateTime.Now.AddDays(-x),
+            OrderDate = new DateTime(2024, 1, 1).AddDays(-x),
         }).ToList();
     }
 
     public class Order
     {
         public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
+        public string? CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
     }
