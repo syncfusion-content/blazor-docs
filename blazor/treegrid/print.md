@@ -9,7 +9,7 @@ documentation: ug
 
 # Print in Blazor TreeGrid
 
-To print the TreeGrid, use the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PrintAsync) method from the TreeGrid instance. The print option can be enabled in the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar) by adding the **Print** item.
+Print the TreeGrid by using the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PrintAsync) method on the TreeGrid component. Enable print functionality by adding the **Print** item to the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar).
 
 {% tabs %}
 
@@ -79,7 +79,7 @@ public class TreeData
 
 ## Page Setup
 
-Some print settings such as layout, paper size, and margins must be configured using the browser's page setup dialog. Refer to the following resources for browser-specific instructions:
+Configure print settings such as layout, paper size, and margins using the browser's page setup dialog. Refer to the following resources for browser-specific instructions:
 
 * [Chrome](https://support.google.com/chrome/answer/1069693?hl=en&visit_id=1-636335333734668335-3165046395&rd=1)
 * [Firefox](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)
@@ -88,7 +88,7 @@ Some print settings such as layout, paper size, and margins must be configured u
 
 ## Printing Using an External Button
 
-To trigger printing from an external button, invoke the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PrintAsync) method on the TreeGrid instance.
+Invoke the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PrintAsync) method on the TreeGrid component to trigger printing from an external button.
 
 {% tabs %}
 
@@ -165,7 +165,12 @@ public class TreeData
 
 ## Print the Visible Page
 
-By default, the TreeGrid prints all the pages. To print the current page alone, set the [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PrintMode) to **CurrentPage**.
+The Blazor TreeGrid prints all pages in the dataset by default. Set the [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PrintMode) to **CurrentPage** to print only the currently visible page. This configuration applies when printing is triggered using the built-in toolbar or programmatically through the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PrintAsync) method.
+
+### Available print modes
+
+* **PrintMode.AllPages** — Prints the entire dataset across all pages. This is the default behavior.
+* **PrintMode.CurrentPage** — Prints only the data displayed on the current page.
 
 {% tabs %}
 
@@ -237,9 +242,9 @@ public class TreeData
 
 ## Print large number of columns
 
-By default, the browser uses A4 as page size option to print pages and to adapt the size of the page the browser print preview will auto-hide the overflowed contents. Hence TreeGrid with large number of columns will cut off to adapt the print page.
+The browser uses A4 page size by default, and the print preview auto-hides overflowed contents to fit the page. As a result, TreeGrids with large numbers of columns may be cut off to fit the print page.
 
-To show large number of columns when printing, adjust the scale option from the print option panel based on the content size.
+Adjust the scale option from the browser's print settings panel to show large numbers of columns when printing. Reduce the scale percentage to fit more columns on the printed page.
 
 ![Displaying Print Preview Option in Blazor TreeGrid](./images/blazor-treegrid-print-preview.webp)
 
@@ -256,6 +261,6 @@ In the below example, we have **Duration** as a hidden column in the TreeGrid. W
 
 ## Limitations of printing large data
 
-When tree grid contains large number of data, printing all the data at once is not a best option for the browser performance. Because to render all the DOM elements in one page will produce performance issues in the browser. It leads to browser slow down or browser hang.
+Printing large datasets directly from the browser may lead to performance issues such as slow rendering or browser hang. Rendering all DOM elements on one page can cause the browser to slow down or become unresponsive.
 
-Printing large datasets directly from the browser may lead to performance issues such as slow rendering or browser hang. For better performance, consider exporting the TreeGrid to **Excel**, **CSV**, or **PDF**, and print using a desktop application.
+For better performance when working with large TreeGrids, consider exporting the TreeGrid to **Excel**, **CSV**, or **PDF**, and then print using a desktop application.

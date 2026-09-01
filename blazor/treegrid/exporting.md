@@ -9,10 +9,8 @@ documentation: ug
 
 # PDF Export in Blazor TreeGrid
 
-The PDF export feature enables users to convert TreeGrid data into a downloadable PDF document. To perform the export, use the
- [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ExportToPdfAsync) method for exporting. To enable PDF export in the TreeGrid, set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowPdfExport) as true.
-
-For a visual walkthrough of PDF export in the Blazor TreeGrid component, refer to the following video:
+The PDF export feature enables users to convert TreeGrid data into a downloadable PDF document using the
+ [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ExportToPdfAsync) method. PDF export is enabled by setting the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowPdfExport) to true.
 
 {% youtube alt="PDF Export in Blazor TreeGrid - Syncfusion"
 "youtube:https://www.youtube.com/watch?v=SHCWtM2buCc"%}
@@ -100,7 +98,7 @@ PDF export provides an option to customize mapping of TreeGrid to exported PDF d
 
 ### Set File Name for Exported PDF
 
-The file name can be assigned for the exported document by defining [FileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_FileName) property in **PdfExportProperties**.
+Assign a file name to the exported document by setting the [FileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_FileName) property in **PdfExportProperties**.
 
 {% tabs %}
 
@@ -183,7 +181,7 @@ public class TreeData
 
 ### Change Page Orientation in Exported PDF
 
-Page orientation can be changed Landscape (default is Portrait) for the exported document using the export properties.
+Change the page orientation to Landscape (default is Portrait) for the exported document by using the export properties.
 
 {% tabs %}
 
@@ -266,7 +264,7 @@ public class TreeData
 
 ### Customize Page Size for Exported PDF
 
-Page size can be customized for the exported document using the export properties.
+Customize the page size for the exported document by using the export properties.
 
 Supported page sizes are:
 
@@ -379,7 +377,7 @@ public class TreeData
 
 ### Export Only the Current Page
 
-PDF export provides an option to export the current page into PDF. To export current page, define the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExportType.html) to **CurrentPage**.
+Set the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExportType.html) to **CurrentPage** to export only the current page into PDF.
 
 {% tabs %}
 
@@ -462,7 +460,7 @@ public class TreeData
 
 ### Include Hidden Columns in Exported PDF
 
-PDF export provides an option to export hidden columns of the TreeGrid by defining the [IncludeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_IncludeHiddenColumn) as **true**.
+Set the [IncludeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_IncludeHiddenColumn) to **true** to include hidden columns of the TreeGrid in the exported PDF.
 
 {% tabs %}
 
@@ -545,9 +543,7 @@ public class TreeData
 
 ### Apply Theme to Exported PDF
 
-PDF export provides an option to include theme for exported PDF document.
-
-To apply theme in exported PDF, define the [Theme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Theme) in export properties.
+Set the [Theme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Theme) in export properties to apply a theme to the exported PDF document.
 
 {% tabs %}
 
@@ -661,4 +657,4 @@ public class TreeData
 
 {% endtabs %}
 
-N> By default, material theme is applied to exported PDF document.
+N> By default, material theme is applied to exported PDF document.the material theme is applied to the
