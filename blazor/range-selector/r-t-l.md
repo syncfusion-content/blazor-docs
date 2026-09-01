@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Range Selector RTL
 
-The Range Selector supports right-to-left (RTL), which can be enabled with the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_EnableRtl) property.
+The Range Selector supports right-to-left (RTL) rendering, which reverses the layout of the axis labels, the slider, and the period selector. It is enabled by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_EnableRtl) property to **true**.
 
 ```cshtml
 
@@ -33,15 +33,20 @@ The Range Selector supports right-to-left (RTL), which can be enabled with the [
 
     public List<StockDetails> StockInfo = new List<StockDetails>
     {
-        new StockDetails { Date = new DateTime(2005, 01, 01), Close = 21,   },
-        new StockDetails { Date = new DateTime(2006, 01, 01), Close = 24, },
-        new StockDetails { Date = new DateTime(2007, 01, 01), Close = 36,   },
-        new StockDetails { Date = new DateTime(2008, 01, 01), Close = 38,   },
-        new StockDetails { Date= new DateTime(2009, 01, 01), Close = 54,   },
-        new StockDetails { Date = new DateTime(2010, 01, 01), Close = 57,   },
-        new StockDetails { Date = new DateTime(2011, 01, 01), Close = 70,   }
+        new StockDetails { Date = new DateTime(2005, 01, 01), Close = 21 },
+        new StockDetails { Date = new DateTime(2006, 01, 01), Close = 24 },
+        new StockDetails { Date = new DateTime(2007, 01, 01), Close = 36 },
+        new StockDetails { Date = new DateTime(2008, 01, 01), Close = 38 },
+        new StockDetails { Date = new DateTime(2009, 01, 01), Close = 54 },
+        new StockDetails { Date = new DateTime(2010, 01, 01), Close = 57 },
+        new StockDetails { Date = new DateTime(2011, 01, 01), Close = 70 }
     };
 }
 ```
 
-![Right to Left in Blazor RangeNavigator](images/common/blazor-rangenavigator-rght-to-left.webp)
+![Right to Left in Blazor RangeNavigator](images/common/blazor-rangenavigator-right-to-left.webp)
+
+## See also
+
+* [Accessibility](./accessibility)
+* [Labels](./labels)
