@@ -175,8 +175,8 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLdZwtrBgOCWMim?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> * The DataGrid add or edit dialog element includes a max-height property, which is calculated based on the available window height. In a standard window size of **1920×1080** pixels, the dialog height can be set up to **658px**.
-> * Refer to the Blazor DataGrid feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.
+> * The DataGrid add or edit dialog element includes a max-height property, which is calculated based on the available window height. At a **1920×1080** resolution, the maximum dialog height is **658px**.
+> * For a broad overview, refer to the [Blazor DataGrid feature tour](https://www.syncfusion.com/blazor-components/blazor-datagrid). Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.
 
 ## Show or hide columns in dialog editing
 
@@ -188,7 +188,7 @@ To implement this behavior, use the following Grid events:
 3. [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating): Triggered before the update operation is finalized.
 4. [EditCanceling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_EditCanceling): Triggered before the cancel operation is executed.
 
-Within the `RowCreating` and `RowEditing` event handlers, column visibility can be modified using the [Column.Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Visible) property. This property determines whether a column is displayed or hidden during dialog editing.
+Within the `RowCreating` and `RowEditing` event handlers, column visibility can be modified using the [Column.Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Visible) property. Access the columns through `Grid.Columns`, find a column by its `Field`, and assign `column.Visible = true` or `false`. This property determines whether a column is displayed or hidden during dialog editing.
 
 To restore the original visibility state, use the `Column.Visible` property in the `RowUpdating` and `EditCanceling` events.
 
@@ -635,6 +635,8 @@ public class OrderDetails
 ## Implement calculated column inside Blazor DataGrid dialog editing
 
 The Blazor DataGrid supports automatic column value updates based on changes made to related columns during dialog editing. This functionality enables dynamic calculations within the edit form using the **Dialog Template** feature.
+
+Formulas or event handlers in the dialog template can perform the calculations.
 
 In the following example, the [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) component is rendered inside the dialog edit form. The **Total** column value is calculated based on the **Price** and **Quantity** columns using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.NumericTextBoxEvents-1.html#Syncfusion_Blazor_Inputs_NumericTextBoxEvents_1_ValueChange) event. 
 
