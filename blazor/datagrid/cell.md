@@ -9,15 +9,15 @@ documentation: ug
 
 # Cell Customization in Blazor Data Grid
 
-In [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), a cell is a single data unit formed at the intersection of a row and a column. Each cell displays content based on its data record and column settings. Depending on configuration, cells can show text, numbers, or custom templated content.
+In [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid), a cell is a single data unit formed at the intersection of a row and a column. Each cell displays content based on its data record and column settings. Depending on configuration, cells can show text, numbers, or custom templated content.
 
-The Grid offers extensive options to customize cell appearance and functionality. Templates can be applied, cell values can be formatted, editing can be enabled or disabled, and various operations can be performed to build interactive and visually informative data grids for web applications.
+The Blazor Data Grid offers extensive options for cell appearance and functionality. Templates control display. Formatting changes appearance. Editing options control modifications. Additional operations support interactive and informative Data Grids for web applications.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=6H90a5tz7bE"%}
 
 ## Displaying the HTML content
 
-Displaying HTML content in the Blazor DataGrid is useful when presenting formatted elements such as images, hyperlinks, or tables within a tabular layout. The DataGrid supports rendering HTML tags in both header and content cells.
+Displaying HTML content in the Blazor Data Grid is useful when presenting formatted elements such as images, hyperlinks, or tables within a tabular layout. The Data Grid supports rendering HTML tags in both header and content cells.
 
 By default, HTML content is encoded to prevent security vulnerabilities. To render raw HTML, set the [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property to **false**. This allows HTML tags to be displayed as intended within the cell.
 
@@ -25,9 +25,9 @@ To configure:
 
 - Set `DisableHtmlEncode` to **false** in the column definition.
 - Insert HTML tags such as `<img>`, `<a>`, or `<table>` directly into the cell content.
-- Use a [Blazor Toggle Switch](https://www.syncfusion.com/blazor-components/blazor-toggle-switch-button)  to dynamically control the encoding behavior.
+- Use a [Blazor Toggle Switch](https://www.syncfusion.com/blazor-components/blazor-toggle-switch-button) to dynamically control the encoding behavior.
 - Handle the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event to update the column setting.
-- Call the [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Refresh) method to apply the changes and re-render the Grid.
+- Call the [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Refresh) method to apply the changes and re-render the Data Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -35,12 +35,12 @@ To configure:
 @using Syncfusion.Blazor.Buttons
 
 <label> Enable or disable HTML Encode</label>
-<SfSwitch ValueChange="Change" TChecked="bool"></SfSwitch>
+<SfSwitch ValueChange="Change" Checked="@IsEncode" TChecked="bool"></SfSwitch>
 
 <SfGrid @ref="Grid" DataSource="@Orders" Height="315">
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="<span> Customer ID </span>" DisableHtmlEncode="@IsEncode" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="<span> Customer ID </span>" DisableHtmlEncode="@(!IsEncode)" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
     </GridColumns>
@@ -57,7 +57,7 @@ To configure:
     }
     private void Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> args)
     {
-        IsEncode = !args.Checked;
+        IsEncode = args.Checked;
         Grid.Refresh();
     }
 
@@ -84,9 +84,6 @@ To configure:
         {
             if (Orders.Count() == 0)
             {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
                     Orders.Add(new OrderData(10248, "<b>VINET</b>",32.38, "Reims"));
                     Orders.Add(new OrderData(10249, "<b>TOMSP</b>", 11.61, "Münster"));
                     Orders.Add(new OrderData(10250, "<b>HANAR</b>", 65.83, "Rio de Janeiro"));
@@ -96,8 +93,6 @@ To configure:
                     Orders.Add(new OrderData(10254, "<b>RICSU</b>", 22.98, "Genève"));
                     Orders.Add(new OrderData(10255, "<b>WELLI</b>", 13.97, "San Cristóbal"));
                     Orders.Add(new OrderData(10256, "<b>HILAA</b>", 81.91, "Graz"));
-                    code += 5;
-                }
             }
             return Orders;
         }
@@ -107,19 +102,19 @@ To configure:
         public double? Freight { get; set; }
         public string ShipCity { get; set; }
     }
-    {% endhighlight %}
+{% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhHjGjMUHFzfqVe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVRDFBpLTeTuZFh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * The [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property disables HTML encoding for the corresponding column in the DataGrid.
 > * When set to **false**, HTML tags in the column’s data are rendered as HTML.
 > * When set to **true**, HTML tags are encoded and displayed as plain text.
 > * Disabling HTML encoding introduces potential security vulnerabilities. Enable this feature only when using fully trusted and sanitized data sources.
 
-## Autowrap the Grid content
+## Autowrap the Data Grid content
 
-The auto wrap feature in the Blazor DataGrid enables cell content to wrap to the next line when it exceeds the defined column width. Wrapping occurs at whitespace boundaries between words, ensuring readability without horizontal scrolling. To support auto wrap, define an appropriate width for each column. The column width acts as the maximum boundary for wrapping content.
+The auto wrap feature in the Blazor Data Grid enables cell content to wrap to the next line when it exceeds the defined column width. Wrapping occurs at whitespace boundaries between words, ensuring readability without horizontal scrolling. To support auto wrap, define an appropriate width for each column. The column width acts as the maximum boundary for wrapping content.
 
 Enable auto wrap by setting the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowTextWrap) property to **true**. Configure the wrapping behavior using the [TextWrapSettings.WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTextWrapSettings.html#Syncfusion_Blazor_Grids_GridTextWrapSettings_WrapMode) property.
 
@@ -129,16 +124,16 @@ Set the **WrapMode** property in `TextWrapSettings` to one of these values:
 * **Header** - Wraps text only in header cells.
 * **Content** - Wraps text only in content cells.
 
-> * If a column width is not specified, auto wrap adjusts based on the overall Grid width.
+> * If a column width is not specified, auto wrap adjusts based on the overall Data Grid width.
 > * Header text without whitespace may not wrap.
-> * HTML content interferes with wrapping behavior. Use [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_HeaderTemplate) and [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) properties to customize layout and ensure proper wrapping.
+> * HTML content interferes with wrapping behavior. Use [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTemplate) and [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) properties to customize layout and ensure proper wrapping.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 
-<label>Change the wrapmode of auto wrap feature:</label>
+<label>Change the wrap mode of the auto wrap feature:</label>
 <SfDropDownList TValue="WrapMode" TItem="DropDownOrder" @bind-Value="@WrapModeValue" DataSource="@DropDownValue" Width="100px">
     <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
     <DropDownListEvents ValueChange="OnValueChange" TValue="WrapMode" TItem="DropDownOrder"></DropDownListEvents>
@@ -148,7 +143,7 @@ Set the **WrapMode** property in `TextWrapSettings` to one of these values:
     <GridTextWrapSettings WrapMode="@WrapModeValue"></GridTextWrapSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.Name) HeaderText="Name of the inventor" Width="70"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.PatentFamilies) HeaderText="No of patentfamilies" Width="80"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.PatentFamilies) HeaderText="No of patent families" Width="80"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Country) HeaderText="Country" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Active) HeaderText="Active" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.MainFields) HeaderText="Main fields of Invention" Width="120"></GridColumn>
@@ -158,7 +153,7 @@ Set the **WrapMode** property in `TextWrapSettings` to one of these values:
 @code {
     private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
-    public WrapMode WrapModeValue { get; set; } = WrapMode.Content;
+    public WrapMode WrapModeValue { get; set; } = WrapMode.Both;
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
@@ -203,9 +198,6 @@ public class OrderData
         {
             if (Orders.Count() == 0)
             {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
                     Orders.Add(new OrderData("Kia Silverb", 4737, "9839", "Australia", "Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical, VLSI", "1994-2016"));
                     Orders.Add(new OrderData("Shunpei Yamazaki", 4677, "10000+", "Japan", "Various", "1976-2016"));
                     Orders.Add(new OrderData("Lowell L. Wood, Jr.",13197, "1332", "Canada", "Printing, Digital paper, Internet, Electronics, CGI, VLSI", "1977-2016"));
@@ -215,8 +207,6 @@ public class OrderData
                     Orders.Add(new OrderData("Paul Lap", 1093, "3360", "USA", "Automotive, Stainless steel products", "1977 - 2016"));
                     Orders.Add(new OrderData("Gurtej Sandhu", 993, "1398", "Japan", "Various", "1976-2016"));
                     Orders.Add(new OrderData("Kia Silverb", 949,"NA", "India", "Printing, Digital paper, Internet, Electronics, CGI, VLSI", "1994-2016"));                  
-                    code += 5;
-                }
             }
             return Orders;
         }
@@ -230,11 +220,11 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLdXwDsKHvFCLxU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhdZPrzrHmwyifw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize cell styles
 
-Customizing cell styles in the Blazor DataGrid enables modification of cell appearance to match specific design requirements. Styles such as **font**, **background color**, and **borders** can be applied to enhance visual presentation.
+Customizing cell styles in the Blazor Data Grid enables modification of cell appearance to match specific design requirements. Styles such as **font**, **background color**, and **borders** can be applied to enhance visual presentation.
 
 Cell customization can be achieved through these approaches:
 
@@ -244,9 +234,9 @@ Cell customization can be achieved through these approaches:
 
 ### Event-based customization
 
-To customize the appearance of cells, use the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event. This event is triggered during the rendering of each cell and provides access to cell-specific information.
+Use the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event to customize cell appearance. This event fires during rendering of each cell and provides access to cell-specific information.
 
-In this setup, the column is checked to confirm if it corresponds to the **Freight** field, and a CSS class is applied based on the cell’s value.
+The code checks if `args.Column.Field` equals **Freight**, and applies a CSS class based on the cell’s value.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -321,9 +311,6 @@ In this setup, the column is checked to confirm if it corresponds to the **Freig
         {
             if (Orders.Count() == 0)
             {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
                     Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims"));
                     Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster"));
                     Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro"));
@@ -333,8 +320,6 @@ In this setup, the column is checked to confirm if it corresponds to the **Freig
                     Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern"));
                     Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève"));
                     Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende"));
-                    code += 5;
-                }
             }
             return Orders;
         }
@@ -347,7 +332,7 @@ In this setup, the column is checked to confirm if it corresponds to the **Freig
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhHtQZiAdEMndYb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLnDvLzrxfOIHXI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 * Using the `QueryCellInfo` event, the appearance of the **Freight** column can be customized based on value ranges. Each range is styled with distinct text and background colors using refined CSS.
 
@@ -363,7 +348,7 @@ In this setup, the column is checked to confirm if it corresponds to the **Freig
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="ShipCountry" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="130"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -385,7 +370,6 @@ In this setup, the column is checked to confirm if it corresponds to the **Freig
 </style>
 
 @code{
-    private SfGrid<Order> Grid;
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
@@ -465,10 +449,10 @@ In this setup, the column is checked to confirm if it corresponds to the **Freig
 
 ### CSS-based customization
 
-Styles can be applied to DataGrid cells using CSS selectors. The Blazor DataGrid assigns class names to each cell element, enabling targeted styling for individual cells or entire columns.
+Styles can be applied to Data Grid cells using CSS selectors. The Blazor Data Grid assigns class names to each cell element, enabling targeted styling for individual cells or entire columns.
 
-* The **e-rowcell** class is used to style standard row cells.
-* The **e-selectionbackground** class is used to modify the background color of selected rows.
+* Apply **e-rowcell** for standard cell styling.
+* Apply **e-cellselectionbackground** to modify the selected cell background.
 
 ```cshtml
 <style>
@@ -489,7 +473,7 @@ Styles can be applied to DataGrid cells using CSS selectors. The Blazor DataGrid
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
 <style>
@@ -531,9 +515,6 @@ Styles can be applied to DataGrid cells using CSS selectors. The Blazor DataGrid
         {
             if (Orders.Count() == 0)
             {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
                     Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcol"));
                     Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
                     Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
@@ -543,8 +524,6 @@ Styles can be applied to DataGrid cells using CSS selectors. The Blazor DataGrid
                     Orders.Add(new OrderData(10254, "CHOPS", "Bern", "Richter Supermarkt"));
                     Orders.Add(new OrderData(10255, "RICSU", "Genève", "Wellington Importadora"));
                     Orders.Add(new OrderData(10256, "WELLI", "Resende", "HILARION-Abastos"));
-                    code += 5;
-                }
             }
             return Orders;
         }
@@ -557,9 +536,9 @@ Styles can be applied to DataGrid cells using CSS selectors. The Blazor DataGrid
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrnjmXMUQhCdBFN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVRZvhpVIFFfQlA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### property-based customization
+### Property-based customization
 
 Cell styles can also be customized using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_CustomAttributes) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) definition. This property accepts a dictionary of name–value pairs to apply custom CSS classes or inline styles to Grid cells.
 
@@ -631,9 +610,6 @@ In this configuration, the `CustomAttributes` property of the **ShipCity** colum
         {
             if (Orders.Count() == 0)
             {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
                     Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcol"));
                     Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
                     Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
@@ -643,8 +619,6 @@ In this configuration, the `CustomAttributes` property of the **ShipCity** colum
                     Orders.Add(new OrderData(10254, "CHOPS", "Bern", "Richter Supermarkt"));
                     Orders.Add(new OrderData(10255, "RICSU", "Genève", "Wellington Importadora"));
                     Orders.Add(new OrderData(10256, "WELLI", "Resende", "HILARION-Abastos"));
-                    code += 5;
-                }
             }
             return Orders;
         }
@@ -657,13 +631,13 @@ In this configuration, the `CustomAttributes` property of the **ShipCity** colum
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBnDGDiKwrSnave?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVxZbVfBevCGVec?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> Custom attributes can be used to customize any cell in the Grid, including header and footer cells.
+> Custom attributes can be used to customize any cell in the Data Grid, including header and footer cells.
 
-## Clip Mode
+## Clip mode
 
-The clip mode feature in the Blazor DataGrid is used to manage overflow content in cells containing long text. This feature provides options to truncate content, display ellipsis, or show ellipsis with a tooltip.
+Clip mode manages cell content when it exceeds cell boundaries. This feature provides options to truncate content, display ellipsis, or show ellipsis with a tooltip.
 
 Enable clip mode by setting the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) property for the desired column.
 
@@ -672,6 +646,8 @@ Available ClipMode options:
 * **Clip** – Truncates cell content that exceeds the cell boundary.
 * **Ellipsis** – Displays ellipsis when content overflows the cell area.
 * **EllipsisWithTooltip** – Displays ellipsis for overflow content and shows a tooltip on hover.
+
+Without a set column `Width`, ellipsis appears only when content exceeds the rendered cell width.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -741,9 +717,6 @@ Available ClipMode options:
         {
             if (Orders.Count() == 0)
             {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
                     Orders.Add(new OrderData("Kia Silverb", 4737, "9839", "Australia", "Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical, VLSI"));
                     Orders.Add(new OrderData("Shunpei Yamazaki", 4677, "10000+", "Japan", "Various"));
                     Orders.Add(new OrderData("Lowell L. Wood, Jr.",13197, "1332", "Canada", "Printing, Digital paper, Internet, Electronics, CGI, VLSI"));
@@ -753,8 +726,6 @@ Available ClipMode options:
                     Orders.Add(new OrderData("Paul Lap", 1093, "3360", "USA", "Automotive, Stainless steel products"));
                     Orders.Add(new OrderData("Gurtej Sandhu", 993, "1398", "Japan", "Various"));
                     Orders.Add(new OrderData("Kia Silverb", 949,"NA", "India", "Printing, Digital paper, Internet, Electronics, CGI, VLSI"));                  
-                    code += 5;
-                }
             }
             return Orders;
         }
@@ -767,24 +738,24 @@ Available ClipMode options:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrRZcjWAGUtixMn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrRZvLfBeHlXNta?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> * The [Columns.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) property is set to **Ellipsis** by default.
+> * The [GridColumn.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) property is set to **Ellipsis** by default.
 > * When the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width) property is defined for a column, clip mode is automatically applied if the content exceeds the specified width.
 > * If clip mode is applied without tooltip support, essential data will be hidden from view. To ensure accessibility and data visibility, **Ellipsis** or **EllipsisWithTooltip** must be used when truncation occurs.
 
 ## Tooltip
 
-The Blazor DataGrid supports displaying tooltips for Grid columns when hovered with a mouse pointer. This feature enhances accessibility and provides additional context for column data.
+The Blazor Data Grid supports displaying tooltips for Data Grid columns when hovered with a mouse pointer. This feature enhances accessibility and provides additional context for column data.
 
 ### Show tooltip
 
-Tooltips are displayed for both header and content cells when the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowTooltip)  property is set to **true**.
+Tooltips are displayed for both header and content cells when the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowTooltip) property is set to **true**.
 
 By default:
 
 * The tooltip displays the cell value for header and content cells.
-* For templated columns, the tooltip displays the corresponding row data
+* For templated columns, the tooltip displays the corresponding row data.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -855,7 +826,7 @@ public class OrderData
 
 ### Tooltip template
 
-The Blazor DataGrid component provides a built-in option to customize tooltip content for both header and content cells. This customization is achieved using the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_TooltipTemplate) property, which accepts a **RenderFragment** defined within the [GridTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html) component.
+The Blazor Data Grid component provides a built-in option to customize tooltip content for both header and content cells. This customization is achieved using the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_TooltipTemplate) property, which accepts a **RenderFragment** defined within the [GridTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html) component.
 
 This feature enhances clarity and usability by displaying contextual information when hovering over cells.
 
@@ -937,7 +908,7 @@ Tooltip customization is supported through the [TooltipTemplateContext](https://
     <GridColumns>
         <GridColumn Field=@nameof(OrdersDetails.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
         <GridColumn Field=@nameof(OrdersDetails.CustomerID) HeaderText="Customer ID" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrdersDetails.Freight) Format="C2" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" EditType="EditType.NumericEdit"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.Freight) HeaderText="Freight" Format="C2" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GridColumn>
         <GridColumn Field=@nameof(OrdersDetails.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1029,13 +1000,13 @@ public class OrdersDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhRDmNsUmUwgtqV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBntPLTBIhoyPTT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > Custom tooltips are displayed only when the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowTooltip) property is set to **true**.
 
 ### Display custom tooltip for columns
 
-The Blazor DataGrid supports displaying custom tooltips for columns using the [SfTooltip](https://blazor.syncfusion.com/documentation/tooltip/getting-started) component. This feature enables the presentation of additional contextual information when hovering over column content.
+The Blazor Data Grid supports displaying custom tooltips for columns using the [SfTooltip](https://blazor.syncfusion.com/documentation/tooltip/getting-started) component. Use this approach when you need fully custom hover content, rich HTML, or interactive tooltip behavior.
 
 To enable custom tooltips, use the [Column Template](https://blazor.syncfusion.com/documentation/datagrid/column-template) feature and render the tooltip component within the template definition.
 
@@ -1070,7 +1041,6 @@ To enable custom tooltips, use the [Column Template](https://blazor.syncfusion.c
 
 @code {
     int Count { get; set; } = 0;
-    private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
       
     protected override void OnInitialized()
@@ -1099,9 +1069,6 @@ public class OrderData
         {
             if (Orders.Count() == 0)
             {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
                     Orders.Add(new OrderData(1, "Nancy","Sales Representative",new DateTime(1996,07,06 )));
                     Orders.Add(new OrderData(2, "Andrew", "Vice President, Sales", new DateTime(1996, 07, 06)));
                     Orders.Add(new OrderData(3, "Janet", "Sales Manager", new DateTime(1996, 07, 06)));
@@ -1111,8 +1078,6 @@ public class OrderData
                     Orders.Add(new OrderData(7, "Janet", "Vice President, Sales", new DateTime(1996, 07, 06)));
                     Orders.Add(new OrderData(8, "Steven", "Inside Sales Coordinator", new DateTime(1996, 07, 06)));
                     Orders.Add(new OrderData(9,"Andrew", "Sales Manager", new DateTime(1996, 07, 06)));                             
-                    code += 5;
-                }
             }
             return Orders;
         }      
@@ -1124,7 +1089,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVxZmZWgcpBTpTh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrdtvrTroCjWXTU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Grid lines
 
@@ -1134,13 +1099,13 @@ Set the `GridLines` property to one of the following values:
 
 | Modes | Description |
 |-------|---------|
-| Both | Displays both horizontal and vertical grid lines.|
-| None | Hides all grid lines.|
-| Horizontal | Displays only horizontal grid lines.|
-| Vertical | Displays only vertical grid lines.|
-| Default | Displays grid lines based on the applied theme.|
+| Default | Displays Data Grid lines based on the applied theme.|
+| Horizontal | Displays only horizontal Data Grid lines.|
+| Vertical | Displays only vertical Data Grid lines.|
+| Both | Displays both horizontal and vertical Data Grid lines.|
+| None | Hides all Data Grid lines.|
 
-In this configuration, the `GridLines` property is updated dynamically based on the selected value from a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app), using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event.
+In this configuration, the `GridLines` property is updated dynamically based on the selected value from a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app), using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1211,9 +1176,6 @@ In this configuration, the `GridLines` property is updated dynamically based on 
         {
             if (Orders.Count() == 0)
             {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
                     Orders.Add(new OrderData("Kia Silverbrook", 4737, "1994-2016", "Australia","Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical"));
                     Orders.Add(new OrderData("Shunpei Yamazaki", 4677, "1976-2016", "Japan", "Thin film transistors, Liquid crystal displays, Solar cells, Flash memory, OLED"));
                     Orders.Add(new OrderData("Lowell L. Wood, Jr.", 1419, "1977-2016", "USA", "Mosquito laser, Nuclear weapons"));
@@ -1223,8 +1185,6 @@ In this configuration, the `GridLines` property is updated dynamically based on 
                     Orders.Add(new OrderData("Roderick A. Hyde", 1240, "2001-2016", "USA", "Various"));
                     Orders.Add(new OrderData("Leonard Forbes", 1093, "1991-2016", "Canada", "Semiconductor Memories, CCDs, Thin film processes and materials, VLSI"));
                     Orders.Add(new OrderData("Thomas Edison", 1084, "1847(b)-1931(d)", "USA", "Electric power, Lighting, Batteries, Phonograph, Cement, Telegraphy, Mining"));
-                    code += 5;
-                }
             }
             return Orders;
         }
@@ -1238,8 +1198,8 @@ In this configuration, the `GridLines` property is updated dynamically based on 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBdZmtCUQfRBfZA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhHjFLfLoDVUbue?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> By default, the GridLines property is set to **Default**.
+> * By default, the `GridLines` property is set to **Default**.
 
-N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.
+N> Refer to the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor Data Grid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.
