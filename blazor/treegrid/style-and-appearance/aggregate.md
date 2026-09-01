@@ -15,7 +15,7 @@ Aggregates are displayed as summary rows in the TreeGrid footer, providing a con
 - **Aggregate summary row and cells:** The row that shows summary values, and the cells that display each result.
 
 ## Customize the aggregate root element
-The **.e-gridfooter** class styles the root container of the aggregate footer row. Use CSS to adjust its appearance:
+Use the **.e-gridfooter** class to style the root container of the aggregate footer row. Apply CSS to adjust its appearance:
 
 ```css
 .e-treegrid .e-gridfooter {
@@ -23,13 +23,13 @@ The **.e-gridfooter** class styles the root container of the aggregate footer ro
 }
 ```
 
-Properties like **font-family**, **font-size**, and **padding** can be changed to fit the TreeGrid layout design.
+Properties like **font-family**, **font-size**, and **padding** can be changed to fit the TreeGrid's layout and design.
 
 ![Aggregate footer root with custom font](../images/style-and-appearance/aggregate-root-element.webp)
 
 ## Customize the aggregate cell elements
 
-The **.e-summaryrow** and **.e-summarycell** classes define the appearance of the summary row and its individual cells in the Blazor TreeGrid. Apply CSS to modify their look:
+Use the **.e-summaryrow** and **.e-summarycell** classes to define the appearance of the summary row and its individual cells in the Blazor TreeGrid. Apply CSS to modify their look:
 
 ```css
 .e-treegrid .e-summaryrow .e-summarycell {
