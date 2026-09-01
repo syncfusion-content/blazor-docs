@@ -357,7 +357,7 @@ The Blazor DataGrid offers flexibility to render custom components within the gr
 
 Define the custom UI in the [CaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_CaptionTemplate) and use `CaptionTemplateContext` to access the current group’s details. This feature enables the replacement of plain text with a custom component in the group caption, enhancing both customization and interactivity.
 
-The sample below shows how to render a chip with the group key in the Blazor [Chip](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) component.
+The example below demonstrates rendering a Blazor [Chip](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) component displaying the group key.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -443,3 +443,8 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBxZQZMqykMQscc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+## See Also
+
+- [Localization and Globalization](https://blazor.syncfusion.com/documentation/datagrid/global-local)
+- [Grouping customization](https://blazor.syncfusion.com/documentation/datagrid/style-and-appearance/grouping)
