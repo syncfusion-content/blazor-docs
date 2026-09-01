@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in Blazor Data Grid
 
-Selection in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables interactive selection of specific cells and rows. Selection can be performed using mouse clicks, arrow keys (up, down, left, right), or touch gestures. This feature is useful for highlighting, manipulating, or executing actions on targeted Grid elements.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports interactive selection of specific cells and rows using mouse clicks, arrow keys (up, down, left, right), or touch gestures. This feature enables highlighting, manipulating, or executing actions on targeted Grid elements.
 
 To disable selection, set the  [AllowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSelection) property to **false**.
 
@@ -116,7 +116,8 @@ public class OrderDetails
 
 ## Selection mode
 
-The selection mode feature in the Blazor DataGrid enables configuration of how rows, cells, or both are selected within the Grid. This functionality is useful for highlighting and manipulating specific Grid elements based on application requirements.
+The selection mode feature configures how rows, cells, or both are selected within the Grid. This functionality enables highlighting and manipulating specific Grid elements based on application requirements.
+
 To configure selection mode, set the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property. The Grid supports the following selection modes:
 
 * **Row** - Enables selection of rows only. (Default)
@@ -246,7 +247,7 @@ The following screenshot represents a Grid touch selection in the device.
 
 ## Toggle selection
 
-The toggle selection feature in the Blazor DataGrid enables to switch the selection state of rows or cells by simply clicking on them. When this feature is enabled, clicking a selected item will unselect it, and clicking an unselected item will select it.
+The toggle selection feature allows switching the selection state of rows or cells by clicking. When enabled, clicking a selected item deselects it, and clicking an unselected item selects it.
 
 To activate toggle selection, set the [GridSelectionSettings.EnableToggle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_EnableToggle) property to **true**.
 
@@ -358,13 +359,11 @@ public class OrderDetails
 > * If multi-selection is enabled, clicking a selected row without pressing the **Ctrl** key will first clear the multi-selection. A second click on the same row will unselect it.
 > * Toggle selection applies to all selection types. When the `CheckboxOnly` property is set to **true**, selection and deselection by clicking are disabled, restricting interaction to checkbox clicks only.
 
-### Toggle row selection via programmatically
+### Toggle row selection programmatically
 
 In Blazor DataGrid, row selection can be toggled programmatically using the [SelectRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowAsync_System_Int32_System_Nullable_System_Boolean__System_Boolean_) method. By passing **true** as the second argument (**isToggle**), the method toggles the selection state of the specified row.
 
-If the row is already selected, it will be deselected; otherwise, it will be selected.
-
-This capability is useful when managing row selection through custom logic or external UI elements.
+If the row is already selected, the method deselects it; otherwise, the method selects it. This capability is useful when managing row selection through custom logic or external UI elements.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
