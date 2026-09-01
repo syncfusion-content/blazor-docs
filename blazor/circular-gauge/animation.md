@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Circular Gauge Animation
 
-All of the elements in the Circular Gauge, such as the axis lines, ticks, labels, ranges, pointers, and annotations, can be animated sequentially by using the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_AnimationDuration) property. The animation for the Circular Gauge is enabled when the `AnimationDuration` property is set to an appropriate value in milliseconds, providing a smooth rendering effect for the component. If the `AnimationDuration` property is set to **0**, which is the default value, the animation effect is disabled. If the animation is enabled, the component will behave in the following order.
+All of the elements in the Circular Gauge, such as the axis lines, ticks, labels, ranges, pointers, and annotations, can be animated sequentially by using the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_AnimationDuration) property. The animation for the Circular Gauge is enabled when the `AnimationDuration` property is set to an appropriate value in milliseconds, providing a smooth rendering effect for the component. If the `AnimationDuration` property is set to **0**, which is the default value, the animation effect is disabled. If the animation is enabled, the component renders elements in the following order.
 
 1. The axis line will be animated in the rendering direction (clockwise or anticlockwise).
 2. Each tick line and label will then be animated.
@@ -41,31 +41,31 @@ The animation of the Circular Gauge is demonstrated in the following example.
                         <CircularGaugeNeedleTail Length="0%" />
                     </CircularGaugePointer>
                 </CircularGaugePointers>
-            <CircularGaugeRanges>
-                <CircularGaugeRange Color="#E63B86" Start="0" End="30" StartWidth="22" EndWidth="22" Radius="60%">
-                    <LinearGradient StartValue="0%" EndValue="100%">
-                        <ColorStops>
-                            <ColorStop Opacity="1" Offset="0%" Color="#9e40dc" />
-                            <ColorStop Opacity="1" Offset="70%" Color="#d93c95" />
-                        </ColorStops>
-                    </LinearGradient>
-                </CircularGaugeRange>
-                <CircularGaugeRange Color="#E0E0E0" Start="30" End="60" StartWidth="22" EndWidth="22" Radius="60%" />
-            </CircularGaugeRanges>
-            <CircularGaugeAnnotations>
-                <CircularGaugeAnnotation Angle="165" Radius="35%" ZIndex="1">
-                    <ContentTemplate>
-                        <div style="font-size:18px;margin-left: -20px;margin-top: -12px; color:#9DD55A">60</div>
-                    </ContentTemplate>
-                </CircularGaugeAnnotation>
-            </CircularGaugeAnnotations>
+                <CircularGaugeRanges>
+                    <CircularGaugeRange Color="#E63B86" Start="0" End="30" StartWidth="22" EndWidth="22" Radius="60%">
+                        <LinearGradient StartValue="0%" EndValue="100%">
+                            <ColorStops>
+                                <ColorStop Opacity="1" Offset="0%" Color="#9e40dc" />
+                                <ColorStop Opacity="1" Offset="70%" Color="#d93c95" />
+                            </ColorStops>
+                        </LinearGradient>
+                    </CircularGaugeRange>
+                    <CircularGaugeRange Color="#E0E0E0" Start="30" End="60" StartWidth="22" EndWidth="22" Radius="60%" />
+                </CircularGaugeRanges>
+                <CircularGaugeAnnotations>
+                    <CircularGaugeAnnotation Angle="165" Radius="35%" ZIndex="1">
+                        <ContentTemplate>
+                            <div style="font-size:18px;margin-left: -20px;margin-top: -12px; color:#9DD55A">60</div>
+                        </ContentTemplate>
+                    </CircularGaugeAnnotation>
+                </CircularGaugeAnnotations>
             </CircularGaugeAxis>
         </CircularGaugeAxes>
     </SfCircularGauge>
-    
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/cjBSjshRrgGPmZbb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge Animation](./images/blazor-circulargauge-multiple-elements-animation.webp)" %}
 
 ![Blazor Circular Gauge Animation](./images/blazor-circulargauge-multiple-elements-animation.webp)
 
-N> Only the pointer of the Circular Gauge can be animated individually, not the axis lines, ticks, labels, ranges, and annotations. You can refer this [link](https://blazor.syncfusion.com/documentation/circular-gauge/pointers#pointer-animation) to enable only pointer animation.
+N> Only the pointer of the Circular Gauge can be animated individually, not the axis lines, ticks, labels, ranges, and annotations. Refer to this [link](https://blazor.syncfusion.com/documentation/circular-gauge/pointers#pointer-animation) to enable only pointer animation.
 

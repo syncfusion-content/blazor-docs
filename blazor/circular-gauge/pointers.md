@@ -31,7 +31,7 @@ The Circular Gauge supports three types of pointers such as [Needle](https://hel
 
 ## Needle pointer
 
-The circular gauge's default pointer type will be needle. A needle point contains three parts, a needle, a cap/knob, and a tail.
+The default pointer type is needle. A needle pointer contains three parts: a needle, a cap/knob, and a tail.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -289,7 +289,7 @@ You can customize the marker pointer using the following properties.
 
 ### Image marker pointer
 
-You can use image instead of rendering marker shape to denote the pointer value. It can be achieved by setting [MarkerShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_MarkerShape) to 'GaugeShape.Image' and assigning image path to [ImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_ImageUrl) as shown in following example.
+You can render an image instead of a marker shape to denote the pointer value. Set [MarkerShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_MarkerShape) to `GaugeShape.Image` and assign the image path to [ImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_ImageUrl), as shown in the following example. The image must be available at the path relative to the host application.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -400,14 +400,14 @@ The pointers are animated on loading the gauge using the [CircularGaugePointerAn
 
 ## Gradient color
 
-Gradient support allows to add multiple colors in the ranges and pointers of the circular gauge. The following gradient types are supported in the circular gauge.
+Gradient support applies colors to the ranges and pointers of the circular gauge. The following gradient types are supported by the circular gauge.
 
 * Linear Gradient
 * Radial Gradient
 
 ### Linear gradient
 
-Using linear gradient, colors will be applied in a linear progression. The start value of the linear gradient can be set using the [StartValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeLinearGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeLinearGradient_StartValue) property. The end value of the linear gradient will be set using the [EndValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeLinearGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeLinearGradient_EndValue) property. The color stop values such as color, opacity and offset are set using [ColorStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeLinearGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeLinearGradient_ColorStop) property.
+Colors are applied in a linear progression when a linear gradient is used. The start value of the linear gradient can be set using the [StartValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeLinearGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeLinearGradient_StartValue) property. The end value of the linear gradient can be set using the [EndValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeLinearGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeLinearGradient_EndValue) property. The color stop values such as color, opacity, and offset are set using the [ColorStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeLinearGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeLinearGradient_ColorStop) property.
 
 The linear gradient can be applied to all pointer types like marker, range bar, and needle. To do so, follow the below code sample.
 
@@ -473,7 +473,7 @@ The linear gradient can be applied to all pointer types like marker, range bar, 
 
 ### Radial gradient
 
-Using radial gradient, colors will be applied in circular progression. The inner circle position of the radial gradient will be set using the [InnerPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRadialGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRadialGradient_InnerPosition) property. The outer circle position of the radial gradient can be set using the [OuterPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRadialGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRadialGradient_OuterPosition) property. The color stop values such as color, opacity and offset are set using [ColorStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRadialGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRadialGradient_ColorStop) property.
+Colors are applied in a circular progression when a radial gradient is used. The inner circle position of the radial gradient can be set using the [InnerPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRadialGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRadialGradient_InnerPosition) property. The outer circle position of the radial gradient can be set using the [OuterPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRadialGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRadialGradient_OuterPosition) property. The color stop values such as color, opacity, and offset are set using the [ColorStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRadialGradient.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRadialGradient_ColorStop) property.
 
 The radial gradient can be applied to all pointer types like marker, range bar, and needle. To do so, follow the below code sample.
 

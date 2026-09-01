@@ -12,7 +12,7 @@ documentation: ug
 
 The [Blazor Circular Gauge](https://www.syncfusion.com/blazor-components/blazor-circular-gauge) component follows commonly used accessibility guidelines and standards, such as [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 
-The accessibility compliance for the Blazor Circular Gauge component is outlined below.
+The table below outlines the accessibility compliance of the Blazor Circular Gauge component.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,13 +40,12 @@ The accessibility compliance for the Blazor Circular Gauge component is outlined
 
 ## WAI-ARIA attributes
 
-The Blazor Circular Gauge component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following `WAI-ARIA` attributes are used in the Circular Gauge component.
-
+The Blazor Circular Gauge component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet accessibility requirements. The following `WAI-ARIA` attributes are used in the Circular Gauge component.
 
 | Attributes | Purpose |
 | --- | --- |
-| `role=region` | It is specified in the pointer, annotation, and title. The pointer supports the interactive drag-and-drop function to update the pointer value. |
-| `aria-label` | Provides an accessible name for the axis labels, title, legend item labels, text pointers and annotation. |
+| `role=region` | Applied on the components that group the pointer, annotation, and title regions. |
+| `aria-label` | Provides an accessible name for the axis labels, title, legend item labels, text pointer, and annotation. |
 
 ## Screen reading in Circular Gauge
 
@@ -65,3 +64,10 @@ Accessibility in the Blazor Circular Gauge component ensures that all users, reg
 The Blazor Circular Gauge component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
 The accessibility compliance of the Circular Gauge component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/circulargauge) in a new window to evaluate the accessibility of the Circular Gauge component with accessibility tools.
+
+## See also
+
+- [Globalization in Blazor Circular Gauge](globalization.html)
+- [Animation in Blazor Circular Gauge](animation.html)
+- [Legend in Blazor Circular Gauge](legend.html)
+- [Annotations in Blazor Circular Gauge](annotations.html)

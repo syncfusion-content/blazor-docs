@@ -17,8 +17,8 @@ To change the annotation content dynamically, use the [SetAnnotationValueAsync](
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|
-|     axisIndex        |    Specifies the index of the axis where the annotation is to be placed.  |
-|     annotationIndex  |    Specifies the index number of the annotation to be updated.        |
+|     axisIndex        |    Specifies the index of the axis in which the annotation is to be updated. |
+|     annotationIndex  |    Specifies the index of the annotation to be updated.        |
 |     content          |    Specifies the text for the annotation to be updated.         |
 
 ```cshtml
@@ -55,14 +55,14 @@ To change the pointer value dynamically, use the [SetPointerValueAsync](https://
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|
-|     axis index       |    Specifies the index of the axis in which the pointer value is to be updated. |
+|     axisIndex        |    Specifies the index of the axis in which the pointer value is to be updated. |
 |     pointerIndex     |    Specifies the index of the pointer to be updated.           |
 |     value            |    Specifies the value of the pointer to be updated.           |
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
-<button style="margin-left:34px" @onclick="ChangePoinerValue">Change pointer value</button>
+<button style="margin-left:34px" @onclick="ChangePointerValue">Change pointer value</button>
 <SfCircularGauge @ref="gauge" Width="250px" Height="250px">
     <CircularGaugeAxes>
         <CircularGaugeAxis>
@@ -75,13 +75,13 @@ To change the pointer value dynamically, use the [SetPointerValueAsync](https://
 
 @code {
     SfCircularGauge gauge;
-    public async Task ChangePoinerValue()
+    public async Task ChangePointerValue()
     {
         await gauge.SetPointerValueAsync(0, 0, 30);
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVxNdVHUIWstkIv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge](./images/blazor-circulargauge.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBnjlBwgOTZxwal?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge](./images/blazor-circulargauge.webp)" %}
 
 ## SetRangeValue
 
@@ -89,7 +89,7 @@ To change the start and end of a range in axis, use the [SetRangeValue](https://
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|
-|     axis index       |    Specifies the index of the axis in which the range value is to be updated. |
+|     axisIndex        |    Specifies the index of the axis in which the range value is to be updated. |
 |     rangeIndex       |    Specifies the index of the range to be updated. |
 |     start            |    Specifies the start value of the range.         |
 |     end              |    Specifies the end value of the range            |

@@ -9,9 +9,9 @@ documentation: ug
 
 # Blazor Circular Gauge Annotations
 
-Annotations are used to mark a specific area of interest in the Circular Gauge with texts, shapes, or images.
+Annotations are used to mark a specific area of interest in the Circular Gauge with text, shapes, or images.
 
-## Customization
+## Adding an annotation
 
 You can place any custom element on the axis area using [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAnnotation_ContentTemplate) in the [CircularGaugeAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html).
 
@@ -50,7 +50,7 @@ You can place any custom element on the axis area using [ContentTemplate](https:
 
 ## Positioning the annotation
 
-Annotations can be placed around an axis using the [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAnnotation_Radius) and [Angle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAnnotation_Angle) properties. For example, if the angle is 90 degrees and the radius is 110%, then the annotation will be placed at the right of the axis.
+Annotations can be placed around an axis using the [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAnnotation_Radius) and [Angle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAnnotation_Angle) properties. For example, if the angle is 90 degrees and the radius is 120%, then the annotation will be placed at the right of the axis.
 
 The radius of an annotation takes values either in pixel or in percentage. By setting value in percentage, annotation gets its position with respect to its axis radius.
 
@@ -146,4 +146,4 @@ Using [CircularGaugeAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ## See also
 
-* [Tooltip for Annotation](user-interaction#tooltip-for-annotations)
+* [Tooltip for annotations](user-interaction#tooltip-for-annotations)
