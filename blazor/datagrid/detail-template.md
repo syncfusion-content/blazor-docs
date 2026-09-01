@@ -9,20 +9,20 @@ documentation: ug
 
 # Detail Template in Blazor Data Grid
 
-The detail template in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) displays expandable sections for each row to show additional, context-specific information. This is useful when rows contain nested or supplementary data that would otherwise clutter the main grid view. Define the template using the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) property, which supports any HTML content, Blazor components, or custom Blazor components.
+The detail template in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) displays expandable sections for each row to show additional, context-specific information. Use the detail template when rows contain nested or supplementary data that would otherwise clutter the main grid view. Define the template using the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) property, which supports any HTML content, Blazor components, or custom Blazor components.
 
 > Review the [templates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates) topic before adding a detail template to configure required settings.
 
-For an overview of the `detail template` in the grid, watch the following video.
+For an overview of the `detail template` in the Data Grid, watch the following video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=Dft0kerEGUQ"%}
 
-To integrate the detail template in the grid:
+To integrate the detail template in the Data Grid:
 
 1. Add the <DetailTemplate> element within the <GridTemplates> component to define the detail row content.
 2. Use any HTML structure or Blazor components inside the **DetailTemplate** to render custom content for each expanded row.
-3. Optionally, bind data to the template to display information corresponding to the expanded row.
+3. Cast the template `context` to the row model type (for example, `context as EmployeeData`) inside the template to access the properties of the expanded row and bind data to the template.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -44,7 +44,7 @@ To integrate the detail template in the grid:
                     <tbody>
                         <tr>
                             <td rowspan="4" style="text-align: center;">
-                                <img class="photo" src="@($" scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
+                                <img class="photo" src="@($"scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
                             </td>
                             <td>
                                 <span style="font-weight: 500;">Employee ID: </span> @employee.FirstName
@@ -168,15 +168,17 @@ public class EmployeeData
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataGrid with detail template](./images/blazor-datagrid-detail-template.webp)
+![Blazor Data Grid with detail template](./images/blazor-datagrid-detail-template.webp)
 
-## Expand detail DataGrid initially
+## Expand detail Data Grid initially
 
-Expanding detail rows by default in the Blazor DataGrid is useful when immediate visibility into related data is required on initial load.
+Expanding detail rows by default in the Blazor Data Grid is useful when immediate visibility into related data is required on initial load.
 
 Use the [ExpandCollapseDetailRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandCollapseDetailRowAsync_System_String_System_Object_) method during the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event to expand a specific row by field and value.
 
 > Alternatively, call `ExpandCollapseDetailRowAsync` with the row data object in the `DataBound` event.
+
+> **Note:** The `DataBound` event fires on every data operation such as paging, sorting, and filtering. Calling `ExpandCollapseDetailRowAsync` directly inside `DataBound` may re-expand rows after each operation.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -297,9 +299,9 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrdtGXVhVxUreCB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Creating custom component/Hierarchical DataGrid 
+## Creating custom components or hierarchical DataGrids
 
-The Blazor DataGrid can render custom components inside the detail row. This enables adding additional information or functionality for a specific row. A hierarchical structure can be created by nesting grids inside the detail row of the parent grid.
+The Blazor Data Grid can render custom components inside the detail row. This enables adding additional information or functionality for a specific row. A hierarchical structure can be created by nesting Data Grids inside the detail row of the parent Data Grid.
 
 To render a custom component or build a hierarchical grid inside the detail row, define the template in the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) within the `GridTemplates` section. The hierarchical DataGrid displays data in expandable or collapsible levels using the expand or collapse button, or custom content such as HTML elements.
 
@@ -466,11 +468,11 @@ public class CustomerDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBHtwZBVVmHWFvQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> The Blazor DataGrid does not include built-in hierarchical support. Use the detail template to create multi-level hierarchical layouts, as shown in the example.
+> The Blazor Data Grid does not include built-in hierarchical support. Use the detail template to create multi-level hierarchical layouts, as shown in the example.
 
 ## Template column in detail DataGrid
 
-A template column in a detail grid within the Blazor DataGrid is useful for customizing the appearance and behavior of specific columns. It enables the inclusion of interactive elements, custom formatting, or complex data representations within the detail grid.
+A template column in a detail Data Grid within the Blazor Data Grid is useful for customizing the appearance and behavior of specific columns. It enables the inclusion of interactive elements, custom formatting, or complex data representations within the detail Data Grid.
 
 Use the `Template` property of a column to display custom content instead of the field value.
 
@@ -607,7 +609,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-![Template column in detail Grid](images/hierarchy-grid/hierarchy-grid-template.webp)
+![Template column in detail Data Grid](images/hierarchy-grid/hierarchy-grid-template.webp)
 
 ## Expand by external button
 
@@ -636,7 +638,7 @@ By default, detail rows are collapsed. Expand all detail rows programmatically b
                     <tbody>
                         <tr>
                             <td rowspan="4" style="text-align: center;">
-                                <img class="photo" src="@($" scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
+                                <img class="photo" src="@($"scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
                             </td>
                             <td>
                                 <span style="font-weight: 500;">Employee ID: </span> @employee.FirstName
@@ -697,9 +699,9 @@ By default, detail rows are collapsed. Expand all detail rows programmatically b
 
     public List<EmployeeData> Employees { get; set; }
 
-    public void BtnClick()
+    public async Task BtnClick()
     {
-        this.Grid.ExpandAllDetailRowAsync();
+        await this.Grid.ExpandAllDetailRowAsync();
     }
     protected override void OnInitialized()
     {
@@ -1065,7 +1067,7 @@ Here is an example that customizes the expand/collapse icons:
                     <tbody>
                         <tr>
                             <td rowspan="4" style="text-align: center;">
-                                <img class="photo" src="@($" scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
+                                <img class="photo" src="@($"scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
                             </td>
                             <td>
                                 <span style="font-weight: 500;">Employee ID: </span> @employee.FirstName
@@ -1198,13 +1200,13 @@ public class EmployeeData
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataGrid with customized detail template icon](./images/blazor-datagrid-detail-template-customizeicon.webp)
+![Blazor Data Grid with customized detail template icon](./images/blazor-datagrid-detail-template-customizeicon.webp)
 
 ## How to access the child component in the detail template
 
-Using the detail template feature of the Blazor DataGrid, a grid-like structure with hierarchical binding can be achieved by rendering a grid inside the DetailTemplate. By default, the @ref property of the grid is of type SfGrid<T>, which carries a single grid instance. For a hierarchy, each child grid requires a separate reference. Define the @ref using a dictionary of key–value pairs, where values are SfGrid<T> instances and keys are unique.
+Using the detail template feature of the Blazor Data Grid, a grid-like structure with hierarchical binding can be achieved by rendering a Data Grid inside the DetailTemplate. By default, the @ref property of the grid is of type SfGrid<T>, which carries a single Data grid instance. For a hierarchy, each child Data Grid requires a separate reference. Define the @ref using a dictionary of key–value pairs, where values are SfGrid<T> instances and keys are unique.
 
-In the following sample, the instance of a specific child grid is retrieved using the unique key value passed to the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event. The selected record details are then obtained using [GetSelectedRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRecordsAsync) on that child grid:
+In the following sample, the instance of a specific child Data Grid is retrieved using the unique key value passed to the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event. The selected record details are then obtained using [GetSelectedRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRecordsAsync) on that child Data Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1405,9 +1407,11 @@ public class EmployeeData
 
 ## Hide the expand/collapse icon in parent row when no record in detail DataGrid
 
-The Blazor DataGrid supports hiding the expand/collapse icon in parent rows when no records exist in the detail grid. This creates a cleaner and more intuitive interface by removing unnecessary icons from empty parent rows.
+The Blazor Data Grid supports hiding the expand/collapse icon in parent rows when no records exist in the detail grid. This creates a cleaner and more intuitive interface by removing unnecessary icons from empty parent rows.
 
-Use the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event to check whether the detail grid has records for the current row and add a custom class to disable and hide the icon. Apply the following CSS to prevent interaction and hide the icon:
+Use the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event to check whether the detail Data Grid has records for the current row and add a custom class to disable and hide the icon. Apply the following CSS to prevent interaction and hide the icon:
+
+> **Note:** The `RowDataBound` handler uses LINQ's `.Where()` method, which requires a `using System.Linq;` directive. The filter check runs for every row, which can affect rendering performance on large datasets. Consider caching the set of EmployeeIDs with orders in advance to optimize the check.
 
 ```css
 
@@ -1554,9 +1558,9 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjhnZGXhBKSgaXeg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Render aggregates in detail DataGrid
+## Render aggregates in detail Data Grid
 
-Aggregates display summary values in the footer, group footer, or group caption of the detail grid. Use this feature to calculate and show summary information.
+Aggregates display summary values in the footer, group footer, or group caption of the detail Data Grid. Use this feature to calculate and show summary information.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1708,30 +1712,30 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBHNmDVLAybpsVP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Customize the detail Blazor DataGrid
+## Customize the detail Blazor Data Grid
 
-The Blazor DataGrid offers multiple ways to customize the detail grid appearance using CSS or themes. Target detail grid elements with the `.e-detailcell` class selector.
+The Blazor Data Grid offers multiple ways to customize the detail Data Grid appearance using CSS or themes. Target detail Data Grid elements with the `.e-detailcell` class selector.
 
 ### Header
 
-Customize header elements in the detail grid using CSS. The following examples style the header, header cells, and header cell content.
+Customize header elements in the detail Data Grid using CSS. The following examples style the header, header cells, and header cell content.
 
 **Customizing the Detail Grid Header**
 
-To customize the appearance of the detail grid header root element, use the following CSS:
+To customize the appearance of the detail Data Grid header root element, use the following CSS:
 
 ```css
 .e-detailcell .e-grid .e-headercontent{
     border: 2px solid green;
 }
 ```
-In this example, the `.e-detailcell` class targets the detail grid, and `.e-headercontent` targets its header root element. The border property can be modified to change the style of the header border, allowing customization of the dividing line between the header and content areas.
+In this example, the `.e-detailcell` class targets the detail Data Grid, and `.e-headercontent` targets its header root element. The border property can be modified to change the style of the header border, allowing customization of the dividing line between the header and content areas.
 
 ![Detail header in Blazor](images/hierarchy-grid/grid-child-header.webp)
 
 **Customizing the Detail Grid Header Cell**
 
-To customize the appearance of header cell elements in the detail grid, use the following CSS:
+To customize the appearance of header cell elements in the detail Data Grid, use the following CSS:
 
 ```css
 .e-detailcell .e-grid .e-headercontent .e-headercell{
@@ -1739,13 +1743,13 @@ To customize the appearance of header cell elements in the detail grid, use the 
     background-color: #1ea8bd;
 }
 ```
-In this example, the `.e-headercell` class targets the header cells within the detail grid. Adjust the `color` and `background-color` properties to match the application's design requirements.
+In this example, the `.e-headercell` class targets the header cells within the detail Data Grid. Adjust the `color` and `background-color` properties to match the application's design requirements.
 
 ![Customize the detail grid header cell in Blazor](images/hierarchy-grid/grid-child-header-cell.webp)
 
 **Customizing the Detail Grid Header Cell Div Element**
 
-To customize the appearance of the header cell div element in the detail grid, use the following CSS:
+To customize the appearance of the header cell div element in the detail Data Grid, use the following CSS:
 
 ```css
 .e-detailcell .e-grid .e-headercelldiv {
@@ -1754,17 +1758,17 @@ To customize the appearance of the header cell div element in the detail grid, u
     color: darkblue;
 }
 ```
-In this example, the `.e-headercelldiv` class targets the div element within the header cell of the detail grid. The `font-size`, `font-weight`, and `color` properties control the styling of the header text content.
+In this example, the `.e-headercelldiv` class targets the div element within the header cell of the detail Data Grid. The `font-size`, `font-weight`, and `color` properties control the styling of the header text content.
 
-![detail Grid header cell div element in Blazor.](images/hierarchy-grid/grid-child-header-cell-div-element.webp)
+![Customize the detail Data Grid header cell div element in Blazor](images/hierarchy-grid/grid-child-header-cell-div-element.webp)
 
 ### Paging
 
-Customize paging elements in the detail grid using CSS. The following examples style the pager root, container, navigation elements, numeric links, and current page indicator.
+Customize paging elements in the detail Data Grid using CSS. The following examples style the pager root, container, navigation elements, numeric links, and current page indicator.
 
-**Customizing the Detail Grid Pager Root Element**
+**Customizing the Detail Data Grid Pager Root Element**
 
-To customize the appearance of the pager root element in the detail grid, use the following CSS:
+To customize the appearance of the pager root element in the detail Data Grid, use the following CSS:
 
 ```css
 .e-detailcell .e-grid  .e-gridpager {
@@ -1772,13 +1776,13 @@ To customize the appearance of the pager root element in the detail grid, use th
     background-color: #deecf9;
 }
 ```
-In this example, the `.e-detailcell` class targets the detail grid, and `.e-gridpager` targets the pager root element. The `font-family` and `background-color` properties control the font style and background color of the pager section.
+In this example, the `.e-detailcell` class targets the detail Data Grid, and `.e-gridpager` targets the pager root element. The `font-family` and `background-color` properties control the font style and background color of the pager section.
 
 ![Blazor Grid pager root element](images/hierarchy-grid/child-grid-pager-root-element.webp)
 
 **Customizing the Detail Grid Pager Container Element**
 
-To customize the appearance of the pager container element in the detail grid, use the following CSS:
+To customize the appearance of the pager container element in the detail Data Grid, use the following CSS:
 
 ```css
 .e-detailcell .e-grid .e-pagercontainer {
@@ -1786,13 +1790,13 @@ To customize the appearance of the pager container element in the detail grid, u
     font-family: cursive;
 }
 ```
-In this example, the `.e-pagercontainer` class targets the pager container element within the detail grid. The `border` and `font-family` properties control the border styling and font appearance of the pager container.
+In this example, the `.e-pagercontainer` class targets the pager container element within the detail Data Grid. The `border` and `font-family` properties control the border styling and font appearance of the pager container.
 
 ![Blazor Grid pager container element](images/hierarchy-grid/grid-child-pager-container-element.webp)
 
 **Customizing the Detail Grid Pager Navigation Elements**
 
-To customize the appearance of the detail Grid pager navigation elements, use the following CSS code:
+To customize the appearance of the detail Data Grid pager navigation elements, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-gridpager .e-prevpagedisabled,
@@ -1807,13 +1811,13 @@ To customize the appearance of the detail Grid pager navigation elements, use th
 }
 ```
 
-In this example, the classes `.e-prevpagedisabled`, `.e-prevpage`, `.e-nextpage`, `.e-nextpagedisabled`, `.e-lastpagedisabled`, `.e-lastpage`, `.e-firstpage`, and `.e-firstpagedisabled` target the various pager navigation elements of the detail Grid. Modify the `background-color` property to change the background color of these elements.
+In this example, the classes `.e-prevpagedisabled`, `.e-prevpage`, `.e-nextpage`, `.e-nextpagedisabled`, `.e-lastpagedisabled`, `.e-lastpage`, `.e-firstpage`, and `.e-firstpagedisabled` target the various pager navigation elements of the detail Data Grid. Modify the `background-color` property to change the background color of these elements.
 
-![Blazor Grid pager navigation elements](images/hierarchy-grid/grid-child-pager-navigation-element.webp)
+![Blazor Data Grid pager navigation elements](images/hierarchy-grid/grid-child-pager-navigation-element.webp)
 
-**Customizing the Detail Grid Pager Page Numeric Link Elements**
+**Customizing the Detail Data Grid Pager Page Numeric Link Elements**
 
-To customize the appearance of the detail Grid pager current page numeric link elements, use the following CSS code:
+To customize the appearance of the detail Data Grid pager page numeric link elements, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-gridpager .e-numericitem {
@@ -1830,11 +1834,11 @@ To customize the appearance of the detail Grid pager current page numeric link e
 
 In this example, the `.e-numericitem` class targets the page numeric link elements. Modify the `background-color` and `color` properties to change the background and text color of these elements.
 
-![Blazor Grid pager numeric link elements](images/hierarchy-grid/grid-child-page-numeric-link-elements.webp)
+![Blazor Data Grid pager numeric link elements](images/hierarchy-grid/grid-child-page-numeric-link-elements.webp)
 
-**Customizing the Detail Grid Pager Current Page Numeric Element**
+**Customizing the Detail Data Grid Pager Current Page Numeric Element**
 
-To customize the appearance of the detail Grid pager current page numeric element, use the following CSS code:
+To customize the appearance of the detail Data Grid pager current page numeric element, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-gridpager .e-currentitem {
@@ -1845,15 +1849,15 @@ To customize the appearance of the detail Grid pager current page numeric elemen
 
 In this example, the `.e-currentitem` class targets the current page numeric item. Modify the `background-color` property to change the background color of this element and the `color` property to change the text color.
 
-![Blazor Grid current pager numeric element](images/hierarchy-grid/grid-child-current-page-numeric-element.webp)
+![Blazor Data Grid current pager numeric element](images/hierarchy-grid/grid-child-current-page-numeric-element.webp)
 
 ### Sorting
 
-Customize sorting icons and multi-sorting indicators in the detail grid using CSS. Icon glyphs can vary by theme; refer to the [icons](https://blazor.syncfusion.com/documentation/appearance/icons#bootstrap-5) for theme-specific codes.
+Customize sorting icons and multi-sorting indicators in the detail Data Grid using CSS. Icon glyphs can vary by theme; refer to the [icons](https://blazor.syncfusion.com/documentation/appearance/icons#bootstrap-5) for theme-specific codes.
 
-**Customizing the Detail Grid Sorting Icon**
+**Customizing the Detail Data Grid Sorting Icon**
 
-To customize the sorting icon that appears in the detail Grid header when sorting is applied, use the following CSS code:
+To customize the sorting icon that appears in the detail Data Grid header when sorting is applied, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-icon-ascending::before {
@@ -1867,13 +1871,13 @@ To customize the sorting icon that appears in the detail Grid header when sortin
 }
 ```
 
-In this example, the `.e-detailcell` class targets the detail Grid. The `.e-icon-ascending::before` class targets the sorting icon for ascending order, and the `.e-icon-descending::before` class targets the sorting icon for descending order.
+In this example, the `.e-detailcell` class targets the detail Data Grid. The `.e-icon-ascending::before` class targets the sorting icon for ascending order, and the `.e-icon-descending::before` class targets the sorting icon for descending order.
 
-![Blazor Grid sorting icon](images/hierarchy-grid/grid-child-sorting-icons.webp)
+![Blazor Data Grid sorting icon](images/hierarchy-grid/grid-child-sorting-icons.webp)
 
 **Customizing the Detail Grid Multi Sorting Icon**
 
-To customize the multi sorting icon that appears in the detail Grid header when multiple columns are sorted, use the following CSS code:
+To customize the multi sorting icon that appears in the detail Data Grid header when multiple columns are sorted, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-sortnumber {
@@ -1884,15 +1888,15 @@ To customize the multi sorting icon that appears in the detail Grid header when 
 
 In this example, the `.e-sortnumber` class targets the background color and font family of the multi sorting icon. Modify the `background-color` and `font-family` properties to customize the appearance of the multi sorting icon.
 
-![Blazor Grid multi-sorting icon](images/hierarchy-grid/grid-child-multi-sorting-icon.webp)
+![Blazor Data Grid multi-sorting icon](images/hierarchy-grid/grid-child-multi-sorting-icon.webp)
 
 ### Filtering
 
-Customize filtering elements in the detail grid using CSS. The following examples apply to the filter bar and Excel/menu filter UI depending on the configured filter mode.
+Customize filtering elements in the detail Data Grid using CSS. The following examples apply to the filter bar and Excel/menu filter UI depending on the configured filter mode.
 
 **Customizing the Detail Grid Filter Bar Cell Element**
 
-To customize the appearance of the filter bar cell element in the detail Grid header, use the following CSS code:
+To customize the appearance of the filter bar cell element in the detail Data Grid header, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-filterbar .e-filterbarcell {
@@ -1900,13 +1904,13 @@ To customize the appearance of the filter bar cell element in the detail Grid he
 }
 ```
 
-In this example, the `.e-detailcell` class targets the detail Grid, and the `.e-filterbarcell` class targets the filter bar cell element in the header. Modify the `background-color` property to change the color of the filter bar cell element.
+In this example, the `.e-detailcell` class targets the detail Data Grid, and the `.e-filterbarcell` class targets the filter bar cell element in the header. Modify the `background-color` property to change the color of the filter bar cell element.
 
 ![Blazor Grid filter bar cell element](images/hierarchy-grid/grid-child-filter-bar-cell-element.webp)
 
 **Customizing the Detail Grid Filter Bar Input Element**
 
-To customize the appearance of the filter bar input element in the detail Grid header, use the following CSS code:
+To customize the appearance of the filter bar input element in the detail Data Grid header, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-filterbarcell .e-input-group input.e-input{
@@ -1916,11 +1920,11 @@ To customize the appearance of the filter bar input element in the detail Grid h
 
 In this example, the `.e-filterbarcell` class targets the filter bar cell element, and the `.e-input` class targets the input element within the cell. Modify the `font-family` property to change the font of the filter bar input element.
 
-![Blazor Grid filter bar input element](images/hierarchy-grid/grid-child-filter-bar-input-element.webp)
+![Blazor Data Grid filter bar input element](images/hierarchy-grid/grid-child-filter-bar-input-element.webp)
 
-**Customizing the Detail Grid Filter Bar Input Focus**
+**Customizing the Detail Data Grid Filter Bar Input Focus**
 
-To customize the appearance of the detail Grid's filter bar input element focus highlight, use the following CSS code:
+To customize the appearance of the detail Data Grid's filter bar input element focus highlight, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-filterbarcell .e-input-group.e-input-focus{
@@ -1928,13 +1932,13 @@ To customize the appearance of the detail Grid's filter bar input element focus 
 }
 ```
 
-In this example, the `.e-filterbarcell` class targets the filter bar cell element, and the .e-input-group.`e-input-focus` class targets the focused input element. Modify the `background-color` property to change the color of the focus highlight.
+In this example, the `.e-filterbarcell` class targets the filter bar cell element, and the `.e-input-group.e-input-focus` class targets the focused input element. Modify the `background-color` property to change the color of the focus highlight.
 
-![Blazor Grid filter bar input focus](images/hierarchy-grid/grid-child-filter-bar-input-element-focus.webp)
+![Blazor Data Grid filter bar input focus](images/hierarchy-grid/grid-child-filter-bar-input-element-focus.webp)
 
-**Customizing the Detail Grid Filter Bar Input Clear Icon**
+**Customizing the Detail Data Grid Filter Bar Input Clear Icon**
 
-To customize the appearance of the detail Grid's filter bar input element clear icon, use the following CSS code:
+To customize the appearance of the detail Data Grid's filter bar input element clear icon, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-filterbarcell .e-input-group .e-clear-icon::before {
@@ -1946,9 +1950,9 @@ In this example, the `.e-clear-icon` class targets the clear icon element within
 
 ![Blazor Grid filter bar input clear icon](images/hierarchy-grid/child-grid-filter-bar-input-clear-icon.webp)
 
-**Customizing the Detail Grid Filtering Icon**
+**Customizing the Detail Data Grid Filtering Icon**
 
-To customize the appearance of the filtering icon in the detail Grid header, use the following CSS code:
+To customize the appearance of the filtering icon in the detail Data Grid header, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-icon-filter::before{
@@ -1958,11 +1962,11 @@ To customize the appearance of the filtering icon in the detail Grid header, use
 
 In this example, the `.e-icon-filter` class targets the filtering icon element. Modify the `content` property to change the icon displayed.
 
-![Blazor Grid filtering icon](images/hierarchy-grid/grid-child-filtering-icon.webp)
+![Blazor Data Grid filtering icon](images/hierarchy-grid/grid-child-filtering-icon.webp)
 
-**Customizing the Detail Grid Filter Dialog Content**
+**Customizing the Detail Data Grid Filter Dialog Content**
 
-To customize the appearance of the detail Grid's filter dialog content element, use the following CSS code:
+To customize the appearance of the detail Data Grid's filter dialog content element, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-filter-popup .e-dlg-content {
@@ -1972,11 +1976,11 @@ To customize the appearance of the detail Grid's filter dialog content element, 
 
 In this example, the `.e-filter-popup .e-dlg-content` classes target the content element within the filter dialog. Modify the `background-color` property to change the color of the dialog's content.
 
-![Blazor Grid filter dialog content](images/hierarchy-grid/grid-child-filter-dialog-content.webp)
+![Blazor Data Grid filter dialog content](images/hierarchy-grid/grid-child-filter-dialog-content.webp)
 
-**Customizing the Detail Grid Filter Dialog Footer**
+**Customizing the Detail Data Grid Filter Dialog Footer**
 
-To customize the appearance of the detail Grid's filter dialog footer element, use the following CSS code:
+To customize the appearance of the detail Data Grid's filter dialog footer element, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-filter-popup .e-footer-content {
@@ -1984,13 +1988,13 @@ To customize the appearance of the detail Grid's filter dialog footer element, u
 }
 ```
 
-In this example, the `.e-filter-popup .e-footer-content `classes target the footer element within the filter dialog. Modify the `background-color` property to change the color of the dialog's footer.
+In this example, the `.e-filter-popup .e-footer-content` classes target the footer element within the filter dialog. Modify the `background-color` property to change the color of the dialog's footer.
 
 ![Blazor Grid filter dialog footer](images/hierarchy-grid/child-grid-filter-dialog-footer.webp)
 
-**Customizing the Detail Grid Filter Dialog Input Element**
+**Customizing the Detail Data Grid Filter Dialog Input Element**
 
-To customize the appearance of the detail Grid's filter dialog input elements, use the following CSS code:
+To customize the appearance of the detail Data Grid's filter dialog input elements, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-filter-popup .e-input-group input.e-input{
@@ -1998,13 +2002,13 @@ To customize the appearance of the detail Grid's filter dialog input elements, u
 }
 ```
 
-In this example, the **.e-filter-popup** class targets the filter dialog, and the **.e-input** class targets the input elements within the dialog. Modify the `font-family` property to change the font of the input elements.
+In this example, the `.e-filter-popup` class targets the filter dialog, and the `.e-input` class targets the input elements within the dialog. Modify the `font-family` property to change the font of the input elements.
 
-![Blazor Grid filter dialog input element](images/hierarchy-grid/grid-child-filter-dialog-input-element.webp)
+![Blazor Data Grid filter dialog input element](images/hierarchy-grid/grid-child-filter-dialog-input-element.webp)
 
-**Customizing the Detail Grid Filter Dialog Button Element**
+**Customizing the Detail Data Grid Filter Dialog Button Element**
 
-To customize the appearance of the detail Grid's filter dialog button elements, use the following CSS code:
+To customize the appearance of the detail Data Grid's filter dialog button elements, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-filter-popup .e-btn{
@@ -2014,11 +2018,11 @@ To customize the appearance of the detail Grid's filter dialog button elements, 
 
 In this example, the `.e-filter-popup` class targets the filter dialog, and the `.e-btn` class targets the button elements within the dialog. Modify the `font-family` property to change the font of the button elements.
 
-![Blazor Grid filter dialog button element](images/hierarchy-grid/grid-child-filter-dialog-button-element.webp)
+![Blazor Data Grid filter dialog button element](images/hierarchy-grid/grid-child-filter-dialog-button-element.webp)
 
-**Customizing the Detail Grid Excel Filter Dialog Number Filters Element**
+**Customizing the Detail Data Grid Excel Filter Dialog Number Filters Element**
 
-To customize the appearance of the Excel filter dialog's number filters in the detail Grid, use the following CSS code:
+To customize the appearance of the Excel filter dialog's number filters in the detail Data Grid, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-filter-popup .e-contextmenu {
@@ -2028,15 +2032,15 @@ To customize the appearance of the Excel filter dialog's number filters in the d
 
 In this example, the `.e-filter-popup .e-contextmenu` classes target the number filter elements within the Excel filter dialog. Modify the `background-color` property to change the color of these elements.
 
-![Blazor Grid Excel filter dialog number filters element](images/hierarchy-grid/grid-child-excel-filter-dialog-element.webp)
+![Blazor Data Grid Excel filter dialog number filters element](images/hierarchy-grid/grid-child-excel-filter-dialog-element.webp)
 
 ### Grouping
 
-Customize grouping elements in the detail grid using CSS. The following examples style the group header, expand/collapse icons, caption row, and indent cell.
+Customize grouping elements in the detail Data Grid using CSS. The following examples style the group header, expand/collapse icons, caption row, and indent cell.
 
 **Customizing the Detail Grid Group Header**
 
-To customize the appearance of the detail Grid's group header element, use the following CSS code:
+To customize the appearance of the detail Data Grid's group header element, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-groupdroparea {
@@ -2044,13 +2048,13 @@ To customize the appearance of the detail Grid's group header element, use the f
 }
 ```
 
-In this example, the `.e-detailcell` class targets the detail Grid and the `.e-groupdroparea` class targets the group header element. Modify the `background-color` property to change the color of the group header.
+In this example, the `.e-detailcell` class targets the detail Data Grid and the `.e-groupdroparea` class targets the group header element. Modify the `background-color` property to change the color of the group header.
 
-![Detail Grid group header in Blazor](images/hierarchy-grid/grid-child-group-header.webp)
+![Detail Data Grid group header in Blazor](images/hierarchy-grid/grid-child-group-header.webp)
 
-**Customizing the Detail Grid Group Expand or Collapse Icons**
+**Customizing the Detail Data Grid Group Expand or Collapse Icons**
 
-To customize the appearance of the group expand/collapse icons in the detail Grid, use the following CSS code:
+To customize the appearance of the group expand/collapse icons in the detail Data Grid, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-icon-gdownarrow::before{
@@ -2061,13 +2065,13 @@ To customize the appearance of the group expand/collapse icons in the detail Gri
 }
 ```
 
-In this example, the `.e-icon-gdownarrow` and `.e-icon-grightarrow` classes target the expand and collapse icons, respectively. Modify the `content` property to change the icon displayed. [icons](https://blazor.syncfusion.com/documentation/appearance/icons) sets can be used based on the selected theme.
+In this example, the `.e-icon-gdownarrow` and `.e-icon-grightarrow` classes target the expand and collapse icons, respectively. Modify the `content` property to change the icon displayed. Use theme-appropriate icons based on the selected theme.
 
-![Detail Grid group expand or collapse icons in Blazor](images/hierarchy-grid/grid-child-group-expand-or-collapse-icons.webp)
+![Detail Data Grid group expand or collapse icons in Blazor](images/hierarchy-grid/grid-child-group-expand-or-collapse-icons.webp)
 
-**Customizing the Detail Grid Group Caption Row**
+**Customizing the Detail Data Grid Group Caption Row**
 
-To customize the appearance of the detail Grid's group caption row and the icons indicating record expansion or collapse, use the following CSS code:
+To customize the appearance of the detail Data Grid's group caption row and the icons indicating record expansion or collapse, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-groupcaption {
@@ -2082,11 +2086,11 @@ To customize the appearance of the detail Grid's group caption row and the icons
 
 In this example, the `.e-groupcaption` class targets the group caption row element, and the `.e-recordplusexpand` and `.e-recordpluscollapse` classes target the icons indicating record expansion or collapse. Modify the `background-color` property to change the color of these elements.
 
-![Detail Grid group caption row in Blazor](images/hierarchy-grid/child-grid-group-caption-row.webp)
+![Detail Data Grid group caption row in Blazor](images/hierarchy-grid/child-grid-group-caption-row.webp)
 
-**Customizing the Detail Grid Grouping Indent Cell**
+**Customizing the Detail Data Grid Grouping Indent Cell**
 
-To customize the appearance of the detail Grid's grouping indent cell element, use the following CSS code:
+To customize the appearance of the detail Data Grid's grouping indent cell element, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-indentcell {
@@ -2094,17 +2098,17 @@ To customize the appearance of the detail Grid's grouping indent cell element, u
 }
 ```
 
-In this example, the **.e-indentcell** class targets the grouping indent cell element. Modify the `background-color` property to change the color of the indent cell.
+In this example, the `.e-indentcell` class targets the grouping indent cell element. Modify the `background-color` property to change the color of the indent cell.
 
-![Detail Grid grouping indent cell in Blazor](images/hierarchy-grid/child-grid-indent-cell.webp)
+![Detail Data Grid grouping indent cell in Blazor](images/hierarchy-grid/child-grid-indent-cell.webp)
 
 ### Toolbar
 
-Customize the toolbar appearance in the detail grid using CSS. The following examples style the toolbar root and button elements.
+Customize the toolbar appearance in the detail Data Grid using CSS. The following examples style the toolbar root and button elements.
 
-**Customizing the Detail Grid toolbar Root Element**
+**Customizing the Detail Data Grid Toolbar Root Element**
 
-To customize the appearance of the detail Grid's toolbar root element, use the following CSS code:
+To customize the appearance of the detail Data Grid's toolbar root element, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-toolbar-items {
@@ -2112,13 +2116,13 @@ To customize the appearance of the detail Grid's toolbar root element, use the f
 }
 ```
 
-In this example, the `.e-detailcell` class targets the detail Grid and the `.e-toolbar-items` class targets the background color of the toolbar root element. Modify the `background-color` property to change the background color of the toolbar.
+In this example, the `.e-detailcell` class targets the detail Data Grid and the `.e-toolbar-items` class targets the background color of the toolbar root element. Modify the `background-color` property to change the background color of the toolbar.
 
-![Detail Grid toolbar root element in Blazor](images/hierarchy-grid/child-grid-toolbar-root-element.webp)
+![Detail Data Grid toolbar root element in Blazor](images/hierarchy-grid/child-grid-toolbar-root-element.webp)
 
-**Customizing the Detail Grid Toolbar Button Element**
+**Customizing the Detail Data Grid Toolbar Button Element**
 
-To customize the appearance of the detail Grid's toolbar buttons, use the following CSS code:
+To customize the appearance of the detail Data Grid's toolbar buttons, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-toolbar .e-btn {
@@ -2128,15 +2132,15 @@ To customize the appearance of the detail Grid's toolbar buttons, use the follow
 
 In this example, the `.e-toolbar .e-btn` selector targets the background color of the toolbar button elements. Modify the `background-color` property to change the background color of the toolbar buttons.
 
-![Detail Grid toolbar button element in Blazor](images/hierarchy-grid/child-grid-toolbar-button-element.webp)
+![Detail Data Grid toolbar button element in Blazor](images/hierarchy-grid/child-grid-toolbar-button-element.webp)
 
 ### Editing
 
-Customize editing-related elements in the detail grid using CSS. The following examples style edited/added rows, inputs, edit dialog, and command buttons.
+Customize editing-related elements in the detail Data Grid using CSS. The following examples style edited/added rows, inputs, edit dialog, and command buttons.
 
-**Customizing the Detail Grid Edited and Added Row Element**
+**Customizing the Detail Data Grid Edited and Added Row Element**
 
-To customize the appearance of edited and added row table elements in the detail Grid, use the following CSS code:
+To customize the appearance of edited and added row table elements in the detail Data Grid, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-editedrow table, 
@@ -2146,12 +2150,12 @@ To customize the appearance of edited and added row table elements in the detail
 ```
 In this example, the `.e-editedrow` class represents the edited row element, and the `.e-addedrow` class represents the added row element. Modify the `background-color` property to change the color of these row table elements.
 
-![Detail Grid edited row element in Blazor](images/hierarchy-grid/child-grid-edited-row-element.webp)
-![Detail Grid added row element in Blazor](images/hierarchy-grid/child-grid-added-row-element.webp)
+![Detail Data Grid edited row element in Blazor](images/hierarchy-grid/child-grid-edited-row-element.webp)
+![Detail Data Grid added row element in Blazor](images/hierarchy-grid/child-grid-added-row-element.webp)
 
-**Customizing the Detail Grid Edited Row Input Element**
+**Customizing the Detail Data Grid Edited Row Input Element**
 
-To customize the appearance of edited row input elements in the detail Grid, use the following CSS code:
+To customize the appearance of edited row input elements in the detail Data Grid, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-editedrow .e-input-group input.e-input{
@@ -2161,11 +2165,11 @@ To customize the appearance of edited row input elements in the detail Grid, use
 ```
 In this example, the `.e-editedrow` class represents the edited row element, and the `.e-input` class targets the input elements within the form. Modify the `font-family` property to change the font and the `color` property to change the text color of the input elements.
 
-![Detail Grid edited row input element in Blazor](images/hierarchy-grid/child-grid-edited-row-input-element.webp)
+![Detail Data Grid edited row input element in Blazor](images/hierarchy-grid/child-grid-edited-row-input-element.webp)
 
 **Customizing the Detail Grid Edit Dialog Header Element**
 
-To customize the appearance of the edit dialog header element in the detail Grid, use the following CSS code:
+To customize the appearance of the edit dialog header element in the detail Data Grid, use the following CSS code:
 
 ```css
 .e-edit-dialog .e-dlg-header-content {
@@ -2176,9 +2180,9 @@ In this example, the `.e-edit-dialog` class represents the edit dialog, and the 
 
 ![Detail Grid edit dialog header element in Blazor](images/hierarchy-grid/child-grid-edit-dialog-header-element.webp)
 
-**Customizing the Detail Grid Command Column Buttons**
+**Customizing the Detail Data Grid Command Column Buttons**
 
-To customize the appearance of the detail Grid's command column buttons such as `Edit`, `Delete`, `Update`, and `Cancel`, use the following CSS code:
+To customize the appearance of the detail Data Grid's command column buttons such as `Edit`, `Delete`, `Update`, and `Cancel`, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-delete::before ,.e-grid .e-cancel-icon::before{
@@ -2190,16 +2194,16 @@ To customize the appearance of the detail Grid's command column buttons such as 
 ```
 In this example, the `.e-edit`, `.e-delete`, `.e-update`, and `.e-cancel-icon` classes represent the respective command column buttons. Modify the `color` property to change the color of these buttons.
 
-![Detail Grid command column buttons in Blazor](images/hierarchy-grid/child-grid-command-button.webp)
-![Detail Grid command column buttons in Blazor](images/hierarchy-grid/child-grid-next-command-button.webp)
+![Detail Data Grid command column buttons in Blazor](images/hierarchy-grid/child-grid-command-button.webp)
+![Detail Data Grid command column buttons in Blazor](images/hierarchy-grid/child-grid-next-command-button.webp)
 
 ### Aggregate
 
-Customize aggregate elements in the detail grid using CSS. The following examples style the aggregate root and aggregate cells.
+Customize aggregate elements in the detail Data Grid using CSS. The following examples style the aggregate root and aggregate cells.
 
-**Customizing the Detail Grid Aggregate Root Element**
+**Customizing the Detail Data Grid Aggregate Root Element**
 
-To customize the appearance of the detail Grid's aggregate root elements, use the following CSS code:
+To customize the appearance of the detail Data Grid's aggregate root elements, use the following CSS code:
 
 
 ```css
@@ -2208,13 +2212,13 @@ To customize the appearance of the detail Grid's aggregate root elements, use th
 }
 ```
 
-In this example, the `.e-gridfooter` class represents the root element of the aggregate row in the grid footer. Modify the `font-family` property to change the font of the aggregate root element.
+In this example, the `.e-gridfooter` class represents the root element of the aggregate row in the Data Grid footer. Modify the `font-family` property to change the font of the aggregate root element.
 
-![Detail Grid aggregate root element in Blazor](images/hierarchy-grid/child-grid-aggregate-root-element.webp)
+![Detail Data Grid aggregate root element in Blazor](images/hierarchy-grid/child-grid-aggregate-root-element.webp)
 
-**Customizing the Detail Grid Aggregate Cell Elements**
+**Customizing the Detail Data Grid Aggregate Cell Elements**
 
-To customize the appearance of the detail Grid's aggregate cell elements (summary row cell elements), use the following CSS code:
+To customize the appearance of the detail Data Grid's aggregate cell elements (summary row cell elements), use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-summaryrow .e-summarycell {
@@ -2224,28 +2228,28 @@ To customize the appearance of the detail Grid's aggregate cell elements (summar
 
 In this example, the `.e-summaryrow` class represents the summary row containing aggregate cells, and the `.e-summarycell` class targets individual aggregate cells within the summary row. Modify the `background-color` property to change the color of the aggregate cell elements.
 
-![Detail Grid aggregate cell element in Blazor](images/hierarchy-grid/child-grid-aggregate-cell-element.webp)
+![Detail Data Grid aggregate cell element in Blazor](images/hierarchy-grid/child-grid-aggregate-cell-element.webp)
 
 ### Selection
 
-Customize selection styles in the detail grid using CSS. The following examples style row selection, cell selection, and column selection backgrounds.
+Customize selection styles in the detail Data Grid using CSS. The following examples style row selection, cell selection, and column selection backgrounds.
 
-**Customizing the Detail Grid Row Selection Background**
+**Customizing the Detail Data Grid Row Selection Background**
 
-To customize the appearance of the detail Grid's row selection, use the following CSS code:
+To customize the appearance of the detail Data Grid's row selection, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid td.e-selectionbackground {
     background-color: #00b7ea;
 }
 ```
-In this example, the `.e-selectionbackground` class targets the background color of the selected rows in the detail Grid. Modify the `background-color` property to change the appearance of the selected row background.
+In this example, the `.e-selectionbackground` class targets the background color of the selected rows in the detail Data Grid. Modify the `background-color` property to change the appearance of the selected row background.
 
 ![Detail Grid row selection in Blazor](images/hierarchy-grid/child-grid-row-selection.webp)
 
-**Customizing the Detail Grid Cell Selection Background**
+**Customizing the Detail Data Grid Cell Selection Background**
 
-To customize the appearance of the detail Grid's cell selection, use the following CSS code:
+To customize the appearance of the detail Data Grid's cell selection, use the following CSS code:
 
 ```css
 .e-detailcell .e-grid td.e-cellselectionbackground {
@@ -2255,7 +2259,7 @@ To customize the appearance of the detail Grid's cell selection, use the followi
 
 In this example, the `.e-cellselectionbackground` class targets the background color of the selected cells. Modify the `background-color` property to change the appearance of the selected cell background.
 
-![Detail Grid cell selection in Blazor](images/hierarchy-grid/child-grid-cell-selection.webp)
+![Detail Data Grid cell selection in Blazor](images/hierarchy-grid/child-grid-cell-selection.webp)
 
 ## Limitations
 
