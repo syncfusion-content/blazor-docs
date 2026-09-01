@@ -478,13 +478,13 @@ The WildCard filter processes one or more search patterns using the <b>*</b> sym
    * **Immediate** - Filtering is applied on every keystroke. This mode is enabled by default.
    * **OnEnter** - Filtering is applied only when the Enter key is pressed.
 
-Operator |Description
------|-----
-a*b | Matches values that start with “a” and end with “b”.
-a* | Matches values that start with “a”.
-*b | Matches values that end with “b”.
-a | Matches values that contain “a”.
-ab* | Matches values that contain “a”, followed by any characters, then “b”, followed by any characters.
+Operator |Description | Business Example
+-----|-----|-----
+PRD* | Matches product codes that start with "PRD". | PRD001, PRD020, PRD050
+INV* | Matches invoice numbers that start with "INV". | INV1001, INV1002, INV2001
+EMP* | Matches employee IDs that start with "EMP". | EMP001, EMP002, EMP100
+*-2024 | Matches values ending with "-2024". | ORD-2024, INV-2024, PO-2024
+*Laptop* | Matches product names containing "Laptop". | Dell Laptop, HP Laptop Pro
 
 ![Blazor DataGrid with WildCard operator filtering](./images/blazor-datagrid-wildcard-operator-filtering.webp)
 
@@ -500,9 +500,9 @@ The **Like** filter processes single search patterns using the <b>%</b> symbol t
 
 | Operator | Description |
 | ----- | ----- |
-| %ab% | Matches values that contain “ab”. |
-| ab% | Matches values that end with “ab”. |
-| %ab | Matches values that start with “ab”. |
+| %INV% | Matches invoice numbers containing "INV". |
+| %Laptop% | Matches product names containing "Laptop". |
+| %Warehouse% | Matches location names containing "Warehouse". |
 
 ![Blazor DataGrid with like operator filtering](./images/blazor-datagrid-like-operator-filtering.webp)
 
@@ -594,7 +594,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXLRjlWbSNyhFVOZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Enable different filter types for columns
+## Configure Different Filter types for columns
 
 The Blazor DataGrid provides flexibility to customize filtering behavior for individual columns by enabling various filter types such as **Menu**, **Excel**, and **Checkbox**. This feature allows tailoring the filtering experience to meet the specific requirements of each column. For example, a menu-based filter may be suitable for a category column, an Excel-like filter for a date column, and a checkbox filter for a status column.
 
@@ -1303,7 +1303,7 @@ To wire up the handler, register the event through the `GridEvents` component in
 }
 ```
 
-## Clear filter programmatically
+## Clear Filters programmatically
 
 The Blazor DataGrid provides the [ClearFilteringAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearFilteringAsync) method to remove applied filters and reset the Grid to its original state.
 
@@ -1503,7 +1503,7 @@ public class OrderData
 
 Enum-type data cannot be filtered out-of-the-box in the Blazor DataGrid. To enable filtering on an enum column, the **Filter Template** feature must be used. The [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) allows you to customize the filter UI for specific columns with custom components and logic.
 
-In the following example, the [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) component is rendered within the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) of the **Type** column. The enumerated list is bound to the column, and filtering is applied dynamically using the  [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of the `SfDropDownList`. Within this event, the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_System_Object_System_String_) method is used to apply filtering to the **Type** column.
+In the following example, the [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) component is rendered within the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) of the **Status** column. The enumerated list is bound to the column, and filtering is applied dynamically using the  [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of the `SfDropDownList`. Within this event, the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_System_Object_System_String_) method is used to apply filtering to the **Type** column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1517,11 +1517,11 @@ In the following example, the [SfDropDownList](https://blazor.syncfusion.com/doc
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Type) HeaderText="Type" Type="Syncfusion.Blazor.Grids.ColumnType.String" Width="130">
+        <GridColumn Field=@nameof(OrderData.Status) HeaderText="Status" Type="Syncfusion.Blazor.Grids.ColumnType.String" Width="130">
             <FilterTemplate>
-                <SfDropDownList Placeholder="Type" ID="Type" Value="@((string)(context as PredicateModel).Value)" DataSource="@FilterDropData" TValue="string" TItem="Data">
+                <SfDropDownList Placeholder="Status" ID="Status" Value="@((string)(context as PredicateModel).Value)" DataSource="@FilterDropData" TValue="string" TItem="Data">
                     <DropDownListEvents TItem="Data" ValueChange="Change" TValue="string"></DropDownListEvents>
-                    <DropDownListFieldSettings Value="Type" Text="Type"></DropDownListFieldSettings>
+                    <DropDownListFieldSettings Value="Status" Text="Status"></DropDownListFieldSettings>
                 </SfDropDownList>
             </FilterTemplate>
         </GridColumn>
@@ -1533,10 +1533,11 @@ In the following example, the [SfDropDownList](https://blazor.syncfusion.com/doc
     public List<OrderData> GridData { get; set; }
     List<Data> FilterDropData = new List<Data>
     {
-        new Data() { Type= "All" },
-        new Data() { Type= "Base" },
-        new Data() { Type= "Replace" },
-        new Data() { Type= "Delta" }
+        new Data() { Status= "All" },
+        new Data() { Status= "Pending" },
+        new Data() { Status= "Approved" },
+        new Data() { Status= "Processing" },
+        new Data() { Status= "Completed" }
     };
 
     protected override void OnInitialized()
@@ -1552,13 +1553,13 @@ In the following example, the [SfDropDownList](https://blazor.syncfusion.com/doc
         }
         else if(args.Value != null)
         {
-            await this.Grid.FilterByColumnAsync("Type", "equal", args.Value);
+            await this.Grid.FilterByColumnAsync("Status", "equal", args.Value);
         }
     }
 
     public class Data
     {
-        public string Type { get; set; }
+        public string Status { get; set; }
     }
 }
 
@@ -1571,13 +1572,13 @@ public class OrderData
     public static List<OrderData> Orders = new List<OrderData>();
     public OrderData(){}
 
-    public OrderData(int? OrderID, string CustomerID, string ShipCity, string ShipName, FileType type)
+    public OrderData(int? OrderID, string CustomerID, string ShipCity, string ShipName, OrderStatus status)
     {
         this.OrderID = OrderID;
         this.CustomerID = CustomerID;
         this.ShipCity = ShipCity;
         this.ShipName = ShipName;
-        this.Type = type;
+        this.Status = status;
     }
 
     public static List<OrderData> GetAllRecords()
@@ -1587,15 +1588,15 @@ public class OrderData
             int OrderID = 10248;
             for (int i = 1; i < 3; i++)
             {
-                Orders.Add(new OrderData(OrderID + 1, "VINET", "Reims", "Vins et alcools Chevalier", FileType.Base));
-                Orders.Add(new OrderData(OrderID + 2, "TOMSP", "Münster", "Toms Spezialitäten", FileType.Replace));
-                Orders.Add(new OrderData(OrderID + 3, "HANAR", "Rio de Janeiro", "Hanari Carnes", FileType.Delta));
-                Orders.Add(new OrderData(OrderID + 4, "VICTE", "Lyon", "Victuailles en stock", FileType.Base));
-                Orders.Add(new OrderData(OrderID + 5, "SUPRD", "Charleroi", "Suprêmes délices", FileType.Replace));
-                Orders.Add(new OrderData(OrderID + 6, "HANAR", "Lyon", "Hanari Carnes", FileType.Delta));
-                Orders.Add(new OrderData(OrderID + 7, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese", FileType.Base));
-                Orders.Add(new OrderData(OrderID + 8, "RICSU", "Münster", "Richter Supermarkt", FileType.Replace));
-                Orders.Add(new OrderData(OrderID + 9, "WELLI", "Reims", "Wellington Import", FileType.Delta));
+                Orders.Add(new OrderData(OrderID + 1, "VINET", "Reims", "Vins et alcools Chevalier", OrderStatus.Pending));
+                Orders.Add(new OrderData(OrderID + 2, "TOMSP", "Münster", "Toms Spezialitäten", OrderStatus.Approved));
+                Orders.Add(new OrderData(OrderID + 3, "HANAR", "Rio de Janeiro", "Hanari Carnes", OrderStatus.Processing));
+                Orders.Add(new OrderData(OrderID + 4, "VICTE", "Lyon", "Victuailles en stock", OrderStatus.Completed));
+                Orders.Add(new OrderData(OrderID + 5, "SUPRD", "Charleroi", "Suprêmes délices", OrderStatus.Pending));
+                Orders.Add(new OrderData(OrderID + 6, "HANAR", "Lyon", "Hanari Carnes", OrderStatus.Approved));
+                Orders.Add(new OrderData(OrderID + 7, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese", OrderStatus.Processing));
+                Orders.Add(new OrderData(OrderID + 8, "RICSU", "Münster", "Richter Supermarkt", OrderStatus.Completed));
+                Orders.Add(new OrderData(OrderID + 9, "WELLI", "Reims", "Wellington Import", OrderStatus.Pending));
 
                 OrderID += 9;
             }
@@ -1607,16 +1608,17 @@ public class OrderData
     public string CustomerID { get; set; }
     public string ShipCity { get; set; }
     public string ShipName { get; set; }
-    public FileType Type { get; set; }
+    public OrderStatus Status { get; set; }
 }
 
-public enum FileType : short
+public enum OrderStatus : short
 {
-    Base = 1,
-    Replace = 2,
-    Delta = 3
+    Pending = 1,
+    Approved = 2,
+    Processing = 3,
+    Completed = 4
 }
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrRNbCFzRMFLzlK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLxjuZMnyQRWbck?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
