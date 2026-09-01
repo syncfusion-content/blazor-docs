@@ -39,7 +39,7 @@ The accessibility compliance for the Blazor Timeline component is outlined below
 
 ## WAI-ARIA Attributes
 
-The following ARIA attributes are used in the Timeline component:
+The following ARIA attributes are used in the Blazor  Timeline component:
 
 | Attributes | Purpose |
 | --- | --- |

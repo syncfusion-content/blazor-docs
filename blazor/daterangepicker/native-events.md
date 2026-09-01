@@ -9,9 +9,9 @@ documentation: ug
 
 # Native Events in Blazor DateRangePicker
 
-The following section explains the steps to bind native events to the DateRangePicker and pass data to the event handler.
+The following section explains the steps to bind native events to the Blazor DateRangePicker and pass data to the event handler.
 
-## Bind native events to DateRangePicker
+## Bind native events to Blazor DateRangePicker
 
 You can access any native event by using the `<event>` attribute on the component. The attribute's value is treated as an event handler.
 

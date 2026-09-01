@@ -1,130 +1,188 @@
 ---
 layout: post
-title: Add Blazor component to an existing ASP.NET Core MVC App | Syncfusion®
-description: Learn how to integrate a Blazor component into an existing ASP.NET Core MVC application using the component tag helper and explore to more details.
+title: Add a Blazor DataGrid to an Existing ASP.NET Core MVC App | Syncfusion
+description: Learn how to add a Syncfusion Blazor DataGrid component to an existing ASP.NET Core MVC application using the built-in component tag helper in Visual Studio.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Add a Blazor component to an existing ASP.NET Core MVC application
+# Add a Blazor DataGrid to an Existing ASP.NET Core MVC Application
 
-This guide explains how to add a Blazor component to an existing ASP.NET Core MVC application.
+This guide explains how to add a [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component to an existing ASP.NET Core MVC application.
 
-1. Open the existing ASP.NET Core MVC application in Visual Studio 2022.
+## Prerequisites
 
-2. Right-click the project and select `Manage NuGet Packages`.
+* [.NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks) (version 8.0 or later).
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later.
 
-    ![Manage NuGet package on ASP.NET Core MVC app](images/asp-mvc-manage-nuget-package.webp)
+## Steps to integrate DataGrid component
 
-3. Search for the `Syncfusion.Blazor.Grid` and `Syncfusion.Blazor.Themes` NuGet packages and install them.
+Open the existing ASP.NET Core MVC application in Visual Studio, and follow these steps one by one.
 
-    ![Installing Blazor Grid NuGet package](images/asp-mvc-install-nuget.webp)
+### Install the Blazor NuGet packages
 
-4. Register Blazor Server and Blazor services in the `~/Program.cs` file.
+* Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
+* Search the required NuGet packages [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and install them.
 
-    ```c#
-    using Syncfusion.Blazor;
-    ....
-    builder.Services.AddServerSideBlazor();
-    builder.Services.AddSyncfusionBlazor();
+Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
-    ```
+{% tabs %}
+{% highlight razor tabtitle="Package Manager Console" %}
 
-5. Add BlazorHub in the `~/Program.cs` file.
+Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
-    ```c#
-    // Map your endpoints here...
+{% endhighlight %}
+{% endtabs %}
 
-    app.MapRazorPages();
-    app.MapBlazorHub();
-    app.MapFallbackToPage("/_Host");
-    ```
+### Add the Blazor namespaces to the project
 
-6. Create a `~/_Imports.razor` file at the root of the application and add the following namespaces.
+Create a new file named **`_Imports.razor`** at the project root and include the following namespaces.
 
-    ```cshtml
-    @using System.Net.Http
-    @using Microsoft.AspNetCore.Authorization
-    @using Microsoft.AspNetCore.Components.Authorization
-    @using Microsoft.AspNetCore.Components.Forms
-    @using Microsoft.AspNetCore.Components.Routing
-    @using Microsoft.AspNetCore.Components.Web
-    @using Microsoft.AspNetCore.Components.Web.Virtualization
-    @using Microsoft.JSInterop
-    @using AspCoreMvcApp;
-    @using Syncfusion.Blazor
-    @using Syncfusion.Blazor.Grids
-    ```
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
-7. Add Blazor script references at the end of the `<body>` tag and theme and script references inside the `<head>` tag in the `~/Views/Shared/_Layout.cshtml` file.
+@using System.Net.Http
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components.Web.Virtualization
+@using Microsoft.JSInterop
+@using AspCoreMvcApp
+@using AspCoreMvcApp.Components
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Grids
 
-    ```cshtml
-    <head>
-        ....
-        ....
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-        <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-    </head>
-    <body>
-        ....
-        ....
-        <script src="_framework/blazor.server.js"></script>
-    </body>
-    ```
+{% endhighlight %}
+{% endtabs %}
 
-8. Create a new `~/Components` folder at the root of the application. Right-click the `~/Components` folder and add a new razor component via `Add -> Razor Component`.
+### Register the Blazor Server and Blazor services in `~/Program.cs`
 
-9. Add the Blazor component in the created razor component file.
+Open the **Program.cs** file and include the required namespace reference `using Syncfusion.Blazor;` at the top then register the services on the `WebApplicationBuilder`.
 
-    ```cshtml
-    <SfGrid DataSource="@Orders" AllowPaging="true">
-        <GridPageSettings PageSize="5"></GridPageSettings>
-        <GridColumns>
-            <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Width="120"></GridColumn>
-            <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-            <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Width="130"></GridColumn>
-            <GridColumn Field=@nameof(Order.Freight) Format="C2" Width="120"></GridColumn>
-        </GridColumns>
-    </SfGrid>
+{% tabs %}
+{% highlight C# tabtitle="Program.cs" %}
 
-    @code{
-        public List<Order> Orders { get; set; }
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSyncfusionBlazor();
 
-        protected override void OnInitialized()
+{% endhighlight %}
+{% endtabs %}
+
+### Map the Blazor hubs and Razor Pages in `~/Program.cs`
+
+{% tabs %}
+{% highlight C# tabtitle="Program.cs" %}
+
+app.MapRazorPages();
+app.MapBlazorHub();
+
+{% endhighlight %}
+{% endtabs %}
+
+
+### Add the theme stylesheet and script references
+
+Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<head>` section in the `~/Views/Shared/_Layout.cshtml` file.
+
+{% tabs %}
+{% highlight html tabtitle="_Layout.cshtml" %}
+
+<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
+
+{% endhighlight %}
+{% endtabs %}
+
+Add required Blazor script references at the end of the `<body>` section in the `~/Views/Shared/_Layout.cshtml` file.
+
+{% tabs %}
+{% highlight html tabtitle="_Layout.cshtml" %}
+
+<script src="_framework/blazor.server.js"></script>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Create a Razor Component that hosts the Blazor DataGrid.
+
+* Right-click the project root, choose **Add** → **New Folder**, and name it **Components**.
+* Right-click the **Components** folder and choose **Add** → **Razor Component**.
+* Name the file **`MyGrid.razor`**. The file name becomes the component class name (for example, `MyGrid`).
+* Replace the contents of `MyGrid.razor` with:
+
+{% tabs %}
+{% highlight razor tabtitle="MyGrid.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true">
+    <GridPageSettings PageSize="5"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Width="120" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerName) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Width="130" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="120" TextAlign="TextAlign.Right"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        var customers = new string[] { "James Hopper", "Michael Smith", "Sarah Johnson", "Robert Davis", "Emily Wilson" };
+        var cities = new string[] { "New York", "Los Angeles", "Chicago", "Houston", "Phoenix" };
+        var rng = new Random();
+        Orders = Enumerable.Range(1, 50).Select(x => new Order
         {
-            Orders = Enumerable.Range(1, 50).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
-            }).ToList();
-        }
-
-        public class Order
-        {
-            public int? OrderID { get; set; }
-            public string CustomerID { get; set; }
-            public DateTime? OrderDate { get; set; }
-            public double? Freight { get; set; }
-        }
+            OrderID = 1000 + x,
+            CustomerName = customers[rng.Next(customers.Length)],
+            ShipCity = cities[rng.Next(cities.Length)],
+            Freight = Math.Round(10.5 + (x * 7.3), 2),
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
     }
-    ```
 
-10. Add the Razor component to the `~/Views/Home/Index.cshtml` page using the `component` tag helper. The `.razor` file name is the razor component type. For example, the `SfGrid` component above is added in the `~/Components/MyGrid.razor` file.
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string? CustomerName { get; set; }
+        public string? ShipCity { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
 
-    ```cshtml
-    @using AspCoreMvcApp.Components;
+### Insert the component into the MVC view using the component tag helper
 
-    <component type="typeof(MyGrid)" render-mode="ServerPrerendered" />
-    ```
+Open **~/Views/Home/Index.cshtml** and add the following at the top, then place the `<component>` tag where the Blazor DataGrid should appear.
 
-11. Run the application by pressing `F5`. The Blazor Grid component is rendered in the ASP.NET Core MVC application.
+{% tabs %}
+{% highlight razor tabtitle="Index.cshtml" %}
 
-    ![Blazor Grid component rendered on ASP.NET Core MVC application](images/asp-mvc-grid.webp)
+@using AspCoreMvcApp.Components
 
-## See Also
+<component type="typeof(MyGrid)" render-mode="ServerPrerendered" />
+
+{% endhighlight %}
+{% endtabs %}
+
+### Run the application
+
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio to launch the MVC application. Navigate to the MVC page where you placed the `<component>` tag. The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) renders inside the MVC view.
+
+![Blazor DataGrid rendered on an ASP.NET Core MVC application](images/asp-mvc-grid.webp)
+
+## See also
 
 * [Component Tag Helper in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/component-tag-helper)
 * [Integrating Blazor components into existing ASP.NET Core MVC apps](https://devblogs.microsoft.com/premier-developer/integrating-blazor-components-into-existing-asp-net-core-mvc-apps/)
+* [Getting started with the Blazor DataGrid in a Blazor Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)

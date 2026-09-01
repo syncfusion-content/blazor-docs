@@ -11,7 +11,7 @@ documentation: ug
 
 ## Populating items using CarouselItem
 
-You can populate the Carousel by declaring `CarouselItem` child components inside `SfCarousel`. You can customize the transition interval for each item separately using the `Interval` property on `CarouselItem`. The following example demonstrates populating items using `CarouselItem`.
+You can populate the Blazor Carousel by declaring `CarouselItem` child components inside `SfCarousel`. You can customize the transition interval for each item separately using the `Interval` property on `CarouselItem`. The following example demonstrates populating items using `CarouselItem`.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -57,7 +57,7 @@ You can populate the Carousel by declaring `CarouselItem` child components insid
 
 ## Selection
 
-By default, the Carousel displays the first slide. You can select a different slide in one of the following ways:
+By default, the Blazor Carousel displays the first slide. You can select a different slide in one of the following ways:
 
 * Select an item using the property.
 * Select an item using the method.
@@ -110,11 +110,11 @@ Use the [SelectedIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBRXxMLgBrfFPXo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel selected slide](images/selected_index.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBRXxMLgBrfFPXo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Carousel selected slide](images/selected_index.webp)" %}
 
 ### Select an item using the method
 
-Use the [`PreviousAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_PreviousAsync) or [`NextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_NextAsync) public methods of the Carousel component to navigate to the previous or next slide programmatically.
+Use the [`PreviousAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_PreviousAsync) or [`NextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_NextAsync) public methods of the Blazor Carousel component to navigate to the previous or next slide programmatically.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -184,7 +184,7 @@ Use the [`PreviousAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## Partial visible slides
 
-The Carousel can display one complete slide along with a partial view of the adjacent (previous and next) slides at the same time. You can enable or disable this behavior using the [`PartialVisible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_PartialVisible) property (default: `false`).
+The Blazor Carousel can display one complete slide along with a partial view of the adjacent (previous and next) slides at the same time. You can enable or disable this behavior using the [`PartialVisible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_PartialVisible) property (default: `false`).
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -235,7 +235,7 @@ The Carousel can display one complete slide along with a partial view of the adj
 
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBdXRshqBqhCAOS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel partial visible slide](images/partial-visible.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBdXRshqBqhCAOS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Carousel partial visible slide](images/partial-visible.webp)" %}
 
 N> Slide animation applies only when `PartialVisible` is enabled.
 
@@ -294,7 +294,7 @@ The following example demonstrates the `PartialVisible` behavior when `Loop` is 
 
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVxXniVUBqodeNT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel partial visible slide](images/without-loop.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVxXniVUBqodeNT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Carousel partial visible slide](images/without-loop.webp)" %}
 
 ## See also
 

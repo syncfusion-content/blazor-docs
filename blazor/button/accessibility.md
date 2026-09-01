@@ -42,7 +42,7 @@ The Blazor Button component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/a
 
 | Attributes | Purpose |
 | --- | --- |
-| `aria-label` | Provides an accessible name for the icon only button. |
+| `aria-label` | Provides an accessible name for the icon only Blazor Button. |
 
 ## Keyboard interaction
 
@@ -50,8 +50,8 @@ The Blazor Button component follows the [keyboard interaction](https://www.w3.or
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
-| <kbd>Space</kbd> | <kbd>Space</kbd> | When the button has focus, pressing the <kbd>Space</kbd> key activates the button. |
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | When the button has focus, pressing the <kbd>Enter</kbd> key activates the button. |
+| <kbd>Space</kbd> | <kbd>Space</kbd> | When the Blazor button has focus, pressing the <kbd>Space</kbd> key activates the button. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | When the Blazor button has focus, pressing the <kbd>Enter</kbd> key activates the button. |
 
 ## Ensuring accessibility
 

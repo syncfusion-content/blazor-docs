@@ -16,7 +16,7 @@ The masking feature guides users to enter date and time values that match the di
 
 {% endhighlight %}
 
-![Blazor DateTimePicker with EnableMask](./images/DateTimePickerMask.gif)
+![Blazor DateTime Picker with EnableMask](./images/DateTimePickerMask.gif)
 
 ## MaskPlaceholder
 
@@ -40,11 +40,11 @@ By default, the component uses placeholder text from the current culture's resou
 
 {% endhighlight %}
 
-![Blazor DateTimePicker Mask Support with MaskPlaceholder](./images/DateTimePickerMaskPlaceholder.gif)
+![Blazor DateTime Picker Mask Support with MaskPlaceholder](./images/DateTimePickerMaskPlaceholder.gif)
 
 > If custom placeholder text is not specified for a segment, the component uses the default placeholder text from the current culture's resource file for that segment. The mask pattern and separators are culture-aware, and validation behavior (such as handling incomplete or out-of-range input) follows the component's configuration. Enable [StrictMode](./strict-mode) to enforce the mask on blur; with `StrictMode="false"`, masked but incomplete input may resolve to `null`.
 
 ## See also
 
-* [DateTime Format in Blazor DateTimePicker](./date-time-format)
-* [Strict Mode in Blazor DateTimePicker](./strict-mode)
+* [DateTime Format in Blazor DateTime Picker](./date-time-format)
+* [Strict Mode in Blazor DateTime Picker](./strict-mode)

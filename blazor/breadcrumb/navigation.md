@@ -52,9 +52,9 @@ Set an absolute URL in the `Url` property of the `BreadcrumbItem`. Use absolute 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtrHtdMCfoHqDSRD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage="[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-absolute-url.webp)" %}
 
-## Enable navigation for the last Breadcrumb item
+## Enable navigation for the last Blazor Breadcrumb item
 
-By default, the last (active) Breadcrumb item is not clickable because it represents the current page. Set the [EnableActiveItemNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableActiveItemNavigation) property to `true` to make the last item navigable.
+By default, the last (active) Blazor Breadcrumb item is not clickable because it represents the current page. Set the [EnableActiveItemNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableActiveItemNavigation) property to `true` to make the last item navigable.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

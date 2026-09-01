@@ -43,7 +43,7 @@ The accessibility compliance for the Blazor Toolbar component is outlined below.
 
 The Blazor Toolbar component is designed considering the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) standard. ARIA Accessibility support ensures the Toolbar is accessible by screen readers and other assistive technology devices.
 
-The following list of attributes is added to the Toolbar.
+The following list of attributes is added to the Blazor Toolbar.
 
 | **Attributes** | **Purpose** |
 | --- | --- |

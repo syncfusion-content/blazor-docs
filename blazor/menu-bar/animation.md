@@ -9,7 +9,7 @@ documentation: ug
 
 # Animation in Blazor Menu Bar
 
-To change the open/close animation of the Menu Bar component, the [`MenuAnimationSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuAnimationSettings.html) child tag of `SfMenu` is used to initialize the animation properties. `Duration` is specified in milliseconds, and `Effect` accepts any value from the [`MenuEffect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEffect.html) enum.
+To change the open/close animation of the Blazor Menu Bar component, the [`MenuAnimationSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuAnimationSettings.html) child tag of `SfMenu` is used to initialize the animation properties. `Duration` is specified in milliseconds, and `Effect` accepts any value from the [`MenuEffect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEffect.html) enum.
 
 The supported effects are:
 
@@ -63,4 +63,4 @@ The following sample illustrates how to animate the Menu Bar's submenu with the 
 
 ```
 
-![Blazor MenuBar with SlideDown animation](./images/blazor-menubar-animation.webp)
+![Blazor Menu Bar with SlideDown animation](./images/blazor-menubar-animation.webp)
