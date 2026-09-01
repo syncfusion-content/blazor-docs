@@ -9,15 +9,15 @@ documentation: ug
 
 # Keytip in Blazor Ribbon
 
-The Blazor Ribbon component supports keyboard navigation through keytips, enabling users to interact with the Ribbon interface without a mouse. Keytips can be enabled by setting the `EnableKeyTips` property, allowing users to quickly access commands using keyboard shortcuts.
+The Blazor Ribbon component supports keyboard navigation through keytips, enabling users to interact with the Blazor Ribbon interface without a mouse. Keytips can be enabled by setting the `EnableKeyTips` property, allowing users to quickly access commands using keyboard shortcuts.
 
 The keyTips will be shown when the **Alt + Windows/Command(on macOS)** keys are pressed.
 
-## KeyTips for different ribbon elements
+## KeyTips for different Blazor Ribbon elements
 
-### Ribbon items keytip
+### Blazor Ribbon items keytip
 
-Keytips can be added to Ribbon items by using the `KeyTip` property in the `RibbonItem` directive.
+Keytips can be added to Blazor Ribbon items by using the `KeyTip` property in the `RibbonItem` directive.
 
 {% tabs %}
 {% highlight razor %}
@@ -275,7 +275,7 @@ Keytips can be added to Ribbon items by using the `KeyTip` property in the `Ribb
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon items keytip](./images/keytip/items-keytip.webp)
+![Blazor Ribbon items keytip](./images/keytip/items-keytip.webp)
 
 ### File menu keytip
 
@@ -346,7 +346,7 @@ A keytip can be added to the File menu by using the `KeyTip` property.
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon file menu keytip](./images/keytip/file-menu-keytip.webp)
+![Blazor Ribbon file menu keytip](./images/keytip/file-menu-keytip.webp)
 
 ### Backstage menu keytip
 
@@ -418,11 +418,11 @@ Keytips can be added for the backstage button and menu items by using the `KeyTi
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon backstage menu keytip](./images/keytip/backstage-keytip.webp)
+![Blazor Ribbon backstage menu keytip](./images/keytip/backstage-keytip.webp)
 
-### Ribbon layout switcher keytip
+### Blazor Ribbon layout switcher keytip
 
-A keytip can be added to the layout switcher by using the `LayoutSwitcherKeyTip` property to switch between the `Classic` and `Simplified` Ribbon layouts.
+A keytip can be added to the layout switcher by using the `LayoutSwitcherKeyTip` property to switch between the `Classic` and `Simplified` Blazor Ribbon layouts.
 
 {% tabs %}
 {% highlight razor %}
@@ -489,11 +489,11 @@ A keytip can be added to the layout switcher by using the `LayoutSwitcherKeyTip`
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon layout switcher keytip](./images/keytip/layout-switcher-keytip.webp)
+![Blazor Ribbon layout switcher keytip](./images/keytip/layout-switcher-keytip.webp)
 
-### Ribbon launcher icon keytip
+### Blazor Ribbon launcher icon keytip
 
-A keytip can be added to the launcher icon by using the `LauncherIconKeyTip` property to quickly open additional options in Ribbon groups.
+A keytip can be added to the launcher icon by using the `LauncherIconKeyTip` property to quickly open additional options in Blazor Ribbon groups.
 
 {% tabs %}
 {% highlight razor %}
@@ -561,20 +561,20 @@ A keytip can be added to the launcher icon by using the `LauncherIconKeyTip` pro
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon launcher icon keytip](./images/keytip/launcher-icon-keytip.webp)
+![Blazor Ribbon launcher icon keytip](./images/keytip/launcher-icon-keytip.webp)
 
 ## Methods
 
 ### Show keytips
 
-The `ShowKeyTipsAsync` method displays keytips dynamically for the Ribbon.
+The `ShowKeyTipsAsync` method displays keytips dynamically for the Blazor Ribbon.
 
 - To activate a specific key action, pass the corresponding keytip string as an argument.
 - For example, calling `ShowKeyTipsAsync('H')` will look for the specific item associated with the **H** key and trigger its respective action.
 
 ### Hide keytips
 
-The `HideKeyTipsAsync` method removes all visible keytips from the Ribbon dynamically.
+The `HideKeyTipsAsync` method removes all visible keytips from the Blazor Ribbon dynamically.
 
 {% tabs %}
 {% highlight razor %}
@@ -654,11 +654,11 @@ The `HideKeyTipsAsync` method removes all visible keytips from the Ribbon dynami
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Show Hide keytips](./images/keytip/show-hide-keytip.webp)
+![Blazor Ribbon Show Hide keytips](./images/keytip/show-hide-keytip.webp)
 
 ## Guidelines for adding keytips
 
-Before adding keytips to Ribbon items, follow these best practices:
+Before adding keytips to Blazor Ribbon items, follow these best practices:
 
 * Avoid assigning the same keytip to multiple items.
 

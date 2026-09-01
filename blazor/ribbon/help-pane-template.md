@@ -12,7 +12,7 @@ documentation: ug
 
 # Help Pane Template in Blazor Ribbon
 
-The help pane is dedicated area where the users can define help contents like controlling document permissions, sharing features, and more which appears on the right side of the Ribbon. You can use the [HelpPaneTemplate][HelpPaneTemplate] tag directive within the [SfRibbon][SfRibbon] to set the help pane contents.
+The help pane is dedicated area where the users can define help contents like controlling document permissions, sharing features, and more which appears on the right side of the Blazor Ribbon. You can use the [HelpPaneTemplate][HelpPaneTemplate] tag directive within the [SfRibbon][SfRibbon] to set the help pane contents.
 
 {% tabs %}
 {% highlight razor %}
@@ -62,4 +62,4 @@ The help pane is dedicated area where the users can define help contents like co
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Help Pane Template](./images/ribbon_helppane.webp)
+![Blazor Ribbon Help Pane Template](./images/Blazor Ribbon_helppane.webp)
