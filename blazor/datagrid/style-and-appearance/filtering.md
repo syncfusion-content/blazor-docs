@@ -9,14 +9,14 @@ documentation: ug
 
 # Filtering Customization in Blazor Data Grid
 
-The appearance of filtering elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. Styling options are available for different parts of the filtering interface:
+The appearance of filtering elements in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. Styling options are available for different parts of the filtering interface:
 
 - **Filter bar cell and input elements:** Used to enter filter values directly in the header row.
 - **Input focus styles:** Visual highlight applied when the filter input field is focused.
 - **Clear and filter icons:** Icons for clearing filter values and indicating active filters in column headers.
 - **Filter dialog content and footer:** Sections of the filter popup used for entering filter criteria and confirming actions.
 - **Input fields and buttons within the filter dialog:** Controls used to specify filter values and apply or cancel filtering.
-- **Excel-style number filter visuals:** Menu-style interface for selecting numeric filter conditions in Excel-like filtering mode.
+- **Excel-style number filter menu:** Menu-style interface for selecting numeric filter conditions in Excel-like filtering mode.
 
 ## Customize the filter bar cell element
 
@@ -25,10 +25,11 @@ The **.e-filterbarcell** class styles the filter bar cells in the header row. Us
 ```css
 .e-grid .e-filterbarcell {
     background-color: #045fb4;
+    color: #ffffff;
 }
 ```
 
-Properties like **background-color**, **padding**, and **border** can be changed to visually distinguish the filter row from header cells.
+Properties like **background-color**, **color**, **padding**, and **border** can be changed to visually distinguish the filter row from header cells.
 
 ![Filter bar cell with custom background](../images/style-and-appearance/filter-bar-cell-element.webp)
 
@@ -41,11 +42,11 @@ The **.e-input** class inside **.e-filterbarcell** styles the input field in the
 }
 ```
 
-Adjust properties such as **font-family**, **font-size**, and **border** can be adjusted to improve readability and match the grid design.
+Properties such as **font-family**, **font-size**, and **border** can be adjusted to improve readability and match the Data Grid design.
 
 ![Filter bar input with custom font](../images/style-and-appearance/filter-bar-input-element.webp)
 
-## Customize the input focus
+## Customize the filter bar input focus
 
 The **.e-input-focus** class styles the filter bar input group when focused. Apply CSS to change its appearance:
 
@@ -61,7 +62,7 @@ Change properties like **background-color** and **border** to enhance focus visi
 
 ## Customize the filter bar input clear icon
 
-The **.e-clear-icon::before** class defines the clear icon in the filter bar input. Apply CSS to change its appearance:
+The **.e-clear-icon::before** pseudo-element selector styles the clear icon in the filter bar input. Apply CSS to change its appearance:
 
 ```css
 .e-grid .e-filterbarcell .e-input-group .e-clear-icon::before {
@@ -119,8 +120,8 @@ The `content` property can be updated to use a different glyph from the icon set
 </style>
 
 @code {
-    
     private List<OrderData> Orders { get; set; }
+
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
@@ -173,9 +174,9 @@ internal sealed class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLntQXWVnLBYnNS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Customize the filtering icon in the header
+## Customize the filter icon in the header
 
-The **.e-icon-filter::before** class styles the filter icon in column headers. Apply CSS to modify its look:
+The **.e-icon-filter::before** pseudo-element selector styles the filter icon in column headers. Apply CSS to modify its look:
 
 ```css
 .e-grid .e-icon-filter::before {
@@ -189,7 +190,7 @@ Update the `content` value to match the desired icon glyph.
 
 ## Customize the filter dialog content
 
-The **.e-filter-popup .e-dlg-content** class styles the content area of the filter dialog. Apply CSS to change its appearance:
+The **.e-filter-popup .e-dlg-content** selector styles the content area of the filter dialog. Apply CSS to change its appearance:
 
 ```css
 .e-grid .e-filter-popup .e-dlg-content {
@@ -203,7 +204,7 @@ Modify properties such as **background-color**, **padding**, and **border** to m
 
 ## Customize the filter dialog footer
 
-The **.e-filter-popup .e-footer-content** class styles the footer section of the filter dialog. Apply CSS to adjust its appearance:
+The **.e-filter-popup .e-footer-content** selector styles the footer section of the filter dialog. Apply CSS to adjust its appearance:
 
 ```css
 .e-grid .e-filter-popup .e-footer-content {
@@ -217,7 +218,7 @@ Properties like **background-color**, **text-align**, and **border** can be chan
 
 ## Customize the filter dialog input field
 
-The **.e-input** class inside **.e-filter-popup** targets input fields in the filter dialog. Use CSS to adjust its appearance:
+The **.e-input** selector inside **.e-filter-popup** styles input fields in the filter dialog. Use CSS to adjust its appearance:
 
 ```css
 .e-grid .e-filter-popup .e-input-group input.e-input {
@@ -231,7 +232,7 @@ Adjust properties such as **font-family**, **color**, and **border** to improve 
 
 ## Customize the filter dialog button element
 
-The **.e-filter-popup .e-btn** class styles buttons inside the filter dialog. Apply CSS to modify their appearance:
+The **.e-filter-popup .e-btn** selector styles buttons inside the filter dialog. Apply CSS to modify their appearance:
 
 ```css
 .e-grid .e-filter-popup .e-btn {
@@ -245,7 +246,9 @@ Change properties like **font-family**, **background-color**, and **border** to 
 
 ## Customize the Excel-style number filter menu
 
-The **.e-contextmenu-container ul** class inside **.e-filter-popup** styles the number filter list in the Excel-style filter dialog. Apply CSS to change its appearance:
+The **.e-contextmenu-container ul** descendant selector inside **.e-filter-popup** styles the number filter list in the Excel-style filter dialog. Apply CSS to change its appearance.
+
+> **Note:** This style applies only when the Data Grid uses Excel-style filtering. Set `Type="FilterType.Excel"` in `GridFilterSettings` to render the number filter menu that contains the `.e-contextmenu-container` element.
 
 ```css
 .e-grid .e-filter-popup .e-contextmenu-container ul {
@@ -267,7 +270,7 @@ Properties such as **background-color**, **color**, and **text-align** can be ad
         AllowFiltering="true"
         AllowPaging="true">
     <GridPageSettings PageSize="8"></GridPageSettings>
-    <GridFilterSettings Type="FilterType.Menu"></GridFilterSettings>
+    <GridFilterSettings Type="FilterType.Excel"></GridFilterSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
@@ -294,12 +297,6 @@ Properties such as **background-color**, **color**, and **text-align** can be ad
         font-family: cursive;
     }
 
-    /* Optional: focus outline inside the filter dialog for keyboard users */
-    .e-grid .e-filter-popup .e-input-group input.e-input:focus-visible,
-    .e-grid .e-filter-popup .e-btn:focus-visible {
-        outline: 2px solid #005a9e;
-        outline-offset: 2px;
-    }
 </style>
 
 @code {
@@ -355,4 +352,4 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVdNcDsVHVxdOKe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVHZvCPpBhnqemA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
