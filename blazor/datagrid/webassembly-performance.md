@@ -9,62 +9,62 @@ documentation: ug
 
 # WebAssembly Performance in Blazor Data Grid
 
-This section outlines performance guidelines for using the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) efficiently in Blazor WebAssembly applications. General Blazor WebAssembly performance guidance is available in the [Microsoft documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance/?view=aspnetcore-9.0).
+This section outlines performance guidelines for using the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-Data Grid) efficiently in Blazor WebAssembly applications. General Blazor WebAssembly performance guidance is available in the [Microsoft documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance/?view=aspnetcore-10.0).
 
-N> Refer to Getting Started for configuration details: [Blazor Server DataGrid](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) and [Blazor WebAssembly DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started)  using Visual Studio.
+N> **Hosting model applicability:** The `PreventRender` API and the paging/virtualization guidance apply to both Blazor Server and Blazor WebAssembly. The examples on this page emphasize WebAssembly because the Blazor diffing cost is most noticeable in WebAssembly. For hosting-model-specific tuning, also review the general [Microsoft Blazor performance guide](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance/?view=aspnetcore-10.0).
+
+N> Refer to the Getting Started pages for configuration details: [Blazor WebAssembly Data Grid](https://blazor.syncfusion.com/documentation/datagrid/getting-started) using Visual Studio.
 
 ## Avoid unnecessary component renders
 
-During the Blazor diffing process, each DataGrid cell and child component is evaluated for re-rendering. `Event callbacks` can trigger additional renders across the component tree. Fine-grained control over DataGrid rendering helps avoid unnecessary work.
+During the Blazor diffing process, each Data Grid cell and child component is evaluated for re-rendering. `Event callbacks` can trigger additional renders across the component tree. Fine-grained control over Data Grid rendering helps avoid unnecessary work.
 
-Use [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PreventRender_System_Boolean_) on the DataGrid instance to skip participation in the next render cycle. This method internally affects the DataGrid’s [ShouldRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShouldRender) behavior.
+Use [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PreventRender_System_Boolean_) on the Data Grid instance to skip participation in the next render cycle. This method internally affects the Data Grid’s [ShouldRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShouldRender) behavior.
+
+> `PreventRender` must be called from a parent component (typically a click handler or event callback in the same Blazor render cycle) before the Data Grid is re-rendered. Calling it after the render has already completed, or from a child component the Data Grid does not share a render scope with, has no effect on that cycle.
 
 In the following example:
 
 - PreventRender is called in a click callback.
-- The DataGrid is excluded from the render cycle caused by the click, and only currentCount updates.
+- The Data Grid is excluded from the render cycle caused by the click, and only `currentCount` updates.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
-<h1>Counter</h1>
-
 <p>Current count: @currentCount</p>
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
-<SfGrid @ref="grid" DataSource="@Orders" AllowPaging="true">
+<SfGrid @ref="Grid" DataSource="@Orders">
     <GridColumns>
         <GridColumn Type="ColumnType.CheckBox" Width="50"></GridColumn>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field="@nameof(OrderData.Verified)" DisplayAsCheckBox="true" Width="70"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-
 @code {
-    SfGrid<OrderData> grid { get; set; }
+    private SfGrid<OrderData> Grid { get; set; }
     private int currentCount = 0;
-       public List<OrderData> Orders { get; set; }
+    public List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
-    }   
+    }
 
     private void IncrementCount()
     {
-        grid.PreventRender();
+        Grid.PreventRender(true);
         currentCount++;
     }
 }
 
 {% endhighlight %}
-{% highlight c# tabtitle="OrderDetails.cs" %}
+{% highlight c# tabtitle="OrderData.cs" %}
 
 public class OrderData
 {
@@ -107,19 +107,14 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrntmNHrYKBrMhu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLxjvsPzObSazdQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> - `PreventRender` accepts a Boolean argument to disable (**true**) or enable (**false**) participation in rendering.
-> - Call `PreventRender` only after the DataGrid completes its initial render; calling during initial render has no effect.
+> - Pass **true** to `PreventRender` to skip the Data Grid’s participation in the next render cycle; pass **false** to render normally. The default value is **true**, so `PreventRender()` and `PreventRender(true)` are equivalent.
+> - Call `PreventRender` only after the Data Grid completes its initial render; calling during initial render has no effect.
 
-## Avoid unnecessary component renders after Blazor DataGrid events
+## Prevent re-renders from Data Grid events
 
-When callback methods are assigned to DataGrid events, the parent component re-renders once the event completes. To prevent re-rendering of the DataGrid in that cycle, set the [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowSelectEventArgs-1.html#Syncfusion_Blazor_Grids_RowSelectEventArgs_1_PreventRender) property on the corresponding event args to true (when available).
-
-In the following example:
-
-- [RowSelected](https://blazor.syncfusion.com/documentation/datagrid/events#rowselected) invokes a callback that would normally trigger `StateHasChanged` in the parent.
-- Setting `RowSelectEventArgs<Order>.PreventRender` to **true** prevents the DataGrid from participating in that re-render.
+When callback methods are assigned to Data Grid events, the parent component re-renders once the event completes. To prevent re-rendering of the Data Grid in that cycle, set the [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowSelectEventArgs-1.html#Syncfusion_Blazor_Grids_RowSelectEventArgs_1_PreventRender) property on the corresponding event args to true (when available). The sample below uses the [RowSelected](https://blazor.syncfusion.com/documentation/datagrid/events#rowselected) event to demonstrate this approach.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -127,40 +122,38 @@ In the following example:
 @using Syncfusion.Blazor.Grids
 <p>Selected OrderID: <span style="color:red">@SelectedOrder.OrderID</span></p>
 
-<SfGrid @ref="grid" DataSource="@Orders">
+<SfGrid DataSource="@Orders">
     <GridSelectionSettings PersistSelection="true"></GridSelectionSettings>
     <GridColumns>
         <GridColumn Type="ColumnType.CheckBox" Width="50"></GridColumn>
         <GridColumn Field=@nameof(OrderData.OrderID) IsPrimaryKey="true" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field="@nameof(OrderData.Verified)" DisplayAsCheckBox="true" Width="70"></GridColumn>
     </GridColumns>
     <GridEvents TValue="OrderData" RowSelected="OnRowSelected"></GridEvents>
 </SfGrid>
 
-
 @code {
-    SfGrid<OrderData> grid { get; set; }
-    OrderData SelectedOrder = new OrderData { };
-
+    OrderData SelectedOrder = new OrderData();
     public List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
-    } 
+    }
 
     private void OnRowSelected(RowSelectEventArgs<OrderData> args)
     {
-        args.PreventRender = true; //Without this, you may see noticeable delay in selection with rows in Grid.
+        // Without PreventRender, the Data Grid re-renders on every selection,
+        // which can cause noticeable delay when many rows are involved.
+        args.PreventRender = true;
         SelectedOrder = args.Data;
     }
 }
 
 {% endhighlight %}
-{% highlight c# tabtitle="OrderDetails.cs" %}
+{% highlight c# tabtitle="OrderData.cs" %}
 
 public class OrderData
 {
@@ -203,13 +196,11 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLRDGNxBEqcogXh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrHNbivetRLqBuB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> - `args.PreventRender` affects rendering only for the event-triggered cycle and does not change component state beyond that cycle.
-> - Prefer setting `PreventRender` to **true** for user-interactive events (for example, [RowSelected](https://blazor.syncfusion.com/documentation/datagrid/events#rowselected), [RowSelecting](https://blazor.syncfusion.com/documentation/datagrid/events#rowselecting)) to reduce UI latency. For events without args (for example, [DataBound](https://blazor.syncfusion.com/documentation/datagrid/events#databound)), call the grid’s `PreventRender` method.
+> - Use the args-level `PreventRender` property for events that expose a typed args object with that member, for example [RowSelectEventArgs&lt;OrderData&gt;](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowSelectEventArgs-1.html) used by [RowSelected](https://blazor.syncfusion.com/documentation/datagrid/events#rowselected). Set it to **true** to reduce UI latency; the property affects rendering only for the event-triggered cycle and does not change component state beyond that cycle.
+> - For events whose args type does not expose `PreventRender` (for example, [DataBound](https://blazor.syncfusion.com/documentation/datagrid/events#databound), which uses `DataBoundEventArgs<TValue>`), call the Data Grid’s `PreventRender` method instead.
 
 ## Use paging or virtualization to load only visible rows
 
-The DataGrid renders each row and cell as a component. Rendering a large number of elements can impact memory and CPU. Load only what is visible using [Paging](./paging) or [Virtualization](./virtualization). Keep page sizes reasonable to avoid reintroducing performance bottlenecks even with these features enabled.
-
-N> Even with paging or virtualization, very large page sizes can still cause performance issues. Choose sizes that balance usability and responsiveness.
+The Data Grid renders each row and cell as a component. Rendering a large number of elements can impact memory and CPU. Load only what is visible using [Paging](https://blazor.syncfusion.com/documentation/datagrid/paging) or [Virtual scrolling](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling), and keep page sizes reasonable so these features do not reintroduce performance bottlenecks. Even with these features enabled, very large page sizes can still cause performance issues — choose sizes that balance usability and responsiveness.
