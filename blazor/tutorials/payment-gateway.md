@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with the Stripe Payment Gateway in Blazor
 
-This guide explains how to integrate the Stripe payment gateway in a Blazor application using [Blazor components](https://www.syncfusion.com/blazor-components). It walks through the core building blocks of a card-based checkout flow, including configuring Stripe, creating and updating Payment Intents, collecting card details through Stripe Elements.
+This guide explains how to integrate the [Stripe payment gateway](https://stripe.com/in) in a Blazor application using [Blazor components](https://www.syncfusion.com/blazor-components). It walks through the core building blocks of a card based checkout flow, including configuring Stripe, creating and updating Payment Intents, collecting card details through Stripe Elements.
 
 ## Prerequisites
 
@@ -37,9 +37,9 @@ dotnet add package Stripe.net
 {% endhighlight %}
 {% endtabs %}
 
-N> The Syncfusion Blazor packages [Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons), [Spinner](https://www.nuget.org/packages/Syncfusion.Blazor.Spinner), and [Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) are included as dependencies from the shopping cart tutorial. If you're starting this tutorial independently, ensure these packages are installed. For a complete list, refer to [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
+N> The Syncfusion Blazor packages [Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons), [Spinner](https://www.nuget.org/packages/Syncfusion.Blazor.Spinner), and [Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) are included as dependencies from the [existing Blazor shopping cart application](https://blazor.syncfusion.com/documentation/tutorials/shopping-cart). If you're starting this tutorial independently, ensure these packages are installed. For a complete list, refer to [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
-### Add required namespaces
+## Add required namespaces
 
 Open the `Components/_Imports.razor` file and import the namespaces required by the Stripe checkout components, alongside the existing shopping cart namespaces.
 
@@ -60,7 +60,7 @@ Open the `Components/_Imports.razor` file and import the namespaces required by 
 {% endhighlight %}
 {% endtabs %}
 
-### Bind the Stripe configuration
+## Bind the Stripe configuration
 
 Bind the Stripe configuration section to the `StripeOptions` model in the `~/Program.cs` file. 
 
@@ -403,7 +403,7 @@ N> The `OrderService` stores data in memory, all orders are lost when the applic
 
 ## Register services
 
-Register the payment-related services in `Program.cs` so they can be accessed throughout the Blazor application using dependency injection.
+Register the payment related services in `Program.cs` so they can be accessed throughout the Blazor application using dependency injection.
 
 {% tabs %}
 {% highlight csharp tabtitle="Program.cs" %}
@@ -414,13 +414,13 @@ builder.Services.AddScoped<IStripePaymentService, StripePaymentService>();
 {% endhighlight %}
 {% endtabs %}
 
-This tutorial changes `IOrderService` from scoped to singleton (and adds UpdateAsync) so order state survives across the JS interop confirmation call and any post-confirmation page navigation. Replace the existing `AddScoped<IOrderService, OrderService>()` line from the shopping cart tutorial with `AddSingleton<IOrderService, OrderService>()` below. Don't add both.
+This tutorial changes `IOrderService` from scoped to singleton (and adds UpdateAsync) so order state survives across the [JS interop](https://learn.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/?view=aspnetcore-10.0) confirmation call and any post confirmation page navigation. Replace the existing `AddScoped<IOrderService, OrderService>()` line from the shopping cart tutorial with `AddSingleton<IOrderService, OrderService>()` below. Don't add both.
 
-N> The `ICartService`, `IProductService`, and `IWishlistService` registrations are covered in [Creating a Shopping Cart with Blazor Components](https://blazor.syncfusion.com/documentation/tutorials/shopping-cart).
+N> The `ICartService`, `IProductService`, and `IWishlistService` registrations are covered in [existing Blazor shopping cart application](https://blazor.syncfusion.com/documentation/tutorials/shopping-cart).
 
 ## Create the JavaScript interop module
 
-The `wwwroot/js/payment.js` module wraps Stripe.js and exposes the functions used by the `Checkout` page through Blazor JavaScript interop.
+The `wwwroot/js/payment.js` module wraps `Stripe.js` and exposes the functions used by the `Checkout` page through [Blazor JavaScript interop](https://learn.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/?view=aspnetcore-10.0).
 
 {% tabs %}
 {% highlight javascript tabtitle="wwwroot/js/payment.js" %}
@@ -498,13 +498,13 @@ export function unmountPaymentElement() {
 {% endhighlight %}
 {% endtabs %}
 
-`mountPaymentElement` loads Stripe.js using the **Publishable key**, creates a Stripe `elements` instance scoped to the **Client Secret**, and mounts the Payment Element into the specified DOM element. `confirmPayment` calls `stripe.confirmPayment` with `redirect: "if_required"`, which keeps the user on the page for standard card payments. `unmountPaymentElement` releases the mounted element and resets the module state.
+`mountPaymentElement` loads `Stripe.js` using the **Publishable key**, creates a Stripe `elements` instance scoped to the **Client Secret**, and mounts the Payment Element into the specified DOM element. `confirmPayment` calls `stripe.confirmPayment` with `redirect: "if_required"`, which keeps the user on the page for standard card payments. `unmountPaymentElement` releases the mounted element and resets the module state.
 
 N> `Stripe.js` is loaded on demand by `wwwroot/js/payment.js` only when the Checkout page mounts the payment form. Do not add a static `<script src="https://js.stripe.com/v3"></script>` tag to `App.razor`.
 
 ## Update the checkout and order confirmation pages
 
-The pages below demonstrate how the checkout flow integrates the Syncfusion Blazor components with Stripe Elements to collect shipping and card details, confirm the Payment Intent, and display the final order status. Each page binds its inputs to a strongly typed `Order` model and uses [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox), [Blazor MaskedTextBox](https://www.syncfusion.com/blazor-components/blazor-input-mask), [Blazor Spinner](https://www.syncfusion.com/blazor-components/blazor-spinner), and [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) components to capture user input and trigger actions.
+The pages below demonstrate how the checkout flow integrates the [Blazor components](https://www.syncfusion.com/blazor-components) with Stripe Elements to collect shipping and card details, confirm the Payment Intent, and display the final order status. Each page binds its inputs to a strongly typed `Order` model and uses [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox), [Blazor MaskedTextBox](https://www.syncfusion.com/blazor-components/blazor-input-mask), [Blazor Spinner](https://www.syncfusion.com/blazor-components/blazor-spinner), and [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) components to capture user input and trigger actions.
 
 ### Update the `Checkout` page
 

@@ -41,15 +41,15 @@ The accessibility compliance for the Blazor TreeView component is outlined below
 
 ## WAI-ARIA Attributes
 
-The Blazor TreeView component implements the [WAI-ARIA Tree View pattern](https://www.w3.org/WAI/ARIA/apg/patterns/treeview/) to ensure comprehensive accessibility. The following ARIA attributes are used within the TreeView component's structure:
+The Blazor TreeView component implements the [WAI-ARIA Tree View pattern](https://www.w3.org/WAI/ARIA/apg/patterns/treeview/) to ensure comprehensive accessibility. The following ARIA attributes are used within the Blazor TreeView's structure:
 
 | **Attributes** | **Purpose** |
 | --- | --- |
-| aria-multiselectable | Indicates whether the TreeView enables multiple selection or not. |
+| aria-multiselectable | Indicates whether the Blazor TreeView enables multiple selection or not. |
 | aria-expanded | Indicates whether the parent node has expanded or not. |
 | aria-selected | Indicates the selected node. |
 | aria-grabbed | Indicates the selected state on drag-and-drop of node. |
-| aria-level | Indicates the level of node in TreeView. |
+| aria-level | Indicates the level of node in Blazor TreeView. |
 
 ## Keyboard Interaction
 
@@ -73,7 +73,7 @@ The Blazor TreeView component adheres to the [WAI-ARIA keyboard interaction guid
 
 The accessibility levels of the Blazor TreeView component are verified through regular automated testing using the [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool.
 
-The accessibility compliance of the TreeView component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/treeview) in a new window to evaluate the accessibility of the TreeView component with accessibility tools.
+The accessibility compliance of the Blazor TreeView component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/treeview) in a new window to evaluate the accessibility of the Blazor TreeView with accessibility tools.
 
 ## See Also
 

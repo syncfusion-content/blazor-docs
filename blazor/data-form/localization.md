@@ -7,13 +7,13 @@ control: DataForm
 documentation: ug
 ---
 
-# Localization in Blazor DataForm component
+# Localization in Blazor Data Form component
 
-The DataForm component supports localization for any culture. Refer to the [Blazor localization](https://blazor.syncfusion.com/documentation/common/localization) documentation to localize Syncfusion Blazor components.
+The Blazor Data Form component supports localization for any culture. Refer to the [Blazor localization](https://blazor.syncfusion.com/documentation/common/localization) documentation to localize Syncfusion Blazor components.
 
 ## Configuring localization for label text and error messages
 
-Follow these steps to configure localization for label text and validation error messages in the Blazor DataForm component.
+Follow these steps to configure localization for label text and validation error messages in the Blazor Blazor Data Form component.
 
 <ol>
 	<li>

@@ -11,7 +11,7 @@ documentation: ug
 
 The Blazor File Upload component can be localized to display static text, such as button labels and tooltips, in different languages. This is achieved by adding a resource file (`.resx`) for each culture and referencing it in your application.
 
-The following UI elements of the File Upload component can be localized:
+The following UI elements of the Blazor File Upload component can be localized:
 
 *   **Browse button text:** The label for the file selection button.
 *   **Drop area hint:** The "Or drop files here" message.

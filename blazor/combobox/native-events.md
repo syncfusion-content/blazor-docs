@@ -9,7 +9,7 @@ documentation: ug
 
 # Native Events in Blazor ComboBox
 
-The following section explains the steps to include native events and pass data to event handler in ComboBox component.
+The following section explains the steps to include native events and pass data to event handler in Blazor ComboBox component.
 
 ## Bind native events to ComboBox
 

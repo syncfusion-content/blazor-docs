@@ -9,11 +9,11 @@ documentation: ug
 
 # Different Layouts in Blazor Splitter
 
-By using splitter control, the different layouts can be created with multiple and nested panes.
+By using Blazor Splitter control, the different layouts can be created with multiple and nested panes.
 
 ## Code editor style layout
 
-**Step 1**: Create the element with two child to render the outer splitter.
+**Step 1**: Create the element with two child to render the outer Blazor Splitter.
 
 ```cshtml
 
@@ -426,4 +426,4 @@ Once the above configurations has been completed, the output will be displayed l
 
 ## See Also
 
-* [Multiple panes in Splitter](./split-panes)
+* [Multiple panes in Blazor Splitter](./split-panes)

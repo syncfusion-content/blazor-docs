@@ -44,7 +44,7 @@ The `Blur` event is triggered when the input loses focus.
 
 ## ValueChange
 
-The `ValueChange` event is triggered when the TimePicker value is changed.
+The `ValueChange` event is triggered when the Blazor TimePicker value is changed.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -182,7 +182,7 @@ The `OnOpen` event is triggered when the popup is opened.
 }
 ```
 
-N> The TimePicker currently supports the events listed above. New events may be added in the future based on user requests. If the event you are looking for is not in the list, request it at the [Syncfusion Blazor feedback portal](https://www.syncfusion.com/feedback/blazor-components).
+N> The Blazor TimePicker currently supports the events listed above. New events may be added in the future based on user requests. If the event you are looking for is not in the list, request it at the [Syncfusion Blazor feedback portal](https://www.syncfusion.com/feedback/blazor-components).
 
 ## See also
 

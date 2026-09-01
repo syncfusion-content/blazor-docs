@@ -11,7 +11,7 @@ documentation: ug
 
 The [`TooltipText`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TooltipText) property of a Toolbar item sets the hint text that appears on mouse hover.
 
-Initialize the Tooltip with the Toolbar as the target.
+Initialize the Tooltip with the Blazor Toolbar as the target.
 
 ```cshtml
 

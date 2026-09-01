@@ -106,7 +106,7 @@ The ResizeDirection enum provides the following options:
 
 ### OnResizeStart
 
-The Dialog component provides several events that trigger during the resizing process, allowing developers to implement custom logic and handle resize operations programmatically.
+The Blazor Dialog component provides several events that trigger during the resizing process, allowing developers to implement custom logic and handle resize operations programmatically.
 
 The [OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnResizeStart) event triggers when the user begins to resize a dialog.
 

@@ -11,7 +11,7 @@ documentation: ug
 
 This section demonstrates binding the SfNumericTextBox value to a model using EditForm, along with data annotation–based validation. The example binds to a nullable integer (int?) model property to allow an empty state and shows how validation messages are displayed for the bound field.
 
-In this sample, select a value in the Numeric TextBox and click Submit to trigger form validation. When the bound value is null, a validation error message is displayed below the Numeric TextBox based on the `Required` attribute. The form uses `EditForm` with `DataAnnotationsValidator` to enable validation, and `ValidationMessage` to display field-specific errors.
+In this sample, select a value in the Blazor Numeric TextBox and click Submit to trigger form validation. When the bound value is null, a validation error message is displayed below the Blazor Numeric TextBox based on the `Required` attribute. The form uses `EditForm` with `DataAnnotationsValidator` to enable validation, and `ValidationMessage` to display field-specific errors.
 
 ```cshtml
 @using System.ComponentModel.DataAnnotations

@@ -11,7 +11,7 @@ documentation: ug
 
 The [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_StrictMode) property restricts the input to valid time values within the specified `Min`/`Max` range in the text box. If the entered value is invalid, the component's value is reset to the most recent valid value. If the entered value is out of range, the component sets the time to the `Min` or `Max` value accordingly.
 
-The following example demonstrates the TimePicker in `StrictMode` with a `Min`/`Max` range of `10:00 AM` to `4:00 PM`. It accepts only valid time values within the specified range.
+The following example demonstrates the Blazor TimePicker in `StrictMode` with a `Min`/`Max` range of `10:00 AM` to `4:00 PM`. It accepts only valid time values within the specified range.
 
 * If you enter an out-of-range value such as `8:00 PM`, the value is set to the Max time `4:00 PM` because `8:00 PM` is greater than the Max value `4:00 PM`.
 
@@ -31,11 +31,11 @@ The following example demonstrates the TimePicker in `StrictMode` with a `Min`/`
 
 ![Blazor TimePicker in Strict Mode](./images/blazor-timepicker-strict-mode.webp)
 
-By default, the TimePicker is in non-strict mode (`StrictMode = false`), which allows you to enter invalid or out-of-range time values in the text box.
+By default, the Blazor TimePicker is in non-strict mode (`StrictMode = false`), which allows you to enter invalid or out-of-range time values in the text box.
 
 If the time is out of range or invalid, the model value is set to the out-of-range time value or to `null` respectively, and the input is highlighted with the `error` CSS class to indicate that the time is out of range or invalid.
 
-The following example demonstrates the `StrictMode` as `false`. Here, the TimePicker accepts valid or invalid values in the text box.
+The following example demonstrates the `StrictMode` as `false`. Here, the Blazor TimePicker accepts valid or invalid values in the text box.
 
 * If you enter an out-of-range or invalid time value, the model value is set to the out-of-range time value or to `null` respectively, and the input is highlighted with the `error` CSS class to indicate that the time is out of range or invalid.
 
