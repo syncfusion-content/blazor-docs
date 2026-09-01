@@ -9,11 +9,11 @@ documentation: ug
 
 # Blazor HeatMap Chart Tooltip
 
-Tooltip is used to provide the details of the heatmap cell, and this can be displayed, while hovering the cursor over the cell or performing tap action in touch devices.
+Tooltips display information about HeatMap cells. A tooltip is displayed when you hover over a cell or tap it on a touch-enabled device.
 
-## Default tooltip
+## Default Tooltip
 
-You can enable the tooltip by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapTooltipSettings.html#Syncfusion_Blazor_HeatMap_HeatMapTooltipSettings_Enable) property to **true** inside the [HeatMapTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapTooltipSettings.html).
+To enable the tooltip, set the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapTooltipSettings.html#Syncfusion_Blazor_HeatMap_HeatMapTooltipSettings_Enable) property to `true` in [`HeatMapTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapTooltipSettings.html).
 
 ```cshtml
 
@@ -56,17 +56,17 @@ You can enable the tooltip by setting the [Enable](https://help.syncfusion.com/c
 ![Blazor HeatMap Chart displays Tooltip](images/tooltip/blazor-heatmap-chart-tooltip.webp)
 
 
-## Tooltip template
+## Tooltip Template
 
-Any custom HTML element can be rendered as a HeatMap tooltip using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapTooltipSettings.html#Syncfusion_Blazor_HeatMap_HeatMapTooltipSettings_Template) property of the [HeatMapTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapTooltipSettings.html). The following examples show how to display the tooltip template for different data bindings in the HeatMap.
+You can use the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapTooltipSettings.html#Syncfusion_Blazor_HeatMap_HeatMapTooltipSettings_Template) property of [`HeatMapTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapTooltipSettings.html) to customize the tooltip content using a custom HTML template. The following examples demonstrate how to use tooltip templates with different data-binding modes in the HeatMap.
 
-### Array binding 
+### Array Binding
 
-When an array of numbers is specified as the `DataSource`, you can get the data for the tooltip as a **Dictionary<string, string>** type. The x-axis label, y-axis label, and cell value can be retrieved from the dictionary using the **XLabel**, **YLabel**, and **Value** keys respectively.
+When an array of numbers is assigned to the `DataSource`, the tooltip data is available as a `Dictionary<string, string>`. You can retrieve the X-axis label, Y-axis label, and cell value using the `XLabel`, `YLabel`, and `Value` keys, respectively.
 
-**Table**
+**Table Binding**
 
-The following example illustrates how to display the tooltip template for array table binding.
+The following example demonstrates how to display a tooltip template for array table binding.
 
 ```cshtml
 
@@ -167,9 +167,9 @@ The following example illustrates how to display the tooltip template for array 
 
 ![Tooltip template for array table binding in Blazor HeatMap Chart](images/tooltip/blazor-heatmap-chart-table-data-tooltip-template.webp)
 
-**Cell**
+**Cell Binding**
 
-The following example illustrates how to display the tooltip template for array cell binding.
+The following example demonstrates how to display a tooltip template for array cell binding.
 
 ```cshtml
 
@@ -269,13 +269,13 @@ The following example illustrates how to display the tooltip template for array 
 
 ![Tooltip template for array cell binding in Blazor HeatMap Chart](images/tooltip/blazor-heatmap-chart-cell-data-tooltip-template.webp)
 
-### JSON binding
+### JSON Binding
 
-When a list of JSON objects are specified as `DataSource`, the data for the tooltip can be obtained as the same JSON object.
+When a collection of JSON objects is assigned to the `DataSource`, the tooltip data is available as the corresponding JSON object.
 
-**Table**
+**Table Binding**
 
-The following example illustrates how to display the tooltip template for JSON table binding.
+The following example demonstrates how to display a tooltip template for JSON table binding.
 
 ```cshtml
 
@@ -361,9 +361,9 @@ The following example illustrates how to display the tooltip template for JSON t
 
 ![Tooltip template for JSON binding with table adaptor in Blazor HeatMap Chart](images/tooltip/blazor-heatmap-chart-json-table-data-tooltip-template.webp)
 
-**Cell**
+**Cell Binding**
 
-The following example illustrates how to display the tooltip template for JSON cell binding.
+The following example demonstrates how to display a tooltip template for JSON cell binding.
 
 ```cshtml
 
