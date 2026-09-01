@@ -18,7 +18,7 @@ Maps support internationalization for the following elements:
 
 Globalization is the process of designing and developing a component that works across cultures and locales. It is available for both Blazor Server and Blazor WebAssembly applications. Refer to the Blazor Server and Blazor WebAssembly localization sections for configuring globalization for the Maps component: [Enable localization in Blazor Server applications](https://blazor.syncfusion.com/documentation/common/localization#enable-localization-in-blazor-server-application) and [Enable localization in Blazor WebAssembly applications](https://blazor.syncfusion.com/documentation/common/localization#enable-localization-in-blazor-webassembly-application).
 
-Number, date, and time values in the Maps component can be globalized using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Format) property of the Maps component.
+Number, date, and time values in the Maps component can be globalized using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Format) property of the [SfMaps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html) class.
 
 ```cshtml
 

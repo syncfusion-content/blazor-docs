@@ -48,7 +48,7 @@ Interactive legends display an arrow pointer indicating the exact range color wh
 
 @code {
     private List<UNCouncilCountry> SecurityCouncilDetails = new List<UNCouncilCountry>{
-         new UNCouncilCountry { Name  "China", Membership = "Permanent" },
+         new UNCouncilCountry { Name = "China", Membership = "Permanent" },
          new UNCouncilCountry { Name = "France", Membership = "Permanent" },
          new UNCouncilCountry { Name = "Russia", Membership = "Permanent" },
          new UNCouncilCountry { Name = "Kazakhstan", Membership = "Non-Permanent" },
@@ -76,20 +76,20 @@ The legend can be positioned in two ways:
 * Absolute position
 * Dock position
 
-<b>Absolute position</b>
+### Absolute position
 
-Position the legend using the [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_X) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Y) properties in [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html). To position the legend based on coordinates relative to Maps, set [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Position) to **Float**.
+Position the legend using the [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_X) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Y) properties in [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html). To position the legend based on coordinates relative to Maps, set the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Position) property to **Float**.
 
-<b>Dock position</b>
+### Dock position
 
-Legends can be docked within the container using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Position) property in [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) at the following locations:
+Legends can be docked within the container using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Position) property in [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) with the [LegendPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.LegendPosition.html) enum at the following locations:
 
 * Top
 * Left
 * Bottom
 * Right
 
-These positions can be aligned using **Near**, **Center**, or **Far** with the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.Alignment.html) property in [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html), providing 12 alignment combinations.
+Each position can be aligned using **Near**, **Center**, or **Far** with the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Alignment) property in [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) (from the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.Alignment.html) enum), giving 12 position/alignment combinations.
 
 ```cshtml
 
@@ -114,7 +114,7 @@ These positions can be aligned using **Near**, **Center**, or **Far** with the [
 
 ```
 
-N> Refer [code block](#interactive-mode) to know the property value of `securityCouncilDetails`.
+N> Refer to the [Interactive mode](#interactive-mode) section for the `SecurityCouncilDetails` data.
 
 ![Changing Legend Position in Blazor Maps](./images/Legend/blazor-maps-legend-position.webp)
 
@@ -167,7 +167,7 @@ The following code demonstrates equal color mapping legends for shapes. To bind 
 
 ### Legend shape
 
-Maps supports the following legend shapes. Use the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Shape) property in [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) to change the legend shape.
+Maps supports the following legend shapes. Use the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Shape) property in [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) with the [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.LegendShape.html) enum to change the legend shape.
 
 * Circle
 * Rectangle
@@ -329,7 +329,7 @@ Use the [ShowLegend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Map
 
 ```
 
-N> Refer [code block](#legend-for-items-excluded-from-color-mapping) to know the property value of `PopulationDetails`.
+N> Refer to the [Legend for items excluded from color mapping](#legend-for-items-excluded-from-color-mapping) section for the `populationDetails` data.
 
 ![Hiding Legend Item in Blazor Maps](./images/Legend/blazor-maps-hide-legend-item.webp)
 
@@ -490,7 +490,7 @@ To hide duplicate legend items, set [RemoveDuplicateLegend](https://help.syncfus
 
 ### Toggle option in legend
 
-A toggle option is available for legends. When toggled, the specified color is applied to the corresponding Maps shape item. To enable toggle behavior, set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsToggleLegendSettings.html#Syncfusion_Blazor_Maps_MapsToggleLegendSettings_Enable) property of [MapsToggleLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsToggleLegendSettings.html) to **true**.
+A toggle option is available for legends. Clicking a legend item toggles the associated shapes between their mapped color and the toggled appearance defined by the toggle settings. To enable this behavior, set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsToggleLegendSettings.html#Syncfusion_Blazor_Maps_MapsToggleLegendSettings_Enable) property of [MapsToggleLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsToggleLegendSettings.html) to **true**.
 
 The following properties and components customize the toggle option:
 
@@ -504,10 +504,11 @@ The following properties and components customize the toggle option:
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
-    @*  To hide legend based in data source fields  *@
+    @*  To enable the toggle option for legend items  *@
     <MapsLegendSettings Visible="true">
-    <MapsToggleLegendSettings Enable="true" ApplyShapeSettings="false">
-    <MapsLegendBorder Width="2" Color="green"></MapsLegendBorder></MapsToggleLegendSettings>
+        <MapsToggleLegendSettings Enable="true" ApplyShapeSettings="false">
+            <MapsToggleLegendBorder Width="2" Color="green"></MapsToggleLegendBorder>
+        </MapsToggleLegendSettings>
     </MapsLegendSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' ShapeDataPath="Name"
@@ -553,7 +554,7 @@ The following properties and components customize the toggle option:
 
 ## Enable legend for bubbles
 
-Enable legends for bubbles by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) to **true** and the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Type) property to **Bubbles**.
+Enable legends for bubbles by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) to **true** and the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Type) property to **Bubbles** using the [LegendType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.LegendType.html) enum.
 
 ```cshtml
 
@@ -634,7 +635,7 @@ Enable legends for markers by setting the [Visible](https://help.syncfusion.com/
     }
 
     private List<City> Cities = new List<City> {
-        new City { Latitude = 35.145083, Longitude = -117.960260, Name = "Californiya" },
+        new City { Latitude = 35.145083, Longitude = -117.960260, Name = "California" },
         new City { Latitude = 40.724546, Longitude = -73.850344, Name = "New York" },
         new City { Latitude = 41.657782, Longitude = -91.533857, Name = "Iowa" }
     };
@@ -707,7 +708,7 @@ To map the marker shape to the legend item shape, set [UseMarkerShape](https://h
         new PopulationCityDetails { Name = "Shanghai", Latitude = 31.2303904, Longitude = 121.4737021, Population = 10000000, Country = "China", Continent = "Asia", Color = "red", Shape = "Pentagon" },
         new PopulationCityDetails { Name = "Karachi", Latitude = 25.0700428, Longitude = 67.2847875, Population = 9800000, Country = "Pakistan", Continent = "Asia", Color = "red", Shape = "Pentagon" },
         new PopulationCityDetails { Name = "Paris", Latitude = 48.856614, Longitude = 2.3522219, Population = 9645000, Country = "France", Continent = "Europe", Color = "yellow", Shape = "Triangle" },
-        new PopulationCityDetails { Name = "Istanbul", Latitude = 41.0082376, Longitude = 28.9783589, Population = 9000000, Country = "Istanbul", Continent = "Europe", Color = "yellow", Shape = "Triangle" },
+        new PopulationCityDetails { Name = "Istanbul", Latitude = 41.0082376, Longitude = 28.9783589, Population = 9000000, Country = "Turkey", Continent = "Europe", Color = "yellow", Shape = "Triangle" },
         new PopulationCityDetails { Name = "Nagoya", Latitude = 35.1814464, Longitude = 136.906398, Population = 9000000, Country = "Japan", Continent = "Asia", Color = "red", Shape = "Pentagon" },
         new PopulationCityDetails { Name = "Beijing", Latitude = 39.9041999, Longitude = 116.4073963, Population = 8614000, Country = "China", Continent = "Asia", Color = "red", Shape = "Pentagon" },
         new PopulationCityDetails { Name = "Chicago", Latitude = 41.8781136, Longitude = -87.6297982, Population = 8308000, Country = "United States", Continent = "North America", Color = "green", Shape = "Diamond" },

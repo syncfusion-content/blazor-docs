@@ -15,13 +15,13 @@ Color mapping customizes shape colors based on data values. It supports three ty
 2. Equal color mapping
 3. Desaturation color mapping
 
-To apply color mapping to map shapes, bind the data source to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html), and set the field that contains the color value to the [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) property.
+To apply color mapping to map shapes, bind the data source to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html), and set the field that contains the color value to the [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) property of [MapsShapeSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html). Define the color rules by adding [MapsShapeColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html) elements within [MapsShapeColorMappings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeColorMappings.html).
 
 ## Types of color mapping
 
 ### Range color mapping
 
-Range color mapping applies colors to map shapes whose numeric values fall within the given color mapping ranges. The [StartRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_StartRange) and [EndRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_EndRange) properties in [MapsShapeColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html) defines the color mapping ranges.
+Range color mapping applies colors to map shapes whose numeric values fall within the given color mapping ranges. The [StartRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_StartRange) and [EndRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_EndRange) properties in [MapsShapeColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html) define the color mapping ranges.
 
 Bind the **PopulationDetails** data to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) and set the [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) property of [MapsShapeSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html) to **Density**. Configure range values using [StartRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_StartRange) and [EndRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_EndRange) properties in [MapsShapeColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html).
 
@@ -69,7 +69,7 @@ Bind the **PopulationDetails** data to the [DataSource](https://help.syncfusion.
        },
        new PopulationDetail
        {
-           Code = "CN", Value = 143, Name = "China", Population = 1389750000,Density = 144
+           Code = "CN", Value = 143, Name = "China", Population = 1389750000, Density = 144
        }
     };
 }
@@ -82,7 +82,7 @@ Bind the **PopulationDetails** data to the [DataSource](https://help.syncfusion.
 
 Equal color mapping applies colors when the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_Value) property of [MapsShapeColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html) matches a corresponding value in the data source.
 
-The following example highlights permanent and non-permanent members of the UN Security Council in 2017. Bind **CouncilMemberDetails** to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) and set [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) property of [MapsShapeSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html) to **Membership**. Configure [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_Value) property as **Permanent** and **Non-Permanent** in separate mappings. When the value specified by [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) property matches with the corresponding field name in the data source, the corresponding color is applied.
+The following example highlights permanent and non-permanent members of the UN Security Council in 2017. Bind **CouncilMemberDetails** to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) and set [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) property of [MapsShapeSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html) to **Membership**. Configure [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_Value) property as **Permanent** and **Non-Permanent** in separate mappings. When the `Value` of a mapping matches the value of the field named by the [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) property in the data source, that mapping's color is applied.
 
 ```cshtml
 
@@ -127,7 +127,7 @@ The following example highlights permanent and non-permanent members of the UN S
 
 Desaturation color mapping works like range color mapping, but applies opacity based on [MinOpacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_MinOpacity) and [MaxOpacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_MaxOpacity) properties in [MapsShapeColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html).
 
-N>The following example applies desaturation color mapping to shapes using the **PopulationDetails** data from the [Range color mapping](#range-color-mapping) section.
+N> The following example applies desaturation color mapping to shapes using the **PopulationDetails** data from the [Range color mapping](#range-color-mapping) section.
 
 Bind **PopulationDetails** to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) and set [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) property of [MapsShapeSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html) to **Density**. Configure the range using [StartRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_StartRange) and [EndRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_EndRange) properties in [MapsShapeColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html).
 
@@ -155,7 +155,7 @@ Bind **PopulationDetails** to the [DataSource](https://help.syncfusion.com/cr/bl
 
 Multiple colors can be added to color mapping to create a gradient effect for specific shapes based on ranges in the data source. Using the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_Color) property of [MapsShapeColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html), multiple colors can be assigned to shapes as a gradient.
 
-N>The following example demonstrates multiple colors in color mapping using the **PopulationDetails** data from the [Range color mapping](#range-color-mapping) section.
+N> The following example demonstrates multiple colors in color mapping using the **PopulationDetails** data from the [Range color mapping](#range-color-mapping) section.
 
 Bind **PopulationDetails** to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) and set [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) property of [MapsShapeSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html) to **Density**. Configure the range values using [StartRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_StartRange) and [EndRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_EndRange) properties in [MapsShapeColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html).
 
@@ -179,13 +179,13 @@ Bind **PopulationDetails** to the [DataSource](https://help.syncfusion.com/cr/bl
 
 ```
 
-![Blazor Maps with Multi Color Mapping](./images/Colormapping/blazor-maps-multi-color-mapping.webp)
+![Blazor Maps with Multiple Colors for a Shape](./images/Colormapping/blazor-maps-multi-color-mapping.webp)
 
 ## Color for items excluded from color mapping
 
 Color mapping can also define a color for shapes that do not match range or equal-value criteria by using the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_Color) property of [MapsShapeColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html).
 
-N>The following example shows how to set a color for items excluded from color mapping using the **PopulationDetails** data from the [Range color mapping](#range-color-mapping) section.
+N> The following example shows how to set a color for items excluded from color mapping using the **PopulationDetails** data from the [Range color mapping](#range-color-mapping) section.
 
 In the following example, color mapping is configured for the range 0 to 300. If any records fall outside this range, the mapping is not applied. To color these excluded items, set only the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_Color) property in [MapsShapeColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html).
 
@@ -210,7 +210,7 @@ In the following example, color mapping is configured for the range 0 to 300. If
 
 ```
 
-![Blazor Maps with Exculde Color Mapping](./images/Colormapping/blazor-maps-exclude-color-mapping.webp)
+![Blazor Maps with Exclude Color Mapping](./images/Colormapping/blazor-maps-exclude-color-mapping.webp)
 
 ## Color mapping for bubbles
 
@@ -226,7 +226,7 @@ Range, equal, and desaturation color mapping types are also supported for bubble
 		        ShapeDataPath="Name" ShapePropertyPath='new string[] {"name"}' TValue="BubbleData">
         <MapsShapeSettings Fill="#E5E5E5"/>
             <MapsBubbleSettings>
-                <MapsBubble Visible="true" ValuePath="Population" ColorValuePath="Population" MinRadius=5 DataSource="BubbleColorMapping"
+                <MapsBubble Visible="true" ValuePath="Population" ColorValuePath="Population" MinRadius="5" DataSource="BubbleColorMapping"
 			        TValue="BubbleData">
                     <MapsBubbleColorMappings>
                         <MapsBubbleColorMapping Value="38332521" Color='new string[] {"#D84444"}' />
@@ -243,13 +243,13 @@ Range, equal, and desaturation color mapping types are also supported for bubble
     public class BubbleData
     {
         public string Name { get; set; }
-        public string Population { get; set; }
-    };
+        public double Population { get; set; }
+    }
 
-    public List<BubbleData> BubbleColorMapping = new List<BubbleData>{
-        new BubbleData { Name = "India", Population = "38332521" },
-        new BubbleData { Name = "Russia", Population = "19651127" },
-        new BubbleData { Name = "Pakistan", Population = "3090416"}
+    public List<BubbleData> BubbleColorMapping = new List<BubbleData> {
+        new BubbleData { Name = "India", Population = 38332521 },
+        new BubbleData { Name = "Russia", Population = 19651127 },
+        new BubbleData { Name = "Pakistan", Population = 3090416 }
     };
 }
 

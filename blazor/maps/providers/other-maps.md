@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Maps Other Tile Providers
 
-Apart from OpenStreetMap and Bing Maps, maps from other online providers can be rendered by assigning the provider’s tile URL to the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property. The URL template design supports any provider that follows the standard tile format shown below.
+Apart from OpenStreetMap and Bing Maps, maps from other online providers can be rendered by assigning the provider’s tile URL to the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html). The URL template design supports any provider that follows the standard tile format shown below.
 
 Sample Template: https://< domain_name >/maps/basic/{z}/{x}/{y}.png
 
@@ -36,7 +36,7 @@ The following example shows how to add a TomTom map. Generate an API key using t
 
 ![Blazor TomTom Maps](../images/MapProviders/blazor-tomtom-maps.webp)
 
-**Enable zooming and panning**
+## Enable zooming and panning
 
 Tile map layers support zooming and panning. Zooming provides a closer view for detailed analysis. Panning moves the map to focus on a specific area. To enable zooming, set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property to **true** in [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html). Panning is enabled by default and can be configured using the [EnablePanning](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_EnablePanning) property.
 
@@ -62,11 +62,11 @@ Tile map layers support zooming and panning. Zooming provides a closer view for 
 
 ![Blazor TomTom Maps with Zooming and Panning](../images/MapProviders/blazor-tomtom-maps-zooming.webp)
 
-**Adding markers and navigation line**
+## Adding markers and navigation lines
 
-Markers can be added to tile layers by providing the latitude and longitude for each location using the [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) class. Navigation lines can be drawn to highlight a path between locations using [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
+Markers can be added to tile layers by supplying a [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_DataSource) of latitude and longitude values to the [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) class. Navigation lines can be drawn to highlight a path between locations by setting the [Latitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Latitude) and [Longitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html#Syncfusion_Blazor_Maps_MapsNavigationLine_Longitude) properties of [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Maps
 
@@ -108,7 +108,7 @@ Markers can be added to tile layers by providing the latitude and longitude for 
 
 ![Blazor TomTom Maps with Markers and Navigation Line](../images/MapProviders/blazor-tomtom-maps-marker-and-line.webp)
 
-**Adding sublayer**
+## Adding sublayer
 
 Any GeoJSON shape can be rendered as a sublayer on top of the tile layer to highlight a continent or country by adding another layer and setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **SubLayer**.
 
@@ -132,7 +132,7 @@ Any GeoJSON shape can be rendered as a sublayer on top of the tile layer to high
 
 ![Blazor TomTom Maps with Sublayer](../images/MapProviders/blazor-tomtom-map-sublayer.webp)
 
-**Enable legend**
+## Enable legend
 
 A legend can be added to a tile map by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) to **true**.
 
@@ -156,7 +156,7 @@ A legend can be added to a tile map by setting the [Visible](https://help.syncfu
         <MapsLayer UrlTemplate="http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=subscription_key" TValue="string">
         <MapsMarkerSettings>
                 <MapsMarker Visible="true" TValue="PopulationCityDetails" DataSource="@PopulatedCities" Shape="MarkerType.Circle" Fill="#FFFFFF" ColorValuePath="Color" LegendText="Name" Height="15" Width="15">
-                    <MapsMarkerTooltipSettings Visible="true" ValuePath="Population" Format="City Name: ${Name}</br>Population: ${Population} million">
+                    <MapsMarkerTooltipSettings Visible="true" ValuePath="Population" Format="City Name: ${Name}<br/>Population: ${Population} million">
                         <MapsMarkerTooltipTextStyle FontFamily="inherit"></MapsMarkerTooltipTextStyle>
                     </MapsMarkerTooltipSettings>
                 </MapsMarker>
@@ -193,12 +193,9 @@ A legend can be added to a tile map by setting the [Visible](https://help.syncfu
 
 ![Blazor TomTom Maps with Legend](../images/MapProviders/blazor-tomtom-map-legend.webp)
 
-## Other supportive online map service providers
+## Other supported online map providers
 
-The Maps component can render maps from the following online providers:
-
-- MapBox
-- ESRI
+The Maps component can render maps from other providers such as MapBox and ESRI by assigning their tile URL (with the `z`/`x`/`y` placeholders and an access token) to `UrlTemplate`.
 
 ```cshtml
 
@@ -206,7 +203,7 @@ The Maps component can render maps from the following online providers:
 
 <SfMaps>
     <MapsLayers>
-        @* Renders Mapbox map *@
+        @* Renders MapBox map *@
         <MapsLayer UrlTemplate="https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/level/tileX/tileY?access_token=" TValue="string">
         </MapsLayer>
         @* Renders ESRI map *@

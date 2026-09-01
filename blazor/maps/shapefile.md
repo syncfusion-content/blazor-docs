@@ -9,13 +9,13 @@ documentation: ug
 
 # Blazor Maps Shapefile
 
-A shapefile is a widely used geospatial vector data format for storing geographic features, their spatial locations, and associated attribute data.
+A shapefile is a geospatial vector data format for storing geographic features, their spatial locations, and associated attribute data.
 
-## Importing and viewing shapefile
+## Importing and viewing a shapefile
 
-A shapefile can render a vector shape map in the Maps component by providing the remotely hosted file path in the [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) property.
+A shapefile can render a vector shape map in the [SfMaps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html) component by providing the remotely hosted `.shp` file path in the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html). The companion `.dbf` file (attribute data) must be available at the same location.
 
-> Only shapefiles hosted on a remote server are currently supported by the Maps component.
+N> Only shapefiles hosted on a remote server are currently supported by the Maps component.
 
 ```cshtml
 
@@ -31,7 +31,7 @@ A shapefile can render a vector shape map in the Maps component by providing the
                     <MapsLayerMarkerClusterConnectorLineSettings Color="#000000" />
                 </MapsMarkerClusterSettings>
                 <MapsMarkerSettings>
-                    <MapsMarker Visible="true" TValue="TopUniversitiesDetails" Height=15 Width=15 DataSource="@TopUniversities" Shape="MarkerType.Circle" Fill="red" AnimationDuration="0">
+                    <MapsMarker Visible="true" TValue="TopUniversitiesDetails" Height="15" Width="15" DataSource="@TopUniversities" Shape="MarkerType.Circle" Fill="red" AnimationDuration="0">
                         <MapsMarkerTooltipSettings Visible="true" ValuePath="Name">
                             <MapsMarkerTooltipTextStyle FontFamily="inherit"></MapsMarkerTooltipTextStyle>
                         </MapsMarkerTooltipSettings>
@@ -52,7 +52,7 @@ A shapefile can render a vector shape map in the Maps component by providing the
         public double Longitude { get; set; }
         public string Name { get; set; }
         public string Color { get; set; }
-    };
+    }
 
     public List<TopUniversitiesDetails> TopUniversities = new List<TopUniversitiesDetails> {
         new TopUniversitiesDetails { Name = "University of Washington", Latitude = 47.655548, Longitude = -122.303200 , Color = "#623e8c" },
@@ -74,18 +74,18 @@ A shapefile can render a vector shape map in the Maps component by providing the
 
 ## Multilayer
 
-A shapefile map, like a GeoJSON map, can be rendered using a multilayer structure, as described in this [section](https://blazor.syncfusion.com/documentation/maps/layers#multilayer). A shapefile map can be added to different layers in the following ways:
+A shapefile map, like a GeoJSON map, can be rendered using a multilayer structure, as described in the [Layers](layers#multilayer) topic. A shapefile map can be combined with other layers in the following ways:
 
 1. Display the shapefile map as a sublayer over online map providers.
 2. Display the shapefile map as a sublayer above the GeoJSON map.
 3. Display the GeoJSON map as a sublayer over the shapefile map.
 4. Use shapefiles as both main and sublayer.
 
-The following example demonstrates a shapefile map as a sublayer above the GeoJSON map.
+The following example demonstrates a shapefile map as a sublayer above the GeoJSON map by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **SubLayer** using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.Type.html) enum.
 
 ```cshtml
 
-@using Syncfusion.Blazor.Maps;
+@using Syncfusion.Blazor.Maps
 
 <SfMaps>
     <MapsLayers>
@@ -103,7 +103,7 @@ The following example demonstrates a shapefile map as a sublayer above the GeoJS
 
 ## Customization
 
-Shape characteristics in a shapefile map such as fill color, border, and projection can be customized. For details, see the [Maps customization](https://blazor.syncfusion.com/documentation/maps/customization) documentation.
+Shape characteristics in a shapefile map such as fill color, border, and projection can be customized. For details, see the [Maps customization](customization) topic.
 
 > The examples in the linked topic use a GeoJSON file. Replace the GeoJSON file path with the shapefile path to view the same behavior with shapefiles.
 

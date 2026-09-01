@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Maps Methods Support
 
-This section describes the available methods in the Blazor Maps component.
+This section describes the public methods of the Blazor Maps component. Call them through a component reference captured with `@ref`, after the component has rendered. The `PrintAsync` and `ExportAsync` methods are covered in the [Print and export](print-and-export) topic.
 
 ## ShapeSelectionAsync
 
@@ -42,7 +42,7 @@ The [ShapeSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
     public async Task ShapeSelectAsync()
     {
-         await maps.ShapeSelectionAsync(0, "name", "Argentina");
+         await maps.ShapeSelectionAsync(0, "name", "Argentina", true);
     }
 }
 
@@ -56,7 +56,7 @@ The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMap
 
 @using Syncfusion.Blazor.Maps
 
-<button @onclick="Refresh">Refresh</button>
+<button @onclick="RefreshMap">Refresh</button>
 <SfMaps @ref="maps">
     <MapsZoomSettings Enable="true" EnablePanning="true">
     </MapsZoomSettings>
@@ -69,7 +69,7 @@ The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMap
 @code {
     SfMaps maps;
 
-    public void Refresh()
+    public void RefreshMap()
     {
        maps.Refresh();
     }
@@ -79,7 +79,7 @@ The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMap
 
 ## PanByDirectionAsync
 
-The `PanByDirectionAsync` method pans the Maps dynamically by specifying a direction. The following are the arguments for this method.
+The [PanByDirectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_PanByDirectionAsync_Syncfusion_Blazor_Maps_PanDirection_Syncfusion_Blazor_Maps_Internal_Point_) method pans the Maps dynamically by specifying a [PanDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.PanDirection.html). The following are the arguments for this method.
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|
@@ -90,7 +90,7 @@ The `PanByDirectionAsync` method pans the Maps dynamically by specifying a direc
 
 @using Syncfusion.Blazor.Maps
 
-<button @onclick="PanByDirectionAsync">Pan by Direction</button>
+<button @onclick="PanByDirection">Pan by Direction</button>
 <SfMaps @ref="maps">
     <MapsZoomSettings Enable="true" EnablePanning="true">
     </MapsZoomSettings>
@@ -103,12 +103,12 @@ The `PanByDirectionAsync` method pans the Maps dynamically by specifying a direc
 @code {
     SfMaps maps;
 
-    void PanByDirectionAsync()
+    async Task PanByDirection()
     {
         Syncfusion.Blazor.Maps.Internal.Point position = new Syncfusion.Blazor.Maps.Internal.Point();
         position.X = 120;
         position.Y = 200;
-        maps.PanByDirectionAsync(Syncfusion.Blazor.Maps.PanDirection.Bottom, position);
+        await maps.PanByDirectionAsync(Syncfusion.Blazor.Maps.PanDirection.Bottom, position);
     }
 }
 
@@ -127,7 +127,7 @@ The [ZoomByPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Map
 
 @using Syncfusion.Blazor.Maps
 
-<button @onclick="ZoomByPosition">ZoomByPosition</button>
+<button @onclick="ZoomMapByPosition">ZoomByPosition</button>
 <SfMaps @ref="maps">
     <MapsZoomSettings Enable="true">
     </MapsZoomSettings>
@@ -140,7 +140,7 @@ The [ZoomByPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Map
 @code {
     SfMaps maps;
 
-    public void ZoomByPosition()
+    public void ZoomMapByPosition()
     {
         MapsCenterPosition centerPosition = new MapsCenterPosition();
         centerPosition.Latitude = 35.145083;
@@ -166,7 +166,7 @@ The [ZoomToCoordinates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 @using Syncfusion.Blazor.Maps
 
-<button @onclick="ZoomToCoordinates">ZoomToCoordinates</button>
+<button @onclick="ZoomMapToCoordinates">ZoomToCoordinates</button>
 <SfMaps @ref="maps">
     <MapsZoomSettings Enable="true">
     </MapsZoomSettings>
@@ -179,13 +179,15 @@ The [ZoomToCoordinates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 @code {
     SfMaps maps;
 
-    public void ZoomToCoordinates()
+    public void ZoomMapToCoordinates()
     {
-        maps.ZoomToCoordinates(0, 0, 100, 100);
+        maps.ZoomToCoordinates(6.7, 68.1, 35.5, 97.4);
     }
 }
 
 ```
+
+N> `ZoomByPosition` and `ZoomToCoordinates` are synchronous and take effect immediately. Latitude values must be within ±90 and longitude values within ±180.
 
 ## GetMinMaxLatitudeLongitude
 
@@ -194,9 +196,9 @@ The [GetMinMaxLatitudeLongitude](https://help.syncfusion.com/cr/blazor/Syncfusio
 ```cshtml
 
 @using Syncfusion.Blazor.Maps
-@using System.Collections.ObjectModel;
+@using System.Collections.ObjectModel
 
-<button @onclick="GetMinMaxLatitudeLongitude">GetMinMaxLatitudeLongitude</button>
+<button @onclick="GetBounds">GetMinMaxLatitudeLongitude</button>
 
 @if(MapBoundCoordinates != null)
 {
@@ -236,7 +238,7 @@ The [GetMinMaxLatitudeLongitude](https://help.syncfusion.com/cr/blazor/Syncfusio
         public double Longitude { get; set; }
     }
 
-    public void GetMinMaxLatitudeLongitude()
+    public void GetBounds()
     {
         MapBoundCoordinates = MapsRef?.GetMinMaxLatitudeLongitude();
     }

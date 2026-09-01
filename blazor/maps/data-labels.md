@@ -79,7 +79,7 @@ In the following example, the [LabelPath](https://help.syncfusion.com/cr/blazor/
 }
 ```
 
-![Getting Blazor Maps Label Path Value from Datasource](./images/DataLabel/blazor-maps-label-path-datasource.webp)
+![Getting Blazor Maps Label Path Value from DataSource](./images/DataLabel/blazor-maps-label-path-datasource.webp)
 
 ## Customization
 
@@ -100,7 +100,7 @@ Customize the appearance of data labels using the following properties in [MapsD
             @* To add data labels *@
             <MapsDataLabelSettings Visible="true" LabelPath="name" Fill="red" Opacity="0.9">
                 <MapsLayerDataLabelBorder Color="green" Width="2"></MapsLayerDataLabelBorder>
-                <MapsLayerDataLabelTextStyle Color="blue" Size="12px" FontStyle="Sans-serif" FontWeight="normal">
+                <MapsLayerDataLabelTextStyle Color="blue" Size="12px" FontFamily="Segoe UI" FontStyle="Normal" FontWeight="normal">
                 </MapsLayerDataLabelTextStyle>
             </MapsDataLabelSettings>
             <MapsShapeSettings Autofill="true"></MapsShapeSettings>
@@ -114,7 +114,7 @@ Customize the appearance of data labels using the following properties in [MapsD
 
 ## Label animation
 
-Animate data labels on initial render by setting the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_AnimationDuration) property in `MapsDataLabelSettings`. The duration is specified in milliseconds.
+Animate data labels on initial render by setting the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_AnimationDuration) property in [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html). The duration is specified in milliseconds.
 
 ```cshtml
 
@@ -124,9 +124,8 @@ Animate data labels on initial render by setting the [AnimationDuration](https:/
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
             @* To add data labels *@
-            <MapsDataLabelSettings Visible="true" LabelPath="name" AnimationDuration="5000"></MapsDataLabelSettings>
+            <MapsDataLabelSettings Visible="true" LabelPath="name" AnimationDuration="2000"></MapsDataLabelSettings>
             <MapsShapeSettings Autofill="true"></MapsShapeSettings>
-            <MapsLayerTooltipSettings Visible="true" ValuePath="name"></MapsLayerTooltipSettings>
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -137,13 +136,13 @@ Animate data labels on initial render by setting the [AnimationDuration](https:/
 
 ## Smart labels
 
-Manage labels that intersect shape borders by using the [SmartLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_SmartLabelMode) property. Available options:
+Manage labels that intersect shape borders by using the [SmartLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_SmartLabelMode) property with the [SmartLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SmartLabelMode.html) enum. Available options:
 
 - None
 - Hide
 - Trim
 
-```
+```cshtml
 
 @using Syncfusion.Blazor.Maps
 
@@ -164,13 +163,13 @@ Manage labels that intersect shape borders by using the [SmartLabelMode](https:/
 
 ## Intersect action
 
-Manage labels that intersect with other labels by using the [IntersectionAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_IntersectionAction) property. Available options:
+Manage labels that intersect with other labels by using the [IntersectionAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_IntersectionAction) property with the [IntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.IntersectAction.html) enum. Available options:
 
 - None
 - Hide
 - Trim
 
-```
+```cshtml
 
 @using Syncfusion.Blazor.Maps
 
@@ -189,9 +188,9 @@ Manage labels that intersect with other labels by using the [IntersectionAction]
 
 ![Blazor Maps Label with Intersect Action](./images/DataLabel/blazor-maps-data-label-trim.webp)
 
-## Adding data label as a template
+## Adding data labels using a template
 
-Add data labels using a template by setting the [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelTemplate) property of [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html). Any text or HTML element can be used within the template.
+Add data labels using a template by setting the [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelTemplate) property of [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html). Any text or HTML element can be used within the template. The template `context` is the data source item for the shape (cast it to the model type).
 
 N> The data label customization properties [SmartLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_SmartLabelMode), [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_AnimationDuration), and [IntersectionAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_IntersectionAction) do not apply to [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelTemplate). Style the template using CSS on the template elements.
 
@@ -206,10 +205,13 @@ N> The data label customization properties [SmartLabelMode](https://help.syncfus
             <MapsDataLabelSettings Visible="true">
                 <LabelTemplate>
                     @{
-                        var Data = context as PopulationDetail;
-                        <div style="width:50px; height:20px;border: 2px solid black; text-align:center;">
-                            <p style="color:red; font-size:12px;">@Data.Continent</p>
-                        </div>
+                        var data = context as PopulationDetail;
+                        if (data != null)
+                        {
+                            <div style="width:50px; height:20px;border: 2px solid black; text-align:center;">
+                                <p style="color:red; font-size:12px;">@data.Continent</p>
+                            </div>
+                        }
                     }
                 </LabelTemplate>
             </MapsDataLabelSettings>
