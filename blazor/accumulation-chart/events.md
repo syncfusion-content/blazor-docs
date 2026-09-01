@@ -42,7 +42,7 @@ PointMoved|
 
 ## OnDataLabelRender
 
-[OnDataLabelRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnDataLabelRender) event triggers, before datalabel for series is rendered.
+The [OnDataLabelRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnDataLabelRender) event triggers before the data label for the series is rendered.
 
 ### Arguments
 
@@ -53,12 +53,11 @@ The following properties are available in the [AccumulationTextRenderEventArgs](
 * [Font](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationTextRenderEventArgs.html#Syncfusion_Blazor_Charts_AccumulationTextRenderEventArgs_Font) – Specifies the font information of the data label.
 * [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationTextRenderEventArgs.html#Syncfusion_Blazor_Charts_AccumulationTextRenderEventArgs_Text) – Specifies the text to be displayed in the data label.
 
-```cshtml 
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartEvents OnDataLabelRender="DataLabelRenderEvent"></AccumulationChartEvents>
-
+    <AccumulationChartEvents OnDataLabelRender="DataLabelRenderEvent" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
             <AccumulationDataLabelSettings Visible="true"></AccumulationDataLabelSettings>
@@ -66,7 +65,7 @@ The following properties are available in the [AccumulationTextRenderEventArgs](
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -78,7 +77,7 @@ The following properties are available in the [AccumulationTextRenderEventArgs](
         new Statistics { Browser = "Chrome", Users = 37 },
         new Statistics { Browser = "UC Browser", Users = 17 },
         new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Others", Users = 4 },
         new Statistics { Browser = "Opera", Users = 11 },
         new Statistics { Browser = "Android", Users = 12 },
     };
@@ -92,7 +91,7 @@ The following properties are available in the [AccumulationTextRenderEventArgs](
 
 ## OnLegendItemRender
 
-[OnLegendItemRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnLegendItemRender) event triggers, before legend getting rendered.
+The [OnLegendItemRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnLegendItemRender) event triggers before the legend gets rendered.
 
 ### Arguments
 
@@ -102,22 +101,19 @@ The following properties are available in the [AccumulationLegendRenderEventArgs
 * [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationLegendRenderEventArgs.html#Syncfusion_Blazor_Charts_AccumulationLegendRenderEventArgs_Shape) – Specifies the shape of the legend item's icon.
 * [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationLegendRenderEventArgs.html#Syncfusion_Blazor_Charts_AccumulationLegendRenderEventArgs_Text) – Specifies the text to be displayed in the legend item.
 
-```cshtml 
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartEvents OnLegendItemRender="LegendRenderEvent"></AccumulationChartEvents>
-
+    <AccumulationChartEvents OnLegendItemRender="LegendRenderEvent" />
     <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser">
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
+    <AccumulationChartLegendSettings Visible="true" />
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -129,7 +125,7 @@ The following properties are available in the [AccumulationLegendRenderEventArgs
         new Statistics { Browser = "Chrome", Users = 37 },
         new Statistics { Browser = "UC Browser", Users = 17 },
         new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Others", Users = 4 },
         new Statistics { Browser = "Opera", Users = 11 },
         new Statistics { Browser = "Android", Users = 12 },
     };
@@ -152,19 +148,18 @@ The following properties are available in the [AccumulationPointRenderEventArgs]
 * [Border](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationPointRenderEventArgs.html#Syncfusion_Blazor_Charts_AccumulationPointRenderEventArgs_Border) – Specifies the color and the width of the point border.
 * [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationPointRenderEventArgs.html#Syncfusion_Blazor_Charts_AccumulationPointRenderEventArgs_Fill) – Specifies the fill color of the point.
 
-```cshtml 
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartEvents OnPointRender="PointRenderEvent"></AccumulationChartEvents>
-
+    <AccumulationChartEvents OnPointRender="PointRenderEvent" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -176,7 +171,7 @@ The following properties are available in the [AccumulationPointRenderEventArgs]
         new Statistics { Browser = "Chrome", Users = 37 },
         new Statistics { Browser = "UC Browser", Users = 17 },
         new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Others", Users = 4 },
         new Statistics { Browser = "Opera", Users = 11 },
         new Statistics { Browser = "Android", Users = 12 },
     };
@@ -190,7 +185,7 @@ The following properties are available in the [AccumulationPointRenderEventArgs]
 
 ## OnExportComplete
 
-[OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnExportComplete) event triggers after exporting the accumulation chart.
+The [OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnExportComplete) event triggers after exporting the accumulation chart.
 
 ### Arguments
 
@@ -198,20 +193,19 @@ The following field is available in the [ExportEventArgs](https://help.syncfusio
 
 * [DataUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportEventArgs.html#Syncfusion_Blazor_Charts_ExportEventArgs_DataUrl) – Specifies the DataUrl of the exported file.
 
-```cshtml 
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <button @onclick="Export" class="btn-success">Export</button>
 <SfAccumulationChart Title="Mobile Browser Statistics" @ref="AccChart">
-    <AccumulationChartEvents OnExportComplete="ExportCompleteEvent"></AccumulationChartEvents>
-
+    <AccumulationChartEvents OnExportComplete="ExportCompleteEvent" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     SfAccumulationChart AccChart;
     public class Statistics
     {
@@ -224,7 +218,7 @@ The following field is available in the [ExportEventArgs](https://help.syncfusio
         new Statistics { Browser = "Chrome", Users = 37 },
         new Statistics { Browser = "UC Browser", Users = 17 },
         new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Others", Users = 4 },
         new Statistics { Browser = "Opera", Users = 11 },
         new Statistics { Browser = "Android", Users = 12 },
     };
@@ -243,21 +237,21 @@ The following field is available in the [ExportEventArgs](https://help.syncfusio
 
 ## OnPrintComplete
 
-`OnPrintComplete` event triggers after printing the accumulation chart.
+The `OnPrintComplete` event triggers after printing the accumulation chart.
 
-```cshtml 
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <button @onclick="Print" class="btn-success">Print</button>
 <SfAccumulationChart Title="Mobile Browser Statistics" @ref="AccChart">
-    <AccumulationChartEvents OnPrintComplete="PrintCompleteEvent"></AccumulationChartEvents>
+    <AccumulationChartEvents OnPrintComplete="PrintCompleteEvent" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     SfAccumulationChart AccChart;
     public class Statistics
     {
@@ -270,7 +264,7 @@ The following field is available in the [ExportEventArgs](https://help.syncfusio
         new Statistics { Browser = "Chrome", Users = 37 },
         new Statistics { Browser = "UC Browser", Users = 17 },
         new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Others", Users = 4 },
         new Statistics { Browser = "Opera", Users = 11 },
         new Statistics { Browser = "Android", Users = 12 },
     };
@@ -289,7 +283,7 @@ The following field is available in the [ExportEventArgs](https://help.syncfusio
 
 ## SizeChanged
 
-[SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_SizeChanged) event is triggered when the accumulation chart is resized.
+The [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_SizeChanged) event is triggered when the accumulation chart is resized.
 
 ### Arguments
 
@@ -299,19 +293,18 @@ The following fields are available in the [AccumulationResizeEventArgs](https://
 * [CurrentSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationResizeEventArgs.html#Syncfusion_Blazor_Charts_AccumulationResizeEventArgs_CurrentSize) – Specifies the current size of the accumulation chart.
 * [PreviousSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationResizeEventArgs.html#Syncfusion_Blazor_Charts_AccumulationResizeEventArgs_PreviousSize) – Specifies the previous size of the accumulation chart.
 
-```cshtml 
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartEvents SizeChanged="SizeChangedEvent"></AccumulationChartEvents>
-
+    <AccumulationChartEvents SizeChanged="SizeChangedEvent" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -323,7 +316,7 @@ The following fields are available in the [AccumulationResizeEventArgs](https://
         new Statistics { Browser = "Chrome", Users = 37 },
         new Statistics { Browser = "UC Browser", Users = 17 },
         new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Others", Users = 4 },
         new Statistics { Browser = "Opera", Users = 11 },
         new Statistics { Browser = "Android", Users = 12 },
     };
@@ -337,21 +330,20 @@ The following fields are available in the [AccumulationResizeEventArgs](https://
 
 ## Loaded
 
-`Loaded` event triggers after accumulation chart is loaded.
+The `Loaded` event triggers after the accumulation chart is loaded.
 
-```cshtml 
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartEvents Loaded="@LoadHandler"></AccumulationChartEvents>
-
+    <AccumulationChartEvents Loaded="@LoadHandler" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -363,7 +355,7 @@ The following fields are available in the [AccumulationResizeEventArgs](https://
         new Statistics { Browser = "Chrome", Users = 37 },
         new Statistics { Browser = "UC Browser", Users = 17 },
         new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Others", Users = 4 },
         new Statistics { Browser = "Opera", Users = 11 },
         new Statistics { Browser = "Android", Users = 12 },
     };
@@ -391,20 +383,18 @@ The following fields are available in the [AccumulationPointEventArgs](https://h
 * [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationPointEventArgs.html#Syncfusion_Blazor_Charts_AccumulationPointEventArgs_X) – Specifies the x coordinate of the current mouse click.
 * [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationPointEventArgs.html#Syncfusion_Blazor_Charts_AccumulationPointEventArgs_Y) – Specifies the y coordinate of the current mouse click.
 
-
-```cshtml 
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartEvents OnPointClick="PointClick"></AccumulationChartEvents>
-
+    <AccumulationChartEvents OnPointClick="PointClick" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -416,7 +406,7 @@ The following fields are available in the [AccumulationPointEventArgs](https://h
         new Statistics { Browser = "Chrome", Users = 37 },
         new Statistics { Browser = "UC Browser", Users = 17 },
         new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Others", Users = 4 },
         new Statistics { Browser = "Opera", Users = 11 },
         new Statistics { Browser = "Android", Users = 12 },
     };
@@ -439,21 +429,19 @@ The following property is available in the [TooltipRenderEventArgs](https://help
 * [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_TooltipRenderEventArgs_HeaderText) – Specifies the header text for the tooltip.
 * [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_TooltipRenderEventArgs_Text) – Specifies the text for the tooltip.
 
-```cshtml 
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartEvents TooltipRender="TooltipRenderEvent"></AccumulationChartEvents>
-
+    <AccumulationChartEvents TooltipRender="TooltipRenderEvent" />
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
     <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
 </SfAccumulationChart>
 
-@code{
+@code {
     public class Statistics
     {
         public string Browser { get; set; }
@@ -465,7 +453,7 @@ The following property is available in the [TooltipRenderEventArgs](https://help
         new Statistics { Browser = "Chrome", Users = 37 },
         new Statistics { Browser = "UC Browser", Users = 17 },
         new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Others", Users = 4 },
         new Statistics { Browser = "Opera", Users = 11 },
         new Statistics { Browser = "Android", Users = 12 },
     };
@@ -473,6 +461,102 @@ The following property is available in the [TooltipRenderEventArgs](https://help
     public void TooltipRenderEvent(TooltipRenderEventArgs args)
     {
         // Here, you can customize your code.
+    }
+}
+```
+
+## OnExportComplete (Async Sample)
+
+Use the `OnExportComplete` event with the modern async export API. The handler below initiates the export, awaits completion, and reports the resulting `DataUrl`.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<button class="btn-success" @onclick="Export">Export</button>
+
+<SfAccumulationChart Title="Mobile Browser Statistics" @ref="AccChart">
+    <AccumulationChartEvents OnExportComplete="ExportCompleteEvent" />
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+</SfAccumulationChart>
+
+@code {
+    SfAccumulationChart AccChart;
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+    {
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4 },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+
+    private async Task Export()
+    {
+        await AccChart.ExportAsync(ExportType.JPEG, "Charts");
+    }
+
+    private void ExportCompleteEvent(ExportEventArgs args)
+    {
+        // Use args.DataUrl to inspect or post-process the exported file.
+    }
+}
+```
+
+## OnPrintComplete (Async Sample)
+
+Use the `OnPrintComplete` event with the modern async print API. The handler is invoked after the browser finishes the chart's print job.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<button class="btn-success" @onclick="Print">Print</button>
+
+<SfAccumulationChart Title="Mobile Browser Statistics" @ref="AccChart">
+    <AccumulationChartEvents OnPrintComplete="PrintCompleteEvent" />
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+</SfAccumulationChart>
+
+@code {
+    SfAccumulationChart AccChart;
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+    {
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4 },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+
+    private async Task Print()
+    {
+        await AccChart.PrintAsync();
+    }
+
+    private void PrintCompleteEvent(ExportEventArgs args)
+    {
+        // Triggered after the print dialog has been handled by the browser.
     }
 }
 ```
