@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Item Configuration in Blazor Toolbar Component | Syncfusion®
-description: Checkout and learn here all the features about item configuration in Blazor Toolbar component and more.
+title: Item Configuration in Blazor Toolbar | Syncfusion
+description: Configure Blazor Toolbar items with align, icon, template, overflow, disabled, and HTML attributes for full control.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Item Configuration in Blazor Toolbar Component
+# Item Configuration in Blazor Toolbar
 
 The [Blazor Toolbar](https://www.syncfusion.com/blazor-components/blazor-toolbar) can be rendered by defining a list of items. Items can be constructed with the following built-in Items types or item template.
 
@@ -31,11 +31,11 @@ The [Blazor Toolbar](https://www.syncfusion.com/blazor-components/blazor-toolbar
 
 ## Align
 
-This property specifies the alignment of Toolbar items within the Toolbar. Each item aligns according to its [`Align`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Align) property. The possible values are:
+This property specifies the alignment of Toolbar items within the Blazor Toolbar. Each item aligns according to its [`Align`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Align) property. The possible values are:
 
-1.  **Left**: Aligns items to the left side of the Toolbar.
-2.  **Center**: Aligns items at the center of the Toolbar.
-3.  **Right**: Aligns items to the right side of the Toolbar.
+1.  **Left**: Aligns items to the left side of the Blazor Toolbar.
+2.  **Center**: Aligns items at the center of the Blazor Toolbar.
+3.  **Right**: Aligns items to the right side of the Blazor Toolbar.
 
 ```cshtml
 
@@ -190,11 +190,11 @@ N> Refer [here](https://blazor.syncfusion.com/documentation/appearance/icons#ico
 
 ## TabIndex
 
-The Toolbar supports the [`TabIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) property to enable Tab and Shift+Tab key navigation between items, in addition to arrow-key navigation. Refer [Tab key navigation toolbar items ](https://blazor.syncfusion.com/documentation/toolbar/how-to/tab-key-navigation-toolbar-items) for detailed explanation, snippets, and output. 
+The Blazor Toolbar supports the [`TabIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) property to enable Tab and Shift+Tab key navigation between items, in addition to arrow-key navigation. Refer [Tab key navigation toolbar items ](https://blazor.syncfusion.com/documentation/toolbar/how-to/tab-key-navigation-toolbar-items) for detailed explanation, snippets, and output. 
 
 ## Template
 
-The Toolbar supports custom content rendering using its [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Template) property. This property accepts either an HTML element or a `RenderFragment`, allowing you to render any content inside a toolbar item. Refer [Set item-wise custom template](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-item-wise-custom-template) for detailed explanation, snippets, and output.
+The Blazor Toolbar supports custom content rendering using its [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Template) property. This property accepts either an HTML element or a `RenderFragment`, allowing you to render any content inside a toolbar item. Refer [Set item-wise custom template](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-item-wise-custom-template) for detailed explanation, snippets, and output.
 
 ## Text
 
@@ -322,7 +322,7 @@ The [`Input`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigation
 
 ```
 
-The following code explains how to add `NumericTextBox`, `DropDownList`, `RadioButton` and `CheckBox` components to the Toolbar.
+The following code explains how to add `NumericTextBox`, `DropDownList`, `RadioButton` and `CheckBox` components to the Blazor Toolbar.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

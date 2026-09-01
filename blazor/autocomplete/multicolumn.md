@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Multi-column in Blazor AutoComplete component | Syncfusion®
-description: Checkout and learn here all features about AutoComplete in Blazor AutoComplete component and much more.
+title: Multicolumn in Blazor AutoComplete | Syncfusion®
+description: Render the Blazor AutoComplete popup with multiple visual columns by applying the e-multi-column CSS class and an item template to lay out the data.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Multicolumn in AutoComplete
+# Multicolumn in Blazor AutoComplete
 
 Provide two or more visual columns in the popup by applying the `e-multi-column` CSS class through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property, and render the layout using an item template. This approach uses templates and CSS to display data in multiple columns; it is not a data grid and does not add grid features.
 

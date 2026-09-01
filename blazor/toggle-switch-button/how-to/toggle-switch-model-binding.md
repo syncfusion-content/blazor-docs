@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Model binding in Blazor Toggle Switch Button Component | Syncfusion®
-description: Learn here all the features about model binding in Blazor Toggle Switch Button component and much more.
+title: How to bind a model in Blazor Toggle Switch Button | Syncfusion
+description: Bind a strongly typed model to Blazor Toggle Switch Button for validation and form submission scenarios.
 platform: Blazor
 control: Toggle Switch Button 
 documentation: ug
 ---
 
-# Model binding in Blazor Toggle Switch Button Component
+# How to bind a model in Blazor Toggle Switch Button
 
-This section demonstrates the model binding support in the Toggle Switch Button. A view that can bind to any model is called a strongly typed view. You can bind any class as a model to a view. Model properties can be accessed directly in the view. The data associated with the model can be used to render the component.
+This section demonstrates the model binding support in the Blazor Toggle Switch Button. A view that can bind to any model is called a strongly typed view. You can bind any class as a model to a view. Model properties can be accessed directly in the view. The data associated with the model can be used to render the component.
 
-In this sample, select the option and click the **Submit** button to post the selected value in the Toggle Switch Button. When the value is not checked, a validation error message is shown below the Toggle Switch Button.
+In this sample, select the option and click the **Submit** button to post the selected value in the Blazor Toggle Switch Button. When the value is not checked, a validation error message is shown below the Blazor Toggle Switch Button.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons

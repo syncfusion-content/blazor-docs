@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Popup Settings in Blazor MultiColumn ComboBox | Syncfusion®
-description: Checkout and learn here all about Popup Setting in Blazor MultiColumn ComboBox component and much more.
+title: Popup Setting in Blazor MultiColumn ComboBox | Syncfusion
+description: Customize Blazor MultiColumn ComboBox popup width and dimensions using PopupWidth and other settings.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
 ---
 
-# Popup Setting in MultiColumn ComboBox
+# Popup Setting in Blazor MultiColumn ComboBox
 
 ## Change the Popup Width
 
-Customize the popup width using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupWidth) property. If `PopupWidth` is not specified, the popup width matches the MultiColumn ComboBox input width.
+Customize the popup width using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupWidth) property. If `PopupWidth` is not specified, the popup width matches the Blazor MultiColumn ComboBox input width.
 
 In the following example, `PopupWidth` is set to `600px`.
 

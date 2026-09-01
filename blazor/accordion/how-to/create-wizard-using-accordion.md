@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create Wizard in Blazor Accordion Component | Syncfusion®
-description: Checkout and learn here all features about how to create Wizard in Blazor Accordion component and much more.
+title: How to create a wizard in Blazor Accordion | Syncfusion®
+description: Build a Blazor Accordion wizard by toggling each item's Disabled and Expanded properties to create a sequential, validation-driven multi-step form.
 platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
-# Create Wizard in Blazor Accordion Component
+# How to create a wizard in Blazor Accordion
 
 You can create a wizard interface by driving the [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) with a state machine: disable the future steps and expand the current step. Use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Disabled) and [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Expanded) properties.
 
@@ -206,6 +206,7 @@ The following example demonstrates a simple payment module that enables or disab
     }
     public async Task OnSubmit(Object args)
     {
+
         await AlertDialog.HideAsync();
         ExpandCardItem = false;
         DisableSignInItem = false;
@@ -222,7 +223,7 @@ The following example demonstrates a simple payment module that enables or disab
 </style>
 ```
 
-In this example, we've created a three-step wizard using the Accordion component:
+In this example, we've created a three-step wizard using the Blazor Accordion component:
 
 1. **Sign In** - Collects user credentials
 2. **Delivery Address** - Gathers shipping information

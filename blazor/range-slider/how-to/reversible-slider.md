@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Reversible Slider in Blazor Range Slider Component | Syncfusion®
-description: Checkout and learn here all about Reversible Slider in Blazor Range Slider component with examples and much more details.
+title: How to create a reversible range slider in Blazor | Syncfusion
+description: Create a reversible Blazor Range Slider with descending values using Min and Max settings to support flexible data entry scenarios.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Reversible Slider in Blazor Range Slider Component
+# How to create a reversible range slider in Blazor
 
 Create a reversible slider (values displayed in descending order) by setting the [`Min`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_Min) property to the maximum value and the [`Max`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_Max) property to the minimum value. The example below renders a vertical range slider that counts down from 100 to 0.ow
 

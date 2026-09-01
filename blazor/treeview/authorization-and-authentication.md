@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Authorization,Authentication in Blazor TreeView | Syncfusion®
-description: Checkout and learn here all about Authorization and Authentication in Blazor TreeView component and much more details.
+title: Authorization and Authentication in Blazor TreeView | Syncfusion
+description: Restrict Blazor TreeView access to authenticated users with ASP.NET Core Identity framework support.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Authorization and Authentication in Blazor TreeView Component
+# Authorization and Authentication in Blazor TreeView
 
 **Authentication** involves verifying the identity of a user or system. This typically occurs through methods such as user names and passwords, biometrics, or security tokens.
 
@@ -15,14 +15,14 @@ documentation: ug
 
 This section provides an example of implementing authorization and authentication to restrict access to the Blazor TreeView component to authorized users. The provided blog post details the steps for creating a [Blazor Server App with Authentication](https://www.syncfusion.com/blogs/post/easy-steps-create-a-blazor-server-app-with-authentication), facilitating easy setup and configuration for this example.
 
-The following example demonstrates a Blazor Server App configured with authentication, ensuring that the entire TreeView component is only accessible to authenticated users.
+The following example demonstrates a Blazor Server App configured with authentication, ensuring that the entire Blazor TreeView component is only accessible to authenticated users.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <AuthorizeView>
     <Authorized>
-        <a href="Identity/Account/Manage">Hello, @context.User.Identity?.Name!</a>
+        <a href="Identity/Account/Manage" aria-label="Manage your account">Hello, @context.User.Identity?.Name!</a>
 
         <SfTreeView TValue="MailItem">
             <TreeViewFieldsSettings TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
@@ -81,8 +81,8 @@ The following example demonstrates a Blazor Server App configured with authentic
     </Authorized>
     <NotAuthorized>
         <p>Please log in or Register to view the TreeView component.</p>
-        <a href="Identity/Account/Register">Register</a>
-        <a href="Identity/Account/Login">Log in</a>
+        <a href="Identity/Account/Register" aria-label="Register a new account">Register</a>
+        <a href="Identity/Account/Login" aria-label="Log in to your account">Log in</a>
     </NotAuthorized>
 </AuthorizeView>
 

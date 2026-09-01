@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Get Started with Blazor MultiSelect Dropdown in WASM App | Syncfusion
-description: Check out and learn about getting started with Blazor MultiSelect Dropdown component in Blazor WebAssembly Application.
+title: Getting Started with Blazor MultiSelect Dropdown | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor MultiSelect Dropdown in a Blazor WebAssembly app with installation and setup steps.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Getting Started with Blazor MultiSelect Dropdown in Blazor WASM App
+# Getting Started with Blazor MultiSelect Dropdown
 
 This guide briefly explains how to include the [Blazor MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) component in a Blazor WebAssembly app using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -212,7 +212,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBdDwjlgyBlqRii?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor MultiSelect DropDown Component](./images/blazing-fast-multiselect-dropdown-blazor.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBdDwjlgyBlqRii?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor MultiSelect Dropdown Component](./images/blazing-fast-multiselect-dropdown-blazor.webp)" %}
 
 ## Binding data source
 
@@ -251,7 +251,7 @@ After initialization, populate the MultiSelect using the [DataSource](https://he
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBxXmjlUeRDCOaS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Binding in Blazor MultiSelect DropDown](./images/blazing-fast-multiselect-dropdown-data-binding.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBxXmjlUeRDCOaS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Binding in Blazor MultiSelect Dropdown](./images/blazing-fast-multiselect-dropdown-data-binding.webp)" %}
 
 ## Configure the popup list
 

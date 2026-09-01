@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Globalization in Blazor DateRangePicker Component | Syncfusion®
-description: Checkout and learn here all about Globalization in Blazor DateRangePicker component and much more details.
+title: Globalization in Blazor DateRangePicker | Syncfusion®
+description: Globalize the Blazor DateRangePicker for different cultures, including right-to-left rendering, localized day names, and culture-specific formats.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
 ---
 
-# Globalization in Blazor DateRangePicker Component
+# Globalization in Blazor DateRangePicker
 
 [Blazor DateRangePicker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Blazor components.
 
 ## Right-To-Left
 
-The DateRangePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew. Use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_EnableRtl) property to set the RTL direction. The component renders based on the system culture.
+The Blazor DateRangePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew. Use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_EnableRtl) property to set the RTL direction. The component renders based on the system culture.
 
-The following code example initializes the DateRangePicker component in RTL mode.
+The following code example initializes the Blazor DateRangePicker component in RTL mode.
 
 ```cshtml
 @using Syncfusion.Blazor

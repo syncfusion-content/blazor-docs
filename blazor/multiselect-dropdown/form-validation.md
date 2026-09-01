@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Form Validation in Blazor MultiSelect Component | Syncfusion®
-description: Checkout and learn here all about Form Validation in Blazor MultiSelect component and much more details.
+title: Form Validation in Blazor MultiSelect Dropdown | Syncfusion
+description: Validate Blazor MultiSelect Dropdown inside Blazor EditForm with data annotations and validation messages.
 platform: Blazor
-control: MultiSelect
+control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Form Validation in MultiSelect
+# Form Validation in Blazor MultiSelect Dropdown
 
 ## Edit form validation
 
@@ -27,7 +27,7 @@ When the MultiSelect input is valid, the form can be submitted. If the input is 
 
 {% endhighlight %}
 
-![Blazor MultiSelect inside EditForm](./images/form-validation/blazor_multiselect_inside-editform.webp)
+![Blazor MultiSelect Dropdown inside EditForm](./images/form-validation/blazor_multiselect_inside-editform.webp)
 
 ## Selection Limit
 

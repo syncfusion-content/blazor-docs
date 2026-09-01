@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to place TreeMap component inside other components | Syncfusion®
-description: Learn here about how to place the TreeMap inside other components like Dashboard Layout, Tab, Dialog and Accordion.
+title: Place TreeMap inside other components | Syncfusion®
+description: Learn how to render the Blazor TreeMap inside Dashboard Layout, Tabs, Dialog, and Accordion by deferring rendering until the host is ready.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Render TreeMap component inside other components
+# How to Place TreeMap inside other components
 
 The TreeMap can be rendered within components such as the Dashboard Layout, Tabs, Dialog, and others. In general, the TreeMap component renders before other components, so a boolean variable (i.e. boolean flag) is used to determine when to begin rendering the TreeMap component.
 

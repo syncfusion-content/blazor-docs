@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor DropDown List Component | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor DropDown List component and much more details.
+title: Accessibility in Blazor Dropdown List | Syncfusion®
+description: Learn how Blazor Dropdown List supports accessibility standards, ARIA attributes, keyboard navigation, and assistive technologies.
 platform: Blazor
 control: DropDownList
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in DropDown List 
 
-The [Blazor DropDownList](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component is built to align with WAI-ARIA specifications, applying appropriate roles, states, and properties alongside comprehensive keyboard support. It provides full keyboard interaction and ARIA compatibility to ensure a consistent experience for users of assistive technologies and for those who rely on keyboard navigation.
+The [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component is built to align with WAI-ARIA specifications, applying appropriate roles, states, and properties alongside comprehensive keyboard support. It provides full keyboard interaction and ARIA compatibility to ensure a consistent experience for users of assistive technologies and for those who rely on keyboard navigation.
 
-The Blazor DropDownList component follows recognized accessibility standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) commonly used to evaluate accessibility.
+The Blazor Dropdown List component follows recognized accessibility standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) commonly used to evaluate accessibility.
 
 The accessibility compliance for the DropDownList component is outlined below.
 
@@ -40,7 +40,7 @@ The accessibility compliance for the DropDownList component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Blazor DropDownList component uses the combobox pattern. The following ARIA attributes convey the component’s state and relationships:
+The Blazor Dropdown List component uses the combobox pattern. The following ARIA attributes convey the component’s state and relationships:
 
 | **Properties** | **Functionalities** |
 | --- | --- |
@@ -55,7 +55,7 @@ The Blazor DropDownList component uses the combobox pattern. The following ARIA 
 
 ## Keyboard interaction
 
-Use the following keys to operate the Blazor DropDownList by keyboard:
+Use the following keys to operate the Blazor Dropdown List by keyboard:
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
@@ -79,7 +79,7 @@ Use the following keys to operate the Blazor DropDownList by keyboard:
 
 ## Ensuring accessibility
 
-The Blazor DropDownList component’s accessibility is validated using the [axe-core](https://www.npmjs.com/package/axe-core) tool during automated testing.
+The Blazor Dropdown List component’s accessibility is validated using the [axe-core](https://www.npmjs.com/package/axe-core) tool during automated testing.
 
 The accessibility compliance of the DropDownList component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/dropdownlist) in a new window to evaluate the accessibility of the DropDownList component with accessibility tools.
 

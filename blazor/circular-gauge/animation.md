@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Animation in Blazor Circular Gauge Component | Syncfusion®
-description: Checkout and learn here all the features about animation in the Blazor Circular Gauge component and much more.
+title: Blazor Circular Gauge Animation | Syncfusion®
+description: Learn how to animate the Blazor Circular Gauge elements sequentially using the AnimationDuration property to render axis, ticks, labels, and pointers.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
 ---
 
-# Animation in Blazor Circular Gauge Component
+# Blazor Circular Gauge Animation
 
 All of the elements in the Circular Gauge, such as the axis lines, ticks, labels, ranges, pointers, and annotations, can be animated sequentially by using the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_AnimationDuration) property. The animation for the Circular Gauge is enabled when the `AnimationDuration` property is set to an appropriate value in milliseconds, providing a smooth rendering effect for the component. If the `AnimationDuration` property is set to **0**, which is the default value, the animation effect is disabled. If the animation is enabled, the component will behave in the following order.
 

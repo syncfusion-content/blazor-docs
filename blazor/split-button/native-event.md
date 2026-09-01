@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Events in Blazor SplitButton Component | Syncfusion®
-description: Checkout and learn here all the features about events in Blazor SplitButton component and much more details.
+title: Events in Blazor Split Button | Syncfusion
+description: Handle Blazor Split Button native events using @onxxx attributes with explicit event binding support.
 platform: Blazor
 control: Split Button
 documentation: ug
 ---
 
-# Events in Blazor SplitButton Component
+# Events in Blazor Split Button
 
-Handle Split Button events by defining handlers in the [SplitButtonEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SplitButtonEvents.html) tag. The assigned method names act as event handlers, and event-specific data is provided through strongly typed event argument classes.
+Handle Blazor Split Button events by defining handlers in the [Blazor Split Button Events](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SplitButtonEvents.html) tag. The assigned method names act as event handlers, and event-specific data is provided through strongly typed event argument classes.
 
 ## List of events supported
 
-The Split Button component supports the following events and corresponding event argument types:
+The Blazor Split Button component supports the following events and corresponding event argument types:
 
 * Created - Initializes after the component is created.
 * Clicked - Raised when the primary button is clicked. Argument type: Syncfusion.Blazor.SplitButtons.ClickEventArgs
@@ -24,9 +24,9 @@ The Split Button component supports the following events and corresponding event
 * OnItemRender - Raised while rendering each menu item. Argument type: MenuEventArgs
 * Closed - Raised after the popup closes. Argument type: OpenCloseMenuEventArgs
 
-## How to bind event to Split Button
+## How to bind event to Blazor Split Button
 
-Bind the above events to the Split Button component using the SplitButtonEvents tag, as shown below.
+Bind the above events to the Blazor Split Button component using the SplitButtonEvents tag, as shown below.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons

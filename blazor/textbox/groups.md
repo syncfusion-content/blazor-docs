@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Groups in Blazor TextBox Component | Syncfusion®
-description: Learn how to customize Blazor TextBox by combining icons, floating labels, clear buttons, and multiline features to create enhanced input experiences.
+title: Groups in Blazor TextBox | Syncfusion
+description: Combine Blazor TextBox features such as icons, floating labels, clear buttons, and multiline input in your forms.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Groups in Blazor TextBox Component
+# Groups in Blazor TextBox
 
-This section demonstrates how to enhance the TextBox component by combining multiple features such as icons, floating labels, clear buttons, and multiline input. These combinations create rich, user-friendly input experiences that improve usability and visual appeal. Each configuration uses specific APIs to achieve the desired functionality.
+This section demonstrates how to enhance the Blazor TextBox component by combining multiple features such as icons, floating labels, clear buttons, and multiline input. These combinations create rich, user-friendly input experiences that improve usability and visual appeal. Each configuration uses specific APIs to achieve the desired functionality.
 
-## TextBox
+## Blazor TextBox
 
-A basic TextBox component provides a simple text input field.
+A basic Blazor TextBox component provides a simple text input field.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -31,11 +31,11 @@ Enable floating labels by setting the [FloatLabelType](https://help.syncfusion.c
 <SfTextBox Placeholder="Enter your name" FloatLabelType="@FloatLabelType.Auto"></SfTextBox>
 ```
 
-The following sections demonstrate how to add icons to the TextBox for enhanced visual context and user interaction.
+The following sections demonstrate how to add icons to the Blazor TextBox for enhanced visual context and user interaction.
 
-## TextBox with icon and floating label
+## Blazor TextBox with icon and floating label
 
-Add icons to the TextBox to provide visual context or indicate the input purpose. The [AddIconAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_AddIconAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__) method appends or prepends icons to the input field. The position argument (`prepend` or `append`) determines whether the icon appears as a prefix or suffix. When invoking `AddIconAsync` inside lifecycle events such as `Created`, ensure the method is awaited within an asynchronous handler to maintain proper component initialization.
+Add icons to the Blazor TextBox to provide visual context or indicate the input purpose. The [AddIconAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_AddIconAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__) method appends or prepends icons to the input field. The position argument (`prepend` or `append`) determines whether the icon appears as a prefix or suffix. When invoking `AddIconAsync` inside lifecycle events such as `Created`, ensure the method is awaited within an asynchronous handler to maintain proper component initialization.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -141,9 +141,9 @@ Attach event handlers to icons by passing event attributes as a parameter to the
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZVxtGNiTneJcuVs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Binding events to icons](./images/binding-events-to-icons.webp)" %}
 
-## TextBox with clear button and floating label
+## Blazor TextBox with clear button and floating label
 
-Add a clear button to allow users to quickly remove the current input value. The clear button appears only when the TextBox contains text, providing a convenient way to reset the field. Enable the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_ShowClearButton) API to display the clear icon. This feature can be combined with `FloatLabelType` to maintain the floating label behavior while offering the clear functionality.
+Add a clear button to allow users to quickly remove the current input value. The clear button appears only when the Blazor TextBox contains text, providing a convenient way to reset the field. Enable the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_ShowClearButton) API to display the clear icon. This feature can be combined with `FloatLabelType` to maintain the floating label behavior while offering the clear functionality.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -165,7 +165,7 @@ Add a clear button to allow users to quickly remove the current input value. The
 
 ## Multiline input with floating label
 
-Enable [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Multiline) to transform the TextBox into a multi-line text editor, ideal for longer text input such as comments, descriptions, or messages. This feature can be combined with `FloatLabelType` to maintain the floating label behavior, ensuring consistent styling across single-line and multi-line inputs.
+Enable [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Multiline) to transform the Blazor TextBox into a multi-line text editor, ideal for longer text input such as comments, descriptions, or messages. This feature can be combined with `FloatLabelType` to maintain the floating label behavior, ensuring consistent styling across single-line and multi-line inputs.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

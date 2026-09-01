@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Chip Component | Syncfusion®
-description: Checkout and learn here all the features about Accessibility in Blazor Chip component and much more details.
+title: Accessibility in Blazor Chips | Syncfusion®
+description: Learn how Blazor Chips meet WCAG 2.2, Section 508, and ADA standards with WAI-ARIA roles, keyboard navigation, and screen reader support.
 platform: Blazor
-control: Chip
+control: Chips
 documentation: ug
 ---
 
-# Accessibility in Blazor Chip Component
+# Accessibility in Blazor Chips
 
 The [Blazor Chips](https://www.syncfusion.com/blazor-components/blazor-chips) component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -39,7 +39,7 @@ The accessibility compliance for the Blazor Chips component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Blazor Chips component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet accessibility requirements. The following ARIA attributes are used in the Chips component:
+The Blazor Chips component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet accessibility requirements. The following ARIA attributes are used in the Blazor Chips component:
 
 | Attributes | Purpose |
 | -- | -- |
@@ -52,7 +52,7 @@ The Blazor Chips component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/ap
 
 ## Keyboard interaction
 
-The following shortcut keys are used to access the Blazor Chip component seamlessly. To make the <kbd>Delete</kbd> key functional, set [`EnableDelete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfChip.html#Syncfusion_Blazor_Buttons_SfChip_EnableDelete) to `true` on the `SfChip` component. Focus order follows the order in which chips are rendered.
+The following shortcut keys are used to access the Blazor Chips component seamlessly. To make the <kbd>Delete</kbd> key functional, set [`EnableDelete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfChip.html#Syncfusion_Blazor_Buttons_SfChip_EnableDelete) to `true` on the `SfChip` component. Focus order follows the order in which chips are rendered.
 
 | Windows | Mac | Actions |
 |------------|-------|------------|
@@ -63,7 +63,7 @@ The following shortcut keys are used to access the Blazor Chip component seamles
 
 The Blazor Chips component's accessibility is validated through the [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
-The accessibility compliance of the Chip component is shown in the following sample. The sample references the local image files (`andrew.png`, `janet.png`, `laura.png`, `margaret.png`) that ship with the Syncfusion Blazor sample assets. The [sample](https://blazor.syncfusion.com/accessibility/chips) can be opened in a new window to evaluate the accessibility of the Chip component with accessibility tools.
+The accessibility compliance of the Blazor Chips component is shown in the following sample. The sample references the local image files (`andrew.png`, `janet.png`, `laura.png`, `margaret.png`) that ship with the Syncfusion Blazor sample assets. The [sample](https://blazor.syncfusion.com/accessibility/chips) can be opened in a new window to evaluate the accessibility of the Blazor Chips component with accessibility tools.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -96,13 +96,13 @@ The accessibility compliance of the Chip component is shown in the following sam
 
 ```
 
-![Accessibility in Blazor Chip](./images/blazor-chip-accessibility.gif)
+![Accessibility in Blazor Chips](./images/blazor-chip-accessibility.gif)
 
 ## See also
 
 * [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
-* [Getting Started with Blazor Chip](getting-started.md)
-* [Types in Blazor Chip](types.md)
-* [Customization in Blazor Chip](customization.md)
-* [Events in Blazor Chip](events.md)
-* [CSS Structure in Blazor Chip](style.md)
+* [Getting Started with Blazor Chips](getting-started.md)
+* [Types in Blazor Chips](types.md)
+* [Customization in Blazor Chips](customization.md)
+* [Events in Blazor Chips](events.md)
+* [CSS Structure in Blazor Chips](style.md)

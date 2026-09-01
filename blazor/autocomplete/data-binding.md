@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor AutoComplete Component | Syncfusion®
-description: Checkout and learn here all features about Data Binding in Blazor AutoComplete component and much more.
+title: Data Binding in Blazor AutoComplete | Syncfusion®
+description: Bind the Blazor AutoComplete to local arrays or remote services using the DataSource property and DataManager with adaptors like WebApi and OData.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Data Binding in AutoComplete
+# Data Binding in Blazor AutoComplete
 
 The AutoComplete loads data from local collections or remote services. Use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property to bind local data, or configure remote data using the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
@@ -39,7 +39,7 @@ The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDown
 
 Bind arrays or lists of primitive types such as `string`, `int`, `double`, and `bool`.
 
-The following example binds an array of strings to the AutoComplete component.
+The following example binds an array of strings to the Blazor AutoComplete component.
 
 {% highlight cshtml %}
 
@@ -49,7 +49,7 @@ The following example binds an array of strings to the AutoComplete component.
 
 ![Blazor AutoComplete with Primitive string type](./images/data-binding/blazor_autocomplete_primitive-type-string.webp)
 
-The following example binds an array of integers to the AutoComplete component.
+The following example binds an array of integers to the Blazor AutoComplete component.
 
 {% highlight cshtml %}
 
@@ -228,7 +228,7 @@ The following example shows remote data binding with offline mode enabled.
 
 ### Entity Framework
 
-Follow these steps to consume data from [Entity Framework](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-orm/entityframework) in the AutoComplete component.
+Follow these steps to consume data from [Entity Framework](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-orm/entityframework) in the Blazor AutoComplete component.
 
 #### Create DBContext class
 
@@ -340,7 +340,7 @@ namespace EFDropDown.Controllers
 }
 ```
 
-### Configure AutoComplete component using Web API adaptor
+### Configure Blazor AutoComplete component using Web API adaptor
 
 Configure the AutoComplete with [SfDataManager](https://blazor.syncfusion.com/documentation/data/getting-started) to interact with the Web API using the [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor).
 

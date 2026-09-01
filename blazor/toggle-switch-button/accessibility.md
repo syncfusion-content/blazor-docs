@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Toggle Switch Button Component | Syncfusion®
-description: Checkout and learn here all the features about accessibility in Blazor Toggle Switch Button component and more.
+title: Accessibility in Blazor Toggle Switch Button | Syncfusion
+description: Learn how Blazor Toggle Switch Button supports accessibility with keyboard and screen reader support.
 platform: Blazor
 control: Toggle Switch Button
 documentation: ug
 ---
 
-# Accessibility in Blazor Toggle Switch Button Component
+# Accessibility in Blazor Toggle Switch Button
 
 The Blazor Toggle Switch Button component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -42,7 +42,7 @@ The Blazor Toggle Switch Button component follows the [WAI-ARIA](https://www.w3.
 
 | Attributes | Purpose |
 | --- | --- |
-| `role` | Indicates the switch role (`role="switch"`) on the Toggle Switch Button component. |
+| `role` | Indicates the switch role (`role="switch"`) on the Blazor Toggle Switch Button component. |
 | `aria-disabled` | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable. |
 
 ## Keyboard interaction
@@ -51,7 +51,7 @@ The Blazor Toggle Switch Button component follows the [keyboard interaction](htt
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
-| <kbd>Space</kbd> | <kbd>space</kbd> | When the Toggle Switch Button has focus, pressing the Space key changes the state of the Toggle Switch Button. |
+| <kbd>Space</kbd> | <kbd>space</kbd> | When the Blazor Toggle Switch Button has focus, pressing the Space key changes the state of the Blazor Toggle Switch Button. |
 
 ## Ensuring accessibility
 

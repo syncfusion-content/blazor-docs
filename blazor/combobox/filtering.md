@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Filtering in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn here all the features about Filtering in the Blazor ComboBox component and much more.
+title: Filtering in Blazor ComboBox | Syncfusion®
+description: Filter Blazor ComboBox suggestions as the user types using StartsWith, EndsWith, or Contains match modes, with case sensitivity and diacritic options.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Filtering in Blazor ComboBox Component
+# Filtering in Blazor ComboBox
 
 The ComboBox has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is enabled. The filter operation starts as soon as characters are typed in the input. The default value of AllowFiltering is `false`.
 
 ## Local data
 
-The following code demonstrates the filtering functionality with local data in the ComboBox component.
+The following code demonstrates the filtering functionality with local data in the Blazor ComboBox component.
 
 {% highlight cshtml %}
 
@@ -27,7 +27,7 @@ The following code demonstrates the filtering functionality with local data in t
 
 For remote data, each key press sends a filter request to the server when using DataManager with filtering enabled.
 
-The below code demonstrates the filtering functionality with [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) in the ComboBox component with help of [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
+The below code demonstrates the filtering functionality with [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) in the Blazor ComboBox component with help of [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
 
 {% highlight cshtml %}
 
@@ -117,7 +117,7 @@ The following example shows how to perform case-sensitive filtering.
 
 ## Custom filtering
 
-ComboBox component filter queries can be customized using the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_Filtering) event. You can also filter text across multiple columns in the data source by composing predicates.
+Blazor ComboBox component filter queries can be customized using the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_Filtering) event. You can also filter text across multiple columns in the data source by composing predicates.
 
 In the below sample demonstration, the data is filtered using its `FirstName` or `LastName` field. Hence in the Filtering event, [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_predicates) is used with `or` condition for filtering both fields. 
 

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Data Binding in Blazor TextBox Component | Syncfusion®
-description: Checkout and learn here all the features about data binding in Blazor TextBox component and much more details.
+title: Data Binding in Blazor TextBox | Syncfusion
+description: Bind values to Blazor TextBox with one-way, two-way, dynamic, or complex data binding options for flexible form integration.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Data Binding in Blazor TextBox Component
+# Data Binding in Blazor TextBox
 
-This section describes how to bind values to the TextBox component using the following approaches:
+This section describes how to bind values to the Blazor TextBox component using the following approaches:
 
 - One-way data binding
 - Two-way data binding
@@ -18,7 +18,7 @@ This section describes how to bind values to the TextBox component using the fol
 
 ## One-way binding
 
-Bind a value to the TextBox by assigning a property to the `Value` parameter. In one-way binding, pass the property or variable name with `@` (for example, `@Name`). UI updates occur when the bound property changes during a render (for example, inside an event handler).
+Bind a value to the Blazor TextBox by assigning a property to the `Value` parameter. In one-way binding, pass the property or variable name with `@` (for example, `@Name`). UI updates occur when the bound property changes during a render (for example, inside an event handler).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

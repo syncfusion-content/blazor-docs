@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor MultiSelect Dropdown Component | Syncfusion®
-description: Checkout and learn here all about templates in Blazor MultiSelect Dropdown component and much more details.
+title: Templates in Blazor MultiSelect Dropdown | Syncfusion
+description: Customize Blazor MultiSelect Dropdown list items, selected values, headers, footers, and group headers with templates.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Templates in Blazor MultiSelect Dropdown Component
+# Templates in Blazor MultiSelect Dropdown
 
 The MultiSelect provides template options to customize the selected value, list items, group headers, header, and footer elements.
 
@@ -54,7 +54,7 @@ In the following sample, employees are grouped by city.
 
 {% endhighlight %}
 
-![Blazor MultiSelect with GroupTemplate](./images/template/blazor-multiselect-group-template.webp)
+![Blazor MultiSelect Dropdown with GroupTemplate](./images/template/blazor-multiselect-group-template.webp)
 
 ## Header template
 

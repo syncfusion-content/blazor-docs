@@ -1,13 +1,13 @@
 ---
 layout: post
-title: DropDownList options with tooltip in Blazor ComboBox | Syncfusion®
-description: Learn here all the features about DropDownList options with tooltip in Blazor ComboBox component and more.
+title: How to show tooltip for ComboBox items in Blazor | Syncfusion®
+description: Display a tooltip for Blazor ComboBox list items by binding the SfTooltip component to appear when the user hovers over an item in the popup.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Show tooltip for ComboBox items in Blazor
+# How to show tooltip for ComboBox items in Blazor
 
 Display a tooltip for ComboBox list items by using the SfTooltip component. When the user hovers over an item in the ComboBox popup, a tooltip appears with information about the hovered item.
 

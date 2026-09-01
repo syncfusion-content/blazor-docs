@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Checkbox in Blazor Dropdown Tree Component | Syncfusion®
-description: Checkout and learn here all the features about Checkbox in Blazor Dropdown Tree component and much more.
+title: Checkbox in Blazor Dropdown Tree | Syncfusion®
+description: Enable checkboxes, dependent parent-child states, and select all options in the Blazor Dropdown Tree component.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
 ---
 
-# Checkbox in Blazor Dropdown Tree Component
+# Checkbox in Blazor Dropdown Tree
 
 The Dropdown Tree component allows you to check more than one item from the tree without affecting the UI’s appearance by enabling the [ShowCheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ShowCheckBox) property. When this property is enabled, checkbox appears before each item text in the popup.
 
@@ -59,7 +59,7 @@ In the following example, the [AutoUpdateCheckState](https://help.syncfusion.com
 
 ## Select/Unselect All
 
-The Dropdown Tree component has built-in support to select all the tree items using the checkbox in the header.
+The Blazor Dropdown Tree component has built-in support to select all the tree items using the checkbox in the header.
 
 When the [ShowSelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ShowSelectAll) property is set to true, a checkbox will be displayed in the popup header that allows you to select or unselect all the tree items in the popup.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and appearance in Blazor Spinner Component | Syncfusion®
-description: Checkout and learn here all about style and appearance in Blazor Spinner component and much more details.
+title: Style and Appearance in Blazor Spinner | Syncfusion
+description: Customize Blazor Spinner appearance using CSS variables and theme overrides for stroke and background colors.
 platform: Blazor
 control: Spinner
 documentation: ug
 ---
 
-# Style and appearance in Blazor Spinner Component
+# Style and Appearance in Blazor Spinner
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

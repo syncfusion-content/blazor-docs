@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Breakpoints in Blazor Media Query Component | Syncfusion®
-description: Checkout and learn here all about Breakpoints in Blazor Media Query component and much more details.
+title: Breakpoints in Blazor Media Query | Syncfusion
+description: Configure built-in or custom breakpoints in Blazor Media Query to adapt layouts for small, medium, and large screens.
 platform: Blazor
 control: Media Query
 documentation: ug
 ---
 
-# Breakpoints in Blazor Media Query Component
+# Breakpoints in Blazor Media Query
 
 Blazor Media Query breakpoints let you build responsive and adaptive layouts by defining screen-size thresholds at which the layout and styling of the web application adjust for the best user experience.
 
@@ -23,7 +23,7 @@ The built-in breakpoint values for the Media Query component are:
 
 ### Modifying built-in breakpoints
 
-You can modify the media query for a built-in breakpoint by setting the [MediaQuery](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MediaBreakpoint.html#Syncfusion_Blazor_MediaBreakpoint_MediaQuery) property of the corresponding [MediaBreakpoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MediaBreakpoint.html) on `SfMediaQuery` (for example, `SfMediaQuery.Small`, `SfMediaQuery.Medium`, and `SfMediaQuery.Large`).
+You can modify the media query for a built-in breakpoint by setting the [Blazor Media Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MediaBreakpoint.html#Syncfusion_Blazor_MediaBreakpoint_MediaQuery) property of the corresponding [MediaBreakpoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MediaBreakpoint.html) on `SfMediaQuery` (for example, `SfMediaQuery.Small`, `SfMediaQuery.Medium`, and `SfMediaQuery.Large`).
 
 ```cshtml
 
