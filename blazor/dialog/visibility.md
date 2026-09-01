@@ -97,7 +97,7 @@ The [ShowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.S
 
 <div id="target" class="control-section">
     <SfButton @onclick="OpenDialog">Open Dialog</SfButton>
-    
+
     <SfDialog Target="#target" @ref="DialogObj" Width="300px" Visible="false" ShowCloseIcon="true">
         <DialogTemplates>
             <Header>Async Dialog</Header>
@@ -107,14 +107,17 @@ The [ShowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.S
 </div>
 
 @code {
-    private SfDialog DialogObj { get; set; }
+    private SfDialog? DialogObj { get; set; }
     private string DialogContent { get; set; } = "Loading...";
 
     private async Task OpenDialog()
     {
         // Add validation or data loading logic here
         DialogContent = "Content loaded successfully!";
-        await DialogObj.ShowAsync();
+        if (DialogObj != null)
+        {
+            await DialogObj.ShowAsync();
+        }
     }
 }
 
@@ -140,7 +143,7 @@ The [HideAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.S
 
 <div id="target" class="control-section">
     <SfButton @onclick="OpenDialog">Open Modal Dialog</SfButton>
-    
+
     <SfDialog @ref="DialogObj" Target="#target" Width="300px" IsModal="true" ShowCloseIcon="true">
         <DialogTemplates>
             <Header>Modal Dialog</Header>
@@ -154,24 +157,33 @@ The [HideAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.S
 </div>
 
 @code {
-    private SfDialog DialogObj { get; set; }
+    private SfDialog? DialogObj { get; set; }
     private string DialogMessage { get; set; } = "Content loaded successfully!";
 
     private async Task OpenDialog()
     {
-        await DialogObj.ShowAsync();
+        if (DialogObj != null)
+        {
+            await DialogObj.ShowAsync();
+        }
     }
 
     private async Task SaveAndClose()
     {
         // Simulate async save operation
-        await DialogObj.HideAsync();
+        if (DialogObj != null)
+        {
+            await DialogObj.HideAsync();
+        }
     }
 
     private async Task OnOverlayClick(OverlayModalClickEventArgs arg)
     {
         // Add validation or data loading logic here
-        await DialogObj.HideAsync();
+        if (DialogObj != null)
+        {
+            await DialogObj.HideAsync();
+        }
     }
 }
 
@@ -197,7 +209,7 @@ The [CloseOnEscape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popu
 
 <div id="target" class="control-section">
     <SfButton @onclick="OpenDialog">Open Dialog</SfButton>
-    
+
     <SfDialog @ref="DialogObj" Target="#target" Width="300px" CloseOnEscape="true" ShowCloseIcon="true">
         <DialogTemplates>
             <Header>Keyboard Accessible Dialog!</Header>
@@ -210,16 +222,22 @@ The [CloseOnEscape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popu
 </div>
 
 @code {
-    private SfDialog DialogObj { get; set; }
+    private SfDialog? DialogObj { get; set; }
 
     private async Task OpenDialog()
     {
-        await DialogObj.ShowAsync();
+        if (DialogObj != null)
+        {
+            await DialogObj.ShowAsync();
+        }
     }
 
     private async Task CloseDialog()
     {
-        await DialogObj.HideAsync();
+        if (DialogObj != null)
+        {
+            await DialogObj.HideAsync();
+        }
     }
 }
 
