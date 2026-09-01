@@ -9,35 +9,42 @@ documentation: ug
 
 # Blazor Stock Chart Stock Events
 
-Stock events mark notable occurrences such as market open and close, highest or lowest price, and quarter or year boundaries on specific dates. In this section, **SplineSeries** is used to represent selected data values. Specific data values can be customized using `StockEvents`.
+Stock events mark notable occurrences such as market open and close, highest or lowest price, and quarter or year boundaries on specific dates. In this section, a `Spline` series represents the stock price data, with stock events plotted at specific dates. Configure stock events using [StockChartStockEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvents.html).
 
 ## Date
 
-The [Date](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Date) property displays the stock event on the chart at the specified time. For example, when Quarter 1 ends on March 31, 2021, set the stock event date to March 31, 2021. Additional customization options are available in the following sections, including **Text**, **Type**, and **Description**.
+The [Date](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Date) property displays the stock event on the chart at the specified time. For example, when Quarter 1 ends on March 31, 2021, set the stock event date to March 31, 2021. Additional customization options are available in the following sections, including [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Text), [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Type), and [Description](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Description).
 
 ## Text
 
-Text provides a concise label for a stock event, such as **Q1** for Quarter 1 or **High** for the highest price over a period. Configure this per event using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Text) property.
+The [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Text) property provides a concise label for a stock event, such as `Q1` for Quarter 1 or `High` for the highest price over a period.
 
 ## Type
 
-The [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.FlagType.html) property sets the background shape of a stock event. Available options include **Circle**, **Square**, **Flag**, **Text**, **Sign**, **Triangle**, **InvertedTriangle**, **ArrowUp**, **ArrowDown**, **ArrowLeft**, and **ArrowRight**.
+The [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Type) property sets the background shape of a stock event. The available [FlagType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.FlagType.html) options include `Circle`, `Square`, `Flag`, `Text`, `Sign`, `Triangle`, `InvertedTriangle`, `ArrowUp`, `ArrowDown`, `ArrowLeft`, `ArrowRight`, and `Pin`.
 
 ## Background
 
-The [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Background) property customizes the color of the background shape. It accepts valid CSS color strings such as hex or rgba values.
+The [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Background) property customizes the color of the background shape. It accepts valid CSS color strings such as hexadecimal or RGBA values.
 
 ## Description
 
 The [Description](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Description) property specifies the tooltip content that appears when hovering over a stock event. For example, when [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Text) is **Q1** and the [Description](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Description) is **Quarter 1**, the tooltip displays **Quarter 1**.
 
+## Show Event on Series
+
+Use the [ShowOnSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_ShowOnSeries) property to control whether the stock event is displayed on the series.
+
+## Border and Text Style
+
+Customize the event border using [StockChartStockEventsBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEventsBorder.html) and the event text using [StockChartStockEventsTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEventsTextStyle.html).
+
+The following example demonstrates all the stock event properties described above together:
+
 ```cshtml
 
-@page "/"
-
 @using Syncfusion.Blazor.Charts
-@using System.IO
-@using System.Runtime.Serialization
+@using System.Net.Http.Json
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
 
@@ -97,14 +104,11 @@ The [Description](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
     public List<ChartSeriesType> SeriesValue = new List<ChartSeriesType>();
     private ChartData[] DataSource;
     private List<StockEventDetails> StockEvents;
-    
+
     protected override async Task OnInitializedAsync()
     {
         GetStockEventsDetails();
-        await Task.Run(() =>
-        {
-            DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri +"./chart-data.json");
-        });
+        DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri + "./chart-data.json");
     }
 
     private void GetStockEventsDetails()
@@ -133,3 +137,8 @@ The [Description](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 ```
 
 ![Events in Blazor Stock Chart](images/blazor-stock-chart-events.webp)
+
+## See also
+
+* [Series Types](./series-types)
+* [Tooltip](./tool-tip)

@@ -9,14 +9,14 @@ documentation: ug
 
 # Blazor Stock Chart Crosshair
 
-The crosshair displays vertical and horizontal lines to show axis values at the mouse or touch position. Enable crosshair lines using the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable) property of `Crosshair`. Enabling the `SnapToData` property aligns the crosshair with the nearest data point instead of the exact pointer position.
+The crosshair displays vertical and horizontal lines to show axis values at the mouse or touch position. Enable crosshair lines using the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable) property of `StockChartCrosshairSettings`. Enabling the [SnapToData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_SnapToData) property aligns the crosshair with the nearest data point instead of the exact pointer position. The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_DashArray) property sets the dash pattern of the crosshair lines. The following example also enables a shared tooltip through `StockChartTooltipSettings`; see [Tooltip](./tool-tip) for details on tooltip formatting options.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart Title="AAPL Stock Price">
-     <StockChartPrimaryXAxis>
+    <StockChartPrimaryXAxis>
         <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
     </StockChartPrimaryXAxis>
     <StockChartPrimaryYAxis>
@@ -34,11 +34,11 @@ The crosshair displays vertical and horizontal lines to show axis values at the 
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -57,11 +57,11 @@ The crosshair displays vertical and horizontal lines to show axis values at the 
 
 ```
 
-![SnapToData Crosshair in Blazor Stock Chart](images/common/blazor-stock-chart-crosshair.webp)
+![SnapToData Crosshair in Blazor Stock Chart](images/cross-hair/blazor-stock-chart-crosshair.webp)
 
-## Tooltip for axis
+## Axis Tooltip
 
-Axis tooltip labels can be enabled using the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable) property of `CrosshairTooltip` on the corresponding axis.
+Axis tooltip labels can be enabled using the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxisCrosshairTooltip.html#Syncfusion_Blazor_Charts_StockChartAxisCrosshairTooltip_Enable) property of `StockChartAxisCrosshairTooltip` on the corresponding axis. The crosshair itself must also be enabled by setting `StockChartCrosshairSettings.Enable` to `true`; otherwise, the axis tooltip does not appear.
 
 ```cshtml
 
@@ -69,18 +69,15 @@ Axis tooltip labels can be enabled using the [Enable](https://help.syncfusion.co
 
 <SfStockChart Title="AAPL Stock Price">
     <StockChartCrosshairSettings Enable="true"></StockChartCrosshairSettings>
-
     <StockChartPrimaryYAxis>
         <StockChartAxisLineStyle Color="Transparent"></StockChartAxisLineStyle>
         <StockChartAxisMajorTickLines Color="Transparent" Width="0"></StockChartAxisMajorTickLines>
         <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
     </StockChartPrimaryYAxis>
-
     <StockChartPrimaryXAxis>
         <StockChartAxisMajorGridLines Color="Transparent"></StockChartAxisMajorGridLines>
         <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
     </StockChartPrimaryXAxis>
-
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume"></StockChartSeries>
     </StockChartSeriesCollection>
@@ -90,11 +87,11 @@ Axis tooltip labels can be enabled using the [Enable](https://help.syncfusion.co
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -113,11 +110,11 @@ Axis tooltip labels can be enabled using the [Enable](https://help.syncfusion.co
 
 ```
 
-![Blazor Stock Chart with Crosshair Tooltip](images/common/blazor-stock-chart-crosshair-tooltip.webp)
+![Blazor Stock Chart with Crosshair Tooltip](images/cross-hair/blazor-stock-chart-crosshair-tooltip.webp)
 
 ## Customization
 
-Customize the crosshair tooltip background and font using the `Fill` and `TextStyle` properties of `CrosshairTooltip`. Customize the crosshair line color and width using the [Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Line) property in `Crosshair`.
+Customize the crosshair tooltip background and font using the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxisCrosshairTooltip.html#Syncfusion_Blazor_Charts_StockChartAxisCrosshairTooltip_Fill) and [TextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxisCrosshairTooltip.html#Syncfusion_Blazor_Charts_StockChartAxisCrosshairTooltip_TextStyle) properties of `StockChartAxisCrosshairTooltip`. Customize the crosshair line color and width using the [Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Line) property in `StockChartCrosshairSettings`.
 
 ```cshtml
 
@@ -127,17 +124,14 @@ Customize the crosshair tooltip background and font using the `Fill` and `TextSt
     <StockChartCrosshairSettings Enable="true">
         <StockChartCrosshairLine Width="2" Color="green"></StockChartCrosshairLine>
     </StockChartCrosshairSettings>
-
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume"></StockChartSeries>
     </StockChartSeriesCollection>
-
     <StockChartPrimaryYAxis>
         <StockChartAxisLineStyle Color="Transparent"></StockChartAxisLineStyle>
         <StockChartAxisMajorTickLines Color="Transparent" Width="0"></StockChartAxisMajorTickLines>
         <StockChartAxisCrosshairTooltip Enable="true" Fill="green"></StockChartAxisCrosshairTooltip>
     </StockChartPrimaryYAxis>
-
     <StockChartPrimaryXAxis>
         <StockChartAxisMajorGridLines Color="Transparent"></StockChartAxisMajorGridLines>
         <StockChartAxisCrosshairTooltip Enable="true" Fill="green"></StockChartAxisCrosshairTooltip>
@@ -148,11 +142,11 @@ Customize the crosshair tooltip background and font using the `Fill` and `TextSt
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -171,11 +165,11 @@ Customize the crosshair tooltip background and font using the `Fill` and `TextSt
 
 ```
 
-![Blazor Stock Chart with Custom Crosshair](images/common/blazor-stock-chart-custom-crosshair.webp)
+![Blazor Stock Chart with Custom Crosshair](images/cross-hair/blazor-stock-chart-custom-crosshair.webp)
 
 ## Add Trackball
 
-Trackball highlights the data point closest to the pointer and shows its details in the tooltip. Enable trackball behavior by setting the crosshair [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable) property to true and the `Shared` property in `Tooltip` to true.
+Trackball highlights the data point closest to the pointer and shows its details in the tooltip. Enable trackball behavior by setting the crosshair [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable) property to `true`, setting [LineType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_LineType) to `Vertical`, and setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Enable) and [Shared](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Shared) properties in `StockChartTooltipSettings` to `true`.
 
 ```cshtml
 
@@ -195,11 +189,11 @@ Trackball highlights the data point closest to the pointer and shows its details
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Open { get; set; }
-        public Double Low { get; set; }
-        public Double Close { get; set; }
-        public Double High { get; set; }
-        public Double Volume { get; set; }
+        public double Open { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double High { get; set; }
+        public double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -218,4 +212,4 @@ Trackball highlights the data point closest to the pointer and shows its details
 
 ```
 
-![Blazor Stock Chart with Trackball](images/common/blazor-stock-chart-trackball.webp)
+![Blazor Stock Chart with Trackball](images/cross-hair/blazor-stock-chart-trackball.webp)

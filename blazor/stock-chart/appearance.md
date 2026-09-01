@@ -54,7 +54,7 @@ Set a chart title using the [Title](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ## Title Customizations
 
-The `TextStyle` property of the chart title provides options to customize `Size`, `Color`, `FontFamily`, `FontWeight`, `FontStyle`, `Opacity`, `TextAlignment`, and `TextOverflow`.
+The [`StockChartTitleStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTitleStyle.html) provides options to customize the chart title's [`Size`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTitleStyle.html#Syncfusion_Blazor_Charts_StockChartTitleStyle_Size), [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTitleStyle.html#Syncfusion_Blazor_Charts_StockChartTitleStyle_Color), [`FontFamily`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTitleStyle.html#Syncfusion_Blazor_Charts_StockChartTitleStyle_FontFamily), [`FontWeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTitleStyle.html#Syncfusion_Blazor_Charts_StockChartTitleStyle_FontWeight), [`FontStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTitleStyle.html#Syncfusion_Blazor_Charts_StockChartTitleStyle_FontStyle), [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTitleStyle.html#Syncfusion_Blazor_Charts_StockChartTitleStyle_Opacity), [`TextAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTitleStyle.html#Syncfusion_Blazor_Charts_StockChartTitleStyle_TextAlignment), and [`TextOverflow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTitleStyle.html#Syncfusion_Blazor_Charts_StockChartTitleStyle_TextOverflow).
 
 ```cshtml
 
@@ -98,13 +98,13 @@ The `TextStyle` property of the chart title provides options to customize `Size`
 
 Changing the theme affects background color, gridlines, tooltip appearance, and overall styling.
 
-Stock Chart includes several built-in themes such as `Material`, `Fabric`, `Bootstrap`, `HighContrastLight`, `MaterialDark`, `FabricDark`, `HighContrast`, and `BootstrapDark`.
+Stock Chart supports several built-in themes such as `Material3`, `Fluent2`, `Bootstrap5`, `Tailwind3`, `HighContrast`, and their corresponding dark variants.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price" Theme="Theme.Fluent2">
+<SfStockChart Title="AAPL Stock Price" Theme="Syncfusion.Blazor.Theme.Bootstrap4">
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Line" XName="XValue" YName="YValue"></StockChartSeries>
     </StockChartSeriesCollection>
@@ -137,6 +137,6 @@ Stock Chart includes several built-in themes such as `Material`, `Fabric`, `Boot
 
 ![Applying Theme in Blazor Stock Chart](images/appearance/blazor-stock-chart-with-theme.webp)
 
-## See Also
+## See also
 
 * [Axis Customization](./axis-customization)
