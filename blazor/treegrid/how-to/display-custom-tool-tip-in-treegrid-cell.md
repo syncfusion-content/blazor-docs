@@ -9,17 +9,15 @@ documentation: ug
 
 # Display Custom Tooltips on Cells in Blazor TreeGrid 
 
-The custom tooltip in the Tree Grid column can be displayed using the [Column Template](https://blazor.syncfusion.com/documentation/treegrid/columns/column-template) feature by rendering the [SfTooltip](https://blazor.syncfusion.com/documentation/tooltip/getting-started) components inside the template.
-
-This is demonstrated in the below sample code where the tooltip is rendered for **TaskName** column using [Column Template](https://blazor.syncfusion.com/documentation/treegrid/columns/column-template).
+Display custom tooltips in TreeGrid columns using the [Column Template](https://blazor.syncfusion.com/documentation/treegrid/columns/column-template) feature by rendering the [SfTooltip](https://blazor.syncfusion.com/documentation/tooltip/getting-started) components inside the template.
 
 {% tabs %}
 
 {% highlight razor %}
 
 @using TreeGridComponent.Data;
-@using  Syncfusion.Blazor.Grids;
-@using  Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
+@using Syncfusion.Blazor.TreeGrid;
 @using Syncfusion.Blazor.Popups;
 
 <SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1"
@@ -31,12 +29,12 @@ This is demonstrated in the below sample code where the tooltip is rendered for 
                 @{
                     var taskData = (context as TreeData);
                     <SfTooltip Target="#txt">
-                        <TooltipTemplates>
-                            <Content>
-                                @taskData.TaskName
-                            </Content>
-                        </TooltipTemplates>
-                        <span id="txt">@taskData.TaskName</span>
+                        <ContentTemplate>
+                            <span> @taskData.TaskName</span>
+                        </ContentTemplate>
+                        <ChildContent>
+                                <span id="txt">@taskData.TaskName</span>
+                        </ChildContent>
                     </SfTooltip>
                 }
             </Template>
