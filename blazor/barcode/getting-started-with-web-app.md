@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Barcode Generator in Web App | Syncfusion®
-description: Learn how to get started with the Syncfusion Blazor Barcode Generator control. Explore setup, features, examples, and customization options.
+title: Getting Started with Blazor Barcode Component in Web App | Syncfusion®
+description: Learn how to get started with the Syncfusion Blazor Barcode Component. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Barcode Generator
 documentation: ug
 ---
 
-# Getting Started with Blazor Barcode Generator Component in Web App
+# Getting Started with Blazor Barcode Component in Web App
 
 This section briefly explains how to include the [Blazor Barcode Generator](https://www.syncfusion.com/blazor-components/blazor-barcode) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -183,7 +183,7 @@ Include the required [script references](https://blazor.syncfusion.com/documenta
 {% endhighlight %}
 {% endtabs %}
 
-## Add Blazor Barcode Generator component
+## Add Blazor Barcode Component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Barcode Generator](https://www.syncfusion.com/blazor-components/blazor-barcode) component inside the `.Client` project razor file.
 
@@ -257,7 +257,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## Add the QR Code Generator component
 
-Add a QR code to the Barcode Generator component.
+Add a QR code to the Blazor Barcode Component.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -271,7 +271,7 @@ Add a QR code to the Barcode Generator component.
 
 ## Add the Data Matrix Generator component
 
-Add a Data Matrix code to the Barcode Generator component.
+Add a Data Matrix code to the Blazor Barcode Component.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
