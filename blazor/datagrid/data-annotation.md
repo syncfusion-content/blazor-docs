@@ -15,13 +15,20 @@ When the DataGrid is bound to a model, data annotations automatically map to cor
 
 To enable data annotation in the Blazor DataGrid:
 
-1. Add the **System.ComponentModel.DataAnnotations** namespace in the Blazor application.
+1. Add the **System.ComponentModel.DataAnnotations** namespace to the Blazor application.
 2. Bind the DataGrid to a model using `TValue` and [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource).
 3. Apply annotation attributes to model properties to enforce validation and display rules during CRUD operations.
 
 ### Supported Data Annotation Attributes
 
-The tables categorize supported attributes by display, formatting, metadata, and validation functionality.
+Data annotation attributes control four key aspects of grid column behavior:
+
+- **Display attributes** manage how column headers and metadata appear in the grid interface
+- **Format attributes** define how data values are displayed and formatted in cells and edit dialogs
+- **Metadata attributes** control column visibility, editing behavior, and primary key identification
+- **Validation attributes** enforce data validation rules and display error messages during data entry
+
+The following tables detail each category:
 
 ### Display Attributes
 
@@ -48,9 +55,9 @@ Apply **DisplayFormat** attributes when column values require specific formattin
 | DisplayFormat | ConvertEmptyStringToNull | Converts empty strings to null in the UI |
 | DisplayFormat | HtmlEncode | Enables or disables HTML encoding for display |
 
-### Other Metadata Attributes
+### Metadata Attributes
 
-Use these attributes to manage column visibility, editing behavior, and key definitions.
+Metadata attributes control column visibility, editing capabilities, and key identification in the grid.
 
 | Attribute Name | Properties | Functionality |
 |----------------|------------|---------------|
