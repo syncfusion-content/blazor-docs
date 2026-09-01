@@ -97,6 +97,63 @@ The AI AssistView supports rendering responses as **Markdown** content, which is
 
 You can use markdown syntax like **bold**, *italic*, headings, lists, code blocks, and links to format your responses.
 
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView Prompts="@markdownPrompts" PromptSuggestions="@markdownSuggestions" PromptRequested="@PromptRequest"></SfAIAssistView>
+</div>
+
+@code {
+    private List<string> markdownSuggestions = new List<string> 
+    { 
+        "What is Markdown?", 
+        "How do I use bold?", 
+        "Show code block example" 
+    };
+
+    private List<AssistViewPrompt> markdownPrompts = new List<AssistViewPrompt>()
+    {
+        new AssistViewPrompt() 
+        { 
+            Prompt = "What is Markdown?", 
+            Response = @"# Markdown Guide
+
+Markdown is a lightweight markup language:
+
+- **Headers:** Use `#`, `##`, `###`
+- **Bold:** `**text**` for bold
+- **Italic:** `*text*` for italic
+- **Code:** Triple backticks for code blocks
+- **Lists:** Use `-` for bullet points
+
+It's simple and perfect for documentation."
+        },
+        new AssistViewPrompt() 
+        { 
+            Prompt = "How do I use bold?", 
+            Response = @"# Bold Text in Markdown
+
+Use double asterisks `**text**` or double underscores `__text__`:
+
+**This is bold text**
+
+Both methods produce the same result."
+        }
+    };
+
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        var markdownResponse = markdownPrompts.FirstOrDefault(prompt => prompt.Prompt == args.Prompt);
+        var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+        args.Response = markdownResponse?.Response ?? defaultResponse;
+    }
+}
+
+```
+
 ## Adding prompt suggestions
 
 You can use the [PromptSuggestions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptSuggestions) property, to add the suggestions in both initial and on-demand which help users to refine their prompts. Additionally, custom header can be set for suggestions further enhancing the user experience.
@@ -216,4 +273,46 @@ You can use the [ResponseIconCss](https://help.syncfusion.com/cr/blazor/Syncfusi
 ## Enable scroll to bottom icon
 
 You can use the [EnableScrollToBottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_EnableScrollToBottom) property to show or hide the scroll-to-bottom indicator. By default, this property is `true`. When enabled, a floating icon/button appears when the user scrolls away from the bottom of the conversation. Clicking this icon smoothly scrolls the view to the bottom to display the latest response.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView EnableScrollToBottom="true" Prompts="@prompts" PromptSuggestions="@suggestions" PromptRequested="@PromptRequest"></SfAIAssistView>
+</div>
+
+@code {
+    private List<string> suggestions = new List<string> 
+    { 
+        "What tools or apps can help me prioritize tasks?", 
+        "How do I manage multiple projects effectively?" 
+    };
+    
+    private List<AssistViewPrompt> prompts = new List<AssistViewPrompt>()
+    {
+        new AssistViewPrompt() 
+        { 
+            Prompt = "What tools or apps can help me prioritize tasks?", 
+            Response = "<div>Here are some effective task prioritization tools:<ul><li><strong>Todoist:</strong> A robust task manager with priority levels and project organization.</li><li><strong>Asana:</strong> Project management tool with timeline and board views.</li><li><strong>Microsoft To Do:</strong> Simple and integrated with Microsoft ecosystem.</li><li><strong>Notion:</strong> All-in-one workspace for notes, databases, and tasks.</li><li><strong>ClickUp:</strong> Comprehensive tool with customizable workflows and prioritization features.</li></ul></div>" 
+        },
+        new AssistViewPrompt() 
+        { 
+            Prompt = "How do I manage multiple projects effectively?", 
+            Response = "<div>Here are best practices for managing multiple projects:<ul><li><strong>Use a centralized dashboard:</strong> Track all projects in one place.</li><li><strong>Set clear milestones:</strong> Break down each project into manageable phases.</li><li><strong>Prioritize tasks:</strong> Focus on high-impact items first.</li><li><strong>Delegate effectively:</strong> Assign tasks to team members based on skills.</li><li><strong>Regular reviews:</strong> Conduct weekly or bi-weekly project status meetings.</li></ul></div>" 
+        }
+    };
+    
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        var promptData = prompts.FirstOrDefault(prompt => prompt.Prompt == args.Prompt);
+        var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+        args.Response = string.IsNullOrEmpty(promptData.Response) ? defaultResponse : promptData.Response;
+    }
+}
+
+```
+
+![Blazor AI AssistView ScrollToBottom](./images/assistview-scroll-to-bottom.png)
 
