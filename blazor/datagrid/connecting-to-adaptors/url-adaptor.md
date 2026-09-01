@@ -10,17 +10,17 @@ documentation: ug
 
 # Bind REST API Data using UrlAdaptor in Blazor Data Grid
 
-The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) serves as the base adaptor for facilitating communication between remote data services and a UI component. It enables seamless data binding and interaction with custom API services or any remote service through URLs. The `UrlAdaptor` is particularly useful in scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data, with the resultant data returned in the `result` and `count` format for display in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid).
+The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) serves as the base adaptor for facilitating communication between remote data services and a UI component. The UrlAdaptor enables seamless data binding and interaction with custom API services or any remote service through URLs. The `UrlAdaptor` is particularly useful in scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data, with the resultant data returned in the `result` and `count` format for display in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid).
 
-This section describes a step-by-step process for retrieving data using the `UrlAdaptor` and binding it to the Blazor DataGrid to facilitate data and CRUD operations.
+The following section explains how to retrieve data with the `UrlAdaptor` and bind the data to the Blazor Data Grid for data operations and CRUD actions.
 
 ## Creating an API Service
  
-To configure a server with the Blazor DataGrid, follow these steps:
+To configure a server with the Blazor Data Grid, follow these steps:
  
 **1. Create a Blazor web app**
  
-You can create a **Blazor Web App** named **URLAdaptor** using Visual Studio 2022, either via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
+Create a **Blazor Web App** named **URLAdaptor** using Visual Studio 2022, either by using [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
 
 **2. Create a model class**
  
@@ -85,7 +85,7 @@ namespace URLAdaptor.Models
  
 **3. Create an API controller**
  
-Create an API controller (aka, **GridController.cs**) file under **Controllers** folder that helps to establish data communication with the Blazor DataGrid.
+Create an API controller (aka, **GridController.cs**) file under **Controllers** folder that helps to establish data communication with the Blazor Data Grid.
  
 ```csharp
  
@@ -131,7 +131,7 @@ namespace URLAdaptor.Controllers
  
 ```
  
-> The **GetOrderData** method retrieves sample order data. Replace it with your custom logic to fetch data from a database or other sources.
+> The **GetOrderData** method retrieves sample order data. Replace the method with custom logic to fetch data from a database or other sources.
 
 **4. Register controllers in `Program.cs`**
  
@@ -147,17 +147,17 @@ app.MapControllers();
  
 **5. Run the application**
  
-Run the application in Visual Studio. The API will be accessible at a URL like **https://localhost:xxxx/api/grid** (where **xxxx** represents the port number). Please verify that the API returns the order data.
+Run the application in Visual Studio. The API endpoint is available at a URL such as **https://localhost:xxxx/api/grid**, where **xxxx** is the actual port number assigned to the app. Verify that the API returns the order data before connecting the Data Grid.
  
 ![UrlAdaptor Data](../images/blazor-datagrid-adaptors-data.webp)
 
-## Connecting Blazor DataGrid to an API service
+## Connecting Blazor Data Grid to an API service
  
-To integrate the Blazor DataGrid into your project using Visual Studio, follow the below steps:
+To integrate the Blazor Data Grid into your project using Visual Studio, follow the below steps:
  
-**1. Install Blazor DataGrid and Themes NuGet packages**
+**1. Install Blazor Data Grid and Themes NuGet packages**
  
-To add the Blazor DataGrid in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add the Blazor Data Grid in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
  
 If your Blazor Web App uses `WebAssembly` or `Auto` render modes, install the Blazor NuGet packages in the client project.
  
@@ -208,11 +208,11 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 > * Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for various methods to include themes (e.g., Static Web Assets, CDN, or CRG).
 > * Set the render mode to **InteractiveServer** or **InteractiveAuto** in your Blazor Web App configuration.
  
-**4. Add Blazor DataGrid and configure with server**
+**4. Add Blazor Data Grid and configure with server**
  
-To connect the Blazor DataGrid to a hosted API, use the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html). Update the **Index.razor** file as follows.
+To connect the Blazor Data Grid to a hosted API, use the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html). Update the **Index.razor** file as follows.
 
-The `SfDataManager` offers multiple adaptor options to connect with remote database based on an API service. Below is an example of the [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) configuration where an API service are set up to return the resulting data in the result and count format.
+The `SfDataManager` offers multiple adaptor options for remote data connections through an API service. The following example shows the [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) configuration for returning data in the result and count format.
  
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -221,7 +221,7 @@ The `SfDataManager` offers multiple adaptor options to connect with remote datab
 @using Syncfusion.Blazor.Data
 @using URLAdaptor.Models
  
-<SfGrid TValue="OrderDetails" Height="348">
+<SfGrid TValue="OrdersDetails" Height="348">
     <SfDataManager Url="https://localhost:xxxx/api/grid" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
     <GridColumns>
         <GridColumn Field="OrderID" HeaderText="Order ID" Width="100" TextAlign="TextAlign.Right"></GridColumn>
@@ -279,20 +279,20 @@ namespace URLAdaptor.Controllers
 {% endhighlight %}
 {% endtabs %}
  
-> Replace https://localhost:xxxx/api/grid with the actual URL of your API endpoint that provides the data in a consumable format (e.g., JSON).
+> Replace `https://localhost:xxxx/api/grid` with the actual URL of the API endpoint that returns JSON data for the grid.
  
 **5. Run the application**
  
-When you run the application, the Blazor DataGrid  will display data fetched from the API.
+When the application runs, the Blazor DataGrid displays data from the API.
  
 ![UrlAdaptor Data](../images/blazor-datagrid-adaptors.webp)
  
-> * The Blazor DataGrid supports server-side operations such as **searching**, **sorting**, **filtering**, **aggregating**, and **paging**. These can be handled using methods like [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__), [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_), [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__), [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Linq_IQueryable___0__System_Int32_), and [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_) from the **Syncfusion.Blazor.Data** package. Let's explore how to manage these data operations using the `UrlAdaptor`.
+> * The Blazor Data Grid supports server-side operations such as **searching**, **sorting**, **filtering**, **aggregating**, and **paging**. Such operations can be handled using methods like [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__), [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_), [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__), [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Linq_IQueryable___0__System_Int32_), and [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_) from the **Syncfusion.Blazor.Data** package. Refer to the following sections to manage data operations using the `UrlAdaptor`.
 > * In an API service project, add **Syncfusion.Blazor.Data** by opening the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 
 ## Handling searching operation
 
-To handle the searching operation, ensure that your API endpoint supports custom searching criteria. Implement the searching logic on the server side using the [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__) method from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. This allows the custom data source to undergo searching based on the criteria specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object.
+To handle the searching operation, ensure that the API endpoint supports custom searching criteria. Implement the searching logic on the server side using the [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__) method from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. The custom data source can undergo searching based on the criteria specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object.
 
 ![UrlAdaptor - Searching](../images/urladaptor-searching.webp)
 
@@ -348,7 +348,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 ### Handling filtering operation
 
-To handle the filtering operation, ensure that your API endpoint supports custom filtering criteria. Implement the filtering logic on the server side using the [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) method from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. This allows the custom data source to undergo filtering based on the criteria specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object.
+To handle the filtering operation, ensure that the API endpoint supports custom filtering criteria. Implement the filtering logic on the server side using the [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) method from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. The custom data source can undergo filtering based on the criteria specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object.
 
 **Single column filtering**
 ![Single column filtering](../images/urladaptor-filtering.webp)
@@ -414,7 +414,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 ## Handling sorting operation
 
-To handle the sorting operation, ensure that your API endpoint supports custom sorting criteria. Implement the sorting logic on the server side using the [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__) method from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. This allows the custom data source to undergo sorting based on the criteria specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object.
+To handle the sorting operation, ensure that the API endpoint supports custom sorting criteria. Implement the sorting logic on the server side using the [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__) method from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. The custom data source can undergo sorting based on the criteria specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object.
 
 **Single column sorting**
 ![Single column sorting](../images/urladaptor-sorting.webp)
@@ -474,7 +474,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 ## Handling paging operation
 
-To handle the paging operation, ensure that your API endpoint supports custom paging criteria. Implement the paging logic on the server side using the [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Linq_IQueryable___0__System_Int32_) and [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_) methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. This allows the custom data source to undergo paging based on the criteria specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object.
+To handle the paging operation, ensure that the API endpoint supports custom paging criteria. Implement the paging logic on the server side using the [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Linq_IQueryable___0__System_Int32_) and [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_) methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. The custom data source can undergo paging based on the criteria specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object.
 
 ![UrlAdaptor - Paging](../images/urladaptor-paging.webp)
 
@@ -535,11 +535,11 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 ## Handling CRUD operations
 
-The Blazor DataGrid seamlessly integrates CRUD (Create, Read, Update, and Delete) operations with server-side controller actions through specific properties: [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl), [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_RemoveUrl), [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl), [CrudUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_CrudUrl), and [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl). These properties enable the Grid to communicate with the data service for every Grid action, facilitating server-side operations.
+The Blazor Data Grid integrates CRUD (Create, Read, Update, and Delete) operations with server-side controller actions through specific properties: [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl), [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_RemoveUrl), [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl), [CrudUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_CrudUrl), and [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl). Such properties enable the Data Grid to send requests to the data service for each Data Grid action.
 
 **CRUD Operations Mapping**
 
-CRUD operations within the Grid can be mapped to server-side controller actions using specific properties:
+CRUD operations within the Data Grid can be mapped to server-side controller actions using specific properties:
 
 1. **InsertUrl**: Specifies the URL for inserting new data.
 2. **RemoveUrl**: Specifies the URL for removing existing data.
@@ -547,7 +547,7 @@ CRUD operations within the Grid can be mapped to server-side controller actions 
 4. **CrudUrl**: Specifies a single URL for all CRUD operations.
 5. **BatchUrl**: Specifies the URL for batch editing.
 
-To enable editing in Blazor DataGrid, refer to the editing [documentation](https://blazor.syncfusion.com/documentation/datagrid/editing). In the example below, the inline edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) is enabled, and the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property is configured to display toolbar items for editing purposes.
+To enable editing in Blazor Data Grid, refer to the editing [documentation](https://blazor.syncfusion.com/documentation/datagrid/editing). In the example below, the inline edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) is enabled, and the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property is configured to display toolbar items for editing purposes.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -570,7 +570,9 @@ To enable editing in Blazor DataGrid, refer to the editing [documentation](https
 {% endhighlight %}
 {% endtabs %}
 
-> Normal/Inline editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Grid. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
+> Normal/Inline editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Data Grid. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific Data Grid column, ensuring that the value remains unique.
+>
+> Without a primary key, the Data Grid cannot determine the unique record identity for update and delete actions. The server receives the record key in the CRUD request, and missing key data can fail the update or delete operation or update the wrong row. Set `IsPrimaryKey="true"` on the column holding the unique record ID.
 
 The below class is used to structure data sent during CRUD operations.
 
@@ -600,7 +602,7 @@ To insert a new record, use the [InsertUrl](https://help.syncfusion.com/cr/blazo
 /// <summary>
 /// Inserts a new data item into the data collection.
 /// </summary>
-/// <param name="value">It contains the new record detail which is need to be inserted.</param>
+/// <param name="value">Contains the new record details for insertion.</param>
 /// <returns>Returns void.</returns>
 [HttpPost]
 [Route("api/[controller]/Insert")]
@@ -628,7 +630,7 @@ For updating existing records, use the [UpdateUrl](https://help.syncfusion.com/c
 /// <summary>
 /// Update a existing data item from the data collection.
 /// </summary>
-/// <param name="updatedRecord">It contains the updated record detail which is need to be updated.</param>
+/// <param name="updatedRecord">Contains the updated record details for modification.</param>
 /// <returns>Returns void.</returns>
 [HttpPost]
 [Route("api/[controller]/Update")]
@@ -665,8 +667,8 @@ To delete existing records, use the [RemoveUrl](https://help.syncfusion.com/cr/b
 /// <summary>
 /// Remove a specific data item from the data collection.
 /// </summary>
-/// <param name="deletedRecord">It contains the specific record detail which is need to be removed.</param>
-/// <return>Returns void.</return>
+/// <param name="deletedRecord">Contains the record details selected for removal.</param>
+/// <returns>Returns void.</returns>
 [HttpPost]
 [Route("api/[controller]/Remove")]
 public void Remove([FromBody] CRUDModel<OrdersDetails> deletedRecord)
@@ -757,13 +759,13 @@ public void CrudUpdate([FromBody] CRUDModel<OrdersDetails> request)
 
 **Batch operation:**
 
-To perform batch operation, define the edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as **Batch** and specify the [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl) property in the `DataManager`. Use the **Add** toolbar button to insert new row in batch editing mode. To edit a cell, double-click the desired cell and update the value as required. To delete a record, simply select the record and press the **Delete** toolbar button. Now, all CRUD operations will be executed in single request. Clicking the **Update** toolbar button will update the newly added, edited, or deleted records from the **OrdersDetails** table using a single API POST request.
+To perform batch operation, define the edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as **Batch** and specify the [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl) property in the `DataManager`. Use the **Add** toolbar button to insert a new row in batch editing mode. To edit a cell, double-click the desired cell and update the value as required. To delete a record, select the record and press the **Delete** toolbar button. All CRUD operations will be executed in a single request. Clicking the **Update** toolbar button will update the newly added, edited, or deleted records from the **OrdersDetails** table using a single API POST request.
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
 
 /// <summary>
-/// Handles CRUD operations when batch editing is enabled in the DataGrid.
+/// Handles CRUD operations when batch editing is enabled in the Data Grid.
 /// </summary>
 /// <param name="batchModel">The batch model containing the data changes to be processed.</param>
 /// <returns>Returns the result of the CRUD operation.</returns>
@@ -795,7 +797,7 @@ public IActionResult BatchUpdate([FromBody] CRUDModel<OrdersDetails> batchModel)
                 existingOrder.OrderID = changedOrder.OrderID;
                 existingOrder.CustomerID = changedOrder.CustomerID;
                 existingOrder.ShipCity = changedOrder.ShipCity;
-                existingOrder.ShipCountry = changedOrder.ShipCity;
+                existingOrder.ShipCountry = changedOrder.ShipCountry;
                 // Update other properties as needed.
             }
         }
