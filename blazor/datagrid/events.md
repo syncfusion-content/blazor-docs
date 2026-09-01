@@ -9,15 +9,15 @@ documentation: ug
 
 # Events in Blazor Data Grid
 
-This section lists the events available in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and when they are triggered for various Grid actions.
+This section lists the events available in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and when they are triggered for various Data Grid actions.
 
-Events are assigned to the Grid by using a single **GridEvents** component. When configuring Grid events, specify the generic type via the **TValue** parameter to match the Grid’s data model.
+Events are assigned to the Data Grid by using a single **GridEvents** component. When configuring Grid events, specify the generic type via the **TValue** parameter to match the Data Grid’s data model.
 
 N> All events should be configured within a single **GridEvents** component.
 
 ## OnActionBegin
 
-[OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) triggers when a Grid action starts ([sorting](https://blazor.syncfusion.com/documentation/datagrid/sorting), [filtering](https://blazor.syncfusion.com/documentation/datagrid/filtering), [paging](https://blazor.syncfusion.com/documentation/datagrid/paging), [grouping](https://blazor.syncfusion.com/documentation/datagrid/grouping), [editing](https://blazor.syncfusion.com/documentation/datagrid/editing), and more). Use this to inspect or adjust action parameters before execution.
+[OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) triggers when a Grid action starts ([sorting](https://blazor.syncfusion.com/documentation/datagrid/sorting), [filtering](https://blazor.syncfusion.com/documentation/datagrid/filtering), [paging](https://blazor.syncfusion.com/documentation/datagrid/paging), [grouping](https://blazor.syncfusion.com/documentation/datagrid/grouping), [editing](https://blazor.syncfusion.com/documentation/datagrid/editing), and more). Use OnActionBegin to inspect or adjust action parameters before execution.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -27,7 +27,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -64,7 +64,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnActionComplete
 
-[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) triggers after Grid actions ([sorting](https://blazor.syncfusion.com/documentation/datagrid/sorting), [filtering](https://blazor.syncfusion.com/documentation/datagrid/filtering), [paging](https://blazor.syncfusion.com/documentation/datagrid/paging), [grouping](https://blazor.syncfusion.com/documentation/datagrid/grouping), [editing](https://blazor.syncfusion.com/documentation/datagrid/editing), etc.) finish. Use it for post-processing or UI updates.
+[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) triggers after Grid actions ([sorting](https://blazor.syncfusion.com/documentation/datagrid/sorting), [filtering](https://blazor.syncfusion.com/documentation/datagrid/filtering), [paging](https://blazor.syncfusion.com/documentation/datagrid/paging), [grouping](https://blazor.syncfusion.com/documentation/datagrid/grouping), [editing](https://blazor.syncfusion.com/documentation/datagrid/editing), etc.) finish. Use OnActionComplete for post-processing or UI updates.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -74,7 +74,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -109,7 +109,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnActionFailure
 
-[OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) triggers when a Grid action fails. Use it to log or display error details. In the following example, an invalid URL is configured to demonstrate the failure event.
+[OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) triggers when a Grid action fails. Use OnActionFailure to log or display error details.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -122,7 +122,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -144,7 +144,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## BeforeOpenColumnChooser
 
-[BeforeOpenColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeOpenColumnChooser) triggers before the Column Chooser dialog opens. Use it to customize behavior or cancel opening.
+[BeforeOpenColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeOpenColumnChooser) triggers before the Column Chooser dialog opens. Use BeforeOpenColumnChooser to customize behavior or cancel opening.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -186,16 +186,16 @@ N> All events should be configured within a single **GridEvents** component.
         public string Title { get; set; }
         public DateTime? HireDate { get; set; }
     }
-    public void BeforeOpenColumnChooserHandler(ColumnChooserEventArgs Args)
+    public void BeforeOpenColumnChooserHandler(ColumnChooserEventArgs args)
     {
-        // Customize or prevent opening based on Args if required.
+        // Customize or prevent opening based on args if required.
     }
 }
 ```
 
 ## Created
 
-[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Created) triggers once the Grid is created. Use it for one-time initialization that depends on the Grid being ready.
+[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Created) triggers once the Grid is created. Use Created for one-time initialization after the DataGrid is ready.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -205,7 +205,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -233,14 +233,14 @@ N> All events should be configured within a single **GridEvents** component.
 
     public void CreatedHandler(object args)
     {
-        // Perform setup that requires the Grid DOM or instance to exist.
+        // Perform setup that requires the Data Grid DOM or instance to exist.
     }
 }
 ```
 
 ## OnLoad
 
-[OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnLoad) triggers before the Grid rendering starts, allowing customization of Grid properties prior to rendering.
+[OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnLoad) triggers before the Data Grid rendering starts, allowing customization of Grid properties before rendering.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -250,7 +250,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -278,14 +278,14 @@ N> All events should be configured within a single **GridEvents** component.
 
     public void LoadHandler(object args)
     {
-        // Configure initial state before the Grid renders.
+        // Configure initial state before the Data Grid renders.
     }
 }
 ```
 
 ## Destroyed
 
-[Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Destroyed) event triggers when the Grid is destroyed. Use it to confirm that the Grid gets completely destroyed.
+[Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Destroyed) event triggers when the Grid is destroyed. Use Destroyed to confirm the DataGrid is completely destroyed.
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
@@ -294,7 +294,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -329,7 +329,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnDataBound
 
-[OnDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnDataBound) triggers before data is bound to the Grid. Use it to adjust query/columns based on incoming data.
+[OnDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnDataBound) triggers before data is bound to the Data Grid. Use OnDataBound to adjust query or columns based on incoming data.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -339,7 +339,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -374,7 +374,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## DataBound
 
-[DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) triggers after the data source is populated in the Grid. Use it for final UI adjustments after binding.
+[DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) triggers after the data source is populated in the Data Grid. Use DataBound for final UI adjustments after binding.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -384,7 +384,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -419,7 +419,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## RowDataBound
 
-[RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) triggers before each row element is appended to the Grid. Use it to style or transform row content.
+[RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) triggers before each row element is appended to the Data Grid. Use RowDataBound to style or transform row content.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -429,7 +429,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -464,7 +464,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## DetailDataBound
 
-[DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailDataBound) triggers after a detail row expands. Use it to modify the expanded content or perform related actions.
+[DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailDataBound) triggers after a detail row expands. Use DetailDataBound to modify expanded content or perform related actions.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -483,30 +483,30 @@ N> All events should be configured within a single **GridEvents** component.
                     </colgroup>
                     <tbody>
                         <tr>
-                            <td rowspan="4" style="text-align: center;">
-                                <img class="photo" src="@($" scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
+                            <td rowspan="4" class="photo-cell">
+                                <img class="photo" src="@($"scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
                             </td>
                             <td>
-                                <span style="font-weight: 500;">Employee ID: </span> @employee.FirstName
+                                <span class="label">Employee ID:</span> @employee.EmployeeID
                             </td>
                             <td>
-                                <span style="font-weight: 500;">Hire Date: </span> @employee.HireDate.Value.ToShortDateString()
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span style="font-weight: 500;">Last Name: </span> @employee.LastName
-                            </td>
-                            <td>
-                                <span style="font-weight: 500;">City: </span> @employee.City
+                                <span class="label">Hire Date:</span> @employee.HireDate.Value.ToShortDateString()
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <span style="font-weight: 500;">Title: </span> @employee.Title
+                                <span class="label">Last Name:</span> @employee.LastName
                             </td>
                             <td>
-                                <span style="font-weight: 500;">Country: </span> @employee.Country
+                                <span class="label">City:</span> @employee.City
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="label">Title:</span> @employee.Title
+                            </td>
+                            <td>
+                                <span class="label">Country:</span> @employee.Country
                             </td>
                         </tr>
                     </tbody>
@@ -515,7 +515,7 @@ N> All events should be configured within a single **GridEvents** component.
         </DetailTemplate>
     </GridTemplates>
     <GridColumns>
-        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="110"> </GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="110"></GridColumn>
         <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="110"></GridColumn>
         <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="110"></GridColumn>
         <GridColumn Field=@nameof(EmployeeData.Country) HeaderText="Country" Width="110"></GridColumn>
@@ -532,11 +532,19 @@ N> All events should be configured within a single **GridEvents** component.
         white-space: nowrap;
     }
 
+    .photo-cell {
+        text-align: center;
+    }
+
+    .label {
+        font-weight: 500;
+    }
+
     .photo {
         width: 100px;
         height: 100px;
         border-radius: 50px;
-        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0,0,0,0.2);
+        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0, 0, 0, 0.2);
     }
 </style>
 
@@ -576,7 +584,7 @@ N> All events should be configured within a single **GridEvents** component.
 ```
 ## DetailsExpanding
 
-[DetailsExpanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsExpanding) triggers when a detail template row is clicked to expand. Use it to control expanding row or prevent it in specific cases.
+[DetailsExpanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsExpanding) triggers when a detail template row is clicked to expand. Use DetailsExpanding to control row expansion or prevent it in specific cases.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -683,7 +691,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## DetailsExpanded
 
-[DetailsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsExpanded) triggers after a detail template row has finished expanding. Use it to run logic that depends on the expanded detail view.
+[DetailsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsExpanded) triggers after a detail template row has finished expanding. Use DetailsExpanded to run logic that depends on the expanded detail view.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -790,7 +798,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## DetailsCollapsing
 
-[DetailsCollapsing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsCollapsing) triggers when a detail template row is clicked to collapse. Use it to control collapsing row or prevent it in specific cases.
+[DetailsCollapsing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsCollapsing) triggers when a detail template row is clicked to collapse. Use DetailsCollapsing to control row collapse or prevent it in specific cases.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -897,7 +905,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## DetailsCollapsed
 
-[DetailsCollapsed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsCollapsed) triggers after a detail template row has fully collapsed. Use it to clean up resources, stop timers, or update the UI after the detail content is hidden.
+[DetailsCollapsed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsCollapsed) triggers after a detail template row has fully collapsed. Use DetailsCollapsed to clean up resources, stop timers, or update the UI after detail content is hidden.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1004,7 +1012,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## QueryCellInfo
 
-[QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) triggers before a cell element is appended to the Grid. Use it to customize cell content, attributes, or styles.
+[QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) triggers before a cell element is appended to the Grid. Use QueryCellInfo to customize cell content, attributes, or styles.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1014,7 +1022,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1049,7 +1057,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnBeginEdit
 
-[OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBeginEdit) triggers before a record enters edit mode. Use it to set defaults or cancel editing.
+[OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBeginEdit) triggers before a record enters edit mode. Use OnBeginEdit to set defaults or cancel editing.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1060,7 +1068,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1095,7 +1103,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnBatchAdd
 
-[OnBatchAdd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchAdd) triggers before records are added in batch mode. Use it to validate or preset values.
+[OnBatchAdd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchAdd) triggers before records are added in batch mode. Use OnBatchAdd to validate or preset values.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1106,7 +1114,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1141,7 +1149,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnBatchSave
 
-[OnBatchSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchSave) triggers before batch changes are committed. Use it to validate or cancel save.
+[OnBatchSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchSave) triggers before batch changes are committed. Use OnBatchSave to validate or cancel save.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1152,7 +1160,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1188,7 +1196,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnBatchDelete
 
-[OnBatchDelete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchDelete) triggers before records are deleted in batch mode. Use it to confirm or cancel deletion.
+[OnBatchDelete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchDelete) triggers before records are deleted in batch mode. Use OnBatchDelete to confirm or cancel deletion.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1199,7 +1207,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1234,7 +1242,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnCellEdit
 
-[OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) triggers when a cell enters edit mode. Use it to configure the editor or apply validation.
+[OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) triggers when a cell enters edit mode. Use OnCellEdit to configure the editor or apply validation.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1246,7 +1254,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1281,7 +1289,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnCellSave
 
-[OnCellSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellSave) triggers before a cell value is saved. Use it to validate and optionally cancel the save.
+[OnCellSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellSave) triggers before a cell value is saved. Use OnCellSave to validate and optionally cancel the save.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1293,7 +1301,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1328,7 +1336,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## CellSaved
 
-[CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSaved) triggers after a cell value is saved. Use it to perform follow-up actions.
+[CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSaved) triggers after a cell value is saved. Use CellSaved to perform follow-up actions.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1339,7 +1347,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1374,7 +1382,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## RowSelecting
 
-[RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelecting) triggers before a row is selected. Use it to control selection or prevent it in specific cases.
+[RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelecting) triggers before a row is selected. Use the event to control selection or prevent it in specific cases.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1384,7 +1392,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1419,7 +1427,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## RowSelected
 
-[RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) triggers after a row is selected. Use it to respond to selection changes.
+[RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) triggers after a row is selected. Use the event to respond to selection changes.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1429,7 +1437,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1464,7 +1472,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## RowDeselecting
 
-[RowDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeselecting) triggers before a selected row is deselected. Use it to prevent deselection in specific scenarios.
+[RowDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeselecting) triggers before a selected row is deselected. Use the event to prevent deselection in specific scenarios.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1474,7 +1482,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1510,7 +1518,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## RowDeselected
 
-[RowDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeselected) triggers after a selected row is deselected. Use it to handle deselection logic.
+[RowDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeselected) triggers after a selected row is deselected. Use the event to handle deselection logic.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1520,7 +1528,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1555,7 +1563,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## CellSelecting
 
-[CellSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSelecting) triggers before a cell is selected. Use it to control or cancel cell selection.
+[CellSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSelecting) triggers before a cell is selected. Use the event to control or cancel cell selection.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1567,7 +1575,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1602,7 +1610,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## CellSelected
 
-[CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSelected) triggers after a cell is selected. Use it for responding to cell-level selection changes.
+[CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSelected) triggers after a cell is selected. Use the event for responding to cell-level selection changes.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1613,7 +1621,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1648,7 +1656,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## CellDeselecting
 
-[CellDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellDeselecting) triggers before a selected cell is deselected. Use it to prevent deselection when needed.
+[CellDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellDeselecting) triggers before a selected cell is deselected. Use the event to prevent deselection when needed.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1660,7 +1668,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1696,7 +1704,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## CellDeselected
 
-[CellDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellDeselected) triggers after a cell is deselected. Use it to react to deselection changes.
+[CellDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Celldeselected) triggers after a cell is deselected. Use the event to react to deselection changes.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1708,7 +1716,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1744,7 +1752,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnRecordClick
 
-[OnRecordClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRecordClick) triggers when a record is clicked. Use it for row-level navigation or actions.
+[OnRecordClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRecordClick) triggers when a record is clicked. Use the event for row-level navigation or actions.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1755,7 +1763,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1791,7 +1799,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnRecordDoubleClick
 
-[OnRecordDoubleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRecordDoubleClick) triggers when a record is double-clicked. Use it to open detail views or toggle editing.
+[OnRecordDoubleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRecordDoubleClick) triggers when a record is double-clicked. Use the event to open detail views or toggle editing.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1802,7 +1810,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1837,7 +1845,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnToolbarClick
 
-[OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) triggers when a toolbar item is clicked. Use it to perform corresponding actions.
+[OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) triggers when a toolbar item is clicked. Use the event to perform corresponding actions.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1848,7 +1856,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1894,7 +1902,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn HeaderText="Manage Records" Width="150">
             <GridCommandColumns>
@@ -1940,7 +1948,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## ColumnMenuItemClicked
 
-[ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked) triggers when a column menu item is clicked. Use it to intercept and customize menu actions.
+[ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked) triggers when a column menu item is clicked. Use the event to intercept and customize menu actions.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1952,7 +1960,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1988,24 +1996,25 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## ContextMenuItemClicked
 
-[ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ContextMenuItemClicked) triggers when a context menu item is clicked. Use it to customize context menu actions.
+[ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ContextMenuItemClicked) triggers when a context menu item is clicked. Use the event to customize context menu actions.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowGrouping="true" AllowFiltering="true" AllowPaging="true" ContextMenuItems="@(new List<object>() { "AutoFit", "AutoFitAll", "SortAscending", "SortDescending","Copy", "Edit", "Delete", "Save", "Cancel","PdfExport", "ExcelExport", "CsvExport", "FirstPage", "PrevPage","LastPage", "NextPage"})">
+<SfGrid @ref="Grid" DataSource="@Orders" AllowGrouping="true" AllowFiltering="true" AllowPaging="true" AllowExcelExport="true" AllowPdfExport="true" ContextMenuItems="@(new List<object>() { "AutoFit", "AutoFitAll", "SortAscending", "SortDescending", "Copy", "Edit", "Delete", "Save", "Cancel", "CsvExport", "ExcelExport", "PdfExport", "FirstPage", "PrevPage", "LastPage", "NextPage" })">
     <GridEvents ContextMenuItemClicked="ContextMenuItemClickedHandler" TValue="Order"></GridEvents>
     <GridFilterSettings Type="@Syncfusion.Blazor.Grids.FilterType.CheckBox"></GridFilterSettings>
     <GridGroupSettings ShowGroupedColumn="true"></GridGroupSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code{
+    private SfGrid<Order> Grid;
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
@@ -2027,28 +2036,36 @@ N> All events should be configured within a single **GridEvents** component.
         public double? Freight { get; set; }
     }
 
-    public void ContextMenuItemClickedHandler(ContextMenuClickEventArgs<Order> args)
+    public async Task ContextMenuItemClickedHandler(ContextMenuClickEventArgs<Order> args)
     {
         // Handle item click based on args.ItemId/args.Element information.
+        if (args.Item.Id == "Grid_excelexport")
+        {
+            await Grid.ExportToExcelAsync();
+        }
+        else if (args.Item.Id == "Grid_pdfexport")
+        {
+            await Grid.ExportToPdfAsync();
+        }
     }
 }
 ```
 
 ## ContextMenuOpen
 
-[ContextMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ContextMenuOpen) triggers before the context menu opens. Use it to customize items or cancel opening dynamically.
+[ContextMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ContextMenuOpen) triggers before the context menu opens. Use the event to customize items or cancel opening dynamically.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowGrouping="true" AllowFiltering="true" AllowPaging="true" ContextMenuItems="@(new List<object>() { "AutoFit", "AutoFitAll", "SortAscending", "SortDescending","Copy", "Edit", "Delete", "Save", "Cancel","PdfExport", "ExcelExport", "CsvExport", "FirstPage", "PrevPage","LastPage", "NextPage"})">
+<SfGrid @ref="Grid" DataSource="@Orders" AllowGrouping="true" AllowFiltering="true" AllowPaging="true" AllowExcelExport="true" AllowPdfExport="true" ContextMenuItems="@(new List<object>() { "AutoFit", "AutoFitAll", "SortAscending", "SortDescending", "Copy", "Edit", "Delete", "Save", "Cancel", "CsvExport", "ExcelExport", "PdfExport", "FirstPage", "PrevPage", "LastPage", "NextPage" })">
     <GridEvents ContextMenuOpen="ContextMenuOpenHandler" TValue="Order"></GridEvents>
     <GridFilterSettings Type="@Syncfusion.Blazor.Grids.FilterType.CheckBox"></GridFilterSettings>
     <GridGroupSettings ShowGroupedColumn="true"></GridGroupSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -2084,7 +2101,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnPdfExport
 
-[OnPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnPdfExport) triggers before Grid data is exported to a PDF document. Use it to customize export settings.
+[OnPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnPdfExport) triggers before Grid data is exported to a PDF document. Use the event to customize export settings.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2094,7 +2111,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -2147,7 +2164,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -2200,7 +2217,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -2283,7 +2300,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -2326,9 +2343,9 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## PdfGroupCaptionTemplateInfo
 
-[PdfGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfGroupCaptionTemplateInfo) triggers when exporting the group caption template to PDF. Use it to customize group caption content in the exported document.
+[PdfGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfGroupCaptionTemplateInfo) triggers when exporting the group caption template to PDF. Use the event to customize group caption content in the exported document.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true" AllowGrouping="true">
@@ -2344,7 +2361,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -2354,10 +2371,10 @@ N> All events should be configured within a single **GridEvents** component.
     public List<Order> Orders { get; set; }
     string[] Initial = new string[] { "CustomerID" };
 
-    public void PdfGroupCaptionHandler(PdfCaptionTemplateArgs Args)
+    public void PdfGroupCaptionHandler(PdfCaptionTemplateArgs args)
     {
         // Customize group caption cell values for PDF export.
-        Args.Cell.Value = Args.Field + " - " + Args.Key;
+        args.Cell.Value = args.Field + " - " + args.Key;
     }
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
@@ -2390,7 +2407,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnExcelExport
 
-[OnExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnExcelExport) triggers before Grid data is exported to an Excel document. Use this event to modify export settings (such as file name, columns, or formatting) before the export begins.
+[OnExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnExcelExport) triggers before Grid data is exported to an Excel document. Use the event to modify export settings (such as file name, columns, or formatting) before the export begins.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2400,7 +2417,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -2443,7 +2460,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## ExcelHeaderQueryCellInfoEvent
 
-[ExcelHeaderQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelHeaderQueryCellInfoEvent) triggers before exporting to Excel to customize header cells. Use it to modify header text, alignment, styles, or to merge cells when creating grouped headings.
+[ExcelHeaderQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelHeaderQueryCellInfoEvent) triggers before exporting to Excel to customize header cells. Use the event to modify header text, alignment, styles, or to merge cells when creating grouped headings.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2453,7 +2470,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -2496,7 +2513,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## ExcelQueryCellInfoEvent
 
-[ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent) triggers before exporting to Excel to customize data cells. Use it to apply number/date formats, conditional formatting, custom values, or styling per cell or column.
+[ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent) triggers before exporting to Excel to customize data cells. Use the event to apply number/date formats, conditional formatting, custom values, or styling per cell or column.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2506,7 +2523,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -2549,7 +2566,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## ExcelAggregateTemplateInfo
 
-[ExcelAggregateTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelAggregateTemplateInfo) triggers before Excel export to customize aggregate footer template content. Use it to format summary values, change labels, or adjust footer styles.
+[ExcelAggregateTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelAggregateTemplateInfo) triggers before Excel export to customize aggregate footer template content. Use the event to format summary values, change labels, or adjust footer styles.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2589,7 +2606,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -2632,9 +2649,9 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## ExcelGroupCaptionTemplateInfo
 
-[ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) triggers when exporting group caption templates to Excel. Use it to customize group caption text, apply formatting, or include aggregate details in caption rows.
+[ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) triggers when exporting group caption templates to Excel. Use the event to customize group caption text, apply formatting, or include aggregate details in caption rows.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true" AllowPaging="true" AllowGrouping="true">
@@ -2650,7 +2667,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -2660,10 +2677,10 @@ N> All events should be configured within a single **GridEvents** component.
     public List<Order> Orders { get; set; }
     string[] Initial = new string[] { "CustomerID" };
 
-    public void ExcelGroupCaptionHandler(ExcelCaptionTemplateArgs Args)
+    public void ExcelGroupCaptionHandler(ExcelCaptionTemplateArgs args)
     {
         // Set the group caption value or style for Excel export.
-        Args.Cell.Value = Args.Field + " - " + Args.Key;
+        args.Cell.Value = args.Field + " - " + args.Key;
     }
 
 
@@ -2697,7 +2714,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## ExportComplete
 
-[ExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExportComplete) triggers after a file export (PDF, Excel, or CSV) finishes. Use it to display notifications, log analytics, or trigger follow-up workflows.
+[ExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExportComplete) triggers after a file export (PDF, Excel, or CSV) finishes. Use the event to display notifications, log analytics, or trigger follow-up workflows.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2707,7 +2724,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -2761,17 +2778,17 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnResizeStart
 
-[OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnResizeStart) triggers when column resizing begins. Use it to capture initial widths, toggle resize behavior, or conditionally cancel via event arguments (if supported).
+[OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnResizeStart) triggers when column resizing begins. Use the event to capture initial widths, toggle resize behavior, or conditionally cancel via event arguments (if supported).
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowResizing="true">
-    <GridEvents OnResizeStart="OnResizeStartHanlder" TValue="Order"></GridEvents>
+    <GridEvents OnResizeStart="OnResizeStartHandler" TValue="Order"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -2798,7 +2815,7 @@ N> All events should be configured within a single **GridEvents** component.
         public double? Freight { get; set; }
     }
 
-    public void OnResizeStartHanlder(ResizeArgs args)
+    public void OnResizeStartHandler(ResizeArgs args)
     {
         // Record current column widths or decide whether to proceed with resizing.
     }
@@ -2807,17 +2824,17 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## ResizeStopped
 
-[ResizeStopped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ResizeStopped) triggers when column resizing ends. Use it to persist new widths, update responsive layouts, or store preferences.
+[ResizeStopped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ResizeStopped) triggers when column resizing ends. Use the event to persist new widths, update responsive layouts, or store preferences.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowResizing="true">
-    <GridEvents ResizeStopped="ResizeStoppedHanlder" TValue="Order"></GridEvents>
+    <GridEvents ResizeStopped="ResizeStoppedHandler" TValue="Order"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -2844,7 +2861,7 @@ N> All events should be configured within a single **GridEvents** component.
         public double? Freight { get; set; }
     }
 
-    public void ResizeStoppedHanlder(ResizeArgs args)
+    public void ResizeStoppedHandler(ResizeArgs args)
     {
         // Save or apply the final column widths after resizing completes.
     }
@@ -2853,7 +2870,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## RowDragStarting
 
-[RowDragStarting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDragStarting) triggers when a row drag action begins. Use it to validate the drag operation, set drag metadata, or restrict which rows can be dragged.
+[RowDragStarting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDragStarting) triggers when a row drag action begins. Use the event to validate the drag operation, set drag metadata, or restrict which rows can be dragged.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2863,7 +2880,7 @@ N> All events should be configured within a single **GridEvents** component.
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -2899,9 +2916,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## RowDropped
 
-[RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDropped) triggers when a dragged row is dropped on a valid target. Use it to finalize reordering, update the data source, or take actions based on the drop position.
-
-N> The DataGrid continues to evolve with new events. If an event is missing, submit a request on the [feedback portal](https://www.syncfusion.com/feedback/blazor-components).
+[RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDropped) triggers when a dragged row is dropped on a valid target. Use the event to finalize reordering, update the data source, or take actions based on the drop position.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2911,7 +2926,7 @@ N> The DataGrid continues to evolve with new events. If an event is missing, sub
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -2944,12 +2959,11 @@ N> The DataGrid continues to evolve with new events. If an event is missing, sub
     }
 }
 ```
+N> The Data Grid continues to evolve with new events. If an event is missing, submit a request on the [feedback portal](https://www.syncfusion.com/feedback/blazor-components).
 
 ## RowDropping
 
-[RowDropping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDropping) triggers while a row is being dropped over a target. Use it to validate the drop target or to prevent dropping on invalid locations.
-
-> To cancel the drop, set args.Cancel to true in the RowDropping event handler.
+[RowDropping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDropping) triggers while a row is being dropped over a target. Use the event to validate the drop target or to prevent dropping on invalid locations.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2959,7 +2973,7 @@ N> The DataGrid continues to evolve with new events. If an event is missing, sub
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -2993,9 +3007,11 @@ N> The DataGrid continues to evolve with new events. If an event is missing, sub
 }
 ```
 
+> To cancel the drop, set args.Cancel to true in the RowDropping event handler.
+
 ## OnBatchCancel
 
-The [OnBatchCancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchCancel) event triggers when the cancel action is initiated in batch mode. Use it to revert local state, clear validation messages, or notify that pending edits were discarded.
+The [OnBatchCancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchCancel) event triggers when the cancel action is initiated in batch mode. Use the event to revert local state, clear validation messages, or notify that pending edits were discarded.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3006,7 +3022,7 @@ The [OnBatchCancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grid
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" ValidationRules="@(new ValidationRules { Required = true })" Type="ColumnType.Integer" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
     </GridColumns>
@@ -3043,13 +3059,13 @@ The [OnBatchCancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grid
 ```
 ## OnColumnMenuOpen
 
-The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnColumnMenuOpen) event triggers before opening the column menu and any submenu items. Use it to add, remove, or disable items dynamically, or to cancel menu opening.
+The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnColumnMenuOpen) event triggers before opening the column menu and any submenu items. Use the event to add, remove, or disable items dynamically, or to cancel menu opening.
 
 > To cancel column menu rendering, set args.Cancel to true in the OnColumnMenuOpen event handler.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Navigations;
+@using Syncfusion.Blazor.Navigations
 
 <SfGrid DataSource="@Orders" Height="315" AllowGrouping="true"  AllowFiltering="true" ShowColumnMenu="true" AllowPaging="true" AllowSorting=true>
     <GridFilterSettings Type="FilterType.CheckBox"></GridFilterSettings>
@@ -3094,7 +3110,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 ## PageChanging
 
-[PageChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PageChanging) triggers before navigating to a new page or changing page size. Use it to validate navigation, synchronize external state, or log user actions.
+[PageChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PageChanging) triggers before navigating to a new page or changing page size. Use the event to validate navigation, synchronize external state, or log user actions.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3104,7 +3120,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -3150,7 +3166,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 ## PageChanged
 
-[PageChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PageChanged) triggers after page navigation or page size changes. Use it to update UI state, lazy-load related data, or record analytics.
+[PageChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PageChanged) triggers after page navigation or page size changes. Use the event to update UI state, lazy-load related data, or record analytics.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3160,7 +3176,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -3207,7 +3223,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 ## Sorting
 
-[Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Sorting) triggers before a sort is applied, removed, or its direction changes. Use it to validate sort rules, customize sort descriptors, or cancel sorting via event args.
+[Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Sorting) triggers before a sort is applied, removed, or its direction changes. Use the event to validate sort rules, customize sort descriptors, or cancel sorting via event args.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3217,7 +3233,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -3264,7 +3280,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 ## Sorted
 
-[Sorted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Sorted) triggers after sorting completes. Use it to persist sort preferences, update UI indicators, or re-query dependent data.
+[Sorted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Sorted) triggers after sorting completes. Use the event to persist sort preferences, update UI indicators, or re-query dependent data.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3274,7 +3290,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -3321,7 +3337,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 ## Grouping
 
-[Grouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouping) triggers before a group or ungroup action is applied. Use it to validate grouping rules, adjust descriptors, or cancel via event args.
+[Grouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouping) triggers before a group or ungroup action is applied. Use the event to validate grouping rules, adjust descriptors, or cancel via event args.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3331,7 +3347,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -3378,7 +3394,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 ## Grouped
 
-[Grouped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouped) triggers after a column is grouped or ungrouped. Use it to refresh summaries or update UI dependent on grouping.
+[Grouped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouped) triggers after a column is grouped or ungrouped. Use the event to refresh summaries or update UI dependent on grouping.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3388,7 +3404,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -3435,7 +3451,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 ## Searching
 
-[Searching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Searching) triggers before a search is applied. Use it to validate or adjust search settings, or cancel via event args.
+[Searching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Searching) triggers before a search is applied. Use the event to validate or adjust search settings, or cancel via event args.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3445,7 +3461,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -3492,7 +3508,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 ## Searched
 
-[Searched](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Searched) triggers after a search is applied. Use it to reflect search results in the UI or analytics.
+[Searched](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Searched) triggers after a search is applied. Use the event to reflect search results in the UI or analytics.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3502,7 +3518,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -3549,7 +3565,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 ## RowCreating
 
-[RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating) triggers before a new record is added. Use it to preset default values or cancel the add operation.
+[RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating) triggers before a new record is added. Use the event to preset default values or cancel the add operation.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3560,7 +3576,7 @@ The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -3608,7 +3624,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## RowCreated
 
-[RowCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreated) triggers after a record is added. Use it to run post-add logic such as notifications or focus management.
+[RowCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreated) triggers after a record is added. Use the event to run post-add logic such as notifications or focus management.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3619,7 +3635,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -3667,7 +3683,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## RowUpdating
 
-[RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) triggers before edited or newly added data is saved. Use it to validate, transform values, or cancel saving via event args.
+[RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) triggers before edited or newly added data is saved. Use the event to validate, transform values, or cancel saving via event args.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3678,7 +3694,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -3726,7 +3742,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## RowUpdated
 
-[RowUpdated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdated) triggers after edited or newly added data is saved. Use it to perform post-save actions such as refreshing related data or showing a confirmation.
+[RowUpdated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdated) triggers after edited or newly added data is saved. Use the event to perform post-save actions such as refreshing related data or showing a confirmation.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3737,7 +3753,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -3784,7 +3800,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## RowDeleting
 
-[RowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeleting) triggers before a record is deleted. Use it to confirm deletion or cancel based on custom rules.
+[RowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeleting) triggers before a record is deleted. Use the event to confirm deletion or cancel based on custom rules.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3795,7 +3811,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -3843,7 +3859,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## RowDeleted
 
-[RowDeleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeleted) triggers after a record is deleted. Use it to update UI, refresh dependencies, or log the deletion.
+[RowDeleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeleted) triggers after a record is deleted. Use the event to update UI, refresh dependencies, or log the deletion.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3854,7 +3870,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -3902,7 +3918,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## EditCanceling
 
-[EditCanceling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_EditCanceling) triggers before canceling the update of edited or added data. Use it to confirm cancellation or revert temporary state.
+[EditCanceling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_EditCanceling) triggers before canceling the update of edited or added data. Use the event to confirm cancellation or revert temporary state.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3913,7 +3929,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -3961,7 +3977,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## EditCanceled
 
-[EditCanceled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_EditCanceled) triggers after canceling the update of edited or added data. Use it to restore UI state or notify users.
+[EditCanceled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_EditCanceled) triggers after canceling the update of edited or added data. Use the event to restore UI state or notify users.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3972,7 +3988,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -4020,7 +4036,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## OnRowEditStart
 
-[OnRowEditStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRowEditStart) triggers before a row enters edit mode. Use it to prepare the editor UI or to prevent editing based on conditions.
+[OnRowEditStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRowEditStart) triggers before a row enters edit mode. Use the event to prepare the editor UI or to prevent editing based on conditions.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -4031,7 +4047,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -4079,7 +4095,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## RowEditing
 
-[RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing) triggers before the edit action is performed. Use it to configure editors, load reference data, or cancel editing based on rules.
+[RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing) triggers before the edit action is performed. Use the event to configure editors, load reference data, or cancel editing based on rules.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -4090,7 +4106,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -4138,7 +4154,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## RowEdited
 
-[RowEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEdited) triggers after the edit action completes. Use it to commit changes to external stores or inform users.
+[RowEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEdited) triggers after the edit action completes. Use the event to commit changes to external stores or inform users.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -4149,7 +4165,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -4197,7 +4213,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## Filtering
 
-[Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtering) triggers before filtering or clearing filters. Use it to validate filter predicates, modify operators, or cancel the operation.
+[Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtering) triggers before filtering or clearing filters. Use the event to validate filter predicates, modify operators, or cancel the operation.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -4207,7 +4223,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -4253,7 +4269,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## Filtered
 
-[Filtered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtered) triggers after filtering or clearing filters. Use it to update UI or perform analytics based on the applied filters.
+[Filtered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtered) triggers after filtering or clearing filters. Use the event to update UI or perform analytics based on the applied filters.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -4263,7 +4279,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -4310,7 +4326,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
 
 ## FilterDialogOpening
 
-[FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) triggers before the filter dialog opens. Use it to configure dialog content or cancel opening.
+[FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) triggers before the filter dialog opens. Use the event to configure dialog content or cancel opening.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -4321,7 +4337,7 @@ N> This event is raised specifically for `Normal` and `Dialog` [EditMode](https:
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -4369,18 +4385,18 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
 
 ## FilterDialogOpened
 
-[FilterDialogOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpened) triggers after the filter dialog opens. Use it to adjust UI or focus elements within the dialog.
+[FilterDialogOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpened) triggers after the filter dialog opens. Use the event to adjust UI or focus elements within the dialog.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" AllowFiltering="true">
-    <GridEvents FilterDialogOpened="FilterDialogOpeneHandler" TValue="Order"></GridEvents>
+    <GridEvents FilterDialogOpened="FilterDialogOpenedHandler" TValue="Order"></GridEvents>
     <GridFilterSettings Type="FilterType.Excel"></GridFilterSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -4410,7 +4426,7 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
         return data;
     }
 
-    public void FilterDialogOpeneHandler(FilterDialogOpenedEventArgs args)
+    public void FilterDialogOpenedHandler(FilterDialogOpenedEventArgs args)
     {
         // Focus a control or tweak dialog UI after it renders.
     }
@@ -4428,7 +4444,7 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
 
 ## CheckboxFilterSearching
 
-[CheckboxFilterSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CheckboxFilterSearching) triggers when values are filtered using the search bar in [CheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) and [Excel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) filter dialogs. Use it to tune search behavior or pre-filter items.
+[CheckboxFilterSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CheckboxFilterSearching) triggers when values are filtered using the search bar in [CheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) and [Excel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) filter dialogs. Use the event to tune search behavior or pre-filter items.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -4439,7 +4455,7 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -4486,7 +4502,7 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
 
 ## ColumnReordering
 
-[ColumnReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnReordering) triggers before columns are reordered. Use it to enforce ordering rules or cancel the operation.
+[ColumnReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnReordering) triggers before columns are reordered. Use the event to enforce ordering rules or cancel the operation.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -4496,7 +4512,7 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -4543,7 +4559,7 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
 
 ## ColumnReordered
 
-[ColumnReordered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnReordered) triggers after columns are reordered. Use it to persist layout preferences or update dependent UI.
+[ColumnReordered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnReordered) triggers after columns are reordered. Use the event to persist layout preferences or update dependent UI.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -4553,7 +4569,7 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -4600,18 +4616,18 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
 
 ## ColumnVisibilityChanging
 
-[ColumnVisibilityChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnVisibilityChanging) triggers before a column’s visibility changes. Use it to control toggling or cancel the change.
+[ColumnVisibilityChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnVisibilityChanging) triggers before a column’s visibility changes. Use the event to control toggling or cancel the change.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowPaging="true" AllowReordering="true">
+<SfGrid DataSource="@Orders" AllowPaging="true" AllowReordering="true" ShowColumnChooser="true" Toolbar="@(new List<string>() { "ColumnChooser" })">
     <GridEvents ColumnVisibilityChanging="ColumnVisibilityChangingHandler" TValue="Order"></GridEvents>
     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.CheckBox"></GridFilterSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -4658,17 +4674,17 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
 
 ## ColumnVisibilityChanged
 
-[ColumnVisibilityChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnVisibilityChanged) triggers after a column’s visibility changes. Use it to store preferences or refresh dependent UI.
+[ColumnVisibilityChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnVisibilityChanged) triggers after a column’s visibility changes. Use the event to store preferences or refresh dependent UI.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowPaging="true" AllowReordering="true">
+<SfGrid DataSource="@Orders" AllowPaging="true" AllowReordering="true" ShowColumnChooser="true" Toolbar="@(new List<string>() { "ColumnChooser" })">
     <GridEvents ColumnVisibilityChanged="ColumnVisibilityChangedHandler" TValue="Order"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
