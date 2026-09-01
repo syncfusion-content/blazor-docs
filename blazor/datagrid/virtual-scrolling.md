@@ -17,7 +17,7 @@ The virtual scrolling feature in the [Blazor DataGrid](https://www.syncfusion.co
 
 Row virtualization is a technique that optimizes rendering performance for large datasets in data grids. Instead of loading all rows at once, it dynamically loads and renders only the rows visible within the viewport during vertical scrolling. This approach reduces the initial load time and memory usage, making it a more efficient alternative to traditional paging.
 
-To configure row virtualization, set [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) to **true** and define a fixed content height using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) property. The number of rendered records is implicitly determined by the content height. The visible count can be adjusted using [GridPageSettings.PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) data is cached and reused while scrolling.
+To configure row virtualization, set [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) to **true** and define a fixed content height using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) property. The number of rendered records is implicitly determined by the content height. The visible count can be adjusted with [GridPageSettings.PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize), and data is cached and reused while scrolling.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -899,10 +899,10 @@ To ensure smooth scrolling behavior, virtualization must be enabled in the Grid.
 @using Syncfusion.Blazor.Inputs
 
 <div style="margin-bottom:5px">
-    <label style="margin: 5px 5px 0 0"> Enter Column Index:</label>
+    <label style="margin: 5px 5px 0 0">Enter Column Index:</label>
     <SfNumericTextBox CssClass="e-outline" @bind-Value="@ColumnIndexValue" Max="10" Width="150px"></SfNumericTextBox>
     <SfButton @onclick="Scroll" Content="Scroll Horizontally"></SfButton>
-    <label style="margin: 5px 5px 0 0"> Enter Row Index:</label>
+    <label style="margin: 5px 5px 0 0">Enter Row Index:</label>
     <SfNumericTextBox CssClass="e-outline" @bind-Value="@RowIndexValue" Max="1000" Width="150px"></SfNumericTextBox>
     <SfButton @onclick="Scroll" Content="Scroll Vertically"></SfButton>
 </div>
