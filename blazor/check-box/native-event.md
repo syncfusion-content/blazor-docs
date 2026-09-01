@@ -67,6 +67,10 @@ The component-specific change event is bound using the [ValueChange](https://hel
 
 `@onchange` is used for the framework's native change behavior with `ChangeEventArgs` (object `Value`). `ValueChange` is used when a strongly typed `ChangeEventArgs<bool>` payload from Syncfusion is required.
 
+N> When using multiple Syncfusion components within the same project, it is recommended to explicitly define the namespace to avoid ambiguity and ensure proper functionality.
+In certain integrated development environments (IDEs), such as Playground, it is necessary to explicitly specify the namespace for event arguments. This helps prevent ambiguous reference errors, especially when both Syncfusion and native components are used without defined namespaces.
+
+
 ```cshtml
 @using Syncfusion.Blazor.Buttons
 
@@ -74,7 +78,7 @@ The component-specific change event is bound using the [ValueChange](https://hel
 
 @code {
     private bool isChecked = true;
-    private void ValueChange(ChangeEventArgs<bool> args)
+    private void ValueChange(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> args)
     {
         // ValueChange event triggered
         var state = args.Checked;
