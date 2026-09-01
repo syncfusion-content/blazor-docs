@@ -1563,7 +1563,7 @@ AA
 ---
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/multicolumn-combobox/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/multicolumn-combobox/accessibility" target="_blank" aria-label="MultiColumn ComboBox accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1592,10 +1592,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/multiselect" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/multiselect" target="_blank" aria-label="MultiSelect Dropdown accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/multiselect-dropdown/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/multiselect-dropdown/accessibility" target="_blank" aria-label="MultiSelect Dropdown accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1624,10 +1624,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/numerictextbox" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/numerictextbox" target="_blank" aria-label="Numeric TextBox accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/numeric-textbox/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/numeric-textbox/accessibility" target="_blank" aria-label="Numeric TextBox accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1656,10 +1656,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/pager" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/pager" target="_blank" aria-label="Pager accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/pager/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/pager/accessibility" target="_blank" aria-label="Pager accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1691,7 +1691,7 @@ AA
 ---
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/otp-input/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/otp-input/accessibility" target="_blank" aria-label="OTP Input accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1720,10 +1720,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/pivot-table" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/pivot-table" target="_blank" aria-label="Pivot Table accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/pivot-table/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/pivot-table/accessibility" target="_blank" aria-label="Pivot Table accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1752,10 +1752,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/progress-bar" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/progress-bar" target="_blank" aria-label="ProgressBar accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/progress-bar/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/progress-bar/accessibility" target="_blank" aria-label="ProgressBar accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1784,10 +1784,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/progress-button" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/progress-button" target="_blank" aria-label="ProgressButton accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/progress-button/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/progress-button/accessibility" target="_blank" aria-label="ProgressButton accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1816,10 +1816,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/querybuilder" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/querybuilder" target="_blank" aria-label="Query Builder accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/query-builder/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/query-builder/accessibility" target="_blank" aria-label="Query Builder accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1848,10 +1848,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/radio-button" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/radio-button" target="_blank" aria-label="RadioButton accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/radio-button/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/radio-button/accessibility" target="_blank" aria-label="RadioButton accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1880,10 +1880,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/range-selector" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/range-selector" target="_blank" aria-label="Range Selector accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/range-selector/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/range-selector/accessibility" target="_blank" aria-label="Range Selector accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1912,10 +1912,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/slider" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/slider" target="_blank" aria-label="Range Slider accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/range-slider/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/range-slider/accessibility" target="_blank" aria-label="Range Slider accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1944,10 +1944,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/rating" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/rating" target="_blank" aria-label="Rating accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/rating/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/rating/accessibility" target="_blank" aria-label="Rating accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1979,7 +1979,7 @@ AA
 ---
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/ribbon/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/ribbon/accessibility" target="_blank" aria-label="Ribbon accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2008,10 +2008,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/schedule" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/schedule" target="_blank" aria-label="Scheduler accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/scheduler/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/scheduler/accessibility" target="_blank" aria-label="Scheduler accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2040,10 +2040,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/sidebar" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/sidebar" target="_blank" aria-label="Sidebar accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/sidebar/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/sidebar/accessibility" target="_blank" aria-label="Sidebar accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2072,10 +2072,10 @@ N/A
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/signature" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/signature" target="_blank" aria-label="Signature accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/signature/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/signature/accessibility" target="_blank" aria-label="Signature accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2104,10 +2104,10 @@ AA
 N/A
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/skeleton" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/skeleton" target="_blank" aria-label="Skeleton accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/skeleton/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/skeleton/accessibility" target="_blank" aria-label="Skeleton accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2136,10 +2136,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/smith-chart" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/smith-chart" target="_blank" aria-label="Smith Chart accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/smith-chart/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/smith-chart/accessibility" target="_blank" aria-label="Smith Chart accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2168,10 +2168,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/sparkline" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/sparkline" target="_blank" aria-label="Sparkline accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/sparkline/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/sparkline/accessibility" target="_blank" aria-label="Sparkline accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2203,7 +2203,7 @@ AA
 ---
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/speech-to-text/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/speech-to-text/accessibility" target="_blank" aria-label="Speech To Text accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2232,10 +2232,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/speeddial" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/speeddial" target="_blank" aria-label="SpeedDial accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/speeddial/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/speeddial/accessibility" target="_blank" aria-label="SpeedDial accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2264,10 +2264,10 @@ N/A
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/split-button" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/split-button" target="_blank" aria-label="SplitButton accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/split-button/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/split-button/accessibility" target="_blank" aria-label="SplitButton accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2296,10 +2296,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/splitter" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/splitter" target="_blank" aria-label="Splitter accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/splitter/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/splitter/accessibility" target="_blank" aria-label="Splitter accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2328,10 +2328,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/stepper" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/stepper" target="_blank" aria-label="Stepper accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/stepper/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/stepper/accessibility" target="_blank" aria-label="Stepper accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2360,10 +2360,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/stock-chart" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/stock-chart" target="_blank" aria-label="Stock Chart accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/stock-chart/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/stock-chart/accessibility" target="_blank" aria-label="Stock Chart accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2392,10 +2392,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/tab" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/tab" target="_blank" aria-label="Tabs accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/tabs/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/tabs/accessibility" target="_blank" aria-label="Tabs accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2424,10 +2424,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/textbox" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/textbox" target="_blank" aria-label="TextBox accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/textbox/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/textbox/accessibility" target="_blank" aria-label="TextBox accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2456,10 +2456,10 @@ N/A
 N/A
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/timeline" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/timeline" target="_blank" aria-label="Timeline accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/timeline/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/timeline/accessibility" target="_blank" aria-label="Timeline accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2488,10 +2488,10 @@ AA
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/timepicker" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/timepicker" target="_blank" aria-label="TimePicker accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/timepicker/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/timepicker/accessibility" target="_blank" aria-label="TimePicker accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2520,10 +2520,10 @@ AA
 N/A
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/toast" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/toast" target="_blank" aria-label="Toast accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/toast/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/toast/accessibility" target="_blank" aria-label="Toast accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2552,10 +2552,10 @@ N/A
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/switch" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/switch" target="_blank" aria-label="Toggle Switch Button accessibility demo">Demo</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/toggle-switch-button/accessibility" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/toggle-switch-button/accessibility" target="_blank" aria-label="Toggle Switch Button accessibility documentation">Documentation</a>
 </td>
 </tr>
 <tr>
