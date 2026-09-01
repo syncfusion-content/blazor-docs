@@ -9,11 +9,11 @@ documentation: ug
 
 # Enable or Disable Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be dynamically enabled or disabled by toggling a button. This is useful to restrict user interaction with the Grid during certain application states or processes. The approach below disables interaction at the UI level by applying a CSS class to a wrapper and setting an attribute for styling or accessibility.
+The [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be enabled or disabled at the UI level by toggling a button. This approach is useful when user interaction needs to be restricted during specific application states or processes. The sample below applies a CSS class to a wrapper and updates an accessibility attribute. The wrapper style prevents pointer and touch interaction and shows a disabled appearance. The approach does not change the Blazor Data Grid component's internal enabled state or keyboard behavior.
 
-To implement this:
+To implement the behavior:
 
-* Define a CSS class on the wrapper (`.grid-wrapper.disabled`) to visually and functionally disable the Grid.
+* Define a CSS class on the wrapper (`.grid-wrapper.disabled`) to visually and functionally disable the Data Grid.
 
 ```css
 .grid-wrapper.disabled {
@@ -23,8 +23,8 @@ To implement this:
     cursor: not-allowed;
 }
 ```
-* Bind a boolean flag (`isGridDisabled`) to update the wrapper class and an attribute (for example, `aria-disabled`) on the Grid or wrapper.
-* Use a button to toggle the flag and control the Grid state.
+* Bind a boolean flag (`isGridDisabled`) to update the wrapper class and an attribute (for example, `aria-disabled`) on the Data Grid root element.
+* Use a button to toggle the flag and control the Data Grid state.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -39,10 +39,10 @@ To implement this:
     <SfGrid DataSource="@Orders" @attributes="@GridAttributes" AllowPaging="true" Height="273px" Toolbar="@Toolbar">
         <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
         <GridColumns>
-            <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" IsPrimaryKey="true" Width="100"></GridColumn>
+            <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" IsPrimaryKey="true" Width="100"></GridColumn>
             <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
-            <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" EditType="EditType.NumericEdit" Width="120" Format="C2"></GridColumn>
-            <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country"  EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+            <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120" Format="C2"></GridColumn>
+            <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
         </GridColumns>
     </SfGrid>
 </div>
@@ -73,14 +73,6 @@ To implement this:
         isGridDisabled = !isGridDisabled;
         GridAttributes["aria-disabled"] = isGridDisabled ? "true" : "false";
     }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderDetails.cs" %}
@@ -89,7 +81,7 @@ public class OrderDetails
 {
     public static List<OrderDetails> order = new List<OrderDetails>();
 
-    public OrderDetails(int orderId, string customerId, string shipCity, string shipName,double freight, DateTime orderDate, string shipCountry)
+    public OrderDetails(int orderId, string customerId, string shipCity, string shipName, double freight, DateTime orderDate, string shipCountry)
     {
         this.OrderID = orderId;
         this.CustomerID = customerId;
