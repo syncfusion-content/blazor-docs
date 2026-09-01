@@ -32,12 +32,12 @@
         public string ID { get; set; }
     }
 
-    public List<Employees> data = new List<Employees>()
+    private List<Employees> data = new()
     {
-        new Employees() { Name = "Andrew Fuller", ID = "1" },
-        new Employees() { Name = "Anne Dodsworth", ID = "2" },
-        new Employees() { Name = "Janet Leverling", ID = "3" },
-        new Employees() { Name = "Laura Callahan", ID = "4" },
-        new Employees() { Name = "Margaret Peacock", ID = "5" }
+        new() { Name = "Andrew Fuller", ID = "1" },
+        new() { Name = "Anne Dodsworth", ID = "2" },
+        new() { Name = "Janet Leverling", ID = "3" },
+        new() { Name = "Laura Callahan", ID = "4" },
+        new() { Name = "Margaret Peacock", ID = "5" }
     };
 }
