@@ -9,7 +9,7 @@ documentation: ug
 
 # Aggregates in Blazor Data Grid
 
-The aggregates feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) displays summary values in the footer, group footer, and group caption. It enables computing summary information for specific columns and presenting it at key locations in the DataGrid. Configure aggregates with the GridAggregates component. For each aggregate column, specify at least the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Field) and [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) properties.
+The aggregates feature in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) displays summary values in the footer, group footer, and group caption. Aggregates compute summary information for specific columns and present it at key locations in the Data Grid. Configure aggregates using the GridAggregates component. For each aggregate column, specify at least the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Field) and [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) properties.
 
 For customized rendering, use aggregate templates and access values via AggregateTemplateContext (for example, **Sum, Average, Min, Max, Count, TrueCount**, and **FalseCount**). See: [AggregateTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateTemplateContext.html) and [AggregateType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateType.html).
 
@@ -21,7 +21,7 @@ By default, aggregate values can be shown in the footer, group footer, and group
 * [GroupFooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupFooterTemplate): Display and format the aggregate value in the group footer cell with a custom template.
 * [GroupCaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupCaptionTemplate): Display and format the aggregate value in the group caption cell with a custom template.
 
-N> Group footer and group caption aggregates appear when grouping is enabled and data is grouped.
+N> Group footer and group caption aggregates display after grouping is enabled and data is grouped. For grouping setup steps, see [Grouping in Data Grid](https://blazor.syncfusion.com/documentation/datagrid/grouping).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -86,7 +86,7 @@ N> Group footer and group caption aggregates appear when grouping is enabled and
         {
 
         }
-        public OrderData(int? OrderID, string CustomerID, string ShipCountry,DateTime OrderDate, double Freight)
+        public OrderData(int? OrderID, string CustomerID, string ShipCountry,DateTime OrderDate, double? Freight)
         {
             this.OrderID = OrderID;
             this.CustomerID = CustomerID;
@@ -100,7 +100,6 @@ N> Group footer and group caption aggregates appear when grouping is enabled and
         {
             if (Orders.Count() == 0)
             {
-                int code = 10;
                 for (int i = 1; i < 2; i++)
                 {
                     Orders.Add(new OrderData(10248, "ERNSH", "Austria",new DateTime(1996,07,17), 140.51));
@@ -112,7 +111,6 @@ N> Group footer and group caption aggregates appear when grouping is enabled and
                     Orders.Add(new OrderData(10254, "QUEDE", "Switzerland", new DateTime(1996,07,04), 32.38));
                     Orders.Add(new OrderData(10255, "RICSU", "Austria", new DateTime(1996,07,08), 41.34));
                     Orders.Add(new OrderData(10256, "WELLI", "Belgium", new DateTime(1996,07,05), 11.61));
-                    code += 5;
                 }
             }
             return Orders;
@@ -134,9 +132,9 @@ N> Group footer and group caption aggregates appear when grouping is enabled and
 
 ## Built-in aggregate types
 
-The Blazor DataGrid provides several built-in aggregate types that can be assigned via the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property on an aggregate column.
+The Blazor Data Grid provides several built-in aggregate types that can be assigned via the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property on an aggregate column.
 
-The available built-in aggregate types are :
+The available built-in aggregate types are:
 
 * **Sum**: Calculates the sum of values in the column.
 * **Average**: Calculates the average of values in the column.
@@ -155,7 +153,7 @@ The available built-in aggregate types are :
     <GridAggregates>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(OrderData.ShippedDate) Type="Syncfusion.Blazor.Grids.AggregateType.Max" Format="d">
+                <GridAggregateColumn Field=@nameof(OrderData.ShippedDate) Type="AggregateType.Max" Format="d">
                     <FooterTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
@@ -169,7 +167,7 @@ The available built-in aggregate types are :
         </GridAggregate>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(OrderData.OrderDate) Type="Syncfusion.Blazor.Grids.AggregateType.Min" Format="d">
+                <GridAggregateColumn Field=@nameof(OrderData.OrderDate) Type="AggregateType.Min" Format="d">
                     <FooterTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
@@ -183,7 +181,7 @@ The available built-in aggregate types are :
         </GridAggregate>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(OrderData.IsVerified) Type="Syncfusion.Blazor.Grids.AggregateType.TrueCount">
+                <GridAggregateColumn Field=@nameof(OrderData.IsVerified) Type="AggregateType.TrueCount">
                     <FooterTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
@@ -197,7 +195,7 @@ The available built-in aggregate types are :
         </GridAggregate>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(OrderData.Freight) Type="Syncfusion.Blazor.Grids.AggregateType.Max" Format="C2">
+                <GridAggregateColumn Field=@nameof(OrderData.Freight) Type="AggregateType.Max" Format="C2">
                     <FooterTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
@@ -215,7 +213,7 @@ The available built-in aggregate types are :
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
         <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="150"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShippedDate) HeaderText="Shipped Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="150"></GridColumn>
         <GridColumn Field=@nameof(OrderData.IsVerified) HeaderText="Verified" Width="150" Type="ColumnType.Boolean"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
@@ -241,7 +239,7 @@ The available built-in aggregate types are :
         {
 
         }
-        public OrderData(int? OrderID, string CustomerID, string ShipCountry,string ShipCity,DateTime OrderDate,DateTime ShippedDate,bool isVerified, double Freight)
+        public OrderData(int? OrderID, string CustomerID, string ShipCountry,string ShipCity,DateTime OrderDate,DateTime ShippedDate,bool isVerified, double? Freight)
         {
             this.OrderID = OrderID;
             this.CustomerID = CustomerID;
@@ -258,7 +256,6 @@ The available built-in aggregate types are :
         {
             if (Orders.Count() == 0)
             {
-                int code = 10;
                 for (int i = 1; i < 2; i++)
                 {
                     Orders.Add(new OrderData(10248, "ERNSH", "Austria", "Graz", new DateTime(1996,07,17), new DateTime(1996, 08, 17),true, 140.51));
@@ -270,7 +267,6 @@ The available built-in aggregate types are :
                     Orders.Add(new OrderData(10254, "QUEDE", "Switzerland", "Resende", new DateTime(1996,07,04), new DateTime(1996, 09, 07), true, 32.38));
                     Orders.Add(new OrderData(10255, "RICSU", "Austria", "Rio de Janeiro", new DateTime(1996,07,08), new DateTime(1996, 10, 08), false, 41.34));
                     Orders.Add(new OrderData(10256, "WELLI", "Belgium", "Graz", new DateTime(1996,07,05), new DateTime(1996, 07, 06),true, 11.61));
-                    code += 5;
                 }
             }
             return Orders;
@@ -290,7 +286,7 @@ The available built-in aggregate types are :
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNhnXQZsrFTTYvPe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> - Multiple aggregate types for a single column are supported only when one of the aggregate templates is used.
+> - Multiple aggregate types for a single column are supported only when using aggregate templates (FooterTemplate, GroupFooterTemplate, or GroupCaptionTemplate).
 > - Access aggregate values inside the template using the corresponding [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) name (for example, Sum, Average, Min, Max, Count, TrueCount, FalseCount).
 > - Use the Format property (for example, C2 or d) to apply culture-aware currency and date formatting to aggregate values.
 
@@ -299,5 +295,5 @@ The available built-in aggregate types are :
 * [Handling aggregates in custom adaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor#handling-aggregates-operation)
 * [AggregateTemplateContext API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateTemplateContext.html)
 * [AggregateType enumeration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateType.html)
-* [Grouping in DataGrid](https://blazor.syncfusion.com/documentation/datagrid/grouping)
+* [Grouping in Data Grid](https://blazor.syncfusion.com/documentation/datagrid/grouping)
 * [Column templates](https://blazor.syncfusion.com/documentation/datagrid/column-template)
