@@ -28,6 +28,8 @@ Built-in toolbar items perform standard TreeGrid actions and can be added by def
 | Update                | Updates the edited record        |
 | Delete                | Deletes the selected record      |
 | Cancel                | Cancels the edit state           |
+| Indent                | Indent the selected record to one level. |
+| Outdent               | Outdent the selected record to one level. |
 | Search                | Searches records by keyword      |
 | Print                 | Prints the TreeGrid              |
 | ExcelExport           | Exports TreeGrid to Excel        |
