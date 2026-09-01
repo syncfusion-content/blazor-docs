@@ -9,11 +9,13 @@ documentation: ug
 
 # Blazor Sparkline Charts Methods
 
-The `@ref` property can be used to create an object reference for the Sparkline component and call its methods.
+The `@ref` directive attribute can be used to obtain a reference to the Sparkline component and call its methods.
 
 ## Refresh
 
-The `RefreshAsync` method re-renders the Sparkline component.
+The `RefreshAsync` method re-renders the Sparkline component programmatically. It returns a `Task` that represents the asynchronous refresh operation.
+
+> The `@ref` component reference is available only after the component is rendered. Ensure that the reference is not null before calling component methods.
 
 ```cshtml
 
