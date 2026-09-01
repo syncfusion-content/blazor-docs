@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Template in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property that allows rendering custom elements in a column instead of the default field value. This feature is useful for displaying images, buttons, or other custom content within a column.
+The [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property that allows rendering custom elements in a column instead of the default field value. This feature is useful for displaying images, buttons, or other custom content within a column.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=9YF9HnFY5Ew"%}
@@ -18,11 +18,11 @@ The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagr
 
 ## Render HTML Elements in a Column
 
-The Blazor DataGrid allows rendering HTML elements inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This enables embedding custom content such as **images** and **hyperlinks** instead of plain text.
+The Blazor Data Grid allows rendering HTML elements inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This enables embedding custom content such as **images** and **hyperlinks** instead of plain text.
 
 ### Render image in a column
 
-To display an image in a DataGrid column, define the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property for the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `Template` property allows rendering custom HTML or Blazor components instead of the default field value.
+To display an image in a Data Grid column, define the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property for the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `Template` property allows rendering custom HTML or Blazor components instead of the default field value.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -70,31 +70,28 @@ To display an image in a DataGrid column, define the [Template](https://help.syn
         {
 
         }
-        public OrderData(int EmployeeID, string FirstName, string LastName, string City,DateTime? HireDate)
+        public OrderData(int EmployeeID, string FirstName, string LastName, string City)
         {
-           this.EmployeeID = EmployeeID;
-           this.FirstName = FirstName;
-           this.LastName = LastName;
-           this.City = City;
-           this.HireDate = HireDate;            
+            this.EmployeeID = EmployeeID;
+            this.FirstName = FirstName;
+            this.LastName = LastName;
+            this.City = City;
         }
         public static List<OrderData> GetAllRecords()
         {
             if (Orders.Count() == 0)
             {
-                int code = 10;
                 for (int i = 1; i < 2; i++)
                 {
-                    Orders.Add(new OrderData(10248, "Nancy", "Davolio", "Seattle", new DateTime(1996,07,08)));
-                    Orders.Add(new OrderData(10249, "Andrew", "Fuller", "Tacoma", new DateTime(1996, 07, 18)));
-                    Orders.Add(new OrderData(10250, "Janet", "Leverling", "Kirkland", new DateTime(1996, 07, 05)));
-                    Orders.Add(new OrderData(10251, "Margaret", "Peacock", "Redmond", new DateTime(1996, 07, 23)));
-                    Orders.Add(new OrderData(10252, "Steven", "Buchanan", "London", new DateTime(1996, 07, 16)));
-                    Orders.Add(new OrderData(10253, "Michael", "Suyama", "London", new DateTime(1996, 07, 12)));
-                    Orders.Add(new OrderData(10254, "Robert", "King", "London", new DateTime(1996, 07, 18)));
-                    Orders.Add(new OrderData(10255, "Anne", "Callahan", "London", new DateTime(1996, 07, 05)));
-                    Orders.Add(new OrderData(10256, "Laura", "Dodsworth", "London", new DateTime(1996, 07, 01)));
-                    code += 5;
+                    Orders.Add(new OrderData(10248, "Nancy", "Davolio", "Seattle"));
+                    Orders.Add(new OrderData(10249, "Andrew", "Fuller", "Tacoma"));
+                    Orders.Add(new OrderData(10250, "Janet", "Leverling", "Kirkland"));
+                    Orders.Add(new OrderData(10251, "Margaret", "Peacock", "Redmond"));
+                    Orders.Add(new OrderData(10252, "Steven", "Buchanan", "London"));
+                    Orders.Add(new OrderData(10253, "Michael", "Suyama", "London"));
+                    Orders.Add(new OrderData(10254, "Robert", "King", "London"));
+                    Orders.Add(new OrderData(10255, "Anne", "Callahan", "London"));
+                    Orders.Add(new OrderData(10256, "Laura", "Dodsworth", "London"));
                 }
             }
             return Orders;
@@ -103,19 +100,18 @@ To display an image in a DataGrid column, define the [Template](https://help.syn
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string City { get; set; }
-        public DateTime? HireDate { get; set; }
     }
 {% endhighlight %}
 {% endtabs %}
 
 <!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhAMiNMBnKKvMuz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-![Render image in a column](./images/render-image-column-template.webp)
+![Render image in a Data Grid column](./images/render-image-column-template.webp)
 
 > The `Template` property allows defining any HTML content or Blazor components within a column, enabling complete customization of cell rendering.
 
 ### Render hyperlink in a column
 
-The Blazor DataGrid supports rendering hyperlinks in columns using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful for displaying data that links to another page or external resource.
+The Blazor Data Grid supports rendering hyperlinks in columns using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful for displaying data that links to another page or external resource.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -142,7 +138,7 @@ The Blazor DataGrid supports rendering hyperlinks in columns using the [Template
 
     protected override void OnInitialized()
     {
-    EmployeeData = EmployeeDetails.GetAllRecords();        
+        EmployeeData = EmployeeDetails.GetAllRecords();
     }       
 }
 {% endhighlight %}
@@ -190,7 +186,7 @@ public class EmployeeDetails
 
 ## Render other components in a column
 
-The Blazor DataGrid supports rendering other components inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This allows embedding interactive elements for advanced customization.
+The Blazor Data Grid supports rendering other components inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This allows embedding interactive elements for advanced customization.
 
 ### Render LineChart in a column
 
@@ -223,7 +219,7 @@ The [LineChart](https://blazor.syncfusion.com/documentation/sparkline/getting-st
 
     protected override void OnInitialized()
     {
-    EmployeeData = EmployeeDetails.GetAllRecords();        
+        EmployeeData = EmployeeDetails.GetAllRecords();
     } 
      // Line data
     private List<List<int>> lineData = new List<List<int>>
@@ -293,7 +289,7 @@ public class EmployeeDetails
 
 ### Render DropDownList in a column
 
-The Blazor DataGrid allows rendering a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is commonly used to provide inline selection of predefined values directly within the grid, such as choosing from predefined options for a field.
+The Blazor Data Grid allows rendering a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is commonly used to provide inline selection of predefined values directly within the Data Grid, such as choosing from predefined options for a field.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -302,14 +298,14 @@ The Blazor DataGrid allows rendering a [DropDownList](https://blazor.syncfusion.
 
 <SfGrid DataSource="@Orders">
     <GridColumns>
-        <GridColumn Field=@nameof(OrderDetails.OrderID) TextAlign="TextAlign.Right" HeaderText="Employee ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) TextAlign="TextAlign.Right" HeaderText="Order ID" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.OrderStatus) HeaderText="Order Status" TextAlign="TextAlign.Right" Width="150">
             <Template>
                 @{
                     var Data = (context as OrderDetails);
-                    <SfDropDownList TValue="string" Placeholder="Order Placed" PopupWidth="150" PopupHeight="150" TItem="EmployeeNames" @bind-Value="@Data.OrderStatus" DataSource="@EmployeeDetails">
+                    <SfDropDownList TValue="string" Placeholder="Order Placed" PopupWidth="150" PopupHeight="150" TItem="OrderStatusOption" @bind-Value="@Data.OrderStatus" DataSource="@OrderStatusOptions">
                         <DropDownListFieldSettings Value="Status"></DropDownListFieldSettings>
                     </SfDropDownList>
                 }
@@ -319,21 +315,21 @@ The Blazor DataGrid allows rendering a [DropDownList](https://blazor.syncfusion.
 </SfGrid>
 @code {
     public List<OrderDetails> Orders { get; set; }
-    public List<EmployeeNames> EmployeeDetails { get; set; }
+    public List<OrderStatusOption> OrderStatusOptions { get; set; }
     
     protected override void OnInitialized()
     {
         Orders = OrderDetails.GetAllRecords();
 
-        EmployeeDetails = Enumerable.Range(1, 3).Select(x => new EmployeeNames()
-            {
-                Id = x,
-                Status = (new string[] { "Order Placed", "Processing", "Delivered" })[new Random().Next(3)]
-            }).ToList();
+        OrderStatusOptions = new List<OrderStatusOption>
+        {
+            new OrderStatusOption { Status = "Order Placed" },
+            new OrderStatusOption { Status = "Processing" },
+            new OrderStatusOption { Status = "Delivered" }
+        };
     }
-    public class EmployeeNames
+    public class OrderStatusOption
     {
-        public int Id { get; set; }
         public string Status { get; set; }
     }
 }
@@ -379,11 +375,11 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrRtwZMpHYjAOtp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVRNbBsUmQoeIGh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Render Chip in a column
 
-The Blazor DataGrid supports rendering [Chips](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful for displaying data as visually distinct elements, such as tags or labels, within the grid.
+The Blazor Data Grid supports rendering [Chips](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful for displaying data as visually distinct elements, such as tags or labels, within the Data Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -413,7 +409,7 @@ The Blazor DataGrid supports rendering [Chips](https://blazor.syncfusion.com/doc
 
     protected override void OnInitialized()
     {
-    EmployeeData = EmployeeDetails.GetAllRecords();        
+        EmployeeData = EmployeeDetails.GetAllRecords();
     }       
 }
 {% endhighlight %}
@@ -461,7 +457,7 @@ public class EmployeeDetails
 
 ### Render ProgressBar in a column
 
-The Blazor DataGrid supports rendering a [Progress Bar](https://blazor.syncfusion.com/documentation/progress-bar/getting-started-webapp) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful for visually tracking progress related to specific records.
+The Blazor Data Grid supports rendering a [Progress Bar](https://blazor.syncfusion.com/documentation/progress-bar/getting-started-webapp) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful for visually tracking progress related to specific records.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -538,7 +534,7 @@ public class OrderDetails
 
 ### Render RadioButton in a column
 
-The Blazor DataGrid supports rendering a [RadioButton](https://blazor.syncfusion.com/documentation/radio-button/getting-started-webapp) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful for scenarios where a single option must be selected from multiple choices within the grid.
+The Blazor Data Grid supports rendering a [RadioButton](https://blazor.syncfusion.com/documentation/radio-button/getting-started-webapp) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful for scenarios where a single option must be selected from multiple choices within the Data Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -547,7 +543,7 @@ The Blazor DataGrid supports rendering a [RadioButton](https://blazor.syncfusion
 
 <SfGrid DataSource="@OrderData" AllowPaging="true" Height="350">
     <GridColumns>
-        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.FreightStatus) HeaderText="Order Status" Width="250">
             <Template>
@@ -611,7 +607,7 @@ public class OrderDetails
 
 ## Using condition template
 
-The Blazor DataGrid supports conditional rendering within a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature allows displaying template elements based on specific conditions in the data source.
+The Blazor Data Grid supports conditional rendering within a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature allows displaying template elements based on specific conditions in the data source.
 
 The `Template` property provides access to the current row’s data through the implicit **context** parameter, enabling conditional logic for rendering elements such as checkboxes, icons, or status indicators.
 
@@ -638,7 +634,7 @@ The `Template` property provides access to the current row’s data through the 
                 }
             </Template>
         </GridColumn>
-        <GridColumn Field=@nameof(OrderData.ProductID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ProductID) TextAlign="TextAlign.Center" HeaderText="Product ID" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CategoryName) HeaderText="Category Name" Width="130"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ProductName) HeaderText="Product Name" Width="130"></GridColumn>
     </GridColumns>
@@ -670,7 +666,6 @@ The `Template` property provides access to the current row’s data through the 
         {
             if (Orders.Count() == 0)
             {
-                int code = 10;
                 for (int i = 1; i < 2; i++)
                 {
                     Orders.Add(new OrderData(1, "Beverages", "Chai", true));
@@ -682,7 +677,6 @@ The `Template` property provides access to the current row’s data through the 
                     Orders.Add(new OrderData(7, "Beverages", "Chai", false));
                     Orders.Add(new OrderData(8, "Beverages", "Mishi Kobe Niku", true));
                     Orders.Add(new OrderData(9, "Beverages", "Aniseed Syrup", true));
-                    code += 5;
                 }
             }
             return Orders;
@@ -690,16 +684,16 @@ The `Template` property provides access to the current row’s data through the 
         public int? ProductID { get; set; }
         public string CategoryName { get; set; }
         public string ProductName { get; set; }
-        public Boolean Discontinued { get; set; }
+        public bool Discontinued { get; set; }
     }
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLHjQNiTQoBGWVd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhRDvhMgljvylzx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Calculate column value based on other columns in Blazor DataGrid
+### Calculate column value based on other columns in Blazor Data Grid
 
-In the Blazor DataGrid, a column can display values derived from other fields in the same row using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This approach is useful for scenarios where calculated values, such as totals or combined costs, need to be shown without adding extra fields to the data source.
+In the Blazor Data Grid, a column can display values derived from other fields in the same row using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This approach is useful for scenarios where calculated values, such as totals or combined costs, need to be shown without adding extra fields to the data source.
 
 The `Template` property allows defining inline expressions or logic that compute values dynamically. The **context** parameter provides access to the row data, enabling calculations like summing two fields or applying custom formulas.
 
@@ -712,10 +706,10 @@ The `Template` property allows defining inline expressions or logic that compute
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type=ColumnType.Date TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Center" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.ManfCost) HeaderText="Manufacturing Cost" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.LabCost) HeaderText="Labor Cost" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.FinalCost) HeaderText="Final price" Format="C2" TextAlign="TextAlign.Center" Width="120">
+        <GridColumn Field=@nameof(Order.FinalCost) HeaderText="Final price" TextAlign="TextAlign.Center" Width="120">
             <Template>
                 @{
                     var value = (context as Order);
@@ -757,7 +751,7 @@ The `Template` property allows defining inline expressions or logic that compute
 
 ## How to get the row object by clicking on the template element
 
-The Blazor DataGrid supports retrieving the row object when a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) element inside a column is clicked. This feature is useful for performing custom actions such as showing detailed information, triggering workflows, or updating related UI components based on the selected record.
+The Blazor Data Grid supports retrieving the row object when a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) element inside a column is clicked. This feature is useful for performing custom actions such as showing detailed information, triggering workflows, or updating related UI components based on the selected record.
 
 The `Template` property allows rendering interactive elements like buttons inside a column. When these elements are clicked, the associated row data can be accessed using the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) event or by handling the [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick) event of the template element.
 
@@ -775,29 +769,29 @@ The `Template` property allows rendering interactive elements like buttons insid
         <GridColumn HeaderText="Employee Data" TextAlign="TextAlign.Right" Width="150">
             <Template>
                 <SfButton CssClass="empData" OnClick="ShowDetails">View</SfButton>
-                <SfDialog @ref="Dialog" Visible="false" Width="50%" ShowCloseIcon="true" Header="Selected Row Details">
-                    <DialogTemplates>
-                        <Content>
-                            @if (selectedRecord !=null)
-                            {
-                                <p><b>Employee ID:</b> @selectedRecord.EmployeeID</p>
-                                <p><b>First Name:</b> @selectedRecord.FirstName</p>
-                                <p><b>Last Name:</b> @selectedRecord.LastName</p>
-                            }
-                        </Content>
-                    </DialogTemplates>
-                </SfDialog>
             </Template>
         </GridColumn>
     </GridColumns>
 </SfGrid>
+<SfDialog @ref="Dialog" Visible="false" Width="50%" ShowCloseIcon="true" Header="Selected Row Details">
+    <DialogTemplates>
+        <Content>
+            @if (selectedRecord != null)
+            {
+                <p><b>Employee ID:</b> @selectedRecord.EmployeeID</p>
+                <p><b>First Name:</b> @selectedRecord.FirstName</p>
+                <p><b>Last Name:</b> @selectedRecord.LastName</p>
+            }
+        </Content>
+    </DialogTemplates>
+</SfDialog>
 
 @code {
     public SfGrid<EmployeeDetails> Grid { get; set; }  
     public List<EmployeeDetails> EmployeeData { get; set; }
     protected override void OnInitialized()
     {
-        EmployeeData = EmployeeDetails.GetAllRecords();
+            EmployeeData = EmployeeDetails.GetAllRecords();
     }
     private SfDialog Dialog;
     private EmployeeDetails selectedRecord;
@@ -806,9 +800,9 @@ The `Template` property allows rendering interactive elements like buttons insid
     {
         selectedRecord = args.Data; 
     }
-    private void ShowDetails()
+    private async Task ShowDetails()
     {
-        Dialog.ShowAsync();
+       await Dialog.ShowAsync();
     }
 }
 {% endhighlight %}
@@ -848,11 +842,11 @@ public class EmployeeDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVnDmXMTQQKqpXx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrnNvBWfsIDBkHK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Use custom helper inside the template
 
-The Blazor DataGrid supports using custom helper functions inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property of a column. This feature is useful for creating complex templates that require additional logic beyond the default template syntax.
+The Blazor Data Grid supports using custom helper functions inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property of a column. This feature is useful for creating complex templates that require additional logic beyond the default template syntax.
 
 Custom helper functions can be defined in the component’s code section and invoked within the template using the **context** parameter. This approach allows implementing dynamic behaviors such as formatting values, applying conditional styles, or rendering custom UI elements based on row data.
 
@@ -866,7 +860,7 @@ Custom helper functions can be defined in the component’s code section and inv
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="90">
             <Template Context="data">
-                @formatCurrency(((OrderDetails)data).Freight)
+                @FormatCurrency(((OrderDetails)data).Freight)
             </Template>
         </GridColumn>
         <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -880,7 +874,7 @@ Custom helper functions can be defined in the component’s code section and inv
     {
         OrderData = OrderDetails.GetAllRecords();
     }
-    public string formatCurrency(double value)
+    public string FormatCurrency(double value)
     {
         return "₹ " + value.ToString("F3"); // Format currency with 3 decimals
     }
@@ -891,11 +885,11 @@ public class OrderDetails
 {
     public static List<OrderDetails> order = new List<OrderDetails>();
     
-    public OrderDetails(int OrderID, string CustomerId, DateTime Orderdate, double Freight)
+    public OrderDetails(int OrderID, string CustomerId, DateTime OrderDate, double Freight)
     {
         this.OrderID = OrderID;
         this.CustomerID = CustomerId;
-        this.OrderDate = Orderdate;
+        this.OrderDate = OrderDate;
         this.Freight = Freight; 
     }
     public static List<OrderDetails> GetAllRecords()
@@ -934,9 +928,9 @@ public class OrderDetails
 
 ## Dynamically adding template column
 
-The Blazor DataGrid supports dynamically adding template columns at runtime. This feature is useful when the grid structure needs to change based on interactions or dynamic conditions.
+The Blazor Data Grid supports dynamically adding template columns at runtime. Dynamic column creation supports Data Grid structures that change based on interactions or dynamic conditions.
 
-Template columns can be created and inserted after the grid has been initialized, allowing custom elements such as dropdowns, buttons, or icons to be rendered dynamically. This approach provides flexibility for scenarios like adding interactive controls or displaying conditional content without modifying the initial grid configuration.
+Template columns can be created and inserted after grid initialization, allowing custom elements such as dropdowns, buttons, or icons to render dynamically. Dynamic column creation provides flexibility for scenarios such as adding interactive controls or displaying conditional content without modifying the initial grid configuration.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -963,7 +957,7 @@ Template columns can be created and inserted after the grid has been initialized
         OrderData = OrderDetails.GetAllRecords();
         ShipCountryList = OrderData.Select(o => o.ShipCountry).Distinct().ToList();
     }
-    private void AddTemplateColumn()
+    private async Task AddTemplateColumn()
     {
         List<GridColumn> NewColumns = new List<GridColumn> { 
             new GridColumn { 
@@ -983,7 +977,7 @@ Template columns can be created and inserted after the grid has been initialized
         {
             Grid.Columns.Add(column);
         }
-        Grid.RefreshColumnsAsync();
+        await Grid.RefreshColumnsAsync();
     }  
 }
 {% endhighlight %}
@@ -992,11 +986,11 @@ public class OrderDetails
 {
     public static List<OrderDetails> order = new List<OrderDetails>();
     
-    public OrderDetails(int OrderID, string CustomerId, string Shipcountry, double Freight)
+    public OrderDetails(int OrderID, string CustomerId, string ShipCountry, double Freight)
     {
         this.OrderID = OrderID;
         this.CustomerID = CustomerId;
-        this.ShipCountry = Shipcountry;
+        this.ShipCountry = ShipCountry;
         this.Freight = Freight; 
     }
     public static List<OrderDetails> GetAllRecords()
@@ -1033,7 +1027,7 @@ public class OrderDetails
 
 ## Using hyperlink column and performing routing on click
 
-The Blazor DataGrid supports adding routing links inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature enables navigation to different pages or routes when interacting with template elements.
+The Blazor Data Grid supports adding routing links inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature enables navigation to different pages or routes when interacting with template elements.
 
 Routing can be implemented by defining an **anchor tag** or clickable element inside the column template and handling navigation through the [UriHelper](https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/routing?view=aspnetcore-7.0&viewFallbackFrom=aspnetcore-3.0#uri-and-navigation-state-helpers). The **context** parameter provides access to the current row data, allowing dynamic route generation based on record values.
 
@@ -1069,7 +1063,7 @@ Routing can be implemented by defining an **anchor tag** or clickable element in
     }
     private void Navigate(OrderData Orders)
     {
-        UriHelper.NavigateTo($"{Orders.Link}/{Orders.EmployeeID.ToString()}/{Orders.Name}/{Orders.Title}");
+        UriHelper.NavigateTo($"{Orders.Link}/{Orders.EmployeeID.ToString()}/{Uri.EscapeDataString(Orders.Name)}/{Uri.EscapeDataString(Orders.Title)}");
     }
 
 }
@@ -1093,7 +1087,6 @@ Routing can be implemented by defining an **anchor tag** or clickable element in
         {
             if (Orders.Count() == 0)
             {
-                int code = 10;
                 for (int i = 1; i < 2; i++)
                 {
                     Orders.Add(new OrderData(1, "Nancy Fuller", "Vice President", "nancy_fuller"));
@@ -1105,7 +1098,6 @@ Routing can be implemented by defining an **anchor tag** or clickable element in
                     Orders.Add(new OrderData(7, "Janet Leverling", "Sales Representative", "janet_leverling"));
                     Orders.Add(new OrderData(8, "Steven Buchanan", "Sales Manager", "steven_buchanan"));
                     Orders.Add(new OrderData(9, "Nancy Fuller", "Vice President", "nancy_fuller"));
-                    code += 5;
                 }
             }
             return Orders;
@@ -1144,9 +1136,9 @@ Next, create a new Razor page with the appropriate routing URL and include any r
 {% endhighlight %}
 {% endtabs %}
 
-The following GIF represents template routing in Grid
-![Blazor DataGrid with routing template.](./images/blazor-datagrid-template-routing.webp)
+The following GIF represents template routing in the Data Grid
+![Blazor Data Grid with routing template.](./images/blazor-datagrid-template-routing.webp)
 
 ## See also
 
-* [FileUpload in Grid Column Template](https://www.syncfusion.com/forums/151021/fileupload-in-grid-column-template)
+* [FileUpload in Data Grid Column Template](https://www.syncfusion.com/forums/151021/fileupload-in-grid-column-template)
