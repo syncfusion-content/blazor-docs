@@ -9,15 +9,17 @@ documentation: ug
 
 # Column Pinning (Frozen) in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports freezing columns to keep them visible while scrolling through large datasets. This feature ensures that important fields remain accessible regardless of horizontal scroll position.
+The [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports freezing columns to keep them visible while scrolling through large datasets. This feature ensures that important fields remain accessible regardless of horizontal scroll position.
 
-Column pinning can be configured using either grid-level or column-level settings.
+> **Terminology:** Column pinning, column freezing, and frozen columns refer to the same Data Grid feature.
 
-**Grid-level freezing**
+Column pinning can be configured using either Data Grid-level or column-level settings.
 
-To freeze columns from the left side of the grid:
+**Data Grid-level freezing**
 
-- Set the [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) property in the [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to a **numeric** value.
+To freeze columns from the left side of the Data Grid:
+
+- Set the [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) property in the [SfGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to a **numeric** value.
 - This value determines how many columns from the **left** remain **fixed** during horizontal scrolling.
 
 **Column-level freezing**
@@ -27,9 +29,9 @@ To freeze specific columns regardless of their position:
 - Set the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) property of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **true**.
 - Use the [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) property to define the freeze direction. The [FreezeDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FreezeDirection.html) enum supports the following values:
 
-    * [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FreezeDirection.html#Syncfusion_Blazor_Grids_FreezeDirection_Left) –  Freezes the column to the left side of the grid.
-    * [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FreezeDirection.html#Syncfusion_Blazor_Grids_FreezeDirection_Right) –  Freezes the column to the right side of the grid.
-    * [Fixed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FreezeDirection.html#Syncfusion_Blazor_Grids_FreezeDirection_Fixed) – Keeps the column fixed in place regardless of scroll direction.
+    * [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FreezeDirection.html#Syncfusion_Blazor_Grids_FreezeDirection_Left) –  Freezes the column to the left side of the Data Grid.
+    * [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FreezeDirection.html#Syncfusion_Blazor_Grids_FreezeDirection_Right) –  Freezes the column to the right side of the Data Grid.
+    * [Fixed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FreezeDirection.html#Syncfusion_Blazor_Grids_FreezeDirection_Fixed) – Keeps the column in its original position regardless of horizontal scrolling.
 
 These options allow precise control over which columns remain visible during horizontal scrolling.
 
@@ -47,7 +49,7 @@ In this configuration, the `FrozenColumns` property is set to **2**, which keeps
 
 <div style="margin-bottom:10px">
     <label style="padding: 30px 17px 0 0">Change the frozen columns:</label>
-    <SfNumericTextBox Width="120px" Min=0 Max=5 Decimals="0" ValidateDecimalOnType="true" Format="n" Value="@value" TValue="int?">
+    <SfNumericTextBox Width="120px" Min=1 Max=5 Decimals="0" ValidateDecimalOnType="true" Format="n" Value="@value" TValue="int?">
         <NumericTextBoxEvents TValue="int?" ValueChange="@ValueChangeHandler"></NumericTextBoxEvents>
     </SfNumericTextBox>
     <SfButton @onclick="@UpdateValue">Update</SfButton>
@@ -57,7 +59,7 @@ In this configuration, the `FrozenColumns` property is set to **2**, which keeps
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="160"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="160"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.ShipName) HeaderText="Ship Name" Width="130"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.ShipAddress) HeaderText="Ship Address" Width="150"></GridColumn>
@@ -81,7 +83,7 @@ In this configuration, the `FrozenColumns` property is set to **2**, which keeps
         
     public void ValueChangeHandler(Syncfusion.Blazor.Inputs.ChangeEventArgs<int?> args)
     {
-        if (args.Value != null && args.Value != 0)
+        if (args.Value != null)
         {
             value = args.Value;
         }
@@ -150,17 +152,17 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLnXmDghJLsdZBL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVnDPhXUvvktsFm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> * Frozen columns must remain within the visible viewport of the grid.
-> * When the `FreezeDirection` property is not set at the column level, the grid automatically applies the Left freeze direction by default.
+> * Frozen columns must remain within the visible viewport of the Data Grid.
+> * When the `FreezeDirection` property is not set at the column level, the Data Grid automatically applies the Left freeze direction by default.
 > * Column virtualization is supported with frozen columns to improve performance when handling large datasets.
-> * Freezing is applicable only to columns currently visible in the grid.
-> * Both [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) and [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) properties can be used together in the same grid.
+> * Freezing is applicable only to columns currently visible in the Data Grid.
+> * Both [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) and [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) properties can be used together in the same Data Grid. For details about frozen rows, see [Row pinning (frozen)](https://blazor.syncfusion.com/documentation/datagrid/row#row-pinning-frozen).
 
 ## Change default frozen line color
 
-The Blazor DataGrid allows customizing the border color of frozen columns using CSS. This includes styling for **left**, **right**, and **fixed** frozen columns to match application design requirements.
+The Blazor Data Grid allows customizing the border color of frozen columns using CSS. This includes styling for **left**, **right**, and **fixed** frozen columns to match application design requirements.
 
 To change the default frozen line color, apply styles using these class selectors:
 
@@ -198,7 +200,7 @@ To change the default frozen line color, apply styles using these class selector
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Freeze="FreezeDirection.Left" IsFrozen="true" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="160"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="160"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.ShipName) HeaderText="Ship Name" Width="130"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.ShipAddress) HeaderText="Ship Address" Freeze="FreezeDirection.Fixed" IsFrozen="true" Width="150"></GridColumn>
@@ -296,7 +298,7 @@ To change the default frozen line color, apply styles using these class selector
 
 ## Detail template with frozen columns
 
-The Blazor DataGrid supports frozen columns in combination with a [DetailTemplate](https://blazor.syncfusion.com/documentation/datagrid/detail-template). The detail template displays additional information for a row when expanded, without affecting the frozen column layout.
+The Blazor Data Grid supports frozen columns in combination with a [DetailTemplate](https://blazor.syncfusion.com/documentation/datagrid/detail-template). The detail template displays additional information for a row when expanded, without affecting the frozen column layout.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -343,7 +345,7 @@ The Blazor DataGrid supports frozen columns in combination with a [DetailTemplat
         </DetailTemplate>
     </GridTemplates>
     <GridColumns>
-        <GridColumn Field=@nameof(EmployeeDetails.FirstName) HeaderText="First Name" IsFrozen='true' Width="110"> </GridColumn>
+        <GridColumn Field=@nameof(EmployeeDetails.FirstName) HeaderText="First Name" IsFrozen="true" Width="110"> </GridColumn>
         <GridColumn Field=@nameof(EmployeeDetails.LastName) HeaderText="Last Name" Width="110"></GridColumn>
         <GridColumn Field=@nameof(EmployeeDetails.Title) Width="200"></GridColumn>
         <GridColumn Field=@nameof(EmployeeDetails.Address) Width="250"></GridColumn>
@@ -391,19 +393,22 @@ public class EmployeeDetails
         this.Country = Country;
         this.Email = mail;
     }    
+    public static List<EmployeeDetails> Employee = new List<EmployeeDetails>();
     public static List<EmployeeDetails> GetAllRecords()
     {
-        List<EmployeeDetails> Employee = new List<EmployeeDetails>();
-        Employee.Add(new EmployeeDetails(1, "Nancy", "Davolio", "Sales Representative", new DateTime(1948, 12, 08), new DateTime(1992, 05, 01), 2, "507 - 20th Ave. E.Apt. 2A ", " 98122", "(206) 555-9857 ", "Seattle ", "USA", "nancy_davolio@gmail.com"));
-        Employee.Add(new EmployeeDetails(2, "Andrew", "Fuller", "Vice President, Sales", new DateTime(1952, 02, 19), new DateTime(1992, 08, 14), 4, "908 W. Capital Way", "98401 ", "(206) 555-9482 ", "Kirkland ", "USA", "andrew_fuller@gmail.com"));
-        Employee.Add(new EmployeeDetails(3, "Janet", "Leverling", "Sales Representative", new DateTime(1963, 08, 30), new DateTime(1992, 04, 01), 3, " 4110 Old Redmond Rd.", "98052 ", "(206) 555-8122", "Redmond ", "USA", "Janet_leverling@gmail.com"));
-        Employee.Add(new EmployeeDetails(4, "Margaret", "Peacock", "Sales Representative", new DateTime(1937, 09, 19), new DateTime(1993, 05, 03), 6, "14 Garrett Hill ", "SW1 8JR ", "(71) 555-4848 ", "London ", "UK", "margaret_peacock@gmail.com"));
-        Employee.Add(new EmployeeDetails(5, "Steven", "Buchanan", "Sales Manager", new DateTime(1955, 03, 04), new DateTime(1993, 10, 17), 8, "Coventry HouseMiner Rd. ", "EC2 7JR ", " (206) 555-8122", "Tacoma ", " USA", "steven_buchanan@gmail.com"));
-        Employee.Add(new EmployeeDetails(6, "Michael", "Suyama", "Sales Representative", new DateTime(1963, 07, 02), new DateTime(1993, 10, 17), 2, " 7 Houndstooth Rd.", " WG2 7LT", "(71) 555-4444 ", "London ", "UK", "michael_suyama@gmail.com"));
-        Employee.Add(new EmployeeDetails(7, "Robert", "King", "Sales Representative", new DateTime(1960, 05, 29), new DateTime(1994, 01, 02), 7, "Edgeham HollowWinchester Way ", "RG1 9SP ", "(71) 555-5598 ", "London", "UK", "robert_king@gmail.com"));
-        Employee.Add(new EmployeeDetails(8, "Laura", "Callahan", "Inside Sales Coordinator", new DateTime(1958, 01, 09), new DateTime(1994, 03, 05), 9, "722 Moss Bay Blvd. ", "98033 ", " (206) 555-3412", "Seattle ", "USA ", "laura_callahan@gmail.com"));
-        Employee.Add(new EmployeeDetails(9, "Anne", "Dodsworth", "Sales Representative", new DateTime(1966, 01, 27), new DateTime(1994, 11, 15), 5, "4726 - 11th Ave. N.E. ", "98105 ", "(71) 555-5598 ", " London", "UK", "anne_dodsworth@gmail.com"));
-        
+        if (Employee.Count == 0)
+        {
+            Employee.Add(new EmployeeDetails(1, "Nancy", "Davolio", "Sales Representative", new DateTime(1948, 12, 08), new DateTime(1992, 05, 01), 2, "507 - 20th Ave. E.Apt. 2A ", " 98122", "(206) 555-9857 ", "Seattle ", "USA", "nancy_davolio@gmail.com"));
+            Employee.Add(new EmployeeDetails(2, "Andrew", "Fuller", "Vice President, Sales", new DateTime(1952, 02, 19), new DateTime(1992, 08, 14), 4, "908 W. Capital Way", "98401 ", "(206) 555-9482 ", "Kirkland ", "USA", "andrew_fuller@gmail.com"));
+            Employee.Add(new EmployeeDetails(3, "Janet", "Leverling", "Sales Representative", new DateTime(1963, 08, 30), new DateTime(1992, 04, 01), 3, " 4110 Old Redmond Rd.", "98052 ", "(206) 555-8122", "Redmond ", "USA", "Janet_leverling@gmail.com"));
+            Employee.Add(new EmployeeDetails(4, "Margaret", "Peacock", "Sales Representative", new DateTime(1937, 09, 19), new DateTime(1993, 05, 03), 6, "14 Garrett Hill ", "SW1 8JR ", "(71) 555-4848 ", "London ", "UK", "margaret_peacock@gmail.com"));
+            Employee.Add(new EmployeeDetails(5, "Steven", "Buchanan", "Sales Manager", new DateTime(1955, 03, 04), new DateTime(1993, 10, 17), 8, "Coventry HouseMiner Rd. ", "EC2 7JR ", " (206) 555-8122", "Tacoma ", " USA", "steven_buchanan@gmail.com"));
+            Employee.Add(new EmployeeDetails(6, "Michael", "Suyama", "Sales Representative", new DateTime(1963, 07, 02), new DateTime(1993, 10, 17), 2, " 7 Houndstooth Rd.", " WG2 7LT", "(71) 555-4444 ", "London ", "UK", "michael_suyama@gmail.com"));
+            Employee.Add(new EmployeeDetails(7, "Robert", "King", "Sales Representative", new DateTime(1960, 05, 29), new DateTime(1994, 01, 02), 7, "Edgeham HollowWinchester Way ", "RG1 9SP ", "(71) 555-5598 ", "London", "UK", "robert_king@gmail.com"));
+            Employee.Add(new EmployeeDetails(8, "Laura", "Callahan", "Inside Sales Coordinator", new DateTime(1958, 01, 09), new DateTime(1994, 03, 05), 9, "722 Moss Bay Blvd. ", "98033 ", " (206) 555-3412", "Seattle ", "USA ", "laura_callahan@gmail.com"));
+            Employee.Add(new EmployeeDetails(9, "Anne", "Dodsworth", "Sales Representative", new DateTime(1966, 01, 27), new DateTime(1994, 11, 15), 5, "4726 - 11th Ave. N.E. ", "98105 ", "(71) 555-5598 ", " London", "UK", "anne_dodsworth@gmail.com"));
+        }
+
 		return Employee;
     }
     public int EmployeeID { get; set; }
@@ -423,14 +428,14 @@ public class EmployeeDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBdNcjUVTgmcnMb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBRjbBjzZNxQozK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * Freeze columns using either the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) or [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) properties.
 
 ## Add or remove frozen columns by dragging the column separator
 
-The Blazor DataGrid allows dynamically modifying frozen columns by dragging and dropping the column separator. This interaction enables adjusting which columns remain frozen, providing flexibility to customize the layout directly through the Grid UI.
-To enable this behavior, set the [AllowFreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFreezeLineMoving) property to **true** in the Grid.
+The Blazor Data Grid allows dynamically modifying frozen columns by dragging and dropping the column separator. This interaction enables adjusting which columns remain frozen, providing flexibility to customize the layout directly through the Data Grid UI.
+To enable this behavior, set the [AllowFreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFreezeLineMoving) property to **true** in the Data Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -440,7 +445,7 @@ To enable this behavior, set the [AllowFreezeLineMoving](https://help.syncfusion
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Freeze="FreezeDirection.Left" IsFrozen="true" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="160"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="160"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.ShipName) HeaderText="Ship Name" Width="130"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.ShipAddress) HeaderText="Ship Address" Freeze="FreezeDirection.Fixed" IsFrozen="true" Width="150"></GridColumn>
@@ -518,16 +523,16 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNrdtQDUhpfoKBMK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> If no columns are frozen, the frozen column separator appears at the **left** and **right** edges of the Grid. Columns can be dynamically frozen or unfrozen by dragging the separator.
+> If no columns are frozen, the frozen column separator appears at the **left** and **right** edges of the Data Grid. Columns can be dynamically frozen or unfrozen by dragging the separator.
 
 ## Limitations of frozen columns and freeze direction  
 
-The frozen columns and freeze direction features in Blazor DataGrid have the following limitations:
+The frozen columns and freeze direction features in Blazor Data Grid have the following limitations:
 
-* The **Row Template** feature not compatible with frozen columns.
-* Infinite scroll in cache mode is not supported.
+* The Row Template feature is not compatible with frozen columns.
+* Infinite scrolling with frozen columns does not support cache mode.
 * Freeze direction in the stacked header is incompatible with column reordering.
-* Using a cell template or text wrap in any one of the panels may cause variable row heights between the panels. The height is recalculated based on the DOM offset height and applied uniformly across all rows to maintain consistency. This can lead to visual glitches. To resolve this, set a static value for the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property in [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html).
-* The [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) and [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) properties are incompatible and cannot be used simultaneously.
+* Using a cell template or text wrap in any one of the panels may cause variable row heights between the panels. The height is recalculated based on the DOM offset height and applied uniformly across all rows to maintain consistency. This can lead to visual glitches. To resolve this, set a static value for the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property in [Data Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html).
+* Column-level [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) and Data Grid-level [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) properties are incompatible and cannot be used simultaneously.
 
-> N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.
+> N> Refer to the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor Data Grid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.
