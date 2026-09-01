@@ -13,7 +13,7 @@ documentation: ug
 
 ## DateTime Axis
 
-The DateTime axis uses a time-based scale and renders date-time values as axis labels in the specified format. Set the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_ValueType) of the axis to DateTime.
+The DateTime axis uses a time-based scale and renders date-time values as axis labels in the specified format. Set the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_ValueType) of the axis to [`DateTime`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_DateTime).
 
 ```cshtml
 
@@ -33,7 +33,7 @@ The DateTime axis uses a time-based scale and renders date-time values as axis l
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -46,17 +46,17 @@ The DateTime axis uses a time-based scale and renders date-time values as axis l
         new ChartData { Date = new DateTime(2012, 05, 07), Y = 600 },
         new ChartData { Date = new DateTime(2012, 05, 14), Y = 50 },
         new ChartData { Date = new DateTime(2012, 05, 21), Y = 700 },
-        new ChartData { Date = new DateTime(2012, 05, 28), Y = 90}
-   };
+        new ChartData { Date = new DateTime(2012, 05, 28), Y = 90 }
+    };
 }
 
 ```
 
-![Blazor Stock Chart with Datetime Axis](images/common/blazor-stock-chart-datetime-axis.webp)
+![Blazor Stock Chart with Datetime Axis](images/axis/blazor-stock-chart-datetime-axis.webp)
 
 ## DateTimeCategory Axis
 
-The DateTimeCategory axis displays only business days by skipping non-trading dates. To enable it, set the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html) to [DateTimeCategory](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_DateTimeCategory).
+The DateTimeCategory axis displays only business days by skipping non-trading dates. To enable it, set the [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_ValueType) to [`DateTimeCategory`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_DateTimeCategory).
 
 ```cshtml
 
@@ -72,7 +72,7 @@ The DateTimeCategory axis displays only business days by skipping non-trading da
     <StockChartTooltipSettings Enable="true" Header="AAPL Stock Price"></StockChartTooltipSettings>
     <StockChartCrosshairSettings Enable="true"></StockChartCrosshairSettings>
     <StockChartSeriesCollection>
-        <StockChartSeries DataSource="@StockInfo" Type="ChartSeriesType.Line" XName="X"  YName="Y"></StockChartSeries>
+        <StockChartSeries DataSource="@StockInfo" Type="ChartSeriesType.Line" XName="X" YName="Y"></StockChartSeries>
     </StockChartSeriesCollection>
 </SfStockChart>
 
@@ -122,13 +122,13 @@ The DateTimeCategory axis displays only business days by skipping non-trading da
 
 ```
 
-![Blazor Stock Chart with DateTimeCategory Axis](images/common/blazor-stock-chart-datetimecategory-axis.webp)
+![Blazor Stock Chart with DateTimeCategory Axis](images/axis/blazor-stock-chart-datetimecategory-axis.webp)
 
 ## Logarithmic Axis
 
 <!-- markdownlint-disable MD033 -->
 
-The Logarithmic axis uses a logarithmic scale and is useful when data spans multiple orders of magnitude (e.g., 10<sup>-6</sup> to 10<sup>6</sup>). Set the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_ValueType) of the axis to `Logarithmic`.
+The Logarithmic axis uses a logarithmic scale and is useful when data spans multiple orders of magnitude (for example, 10<sup>-6</sup> to 10<sup>6</sup>). Set the [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_ValueType) of the axis to [`Logarithmic`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Logarithmic).
 
 ```cshtml
 
@@ -149,7 +149,7 @@ The Logarithmic axis uses a logarithmic scale and is useful when data spans mult
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
     public List<ChartData> StockDetails = new List<ChartData>
     {
@@ -162,13 +162,13 @@ The Logarithmic axis uses a logarithmic scale and is useful when data spans mult
         new ChartData { Date = new DateTime(2012, 05, 14), Y = 50 },
         new ChartData { Date = new DateTime(2012, 05, 21), Y = 700 },
         new ChartData { Date = new DateTime(2012, 05, 28), Y = 90 }
-   };
+    };
 }
 
 ```
 
-![Blazor Stock Chart with Logarithmic Axis](images/common/blazor-stock-chart-logarithmic-axis.webp)
+![Blazor Stock Chart with Logarithmic Axis](images/axis/blazor-stock-chart-logarithmic-axis.webp)
 
-## See Also
+## See also
 
 * [Axis Customization](./axis-customization)

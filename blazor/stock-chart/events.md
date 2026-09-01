@@ -9,23 +9,23 @@ documentation: ug
 
 # Blazor Stock Chart Events
 
-This section lists the events of the Stock Chart component that are triggered for corresponding actions. Configure events using the **StockChartEvents** component.
+This section lists the events of the Stock Chart component that are triggered for corresponding actions. Configure events using the [StockChartEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html) component.
 
 The Stock Chart supports the following events:
 
-* [OnLoaded](events#onloaded)
-* [OnPointClick](events#onpointclick)
-* [PointMoved](events#pointmoved)
-* [RangeChange](events#rangechange)
-* [OnStockChartMouseClick](events#onstockchartmouseclick)
-* [OnStockChartMouseDown](events#onstockchartmousedown)
-* [OnStockChartMouseLeave](events#onstockchartmouseleave)
-* [OnStockChartMouseMove](events#onstockchartmousemove)
-* [OnStockChartMouseUp](events#onstockchartmouseup)
+* [OnLoaded](#onloaded)
+* [OnPointClick](#onpointclick)
+* [PointMoved](#pointmoved)
+* [RangeChange](#rangechange)
+* [OnStockChartMouseClick](#onstockchartmouseclick)
+* [OnStockChartMouseDown](#onstockchartmousedown)
+* [OnStockChartMouseLeave](#onstockchartmouseleave)
+* [OnStockChartMouseMove](#onstockchartmousemove)
+* [OnStockChartMouseUp](#onstockchartmouseup)
 
 ## OnLoaded
 
-[Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_Loaded) event triggers after the stock chart is rendered.
+The [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_Loaded) event is triggered after the Stock Chart is rendered. The callback receives [StockChartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEventArgs.html).
 
 ```cshtml
 
@@ -48,7 +48,7 @@ The Stock Chart supports the following events:
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -69,7 +69,7 @@ The Stock Chart supports the following events:
 
 ## OnPointClick
 
-[OnPointClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnPointClick) event triggers when a data point is clicked.
+The [OnPointClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnPointClick) event is triggered when a data point is clicked. The callback receives [StockChartPointEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartPointEventArgs.html).
 
 ```cshtml
 
@@ -92,7 +92,7 @@ The Stock Chart supports the following events:
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -113,7 +113,7 @@ The Stock Chart supports the following events:
 
 ## PointMoved
 
-[PointMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_PointMoved) event triggers when the mouse moves over a data point.
+The [PointMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_PointMoved) event is triggered when the mouse moves over a data point. The callback receives [StockChartPointEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartPointEventArgs.html).
 
 ```cshtml
 
@@ -136,7 +136,7 @@ The Stock Chart supports the following events:
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -157,7 +157,7 @@ The Stock Chart supports the following events:
 
 ## RangeChange
 
-[RangeChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_RangeChange) event triggers when the range is changed.
+The [RangeChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_RangeChange) event is triggered when the range changes. The callback receives [StockChartRangeChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartRangeChangeEventArgs.html).
 
 ```cshtml
 
@@ -180,7 +180,7 @@ The Stock Chart supports the following events:
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -201,7 +201,7 @@ The Stock Chart supports the following events:
 
 ## OnStockChartMouseClick
 
-[OnStockChartMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseClick) event triggers when a mouse click occurs on the chart surface.
+The [OnStockChartMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseClick) event is triggered when a mouse click occurs on the chart surface. The callback receives [StockChartMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartMouseEventArgs.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -223,7 +223,7 @@ The Stock Chart supports the following events:
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -244,7 +244,7 @@ The Stock Chart supports the following events:
 
 ## OnStockChartMouseDown
 
-[OnStockChartMouseDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseDown) event triggers when a mouse button is pressed on the chart.
+The [OnStockChartMouseDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseDown) event is triggered when a mouse button is pressed on the chart. The callback receives [StockChartMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartMouseEventArgs.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -266,7 +266,7 @@ The Stock Chart supports the following events:
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -287,7 +287,7 @@ The Stock Chart supports the following events:
 
 ## OnStockChartMouseLeave
 
-[OnStockChartMouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseLeave) event triggers when the mouse pointer leaves the chart area.
+The [OnStockChartMouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseLeave) event is triggered when the mouse pointer leaves the chart area. The callback receives [StockChartMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartMouseEventArgs.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -309,7 +309,7 @@ The Stock Chart supports the following events:
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -330,7 +330,7 @@ The Stock Chart supports the following events:
 
 ## OnStockChartMouseMove
 
-[OnStockChartMouseMove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseMove) event triggers when the mouse moves over the chart.
+The [OnStockChartMouseMove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseMove) event is triggered when the mouse moves over the chart. The callback receives [StockChartMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartMouseEventArgs.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -352,7 +352,7 @@ The Stock Chart supports the following events:
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -373,7 +373,7 @@ The Stock Chart supports the following events:
 
 ## OnStockChartMouseUp
 
-[OnStockChartMouseUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseUp) event triggers when a pressed mouse button is released over the chart.
+The [OnStockChartMouseUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseUp) event is triggered when a pressed mouse button is released over the chart. The callback receives [StockChartMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartMouseEventArgs.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -395,7 +395,7 @@ The Stock Chart supports the following events:
     public class ChartData
     {
         public DateTime Date { get; set; }
-        public Double Y { get; set; }
+        public double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
