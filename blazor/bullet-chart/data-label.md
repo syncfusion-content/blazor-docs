@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Bullet Chart Data Labels Examples | Syncfusion®
-description: Learn how to add and customize data labels in Syncfusion Blazor Bullet Chart, including position, format, and label style.
+description: Learn how to add and customize data labels in Syncfusion Blazor Bullet Chart, including format and label style.
 platform: Blazor
 control: Bullet Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Bullet Chart Data Labels
 
-Data Labels are used to identify the value of actual bar in the [Blazor Bullet Chart](https://www.syncfusion.com/blazor-components/blazor-bullet-chart) component. The Data Labels will be shown by specifying the [BulletChartDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartDataLabel.html) setting.
+Data labels are used to identify the value of the actual bar in the [Blazor Bullet Chart](https://www.syncfusion.com/blazor-components/blazor-bullet-chart) component. Enable data labels by specifying the [BulletChartDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartDataLabel.html) setting.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -43,9 +43,11 @@ Data Labels are used to identify the value of actual bar in the [Blazor Bullet C
 }
 ```
 
-## Data label customization
+## Data Label Customization
 
-Data Labels color, opacity, font size, font family, font weight, and font style can be customized using the [BulletChartDataLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartDataLabelStyle.html).
+Data label color, opacity, font size, font family, font weight, and font style can be customized using the [BulletChartDataLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartDataLabelStyle.html).
+
+> The following example uses the `BulletChartData` data source defined in the previous example.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -62,7 +64,5 @@ Data Labels color, opacity, font size, font family, font weight, and font style 
     </BulletChartRangeCollection>
 </SfBulletChart>
 ```
-
-N> Refer to the [code block](#data-labels-in-blazor-bullet-chart-component) to know about the property value of the **BulletChartData**.
 
 ![Blazor Bullet Chart with Data Labels](images/blazor-bullet-chart-data-label.webp)

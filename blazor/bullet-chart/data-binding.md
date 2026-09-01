@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Blazor Bullet Chart Working with Data Examples | Syncfusion®
-description: Learn how to bind data to Syncfusion Blazor Bullet Chart using DataSource, ValueField, TargetField, and CategoryField with code samples.
+title: Blazor Bullet Chart Working with Data Example | Syncfusion®
+description: Learn how to bind data to Syncfusion Blazor Bullet Chart using DataSource, ValueField, TargetField, and CategoryField with a code sample.
 platform: Blazor
 control: Bullet Chart
 documentation: ug
@@ -9,7 +9,9 @@ documentation: ug
 
 # Blazor Bullet Chart Working with Data
 
-The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_DataSource) property accepts a collection of values as input that helps to display measures, and compares them to a target bar. To display the actual and target bar, specify the property from the datasource into the [ValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_ValueField) and [TargetField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetField) respectively.
+The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_DataSource) property accepts a collection of data objects used to display feature measures and compare them with target values. Map the corresponding data-source properties to the [ValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_ValueField) and [TargetField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetField) properties. The [CategoryField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_CategoryField) property maps the category labels from the data source.
+
+In this example, `ComparativeMeasureValue` is an array, so each data item can display one or more comparative measures. Use a numeric value instead when each data item has only one target value.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -41,4 +43,7 @@ The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
     };
 }
 ```
+
+If the chart does not render the expected bars or labels, verify that `ValueField`, `TargetField`, and `CategoryField` exactly match the corresponding data-source property names and that the mapped values are numeric.
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXrxNnsVLCpMXlIO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Binding in Blazor Bullet Chart](images/blazor-bullet-chart-data-binding.webp)" %}
