@@ -9,11 +9,12 @@ documentation: ug
 
 # Reactive Aggregates in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports reactive aggregates that update dynamically as data changes. Aggregate values are recalculated when underlying data is edited, providing real-time updates to footer, group footer, and group caption summaries.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports reactive aggregates that update automatically when data changes. Aggregate values recalculate in real time when data is edited, providing immediate updates to footer, group footer, and group caption summaries.
+
 
 ## Auto-update aggregate values in batch editing
 
-When the DataGrid is in batch editing mode, aggregate values in the footer, group footer, and group caption are refreshed each time a cell edit is saved. This ensures that summaries reflect the most recent edits.
+When DataGrid is in batch editing mode, aggregate values in the footer, group footer, and group caption refresh each time a cell edit is saved. Summaries always reflect the latest saved changes. Deleting a record in batch mode also triggers aggregate recalculation after saving changes.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -56,7 +57,7 @@ When the DataGrid is in batch editing mode, aggregate values in the footer, grou
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Coutry" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
         <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
@@ -121,6 +122,6 @@ When the DataGrid is in batch editing mode, aggregate values in the footer, grou
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhHDwjKxLCmXMyp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrxDFWCXHajZDYK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > Aggregate values refresh after batch changes are saved (Update). Adding a new record does not update aggregates until the changes are saved.
