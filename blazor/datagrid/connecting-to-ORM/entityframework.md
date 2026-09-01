@@ -25,11 +25,11 @@ Entity Framework Core (EF Core) is a data access technology for .NET that simpli
 
 **What is Entity Framework Core SQL Server Provider?**
 
-The Microsoft.EntityFrameworkCore.SqlServer package is the provider that connects Entity Framework core to SQL Server, enabling CRUD, transactions, and SQL Server-specific features.
+The Microsoft.EntityFrameworkCore.SqlServer package is the provider that connects Entity Framework Core to SQL Server, enabling CRUD, transactions, and SQL Server-specific features.
 
 **What is UrlAdaptor?**
 
-UrlAdaptor is a DataManager adaptor that communicates with REST API endpoints for all grid operations. The DataGrid sends read, insert, update, delete, and batch requests to controller actions, which use Entity Framework core to access SQL Server.
+UrlAdaptor is a DataManager adaptor that communicates with REST API endpoints for all grid operations. The DataGrid sends read, insert, update, delete, and batch requests to controller actions, which use Entity Framework Core to access SQL Server.
 
 ## Prerequisites
 
@@ -49,7 +49,7 @@ Ensure the following software and packages are installed before proceeding:
 
 ### Step 1: Create the Database and Table in SQL Server
 
-First, the SQL Server database structure must be created to store order records.
+First, create the SQL Server database structure to store order records.
 
 Instructions:
 1. Open SQL Server Management Studio (SSMS) or any SQL Server client.
@@ -188,7 +188,7 @@ namespace Grid_EF_UrlAdaptor.Data
 
 **Explanation:**
 - `OrderDbContext` inherits from `DbContext` and exposes `DbSet<Order>` to query and save `Order` entities.
-- `modelBuilder.Entity<Order>().ToTable("Order")` ensures Entity Framework core maps the entity to the `Order` table.
+- `modelBuilder.Entity<Order>().ToTable("Order")` ensures Entity Framework Core maps the entity to the `Order` table.
 
 The DbContext has been successfully configured.
 
@@ -275,7 +275,7 @@ The controller has been created with basic endpoint.
 
 ### Step 7: Register Services in Program.cs
 
-The `Program.cs` file is where application services are registered and configured. This step enables Entity Framework Core, controllers, Blazor, and maps controller routes.
+The `Program.cs` file registers and configures application services. This step enables Entity Framework Core, controllers, Blazor, and maps controller routes.
 
 **Instructions:**
 
@@ -338,7 +338,7 @@ app.Run();
 
 ### Step 1: Install and Configure Blazor DataGrid Components
 
-Syncfusion is a library that provides pre-built UI components like DataGrid, which is used to display data in a table format.
+Syncfusion provides pre-built UI components such as the DataGrid, which displays data in a tabular format.
 
 **Instructions:**
 
@@ -876,6 +876,16 @@ Sorting feature is now active.
 ### Step 9: Perform CRUD Operations
 
 CRUD operations (Create, Read, Update, Delete) enable users to manage data directly from the DataGrid. The REST API endpoints in the controller handle all database operations using Entity Framework Core.
+
+The following table summarizes the CRUD operations enabled by UrlAdaptor:
+
+| Operation | Endpoint route | Controller method | HTTP verb |
+|-----------|---------------|-------------------|-----------|
+| Read | `api/Grid` | `Post` | POST |
+| Create | `api/Grid/Insert` | `Insert` | POST |
+| Update | `api/Grid/Update` | `Update` | POST |
+| Delete | `api/Grid/Delete` | `Delete` | POST |
+| Batch | `api/Grid/BatchUpdate` | `Batch` | POST |
 
 **Instructions:**
 
