@@ -9,10 +9,11 @@ documentation: ug
 
 # Blazor TreeMap Color Mapping
 
-Color mapping is used to customize the color for each group or item based on the specified types. The following options are available to customize the group and leaf items in the TreeMap component.
+Color mapping is used to customize the color for each group or item based on the specified mapping types. The following options are available to customize the group and leaf items in the TreeMap component.
 
 ## Range color mapping
 
+Range color mapping applies colors to items whose underlying value falls within a defined range. Bind the field name from the data source used for range comparison to the [RangeColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_RangeColorValuePath) property in [SfTreeMap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html), and define each range and its color in the [TreeMapLeafColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafColorMapping.html) under `TreeMapLeafItemSettings`. An item whose value equals the `StartRange` of a band is treated as part of that band.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -48,7 +49,7 @@ Color mapping is used to customize the color for each group or item based on the
 
 ## Equal color mapping
 
-Equal color mapping is used to fill colors to each item by specifying equal value present in the data source, that can be specified in the [EqualColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_EqualColorValuePath) property.
+Equal color mapping is used to fill each item with colors by specifying an equal value present in the data source, that can be specified in the [EqualColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_EqualColorValuePath) property.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -107,7 +108,7 @@ N> Refer to the [code block](#range-color-mapping) to know about the property va
 
 ## Desaturation with multiple colors
 
-Multiple colors are used to provide gradient effect to the TreeMap items based on the [TreeMapLeafColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafColorMapping.html) ranges and specify the **n** number of colors in the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_ColorMapping) property.
+Multiple colors are used to provide gradient effect to the TreeMap items based on the [TreeMapLeafColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafColorMapping.html) ranges and specify any number of colors in the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_ColorMapping) property.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -128,6 +129,7 @@ N> Refer to the [code block](#range-color-mapping) to know about the property va
 
 ## Palette color mapping
 
+Palette color mapping applies a predefined set of colors to the items cyclically. Assign the colors to the [Palette](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_Palette) property in [SfTreeMap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html).
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -166,6 +168,7 @@ N> Refer to the [code block](#range-color-mapping) to know about the property va
 
 ## Bind the colors to items from the data source
 
+Bind the color values directly from the data source field by assigning its name to the [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_ColorValuePath) property in [SfTreeMap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html). `RangeColorValuePath` or `EqualColorValuePath` are not required when `ColorValuePath` is used.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -195,3 +198,9 @@ N> Refer to the [code block](#range-color-mapping) to know about the property va
 ```
 
 ![Binding Colors in Blazor TreeMap](images/Colormapping/blazor-treemap-color-binding.webp)
+
+## See also
+
+* [Blazor TreeMap Legend](./legend.md)
+* [Blazor TreeMap Tooltip](./tooltip.md)
+* [Getting Started with Blazor TreeMap](./getting-started.md)
