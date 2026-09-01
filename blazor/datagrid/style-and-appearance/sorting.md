@@ -9,16 +9,25 @@ documentation: ug
 
 # Sorting Customization in Blazor Data Grid
 
-The appearance of sorting indicators in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. Styling options are available for:
+The appearance of sort icons in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. Styling options are available for:
 
 - **Ascending and descending sort icons:** Show the current sort direction in column headers.
-- **Multi-sorting order indicators:** Display the order of sorting when multiple columns are sorted.
+- **Multi-sort badge:** Display the sort order when multiple columns are sorted.
 
-## Customize sorting icons
+## Customize the sort icons
 
-The **.e-icon-ascending** and **.e-icon-descending** classes define the icons shown in the DataGrid header when a column is sorted in `ascending` or `descending` order. Use CSS to adjust its appearance:
+Use the `.e-icon-ascending` and `.e-icon-descending` classes to style the icons shown in the Data Grid header when a column is sorted in `ascending` or `descending` order:
 
 ```css
+.e-grid .e-icon-ascending::before,
+.e-grid .e-icon-descending::before {
+    font-family: 'e-icons' !important; /* Required for the icon glyphs to render */
+    font-weight: normal;
+    font-size: 14px;
+    color: #0b6aa2;
+    margin: 0 2px;
+}
+
 .e-grid .e-icon-ascending::before {
     content: '\e7a3'; /* Ascending icon code */
 }
@@ -28,24 +37,32 @@ The **.e-icon-ascending** and **.e-icon-descending** classes define the icons sh
 }
 ```
 
-Adjust properties such as **content**, **color**, **font-size**, and **margin** to match the grid design. Ensure the correct icon font family is loaded to display the icons properly.
+Adjust properties such as `content`, `color`, `font-size`, and `margin` to match the Data Grid design. Ensure the `e-icons` font family from the loaded theme is available so the icons render correctly.
 
-![Grid sorting icon](../images/style-and-appearance/grid-sorting-icons.webp)
+> The icon codes shown above are theme and version dependent. For the complete list of available icons, refer to the [Syncfusion Blazor built-in icons](https://blazor.syncfusion.com/documentation/appearance/icons) reference.
 
-## Customize multi-sorting indicators
+![Data Grid sort icon](../images/style-and-appearance/grid-sorting-icons.webp)
 
-The **.e-sortnumber** class styles the numeric indicator shown when multiple columns are sorted. Apply CSS to change their appearance:
+## Customize the multi-sort badge
+
+The `.e-sortnumber` class styles the numeric badge shown when multiple columns are sorted. Apply CSS to change the appearance:
 
 ```css
 .e-grid .e-sortnumber {
     background-color: #deecf9;
+    color: #0b6aa2;
     font-family: cursive;
+    font-size: 12px;
 }
 ```
 
-Modify properties such as **background-color**, **font-family**, **font-size**, and **border-radius** to align with the grid layout. Ensure accessibility by maintaining clear contrast and focus styles.
+Properties such as `background-color`, `font-family`, `font-size`, and `border-radius` can be modified to align with the grid layout. Maintain clear contrast and focus styles to support accessibility.
 
-![Grid multi sorting icon](../images/style-and-appearance/grid-multi-sorting-icon.webp)
+> The multi-sort badge appears only when more than one column is sorted. To trigger multi-sort, hold **Ctrl** (or **Cmd** on macOS) while clicking an additional column header, or tap additional headers on touch devices. Sorting a single column will not display the badge.
+
+Enable multi-sort at the component level by setting the [`AllowMultiSorting`](https://blazor.syncfusion.com/documentation/datagrid/sorting#enable-multi-sorting) property to `true`. For programmatic configuration of the sorted columns and direction, use [`GridSortSettings`](https://blazor.syncfusion.com/documentation/datagrid/sorting#sort-settings). See the [Sorting in Blazor Data Grid](https://blazor.syncfusion.com/documentation/datagrid/sorting) documentation for the complete list of sort APIs.
+
+![Data Grid multi-sort badge](../images/style-and-appearance/grid-multi-sorting-icon.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -92,7 +109,11 @@ Modify properties such as **background-color**, **font-family**, **font-size**, 
         content: '\e7b6'; /* Descending icon code (verify for your theme/version) */
     }
 
-    /* Optional: emphasize sorted header and provide better focus visibility */
+    /* Optional: emphasize sorted header and provide better focus visibility.
+       Note: the [aria-sort] selector relies on the component emitting aria-sort
+       on .e-headercell. Verify the attribute is rendered for the active theme
+       before publishing; use .e-headercell.e-sortasc / .e-headercell.e-sortdesc
+       as a fallback when the attribute is absent. */
     .e-grid .e-headercell[aria-sort] {
         background-color: #f3f9ff;
     }
@@ -118,8 +139,6 @@ Modify properties such as **background-color**, **font-family**, **font-size**, 
 
 internal sealed class OrderData
 {
-    private static readonly List<OrderData> Data = new();
-
     public OrderData(int orderID, string customerID, double freight, DateTime orderDate)
     {
         OrderID = orderID;
@@ -128,24 +147,16 @@ internal sealed class OrderData
         OrderDate = orderDate;
     }
 
-    internal static List<OrderData> GetAllRecords()
+    internal static List<OrderData> GetAllRecords() => new()
     {
-        if (Data.Count == 0)
-        {
-            Data.Add(new OrderData(10248, "VINET", 32.38, new DateTime(2024, 1, 10)));
-            Data.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(2024, 1, 11)));
-            Data.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(2024, 1, 12)));
-            Data.Add(new OrderData(10251, "VICTE", 41.34, new DateTime(2024, 1, 13)));
-            Data.Add(new OrderData(10252, "SUPRD", 51.3, new DateTime(2024, 1, 14)));
-            Data.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(2024, 1, 15)));
-            Data.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(2024, 1, 16)));
-            Data.Add(new OrderData(10255, "RICSU", 148.33, new DateTime(2024, 1, 17)));
-            Data.Add(new OrderData(10256, "WELLI", 13.97, new DateTime(2024, 1, 18)));
-            Data.Add(new OrderData(10257, "HILAA", 81.91, new DateTime(2024, 1, 19)));
-        }
-
-        return Data;
-    }
+        new OrderData(10248, "VINET", 32.38, new DateTime(2024, 1, 10)),
+        new OrderData(10249, "TOMSP", 11.61, new DateTime(2024, 1, 11)),
+        new OrderData(10250, "HANAR", 65.83, new DateTime(2024, 1, 12)),
+		new OrderData(10251, "CHOPS", 45.83, new DateTime(2024, 1, 13)),
+		new OrderData(10252, "SUPRD", 55.34, new DateTime(2024, 1, 14)),
+		new OrderData(10250, "WELLI", 75.73, new DateTime(2024, 1, 15)),
+		new OrderData(10254, "HILAA", 32.73, new DateTime(2024, 1, 16))
+    };
 
     public int OrderID { get; set; }
     public string CustomerID { get; set; }
@@ -156,4 +167,4 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrnjQjiLRFmJSBc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVnDbMYKzdcptkx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
