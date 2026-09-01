@@ -9,16 +9,18 @@ documentation: ug
 
 # Blazor Range Selector Style and Appearance
 
-Style and Appearance provide options to customize the visual design of the **Syncfusion Blazor Range Navigator** component, ensuring consistency with your application’s branding and theme.
+The visual design of the Syncfusion Blazor Range Selector can be customized to keep it consistent with your application's branding and theme.
 
-By using CSS selectors and ID-based styling, you can customize colors, typography, spacing, borders, and other visual properties of TreeMap items, labels, and SVG elements.
+By using CSS class and ID-based selectors, you can customize the colors, typography, spacing, and borders of the [SfRangeNavigator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html) SVG elements, such as the root container, the selected and unselected regions, and the axis labels. Some of these can also be configured through the [RangeNavigatorStyleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html) and [RangeNavigatorLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorLabelStyle.html) settings.
 
-**Basic Range Navigator Setup**
+## Basic setup
+
+The following markup is used by the CSS examples in the sections below. Add the CSS to your global stylesheet (for example, `wwwroot/css/site.css`).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
 
-<SfRangeNavigator id="stockRange" Value="@Value">
+<SfRangeNavigator ID="stockRange" Value="@Value">
     <RangeNavigatorRangeTooltipSettings Enable="true"></RangeNavigatorRangeTooltipSettings>
     <RangeNavigatorSeriesCollection>
         <RangeNavigatorSeries DataSource="@StockInfo"
@@ -51,8 +53,9 @@ By using CSS selectors and ID-based styling, you can customize colors, typograph
 }
 ```
 
-## Customize Range Navigator Root Element
-Customize the root container of the Range Navigator to apply global styling such as background color, padding, and borders. The root element uses the `.e-rangenavigator` class and affects the overall appearance of the entire control.
+## Customize the root element
+
+Style the root container to apply global styling such as background color, padding, and borders. The root element uses the `.e-rangenavigator` class and affects the overall appearance of the entire control.
 
 ```css
 .e-rangenavigator {
@@ -60,13 +63,13 @@ Customize the root container of the Range Navigator to apply global styling such
 }
 ```
 
-This styles the entire Range Navigator container.
+This styles the entire Range Selector container.
 
 ![Blazor RangeNavigator with Background Customization](images/style/blazor-rangenavigator-background-color.webp)
 
-## Customize Unselected Range Regions
+## Customize the unselected regions
 
-Modify the appearance of unselected regions (left and right areas outside the selected range) to create visual distinction and improve user interaction clarity. Unselected regions are rendered as SVG elements with IDs, allowing independent styling for left and right areas.
+Modify the appearance of the unselected regions (the left and right areas outside the selected range) to create visual distinction and improve clarity. The unselected regions are rendered as SVG elements with IDs, allowing the left and right areas to be styled independently. The fill color can also be set through the [UnselectedRegionColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorStyleSettings_UnselectedRegionColor) property.
 
 **Left unselected region**
 
@@ -88,8 +91,9 @@ Modify the appearance of unselected regions (left and right areas outside the se
 
 ![Blazor RangeNavigator Unselected Area Customization](images/style/blazor-rangenavigator-unselected-area-customization.webp)
 
-## Customize Selected Range Region
-Style the highlighted selected range area to emphasize the active data range and improve visual focus. The selected region can be customized to stand out from unselected areas, making it easier for users to identify the current selection.
+## Customize the selected region
+
+Style the highlighted selected range area to emphasize the active data range and improve visual focus. The selected region can be customized to stand out from the unselected areas, making it easier for users to identify the current selection.
 
 ```css
 [id*="_SelectedArea"] {
@@ -98,12 +102,13 @@ Style the highlighted selected range area to emphasize the active data range and
 }
 ```
 
-This CSS overrides the default theme color and the color set through [RangeNavigatorStyleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html).
+This CSS overrides the default theme color and the color set through the [SelectedRegionColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorStyleSettings_SelectedRegionColor) property of [RangeNavigatorStyleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html).
 
 ![Blazor RangeNavigator Selected Area Customization](images/style/blazor-rangenavigator-selected-area-customization.webp)
 
-## Customize Axis Label Text
-Format the axis labels to match your application's typography and readability standards. Control font size, color, weight, and family to ensure axis labels are prominent and aligned with your design system. This improves data readability and visual hierarchy in the Range Navigator.
+## Customize the axis label text
+
+Format the axis labels to match your application's typography and readability standards. Control the font size, color, weight, and family to ensure the axis labels are prominent and aligned with your design system. The same options are available through the [RangeNavigatorLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorLabelStyle.html) setting.
 
 ```css
 [id*="_FirstLevelAxisLabels"] text {
@@ -116,4 +121,9 @@ Format the axis labels to match your application's typography and readability st
 
 ![Blazor RangeNavigator Label Customization](images/style/blazor-rangenavigator-label-customization.webp)
 
-N> SVG presentation attributes such as fill, stroke, and font-size may require **!important** when overridden by inline SVG styles.
+N> SVG presentation attributes such as `fill`, `stroke`, and `font-size` may require `!important` when overriding inline SVG styles.
+
+## See Also
+
+* [Customization](./custom)
+* [Grid and Tick Lines](./grid-tick)

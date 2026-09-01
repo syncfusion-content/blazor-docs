@@ -9,9 +9,13 @@ documentation: ug
 
 # Blazor Range Selector Print and Export
 
+The Blazor Range Selector can be printed directly from the browser and exported to image, SVG, PDF, and data (XLSX/CSV) formats through the public `PrintAsync` and `ExportAsync` methods of the component.
+
 ## Print
 
-The rendered Range Selector can be printed directly from the browser by calling the public method `PrintAsync`.
+The rendered Range Selector can be printed directly from the browser by calling the public [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html) method. It optionally accepts an `ElementReference`; when omitted, the current Range Selector is printed.
+
+The [OnPrintCompleted](./events#onprintcompleted) event is triggered after the print operation completes.
 
 ```cshtml
 
@@ -59,11 +63,12 @@ The rendered Range Selector can be printed directly from the browser by calling 
 
 ## Export
 
-The rendered Range Selector can be exported to **JPEG**, **PNG**, **SVG**, **PDF**, **XLSX**, or **CSV** format by using the `ExportAsync` method in the Range Selector. This method contains the following parameters:
+The rendered Range Selector can be exported to [JPEG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_JPEG), [PNG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PNG), [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_SVG), [PDF](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PDF), [XLSX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_XLSX), or [CSV](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_CSV) format by using the `ExportAsync` method of the Range Selector. This method accepts the following parameters:
 
-* **Type** - To specify the export type. The component can be exported to **JPEG**, **PNG**, **SVG**, **PDF**, **XLSX**, or **CSV** format.
-* **File name** - To specify the file name to export.
-* **Orientation** - To specify the orientation type. This is applicable only for PDF export type. It is an optional parameter.
+* `Type` - Specifies the export format as an [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html) value. Required.
+* `FileName` - Specifies the name of the exported file. Required.
+* `Orientation` - Specifies the `PdfPageOrientation` (`Portrait` or `Landscape`). Applicable only for PDF export. Optional.
+* `AllowDownload` - When `true` (default), the browser download prompt is shown; when `false`, the exported content is returned as a `DataUrl` string. Optional.
 
 ```cshtml
 
@@ -103,8 +108,13 @@ The rendered Range Selector can be exported to **JPEG**, **PNG**, **SVG**, **PDF
 
     public async Task Click(MouseEventArgs args)
     {
-        await RangeObj.ExportAsync(ExportType.PDF, "pngImage", Syncfusion.PdfExport.PdfPageOrientation.Landscape);
+        await RangeObj.ExportAsync(ExportType.PDF, "RangeSelector", Syncfusion.PdfExport.PdfPageOrientation.Landscape);
     }
 }
 
 ```
+
+## See also
+
+* [Events](./events)
+* [Period Selector](./period-selector)
