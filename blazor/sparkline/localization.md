@@ -9,21 +9,20 @@ documentation: ug
 
 # Blazor Sparkline Charts Localization
 
-The Sparkline Charts component supports localization. The default culture is `en-US`. The culture can be changed using the `LoadCldrData` and `setCulture` methods.
+The Blazor Sparkline Charts component uses the `en-US` culture by default. Culture-specific number and currency formatting can be applied by loading the required CLDR data and setting the culture.
 
 ## Tooltip Format
 
 The Sparkline Charts tooltip supports localization. The following example shows the tooltip text with currency format based on culture.
 
 ```cshtml
-
 @using Microsoft.JSInterop;
 
 <SfSparkline DataSource="@Numbers"
               Type="SparklineType.Line"
               Fill="#b2cfff"
               LineWidth="3"
-              UseGroupingSeparator= "true"
+              UseGroupingSeparator="true"
               Height="200px" Width="350px"
               Format = "c0">
     <SparklineContainerArea>
@@ -44,14 +43,18 @@ The Sparkline Charts tooltip supports localization. The following example shows 
         "currencies.json","numbers.json","timeZoneNames.json"}).SetCulture("de");
     }
 }
-
 ```
 
-## Rtl
+The `Format` property specifies the currency format, while the `UseGroupingSeparator` property controls whether localized digit-grouping separators are displayed.
 
-If the `EnableRtl` property is set to true, the Sparkline Charts will render from right-to-left.
+If localized values are not displayed, verify that the specified CLDR files are available to the application and that the culture identifier matches the loaded culture data.
 
-The following example shows the Sparkline Charts rendered in right-to-left mode.
+## Right-to-left (RTL)
+
+Right-to-left rendering can be enabled by setting the `EnableRtl` property to `true`.
+
+The following example renders the Sparkline Chart in right-to-left mode:
+
 
 ```cshtml
 
@@ -74,3 +77,10 @@ The following example shows the Sparkline Charts rendered in right-to-left mode.
 }
 
 ```
+
+## See also
+
+- [Getting started with Blazor Sparkline Charts](https://blazor.syncfusion.com/documentation/sparkline/getting-started)
+- [Sparkline Charts appearance](https://blazor.syncfusion.com/documentation/sparkline/appearance)
+- [Globalization in Blazor](https://blazor.syncfusion.com/documentation/common/globalization)
+- [Localization of Blazor components](https://blazor.syncfusion.com/documentation/common/localization)

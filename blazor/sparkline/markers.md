@@ -9,11 +9,11 @@ documentation: ug
 
 # Blazor Sparkline Charts Markers
 
-Data markers provide information about data points in the Sparkline series.
+Data markers provide information about individual data points in the Sparkline.
 
-## Adding Markers
+## Adding markers
 
-The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html#Syncfusion_Blazor_Charts_SparklineMarkerSettings_Visible) property in [SparklineMarkerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html) enables markers by specifying a collection of special points. The following example shows how to enable markers for all points.
+The [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html#Syncfusion_Blazor_Charts_SparklineMarkerSettings_Visible) property in [`SparklineMarkerSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html) determines which markers are displayed. The following example enables markers for all data points.
 
 ```cshtml
 
@@ -26,19 +26,23 @@ The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Spa
 
 ```
 
-![Blazor Sparkline Chart with Marker](./images/marker/blazor-sparkline-marker.webp)
+![Blazor Sparkline Chart with markers](./images/marker/blazor-sparkline-marker.webp)
 
-## Adding Special Point Markers
+## Adding special point markers
 
-Markers can be enabled for specific points as a collection. The following special points are applicable:
+Markers can be displayed for specific types of data points by assigning one or more `VisibleType` values to the `Visible` property.
 
-* [All](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_All) – Markers for all points
-* [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_Start) – Markers for start points
-* [End](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_End) – Markers for end points
-* [High](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_High) – Markers for high points
-* [Low](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_Low) – Markers for low points
-* [Negative](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_Negative) – Markers for negative points
-* [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_None) – Markers for all points are disabled
+The following marker types are available:
+
+* [`All`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_All) – Displays markers for all data points.
+* [`Start`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_Start) – Displays a marker for the first data point.
+* [`End`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_End) – Displays a marker for the last data point.
+* [`High`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_High) – Displays markers for the highest values.
+* [`Low`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_Low) – Displays markers for the lowest values.
+* [`Negative`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_Negative) – Displays markers for negative values.
+* [`None`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_None) – Disables all markers.
+
+The following example displays markers for the highest and lowest values.
 
 ```cshtml
 
@@ -48,19 +52,19 @@ Markers can be enabled for specific points as a collection. The following specia
     <SparklineMarkerSettings Visible="new List<VisibleType> { VisibleType.High, VisibleType.Low }"></SparklineMarkerSettings>
     <SparklineAxisSettings MinX="-1" MaxX="7" MaxY="7" MinY="-1"></SparklineAxisSettings>
 </SfSparkline>
-
 ```
 
-![Displaying High and Low Points Marker in Blazor Sparkline Chart](./images/marker/blazor-sparkline-high-low-point-marker.webp)
+![Blazor Sparkline Chart with high and low point markers](./images/marker/blazor-sparkline-high-low-point-marker.webp)
 
-## Markers Customization
+## Marker customization
 
 The following properties can be used to customize markers:
 
-* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html#Syncfusion_Blazor_Charts_SparklineMarkerSettings_Fill) - Specifies fill color for marker
-* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html#Syncfusion_Blazor_Charts_SparklineMarkerSettings_Opacity) - Specifies opacity of marker [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html#Syncfusion_Blazor_Charts_SparklineMarkerSettings_Fill) color
-* [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html#Syncfusion_Blazor_Charts_SparklineMarkerSettings_Size) - Specifies marker size
-* [SparklineMarkerBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerBorder.html) - Specifies color and width for marker border
+* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html#Syncfusion_Blazor_Charts_SparklineMarkerSettings_Fill) – Specifies the marker fill color.
+* [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html#Syncfusion_Blazor_Charts_SparklineMarkerSettings_Opacity) – Specifies the marker opacity. The value ranges from `0` to `1`.
+* [`Size`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html#Syncfusion_Blazor_Charts_SparklineMarkerSettings_Size) – Specifies the marker size in pixels.
+
+Use the [`SparklineMarkerBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerBorder.html) child component to customize the marker border color and width. The border width is specified in pixels.
 
 ```cshtml
 
@@ -76,4 +80,10 @@ The following properties can be used to customize markers:
 
 ```
 
-![Blazor Sparkline Chart with Custom Marker](./images/marker/blazor-sparkline-custom-marker.webp)
+![Blazor Sparkline Chart with customized markers](./images/marker/blazor-sparkline-custom-marker.webp)
+
+## See also
+
+* [Getting started with Blazor Sparkline Charts](https://blazor.syncfusion.com/documentation/sparkline/getting-started-webapp)
+* [SparklineMarkerSettings API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineMarkerSettings.html)
+* [VisibleType API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html)

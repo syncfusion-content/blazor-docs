@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Sparkline Charts Range Band Examples | Syncfusion®
-description: Learn how to customize range bands in Syncfusion Blazor Sparkline to highlight y-axis ranges with StartRange, EndRange, color, and opacity.
+description: Learn how to customize range bands in Syncfusion Blazor Sparkline to highlight y-axis ranges with StartRange, EndRange, Color, and Opacity.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
@@ -9,15 +9,16 @@ documentation: ug
 
 # Blazor Sparkline Charts Range Band
 
-A range band represents a specific range on the Sparkline y-axis, improving readability or highlighting quality by specifying the [StartRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBand.html#Syncfusion_Blazor_Charts_SparklineRangeBand_StartRange) and [EndRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBand.html#Syncfusion_Blazor_Charts_SparklineRangeBand_EndRange) properties in the [SparklineRangeBand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBand.html) within [SparklineRangeBandSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBandSettings.html).
+A range band represents a specific range on the Sparkline y-axis. It can be used to improve readability and highlight specific value ranges by configuring the `StartRange` and `EndRange` properties of `SparklineRangeBand` within `SparklineRangeBandSettings`.
 
-The following properties are used to customize the range band:
+The following properties are used to customize a range band:
 
-* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBand.html#Syncfusion_Blazor_Charts_SparklineRangeBand_Color) – Specifies the color of the range band.
-* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBand.html#Syncfusion_Blazor_Charts_SparklineRangeBand_Opacity) – Specifies the opacity of the range band color.
+* `Color` - Specifies the color of the range band.
+* `Opacity` - Specifies the opacity of the range band color. Accepted values range from `0` to `1`.
+
+The following example demonstrates how to highlight multiple y-axis ranges using range bands with different colors and opacity values.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="new int[]{ 0, 6, 4, 1, 3, 2, 5 }" Height="150px" Width="150px" LineWidth="2" Fill="#0d3c9b">
