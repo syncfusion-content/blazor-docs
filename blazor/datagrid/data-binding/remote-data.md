@@ -14,7 +14,7 @@ The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagr
 To configure remote data binding:
 
 1. Configure `SfDataManager` with the service endpoint using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property.
-2. Select an adaptor through the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor)  property (e.g., **ODataV4Adaptor**, **ODataAdaptor**, **WebApiAdaptor**, **UrlAdaptor**).
+2. Select an adaptor through the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property (e.g., **ODataV4Adaptor**, **ODataAdaptor**, **WebApiAdaptor**, **UrlAdaptor**).
 3. Define the grid’s `TValue` type to match the data model.
 4. Place `SfDataManager` inside the grid markup.
 
@@ -51,9 +51,9 @@ To configure remote data binding:
 
 ## Binding with OData services
 
-[OData](https://www.odata.org/documentation/) (Open Data Protocol) is a standardized protocol that simplifies data sharing across different systems by enabling querying and updating data through RESTful APIs. The Blazor DataGrid provides built-in support for **OData v3** and **v4** services using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
+[OData](https://www.odata.org/documentation/) (Open Data Protocol) is a standardized protocol that simplifies data sharing across different systems by enabling querying and updating data through RESTful APIs. The Blazor DataGrid provides built-in support for **OData v3** and **v4** services using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
 
-The `DataManager` communicates with the remote OData service using either [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) or [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/odatav4-adaptor), depending on the protocol version.
+The `SfDataManager` component communicates with the remote OData service by using either [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) or [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/odatav4-adaptor), according to the protocol version.
 
 * Use `ODataAdaptor` for **OData v3** services.
 * Use `ODataV4Adaptor` for **OData v4** services.
@@ -169,11 +169,11 @@ This section describes how to configure [SfDataManager](https://help.syncfusion.
 
 **Ways to Configure Authentication**
 
-* **Using a pre-configured HttpClient:** 
+* **Using a pre-configured HttpClient:**
 
     Register an `HttpClient` instance with the access token or an authentication message handler before calling `AddSyncfusionBlazor()` in **Program.cs**. This ensures that `SfDataManager` uses the configured HttpClient instead of creating its own, enabling secure access to protected services.
 
-* **Setting the access token in the default headers:** 
+* **Setting the access token in the default headers:**
 
     Inject the configured `HttpClient` and set the access token in the default request headers:
 
@@ -189,7 +189,7 @@ This section describes how to configure [SfDataManager](https://help.syncfusion.
     }
         ```
 
-- **Using the Headers property of SfDataManager:** 
+- **Using the Headers property of SfDataManager:**
 
     Set the access token directly in the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Headers) property of `SfDataManager`. For more details, see [Setting Custom Headers](#setting-custom-headers).
 
@@ -197,7 +197,7 @@ This section describes how to configure [SfDataManager](https://help.syncfusion.
 
 ## Setting custom headers
 
-Custom HTTP headers can be added to requests made by [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) when interacting with remote services. This is useful for scenarios requiring **authentication tokens**, **API keys**, or **additional metadata** for secure communication
+Custom HTTP headers can be added to requests made by [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) when interacting with remote services. This approach is useful for scenarios that require **authentication tokens**, **API keys**, or **additional metadata** for secure communication.
 
 To achieve this, configure the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Headers) property of `SfDataManager`. The `Headers` property accepts a dictionary of key-value pairs, where each key represents the **header name** and the value represents the **header value**.
 
@@ -283,9 +283,9 @@ The example demonstrates modifying the query parameter dynamically. Initially, t
 
 ## Offline mode
 
-When remote data binding is enabled, all grid actions such as **paging**, **sorting**, **editing**, **grouping**, and **filtering** are processed on the server. To avoid a network request for every action, the grid can load all data during initialization and perform subsequent operations on the client side. 
+When remote data binding is enabled, all grid actions such as **paging**, **sorting**, **editing**, **grouping**, and **filtering** are processed on the server. To avoid a network request for every action, the grid can load all data during initialization and perform subsequent operations on the client side.
 
-This behavior is enabled by setting the [Offline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Offline) property of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to **true**.
+This behavior is enabled by setting the [Offline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Offline) property of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to **true**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -293,7 +293,7 @@ This behavior is enabled by setting the [Offline](https://help.syncfusion.com/cr
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor
- 
+
 <SfGrid TValue="OrdersDetails" Height="348">
     <SfDataManager Url="https://localhost:xxxx/api/Grid" Adaptor="Adaptors.WebApiAdaptor" Offline="true"></SfDataManager>
     <GridColumns>
@@ -303,11 +303,11 @@ This behavior is enabled by setting the [Offline](https://help.syncfusion.com/cr
         <GridColumn Field="ShipCountry" HeaderText="Ship Country" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
- 
+
 {% endhighlight %}
- 
+
 {% highlight c# tabtitle="GridController.cs" %}
- 
+
 using Microsoft.AspNetCore.Mvc;
 using Syncfusion.Blazor.Data;
 using Syncfusion.Blazor;
@@ -334,15 +334,15 @@ namespace WebApiAdaptor.Controllers
         }
     }
 }
- 
+
 {% endhighlight %}
 {% endtabs %}
 
 > Replace **https://localhost:xxxx/api/Grid** with the actual URL of the API endpoint that provides data in a consumable format (such as JSON).
 
-A complete sample is available on [Github](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/Offline-Mode).
+A complete sample is available on [GitHub](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/Offline-Mode).
 
-## Fetch result from the DataManager query using external button
+## Fetch result from the SfDataManager query using external button
 
 The Blazor DataGrid can be populated with data fetched on demand from a remote endpoint. An external button can trigger an HTTP request and assign the returned collection to the grid’s [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. This approach provides control over when data is loaded and is suitable for scenarios where data retrieval should be deferred until a specific event occurs.
 
