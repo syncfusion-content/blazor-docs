@@ -9,15 +9,17 @@ documentation: ug
 
 # Blazor HeatMap Chart Palette
 
-In heat map, each data point is displayed as a cell with applied color based on the data value. The palette in the heat map is used to define the color range for cells and gradient type for colors. You can define the colors either in RGB or hex codes using the `Color` property in the `HeatMapPalette`. The defined colors are applied to the cell background based on the palette type and cell value.
+In the HeatMap, each data point is represented as a cell, and the cell color is determined by its corresponding data value. The palette is used to define the color range for cells and the color transition type. You can specify colors using RGB values or hexadecimal color codes through the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapPalette.html#Syncfusion_Blazor_HeatMap_HeatMapPalette_Color) property of [`HeatMapPalette`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapPalette.html). The configured colors are applied to the cell background based on the selected palette type and the associated cell value.
 
-## Palette types
+## Palette Types
 
 You can display the heat map cells either in gradient colors or fixed colors.
 
 ### Gradient
 
-The smooth transition between the given palette colors can be applied for the heat map cells based on value. The heat map calculates all the gradient colors between the start and end colors for all distinct data values. Default start color and end color will be considered for gradient calculation, if the colors are not defined. The palette type must be defined as `Gradient` for the `Type` property in the `HeatMapPaletteSettings` property.
+A smooth transition between the specified palette colors is applied to HeatMap cells based on their values. The HeatMap calculates intermediate colors between the defined palette colors and applies them to the cells according to their corresponding values. If palette colors are not specified, the default start and end colors are used for gradient calculation.
+
+To enable gradient color mapping, set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapPaletteSettings.html#Syncfusion_Blazor_HeatMap_HeatMapPaletteSettings_Type) property of [`HeatMapPaletteSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapPaletteSettings.html) to [`PaletteType.Gradient`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.PaletteType.html).
 
 ```cshtml
 
@@ -67,7 +69,9 @@ The smooth transition between the given palette colors can be applied for the he
 
 ### Fixed
 
-In fixed palette type, solid colors are applied to the heat map cells. The data values can be grouped based on the number of colors defined for the heat map. The palette type should be defined as `Fixed` for the `Type` property in the `HeatMapPaletteSettings` property.
+In the fixed palette type, solid colors are applied to HeatMap cells. The data values are grouped and mapped to the defined palette colors. The number of groups is determined by the number of colors specified in the palette.
+
+To enable fixed color mapping, set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapPaletteSettings.html#Syncfusion_Blazor_HeatMap_HeatMapPaletteSettings_Type) property of [`HeatMapPaletteSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapPaletteSettings.html) to [`PaletteType.Fixed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.PaletteType.html).
 
 ```cshtml
 

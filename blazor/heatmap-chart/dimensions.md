@@ -9,13 +9,13 @@ documentation: ug
 
 # Blazor HeatMap Chart Dimensions
 
-## Size for heat map
+## Size for HeatMap
 
-You can set the size of heat map directly by using the  `Width` and `Height` properties.
+You can set the size of the heat map directly by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SfHeatMap-1.html#Syncfusion_Blazor_HeatMap_SfHeatMap_1_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SfHeatMap-1.html#Syncfusion_Blazor_HeatMap_SfHeatMap_1_Height) properties.
 
 ### In pixel
 
-You can set the size for heat map in a pixel.
+You can set the size of the heat map in pixels.
 
 ```cshtml
 
@@ -54,17 +54,17 @@ You can set the size for heat map in a pixel.
 
 ```
 
-![Changing Blazor Heatmap Chart Size in Pixel](images/dimension/blazor-heatmap-chart-size-in-pixel.webp)
+![Changing Blazor HeatMap Chart Size in Pixel](images/dimension/blazor-heatmap-chart-size-in-pixel.webp)
 
 ### In percentage
 
-By setting the value in percentage, the heat map gets its dimension with respect to its container. For example, when the height is ‘50%’, the heat map is rendered to half of the container height.
+By setting the value in percentage, the heat map gets its dimension with respect to its container. For example, when the height is "75%", the heat map is rendered to three-quarters of the container height.
 
 ```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" Width=75% Height=75%>
+<SfHeatMap DataSource="@HeatMapData" Width="75%" Height="75%">
     <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
     </HeatMapTitleSettings>
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
@@ -96,5 +96,7 @@ By setting the value in percentage, the heat map gets its dimension with respect
 }
 
 ```
+
+N> The `Width` and `Height` percentages are based on the size of the HeatMap's parent container. Set an explicit width and height on the parent element for percentage values to take effect.
 
 ![Changing Blazor HeatMap Chart Size in Percentage](images/dimension/blazor-heatmap-chart-size-in-percentage.webp)
