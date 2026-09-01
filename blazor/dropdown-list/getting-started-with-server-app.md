@@ -170,6 +170,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveServer
+@using Syncfusion.Blazor.DropDowns
 
 <SfDropDownList TValue="string" TItem="string" Placeholder="Select a game"></SfDropDownList>
 
@@ -225,6 +226,8 @@ After initialization, populate the DropDownList with data using the [DataSource]
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.DropDowns
+
 <SfDropDownList TValue="string" TItem="Games" Placeholder="Select a game" DataSource="@LocalData">
   <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
 </SfDropDownList>
@@ -261,6 +264,8 @@ By default, the popup list width adjusts to match the DropDownList input width, 
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.DropDowns
 
 <SfDropDownList TValue="string" TItem="Games" PopupHeight="350px" PopupWidth="350px" Placeholder="Select a game" DataSource="@LocalData">
   <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
