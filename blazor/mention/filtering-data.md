@@ -13,9 +13,9 @@ The [Blazor Mention](https://blazor.syncfusion.com/documentation/mention/getting
 
 ## Limit the minimum filter character
 
-The [`MinLength`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_MinLength) property specifies the minimum number of characters a user must type after the mention character before filtering and suggestions begin. By default, [`MinLength`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_MinLength) is `0`, so suggestions appear immediately after typing the mention character. The sample below also uses the [`PopupWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_PopupWidth) property to size the suggestion popup.
+The [`MinLength`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_MinLength) property specifies the minimum number of characters a user must type after the mention character before filtering and suggestions begin. By default, [`MinLength`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_MinLength) is `0`, so suggestions appear immediately after typing the mention character.
 
-**Example:** Set [`MinLength`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_MinLength) to `3` to require at least three characters before suggestions are shown. This is especially useful for remote data to reduce unnecessary requests.
+**Example:** Set [`MinLength`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_MinLength) to `3` to require at least three characters before suggestions are shown. This is useful when working with larger data sources to avoid showing an unwieldy popup while the user types only one or two characters.
 
 ```razor
 {% include_relative code-snippet/minimum-filter-char.razor %}
@@ -27,7 +27,7 @@ The [`MinLength`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDo
 
 ## Change the filter type
 
-The [`FilterType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_FilterType) property allows you to specify how the search text is matched against the suggestion data. By default, the `FilterType` property is set to `Contains`, which means the Blazor Mention component will search for items that contain the entered search string as a substring. The value is one of the [`FilterType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html) enumeration members. The sample below also uses the [`PopupWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_PopupWidth) property to size the suggestion popup.
+The [`FilterType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_FilterType) property allows you to specify how the search text is matched against the suggestion data. By default, the `FilterType` property is set to `Contains`, which means the Blazor Mention component will search for items that contain the entered search string as a substring. The value is one of the [`FilterType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html) enumeration members.
 
 For Blazor Mention, the [`FilterType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html) enumeration supports the following three values:
 
@@ -47,9 +47,9 @@ For Blazor Mention, the [`FilterType`](https://help.syncfusion.com/cr/blazor/Syn
 
 Filtering in Blazor Mention is **case-insensitive by default**. This is controlled by the [`IgnoreCase`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_IgnoreCase) property (inherited from [`SfDropDownBase`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html)), which defaults to `true`. With `IgnoreCase="true"`, typing `and` matches `Andrew`, `andrew`, and `ANDREW`. To require exact case matches, set `IgnoreCase="false"`.
 
-The companion property [`IgnoreAccent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_IgnoreAccent) (also inherited from `SfDropDownBase`) controls whether diacritical marks such as accents are ignored during filtering. It defaults to `false`; set it to `true` to make `Jose` match `José`.
+> The companion property [`IgnoreAccent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_IgnoreAccent) (also inherited from `SfDropDownBase`) controls whether diacritical marks such as accents are ignored during filtering. It defaults to `false`; set it to `true` to make `Jose` match `José`.
 
-These two properties are independent of [`FilterType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html) and apply to all three `FilterType` values (`StartsWith`, `Contains`, and `EndsWith`).
+> These two properties are independent of [`FilterType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html) and apply to all three `FilterType` values (`StartsWith`, `Contains`, and `EndsWith`).
 
 ## Allow spacing between search
 
