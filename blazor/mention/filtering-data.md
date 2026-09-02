@@ -47,9 +47,9 @@ For Blazor Mention, the [`FilterType`](https://help.syncfusion.com/cr/blazor/Syn
 
 Filtering in Blazor Mention is **case-insensitive by default**. This is controlled by the [`IgnoreCase`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_IgnoreCase) property (inherited from [`SfDropDownBase`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html)), which defaults to `true`. With `IgnoreCase="true"`, typing `and` matches `Andrew`, `andrew`, and `ANDREW`. To require exact case matches, set `IgnoreCase="false"`.
 
-> The companion property [`IgnoreAccent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_IgnoreAccent) (also inherited from `SfDropDownBase`) controls whether diacritical marks such as accents are ignored during filtering. It defaults to `false`; set it to `true` to make `Jose` match `José`.
+The companion property [`IgnoreAccent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_IgnoreAccent) (also inherited from `SfDropDownBase`) controls whether diacritical marks such as accents are ignored during filtering. It defaults to `false`.
 
-> These two properties are independent of [`FilterType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html) and apply to all three `FilterType` values (`StartsWith`, `Contains`, and `EndsWith`).
+These two properties are independent of [`FilterType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html) and apply to all three `FilterType` values (`StartsWith`, `Contains`, and `EndsWith`).
 
 ## Allow spacing between search
 
