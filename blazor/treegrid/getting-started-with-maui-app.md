@@ -261,7 +261,7 @@ To run the Blazor Tree Grid in your Blazor MAUI app on an Android emulator, foll
 
 N> If you face any issues with the Android emulator, check the [Troubleshooting Android Emulator guide](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting) for solutions.
 
-![Blazor Tree Grid Component](images/blazor-treegrid-component.webp)
+![Blazor Tree Grid Component](images/blazor-treegrid-maui-android.webp)
 
 ## See also
 

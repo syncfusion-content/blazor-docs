@@ -229,7 +229,7 @@ Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/devi
 
 N> If you encounter any errors while using the Android Emulator, refer to [Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting) for guidance.
 
-![Blazor FileManager Component](images/blazor-filemanager-component.webp)
+![Blazor FileManager Component](images/blazor-filemanager-maui-android.webp)
 
 ## See also
 
