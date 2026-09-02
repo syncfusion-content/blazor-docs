@@ -223,7 +223,7 @@ Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/devi
 
 N> If you encounter any errors while using the Android Emulator, refer to [Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting) for guidance.
 
-![Blazor Dropdown List Component](./images/blazor-dropdownlist-component.png)
+![Blazor Dropdown List Component](./images/blazor-dropdownlist-maui-android.webp)
 
 ## Binding data source
 
