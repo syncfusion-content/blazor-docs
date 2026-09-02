@@ -155,22 +155,22 @@ Populate multilevel submenu items in the Dropdown Menu by hosting a Context Menu
 </SfDropDownButton>
 
 @code {
-    SfDropDownButton FileButton;
-    SfContextMenu<ContextMenuItemModel> ContextMenu;
+    SfDropDownButton? FileButton;
+    SfContextMenu<ContextMenuItemModel>? ContextMenu;
 
-    private void BeforeClose(BeforeOpenCloseMenuEventArgs<ContextMenuItemModel> args)
+    private void BeforeClose ( BeforeOpenCloseMenuEventArgs<ContextMenuItemModel> args )
     {
         if (args.ParentItem == null)
         {
-            FileButton.Toggle();
+            FileButton!.Toggle();
         }
     }
     public class ContextMenuItemModel
     {
-        public List<ContextMenuItemModel> Items { get; set; }
-        public string Content { get; set; }
-        public string Id { get; set; }
-        public string IconCss { get; set; }
+        public List<ContextMenuItemModel>? Items { get; set; }
+        public string? Content { get; set; }
+        public string? Id { get; set; }
+        public string? IconCss { get; set; }
         public Boolean Separator { get; set; }
     }
     private List<ContextMenuItemModel> FileMenuItems = new List<ContextMenuItemModel>{
@@ -202,17 +202,17 @@ Populate multilevel submenu items in the Dropdown Menu by hosting a Context Menu
         new ContextMenuItemModel { Id ="FileMenuItemsPrint",Content = "Print" }
     };
 
-    public async Task OnMenuCreated()
+    public async Task OnMenuCreated ()
     {
-        await ContextMenu.OpenAsync();
+        await ContextMenu!.OpenAsync();
     }
 
-    private void Opened()
+    private void Opened ()
     {
-        
+
     }
 
-    private void Closed()
+    private void Closed ()
     {
 
     }
