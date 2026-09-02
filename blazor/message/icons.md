@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Icons with Blazor Message Component | Syncfusion®
-description: Checkout and learn about Icons with Blazor Message component in Blazor Server App and Blazor WebAssembly App.
+title: Icons in Blazor Message | Syncfusion
+description: Show or hide severity and close icons in Blazor Message and add custom icons for visual context clarity today.
 platform: Blazor
 control: Message
 documentation: ug
@@ -123,9 +123,9 @@ In the following example, the messages are rendered with the close icon.
     <SfButton Content="Show Success Message" CssClass="@successBtnClass" OnClick="@successClick"></SfButton>
     <SfMessage Severity="MessageSeverity.Success" ShowIcon="@successIcon" ShowCloseIcon="@successCloseIcon" Closed="@successClosed" @bind-Visible="@successVisible">Your message has been sent successfully</SfMessage>
     <SfButton Content="Show Warning Message" CssClass="@warningBtnClass" OnClick="@warningClick"></SfButton>
-    <SfMessage Severity="MessageSeverity.Warning" ShowIcon="@warningIcon" ShowCloseIcon="@warningCloseIcon" Closed="warningClosed" @bind-Visible="@warningVisible">There was a problem with your network connection</SfMessage>
+    <SfMessage Severity="MessageSeverity.Warning" ShowIcon="@warningIcon" ShowCloseIcon="@warningCloseIcon" Closed="@warningClosed" @bind-Visible="@warningVisible">There was a problem with your network connection</SfMessage>
     <SfButton Content="Show Error Message" CssClass="@errorBtnClass" OnClick="@errorClick"></SfButton>
-    <SfMessage Severity="MessageSeverity.Error" ShowIcon="@errorIcon" ShowCloseIcon="@errorCloseIcon" Closed="@errorClosed" @bind-Visible="@errorVisible">A problem has been occurred while submitting your data</SfMessage>
+    <SfMessage Severity="MessageSeverity.Error" ShowIcon="@errorIcon" ShowCloseIcon="@errorCloseIcon" Closed="@errorClosed" @bind-Visible="@errorVisible">A problem occurred while submitting your data</SfMessage>
   </div>
 </div>
 

@@ -1,17 +1,17 @@
 ---
 layout: post
-title: DateTime Range in Blazor DateTimePicker Component | Syncfusion®
-description: Checkout and learn here all about DateTime Range in Blazor Datetime Picker component and much more details.
+title: DateTime Range in Blazor DateTime Picker | Syncfusion®
+description: Restrict the Blazor DateTime Picker to a specific date-time range using the Min and Max properties for validation and constraint enforcement.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
 ---
 
-# DateTime Range in Blazor DateTimePicker Component
+# DateTime Range in Blazor DateTime Picker
 
 ## DateTime Restriction
 
-DateTimePicker provides an option to select a date and time within a specified range by using the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Max) properties. The Min value must be less than the Max value.
+The Blazor DateTime Picker provides an option to select a date and time within a specified range by using the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Max) properties. The Min value must be less than the Max value.
 
 The `Value` property is validated against Min/Max based on the [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_StrictMode) setting. For details, see the [Strict Mode](./strict-mode) section.
 
@@ -29,7 +29,7 @@ The following code allows selecting a date within the range from the 7th to the 
 }
 ```
 
-![DateTime Selection in Blazor DateTimePicker](./images/blazor-datetimepicker-selection.webp)
+![DateTime Selection in Blazor DateTime Picker](./images/blazor-datetimepicker-selection.webp)
 
 When Min and Max are configured:
 - With StrictMode enabled, out-of-range input is clamped to the nearest boundary (Min/Max) and invalid input reverts to the previous valid value.
@@ -47,20 +47,20 @@ When Min and Max are configured:
 }
 ```
 
-![Blazor DateTimePicker displays Selected Date and Time](./images/blazor-datetimepicker-date-time-selection.webp)
+![Blazor DateTime Picker displays Selected Date and Time](./images/blazor-datetimepicker-date-time-selection.webp)
 
-N> If the values of `Min` or `Max` are changed through code-behind, update the `Value` property to ensure it remains within the defined range. Calendar selection always respects Min and Max; disabled dates cannot be selected from the popup.
+N> If the values of `Min` or `Max` are changed through code-behind, update the `Value` property to ensure it remains within the defined range. Calendar selection always respects `Min` and `Max`; dates outside the range are disabled in the popup.
 
 ## Time Restriction
 
-DateTimePicker provides an option to select a time value within a specified range by using the [MinTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_MinTime) and [MaxTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_MaxTime) properties. The MinTime value must be less than the MaxTime value.
+The Blazor DateTime Picker provides an option to select a time within a specified range of the day by using the [MinTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_MinTime) and [MaxTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_MaxTime) properties. Only the time portion of `MinTime`/`MaxTime` is used; the date portion is ignored. The MinTime value must be less than the MaxTime value.
 
 The `Value` property is validated against MinTime/MaxTime based on [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_StrictMode). MinTime/MaxTime apply to the time portion of the value and work together with Min/Max dates:
 - For the Min date, times earlier than MinTime are restricted.
 - For the Max date, times later than MaxTime are restricted.
 - For dates between Min and Max, the allowed time range follows MinTime–MaxTime.
 
-The following code allows selecting a time between 10:00 AM and 8:30 PM each day.
+The following code allows selecting a time between 10:00 AM and 8:30 PM each day. The date portion of `MinTime`/`MaxTime` is ignored; only the time is applied.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -74,9 +74,9 @@ The following code allows selecting a time between 10:00 AM and 8:30 PM each day
 }
 ```
 
-![Time Selection in Blazor DateTimePicker](./images/blazor-datetimepicker-time-selection.webp)
+![Time Selection in Blazor DateTime Picker](./images/blazor-datetimepicker-time-selection.webp)
 
-The example below also allows selecting a time within the range from 10:00 AM to 8:30 PM of each day.
+The following example combines `Min`/`Max` with `MinTime`/`MaxTime` to restrict both the date and the time portion of the value.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -90,4 +90,4 @@ The example below also allows selecting a time within the range from 10:00 AM to
 }
 ```
 
-![Blazor DateTimePicker displays Time Selection](./images/blazor-datetimepicker-time-validation.webp)
+![Blazor DateTime Picker displays Time Selection](./images/blazor-datetimepicker-time-validation.webp)

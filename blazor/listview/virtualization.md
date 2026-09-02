@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Virtualization in Blazor ListView Component | Syncfusion®
-description: Checkout and learn here all the features about virtualization in Blazor ListView component and much more details.
+title: Virtualization in Blazor ListView | Syncfusion
+description: Improve Blazor ListView performance with large data sets by loading only visible items through UI virtualization.
 platform: Blazor
 control: Listview
 documentation: ug
 ---
 
-# Virtualization in Blazor ListView Component
+# Virtualization in Blazor ListView
 
-UI virtualization loads only viewable list items in a view port, which will improve the ListView performance while loading a large number of data.
+UI virtualization loads only viewable list items in a view port, which will improve the Blazor ListView performance while loading a large number of data.
 
 ## Enable UI Virtualization
 
-UI virtualization can be enabled in the ListView by setting the [`EnableVirtualization`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_EnableVirtualization) property to true. It has two types of scrollers as follows:
+UI virtualization can be enabled in the Blazor ListView by setting the [`EnableVirtualization`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_EnableVirtualization) property to true. It supports two types of scrollers:
 
-**Window scroll**: This scroller is used in the ListView by default.
+**Window scroll**: This scroller is used in the Blazor ListView by default.
 
-**Container scroll**: This scroller is used, when the height property of the ListView is set.
+**Container scroll**: This scroller is used, when the height property of the Blazor ListView is set.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists

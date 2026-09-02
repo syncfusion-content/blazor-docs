@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Labels in Blazor Sparkline Component | Syncfusion®
-description: Check out and learn how to configure and customize Data Labels in Blazor Sparkline component and much more details.
+title: Blazor Sparkline Charts Data Labels Examples | Syncfusion®
+description: Learn how to enable and customize data labels in Syncfusion Blazor Sparkline, including special points, format, and label position.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Data Labels in Blazor Sparkline Component
+# Blazor Sparkline Charts Data Labels
 
 To improve readability, data labels display the value of data points.
 
@@ -43,9 +43,9 @@ The following properties can be used to customize Sparkline data labels:
 * [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html#Syncfusion_Blazor_Charts_SparklineDataLabelSettings_Fill) – Specifies color for the Data Label
 * [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html#Syncfusion_Blazor_Charts_SparklineDataLabelSettings_Opacity) – Specifies opacity of the data label [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html#Syncfusion_Blazor_Charts_SparklineDataLabelSettings_Fill) color
 * [EdgeLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html#Syncfusion_Blazor_Charts_SparklineDataLabelSettings_EdgeLabelMode) – Specifies controlling option when the label comes in the edge. Available options are the [Shift](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EdgeLabelMode.html#Syncfusion_Blazor_Charts_EdgeLabelMode_Shift), the [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EdgeLabelMode.html#Syncfusion_Blazor_Charts_EdgeLabelMode_None) and the [Hide](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EdgeLabelMode.html#Syncfusion_Blazor_Charts_EdgeLabelMode_Hide)
-* [SparklineFont](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineFont.html) – Customize the Data Label font family, font style, font weight, color, opacity and size
-* [SparklineDataLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineDataLabelBorder.html) – Specifies the color and the width for the Data Label border
-* [SparklineDataLabelOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineDataLabelOffset.html) – Specifies the label offset position from its default position
+* [SparklineFont](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineFont.html) – Customize the Data Label font family, font style, font weight, color, opacity and size
+* [SparklineDataLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelBorder.html) – Specifies the color and the width for the Data Label border
+* [SparklineDataLabelOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelOffset.html) – Specifies the label offset position from its default position
 
 ```cshtml
 

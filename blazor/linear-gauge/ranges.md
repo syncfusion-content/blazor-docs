@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Ranges in Blazor Linear Gauge Component | Syncfusion®
-description: Checkout and learn here all the features about ranges in Blazor Linear Gauge component and much more details.
+title: Blazor Linear Gauge Ranges | Syncfusion®
+description: Learn how to add ranges to the Blazor Linear Gauge with start, end, color, position, gradient, and multiple-range configurations for thresholds.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Ranges in Blazor Linear Gauge Component
+# Blazor Linear Gauge Ranges
 
 Range is the set of values in the axis. The range can be defined using the [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeRange.html#Syncfusion_Blazor_LinearGauge_LinearGaugeRange_Start) and [End](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeRange.html#Syncfusion_Blazor_LinearGauge_LinearGaugeRange_End) properties in the [LinearGaugeRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeRange.html). Any number of ranges can be added to the Linear Gauge using the [LinearGaugeRanges](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeRanges.html).
 

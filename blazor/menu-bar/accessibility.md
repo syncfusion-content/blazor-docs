@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Accessibility in Blazor Menu Bar Component | Syncfusion®
-description: Checkout and learn here all the features about accessibility in Blazor Menu Bar component and much more details.
+title: Accessibility in Blazor Menu Bar | Syncfusion
+description: Learn how Blazor Menu Bar supports accessibility standards including keyboard navigation, screen readers, and ARIA roles.
 platform: Blazor
 control: Menu Bar
 documentation: ug
 ---
 
-# Accessibility in Blazor Menu Bar Component
+# Accessibility in Blazor Menu Bar
 
-The Blazor Menu bar component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Menu Bar component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Blazor Menu bar component is outlined below.
+The following table summarizes the Blazor Menu Bar component's accessibility compliance.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -38,41 +38,40 @@ The accessibility compliance for the Blazor Menu bar component is outlined below
 
 ## WAI-ARIA attributes
 
-The Blazor Menu bar component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Menu bar component:
+The Blazor Menu Bar component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/) patterns to meet the accessibility requirements. The following ARIA attributes are used in the Blazor Menu Bar component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `role` | Indicates Menu bar component's root Menu bar as `menubar`, popup as `menu`, and the popup items as `menu item`. |
+| `role` | Identifies the Blazor Menu Bar's root as `menubar`, the popup as `menu`, and each popup item as `menuitem`. |
 | `aria-haspopup` | Indicates the availability and type of interactive popup element. |
-| `aria-expanded` | Indicates whether the subtree can be expanded or collapsed, and indicates whether its current state can be expanded or collapsed. |
+| `aria-expanded` | Indicates whether the subtree is expanded or collapsed. |
 | `aria-orientation` | Indicates whether the orientation is horizontal or vertical. The default orientation is horizontal. |
-| `aria-label` | Indicates the menu item text. |
-| `aria-disabled` | Indicates the state of menu item whether it is disabled. |
+| `aria-label` | Provides an accessible name for the menu item. |
+| `aria-disabled` | Indicates whether the menu item is disabled. |
 
 ## Keyboard interaction
 
-The Blazor Menu bar component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Menu Bar component.
+The Blazor Menu Bar component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Menu Bar component.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
-| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the sub Menu that contains focus and returns focus to the parent element. |
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Opens the sub Menu if focused menu item has sub Menu, and places focus on its first item or activates the item and closes the sub menu. |
-| <kbd>↑</kbd> | <kbd>↑</kbd> | Navigates up or to the previous menu item. |
-| <kbd>↓</kbd> | <kbd>↓</kbd> | Navigates down or to the next menu item. |
-| <kbd>←</kbd> | <kbd>←</kbd> | Closes the current sub menu and navigates to the parent menu. |
-| <kbd>→</kbd> | <kbd>→</kbd> | Navigates and open the next sub menu. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | Focuses the first item. |
-| <kbd>End</kbd> | <kbd>End</kbd> | Focuses the last item.
+| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the submenu that contains focus and returns focus to the parent element. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Opens the submenu if the focused menu item has one and places focus on its first item; otherwise, activates the item and closes the submenu. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Navigates to the previous menu item. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Navigates to the next menu item. |
+| <kbd>←</kbd> | <kbd>←</kbd> | When a submenu is open, closes it and returns focus to the parent menu item. When focus is on a root menu item, moves focus to the previous root menu item. |
+| <kbd>→</kbd> | <kbd>→</kbd> | When focus is on a root menu item that has a submenu, opens that submenu. When focus is on a root menu item without a submenu, moves focus to the next root menu item. |
+| <kbd>Home</kbd> | <kbd>Home</kbd> | Moves focus to the first menu item. |
+| <kbd>End</kbd> | <kbd>End</kbd> | Moves focus to the last menu item. |
 
 ## Ensuring accessibility
 
-The Blazor Menu Bar component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The Blazor Menu Bar component's accessibility is validated with the [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) accessibility engine through Playwright tests.
 
 The accessibility compliance of the Blazor Menu Bar component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/menu) in a new window to evaluate the accessibility of the Blazor Menu Bar component with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/menu.html" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/menu" %}
 
 ## See also
 
 * [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
-

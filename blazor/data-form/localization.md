@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Localization in Blazor DataForm Component | Syncfusion®
-description: Checkout and learn here about how to localize the label text and error messages in Blazor DataForm component.
+title: Localization in Blazor Data Form | Syncfusion®
+description: Localize the Blazor Data Form label text and error messages for any culture using the standard .NET localization resources.
 platform: Blazor
 control: DataForm
 documentation: ug
 ---
 
-# Localization in Blazor DataForm component
+# Localization in Blazor Data Form component
 
-The DataForm component supports localization for any culture. Refer to the [Blazor localization](https://blazor.syncfusion.com/documentation/common/localization) documentation to localize Syncfusion Blazor components.
+The Blazor Data Form component supports localization for any culture. Refer to the [Blazor localization](https://blazor.syncfusion.com/documentation/common/localization) documentation to localize Syncfusion Blazor components.
 
 ## Configuring localization for label text and error messages
 
-Follow these steps to configure localization for label text and validation error messages in the Blazor DataForm component.
+Follow these steps to configure localization for label text and validation error messages in the Blazor Blazor Data Form component.
 
 1. After integrating localization files in the application as described in the [Blazor localization](https://blazor.syncfusion.com/documentation/common/localization) topic, open the required culture resource file in Visual Studio.
 
@@ -43,4 +43,4 @@ Follow these steps to configure localization for label text and validation error
 
 4. Run the application to view the DataForm with localized labels and validation messages.
 
-![Localization applied in the DataForm component](./images/blazor_dataform_localization.webp)
+![Localization applied in the Blazor Data Form component](./images/blazor_dataform_localization.webp)

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Native Events in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn here all the features about Native Events in Blazor ComboBox component and much more.
+title: Native Events in Blazor ComboBox | Syncfusion®
+description: Attach native DOM events to the Blazor ComboBox using Blazor's @on{event} directive and pass event argument data to the handler.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Native Events in Blazor ComboBox Component
+# Native Events in Blazor ComboBox
 
-The following section explains the steps to include native events and pass data to event handler in ComboBox component.
+The following section explains the steps to include native events and pass data to event handler in Blazor ComboBox component.
 
 ## Bind native events to ComboBox
 
@@ -106,6 +106,6 @@ Using Lambda expression also, you can pass the event data to the event handler.
 | List of Native events |  |  | |
 | --- | --- | --- | --- |
 | onclick | onblur | onfocus | onfocusout |
-| onmousemove | onmouseover | onmouseout | onmousedown | onmouseup |
+| onmousemove | onmouseover | onmouseout | onmousedown |
 | ondblclick | onkeydown | oninput | onkeypress |
 | ontouchend | onfocusin | onmouseup | ontouchstart |

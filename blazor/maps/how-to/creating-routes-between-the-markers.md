@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to create routes between markers in Maps Component | Syncfusion®
-description: Learn how to create routes between markers in the Blazor Maps component using API and navigation lines.
+title: How to Create Routes Between Markers in Blazor Maps | Syncfusion®
+description: Learn how to plot routes between source and destination markers in Blazor Maps using the Google Directions API and MapsNavigationLine.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Creating Routes Between Markers in the Blazor Maps component
+# How to Create Routes Between Markers in Blazor Maps
 
 The Maps component supports plotting routes between two locations (source and destination) using the navigation line feature. Markers can be placed at these locations to indicate the source and destination, providing a clear view of the path on the map.
 
@@ -90,7 +90,7 @@ public async Task AddRoutes()
 
 ### Customize the travel mode in the Google Map Directions API
 
-Coordinates can be retrieved based on different travel modes, such as DRIVING, WALKING, BICYCLING, or TRANSIT, using the Google Maps Directions API. DRIVING is the default travel mode for these services. For additional information on available travel modes, refer to this [link](https://developers.google.com/maps/documentation/javascript/directions#TravelModes).
+Coordinates can be retrieved based on different travel modes, such as DRIVING, WALKING, BICYCLING, or TRANSIT, using the Google Maps Directions API. DRIVING is the default travel mode for these services. For additional information on available travel modes, refer to this [link](https://developers.google.com/maps/documentation/javascript/legacy/directions#TravelModes).
 
 ## Plot markers on the Map
 

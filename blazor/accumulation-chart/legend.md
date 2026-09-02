@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Legend in Blazor Accumulation Chart Component | Syncfusion®
-description: Checkout and learn here all about Legend in Blazor Accumulation Chart component and much more details.
+title: Blazor Accumulation Chart Legend Configuration Examples | Syncfusion®
+description: Learn how to enable and customize the legend in Syncfusion Blazor Accumulation Chart, including position, alignment, and LegendSettings.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Legend in Blazor Accumulation Chart Component
+# Blazor Accumulation Chart Legend
 
 The legend is available for accumulation charts, just like it is for charts, and it provides information about the points. If the chart's width is large, the legend will be placed on the right, and if the chart's height is large, the legend will be placed on the bottom. The legend for a point can be collapsed by assigning an empty string to the point's x value.
 
@@ -453,7 +453,7 @@ To use, add a `LegendItemTemplate` inside any [AccumulationChartSeries](https://
 ```
 ![Legend Template in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-template.webp)
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=fluent2) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.
 
 * [Grouping](./grouping)
 * [Data label](./data-label)

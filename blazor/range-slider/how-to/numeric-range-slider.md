@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Numeric Range Slider in Blazor Range Slider Component | Syncfusion®
-description: Checkout and learn here all about Numeric Range Slider in Blazor Range Slider component with examples and much more details.
+title: How to format numeric range slider in Blazor Range Slider | Syncfusion
+description: Format Blazor Range Slider numeric values with units, decimal places, and leading zeros to ensure precise, readable, and context-aware numeric input for users.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Numeric Range Slider in Blazor Range Slider Component
+# How to format numeric range slider in Blazor Range Slider
 
 The Blazor Range Slider can display numeric values with custom formatting using the `Format` property on `SliderTicks` and `SliderTooltip`. Formatting options include appending units, controlling decimal precision, and adding leading zeros. The examples below demonstrate three common scenarios.
 
@@ -44,22 +44,22 @@ The complete code for the numeric formatting examples is shown below.
 <div class="control-section">
     <div class="content-wrapper">
         <div class="sliderwrap">
-            <label class="labeltext userselect">Default Slider</label>
-            <SfSlider @bind-Value="@Value1">
+            <label class="labeltext userselect">Default Slider (unit suffix: km)</label>
+            <SfSlider TValue="int" @bind-Value="@Value1">
                 <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="##.##km"> </SliderTicks>
                 <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="##.##km"></SliderTooltip>
             </SfSlider>
         </div>
         <div class="sliderwrap">
-            <label class="labeltext userselect">MinRange Slider</label>
-            <SfSlider @bind-Value="@Value2" Type=SliderType.MinRange>
+            <label class="labeltext userselect">MinRange Slider (decimal places)</label>
+            <SfSlider TValue="int" @bind-Value="@Value2" Type="SliderType.MinRange">
                 <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="##.#00"> </SliderTicks>
-                    <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="##.#00"></SliderTooltip>
+                <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="##.#00"></SliderTooltip>
             </SfSlider>
         </div>
         <div class="sliderwrap">
-            <label class="labeltext userselect">Range Slider</label>
-            <SfSlider @bind-Value="@Value" Type=SliderType.Range>
+            <label class="labeltext userselect">Range Slider (leading zeros)</label>
+            <SfSlider TValue="int[]" @bind-Value="@Value" Type="SliderType.Range">
                 <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="0000#"> </SliderTicks>
                 <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="0000#"></SliderTooltip>
             </SfSlider>

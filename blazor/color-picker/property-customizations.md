@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Property Customizations in Blazor Color Picker Component | Syncfusion
-description: Checkout and learn here all about Property Customizations in Syncfusion Blazor Color Picker component and more.
+title: Property Customizations in Blazor Color Picker | Syncfusion®
+description: Configure inline rendering, mode switcher, custom palettes, value formats, and other properties to customize the Blazor Color Picker behavior.
 platform: Blazor
 control: Color Picker
 documentation: ug
 ---
 
-# Property Customizations in Blazor Color Picker Component
+# Property Customizations in Blazor Color Picker
 
-## Inline Rendering in Blazor Color Picker Component
+## Inline rendering in Blazor Color Picker Component
 
-By default, the Color Picker renders with a button that opens a popup to access the selector. To display the Color Picker directly on the page (without a popup), render it inline by setting the [Inline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Inline) property to `true`.
+By default, the Blazor Color Picker renders with a button that opens a popup to access the selector. To display the Blazor Color Picker directly on the page (without a popup), render it inline by setting the [Inline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Inline) property to `true`.
 
-The following sample shows inline rendering of the Color Picker.
+The following sample shows inline rendering of the Blazor Color Picker.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -24,13 +24,13 @@ The following sample shows inline rendering of the Color Picker.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLRtxsOpJfpxiQi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Inline Rendering in Blazor ColorPicker](./images/blazor-colorpicker-inline-rendering.webp)" %}
 
-N> The `ShowButtons` property is disabled in this sample because control buttons are not needed for inline rendering. For details about control buttons functionality, see [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowButtons).
+N> The [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowButtons) property is disabled in this sample because control buttons are not needed for inline rendering.
 
 ## RTL in Blazor Color Picker Component
 
-The Color Picker supports right-to-left (RTL) layout to improve usability for languages such as Arabic, Farsi, and Urdu. Enable RTL by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_EnableRtl) property to `true`. RTL affects layout direction but does not translate text; use localization to provide translated strings.
+The Blazor Color Picker supports right-to-left (RTL) layout to improve usability for languages such as Arabic, Farsi, and Urdu. Enable RTL by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_EnableRtl) property to `true`. RTL affects layout direction but does not translate text; use localization to provide translated strings.
 
-In the following example, the Color Picker is rendered in RTL mode with an Arabic locale configured at the app level.
+In the following example, the Blazor Color Picker is rendered in RTL mode with an Arabic locale configured at the app level.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -40,9 +40,9 @@ In the following example, the Color Picker is rendered in RTL mode with an Arabi
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjrRZRCkppyUgqmJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Right to Left in Blazor ColorPicker](./images/blazor-colorpicker-right-to-left.webp)" %}
 
 
-## Rendering palette at initial load
+## Show palette at initial load
 
-By default, the `Picker` view is shown initially. To display the palette view when opening the Color Picker popup, set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Mode) property to `Palette`.
+By default, the `Picker` view is shown initially. To display the palette view when opening the Blazor Color Picker popup, set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Mode) property to `ColorPickerMode.Palette`.
 
 In the following example, the palette is displayed at initial load.
 
@@ -57,7 +57,7 @@ In the following example, the palette is displayed at initial load.
 
 ## Color value in Blazor Color Picker Component
 
-The [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Value) property can be used to specify the color value to the Color Picker. It supports either `three` or `six` digit hex codes. To include `opacity`, set the color value as `four` or `eight` digit hex code.
+The [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Value) property can be used to specify the color value to the Blazor Color Picker. It supports either `three` or `six` digit hex codes. To include `opacity`, set the color value as `four` or `eight` digit hex code.
 
 In the following example, a 4-digit hex value is used, where the last digit represents the opacity.
 
@@ -75,9 +75,9 @@ N> The [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.Sf
 
 ## Disable the Blazor Color Picker Component
 
-Set the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Disabled) property to `true` to disable the Color Picker. In the disabled state, the input and popup cannot receive focus or user interaction.
+Set the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Disabled) property to `true` to disable the Blazor Color Picker. In the disabled state, the input and popup cannot receive focus or user interaction, and the `ValueChange` event does not fire.
 
-The following example shows the `Disabled` state of the Color Picker component.
+The following example shows the disabled state of the Blazor Color Picker component.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -89,7 +89,7 @@ The following example shows the `Disabled` state of the Color Picker component.
 
 ## Hide control buttons in Blazor Color Picker Component
 
-Render the Color Picker without control buttons (Apply/Cancel) by setting the [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowButtons) property to `false`.
+Render the Blazor Color Picker without control buttons (Apply and Cancel) by setting the [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowButtons) property to `false`.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -99,18 +99,25 @@ Render the Color Picker without control buttons (Apply/Cancel) by setting the [S
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhHtHiOpyWWBLFm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Hide Control Buttons in Blazor ColorPicker](./images/blazor-colorpicker-hide-control.webp)" %}
 
-## Show Recent color in Blazor Color Picker Component
+## Show recent colors in Blazor Color Picker Component
 
-The [ShowRecentColors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowRecentColors) property displays recently selected colors in the Color Picker when using palette mode. This feature helps users quickly reuse frequently chosen colors.
+The [ShowRecentColors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowRecentColors) property displays recently selected colors in the Blazor Color Picker when using palette mode. This feature helps users quickly reuse frequently chosen colors.
 
-N> The [ShowRecentColors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowRecentColors) feature shows up to 10 recent colors as tiles and is available only in palette mode.
+N> The [ShowRecentColors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowRecentColors) feature shows up to 10 recent colors as tiles and is available only in palette mode. Recent colors are stored for the current browser session and are cleared when the page is reloaded.
 
-In the following sample, the [ShowRecentColors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowRecentColors) property is enabled to display recent colors in the palette area.
+In the following sample, the [ShowRecentColors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowRecentColors) property is enabled alongside palette mode to display recent colors in the palette area.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <h4>Choose a color</h4>
-<SfColorPicker ShowRecentColors="true"></SfColorPicker>
+<SfColorPicker Mode="ColorPickerMode.Palette" ShowRecentColors="true"></SfColorPicker>
 ```
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLHtxMuzoVXVRFv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Rendering Show Recent color in Blazor ColorPicker](./images/blazor-colorpicker-show-recent-color.webp)" %}
+
+## See also
+
+* [Blazor Color Picker Getting Started](https://blazor.syncfusion.com/documentation/color-picker/getting-started)
+* [Blazor Color Picker Events](https://blazor.syncfusion.com/documentation/color-picker/events)
+* [Blazor Color Picker API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html)

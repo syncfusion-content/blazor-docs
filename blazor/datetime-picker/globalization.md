@@ -1,36 +1,26 @@
 ---
 layout: post
-title: Globalization in Blazor DateTimePicker Component | Syncfusion®
-description: Checkout and learn here all about Globalization in Blazor Datetime Picker component and much more details.
+title: Globalization in Blazor DateTime Picker | Syncfusion®
+description: Globalize the Blazor DateTime Picker for different cultures with right-to-left rendering, localized names, and culture-specific date and time formats.
 platform: Blazor
-control: Datetime Picker 
+control: DateTimePicker
 documentation: ug
 ---
 
-# Globalization in Blazor Datetime Picker Component
+# Globalization in Blazor DateTime Picker
 
-The [Blazor DateTimePicker](https://www.syncfusion.com/blazor-components/blazor-datetime-picker) component supports localization and culture-specific formatting. For configuration details, see the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic for Blazor components. When a Locale is set, the component reflects the culture’s date and time formats, month and day names, and other culture-specific settings. Ensure that the required culture data is loaded before rendering the component.
+The [Blazor DateTime Picker](https://www.syncfusion.com/blazor-components/blazor-datetime-picker) component reflects the application's culture based on the system culture. Date and time formats, month and day names, and other culture-specific settings are derived automatically from the current culture.
 
 ## Right-To-Left
 
-The DateTimePicker supports right-to-left (RTL) layout for languages such as Arabic and Hebrew. Use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_EnableRtl) property to render the component in RTL direction. RTL layout is independent of the Locale setting; both can be combined to achieve the desired language and layout.
+The Blazor DateTime Picker supports right-to-left (RTL) layout for languages such as Arabic and Hebrew. Set `EnableRtl="true"` to render the component right-to-left. The default value is `false`. RTL layout is independent of the system culture; both can be combined to achieve the desired language and layout.
 
-The following code example initializes the DateTimePicker component with the `ar` (Arabic) culture and RTL layout.
+The following example enables RTL layout on the Blazor DateTime Picker.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
-@inject HttpClient Http;
 
-<SfDateTimePicker TValue="DateTime?" Locale="ar" EnableRtl=true></SfDateTimePicker>
-
-@code {
-    [Inject]
-    protected IJSRuntime JsRuntime { get; set; }
-    protected override async Task OnInitializedAsync()
-    {
-        this.JsRuntime.Sf().LoadLocaleData(await Http.GetJsonAsync<object>("blazor-locale/src/ar.json")).SetCulture("ar");
-    }
-}
+<SfDateTimePicker TValue="DateTime?" EnableRtl="true"></SfDateTimePicker>
 ```
 
-![Blazor DateTimePicker in Arabic culture with right-to-left layout](./images/blazor-datetimepicker-right-to-left.webp)
+![Blazor DateTime Picker with right-to-left layout](./images/blazor-datetimepicker-right-to-left.webp)

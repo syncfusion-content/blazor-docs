@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Templates in Blazor DropDown List Component | Syncfusion®
-description: Checkout and learn here all about Templates in Blazor DropDown List component and much more details.
+title: Templates in Blazor Dropdown List | Syncfusion®
+description: Customize Blazor Dropdown List items, selected values, group headers, and popup header or footer with templates.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Templates in DropDown List
+# Templates in Blazor Dropdown List
 
 The DropDownList provides several templates to customize the appearance of individual list items, group headers, the selected value, and the popup’s header and footer.
 
-To get started quickly with Templates in the Blazor DropDown List component, you can check the video below.
+To get started quickly with Templates in the Blazor Dropdown List component, you can check the video below.
 
 {% youtube "https://www.youtube.com/watch?v=OfOnp3bwVfc" %}
 
@@ -27,7 +27,7 @@ In the following sample, the selected value shows a combined text of `FirstName`
 
 {% endhighlight %}
 
-![Blazor DropDownList with ValueTemplate](./images/template/blazor-dropdownlist-value-template.webp)
+![Blazor Dropdown List with ValueTemplate](./images/template/blazor-dropdownlist-value-template.webp)
 
 ## Item template
 
@@ -41,7 +41,7 @@ In the following sample, each list item is arranged into two columns to present 
 
 {% endhighlight %}
 
-![Blazor DropDownList with ItemTemplate](./images/template/blazor-dropdownlist-item-template.webp)
+![Blazor Dropdown List with ItemTemplate](./images/template/blazor-dropdownlist-item-template.webp)
 
 ## Group template
 
@@ -55,7 +55,7 @@ In the following sample, employees are grouped by city.
 
 {% endhighlight %}
 
-![Blazor DropDownList with GroupTemplate](./images/template/blazor-dropdownlist-group-template.webp)
+![Blazor Dropdown List with GroupTemplate](./images/template/blazor-dropdownlist-group-template.webp)
 
 ## Header template
 
@@ -69,7 +69,7 @@ In the following sample, the header and items are presented in two columns, simi
 
 {% endhighlight %}
 
-![Blazor DropDownList with HeaderTemplate](./images/template/blazor-dropdownlist-header-template.webp)
+![Blazor Dropdown List with HeaderTemplate](./images/template/blazor-dropdownlist-header-template.webp)
 
 ## Footer template
 
@@ -83,7 +83,7 @@ In the following sample, the footer displays the total number of items in the Dr
 
 {% endhighlight %}
 
-![Blazor DropDownList with Footer Template](./images/template/blazor-dropdownlist-footer-template.webp)
+![Blazor Dropdown List with Footer Template](./images/template/blazor-dropdownlist-footer-template.webp)
 
 ## No records template
 
@@ -97,11 +97,11 @@ In the following sample, the popup displays a “no data available” message.
 
 {% endhighlight %}
 
-![Blazor DropDownList without Data](./images/template/blazor-dropdownlist-without-data.webp)
+![Blazor Dropdown List without Data](./images/template/blazor-dropdownlist-without-data.webp)
 
 ## Action failure template
 
-Customize the popup content shown when a remote data request fails using the [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ActionFailureTemplate) property.
+Customize the popup content shown when a remote data request fails by using the [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ActionFailureTemplate) property.
 
 In the following sample, the DropDownList displays a notification when data retrieval fails.
 
@@ -111,9 +111,9 @@ In the following sample, the DropDownList displays a notification when data retr
 
 {% endhighlight %}
 
-![Blazor DropDownList with Action Failure Template](./images/template/blazor-dropdownlist-action-failure-template.webp)
+![Blazor Dropdown List with Action Failure Template](./images/template/blazor-dropdownlist-action-failure-template.webp)
 
 ## See also
 
-* [Select a value in Blazor DropDownList during bUnit test](https://www.syncfusion.com/forums/172141/how-can-i-select-a-value-in-an-sfdropdown-during-a-bunit-test)
-* [Client side validation in Blazor DropDownList](https://www.syncfusion.com/forums/172516/client-side-validation-on-dropdown-list)
+* [Select a value in Blazor Dropdown List during bUnit test](https://www.syncfusion.com/forums/172141/how-can-i-select-a-value-in-an-sfdropdown-during-a-bunit-test)
+* [Client side validation in Blazor Dropdown List](https://www.syncfusion.com/forums/172516/client-side-validation-on-dropdown-list)

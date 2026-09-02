@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Placeholder/FloatLabel in Blazor MultiColumn ComboBox | Syncfusion®
-description: Checkout and learn here all about Placeholder and FloatLabel in Blazor MultiColumn ComboBox component and more.
+title: Placeholder and Float Label in Blazor MultiColumn | Syncfusion
+description: Add placeholder hints and floating labels to Blazor MultiColumn ComboBox input fields and input controls today.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
 ---
 
-# Placeholder and Float Label in MultiColumn ComboBox
+# Placeholder and Float Label in Blazor MultiColumn ComboBox
 
 ## Placeholder
 
@@ -35,7 +35,7 @@ You can change the color of the placeholder by targeting its CSS class `input.e-
 
 A visual mandatory indicator (*) can be appended to the floating placeholder label by targeting the `.e-float-text::after` CSS selector and setting the `content` style.
 
-For accessibility, pair this visual cue with semantic validation (for example, apply `[Required]` to the bound model property or set `aria-required="true"`) so assistive technologies convey the required state.
+For accessibility, pair this visual cue with semantic validation (for example, apply `[Required]` to the bound model property or set `aria-required="true"` on the component) so assistive technologies convey the required state.
 
 {% highlight cshtml %}
 
@@ -45,17 +45,17 @@ For accessibility, pair this visual cue with semantic validation (for example, a
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBfDurAqkybkRoR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with mandatory indicator placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder-with-mandatory.webp)" %}
 
-## Floating label
+## Floating Label
 
 Use the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html) property to control how the placeholder text floats as a label above the input. Floating labels work when a `Placeholder` is provided. The default is `Never`.
 
-The floating label supports the following options.
+The floating label supports the following options:
 
-Type     | Description
------------- | -------------
-  [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Auto)       | Floats the label on focus or after a value is entered.
-  [Always](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Always)     | Always keeps the label floated above the input.
-  [Never](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Never)      | Never floats the label when a placeholder is available (default).
+| Type | Description |
+| --- | --- |
+| [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Auto) | Floats the label on focus or after a value is entered. |
+| [Always](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Always) | Always keeps the label floated above the input. |
+| [Never](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Never) | Never floats the label when a placeholder is available (default). |
 
 The `FloatLabelType` set to `Auto` is demonstrated in the following example.
 

@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Drag and Drop in Blazor TreeView Component | Syncfusion®
-description: Checkout and learn here all the features about Drag and Drop in Blazor TreeView component and much more.
+title: Drag and Drop in Blazor TreeView | Syncfusion
+description: Reorder tree nodes with drag-and-drop indicators in Blazor TreeView for interactive tree management.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Drag and Drop in Blazor TreeView Component
+# Drag and Drop in Blazor TreeView
 
 The Blazor TreeView component supports drag and drop operations for reordering nodes. This functionality is enabled by setting the [`AllowDragAndDrop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowDragAndDrop) property to `true`. Nodes can be dragged and dropped at various levels within the same TreeView.
 
-The dragged nodes can be dropped at any level by indicator lines with **line**, **plus/minus**, and **restrict** icons. It represents the exact position where the node is to be dropped as sibling or child.
+The dragged nodes can be dropped at any level using indicator lines with **line**, **plus/minus**, and **restrict** icons. These indicators represent the exact position where the node will be dropped, either as a sibling or as a child.
 
 The following table explains the usage of indicator icons.
 

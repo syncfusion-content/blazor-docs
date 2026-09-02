@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Text placing center of Blazor Doughnut Chart Component | Syncfusion®
-description: Learn here all about Text placing center of the doughnut in Syncfusion Blazor Accumulation Chart component and much more details.
+title: How to Add Text at the Center of Blazor Doughnut Chart | Syncfusion®
+description: Learn how to place text in the center of a Blazor Doughnut Chart using Syncfusion annotation to display labels at the doughnut center.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Text placing center of the Blazor Doughnut Chart Component
+# How to Place Text in the Center of Doughnut Chart
 
 The annotation is used to place text, shapes or images in the center of the doughnut chart.
 
@@ -101,4 +101,4 @@ The complete code snippet for the preceding steps is as follows.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htLxNmBjfKgxTeAK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=fluent2) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.

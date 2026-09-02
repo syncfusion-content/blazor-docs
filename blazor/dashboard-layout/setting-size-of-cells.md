@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Configure Grid Layout in Blazor Dashboard | Syncfusion®
-description: Learn here all about Configuring the Grid Layout in Blazor Dashboard Layout component and much more.
+title: Configuring the Grid Layout in Blazor Dashboard Layout | Syncfusion®
+description: Configure the Blazor Dashboard Layout grid by setting cell size, column count, row spacing, and breakpoints to control the panel layout.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
 ---
 
-# Configuring the Grid Layout in Blazor Dashboard Layout Component
+# Configuring the Grid Layout in Blazor Dashboard Layout
 
-The **Dashboard Layout** component is built upon a grid structure, which is divided into equally sized subsections known as cells.
+The **Blazor Dashboard Layout** component is built upon a grid structure, which is divided into equally sized subsections known as cells.
 
 | **Properties** | **Description** |
 | --- | --- |
@@ -52,7 +52,7 @@ The size of individual grid cells can be modified to suit your design requiremen
 
 In the sample above, the width of the parent element is divided into five equal cells based on the [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_Columns) property value. The `CellAspectRatio` is set to `2`, meaning for every 100px of cell width, the height will be 50px (width / height = 2).
 
-The following output demonstrates the effect of setting [`CellAspectRatio`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_CellAspectRatio) and [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_Columns) properties in the Dashboard Layout:
+The following output demonstrates the effect of setting [`CellAspectRatio`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_CellAspectRatio) and [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_Columns) properties in the Blazor Dashboard Layout:
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNVxXxVgqlYWAAdQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Cell Size of Blazor Dashboard Layout](images/blazor-dashboard-layout-cell-size.webp)" %}
 
@@ -90,13 +90,13 @@ The spacing between individual panels in both rows and columns can be defined us
 
 ```
 
-The following output demonstrates the clear representation of data achieved by setting the `CellSpacing` property in the Dashboard Layout component:
+The following output demonstrates the clear representation of data achieved by setting the `CellSpacing` property in the Blazor Dashboard Layout component:
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDhHNRrKTNqWJgGO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard Layout with Cell Spacing](images/blazor-dashboard-layout-cell-space.webp)" %}
 
 ## Graphical Representation of Grid Layout
 
-The underlying grid structure of the Dashboard Layout is initially hidden. This grid can be made visible by enabling the [`ShowGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_ShowGridLines) property. Visualizing these grid lines is particularly helpful during the initial design phase for accurately sizing and positioning panels within the layout.
+The underlying grid structure of the Blazor Dashboard Layout is initially hidden. This grid can be made visible by enabling the [`ShowGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_ShowGridLines) property. Visualizing these grid lines is particularly helpful during the initial design phase for accurately sizing and positioning panels within the layout.
 
 ```cshtml
 

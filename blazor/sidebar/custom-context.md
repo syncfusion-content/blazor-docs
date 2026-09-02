@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sidebar for specific content in Blazor Sidebar Component | Syncfusion®
-description: Checkout and learn here all about Sidebar for specific content in Blazor Sidebar component and more.
+title: Sidebar for specific content in Blazor Sidebar | Syncfusion
+description: Set a custom target element and choose Auto, Over, Push, or Slide types for Blazor Sidebar to create flexible, adaptive layouts.
 platform: Blazor
 control: Sidebar
 documentation: ug
@@ -9,9 +9,11 @@ documentation: ug
 
 <!-- markdownlint-disable MD009 -->
 
-# Sidebar for specific content in Blazor Sidebar Component
+# Sidebar for specific content in Blazor Sidebar
 
 By default, [Blazor Sidebar](https://www.syncfusion.com/blazor-components/blazor-sidebar) initializes context to the body element. Using the [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_Target) property, set context element to initialize Sidebar inside any HTML element apart from the body element.
+
+The Sidebar expand behavior can be customized using the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_Type) property. It supports the [`Auto`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SidebarType.html#Syncfusion_Blazor_Navigations_SidebarType_Auto), [`Over`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SidebarType.html#Syncfusion_Blazor_Navigations_SidebarType_Over), [`Push`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SidebarType.html#Syncfusion_Blazor_Navigations_SidebarType_Push), and [`Slide`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SidebarType.html#Syncfusion_Blazor_Navigations_SidebarType_Slide) types, with `Auto` as the default type.
 
 In the following sample, click the toggle button to expand or collapse the Sidebar.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Multiple Selection Modes in Blazor MultiSelect Component | Syncfusion®
-description: Checkout and learn here all about Multiple selection display modes in Blazor MultiSelect component and much more details.
+title: Multiple Selection Modes in Blazor MultiSelect Dropdown | Syncfusion
+description: Configure Blazor MultiSelect Dropdown selection display as Default, Box, Delimiter, or Chip display modes today.
 platform: Blazor
-control: MultiSelect
+control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Multiple Selection Display Modes
+# Multiple Selection Modes in Blazor MultiSelect Dropdown
 
 ## Basic modes
 
@@ -87,9 +87,9 @@ Use [EnableSelectionOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ## Select all
 
-The MultiSelect component has in-built support to select all the list items using `Select All` options in the header. When the [ShowSelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_ShowSelectAll) property is set to true, by default Select All text will show. You can customize the name attribute of the Select All option by using [SelectAllText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_SelectAllText).
+The MultiSelect component has in-built support for selecting all list items using the `Select All` option in the header. When the [ShowSelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_ShowSelectAll) property is set to `true`, the "Select All" text is shown by default. You can customize the label of the Select All option by using [SelectAllText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_SelectAllText).
 
-For the unSelect All option, by default unSelect All text will show. You can customize the name attribute of the unSelect All option by using [UnSelectAllText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_UnSelectAllText).
+For the UnSelect All option, the "Unselect All" text is shown by default. You can customize the label of the UnSelect All option by using [UnSelectAllText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_UnSelectAllText).
 
 {% highlight cshtml %}
 
@@ -97,9 +97,9 @@ For the unSelect All option, by default unSelect All text will show. You can cus
 
 {% endhighlight %}
 
-![Blazor MultiSelect DropDown with CheckBox Selection](./images/blazor-multiselect-dropdown-checkbox-selection.webp)
+![Blazor MultiSelect Dropdown with CheckBox Selection](./images/blazor-multiselect-dropdown-checkbox-selection.webp)
 
 ## See also
 
-- [Blazor MultiSelect DropDown with selection stacked vertically in CheckBox](https://www.syncfusion.com/forums/172062/how-to-stack-selected-items-vertically-in-a-multiselct-dropdown)
-- [Disable CheckBox for certain values in Blazor MultiSelect DropDown](https://www.syncfusion.com/forums/157795/is-it-possible-to-disable-checkbox-for-certain-values-in-multiselect-dropdown)
+- [Blazor MultiSelect Dropdown with selection stacked vertically in CheckBox](https://www.syncfusion.com/forums/172062/how-to-stack-selected-items-vertically-in-a-multiselct-dropdown)
+- [Disable CheckBox for certain values in Blazor MultiSelect Dropdown](https://www.syncfusion.com/forums/157795/is-it-possible-to-disable-checkbox-for-certain-values-in-multiselect-dropdown)

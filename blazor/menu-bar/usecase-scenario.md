@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Use Case Scenarios in Blazor Menu Bar Component | Syncfusion®
-description: Checkout and learn here all about use case scenarios in Blazor Menu Bar component and much more details.
+title: Use Case Scenarios in Blazor Menu Bar | Syncfusion
+description: Build scrollable and adaptive Blazor Menu Bar layouts using EnableScrolling and responsive sizing options.
 platform: Blazor
 control: Menu Bar 
 documentation: ug
 ---
 
-# Use Case Scenarios in Blazor Menu Bar Component
+# Use Case Scenarios in Blazor Menu Bar
 
-## Scrollable Menu Bar
+## Scrollable Blazor Menu Bar
 
-The Menu Bar component supports horizontal and vertical scrolling to render large Menu Bars and sub menus in an adaptive way. This can be achieved by enabling the [EnableScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu-1.html) property and by restricting the corresponding Menu Bar/Sub Menu Bar size.
+The Blazor Menu Bar component supports horizontal and vertical scrolling to render large menus in a compact, responsive way. Enable it by setting the [EnableScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu-1.html#Syncfusion_Blazor_Navigations_SfMenu_1_EnableScrolling) property to `true` and constraining the corresponding Blazor Menu Bar or submenu size. The scroll direction follows the constrained axis: a fixed `width` produces horizontal scrolling, while a fixed `height` on a submenu produces vertical scrolling.
 
 ```cshtml
 
@@ -73,15 +73,15 @@ The Menu Bar component supports horizontal and vertical scrolling to render larg
 
 ```
 
-![Blazor MenuBar with Scroller](./images/blazor-menubar-scroller.webp)
+![Blazor Menu Bar with Scroller](./images/blazor-menubar-scroller.webp)
 
 ## Hamburger Menu
 
-The following example demonstrates the use case of [HamburgerMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu-1.html#Syncfusion_Blazor_Navigations_SfMenu_1_HamburgerMode) mode.
+The following example demonstrates the [Hamburger mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu-1.html#Syncfusion_Blazor_Navigations_SfMenu_1_HamburgerMode) of the Blazor Menu Bar. When `HamburgerMode="true"` is set, the top-level items collapse behind a hamburger icon on narrow view ports and expand when the icon is clicked. The `ShowItemOnClick="true"` property keeps the menu open after a leaf item is selected, which is the typical mobile / responsive UX.
 
 ```cshtml
 
-@using Syncfusion.Blazor.Navigations;
+@using Syncfusion.Blazor.Navigations
 
 <SfMenu TValue="MenuItem" HamburgerMode="true" ShowItemOnClick="true">
     <MenuItems>
@@ -140,15 +140,15 @@ The following example demonstrates the use case of [HamburgerMenu](https://help.
 
 ```
 
-![Blazor MenuBar with Hamburger Menu](./images/blazor-menubar-with-hamburger-menu.webp)
+![Blazor Menu Bar with Hamburger Menu](./images/blazor-menubar-with-hamburger-menu.webp)
 
-## Mobile View
+## Mobile view
 
-The following example demonstrates the use case of Menu Bar in Mobile mode with hamburger.
+The following example demonstrates the Blazor Menu Bar in [hamburger mode](#hamburger-menu) wrapped in a decorative device frame. The Blazor Menu Bar itself is the same as the previous example; the surrounding `.deviceLayout` markup is purely cosmetic to make the result look like a phone screen. The `<style>` block contains both behavior-shaping rules (scrollbar hiding, fixed container height) and cosmetic rules (rounded corners, speaker, camera) — adapt the cosmetic rules for your own layout.
 
 ```cshtml
 
-@using Syncfusion.Blazor.Navigations;
+@using Syncfusion.Blazor.Navigations
 
 <div class="menu-control">
     <div id='layoutcontainer' class="deviceLayout">
@@ -158,7 +158,7 @@ The following example demonstrates the use case of Menu Bar in Mobile mode with 
         <div class="layout">
             <div id="container">
                 <SfMenu TValue="MenuItem" HamburgerMode="true" ShowItemOnClick="true">
-                    <MenuItems >
+                    <MenuItems>
                         <MenuItem Text="File">
                             <MenuItems>
                                 <MenuItem Text="Open"></MenuItem>
@@ -284,4 +284,10 @@ The following example demonstrates the use case of Menu Bar in Mobile mode with 
 
 ```
 
-![Blazor MenuBar with Mobile View](./images/blazor-menubar-mobile-view.webp)
+![Blazor Menu Bar with Mobile View](./images/blazor-menubar-mobile-view.webp)
+
+## See also
+
+* [Styles and Appearances in Blazor Menu Bar Component](style-and-appearance.md)
+* [Animation in Blazor Menu Bar Component](animation.md)
+* [Menu Bar Events in Blazor](menu-events.md)

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Globalization in Blazor In-place Editor Component | Syncfusion®
-description: Checkout and learn here all about Globalization in Blazor In-place Editor component and much more details.
+title: Globalization in Blazor In-place Editor | Syncfusion
+description: Localize UI text, enable RTL layout, and apply culture-specific formats in Blazor In-place Editor for global use.
 platform: Blazor
 control: In-place Editor 
 documentation: ug
 ---
 
-# Globalization in Blazor In-place Editor Component
+# Globalization in Blazor In-place Editor
 
-This topic explains how to globalize the In-place Editor, including localizing UI text, enabling right-to-left (RTL) layout, and applying culture-aware formatting.
+This topic explains how to globalize the Blazor In-place Editor, including localizing UI text, enabling right-to-left (RTL) layout, and applying culture-aware formatting.
 
 ## Localization
 
@@ -17,9 +17,9 @@ This topic explains how to globalize the In-place Editor, including localizing U
 
 ## Right to left
 
-Specify the direction of the In-place Editor using the `EnableRtl` property. Use RTL layout for right-to-left languages such as Arabic, Hebrew, and Farsi. The layout direction can be switched to right-to-left independently of the current locale.
+Specify the direction of the Blazor In-place Editor using the `EnableRtl` property. Use RTL layout for right-to-left languages such as Arabic, Hebrew, and Farsi. The layout direction can be switched to right-to-left independently of the current locale.
 
-> It will not change based on the locale property.
+> The layout direction is not automatically changed by the `EnableRtl` property based on the current culture.
 
 ```cshtml
 
@@ -49,7 +49,7 @@ Specify the direction of the In-place Editor using the `EnableRtl` property. Use
 
 ## Format
 
-Formatting is a way of representing the value in different formats. Format the following mentioned components with its `format` property when it is directly configured in the Editor component.
+Formatting is a way of representing the value in different formats. Format the following components using their `Format` property when they are directly configured in the editor component.
 
 * [DatePicker](../datepicker/date-format)
 * [DateRangePicker](../daterangepicker/globalization)

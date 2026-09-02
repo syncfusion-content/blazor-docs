@@ -1,14 +1,14 @@
 ---
 layout: post
-title: LiteLLM Integration with Blazor AI AssistView Component | Syncfusion®
-description: Checkout and learn about LiteLLM integration with Blazor AI AssistView component in Blazor WebAssembly Application.
+title: Integrate LiteLLM With Blazor AI AssistView | Syncfusion®
+description: Checkout and learn about LiteLLM integration with Blazor AI AssistView component in Blazor Application.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate AI AssistView with LiteLLM
+# Integrate LiteLLM With Blazor AI AssistView
 
 The **AI AssistView** component can also be integrated with [LiteLLM](https://docs.litellm.ai/docs), an open-source proxy that provides a unified, OpenAI-compatible API for multiple LLM providers such as [OpenAI](https://openai.com) and [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai).
 
@@ -27,14 +27,6 @@ Before starting, ensure you have the following:
 * **Python**: Required to run the **LiteLLM proxy**.
 
 * **Syncfusion AI AssistView**: Package [Syncfusion Blazor package](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed.
-
-* **Markdig**: For parsing Markdown responses.
-
-```bash
-
-Nuget\Install-Package Markdig
-
-```
 
 ## Set Up the AI AssistView Component
 
@@ -76,7 +68,7 @@ In the following example:
 
 * The [PromptRequested](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptRequested) event sends the user prompt to the LiteLLM proxy at `/v1/chat/completions`. 
 * The proxy uses the **model alias** defined in `config.yaml` (e.g., `openai/gpt-4o-mini`) and routes the request to the actual LLM provider. 
-* The response is parsed as **Markdown** using the `Markdig` library and displayed in the AI AssistView component.
+* The response is parsed as **Markdown** and displayed in the AI AssistView component.
 
 {% tabs %}
 {% highlight razor %}
@@ -84,7 +76,6 @@ In the following example:
 @rendermode InteractiveAuto
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Navigations
-@using Markdig
 @using System.Text.Json
 @using System.Text
 @inject HttpClient Http
@@ -162,15 +153,9 @@ In the following example:
                 .GetProperty("content")
                 .GetString()?.Trim() ?? "No response received.";
 
-            var pipeline = new MarkdownPipelineBuilder()
-                .UseAdvancedExtensions()
-                .UsePipeTables()
-                .UseTaskLists()
-                .Build();
-
             // Add the response to the AIAssistView
             await Task.Delay(1000); // Simulate delay as in original code
-            args.Response = Markdown.ToHtml(responseText, pipeline);
+            args.Response = responseText;
         }
         catch (Exception ex)
         {

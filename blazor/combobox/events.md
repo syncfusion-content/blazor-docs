@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Events in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn here all about the features and events in Blazor ComboBox component and much more details.
+title: Events in Blazor ComboBox | Syncfusion®
+description: Handle Blazor ComboBox lifecycle and user actions through events such as ValueChange, OnOpen, OnClose, DataBound, Filtering, and selection callbacks.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Events in Blazor ComboBox Component
+# Events in Blazor ComboBox
 
-This section lists the events available in the ComboBox component and when they are triggered during typical interactions.
+This section lists the events available in the Blazor ComboBox component and when they are triggered during typical interactions.
 
 ## Blur
 
@@ -527,6 +527,6 @@ The `Opened` event triggers when the popup opens and is visible.
 ```
 
 ## See also
-* [How to pass an extra parameter to Blazor ComboBox ValueChange handler?](https://www.syncfusion.com/kb/13138/how-to-pass-an-extra-parameter-to-blazor-combobox-valuechange-handler)
+* [How to pass an extra parameter to Blazor ComboBox ValueChange handler?](https://support.syncfusion.com/kb/article/11554/how-to-pass-an-extra-parameter-to-blazor-combobox-valuechange-handler)
 
 N> ComboBox is limited with these events and new events will be added in the future based on the user requests. If the event you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).

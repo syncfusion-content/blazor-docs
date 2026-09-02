@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Asynchronous Upload in Blazor File Upload Component | Syncfusion®
-description: Checkout and learn here all about Asynchronous Upload in Blazor File Upload component and much more details.
+title: Asynchronous Upload in Blazor File Upload | Syncfusion
+description: Upload files asynchronously in Blazor File Upload using SaveUrl and RemoveUrl with auto and manual modes.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# Asynchronous Upload in Blazor File Upload Component
+# Asynchronous Upload in Blazor File Upload
 
-The Uploader component allows you to upload files asynchronously. The upload process requires [`SaveUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html#Syncfusion_Blazor_Inputs_UploaderAsyncSettings_SaveUrl) and [`RemoveUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html#Syncfusion_Blazor_Inputs_UploaderAsyncSettings_RemoveUrl) to manage the upload process on the server.
+The Blazor File Upload component allows you to upload files asynchronously. The upload process requires [`SaveUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html#Syncfusion_Blazor_Inputs_UploaderAsyncSettings_SaveUrl) and [`RemoveUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html#Syncfusion_Blazor_Inputs_UploaderAsyncSettings_RemoveUrl) to manage the upload process on the server.
 *   The [`SaveUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html#Syncfusion_Blazor_Inputs_UploaderAsyncSettings_SaveUrl) is necessary to handle the upload operation.
 *   The [`RemoveUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html#Syncfusion_Blazor_Inputs_UploaderAsyncSettings_RemoveUrl) is optional; it handles files removed from the server.
 
@@ -527,5 +527,5 @@ The OnClear event is triggered when the file list in the uploader is cleared (ei
 
 - Handling custom data with upload: https://support.syncfusion.com/kb/article/16000/handling-custom-data-with-file-upload-component-in-blazor
 - Upload with user info in SfUploader: https://support.syncfusion.com/kb/article/15190/how-to-handle-blazor-file-upload-with-user-information-in-sfuploader
-- Upload to Azure Blob Storage: https://www.syncfusion.com/blogs/post/simple-steps-to-upload-files-to-azure-blob-storage-in-b
+- Upload to Azure Blob Storage: https://www.syncfusion.com/blogs/post/simple-steps-to-upload-files-to-azure-blob-storage-in-blazor-app
 - Upload files to Database in Blazor: (https://github.com/SyncfusionExamples/how-to-upload-files-to-database-in-blazor)

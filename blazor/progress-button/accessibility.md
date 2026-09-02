@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Accessibility in Blazor ProgressButton Component | Syncfusion®
-description: Learn about accessibility in Blazor ProgressButton component with WAI-ARIA support and keyboard navigation examples.
+title: Accessibility in Blazor Progress Button | Syncfusion
+description: Learn how Blazor Progress Button supports accessibility using ARIA roles, keyboard navigation, and screen reader support for inclusive experiences.
 platform: Blazor
 control: Progress Button
 documentation: ug
 ---
 
-# Accessibility in Blazor ProgressButton Component
+# Accessibility in Blazor Progress Button
 
-The Blazor ProgressButton component follows established accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Progress Button component follows established accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Blazor ProgressButton component is outlined below.
+The accessibility compliance for the Blazor Progress Button component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -38,16 +38,16 @@ The accessibility compliance for the Blazor ProgressButton component is outlined
 
 ## WAI-ARIA attributes
 
-The Blazor ProgressButton component follows the [WAI-ARIA button pattern](https://www.w3.org/WAI/ARIA/apg/patterns/button/) to meet accessibility requirements. The following ARIA attributes are used in the Blazor ProgressButton component:
+The Blazor Progress Button component follows the [WAI-ARIA button pattern](https://www.w3.org/WAI/ARIA/apg/patterns/button/) to meet accessibility requirements. The following ARIA attributes are used in the Blazor Progress Button component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `aria-label` | Provides an accessible name for the icon-only ProgressButton. |
+| `aria-label` | Provides an accessible name for the icon-only Blazor  Progress Button. |
 | `aria-disabled` | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable. |
 
 ## Keyboard interaction
 
-The Blazor ProgressButton component follows keyboard interaction guidelines, making it usable for people who rely on assistive technologies and keyboard navigation. The following keyboard shortcuts are supported by the Blazor ProgressButton component. Use Tab/Shift+Tab to move focus to the button, then activate it with Enter or Space.
+The Blazor Progress Button component follows keyboard interaction guidelines, making it usable for people who rely on assistive technologies and keyboard navigation. The following keyboard shortcuts are supported by the Blazor Progress Button component. Use Tab/Shift+Tab to move focus to the button, then activate it with Enter or Space.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
@@ -55,12 +55,12 @@ The Blazor ProgressButton component follows keyboard interaction guidelines, mak
 
 ## Ensuring accessibility
 
-The Blazor ProgressButton component's accessibility levels are validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
+The Blazor Progress Button component's accessibility levels are validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
 
-The accessibility compliance of the Blazor ProgressButton component is shown in the following sample. Open the [sample site for ProgressButton accessibility](https://blazor.syncfusion.com/accessibility/progress-button) in a new window to evaluate the component with accessibility tools.
+The accessibility compliance of the Blazor Progress Button component is shown in the following sample. Open the [sample site for Blazor Progress Button accessibility](https://blazor.syncfusion.com/accessibility/progress-button) in a new window to evaluate the component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/progress-button.html" %}
 
 ## See also
 
-* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)

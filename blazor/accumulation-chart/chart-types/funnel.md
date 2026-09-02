@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Funnel in Blazor Accumulation Chart Component | Syncfusion®
-description: Checkout and learn here all about Funnel in Blazor Accumulation Chart component and much more details.
+title: Blazor Funnel Chart Examples | Syncfusion®
+description: Learn how to create a Funnel Chart in Syncfusion Blazor Accumulation Chart to visualize stages in a sales process and potential revenue.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Funnel in Blazor Accumulation Chart Component
+# Funnel Chart in Blazor
 
 [Funnel Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/funnel-chart) is often used to represent stages in a sales process and to show the amount of potential revenue for each stage. To render the [Funnel Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/funnel-chart), set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Type) as [Funnel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationType.html#Syncfusion_Blazor_Charts_AccumulationType_Funnel).
 
@@ -87,7 +87,7 @@ The size of the funnel chart can be customized by using the [Width](https://help
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhxDmWIreVBVuEB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Funnel Size in Blazor Funnel Chart](../images/funnel/blazor-funnel-chart-size-customization.webp)" %}
 
-N> The [Blazor Funnel Chart](https://blazor.syncfusion.com/demos/chart/funnel) example can be explored to learn to render and configure the funnel chart.
+N> The [Blazor Funnel Chart](https://blazor.syncfusion.com/demos/chart/funnel?theme=fluent2) example can be explored to learn to render and configure the funnel chart.
 
 ## Funnel neck size
 
@@ -301,7 +301,7 @@ The corners of the first data point and last data point in the funnel chart seri
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLRjcWohyPOvlbM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Funnel Chart with border radius applied.](../images/funnel/blazor-funnel-border-radius.webp)" %}
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/funnel?theme=bootstrap5) to know various features of accumulation charts and how it is used to represent numeric proportional data.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/funnel?theme=fluent2) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 
 ## See also
 

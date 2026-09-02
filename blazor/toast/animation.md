@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Animation in Blazor Toast Component | Syncfusion®
-description: Checkout and learn here all the features about animation in Blazor Toast component and much more details.
+title: Animation in Blazor Toast | Syncfusion
+description: Customize show and hide animations for Blazor Toast using animation settings and easing effects for transitions.
 platform: Blazor
 control: Toast
 documentation: ug
 ---
 
-# Animation in Blazor Toast Component
+# Animation in Blazor Toast
 
-The toast component supports custom animations for both show and hide actions from the provided `ToastHideAnimationSettings` and  `ToastShowAnimationSettings` option of the `Animation` library. The default animation is given as `FadeIn` for showing the toast and `FadeOut` for hiding the toast.
+The Blazor Toast component supports custom animations for both show and hide actions from the provided `ToastHideAnimationSettings` and  `ToastShowAnimationSettings` option of the `Animation` library. The default animation is given as `FadeIn` for showing the toast and `FadeOut` for hiding the toast.
 
 The following sample demonstrates some types of animations that suit toast.
 
@@ -34,7 +34,7 @@ The following sample demonstrates some types of animations that suit toast.
                 <label> Show Animation </label>
             </div>
             <SfDropDownList Placeholder="Select a animate type" DataSource="@Effects" TValue="string" TItem="DropDownFields">
-                <DropDownListEvents ValueChange="@ShowAnimationChange" TValue="string"></DropDownListEvents>
+                <DropDownListEvents ValueChange="@ShowAnimationChange" TValue="string" TItem="DropDownFields"></DropDownListEvents>
                 <DropDownListFieldSettings Text="text" Value="id"></DropDownListFieldSettings>
             </SfDropDownList>
 
@@ -42,7 +42,7 @@ The following sample demonstrates some types of animations that suit toast.
                 <label> Hide Animation </label>
             </div>
             <SfDropDownList Placeholder="Select a animate type" DataSource="@Effects" TValue="string" TItem="DropDownFields">
-                <DropDownListEvents ValueChange="@HideAnimationChange" TValue="string"></DropDownListEvents>
+                <DropDownListEvents ValueChange="@HideAnimationChange" TValue="string" TItem="DropDownFields"></DropDownListEvents>
                 <DropDownListFieldSettings Text="text" Value="id"></DropDownListFieldSettings>
             </SfDropDownList>
         </div>
@@ -94,7 +94,8 @@ The following sample demonstrates some types of animations that suit toast.
         new DropDownFields(){ id= "FlipLeftDownIn", text= "Flip Left Down In" },
         new DropDownFields(){ id= "FlipLeftDownOut", text= "Flip Left Down Out" },
         new DropDownFields(){ id= "FlipLeftUpIn", text= "Flip Left Up In" },
-        new DropDownFields(){ id= "FlipRightDownIn", text= "Flip Right Up In" },
+        new DropDownFields(){ id= "FlipLeftUpOut", text= "Flip Left Up Out" },
+        new DropDownFields(){ id= "FlipRightDownIn", text= "Flip Right Down In" },
         new DropDownFields(){ id= "FlipRightDownOut", text= "Flip Right Down Out" },
         new DropDownFields(){ id= "FlipRightUpIn", text= "Flip Right Up In" },
         new DropDownFields(){ id= "FlipRightUpOut", text= "Flip Right Up Out" },
@@ -114,13 +115,13 @@ The following sample demonstrates some types of animations that suit toast.
         await ToastObj.ShowAsync();
     }
 
-    private void ShowAnimationChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
+    private void ShowAnimationChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, DropDownFields> args)
     {
         this.ShowAnimation  = (ToastEffect)System.Enum.Parse(typeof(ToastEffect), args.Value);
         StateHasChanged();
     }
 
-    private void HideAnimationChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
+    private void HideAnimationChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, DropDownFields> args)
     {
         this.HideAnimation = (ToastEffect)System.Enum.Parse(typeof(ToastEffect), args.Value);
         StateHasChanged();

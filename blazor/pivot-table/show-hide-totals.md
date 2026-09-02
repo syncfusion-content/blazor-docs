@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Show or Hide Totals in Blazor Pivot Table Component | Syncfusion®
-description: Learn how to show or hide grand totals and sub-totals in Blazor Pivot Table component with examples and much more details.
+title: Show or Hide Totals in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table shows or hides grand totals and sub-totals for rows, columns, or both to control summary visibility.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Show or Hide Totals in Blazor Pivot Table Component
+# Show or Hide Totals in Blazor Pivot Table
 
 The Pivot Table component allows users to easily customize the display of grand totals and sub-totals. This documentation explains how to control their visibility and positioning to suit your data analysis needs.
 
 ## Show or hide grand totals
 
-The Pivot Table component provides options to display or hide grand totals for rows, columns, or both. These options are configured using the following properties within the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class:
+The Pivot Table component provides options to display or hide grand totals for rows, columns, or both. These options are configured using the following properties within the [`PivotViewDataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class:
 
-- [ShowGrandTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowGrandTotals): Controls the visibility of grand totals for both rows and columns. Set this property to **false** to hide grand totals in both directions.
-- [ShowRowGrandTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowRowGrandTotals): When set to **false**, this property hides only the row grand totals.
-- [ShowColumnGrandTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowColumnGrandTotals): When set to **false**, this property hides only the column grand totals.
+- [`ShowGrandTotals`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowGrandTotals): Controls the visibility of grand totals for both rows and columns. Set this property to **false** to hide grand totals in both directions.
+- [`ShowRowGrandTotals`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowRowGrandTotals): When set to **false**, this property hides only the row grand totals.
+- [`ShowColumnGrandTotals`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowColumnGrandTotals): When set to **false**, this property hides only the column grand totals.
 
-N> By default, all of these properties—[ShowGrandTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowGrandTotals), [ShowRowGrandTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowRowGrandTotals), and [ShowColumnGrandTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowColumnGrandTotals)—are set to **true** in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class.
+N> By default, all of these properties—[`ShowGrandTotals`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowGrandTotals), [`ShowRowGrandTotals`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowRowGrandTotals), and [`ShowColumnGrandTotals`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowColumnGrandTotals)—are set to **true** in the [`PivotViewDataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -102,13 +102,13 @@ To display grand totals at the top of both rows and columns, set the [GrandTotal
 
 ## Show or hide sub-totals
 
-The Pivot Table component enables showing or hiding sub-totals for rows, columns, or both. Use the following properties in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class to configure these options:
+The Pivot Table component enables showing or hiding sub-totals for rows, columns, or both. Use the following properties in the [`PivotViewDataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class to configure these options:
 
-* [ShowSubTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowSubTotals): Set to `false` to hide all sub-totals for rows and columns.
-* [ShowRowSubTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowRowSubTotals): Set to `false` to hide row sub-totals only.
-* [ShowColumnSubTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowColumnSubTotals): Set to `false` to hide column sub-totals only.
+* [`ShowSubTotals`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowSubTotals): Set to **false** to hide all sub-totals for rows and columns.
+* [`ShowRowSubTotals`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowRowSubTotals): Set to **false** to hide row sub-totals only.
+* [`ShowColumnSubTotals`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowColumnSubTotals): Set to **false** to hide column sub-totals only.
 
-N> By default, the [ShowSubTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowSubTotals), [ShowRowSubTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowRowSubTotals), and [ShowColumnSubTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowColumnSubTotals) properties in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class are set to **true**, ensuring sub-totals are visible across the Pivot Table.
+N> By default, the [`ShowSubTotals`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowSubTotals), [`ShowRowSubTotals`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowRowSubTotals), and [`ShowColumnSubTotals`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowColumnSubTotals) properties in the [`PivotViewDataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class are set to **true**, ensuring sub-totals are visible across the Pivot Table.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -149,9 +149,9 @@ N> By default, the [ShowSubTotals](https://help.syncfusion.com/cr/blazor/Syncfus
 
 ## Show or hide sub-totals for specific fields
 
-The Pivot Table component allows users to show or hide sub-totals for specific fields in the row and column axes using the [ShowSubTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowSubTotals) property. To hide sub-totals for a specific field in either axis, set the [ShowSubTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowSubTotals) property to **false** in the corresponding field configuration within the rows or columns axis.
+The Pivot Table component allows users to show or hide sub-totals for specific fields in the row and column axes. Set the `ShowSubTotals` property to **false** on an individual field entry inside the [`PivotViewRow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#implements) or [`PivotViewColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html) field to hide the sub-total for that field only.
 
-N> By default, the [ShowSubTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowSubTotals) property for fields in both the [PivotViewRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRows.html) and [PivotViewColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html) classes is set to **true**.
+N> By default, the [`ShowSubTotals`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowSubTotals) property for fields in both the [PivotViewRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRows.html) and [PivotViewColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html) field is set to **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -191,9 +191,9 @@ N> By default, the [ShowSubTotals](https://help.syncfusion.com/cr/blazor/Syncfus
 
 ## Show sub-totals at top or bottom
 
-You can configure the position of sub-totals within header groups for both rows and columns in the Pivot Table using the [`SubTotalsPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SubTotalsPosition.html) property in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html). By default, the [`SubTotalsPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SubTotalsPosition.html) property is set to **Auto**, which displays column sub-totals at the bottom and row sub-totals at the top of their respective header groups in the pivot table.
+You can configure the position of sub-totals within header groups for both rows and columns in the Pivot Table using the [`SubTotalsPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SubTotalsPosition.html) property in the [`PivotViewDataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class. The available values are **Top**, **Bottom**, and **Auto** (the default). With **Auto**, column sub-totals appear at the bottom and row sub-totals appear at the top of their respective header groups.
 
-To display sub-totals at the top of header groups for both rows and columns, set the [`SubTotalsPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SubTotalsPosition.html) property in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) to **Top**.
+To display sub-totals at the top of header groups for both rows and columns, set the [`SubTotalsPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SubTotalsPosition.html) property in [`PivotViewDataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) to **Top**.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -231,7 +231,7 @@ To display sub-totals at the top of header groups for both rows and columns, set
 
 ![Show sub-totals at top](images/blazor-pivottable-show-sub-totals-at-top.webp)
 
-To display sub-totals at the bottom of header groups for both rows and columns, set the [`SubTotalsPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SubTotalsPosition.html) property in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) to **Bottom**.
+To display sub-totals at the bottom of header groups for both rows and columns, set the [`SubTotalsPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SubTotalsPosition.html) property in [`PivotViewDataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) to **Bottom**.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -271,7 +271,7 @@ To display sub-totals at the bottom of header groups for both rows and columns, 
 
 ## Show or hide totals using toolbar
 
-You can show or hide grand totals and sub-totals in the Pivot Table using the built-in toolbar. To enable the toolbar, set the [ShowToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowToolbar) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. Then, include [ToolbarItems.GrandTotal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ToolbarItems.html#Syncfusion_Blazor_PivotView_ToolbarItems_GrandTotal) and [ToolbarItems.SubTotal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ToolbarItems.html#Syncfusion_Blazor_PivotView_ToolbarItems_SubTotal) in the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_Toolbar) property. This displays "Show/Hide Grand Totals" and "Show/Hide Subtotals" icons in the toolbar, allowing users to quickly manage grand totals and sub-totals in the table.
+You can show or hide grand totals and sub-totals in the Pivot Table using the built-in toolbar. To enable the toolbar, set the [ShowToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowToolbar) property to **true** in the Pivot Table component. Then, include [ToolbarItems.GrandTotal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ToolbarItems.html#Syncfusion_Blazor_PivotView_ToolbarItems_GrandTotal) and [ToolbarItems.SubTotal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ToolbarItems.html#Syncfusion_Blazor_PivotView_ToolbarItems_SubTotal) in the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_Toolbar) property. This displays "Show/Hide Grand Totals" and "Show/Hide Subtotals" icons in the toolbar, allowing users to quickly manage grand totals and sub-totals in the table.
 
 The toolbar also includes options for "Grand Totals Position" and "Subtotals Position." These options allow users to specify whether grand totals and sub-totals appear at the top or bottom of rows and columns. This flexibility helps users position grand totals and sub-totals to best suit their reporting or data analysis needs.
 

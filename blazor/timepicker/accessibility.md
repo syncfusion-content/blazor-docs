@@ -1,17 +1,17 @@
 ---
 layout: post
-title:  Accessibility in Blazor TimePicker Component | Syncfusion®
-description: Checkout and learn here all the features about the accessibility in Blazor TimePicker component and much more.
+title: Accessibility in Blazor TimePicker | Syncfusion
+description: Learn how Blazor TimePicker supports accessibility with keyboard navigation and screen reader compatibility.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-#  Accessibility in Blazor TimePicker Component
+# Accessibility in Blazor TimePicker
 
-The web accessibility makes web applications and its content more accessible to people with disabilities without any barriers. It especially tracks the dynamic value changes and DOM changes.
+Web accessibility makes web applications and their content more accessible to people with disabilities by removing barriers that can prevent interaction. The Blazor TimePicker is designed to surface dynamic value changes and DOM updates to assistive technologies in a predictable way.
 
-The [Blazor TimePicker](https://www.syncfusion.com/blazor-components/blazor-timepicker) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The [Blazor TimePicker](https://www.syncfusion.com/blazor-components/blazor-timepicker) component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor TimePicker component is outlined below.
 
@@ -42,46 +42,46 @@ The accessibility compliance for the Blazor TimePicker component is outlined bel
 
 The Blazor TimePicker component has covered the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) specifications with the following list of WAI-ARIA attributes: `aria-haspopup`, `aria-selected`, `aria-disabled`, `aria-activedescendant`, `aria-expanded`, `aria-owns`, and `aria-autocomplete`.
 
-In the TimePicker, the `combobox` plays the role of input element, and the `listbox` plays the role of popup element.
+In the Blazor TimePicker, the `combobox` plays the role of the input element, and the `listbox` plays the role of the popup element. For the full pattern specification, see the [WAI-ARIA Combobox Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/).
 
-* **aria-haspopup**: Provides the information about whether this element display a pop-up window or not.
+* **aria-haspopup**: Indicates whether this element displays a pop-up window.
 
-* **aria-selected**: Indicates the current selected value of the TimePicker component.
+* **aria-selected**: Indicates the current selected value of the Blazor TimePicker component.
 
-* **aria-disabled**: Indicates disabled state of the TimePicker component.
+* **aria-disabled**: Indicates the disabled state of the Blazor TimePicker component.
 
 * **aria-expanded**: Indicates the expanded state of the popup.
 
-* **aria-autocomplete**: Indicates whether user input completion suggestions are provided or not.
+* **aria-autocomplete**: Indicates whether input completion suggestions are provided to the user.
 
-* **aria-owns**: Creates a parent/child relationship between two DOM element in the accessibility layer.
+* **aria-owns**: Creates a parent/child relationship between two DOM elements in the accessibility layer.
 
-* **aria-activedescendent**: Helps in managing the current active child of the TimePicker component.
+* **aria-activedescendant**: Helps in managing the current active child of the Blazor TimePicker component.
 
 * **role**: Gives assistive technology information for handling each element in a widget.
 
 ## Keyboard interaction
 
-Keyboard accessibility is one of the most important aspects of web accessibility. Disabled people like blind and those who have motor disabilities or birth defects use keyboard shortcuts more than the mouse.
+Keyboard accessibility is one of the most important aspects of web accessibility. Many users, including people who are blind, have low vision, or have motor disabilities, rely on keyboard shortcuts rather than the mouse to interact with applications.
 
-The Blazor TimePicker component has built-in keyboard accessibility support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/).
+The Blazor TimePicker component has built-in keyboard accessibility support that follows the [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/) for a combobox pattern.
 
-N> It supports the following list of shortcut keys to interact with the TimePicker component:
+N> The following table lists the built-in shortcut keys supported by the Blazor TimePicker component:
 
 | Windows | Mac | **Description** |
 | --- | --- | --- |
 | <kbd>↑</kbd> | <kbd>↑</kbd> | Navigates and selects the previous item. |
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Navigates and selects the next item. |
-| <kbd>←</kbd> | <kbd>←</kbd> | Moves the cursor towards arrow key pressed direction. |
-| <kbd>→</kbd> | <kbd>→</kbd> | Moves the cursor towards arrow key pressed direction. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Moves the cursor in the direction of the pressed arrow key. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Moves the cursor in the direction of the pressed arrow key. |
 | <kbd>Home</kbd> | <kbd>Home</kbd> | Navigates and selects the first item. |
 | <kbd>End</kbd> | <kbd>End</kbd> | Navigates and selects the last item. |
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the currently focused item and close the popup. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the currently focused item and closes the popup. |
 | <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the popup. |
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup. |
 | <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the popup. |
 
-N> To focusout the TimePicker component, use the `t` keys. For additional information about native event, [click](https://blazor.syncfusion.com/documentation/timepicker/native-events) here.
+N> The example below wires a native `onkeypress` event so that pressing the `t` key calls `FocusOutAsync()`. The `t` key is only the key checked in the sample handler and is not a built-in Blazor TimePicker shortcut — replace `"t"` in the handler to use a different key. For more information, see [Native Events in Blazor TimePicker](https://blazor.syncfusion.com/documentation/timepicker/native-events).
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -102,10 +102,12 @@ N> To focusout the TimePicker component, use the `t` keys. For additional inform
 
 ## Ensuring accessibility
 
-The Blazor TimePicker component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
+The Blazor TimePicker component's accessibility is verified through the [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-The accessibility compliance of the TimePicker component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/timepicker) in a new window to evaluate the accessibility of the TimePicker component with accessibility tools.
+The following sample demonstrates the accessibility compliance of the Blazor TimePicker component. Open the [sample](https://blazor.syncfusion.com/accessibility/timepicker) in a new window to evaluate the accessibility of the Blazor TimePicker component with accessibility tools.
 
 ## See also
 
 * [Accessibility in Blazor components](../common/accessibility)
+* [WAI-ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/)
+* [WCAG 2.2 Quick Reference](https://www.w3.org/WAI/WCAG22/quickref/)

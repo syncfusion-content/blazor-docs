@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Tabs in Blazor Web App | Syncfusion
-description: Check out and learn the documentation for getting started with Blazor Tabs Components in Blazor Web App.
+description: Learn how to get started with the Syncfusion Blazor Tabs in a Blazor Web App using setup steps and code examples.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -246,9 +246,9 @@ dotnet run
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Tabs).
 
-## Initialize Blazor Tab Content using Template
+## Initialize Blazor Tabs Content using Template
 
-Tab provides support to render content using `ContentTemplate` property. You can give preferred content inside the `ContentTemplate` element.
+Blazor Tabs provides support to render content using `ContentTemplate` property. You can give preferred content inside the `ContentTemplate` element.
 
 N> `ContentTemplate` property supports `RenderFragment` type to render content.
 
@@ -347,6 +347,5 @@ Selected Tab
 
 ## See also
 
-1. [Getting Started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-2. [Getting Started with Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
-3. [Getting Started with Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Getting Started with Blazor WebAssembly App in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Server App in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)

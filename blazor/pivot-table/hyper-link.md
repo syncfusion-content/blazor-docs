@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Hyperlink in Blazor Pivot Table Component | Syncfusion®
-description: Learn about hyperlink feature in Blazor Pivot Table component for cell navigation with examples and much more details.
+title: Hyperlink in Blazor Pivot Table | Syncfusion
+description: Learn how to configure hyperlinks for row, column, and value cells in the Blazor Pivot Table with PivotViewHyperlinkSettings.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Hyperlink in Blazor Pivot Table Component
+# Hyperlink in Blazor Pivot Table
 
-The Pivot Table component provides built-in support for displaying hyperlinks within individual cells. This feature allows users to link data in specific cells, enhancing interactivity and navigation.
+The Pivot Table component provides built-in support for displaying hyperlinks within individual cells. This feature allows users to link data in specific cells, enhancing interactivity and navigation. Common use cases include linking a value cell to a related detail report, opening an external resource from a row header, or highlighting summary cells that match a business rule.
 
 Hyperlinks can be selectively enabled for various cell types, including:
 
@@ -18,30 +18,35 @@ Hyperlinks can be selectively enabled for various cell types, including:
 - Value cells
 - Summary cells
 
-You can control hyperlink behavior using the [PivotViewHyperlinkSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class, which can be defined during the initial rendering through the code-behind.
+You can control hyperlink behavior using the [`PivotViewHyperlinkSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class, which can be defined during the initial rendering through the code-behind.
 
-## Available Hyperlink Settings
+## Available hyperlink settings
 
-The following properties are available in PivotViewHyperlinkSettings:
+The following properties are available in `PivotViewHyperlinkSettings`. Each property is optional; combine them to control which cells display hyperlinks.
 
-* [ShowHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowHyperlink): It allows to set the visibility of hyperlink in all cells.
-* [ShowRowHeaderHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowRowHeaderHyperlink): It allows to set the visibility of hyperlink in row headers.
-* [ShowColumnHeaderHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowColumnHeaderHyperlink): It allows to set the visibility of hyperlink in column headers.
-* [ShowValueCellHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowValueCellHyperlink): It allows to set the visibility of hyperlink in value cells.
-* [ShowSummaryCellHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowSummaryCellHyperlink): It allows to set the visibility of hyperlink in summary cells.
-* [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_HeaderText): It allows to set the visibility of hyperlink based on header text.
-* [ConditionalSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html): It allows to set the visibility of hyperlink based on specific condition.
+| Property | Type | Default | Description |
+|----------|------|---------|-------------|
+| [`ShowHyperlink`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowHyperlink) | `boolean` | `false` | Shows or hides hyperlinks in all cells. |
+| [`ShowRowHeaderHyperlink`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowRowHeaderHyperlink) | `boolean` | `false` | IShows or hides hyperlinks in row headers. |
+| [`ShowColumnHeaderHyperlink`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowColumnHeaderHyperlink) | `boolean` | `false | Shows or hides hyperlinks in column headers. |
+| [`ShowValueCellHyperlink`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowValueCellHyperlink) | `boolean` | `false` | Shows or hides hyperlinks in value cells. |
+| [`ShowSummaryCellHyperlink`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowSummaryCellHyperlink) | `boolean` | `false` | Shows or hides hyperlinks in summary cells. |
+| [`HeaderText`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_HeaderText) | `string` | `''` | Shows hyperlinks for cells whose header text matches the specified value. |
+| [`ConditionalSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html) | `List<PivotViewConditionalSettings>` | `null` | Shows hyperlinks for cells whose values match the specified conditions. |
+| [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_CssClass) | `string` | `''` | Applies a custom CSS class to hyperlink elements for user-defined styling. |
 
 <!-- markdownlint-disable MD028 -->
 N> By default, the hyperlink options are disabled for all cells in the Pivot Table.
 
-N> User defined style can be applied to hyperlink using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_CssClass) property in [PivotViewHyperlinkSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class.
+N> User defined style can be applied to hyperlink using [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_CssClass) property in [`PivotViewHyperlinkSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class.
 
 ## Hyperlink for all cells
 
-The Pivot Table provides an option to display hyperlinks across **all cells** currently visible in the table. To enable this functionality, set the [ShowHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowHyperlink) property to **true** within the [PivotViewHyperlinkSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html).
+The pivot table provides an option to display hyperlinks for **all cells** in the table. To enable this functionality, set the [`ShowHyperlink`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowHyperlink) property to **true** within the [`PivotViewHyperlinkSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class.
 
-Once enabled, hyperlinks will be shown consistently in row headers, column headers, value cells, and summary cells.
+N> **Prerequisite:** The Pivot Table must have at least one row, column, and value field configured so that all cell types render with content.
+
+Once enabled, hyperlinks are shown consistently in row headers, column headers, value cells, and summary cells.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -90,7 +95,7 @@ Once enabled, hyperlinks will be shown consistently in row headers, column heade
 
 ## Hyperlink for row headers
 
-The Pivot Table provides a way to display hyperlinks specifically in **row header cells** that are currently visible. To enable this functionality, set the [ShowRowHeaderHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowRowHeaderHyperlink) property to **true** within the [PivotViewHyperlinkSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html). This ensures that only the row headers will display hyperlinks, while other cell types remain unaffected.
+The pivot table provides a way to display hyperlinks specifically in **row header cells** that are currently visible. To enable this functionality, set the [`ShowRowHeaderHyperlink`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowRowHeaderHyperlink) property to **true** within the [`PivotViewHyperlinkSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html). This ensures that only the row headers will display hyperlinks, while other cell types remain unaffected.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -139,7 +144,7 @@ The Pivot Table provides a way to display hyperlinks specifically in **row heade
 
 ## Hyperlink for column headers
 
-The Pivot Table provides an option to display hyperlinks specifically in column header cells that are currently visible. To enable this functionality, set the [ShowColumnHeaderHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowColumnHeaderHyperlink) property to **true** within the [PivotViewHyperlinkSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class. This ensures that only the column headers will display hyperlinks, while other cell types remain unaffected.
+The pivot table provides an option to display hyperlinks specifically in column header cells that are currently visible. To enable this functionality, set the [`ShowColumnHeaderHyperlink`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowColumnHeaderHyperlink) property to **true** within the [`PivotViewHyperlinkSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class. This ensures that only the column headers will display hyperlinks, while other cell types remain unaffected.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -188,7 +193,7 @@ The Pivot Table provides an option to display hyperlinks specifically in column 
 
 ## Hyperlink for value cells
 
-The Pivot Table provides support for displaying hyperlinks specifically in value cells that are currently visible. To enable this option, set the [ShowValueCellHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowValueCellHyperlink) property to **true** within the [PivotViewHyperlinkSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class. This ensures that only the value cells will display hyperlinks, while other cell types remain unaffected.
+The pivot table provides support for displaying hyperlinks specifically in value cells that are currently visible. To enable this option, set the [`ShowValueCellHyperlink`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowValueCellHyperlink) property to **true** within the [`PivotViewHyperlinkSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class. This ensures that only the value cells will display hyperlinks, while other cell types remain unaffected.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -237,7 +242,7 @@ The Pivot Table provides support for displaying hyperlinks specifically in value
 
 ## Hyperlink for summary cells
 
-The Pivot Table provides support for displaying hyperlinks specifically in summary cells that are currently visible. To enable this option, set the [ShowSummaryCellHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowSummaryCellHyperlink) property to **true** within the [PivotViewHyperlinkSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class. This ensures that only the summary cells will display hyperlinks, while other cell types remain unaffected.
+The pivot table provides support for displaying hyperlinks specifically in summary cells that are currently visible. To enable this option, set the [`ShowSummaryCellHyperlink`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowSummaryCellHyperlink) property to **true** within the [`PivotViewHyperlinkSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class. This ensures that only the summary cells will display hyperlinks, while other cell types remain unaffected.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -284,16 +289,26 @@ The Pivot Table provides support for displaying hyperlinks specifically in summa
 
 ![Hyperlink in Blazor PivotTable Summary Cells](images/blazor-pivottable-hyperlink-in-summary-cells.webp)
 
-## Condition based hyperlink
+## Condition-based hyperlink
 
-The Pivot Table supports displaying hyperlinks in specific cells based on defined conditions. This functionality can be configured through code-behind during initial rendering using the [PivotViewConditionalSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html) class.
+The pivot table supports displaying hyperlinks in specific cells based on defined conditions. This functionality can be configured through code-behind during initial rendering using the [`PivotViewConditionalSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html) class.
 
-* [Measure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalSetting_Measure): Specifies the value field name for which the hyperlink should be shown when the condition is met.
-* [Conditions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalSetting_Conditions): Specifies the operator type such as [Condition.Equals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Condition.html), [Condition.GreaterThan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Condition.html), [Condition.LessThan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Condition.html), etc.
-* [Value1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalSetting_Value1): Sets the starting value for the condition.
-* [Value2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalSetting_Value2): Sets the ending value for the condition (used in range-based comparisons).
+* [Measure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalSetting_Measure) (`string`): Specifies the value field name for which the hyperlink should be shown when the condition is met.
+* [Conditions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalSetting_Conditions) (`Condition`): Specifies the operator type. The supported operators include:
+    * `Condition.Equals`
+    * `Condition.NotEquals`
+    * `Condition.GreaterThan`
+    * `Condition.GreaterThanOrEqualTo`
+    * `Condition.LessThan`
+    * `Condition.LessThanOrEqualTo`
+    * `Condition.Between` (uses both `Value1` and `Value2`)
+    * `Condition.NotBetween` (uses both `Value1` and `Value2`)
+* [Value1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalSetting_Value1) (`double`): Sets the starting (or only) value for the condition.
+* [Value2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalSetting_Value2) (`double`): Sets the ending value for range-based comparisons (`Condition.Between`, `Condition.NotBetween`). Ignored for other operators.
 
-In the example below, the Pivot Table is configured to display hyperlinks only in cells where the "Units Sold" field value is between **100** and **200**. This highlights specific aggregated values that meet the given condition.
+> **URL source:** The hyperlink target for condition-based cells is taken from a column on the data source whose name matches the value field defined in `Measure`. If your data source does not contain such a column, the cell is rendered as plain text.
+
+In the example below, the pivot table is configured to display hyperlinks only in cells where the "Units Sold" field value is between **100** and **200**. This highlights specific aggregated values that meet the given condition.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -346,9 +361,9 @@ In the example below, the Pivot Table is configured to display hyperlinks only i
 
 ## Header based hyperlink
 
-The Pivot Table supports displaying hyperlinks in cells based on specific row or column headers. This functionality can be enabled using the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_HeaderText) property, which is configured through code-behind during initial rendering.
+The Pivot Table supports displaying hyperlinks in cells based on specific row or column headers. This functionality can be enabled using the [`HeaderText`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_HeaderText) property, which is configured through code-behind during initial rendering.
 
-In the below code example, the value **FY 2015** is assigned to [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_HeaderText), which means the Pivot Table will show hyperlinks only in cells that match this specific header combination.
+In the below code example, the value **FY 2015** is assigned to [`HeaderText`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_HeaderText), which means the Pivot Table will show hyperlinks only in cells that match this specific header combination.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -397,16 +412,16 @@ In the below code example, the value **FY 2015** is assigned to [HeaderText](htt
 
 ## Event
 
-The Pivot Table triggers the [`HyperlinkCellClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_HyperlinkCellClicked) event whenever a hyperlink cell is clicked. This event allows you to either customize the clicked cell or retrieve information about it.
+The pivot table triggers the [`HyperlinkCellClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_HyperlinkCellClicked) event whenever a hyperlink cell is clicked. This event allows you to either customize the clicked cell or retrieve information about it.
 
-It provides two parameters:
+It provides the following parameters:
 
-* [`CurrentCell`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_CurrentCell): Refers to the clicked cell element, which can be modified as needed.
-* [`Cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_Cancel): If set to **true**, prevents any changes from being applied to the cell.
-* [`Data`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_Data): Contains detailed information about the clicked cell, including its value, row and column headers, position, and whether it’s a summary cell.
-* [`NativeEvent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_NativeEvent): Represents the original browser event triggered by the click, useful for advanced event handling.
+* [`CurrentCell`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_CurrentCell) (`DOM`): Refers to the clicked cell element, which can be modified as needed.
+* [`Cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_Cancel) (`boolean`): If set to **true**, prevents athe default click behavior from running (for example, navigation). Set to **false** to let the click proceed normally and your custom code run in addition.
+* [`Data`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_Data) (`object`): Contains detailed information about the clicked cell, including its value, row and column headers, position, and whether it is a summary cell.
+* [`NativeEvent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_NativeEvent) (`object`): Represents the original browser event triggered by the click, useful for advanced event handling.
 
-In the example below, when a hyperlink cell is clicked, the cell is checked to determine if it is a row header. If it is a row header (e.g., 'France'), the user is redirected to the corresponding Wikipedia page (e.g., 'https://en.wikipedia.org/wiki/France'). If the clicked cell is a column header, value cell, or summary cell, the user is redirected to 'https://syncfusion.com/'. The [`Cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_Cancel) property is set to **false** to enable this interaction.
+In the example below, when a hyperlink cell is clicked, the cell is checked to determine if it is a row header. If it is a row header (e.g., 'France'), the user is redirected to the corresponding Wikipedia page (e.g., 'https://en.wikipedia.org/wiki/France'). If the clicked cell is a column header, value cell, or summary cell, the user is redirected to 'https://syncfusion.com/'. The [`Cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.HyperCellClickEventArgs.html#Syncfusion_Blazor_PivotView_HyperCellClickEventArgs_Cancel) property is set to **false** to allow this interaction.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView

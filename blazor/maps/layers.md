@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Layers in Blazor Maps Component | Syncfusion®
-description: Check out and learn the features and how to configure layers in the Blazor Maps component and much more details.
+title: Blazor Maps Layers Support | Syncfusion®
+description: Learn how to stack multiple shape files and tile providers in Blazor Maps using main layers, sublayers, and BaseLayerIndex.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Layers in Blazor Maps Component
+# Blazor Maps Layers Support
 
 The Maps component is rendered through [MapsLayers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayers.html), and any number of layers can be added to Maps.
 
@@ -77,7 +77,7 @@ Custom shapes (also known as custom maps) can be rendered in Maps to represent b
 
 Refer to the sample GeoJSON file for bus seat selection: [Seat selection GeoJSON](https://cdn.syncfusion.com/maps/map-data/seat.json).
 
-For a live demonstration, see [Bus seat selection demo](https://blazor.syncfusion.com/demos/maps/bus-seat-selection?theme=bootstrap5).
+For a live demonstration, see [Bus seat selection demo](https://blazor.syncfusion.com/demos/maps/bus-seat-selection?theme=fluent2).
 
 ## See also
 

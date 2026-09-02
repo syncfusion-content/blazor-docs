@@ -1,23 +1,25 @@
 ---
 layout: post
-title: Positioning in Blazor AppBar Component | Syncfusion®
-description: Check out and learn about Positioning in the Blazor AppBar component in the Blazor Server App and the Blazor WebAssembly App.
+title: Position in Blazor AppBar | Syncfusion®
+description: Place the Blazor AppBar at the Top, Bottom, or as a Sticky element using the Position and IsSticky properties for fixed or scrolling layouts.
 platform: Blazor
 control: AppBar
 documentation: ug
 ---
 
-# Positioning in Blazor AppBar Component
+# Position in Blazor AppBar
 
-The position of the AppBar can be set using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position) and [IsSticky](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_IsSticky) property. The AppBar provides the following options for setting its position:
+The position of the Blazor AppBar can be set using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position) and [IsSticky](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_IsSticky) properties. By default, the `Position` property is set to `AppBarPosition.Top` and the `IsSticky` property is set to `false`. The AppBar provides the following options for setting its position:
 
 * Top AppBar
 * Bottom AppBar
 * Sticky AppBar
 
-### Top AppBar
+N> For the Sticky AppBar to behave as expected during scrolling, the parent container must be a scrollable element (for example, with `overflow-y: scroll`) and use `position: relative`.
 
-The top AppBar is the default one in which it positions the AppBar at the top of the content.
+## Top AppBar
+
+The top AppBar is the default position, displaying the AppBar at the top of the content.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -60,7 +62,7 @@ The top AppBar is the default one in which it positions the AppBar at the top of
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjVHXHMWVctxDwjJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Top Position](./images/top_appbar.webp)" %}
 
-### Bottom AppBar
+## Bottom AppBar
 
 This position can be set to the AppBar by setting `AppBarPosition.Bottom` to the property [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position). The bottom AppBar positions the AppBar at the bottom of the content.
 
@@ -105,7 +107,7 @@ This position can be set to the AppBar by setting `AppBarPosition.Bottom` to the
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXrxNRWWVcDasDHw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Bottom Position](./images/bottom_appbar.webp)" %}
 
-### Sticky AppBar
+## Sticky AppBar
 
 This position can be set to the AppBar by setting `true` to the property [IsSticky](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_IsSticky). AppBar will be sticky while scrolling the AppBar content.
 
@@ -149,3 +151,10 @@ This position can be set to the AppBar by setting `true` to the property [IsStic
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtVHXHCChwMUKDJV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Sticky Position](./images/sticky_appbar.webp)" %}
+
+## See Also
+
+* [Getting Started with Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/getting-started)
+* [Designing the User Interface in Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/design)
+* [Styles and Appearances in Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/style-and-appearance)
+* [Accessibility in Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/accessibility)

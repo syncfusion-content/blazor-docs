@@ -1,19 +1,23 @@
 ---
 layout: post
-title: Icons and submenu Items in Blazor Menu Bar Component | Syncfusion®
-description: Checkout and learn here all about icons and submenu items in Blazor Menu Bar component and much more details.
+title: Icons and Submenu Items in Blazor Menu Bar | Syncfusion
+description: Add icons to Blazor Menu Bar items and submenus using IconCss for clear visual representation of actions.
 platform: Blazor
 control: Menu Bar 
 documentation: ug
 ---
 
-# Icons and submenu Items in Blazor Menu Bar Component
+# Icons and Submenu Items in Blazor Menu Bar
 
 ## Icons
 
-The menu item contains an icon/image in it to provide a visual representation of an action. To place the icon on a menu item, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_IconCss) property with the required icon CSS. By default, the icon is positioned at the left of the menu item. In the following sample, the icons of `File` and `Edit` menu items and `Open`, `Save`, `Cut`, `Copy`,and `Paste` sub menu items are added using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_IconCss) property.
+A menu item can show an icon to provide a visual representation of its action. To place an icon on a menu item, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_IconCss) property with the required icon CSS. By default, the icon is positioned at the left of the menu item. 
+
+In the following sample, the icons of `File` and `Edit` menu items and the `Open`, `Save`, `Cut`, `Copy`, and `Paste` submenu items are added using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_IconCss) property. The `<MenuItem Separator="true">` element renders a horizontal divider between sibling items.
 
 ```cshtml
+@using Syncfusion.Blazor.Navigations
+
 <SfMenu TValue="MenuItem">
     <MenuItems>
         <MenuItem Text="File" IconCss="e-icons e-file">
@@ -92,11 +96,11 @@ The menu item contains an icon/image in it to provide a visual representation of
 </style>
 ```
 
-![Blazor MenuBar with Icons](./images/blazor-menubar-icons.webp)
+![Blazor Menu Bar with Icons](./images/blazor-menubar-icons.webp)
 
 ## Navigation
 
-Navigation in Menu Bar is used to navigate to the other web page when a Menu Bar item is clicked. It can be achieved by providing a link to the Menu Bar item using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Url) property. In the following sample, the Navigation URL is added to sub menu Bar items using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Url) property.
+Navigation in Blazor Menu Bar is used to navigate to the other web page when a Blazor Menu Bar item is clicked. It can be achieved by providing a link to the Blazor Menu Bar item using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Url) property. In the following sample, the Navigation URL is added to sub menu Bar items using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Url) property.
 
 ```cshtml
 
@@ -131,11 +135,11 @@ Navigation in Menu Bar is used to navigate to the other web page when a Menu Bar
 </SfMenu>
 ```
 
-![Navigation in Blazor MenuBar](./images/blazor-menubar-navigation.webp)
+![Navigation in Blazor Menu Bar](./images/blazor-menubar-navigation.webp)
 
 ## Multilevel nesting
 
-The Menu Bar supports multiple level nesting, and it can be achieved by mapping the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Items) property inside the parent `MenuItems`.
+The Blazor Menu Bar supports multiple level nesting, and it can be achieved by mapping the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Items) property inside the parent `MenuItems`.
 
 ```cshtml
 
@@ -204,4 +208,4 @@ The Menu Bar supports multiple level nesting, and it can be achieved by mapping 
 </SfMenu>
 ```
 
-![Blazor MenuBar with Multilevel Nesting](./images/blazor-menubar-multilevel-nesting.webp)
+![Blazor Menu Bar with Multilevel Nesting](./images/blazor-menubar-multilevel-nesting.webp)

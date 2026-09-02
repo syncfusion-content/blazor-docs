@@ -13,7 +13,7 @@ The Blazor Stepper allows you to add steps using the [StepperStep](https://help.
 
 ## Adding steps
 
-You can define the icon and text content for each step using the `IconCss`, `Text` and `Label` properties.
+You can define the icon and text content for each step using the `IconCss`, `Text`, and `Label` properties.
 
 ### Defining icon CSS
 
@@ -101,7 +101,7 @@ You can define text instead of an icon by setting the [Text](https://help.syncfu
 
 ## Optional steps
 
-You can show whether the step is optional or not by using [Optional](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Optional) property. By default, the `Optional` property is false.
+You can indicate an optional step by setting the [Optional](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Optional) property to `true`. By default, the value is `false`.
 
 ```cshtml
 
@@ -111,7 +111,7 @@ You can show whether the step is optional or not by using [Optional](https://hel
     <StepperSteps>
         <StepperStep IconCss="sf-icon-cart"></StepperStep>        
         <StepperStep IconCss="sf-icon-transport"></StepperStep>
-        <StepperStep IconCss="sf-icon-payment" Optional=true></StepperStep>
+        <StepperStep IconCss="sf-icon-payment" Optional="true"></StepperStep>
         <StepperStep IconCss="sf-icon-success"></StepperStep>
     </StepperSteps>
 </SfStepper>
@@ -158,7 +158,7 @@ You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
     <StepperSteps>
         <StepperStep IconCss="sf-icon-cart"></StepperStep>        
         <StepperStep IconCss="sf-icon-transport"></StepperStep>
-        <StepperStep IconCss="sf-icon-payment" Disabled=true></StepperStep>
+        <StepperStep IconCss="sf-icon-payment" Disabled="true"></StepperStep>
         <StepperStep IconCss="sf-icon-success"></StepperStep>
     </StepperSteps>
 </SfStepper>
@@ -195,7 +195,7 @@ You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ## Setting readonly
 
-You can use [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_ReadOnly) property to disable the user interactions in the stepper.
+You can use the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_ReadOnly) property to disable the user interactions in the Blazor Stepper.
 
 ```cshtml
 
@@ -307,7 +307,6 @@ Each step's progress state can be specified using the [Status](https://help.sync
 </div>
 @code {
     private StepperStep payment;
-    private string statusMap;
     private string content = "Your payment has not started yet";
     private string color;
     public void StepChanged()
@@ -316,7 +315,7 @@ Each step's progress state can be specified using the [Status](https://help.sync
     }
     public void updateStatus(StepperStatus stepStatus)
     {
-        StatusInfo statusMap = new StatusInfo()
+        StatusInfo statusInfo = new StatusInfo()
         {
             NotStarted = new StatusModel() { Text = "Your payment has not started yet", Color = "#e74d4d" },
             InProgress = new StatusModel() { Text = "Processing your payment", Color = "orange" },
@@ -325,18 +324,18 @@ Each step's progress state can be specified using the [Status](https://help.sync
 
         if (stepStatus == StepperStatus.NotStarted)
         {
-            content = statusMap.NotStarted.Text;
-            color = statusMap.NotStarted.Color;
+            content = statusInfo.NotStarted.Text;
+            color = statusInfo.NotStarted.Color;
         }
         else if (stepStatus == StepperStatus.InProgress)
         {
-            content = statusMap.InProgress.Text;
-            color = statusMap.InProgress.Color;
+            content = statusInfo.InProgress.Text;
+            color = statusInfo.InProgress.Color;
         }
         else if (stepStatus == StepperStatus.Completed)
         {
-            content = statusMap.Completed.Text;
-            color = statusMap.Completed.Color;
+            content = statusInfo.Completed.Text;
+            color = statusInfo.Completed.Color;
         }
     }
     public class StatusInfo
@@ -414,7 +413,7 @@ You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
         <StepperSteps>
             <StepperStep IconCss="sf-icon-cart" Label="Cart"></StepperStep>
             <StepperStep IconCss="sf-icon-transport" Label="Delivery Address"></StepperStep>
-            <StepperStep IconCss="sf-icon-payment" Label="Payment" CssClass="custom-step" Optional=true></StepperStep>
+            <StepperStep IconCss="sf-icon-payment" Label="Payment" CssClass="custom-step" Optional="true"></StepperStep>
             <StepperStep IconCss="sf-icon-success" Label="Confirmation"></StepperStep>
         </StepperSteps>
     </SfStepper>
@@ -464,6 +463,6 @@ You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ## Step validation
 
-You can set the validation state for each step to displaying a success or error icon by using [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IsValid) property.
+You can set the validation state for each step to display a success or error icon by using the [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IsValid) property.
 
 > To know more about Stepper validation, please refer to the [Validation](./steps-validation#validating-steps) section.

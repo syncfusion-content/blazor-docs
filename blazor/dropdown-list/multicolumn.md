@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Multicolumn in Blazor DropDownList Component | Syncfusion®
-description: Checkout and learn here all about Multicolumn in Blazor DropDown List component and much more details.
+title: Multicolumn in Blazor Dropdown List | Syncfusion®
+description: Render multi-column layouts in Blazor Dropdown List popup using CSS classes and templates for tabular item display.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Multicolumn in Dropdown List 
+# Multicolumn in Blazor Dropdown List 
 
 Render two or more columns in the popup by applying the `e-multi-column` CSS class through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property, and structure the content using templates so items align in a grid-like layout.
 
@@ -26,8 +26,8 @@ Apply built-in text alignment classes to control alignment in each column:
 
 {% endhighlight %}
 
-![Blazor DropDownList with multi-column popup](./images/multicolumn/blazor_dropdown_multicolumn.webp)
+![Blazor Dropdown List with multi-column popup](./images/multicolumn/blazor_dropdown_multicolumn.webp)
 
-## Limitation of multicolumn dropdown list
+## Limitations of the multicolumn dropdown list
 
 The component does not support built-in column filtering or sorting, and the columns are aligned using templates and CSS rather than a data grid feature set.

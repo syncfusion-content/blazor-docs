@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Importing and Exporting in Blazor QueryBuilder Component | Syncfusion®
-description: Checkout and learn here all about importing and exporting in Blazor QueryBuilder component with examples and much more details.
+title: Importing and Exporting in Blazor Query Builder | Syncfusion
+description: Import and export Blazor Query Builder rules in JSON, SQL, or MongoDB formats for persistence, migration, and integration with external systems.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Importing and Exporting in Blazor QueryBuilder Component
+# Importing and Exporting in Blazor Query Builder
 
 Import rules to view or edit predefined conditions from JSON, SQL, or MongoDB query formats, and export the rules built in the Query Builder back to JSON, SQL, or MongoDB queries. These operations map to the Query Builder’s rule model and require that fields and operators used in the imported content exist in the configured columns.
 
@@ -513,7 +513,7 @@ Generate SQL with named parameters using [`GetNamedParameterSql`](https://help.s
 
 ### Exporting to MongoDB Query
 
-Convert the current rules to MongoDB query syntax using [`GetMongoQuery`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetMongoQuery_Syncfusion_Blazor_QueryBuilder_RuleModel_). Ensure date and number formats match expectations of the target database.
+Convert the current rules to MongoDB query syntax using [`GetMongoQuery`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetMongoQuery_Syncfusion_Blazor_QueryBuilder_RuleModel_). Ensure date and number formats match the expectations of the target database.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -565,4 +565,4 @@ Convert the current rules to MongoDB query syntax using [`GetMongoQuery`](https:
 
 ```
 
-N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.
+N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=fluent2) to know how to render and configure the query builder.

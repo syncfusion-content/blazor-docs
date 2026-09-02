@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Style and appearance in Blazor Calendar Component | Syncfusion®
-description: Checkout and learn here all features about Style and appearance in Blazor Calendar component and much more.
+title: Style and Appearance in Blazor Calendar | Syncfusion®
+description: Customize the Blazor Calendar appearance by overriding its default CSS structure to adjust cells, header, navigation, and selected day styles.
 platform: Blazor
 control: Calendar
 documentation: ug
 ---
 
-# Style and appearance in Blazor Calendar Component
+# Style and Appearance in Blazor Calendar
 
-The following content shows the Calendar’s CSS structure that can be overridden to change the component’s appearance based on user preferences. These examples are theme-agnostic overrides; depending on the selected theme, additional selector specificity may be required.
+The following content shows the Blazor Calendar’s CSS structure that can be overridden to change the component’s appearance based on user preferences. These examples are theme-agnostic overrides; depending on the selected theme, additional selector specificity may be required.
 
-## Customizing the background color for the Calendar
+## Customizing the background color for the Blazor Calendar
 
-Use the following CSS to customize the Calendar container’s background color and border. This affects the overall widget surface.
+Use the following CSS to customize the Blazor Calendar container’s background color and border. This affects the overall widget surface.
 
 ```css
 /* To specify background color and border */
@@ -23,9 +23,9 @@ Use the following CSS to customize the Calendar container’s background color a
 }
 ```
 
-## Customizing the Calendar date elements on hovering
+## Customizing the Blazor Calendar date elements on hovering
 
-Use the following CSS to customize day cells on hover and focus states in the Calendar’s month view. This helps emphasize interactive feedback.
+Use the following CSS to customize day cells on hover and focus states in the Blazor Calendar’s month view. This helps emphasize interactive feedback.
 
 ```css
 /* To specify background color, color, and border */
@@ -47,9 +47,9 @@ Use the following CSS to add borders around individual day cells in the month gr
 }
 ```
 
-## Customizing the Calendar title
+## Customizing the Blazor Calendar title
 
-Use the following CSS to style the Calendar title (month/year text) in the header.
+Use the following CSS to style the Blazor Calendar title (month/year text) in the header.
 
 ```css
 /* To specify color and font size  */
@@ -86,7 +86,7 @@ Use the following CSS to customize the Today footer button’s background, text 
 
 ## Customizing the selected date cell grid
 
-Use the following CSS to style the currently selected day cell in the Calendar for stronger visual emphasis.
+Use the following CSS to style the currently selected day cell in the Blazor Calendar for stronger visual emphasis.
 
 ```css
 /* To specify background color and color  */
@@ -96,7 +96,7 @@ Use the following CSS to style the currently selected day cell in the Calendar f
 }
 ```
 
-## Customizing the content header in Calendar
+## Customizing the content header in Blazor Calendar
 
 Use the following CSS to customize the weekday header row above the month grid.
 

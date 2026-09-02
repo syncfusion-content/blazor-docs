@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in Blazor Rating Component | Syncfusion®
-description: Checkout and learn here all about Tooltip with Blazor Rating component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
+title: Tooltip in Blazor Rating | Syncfusion
+description: Show tooltips on Blazor Rating items and control visibility with ShowTooltip for helpful, accessible, context-aware rating feedback.
 platform: Blazor
 control: Rating
 documentation: ug
 ---
 
-# Tooltip in Blazor Rating Component
+# Tooltip in Blazor Rating
 
 The Blazor Rating component provides tooltip support to display additional information for rating items. Set the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ShowTooltip) property to control the visibility of tooltips. By default, this property is set to true, and a tooltip is displayed when the user hovers over a rating item. When set to false, tooltips are disabled and will not be shown for rating items.
 
@@ -31,7 +31,7 @@ Use the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 <SfRating Value=4 ShowTooltip=true>
     <TooltipTemplate>
-        <b>@((context == 1)?"Angry":(context == 2)?"Sad":(context == 3)?"Neutral":(context == 4)?"Good":"Happy")</b>
+        <b>@((context == 1) ? "Angry" : (context == 2) ? "Sad" : (context == 3) ? "Neutral" : (context == 4) ? "Good" : "Happy")</b>
     </TooltipTemplate>
 </SfRating>
 
@@ -41,9 +41,9 @@ Use the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## Tooltip customization
 
-Customize the appearance of tooltips by assigning a custom CSS class using the `CssClass` property on the Blazor Rating component and writing styles scoped to that class. The class is applied to the component’s root element, which lets you target the nested tooltip elements without affecting other tooltips.
+Use the `CssClass` property on the Blazor Rating component and write styles scoped to that class to customize the tooltip. The class is applied to the component's root element, so you can target the nested tooltip elements without affecting other tooltips on the page.
 
-N> For more details on styling options, refer to the [tooltip customization](https://blazor.syncfusion.com/documentation/tooltip/style) documentation. For accessibility, ensure tooltip text is concise, meaningful, and readable. Tooltips should supplement visible information.
+> For more details on styling options, refer to the [Tooltip styling documentation](https://blazor.syncfusion.com/documentation/tooltip/style). For accessibility, ensure tooltip text is concise, meaningful, and readable; tooltips should supplement visible information rather than replace it.
 
 ```cshtml
 
@@ -60,7 +60,7 @@ N> For more details on styling options, refer to the [tooltip customization](htt
 
     /* To change the size of the tooltip content. */
     .customtooltip .e-tooltip-wrap .e-tip-content {
-        font-size:14px;
+        font-size: 14px;
     }
 
     /* To change the border color and width for tooltip. */

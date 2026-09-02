@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Image and Divider in Blazor Card Component | Syncfusion®
-description: Checkout and learn here all features about Image and Divider in Blazor Card component and much more details.
+title: Image and Divider in Blazor Card | Syncfusion®
+description: Add an image and a divider to the Blazor Card using the CardImage and CardImage with Separator, to compose richer card layouts.
 platform: Blazor
 control: Card
 documentation: ug
@@ -13,22 +13,29 @@ documentation: ug
 
 ## Images
 
-The Card supports to include images within the elements, you can add image as direct element anywhere inside card root by adding the `CardImage` component . Using the class defined, you can write CSS styles to load images to that element.
+The [Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card) component supports including images within its elements. You can add an image as a direct element anywhere inside the card root by using the `CardImage` component. Using the class defined, you can write CSS styles to load images into that element.
 
-N> By default, card images occupies full width of its parent element.
+N> By default, card images occupy the full width of their parent element.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
 
-<SfCard>
-    <CardImage/>
+<SfCard ID="Steven" >
+    <CardImage Image="https://cdn.syncfusion.com/blazor/images/cards/steven.png" />
 </SfCard>
+
+<style>
+    #Steven .e-card-image {
+        height: 300px;
+        width: 300px;
+    }
+</style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrRtHsLrOnTFpDk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBdtPBITswbBYmi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Title
 
-Card image is supported to include a `Title` property for the image. By default, Title is placed over the image on left-bottom position with overlay.
+The `CardImage` component supports a `Title` property to display a title over the image. By default, the title is placed over the image on the left-bottom position with an overlay.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
@@ -46,7 +53,7 @@ Card image is supported to include a `Title` property for the image. By default,
 
 ## Divider
 
-Divider used to separate the elements inside the card. You can add divider inside the card elements to separate it. Set `EnableSeparator` property to `true` in card content for adding a divider.
+A divider is used to separate elements inside the card. You can add a divider inside card content by setting the `EnableSeparator` property to `true`.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
@@ -69,3 +76,10 @@ Divider used to separate the elements inside the card. You can add divider insid
 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBRZdMhVamtbNWR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+## See also
+
+* [Style and Appearance in Blazor Card](style.md)
+* [Header and Content in Blazor Card](header-content.md)
+* [Action Buttons in Blazor Card](action-buttons.md)
+* [Horizontal Card in Blazor Card](horizontal.md)

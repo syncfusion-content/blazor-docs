@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Events in Blazor Accordion Component | Syncfusion®
-description: Checkout and learn here all features about handling Accordion events in Blazor Accordion components.
+title: Events in Blazor Accordion | Syncfusion®
+description: Handle Blazor Accordion actions through events such as Expanding, Expanded, Collapsing, and Collapsed using the AccordionEvents component inside SfAccordion.
 platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
-# Events in Blazor Accordion Component
+# Events in Blazor Accordion
 
-This section lists the events available in the Blazor Accordion and when they are triggered for various Accordion actions.
+This section lists the events raised by the [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) and when each is triggered.
 
-Events are assigned to the Accordion by using a single `<AccordionEvents>` component inside `<SfAccordion>`.
+Configure events by adding an `<AccordionEvents>` child component to `<SfAccordion>`. 
 
 N> All events should be configured within a single **AccordionEvents** component.
 
 ## Created
 
-The [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Created) event is triggered once the Accordion component has been successfully created and rendered.
+The [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Created) event is triggered once the Blazor Accordion component has been successfully created and rendered.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -43,7 +43,7 @@ The [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigati
 
 ## Destroyed
 
-[`Destroyed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Destroyed) event triggers when the Accordion is destroyed.
+[`Destroyed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Destroyed) event triggers when the Blazor Accordion is destroyed.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -191,3 +191,12 @@ The [`Collapsed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Naviga
     }
 }
 ```
+
+## See also
+
+* [Getting Started with Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/getting-started)
+* [Expand Mode in Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/expand-mode)
+* [Data Binding in Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/data-binding)
+* [Content Render Mode in Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/content-render-mode)
+* [AccordionEvents API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html)
+* [SfAccordion API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html)

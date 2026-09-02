@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Change Submenu Position in Blazor Menu Bar | Syncfusion®
-description: Checkout and learn about Change Submenu Position in Blazor Menu Bar component and much more details.
+title: How to change submenu position in Blazor Menu Bar | Syncfusion
+description: Customize Blazor Menu Bar submenu position by setting Top and Left values in the OnOpen event handler today.
 platform: Blazor
 control: Menu Bar 
 documentation: ug
 ---
 
-# Change SubMenu Position
+# How to change submenu position in Blazor Menu Bar
 
-The submenu position can be changed by using the [`OnOpen`](https://blazor.syncfusion.com/documentation/menu-bar/menu-events#onopen) event. Assign the `Top` and `Left` position where you want to open the submenu.
+The submenu position can be changed by using the [`OnOpen`](https://blazor.syncfusion.com/documentation/menu-bar/menu-events#onopen) event. Assign the `Top` and `Left` position where you want to open the submenu. The `OnOpen` event is wired through the `MenuEvents` component, which receives a `BeforeOpenCloseMenuEventArgs<TValue>` that exposes the `Top` and `Left` properties of the opening submenu.
 
-In the below sample, the sub menu opens above the parent menu item
+In the below sample, the submenu opens at a custom `Top` and `Left` position relative to the parent menu item.
 
 ```cshtml
 
@@ -36,7 +36,7 @@ In the below sample, the sub menu opens above the parent menu item
         <MenuItem Text="View">
             <MenuItems>
                 <MenuItem Text="Toolbars"></MenuItem>
-                <MenuItem Text="Zoomr"></MenuItem>
+                <MenuItem Text="Zoom"></MenuItem>
                 <MenuItem Text="Full Screen"></MenuItem>
             </MenuItems>
         </MenuItem>
@@ -57,37 +57,31 @@ In the below sample, the sub menu opens above the parent menu item
 
     public void Open(BeforeOpenCloseMenuEventArgs<MenuItem> args)
     {
-        if (args.ParentItem.Text == "File")
+        if (args.ParentItem == null)
         {
-            args.Left = 390;
-            args.Top = 40;
+            return;
         }
-        if (args.ParentItem.Text == "Edit")
+        args.Top = 40;
+        switch (args.ParentItem.Text)
         {
-            args.Left = 455;
-            args.Top = 40;
-        }
-        if (args.ParentItem.Text == "View")
-        {
-            args.Left = 520;
-            args.Top = 40;
-        }
-        if (args.ParentItem.Text == "Tools")
-        {
-            args.Left = 585;
-            args.Top = 40;
+            case "File":
+                args.Left = 390;
+                break;
+            case "Edit":
+                args.Left = 455;
+                break;
+            case "View":
+                args.Left = 520;
+                break;
+            case "Tools":
+                args.Left = 585;
+                break;
         }
     }
 }
-
-<style>
-    #element {
-        margin: 25% 5px 20px 30%;
-    }
-</style>
 
 ```
 
 Output be like
 
-![Menu Sample](./../images/menu-position.png)
+![Blazor Menu Bar Sample](./../images/menu-position.png)

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Accessibility in Blazor Breadcrumb Component | Syncfusion®
-description: Checkout and learn here all about features Accessibility in Blazor Breadcrumb component and much more.
+title: Accessibility in Blazor Breadcrumb | Syncfusion®
+description: Learn how Blazor Breadcrumb meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA roles, keyboard navigation, and screen reader support.
 platform: Blazor
-control: Button
+control: Breadcrumb
 documentation: ug
 ---
 
-# Accessibility in Blazor Breadcrumb component
+# Accessibility in Blazor Breadcrumb
 
-The Blazor Breadcrumb component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Breadcrumb component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor Breadcrumb component is outlined below.
 
@@ -38,23 +38,39 @@ The accessibility compliance for the Blazor Breadcrumb component is outlined bel
 
 ## WAI-ARIA attributes
 
-The Blazor Breadcrumb component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Breadcrumb component:
+The Blazor Breadcrumb component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/) patterns to meet accessibility standards. The following ARIA attributes are used in the Blazor Breadcrumb component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `aria-label` | Indicates the breadcrumb item text. |
-| `aria-disabled` | Indicates the state of breadcrumb item whether it is disabled. |
+| `role="navigation"` | Identifies the Blazor Breadcrumb as a navigation landmark. |
+| `aria-label` | Provides an accessible name for the Blazor breadcrumb item. |
+| `aria-disabled` | Indicates whether the Blazor breadcrumb item is disabled. |
+| `aria-current="page"` | Identifies the Blazor breadcrumb item that represents the current page. |
+
+The following example shows how to set accessibility attributes on the Blazor Breadcrumb component:
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<SfBreadcrumb EnableNavigation="false" AriaLabel="Breadcrumb">
+    <BreadcrumbItems>
+        <BreadcrumbItem Text="Home" Url="https://www.syncfusion.com"></BreadcrumbItem>
+        <BreadcrumbItem Text="Components" Url="https://www.syncfusion.com/blazor-components"></BreadcrumbItem>
+        <BreadcrumbItem Text="Breadcrumb" Disabled="true"></BreadcrumbItem>
+    </BreadcrumbItems>
+</SfBreadcrumb>
+```
 
 ## Keyboard interaction
 
-The Blazor Breadcrumb component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Breadcrumb component.
+The Blazor Breadcrumb component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Breadcrumb component.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Navigate to the next item and also next item in the popup of menu type overflow. |
-| <kbd>Shift + Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Navigate to the previous item also previous item in the popup of menu type overflow. |
-| <kbd>Enter</kbd> key in normal mode | <kbd>Enter</kbd> key in normal mode | Select the breadcrumb item. |
-| <kbd>Enter</kbd> key in normal mode | <kbd>Enter</kbd> key in normal mode | To open the popup of menu type overflow mode when you press enter on collapsed button and It will expand the items of collapsed type overflow mode when you press enter on collapsed button. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Navigate to the next item, and to the next item in the popup of the menu-type overflow. |
+| <kbd>Shift + Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Navigate to the previous item, and to the previous item in the popup of the menu-type overflow. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Select the breadcrumb item. |
+| <kbd>Enter</kbd> on the collapsed button (overflow mode) | <kbd>Enter</kbd> on the collapsed button (overflow mode) | Open the popup when overflow mode is set to menu; expand the items when overflow mode is set to collapsed. |
 
 ## Ensuring accessibility
 
@@ -66,4 +82,5 @@ The accessibility compliance of the Blazor Breadcrumb component is shown in the 
 
 ## See also
 
+* [Getting started with Blazor Breadcrumb](https://blazor.syncfusion.com/documentation/breadcrumb/getting-started)
 * [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

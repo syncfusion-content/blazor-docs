@@ -1,41 +1,39 @@
 ---
 layout: post
-title: Customize the thumb in Blazor Range Slider Component | Syncfusion®
-description: Checkout and learn here all about how to customize the thumb in Blazor Range Slider component with examples and much more details.
+title: How to customize the thumb in Blazor Range Slider | Syncfusion
+description: Customize Blazor Range Slider thumb shape, size, and image using CSS overrides and properties to create unique, accessible slider handles.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Customize the thumb in Blazor Range Slider Component
+# How to customize the thumb in Blazor Range Slider
 
 The slider’s appearance can be customized with CSS. By overriding the slider CSS classes, the thumb can be restyled. The slider thumb uses the `e-handle` class by default. Override this class to create different shapes or apply custom images. In the following example, the slider thumb is customized as square, circle, and oval shapes, and a background image is also applied.
-
 ```cshtml
 @using Syncfusion.Blazor.Inputs;
-@using Syncfusion.Blazor.Buttons;
 
 <div class="col-lg-12 control-section">
     <div class="control-wrapper">
         <div class="slider-content-wrapper">
             <div class="slider_container">
                 <div class="labelText slider-userselect">Square</div>
-                <SfSlider Value="30" ID="square_slider">
+                <SfSlider TValue="int" Value="30" ID="square_slider">
                 </SfSlider>
             </div>
             <div class="slider_container">
                 <div class="labelText slider-userselect">Circle</div>
-                <SfSlider Value="30" ID="circle_slider">
+                <SfSlider TValue="int" Value="30" ID="circle_slider">
                 </SfSlider>
             </div>
             <div class="slider_container">
                 <div class="labelText slider-userselect">Oval</div>
-                <SfSlider Value="30" ID="oval_slider">
+                <SfSlider TValue="int" Value="30" ID="oval_slider">
                 </SfSlider>
             </div>
             <div class="slider_container">
                 <div class="labelText slider-userselect">Custom image</div>
-                <SfSlider Value="30" ID="image_slider">
+                <SfSlider TValue="int" Value="30" ID="image_slider">
                     <SliderTicks Placement="@Placement.After" LargeStep="10" SmallStep="5" ShowSmallTicks="true"></SliderTicks>
                 </SfSlider>
             </div>

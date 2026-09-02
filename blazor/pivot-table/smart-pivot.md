@@ -1,18 +1,19 @@
 ---
 layout: post
-title: AI-Powered Smart Pivot Table in Blazor | Syncfusion®
-description: Learn how to use Blazor Pivot Table with AI services for smart data aggregation and predictive modeling.
+title: AI-Powered Smart Pivot Table in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table works with AI AssistView to apply validated natural-language actions that change exactly one report setting at a time.
 platform: Blazor
 control: AI Integration
 documentation: ug
 keywords: Blazor Pivot Table, Blazor AI, Smart Data Aggregation, Predictive Modeling and Adaptive Filtering
 ---
 
-# Building an AI-Powered Smart Pivot Table in Blazor
+# AI-Powered Smart Pivot Table in Blazor Pivot Table
 
-The Blazor Pivot Table can be enhanced with AI-driven features by using the [**Syncfusion.Blazor.AI**](https://www.nuget.org/packages/Syncfusion.Blazor.AI) NuGet package. This guide helps you add AI features to your Pivot Table, including Smart Data Aggregation, Predictive Modeling, and Adaptive Filtering. You can use different AI services such as OpenAI, Azure OpenAI, or Ollama. With these features, you can interact with the Pivot Table in a smarter way to understand your data better.
+The Blazor Pivot Table can be enhanced with AI-driven features by using the [**Syncfusion.Blazor.AI**](https://www.nuget.org/packages/Syncfusion.Blazor.AI) NuGet package. This guide explains how to add AI capabilities to your Pivot Table, including Smart Data Aggregation, Predictive Modeling, and Adaptive Filtering. You can integrate different AI services such as OpenAI, Azure OpenAI, or Ollama to interact with the Pivot Table using natural-language actions.
 
 In this guide
+- Create a Blazor Web App
 - Prerequisites
 - Add Stylesheet and Script Resources
 - Configure your AI service (OpenAI, Azure OpenAI, Ollama)
@@ -22,6 +23,7 @@ In this guide
 - Error Handling and Troubleshooting
 - Performance Considerations
 - Sample Code
+- Live Demo
 
 ## Prerequisites
 
@@ -83,7 +85,7 @@ Follow the instructions for your selected service to register the AI model in yo
 
 ### OpenAI
 
-Generate an API key from OpenAI and set `openAIApiKey`. Specify the desired model (e.g., `gpt-3.5-turbo`, `gpt-4`) in `openAIModel`.
+Generate an API key from OpenAI and set `openAIApiKey`. Specify the desired model (for example, `gpt-3.5-turbo` or `gpt-4`) in `openAIModel`.
 
 - Install the required NuGet packages:
 
@@ -121,7 +123,7 @@ var app = builder.Build();
 
 ### Azure OpenAI
 
-Deploy an Azure OpenAI Service resource and model as described in [Microsoft's documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource). Obtain values for `azureOpenAIKey`, `azureOpenAIEndpoint`, and `azureOpenAIModel`.
+Deploy an Azure OpenAI Service resource and model deployment as described in [Microsoft's documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource). Confirm the deployment name matches the value you will assign to `azureOpenAIModel`. Then obtain values for `azureOpenAIKey`, `azureOpenAIEndpoint`, and `azureOpenAIModel` from the Azure portal. The endpoint must use the `https://{resource}.openai.azure.com/` form.
 
 - Install the required NuGet packages:
 
@@ -168,8 +170,8 @@ var app = builder.Build();
 To use self-hosted AI models with Ollama:
 
 1. **Download and install Ollama**: Visit [Ollama's official website](https://ollama.com) and install the application for your operating system.
-2. **Install a model**: Choose a model from the [Ollama Library](https://ollama.com/library) (e.g., `llama2:13b`, `mistral:7b`).
-3. **Configure the application**: Provide the `Endpoint` URL (e.g., `http://localhost:11434`) and `ModelName` (e.g., `llama2:13b`).
+2. **Install a model**: Choose a model from the [Ollama Library](https://ollama.com/library) (for example, `llama2:13b` or `mistral:7b`) and pull it with `ollama pull <model>`.
+3. **Configure the application**: Provide the `Endpoint` URL (for example, `http://localhost:11434`) and `ModelName` (for example, `llama2:13b`). Note that the `OllamaSharp` package version must be compatible with the `Microsoft.Extensions.AI` package version you install.
 
 - Install the required NuGet packages:
 
@@ -203,11 +205,11 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-- **Verify connectivity**: Ensure the Ollama server is running and accessible at the specified endpoint (e.g., `http://localhost:11434`) before starting the application.
+- **Verify connectivity**: Start the Ollama server with `ollama serve` and ensure it is running and accessible at the specified endpoint (for example, `http://localhost:11434`) before starting the application.
 
 ## Register the Blazor service
 
-Add the Blazor service to your **~/Program.cs** file. The configuration depends on your app's **Interactive Render Mode**:
+Register the Syncfusion license key in your **~/Program.cs** file before `AddSyncfusionBlazor()` is called. Add the Blazor service to your **~/Program.cs** file. The configuration depends on your app's **Interactive Render Mode**:
 
 - **Server Mode**: Register the service in the single **~/Program.cs** file.
 - **WebAssembly or Auto Mode**: Register the service in both the server-side **~/Program.cs** and client-side **~/Program.cs** files.
@@ -245,9 +247,11 @@ await builder.Build().RunAsync();
 
 This section shows you how to create a Blazor Pivot Table with AI-driven features. The AI features help you explore your data in new ways:
 
-- **Predictive Modeling**: The AI uses your past data to predict what might happen in the future. You select a year, and the AI shows you what values might look like in that year.
-- **Smart Data Aggregation**: The AI analyzes your data based on what you ask it to do. It automatically adjusts how the data is summarized and calculated to show you the most useful insights.
+- **Predictive Modeling**: The AI uses your past data to predict what might happen in the future. You select a year, and the AI shows predicted values for that year.
+- **Smart Data Aggregation**: The AI analyzes your data based on your request. It automatically adjusts how the data is summarized and calculated to show you the most useful insights.
 - **Adaptive Filtering**: You can apply and modify filters dynamically through the AI Assist dialog UI, allowing the Pivot Table to instantly update and display refined data views.
+
+Before the Razor component can call the AI service, the `AzureAIService` (or the equivalent chat service you choose) must be registered in the DI container and its dependencies (such as `HttpClient` and configuration values) must be available. The full source for the `PivotProductDetails` model and its `GetProductData()` sample data is included in the [Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
 
 The following example shows how to set up these features in your Blazor application:
 
@@ -273,7 +277,7 @@ The following example shows how to set up these features in your Blazor applicat
     <Description>
         <p>
             The <b>Pivot</b>, enhanced with AI, offers features such as <b>Smart Data Aggregation</b>, <b>Predictive Modeling</b>, and <b>Adaptive Filtering</b>. Click the <mark><b>AI Assist</b></mark> option to explore these AI-powered capabilities.
-            Know more <a target="_blank" href="https://github.com/syncfusion/smart-ai-samples/blob/master/blazor/SyncfusionAISamples/Components/Pages/PivotTable/Readme.md">here</a>.
+            Know more in the <a href="https://github.com/syncfusion/smart-ai-samples/blob/master/blazor/SyncfusionAISamples/Components/Pages/PivotTable/Readme.md" target="_blank" rel="noopener noreferrer" aria-label="Read the Syncfusion Pivot Table AI Samples documentation on GitHub">Syncfusion Pivot Table AI Samples documentation </a>.
         </p>
     </Description>
     <div class="pivot-toast">
@@ -335,7 +339,7 @@ The following example shows how to set up these features in your Blazor applicat
             </Content>
         </DialogTemplates>
         <DialogButtons>
-            <DialogButton IsPrimary="true" Content="Submit" OnClick="@OnBtnClick" />
+            <DialogButton IsPrimary="true" Content="Submit" OnClick="@OnButtonClick" />
         </DialogButtons>
     </SfDialog>
 
@@ -589,7 +593,7 @@ namespace SyncfusionAISamples.Components.Pages.PivotTable
             await Dialog.ShowAsync();
         }
 
-        private async Task OnBtnClick()
+        private async Task OnButtonClick()
         {
             await Dialog.HideAsync();
             if (ChoiceSelected[0] == "Predictive Analytics & Modeling")
@@ -804,7 +808,7 @@ A dialog box opens with three options to choose from: **Predictive Modeling**, *
 
 #### Step 2: Select a feature
 
-Pick one of the AI features below and follow the detailed steps for each feature.
+Pick one of the AI features above and follow the detailed steps for each feature.
 
 ##### Predictive Modeling
 
@@ -848,20 +852,21 @@ The Pivot Table automatically updates to show the results based on your AI reque
 
 ## Error Handling and Troubleshooting
 
-If the AI service fails to return a valid response, the Pivot Table shows a toast in the upper-right corner: "Server is busy right now, Please try again". Common issues include:
+If the AI service fails to return a valid response, the Pivot Table shows a toast in the upper-right corner with the message "Server is busy right now, Please try again" (displayed for 5000 ms). The same toast is shown when the AI returns a response that cannot be deserialized into the expected `PivotReport` shape (for example, malformed JSON or missing properties). Common issues include:
 
 - **Invalid API Key or Endpoint**: Verify that the `openAIApiKey`, `azureOpenAIKey`, or Ollama `Endpoint` is correct and the service is accessible.
-- **Model Unavailable**: Ensure the specified `openAIModel`, `azureOpenAIModel`, or `ModelName` is deployed and supported.
+- **Model Unavailable**: Ensure the specified `openAIModel`, `azureOpenAIModel`, or `ModelName` is deployed and supported by your account.
 - **Network Issues**: Check connectivity to the AI service endpoint, especially for self-hosted Ollama instances.
 - **Large Datasets**: Processing large datasets may cause timeouts. Consider batching data or optimizing the prompt for efficiency.
+- **Malformed AI Response**: If the model returns JSON that does not match the expected `PivotReport` schema, the catch block in `OnButtonClick` shows the toast. Re-prompt the model with clearer instructions or reduce the dataset size.
 
 ## Performance Considerations
 
-When handling large datasets, ensure the Ollama server has sufficient resources (CPU/GPU) to process requests efficiently. For datasets exceeding 10,000 records, consider splitting the data into smaller batches to avoid performance bottlenecks. Test the application with your specific dataset to determine optimal performance.
+When handling large datasets, ensure the Ollama server has sufficient resources (CPU/GPU) to process requests efficiently. The full `data` source is serialized into the prompt on every request, so the prompt size grows linearly with the number of records. As a guideline, keep the serialized payload under a few thousand records to stay within model context limits and reduce token cost. Test the application with your specific dataset to determine optimal performance.
 
 ## Sample Code
 
-A complete working example is available in the [Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
+A complete working example is available in the [Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples) under the Blazor Pivot Table sample.
 
 ## Live Demo
 

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Create wizard in Blazor Tabs Component | Syncfusion®
-description: Checkout and learn here all about how to create wizard in Blazor Tabs component and much more details.
+title: How to create wizard in Blazor Tabs | Syncfusion
+description: Build a multi-step wizard using Blazor Tabs with validation, templates, and enabled or disabled steps.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Create wizard in Blazor Tabs Component
+# How to create wizard in Blazor Tabs
 
-Tab items can be disabled during initial control rendering by passing the boolean value and tab index to the [EnableTab](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_EnableTab_System_Int32_System_Boolean_) public method.
+Blazor Tabs items can be disabled during initial control rendering by passing the tab index and a boolean value to the [EnableTabAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_EnableTabAsync_System_Int32_System_Boolean_) public method.
 
 In the below Wizard sample, each tab is integrated with required components to complete the reservation. Each field is provided with validation for all mandatory option to proceed to next tabs. Using tab item's template property the components are added into content.
 
@@ -23,7 +23,7 @@ Create the following contents for each tab in the wizard.
 4. **Payment tab:**
    Calculate the ticket cost and generate data for Grid with passenger details, train number and ticket cost summary.
 
-You can go back on each tab using buttons available in it and tabs are disabled to navigate through tab header click actions.
+You can go back on each tab using buttons available in it and Blazor Tabs are disabled to navigate through tab header click actions.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Styles and Appearances in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all about styles and appearances in Blazor ListBox component and more.
+title: Style and Appearance in Blazor ListBox | Syncfusion
+description: Customize the appearance of Blazor ListBox with CSS classes for containers, items, selection, and toolbars.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Styles and Appearances in Blazor ListBox Component
+# Style and Appearance in Blazor ListBox
 
-To modify the ListBox appearance, override the component’s default CSS. The following table lists key CSS classes and the parts of the ListBox they affect. A custom theme can also be generated using the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+To modify the ListBox appearance, override the component's default CSS. The following table lists key CSS classes and the parts of the ListBox they affect. A custom theme can also be generated using the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
 | CSS Class | Purpose of Class |
 | ----- | ----- |
@@ -23,10 +23,12 @@ To modify the ListBox appearance, override the component’s default CSS. The fo
 
 ## Horizontal ListBox
 
-Use the [CssClass property](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_CssClass) to apply a custom CSS class and display the ListBox horizontally. The sample below applies layout styles via the e-horizontal-listbox class to render items in a single horizontal row.
+Use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_CssClass) property to apply a custom CSS class and display the ListBox horizontally. The following example applies layout styles via the `e-horizontal-listbox` class to render items in a single horizontal row.
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.DropDowns
 
 <div id="listbox-control">
     <h6>Select your favorite car:</h6>
@@ -83,3 +85,9 @@ Use the [CssClass property](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 ![Blazor ListBox displayed horizontally with custom CSS](./images/blazor-horizontal-listbox.webp)
 
 N> [View sample on GitHub](https://github.com/SyncfusionExamples/how-to-set-the-blazor-list-box-items-as-horizontal-list)
+
+## See also
+
+* [Getting Started with Blazor ListBox](./getting-started.md)
+* [Icons and Templates in Blazor ListBox](./icons-and-templates.md)
+* [Selection in Blazor ListBox](./selection.md)

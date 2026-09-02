@@ -1,23 +1,23 @@
 ---
 layout: post
 title: Server Side Engine in Blazor Pivot Table Component | Syncfusion®
-description: Learn how to connect Blazor Pivot Table to a server-side pivot engine for large datasets with examples and much more details.
+description: Learn how the Blazor Pivot Table offloads aggregation, filtering, sorting, and grouping to a server-side engine for processing very large datasets.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-> By default, the Pivot Table processes and displays data using its built‑in engine with the given data source. Alternatively, you can use a server‑side pivot engine to connect external data to the Pivot Table, which is especially useful when working with large datasets. This option is applicable only for relational data sources. The server‑side pivot engine improves rendering performance, particularly in Blazor WebAssembly applications.
+# Server-side pivot engine in Blazor Pivot Table
 
-# Getting Started with the Server-Side Engine in Blazor Pivot Table
+N> By default, the Pivot Table processes and displays data using its built-in engine with the given data source. You can also use a server-side pivot engine to connect external data to the Pivot Table, which is especially useful when working with large datasets. This option is applicable only for relational data sources. The server‑side pivot engine improves rendering performance, particularly in Blazor WebAssembly applications.
 
-This section explains how to use the [Syncfusion.Pivot.Engine](https://www.nuget.org/packages/Syncfusion.Pivot.Engine) assembly in a server-side application. The server-side engine performs operations such as aggregation, filtering, sorting, and grouping on the server. Only the information required for the Pivot Table viewport is sent to the client through a web service (Web API), instead of transferring the entire data source. This approach helps reduce network traffic and improves Pivot Table rendering performance when working with large data sets. It works efficiently with the virtual scrolling option and supports all existing features in the Pivot Table.
+This section explains how to use the Syncfusion<sup style="font-size:70%">&reg;</sup> assembly [Syncfusion.Pivot.Engine](https://www.nuget.org/packages/Syncfusion.Pivot.Engine) assembly in a server-side application. The server-side engine performs operations such as aggregation, filtering, sorting, and grouping on the server. Only the information required for the Pivot Table viewport is sent to the client through a web service (Web API), instead of transferring the entire data source. This approach helps reduce network traffic and improves Pivot Table rendering performance when working with large data sets. It works efficiently with the virtual scrolling option and supports all existing features in the Pivot Table.
 
-## Quick steps to render the Blazor Pivot Table by using the server-side Pivot Engine
+## Quick steps to render the Pivot Table with the server-side engine
 
-### Download and installing Server-side Pivot Engine
+### Download and install the server-side pivot engine
 
-1. Download the ASP.NET Core-based standalone [application](https://github.com/SyncfusionExamples/server-side-pivot-engine-for-blazor-pivot-table) from the GitHub repository. This application includes all necessary files to set up and use the server-side Pivot Engine.
+1. Download the ASP.NET Core-based standalone Pivot Table [application](https://github.com/SyncfusionExamples/server-side-pivot-engine-for-blazor-pivot-table) from the GitHub repository. This application includes all necessary files to set up and use the server-side Pivot Engine.
 
 2. The downloaded **PivotController** application contains the following files to support data communication and processing:
    - **PivotController.cs** in the **Controllers** folder: Handles data communication between the server and the Pivot Table.
@@ -28,7 +28,7 @@ This section explains how to use the [Syncfusion.Pivot.Engine](https://www.nuget
 
 ![Solution Explorer](./images/blazor-pivotcontroller-solution-explorer.webp)
 
-### Connecting Blazor Pivot Table to Server-side Pivot Engine
+### Connecting Pivot Table to Server-side Pivot Engine
 
 This section explains how to connect the Pivot Table to the server-side Pivot Engine to display data efficiently. Follow these steps to set up the connection and configure the Pivot Table using the server-side application created in the previous section.
 
@@ -305,7 +305,7 @@ Then, configure the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr
 
 You can also use JSON data from a remote server in the same way as a local JSON file. Both directly downloadable *.json files and web service URLs are supported. To do this, specify the URL of the remote *.json file in the **GetData** method. The remaining configurations stay the same.
 
-In the server-side application, the CDN link is used to connect the same **sales-analysis.json** file which is already hosted on the server.
+In the server-side application, the CDN link is used to connect the same **sales-analysis.json** file which is already hosted in the Syncfusion<sup style="font-size:70%">&reg;</sup> server.
 
 ```csharp
 public async Task<object> GetData(FetchData param)
@@ -761,7 +761,7 @@ The memory cache is configured to expire after 60 minutes to help free up RAM. I
 
 ## Excel Export
 
-The server-side engine seamlessly supports Excel export functionality, enabling users to efficiently generate and download pivot table reports in Excel format directly from the server. To enable Excel export in the pivot table, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowExcelExport) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. Once the API is set, the user needs to call the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExcelExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method to export the pivot table to Excel by clicking an external button.
+The server-side engine seamlessly supports Excel export functionality, enabling users to efficiently generate and download pivot table reports in Excel format directly from the server. To enable Excel export in the pivot table, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowExcelExport) as **true**. Once the API is set, the user needs to call the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExcelExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method to export the pivot table to Excel by clicking an external button.
 
 N> The pivot table component can be exported to Excel format using options available in the toolbar. For more details [refer](./tool-bar) here.
 
@@ -926,8 +926,8 @@ The Excel export provides an option to include header and footer content for the
         await this.pivotView.ExportToExcelAsync(excelExportProperties);
     } 
 }
-
 ```
+
 ![Add header and footer while exporting](images/add-header-and-footer-while-exporting.webp)
 
 ## CSV Export
@@ -1028,7 +1028,7 @@ Then, based on the **Action** parameter (**onExcelExport** or **onCsvExport**), 
 
 ## Export as Pivot
 
-You can export a PivotTable to an Excel file while preserving its native pivot structure using the server-side engine. The exported Excel document contains a fully interactive PivotTable, allowing users to dynamically modify configurations such as filtering, sorting, grouping, and aggregation directly in Microsoft Excel.
+You can export a Syncfusion PivotTable to an Excel file while preserving its native pivot structure using the server-side engine. The exported Excel document contains a fully interactive PivotTable, allowing users to dynamically modify configurations such as filtering, sorting, grouping, and aggregation directly in Microsoft Excel.
 
 To enable native Excel pivot export in the PivotTable, the user must call the [ExportAsPivotAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExcelExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method to export the PivotTable to Excel by clicking an external button, specifying the export type (**Excel** or **CSV**) as a parameter.
 

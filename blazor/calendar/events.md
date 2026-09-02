@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Events in Blazor Calendar Component | Syncfusion®
-description: Checkout and learn here all features about available Events in Blazor Calendar component and much more.
+title: Events in Blazor Calendar | Syncfusion®
+description: Handle Blazor Calendar events such as ValueChange, Navigated, and OnRenderDayCell to react to user selections and custom day-cell rendering.
 platform: Blazor
 control: Calendar
 documentation: ug
 ---
 
-# Events in Blazor Calendar Component
+# Events in Blazor Calendar
 
 This section lists the events of the [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) component and describes when they are triggered during user interaction and rendering.
 
-N> Starting with `v17.2.*`, only a limited set of events are available for the Calendar component. Event names differ from previous releases, and several events were removed. The following table summarizes event name changes from `v17.1.*` to `v17.2.*`.
+N> Starting with `v17.2.*`, only a limited set of events are available for the Blazor Calendar component. Event names differ from previous releases, and several events were removed. The following table summarizes event name changes from `v17.1.*` to `v17.2.*`.
 
 Event Name(`v17.1.*`) |Event Name(`v17.2.*`)
 -----|-----
@@ -40,7 +40,7 @@ The `OnRenderDayCell` event is triggered as each day cell is rendered, enabling 
 
 ## ValueChange
 
-The `ValueChange` event is triggered after the selected date value changes in the Calendar.  
+The `ValueChange` event is triggered after the selected date value changes in the Blazor Calendar.  
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -60,7 +60,7 @@ The `ValueChange` event is triggered after the selected date value changes in th
 
 ## Created
 
-The `Created` event is triggered after the Calendar is initialized and rendered.  
+The `Created` event is triggered after the Blazor Calendar is initialized and rendered.  
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -80,7 +80,7 @@ The `Created` event is triggered after the Calendar is initialized and rendered.
 
 ## Destroyed
 
-The `Destroyed` event is triggered when the Calendar is disposed.  
+The `Destroyed` event is triggered when the Blazor Calendar is disposed.  
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -118,4 +118,44 @@ The `Navigated` event is triggered after navigating to another view level or wit
 }
 ```
 
-N> The Calendar is currently limited to these events. Additional events may be introduced in future versions based on user feedback. If a required event is missing, submit a request on the Syncfusion feedback portal: [Request a feature](https://www.syncfusion.com/feedback/blazor-components).
+## Selected
+
+The [`Selected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SelectedEventArgs-1.html) event is triggered after one or more date values are selected in the Blazor Calendar. Use the `args.Value` to read the selected date.
+
+```cshtml
+@using Syncfusion.Blazor.Calendars
+
+<SfCalendar TValue="DateTime?">
+    <CalendarEvents TValue="DateTime?" Selected="SelectedHandler"></CalendarEvents>
+</SfCalendar>
+
+@code{
+
+    public void SelectedHandler(SelectedEventArgs<DateTime?> args)
+    {
+        // Here, you can customize your code.
+    }
+}
+```
+
+## DeSelected
+
+The [`DeSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DeSelectedEventArgs-1.html) event is triggered when a value is deselected in the Blazor Calendar. This event fires only when [IsMultiSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfCalendar-1.html#Syncfusion_Blazor_Calendars_SfCalendar_1_IsMultiSelection) is enabled.
+
+```cshtml
+@using Syncfusion.Blazor.Calendars
+
+<SfCalendar TValue="DateTime?" IsMultiSelection="true">
+    <CalendarEvents TValue="DateTime?" DeSelected="DeSelectedHandler"></CalendarEvents>
+</SfCalendar>
+
+@code{
+
+    public void DeSelectedHandler(DeSelectedEventArgs<DateTime?> args)
+    {
+        // Here, you can customize your code.
+    }
+}
+```
+
+N> The Blazor Calendar is currently limited to these events. Additional events may be introduced in future versions based on user feedback. If a required event is missing, submit a request on the Syncfusion feedback portal: [Request a feature](https://www.syncfusion.com/feedback/blazor-components).

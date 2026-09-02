@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles and Appearances in Blazor Dropdown Menu Component | Syncfusion®
-description: Checkout and learn here all about Styles and Appearances in Blazor Dropdown Menu component and more.
+title: Style and Appearance in Blazor Dropdown Menu | Syncfusion®
+description: Customize the Blazor Dropdown Menu appearance by overriding its default CSS classes or by building a custom theme with the Syncfusion Theme Studio.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
 ---
 
-# Styles and Appearances in Blazor Dropdown Menu Component
+# Style and Appearance in Blazor Dropdown Menu
 
 To modify the appearance of the DropDownButton, override the component’s default CSS. The following CSS classes target the button and popup elements in different states. Custom styles can be added to the application’s stylesheet. Alternatively, create a custom theme using [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=bootstrap5).
 
@@ -22,7 +22,7 @@ To modify the appearance of the DropDownButton, override the component’s defau
 
 ## Disable a Dropdown Menu
 
-The Dropdown Menu component can be disabled by setting the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_Disabled) property. To disable Dropdown Menu component, the disabled property can be set as `true`.
+The Dropdown Menu component can be disabled by setting the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_Disabled) property. Set the `Disabled` property to `true` to disable the component.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -37,7 +37,7 @@ The Dropdown Menu component can be disabled by setting the [Disabled](https://he
 </SfDropDownButton>
 ```
 
-![Disabled state of Blazor DropDownMenu](.\images\blazor-dropdownmenu-in-disable-state.png)
+![Disabled state of Blazor DropDownMenu](.\images\blazor-dropdownmenu-in-disable-state.webp)
 
 ## Create Dropdown Menu with Rounded Corner
 
@@ -64,4 +64,4 @@ In the following example, the `e-round-corner` class sets a `5px` `border-radius
 
 ```
 
-![Blazor DropDownMenu with Rounded Corner](.\images\blazor-dropdownmenu-with-rounded-corner.png)
+![Blazor DropDownMenu with Rounded Corner](.\images\blazor-dropdownmenu-with-rounded-corner.webp)

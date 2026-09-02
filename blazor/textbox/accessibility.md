@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor TextBox Component | Syncfusion®
-description: Discover Blazor TextBox Components accessibility features—easy to learn, implement and much more details.
+title: Accessibility in Blazor TextBox | Syncfusion
+description: Learn how Blazor TextBox supports accessibility with WCAG 2.2, keyboard navigation, and screen readers.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Accessibility in Blazor TextBox Component
+# Accessibility in Blazor TextBox
 
 The [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) follows accessibility guidelines and standards commonly used to evaluate UI accessibility, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI‑ARIA](https://www.w3.org/TR/wai-aria/).
 
@@ -36,20 +36,20 @@ The accessibility compliance for the Blazor TextBox component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Blazor TextBox is characterized with complete ARIA Accessibility support that helps to access through the on-screen readers and other assistive technology devices. This component is designed with the reference of the guidelines document given in [WAI ARAI Accessibility practices](https://www.w3.org/TR/wai-aria/#textbox).
+The Blazor TextBox provides complete ARIA support that helps to access through on-screen readers and other assistive technology devices. This component is designed with the reference of the guidelines document given in [WAI-ARIA Accessibility practices](https://www.w3.org/TR/wai-aria/#textbox).
 
-The TextBox uses the `textbox` role and following ARIA properties for its element based on its state.
+The Blazor TextBox uses the `textbox` role and the following ARIA properties for its element based on its state.
 
 | **Property** | **Functionality** |
 | --- | --- |
-| aria-placeholder | The `aria-placeholder` is a short hint to help the users with data entry when the Textbox has no value. |
-| aria-labelledby | The `aria-labelledby` property indicates the floating label element of the Textbox. |
+| aria-placeholder | The `aria-placeholder` is a short hint to help the users with data entry when the Blazor TextBox has no value. |
+| aria-labelledby | The `aria-labelledby` property indicates the floating label element of the Blazor TextBox. |
 
 ## Ensuring accessibility
 
 The Blazor TextBox component’s accessibility is validated with the [axe-core](https://www.npmjs.com/package/axe-core) tool during automated testing.
 
-The accessibility compliance of the TextBox component is demonstrated in the following sample. Open the [accessibility sample for TextBox](https://blazor.syncfusion.com/accessibility/textbox) in a new window to evaluate accessibility with your preferred tools. The component also supports right-to-left (RTL) rendering and high-contrast themes for improved readability and usability.
+The accessibility compliance of the Blazor TextBox component is demonstrated in the following sample. Open the [accessibility sample for TextBox](https://blazor.syncfusion.com/accessibility/textbox) in a new window to evaluate accessibility with your preferred tools. The component also supports right-to-left (RTL) rendering and high-contrast themes for improved readability and usability.
 
 ## See also
 

@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Templates in Blazor Rating Component | Syncfusion®
-description: Checkout and learn here all about Templates with Blazor Rating component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
+title: Templates in Blazor Rating | Syncfusion
+description: Customize Blazor Rating items with EmptyTemplate and FullTemplate for unique, branded, and accessible rating displays.
 platform: Blazor
 control: Rating
 documentation: ug
 ---
 
-# Templates in Blazor Rating Component
+# Templates in Blazor Rating
 
-The Blazor Rating component supports templates to customize the appearance of rating items. Templates let you define custom content for items to create tailored and interactive experiences.
+The Blazor Rating component supports templates to customize the appearance of rating items.
 
-The rating component supports the following templates for item customization:
+The Blazor Rating component supports the following templates for item customization:
 
 * [EmptyTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_EmptyTemplate): Template applied to unrated items.
 * [FullTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_FullTemplate): Template applied to rated items.
@@ -62,6 +62,10 @@ Use the `EmptyTemplate` tag directive to customize the appearance of unrated ite
         -moz-osx-font-smoothing: grayscale;
     }
 
+    .sf-rating-heart {
+        font-family: 'rating';
+    }
+
     .sf-rating-heart:before {
         content: "\e702";
     }
@@ -75,8 +79,7 @@ N> The current value of the rating item is available in the template context (`R
 
 ## Full (rated) symbol template
 
-To customize the appearance of **rated** items in the Blazor rating component, you can use the `FullTemplate` tag directive. This directive allows you to specify a custom layout for the rated items, which can include any content you desire.
-The [RatingItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.RatingItemContext.html) is passed as a `context` to the template, allowing it to access information about the rated item, such as its `Value` and `Index`.
+Use the `FullTemplate` tag directive to customize the appearance of rated items. The [RatingItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.RatingItemContext.html) is passed as `@context` and exposes the item `Value` and `Index`.
 
 ```cshtml
 
@@ -192,14 +195,17 @@ Use SVG icons as rating symbols by specifying them as template content within th
         </svg>
     </EmptyTemplate>
     <FullTemplate>
+        @{
+            var gradId = "grad" + context.Index;
+        }
         <svg width="35" height="25" class="e-rating-svg-icon">
             <defs>
-                <linearGradient id=@("grad"+context.Index.ToString()) x1="0%" y1="0%" x2="100%" y2="0%">
+                <linearGradient id="@gradId" x1="0%" y1="0%" x2="100%" y2="0%">
                     <stop class="start" offset="0%" />
                     <stop class="end" offset="100%" />
                 </linearGradient>
             </defs>
-            <rect width="35" height="25" fill=@("url(#grad"+context.Index.ToString()+")") style="stroke-width:2;stroke:rgb(173,181,189)" />
+            <rect width="35" height="25" fill="@($"url(#{gradId})")" style="stroke-width:2;stroke:rgb(173,181,189)" />
         </svg>
     </FullTemplate>
 </SfRating>
@@ -255,16 +261,16 @@ Use webP images as rating symbols by specifying them as template content within 
 
 <SfRating Value="3">
     <FullTemplate>
-        <img src=@fullTemplateImage widht="25" height="25" />
+        <img src="@fullTemplateImage" alt="Filled star" width="25" height="25" />
     </FullTemplate>
     <EmptyTemplate>
-        <img src=@emptyTemplateImage widht="25" height="25" />
+        <img src="@emptyTemplateImage" alt="Empty star" width="25" height="25" />
     </EmptyTemplate>
 </SfRating>
 
 @code {
-    private string fullTemplateImage = "";//Provide the URL for the image here.
-    private string emptyTemplateImage = "";//Provide the URL for the image here.
+    private string fullTemplateImage = ""; // Provide the URL for the filled (rated) image here.
+    private string emptyTemplateImage = ""; // Provide the URL for the empty (unrated) image here.
 }
 
 ```

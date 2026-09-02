@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Limits in Blazor Range Slider Component | Syncfusion®
-description: Checkout and learn here all about limits in Blazor Range Slider component with examples and much more details.
+title: Limits in Blazor Range Slider | Syncfusion
+description: Restrict Blazor Range Slider thumb movement within allowed ranges using MinStart, MinEnd, MaxStart, and MaxEnd.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Limits in Blazor Range Slider Component
+# Limits in Blazor Range Slider
 
 Slider limits restrict the movement of the slider thumb(s) within a specified range. This is useful when higher or lower values would negatively affect a process or product where the slider is used.
 
@@ -44,7 +44,7 @@ In the Range slider, both handles can be restricted and locked using the limits 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
-<SfSlider Value="@Value" Type="SliderType.Range">
+<SfSlider TValue="int[]" Min="0" Max="100" Value="@Value" Type="SliderType.Range">
     <SliderLimits Enabled="true" MinStart="10" MinEnd="40" MaxStart="60" MaxEnd="90"></SliderLimits>
 </SfSlider>
 
@@ -62,7 +62,7 @@ The movement of slider handles can be locked by enabling the [``StartHandleFixed
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
-<SfSlider Value="@Value" Type="SliderType.Range">
+<SfSlider TValue="int[]" Min="0" Max="100" Value="@Value" Type="SliderType.Range">
      <SliderLimits Enabled="true" StartHandleFixed="true" EndHandleFixed="true">
     </SliderLimits>
 </SfSlider>

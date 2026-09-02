@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Appearance in Blazor Stock Chart Component | Syncfusion®
-description: Check out and learn about configuring chart appearance in the Blazor Stock Chart component to refine visual presentation.
+title: Blazor Stock Chart Appearance | Syncfusion®
+description: Learn how to customize the Blazor Stock Chart's title font, color, theme, background, gridlines, tooltip, and overall styling.
 platform: Blazor
-control: Stock Chart 
+control: Stock Chart
 documentation: ug
 ---
 
-# Appearance in Blazor Stock Chart Component
+# Blazor Stock Chart Appearance
 
 ## Stock Chart Title
 
-Set a chart title using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Title) property to provide context for the plotted data.
+Set a chart title using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_Title) property to provide context for the plotted data.
 
 ```cshtml
 

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Filtering in Blazor MultiSelect Dropdown Component | Syncfusion®
-description: Learn how to enable and configure filtering in Blazor MultiSelect component for search-based item selection and much more details.
+title: Filtering in Blazor MultiSelect Dropdown | Syncfusion
+description: Enable real-time filtering in Blazor MultiSelect Dropdown so users can search and select matching items quickly.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# AllowFiltering in MultiSelect Dropdown
+# Filtering in Blazor MultiSelect Dropdown
 
-The [**AllowFiltering**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_AllowFiltering) feature in the Blazor MultiSelect component enables real-time search capability within the dropdown popup. Users can filter the list of items dynamically based on their input, supporting both simple text searches and complex filtered queries.
+The [**AllowFiltering**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_AllowFiltering) feature in the Blazor MultiSelect Dropdown component enables real-time search capability within the dropdown popup. Users can filter the list of items dynamically based on their input, supporting both simple text searches and complex filtered queries.
 
 ## Getting Started with AllowFiltering
 
@@ -104,7 +104,7 @@ The MultiSelect filtering feature supports case-insensitive and accent-insensiti
 
 ### Case-Insensitive Filtering
 
-The [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_IgnoreCase) property controls whether the filter operation is case-sensitive.
+The [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_IgnoreCase) property controls whether the filter operation is case-sensitive.
 
 ```cshtml
 <SfMultiSelect TItem="string" TValue="string[]" AllowFiltering="true" IgnoreCase="true" DataSource="@countries" Placeholder="Search (case-insensitive)">
@@ -296,7 +296,7 @@ When filtering is applied with a custom query:
 
 ## Filtering Events
 
-The MultiSelect component provides several events for handling filtering operations at different stages.
+The MultiSelect component provides events for handling filtering operations at different stages.
 
 ### Filtering Event
 

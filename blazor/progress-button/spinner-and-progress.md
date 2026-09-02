@@ -1,30 +1,55 @@
 ---
 layout: post
-title: Spinner and Progress in Blazor ProgressButton Component | Syncfusion®
-description: Learn about spinner and progress in Blazor ProgressButton component with examples and much more details.
+title: Spinner and Progress in Blazor Progress Button | Syncfusion
+description: Customize spinner position, template, animation, and progress in Blazor Progress Button for engaging loading feedback in your application.
 platform: Blazor
 control: Progress Button
 documentation: ug
 ---
 
 <!-- markdownlint-disable MD002 MD022 -->
-# Spinner and Progress in Blazor ProgressButton Component
+# Spinner and Progress in Blazor Progress Button Component
 
-This section describes how to customize the spinner and configure progress behavior in the ProgressButton, including positioning and sizing the spinner, using a custom spinner template, animating content, changing step increments, updating progress dynamically, pausing/resuming, and completing progress programmatically.
+This section describes how to customize the spinner and configure progress behavior in the Blazor  Progress Button, including positioning and sizing the spinner, using a custom spinner template, animating content, changing step increments, updating progress dynamically, pausing/resuming, and completing progress programmatically.
 
 ## Spinner
 
 ### Change spinner position
 
-Spinner position can be changed by modifying the `Position` property of [SpinSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_SpinSettings). By default, the spinner is positioned at the left of the Progress Button. You can position it at the [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SpinPosition.html#Syncfusion_Blazor_SplitButtons_SpinPosition_Left), [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SpinPosition.html#Syncfusion_Blazor_SplitButtons_SpinPosition_Right), [top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SpinPosition.html#Syncfusion_Blazor_SplitButtons_SpinPosition_Top), [bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SpinPosition.html#Syncfusion_Blazor_SplitButtons_SpinPosition_Bottom), or [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SpinPosition.html#Syncfusion_Blazor_SplitButtons_SpinPosition_Center) of the text content.
+Change the spinner position using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonSpinSettings.html#Syncfusion_Blazor_SplitButtons_ProgressButtonSpinSettings_Position) property of [SpinSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonSpinSettings.html). By default, the spinner is positioned to the Left of the Blazor  Progress Button. You can set it to [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SpinPosition.html#Syncfusion_Blazor_SplitButtons_SpinPosition_Left), [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SpinPosition.html#Syncfusion_Blazor_SplitButtons_SpinPosition_Right), [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SpinPosition.html#Syncfusion_Blazor_SplitButtons_SpinPosition_Top), [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SpinPosition.html#Syncfusion_Blazor_SplitButtons_SpinPosition_Bottom), or [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SpinPosition.html#Syncfusion_Blazor_SplitButtons_SpinPosition_Center).
+
+```cshtml
+@using Syncfusion.Blazor.SplitButtons
+
+<SfProgressButton Content="Top">
+    <ProgressButtonSpinSettings Position="SpinPosition.Top"></ProgressButtonSpinSettings>
+</SfProgressButton>
+<SfProgressButton Content="Right">
+    <ProgressButtonSpinSettings Position="SpinPosition.Right"></ProgressButtonSpinSettings>
+</SfProgressButton>
+<SfProgressButton Content="Bottom">
+    <ProgressButtonSpinSettings Position="SpinPosition.Bottom"></ProgressButtonSpinSettings>
+</SfProgressButton>
+<SfProgressButton Content="Center">
+    <ProgressButtonSpinSettings Position="SpinPosition.Center"></ProgressButtonSpinSettings>
+</SfProgressButton>
+```
 
 ### Change spinner size
 
-Spinner size can be changed by modifying the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonSpinSettings.html#Syncfusion_Blazor_SplitButtons_ProgressButtonSpinSettings_Width) property of [SpinSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_SpinSettings). In this demo, the width is set to `20` to change the spinner size.
+Change the spinner size using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonSpinSettings.html#Syncfusion_Blazor_SplitButtons_ProgressButtonSpinSettings_Width) property of [SpinSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonSpinSettings.html). Width is specified in pixels; the spinner is rendered as a square. In this example, the width is set to `20`.
+
+```cshtml
+@using Syncfusion.Blazor.SplitButtons
+
+<SfProgressButton Content="Submit">
+    <ProgressButtonSpinSettings Position="SpinPosition.Right" Width="20"></ProgressButtonSpinSettings>
+</SfProgressButton>
+```
 
 ### Spinner template
 
-Use a custom spinner by specifying the [SpinTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonSpinSettings.html#Syncfusion_Blazor_SplitButtons_ProgressButtonSpinSettings_SpinTemplate) property of [SpinSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonSpinSettings.html#properties) with custom styles.
+Use a custom spinner by specifying the [SpinTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonSpinSettings.html#Syncfusion_Blazor_SplitButtons_ProgressButtonSpinSettings_SpinTemplate) property of [SpinSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonSpinSettings.html) with custom styles.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -58,9 +83,6 @@ Use a custom spinner by specifying the [SpinTemplate](https://help.syncfusion.co
         border-bottom-color: transparent;
         height: 16px;
         width: 16px;
-    }
-
-    .template {
         -webkit-animation: custom-rolling 1.3s linear infinite;
         animation: custom-rolling 1.3s linear infinite;
     }
@@ -68,13 +90,13 @@ Use a custom spinner by specifying the [SpinTemplate](https://help.syncfusion.co
 
 ```
 
-![Blazor ProgressButton with Spinner](./images/blazor-progressbutton-spinner.webp)
+![Blazor Progress Button with Spinner](./images/blazor-progressbutton-spinner.webp)
 
 ## Progress
 
 ### Content animation
 
-The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_Content) of the Progress Button can be animated during progress using the [Effect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonAnimationSettings.html#Syncfusion_Blazor_SplitButtons_ProgressButtonAnimationSettings_Effect) property of [AnimationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_AnimationSettings). You can also set custom duration and timing function using the [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonAnimationSettings.html#Syncfusion_Blazor_SplitButtons_ProgressButtonAnimationSettings_Duration) and [Easing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonAnimationSettings.html#Syncfusion_Blazor_SplitButtons_ProgressButtonAnimationSettings_Easing) properties. The possible `Effect` values are `None`, [SlideLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.AnimationEffect.html#Syncfusion_Blazor_SplitButtons_AnimationEffect_SlideLeft), [SlideRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.AnimationEffect.html#Syncfusion_Blazor_SplitButtons_AnimationEffect_SlideRight), [SlideUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.AnimationEffect.html#Syncfusion_Blazor_SplitButtons_AnimationEffect_SlideUp), [SlideDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.AnimationEffect.html#Syncfusion_Blazor_SplitButtons_AnimationEffect_SlideDown), [ZoomIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.AnimationEffect.html#Syncfusion_Blazor_SplitButtons_AnimationEffect_ZoomIn), and [ZoomOut](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.AnimationEffect.html#Syncfusion_Blazor_SplitButtons_AnimationEffect_ZoomOut).
+The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_Content) of the Blazor  Progress Button can be animated during progress using the [Effect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonAnimationSettings.html#Syncfusion_Blazor_SplitButtons_ProgressButtonAnimationSettings_Effect) property of [AnimationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_AnimationSettings). You can also set a custom duration (in milliseconds) and timing function using the [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonAnimationSettings.html#Syncfusion_Blazor_SplitButtons_ProgressButtonAnimationSettings_Duration) and [Easing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonAnimationSettings.html#Syncfusion_Blazor_SplitButtons_ProgressButtonAnimationSettings_Easing) properties. Valid `Easing` values are `Linear`, `EaseInOut`, `EaseIn`, and `EaseOut`. The possible `Effect` values are `None`, [SlideLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.AnimationEffect.html#Syncfusion_Blazor_SplitButtons_AnimationEffect_SlideLeft), [SlideRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.AnimationEffect.html#Syncfusion_Blazor_SplitButtons_AnimationEffect_SlideRight), [SlideUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.AnimationEffect.html#Syncfusion_Blazor_SplitButtons_AnimationEffect_SlideUp), [SlideDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.AnimationEffect.html#Syncfusion_Blazor_SplitButtons_AnimationEffect_SlideDown), [ZoomIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.AnimationEffect.html#Syncfusion_Blazor_SplitButtons_AnimationEffect_ZoomIn), and [ZoomOut](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.AnimationEffect.html#Syncfusion_Blazor_SplitButtons_AnimationEffect_ZoomOut).
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -85,11 +107,11 @@ The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButto
 </SfProgressButton>
 
 ```
-![Blazor ProgressButton with Animation](./images/blazor-progressbutton-animation.webp)
+![Blazor Progress Button with Animation](./images/blazor-progressbutton-animation.webp)
 
-### Change step of the Progress Button
+### Change step of the Blazor  Progress Button
 
-The progress can be visualized at the specified interval by changing the [Step](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressEventArgs.html#Syncfusion_Blazor_SplitButtons_ProgressEventArgs_Step) property in the [OnBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html) event of the Progress Button. In this demo, the Step property is set to `20` to show progress at every 20% increment.
+The progress can be visualized at the specified interval by changing the [Step](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressEventArgs.html#Syncfusion_Blazor_SplitButtons_ProgressEventArgs_Step) property in the [OnBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_OnBegin) event of the Blazor  Progress Button. `Step` accepts a value between `1` and `100` and represents the percentage increment between progress updates. In this example, the Step property is set to `20` to show progress at every 20% increment.
 
 ```cshtml
 
@@ -107,13 +129,13 @@ The progress can be visualized at the specified interval by changing the [Step](
 }
 
 ```
-![Changing Step of Blazor ProgressButton](./images/blazor-progressbutton-step.webp)
+![Changing Step of Blazor Progress Button](./images/blazor-progressbutton-step.webp)
 
-N> The class `e-hide-spinner` hides the spinner in the Progress Button, For more information, see [hide spinner](./how-to/hide-spinner) section.
+N> The class `e-hide-spinner` hides the spinner in the Blazor  Progress Button. For more information, see the [Hide Spinner in Blazor Blazor  Progress Button](style-and-appearance#hide-spinner-in-blazor-progressbutton) section.
 
 ### Change Progress state dynamically
 
-The progress state can be changed dynamically by modifying the [Percent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressEventArgs.html#Syncfusion_Blazor_SplitButtons_ProgressEventArgs_Percent) event argument in the [OnBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_OnBegin), [Progressing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_Progressing), [OnEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_OnEnd) events. In this example, on 40% completion of progress, the Percent property is set to `90` to show dynamic change of the progress state. The progress state can be changed dynamically by modifying the Percent property in the [Progress](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_Progressing) event.
+The progress state can be changed dynamically by modifying the [Percent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressEventArgs.html#Syncfusion_Blazor_SplitButtons_ProgressEventArgs_Percent) event argument in the [OnBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_OnBegin), [Progressing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_Progressing), and [OnEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_OnEnd) events. In this example, on 40% completion of progress, the Percent property is set to `90` to show a dynamic change in the progress state.
 
 ```cshtml
 
@@ -144,11 +166,11 @@ The progress state can be changed dynamically by modifying the [Percent](https:/
 }
 
 ```
-![Changing Blazor ProgressButton State](./images/blazor-progressbutton-state.webp)
+![Changing Blazor Progress Button State](./images/blazor-progressbutton-state.webp)
 
-### Start and Stop Methods
+### Start and Stop methods
 
-You can pause and resume the progress using the [StopAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_StopAsync) and [StartAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_StartAsync_System_Double_) methods, respectively. In this example, clicking the Progress Button will pause and resume the progress.
+Pause and resume the progress using the [StopAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_StopAsync) and [StartAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_StartAsync_System_Double_) methods, respectively. `StartAsync` accepts an optional `duration` (in milliseconds) that controls the total time for the next progress run. In this example, an external `SfButton` is used to start, pause, and resume the Blazor  Progress Button.
 
 ```cshtml
 
@@ -208,11 +230,11 @@ You can pause and resume the progress using the [StopAsync](https://help.syncfus
 </style>
 
 ```
-![Blazor ProgressButton displays Start and Stop Process](./images/blazor-progressbutton-start-stop-process.webp)
+![Blazor Progress Button displays Start and Stop Process](./images/blazor-progressbutton-start-stop-process.webp)
 
-### EndProgressAsync Method
+### EndProgressAsync method
 
-You can complete the progress by using the [EndProgressAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_EndProgressAsync) method and it will also hide the spinner. In this example, another button has been added to complete the current progress of the progress button.
+Complete the progress by calling the [EndProgressAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_EndProgressAsync) method. It returns a `Task` that completes once the progress is halted and the spinner is hidden. In this example, an external `SfButton` is used to complete the running progress.
 
 ```cshtml
 

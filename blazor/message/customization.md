@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization with Blazor Message Component | Syncfusion®
-description: Checkout and learn about Customization with Blazor Message component in Blazor Server App and Blazor WebAssembly App.
+title: Customization in Blazor Message | Syncfusion
+description: Customize Blazor Message content alignment and border styles to match your application design perfectly today.
 platform: Blazor
 control: Message
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Customization in Blazor Message
 
-The Message component allows the user to customize the content display positions and appearance. This section explains the details about changing the content alignments and border styles for messages.
+The Blazor Message component allows the user to customize the content display positions and appearance. This section explains the details about changing the content alignments and border styles for messages.
 
 ## Content Alignment
 
-Normally, the message content is aligned to the **left**. The Message component allows the user to align the message content in the **center** or **right** through the [ContentAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_ContentAlignment) property.
+Normally, the message content is aligned to the **left**. The Blazor Message component allows the user to align the message content in the **center** or **right** through the [ContentAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_ContentAlignment) property.
 
 The following example demonstrates the message with different content alignments.
 
@@ -50,13 +50,14 @@ The following example demonstrates the message with different content alignments
 
 ## Rounded and Square
 
-To customize the Message component's appearance, add the custom class to the message through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_CssClass) property. This custom class will be added to the root element. Based on this custom class, the user can override the message styles at the application level.
+To customize the Blazor Message component's appearance, add the custom class to the message through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_CssClass) property. This custom class will be added to the root element. Based on this custom class, the user can override the message styles at the application level.
 
 The following example shows the rounded and squared appearance of the message, which can be achieved by adding the `CssClass` property.
 
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Notifications
 
 <div class="msg-custom-section">
@@ -137,10 +138,8 @@ The following example shows the message which renders without any script referen
 {% tabs %}
 {% highlight razor %}
 
-@using Syncfusion.Blazor.Notifications
-
 <div class="msg-default">
-    <div id="msg" class="e-message" role="alert">
+    <div class="e-message" role="alert">
       <span class="e-msg-icon"></span>
       <div class="e-msg-content">Please read the comments carefully</div>
     </div>

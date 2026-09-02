@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor Circular Gauge Component | Syncfusion®
-description: Checkout and learn here all the features about Appearance in Blazor Circular Gauge component and more.
+title: Blazor Circular Gauge Appearance | Syncfusion®
+description: Learn how to customize the Blazor Circular Gauge title, position, and background using properties like Title, CenterX, CenterY, and Background.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
 ---
 
-# Appearance in Blazor Circular Gauge Component
+# Blazor Circular Gauge Appearance
 
 ## Circular gauge title
 
@@ -70,7 +70,7 @@ By setting the value in percentage, Circular Gauge gets its mid point with respe
 
 ## Background customization
 
-Using the [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_Background) and [CircularGaugeBorder](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeBorder.html) properties, you can change the background color and border of the Circular Gauge.
+Using the [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_Background) and [CircularGaugeBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeBorder.html) properties, you can change the background color and border of the Circular Gauge.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge

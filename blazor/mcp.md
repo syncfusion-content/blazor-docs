@@ -9,9 +9,11 @@ documentation: ug
 
 # Syncfusion Blazor MCP Server
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> MCP Server accelerate Blazor application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) (MCP) integration enables quick access to  documentation, API references, and code-generation features from within the development environment.
+Syncfusion<sup style="font-size:70%">&reg;</sup> MCP Server accelerate Blazor application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to  documentation, API references, and code-generation features from within the development environment.
 
 These tools speed up development and reinforce best practices for Syncfusion component integration.
+
+> The previously available **Agentic UI Builder** (`#sf_blazor_ui_builder`) has been upgraded to an **Agent skill-based experience** and is no longer part of the MCP Server. To learn more about the new **Agentic UI Builder**, see the [documentation](https://blazor.syncfusion.com/documentation/agentic-ui-builder). The **AI Coding Assistant** (#sf_react_assistant) has been **renamed** to **search_docs** (`#search_docs`) to ensure the tool name follows MCP naming conventions.
 
 ## Key Benefits
 
@@ -27,10 +29,10 @@ Before beginning, ensure the following prerequisites are met:
 
 - Microsoft [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later
 - A **compatible MCP client** (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, JetBrains, etc.)
-- An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://syncfusion.com/account/api-key)
+- An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://www.syncfusion.com/account/api-key)
 - A **Blazor application** (existing or new); see [Quick Start](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 - An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
-  - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)  
+  - [Commercial License](https://www.syncfusion.com/sales/pricing?category=ui-components)  
   - [Free Community License](https://www.syncfusion.com/products/communitylicense)  
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
 
@@ -149,6 +151,8 @@ You can install the Syncfusion Blazor MCP server as a local tool without a globa
     dotnet tool install Syncfusion.Blazor.MCP
     ````
 
+    > If the project does not already have a tool manifest, create one first by running `dotnet new tool-manifest` in the project root. This generates a shared `.config/dotnet-tools.json` file that tracks local tools, then re-run the install command above.
+
 2. In your MCP client config (`.vscode/mcp.json`), replace the server entry with:
 
     ````json
@@ -243,7 +247,7 @@ The table below lists frequently encountered issues and suggested resolutions to
 | Issue | Solution |
 |-------|----------|
 | **Server failed to start** | Update to .NET 8 SDK or higher, verify JSON syntax in the config file, and restart your IDE. |
-| **Invalid API key** | Verify your key is active at the [Syncfusion Account Page](https://syncfusion.com/account/api-key). |
+| **Invalid API key** | Verify your key is active at the [Syncfusion Account Page](https://www.syncfusion.com/account/api-key). |
 | **Incorrect API key config** | For the file path: verify file location and content. For inline key: check the key is correctly updated. |
 | **Wrong config file location** | VS Code: `.vscode/mcp.json` • Code Studio: `.codestudio/mcp.json` • Cursor: `.cursor/mcp.json` in the workspace root. |
 | **Check IDE logs** | VS Code / Code Studio: Output panel → "MCP" • Cursor: Developer Console for MCP errors. |
@@ -261,4 +265,4 @@ The MCP Server acts purely as a knowledge bridge, connecting your AI model with 
 
 ## See Also
 
-- [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro)
+- [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)

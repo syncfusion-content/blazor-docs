@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Data annotation attributes in Blazor DataForm | Syncfusion®
-description: Checkout and learn here about Model ,EditContext and Custom Validation attributes binding with Blazor DataForm component.
+title: Data Annotation Attributes in Blazor Data Form | Syncfusion®
+description: Use .NET data annotation attributes to control Blazor Data Form labels, placeholders, auto-generation, editable state, and validation behavior.
 platform: Blazor
 control: DataForm
 documentation: ug
 ---
 
-# Data annotation attributes
+# Data Annotation Attributes in Blazor Data Form
 
-The DataForm component supports .NET data annotation attributes from [System.ComponentModel.DataAnnotations](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=net-8.0) to control labels, placeholders, auto-generation, editable, and validation behavior.
+The Blazor Data Form component supports .NET data annotation attributes from [System.ComponentModel.DataAnnotations](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=net-8.0) to control labels, placeholders, auto-generation, editable, and validation behavior.
 
 ## Display attribute
 
@@ -71,7 +71,7 @@ public string ID { get; set; }
 
 ## Validation attributes
 
-The DataForm component supports the following validation attributes from the [System.ComponentModel.DataAnnotations](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=net-8.0) namespace. When validation fails, the DataForm displays the associated error message.
+The Blazor Data Form component supports the following validation attributes from the [System.ComponentModel.DataAnnotations](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=net-8.0) namespace. When validation fails, the DataForm displays the associated error message.
 
 ### Required attribute
 
@@ -236,15 +236,15 @@ The [DataTypeAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.comp
 
 | Data type | Editor type | Image |
 | ------------ | ----------------------- | ------ |
-| `DataType.Date` | [SfDatePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html) | ![Blazor DataForm DataType.Date editor example](images/blazor_dataform_data_type_date.png) |
-| `DataType.Time` | [SfTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html) |![Blazor DataForm DataType.Time editor example](images/blazor_dataform_data_type_time.png) |
-| `DataType.DateTime` | [SfDateTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html) |![Blazor DataForm DataType.DateTime editor example](images/blazor_dataform_data_type_date_time.png) |
-| `DataType.Currency` | [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html) |![Blazor DataForm DataType.Currency editor example](images/blazor_dataform_data_type_currency.png) |
-| `DataType.PhoneNumber` | [SfMaskedTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html) |![Blazor DataForm DataType.PhoneNumber editor example](images/blazor_dataform_data_type_phone.png) |
-| `DataType.CreditCard` | [SfMaskedTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html) |![Blazor DataForm DataType.CreditCard editor example](images/blazor_dataform_data_type_credit_card.png) |
-| `DataType.MultilineText` | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) | ![Blazor DataForm DataType.MultilineText editor example](images/blazor_dataform_data_type_multiline_text.png) |
-| `DataType.Password` | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) | ![Blazor DataForm DataType.Password editor example](images/blazor_dataform_data_type_password.png) |
-| <ul><li>`DataType.EmailAddress`</li><li>`DataType.Url`</li><li>`DataType.Text`</li><li> `DataType.ImageUrl`</li><li> `DataType.Html`</li></ul> | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) |![Blazor DataForm DataType.Text-like editors example](images/blazor_dataform_data_type_text.png) |
+| `DataType.Date` | [SfDatePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html) | ![Blazor Data Form DataType.Date editor example](images/blazor_dataform_data_type_date.png) |
+| `DataType.Time` | [SfTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html) |![Blazor Data Form DataType.Time editor example](images/blazor_dataform_data_type_time.png) |
+| `DataType.DateTime` | [SfDateTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html) |![Blazor Data Form DataType.DateTime editor example](images/blazor_dataform_data_type_date_time.png) |
+| `DataType.Currency` | [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html) |![Blazor Data Form DataType.Currency editor example](images/blazor_dataform_data_type_currency.png) |
+| `DataType.PhoneNumber` | [SfMaskedTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html) |![Blazor Data Form DataType.PhoneNumber editor example](images/blazor_dataform_data_type_phone.png) |
+| `DataType.CreditCard` | [SfMaskedTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html) |![Blazor Data Form DataType.CreditCard editor example](images/blazor_dataform_data_type_credit_card.png) |
+| `DataType.MultilineText` | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) | ![Blazor Data Form DataType.MultilineText editor example](images/blazor_dataform_data_type_multiline_text.png) |
+| `DataType.Password` | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) | ![Blazor Data Form DataType.Password editor example](images/blazor_dataform_data_type_password.png) |
+| <ul><li>`DataType.EmailAddress`</li><li>`DataType.Url`</li><li>`DataType.Text`</li><li> `DataType.ImageUrl`</li><li> `DataType.Html`</li></ul> | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) |![Blazor Data Form DataType.Text-like editors example](images/blazor_dataform_data_type_text.png) |
 
 If a different data type is specified that is not listed above, the DataForm uses the [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) editor by default.
 
@@ -304,7 +304,7 @@ public string ID { get; set; }
 
 ### Data form display options attribute
 
-The [DataFormDisplayOptionsAttribute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.DataFormDisplayOptionsAttribute.html) attribute configures display options for a property in the DataForm. The DataForm uses this attribute to determine [ColumnSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.DataFormDisplayOptionsAttribute.ColumnSpan.html) for the property.
+The [DataFormDisplayOptionsAttribute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.DataFormDisplayOptionsAttribute.html) attribute configures display options for a property in the DataForm. The DataForm uses this attribute to determine [ColumnSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Blazor_DataForm_DataFormDisplayOptionsAttribute_ColumnSpan) for the property.
 
 {% tabs %}
 
@@ -322,7 +322,7 @@ The [DataFormDisplayOptionsAttribute](https://help.syncfusion.com/cr/blazor/Sync
 
 {% endtabs %}
 
-![Blazor DataForm Custom Attributes](images/blazor_dataform_custom_attributes.png)
+![Blazor Data Form Custom Attributes](images/blazor_dataform_custom_attributes.png)
 
 ## Custom validation
 
@@ -340,4 +340,4 @@ In the `IsValid` method, implement the validation logic. When validation fails, 
 
 In the example, the `PasswordValidationAttribute` checks whether the password meets the required criteria (length, uppercase, lowercase, and special character). If not, it returns a `ValidationResult` with an appropriate message. The `EmailValidationAttribute` validates the email format and returns a `ValidationResult` with an error message when invalid.
 
-![Blazor DataForm custom validation showing error messages for password and email](images/blazor_dataform_customvalidation.png)
+![Blazor Data Form custom validation showing error messages for password and email](images/blazor_dataform_customvalidation.png)

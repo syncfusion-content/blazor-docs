@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Mask Support in Blazor DatePicker Component | Syncfusion®
-description: Checkout and learn here all the features about Mask Support in Blazor DatePicker component and much more.
+title: Mask Support in Blazor DatePicker | Syncfusion®
+description: Apply an input mask to the Blazor DatePicker to guide users as they type date values, ensuring consistent input format.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Mask Support in Blazor DatePicker Component
+# Mask Support in Blazor DatePicker
 
-The masking feature allows users to enter a date in the correct format, as specified by the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Format) property. This helps to ensure that the date is entered correctly and can also make it easier for users to understand how to enter the date. The [EnableMask](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_EnableMask) property in the DatePicker component allows you to enable or disable the masking functionality. When enabled, the input field will be displayed as masked with a specific date format pattern for entering the date.
+The masking feature helps users enter a date in the correct format by rendering the input as a mask that follows the configured [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Format) property. Set [EnableMask](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_EnableMask) to `true` to enable masking. The default value of `EnableMask` is `false`.
 
 {% highlight Razor %}
 
@@ -17,23 +17,19 @@ The masking feature allows users to enter a date in the correct format, as speci
 
 {% endhighlight %}
 
-
-
 ![Blazor DatePicker with EnableMask](./images/DatePickerMask.gif)
 
 ## MaskPlaceholder
 
-The [DatePickerMaskPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerMaskPlaceholder.html) directive allows you to set custom placeholder text for each segment of the date format in a `DatePicker` component. This can be used to provide additional context or instructions to the user about the expected format for the input. To use the directive, include it in the component's configuration along with the [EnableMask](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_EnableMask) property.
+The [DatePickerMaskPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerMaskPlaceholder.html) directive sets the placeholder text for each segment (day, month, year) of the masked input.
 
-The `DatePickerMaskPlaceholder` tag directive has the following properties:
+The `DatePickerMaskPlaceholder` directive exposes the following properties:
 
-* [Day](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.MaskPlaceholder.html#Syncfusion_Blazor_Calendars_MaskPlaceholder_Day) : Specifies the placeholder text for the day (`dd`) segment of the date value.
+* [Day](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.MaskPlaceholder.html#Syncfusion_Blazor_Calendars_MaskPlaceholder_Day): Specifies the placeholder text for the day segment of the date value (matches the `d` or `dd` format specifier).
+* [Month](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.MaskPlaceholder.html#Syncfusion_Blazor_Calendars_MaskPlaceholder_Month): Specifies the placeholder text for the month segment of the date value (matches the `M` or `MM` format specifier).
+* [Year](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.MaskPlaceholder.html#Syncfusion_Blazor_Calendars_MaskPlaceholder_Year): Specifies the placeholder text for the year segment of the date value (matches the `yy` or `yyyy` format specifier).
 
-* [Month](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.MaskPlaceholder.html#Syncfusion_Blazor_Calendars_MaskPlaceholder_Month) : Specifies the placeholder text for the month (`MM`) segment of the date value.
-
-* [Year](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.MaskPlaceholder.html#Syncfusion_Blazor_Calendars_MaskPlaceholder_Year) : Specifies the placeholder text for the year (`yy`) segment of the date value.
-
-The `DatePicker` component uses placeholder text from the current culture's resources file for each segment of the date format by default. If you want to use custom placeholder text instead, you can specify it using the `DatePickerMaskPlaceholder` directive and its properties. 
+By default, the Blazor DatePicker loads placeholder text from the current culture's resources file for each segment. To override the default, specify the segments you want through the `DatePickerMaskPlaceholder` directive.
 
 {% highlight Razor %}
 
@@ -43,4 +39,11 @@ The `DatePicker` component uses placeholder text from the current culture's reso
 
 ![Blazor DatePicker Mask Support with MaskPlaceholder](./images/DatePickerMaskPlaceholder.gif)
 
-> If you do not specify custom placeholder text for any segment of the date format, the component will use the default placeholder text from the current culture based resources file for not specified segments.
+N> If you do not specify custom placeholder text for a particular segment, the component uses the default placeholder text from the current culture's resource file for that segment.
+
+## See also
+
+* [Date Format](date-format)
+* [EnableMask](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_EnableMask) property
+* [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Format) property
+* [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_StrictMode) property

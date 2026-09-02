@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Appearance in Blazor OTP Input Component | Syncfusion®
-description: Learn how to customize the appearance of Blazor OTP Input component including length, disabled state, and visual styles.
+title: Appearance in Blazor OTP Input | Syncfusion
+description: Customize Blazor OTP Input length, disabled state, border, and visual appearance to match your application's design and improve secure entry usability.
 platform: Blazor
 control: OTP Input
 documentation: ug
 ---
 
-# Appearance in Blazor OTP Input component
+# Appearance in Blazor OTP Input
 
-Customize the appearance of the OTP input component, including input length, disabled state, and visual styles.
+Customize the appearance of the Blazor OTP Input component, including input length, disabled state, and visual styles.
 
 ## Setting input length
 
@@ -25,9 +25,9 @@ Specify the length of the OTP by using the [Length](https://help.syncfusion.com/
 
 ![Blazor OTP Input Component with Length](images/blazor-otp-length.webp)
 
-## Disable inputs
+## Setting the disabled state
 
-Disable the OTP Input component by using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Disabled) property. By default, the value is `false`. When disabled, the input fields are non-interactive and display the disabled visual style.
+Disable the Blazor OTP Input component by using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Disabled) property. By default, the value is `false`. When disabled, the input fields are non-interactive and display the disabled visual style.
 
 ```cshtml
 
@@ -39,11 +39,11 @@ Disable the OTP Input component by using the [Disabled](https://help.syncfusion.
 
 ![Blazor OTP Input Component with Disabled](images/blazor-otp-disabled.webp)
 
-## CssClass
+## Custom styling using CssClass property
 
-Customize the appearance of the OTP Input component by changing colors, fonts, sizes, and other visual aspects by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_CssClass) property.
+Customize the appearance of the Blazor OTP Input component by changing colors, fonts, sizes, and other visual aspects by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_CssClass) property.
 
-The OTP input component supports the following predefined styles that can be applied using the `CssClass` property. Replace the `CssClass` value with one of the following class names to apply the corresponding style.
+The Blazor OTP Input component supports the following predefined styles that can be applied using the `CssClass` property. Replace the `CssClass` value with one of the following class names to apply the corresponding style.
 
 | cssClass | Description |
 | -------- | -------- |
@@ -61,9 +61,33 @@ The OTP input component supports the following predefined styles that can be app
 
 ![Blazor OTP Input Component with CssClass](images/blazor-otp-success.webp)
 
+## Setting auto-focus on render
+
+Automatically focus the first input field when the component is rendered by using the [AutoFocus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_AutoFocus) property. By default, the value is `false`. When set to `true`, the OTP input field receives focus as soon as the component is rendered, allowing users to start typing the OTP without manually clicking the input.
+
+```cshtml
+
+@using Syncfusion.Blazor.Inputs
+
+<SfOtpInput AutoFocus="true"></SfOtpInput>
+
+```
+
+## Setting text case transformation
+
+Control the case transformation of the entered OTP text by using the [TextTransform](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_TextTransform) property. The available values are [Uppercase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.TextTransform.html#Syncfusion_Blazor_Inputs_TextTransform_Uppercase), [Lowercase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.TextTransform.html#Syncfusion_Blazor_Inputs_TextTransform_Lowercase), and [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.TextTransform.html#Syncfusion_Blazor_Inputs_TextTransform_None). The default value is `None`.
+
+```cshtml
+
+@using Syncfusion.Blazor.Inputs
+
+<SfOtpInput Type="OtpInputType.Text" TextTransform="TextTransform.Uppercase"></SfOtpInput>
+
+```
+
 ## Style Customization
 
-Customize the OTP Input component with various visual styles by using the `CssClass` property. Below are examples of different style variations and hover effects.
+Customize the Blazor OTP Input component with various visual styles by using the `CssClass` property. Below are examples of different style variations and hover effects.
 
 ### Default (Outline) Style
 
@@ -680,3 +704,10 @@ Cell performs a subtle wiggle animation when hovered — adds playful feedback t
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXVRtmtCKFuWYLCi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+## See also
+
+* [Styling modes in Blazor OTP Input](styling-modes)
+* [Input types in Blazor OTP Input](input-types)
+* [Events in Blazor OTP Input](events)
+* [Accessibility in Blazor OTP Input](accessibility)

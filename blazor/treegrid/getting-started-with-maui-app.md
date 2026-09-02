@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Tree Grid in Blazor MAUI App | Syncfusion®
-description: Check out and learn about the documentation for getting started with Blazor Tree Grid Component in Blazor MAUI App.
+title: Blazor TreeGrid Getting Started with MAUI App | Syncfusion
+description: Learn how to get started with Blazor TreeGrid in a .NET MAUI Blazor Hybrid app using Visual Studio, setup tools, and configuration steps.
 platform: Blazor
 component: Tree Grid
 documentation: ug
@@ -265,5 +265,5 @@ N> If you face any issues with the Android emulator, check the [Troubleshooting 
 
 ## See also
 
-1. [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+1. [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)

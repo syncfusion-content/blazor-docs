@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Blazor Pivot Table with UrlAdaptor| Syncfusion®
-description: Learn about bind data and performing CRUD operations using UrlAdaptor in Blazor Pivot Table and much more details.
+title: URL Adaptor in Blazor Pivot Table | Syncfusion
+description: Learn how the Blazor Pivot Table binds to a custom REST API through the URL adaptor, sending read and CRUD requests and aggregating client-side.
 platform: Blazor
 control: Pivot Table
 keywords: adaptors, urladaptor, url adaptor, remotedata 
 documentation: ug
 ---
 
-# UrlAdaptor in Blazor Pivot Table
+# URL Adaptor in Blazor Pivot Table
 
 The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) serves as the base adaptor for facilitating communication between remote data services and the Blazor Pivot Table component. It enables seamless data binding and interaction with custom API services or any remote service through URLs. The `UrlAdaptor` is particularly useful in scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data, with the resultant data returned in the `result` and `count` format for display in the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table).
 
@@ -256,7 +256,7 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://learn.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-10.0&viewFallbackFrom=aspnetcore-2.1&tabs=visual-studio%2Clinux-ubuntu#http-strict-transport-security-protocol-hsts.
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 

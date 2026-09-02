@@ -1,34 +1,34 @@
 ---
 layout: post
-title: Events in Blazor Spinner Component | Syncfusion®
-description: Checkout and learn here all the features about events in Blazor Spinner component and much more details.
+title: Events in Blazor Spinner | Syncfusion
+description: Handle lifecycle events such as Created, OnShow, and OnHide in Blazor Spinner with event arguments for custom behavior.
 platform: Blazor
 control: Spinner
 documentation: ug
 ---
 
-# Events in Blazor Spinner Component
+# Events in Blazor Spinner
 
-The Blazor Spinner component exposes a set of lifecycle events that hook into key moments of the Spinner's existence — from its initial creation to its final destruction, as well as before it is shown or hidden. These events provide full control over the Spinner's behavior, enabling custom logic execution, application state updates, operation cancellation, or integration with logging and monitoring systems.
+The Blazor Spinner component exposes a set of lifecycle events that hook into key moments of the Spinner's existence—from its initial creation to its final destruction, as well as before it is shown or hidden. These events provide full control over the Spinner's behavior, enabling custom logic execution, application state updates, operation cancellation, or integration with logging and monitoring systems.
 
-All Spinner events are configured through the [SpinnerEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spinner.SpinnerEventArgs.html#properties) child component, which must be nested inside the Spinner component. The `SpinnerEvents` tag accepts event callback attributes for each supported event.
+All Spinner events are configured through the [SpinnerEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spinner.SpinnerEventArgs.html#properties) child component, which must be nested inside the Blazor Spinner component. The `SpinnerEvents` tag accepts event callback attributes for each supported event.
 
 ## List of events
 
-The following table lists all the events available in the Spinner component:
+The following table lists all the events available in the Blazor Spinner component.
 
 | Event | Trigger Point | Event Args |
 | --- | --- | --- |
-| `Created` | After the Spinner is created and rendered | `Object` |
-| `OnBeforeOpen` | Before the Spinner becomes visible | `SpinnerEventArgs` |
-| `OnBeforeClose` | Before the Spinner is hidden | `SpinnerEventArgs` |
-| `Destroyed` | After the Spinner is destroyed and removed | `Object` |
+| `Created` | After the Blazor Spinner is created and rendered | `Object` |
+| `OnBeforeOpen` | Before the Blazor Spinner becomes visible | `SpinnerEventArgs` |
+| `OnBeforeClose` | Before the Blazor Spinner is hidden | `SpinnerEventArgs` |
+| `Destroyed` | After the Blazor Spinner is destroyed and removed | `Object` |
 
 ## Created
 
-The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spinner.SpinnerEvents.html#Syncfusion_Blazor_Spinner_SpinnerEvents_Created) event is triggered after the Spinner component has been fully initialized and rendered in the DOM. This event is fired only once during the component's lifecycle — at the time of creation.
+The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spinner.SpinnerEvents.html#Syncfusion_Blazor_Spinner_SpinnerEvents_Created) event is triggered after the Blazor Spinner component has been fully initialized and rendered in the DOM. This event is fired only once during the component's lifecycle—at the time of creation.
 
-Since the Spinner has already been rendered when this event fires, its properties can be accessed and its methods can be safely invoked from within the handler.
+Since the Blazor Spinner has already been rendered when this event fires, its properties can be accessed and its methods can be safely invoked from within the handler.
 
 ```cshtml
 @using Syncfusion.Blazor.Spinner
@@ -101,7 +101,7 @@ The [OnBeforeClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spin
 
 ## Destroyed
 
-The [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spinner.SpinnerEvents.html#Syncfusion_Blazor_Spinner_SpinnerEvents_Destroyed) event is triggered after the Spinner component has been completely removed from the DOM and all its internal resources have been released. This event fires once during the component's lifecycle, symmetrically opposite to the `Created` event. It is the appropriate place to perform final cleanup tasks — such as releasing object references held for the Spinner, removing event subscriptions that were set up during creation, or logging that the component has been torn down.
+The [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spinner.SpinnerEvents.html#Syncfusion_Blazor_Spinner_SpinnerEvents_Destroyed) event is triggered after the Blazor Spinner component has been completely removed from the DOM and all its internal resources have been released. This event fires once during the component's lifecycle, symmetrically opposite to the `Created` event. It is the appropriate place to perform final cleanup tasks—such as releasing object references held for the Spinner, removing event subscriptions that were set up during creation, or logging that the component has been torn down.
 
 Since the component no longer exists in the DOM when this event fires, invoking Spinner methods or accessing its properties within the handler should be avoided.
 

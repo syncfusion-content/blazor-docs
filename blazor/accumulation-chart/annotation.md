@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotation in Blazor Accumulation Chart Component | Syncfusion®
-description: Checkout and learn here all about Annotation in Blazor Accumulation Chart component and much more details.
+title: Blazor Accumulation Chart Annotation Examples | Syncfusion®
+description: Learn how to add annotations in Syncfusion Blazor Accumulation Chart to highlight regions of interest with text, shapes, or images.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Annotation in Blazor Accumulation Chart Component
+# Blazor Accumulation Chart Annotation
 
 Annotations are texts, shapes, or images that are used to highlight a specific region of interest in a chart. The [AccumulationChartAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html) property allows to add annotations to the chart. Specify the element that needs to be displayed in the accumulation chart area by using the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_Content) property of the annotation.
 
@@ -145,7 +145,7 @@ The [CoordinateUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVnNGhXqHPVgZgR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Accumulation Chart displays Co-ordinate Units](images/annotation/blazor-accumulation-chart-coordinate-unit.webp)" %}
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=fluent2) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.
 
 ## See also
 

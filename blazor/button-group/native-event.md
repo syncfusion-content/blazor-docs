@@ -1,99 +1,145 @@
 ---
 layout: post
-title: Native Events in Blazor Button Group Component | Syncfusion®
-description: Checkout and learn here all features about Native Events in Blazor Button Group component and much more.
+title: Native Events in Blazor Button Group | Syncfusion®
+description: Handle native DOM events on the Blazor Button Group component using Blazor's @on{event} directive and event argument data.
 platform: Blazor
 control: Button Group
 documentation: ug
 ---
 
-# Native Events in Blazor Button Group Component
+# Native Events in Blazor Button Group
 
-You can define the native event using `event` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.
+Native DOM events (such as click, change, focus, mouse, keyboard, and touch events) can be handled on the Blazor Button Group component through Blazor's `@on{event}` directive (for example, `@onclick`, `@onchange`). The value of the directive is treated as an event handler. The event-specific data is passed to the handler through the event arguments.
 
-The different event argument types for each event are,
+The following event argument types are available for the corresponding native events:
 
-* Focus Events - UIFocusEventArgs
-* Mouse Events - UIMouseEventArgs
-* Keyboard Events - UIKeyboardEventArgs
-* Touch Events – UITouchEventArgs
+* Focus Events - `FocusEventArgs`
+* Mouse Events - `MouseEventArgs`
+* Keyboard Events - `KeyboardEventArgs`
+* Touch Events - `TouchEventArgs`
 
-## List of native events supported for default Button Group
+> All event argument types are from the `Microsoft.AspNetCore.Components.Web` namespace.
 
-The following native event support has been provided to the Button Group component:
+## List of native events supported for default Blazor Button Group
 
-| List of Native events |  |  | |
+The following native events are supported by the default Blazor Button Group component:
+
+| List of Native events |  |  |  |
 | --- | --- | --- | --- |
 | onclick | onblur | onfocus | onfocusout |
-|onmousemove|onmouseover|onmouseout|onmousedown|onmouseup|
-|ondblclick|onkeydown|onkeyup|onkeypress|
-|ontouchend|onfocusin|onmouseup|ontouchstart|
+| onmousemove | onmouseover | onmouseout | onmousedown |
+| onmouseup | ondblclick | onkeydown | onkeyup |
+| onkeypress | ontouchend | onfocusin | ontouchstart |
 
-## How to bind click event to Button Group
+## How to bind click event to Blazor Button Group
 
-The `onclick` attribute is used to bind the click event for button group. Here, we have explained about the sample code snippets.
+The `@onclick` directive is used to bind the click event for the Blazor Button Group. The following code snippet demonstrates binding a click event to each button in the group.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.SplitButtons
 
 <SfButtonGroup>
-    <ButtonGroupButton @onclick="onLeftClick">Left</ButtonGroupButton>
-    <ButtonGroupButton @onclick="onCenterClick">Center</ButtonGroupButton>
-    <ButtonGroupButton @onclick="onRightClick">Right</ButtonGroupButton>
+    <ButtonGroupButton @onclick="OnLeftClick">Left</ButtonGroupButton>
+    <ButtonGroupButton @onclick="OnCenterClick">Center</ButtonGroupButton>
+    <ButtonGroupButton @onclick="OnRightClick">Right</ButtonGroupButton>
 </SfButtonGroup>
 
 @code{
-    private void onLeftClick()
+    private void OnLeftClick()
     {
         // handle the left click event
     }
-    private void onCenterClick()
+    private void OnCenterClick()
     {
         // handle the center click event
     }
-    private void onRightClick()
+    private void OnRightClick()
     {
         // handle the right click event
     }
 }
 ```
 
-## List of native events supported for Single / Multiple selection mode Button Group
+## How to bind a mouse event with arguments to Blazor Button Group
 
-The following native event support has been provided to the Button Group component:
+The following code snippet demonstrates how to handle a mouse event and read the `MouseEventArgs` payload.
 
-| List of Native events |  |  | | |
+```cshtml
+
+@using Syncfusion.Blazor.SplitButtons
+@using Microsoft.AspNetCore.Components.Web
+
+<SfButtonGroup>
+    <ButtonGroupButton @onmouseover="OnHover">
+        Hover me
+    </ButtonGroupButton>
+</SfButtonGroup>
+
+<p>@message</p>
+
+@code {
+    private string message = "Move mouse over the button";
+
+    private void OnHover(MouseEventArgs args)
+    {
+        var x = args.ClientX;
+        var y = args.ClientY;
+
+        message = $"Mouse Position: X = {x}, Y = {y}";
+    }
+}
+```
+
+## List of native events supported for Single / Multiple selection mode Blazor Button Group
+
+The following native events are supported when the Blazor Button Group is in single or multiple selection mode (`Mode="SelectionMode.Single"` or `Mode="SelectionMode.Multiple"`):
+
+| List of Native events |  |  |  |  |
 | --- | --- | --- | --- | --- |
 | onchange | oninput | onblur | onfocusout | onfocusin |
-|onfocus|onclick|onkeydown|onkeyup|onkeypress|
+| onfocus | onclick | onkeydown | onkeyup | onkeypress |
 
-## How to bind onchange event to Button Group
+## How to bind onchange event to Blazor Button Group
 
-The `onchange` attribute is used to bind the change event for button group. Here, we have explained about the sample code snippets.
+The `@onchange` directive is used to bind the change event for the Button Group in selection mode. The following code snippet demonstrates binding an `onchange` event to each button in a single-selection Button Group.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.SplitButtons
 
 <SfButtonGroup Mode="Syncfusion.Blazor.SplitButtons.SelectionMode.Single">
-    <ButtonGroupButton @onchange="onLeftClick" Value="Left">Left</ButtonGroupButton>
-    <ButtonGroupButton @onchange="onCenterClick" Value="Center">Center</ButtonGroupButton>
-    <ButtonGroupButton @onchange="onRightClick" Value="Right">Right</ButtonGroupButton>
+    <ButtonGroupButton @onchange="OnLeftChange">Left</ButtonGroupButton>
+    <ButtonGroupButton @onchange="OnCenterChange">Center</ButtonGroupButton>
+    <ButtonGroupButton @onchange="OnRightChange">Right</ButtonGroupButton>
 </SfButtonGroup>
 
-@code{
-    private void onLeftClick(ChangeEventArgs args)
+<p>@message</p>
+
+@code {
+    private string message = "No button selected";
+
+    private void OnLeftChange ( ChangeEventArgs args )
     {
-        var SelectedValue = args.Value;
+        message = $"Selected Button: Left";
+
     }
-    private void onCenterClick(ChangeEventArgs args)
+
+    private void OnCenterChange ( ChangeEventArgs args )
     {
-        var SelectedValue = args.Value;
+        message = $"Selected Button: Center";
     }
-    private void onRightClick(ChangeEventArgs args)
+
+    private void OnRightChange ( ChangeEventArgs args )
     {
-        var SelectedValue = args.Value;
+        message = $"Selected Button: Right";
     }
 }
 ```
+
+## See also
+
+* [Getting Started with Blazor Button Group](getting-started.md)
+* [Types and Styles in Blazor Button Group](types-and-styles.md)
+* [Selection and Nesting in Blazor Button Group](selection-and-nesting.md)
+* [Accessibility in Blazor Button Group](accessibility.md)

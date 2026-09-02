@@ -1,30 +1,30 @@
 ---
 layout: post
-title: Popup settings in Blazor AutoComplete component | Syncfusion®
-description: Check out popup settings in the Blazor AutoComplete component, including resize, width, height, z-index, initial display, and open/close events.
+title: Popup Setting in Blazor AutoComplete | Syncfusion®
+description: Configure the Blazor AutoComplete popup with resizing, custom width and height, z-index, and showPopupOnFocus behavior, plus open and close events.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Popup Setting in AutoComplete
+# Popup Setting in Blazor AutoComplete
 
 ## Popup resize 
 
-Can dynamically adjust the size of the popup in the AutoComplete component by using the [AllowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-1.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_1_AllowResize) property. When enabled, users can resize the popup by dragging the resize handle to improve visibility and control.
+Can dynamically adjust the size of the popup in the Blazor AutoComplete component by using the [AllowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowResize) property. When enabled, users can resize the popup by dragging the resize handle to improve visibility and control.
 
 {% highlight Razor %}
 
 {% include_relative code-snippet/popup-setting/resize.razor %}
 
-{% endhighlight %} 
+{% endhighlight %}
 
 ![Blazor AutoComplete with AllowResize property](./images/popup-setting/blazor_autocomplete_resize.gif)
 
 
 ## Change the popup width
 
-Customize the width of the popup using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-1.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_1_PopupWidth) property. The default value of `PopupWidth` is `100%`. When unspecified, the popup width is based on the AutoComplete component’s width. This property accepts standard CSS units (for example, px, %, rem).
+Customize the width of the popup using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property. The default value of `PopupWidth` is `100%`. When unspecified, the popup width is based on the Blazor AutoComplete component’s width. This property accepts standard CSS units (for example, px, %, rem).
 
 In the following sample, the `PopupWidth` is set as `300px`.
 
@@ -38,7 +38,7 @@ In the following sample, the `PopupWidth` is set as `300px`.
 
 ## Change the popup height
 
-Customize the height of the popup using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-1.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_1_PopupHeight) property. The default value of `PopupHeight` is `300px`. This property accepts standard CSS units (for example, px, %, rem).
+Customize the height of the popup using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) property. The default value of `PopupHeight` is `300px`. This property accepts standard CSS units (for example, px, %, rem).
 
 In the following sample, the `PopupHeight` is set as `200px`.
 
@@ -58,7 +58,7 @@ Defaults to `1000`.
 
 ## Show popup on initial loading
 
-Display the popup at initial load by calling [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-1.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_1_ShowPopupAsync) in the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteModel.html#Syncfusion_Blazor_DropDowns_AutoCompleteModel_Created) event.
+Display the popup at initial load by calling [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowPopupAsync) in the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteModel.html#Syncfusion_Blazor_DropDowns_AutoCompleteModel_Created) event.
 
 {% highlight Razor %}
 

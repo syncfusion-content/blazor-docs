@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Source in Blazor AutoComplete Component | Syncfusion®
-description: Learn how to bind data sources in the Blazor AutoComplete component using local collections or remote services with DataManager and adaptors.
+title: Data Source in Blazor AutoComplete | Syncfusion®
+description: Load Blazor AutoComplete data from local arrays or remote services through the DataSource property or DataManager with OData, Web API, and URL adaptors.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Data Source in Blazor AutoComplete Component
+# Data Source in Blazor AutoComplete
 
 The AutoComplete loads data from local sources or remote services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports an array or the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
@@ -293,7 +293,7 @@ Refer to the following example for remote data binding with offline mode enabled
 
 ### ValueTuple data binding
 
-Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0) data to the AutoComplete component. The following example shows how to get a string value from enumeration data using [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0).
+Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0) data to the Blazor AutoComplete component. The following example shows how to get a string value from enumeration data using [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0).
 
 ```csharp
 
@@ -309,7 +309,7 @@ Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple
 
 ## Binding ExpandoObject
 
-Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the AutoComplete component. The following example binds an `ExpandoObject` collection of vehicles.
+Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the Blazor AutoComplete component. The following example binds an `ExpandoObject` collection of vehicles.
 
 ```csharp
 
@@ -340,7 +340,7 @@ Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 ## Binding DynamicObject
 
-Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) data to the AutoComplete component. The following example binds a `DynamicObject` collection of customers.
+Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) data to the Blazor AutoComplete component. The following example binds a `DynamicObject` collection of customers.
 
 ```csharp
 
@@ -390,7 +390,7 @@ Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 ## Binding ObservableCollection
 
-Bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-8.0) data to the AutoComplete component. The following example binds `ObservableCollection` data for colors.
+Bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-8.0) data to the Blazor AutoComplete component. The following example binds `ObservableCollection` data for colors.
 
 ```csharp
 
@@ -432,7 +432,7 @@ Bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.
 
 ## Entity Framework
 
-Follow the steps below to consume data from Entity Framework in the AutoComplete component.
+Follow the steps below to consume data from Entity Framework in the Blazor AutoComplete component.
 
 ### Create DBContext class
 
@@ -544,7 +544,7 @@ namespace EFDropDown.Controllers
 }
 ```
 
-### Configure AutoComplete component using Web API adaptor
+### Configure Blazor AutoComplete component using Web API adaptor
 
 Configure the AutoComplete using the **SfDataManager** to interact with the created Web API and consume the data appropriately. To interact with the Web API, use `WebApiAdaptor`.
 

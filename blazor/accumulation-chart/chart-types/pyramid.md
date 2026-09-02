@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pyramid in Blazor Accumulation Chart Component | Syncfusion®
-description: Checkout and learn here all about Pyramid in Blazor Accumulation Chart component and much more details.
+title: Blazor Pyramid Chart Examples | Syncfusion®
+description: Learn how to render a Pyramid Chart in Syncfusion Blazor Accumulation Chart to visualize hierarchical data in a triangle with divided sections.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Pyramid in Blazor Accumulation Chart Component
+# Pyramid Chart in Blazor
 
 The [Pyramid Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/pyramid-chart) is used to visualize the hierarchical data in upside triangle shape with horizontally divided section. To render the `Pyramid Chart`, set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Type) as `Pyramid`.
 
@@ -246,7 +246,7 @@ The corners of the first data point and last data point in the pyramid chart ser
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDrHtwiShfICviDm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Pyramid Chart with border radius applied.](../images/pyramid/blazor-pyramid-border-radius.webp)" %}
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pyramid?theme=bootstrap5) to know various features of accumulation charts and how it is used to represent numeric proportional data.
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pyramid?theme=fluent2) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 
 ## See also
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Label in Blazor Accumulation Chart Component | Syncfusion®
-description: Checkout and learn here all about Data Label in Blazor Accumulation Chart component and much more details.
+title: Blazor Accumulation Chart Data Label Examples | Syncfusion®
+description: Learn how to add and customize data labels in Syncfusion Blazor Accumulation Chart, including position, format, and styling options.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Data Label in Blazor Accumulation Chart Component
+# Blazor Accumulation Chart Data Label
 
 The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Visible) property in the [AccumulationDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html) can be used to add a data label to a series point.
 
@@ -261,7 +261,7 @@ The [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accumu
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVxDwCSBPKCpwaV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Text Mapping in Blazor Accumulation Chart](images/data-label/blazor-accumulation-chart-text-mapping.webp)" %}
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know various features of accumulation charts and how it is used to represent numeric proportional data.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=fluent2) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 
 ## Format
 

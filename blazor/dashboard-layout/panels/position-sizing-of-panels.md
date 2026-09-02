@@ -1,21 +1,19 @@
 ---
 layout: post
-title: Size and Position in Blazor Dashboard Layout Component | Syncfusion®
-description: Checkout and learn here all about size and position in Blazor Dashboard Layout component and much more.
+title: Size and Position in Blazor Dashboard Layout | Syncfusion®
+description: Set the size and position of Blazor Dashboard Layout panels with SizeX, SizeY, Row, and Column properties to control their grid placement.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
 ---
 
-# Size and Position of Panels in Blazor Dashboard Layout Component
-
-Panels are fundamental building blocks within the Blazor Dashboard Layout component, serving as containers for data visualization and presentation.
+# Size and Position in Blazor Dashboard Layout
 
 Panels are fundamental building blocks within the Blazor Dashboard Layout component, serving as containers for data visualization and presentation.
 
 | **Panel Property** | **Default Value** | **Description** |
 | --- | --- | --- |
-| <kbd>Id</kbd> | null | Specifies the ID value of the panel. |
+| <kbd>ID</kbd> | null | Specifies a unique ID value for the panel. Duplicate ID values can cause panels to overlap or render in the same position. |
 | <kbd>Row</kbd> | 0 | Specifies the row value in which the panel to be placed. |
 | <kbd>Column</kbd> | 0 | Specifies the column value in which the panel to be placed. |
 | <kbd>SizeX</kbd> | 1 | Specifies the width of the panel in cells count. |
@@ -68,7 +66,7 @@ Panels within the layout can be precisely positioned and ordered using the [`Row
 
 ```
 
-The following screenshot illustrates panel positioning within the Dashboard Layout, utilizing the `Row` and `Column` properties:
+The following screenshot illustrates panel positioning within the Blazor Dashboard Layout, utilizing the `Row` and `Column` properties:
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjBxZHLAfjbpGQPd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Panels Position in Blazor DashBoard Layout](../images/blazor-dashboard-layout-panel-position.webp)" %}
 
@@ -117,6 +115,11 @@ These properties are invaluable when designing dashboards where the content and 
 
 ```
 
-The following screenshot demonstrates the sizing of panels within the Dashboard Layout, using the `SizeX` and `SizeY` properties:
+The following screenshot demonstrates the sizing of panels within the Blazor Dashboard Layout, using the `SizeX` and `SizeY` properties:
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjhRNRLgTMDPQSDl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Panel Size in Blazor Dashboard Layout](../images/blazor-admin-template-layout-panel-size.webp)" %}
+
+> [!IMPORTANT]
+> Always assign a unique [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_ID) to every `DashboardLayoutPanel`. The Blazor Dashboard Layout component uses the [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_ID) property internally to manage panel identity, position, and state. Duplicate [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_ID) values can cause panels to overlap or render in the same location.
+>
+> For more information, see the [FAQ](https://blazor.syncfusion.com/documentation/dashboard-layout/faq/all-panels-rendered-at-the-same-position) on preventing panel overlap.

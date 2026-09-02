@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Disabled Items in Blazor Mention Component | Syncfusion®
-description: Checkout and learn here all about how to Disabled Items in Blazor Mention component and much more details.
+title: Disabled Items in Blazor Mention | Syncfusion
+description: Enable or disable individual Blazor Mention list items using the Disabled field in MentionFieldSettings.
 platform: Blazor
 control: Mention
 documentation: ug
 ---
 
-# Disabled Items in Blazor Mention Component
+# Disabled Items in Blazor Mention
 
 The [Mention](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html) provides options for individual items to be either in an enabled or disabled state for specific scenarios. The category of each list item can be mapped through the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MentionFieldSettings.html#Syncfusion_Blazor_DropDowns_MentionFieldSettings_Disabled) field in the data table. Once an item is disabled, it cannot be selected as a value for the component. To configure the disabled item columns, use the `MentionFieldSettings.Disabled` property.
 
@@ -23,7 +23,7 @@ In the following sample, State are grouped according on its category using `Disa
 
 ## Disable Item Method
 
-The disableItem method can be used to handle dynamic changing in disable state of a specific item. Only one item can be disabled in this method. To disable multiple items, this method can be iterated with the items list or array. The disabled field state will to be updated in the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource), when the item is disabled using this method.
+The disableItem method can be used to handle dynamic changing in disable state of a specific item. Only one item can be disabled in this method. To disable multiple items, this method can be iterated with the items list or array. The disabled field state will be updated in the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource), when the item is disabled using this method.
 
 | Parameter | Type | Description |
 |------|------|------|

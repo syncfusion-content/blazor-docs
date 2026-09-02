@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Icons in Blazor Floating Action Button Component | Syncfusion®
-description: Checkout and learn here all about Icons in Blazor Floating Action Button component and much more details.
+title: Icons in Blazor Floating Action Button | Syncfusion
+description: Add and customize icons and text in Blazor Floating Action Button using IconCss and Content properties.
 platform: Blazor
 control: Floating Action Button
 documentation: ug
 ---
 
-# Icons in Blazor Floating Action Button Component
+# Icons in Blazor Floating Action Button
 
-You can customize the icon and text of Blazor Floating Action Button(FAB) using [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconCss) and [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_Content) properties.
+The icon and text of the Blazor Floating Action Button (FAB) can be customized using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconCss) and [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_Content) properties.
 
 ## FAB with icon
 
-Display an icon-only FAB by setting the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_IconCss) property and omitting Content. The sample below also demonstrates including a custom icon font via @font-face.
+Display an icon-only FAB by setting the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconCss) property and omitting `Content`. The sample below also demonstrates including a custom icon font via `@font-face`.
 
 ```cshtml
 
@@ -56,7 +56,7 @@ Display an icon-only FAB by setting the [IconCss](https://help.syncfusion.com/cr
 
 ## FAB with icon and text
 
-You can show icon along with text in Floating Action Button by setting [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconCss) and [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_Content) properties.
+An icon can be shown along with text in the Floating Action Button by setting the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconCss) and [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_Content) properties.
 
 ```cshtml
 
@@ -99,9 +99,9 @@ You can show icon along with text in Floating Action Button by setting [IconCss]
 
 ### Icon position
 
-Change the icon position relative to the text using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconPosition) property. By default, the icon appears to the left of the text; set IconPosition to Right to place the icon after the text.
+Change the icon position relative to the text using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconPosition) property. By default, the icon appears to the left of the text. Set `IconPosition` to `IconPosition.Right` to place the icon after the text. The available values are `Left`, `Right`, `Top`, and `Bottom`.
 
-Below example demonstrates a FAB with icon and text.
+The following example demonstrates a FAB with icon and text.
 
 ```cshtml
 

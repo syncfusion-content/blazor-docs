@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Accessibility in Blazor Tooltip Component | Syncfusion®
-description: Checkout and learn here all the features about accessibility in Blazor Tooltip component and much more details.
+title: Accessibility in Blazor Tooltip | Syncfusion
+description: Learn how Blazor Tooltip supports accessibility with ARIA roles, keyboard activation, and screen readers.
 platform: Blazor
 control: Tooltip
 documentation: ug
 ---
 
-# Accessibility in Blazor Tooltip Component
+# Accessibility in Blazor Tooltip
 
-The [Blazor Tooltip](https://www.syncfusion.com/blazor-components/blazor-tooltip) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The [Blazor Tooltip](https://www.syncfusion.com/blazor-components/blazor-tooltip) component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor Tooltip component is outlined below.
 
@@ -39,7 +39,7 @@ The accessibility compliance for the Blazor Tooltip component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Blazor Tooltip component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/) patterns to meet the accessibility. The following ARIA attributes are used in the Tooltip component.
+The Blazor Tooltip component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/) patterns to meet the accessibility. The following ARIA attributes are used in the Tooltip component.
 
 | Attributes | Purpose |
 | --- | --- |
@@ -49,7 +49,7 @@ The Blazor Tooltip component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA
 
 ## Keyboard interaction
 
-The Blazor Tooltip component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Tooltip component.
+The Blazor Tooltip component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Tooltip component.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
@@ -60,7 +60,7 @@ The Blazor Tooltip component followed the [keyboard interaction](https://www.w3.
 
 The Blazor Tooltip component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
-The accessibility compliance of the Tooltip component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/tooltip) in a new window to evaluate the accessibility of the Tooltip component with accessibility tools.
+The accessibility compliance of the Blazor Tooltip component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/tooltip) in a new window to evaluate the accessibility of the Blazor Tooltip with accessibility tools.
 
 ## See also
 

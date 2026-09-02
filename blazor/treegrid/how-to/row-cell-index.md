@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Get Index Value of Selected Row Cell in Blazor TreeGrid | Syncfusion®
-description: Learn how to get the index value of a selected row cell in the Blazor TreeGrid component and much more details.
+title: Blazor TreeGrid Get Selected Row Cell Index Value | Syncfusion
+description: Learn how to get the index value of a selected row cell in Blazor TreeGrid and use row and cell indexes for programmatic operations.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Get Index Value of Selected Row Cell in Blazor TreeGrid Component
+# Get Selected Row Cell Index Value in Blazor TreeGrid
 
 The index value of a selected row or cell in the Blazor TreeGrid component can be retrieved using the [GetSelectedRowCellIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetSelectedRowCellIndexesAsync) method of the TreeGrid component.
 
-The following example demonstrates how to use the [GetSelectedRowCellIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetSelectedRowCellIndexesAsync) method on a button click to return the selected row cell indexes.
+The following example demonstrates how to use the `GetSelectedRowCellIndexesAsync` method on a button click to return the selected row cell indexes.
 
 {% tabs %}
 

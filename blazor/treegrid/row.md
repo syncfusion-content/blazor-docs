@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Rows in Blazor Tree Grid Component | Syncfusion®
-description: Check out here and learn more the features about rows in the Blazor Tree Grid component and much more details.
+title: Blazor TreeGrid Rows | Syncfusion
+description: Learn how to customize rows in Blazor TreeGrid with row styles, heights, hover effects, pinning, and advanced row settings.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Rows in Blazor Tree Grid Component
+# Rows in Blazor TreeGrid
 
 The row represents record details fetched from the data source.
 
@@ -21,6 +21,7 @@ The appearance of a row can be customized by using the [RowDataBound](https://he
 
 @using TreeGridComponent.Data
 @using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
 
  <SfTreeGrid DataSource="@TreeGridData" ParentIdMapping="ParentId" IdMapping="TaskId" TreeColumnIndex="1">
     <TreeGridEvents RowDataBound="OnRowDataBound" TValue="TreeData"></TreeGridEvents>
@@ -224,12 +225,13 @@ This is demonstrated in the below sample code where the [GetRowModel](https://he
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
 
-    public async Task TreeProps()
+    public Task TreeProps()
     {
-        var treeProps = await this.TreeGrid.GetRowModel(this.TreeGrid.GetCurrentViewRecords().ToList()[0]);
+        var treeProps = this.TreeGrid.GetRowModel(this.TreeGrid.GetCurrentViewRecords().ToList()[0]);
         var level = treeProps.Level;
         var expanded = treeProps.IsExpanded;
         var childRecords = treeProps.HasChildRecords;
+        return Task.CompletedTask;
     }
 }
 

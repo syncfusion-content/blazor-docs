@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in Blazor Accumulation Chart Component | Syncfusion®
-description: Checkout and learn here all the features about Tooltip in Blazor Accumulation Chart component and much more details.
+title: Blazor Accumulation Chart Tooltip Examples | Syncfusion®
+description: Learn how to enable and customize tooltips in Syncfusion Blazor Accumulation Chart, including format, template, and styling.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Tooltip in Blazor Accumulation Chart Component
+# Blazor Accumulation Chart Tooltip
 
 The [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Enable) property in [AccumulationChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html) can be set to **true** to enable the tooltip.
 
@@ -228,7 +228,7 @@ By default, tooltip shows information of x and y value in points. In addition, b
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNBdZmLDKlhVVFzn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[ToolTip Text Mapping in Blazor Accumulation Chart](images/tool-tip/blazor-accumulation-chart-tooltip-mapping.webp)" %}
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=fluent2) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.
 
 ## See also
 

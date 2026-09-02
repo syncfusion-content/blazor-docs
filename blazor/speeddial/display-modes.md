@@ -1,32 +1,31 @@
 ---
 layout: post
-title: Display Modes in Blazor SpeedDial Component | Syncfusion®
-description: Checkout and learn about linear and radial display modes in Blazor SpeedDial component and much more.
+title: Display Modes in Blazor Speed Dial | Syncfusion
+description: Display Blazor Speed Dial items in Linear or Radial modes and control direction with the Mode property.
 platform: Blazor
 control: SpeedDial
 documentation: ug
 ---
 
-# Display Modes in Blazor Speed Dial Component
+# Display Modes in Blazor Speed Dial
 
 The action items in the Blazor Speed Dial can be displayed in Linear or Radial modes by setting the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Mode) property. By default, Speed Dial items are displayed in Linear mode.
 
 ## Linear display mode
 
-In `Linear` display mode, Speed Dial action items are displayed in a list-like layout either horizontally or vertically, based on the direction.
+In `Linear` display mode, SpeedDial action items are displayed in a list-like layout either horizontally or vertically, based on the direction.
 
 ### Direction
 
-You can open the action items to the left, right, up, or down side of the Speed Dial button by setting [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Direction) property. The default value is `Auto` where the action items are displayed based on the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Position)
-of the Speed Dial.
+You can open the action items to the left, right, up, or down side of the Blazor Speed Dial button by setting the [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Direction) property. The `Direction` property applies only when `Mode` is `Linear`. The default value is `Auto`, where the action items are displayed based on the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Position) of the Blazor Speed Dial.
 
-The `Linear` directions of Speed Dial are as follows:
+The available [LinearDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.LinearDirection.html) values are:
 
-* Left - Action items are displayed on the left side of the button.
-* Right - Action items are displayed on the right side of the button.
-* Up - Action items are displayed above the button.
-* Down - Action items are displayed below the button.
-* Auto - The direction is automatically calculated based on the Speed Dial `Position` (for example, if positioned at the bottom-right, items open upward).
+* `Left` - Action items are displayed on the left side of the button.
+* `Right` - Action items are displayed on the right side of the button.
+* `Up` - Action items are displayed above the button.
+* `Down` - Action items are displayed below the button.
+* `Auto` - The direction is automatically calculated based on the Blazor Speed Dial `Position`.
 
 ```cshtml
 
@@ -42,8 +41,25 @@ The `Linear` directions of Speed Dial are as follows:
 
 ```
 
-![Linear display mode with items opening to the left](./images/Blazor-SpeedDial-LinearMode.webp)
+![Linear display mode with items opening to the left in Blazor Speed Dial](./images/Blazor-SpeedDial-LinearMode.webp)
 
 ## Radial display mode (Radial Menu)
 
-In `Radial` mode, Speed Dial action items are displayed in a circular pattern similar to a radial menu. For more details about Radial mode, see the getting started guide [here](https://blazor.syncfusion.com/documentation/speeddial/getting-started).
+In `Radial` mode, SpeedDial action items are displayed in a circular pattern similar to a radial menu. Use the [SpeedDialRadialSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialRadialSettings.html) tag directive to customize the radial direction, start and end angles, and the offset distance from the trigger button. For more details, see [Radial Menu](radial-menu.md).
+
+```cshtml
+
+@using Syncfusion.Blazor.Buttons
+
+<SfSpeedDial Mode="SpeedDialMode.Radial" OpenIconCss="e-icons e-edit">
+    <SpeedDialRadialSettings Direction="RadialDirection.Clockwise" OffSet="80px"/>
+    <SpeedDialItems>
+        <SpeedDialItem IconCss="e-icons e-cut"/>
+        <SpeedDialItem IconCss="e-icons e-copy"/>
+        <SpeedDialItem IconCss="e-icons e-paste"/>
+    </SpeedDialItems>
+</SfSpeedDial>
+
+```
+
+![Radial display mode with items opening clockwise in Blazor Speed Dial](./images/Blazor-SpeedDial-RadialMenu.webp)

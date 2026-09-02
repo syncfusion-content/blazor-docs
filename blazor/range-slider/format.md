@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Formatting in Blazor Range Slider Component | Syncfusion®
-description: Checkout and learn here all about formatting in Blazor Range Slider component with examples and much more details.
+title: Formatting in Blazor Range Slider | Syncfusion
+description: Format Blazor Range Slider values with prefixes, suffixes, and decimal precision using Format and events.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Formatting in Blazor Range Slider Component
+# Formatting in Blazor Range Slider
 
-The [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_Format) feature is used to customize the units and appearance of slider values. Formatted values are also applied to the ARIA attributes of the slider to ensure accessible output. There are two ways to apply formatting in the slider.
+The [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_Format) property is used to customize the prefix, suffix, decimal precision, and other display aspects of slider values. Formatted values are also applied to the ARIA attributes of the slider to ensure accessible output. There are two ways to apply formatting in the slider:
 
-* Use the `Format` API of the slider, which leverages the built-in internationalization and .NET standard format strings.
-* Customize formatting using the [`TicksRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_TicksRendering) and [`OnTooltipChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_OnTooltipChange) events.
+* Use the `Format` API on the [`SliderTicks`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html) and [`SliderTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTooltip.html) child elements, which leverages the built-in internationalization and .NET standard format strings
+* Customize formatting using the [`TicksRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_TicksRendering) and [`OnTooltipChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_OnTooltipChange) events when the built-in format strings are insufficient (for example, to render weekday names, currency symbols, or localized date/time text).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -56,8 +56,8 @@ For custom scenarios, use event handlers like [`TicksRendering`](https://help.sy
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
-<SfSlider id='default' Min="0" Max="6" @bind-Value="@Value">
-    <SliderEvents TValue="int" OnTooltipChange="@TooltipChange" TicksRendering="@TickesRendering"></SliderEvents>
+<SfSlider id="default" Min="0" Max="6" TValue="int" @bind-Value="@Value">
+    <SliderEvents TValue="int" OnTooltipChange="@TooltipChange" TicksRendering="@TicksRendering"></SliderEvents>
     <SliderTicks Placement="Placement.After" LargeStep="1"></SliderTicks>
     <SliderTooltip Placement="TooltipPlacement.Before" IsVisible="true"></SliderTooltip>
 </SfSlider>
@@ -66,7 +66,7 @@ For custom scenarios, use event handlers like [`TicksRendering`](https://help.sy
 
     private int Value = 2;
 
-    public void TickesRendering(SliderTickEventArgs args)
+    public void TicksRendering(SliderTickEventArgs args)
     {
         string[] daysArr = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
 

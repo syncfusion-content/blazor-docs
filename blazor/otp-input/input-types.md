@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Input Types in Blazor OTP Input Component | Syncfusion®
-description: Learn about input types in Blazor OTP Input component including Number, Text, and Password types with examples.
+title: Input Types in Blazor OTP Input | Syncfusion
+description: Set Blazor OTP Input type to Number, Text, or Password to match the expected one-time password format.
 platform: Blazor
 control: OTP Input
 documentation: ug
 ---
 
-# Input Types in Blazor OTP Input component
+# Input Types in Blazor OTP Input
 
 ## Types
 
@@ -43,7 +43,7 @@ Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.Sf
 
 ### Password type
 
-Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Type) property to [Password](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.OtpInputType.html#Syncfusion_Blazor_Inputs_OtpInputType_Password) to mask entered characters for privacy while typing. The underlying value remains the same; only the display is obscured.
+Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Type) property to [Password](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.OtpInputType.html#Syncfusion_Blazor_Inputs_OtpInputType_Password) to mask entered characters for privacy while typing. The characters in the input fields are displayed as masked values, while the actual value retrieved from the component remains the unmasked text.
 
 ```cshtml
 
@@ -57,7 +57,7 @@ Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.Sf
 
 ## Value
 
-Specify the initial OTP value by using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Value) property. 
+Specify the initial OTP value by using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Value) property. The component accepts a string whose length should not exceed the configured [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Length); extra characters beyond the length are ignored.
 
 ```cshtml
 
@@ -68,3 +68,10 @@ Specify the initial OTP value by using the [Value](https://help.syncfusion.com/c
 ```
 
 ![Blazor OTP input component with value](images/blazor-otp-number.webp)
+
+## See also
+
+* [Appearance in Blazor OTP Input](appearance)
+* [Styling modes in Blazor OTP Input](styling-modes)
+* [Events in Blazor OTP Input](events)
+* [Placeholder in Blazor OTP Input](placeholder)

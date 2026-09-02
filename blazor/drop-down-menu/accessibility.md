@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Accessibility in Blazor Dropdown Menu Component | Syncfusion®
-description: Checkout and learn here all the features about Accessibility in Blazor Dropdown Menu component and more.
+title: Accessibility in Blazor Dropdown Menu | Syncfusion®
+description: Learn how Blazor Dropdown Menu meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA roles, keyboard navigation, and screen reader support.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
 ---
 
-# Accessibility in Blazor Dropdown Menu Component
+# Accessibility in Blazor Dropdown Menu
 
-The Blazor Dropdown Menu component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Dropdown Menu component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor Dropdown Menu component is outlined below.
 
@@ -43,7 +43,7 @@ The Blazor Dropdown Menu component follows relevant WAI-ARIA button and menu pat
 
 | Attributes | Purpose |
 | --- | --- |
-| `role` | Indicates the Dropdown Menu trigger as `button`, the Dropdown Menu popup as `menu`, and the dropdown popup items as `menuitem`. |
+| `role` | Indicates the Dropdown Menu trigger as `button`, the Dropdown Menu popup as `menu`, and the Dropdown Menu popup items as `menuitem`. |
 | `aria-haspopup` | Indicates the availability of the popup element. |
 | `aria-expanded` | Indicates whether the popup can be expanded or collapsed and reflects its current state. |
 | `aria-owns` | Identifies elements to define a visual, functional, or contextual parent/child relationship between DOM elements when the DOM hierarchy alone cannot represent the relationship. |
@@ -51,7 +51,7 @@ The Blazor Dropdown Menu component follows relevant WAI-ARIA button and menu pat
 
 ## Keyboard interaction
 
-The Blazor Dropdown button component followed the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Dropdown Menu component.
+The Blazor Dropdown Menu component follows the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Dropdown Menu component.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
@@ -64,7 +64,7 @@ The Blazor Dropdown button component followed the keyboard interaction guideline
 
 ## Ensuring accessibility
 
-The Blazor Drop down component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The Blazor Dropdown Menu component's accessibility levels are ensured through [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
 
 The accessibility compliance of the Blazor Dropdown Menu component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/dropdown-button) in a new window to evaluate the accessibility of the Blazor Dropdown Menu component with accessibility tools.
 

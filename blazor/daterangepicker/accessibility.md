@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor DateRangePicker Component | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor DateRangePicker component and much more details.
+title: Accessibility in Blazor DateRangePicker | Syncfusion®
+description: Learn how Blazor DateRangePicker meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA attributes, keyboard navigation, and screen reader support.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
 ---
 
-# Accessibility in Blazor DateRangePicker Component
+# Accessibility in Blazor DateRangePicker
 
 The [Blazor DateRangePicker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -38,20 +38,22 @@ The accessibility compliance for the Blazor DateRangePicker component is outline
 
 ## WAI-ARIA attributes
 
-The web accessibility makes web content and web applications more accessible for people with disabilities. It especially helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies. DateRangePicker provides built-in compliance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) specifications. WAI-ARIA
-support is achieved through the attributes like `aria-expanded`, `aria-disabled`, and `aria-activedescendant` applied as an input element.
+Web accessibility makes web content and web applications more accessible for people with disabilities. It especially helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies. Blazor DateRangePicker provides built-in compliance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) specifications. WAI-ARIA
+support is achieved through the attributes like `aria-expanded`, `aria-disabled`, and `aria-activedescendant` applied to the input element.
 
 To learn about the accessibility of Calendar, refer to the Calendar's [Accessibility](https://blazor.syncfusion.com/documentation/calendar/accessibility) section.
 
-It helps people with disabilities by providing information about the widget for assistive technology in the screen readers. DateRangePicker component contains grid role and grid cell for each day cell.
+It helps people with disabilities by providing information about the widget for assistive technology in the screen readers. The Blazor DateRangePicker contains grid roles and grid cells for the day cells of both the start and end calendars.
 
-* **aria-expanded**: Indicates the currently selected date of the DateRangePicker component.
+* **aria-expanded**: Indicates whether the Blazor DateRangePicker popup is expanded or collapsed.
 
-* **aria-disabled**: Indicates the disabled state of the DateRangePicker component.
+* **aria-disabled**: Indicates the disabled state of the Blazor DateRangePicker component.
+
+* **aria-activedescendant**: Identifies the currently focused day cell within the calendar grid for assistive technologies.
 
 ## Keyboard interaction
 
-Use the following keys to interact with the DateRangePicker. This component implements the keyboard navigation support by following the  [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/).
+Use the following keys to interact with the Blazor DateRangePicker. This component implements the keyboard navigation support by following the  [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/).
 
 It supports the following list of shortcut keys:
 
@@ -84,10 +86,10 @@ Use the following list of keys to navigate the currently focused Calendar after 
 | <kbd>Shift</kbd> + <kbd>Page Down</kbd> | <kbd>⇧</kbd> + <kbd>Page Down</kbd> | Focuses the same date for the next year. |
 | <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Home</kbd> | Focuses the first date of the current year. |
 | <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>End</kbd> | Focuses the last date of the current year. |
-| <kbd>Alt</kbd> + <kbd>→</kbd> | <kbd>⌥</kbd> + <kbd>→</kbd> | Focuses through out the pop-up container in forward direction. |
-| <kbd>Alt</kbd> + <kbd>←</kbd> | <kbd>⌥</kbd> + <kbd>←</kbd> | Focuses through out the pop-up container in backward direction. |
+| <kbd>Alt</kbd> + <kbd>→</kbd> | <kbd>⌥</kbd> + <kbd>→</kbd> | Focuses throughout the pop-up container in forward direction. |
+| <kbd>Alt</kbd> + <kbd>←</kbd> | <kbd>⌥</kbd> + <kbd>←</kbd> | Focuses throughout the pop-up container in backward direction. |
 
-N> To focus out the DateRangePicker component, use the `t` keys. For additional information about native event, [click](https://blazor.syncfusion.com/documentation/daterangepicker/native-events) here.
+N> To focus out the Blazor DateRangePicker component, use the `t` key. For additional information about native events, refer to the [Blazor DateRangePicker native events](https://blazor.syncfusion.com/documentation/daterangepicker/native-events) documentation.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -106,13 +108,13 @@ N> To focus out the DateRangePicker component, use the `t` keys. For additional 
 }
 ```
 
-N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap4) to understand how to present and manipulate data.
+N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=fluent2) to understand how to present and manipulate data.
 
 ## Ensuring accessibility
 
 The Blazor DateRangePicker component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-The accessibility compliance of the DateRangePicker component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/daterangepicker) in a new window to evaluate the accessibility of the DateRangePicker component with accessibility tools.
+The accessibility compliance of the Blazor DateRangePicker component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/daterangepicker) in a new window to evaluate the accessibility of the Blazor DateRangePicker component with accessibility tools.
 
 ## See also
 

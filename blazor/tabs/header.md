@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Header in Blazor Tabs Component | Syncfusion®
-description: Checkout and learn here all the features about header in Blazor Tabs component and much more details.
+title: Header in Blazor Tabs | Syncfusion
+description: Customize Blazor Tabs header styles with predefined CSS classes for fill and accent backgrounds for visual variety.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Header in Blazor Tabs Component
+# Header in Blazor Tabs
 
 This section explains about modifying the style of Tab header.
 
@@ -109,12 +109,12 @@ N> If the above custom style classes are not included in the root element, the d
 
 ## Icon positions
 
-The position of the Tab header icons can be customized using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabHeader.html#Syncfusion_Blazor_Navigations_TabHeader_IconPosition) property. This property depends on the header items [IconCSS](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabHeader.html#Syncfusion_Blazor_Navigations_TabHeader_IconCss) property. By default, Tab header icon is placed on left position. The position values are as follows:
+The position of the Tab header icons can be customized using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabHeader.html#Syncfusion_Blazor_Navigations_TabHeader_IconPosition) property. This property depends on the header item's [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabHeader.html#Syncfusion_Blazor_Navigations_TabHeader_IconCss) property. By default, the Tab header icon is placed on the left. The available values of the `IconPosition` enum are:
 
 * **Left**: Icon is placed on the left of the Tab header item.
 * **Right**: Icon is placed on the right of the Tab header item.
-* **Top**: Icon is placed on the top of the Tab header item.
-* **Bottom**: Icon is placed on the bottom of the Tab header item.
+* **Top**: Icon is placed on top of the Tab header item.
+* **Bottom**: Icon is placed at the bottom of the Tab header item.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -247,11 +247,11 @@ The position of the Tab header icons can be customized using the [IconPosition](
 ![Blazor Tabs with Icon](./images/blazor-tabs-icon.webp)
 
 
-## Add floating button to the right of existing tabs
+## Add floating button to the right of existing Blazor Tabs
 
-You can add floating button to the right of existing tabs by adding button inside the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_HeaderTemplate) of last TabItem.
+You can add a floating button to the right of the existing Blazor Tabs by placing a button inside the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_HeaderTemplate) of the last `TabItem`.
 
-Here, New tab items added when user clicks on the `Button` inside `HeaderTemplate`.
+When the user clicks the button inside `HeaderTemplate`, a new tab item with the provided content is added.
 
 ```cshtml
 
@@ -260,20 +260,20 @@ Here, New tab items added when user clicks on the `Button` inside `HeaderTemplat
 
 <SfTab @ref="Tab">
     <TabItems>
-       <TabItem>
-         <ChildContent>
-             <TabHeader Text="Project Time"></TabHeader>
-         </ChildContent>
+        <TabItem>
+            <ChildContent>
+                <TabHeader Text="Project Time"></TabHeader>
+            </ChildContent>
             <ContentTemplate>
                 <ul>
-                    <li>Click on the "+" header to add dynamic tab items. </li>
+                    <li>Click on the "+" header to add dynamic tab items.</li>
                 </ul>
-           </ContentTemplate>
-     </TabItem>
-         <TabItem>
-             <HeaderTemplate>
-                  <SfButton  Content="+"  @onclick="onClick"></SfButton>
-             </HeaderTemplate>
+            </ContentTemplate>
+        </TabItem>
+        <TabItem>
+            <HeaderTemplate>
+                <SfButton Content="+" @onclick="OnClick"></SfButton>
+            </HeaderTemplate>
         </TabItem>
     </TabItems>
 </SfTab>
@@ -281,13 +281,17 @@ Here, New tab items added when user clicks on the `Button` inside `HeaderTemplat
 @code {
     SfTab Tab;
 
-    public void onClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    public void OnClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
     {
         List<TabItem> source = new List<TabItem>()
         {
-            new TabItem() { Header = new TabHeader() { Text = "new tab"} }
+            new TabItem()
+            {
+                Header = new TabHeader() { Text = "New Tab" },
+                Content = "New tab content. Click the close icon to remove this tab."
+            }
         };
-        this.Tab.AddTab(source, this.Tab.Items.Count() - 1);
+        this.Tab.AddTab(source, this.Tab.Items.Count - 1);
     }
 }
 ```
@@ -296,6 +300,6 @@ Here, New tab items added when user clicks on the `Button` inside `HeaderTemplat
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/How-to-add-floating-button-to-the-right-of-tabs-in-Blazor-Tab)
 
-## See Also
+## See also
 
 * [How to customize selected tab styles](./how-to/customize-selected-tab-styles)

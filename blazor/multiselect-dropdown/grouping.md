@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Grouping in Blazor MultiSelect Dropdown Component | Syncfusion®
-description: Checkout and learn here all about grouping in Blazor MultiSelect Dropdown component and much more details.
+title: Grouping in Blazor MultiSelect Dropdown | Syncfusion
+description: Group Blazor MultiSelect Dropdown items by category with GroupBy for inline and fixed group headers.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Grouping in Blazor MultiSelect Dropdown Component
+# Grouping in Blazor MultiSelect Dropdown
 
 The MultiSelect supports grouping list items by category. Map the category field of each item to the [MultiSelectFieldSettings.GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_GroupBy) property. Group headers appear inline and also as fixed headers. The fixed group header updates dynamically while scrolling to reflect the current group.
 

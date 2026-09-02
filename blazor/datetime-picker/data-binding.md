@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Data Binding in Blazor DateTimePicker Component | Syncfusion®
-description: Learn how to bind values to the Blazor DateTimePicker using one-way binding, two-way binding with @bind-Value, and dynamic updates.
+title: Data Binding in Blazor DateTime Picker | Syncfusion®
+description: Bind values to the Blazor DateTime Picker using one-way binding, two-way binding with @bind-Value, and dynamic value updates.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
 ---
 
-# Data Binding in Blazor DateTimePicker Component
+# Data Binding in Blazor DateTime Picker
 
-This section explains how to bind values to the DateTimePicker component in the following ways.
+This section explains how to bind values to the Blazor DateTime Picker component in the following ways.
 
-* One-Way Data Binding
-* Two-Way Data Binding
-* Dynamic Value Binding
+* One-way binding
+* Two-way data binding
+* Dynamic value binding
 
 ## One-way binding
 
-Bind a value to the DateTimePicker component using the `Value` property as shown in the following example. In one-way binding, pass the property or variable name prefixed with `@` (for example, `@DateValue`). Changes to the source update the UI, but user edits do not update the source automatically.
+Bind a value to the Blazor DateTime Picker component using the `Value` property as shown in the following example. In one-way binding, pass the property or variable name prefixed with `@` in Razor (for example, `@DateValue`). Changes to the source update the UI on the next render, but user edits do not update the source automatically.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -54,7 +54,7 @@ public DateTime? DateValue { get; set; } = DateTime.Now;
 
 ## Dynamic value binding
 
-The value can be updated programmatically in response to component events (such as the DateTimePicker’s `ValueChange`) or from external logic. When updating state within component event callbacks, the UI re-renders automatically in most cases; `StateHasChanged()` is typically required only when changes originate outside the normal event pipeline (for example, from timers, external services, or non-UI threads). The following example updates the value in the DateTimePicker’s `ValueChange` event.
+The value can be updated programmatically in response to component events such as the Blazor DateTime Picker’s `ValueChange`. Blazor’s default behavior re-renders the component automatically inside event callbacks, so calling `StateHasChanged()` is usually not required here. The `ChangedEventArgs<T>` payload exposes `Value`, `PreviousValue`, and `IsInteracted` to inspect the change. The following example updates the value in the Blazor DateTime Picker's `ValueChange` event.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

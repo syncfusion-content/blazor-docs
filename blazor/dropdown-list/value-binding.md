@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Value binding in Blazor DropDownList component | Syncfusion®
-description: Checkout and learn here all about Value Binding in Blazor DropDown List component and much more details.
+title: Value Binding in Blazor Dropdown List | Syncfusion®
+description: Bind selected values and indexes in Blazor Dropdown List using primitive, complex, and object data sources.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Value Binding in Dropdown List
+# Value Binding in Blazor Dropdown List
 
 Value binding synchronizes a component’s value with a parent or model. The DropDownList supports two binding approaches:
 - Value binding with `@bind-Value`.
@@ -25,7 +25,7 @@ Use the [`@bind-Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 {% endhighlight %}
 
-![Blazor DropDownList with Bind Value](./images/value-binding/blazor_dropdown_bind-value.webp)
+![Blazor Dropdown List with Bind Value](./images/value-binding/blazor_dropdown_bind-value.webp)
 
 ## Index value binding
 
@@ -37,7 +37,7 @@ Bind by index using the [`@bind-Index`](https://help.syncfusion.com/cr/blazor/Sy
 
 {% endhighlight %}
 
-![Blazor DropDownList with Index Value](./images/value-binding/blazor_dropdown_index-value.webp)
+![Blazor Dropdown List with Index Value](./images/value-binding/blazor_dropdown_index-value.webp)
 
 ## Text and value
 
@@ -51,7 +51,7 @@ In the following example, the selected item text is “Badminton” (Text field)
 
 {% endhighlight %}
 
-![Blazor DropDownList with Text and Value](./images/value-binding/blazor_dropdown_text-and-value.webp)
+![Blazor Dropdown List with Text and Value](./images/value-binding/blazor_dropdown_text-and-value.webp)
 
 ## Primitive type binding
 
@@ -65,7 +65,7 @@ The following example uses an array of strings:
 
 {% endhighlight %}
 
-![Blazor DropDownList with Primitive Type as string](./images/value-binding/blazor_dropdown_primitive-type-string.webp)
+![Blazor Dropdown List with Primitive Type as string](./images/value-binding/blazor_dropdown_primitive-type-string.webp)
 
 The following example uses an array of integers:
 
@@ -75,7 +75,7 @@ The following example uses an array of integers:
 
 {% endhighlight %}
 
-![Blazor DropDownList with Primitive Type as int](./images/value-binding/blazor_dropdown_primitive-type-int.webp)
+![Blazor Dropdown List with Primitive Type as int](./images/value-binding/blazor_dropdown_primitive-type-int.webp)
 
 ## Object binding
 
@@ -89,7 +89,7 @@ In the following example, the `Name` field is mapped to the `Value` property.
 
 {% endhighlight %}
 
-![Blazor DropDownList with object values](./images/value-binding/blazor_dropdown_object-binding.webp)
+![Blazor Dropdown List with object values](./images/value-binding/blazor_dropdown_object-binding.webp)
 
 ## Enum binding
 
@@ -101,7 +101,7 @@ Bind enum values using [`@bind-Value`](https://help.syncfusion.com/cr/blazor/Syn
 
 {% endhighlight %}
 
-![Blazor DropDownList with Enum Data](./images/value-binding/blazor_dropdown_enum-binding.webp)
+![Blazor Dropdown List with Enum Data](./images/value-binding/blazor_dropdown_enum-binding.webp)
 
 ## Show or hide clear button
 
@@ -117,13 +117,13 @@ The following example uses `string` as `TValue`, so clearing sets the value to `
 
 {% endhighlight %}
 
-![Blazor DropDownList with clear button](./images/value-binding/blazor_dropdown_show-hide-clear-button.webp)
+![Blazor Dropdown List with clear button](./images/value-binding/blazor_dropdown_show-hide-clear-button.webp)
 
 ## Dynamically change TItem
 
 Change `TItem` dynamically by defining a generic DropDownList using the `@typeparam` directive and passing different data source types.
 
-### Creating generic dropdownList component
+### Creating a generic DropDownList component
 
 Create a reusable `DropDownList.razor` component that exposes `customData` (`List<TItem>`) and `DDLValue` (`TValue`) as parameters.
 
@@ -219,7 +219,7 @@ In the example below, `TValue` is `string` in `Index.razor`, and `TValue` is `in
 {% endhighlight %}
 {% endtabs %}
 
-## Two way binding
+## Two-way binding
 
 Two-way binding synchronizes data between the UI and the model using the Blazor `@bind-Value` directive. Use `@bind-Value` on the DropDownList to enable two-way binding.
 
@@ -229,7 +229,7 @@ Two-way binding synchronizes data between the UI and the model using the Blazor 
 
 {% endhighlight %}
 
-![Blazor DropDownList with Two way binding](./images/value-binding/blazor_dropdown_two-way-binding.webp)
+![Blazor Dropdown List with Two way binding](./images/value-binding/blazor_dropdown_two-way-binding.webp)
 
 ## Programmatically clearing value
 
@@ -241,4 +241,4 @@ Clear the value programmatically by calling `ClearAsync()` on the DropDownList i
 
 {% endhighlight %} 
 
-![Blazor DropDownList with clear button](./images/value-binding/blazor_dropdown_with-clearAsync-method.gif)
+![Blazor Dropdown List with clear button](./images/value-binding/blazor_dropdown_with-clearAsync-method.gif)

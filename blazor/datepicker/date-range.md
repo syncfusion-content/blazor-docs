@@ -1,17 +1,19 @@
 ---
 layout: post
-title: Date Range in Blazor DatePicker Component | Syncfusion®
-description: Checkout and learn here all the features about Date Range in Blazor DatePicker component and much more.
+title: Date Range in Blazor DatePicker | Syncfusion®
+description: Restrict the Blazor DatePicker to a specific date range using the Min and Max properties, with inclusive bounds and date-only comparison.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Date Range in Blazor DatePicker Component
+# Date Range in Blazor DatePicker
 
-The DatePicker provides an option to select a date value within a specified range by using the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Max) properties. Always the Min value has to be lesser than the Max value. The `Value` property depends on the Min/Max with respect to the [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_StrictMode) property. For more information about StrictMode, refer to the [Strict Mode](./strict-mode) section from the documentation.
+The Blazor DatePicker allows you to restrict the selectable date to a specified range by using the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Max) properties.
 
-The following code allows selecting a date within the range from 7th to 27th in a month.
+When [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_StrictMode) is enabled, the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Value) is reset to `null` if it falls outside the configured Min/Max range. For more information, refer to the [Strict Mode](./strict-mode) section.
+
+The following example allows selecting a date within the range from the 7th to the 27th of the current month.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -25,11 +27,9 @@ The following code allows selecting a date within the range from 7th to 27th in 
 }
 ```
 
-
-
 ![Date Selection in Blazor DatePicker](./images/blazor-datepicker-date-selection.webp)
 
-When the Min and Max properties are configured and the selected date value is out-of-range or invalid, then the model value will be set to `out of range` date value or `null` respectively with highlighted `error` class to indicate the date is out of range or invalid.
+The following example sets the initial `Value` to the 28th, which is outside the configured range (7th–27th). Because the date is out of range, the model value is reset to `null` and the `e-error` CSS class is applied to the input to highlight the invalid value.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -43,8 +43,11 @@ When the Min and Max properties are configured and the selected date value is ou
 }
 ```
 
-
-
 ![Blazor DatePicker displays Selected Date](./images/blazor-datepicker-selected-date.webp)
 
-N> If the value of `Min` or `Max` properties changed through code behind, you have to update the `Value` property to set within the range.
+N> If the value of the `Min` or `Max` property is changed through code-behind, you have to update the `Value` property so that it stays within the range.
+
+## See also
+
+* [Strict Mode](./strict-mode)
+* [DateRangePicker](../daterangepicker/getting-started)

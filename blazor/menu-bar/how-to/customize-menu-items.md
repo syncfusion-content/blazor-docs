@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Customize Menu Bar Items in Blazor Menu Bar Component | Syncfusion®
-description: Checkout and learn here all about how to customize menu bar items in Blazor Menu Bar component and much more details.
+title: How to customize menu bar items in Blazor Menu Bar | Syncfusion
+description: Add or remove Blazor Menu Bar items dynamically using built-in methods and field settings at runtime today.
 platform: Blazor
 control: Menu Bar 
 documentation: ug
 ---
 
-# Customize Menu Bar Items in Blazor Menu Bar Component
+# How to customize menu bar items in Blazor Menu Bar
 
-## Add or Remove Menu Items
+## Add or Remove Blazor Menu Bar Items
 
-Menu items can be added or removed directly by using Add or Remove methods.
+Blazor Menu Bar items can be added or removed by using the [`Add`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu-1.html#Syncfusion_Blazor_Navigations_SfMenu_1_Add__1) and [`Remove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu-1.html#Syncfusion_Blazor_Navigations_SfMenu_1_Remove__1) methods on the `SfMenu` instance. The following example uses a typed model (`TValue="DataList"`) and binds the items through the `Items` parameter along with `MenuFieldSettings` to map the model fields.
 
-In the following example, the `Corporate` menu items are added and the `Company` items are removed from menu.
+In the following example, the `Corporate` menu item is added and the `Company` item is removed from the menu.
 
 ```cshtml
 
@@ -70,13 +70,13 @@ In the following example, the `Corporate` menu items are added and the `Company`
 
 ```
 
-![Add or Remove Items in Blazor MenuBar](./../images/blazor-menubar-add-remove-items.webp)
+![Add or Remove Items in Blazor Menu Bar](./../images/blazor-menubar-add-remove-items.webp)
 
 ## Enable or Disable Menu Items
 
-You can enable and disable the menu items using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Disabled) property in Menu items. To disable menuItems, set the `Disabled` property to true and vice-versa.
+You can enable and disable the menu items using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Disabled) property. To disable a menu item, set the `Disabled` property to `true`; to re-enable it, set the property to `false`. This example also references `Syncfusion.Blazor.Buttons` for the `SfButton` component.
 
-In the following example, the Directory header item, Conferences, and Music sub menu items are disabled.
+In the following example, the Directory header item, Conferences, and Music submenu items are disabled.
 
 ```cshtml
 
@@ -131,13 +131,13 @@ In the following example, the Directory header item, Conferences, and Music sub 
 
 ```
 
-![Disabling Menu Items in Blazor MenuBar](./../images/blazor-menubar-disable-item.webp)
+![Disabling Menu Items in Blazor Menu Bar](./../images/blazor-menubar-disable-item.webp)
 
 ## Show or Hide Menu Items
 
-You can show or hide the menu items using the [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property in Menu items. To hide the menuItems, set the `Hidden` property to true and vice-versa.
+You can show or hide the menu items using the [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property. To hide a menu item, set the `Hidden` property to `true`; to show it again, set the property to `false`.
 
-In the following example, the Movies header item, Workshops, and Music sub menu items are hidden in menu.
+In the following example, the Movies header item, Workshops, and Music submenu items are hidden.
 
 ```cshtml
 
@@ -193,4 +193,4 @@ In the following example, the Movies header item, Workshops, and Music sub menu 
 
 ```
 
-![Disaplying Menu Items in Blazor MenuBar](./../images/blazor-menubar-show-menu-item.webp)
+![Displaying Menu Items in Blazor Menu Bar](./../images/blazor-menubar-show-menu-item.webp)
