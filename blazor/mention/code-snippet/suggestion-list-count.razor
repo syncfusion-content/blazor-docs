@@ -1,6 +1,6 @@
 @using Syncfusion.Blazor.DropDowns
 
-<SfMention TItem="UserData" DataSource="@data" SuggestionCount=6>
+<SfMention TItem="UserData" DataSource="@data" SuggestionCount="6">
     <TargetComponent>
         <div id="commentsMention" placeholder="Type @@ and tag user" ></div>
     </TargetComponent>
@@ -32,19 +32,19 @@
         public string EmailId { get; set; }
     }
 
-    public List<UserData> data = new List<UserData>()
+    private List<UserData> data = new()
     {
-        new UserData { Name = "Selma Rose", EmailId = "selma@gmail.com" },
-        new UserData { Name = "Maria", EmailId = "maria@gmail.com" },
-        new UserData { Name = "Russo kay", EmailId = "russo@gmail.com" },
-        new UserData { Name = "Robert", EmailId = "robert@gmail.com" },
-        new UserData { Name = "Garth", EmailId = "garth@gmail.com" },
-        new UserData { Name = "Andrew James", EmailId = "andrew@gmail.com" },
-        new UserData { Name = "Olivia", EmailId = "olivia@gmail.com" },
-        new UserData { Name = "Margaret", EmailId = "margaret@gmail.com" },
-        new UserData { Name = "Ursula Ann", EmailId = "ursula@gmail.com" },
-        new UserData { Name = "Laura Grace", EmailId = "laura@gmail.com" },
-        new UserData { Name = "Albert", EmailId = "albert@gmail.com" },
-        new UserData { Name = "William", EmailId = "william@gmail.com" }
+        new() { Name = "Selma Rose", EmailId = "selma@gmail.com" },
+        new() { Name = "Maria", EmailId = "maria@gmail.com" },
+        new() { Name = "Russo kay", EmailId = "russo@gmail.com" },
+        new() { Name = "Robert", EmailId = "robert@gmail.com" },
+        new() { Name = "Garth", EmailId = "garth@gmail.com" },
+        new() { Name = "Andrew James", EmailId = "andrew@gmail.com" },
+        new() { Name = "Olivia", EmailId = "olivia@gmail.com" },
+        new() { Name = "Margaret", EmailId = "margaret@gmail.com" },
+        new() { Name = "Ursula Ann", EmailId = "ursula@gmail.com" },
+        new() { Name = "Laura Grace", EmailId = "laura@gmail.com" },
+        new() { Name = "Albert", EmailId = "albert@gmail.com" },
+        new() { Name = "William", EmailId = "william@gmail.com" }
     };
 }
