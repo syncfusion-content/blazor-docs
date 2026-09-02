@@ -297,9 +297,42 @@ By default, the suggestion list width automatically matches the AutoComplete inp
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.DropDowns
+
 <SfAutoComplete TValue="string" TItem="Country" Placeholder="Select a country" DataSource="@LocalData" PopupHeight="300px" PopupWidth="300px">
     <AutoCompleteFieldSettings Value="Name" />
 </SfAutoComplete>
+
+@code {
+
+    public class Country
+    {
+        public string Name { get; set; }
+        public string Code { get; set; }
+    }
+
+    List<Country> LocalData = new List<Country> {
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" },
+        new Country() { Name = "France", Code = "FR" },
+        new Country() { Name = "Finland", Code = "FI" },
+        new Country() { Name = "Germany", Code = "DE" },
+        new Country() { Name = "Greenland", Code = "GL" },
+        new Country() { Name = "Hong Kong", Code = "HK" },
+        new Country() { Name = "India", Code = "IN" },
+        new Country() { Name = "Italy", Code = "IT" },
+        new Country() { Name = "Japan", Code = "JP" },
+        new Country() { Name = "Mexico", Code = "MX" },
+        new Country() { Name = "Norway", Code = "NO" },
+        new Country() { Name = "Poland", Code = "PL" },
+        new Country() { Name = "Switzerland", Code = "CH" },
+        new Country() { Name = "United Kingdom", Code = "GB" },
+        new Country() { Name = "United States", Code = "US" },
+    };
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -308,5 +341,6 @@ By default, the suggestion list width automatically matches the AutoComplete inp
 
 ## See also
 
-1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](../getting-started/blazor-webassembly-app)
-2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-web-app)
+1. [Getting Started with Blazor WebAssembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+3. [Getting Started with Blazor Server App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
