@@ -9,17 +9,21 @@ documentation: ug
 
 # Remote Data in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports remote data binding for seamless interaction with external services such as **OData**, **Web API**, **RESTful endpoints**, or **GraphQL**. Remote data binding is configured using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) by specifying the service endpoint and adaptor type.
+The [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports remote data binding for seamless interaction with external services such as **OData**, **Web API**, **RESTful endpoints**, or **GraphQL**. Remote data binding is configured using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) by specifying the service endpoint and adaptor type.
 
 To configure remote data binding:
 
 1. Configure `SfDataManager` with the service endpoint using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property.
-2. Select an adaptor through the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor)  property (e.g., **ODataV4Adaptor**, **ODataAdaptor**, **WebApiAdaptor**, **UrlAdaptor**).
-3. Define the grid’s `TValue` type to match the data model.
-4. Place `SfDataManager` inside the grid markup.
+2. Select an adaptor through the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property (e.g., **ODataV4Adaptor**, **ODataAdaptor**, **WebApiAdaptor**, **UrlAdaptor**).
+3. Define the Data Grid’s `TValue` type to match the data model.
+4. Place `SfDataManager` inside the Data Grid markup.
 
-```cs
+Quick start with an OData v4 endpoint:
 
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 
@@ -45,19 +49,20 @@ To configure remote data binding:
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 > If no `adaptor` is specified, `SfDataManager` uses [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) by default. Ensure that the `TValue` type matches the data model for proper binding.
 
 ## Binding with OData services
 
-[OData](https://www.odata.org/documentation/) (Open Data Protocol) is a standardized protocol that simplifies data sharing across different systems by enabling querying and updating data through RESTful APIs. The Blazor DataGrid provides built-in support for **OData v3** and **v4** services using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
+[OData](https://www.odata.org/documentation/) (Open Data Protocol) is a standardized protocol that simplifies data sharing across different systems by enabling querying and updating data through RESTful APIs. The Blazor Data Grid provides built-in support for **OData v3** and **v4** services using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
 
 The `DataManager` communicates with the remote OData service using either [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) or [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/odatav4-adaptor), depending on the protocol version.
 
 * Use `ODataAdaptor` for **OData v3** services.
 * Use `ODataV4Adaptor` for **OData v4** services.
-* Ensure the response format of the OData service matches the grid’s data model.
+* Ensure the response format of the OData service matches the Data Grid’s data model.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -92,11 +97,11 @@ The `DataManager` communicates with the remote OData service using either [OData
 
 ## Enable SfDataManager after initial rendering
 
-The Blazor DataGrid can defer remote loading by rendering the grid with an empty data source initially and adding [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) only after a condition is met. When `SfDataManager` is rendered, the grid automatically requests data from the configured remote endpoint using the specified adaptor.
+The Blazor Data Grid can defer remote loading by rendering the Data Grid with an empty data source initially and adding [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) only after a condition is met. When `SfDataManager` is rendered, the grid automatically requests data from the configured remote endpoint using the specified adaptor.
 
-To implement this behavior:
+Implementation steps:
 
-1. Render the grid with an empty data source during initial load.
+1. Render the Data Grid with an empty data source during initial load.
 2. Use a flag to control whether `SfDataManager` is rendered.
 3. Adding `SfDataManager` after the initial render triggers remote data retrieval.
 
@@ -144,7 +149,7 @@ To implement this behavior:
 {% endhighlight %}
 {% endtabs %}
 
-![Dynamically Rendering Data Manager in Blazor DataGrid](../images/blazor-datagrid-dynamic-render-data-manager.webp)
+![Dynamically Rendering Data Manager in Blazor Data Grid](../images/blazor-datagrid-dynamic-render-data-manager.webp)
 
 ## Configuring HttpClient
 
@@ -155,11 +160,26 @@ The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 1. Register a custom `HttpClient` before calling `AddSyncfusionBlazor()` in **Program.cs**. This ensures `SfDataManager` uses the preconfigured instance with **base address**, **authentication**, and **default headers**.
 2. Pass a specific `HttpClient` instance directly to `SfDataManager` using the [HttpClientInstance](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_HttpClientInstance) property when multiple named or preconfigured clients are required.
 3. Use a custom [HTTP message handler](https://learn.microsoft.com/en-us/aspnet/web-api/overview/advanced/httpclient-message-handlers) for advanced scenarios such as logging or request modification.
+
+Register the custom client before `AddSyncfusionBlazor()` in **Program.cs**:
+
+{% highlight c# tabtitle="Program.cs" %}
+
+builder.Services.AddHttpClient(client =>
+{
+    client.BaseAddress = new Uri("https://api.example.com/");
+});
+builder.Services.AddSyncfusionBlazor();
+
+{% endhighlight %}
+
+Inject a registered `HttpClient` with `@inject HttpClient MyClient`, then pass the instance with `<SfDataManager HttpClientInstance="@MyClient">`.
+
 For details on registering a custom handler, see the [Microsoft ASP.NET Core documentation](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-10.0).
 
 > [Typed clients](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-10.0#typed-clients) are not supported with `SfDataManager`. For similar functionality, use [custom binding](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor).
 
-## Authorization and Authentication
+## Authorization and authentication
 
 * **Authentication** is the process of verifying the identity of a client or application.
 
@@ -189,15 +209,15 @@ This section describes how to configure [SfDataManager](https://help.syncfusion.
     }
         ```
 
-- **Using the Headers property of SfDataManager:** 
+* **Using the Headers property of SfDataManager:**
 
-    Set the access token directly in the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Headers) property of `SfDataManager`. For more details, see [Setting Custom Headers](#setting-custom-headers).
+    Add the access token or API key as a key-value pair in the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Headers) property of `SfDataManager`. See [Setting custom headers](#setting-custom-headers) for configuration details.
 
 > For more information about configuring authentication in Blazor, see [Microsoft ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/webassembly/additional-scenarios?view=aspnetcore-9.0) documentation.
 
 ## Setting custom headers
 
-Custom HTTP headers can be added to requests made by [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) when interacting with remote services. This is useful for scenarios requiring **authentication tokens**, **API keys**, or **additional metadata** for secure communication
+Custom HTTP headers can be added to requests made by [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) when interacting with remote services. This is useful for scenarios requiring **authentication tokens**, **API keys**, or **additional metadata** for secure communication.
 
 To achieve this, configure the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Headers) property of `SfDataManager`. The `Headers` property accepts a dictionary of key-value pairs, where each key represents the **header name** and the value represents the **header value**.
 
@@ -241,9 +261,13 @@ To achieve this, configure the [Headers](https://help.syncfusion.com/cr/blazor/S
 
 The [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property of the Blazor DataGrid allows dynamic modification of data requests sent to remote services. This property can be updated at runtime to filter, sort, or customize the data retrieved from the server. Changing the query dynamically is useful for scenarios where data needs to be refreshed based on application events.
 
-The example demonstrates modifying the query parameter dynamically. Initially, the grid displays orders where **CustomerID** equals **VINET**. When the **Modify Query Data** button is clicked, the grid updates to show orders where **CustomerID** equals **HANAR**.
+The example demonstrates modifying the query parameter dynamically. Initially, the Data Grid displays orders where **CustomerID** equals **VINET**. When the **Modify Query Data** button is clicked, the Data Grid updates to show orders where **CustomerID** equals **HANAR**.
 
-```cs
+Reassigning `QueryData` on click triggers component re-render and re-requests data with the new query.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Data
@@ -277,13 +301,14 @@ The example demonstrates modifying the query parameter dynamically. Initially, t
         QueryData = UpdatedQueryData;
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
-![Changing Query Dynamically in the Grid](../images/blazor-datagrid-query-update.webp)
+![Changing Query Dynamically in the Data Grid](../images/blazor-datagrid-query-update.webp)
 
 ## Offline mode
 
-When remote data binding is enabled, all grid actions such as **paging**, **sorting**, **editing**, **grouping**, and **filtering** are processed on the server. To avoid a network request for every action, the grid can load all data during initialization and perform subsequent operations on the client side. 
+When remote data binding is enabled, all Data Grid actions such as **paging**, **sorting**, **editing**, **grouping**, and **filtering** are processed on the server. To avoid a network request for every action, the Data Grid can load all data during initialization and perform subsequent operations on the client side. 
 
 This behavior is enabled by setting the [Offline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Offline) property of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to **true**.
 
@@ -340,16 +365,15 @@ namespace WebApiAdaptor.Controllers
 
 > Replace **https://localhost:xxxx/api/Grid** with the actual URL of the API endpoint that provides data in a consumable format (such as JSON).
 
-A complete sample is available on [Github](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/Offline-Mode).
+A complete sample is available on [GitHub](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/Offline-Mode).
 
-## Fetch result from the DataManager query using external button
+## Fetch result from the DataManager query using an external button
 
-The Blazor DataGrid can be populated with data fetched on demand from a remote endpoint. An external button can trigger an HTTP request and assign the returned collection to the grid’s [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. This approach provides control over when data is loaded and is suitable for scenarios where data retrieval should be deferred until a specific event occurs.
+The Blazor Data Grid can be populated with data fetched on demand from a remote endpoint. An external button can trigger an HTTP request and assign the returned collection to the Data Grid’s [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. This approach provides control over when data is loaded and is suitable for scenarios where data retrieval should be deferred until a specific event occurs.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
-@page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor
@@ -380,7 +404,7 @@ The Blazor DataGrid can be populated with data fetched on demand from a remote e
     {
             public int? OrderID { get; set; }
             public string CustomerID { get; set; }
-            public string EmployeeID { get; set; }
+            public int? EmployeeID { get; set; }
             public double? Freight { get; set; }
             public string ShipCountry { get; set; }
     }
