@@ -9,9 +9,11 @@ documentation: ug
 
 # Command Column Editing in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports command column editing, which enables CRUD (Create, Read, Update, Delete) action buttons within a column to perform operations on individual rows. This approach is suitable for inline editing, deletion, or saving changes directly within the Grid.
+The [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports command column editing. Command column editing enables **Edit**, **Delete**, **Save**, and **Cancel** buttons within a column to perform operations on individual rows. Command column editing is suitable for inline editing, deletion, or saving changes directly within the Data Grid.
 
-To enable command column editing, configure the [GridColumn.Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Commands) property. This property defines which command buttons **Edit**, **Delete**, **Save**, and **Cancel** should appear in the command column.
+To enable command column editing, configure the [GridColumn.Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Commands) property through the `GridCommandColumns` tag. The tag defines which of the command buttons (Edit, Delete, Save, Cancel) appear in the column.
+
+Before configuring command columns, enable editing and deleting in [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html). Set [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowEditing) and [AllowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowDeleting) to `true` to enable the **Edit** and **Delete** buttons.
 
 
 | Command Button | Action                      |
@@ -21,13 +23,15 @@ To enable command column editing, configure the [GridColumn.Commands](https://he
 | Save          | Update the edited row.      |
 | Cancel        | Cancel the edit operation.  |
 
-In this configuration, the [GridCommandColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridCommandColumns.html)  property is used to display all four command buttons in the Manage Records column.
+Edit and Delete buttons are displayed when a row is not being edited. Save and Cancel buttons are displayed only while a row is in edit mode.
+
+In this configuration, the [GridCommandColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridCommandColumns.html) tag displays all four command buttons in the Manage Records column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@OrderData" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })" Height="315">
+<SfGrid DataSource="@OrderData" Height="315">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -98,7 +102,7 @@ public class OrderDetails
 
 ## Custom command column
 
-The Blazor DataGrid supports adding custom command buttons in a column to perform specific actions on individual rows. This feature is suitable for implementing customized functionality such as editing, deleting, or executing other operations.
+The Blazor Data Grid supports adding custom command buttons for row-specific actions beyond the built-in edit and delete commands, such as displaying selected record details in a dialog when a user clicks a custom button.
 
 To add custom command buttons, configure the [GridColumn.Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Commands) property. Define the actions for these buttons using the [CommandClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CommandClicked) event.
 
@@ -117,7 +121,7 @@ To add custom command buttons, configure the [GridColumn.Commands](https://help.
         <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
         <GridColumn HeaderText="Commands" Width="150">
             <GridCommandColumns>
-                <GridCommandColumn ButtonOption="@(new CommandButtonOptions() { Content = "Details", CssClass = "e-flat" })"></GridCommandColumn>
+                <GridCommandColumn Type="CommandButtonType.None" ButtonOption="@(new CommandButtonOptions() { Content = "Details", CssClass = "e-flat" })"></GridCommandColumn>
             </GridCommandColumns>
         </GridColumn>
     </GridColumns>
@@ -144,11 +148,11 @@ To add custom command buttons, configure the [GridColumn.Commands](https://help.
     private SfDialog Dialog;
     private string DialogHeader;
     private OrderDetails selectedRecord;
-    private void CommandClickedHandler(CommandClickEventArgs<OrderDetails> args)
+    private async Task CommandClickedHandler(CommandClickEventArgs<OrderDetails> args)
     {
         selectedRecord = args.RowData; 
         DialogHeader="Row Information of " + selectedRecord.OrderID; 
-        Dialog.ShowAsync();
+        await Dialog.ShowAsync();
     }
 }
 {% endhighlight %}
@@ -201,20 +205,20 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZVHDwDBiEFgGUVy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> The Blazor DataGrid does not support **adding new records** using the command column. This limitation exists because the command column and its buttons are rendered only after a record is created. Therefore, the command column supports only **edit**, **delete**, **cancel**, and **update** operations.
+> The Blazor Data Grid does not support **adding new records** using the command column. The limitation exists because the command column and its buttons are rendered only after a record is created. Therefore, the command column supports only **edit**, **delete**, **cancel**, and **Save (update)** operations.
 
 ## Hide command column button in specific records
 
-The Blazor DataGrid supports conditionally hiding command buttons for specific records based on defined criteria. This is useful when certain actions such as delete or update should be restricted depending on the record's state.
+The Blazor Data Grid supports conditionally hiding command buttons for specific records based on defined criteria. Conditional visibility is useful when certain actions such as delete or update should be restricted depending on the record's state.
 
-To implement this behavior, use the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event, which is triggered whenever a row is created or updated in the Grid.
+To implement conditional visibility, use the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event, which is triggered whenever a row is created or updated in the Data Grid.
 
 The following steps outline how to conditionally hide command buttons:
 
 * Use the `RowDataBound` event to access each row's data during rendering.
 * Check the value of the **Verified** column for the current record.
-* If the **Verified** value is **false**, display only the **Edit** button; otherwise, display the **Delete** button.
-* To hide buttons, apply a CSS class to the row using the **addClass** method inside the `RowDataBound` event based on the record condition. Define corresponding CSS rules to apply the style to the respective command buttons.
+* If the **Verified** value is **false**, display only the **Edit** button; otherwise, display only the **Delete** button.
+* To hide buttons, apply a CSS class to the row using the **AddClass** method inside the `RowDataBound` event based on the record condition. Define corresponding CSS rules to apply the style to the respective command buttons.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -226,7 +230,7 @@ The following steps outline how to conditionally hide command buttons:
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn HeaderText="Manage Records" Width="150">
             <GridCommandColumns>
