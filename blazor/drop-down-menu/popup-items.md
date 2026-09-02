@@ -111,6 +111,7 @@ In the following sample, navigation URL for Flipkart, Amazon, and Snapdeal actio
 Popup items can be customized using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_CssClass) property. The following example demonstrates customizing items with CSS:
 
 ```cshtml
+@using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton Content="Edit" CssClass="custom">
     <DropDownMenuItems>
