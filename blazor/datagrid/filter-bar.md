@@ -9,26 +9,26 @@ documentation: ug
 
 # Filter Bar in Blazor Data Grid
 
-The filter bar feature provides an efficient and intuitive way to filter data within the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component. This feature displays input fields below each column header, enabling straightforward data filtering based on column-specific criteria. The filter bar enhances data exploration by allowing users to narrow down large datasets to display only relevant records.
+The filter bar feature provides an efficient and intuitive way to filter data within the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component. This feature displays input fields below each column header, enabling straightforward data filtering based on column-specific criteria. The filter bar enhances data exploration by allowing users to narrow down large datasets to display only relevant records.
 
-To enable the filter bar, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true** on the grid component. This action adds a filter row beneath the column headers, allowing filtering through various expression operators based on the respective column data type.
+To enable the filter bar, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true** on the [SfGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component. This adds a filter row below the column headers, allowing filtering through various expression operators based on the respective column data type.
 
-**Supported filter expressions**
+**Filter bar expressions:**
 
 The following table outlines the filter expressions (operators) that can be manually entered in the filter bar, organized by column data type:
 
-| Operator | Example | Description | Data Type |
+| Expression | Example | Description | Column Type |
 |----------|---------|-------------|-----------|
-| = | =value | Equal | Number |
-| != | !=value | Not Equal | Number |
-| > | >value | Greater Than | Number |
-| < | <value | Less Than | Number |
-| >= | >=value | Greater Than or Equal | Number |
-| <= | <=value | Less Than or Equal | Number |
-| * | *value | Starts With | Text |
-| % | %value | Ends With | Text |
-| N/A | N/A | Always uses equal | Date |
-| N/A | N/A | Always uses equal | Boolean |
+| = | =value | Matches values exactly equal to the entered value | Number |
+| != | !=value | Matches values not equal to the entered value | Number |
+| > | >value | Matches values greater than the entered value | Number |
+| < | <value | Matches values less than the entered value | Number |
+| >= | >=value | Matches values greater than or equal to the entered value | Number |
+| <= | <=value | Matches values less than or equal to the entered value | Number |
+| * | *value | Matches values that start with the entered text | String |
+| % | %value | Matches values that end with the entered text | String |
+| N/A | N/A | Always uses equal operator for Date columns | Date |
+| N/A | N/A | Always uses equal operator for Boolean columns | Boolean |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -115,18 +115,17 @@ public class OrderData
 
 ## Filter bar modes
 
-The Blazor DataGrid provides two distinct operational modes for the filter bar. These modes determine how and when filtering is executed:
+The Blazor Data Grid provides two distinct operational modes for the filter bar. These modes determine how and when filtering is executed:
 
-* **OnEnter Mode**: Filters are applied only after pressing the **Enter** key, allowing multiple changes before execution
-* **Immediate Mode**: Filters are applied automatically as values are entered, providing real-time results
-
-**OnEnter Mode Implementation**
+**onEnter Mode:**
 
 The [OnEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterBarMode.html#Syncfusion_Blazor_Grids_FilterBarMode_OnEnter) mode executes filtering when the **Enter** key is pressed. Set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Mode) property to **OnEnter** within [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) to enable this mode. This approach enables multiple filter criteria to be adjusted before triggering the filter operation.
 
-**Immediate Mode Implementation**
+**Immediate Mode:**
 
 The [Immediate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterBarMode.html#Syncfusion_Blazor_Grids_FilterBarMode_Immediate) mode applies filters automatically as data is entered. Set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Mode) property to **Immediate** within [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) to enable this mode. This delivers live filtering results as values are modified in the filter bar.
+
+To control the timing of filter execution, use the [ImmediateModeDelay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_ImmediateModeDelay) property of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings). This property sets the delay, in milliseconds, between entering a value in the filter bar and executing the filter operation, reducing the number of filter requests triggered during typing.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -136,7 +135,7 @@ The [Immediate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Fi
 
 <label>Select Filter Mode</label>
 <SfDropDownList TValue="string" TItem="string" Width="150px" DataSource="@filterModesData">
-    <DropDownListEvents TValue="string" TItem="string" ValueChange="onModeChange"></DropDownListEvents>
+    <DropDownListEvents TValue="string" TItem="string" ValueChange="OnModeChange"></DropDownListEvents>
 </SfDropDownList>
 
 <SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" AllowPaging="true" Height="273px">
@@ -161,7 +160,7 @@ The [Immediate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Fi
 
     FilterBarMode currentFilterMode = FilterBarMode.OnEnter;
 
-    public async Task onModeChange(ChangeEventArgs<string, string> args)
+    public async Task OnModeChange(ChangeEventArgs<string, string> args)
     {
         if (args.Value == "Immediate")
         {
@@ -233,12 +232,11 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjhRtGNVJQGlxynp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Display filter text in pager
+## Display filter status in pager
 
-The Blazor DataGrid can display active filter information within the pager section. This visibility enhancement allows clear tracking of currently applied filters and their criteria.
+The Blazor Data Grid can display active filter information within the pager section, showing the currently applied filters and corresponding criteria.
 
-Enable this functionality by setting the [ShowFilterBarStatus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_ShowFilterBarStatus) property to **true** within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) configuration.
-
+Set the [ShowFilterBarStatus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_ShowFilterBarStatus) property to **true** within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) configuration to enable this functionality.
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -252,7 +250,7 @@ Enable this functionality by setting the [ShowFilterBarStatus](https://help.sync
 
 <SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" AllowPaging="true" Height="150px">
     <GridPageSettings PageSize="5"></GridPageSettings>
-    <GridFilterSettings  ShowFilterBarStatus="@BarStatus"></GridFilterSettings>
+    <GridFilterSettings ShowFilterBarStatus="@BarStatus"></GridFilterSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
@@ -291,8 +289,8 @@ Enable this functionality by setting the [ShowFilterBarStatus](https://help.sync
         }
         else
         {
-            BarStatus = !BarStatus;
-            Checked = !Checked;
+            BarStatus = false;
+            Checked = false;
             await Grid.Refresh();
         }
     }
@@ -353,11 +351,11 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLntmjVpGFdAqJg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrxXlWatGJtFQgg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Disable filter for specific columns
+## Disable filter for specific columns
 
-The Blazor DataGrid supports disabling the filter bar for particular columns. Configure the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) object to **false** to restrict filtering for that specific column.
+The Blazor Data Grid supports disabling the filter bar for particular columns. Configure the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowFiltering) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) object to **false** to restrict filtering for that specific column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -433,9 +431,9 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDrdZmZBpmkizFjd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Hide filter bar for template column
+## Hide filter bar for template column
 
-Template columns in the Blazor DataGrid do not display filter bars by default. To maintain or further customize the filter behavior for template columns, use the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property. This property defines a custom template for the filter bar area of the column.
+Template columns that contain custom content, such as buttons, usually do not require filtering. In such cases, use an empty [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property to hide the filter bar content for that column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -515,11 +513,11 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXBRZcthJcYKgyRl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Filter bar template with custom component
+## Filter bar template with custom component
 
-The [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property enables customization of components displayed in the filter bar. By default, the filter bar displays a standard text input field. However, specific filtering scenarios may benefit from alternative components.
+The [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property enables customization of components displayed in the filter bar. By default, a text box is displayed in the filter bar cell. However, specific filtering scenarios may benefit from alternative components.
 
-The Blazor DataGrid supports integration of the following specialized components within the filter bar:
+The Blazor Data Grid supports integration of the following specialized components within the filter bar:
 
 * [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started) - For date-based filtering
 * [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) - For numeric value filtering  
@@ -587,7 +585,7 @@ To implement a custom filter component, define a template using the `FilterTempl
 
     public string stringvalue = "All";
 
-    public string ComboVal;
+    public string? ComboVal { get; set; }
 
     public List<string> CustomerIDDropdown = new List<string>() { "All", "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "CHOPS", "RICSU", "WELLI" };
 
@@ -644,8 +642,8 @@ To implement a custom filter component, define a template using the `FilterTempl
         }
         else
         {
-            NumericValue = (double)args.Value;
-            
+            NumericValue = args.Value.Value;
+
             await Grid.FilterByColumnAsync("Freight", "equal", args.Value);
         }
 
@@ -725,28 +723,21 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhxtQjrTYXtTPmW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrdXvikNlVexjhR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Operator-based filtering in the filter bar
+## Operator-based filtering in the filter bar
 
-The Blazor DataGrid supports operator-based filtering in the filter bar through the [ShowFilterBarOperator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_ShowFilterBarOperator) property in [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
+The Blazor DataGrid supports operator-based filtering in the filter bar through the **ShowFilterBarOperator** property in [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
 
-When the **ShowFilterBarOperator** property is enabled, clicking the filter icon in a filter bar cell displays an operator dropdown menu. A filtering condition appropriate to the column type can be selected, removing the need to type operator expressions manually.
+When the **ShowFilterBarOperator** property is enabled, clicking the filter icon in a filter bar cell displays an operator dropdown menu. Select a condition appropriate to the column type, so there is no need to type operator expressions manually.
 
 Each filter bar cell also includes a **clear filter icon** that reflects the filter state of its column. The icon is **enabled** when a filter is applied to the column and **disabled** otherwise, allowing active filters to be identified and removed quickly. This column-specific behavior improves control and visibility when managing filters across multiple columns.
-
-**Benefits of operator-based filtering**
-
-* Removes the need to enter operator expressions manually.
-* Provides type-safe input controls based on column data type.
-* Improves filtering accuracy and consistency across data types.
-* Offers a structured filtering interface with dedicated controls for each column.
 
 **Column-specific filter controls**
 
 When the **ShowFilterBarOperator** property is enabled, the filter bar dynamically generates input controls based on the data type of each column, ensuring a type-safe filtering experience.
 
-| Data Type | Filter Control |
+| Column Type | Filter Control |
 |-------------|----------------|
 | String | Text input |
 | Numeric | Numeric input |
@@ -754,6 +745,13 @@ When the **ShowFilterBarOperator** property is enabled, the filter bar dynamical
 | TimeOnly | Time picker |
 | DateTime | DateTime picker |
 | Boolean | Dropdown (True/False) |
+
+**Key features of operator-based filtering**
+
+* Displays an operator dropdown menu for selecting filtering conditions.
+* Provides column type-specific input controls (text, numeric, date, or dropdown).
+* Includes a clear filter icon to identify and remove active column filters.
+* Eliminates manual entry of operator expressions in the filter bar.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -837,4 +835,4 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BthHZcLqLCzqjHom?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> The **ShowFilterBarOperator** feature is applicable only when the Grid uses the default **FilterType.FilterBar**. 
+>The `ShowFilterBarOperator` property works with `FilterType.FilterBar` (the default filter type). It is not applicable when using alternative filter types such as `FilterType.Menu` or `FilterType.Excel`. 
