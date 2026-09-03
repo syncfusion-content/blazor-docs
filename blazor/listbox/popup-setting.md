@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup Setting in Blazor ListBox | Syncfusion®
+title: Popup Settings in Blazor ListBox | Syncfusion®
 description: Configure the Blazor ListBox popup rendering using the AppendTo property to control where the popup appears, ensuring proper display in custom containers.
 platform: Blazor
 control: ListBox
 documentation: ug
 ---
 
-# Popup Setting in Blazor ListBox
+# Popup Settings in Blazor ListBox
 
 ## Render popup in a custom container
 

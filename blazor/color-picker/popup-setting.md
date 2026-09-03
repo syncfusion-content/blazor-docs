@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup Setting in Blazor Color Picker | Syncfusion®
+title: Popup Settings in Blazor Color Picker | Syncfusion®
 description: Configure the Blazor Color Picker popup rendering using the AppendTo property to control where the popup appears, ensuring proper display in custom containers.
 platform: Blazor
 control: Color Picker
 documentation: ug
 ---
 
-# Popup Setting in Blazor Color Picker
+# Popup Settings in Blazor Color Picker
 
 ## Render popup in a custom container
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup Setting in Blazor Mention | Syncfusion®
+title: Popup Settings in Blazor Mention | Syncfusion®
 description: Configure the Blazor Mention popup rendering using the AppendTo property to control where the popup appears, ensuring proper display in custom containers.
 platform: Blazor
 control: Mention
 documentation: ug
 ---
 
-# Popup Setting in Blazor Mention
+# Popup Settings in Blazor Mention
 
 ## Render popup in a custom container
 

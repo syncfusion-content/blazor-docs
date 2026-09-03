@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup Setting in Blazor InPlace Editor | Syncfusion®
+title: Popup Settings in Blazor InPlace Editor | Syncfusion®
 description: Learn how to use the AppendTo property in Blazor InPlace Editor to control popup placement and ensure correct display in custom containers.
 platform: Blazor
 control: InPlace Editor
 documentation: ug
 ---
 
-# Popup Setting in Blazor InPlace Editor
+# Popup Settings in Blazor InPlace Editor
 
 ## Render popup in a custom container
 

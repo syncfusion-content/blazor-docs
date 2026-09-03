@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup Setting in Blazor Split Button | Syncfusion®
+title: Popup Settings in Blazor Split Button | Syncfusion®
 description: Configure the Blazor Split Button popup rendering using the AppendTo property to control where the popup appears, ensuring proper display in custom containers.
 platform: Blazor
 control: Split Button
 documentation: ug
 ---
 
-# Popup Setting in Blazor Split Button
+# Popup Settings in Blazor Split Button
 
 ## Render popup in a custom container
 

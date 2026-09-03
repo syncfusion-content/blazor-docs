@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup Setting in Blazor DropDown Button | Syncfusion®
+title: Popup Settings in Blazor DropDown Button | Syncfusion®
 description: Learn how to use the AppendTo property in Blazor DropDown Button to control popup placement and ensure correct display in custom containers.
 platform: Blazor
 control: DropDown Button
 documentation: ug
 ---
 
-# Popup Setting in Blazor DropDown Button
+# Popup Settings in Blazor DropDown Button
 
 ## Render popup in a custom container
 

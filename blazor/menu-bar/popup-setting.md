@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup Setting in Blazor Menu | Syncfusion®
+title: Popup Settings in Blazor Menu | Syncfusion®
 description: Configure the Blazor Menu popup rendering using the AppendTo property to control where the popup appears, ensuring proper display in custom containers.
 platform: Blazor
 control: Menu
 documentation: ug
 ---
 
-# Popup Setting in Blazor Menu
+# Popup Settings in Blazor Menu
 
 ## Render popup in a custom container
 
