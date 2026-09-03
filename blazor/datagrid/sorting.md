@@ -11,16 +11,14 @@ documentation: ug
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) includes a built-in sorting feature that helps organize information within columns. Sorting makes data analysis and information discovery simpler and more intuitive. To enable sorting, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to **true** in the Grid component.
 
-## Sort order
-
 Sorting order follows a default sequence: ascending → descending → none.
 
 - **Ascending Order**: Arranges values from smallest to largest (A to Z or 1 to 100). An upward arrow (↑) appears next to the header.
 - **Descending Order**: Arranges values from largest to smallest (Z to A or 100 to 1). A downward arrow (↓) appears next to the header.
 
-### Manage unsorted-state behavior
+**Manage unsorted-state behavior**
 
-The Blazor DataGrid provides control over whether a column can return to an unsorted state after sorting. This behavior is managed using the [AllowUnsort](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_AllowUnsort) property in [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html). When this property is set to **false**, clicking a sorted column header does not revert the grid to its original unsorted layout. Instead, the column remains sorted until a different sort action is applied. This ensures a consistent sorting state and prevents accidental removal of sorting.
+[AllowUnsort](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_AllowUnsort) controls whether users can remove sorting and return the Data Grid to its original unsorted state. When set to false, the grid always maintains a sorted state, preventing accidental removal of sorting. This is useful in applications that require a consistent and predictable data order, such as records sorted by Order ID, Date, Priority, or Rank.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
