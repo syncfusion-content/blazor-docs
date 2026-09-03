@@ -83,7 +83,7 @@ The [Voluntary Product Accessibility Template (VPAT)](https://www.itic.org/polic
 
 [Download the Latest VPAT Document](https://www.itic.org/dotAsset/0d397438-611d-47da-861a-be9ee508da51.docx)
 
-To review the accessibility conformance of Syncfusion<sup style="font-size:70%">&reg;</sup> products, you can download the latest version of the **Syncfusion<sup style="font-size:70%">&reg;</sup> VPAT document** here: [VPAT Document](https://ej2.syncfusion.com/accessibility/Syncfusion-VPAT2.5.docx)
+To review the accessibility conformance of Syncfusion<sup style="font-size:70%">&reg;</sup> products, you can download the latest version of the **Syncfusion<sup style="font-size:70%">&reg;</sup> VPAT document** here: [Syncfusion Blazor VPAT document](https://blazor.syncfusion.com/accessibility/blazor-syncfusion-vpat.docx)
 
 This document provides detailed information on how Syncfusion<sup style="font-size:70%">&reg;</sup> products meet accessibility requirements, ensuring they are inclusive and usable for all individuals, including those with disabilities.
 
