@@ -44,7 +44,7 @@ To integrate the detail template in the grid:
                     <tbody>
                         <tr>
                             <td rowspan="4" style="text-align: center;">
-                                <img class="photo" src="@($" scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
+                                <img class="photo" src="@($"scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
                             </td>
                             <td>
                                 <span style="font-weight: 500;">Employee ID: </span> @employee.FirstName
@@ -297,7 +297,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrdtGXVhVxUreCB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Creating custom component/Hierarchical DataGrid 
+## Creating custom components or hierarchical DataGrids
 
 The Blazor DataGrid can render custom components inside the detail row. This enables adding additional information or functionality for a specific row. A hierarchical structure can be created by nesting grids inside the detail row of the parent grid.
 
@@ -636,7 +636,7 @@ By default, detail rows are collapsed. Expand all detail rows programmatically b
                     <tbody>
                         <tr>
                             <td rowspan="4" style="text-align: center;">
-                                <img class="photo" src="@($" scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
+                                <img class="photo" src="@($"scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
                             </td>
                             <td>
                                 <span style="font-weight: 500;">Employee ID: </span> @employee.FirstName
@@ -697,9 +697,9 @@ By default, detail rows are collapsed. Expand all detail rows programmatically b
 
     public List<EmployeeData> Employees { get; set; }
 
-    public void BtnClick()
+    public async Task BtnClick()
     {
-        this.Grid.ExpandAllDetailRowAsync();
+        await this.Grid.ExpandAllDetailRowAsync();
     }
     protected override void OnInitialized()
     {
@@ -1065,7 +1065,7 @@ Here is an example that customizes the expand/collapse icons:
                     <tbody>
                         <tr>
                             <td rowspan="4" style="text-align: center;">
-                                <img class="photo" src="@($" scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
+                                <img class="photo" src="@($"scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
                             </td>
                             <td>
                                 <span style="font-weight: 500;">Employee ID: </span> @employee.FirstName

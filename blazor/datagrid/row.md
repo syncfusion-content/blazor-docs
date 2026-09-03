@@ -15,7 +15,7 @@ Customizing row styles helps emphasize important data, align with application th
 
 ### Using event
 
-Customize row appearance using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event, which triggers for each row when it is bound to data. The [RowDataBoundEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDataBoundEventArgs-1.html) provides access to row details for applying custom classes, adding elements, or other styling.
+Customize row appearance using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event, which triggers for each row when it is bound to data. The [RowDataBoundEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDataBoundEventArgs-1.html) provides the `Row` object with methods like `AddClass()` to apply custom classes, along with the bound data for conditional styling.
 
 The following example applies CSS classes to rows based on the value of the `Freight` column. Define the CSS classes `below-30`, `below-80`, and `above-80` in the stylesheet to apply the corresponding styles:
 
@@ -173,7 +173,7 @@ public class OrderData
 
     public OrderData() { }
 
-    public OrderData(int? OrderID, string CustomerID, double Freight, DateTime? OrderDate, DateTime?ShippedDate, bool? IsVerified, string ShipCity)
+    public OrderData(int? OrderID, string CustomerID, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity)
     {
         this.OrderID = OrderID;
         this.CustomerID = CustomerID;
@@ -417,7 +417,7 @@ public class OrderData
 
 ### Customize row height for particular row
 
-Customize the row height for a specific row when a single record needs additional space or emphasis. Use the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property in combination with the [RowDataBound](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event to apply a CSS class conditionally.
+Customize the row height for a specific row when rows require additional space, for example, to accommodate multi-line content. Use the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property in combination with the [RowDataBound](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event to apply a CSS class conditionally.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -865,6 +865,7 @@ The `AddRecordAsync` method takes two parameters:
 @code {
     private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
+    private static readonly Random _random = new Random();
 
     protected override void OnInitialized()
     {
@@ -888,30 +889,30 @@ The `AddRecordAsync` method takes two parameters:
 
     private int GenerateOrderId()
     {
-        return new Random().Next(10000, 99999); // Random Order ID.
+        return _random.Next(10000, 99999); // Random Order ID.
     }
 
     private string GenerateCustomerId()
     {
         const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        return new string(Enumerable.Repeat(chars, 5).Select(s => s[new Random().Next(s.Length)]).ToArray());
+        return new string(Enumerable.Repeat(chars, 5).Select(s => s[_random.Next(s.Length)]).ToArray());
     }
 
     private string GenerateShipCity()
     {
         string[] cities = { "London", "Paris", "New York", "Tokyo", "Berlin" };
-        return cities[new Random().Next(cities.Length)];
+        return cities[_random.Next(cities.Length)];
     }
 
     private double GenerateFreight()
     {
-        return new Random().NextDouble() * 100; // Random Freight value.
+        return _random.NextDouble() * 100; // Random Freight value.
     }
 
     private string GenerateShipName()
     {
         string[] names = { "Que Delícia", "Bueno Foods", "Island Trading", "Laughing Bacchus Winecellars" };
-        return names[new Random().Next(names.Length)];
+        return names[_random.Next(names.Length)];
     }
 }
 
@@ -975,14 +976,14 @@ public class OrderData
 > To insert a new record at the beginning, pass 0 as the second parameter to `AddRecordAsync`.
 > If no index is specified, the new row is added at the end.
 
-## How to get the row data and element
+## How to get row indexes
 
-The Blazor DataGrid exposes methods to retrieve row data and elements for custom operations.
+The Blazor DataGrid exposes methods to retrieve row indexes for custom operations.
 
 1. [GetRowIndexByPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetRowIndexByPrimaryKeyAsync_System_Object_): Retrieves the row index based on a primary key value or row data.
 
 ```cs
-<SfButton id="GetRowIndexByPrimaryKey" @onclick="GetDataHandler">GetRowIndexByPrimaryKey</SfButton>
+<SfButton id="GetRowIndexByPrimaryKey" @onclick="GetDataHandler">Get Row Index</SfButton>
 <SfGrid @ref="grid" DataSource="@Orders">
  ........
 </SfGrid>
@@ -1015,7 +1016,7 @@ The Blazor DataGrid exposes methods to retrieve row data and elements for custom
 
 The Blazor DataGrid can display related details in another Grid using a master-detail layout. Selecting a row in the master Grid loads related records in the detail Grid.
 
-Use the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) event on the master Grid to obtain the selected record. Apply a filter through the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property of the detail Grid and bind the resulting collection to its [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource).
+Use the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) event on the master Grid to obtain the selected record. Apply a filter through the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property of the detail Grid and bind the resulting collection to its [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource). The `Query` property accepts a `Query` object with methods like `Where()` to apply filter conditions. For example, `new Query().Where("EmployeeID", "equal", RowIndex)` filters the detail data where the `EmployeeID` matches the selected master row's value.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
