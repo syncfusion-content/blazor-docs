@@ -185,13 +185,11 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtrnDwZhgbmvyADP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Customize the Number of Filter Options
+## Customize the filter choice count
 
 By default, the filter dialog displays up to **1000** distinct values in the checkbox list for each column. This distinct-value cap ensures the filter dialog loads promptly and performs efficiently, particularly with large datasets. The cap can be modified based on specific requirements.
 
 In addition, the filter dialog scans only the first **1000** records in the dataset to build the list of available choices. If a column contains more than 1000 unique values, the additional values are not included in the initial list. When a value is typed in the search box of the filter dialog, the Data Grid searches across the remaining records and loads the matching values automatically. This record-scan limit and the distinct-value cap together keep the dialog responsive for large datasets.
-
-### Customize the filter choice count
 
 The [FilterChoiceCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterDialogOpeningEventArgs.html#Syncfusion_Blazor_Grids_FilterDialogOpeningEventArgs_FilterChoiceCount) property in the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) event modifies the number of values displayed in the filter dialog.
 
@@ -311,7 +309,7 @@ public class OrderData
 
 The Data Grid supports customization of text displayed in filter checkbox lists. Custom, user-friendly labels can replace raw data values.
 
-### Customize checkbox list text
+**Customize checkbox list text**
 
 The [FilterItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterItemTemplate) property enables creation of custom templates for filter items, allowing custom logic and HTML elements for displaying specific content in the filter dialog.
 
@@ -535,7 +533,7 @@ public class OrderData
 
 The Excel filter dialog appearance can be customized using CSS (Cascading Style Sheets). This enables alignment of the filter dialog with application design and visual requirements.
 
-### Hiding the context menu
+**Hiding the context menu**
 
 The Excel filter dialog contains several components, including a **context menu**, **search box**, and **checkbox list**. The context menu can be hidden when not required using CSS.
 
@@ -630,7 +628,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjrdDwXhJQDpSjFF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Changing filter dialog size
+**Changing filter dialog size**
 
 The filter dialog height and width can be customized for each column. CSS combined with the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) event enables application of custom sizes based on the target column.
 
@@ -755,7 +753,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZrxZGtBTQoosiyI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Styling the filtered column icon
+**Styling the filtered column icon**
 
 After applying a filter to a column, the Data Grid displays an icon in that column's header. The **.e-grid .e-filtered::before** CSS class enables modification of the icon appearance.
 
