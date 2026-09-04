@@ -31,27 +31,19 @@ The following example illustrates how to move items between the **Group A** and 
 
 <div id="listbox1">
     <h4>Group A</h4>
-    <SfListBox TValue="string[]" DataSource="@GroupA" Scope="scope2" TItem="CountryCode" @attributes="listbox1Attr">
+    <SfListBox TValue="string[]" DataSource="@GroupA" Scope="combined-list" ID="group-a" TItem="CountryCode">
         <ListBoxFieldSettings Text="Name"></ListBoxFieldSettings>
         <ListBoxToolbarSettings Items="@Items"></ListBoxToolbarSettings>
     </SfListBox>
 </div>
 <div id="listbox2">
     <h4>Group B</h4>
-    <SfListBox TValue="string[]" Scope="scope1" DataSource="@GroupB" TItem="CountryCode" @attributes="listbox2Attr">
+    <SfListBox TValue="string[]" Scope="combined-list" ID="group-b" DataSource="@GroupB" TItem="CountryCode">
         <ListBoxFieldSettings Text="Name"></ListBoxFieldSettings>
     </SfListBox>
 </div>
 
 @code {
-    private readonly Dictionary<string, object> listbox1Attr = new Dictionary<string, object>
-    {
-        { "id", "scope1" }
-    };
-    private readonly Dictionary<string, object> listbox2Attr = new Dictionary<string, object>
-    {
-        { "id", "scope2" }
-    };
     public string[] Items = new string[] { "MoveUp", "MoveDown", "MoveTo", "MoveFrom", "MoveAllTo", "MoveAllFrom" };
     public List<CountryCode> GroupA = new List<CountryCode>
     {
