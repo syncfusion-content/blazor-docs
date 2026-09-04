@@ -9,7 +9,7 @@ documentation: ug
 
 # Paging in Blazor Data Grid
 
-Paging provides an option to display [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) data in segmented pages, making it easier to navigate large datasets. This feature is particularly useful when dealing with extensive data sets.
+Paging provides an option to display [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) data in segmented pages, making it easier to navigate large datasets. This feature is particularly useful when dealing with extensive data sets.
 
 To enable paging, set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to **true**. When paging is enabled, a pager is rendered at the bottom of the Grid, allowing navigation through different pages of data.
 
@@ -19,11 +19,11 @@ Paging options can be configured through the [GridPageSettings](https://help.syn
 
 ## Customize the pager options
 
-Customizing pager options in  Blazor DataGrid helps adjust pagination to specific needs. The **PageCount** property sets the number of numeric buttons. The **CurrentPage** property defines the active page. The **PageSize** property specifies the number of records displayed per page. The **PageSizes** property provides a dropdown for selecting different page sizes.
+Customizing pager options in  Blazor DataTable helps adjust pagination to specific needs. The **PageCount** property sets the number of numeric buttons. The **CurrentPage** property defines the active page. The **PageSize** property specifies the number of records displayed per page. The **PageSizes** property provides a dropdown for selecting different page sizes.
 
 ### Change the page size
 
-The Blazor DataGrid allows control over the number of records displayed per page. Use the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) property in [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) to specify the initial page size. By default, **PageSize is 12**.
+The Blazor Data Table allows control over the number of records displayed per page. Use the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) property in [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) to specify the initial page size. By default, **PageSize is 12**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -127,7 +127,7 @@ The Blazor DataGrid allows control over the number of records displayed per page
 
 ### Change the page count
 
-The Blazor DataGrid allows adjusting the number of numeric buttons displayed in the pager. By default, **PageCount is 8**.
+The Blazor Data GridView allows adjusting the number of numeric buttons displayed in the pager. By default, **PageCount is 8**.
 
 To change the page count, use the [PageCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageCount) property in [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings), which defines how many pages are shown in the pager container.
 

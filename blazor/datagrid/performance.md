@@ -9,11 +9,11 @@ documentation: ug
 
 # Performance Optimization in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides advanced features for displaying and managing large collections of data. When working with extensive datasets or grids containing numerous columns, performance optimization becomes essential to ensure responsive rendering and smooth interactions. This guide outlines proven strategies and best practices for improving DataGrid performance during data binding and rendering operations.
+The [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides advanced features for displaying and managing large collections of data. When working with extensive datasets or grids containing numerous columns, performance optimization becomes essential to ensure responsive rendering and smooth interactions. This guide outlines proven strategies and best practices for improving Blazor DataGrid performance during data binding and rendering operations.
 
 ## How to improve loading performance by binding large dataset
 
-Rendering large collections in the Blazor DataGrid can impact performance because each cell is treated as an individual Blazor component. To maintain responsiveness and reduce rendering overhead, apply the following optimization techniques:
+Rendering large collections in the Blazor DataTable can impact performance because each cell is treated as an individual Blazor component. To maintain responsiveness and reduce rendering overhead, apply the following optimization techniques:
 
 **Key performance optimization techniques**
 
@@ -28,7 +28,7 @@ Rendering large collections in the Blazor DataGrid can impact performance becaus
 
 [Paging](https://blazor.syncfusion.com/documentation/datagrid/paging) divides large collections into smaller, manageable segments, reducing the number of rows rendered at once. This approach improves initial load time and enhances overall responsiveness.
 
-* **Enable paging in the DataGrid**
+* **Enable paging in the Blazor DataGrid**
 
     Configure the `Paging` feature to display data across multiple pages. This prevents rendering the entire collection simultaneously.
 
@@ -40,7 +40,7 @@ For detailed implementation, refer to the paging [documentation](https://blazor.
 
 ### Optimizing performance with row virtualization or infinite scrolling
 
-Rendering large collections in a single view can significantly impact performance. The Blazor DataGrid supports techniques that load data on demand, reducing rendering overhead:
+Rendering large collections in a single view can significantly impact performance. The Blazor Data Table supports techniques that load data on demand, reducing rendering overhead:
 
 **1. Row virtualization**
 
@@ -58,7 +58,7 @@ Both techniques are effective for handling large collections without compromisin
 
 ### Optimizing performance with column virtualization in large no of columns
 
-[Column virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling#column-virtualization) in the Blazor DataGrid optimizes rendering by displaying only the columns currently visible within the viewport. Additional columns are loaded dynamically as the user scrolls horizontally. This approach significantly reduces initial load time and improves responsiveness when working with grids that contain a large number of columns.
+[Column virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling#column-virtualization) in the Blazor Data GridView optimizes rendering by displaying only the columns currently visible within the viewport. Additional columns are loaded dynamically as the user scrolls horizontally. This approach significantly reduces initial load time and improves responsiveness when working with grids that contain a large number of columns.
 
 Both **row** and **column** virtualization can be enabled together to handle large collections efficiently. This combination ensures that only visible rows and columns are rendered, minimizing DOM elements and enhancing overall performance.
 
@@ -72,7 +72,7 @@ When virtual scrolling is enabled, the Blazor DataGrid calculates its height usi
 
 Browsers impose a maximum pixel height for scrollable elements. If the calculated height exceeds this limit, scrolling beyond a certain point becomes impossible. For example, with a [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) of **30px** and **1,000,000** records, the total height is **30,000,000px**, which exceeds most browsers’ limits (approximately **22,369,600px**).
 
-This limitation is a browser constraint, not specific to the DataGrid. It occurs even in standard HTML tables.
+This limitation is a browser constraint, not specific to the Blazor DataGrid. It occurs even in standard HTML tables.
 
 **Recommended approaches**
 
@@ -88,7 +88,7 @@ For more details, refer to the paging [documentation](https://blazor.syncfusion.
 
 ### Preventing connection errors when persistence is enabled
 
-When the DataGrid attempts to apply persistent settings with a large number of columns, **SignalR** may encounter buffer size limitations, resulting in connection errors. To resolve this, increase the maximum message size for SignalR in the application configuration.
+When the Blazor DataGrid attempts to apply persistent settings with a large number of columns, **SignalR** may encounter buffer size limitations, resulting in connection errors. To resolve this, increase the maximum message size for SignalR in the application configuration.
 
 ```csharp
 builder.Services.AddSignalR(hubOptions =>

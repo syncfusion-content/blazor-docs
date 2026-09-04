@@ -9,7 +9,7 @@ documentation: ug
 
 # Inline Editing & Row Editing in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides in-line editing functionality, enabling direct modification of cell values within the Grid. This approach supports efficient data updates without requiring a separate edit form.
+The [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides in-line editing functionality, enabling direct modification of cell values within the Grid. This approach supports efficient data updates without requiring a separate edit form.
 
 To activate in-line editing, set the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Normal**. This property defines the editing mode used by the Grid.
 
@@ -83,7 +83,7 @@ public class OrderDetails
 
 ## Automatically update a specific column based on another column edited value
 
-Blazor DataGrid supports automatic updates to a column value based on changes made to another related column during in-line editing. This behavior is enabled using the Cell Edit Template feature.
+Blazor DataTable supports automatic updates to a column value based on changes made to another related column during in-line editing. This behavior is enabled using the Cell Edit Template feature.
 
 To configure this functionality in normal edit mode, use the [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) and [RowEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEdited) events, along with the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) property of the Grid.
 
@@ -197,7 +197,7 @@ public class ProductDetails
 
 ## Cancel edit based on condition
 
-The Blazor DataGrid canceling edit operations for specific rows or cells based on defined conditions. This functionality provides control over whether editing is permitted or restricted for particular rows or cells within the Grid.
+The Blazor Data Table canceling edit operations for specific rows or cells based on defined conditions. This functionality provides control over whether editing is permitted or restricted for particular rows or cells within the Grid.
 
 To cancel an edit operation based on a specific condition, handle the following Grid events. These events are triggered during CRUD (Create, Read, Update, and Delete) operations in the Grid:
 
@@ -308,7 +308,7 @@ public class EmployeeDetails
 
 ## Perform CRUD action programmatically
 
-CRUD operations—Create, Read, Update, and Delete—can be executed programmatically in Blazor DataGrid using built-in methods, without manual interaction.
+CRUD operations—Create, Read, Update, and Delete—can be executed programmatically in Blazor Data GridView using built-in methods, without manual interaction.
 
 * To add a new record, use the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AddRecordAsync__0_System_Nullable_System_Int32__) method. Pass the **data** parameter to insert a new record and the **index** parameter to specify the position. If no parameters are provided, an empty row is created at index **0**.
 

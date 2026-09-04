@@ -9,11 +9,11 @@ documentation: ug
 
 # Custom Aggregate in Blazor Data Grid
 
-The custom aggregate feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables calculating summary values with a user-defined function when built-in aggregate types do not meet specific requirements. Configure a custom aggregate by setting the aggregate type and providing a delegate that computes the value.
+The custom aggregate feature in the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables calculating summary values with a user-defined function when built-in aggregate types do not meet specific requirements. Configure a custom aggregate by setting the aggregate type and providing a delegate that computes the value.
 
-To use the custom aggregate option:
+To use the Blazor DataTable custom aggregate option:
 * Set the `AggregateType` as Custom in the `GridAggregateColumn` component.
-* Provide a custom aggregate function using the `CustomAggregate` property on the GridAggregateColumn.
+* Provide a custom aggregate function using the `CustomAggregate` property on the GridAggregateColumn in the Blazor Data Table.
 
 The custom aggregate function is invoked differently based on the context:
 - **Total Aggregation:** The function receives the entire dataset and the current aggregate column object.
@@ -208,4 +208,4 @@ Custom aggregate functions can also compute distinct counts or other domain-spec
 
 > To display the aggregate value of the current column in another column, use the [ColumnName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_ColumnName) property. If ColumnName is not defined, the value of Field is used.
 >
-> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for feature overviews. Explore the [Blazor DataGrid examples](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to see data presentation and manipulation in action.
+> Refer to the [Blazor Data GridView](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for feature overviews. Explore the [Blazor DataGrid examples](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to see data presentation and manipulation in action.

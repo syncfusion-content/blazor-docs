@@ -17,7 +17,7 @@ The Grid offers extensive options to customize cell appearance and functionality
 
 ## Displaying the HTML content
 
-Displaying HTML content in the Blazor DataGrid is useful when presenting formatted elements such as images, hyperlinks, or tables within a tabular layout. The DataGrid supports rendering HTML tags in both header and content cells.
+Displaying HTML content in the Blazor Grid is useful when presenting formatted elements such as images, hyperlinks, or tables within a tabular layout. The Blazor DataGrid supports rendering HTML tags in both header and content cells.
 
 By default, HTML content is encoded to prevent security vulnerabilities. To render raw HTML, set the [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property to **false**. This allows HTML tags to be displayed as intended within the cell.
 
@@ -112,14 +112,14 @@ To configure:
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhHjGjMUHFzfqVe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> * The [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property disables HTML encoding for the corresponding column in the DataGrid.
+> * The [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property disables HTML encoding for the corresponding column in the Blazor DataGrid.
 > * When set to **false**, HTML tags in the column’s data are rendered as HTML.
 > * When set to **true**, HTML tags are encoded and displayed as plain text.
 > * Disabling HTML encoding introduces potential security vulnerabilities. Enable this feature only when using fully trusted and sanitized data sources.
 
 ## Autowrap the Grid content
 
-The auto wrap feature in the Blazor DataGrid enables cell content to wrap to the next line when it exceeds the defined column width. Wrapping occurs at whitespace boundaries between words, ensuring readability without horizontal scrolling. To support auto wrap, define an appropriate width for each column. The column width acts as the maximum boundary for wrapping content.
+The auto wrap feature in the Blazor DataTable enables cell content to wrap to the next line when it exceeds the defined column width. Wrapping occurs at whitespace boundaries between words, ensuring readability without horizontal scrolling. To support auto wrap, define an appropriate width for each column. The column width acts as the maximum boundary for wrapping content.
 
 Enable auto wrap by setting the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowTextWrap) property to **true**. Configure the wrapping behavior using the [TextWrapSettings.WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTextWrapSettings.html#Syncfusion_Blazor_Grids_GridTextWrapSettings_WrapMode) property.
 
@@ -234,7 +234,7 @@ public class OrderData
 
 ## Customize cell styles
 
-Customizing cell styles in the Blazor DataGrid enables modification of cell appearance to match specific design requirements. Styles such as **font**, **background color**, and **borders** can be applied to enhance visual presentation.
+Customizing cell styles in the Blazor Data Table enables modification of cell appearance to match specific design requirements. Styles such as **font**, **background color**, and **borders** can be applied to enhance visual presentation.
 
 Cell customization can be achieved through these approaches:
 
@@ -459,13 +459,13 @@ In this setup, the column is checked to confirm if it corresponds to the **Freig
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLdZGNCKmDdAaVR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> * The [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event is triggered for every cell in the DataGrid.
+> * The [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event is triggered for every cell in the Blazor DataGrid.
 > * Frequent use of this event to modify a large number of cells significantly impacts Grid performance.
 > * Use this event selectively and optimize logic to avoid unnecessary rendering overhead.
 
 ### CSS-based customization
 
-Styles can be applied to DataGrid cells using CSS selectors. The Blazor DataGrid assigns class names to each cell element, enabling targeted styling for individual cells or entire columns.
+Styles can be applied to Blazor DataGrid cells using CSS selectors. The Blazor DataGrid assigns class names to each cell element, enabling targeted styling for individual cells or entire columns.
 
 * The **e-rowcell** class is used to style standard row cells.
 * The **e-selectionbackground** class is used to modify the background color of selected rows.
@@ -663,7 +663,7 @@ In this configuration, the `CustomAttributes` property of the **ShipCity** colum
 
 ## Clip Mode
 
-The clip mode feature in the Blazor DataGrid is used to manage overflow content in cells containing long text. This feature provides options to truncate content, display ellipsis, or show ellipsis with a tooltip.
+The clip mode feature in the Blazor Data GridView is used to manage overflow content in cells containing long text. This feature provides options to truncate content, display ellipsis, or show ellipsis with a tooltip.
 
 Enable clip mode by setting the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) property for the desired column.
 
@@ -911,7 +911,7 @@ Tooltip customization is supported through the [TooltipTemplateContext](https://
                             case nameof(OrdersDetails.CustomerID):
                                 <div>
                                     <p style="margin: 2px 0;">
-                                        <strong>Email: </strong><a href="mailto:@order.Email">@order.Email</a>
+                                        <strong>Email: </strong><a href="mailto:@order.Email" aria-label="Send email to @order.Email">@order.Email</a>
                                     </p>
                                 </div>
                                 break;

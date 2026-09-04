@@ -9,7 +9,7 @@ documentation: ug
 
 # PDF Export in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides a built-in feature to export grid data to a **PDF document**. This functionality is useful for generating printable reports or sharing data in a standardized format.
+The [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides a built-in feature to export grid data to a **PDF document**. This functionality is useful for generating printable reports or sharing data in a standardized format.
 To enable PDF export:
 
 * Set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPdfExport) property to **true**.
@@ -94,7 +94,7 @@ public class OrderDetails
 
 ## Show spinner while exporting
 
-The Blazor DataGrid supports displaying a spinner during PDF export to indicate that the operation is in progress. This improves the experience by providing visual feedback while the export is being processed.
+The Blazor DataTable supports displaying a spinner during PDF export to indicate that the operation is in progress. This improves the experience by providing visual feedback while the export is being processed.
 
 To show and hide the spinner:
 
@@ -188,7 +188,7 @@ public class OrderDetails
 
 ## Binding custom data source while exporting
 
-The Blazor DataGrid supports exporting to PDF using a custom data source. This feature allows exporting data that is not currently bound to the grid and can be generated dynamically based on application logic.
+The Blazor Data Table supports exporting to PDF using a custom data source. This feature allows exporting data that is not currently bound to the grid and can be generated dynamically based on application logic.
 
 To use a custom data source during export:
 
@@ -332,7 +332,7 @@ public class ChangeData
 
 ## Exporting with custom aggregate
 
-The Blazor DataGrid supports exporting grid data with custom aggregates. This feature enables including calculated values in the exported PDF, providing a comprehensive view for reporting or analysis.
+The Blazor Data GridView supports exporting grid data with custom aggregates. This feature enables including calculated values in the exported PDF, providing a comprehensive view for reporting or analysis.
 
 To apply a custom aggregate during export:
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Filtering in Blazor Data Grid
 
-Filtering is a key feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) that enables selective data viewing based on defined criteria. It helps narrow down large datasets and focus on relevant information, improving data analysis and decision-making.
+Filtering is a key feature in the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) that enables selective data viewing based on defined criteria. It helps narrow down large datasets and focus on relevant information, improving data analysis and decision-making.
 
 To enable filtering in the Grid, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true**. Once enabled, configure filtering behavior and appearance using the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) property.
 
@@ -92,7 +92,7 @@ public class OrderData
 
 ## Initial filter
 
-To apply an initial filter in the Blazor DataGrid, define the filter criteria using the **Predicate** object within the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings). The **Predicate** object represents the filtering condition and includes properties such as **Field**, **Operator**, and **Value**.
+To apply an initial filter in the Blazor DataTable, define the filter criteria using the **Predicate** object within the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings). The **Predicate** object represents the filtering condition and includes properties such as **Field**, **Operator**, and **Value**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -177,7 +177,7 @@ public class OrderData
 
 ### Initial filter with multiple values for same column
 
-In the Blazor DataGrid, an initial filter can be configured to include multiple values for a specific column. This approach enables predefined filtering conditions to be applied immediately upon Grid initialization, allowing filtered records to be displayed as soon as the Grid loads.
+In the Blazor Data Table, an initial filter can be configured to include multiple values for a specific column. This approach enables predefined filtering conditions to be applied immediately upon Grid initialization, allowing filtered records to be displayed as soon as the Grid loads.
 
 To apply an initial filter with multiple values for the same column, define the filter [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterColumn.html#Syncfusion_Blazor_Grids_GridFilterColumn_Predicate) object within the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
 
@@ -300,7 +300,7 @@ To apply an initial filter with multiple values for the same column, define the 
 
 ### Initial filter with multiple values for different columns
 
-In the Blazor DataGrid, an initial filter can be configured to include multiple values across different columns. This approach enables predefined filtering conditions to be applied to multiple columns immediately upon Grid initialization, allowing filtered records to be displayed as soon as the Grid loads.
+In the Blazor Data GridView, an initial filter can be configured to include multiple values across different columns. This approach enables predefined filtering conditions to be applied to multiple columns immediately upon Grid initialization, allowing filtered records to be displayed as soon as the Grid loads.
 
 To apply an initial filter with multiple values for different columns, define the filter [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterColumn.html#Syncfusion_Blazor_Grids_GridFilterColumn_Predicate) object within the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
 
@@ -474,7 +474,7 @@ IsNotEmpty |Returns the values that are not empty. |String
 
 The WildCard filter processes one or more search patterns using the <b>*</b> symbol to retrieve values that match the defined criteria.
 
-* The **WildCard** filter option is supported in the DataGrid with all search modes enabled.
+* The **WildCard** filter option is supported in the Blazor DataGrid with all search modes enabled.
 
 Operator |Description
 -----|-----

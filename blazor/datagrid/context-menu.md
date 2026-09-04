@@ -9,7 +9,7 @@ documentation: ug
 
 # Context Menu in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports a context menu that appears when right-clicking anywhere within the grid. This menu provides quick access to actions related to the grid’s data and layout, enhancing interactivity and usability.
+The [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports a context menu that appears when right-clicking anywhere within the grid. This menu provides quick access to actions related to the grid’s data and layout, enhancing interactivity and usability.
 
 To enable the context menu, configure the Grid's `ContextMenuItems` property. Use default items for built-in menu options or add custom items for tailored functionality. This feature improves interactivity by offering context-sensitive actions.
 
@@ -138,7 +138,7 @@ public class OrderData
 
 ## Custom context menu items
 
-The Blazor DataGrid supports adding custom context menu items along with default options.
+The Blazor DataTable supports adding custom context menu items along with default options.
 
 To configure custom context menu items:
 
@@ -234,7 +234,7 @@ public class EmployeeData
 
 ## Built-in and Custom context menu items
 
-The Blazor DataGrid supports using both built-in and custom context menu items together. This is helpful when extending default actions such as **Copy**, **Delete**, or **Edit** with application-specific commands like **Copy with headers** or **Export row**.
+The Blazor Data Table supports using both built-in and custom context menu items together. This is helpful when extending default actions such as **Copy**, **Delete**, or **Edit** with application-specific commands like **Copy with headers** or **Export row**.
 
 To configure **built-in** and **custom** context menu items:
 
@@ -329,9 +329,9 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXrHtQNLBtpYwkYC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Sub context menu items in DataGrid
+## Sub context menu items in Blazor DataGrid
 
-The Blazor DataGrid supports hierarchical context menus, allowing sub-items to be grouped under a parent menu item. This structure helps organize related actions and improves interface usability.
+The Blazor Data GridView supports hierarchical context menus, allowing sub-items to be grouped under a parent menu item. This structure helps organize related actions and improves interface usability.
 
 To configure sub-context menu items:
 
@@ -444,7 +444,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVRNmDVBNSkKtdT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Disable the context menu for specific columns in DataGrid
+## Disable the context menu for specific columns in Blazor DataGrid
 
 The Blazor DataGrid allows restricting the context menu for individual columns, which is useful when dealing with **sensitive** or **read-only** data.
 

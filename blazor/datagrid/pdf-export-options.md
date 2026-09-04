@@ -9,7 +9,7 @@ documentation: ug
 
 # PDF Export Options in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports extensive PDF export customization to control content and layout for reporting requirements. The export behavior is configured using the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class. This configuration enables:
+The [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports extensive PDF export customization to control content and layout for reporting requirements. The export behavior is configured using the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class. This configuration enables:
 
 * Exporting current, selected, or filtered rows.
 * Including or excluding hidden columns.
@@ -19,7 +19,7 @@ The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagr
 
 ## Export current page records
 
-Exporting the current page records from the Blazor DataGrid generates a PDF document that includes only the rows currently visible in the grid. This approach is useful for capturing a snapshot of the paginated view rather than exporting the entire dataset.
+Exporting the current page records from the Blazor DataTable generates a PDF document that includes only the rows currently visible in the grid. This approach is useful for capturing a snapshot of the paginated view rather than exporting the entire dataset.
 
 To configure this behavior:
 
@@ -132,7 +132,7 @@ public class EmployeeData
 
 ## Export selected records
 
-Exporting selected records from the Blazor DataGrid enables generating a PDF document that includes only specific rows. This approach supports focused exports based on selection.
+Exporting selected records from the Blazor Data Table enables generating a PDF document that includes only specific rows. This approach supports focused exports based on selection.
 
 To export selected records:
 
@@ -228,7 +228,7 @@ public class OrderData
 
 ## Export filtered records
 
-Exporting filtered records from the Blazor DataGrid generates a PDF document that includes only rows matching the active filter criteria. This approach is useful for exporting refined data views.
+Exporting filtered records from the Blazor Data GridView generates a PDF document that includes only rows matching the active filter criteria. This approach is useful for exporting refined data views.
 
 To export filtered records:
 

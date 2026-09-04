@@ -9,7 +9,7 @@ documentation: ug
 
 # Columns in Blazor Data Grid
 
-Columns are the core structural elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid).
+Columns are the core structural elements in the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid).
 Each column defines:
 
 * The data field to display.
@@ -20,7 +20,7 @@ Effective column configuration ensures data is presented clearly, remains access
 
 ## Column Types
 
-The Blazor DataGrid utilizes columns to organize and display diverse data. Each column can be assigned a specific data type using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. This property accepts values from the [ColumnType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html) enumeration, which is crucial for determining how data is displayed and formatted (e.g., numeric, date, or string).
+The Blazor DataTable utilizes columns to organize and display diverse data. Each column can be assigned a specific data type using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. This property accepts values from the [ColumnType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html) enumeration, which is crucial for determining how data is displayed and formatted (e.g., numeric, date, or string).
 
 The DataGrid supports the following column types:
 
@@ -123,7 +123,7 @@ The DataGrid supports the following column types:
 
 ### Difference Between Boolean and CheckBox Column Types
 
-The Blazor DataGrid provides two distinct column types for handling boolean values and row selection:
+The Blazor Data Table provides two distinct column types for handling boolean values and row selection:
 
 * [Boolean](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_Boolean): Binds to boolean data fields and supports editing of boolean property values.
 * [Checkbox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_CheckBox): Enables row selection and deselection. When a column is set to `ColumnType.CheckBox`, the Grid uses **multiple** selection mode by default.
@@ -132,7 +132,7 @@ If multiple CheckBox columns are defined, selecting a checkbox in one column aut
 
 ## Column Width
 
-The Blazor DataGrid allows adjustment of column width using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width)  property of [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This property accepts values in **pixels** or **percentages**. For example, set `100` for 100 pixels or `25%` for 25% of the available width.
+The Blazor Data GridView allows adjustment of column width using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width)  property of [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This property accepts values in **pixels** or **percentages**. For example, set `100` for 100 pixels or `25%` for 25% of the available width.
 
 **Key behaviors**
 
@@ -2133,7 +2133,7 @@ To access columns in the Blazor DataGrid, use the following methods:
 
 **1. Get All Columns**
 
-The [GetColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetColumnsAsync_System_Nullable_System_Boolean__) method retrieves all columns defined in the DataGrid.
+The [GetColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetColumnsAsync_System_Nullable_System_Boolean__) method retrieves all columns defined in the Blazor DataGrid.
 
 | Parameter Name | Type   | Description                                      |
 |---------------|--------|--------------------------------------------------|
@@ -2161,7 +2161,7 @@ The [GetVisibleColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 
 **5. Get Foreign Key Columns**
-The [GetForeignKeyColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetForeignKeyColumnsAsync) method retrieves all foreign key columns in the DataGrid.
+The [GetForeignKeyColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetForeignKeyColumnsAsync) method retrieves all foreign key columns in the Blazor DataGrid.
 
 **6. Get Column Field Names**
 
@@ -2171,7 +2171,7 @@ The [GetColumnFieldNamesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ### Adding or Removing Columns
 
-The Blazor DataGrid allows dynamically adding or removing columns using the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property, which is accessible through the DataGrid instance.
+The Blazor DataGrid allows dynamically adding or removing columns using the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property, which is accessible through the Blazor DataGrid instance.
 
 - Use the **Add** method to insert a new column object into the Columns collection.
 - Use the **RemoveAt** method to remove a column by its index from the Columns collection.

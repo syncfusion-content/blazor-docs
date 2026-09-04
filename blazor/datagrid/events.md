@@ -9,9 +9,9 @@ documentation: ug
 
 # Events in Blazor Data Grid
 
-This section lists the events available in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and when they are triggered for various Grid actions.
+This section lists the events available in the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and when they are triggered for various Grid actions.
 
-Events are assigned to the Grid by using a single **GridEvents** component. When configuring Grid events, specify the generic type via the **TValue** parameter to match the Grid’s data model.
+Events are assigned to the Blazor Data Table by using a single **GridEvents** component. When configuring Grid events, specify the generic type via the **TValue** parameter to match the Grid’s data model.
 
 N> All events should be configured within a single **GridEvents** component.
 
@@ -2901,7 +2901,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 [RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDropped) triggers when a dragged row is dropped on a valid target. Use it to finalize reordering, update the data source, or take actions based on the drop position.
 
-N> The DataGrid continues to evolve with new events. If an event is missing, submit a request on the [feedback portal](https://www.syncfusion.com/feedback/blazor-components).
+N> The Blazor DataGrid continues to evolve with new events. If an event is missing, submit a request on the [feedback portal](https://www.syncfusion.com/feedback/blazor-components).
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -4713,4 +4713,4 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
 }
 ```
 
-N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for key capabilities and explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand how to present and manipulate data effectively.
+N> Refer to the [Blazor DataTable](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for key capabilities and explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand how to present and manipulate data effectively.

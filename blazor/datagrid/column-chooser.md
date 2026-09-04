@@ -84,7 +84,7 @@ To enable this feature, set the [ShowColumnChooser](https://help.syncfusion.com/
 
 ## Hide column in column chooser dialog
 
-The Blazor DataGrid allows hiding specific columns from the column chooser dialog. This is useful when working with a large number of columns or when limiting the columns available for selection. 
+The Blazor Grid allows hiding specific columns from the column chooser dialog. This is useful when working with a large number of columns or when limiting the columns available for selection. 
 
 To enable this, set the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowInColumnChooser) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
 
@@ -162,7 +162,7 @@ public class OrderData
 
 ## Open column chooser via programmatically
 
-The Blazor DataGrid allows opening the column chooser dialog programmatically using an external button. Use the [OpenColumnChooserAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_OpenColumnChooserAsync_System_Nullable_System_Double__System_Nullable_System_Double__) method to display the dialog at a specific position on the page.
+The Blazor DataTable allows opening the column chooser dialog programmatically using an external button. Use the [OpenColumnChooserAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_OpenColumnChooserAsync_System_Nullable_System_Double__System_Nullable_System_Double__) method to display the dialog at a specific position on the page.
 
 | Parameter | Type     | Description                                                                 |
 |-----------|----------|-----------------------------------------------------------------------------|
@@ -244,7 +244,7 @@ public class OrderData
 
 ## Customize column chooser dialog size
 
-The Blazor DataGrid displays the column chooser dialog with a default size. To adjust its dimensions, apply custom CSS styles to override the default height and width.
+The Blazor Data Table displays the column chooser dialog with a default size. To adjust its dimensions, apply custom CSS styles to override the default height and width.
 
 ```csharp
 <style> 
@@ -340,7 +340,7 @@ public class OrderData
 
 ## Change default search operator of the column chooser
 
-The Blazor DataGrid provides a search box in the column chooser dialog to filter column names. By default, the search uses the **StartsWith** operator. 
+The Blazor Data GridView provides a search box in the column chooser dialog to filter column names. By default, the search uses the **StartsWith** operator. 
 
 To modify this behavior, use the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Operator.html) property of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html).
 
