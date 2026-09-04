@@ -835,4 +835,4 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BthHZcLqLCzqjHom?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
->The `ShowFilterBarOperator` property works with `FilterType.FilterBar` (the default filter type). It is not applicable when using alternative filter types such as `FilterType.Menu` or `FilterType.Excel`. 
+> The **ShowFilterBarOperator** feature is applicable only when the Grid uses the default **FilterType.FilterBar**. 
