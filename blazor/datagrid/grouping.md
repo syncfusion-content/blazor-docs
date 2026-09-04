@@ -9,7 +9,7 @@ documentation: ug
 
 # Grouping in Blazor Data Grid
 
-The grouping feature in the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) organizes rows into groups, enabling users to expand or collapse related records. Columns can be grouped by dragging the column header into the group drop area. Enable grouping by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to **true**. Configure behavior using [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_GridGroupSettings).
+The grouping feature in the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) organizes rows into groups, enabling users to expand or collapse related records. Columns can be grouped by dragging the column header into the group drop area. Enable grouping by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to **true**. Configure behavior using [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -460,7 +460,7 @@ public class OrderData
 
 ## Persist grouped row expand or collapse state
  
-The Blazor Data GridView can persist the expand or collapse state of grouped rows across operations such as paging, sorting, filtering, and editing. By default, these operations reset grouped rows to their initial state. To retain the current state and ensure a consistent user experience, set [GridGroupSettings.PersistGroupState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_PersistGroupState) to **true**. This also applies when using external methods like [ExpandAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_GridGroupSettings_ExpandAllGroupAsync) and [CollapseAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_GridGroupSettings_CollapseAllGroupAsync).
+The Blazor Data GridView can persist the expand or collapse state of grouped rows across operations such as paging, sorting, filtering, and editing. By default, these operations reset grouped rows to their initial state. To retain the current state and ensure a consistent user experience, set [GridGroupSettings.PersistGroupState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_PersistGroupState) to **true**. This also applies when using external methods like [ExpandAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandAllGroupAsync) and [CollapseAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CollapseAllGroupAsync).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

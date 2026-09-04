@@ -806,7 +806,7 @@ public class OrderDetails
 
 ## Cell selection events
 
-The Blazor DataGrid provides multiple events to customize and respond to the cell selection behavior of the Blazor DataTable. These events allow developers to implement validation, control selection flow, and trigger actions based on user interaction.
+The Blazor DataGrid provides multiple events to customize and respond to the cell selection behavior. These events allow developers to implement validation, control selection flow, and trigger actions based on user interaction.
 
 * [CellSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSelecting): Triggered before a cell is selected. Use this event to implement custom logic or validation to control whether the cell should be selected.
 

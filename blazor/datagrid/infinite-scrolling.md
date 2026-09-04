@@ -183,7 +183,7 @@ public class TaskDetails
 
 ## Efficient data caching and DOM management in Grid cache mode
 
-In Blazor DataTable cache mode, previously loaded blocks are reused when revisited, reducing repeat data requests. The Blazor DataGrid manages the number of rendered DOM row elements using [GridInfiniteScrollSettings.MaximumBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_MaximumBlocks). When this limit is reached, the Grid removes an older block of row elements to render new ones. The Blazor Data Table and Blazor Data GridView variants use the same cache behavior.
+In Blazor DataTable cache mode, previously loaded blocks are reused when revisited, reducing repeat data requests. The Blazor DataGrid manages the number of rendered DOM row elements using [GridInfiniteScrollSettings.MaximumBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_MaximumBlocks). When this limit is reached, the Grid removes an older block of row elements to render new ones.
 
 Enable cache mode by setting [EnableCache](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_EnableCache) to **true** on [GridInfiniteScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html).
 
@@ -268,8 +268,8 @@ public class TaskDetails
 
 ## Limitations
 
-* Due to browser element height limitations, the maximum number of records the Grid can load is constrained by browser capabilities.
-* A static height must be set for the component or its parent container when using infinite scrolling. Using 100% height works only if both the Grid and its parent have explicit heights.
+* Due to browser element height limitations, the maximum number of records the Blazor Data Table can load is constrained by browser capabilities.
+* A static height must be set for the component or its parent container when using infinite scrolling. Using 100% height works only if both the Blazor Data GridView and its parent have explicit heights.
 * The combined height of the initially loaded rows must exceed the viewport height for content to scroll.
 * With infinite scrolling, copy-paste and drag-and-drop apply only to items within the current viewport.
 * Cell selection is not persisted in cache mode.

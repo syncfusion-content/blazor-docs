@@ -11,7 +11,7 @@ documentation: ug
 
 In Blazor, lazy loading refers to loading data dynamically only when needed, rather than loading everything upfront. This approach reduces initial load time and improves application performance.
 
-Lazy load grouping in the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) efficiently loads grouped data by fetching only the required records on demand. This feature is especially useful for large datasets where loading all rows at once can affect performance. When grouping is applied, the Blazor DataGrid initially renders only top-level group caption rows in a collapsed state. The child rows for each group are fetched on demand and rendered when the corresponding caption row is expanded. The Blazor Data Table and Blazor Data GridView variants use the same on-demand behavior.
+Lazy load grouping in the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) efficiently loads grouped data by fetching only the required records on demand. This feature is especially useful for large datasets where loading all rows at once can affect performance. When grouping is applied, the Blazor DataGrid initially renders only top-level group caption rows in a collapsed state. The child rows for each group are fetched on demand and rendered when the corresponding caption row is expanded.
 
 To enable this feature, set [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) to **true** in [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings). Ensure grouping is enabled by setting AllowGrouping to true.
 
@@ -118,7 +118,7 @@ Lazy load grouping with infinite scrolling is useful when presenting grouped dat
 
 **How lazy load grouping with infinite scrolling works**
 
-1. When enabled, the DataGrid initially renders only the top-level group caption rows in a collapsed state.
+1. When enabled, the Blazor Data Table initially renders only the top-level group caption rows in a collapsed state.
 
 2. Child rows for a group are fetched and rendered only when the corresponding caption row is expanded.
 
@@ -232,7 +232,7 @@ The lazy load grouping with virtual scrolling feature in the Blazor DataTable ef
 
 **How lazy load grouping with virtual scrolling works**
 
-1. When enabled, the DataGrid renders only the initial top-level group caption rows in a collapsed state.
+1. When enabled, the Blazor Data GridView renders only the initial top-level group caption rows in a collapsed state.
 
 2. Child rows for each group are fetched and rendered only when the respective caption row is expanded.
 

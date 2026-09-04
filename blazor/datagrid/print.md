@@ -11,7 +11,7 @@ documentation: ug
 
 # Print in Blazor Data Grid
 
-The **Print** feature in the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) generates a print-ready view of Blazor DataTable content for offline access and documentation. Initiate printing through the built-in toolbar option or programmatically using the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method. The output reflects the Blazor Data Table’s current state, including visible columns, sorting, and filtering, and the Blazor Data GridView variant opens the browser’s print dialog.
+The **Print** feature in the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) generates a print-ready view of Blazor DataTable content for offline access and documentation. Initiate printing through the built-in toolbar option or programmatically using the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method. The output reflects the Blazor DataGrid’s current state, including visible columns, sorting, and filtering, and opens the browser’s print dialog.
 
 To enable printing from the toolbar, add the **"Print"** item to the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property.
 
@@ -91,7 +91,7 @@ Print layout options such as **paper size**, **margins**, **headers** and **foot
 
 ## Print via programmatically
 
-Printing can be triggered from external UI elements by calling the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method programmatically. This opens the browser’s print dialog and reflects the current state of the DataGrid, including visible columns, sorting, and filtering.
+Printing can be triggered from external UI elements by calling the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method programmatically. This opens the browser’s print dialog and reflects the current state of the Blazor Data Table, including visible columns, sorting, and filtering.
 
 This approach provides flexibility to integrate printing into custom workflows or toolbar actions beyond the built-in options.
 
@@ -170,7 +170,7 @@ internal sealed class OrderData
 
 ## Print only the visible page
 
-The Blazor DataGrid prints all pages in the dataset by default. To print only the currently visible page, set the [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PrintMode.html) property to **CurrentPage**.This configuration applies when printing is triggered using the built-in toolbar or programmatically through the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method.
+The Blazor DataTable prints all pages in the dataset by default. To print only the currently visible page, set the [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PrintMode.html) property to **CurrentPage**.This configuration applies when printing is triggered using the built-in toolbar or programmatically through the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method.
 
 **Available print modes**
 
@@ -356,7 +356,7 @@ The following image represents Hierarchial Grid with print toolbar item,
 
 ## Printing large number of Columns
 
-When printing a Blazor DataGrid that contains a large number of columns, the default page size used by the browser (such as A4) may not have enough space to display all columns. As a result, some columns may be hidden in the print preview or printed output.
+When printing a Blazor Data View that contains a large number of columns, the default page size used by the browser (such as A4) may not have enough space to display all columns. As a result, some columns may be hidden in the print preview or printed output.
 To include more columns in the printable area:
 
 - Switch to **landscape orientation** in the browser’s print dialog.

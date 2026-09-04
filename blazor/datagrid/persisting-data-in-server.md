@@ -9,7 +9,7 @@ documentation: ug
 
 # Persisting Data to the Server in Blazor Data Grid
 
-The [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports persisting data changes to a server or database using RESTful web services. The Blazor DataTable manages all CRUD operations Create, Read, Update, and Delete through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), while the Blazor Data Table and Blazor Data GridView variants use the same server synchronization. This configuration ensures that changes made in the Grid UI are reliably synchronized with the backend.
+The [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports persisting data changes to a server or database using RESTful web services. The Blazor DataTable manages all CRUD operations Create, Read, Update, and Delete through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which enables seamless communication with server-side data sources. This configuration ensures that changes made in the Blazor Data Table UI are reliably synchronized with the backend.
 
 **Supported Adaptors**
 
@@ -17,7 +17,7 @@ The Syncfusion® provides multiple adaptors to integrate the DataGrid with vario
 
 **UrlAdaptor**
 
-The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) connects the DataGrid to remote services via HTTP endpoints. This adaptor is suitable for custom APIs that implement their own logic for handling CRUD operations.
+The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) connects the DataTable to remote services via HTTP endpoints. This adaptor is suitable for custom APIs that implement their own logic for handling CRUD operations.
 
 - Supports manual implementation of server-side logic.
 - Ideal for RESTful services with custom endpoints.
