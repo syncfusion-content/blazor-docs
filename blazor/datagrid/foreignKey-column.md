@@ -9,7 +9,7 @@ documentation: ug
 
 # Foreign Key Column in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports displaying related data from a **foreign key data source** in a column. This feature is useful when a column represents a foreign key relationship with another data source.
+The [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports displaying related data from a **foreign key data source** in a column. This feature is useful when a column represents a foreign key relationship with another data source.
 
 A foreign key column can be configured using the following properties of the [GridForeignColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridForeignColumn-1.html) directive:
 
@@ -19,7 +19,7 @@ A foreign key column can be configured using the following properties of the [Gr
 
 ## Binding local data
 
-The Blazor DataGrid supports binding local data to a foreign key column. This allows related data from a local data source to be displayed within the Grid.
+The Blazor DataTable supports binding local data to a foreign key column. This allows related data from a local data source to be displayed within the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -115,7 +115,7 @@ public class EmployeeDetails
 
 ## Binding remote data
 
-The Blazor DataGrid supports binding remote data to a foreign key column using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). This approach is useful when retrieving data from services such as **OData**, **Web API**, or other remote endpoints.
+The Blazor Data Table supports binding remote data to a foreign key column using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). This approach is useful when retrieving data from services such as **OData**, **Web API**, or other remote endpoints.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -199,7 +199,7 @@ public class OrderDetails
 
 ## Use edit template in foreign key column
 
-The Blazor DataGrid supports customizing the editor for a foreign key column using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature. By default, a [dropdown](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) is rendered for editing foreign key columns. Other components, such as [ComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started-with-web-app), can be used by defining an edit template.
+The Blazor Data GridView supports customizing the editor for a foreign key column using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature. By default, a [dropdown](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) is rendered for editing foreign key columns. Other components, such as [ComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started-with-web-app), can be used by defining an edit template.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

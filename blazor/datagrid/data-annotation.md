@@ -9,11 +9,11 @@ documentation: ug
 
 # Data Annotation in Blazor Data Grid
 
-Data annotations define validation and display rules for model classes or properties in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid). These attributes ensure that input values follow specific formats and constraints while providing clear error messages during editing operations.
+Data annotations define validation and display rules for model classes or properties in the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid). These attributes ensure that input values follow specific formats and constraints while providing clear error messages during editing operations.
 
 When the DataGrid is bound to a model, data annotations automatically map to corresponding [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) settings. This enables built-in validation and metadata display during CRUD operations.
 
-To enable data annotation in the Blazor DataGrid:
+To enable data annotation in the Blazor DataTable:
 
 1. Add the **System.ComponentModel.DataAnnotations** namespace in the Blazor application.
 2. Bind the DataGrid to a model using `TValue` and [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource).
@@ -60,7 +60,7 @@ Use these attributes to manage column visibility, editing behavior, and key defi
 
 ### Validation Attributes
 
-Add validation attributes to enforce rules that display inline Blazor DataGrid validation messages during CRUD operations.
+Add validation attributes to enforce rules that display inline Blazor Data Table validation messages during CRUD operations.
 
 - RequiredAttribute
 - StringLengthAttribute
@@ -198,4 +198,4 @@ The following image shows how Data Annotations are applied to Grid columns in a 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZrRXQDrLszxRyQn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Annotation in Grid](./images/blazor-datagrid-data-annotation.webp)" %}
 
-N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for an overview of available features. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to see how data is presented and managed within an application.
+N> Refer to the [Blazor Data GridView](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for an overview of available features. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to see how data is presented and managed within an application.

@@ -9,7 +9,7 @@ documentation: ug
 
 # Detail Template in Blazor Data Grid
 
-The detail template in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) displays expandable sections for each row to show additional, context-specific information. This is useful when rows contain nested or supplementary data that would otherwise clutter the main grid view. Define the template using the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) property, which supports any HTML content, Blazor components, or custom Blazor components.
+The detail template in the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) displays expandable sections for each row to show additional, context-specific information. This is useful when rows contain nested or supplementary data that would otherwise clutter the main grid view. Define the template using the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) property, which supports any HTML content, Blazor components, or custom Blazor components.
 
 > Review the [templates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates) topic before adding a detail template to configure required settings.
 
@@ -172,7 +172,7 @@ public class EmployeeData
 
 ## Expand detail DataGrid initially
 
-Expanding detail rows by default in the Blazor DataGrid is useful when immediate visibility into related data is required on initial load.
+Expanding detail rows by default in the Blazor DataTable is useful when immediate visibility into related data is required on initial load.
 
 Use the [ExpandCollapseDetailRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandCollapseDetailRowAsync_System_String_System_Object_) method during the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event to expand a specific row by field and value.
 
@@ -299,7 +299,7 @@ public class OrderData
 
 ## Creating custom component/Hierarchical DataGrid 
 
-The Blazor DataGrid can render custom components inside the detail row. This enables adding additional information or functionality for a specific row. A hierarchical structure can be created by nesting grids inside the detail row of the parent grid.
+The Blazor Data Table can render custom components inside the detail row. This enables adding additional information or functionality for a specific row. A hierarchical structure can be created by nesting grids inside the detail row of the parent grid.
 
 To render a custom component or build a hierarchical grid inside the detail row, define the template in the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) within the `GridTemplates` section. The hierarchical DataGrid displays data in expandable or collapsible levels using the expand or collapse button, or custom content such as HTML elements.
 
@@ -466,7 +466,7 @@ public class CustomerDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBHtwZBVVmHWFvQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> The Blazor DataGrid does not include built-in hierarchical support. Use the detail template to create multi-level hierarchical layouts, as shown in the example.
+> The Blazor Data GridView does not include built-in hierarchical support. Use the detail template to create multi-level hierarchical layouts, as shown in the example.
 
 ## Template column in detail DataGrid
 

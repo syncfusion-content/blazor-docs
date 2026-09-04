@@ -9,7 +9,7 @@ documentation: ug
 
 # Excel Export Options in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) allows customization of Excel and CSV export functionality. This flexibility enables precise control over the exported content and layout to meet specific requirements.
+The [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) allows customization of Excel and CSV export functionality. This flexibility enables precise control over the exported content and layout to meet specific requirements.
 
 The export behavior can be customized using the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) property. This property supports various options, including:
 
@@ -26,7 +26,7 @@ The export behavior can be customized using the [ExcelExportProperties](https://
 
 ## Export current page records
 
-Exporting the current page records from the Blazor DataGrid enables generating Excel or CSV documents that reflect only the data currently visible in the Grid. This approach is suitable when the intent is to capture a snapshot of the paginated view rather than the entire dataset.
+Exporting the current page records from the Blazor DataTable enables generating Excel or CSV documents that reflect only the data currently visible in the Grid. This approach is suitable when the intent is to capture a snapshot of the paginated view rather than the entire dataset.
 
 To configure this behavior, handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and invoke the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method with the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_ExportType)  property set in the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) object. The available options include:
 
@@ -139,7 +139,7 @@ public class EmployeeData
 
 ## Export the selected records 
 
-Exporting selected records from the Blazor DataGrid enables generating Excel or CSV documents that include only specific data. This approach supports focused exports based on selection.
+Exporting selected records from the Blazor Data Table enables generating Excel or CSV documents that include only specific data. This approach supports focused exports based on selection.
 
 To export selected records:
 
@@ -240,7 +240,7 @@ public class OrderData
 
 ## Exporting grouped records
 
-The Blazor DataGrid supports exporting grouped records with outline formatting, allowing detailed rows to be collapsed for improved readability in the exported Excel document. This approach preserves the grouping structure and is suitable for sharing grouped data.
+The Blazor Data GridView supports exporting grouped records with outline formatting, allowing detailed rows to be collapsed for improved readability in the exported Excel document. This approach preserves the grouping structure and is suitable for sharing grouped data.
 
 To enable grouped record export:
 

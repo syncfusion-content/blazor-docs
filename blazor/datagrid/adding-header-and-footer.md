@@ -19,7 +19,7 @@ The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagr
 
 ## Adding text in header and footer
 
-The Blazor DataGrid supports adding custom text to header and footer regions in PDF exports.
+The Blazor Grid supports adding custom text to header and footer regions in PDF exports.
 
 * The **header** appears at the top of each page and can include elements such as a document title, company logo, or date and metadata. This section is typically used for branding and document identification.
 
@@ -169,7 +169,7 @@ public class OrderData
 
 ## Draw a line in header and footer
 
-The Blazor DataGrid supports drawing lines in header and footer regions when exporting to PDF. **Lines** are commonly used to visually separate these regions from the main content.
+The Blazor DataTable supports drawing lines in header and footer regions when exporting to PDF. **Lines** are commonly used to visually separate these regions from the main content.
 
 **Supported Line Styles**
 
@@ -373,7 +373,7 @@ public class OrderData
 
 ## Add page number in header and footer
 
-The Blazor DataGrid supports adding page numbers to header and footer regions when exporting to PDF. This feature improves document navigation and readability.
+The Blazor Data Table supports adding page numbers to header and footer regions when exporting to PDF. This feature improves document navigation and readability.
 
 Page numbers are configured using [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html). Set the [ContentType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContentType.html#Syncfusion_Blazor_Grids_ContentType) to [PageNumber](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContentType.html#Syncfusion_Blazor_Grids_ContentType_PageNumber) when adding page numbers to the header or footer.
 
@@ -540,7 +540,7 @@ public class OrderData
 
 ## Insert an image in header and footer
 
-The Blazor DataGrid supports adding images, such as company logos, to header and footer regions when exporting to PDF. This feature is useful for branding and document personalization.
+The Blazor Data GridView supports adding images, such as company logos, to header and footer regions when exporting to PDF. This feature is useful for branding and document personalization.
 
 To insert an image:
 

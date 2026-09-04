@@ -9,13 +9,13 @@ documentation: ug
 
 # Excel-like Filter in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) includes an Excel-like filter feature that provides an easy-to-use interface for filtering data. This feature mirrors the filtering tools found in Microsoft Excel, making it intuitive for individuals already familiar with that application.
+The [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) includes an Excel-like filter feature that provides an easy-to-use interface for filtering data. This feature mirrors the filtering tools found in Microsoft Excel, making it intuitive for individuals already familiar with that application.
 
 Excel-like filtering proves especially valuable when working with large datasets or when complex filtering operations are required for specific columns. This feature enables rapid data refinement to locate required information.
 
 ## Getting Started with Excel-like Filter
 
-To enable Excel-like filtering in a Blazor DataGrid, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true**  and configure [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) with **FilterType.Excel**. 
+To enable Excel-like filtering in a Blazor DataTable, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true**  and configure [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) with **FilterType.Excel**. 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -838,13 +838,13 @@ public class OrderData
 
 By default, when a filter is applied multiple times to the same column, the new filter replaces the previous selection. Previously applied filters can be retained by using the **Add current selection to filter** option. This checkbox appears in the filter search bar when searching for values in the CheckBox or Excel filter dialog.
 
-![Add current selection to filter in Blazor DataGrid.](images/blazor-datagrid-add-current-selection-to-filter.webp)
+![Add current selection to filter in Blazor Data Table.](images/blazor-datagrid-add-current-selection-to-filter.webp)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDrRXGZVTwebipHI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## See Also
 
-Comprehensive information about the Blazor DataGrid and its features is available through the following resources:
+Comprehensive information about the Blazor Data GridView and its features is available through the following resources:
 
 * **Feature Overview:** The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour provides a complete overview of available capabilities.
 * **Interactive Examples:** The [Blazor DataGrid examples](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) provide practical demonstrations of data presentation and manipulation.

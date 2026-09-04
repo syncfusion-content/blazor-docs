@@ -9,9 +9,9 @@ documentation: ug
 
 # Footer Aggregates in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports calculating and displaying aggregate values in footer cells. Footer aggregates summarize column values across rows and render in the DataGrid footer. Use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate) property to render aggregate values in footer cells.
+The [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports calculating and displaying aggregate values in footer cells. Footer aggregates in the Blazor DataGrid summarize column values across rows and render in the Blazor Data Table footer. Use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate) property to render aggregate values in footer cells.
 
-Access aggregate values inside `FooterTemplate` through the implicit template parameter **context**. Cast **context** to [AggregateTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateTemplateContext.html) to read properties such as **Sum, Average, Min, Max, Count, TrueCount,** and **FalseCount**.
+Access aggregate values inside `FooterTemplate` through the implicit template parameter **context** in the Blazor Data GridView. Cast **context** to [AggregateTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateTemplateContext.html) to read properties such as **Sum, Average, Min, Max, Count, TrueCount,** and **FalseCount**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

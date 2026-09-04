@@ -9,7 +9,7 @@ documentation: ug
 
 # Filter Bar in Blazor Data Grid
 
-The filter bar feature provides an efficient and intuitive way to filter data within the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component. This feature displays input fields below each column header, enabling straightforward data filtering based on column-specific criteria. The filter bar enhances data exploration by allowing users to narrow down large datasets to display only relevant records.
+The filter bar feature provides an efficient and intuitive way to filter data within the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component. This feature displays input fields below each column header, enabling straightforward data filtering based on column-specific criteria. The filter bar enhances data exploration by allowing users to narrow down large datasets to display only relevant records.
 
 To enable the filter bar, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true** on the grid component. This action adds a filter row beneath the column headers, allowing filtering through various expression operators based on the respective column data type.
 
@@ -115,7 +115,7 @@ public class OrderData
 
 ## Filter bar modes
 
-The Blazor DataGrid provides two distinct operational modes for the filter bar. These modes determine how and when filtering is executed:
+The Blazor DataTable provides two distinct operational modes for the filter bar. These modes determine how and when filtering is executed:
 
 * **OnEnter Mode**: Filters are applied only after pressing the **Enter** key, allowing multiple changes before execution
 * **Immediate Mode**: Filters are applied automatically as values are entered, providing real-time results
@@ -235,7 +235,7 @@ public class OrderData
 
 ### Display filter text in pager
 
-The Blazor DataGrid can display active filter information within the pager section. This visibility enhancement allows clear tracking of currently applied filters and their criteria.
+The Blazor Data Table can display active filter information within the pager section. This visibility enhancement allows clear tracking of currently applied filters and their criteria.
 
 Enable this functionality by setting the [ShowFilterBarStatus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_ShowFilterBarStatus) property to **true** within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) configuration.
 
@@ -357,7 +357,7 @@ public class OrderData
 
 ### Disable filter for specific columns
 
-The Blazor DataGrid supports disabling the filter bar for particular columns. Configure the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) object to **false** to restrict filtering for that specific column.
+The Blazor Data GridView supports disabling the filter bar for particular columns. Configure the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) object to **false** to restrict filtering for that specific column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

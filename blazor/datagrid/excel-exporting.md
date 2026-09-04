@@ -9,7 +9,7 @@ documentation: ug
 
 # Excel Exporting in Blazor Data Grid
 
-The Excel and CSV exporting feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables exporting Grid data to spreadsheet formats for external analysis or sharing.
+The Excel and CSV exporting feature in the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables exporting Grid data to spreadsheet formats for external analysis or sharing.
 
 To enable Excel export, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowExcelExport) property to **true**. This property activates the export functionality in the Grid.
 
@@ -107,7 +107,7 @@ public class OrderData
 
 ## Show spinner while exporting 
 
-Displaying a spinner during export operations in the Blazor DataGrid provides a visual indication of progress and improves export feedback.
+Displaying a spinner during export operations in the Blazor DataTable provides a visual indication of progress and improves export feedback.
 
 To show a spinner during export:
 
@@ -208,7 +208,7 @@ public class OrderData
 
 ## Binding custom data source while exporting
 
-The Blazor DataGrid supports exporting data to Excel or CSV format using a custom data source. This capability allows exporting data that is not directly bound to the Grid, including data generated or retrieved dynamically.
+The Blazor Data Table supports exporting data to Excel or CSV format using a custom data source. This capability allows exporting data that is not directly bound to the Grid, including data generated or retrieved dynamically.
 
 To export using a custom data source:
 
@@ -308,7 +308,7 @@ public class OrderData
 
 ## Exporting with custom aggregate
 
-Exporting Blazor DataGrid data with custom aggregates enables inclusion of calculated values in the exported file based on specific conditions. This feature supports enhanced reporting and analysis by incorporating tailored aggregate information.
+Exporting Blazor Data GridView data with custom aggregates enables inclusion of calculated values in the exported file based on specific conditions. This feature supports enhanced reporting and analysis by incorporating tailored aggregate information.
 To export with a custom aggregate:
 
 1. Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property of the aggregate column to **Custom**.

@@ -9,7 +9,7 @@ documentation: ug
 
 # Persisting Data to the Server in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports persisting data changes to a server or database using RESTful web services. All CRUD operations Create, Read, Update, and Delete are managed by the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which enables seamless communication with server-side data sources. This configuration ensures that changes made in the Grid UI are reliably synchronized with the backend.
+The [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports persisting data changes to a server or database using RESTful web services. The Blazor DataTable manages all CRUD operations Create, Read, Update, and Delete through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), while the Blazor Data Table and Blazor Data GridView variants use the same server synchronization. This configuration ensures that changes made in the Grid UI are reliably synchronized with the backend.
 
 **Supported Adaptors**
 

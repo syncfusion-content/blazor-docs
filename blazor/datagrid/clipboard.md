@@ -96,7 +96,7 @@ internal sealed class OrderData
 
 ## Copy to clipboard using external buttons
 
-Clipboard actions can be triggered using external buttons when using UI controls is preferred over shortcut keys.
+Clipboard actions in the Blazor Data GridView can be triggered using external buttons when using UI controls is preferred over shortcut keys.
 
 The [CopyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method programmatically copies selected rows or cells:
 
@@ -195,7 +195,7 @@ internal sealed class OrderData
 
 ## AutoFill
 
-The AutoFill feature in the Blazor DataGrid allows quick data entry by copying values from selected cells and filling them into adjacent cells using a drag handle.
+The AutoFill feature in the Blazor DataTable allows quick data entry by copying values from selected cells and filling them into adjacent cells using a drag handle.
 
 **Steps to use AutoFill feature**
 
@@ -294,7 +294,7 @@ internal sealed class OrderData
 
 ## Paste
 
-The Paste feature in the Blazor DataGrid allows copying content from selected cells and pasting it into another range using <kbd>Ctrl + C</kbd> and <kbd>Ctrl + V</kbd>.
+The Paste feature in the Blazor Data Table allows copying content from selected cells and pasting it into another range using <kbd>Ctrl + C</kbd> and <kbd>Ctrl + V</kbd>.
 
 **To paste data within the grid:**
 
