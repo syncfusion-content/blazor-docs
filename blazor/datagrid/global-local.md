@@ -18,14 +18,14 @@ The Blazor DataTable supports localization of static text elements, such as **gr
 - Apply localization to replace default UI text with culture-specific translations.
 - Configure localization by referring to the [Blazor Localization Documentation](https://blazor.syncfusion.com/documentation/common/localization).
 
-A subset of localizable strings used by the DataGrid is listed for reference.
+A subset of localizable strings used by the Blazor DataGrid is listed for reference.
 
 **Data Rendering**
 
 Locale keywords | Text | Example 
 -----|-----|-----
 Grid_EmptyRecord | No records to display | ![Locale empty record](images/globalization/locale-empty-record.webp)
-Grid_EmptyDataSourceError | DataSource must not be empty at initial load since columns are generated from dataSource in AutoGenerate Column DataGrid
+Grid_EmptyDataSourceError | DataSource must not be empty at initial load since columns are generated from dataSource in AutoGenerate Column Blazor DataGrid
 
 **Columns**
 
@@ -349,7 +349,7 @@ Add the following JavaScript function to **~/Components/App.razor** after the Bl
 
 **Step 9: Configure Culture Switching with Blazor DataGrid** 
 
-In the **Counter.razor** file (or another page, e.g., Index.razor), add code to enable culture switching and display a DataGrid with buttons to toggle between English (en-US) and French (fr-FR):
+In the **Counter.razor** file (or another page, e.g., Index.razor), add code to enable culture switching and display a Blazor DataGrid with buttons to toggle between English (en-US) and French (fr-FR):
  
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -398,7 +398,7 @@ In the **Counter.razor** file (or another page, e.g., Index.razor), add code to 
 
 **Step 10: Create a Model Class**
 
-Create a **Data** folder and add an **OrderData.cs** file to define the model class for the DataGrid:
+Create a **Data** folder and add an **OrderData.cs** file to define the model class for the Blazor DataGrid:
 
 {% tabs %}
 {% highlight cs tabtitle="OrderData.cs" %}
@@ -451,7 +451,7 @@ namespace LocalizationSample.Client.Data
 
 **Step 11: Run the Application**
  
-Run the application to display the DataGrid with localized content and formats based on the selected culture (e.g., en-US or fr-FR). The culture switcher buttons update the UI, such as **pager text** or **currency** formats (e.g., `$` for en-US, `€` for fr-FR).
+Run the application to display the Blazor DataGrid with localized content and formats based on the selected culture (e.g., en-US or fr-FR). The culture switcher buttons update the UI, such as **pager text** or **currency** formats (e.g., `$` for en-US, `€` for fr-FR).
 
 ![Switch to a different localization](images/globalization/switch.webp)
 
@@ -459,7 +459,7 @@ Run the application to display the DataGrid with localized content and formats b
 
 - The Right-to-Left (RTL) feature in the Blazor DataGrid reverses the layout and text direction from left-to-right to right-to-left, supporting languages like **Arabic**, **Farsi**, and **Urdu**. Enabling RTL improves accessibility and delivers a natural reading experience for these languages.
 
-- To enable RTL, set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableRtl) property to **true** in the DataGrid component.
+- To enable RTL, set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableRtl) property to **true** in the Blazor DataGrid component.
 
 - Follow these steps to configure RTL with a specific culture:
 
@@ -523,7 +523,7 @@ builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(Syncfus
 
 **Step 4: Enable or Disable RTL Mode with Toggle Switch**
 
-Use a [Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started-webapp) to enable or disable RTL dynamically. The switch triggers the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event, which updates the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableRtl) property of the DataGrid.
+Use a [Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started-webapp) to enable or disable RTL dynamically. The switch triggers the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event, which updates the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableRtl) property of the Blazor DataGrid.
 
 {% tabs %}
 {% highlight razor tabtitle="Counter.razor" %}
@@ -573,7 +573,7 @@ Use a [Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-
 
 **Step 5: Create a Model Class**
 
-Create a **Data** folder and add an **OrderData.cs** file to define the model class for the DataGrid:
+Create a **Data** folder and add an **OrderData.cs** file to define the model class for the Blazor DataGrid:
 
 {% tabs %}
 {% highlight cs tabtitle="OrderData.cs" %}
@@ -625,6 +625,6 @@ namespace LocalizationSample.Client.Models
 
 **Step 6: Run the Application**
  
-Run the application to display the DataGrid with RTL layout and text direction based on the selected culture. Toggling the switch enables or disables RTL mode.
+Run the application to display the Blazor DataGrid with RTL layout and text direction based on the selected culture. Toggling the switch enables or disables RTL mode.
 
 ![Right to left layout enabled](images/globalization/enable-rtl.webp)

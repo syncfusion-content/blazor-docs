@@ -749,7 +749,7 @@ In the example below, the [DropDownList](https://blazor.syncfusion.com/documenta
 ## Edit complex column
 
 The [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature for complex columns in the Blazor DataGrid enables customization of the editing experience when working with nested data structures. Before performing CRUD operations involving complex objects, refer to the [Complex Data Binding](https://blazor.syncfusion.com/documentation/datagrid/column-rendering#complex-data-generation) documentation.
-To customize the default EditForm input component, define an `EditTemplate` within the GridColumn for the complex field. Two-way binding (**@bind-Value**) can be used inside the `EditTemplate` to reflect changes in the DataGrid.
+To customize the default EditForm input component, define an `EditTemplate` within the GridColumn for the complex field. Two-way binding (**@bind-Value**) can be used inside the `EditTemplate` to reflect changes in the Blazor DataGrid.
 For proper focus management and validation, the `ID` attribute of input elements inside the `EditTemplate` must match the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) value of the corresponding GridColumn. When referencing complex fields, use a double underscore **(__)** instead of the dot **(.)** operator. For example, if the field is **Name.FirstName**, the `ID` should be defined as **Name__FirstName**.
 
 Ensure that both `ID` and `Name` attributes inside the `EditTemplate` follow the double underscore **(__)** format to avoid issues with validation and focus handling.

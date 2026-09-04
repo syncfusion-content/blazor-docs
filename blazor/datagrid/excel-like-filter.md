@@ -309,7 +309,7 @@ public class OrderData
 
 ## Display Custom Text in Filter Options
 
-The DataGrid supports customization of text displayed in filter checkbox lists. Custom, user-friendly labels can replace raw data values.
+The Blazor DataGrid supports customization of text displayed in filter checkbox lists. Custom, user-friendly labels can replace raw data values.
 
 ### Using Custom Filter Item Templates
 
@@ -751,7 +751,7 @@ public class OrderData
 
 ### Styling the filtered column icon
 
-When a filter is applied to a column, the DataGrid displays an icon in that column's header. The **.e-grid .e-filtered::before** CSS class enables modification of the icon appearance.
+When a filter is applied to a column, the Blazor DataGrid displays an icon in that column's header. The **.e-grid .e-filtered::before** CSS class enables modification of the icon appearance.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

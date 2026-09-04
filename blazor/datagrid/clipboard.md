@@ -17,7 +17,7 @@ To use keyboard shortcuts, selection must be enabled and the grid must be focuse
 | <kbd>Ctrl + C</kbd> | <kbd>Command + C</kbd> | Copy selected rows or cells to the clipboard |
 | <kbd>Ctrl + Shift + H</kbd> | <kbd>Command + Shift + H</kbd> | Copy selected rows or cells with headers to the clipboard |
 
-To enable clipboard functionality, configure the DataGrid with the required [GridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html). If the selection mode is **Row**, entire rows are copied. If it is **Cell**, only the highlighted cells are copied.
+To enable clipboard functionality, configure the Blazor DataGrid with the required [GridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html). If the selection mode is **Row**, entire rows are copied. If it is **Cell**, only the highlighted cells are copied.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

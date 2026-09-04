@@ -329,7 +329,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXrHtQNLBtpYwkYC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Sub context menu items in DataGrid
+## Sub context menu items in Blazor DataGrid
 
 The Blazor Data GridView supports hierarchical context menus, allowing sub-items to be grouped under a parent menu item. This structure helps organize related actions and improves interface usability.
 
@@ -444,7 +444,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVRNmDVBNSkKtdT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Disable the context menu for specific columns in DataGrid
+## Disable the context menu for specific columns in Blazor DataGrid
 
 The Blazor DataGrid allows restricting the context menu for individual columns, which is useful when dealing with **sensitive** or **read-only** data.
 

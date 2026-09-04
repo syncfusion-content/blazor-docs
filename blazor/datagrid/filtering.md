@@ -474,7 +474,7 @@ IsNotEmpty |Returns the values that are not empty. |String
 
 The WildCard filter processes one or more search patterns using the <b>*</b> symbol to retrieve values that match the defined criteria.
 
-* The **WildCard** filter option is supported in the DataGrid with all search modes enabled.
+* The **WildCard** filter option is supported in the Blazor DataGrid with all search modes enabled.
 
 Operator |Description
 -----|-----

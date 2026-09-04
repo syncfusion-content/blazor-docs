@@ -436,7 +436,7 @@ In the below example, we have **CustomerID** as a hidden column in the datagrid.
 
 Printing a large volume of data in a single page may cause performance issues in the browser. Rendering many rows and columns at once can slow down the page or make it unresponsive.
 
-The DataGrid uses `virtualization` to improve performance during on-screen rendering. However, virtualization for rows and columns is not feasible during printing. All data is rendered at once, which increases the load on the browser.
+The Blazor DataGrid uses `virtualization` to improve performance during on-screen rendering. However, virtualization for rows and columns is not feasible during printing. All data is rendered at once, which increases the load on the browser.
 
 To avoid performance issues when printing large datasets, consider exporting the data to a supported format:
 
@@ -446,6 +446,6 @@ To avoid performance issues when printing large datasets, consider exporting the
  
 These formats can be printed using desktop applications, which offer better control over layout and performance.
 
-> The printed output reflects the current state of the DataGrid, including visible columns, sorting, and filtering at the time printing is initiated.
+> The printed output reflects the current state of the Blazor DataGrid, including visible columns, sorting, and filtering at the time printing is initiated.
 
 N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.

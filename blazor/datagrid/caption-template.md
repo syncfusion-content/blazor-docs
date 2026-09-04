@@ -184,7 +184,7 @@ public class OrderData
 
 ## Customize group caption text using locale
 
-The Blazor Data Table supports customization of group caption text based on locale settings. This feature enables the display of localized or translated content in group captions, allowing the DataGrid to adapt to different languages and regional formats.
+The Blazor Data Table supports customization of group caption text based on locale settings. This feature enables the display of localized or translated content in group captions, allowing the Blazor DataGrid to adapt to different languages and regional formats.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

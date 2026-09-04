@@ -2901,7 +2901,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 [RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDropped) triggers when a dragged row is dropped on a valid target. Use it to finalize reordering, update the data source, or take actions based on the drop position.
 
-N> The DataGrid continues to evolve with new events. If an event is missing, submit a request on the [feedback portal](https://www.syncfusion.com/feedback/blazor-components).
+N> The Blazor DataGrid continues to evolve with new events. If an event is missing, submit a request on the [feedback portal](https://www.syncfusion.com/feedback/blazor-components).
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

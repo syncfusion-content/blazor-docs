@@ -2133,7 +2133,7 @@ To access columns in the Blazor DataGrid, use the following methods:
 
 **1. Get All Columns**
 
-The [GetColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetColumnsAsync_System_Nullable_System_Boolean__) method retrieves all columns defined in the DataGrid.
+The [GetColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetColumnsAsync_System_Nullable_System_Boolean__) method retrieves all columns defined in the Blazor DataGrid.
 
 | Parameter Name | Type   | Description                                      |
 |---------------|--------|--------------------------------------------------|
@@ -2161,7 +2161,7 @@ The [GetVisibleColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 
 **5. Get Foreign Key Columns**
-The [GetForeignKeyColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetForeignKeyColumnsAsync) method retrieves all foreign key columns in the DataGrid.
+The [GetForeignKeyColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetForeignKeyColumnsAsync) method retrieves all foreign key columns in the Blazor DataGrid.
 
 **6. Get Column Field Names**
 
@@ -2171,7 +2171,7 @@ The [GetColumnFieldNamesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ### Adding or Removing Columns
 
-The Blazor DataGrid allows dynamically adding or removing columns using the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property, which is accessible through the DataGrid instance.
+The Blazor DataGrid allows dynamically adding or removing columns using the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property, which is accessible through the Blazor DataGrid instance.
 
 - Use the **Add** method to insert a new column object into the Columns collection.
 - Use the **RemoveAt** method to remove a column by its index from the Columns collection.

@@ -22,7 +22,7 @@ The Blazor DataGrid allows rendering HTML elements inside a column using the [Te
 
 ### Render image in a column
 
-To display an image in a DataGrid column, define the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property for the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `Template` property allows rendering custom HTML or Blazor components instead of the default field value.
+To display an image in a Blazor DataGrid column, define the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property for the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `Template` property allows rendering custom HTML or Blazor components instead of the default field value.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

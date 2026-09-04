@@ -17,7 +17,7 @@ The Grid offers extensive options to customize cell appearance and functionality
 
 ## Displaying the HTML content
 
-Displaying HTML content in the Blazor Grid is useful when presenting formatted elements such as images, hyperlinks, or tables within a tabular layout. The DataGrid supports rendering HTML tags in both header and content cells.
+Displaying HTML content in the Blazor Grid is useful when presenting formatted elements such as images, hyperlinks, or tables within a tabular layout. The Blazor DataGrid supports rendering HTML tags in both header and content cells.
 
 By default, HTML content is encoded to prevent security vulnerabilities. To render raw HTML, set the [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property to **false**. This allows HTML tags to be displayed as intended within the cell.
 
@@ -112,7 +112,7 @@ To configure:
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhHjGjMUHFzfqVe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> * The [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property disables HTML encoding for the corresponding column in the DataGrid.
+> * The [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property disables HTML encoding for the corresponding column in the Blazor DataGrid.
 > * When set to **false**, HTML tags in the column’s data are rendered as HTML.
 > * When set to **true**, HTML tags are encoded and displayed as plain text.
 > * Disabling HTML encoding introduces potential security vulnerabilities. Enable this feature only when using fully trusted and sanitized data sources.
@@ -459,13 +459,13 @@ In this setup, the column is checked to confirm if it corresponds to the **Freig
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLdZGNCKmDdAaVR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> * The [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event is triggered for every cell in the DataGrid.
+> * The [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event is triggered for every cell in the Blazor DataGrid.
 > * Frequent use of this event to modify a large number of cells significantly impacts Grid performance.
 > * Use this event selectively and optimize logic to avoid unnecessary rendering overhead.
 
 ### CSS-based customization
 
-Styles can be applied to DataGrid cells using CSS selectors. The Blazor DataGrid assigns class names to each cell element, enabling targeted styling for individual cells or entire columns.
+Styles can be applied to Blazor DataGrid cells using CSS selectors. The Blazor DataGrid assigns class names to each cell element, enabling targeted styling for individual cells or entire columns.
 
 * The **e-rowcell** class is used to style standard row cells.
 * The **e-selectionbackground** class is used to modify the background color of selected rows.

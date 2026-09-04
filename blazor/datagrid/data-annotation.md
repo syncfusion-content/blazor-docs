@@ -11,12 +11,12 @@ documentation: ug
 
 Data annotations define validation and display rules for model classes or properties in the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid). These attributes ensure that input values follow specific formats and constraints while providing clear error messages during editing operations.
 
-When the DataGrid is bound to a model, data annotations automatically map to corresponding [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) settings. This enables built-in validation and metadata display during CRUD operations.
+When the Blazor DataGrid is bound to a model, data annotations automatically map to corresponding [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) settings. This enables built-in validation and metadata display during CRUD operations.
 
 To enable data annotation in the Blazor DataTable:
 
 1. Add the **System.ComponentModel.DataAnnotations** namespace in the Blazor application.
-2. Bind the DataGrid to a model using `TValue` and [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource).
+2. Bind the Blazor DataGrid to a model using `TValue` and [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource).
 3. Apply annotation attributes to model properties to enforce validation and display rules during CRUD operations.
 
 ### Supported Data Annotation Attributes
@@ -29,7 +29,7 @@ Use **Display** attributes to control how column headers, ordering, and metadata
 
 | Attribute Name | Properties | Functionality |
 |----------------|------------|---------------|
-| Display | Name | Sets the header text for the DataGrid column |
+| Display | Name | Sets the header text for the Blazor DataGrid column |
 | Display | ShortName | Sets a shorter version of the header text |
 | Display | AutoGenerateField | Prevents the column from being auto-generated |
 | Display | AutoGenerateFilter | Disables filtering for the column |

@@ -91,7 +91,7 @@ public class OrderDetails
 > * To disable resizing for a specific column, set the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
 > * In RTL mode, column resizing is performed by dragging the left edge of the header cell.
 > * The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) property of the `GridColumn` can be set to define the initial column width. When resizing is enabled, this value can be overridden by manual adjustments.
-> * If the `Width` property of a `GridColumn` is explicitly set to **0** and resizing is enabled, the DataGrid automatically assigns a default width of **200px** to that column.
+> * If the `Width` property of a `GridColumn` is explicitly set to **0** and resizing is enabled, the Blazor DataGrid automatically assigns a default width of **200px** to that column.
 
 ## Restrict the resizing based on minimum and maximum width
 
