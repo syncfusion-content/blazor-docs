@@ -648,7 +648,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNVHZmNBStrsgYgs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Prevent autofill option in autocomplete of filter menu dialog
+**Prevent autofill option in autocomplete of filter menu dialog**
 
 By default, the [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started) component in the filter menu dialog is configured to automatically fill suggestions while typing. In scenarios requiring a more controlled user experience, this autofill behavior can be disabled.
 
@@ -736,7 +736,7 @@ To prevent autofill for **string columns**, set the [Autofill](https://help.sync
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDVxXwjryXLfbAFT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Hide the filter operator dropdown in the filter menu
+**Hide the filter operator dropdown in the filter menu**
 
 To hide the operator dropdown in the filter menu dialog, apply CSS to the **.e-flm_optrdiv** class. This simplifies the interface by applying a default filter behavior without displaying operator selection options.
 
@@ -1050,7 +1050,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtLdDPskUHZdRnhP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Hide filter icons when filtering programmatically
+## Hide filter icons during programmatic filtering
 
 When performing filtering programmatically using methods in the Blazor Data Grid, the default filter icons in the column headers can be hidden to simplify the interface.
 
@@ -1124,11 +1124,6 @@ To hide the filter icon in the Data Grid, apply the CSS style to the filter menu
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNVHjmXreNpvBPiP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
-
-
-## Limitations of using different filter types in different columns
-
-Different filter types such as Excel, Menu, and Checkbox can be defined in different columns of the same Blazor Data Grid. However, these filter types cannot be used along with the FilterBar type (default filter type), because the FilterBar type requires UI-level changes that conflict with other filter types. For all other filter types, icons will be rendered in the column header.
 
 ## Filtering using DateRangePicker
 
@@ -1438,6 +1433,10 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXLHjGXroNSoIEKU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+## Limitations of using different filter types in different columns
+
+Different filter types such as Excel, Menu, and Checkbox can be defined in different columns of the same Blazor Data Grid. However, these filter types cannot be used along with the FilterBar type (default filter type), because the FilterBar type requires UI-level changes that conflict with other filter types. For all other filter types, icons will be rendered in the column header.
 
 ## Troubleshoot filter menu operator issue
 
