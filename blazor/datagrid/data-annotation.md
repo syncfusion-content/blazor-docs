@@ -19,7 +19,7 @@ To enable data annotation in the Blazor DataTable:
 2. Bind the Blazor DataGrid to a model using `TValue` and [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource).
 3. Apply annotation attributes to model properties to enforce validation and display rules during CRUD operations.
 
-### Supported Data Annotation Attributes
+## Supported Data Annotation Attributes
 
 The tables categorize supported attributes by display, formatting, metadata, and validation functionality.
 

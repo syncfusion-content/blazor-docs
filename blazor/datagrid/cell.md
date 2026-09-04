@@ -911,7 +911,7 @@ Tooltip customization is supported through the [TooltipTemplateContext](https://
                             case nameof(OrdersDetails.CustomerID):
                                 <div>
                                     <p style="margin: 2px 0;">
-                                        <strong>Email: </strong><a href="mailto:@order.Email">@order.Email</a>
+                                        <strong>Email: </strong><a href="mailto:@order.Email" aria-label="Send email to @order.Email">@order.Email</a>
                                     </p>
                                 </div>
                                 break;

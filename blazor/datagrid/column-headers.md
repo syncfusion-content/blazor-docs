@@ -242,7 +242,7 @@ To achieve this, nest the [GridColumn](https://help.syncfusion.com/cr/blazor/Syn
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" IsPrimaryKey="true" Width="120">
             <HeaderTemplate>
-                <a href="#">Order ID</a>
+                <a href="#" aria-label="Sort by Order ID">Order ID</a>
             </HeaderTemplate>
         </GridColumn>
         <GridColumn HeaderText="Order Details" TextAlign="TextAlign.Center">

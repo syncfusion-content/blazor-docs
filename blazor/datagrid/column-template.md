@@ -130,7 +130,7 @@ The Blazor DataTable supports rendering hyperlinks in columns using the [Templat
                 @{
                     var Data = (context as EmployeeDetails);
                     <div>
-                        <a href="https://www.google.com/search?q=@Data.FirstName" target="_blank">@Data.FirstName</a>
+                        <a href="https://www.google.com/search?q=@Data.FirstName" target="_blank" aria-label="Search Google for @Data.FirstName" >@Data.FirstName</a>
                     </div>
                 }
             </Template>
@@ -1051,7 +1051,7 @@ Routing can be implemented by defining an **anchor tag** or clickable element in
             <Template>
                 @{
                     var Employee = (context as OrderData);
-                    <div><a href="#" @onclick="@(() => Navigate(Employee))">View</a></div>
+                    <div><a href="#" @onclick="@(() => Navigate(Employee))" aria-label="Profile View" >View</a></div>
                 }
             </Template>
         </GridColumn>

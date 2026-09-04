@@ -788,7 +788,7 @@ To configure this feature, define a column using the [Template](https://help.syn
                     var order = (OrderData)data;
                     var emp = Employees.FirstOrDefault(e => e.EmployeeID == order.EmployeeID);
                 }
-                <a href="#" @onclick="() => LogToConsole(order?.OrderID)">@emp?.FirstName</a>
+                <a href="#" @onclick="() => LogToConsole(order?.OrderID)" aria-label="Log order {FirstName}" >@emp?.FirstName</a>
             </Template>
         </GridForeignColumn>
         <GridColumn Field="Freight" HeaderText="Freight" Format="C2" Width="120" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" />

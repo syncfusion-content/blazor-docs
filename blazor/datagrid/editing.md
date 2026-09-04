@@ -349,7 +349,7 @@ To enable this functionality, set the [Field](https://help.syncfusion.com/cr/bla
                 @{
                     var Order = (context as OrderData);
                     <div>
-                        <a href="#">@(Order.ShipCountry)</a>
+                        <a href="#">@(Order.ShipCountry) aria-label="View details for {Order.ShipCountry}"</a>
                     </div>
                 }
             </Template>
