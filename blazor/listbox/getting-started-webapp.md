@@ -180,7 +180,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 ## Binding data source
 
-After initialization, populate the ListBox using the `DataSource` property. In the following example, an array of objects is bound and fields are mapped via `ListBoxFieldSettings`.
+After initialization, populate the ListBox using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. In the following example, an array of objects is bound and fields are mapped via [ListBoxFieldSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxFieldSettings.html).
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -210,7 +210,7 @@ After initialization, populate the ListBox using the `DataSource` property. In t
 {% endhighlight %}
 {% endtabs %}
 
-N> `TValue` is the type of the value in the data source used for type inference. It is a generic type and can be specified as string[], int[], etc.
+N> `TValue` specifies the type of the selected value or values (for example, `string[]`), while `TItem` specifies the type of each data source item (for example, `VehicleData`).
 
 ## Run the application
 
