@@ -172,6 +172,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveAuto
+@using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime"></SfCalendar>
 
@@ -228,7 +229,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## Setting the Value, Min, and Max dates
 
-The Blazor Calendar component provides an option to select a date within a specified range by defining the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Max) properties. You can also set a date value within a specific range using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfCalendar-1.html) property. For more information, refer to the [Date Range](./date-range) section. Min and Max are inclusive boundaries; out-of-range dates are disabled.
+The Blazor Calendar component provides an option to select a date within a specified range by defining the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Max) properties. You can also set a date value within a specific range using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfInputTextBase-1.html#Syncfusion_Blazor_Inputs_SfInputTextBase_1_Value) property. For more information, refer to the [Date Range](./date-range) section. Min and Max are inclusive boundaries; out-of-range dates are disabled.
 
 Here, the Blazor Calendar allows selecting a date from the 5th through the 27th of the current month. `TValue` specifies the type of the Blazor Calendar component.
 
@@ -253,9 +254,10 @@ Here, the Blazor Calendar allows selecting a date from the 5th through the 27th 
 
 ## See also
 
-1. [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-3. [Getting Started with Blazor Calendar Events](https://blazor.syncfusion.com/documentation/calendar/events)
+1. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+2. [Getting Started with Blazor Server App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor WebAssembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+4. [Getting Started with Blazor Calendar Events](https://blazor.syncfusion.com/documentation/calendar/events)
 
 
 
