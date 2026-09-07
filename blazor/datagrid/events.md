@@ -9,15 +9,15 @@ documentation: ug
 
 # Events in Blazor Data Grid
 
-This section lists the events available in the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and when they are triggered for various Grid actions.
+This section lists the events available in the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and when they are triggered for various Blazor Grid actions.
 
-Events are assigned to the Blazor Data Table by using a single **GridEvents** component. When configuring Grid events, specify the generic type via the **TValue** parameter to match the Grid’s data model.
+Events are assigned to the Blazor Data Table by using a single **GridEvents** component. When configuring Blazor Grid events, specify the generic type via the **TValue** parameter to match the Grid’s data model.
 
 N> All events should be configured within a single **GridEvents** component.
 
 ## OnActionBegin
 
-[OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) triggers when a Grid action starts ([sorting](https://blazor.syncfusion.com/documentation/datagrid/sorting), [filtering](https://blazor.syncfusion.com/documentation/datagrid/filtering), [paging](https://blazor.syncfusion.com/documentation/datagrid/paging), [grouping](https://blazor.syncfusion.com/documentation/datagrid/grouping), [editing](https://blazor.syncfusion.com/documentation/datagrid/editing), and more). Use this to inspect or adjust action parameters before execution.
+[OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) triggers when a Blazor Grid action starts ([sorting](https://blazor.syncfusion.com/documentation/datagrid/sorting), [filtering](https://blazor.syncfusion.com/documentation/datagrid/filtering), [paging](https://blazor.syncfusion.com/documentation/datagrid/paging), [grouping](https://blazor.syncfusion.com/documentation/datagrid/grouping), [editing](https://blazor.syncfusion.com/documentation/datagrid/editing), and more). Use this to inspect or adjust action parameters before execution.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -64,7 +64,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnActionComplete
 
-[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) triggers after Grid actions ([sorting](https://blazor.syncfusion.com/documentation/datagrid/sorting), [filtering](https://blazor.syncfusion.com/documentation/datagrid/filtering), [paging](https://blazor.syncfusion.com/documentation/datagrid/paging), [grouping](https://blazor.syncfusion.com/documentation/datagrid/grouping), [editing](https://blazor.syncfusion.com/documentation/datagrid/editing), etc.) finish. Use it for post-processing or UI updates.
+[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) triggers after Blazor Grid actions ([sorting](https://blazor.syncfusion.com/documentation/datagrid/sorting), [filtering](https://blazor.syncfusion.com/documentation/datagrid/filtering), [paging](https://blazor.syncfusion.com/documentation/datagrid/paging), [grouping](https://blazor.syncfusion.com/documentation/datagrid/grouping), [editing](https://blazor.syncfusion.com/documentation/datagrid/editing), etc.) finish. Use it for post-processing or UI updates.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -109,7 +109,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnActionFailure
 
-[OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) triggers when a Grid action fails. Use it to log or display error details. In the following example, an invalid URL is configured to demonstrate the failure event.
+[OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) triggers when a Blazor Grid action fails. Use it to log or display error details. In the following example, an invalid URL is configured to demonstrate the failure event.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -195,7 +195,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## Created
 
-[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Created) triggers once the Grid is created. Use it for one-time initialization that depends on the Grid being ready.
+[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Created) triggers once the Blazor Grid is created. Use it for one-time initialization that depends on the Blazor Grid being ready.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -233,14 +233,14 @@ N> All events should be configured within a single **GridEvents** component.
 
     public void CreatedHandler(object args)
     {
-        // Perform setup that requires the Grid DOM or instance to exist.
+        // Perform setup that requires the Blazor Grid DOM or instance to exist.
     }
 }
 ```
 
 ## OnLoad
 
-[OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnLoad) triggers before the Grid rendering starts, allowing customization of Grid properties prior to rendering.
+[OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnLoad) triggers before the Blazor Grid rendering starts, allowing customization of Blazor Grid properties prior to rendering.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -278,14 +278,14 @@ N> All events should be configured within a single **GridEvents** component.
 
     public void LoadHandler(object args)
     {
-        // Configure initial state before the Grid renders.
+        // Configure initial state before the Blazor Grid renders.
     }
 }
 ```
 
 ## Destroyed
 
-[Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Destroyed) event triggers when the Grid is destroyed. Use it to confirm that the Grid gets completely destroyed.
+[Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Destroyed) event triggers when the Blazor Grid is destroyed. Use it to confirm that the Blazor Grid gets completely destroyed.
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
@@ -329,7 +329,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnDataBound
 
-[OnDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnDataBound) triggers before data is bound to the Grid. Use it to adjust query/columns based on incoming data.
+[OnDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnDataBound) triggers before data is bound to the Blazor Grid. Use it to adjust query/columns based on incoming data.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -374,7 +374,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## DataBound
 
-[DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) triggers after the data source is populated in the Grid. Use it for final UI adjustments after binding.
+[DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) triggers after the data source is populated in the Blazor Grid. Use it for final UI adjustments after binding.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -419,7 +419,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## RowDataBound
 
-[RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) triggers before each row element is appended to the Grid. Use it to style or transform row content.
+[RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) triggers before each row element is appended to the Blazor Grid. Use it to style or transform row content.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1004,7 +1004,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## QueryCellInfo
 
-[QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) triggers before a cell element is appended to the Grid. Use it to customize cell content, attributes, or styles.
+[QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) triggers before a cell element is appended to the Blazor Grid. Use it to customize cell content, attributes, or styles.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2084,7 +2084,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnPdfExport
 
-[OnPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnPdfExport) triggers before Grid data is exported to a PDF document. Use it to customize export settings.
+[OnPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnPdfExport) triggers before Blazor Grid data is exported to a PDF document. Use it to customize export settings.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2390,7 +2390,7 @@ N> All events should be configured within a single **GridEvents** component.
 
 ## OnExcelExport
 
-[OnExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnExcelExport) triggers before Grid data is exported to an Excel document. Use this event to modify export settings (such as file name, columns, or formatting) before the export begins.
+[OnExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnExcelExport) triggers before Blazor Grid data is exported to an Excel document. Use this event to modify export settings (such as file name, columns, or formatting) before the export begins.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

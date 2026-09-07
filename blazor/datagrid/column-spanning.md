@@ -352,7 +352,7 @@ public class EmployeeDetails
 
 ## Disable column spanning for specific column
 
-Column spanning in Blazor Data GridView can be disabled for a specific column(s) by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoSpan) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to **AutoSpanMode.None**. This configuration provides precise control, enabling automatic spanning across the grid while excluding column(s) where merging is not required.
+Column spanning in Blazor DataGrid can be disabled for a specific column(s) by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoSpan) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to **AutoSpanMode.None**. This configuration provides precise control, enabling automatic spanning across the grid while excluding column(s) where merging is not required.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -690,15 +690,15 @@ The effective spanning behavior in the Blazor DataGrid is determined by the inte
 | None | HorizontalAndVertical | No spanning. Grid-level **None** overrides all spanning modes. |
 | Row | None | No spanning. Column explicitly disables spanning. |
 | Row | Row | Row spanning only. Both grid and column enable row spanning. |
-| Row | Column | No spanning. Grid only allows row spanning; column cannot enable column spanning. |
-| Row | HorizontalAndVertical | Row spanning only. Grid only allows row spanning. |
+| Row | Column | No spanning. Blazor Grid only allows row spanning; column cannot enable column spanning. |
+| Row | HorizontalAndVertical | Row spanning only. Blazor Grid only allows row spanning. |
 | Column | None | No spanning. Column explicitly disables spanning. |
-| Column | Row | No spanning. Grid only allows column spanning; column cannot enable row spanning. |
+| Column | Row | No spanning. Blazor Grid only allows column spanning; column cannot enable row spanning. |
 | Column | Column | Column spanning only. Both grid and column enable column spanning. |
-| Column | HorizontalAndVertical | Column spanning only. Grid only allows column spanning. |
+| Column | HorizontalAndVertical | Column spanning only. Blazor Grid only allows column spanning. |
 | HorizontalAndVertical | None | No spanning. Column explicitly disables both directions. |
-| HorizontalAndVertical | Row | Row spanning only. Grid allows both; column narrows to Row. |
-| HorizontalAndVertical | Column | Column spanning only. Grid allows both; column narrows to Column. |
+| HorizontalAndVertical | Row | Row spanning only. Blazor Grid allows both; column narrows to Row. |
+| HorizontalAndVertical | Column | Column spanning only. Blazor Grid allows both; column narrows to Column. |
 | HorizontalAndVertical | HorizontalAndVertical | Row and Column spanning. Both grid and column enable both directions. |
 
 ---

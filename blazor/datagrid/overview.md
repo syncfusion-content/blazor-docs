@@ -28,7 +28,7 @@ The Blazor Data Table is ideal for a wide range of business scenarios:
 
 ## Data Connectivity
 
-The Blazor Data GridView enables multiple data binding approaches, offering flexibility in choosing the right strategy for different application architectures. The Blazor DataGrid can work with in-memory collections for small datasets, connect to remote services for scalable applications, or leverage ORM frameworks for seamless database integration.
+The Blazor DataGrid enables multiple data binding approaches, offering flexibility in choosing the right strategy for different application architectures. The Blazor DataGrid can work with in-memory collections for small datasets, connect to remote services for scalable applications, or leverage ORM frameworks for seamless database integration.
 
 **Data Binding Approaches**
 

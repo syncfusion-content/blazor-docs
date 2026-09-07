@@ -359,7 +359,7 @@ public class OrderData
 
 ## Render nested column menu
 
-The Blazor Data GridView supports rendering a nested column menu that provides extended options within the column header menu. This feature allows organizing related actions under submenus for better usability.
+The Blazor DataGrid supports rendering a nested column menu that provides extended options within the column header menu. This feature allows organizing related actions under submenus for better usability.
 
 To enable a nested column menu, define the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) property. This property accepts a collection of [ColumnMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuItemModel.html) objects, where each item can include a submenu by specifying its [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuItemModel.html#Syncfusion_Blazor_Grids_ColumnMenuItemModel_Items) property.
 

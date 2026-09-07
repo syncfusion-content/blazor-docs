@@ -130,7 +130,7 @@ N> Group footer and group caption aggregates appear when grouping is enabled and
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjBdXcNMhFTVLdtC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > - With local data, total summaries are calculated over the entire bound dataset. Footer aggregates reflect calculations across all rows.
-> - With remote data, footer summaries in the Blazor Data GridView typically reflect only the current page unless the data adaptor or server returns total summaries. When paging is enabled, the footer shows aggregates for visible page records by default.
+> - With remote data, footer summaries typically reflect only the current page unless the data adaptor or server returns total summaries. When paging is enabled, the footer shows aggregates for visible page records by default.
 
 ## Built-in aggregate types
 

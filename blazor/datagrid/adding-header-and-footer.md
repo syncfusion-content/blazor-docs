@@ -540,7 +540,7 @@ public class OrderData
 
 ## Insert an image in header and footer
 
-The Blazor Data GridView supports adding images, such as company logos, to header and footer regions when exporting to PDF. This feature is useful for branding and document personalization.
+The Blazor DataGrid supports adding images, such as company logos, to header and footer regions when exporting to PDF. This feature is useful for branding and document personalization.
 
 To insert an image:
 
@@ -587,7 +587,7 @@ To insert an image:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-       if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
+       if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Blazor Grid's ID and itemname.
         {
             var exportProps = new PdfExportProperties
             {
@@ -697,10 +697,10 @@ To enable this feature:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-       if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
+       if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Blazor Grid's ID and itemname.
         {
             PdfExportProperties ExportProperties = new PdfExportProperties();
-            ExportProperties.IsRepeatHeader = true; // Repeats the Grid's header on every page in the PDF document.
+            ExportProperties.IsRepeatHeader = true; // Repeats the Blazor Grid's header on every page in the PDF document.
             await this.DefaultGrid.ExportToPdfAsync(ExportProperties);
         }
     }

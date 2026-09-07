@@ -232,7 +232,7 @@ The lazy load grouping with virtual scrolling feature in the Blazor DataTable ef
 
 **How lazy load grouping with virtual scrolling works**
 
-1. When enabled, the Blazor Data GridView renders only the initial top-level group caption rows in a collapsed state.
+1. When enabled, the Blazor DataGrid renders only the initial top-level group caption rows in a collapsed state.
 
 2. Child rows for each group are fetched and rendered only when the respective caption row is expanded.
 

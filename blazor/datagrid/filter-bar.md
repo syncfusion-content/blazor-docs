@@ -357,7 +357,7 @@ public class OrderData
 
 ### Disable filter for specific columns
 
-The Blazor Data GridView supports disabling the filter bar for particular columns. Configure the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) object to **false** to restrict filtering for that specific column.
+The Blazor DataGrid supports disabling the filter bar for particular columns. Configure the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) object to **false** to restrict filtering for that specific column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

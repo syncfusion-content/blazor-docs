@@ -11,7 +11,7 @@ documentation: ug
 
 In [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), a cell is a single data unit formed at the intersection of a row and a column. Each cell displays content based on its data record and column settings. Depending on configuration, cells can show text, numbers, or custom templated content.
 
-The Grid offers extensive options to customize cell appearance and functionality. Templates can be applied, cell values can be formatted, editing can be enabled or disabled, and various operations can be performed to build interactive and visually informative data grids for web applications.
+The Blazor Grid offers extensive options to customize cell appearance and functionality. Templates can be applied, cell values can be formatted, editing can be enabled or disabled, and various operations can be performed to build interactive and visually informative data grids for web applications.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=6H90a5tz7bE"%}
 
@@ -129,7 +129,7 @@ Set the **WrapMode** property in `TextWrapSettings` to one of these values:
 * **Header** - Wraps text only in header cells.
 * **Content** - Wraps text only in content cells.
 
-> * If a column width is not specified, auto wrap adjusts based on the overall Grid width.
+> * If a column width is not specified, auto wrap adjusts based on the overall Blazor Grid width.
 > * Header text without whitespace may not wrap.
 > * HTML content interferes with wrapping behavior. Use [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_HeaderTemplate) and [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) properties to customize layout and ensure proper wrapping.
 
@@ -460,7 +460,7 @@ In this setup, the column is checked to confirm if it corresponds to the **Freig
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLdZGNCKmDdAaVR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * The [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event is triggered for every cell in the Blazor DataGrid.
-> * Frequent use of this event to modify a large number of cells significantly impacts Grid performance.
+> * Frequent use of this event to modify a large number of cells significantly impacts Blazor Grid performance.
 > * Use this event selectively and optimize logic to avoid unnecessary rendering overhead.
 
 ### CSS-based customization
@@ -561,7 +561,7 @@ Styles can be applied to Blazor DataGrid cells using CSS selectors. The Blazor D
 
 ### property-based customization
 
-Cell styles can also be customized using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_CustomAttributes) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) definition. This property accepts a dictionary of name–value pairs to apply custom CSS classes or inline styles to Grid cells.
+Cell styles can also be customized using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_CustomAttributes) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) definition. This property accepts a dictionary of name–value pairs to apply custom CSS classes or inline styles to Blazor Grid cells.
 
 ```cshtml
 <style>
@@ -659,11 +659,11 @@ In this configuration, the `CustomAttributes` property of the **ShipCity** colum
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXBnDGDiKwrSnave?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> Custom attributes can be used to customize any cell in the Grid, including header and footer cells.
+> Custom attributes can be used to customize any cell in the Blazor Grid, including header and footer cells.
 
 ## Clip Mode
 
-The clip mode feature in the Blazor Data GridView is used to manage overflow content in cells containing long text. This feature provides options to truncate content, display ellipsis, or show ellipsis with a tooltip.
+The clip mode feature in the Blazor DataGrid is used to manage overflow content in cells containing long text. This feature provides options to truncate content, display ellipsis, or show ellipsis with a tooltip.
 
 Enable clip mode by setting the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) property for the desired column.
 
@@ -775,7 +775,7 @@ Available ClipMode options:
 
 ## Tooltip
 
-The Blazor DataGrid supports displaying tooltips for Grid columns when hovered with a mouse pointer. This feature enhances accessibility and provides additional context for column data.
+The Blazor DataGrid supports displaying tooltips for Blazor Data GridView columns when hovered with a mouse pointer. This feature enhances accessibility and provides additional context for column data.
 
 ### Show tooltip
 

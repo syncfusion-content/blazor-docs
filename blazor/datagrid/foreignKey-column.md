@@ -199,7 +199,7 @@ public class OrderDetails
 
 ## Use edit template in foreign key column
 
-The Blazor Data GridView supports customizing the editor for a foreign key column using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature. By default, a [dropdown](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) is rendered for editing foreign key columns. Other components, such as [ComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started-with-web-app), can be used by defining an edit template.
+The Blazor DataGrid supports customizing the editor for a foreign key column using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature. By default, a [dropdown](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) is rendered for editing foreign key columns. Other components, such as [ComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started-with-web-app), can be used by defining an edit template.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -562,7 +562,7 @@ By default, the Blazor DataGrid does not support aggregation in foreign key colu
 
 To perform aggregation in a foreign key column:
 
-1. Define a foreign key column in the Grid.
+1. Define a foreign key column in the Blazor Grid.
 2. Implement a custom aggregate function to calculate the required value.
 3. Assign the function to the `CustomAggregate` property of the aggregate column.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Reorder in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) allows columns to be reordered by dragging and dropping a column header from one position to another within the Grid.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) allows columns to be reordered by dragging and dropping a column header from one position to another within the Blazor Grid.
 
 To enable column reordering, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowReordering) property of the [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **true**.
 
@@ -436,7 +436,7 @@ public class OrderDetails
 
 ## Reorder events
 
-The Blazor Data Table provides events to handle column reordering interactions in the Blazor Data GridView. These events allow executing custom logic during drag-and-drop operations.
+The Blazor Data Table provides events to handle column reordering interactions in the Blazor DataGrid. These events allow executing custom logic during drag-and-drop operations.
 
 1. [ColumnReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnReordering): Triggered while a column header is being dragged.
 2. [ColumnReordered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnReordered): Triggered when a column header is dropped on the target column.

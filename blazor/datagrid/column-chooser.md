@@ -158,7 +158,7 @@ public class OrderData
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZBxNGXCzCeFriuA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * The `ShowInColumnChooser` property is applied to each column individually. By setting it to **false**, specific columns can be excluded from the column chooser dialog.
-> * At least one column must remain visible in the Grid to ensure proper rendering and interaction.
+> * At least one column must remain visible in the Blazor Data GridView to ensure proper rendering and interaction.
 
 ## Open column chooser via programmatically
 
@@ -340,7 +340,7 @@ public class OrderData
 
 ## Change default search operator of the column chooser
 
-The Blazor Data GridView provides a search box in the column chooser dialog to filter column names. By default, the search uses the **StartsWith** operator. 
+The Blazor DataGrid provides a search box in the column chooser dialog to filter column names. By default, the search uses the **StartsWith** operator. 
 
 To modify this behavior, use the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Operator.html) property of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html).
 

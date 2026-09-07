@@ -72,7 +72,7 @@ The available options include:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport") // ID is a combination of the Grid ID and item name.
+        if (args.Item.Id == "Grid_pdfexport") // ID is a combination of the Blazor Grid ID and item name.
         {
             var exportProperties = new PdfExportProperties
                 {
@@ -228,7 +228,7 @@ public class OrderData
 
 ## Export filtered records
 
-Exporting filtered records from the Blazor Data GridView generates a PDF document that includes only rows matching the active filter criteria. This approach is useful for exporting refined data views.
+Exporting filtered records from the Blazor DataGrid generates a PDF document that includes only rows matching the active filter criteria. This approach is useful for exporting refined data views.
 
 To export filtered records:
 
@@ -367,7 +367,7 @@ In this configuration, the **ShipCity** column is hidden in the Grid and include
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport") // ID is a combination of the Grid ID and item name.
+        if (args.Item.Id == "Grid_pdfexport") // ID is a combination of the Blazor Grid ID and item name.
         {
             PdfExportProperties exportProperties = new PdfExportProperties
                 {
@@ -472,7 +472,7 @@ Toolbar="@(new List<string>() { "PdfExport" })" Height="348">
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Blazor Grid's ID and itemname.
         {
             isCustomerIDVisible = true;
             isShipCityVisible=false;
@@ -764,7 +764,7 @@ To configure page size:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Blazor Grid's ID and itemname.
         {
             var exportProps = new PdfExportProperties
             {
@@ -860,7 +860,7 @@ To configure a custom file name:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")  // ID is a combination of the Grid ID and item name.
+        if (args.Item.Id == "Grid_pdfexport")  // ID is a combination of the Blazor Grid ID and item name.
         {
             var exportProps = new PdfExportProperties
             {
@@ -966,7 +966,7 @@ To configure horizontal overflow:
     }
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport") // ID is a combination of the Grid ID and item name.
+        if (args.Item.Id == "Grid_pdfexport") // ID is a combination of the Blazor Grid ID and item name.
         {
             var pdfExportProps = new PdfExportProperties
             {
@@ -1066,7 +1066,7 @@ To customize columns during PDF export:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport") // ID is a combination of Grid ID and item name.
+        if (args.Item.Id == "Grid_pdfexport") // ID is a combination of Blazor Grid ID and item name.
         {
             var exportColumns = new List<GridColumn>
             {
@@ -1234,11 +1234,11 @@ Applies styling to the caption section in the exported PDF document. The caption
 
 * **Header**
 
-Applies styling to the column headers in the exported PDF document. These headers match the column titles shown in the Grid.
+Applies styling to the column headers in the exported PDF document. These headers match the column titles shown in the Blazor Grid.
 
 * **Record**
 
-Applies styling to the data rows in the exported PDF document. These rows contain the actual values from the Grid.
+Applies styling to the data rows in the exported PDF document. These rows contain the actual values from the Blazor Grid.
 
 N> By default, **Material** theme is applied to the exported PDF document.
 

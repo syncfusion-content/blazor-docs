@@ -58,7 +58,7 @@ Both techniques are effective for handling large collections without compromisin
 
 ### Optimizing performance with column virtualization in large no of columns
 
-[Column virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling#column-virtualization) in the Blazor Data GridView optimizes rendering by displaying only the columns currently visible within the viewport. Additional columns are loaded dynamically as the user scrolls horizontally. This approach significantly reduces initial load time and improves responsiveness when working with grids that contain a large number of columns.
+[Column virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling#column-virtualization) in the Blazor DataGrid optimizes rendering by displaying only the columns currently visible within the viewport. Additional columns are loaded dynamically as the user scrolls horizontally. This approach significantly reduces initial load time and improves responsiveness when working with grids that contain a large number of columns.
 
 Both **row** and **column** virtualization can be enabled together to handle large collections efficiently. This combination ensures that only visible rows and columns are rendered, minimizing DOM elements and enhancing overall performance.
 
@@ -123,7 +123,7 @@ When binding data from a service to the Blazor DataGrid, consider the following 
 
 1. **Assign Data in the Created Event**
 
-    Set the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) in the Grid’s [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Created) event instead of `OnInitializedAsync`. This ensures the Grid is rendered before data assignment, reducing startup delays.
+    Set the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) in the Grid’s [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Created) event instead of `OnInitializedAsync`. This ensures the Blazor Grid is rendered before data assignment, reducing startup delays.
 
 2. **Use Custom Binding for Large Collections**
 
@@ -138,7 +138,7 @@ For detailed guidance, refer to:
 
 To optimize the initial rendering and improve performance during interactions, use the individual NuGet package (**Syncfusion.Blazor.Grid**) along with its corresponding script and CSS files instead of the consolidated package (**Syncfusion.Blazor**).
 
-The consolidated package includes resources for all Blazor components, which increases overall package size and script load time. Referencing only the required Grid resources reduces payload size and improves rendering performance.
+The consolidated package includes resources for all Blazor components, which increases overall package size and script load time. Referencing only the required Blazor Grid resources reduces payload size and improves rendering performance.
 
 For more details, refer to:
 
@@ -149,7 +149,7 @@ For more details, refer to:
 
 The Blazor DataGrid allows updating cell values efficiently without triggering frequent server calls. This approach is useful for live update scenarios where data is initially bound from the server but subsequent edits should not refresh the database.
 
-Use the [SetRowDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetRowDataAsync_System_Object__0_System_Boolean_) method to update the Grid UI without affecting the underlying data source. To prevent database updates, pass **true** for the `preventDataUpdate` argument. Additionally, cancel built-in edit operations by setting **args.Cancel** to **true**.
+Use the [SetRowDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetRowDataAsync_System_Object__0_System_Boolean_) method to update the Blazor Grid UI without affecting the underlying data source. To prevent database updates, pass **true** for the `preventDataUpdate` argument. Additionally, cancel built-in edit operations by setting **args.Cancel** to **true**.
 
 ```csharp
 public async Task OnClick()
@@ -169,7 +169,7 @@ public async Task OnClick()
 
 The Blazor DataGrid supports multiple adaptors such as [OData](https://blazor.syncfusion.com/documentation/datagrid/data-binding/remote-data#binding-with-odata-services), [ODataV4](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/odatav4-adaptor), [WebAPI](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/web-api-adaptor), and [URL](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/url-adaptor) for performing server-side data operations and CRUD actions. These adaptors work with the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component to bind remote data sources and execute operations efficiently.
 
-During actions like **filtering**, **sorting**, **paging**, and **grouping**, the Grid generates queries based on the adaptor configuration. The application must process these queries and return the appropriate data to the Grid. For optimal performance, handle operations in the following order:
+During actions like **filtering**, **sorting**, **paging**, and **grouping**, the Blazor Grid generates queries based on the adaptor configuration. The application must process these queries and return the appropriate data to the Blazor Grid. For optimal performance, handle operations in the following order:
 
 * Filtering
 * Sorting

@@ -35,7 +35,7 @@ To enable PDF export:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Blazor Grid's ID and itemname.
         {
             await this.DefaultGrid.ExportToPdfAsync();
         }
@@ -122,7 +122,7 @@ To show and hide the spinner:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Blazor Grid's ID and itemname.
         {
             // Show spinner while exporting.
             await this.DefaultGrid.ShowSpinnerAsync();
@@ -222,7 +222,7 @@ To use a custom data source during export:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Blazor Grid's ID and itemname.
         {
             var convertedOrders = ConvertToOrderDetails(newOrders);
             PdfExportProperties PdfProperties = new PdfExportProperties
@@ -332,7 +332,7 @@ public class ChangeData
 
 ## Exporting with custom aggregate
 
-The Blazor Data GridView supports exporting grid data with custom aggregates. This feature enables including calculated values in the exported PDF, providing a comprehensive view for reporting or analysis.
+The Blazor DataGrid supports exporting grid data with custom aggregates. This feature enables including calculated values in the exported PDF, providing a comprehensive view for reporting or analysis.
 
 To apply a custom aggregate during export:
 
@@ -383,7 +383,7 @@ To apply a custom aggregate during export:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname. 
+        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Blazor Grid's ID and itemname. 
         {
             await DefaultGrid.ExportToPdfAsync();
         }
@@ -482,7 +482,7 @@ To apply a custom date format:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Blazor Grid's ID and itemname.
         {
             await this.DefaultGrid.ExportToPdfAsync();
         }
@@ -598,7 +598,7 @@ To pass additional parameters:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Blazor Grid's ID and itemname.
         {
             queryClone = this.Grid?.Query;
             this.Grid!.Query = new Query().AddParams("recordcount", "15");

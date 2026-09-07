@@ -439,7 +439,7 @@ public class OrderData
 
 ## Customize filter input editor
 
-The Blazor Data GridView allows customization of the built-in filter dialog editor components using the [FilterEditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterEditorSettings) property on the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). 
+The Blazor DataGrid allows customization of the built-in filter dialog editor components using the [FilterEditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterEditorSettings) property on the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). 
 
 The following table outlines component configurations customized for specific columns:
 
@@ -1054,7 +1054,7 @@ public class OrderData
 
 When performing filtering programmatically using methods in the Blazor DataGrid, the default filter icons in the column headers can be hidden to simplify the interface.
 
-To hide the filter icon in the Grid, apply the CSS style to the filter menu element as shown below:
+To hide the filter icon in the Blazor Grid, apply the CSS style to the filter menu element as shown below:
 
 ```cshtml
 <style>
@@ -1292,7 +1292,7 @@ Different filter types such as Excel, Menu, and Checkbox can be defined in diffe
 
 ## Filtering using DateRangePicker
 
-By default, for the date column in the filter menu, filtering action is performed based on a single date value selected from the `SfDatePicker`. The Blazor DataGrid also can perform the filtering action between the range of date values by rendering the [SfDateRangePicker](https://blazor.syncfusion.com/documentation/daterangepicker/getting-started-with-web-app) in the filter menu. This can be achieved by the filter template feature of the Grid.
+By default, for the date column in the filter menu, filtering action is performed based on a single date value selected from the `SfDatePicker`. The Blazor DataGrid also can perform the filtering action between the range of date values by rendering the [SfDateRangePicker](https://blazor.syncfusion.com/documentation/daterangepicker/getting-started-with-web-app) in the filter menu. This can be achieved by the filter template feature of the Blazor Grid.
 
 In this configuration, the `SfDateRangePicker` is rendered in the filter template of the **OrderDate** column. The [ValueChange](https://blazor.syncfusion.com/documentation/daterangepicker/events#valuechange) event captures the selected start and end dates. The filtering logic is handled in the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtering) event, where the default filter action is canceled and custom predicates are applied using the selected date range.
 
@@ -1353,7 +1353,7 @@ In this configuration, the `SfDateRangePicker` is rendered in the filter templat
             {
                 Grid.FilterSettings.Columns.RemoveAll(c => c.Field == "OrderDate");
             }
-            // Get all the Grid columns.
+            // Get all the Blazor Grid columns.
             var columns = await Grid.GetColumnsAsync();
             // Fetch the Uid of OrderDate column.
             string fUid = columns[2].Uid;

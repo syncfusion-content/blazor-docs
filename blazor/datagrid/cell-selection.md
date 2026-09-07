@@ -298,7 +298,7 @@ public class OrderDetails
 
 ## Select cells via programmatically
 
-Single cell selection, multiple cell selection, and range-based cell selection can be performed externally in the Blazor Data GridView using built-in methods. These API's allow programmatic interaction with specific cells in the Grid.
+Single cell selection, multiple cell selection, and range-based cell selection can be performed externally in the Blazor DataGrid using built-in methods. These API's allow programmatic interaction with specific cells in the Blazor Data GridView.
 
 ### Single cell selection
 
@@ -397,7 +397,7 @@ public class OrderDetails
 
 ### Multiple cell selection
 
-Multiple cell selection in the Blazor DataGrid enables selection of multiple cells within the Grid. This is useful for performing actions on several cells simultaneously or focusing on specific data regions.
+Multiple cell selection in the Blazor DataGrid enables selection of multiple cells within the Blazor Grid. This is useful for performing actions on several cells simultaneously or focusing on specific data regions.
 
 To perform multiple cell selection programmatically, use the [SelectCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectCellsAsync_System_ValueTuple_System_Int32_System_Int32____) method. This method accepts a collection of row and column index pairs to define the target cells.
 

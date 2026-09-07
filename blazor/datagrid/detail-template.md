@@ -466,7 +466,7 @@ public class CustomerDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBHtwZBVVmHWFvQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> The Blazor Data GridView does not include built-in hierarchical support. Use the detail template to create multi-level hierarchical layouts, as shown in the example.
+> The Blazor DataGrid does not include built-in hierarchical support. Use the detail template to create multi-level hierarchical layouts, as shown in the example.
 
 ## Template column in detail DataGrid
 

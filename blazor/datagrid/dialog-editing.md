@@ -180,8 +180,8 @@ public class OrderDetails
 
 ## Show or hide columns in dialog editing
 
-The Blazor Data GridView provides the ability to dynamically show or hide columns during dialog editing. This feature enables conditional column visibility based on the editing context, such as when adding a new record or modifying an existing one.
-To implement this behavior, use the following Grid events:
+The Blazor DataGrid provides the ability to dynamically show or hide columns during dialog editing. This feature enables conditional column visibility based on the editing context, such as when adding a new record or modifying an existing one.
+To implement this behavior, use the following Blazor Grid events:
 
 1. [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating): Triggered before a new record is added.
 2. [RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing): Triggered before an existing record is edited.

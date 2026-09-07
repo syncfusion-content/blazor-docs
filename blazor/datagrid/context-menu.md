@@ -11,9 +11,9 @@ documentation: ug
 
 The [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports a context menu that appears when right-clicking anywhere within the grid. This menu provides quick access to actions related to the grid’s data and layout, enhancing interactivity and usability.
 
-To enable the context menu, configure the Grid's `ContextMenuItems` property. Use default items for built-in menu options or add custom items for tailored functionality. This feature improves interactivity by offering context-sensitive actions.
+To enable the context menu, configure the Blazor Grid's `ContextMenuItems` property. Use default items for built-in menu options or add custom items for tailored functionality. This feature improves interactivity by offering context-sensitive actions.
 
-The context menu appears when right-clicking in these Grid areas:
+The context menu appears when right-clicking in these Blazor Grid areas:
 * **Header:** Displays column-specific actions.
 * **Content:** Shows row-related options.
 * **Pager:** Offers navigation controls.
@@ -35,23 +35,23 @@ The default context menu items include:
 
 | Items         | Description                                                         |
 | ------------- | ------------------------------------------------------------------- |
-| `Edit`        | Edit the currently selected record in the Grid.                     |
+| `Edit`        | Edit the currently selected record in the Blazor Grid.                     |
 | `Delete`      | Delete the currently selected record.                               |
 | `Save`        | Save the changes made to the edited record.                         |
 | `Cancel`      | Cancel the edit state and revert changes made to the edited record. |
 | `Copy`        | Copy the selected records to the clipboard.                         |
-| `PdfExport`   | Export the Grid data as a PDF document.                             |
-| `ExcelExport` | Export the Grid data as an Excel document.                          |
-| `CsvExport`   | Export the Grid data as a CSV document.                             |
+| `PdfExport`   | Export the Blazor Grid data as a PDF document.                             |
+| `ExcelExport` | Export the Blazor Grid data as an Excel document.                          |
+| `CsvExport`   | Export the Blazor Grid data as a CSV document.                             |
 
 **Pager**
 
 | Items       | Description                                |
 | ----------- | ------------------------------------------ |
-| `FirstPage` | Navigate to the first page of the Grid.    |
-| `PrevPage`  | Navigate to the previous page of the Grid. |
-| `LastPage`  | Navigate to the last page of the Grid.     |
-| `NextPage`  | Navigate to the next page of the Grid.     |
+| `FirstPage` | Navigate to the first page of the Blazor Grid.    |
+| `PrevPage`  | Navigate to the previous page of the Blazor Grid. |
+| `LastPage`  | Navigate to the last page of the Blazor Grid.     |
+| `NextPage`  | Navigate to the next page of the Blazor Grid.     |
 
 
 {% tabs %}
@@ -331,7 +331,7 @@ public class OrderData
 
 ## Sub context menu items in Blazor DataGrid
 
-The Blazor Data GridView supports hierarchical context menus, allowing sub-items to be grouped under a parent menu item. This structure helps organize related actions and improves interface usability.
+The Blazor DataGrid supports hierarchical context menus, allowing sub-items to be grouped under a parent menu item. This structure helps organize related actions and improves interface usability.
 
 To configure sub-context menu items:
 
@@ -452,7 +452,7 @@ This behavior is controlled using the [ContextMenuOpen](https://blazor.syncfusio
 
 To disable the context menu for a specific column:
 
-1. Handle the [ContextMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ContextMenuOpen) event of the Grid.
+1. Handle the [ContextMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ContextMenuOpen) event of the Blazor Grid.
 2. Use the **args.Column.Field** property to identify the target column.
 3. Set **args.Cancel = true** to prevent the context menu from opening for that column.
 

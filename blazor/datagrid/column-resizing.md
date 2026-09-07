@@ -333,7 +333,7 @@ public class OrderDetails
 
 ## Touch interaction
 
-The Blazor Data GridView supports touch interactions, enabling column resizing on mobile devices. Columns can be resized by tapping and dragging the floating handler, or adjusted using the column menu options.
+The Blazor DataGrid supports touch interactions, enabling column resizing on mobile devices. Columns can be resized by tapping and dragging the floating handler, or adjusted using the column menu options.
 
 **Resizing Columns on Touch Devices**
 

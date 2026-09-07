@@ -96,7 +96,7 @@ internal sealed class OrderData
 
 ## Copy to clipboard using external buttons
 
-Clipboard actions in the Blazor Data GridView can be triggered using external buttons when using UI controls is preferred over shortcut keys.
+Clipboard actions in the Blazor DataGrid can be triggered using external buttons when using UI controls is preferred over shortcut keys.
 
 The [CopyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method programmatically copies selected rows or cells:
 

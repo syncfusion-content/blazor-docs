@@ -190,7 +190,7 @@ public class EmployeeDetails
 
 ## Render other components in a column
 
-The Blazor Data GridView supports rendering other components inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This allows embedding interactive elements for advanced customization.
+The Blazor DataGrid supports rendering other components inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This allows embedding interactive elements for advanced customization.
 
 ### Render LineChart in a column
 
@@ -1118,7 +1118,7 @@ Routing can be implemented by defining an **anchor tag** or clickable element in
 {% endhighlight %}
 {% endtabs %}
 
-In this configuration, the navigation URL is defined in the **Link** field of the Grid data. When the link is clicked, the page is routed to the specified URL.
+In this configuration, the navigation URL is defined in the **Link** field of the Blazor Grid data. When the link is clicked, the page is routed to the specified URL.
 
 Next, create a new Razor page with the appropriate routing URL and include any required route parameters. Initialize the page with the necessary details.
 
@@ -1144,7 +1144,7 @@ Next, create a new Razor page with the appropriate routing URL and include any r
 {% endhighlight %}
 {% endtabs %}
 
-The following GIF represents template routing in Grid
+The following GIF represents template routing in Blazor Grid
 ![Blazor DataGrid with routing template.](./images/blazor-datagrid-template-routing.webp)
 
 ## See also

@@ -9,13 +9,13 @@ documentation: ug
 
 # Excel Exporting in Blazor Data Grid
 
-The Excel and CSV exporting feature in the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables exporting Grid data to spreadsheet formats for external analysis or sharing.
+The Excel and CSV exporting feature in the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables exporting Blazor Grid data to spreadsheet formats for external analysis or sharing.
 
-To enable Excel export, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowExcelExport) property to **true**. This property activates the export functionality in the Grid.
+To enable Excel export, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowExcelExport) property to **true**. This property activates the export functionality in the Blazor Grid.
 
-To initiate Excel export, use the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method. This method exports the Grid data to an Excel document.
+To initiate Excel export, use the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method. This method exports the Blazor Grid data to an Excel document.
 
-To initiate CSV export, use the [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_System_Boolean_Syncfusion_Blazor_Grids_ExcelExportProperties_) method. This method exports the Grid data to a CSV document.
+To initiate CSV export, use the [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_System_Boolean_Syncfusion_Blazor_Grids_ExcelExportProperties_) method. This method exports the Blazor Grid data to a CSV document.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -308,7 +308,7 @@ public class OrderData
 
 ## Exporting with custom aggregate
 
-Exporting Blazor Data GridView data with custom aggregates enables inclusion of calculated values in the exported file based on specific conditions. This feature supports enhanced reporting and analysis by incorporating tailored aggregate information.
+Exporting Blazor DataGrid data with custom aggregates enables inclusion of calculated values in the exported file based on specific conditions. This feature supports enhanced reporting and analysis by incorporating tailored aggregate information.
 To export with a custom aggregate:
 
 1. Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property of the aggregate column to **Custom**.
