@@ -9,13 +9,13 @@ documentation: ug
 
 # Excel-like Filter in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) includes an Excel-like filter feature that provides an easy-to-use interface for filtering data. This feature mirrors the filtering tools found in Microsoft Excel, making it intuitive for individuals already familiar with that application.
+The [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) includes an Excel-like filter feature that provides an easy-to-use interface for filtering data. The Excel-like filter mirrors the filtering tools found in Microsoft Excel, making the feature intuitive for users already familiar with Microsoft Excel.
 
-Excel-like filtering proves especially valuable when working with large datasets or when complex filtering operations are required for specific columns. This feature enables rapid data refinement to locate required information.
+Excel-like filtering is particularly valuable for large datasets and complex filtering operations. The filter enables rapid data refinement to locate required information.
 
-## Getting Started with Excel-like Filter
+## Enable Excel filtering
 
-To enable Excel-like filtering in a Blazor DataGrid, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true**  and configure [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) with **FilterType.Excel**. 
+To enable Excel-like filtering in a Blazor Data Grid, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true** and configure [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) with **FilterType.Excel**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -29,8 +29,8 @@ To enable Excel-like filtering in a Blazor DataGrid, set the [AllowFiltering](ht
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="90"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="120"> </GridColumn>
-      
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" Width="120"> </GridColumn>
+
     </GridColumns>
 </SfGrid>
 
@@ -64,10 +64,10 @@ public class OrderData
 
     public static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count() == 0)
+        if (Orders.Count == 0)
         {
             int OrderID = 10248;
-                
+
             for (int i = 1; i < 3; i++)
             {
                 Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 04), 32.38));
@@ -100,11 +100,11 @@ public class OrderData
 > * Supports multiple filter types: text, numbers, dates, and true/false values
 > * Provides search functionality to find specific values within the filter dialog
 > * Allows clearing of previously applied filters
-> * By default, the grid does not include a ‘Between’ operator. However, the Excel filter provides a ‘Between’ option for numeric and date columns, which functions as a range filter by applying two conditions.
+> * By default, the Data Grid does not include a `Between` operator. However, the Excel filter provides a "Between" option for numeric and date columns, which functions as a range filter by applying two conditions.
 
-## Checkbox Filtering
+## Checkbox filtering
 
-Checkbox filtering offers another straightforward approach to filter data. With this method, specific values can be displayed by selecting checkboxes next to each option in a column. This approach works effectively when data contains distinct categories or grouped values.
+Checkbox filtering offers another straightforward approach to filter data. Using the checkbox filter, specific values can be displayed by selecting checkboxes next to each option in a column. Checkbox filtering works effectively when data contains distinct categories or grouped values.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -118,8 +118,8 @@ Checkbox filtering offers another straightforward approach to filter data. With 
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="90"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="120"> </GridColumn>
-      
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" Width="120"> </GridColumn>
+
     </GridColumns>
 </SfGrid>
 
@@ -153,10 +153,10 @@ public class OrderData
 
     public static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count() == 0)
+        if (Orders.Count == 0)
         {
             int OrderID = 10248;
-                
+
             for (int i = 1; i < 3; i++)
             {
                 Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 04), 32.38));
@@ -185,13 +185,11 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtrnDwZhgbmvyADP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Customize the Number of Filter Options
+## Customize the filter choice count
 
-By default, the filter dialog displays up to **1000** distinct values in the checkbox list for each column. This limit ensures the filter dialog loads promptly and performs efficiently, particularly with large datasets. The limit can be modified based on specific requirements.
+By default, the filter dialog displays up to **1000** distinct values in the checkbox list for each column. This distinct-value cap ensures the filter dialog loads promptly and performs efficiently, particularly with large datasets. The cap can be modified based on specific requirements.
 
-The filter dialog retrieves values from the first **1000** records in the dataset. If additional values exist, they load automatically when searching in the dialog.
-
-### Adjusting the Filter Choice Count
+In addition, the filter dialog scans only the first **1000** records in the dataset to build the list of available choices. If a column contains more than 1000 unique values, the additional values are not included in the initial list. When a value is typed in the search box of the filter dialog, the Data Grid searches across the remaining records and loads the matching values automatically. This record-scan limit and the distinct-value cap together keep the dialog responsive for large datasets.
 
 The [FilterChoiceCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterDialogOpeningEventArgs.html#Syncfusion_Blazor_Grids_FilterDialogOpeningEventArgs_FilterChoiceCount) property in the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) event modifies the number of values displayed in the filter dialog.
 
@@ -246,7 +244,7 @@ public class OrderData
 
     public static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count() == 0)
+        if (Orders.Count == 0)
         {
             string[] Product = {"Chai", "Chang", "Aniseed Syrup", "Chef Anton\"s Cajun Seasoning", "Chef Anton\"s Gumbo Mix", "Grandma\"s Boysenberry Spread",
         "Uncle Bob\"s Organic Dried Pears", "Northwoods Cranberry Sauce", "Mishi Kobe Niku", "Ikura", "Queso Cabrales", "Queso Manchego La Pastora", "Konbu",
@@ -274,7 +272,7 @@ public class OrderData
 
 
             int OrderID = 10248;
-            int i = 0; int j = 0; int k = 0; int l = 0; int m = 0;
+            int i = 0; int k = 0; int l = 0;
             for (int x = 0; x < 25000; x++)
             {
                 i = i >= CustomerID.Length ? 0 : i;
@@ -288,7 +286,7 @@ public class OrderData
                     Quantity = Quantity[k],
 
                 });
-                i++; j++; k++; l++;
+                i++; k++; l++;
             }
         }
         return Orders;
@@ -303,19 +301,19 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBdNGtVUvPiyWQL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVHDYtVRBZJyZNk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> **Performance Consideration:** Setting a high `FilterChoiceCount` may slow the filter dialog when it opens. Processing and displaying a large number of values requires additional time, potentially resulting in noticeable delays. To maintain smooth filtering, select a value that balances functional requirements with acceptable performance levels.
+> **Performance Consideration:** Setting a high `FilterChoiceCount` may slow the filter dialog when the dialog opens. Processing and displaying a large number of values requires additional time, potentially resulting in noticeable delays. To maintain smooth filtering, select a value that balances functional requirements with acceptable performance levels.
 
-## Display Custom Text in Filter Options
+## Customize checkbox list items using templates
 
-The DataGrid supports customization of text displayed in filter checkbox lists. Custom, user-friendly labels can replace raw data values.
+The Data Grid supports customization of text displayed in filter checkbox lists. Custom, user-friendly labels can replace raw data values.
 
-### Using Custom Filter Item Templates
+**Customize checkbox list text**
 
-The [FilterItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterItemTemplate) property enables creation of custom templates for filter items, allowing custom logic and HTML elements for displaying specific content.
+The [FilterItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterItemTemplate) property enables creation of custom templates for filter items, allowing custom logic and HTML elements for displaying specific content in the filter dialog.
 
-The following example demonstrates how to customize text in a **Delivered** column filter. Instead of displaying **true** or **false**, it displays **Delivered** or **Not delivered**:
+The following example demonstrates how to customize text in a **Delivered** column filter. Instead of displaying **true** or **false**, the filter displays **Delivered** or **Not delivered**:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -323,7 +321,7 @@ The following example demonstrates how to customize text in a **Delivered** colu
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" AllowPaging="true">
-    <GridFilterSettings Type=" Syncfusion.Blazor.Grids.FilterType.Excel"></GridFilterSettings>
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Excel"></GridFilterSettings>
     <GridPageSettings PageSize="6"></GridPageSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.CategoryName) HeaderText="Category Name" Width="120"></GridColumn>
@@ -380,7 +378,7 @@ public class OrderData
 
     public static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count() == 0)
+        if (Orders.Count == 0)
         {
             int ProductID = 0;
             for (int i = 1; i < 7; i++)
@@ -410,7 +408,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZhdZGZLKvPRzQQQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Add Icons and Visual Elements to Filter Options
+## Customize checkbox list items with icons
 
 Filter options can be enhanced with visual elements such as icons positioned alongside filter text. The [FilterItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterItemTemplate) property enables inclusion of custom UI elements including icons, styled text, and other HTML content in filter items.
 
@@ -420,7 +418,7 @@ Filter options can be enhanced with visual elements such as icons positioned alo
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" AllowPaging="true">
-    <GridFilterSettings Type=" Syncfusion.Blazor.Grids.FilterType.Excel"></GridFilterSettings>
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Excel"></GridFilterSettings>
     <GridPageSettings PageSize="6"></GridPageSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.CategoryName) HeaderText="Category Name" Width="150">
@@ -430,35 +428,39 @@ Filter options can be enhanced with visual elements such as icons positioned alo
 
                     if (filterContext.Value.ToString() == "Beverages")
                     {
-                        <i class="fa fa-coffee"></i> <ln/> @filterContext.Value.ToString();
+                        <i class="fa fa-coffee"></i> <br/> @filterContext.Value.ToString();
                     }
                     else if (filterContext.Value.ToString() == "Condiments")
                     {
-                        <i class="fa fa-leaf"></i> <ln/> @filterContext.Value.ToString();
+                        <i class="fa fa-leaf"></i> <br/> @filterContext.Value.ToString();
                     }
                     else if (filterContext.Value.ToString() == "Confections")
                     {
-                        <i class="fas fa-birthday-cake"></i> <ln/> @filterContext.Value.ToString();
+                        <i class="fas fa-birthday-cake"></i> <br/> @filterContext.Value.ToString();
                     }
                     else if (filterContext.Value.ToString() == "DairyProducts")
                     {
-                        <i class="fas fa-ice-cream"></i> <ln/> @filterContext.Value.ToString();
+                        <i class="fas fa-ice-cream"></i> <br/> @filterContext.Value.ToString();
                     }
                     else if (filterContext.Value.ToString() == "Grains")
                     {
-                        <i class="fas fa-seedling"></i> <ln/> @filterContext.Value.ToString();
+                        <i class="fas fa-seedling"></i> <br/> @filterContext.Value.ToString();
                     }
                     else if (filterContext.Value.ToString() == "Meat")
                     {
-                        <i class="fas fa-drumstick-bite"></i> <ln/> @filterContext.Value.ToString();
+                        <i class="fas fa-drumstick-bite"></i> <br/> @filterContext.Value.ToString();
                     }
                     else if (filterContext.Value.ToString() == "Produce")
                     {
-                        <i class="fas fa-carrot"></i> <ln/> @filterContext.Value.ToString();
+                        <i class="fas fa-carrot"></i> <br/> @filterContext.Value.ToString();
                     }
                     else if (filterContext.Value.ToString() == "Seafood")
                     {
-                        <i class="fas fa-fish"></i> <ln/> @filterContext.Value.ToString();
+                        <i class="fas fa-fish"></i> <br/> @filterContext.Value.ToString();
+                    }
+                    else
+                    {
+                        @filterContext.Value.ToString();
                     }
                 }
             </FilterItemTemplate>
@@ -497,7 +499,7 @@ public class OrderData
 
     public static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count() == 0)
+        if (Orders.Count == 0)
         {
             int ProductID = 0;
             for (int i = 1; i < 7; i++)
@@ -527,11 +529,11 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNrxDwjLUPYWYCQJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Style the Excel Filter Dialog with CSS
+## Customize the excel filter dialog using CSS
 
 The Excel filter dialog appearance can be customized using CSS (Cascading Style Sheets). This enables alignment of the filter dialog with application design and visual requirements.
 
-### Hiding the Context Menu
+**Hiding the context menu**
 
 The Excel filter dialog contains several components, including a **context menu**, **search box**, and **checkbox list**. The context menu can be hidden when not required using CSS.
 
@@ -555,7 +557,7 @@ The Excel filter dialog contains several components, including a **context menu*
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="90"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="120"> </GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" Width="120"> </GridColumn>
 
     </GridColumns>
 </SfGrid>
@@ -595,7 +597,7 @@ public class OrderData
 
     public static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count() == 0)
+        if (Orders.Count == 0)
         {
             int OrderID = 10248;
             for (int i = 1; i < 3; i++)
@@ -626,9 +628,11 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjrdDwXhJQDpSjFF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Changing Filter Dialog Size
+**Changing filter dialog size**
 
-The filter dialog height and width can be customized for each column. CSS combined with the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) event enables application of custom sizes based on which column is being filtered.
+The filter dialog height and width can be customized for each column. CSS combined with the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) event enables application of custom sizes based on the target column.
+
+The event handler receives [FilterDialogOpeningEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterDialogOpeningEventArgs.html), which exposes the [ColumnName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterDialogOpeningEventArgs.html#Syncfusion_Blazor_Grids_FilterDialogOpeningEventArgs_ColumnName) property. The `ColumnName` value identifies the column that opens the filter dialog and can be used to apply column-specific styles.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -718,7 +722,7 @@ public class OrderData
 
     public static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count() == 0)
+        if (Orders.Count == 0)
         {
             int OrderID = 10248;
             for (int i = 1; i < 3; i++)
@@ -749,9 +753,9 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZrxZGtBTQoosiyI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Styling the filtered column icon
+**Styling the filtered column icon**
 
-When a filter is applied to a column, the DataGrid displays an icon in that column's header. The **.e-grid .e-filtered::before** CSS class enables modification of the icon appearance.
+After applying a filter to a column, the Data Grid displays an icon in that column's header. The **.e-grid .e-filtered::before** CSS class enables modification of the icon appearance.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -764,14 +768,14 @@ When a filter is applied to a column, the DataGrid displays an icon in that colu
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="90"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="120"> </GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" Width="120"> </GridColumn>
     </GridColumns>
 </SfGrid>
 
 <style>
     .e-grid .e-filtered::before {
-        color: red;               // set the color to filtered icon.
-        font-size: medium;        // set the font-size to filtered icon.
+        color: red;               /* set the color to filtered icon */
+        font-size: medium;        /* set the font-size to filtered icon */
     }
 </style>
 
@@ -805,7 +809,7 @@ public class OrderData
 
     public static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count() == 0)
+        if (Orders.Count == 0)
         {
             int OrderID = 10248;
             for (int i = 1; i < 3; i++)
@@ -834,17 +838,19 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVdXbWEBLDZVFfv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
 ## Combining multiple filter selections
 
-By default, when a filter is applied multiple times to the same column, the new filter replaces the previous selection. Previously applied filters can be retained by using the **Add current selection to filter** option. This checkbox appears in the filter search bar when searching for values in the CheckBox or Excel filter dialog.
+By default, when a filter is applied multiple times to the same column, the new filter replaces the previous selection. Previously applied filters can be retained by using the **Add current selection to filter** option. The checkbox appears in the filter search bar when searching for values in the Checkbox or Excel filter dialog.
 
-![Add current selection to filter in Blazor DataGrid.](images/blazor-datagrid-add-current-selection-to-filter.webp)
+![Add current selection to filter in Blazor Data Grid.](images/blazor-datagrid-add-current-selection-to-filter.webp)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDrRXGZVTwebipHI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## See Also
 
-Comprehensive information about the Blazor DataGrid and its features is available through the following resources:
+Comprehensive information about the Blazor Data Grid and its features is available through the following resources:
 
-* **Feature Overview:** The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour provides a complete overview of available capabilities.
-* **Interactive Examples:** The [Blazor DataGrid examples](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) provide practical demonstrations of data presentation and manipulation.
+* **Feature Overview:** The [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour provides a complete overview of available capabilities.
+* **Interactive Examples:** The [Blazor Data Grid examples](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) provide practical demonstrations of data presentation and manipulation.
