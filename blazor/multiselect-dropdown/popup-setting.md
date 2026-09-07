@@ -73,6 +73,29 @@ Prevent the popup from opening or closing by setting [BeforeOpenEventArgs.Cancel
 
 The following events are raised when opening and closing the popup.
 
+## Render popup in a custom container
+
+Use the `AppendTo` property to render the MultiSelect Dropdown popup inside a specific container instead of the default `document.body`. This is useful when the component is placed inside dialogs, side panels, containers with overflow restrictions, or custom stacking contexts.
+
+Specify a valid CSS selector in the `AppendTo` property. When the selector matches an element, the popup is appended to that element. If the selector is null, empty, or no matching element is found, the popup is rendered in the default location.
+
+{% highlight cshtml %}
+
+@using Syncfusion.Blazor.DropDowns
+
+<div id="popupHost">
+    <SfMultiSelect TValue="string[]" TItem="string" DataSource="@Items" AppendTo="@AppendTarget" Placeholder="Select items"></SfMultiSelect>
+</div>
+
+@code {
+    private string AppendTarget = "#popupHost";
+    private List<string> Items = new() { "One", "Two", "Three" };
+}
+
+{% endhighlight %}
+
+> The `AppendTo` property accepts a CSS selector such as `#elementId` or `.container`. If the specified element is not found, the popup element will be appended to `document.body`.
+
 ### OnOpen event
 
 The [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_OnOpen) event triggers before the popup opens. If canceled, the popup remains closed.
