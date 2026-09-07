@@ -9,7 +9,9 @@ documentation: ug
 
 # How to Get Selected Data in Blazor Charts
 
-Use the chart's [OnSelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSelectionChanged) event to get the list of selected data from the chart.
+This example demonstrates how to capture the data points selected by the user in a Syncfusion® Blazor Chart and display them in a Syncfusion® DataGrid. It is supported in Blazor Server, Blazor WebAssembly, and Blazor Hybrid (MAUI) applications using Syncfusion® Blazor Charts v20.x or later.
+
+The [`OnSelectionChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSelectionChanged) event is triggered after the user completes a selection operation. The event handler receives a `SelectionCompleteEventArgs` object, whose `SelectedDataValues` property contains the selected data points in JSON format. When multiple series are present, deserializing this property returns a `List<List<SelectionData>>`, where each inner list represents the selected points for a series in the order the series are declared.
 
 ```cshtml
 
@@ -33,7 +35,7 @@ public void ShowSelectedData(IDragCompleteEventArgs args)
 }
 ```
 
-By using the grid's [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html?&_ga=2.74923985.277089489.1621702797-1228991885.1619258362#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, chart's selected data can be listed in the grid.
+The selected points can be bound to a Grid using its [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) property:
 
 ```cshtml
 
@@ -46,7 +48,7 @@ By using the grid's [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusio
 
 ```
 
-The complete code snippet is available below.
+The complete code snippet is available below. `SelectionMode.DragXY` enables rectangle drag selection on both axes; the chart exposes selected points per series through `args.SelectedDataValues`.
 
 ```cshtml
 

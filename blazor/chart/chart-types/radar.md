@@ -17,7 +17,9 @@ A detailed demonstration of the process for creating a Radar chart using Blazor 
 
 {% youtube "youtube:https://www.youtube.com/watch?v=Q5odgrcbSO0" %}
 
-To render a radar chart, set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to [Radar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Radar). To render a [Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Line) series in [Radar Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Radar), specify the [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property to [Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Line). [IsClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_IsClosed) property specifies whether to join start and end point of a line series used in [Radar Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/Radar-chart) to form a closed path. The default value of [IsClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_IsClosed) property is **true**.
+To render a radar chart, set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to [Radar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Radar). To render a [Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Line) series in a [Radar chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/radar-chart), set the [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property to [Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Line). The [IsClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_IsClosed) property specifies whether to join the start and end points of a line series to form a closed path. The default value of `IsClosed` is **true**.
+
+N> **Troubleshooting:** If the radar layout does not appear, verify that `Type` is set to `ChartSeriesType.Radar` and that `ChartPrimaryXAxis` has `ValueType="Category"` to render the angular axis. The chart container must have a non-zero height.
 
 ```cshtml
 
@@ -60,7 +62,7 @@ N> Refer to the [Blazor Radar Chart](https://www.syncfusion.com/blazor-component
 
 ### Draw type
 
-Similar to the polar chart, use the [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property to change the series plotting type in a Radar chart to line, column, area, range column, spline, scatter, stacking area, spline area, or stacking column. The default value of [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) is [Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Line).
+Similar to the polar chart, use the [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property to change the series plotting type in a Radar chart to `Line`, `Column`, `Area`, `RangeColumn`, `Spline`, `Scatter`, `StackingArea`, or `StackingColumn`. The default value of `DrawType` is `Line`.
 
 ```cshtml
 
@@ -101,7 +103,7 @@ Similar to the polar chart, use the [`DrawType`](https://help.syncfusion.com/cr/
 
 ## Binding data with series
 
-You can bind data to the chart using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property within the series configuration. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) value can be set using either [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) property values or a list of business objects. More information on data binding can be found [here](../working-with-data). To display the data correctly, map the fields from the data to the chart series' [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) properties.
+You can bind data to the chart using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property within the series configuration. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) value can be set using either [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) property values or a list of business objects. More information on data binding is available in [Working with data](../working-with-data). To display the data correctly, map the fields from the data to the chart series' [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) properties.
 
 ```cshtml
 
@@ -143,8 +145,8 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 ## Series customization
 
 ### Start angle
- 
-To customize the start angle of the [Radar Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Radar), use [StartAngle](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_Charts_ChartCommonAxis_StartAngle/Syncfusion.Blazor.html/Syncfusion.Blazor.html) property. By default, [StartAngle](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_Charts_ChartCommonAxis_StartAngle/Syncfusion.Blazor.html/Syncfusion.Blazor.html) value is **0**.
+
+To customize the start angle of the [Radar Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Radar), use the [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_StartAngle) property on `ChartPrimaryXAxis`. The default value is `0`.
 
 ```cshtml
 
@@ -362,8 +364,8 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
+    <ChartEvents OnSeriesRender="SeriesRender"></ChartEvents>
     <ChartSeriesCollection>
-        <ChartEvents OnSeriesRender="SeriesRender"></ChartEvents>
         <ChartSeries DataSource="@SalesReports" XName="X" Width="2" YName="Y"
                      Type="Syncfusion.Blazor.Charts.ChartSeriesType.Radar" />
     </ChartSeriesCollection>
@@ -405,8 +407,8 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
+    <ChartEvents OnPointRender="PointRender"></ChartEvents>
     <ChartSeriesCollection>
-        <ChartEvents OnPointRender="PointRender"></ChartEvents>
         <ChartSeries DataSource="@SalesReports" XName="X" Width="2" YName="Y"
                      Type="Syncfusion.Blazor.Charts.ChartSeriesType.Radar">
             <ChartMarker Visible="true" Width="10" Height="10"></ChartMarker>
@@ -423,7 +425,14 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
     public void PointRender(PointRenderEventArgs args)
     {
-        args.Fill = args.Point.X.ToString() == "2008" ? "#E91E63" : "#3F51B5";
+        if (System.Convert.ToDouble(args.Point.X) == 2008)
+        {
+            args.Fill = "#E91E63";
+        }
+        else
+        {
+            args.Fill = "#3F51B5";
+        }
     }
 
     public List<ChartData> SalesReports = new List<ChartData>
@@ -441,9 +450,12 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNVHXRCyzpVwogJB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and explore the [Blazor Radar Chart Example](https://blazor.syncfusion.com/demos/chart/polar-line?theme=fluent2) to learn how the radar chart plots data by value and angle on a circular graph.
 
 ## See also
 
+* [Polar](./polar)
 * [Data Label](../data-labels)
 * [Tooltip](../tool-tip)
+* [Data Marker](../data-markers)
+* [Legend](../legend)
