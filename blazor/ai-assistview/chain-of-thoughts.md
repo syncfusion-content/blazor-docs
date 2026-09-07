@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Chain of Thoughts in Blazor AI AssistView | Syncfusion®
-description: Render Chain of Thoughts (thinking blocks) in the Syncfusion® Blazor AI AssistView with reasoning stages, status indicators, collapsible headers, inline context badges, and streaming-friendly updates.
+description: Render Chain of Thoughts (thinking blocks) in Syncfusion® Blazor AI AssistView with reasoning stages, inline context badges, and streaming-friendly updates.
 platform: Blazor
 control: AI AssistView
 documentation: ug
