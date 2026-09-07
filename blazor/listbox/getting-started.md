@@ -201,7 +201,7 @@ After initialization, populate the ListBox using the [DataSource](https://help.s
 {% endhighlight %}
 {% endtabs %}
 
-N> `TValue` specifies the type of the selected value or values (for example, `string[]`), while `TItem` specifies the type of each data source item (for example, `VehicleData`).
+N> `TValue` specifies the value type of the data source for type inference. It is a generic type and can be specified as string[], int[], and so on.
 
 ## Run the application
 
