@@ -9,11 +9,11 @@ documentation: ug
 
 # Lazy Load Grouping for Large Data Performance in Blazor Data Grid
 
-In Blazor, lazy loading refers to loading data dynamically only when needed, rather than loading everything upfront. This approach reduces initial load time and improves application performance.
+Lazy loading loads data dynamically on-demand rather than loading all data upfront. This reduces initial load time and improves performance.
 
-Lazy load grouping in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) efficiently loads grouped data by fetching only the required records on demand. This feature is especially useful for large datasets where loading all rows at once can affect performance. When grouping is applied, the DataGrid initially renders only top-level group caption rows in a collapsed state. The child rows for each group are fetched on demand and rendered when the corresponding caption row is expanded.
+Lazy load grouping in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) efficiently loads grouped data by fetching only the required records on demand. This feature is especially useful for large datasets where loading all rows at once can affect performance. When grouping is applied, the Data Grid initially renders only top-level group caption rows in a collapsed state. Child rows are fetched on demand when the caption row is expanded.
 
-To enable this feature, set [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) to **true** in [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings). Ensure grouping is enabled by setting AllowGrouping to true.
+To enable this feature, set [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) to **true** in [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html). Ensure grouping is enabled by setting `AllowGrouping` to **true**. The basic sample relies on paging to fetch child rows on demand, so set `AllowPaging` to **true** on the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -47,14 +47,14 @@ To enable this feature, set [EnableLazyLoading](https://help.syncfusion.com/cr/b
 
 public class OrderData
 {
-    public static List<OrderData> Orders = new List<OrderData>();  
+    public static List<OrderData> Orders = new List<OrderData>();
     public OrderData(){}
-    public OrderData(int? OrderID,string ProductName, int? ProductID, string CustomerName)
+    public OrderData(int? OrderID, string ProductName, int? ProductID, string CustomerName)
     {
-        this.OrderID = OrderID;    
+        this.OrderID = OrderID;
         this.ProductName = ProductName;
         this.ProductID = ProductID;
-        this.CustomerName = CustomerName;           
+        this.CustomerName = CustomerName;
     }
 
     public static List<OrderData> GetAllRecords()
@@ -62,43 +62,38 @@ public class OrderData
         if (Orders.Count() == 0)
         {
 
-            string[] Customer ={"Maria", "Ana Trujillo", "Antonio Moreno", "Thomas Hardy", "Christina Berglund", "Hanna Moos", "Frédérique Citeaux", "Martín Sommer", "Laurence Lebihan", "Elizabeth Lincoln",
-    "Victoria Ashworth", "Patricio Simpson", "Francisco Chang", "Yang Wang", "Pedro Afonso", "Elizabeth Brown", "Sven Ottlieb", "Janine Labrune", "Ann Devon", "Roland Mendel", "Aria Cruz", "Diego Roel",
-    "Martine Rancé", "Maria Larsson", "Peter Franken", "Carine Schmitt", "Paolo Accorti", "Lino Rodriguez", "Eduardo Saavedra", "José Pedro Freyre", "André Fonseca", "Howard Snyder", "Manuel Pereira",
-    "Mario Pontes", "Carlos Hernández", "Yoshi Latimer", "Patricia McKenna", "Helen Bennett", "Philip Cramer", "Daniel Tonini", "Annette Roulet", "Yoshi Tannamuri", "John Steel", "Renate Messner", "Jaime Yorres",
-    "Carlos González", "Felipe Izquierdo", "Fran Wilson", "Giovanni Rovelli", "Catherine Dewey", "Jean Fresnière", "Alexander Feuer", "Simon Crowther", "Yvonne Moncada", "Rene Phillips", "Henriette Pfalzheim",
-    "Marie Bertrand", "Guillermo Fernández", "Georg Pipps", "Isabel de Castro", "Bernardo Batista", "Lúcia Carvalho", "Horst Kloss", "Sergio Gutiérrez", "Paula Wilson", "Maurizio Moroni", "Janete Limeira", "Michael Holz",
-    "Alejandra Camino", "Jonas Bergulfsen", "Jose Pavarotti", "Hari Kumar", "Jytte Petersen", "Dominique Perrier", "Art Braunschweiger", "Pascale Cartrain", "Liz Nixon", "Liu Wong", "Karin Josephs", "Miguel Angel Paolino",
-    "Anabela Domingues", "Helvetius Nagy", "Palle Ibsen", "Mary Saveley", "Paul Henriot", "Rita Müller", "Pirkko Koskitalo", "Paula Parente", "Karl Jablonski", "Matti Karttunen", "Zbyszek Piestrzeniewicz"};
-        string[] Product = {"Chai", "Chang", "Aniseed Syrup", "Chef Anton\"s Cajun Seasoning", "Chef Anton\"s Gumbo Mix", "Grandma\"s Boysenberry Spread",
-        "Uncle Bob\"s Organic Dried Pears", "Northwoods Cranberry Sauce", "Mishi Kobe Niku", "Ikura", "Queso Cabrales", "Queso Manchego La Pastora", "Konbu",
-        "Tofu", "Genen Shouyu", "Pavlova", "Alice Mutton", "Carnarvon Tigers", "Teatime Chocolate Biscuits", "Sir Rodney\"s Marmalade", "Sir Rodney\"s Scones",
-        "Gustaf\"s Knäckebröd", "Tunnbröd", "Guaraná Fantástica", "NuNuCa Nuß-Nougat-Creme", "Gumbär Gummibärchen", "Schoggi Schokolade", "Rössle Sauerkraut",
-        "Thüringer Rostbratwurst", "Nord-Ost Matjeshering", "Gorgonzola Telino", "Mascarpone Fabioli", "Geitost", "Sasquatch Ale", "Steeleye Stout", "Inlagd Sill",
-        "Gravad lax", "Côte de Blaye", "Chartreuse verte", "Boston Crab Meat", "Jack\"s New England Clam Chowder", "Singaporean Hokkien Fried Mee", "Ipoh Coffee",
-        "Gula Malacca", "Rogede sild", "Spegesild", "Zaanse koeken", "Chocolade", "Maxilaku", "Valkoinen suklaa", "Manjimup Dried Apples", "Filo Mix", "Perth Pasties",
-        "Tourtière", "Pâté chinois", "Gnocchi di nonna Alice", "Ravioli Angelo", "Escargots de Bourgogne", "Raclette Courdavault", "Camembert Pierrot", "Sirop d\"érable",
-        "Tarte au sucre", "Vegie-spread", "Wimmers gute Semmelknödel", "Louisiana Fiery Hot Pepper Sauce", "Louisiana Hot Spiced Okra", "Laughing Lumberjack Lager", "Scottish Longbreads",
-        "Gudbrandsdalsost", "Outback Lager", "Flotemysost", "Mozzarella di Giovanni", "Röd Kaviar", "Longlife Tofu", "Rhönbräu Klosterbier", "Lakkalikööri", "Original Frankfurter grüne Soße"};
-                int OrderID = 10248;
-                int i = 0; int j = 0; int k = 0; int l = 0; int m = 0;
-                for (int x = 0; x < 20000; x++)
+            string[] Customer = {"Maria", "Ana Trujillo", "Antonio Moreno", "Thomas Hardy", "Christina Berglund", "Hanna Moos", "Frédérique Citeaux", "Martín Sommer", "Laurence Lebihan", "Elizabeth Lincoln",
+            "Victoria Ashworth", "Patricio Simpson", "Francisco Chang", "Yang Wang", "Pedro Afonso", "Elizabeth Brown", "Sven Ottlieb", "Janine Labrune", "Ann Devon", "Roland Mendel", "Aria Cruz", "Diego Roel",
+            "Martine Rancé", "Maria Larsson", "Peter Franken", "Carine Schmitt", "Paolo Accorti", "Lino Rodriguez", "Eduardo Saavedra", "José Pedro Freyre", "André Fonseca", "Howard Snyder", "Manuel Pereira",
+            "Mario Pontes", "Carlos Hernández", "Yoshi Latimer", "Patricia McKenna", "Helen Bennett", "Philip Cramer", "Daniel Tonini", "Annette Roulet", "Yoshi Tannamuri", "John Steel", "Renate Messner", "Jaime Yorres",
+            "Carlos González", "Felipe Izquierdo", "Fran Wilson", "Giovanni Rovelli", "Catherine Dewey", "Jean Fresnière", "Alexander Feuer", "Simon Crowther", "Yvonne Moncada", "Rene Phillips", "Henriette Pfalzheim",
+            "Marie Bertrand", "Guillermo Fernández", "Georg Pipps", "Isabel de Castro", "Bernardo Batista", "Lúcia Carvalho", "Horst Kloss", "Sergio Gutiérrez", "Paula Wilson", "Maurizio Moroni", "Janete Limeira", "Michael Holz",
+            "Alejandra Camino", "Jonas Bergulfsen", "Jose Pavarotti", "Hari Kumar", "Jytte Petersen", "Dominique Perrier", "Art Braunschweiger", "Pascale Cartrain", "Liz Nixon", "Liu Wong", "Karin Josephs", "Miguel Angel Paolino",
+            "Anabela Domingues", "Helvetius Nagy", "Palle Ibsen", "Mary Saveley", "Paul Henriot", "Rita Müller", "Pirkko Koskitalo", "Paula Parente", "Karl Jablonski", "Matti Karttunen", "Zbyszek Piestrzeniewicz"};
+            string[] Product = {"Chai", "Chang", "Aniseed Syrup", "Chef Anton\"s Cajun Seasoning", "Chef Anton\"s Gumbo Mix", "Grandma\"s Boysenberry Spread",
+            "Uncle Bob\"s Organic Dried Pears", "Northwoods Cranberry Sauce", "Mishi Kobe Niku", "Ikura", "Queso Cabrales", "Queso Manchego La Pastora", "Konbu",
+            "Tofu", "Genen Shouyu", "Pavlova", "Alice Mutton", "Carnarvon Tigers", "Teatime Chocolate Biscuits", "Sir Rodney\"s Marmalade", "Sir Rodney\"s Scones",
+            "Gustaf\"s Knäckebröd", "Tunnbröd", "Guaraná Fantástica", "NuNuCa Nuß-Nougat-Creme", "Gumbär Gummibärchen", "Schoggi Schokolade", "Rössle Sauerkraut",
+            "Thüringer Rostbratwurst", "Nord-Ost Matjeshering", "Gorgonzola Telino", "Mascarpone Fabioli", "Geitost", "Sasquatch Ale", "Steeleye Stout", "Inlagd Sill",
+            "Gravad lax", "Côte de Blaye", "Chartreuse verte", "Boston Crab Meat", "Jack\"s New England Clam Chowder", "Singaporean Hokkien Fried Mee", "Ipoh Coffee",
+            "Gula Malacca", "Rogede sild", "Spegesild", "Zaanse koeken", "Chocolade", "Maxilaku", "Valkoinen suklaa", "Manjimup Dried Apples", "Filo Mix", "Perth Pasties",
+            "Tourtière", "Pâté chinois", "Gnocchi di nonna Alice", "Ravioli Angelo", "Escargots de Bourgogne", "Raclette Courdavault", "Camembert Pierrot", "Sirop d\"érable",
+            "Tarte au sucre", "Vegie-spread", "Wimmers gute Semmelknödel", "Louisiana Fiery Hot Pepper Sauce", "Louisiana Hot Spiced Okra", "Laughing Lumberjack Lager", "Scottish Longbreads",
+            "Gudbrandsdalsost", "Outback Lager", "Flotemysost", "Mozzarella di Giovanni", "Röd Kaviar", "Longlife Tofu", "Rhönbräu Klosterbier", "Lakkalikööri", "Original Frankfurter grüne Soße"};
+            int orderId = 10248;
+            for (int x = 0; x < 20000; x++)
+            {
+                Orders.Add(new OrderData()
                 {
-                    i = i >= Customer.Length ? 0 : i;
-                    l = l >= Product.Length ? 0 : l;
-                    Orders.Add(new OrderData()
-                    {
-                        OrderID = OrderID + x,
-                        ProductID = x + 10,
-                        CustomerName = Customer[i],
-                        ProductName = Product[l],
-
-                    });
-                    i++; j++; k++; l++; m++;
-                }
+                    OrderID = orderId + x,
+                    ProductID = x + 10,
+                    CustomerName = Customer[x % Customer.Length],
+                    ProductName = Product[x % Product.Length],
+                });
             }
-            return Orders;
         }
+        return Orders;
+    }
 
     public int? OrderID { get; set; }
     public string ProductName { get; set; }
@@ -109,19 +104,17 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVHjmXAorAdFMtg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhnjFMoxJiIcutQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
 ## Lazy load grouping with infinite scrolling
 
-Lazy load grouping with infinite scrolling is useful when presenting grouped data at scale while maintaining responsiveness. Data is loaded on-demand as users interact with the interface, improving performance and user experience.
+Useful for presenting large grouped datasets while maintaining responsiveness. Data is loaded on-demand as users interact with the interface, improving performance and user experience.
 
 **How lazy load grouping with infinite scrolling works**
 
-1. When enabled, the DataGrid initially renders only the top-level group caption rows in a collapsed state.
-
+1. When enabled, the Data Grid initially renders only the top-level group caption rows in a collapsed state.
 2. Child rows for a group are fetched and rendered only when the corresponding caption row is expanded.
-
 3. Infinite scrolling loads additional data as the user reaches the end of the scrollbar.
 
 To enable this feature, set [EnableInfiniteScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableInfiniteScrolling) to **true** and set [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) in [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) to **true**.
@@ -131,7 +124,7 @@ To enable this feature, set [EnableInfiniteScrolling](https://help.syncfusion.co
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@GridData" ID="Grid" EnableInfiniteScrolling="true" RowHeight="36" AllowGrouping="true" Height="315px">
+<SfGrid DataSource="@GridData" EnableInfiniteScrolling="true" RowHeight="36" AllowGrouping="true" Height="315px">
     <GridGroupSettings EnableLazyLoading="true" Columns="@Initial"></GridGroupSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
@@ -174,39 +167,35 @@ public class OrderData
         if (Orders.Count() == 0)
         {
 
-            string[] Customer ={"Maria", "Ana Trujillo", "Antonio Moreno", "Thomas Hardy", "Christina Berglund", "Hanna Moos", "Frédérique Citeaux", "Martín Sommer", "Laurence Lebihan", "Elizabeth Lincoln",
-    "Victoria Ashworth", "Patricio Simpson", "Francisco Chang", "Yang Wang", "Pedro Afonso", "Elizabeth Brown", "Sven Ottlieb", "Janine Labrune", "Ann Devon", "Roland Mendel", "Aria Cruz", "Diego Roel",
-    "Martine Rancé", "Maria Larsson", "Peter Franken", "Carine Schmitt", "Paolo Accorti", "Lino Rodriguez", "Eduardo Saavedra", "José Pedro Freyre", "André Fonseca", "Howard Snyder", "Manuel Pereira",
-    "Mario Pontes", "Carlos Hernández", "Yoshi Latimer", "Patricia McKenna", "Helen Bennett", "Philip Cramer", "Daniel Tonini", "Annette Roulet", "Yoshi Tannamuri", "John Steel", "Renate Messner", "Jaime Yorres",
-    "Carlos González", "Felipe Izquierdo", "Fran Wilson", "Giovanni Rovelli", "Catherine Dewey", "Jean Fresnière", "Alexander Feuer", "Simon Crowther", "Yvonne Moncada", "Rene Phillips", "Henriette Pfalzheim",
-    "Marie Bertrand", "Guillermo Fernández", "Georg Pipps", "Isabel de Castro", "Bernardo Batista", "Lúcia Carvalho", "Horst Kloss", "Sergio Gutiérrez", "Paula Wilson", "Maurizio Moroni", "Janete Limeira", "Michael Holz",
-    "Alejandra Camino", "Jonas Bergulfsen", "Jose Pavarotti", "Hari Kumar", "Jytte Petersen", "Dominique Perrier", "Art Braunschweiger", "Pascale Cartrain", "Liz Nixon", "Liu Wong", "Karin Josephs", "Miguel Angel Paolino",
-    "Anabela Domingues", "Helvetius Nagy", "Palle Ibsen", "Mary Saveley", "Paul Henriot", "Rita Müller", "Pirkko Koskitalo", "Paula Parente", "Karl Jablonski", "Matti Karttunen", "Zbyszek Piestrzeniewicz"};
+            string[] Customer = {"Maria", "Ana Trujillo", "Antonio Moreno", "Thomas Hardy", "Christina Berglund", "Hanna Moos", "Frédérique Citeaux", "Martín Sommer", "Laurence Lebihan", "Elizabeth Lincoln",
+            "Victoria Ashworth", "Patricio Simpson", "Francisco Chang", "Yang Wang", "Pedro Afonso", "Elizabeth Brown", "Sven Ottlieb", "Janine Labrune", "Ann Devon", "Roland Mendel", "Aria Cruz", "Diego Roel",
+            "Martine Rancé", "Maria Larsson", "Peter Franken", "Carine Schmitt", "Paolo Accorti", "Lino Rodriguez", "Eduardo Saavedra", "José Pedro Freyre", "André Fonseca", "Howard Snyder", "Manuel Pereira",
+            "Mario Pontes", "Carlos Hernández", "Yoshi Latimer", "Patricia McKenna", "Helen Bennett", "Philip Cramer", "Daniel Tonini", "Annette Roulet", "Yoshi Tannamuri", "John Steel", "Renate Messner", "Jaime Yorres",
+            "Carlos González", "Felipe Izquierdo", "Fran Wilson", "Giovanni Rovelli", "Catherine Dewey", "Jean Fresnière", "Alexander Feuer", "Simon Crowther", "Yvonne Moncada", "Rene Phillips", "Henriette Pfalzheim",
+            "Marie Bertrand", "Guillermo Fernández", "Georg Pipps", "Isabel de Castro", "Bernardo Batista", "Lúcia Carvalho", "Horst Kloss", "Sergio Gutiérrez", "Paula Wilson", "Maurizio Moroni", "Janete Limeira", "Michael Holz",
+            "Alejandra Camino", "Jonas Bergulfsen", "Jose Pavarotti", "Hari Kumar", "Jytte Petersen", "Dominique Perrier", "Art Braunschweiger", "Pascale Cartrain", "Liz Nixon", "Liu Wong", "Karin Josephs", "Miguel Angel Paolino",
+            "Anabela Domingues", "Helvetius Nagy", "Palle Ibsen", "Mary Saveley", "Paul Henriot", "Rita Müller", "Pirkko Koskitalo", "Paula Parente", "Karl Jablonski", "Matti Karttunen", "Zbyszek Piestrzeniewicz"};
             string[] Product = {"Chai", "Chang", "Aniseed Syrup", "Chef Anton\"s Cajun Seasoning", "Chef Anton\"s Gumbo Mix", "Grandma\"s Boysenberry Spread",
-        "Uncle Bob\"s Organic Dried Pears", "Northwoods Cranberry Sauce", "Mishi Kobe Niku", "Ikura", "Queso Cabrales", "Queso Manchego La Pastora", "Konbu",
-        "Tofu", "Genen Shouyu", "Pavlova", "Alice Mutton", "Carnarvon Tigers", "Teatime Chocolate Biscuits", "Sir Rodney\"s Marmalade", "Sir Rodney\"s Scones",
-        "Gustaf\"s Knäckebröd", "Tunnbröd", "Guaraná Fantástica", "NuNuCa Nuß-Nougat-Creme", "Gumbär Gummibärchen", "Schoggi Schokolade", "Rössle Sauerkraut",
-        "Thüringer Rostbratwurst", "Nord-Ost Matjeshering", "Gorgonzola Telino", "Mascarpone Fabioli", "Geitost", "Sasquatch Ale", "Steeleye Stout", "Inlagd Sill",
-        "Gravad lax", "Côte de Blaye", "Chartreuse verte", "Boston Crab Meat", "Jack\"s New England Clam Chowder", "Singaporean Hokkien Fried Mee", "Ipoh Coffee",
-        "Gula Malacca", "Rogede sild", "Spegesild", "Zaanse koeken", "Chocolade", "Maxilaku", "Valkoinen suklaa", "Manjimup Dried Apples", "Filo Mix", "Perth Pasties",
-        "Tourtière", "Pâté chinois", "Gnocchi di nonna Alice", "Ravioli Angelo", "Escargots de Bourgogne", "Raclette Courdavault", "Camembert Pierrot", "Sirop d\"érable",
-        "Tarte au sucre", "Vegie-spread", "Wimmers gute Semmelknödel", "Louisiana Fiery Hot Pepper Sauce", "Louisiana Hot Spiced Okra", "Laughing Lumberjack Lager", "Scottish Longbreads",
-        "Gudbrandsdalsost", "Outback Lager", "Flotemysost", "Mozzarella di Giovanni", "Röd Kaviar", "Longlife Tofu", "Rhönbräu Klosterbier", "Lakkalikööri", "Original Frankfurter grüne Soße"};
-            int OrderID = 10248;
-            int i = 0; int j = 0; int k = 0; int l = 0; int m = 0;
+            "Uncle Bob\"s Organic Dried Pears", "Northwoods Cranberry Sauce", "Mishi Kobe Niku", "Ikura", "Queso Cabrales", "Queso Manchego La Pastora", "Konbu",
+            "Tofu", "Genen Shouyu", "Pavlova", "Alice Mutton", "Carnarvon Tigers", "Teatime Chocolate Biscuits", "Sir Rodney\"s Marmalade", "Sir Rodney\"s Scones",
+            "Gustaf\"s Knäckebröd", "Tunnbröd", "Guaraná Fantástica", "NuNuCa Nuß-Nougat-Creme", "Gumbär Gummibärchen", "Schoggi Schokolade", "Rössle Sauerkraut",
+            "Thüringer Rostbratwurst", "Nord-Ost Matjeshering", "Gorgonzola Telino", "Mascarpone Fabioli", "Geitost", "Sasquatch Ale", "Steeleye Stout", "Inlagd Sill",
+            "Gravad lax", "Côte de Blaye", "Chartreuse verte", "Boston Crab Meat", "Jack\"s New England Clam Chowder", "Singaporean Hokkien Fried Mee", "Ipoh Coffee",
+            "Gula Malacca", "Rogede sild", "Spegesild", "Zaanse koeken", "Chocolade", "Maxilaku", "Valkoinen suklaa", "Manjimup Dried Apples", "Filo Mix", "Perth Pasties",
+            "Tourtière", "Pâté chinois", "Gnocchi di nonna Alice", "Ravioli Angelo", "Escargots de Bourgogne", "Raclette Courdavault", "Camembert Pierrot", "Sirop d\"érable",
+            "Tarte au sucre", "Vegie-spread", "Wimmers gute Semmelknödel", "Louisiana Fiery Hot Pepper Sauce", "Louisiana Hot Spiced Okra", "Laughing Lumberjack Lager", "Scottish Longbreads",
+            "Gudbrandsdalsost", "Outback Lager", "Flotemysost", "Mozzarella di Giovanni", "Röd Kaviar", "Longlife Tofu", "Rhönbräu Klosterbier", "Lakkalikööri", "Original Frankfurter grüne Soße"};
+            int orderId = 10248;
             for (int x = 0; x < 20000; x++)
             {
-                i = i >= Customer.Length ? 0 : i;
-                l = l >= Product.Length ? 0 : l;
                 Orders.Add(new OrderData()
                 {
-                    OrderID = OrderID + x,
+                    OrderID = orderId + x,
                     ProductID = x + 10,
-                    CustomerName = Customer[i],
-                    ProductName = Product[l],
+                    CustomerName = Customer[x % Customer.Length],
+                    ProductName = Product[x % Product.Length],
                 });
-                i++; j++; k++; l++; m++;
-            }       
+            }
         }
         return Orders;
     }
@@ -220,7 +209,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthHjmXUeBgYdpSj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBxXvCoRpgPXMZg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * The [EnableInfiniteScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableInfiniteScrolling) property is optional and can be set based on the requirement.
 > * When `EnableLazyLoading` is enabled with `EnableInfiniteScrolling`, the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) and [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) properties must be defined.
@@ -228,25 +217,24 @@ public class OrderData
 
 ## Lazy load grouping with virtual scrolling
 
-The lazy load grouping with virtual scrolling feature in the Blazor DataGrid efficiently presents large grouped datasets by reducing initial load time and providing smooth scrolling.
+Efficiently presents large grouped datasets with reduced initial load time and smooth scrolling.
 
 **How lazy load grouping with virtual scrolling works**
 
-1. When enabled, the DataGrid renders only the initial top-level group caption rows in a collapsed state.
-
+1. When enabled, the Data Grid renders only the initial top-level group caption rows in a collapsed state.
 2. Child rows for each group are fetched and rendered only when the respective caption row is expanded.
-
 3. Virtual scrolling loads and displays a buffered set of records while scrolling vertically.
 
-To enable this feature, set [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) in [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) to true and set [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) to true.
+To enable this feature, set [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) in [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) to **true** and set [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) to **true**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@GridData" ID="Grid" RowHeight="36" AllowGrouping="true" EnableVirtualization="true" Height="315px">
+<SfGrid DataSource="@GridData" RowHeight="36" AllowGrouping="true" EnableVirtualization="true" Height="315px">
     <GridGroupSettings EnableLazyLoading="true" Columns="@Initial"></GridGroupSettings>
+    <GridPageSettings PageSize="50"></GridPageSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ProductName) HeaderText="Product Name" Width="100"></GridColumn>
@@ -274,13 +262,13 @@ public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
     public OrderData(){}
-    
-    public OrderData(int? OrderID,string ProductName, int? ProductID, string CustomerName)
+
+    public OrderData(int? OrderID, string ProductName, int? ProductID, string CustomerName)
     {
-        this.OrderID = OrderID;    
+        this.OrderID = OrderID;
         this.ProductName = ProductName;
         this.ProductID = ProductID;
-        this.CustomerName = CustomerName;           
+        this.CustomerName = CustomerName;
     }
 
     public static List<OrderData> GetAllRecords()
@@ -288,7 +276,7 @@ public class OrderData
         if (Orders.Count() == 0)
         {
             int? code = 10247;
-            for (int i = 1; i < 19999; i++)
+            for (int i = 1; i < 20000; i++)
             {
                 Orders.Add(new OrderData(code + 1, "Gumbär Gummib", i, "Marie Bertrand"));
                 Orders.Add(new OrderData(code + 2, "Valkoinen suklaa", i+1, "Paula Wilson"));
@@ -315,7 +303,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLHXwXUeVfqKOZj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLdNbiQWlvUzLSF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * When `EnableLazyLoading` is enabled with `EnableVirtualization`, the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) property of [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html) and the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property must be defined.
 > * When enabling lazy load grouping with virtual scrolling, the [EnableVirtualMaskRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualMaskRow) property is enabled by default; there is no need to set it explicitly.
@@ -323,12 +311,12 @@ public class OrderData
 
 ## Lazy load grouping with custom adaptor
 
-Use a Custom Adaptor of DataManager when binding remote data. Along with the default server request, this feature sends additional details to handle lazy load grouping. On the server, these details are bound to the **LazyLoad** and **LazyExpandAllGroup** parameters in the [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) model. For implementing server logic, extend the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) class.
+Use a custom adaptor when binding remote data. Along with the default server request, this feature sends additional details to handle lazy load grouping. On the server, these details are bound to the **LazyLoad** and **LazyExpandAllGroup** parameters in the [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) model. For implementing server logic, extend the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) class.
 
 | Property Name | Description |
 |-------|---------|
 | LazyLoad | Differentiates between default grouping and lazy load grouping. |
-| LazyExpandAllGroup | Handles Expand All support for lazy load grouping. |
+| LazyExpandAllGroup | Handles expand all support for lazy load grouping. |
 
 
 ```csharp
@@ -361,12 +349,11 @@ public class CustomAdaptor : DataAdaptor
         {
             DataSource = DataOperations.PerformTake(DataSource, dm.Take);
         }
-        DataResult DataObject = new DataResult();
         if (dm.Group != null)
         {
-            // Grouping (Perform lazy load grouping need to send LazyLoad property in Group method).
-            IEnumerable ResultData = DataSource.ToList();
-            ResultData = DataUtil.Group<Customer>(DataSource, dm.Group[0], dm.Aggregates, 0, dm.GroupByFormatter, dm.LazyLoad, dm.LazyExpandAllGroup);
+            // Grouping (Perform lazy load grouping by sending LazyLoad property in Group method).
+            DataResult DataObject = new DataResult();
+            IEnumerable ResultData = DataUtil.Group<Customer>(DataSource, dm.Group[0], dm.Aggregates, 0, dm.GroupByFormatter, dm.LazyLoad, dm.LazyExpandAllGroup);
             DataObject.Result = ResultData;
             DataObject.Count = ResultData.Cast<object>().Count();
             return dm.RequiresCounts ? DataObject : (object)ResultData;
@@ -384,7 +371,14 @@ public class CustomAdaptor : DataAdaptor
     * Row template
     * Row drag and drop
     * Hierarchical Grid
-    * Detail Template
+    * Detail template
 * Programmatic selection is not supported when groups are collapsed.
 * Drag selection, cell selection (box and flow), and row selection do not work when groups are collapsed.
 * Clipboard is not supported when groups are collapsed.
+
+## See also
+
+* [Paging in Blazor Data Grid](https://blazor.syncfusion.com/documentation/datagrid/paging)
+* [Virtual scrolling in Blazor Data Grid](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling)
+* [Infinite scrolling in Blazor Data Grid](https://blazor.syncfusion.com/documentation/datagrid/infinite-scrolling)
+* [Custom binding in Blazor Data Grid](https://blazor.syncfusion.com/documentation/datagrid/custom-binding)
