@@ -32,8 +32,8 @@ Ensure the following software and packages are installed before proceeding:
 | Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
 | .NET SDK | net8.0 or compatible | Runtime and build tools |
 | SQL Server | 2019 or later | Database server |
-| Syncfusion.Blazor.Grid | {{site.blazorversion}} | DataGrid and UI components |
-| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for DataGrid components |
+| Syncfusion.Blazor.Grid | {{site.blazorversion}} | Blazor DataGrid and UI components |
+| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for Blazor DataGrid components |
 | Microsoft.Data.SqlClient | Latest | SQL Server ADO.NET provider |
 | Dapper | Latest | Lightweight micro-ORM for SQL mapping |
 
@@ -415,7 +415,7 @@ The service registration has been completed successfully.
 
 ### Step 1: Install and Configure Blazor DataGrid Components
 
-Syncfusion is a library that provides pre-built UI components like DataGrid, which is used to display data in a table format.
+Syncfusion is a library that provides pre-built UI components like Blazor DataGrid, which is used to display data in a table format.
 
 **Instructions:**
 
@@ -440,7 +440,7 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 ```
 For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Blazor components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
+Blazor components are now configured and ready to use. For additional guidance, refer to the Blazor Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
 ### Step 2: Update the Blazor DataGrid
 
@@ -449,7 +449,7 @@ The `Home.razor` component will display the reservation data in a Blazor DataGri
 **Instructions:**
 
 * Open the file named `Home.razor` in the `Components/Pages` folder.
-* Add the following code to create a DataGrid with CustomAdaptor:
+* Add the following code to create a Blazor DataGrid with CustomAdaptor:
 
 ```cshtml
 @page "/"
@@ -479,16 +479,16 @@ The `Home.razor` component will display the reservation data in a Blazor DataGri
 
 - **`@rendermode InteractiveServer`**: Enables interactive server-side rendering for the component.
 - **`@inject ReservationRepository`**: Injects the repository to access database methods.
-- **`<SfGrid>`**: The DataGrid component that displays data in rows and columns.
-- **`<GridColumns>`**: Defines individual columns in the DataGrid.
+- **`<SfGrid>`**: The Blazor DataGrid component that displays data in rows and columns.
+- **`<GridColumns>`**: Defines individual columns in the Blazor DataGrid.
 
-The Home component has been updated successfully with DataGrid.
+The Home component has been updated successfully with Blazor DataGrid.
 
 ### Step 3: Implement the CustomAdaptor
 
 The Blazor DataGrid can bind data from a **SQL Server** database using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) for scenarios that require full control over data operations.
 
-The `CustomAdaptor` is a bridge between the DataGrid and the database. It handles all data operations including reading, searching, filtering, sorting, paging, and CRUD operations. Each operation in the CustomAdaptor's `ReadAsync` method handles specific grid functionality. The Blazor DataGrid sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
+The `CustomAdaptor` is a bridge between the Blazor DataGrid and the database. It handles all data operations including reading, searching, filtering, sorting, paging, and CRUD operations. Each operation in the CustomAdaptor's `ReadAsync` method handles specific grid functionality. The Blazor DataGrid sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
 
 **Instructions:**
 
@@ -507,8 +507,8 @@ The `CustomAdaptor` is a bridge between the DataGrid and the database. It handle
     }
 
     /// <summary>
-    /// CustomAdaptor class bridges DataGrid interactions with database operations using Dapper.
-    /// This adaptor handles all data retrieval and manipulation for the DataGrid.
+    /// CustomAdaptor class bridges Blazor DataGrid interactions with database operations using Dapper.
+    /// This adaptor handles all data retrieval and manipulation for the Blazor DataGrid.
     /// </summary>
     public class CustomAdaptor : DataAdaptor
     {
@@ -619,7 +619,7 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
         Toolbar="@ToolbarItems">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -692,7 +692,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridPageSettings PageSize="20"></GridPageSettings>
     
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -764,7 +764,7 @@ public async Task<List<Reservation>> GetReservationsAsync()
 
 **How Paging Works:**
 
-- The DataGrid displays 20 records per page (as set in `GridPageSettings`).
+- The Blazor DataGrid displays 20 records per page (as set in `GridPageSettings`).
 - Navigation buttons allow the user to move between pages.
 - When a page is requested, the `ReadAsync` method receives skip and take values.
 - The `DataOperations.PerformSkip()` and `DataOperations.PerformTake()` methods handle pagination.
@@ -786,7 +786,7 @@ Searching allows the user to find records by entering keywords in the search box
         Toolbar="@ToolbarItems">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridPageSettings PageSize="20"></GridPageSettings>
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -843,10 +843,10 @@ Searching allows the user to find records by entering keywords in the search box
 
 **How Searching Works:**
 
-- When the user enters text in the search box and presses Enter, the DataGrid sends a search request to the CustomAdaptor.
+- When the user enters text in the search box and presses Enter, the Blazor DataGrid sends a search request to the CustomAdaptor.
 - The `ReadAsync` method receives the search criteria in `dataManagerRequest.Search`.
 - The `DataOperations.PerformSearching()` method filters the data based on the search term.
-- Results are returned and displayed in the DataGrid.
+- Results are returned and displayed in the Blazor DataGrid.
 
 Searching feature is now active.
 
@@ -870,7 +870,7 @@ Filtering allows the user to restrict data based on column values using a menu i
     
     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
     
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 * Update the `ReadAsync` method in the `CustomAdaptor` class to handle filtering:
@@ -934,7 +934,7 @@ Filtering allows the user to restrict data based on column values using a menu i
 - Select filtering criteria (equals, contains, greater than, less than, etc.).
 - Click the "Filter" button to apply the filter.
 - The `ReadAsync` method receives the filter criteria in `dataManagerRequest.Where`.
-- Results are filtered accordingly and displayed in the DataGrid.
+- Results are filtered accordingly and displayed in the Blazor DataGrid.
 
 Filtering feature is now active.
 
@@ -960,7 +960,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
      <GridPageSettings PageSize="20"></GridPageSettings>
      <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
     
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 * Update the `ReadAsync` method in the `CustomAdaptor` class to handle sorting:
@@ -1027,7 +1027,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
 - Click again to sort in descending order.
 - The `ReadAsync` method receives the sort criteria in `dataManagerRequest.Sorted`.
 - The `DataOperations.PerformSorting()` method sorts the data based on the specified column and direction.
-- Records are sorted accordingly and displayed in the DataGrid.
+- Records are sorted accordingly and displayed in the Blazor DataGrid.
 
 Sorting feature is now active.
 
@@ -1052,7 +1052,7 @@ Grouping organizes records into hierarchical groups based on column values.
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
      <GridPageSettings PageSize="20"></GridPageSettings>
      <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
-    <!-- Grid columns  -->
+    <!-- Blazor Grid columns  -->
 </SfGrid>
 ```
 
@@ -1141,9 +1141,9 @@ Grouping feature is now active.
 
 ### Step 11: Perform CRUD operations
 
-CustomAdaptor methods enable users to create, read, update, and delete records directly from the DataGrid. Each operation calls corresponding data layer methods in **ReservationRepository.cs** to execute SQL commands through Dapper.
+CustomAdaptor methods enable users to create, read, update, and delete records directly from the Blazor DataGrid. Each operation calls corresponding data layer methods in **ReservationRepository.cs** to execute SQL commands through Dapper.
 
-Add the Grid **EditSettings** and **Toolbar** configuration to enable create, read, update, and delete (CRUD) operations.
+Add the Blazor Grid **EditSettings** and **Toolbar** configuration to enable create, read, update, and delete (CRUD) operations.
 
 ```cshtml
 <SfGrid TValue="Reservation" 
@@ -1156,7 +1156,7 @@ Add the Grid **EditSettings** and **Toolbar** configuration to enable create, re
      <GridPageSettings PageSize="20"></GridPageSettings>
      <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
      <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" Mode="EditMode.Batch"></GridEditSettings>
-    <!-- Grid columns  -->
+    <!-- Blazor Grid columns  -->
 </SfGrid>
 ```
 
@@ -1172,7 +1172,7 @@ Add the toolbar items list in the `@code` block:
 
 **Insert**
 
-Record insertion allows new reservations to be added directly through the DataGrid component. The adaptor processes the insertion request, performs any required business‑logic validation, and saves the newly created record to the SQL Server database via Dapper.
+Record insertion allows new reservations to be added directly through the Blazor DataGrid component. The adaptor processes the insertion request, performs any required business‑logic validation, and saves the newly created record to the SQL Server database via Dapper.
 
 In **Home.razor**, implement the `InsertAsync` method within the `CustomAdaptor` class:
 
@@ -1273,13 +1273,13 @@ private int CalculateNoOfDays(DateTime checkInDate, DateTime checkOutDate)
 1. The form data is collected and validated in the CustomAdaptor's `InsertAsync()` method.
 2. The `ReservationRepository.AddReservationAsync()` method is called.
 3. Dapper's `ExecuteAsync()` method executes the INSERT query with parameterized values.
-4. The DataGrid automatically refreshes to display the new record.
+4. The Blazor DataGrid automatically refreshes to display the new record.
 
 Now the new reservation is persisted to the database and reflected in the grid.
 
 **Update**
 
-Record modification allows reservation details to be updated directly within the DataGrid. The adaptor processes the edited row, validates the updated values, and applies the changes to the **SQL Server database** via Dapper while ensuring data integrity is preserved.
+Record modification allows reservation details to be updated directly within the Blazor DataGrid. The adaptor processes the edited row, validates the updated values, and applies the changes to the **SQL Server database** via Dapper while ensuring data integrity is preserved.
 
 In **Home.razor**, implement the `UpdateAsync` method within the `CustomAdaptor` class:
 
@@ -1349,13 +1349,13 @@ public async Task UpdateReservationAsync(Reservation? value)
 3. The `ReservationRepository.UpdateReservationAsync()` method validates the reservation exists.
 4. NoOfDays and TotalAmount are recalculated based on updated dates and amounts.
 5. Dapper's `ExecuteAsync()` method executes the UPDATE query with parameterized values.
-6. The DataGrid refreshes to display the updated record.
+6. The Blazor DataGrid refreshes to display the updated record.
 
 Now modifications are synchronized to the database and reflected in the grid UI.
 
 **Delete**
 
-Record deletion allows reservations to be removed directly from the DataGrid. The adaptor captures the delete request, executes the corresponding **SQL Server DELETE** operation via Dapper, and updates both the database and the grid to reflect the removal.
+Record deletion allows reservations to be removed directly from the Blazor DataGrid. The adaptor captures the delete request, executes the corresponding **SQL Server DELETE** operation via Dapper, and updates both the database and the grid to reflect the removal.
 
 In **Home.razor**, implement the `RemoveAsync` method within the `CustomAdaptor` class:
 
@@ -1400,11 +1400,11 @@ public async Task RemoveReservationAsync(int? key)
 **What happens behind the scenes:**
 
 1. The user selects a record and clicks "Delete".
-2. A confirmation dialog appears (built into the DataGrid).
+2. A confirmation dialog appears (built into the Blazor DataGrid).
 3. If confirmed, the CustomAdaptor's `RemoveAsync()` method is called.
 4. The `ReservationRepository.RemoveReservationAsync()` method validates the reservation exists.
 5. Dapper's `ExecuteAsync()` method executes the DELETE query.
-6. The DataGrid refreshes to remove the deleted record from the UI.
+6. The Blazor DataGrid refreshes to remove the deleted record from the UI.
 
 Now reservations are removed from the database and the grid UI reflects the changes immediately.
 
@@ -1449,17 +1449,17 @@ public class CustomAdaptor : DataAdaptor
     }
 }
 ```
-> This method is triggered when the DataGrid is operating in [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) Edit mode.
+> This method is triggered when the Blazor DataGrid is operating in [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) Edit mode.
 
 **What happens behind the scenes:**
 
-- The DataGrid collects all added, edited, and deleted records in Batch Edit mode.
+- The Blazor DataGrid collects all added, edited, and deleted records in Batch Edit mode.
 - The combined batch request is passed to the CustomAdaptor's `BatchUpdateAsync()` method.
 - Each modified record is processed using `ReservationRepository.UpdateReservationAsync()`.
 - Each newly added record is saved using `ReservationRepository.AddReservationAsync()`.
 - Each deleted record is removed using `ReservationRepository.RemoveReservationAsync()`.
 - All repository operations persist changes to the SQL Server database via Dapper.
-- The DataGrid refreshes to display the updated, added, and removed records in a single response.
+- The Blazor DataGrid refreshes to display the updated, added, and removed records in a single response.
 
 Now the adaptor supports bulk modifications with database synchronization. All CRUD operations are now fully implemented, enabling comprehensive data management capabilities within the Blazor DataGrid.
 
@@ -1556,7 +1556,7 @@ Here is the complete and final `Home.razor` component with all features integrat
     }
 
     /// <summary>
-    /// CustomAdaptor class bridges DataGrid interactions with database operations using Dapper.
+    /// CustomAdaptor class bridges Blazor DataGrid interactions with database operations using Dapper.
     /// </summary>
     public class CustomAdaptor : DataAdaptor
     {
@@ -1741,7 +1741,7 @@ This guide demonstrates how to:
 3. Create data models for database mapping. [🔗](#step-3-create-the-data-model)
 4. Configure connection strings for SQL Server. [🔗](#step-4-configure-the-connection-string)
 5. Implement the repository pattern with Dapper for efficient data access. [🔗](#step-5-create-the-repository-class)
-6. Create a Blazor component with a DataGrid that supports searching, filtering, sorting, paging, and CRUD operations. [🔗](#step-1-install-and-configure-blazor-datagrid-components)
+6. Create a Blazor component with a Blazor DataGrid that supports searching, filtering, sorting, paging, and CRUD operations. [🔗](#step-1-install-and-configure-blazor-datagrid-components)
 7. Handle bulk operations and batch updates. [🔗](#step-10-perform-crud-operations)
 
 The application now provides a complete solution for managing reservation data with a modern, user-friendly interface using Dapper for high-performance database access.

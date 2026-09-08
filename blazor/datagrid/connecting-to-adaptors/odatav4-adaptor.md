@@ -10,7 +10,7 @@ documentation: ug
 
 # OData V4 Service in Blazor Data Grid
 
-The [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables seamless integration of the Grid with OData V4 services, facilitating efficient data fetching and manipulation. This guide provides detailed instructions for binding data and performing CRUD (Create, Read, Update, and Delete) actions using the `ODataV4Adaptor` in your Blazor DataGrid.
+The [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables seamless integration of the Blazor Grid with OData V4 services, facilitating efficient data fetching and manipulation. This guide provides detailed instructions for binding data and performing CRUD (Create, Read, Update, and Delete) actions using the `ODataV4Adaptor` in your Blazor DataGrid.
 
 ## Configuring an OData V4 Service
 
@@ -503,9 +503,9 @@ builder.Services.AddControllers().AddOData(
 
 ## Handling CRUD operations
 
-To manage CRUD (Create, Read, Update, and Delete) operations using the ODataV4Adaptor, follow the provided guide for configuring the DataGrid for [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) and utilize the sample implementation of the `GridController` in your server application. This controller handles HTTP requests for CRUD operations, including GET, POST, PATCH, and DELETE.
+To manage CRUD (Create, Read, Update, and Delete) operations using the ODataV4Adaptor, follow the provided guide for configuring the Blazor DataGrid for [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) and utilize the sample implementation of the `GridController` in your server application. This controller handles HTTP requests for CRUD operations, including GET, POST, PATCH, and DELETE.
 
-To enable CRUD operations in the Grid within your application, follow these steps. In the example below, the inline edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) is enabled, and the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property is configured to display toolbar items for editing.
+To enable CRUD operations in the Blazor Grid within your application, follow these steps. In the example below, the inline edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) is enabled, and the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property is configured to display toolbar items for editing.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -528,11 +528,11 @@ To enable CRUD operations in the Grid within your application, follow these step
 {% endhighlight %}
 {% endtabs %}
 
-> Normal/Inline editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Grid. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
+> Normal/Inline editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Blazor Grid. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific Blazor Grid column, ensuring that its value is unique.
 
 **Insert Record:**
 
-To insert a new record into your DataGrid, you can utilize the `HttpPost` method in your server application. Below is a sample implementation of inserting a record using the **GridController**:
+To insert a new record into your Blazor DataGrid, you can utilize the `HttpPost` method in your server application. Below is a sample implementation of inserting a record using the **GridController**:
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -566,7 +566,7 @@ public IActionResult Post([FromBody] OrdersDetails addRecord)
 
 **Update Record:**
 
-Updating a record in the DataGrid can be achieved by utilizing the `HttpPatch` method in your controller. Here's a sample implementation of updating a record:
+Updating a record in the Blazor DataGrid can be achieved by utilizing the `HttpPatch` method in your controller. Here's a sample implementation of updating a record:
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -609,7 +609,7 @@ public IActionResult Patch(int key, [FromBody] OrdersDetails updateRecord)
 
 **Delete Record:**
 
-To delete a record from your DataGrid, you can utilize the `HttpDelete` method in your controller. Below is a sample implementation:
+To delete a record from your Blazor DataGrid, you can utilize the `HttpDelete` method in your controller. Below is a sample implementation:
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}

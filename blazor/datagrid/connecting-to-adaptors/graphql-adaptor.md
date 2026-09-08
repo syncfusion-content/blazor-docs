@@ -31,8 +31,8 @@ Install the following software and packages before starting the process:
 | Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
 | .NET SDK | net8.0 or compatible | Runtime and build tools |
 | HotChocolate.AspNetCore | 15.1 or later | GraphQL server framework |
-| Syncfusion.Blazor.Grid | {{site.blazorversion}} | DataGrid component |
-| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for DataGrid |
+| Syncfusion.Blazor.Grid | {{site.blazorversion}} | Blazor DataGrid component |
+| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for Blazor DataGrid |
 
 ## Setting Up the GraphQL Backend
 
@@ -44,13 +44,13 @@ For this guide, a Blazor application named **Grid_GraphQLAdaptor** has been crea
 
 **Install NuGet Packages**
 
-NuGet packages are software libraries that add functionality to applications. The following packages enable GraphQL server functionality+ and DataGrid components.
+NuGet packages are software libraries that add functionality to applications. The following packages enable GraphQL server functionality+ and Blazor DataGrid components.
 
 **Required Packages:**
 
 - **HotChocolate.AspNetCore** (version 15.1 or later) - GraphQL server framework
-- **Syncfusion.Blazor.Grid** (version {{site.blazorversion}}) - DataGrid component
-- **Syncfusion.Blazor.Themes** (version {{site.blazorversion}}) - Styling for DataGrid
+- **Syncfusion.Blazor.Grid** (version {{site.blazorversion}}) - Blazor DataGrid component
+- **Syncfusion.Blazor.Themes** (version {{site.blazorversion}}) - Styling for Blazor DataGrid
 
 **Method 1: Using Package Manager Console**
 
@@ -296,7 +296,7 @@ public class GraphQLQuery
         // Retrieve all expense records from the data source.
         List<ExpenseRecord> dataSource = ExpenseRecord.GetAllRecords();
 
-        // Apply search, filter, sort, and paging operations as provided by the DataGrid.
+        // Apply search, filter, sort, and paging operations as provided by the Blazor DataGrid.
         // Operations are applied sequentially: search → filter → sort → paging.
 
         // Store the total count before paging.
@@ -323,9 +323,9 @@ public class ExpenseRecordDataResponse
 
 **Details:**
 
-- The `GetExpenseRecordData` method receives `DataManagerRequestInput`, which contains filter, sort, search, and paging parameters from the DataGrid
+- The `GetExpenseRecordData` method receives `DataManagerRequestInput`, which contains filter, sort, search, and paging parameters from the Blazor DataGrid
 - Hot Chocolate automatically converts the method name `GetExpenseRecordData` to camelCase: `expenseRecordData` in the GraphQL schema
-- The response must contain `Count` (total records) and `Result` (current page data) for the DataGrid to process pagination
+- The response must contain `Count` (total records) and `Result` (current page data) for the Blazor DataGrid to process pagination
 
 The query resolver has been created successfully.
 
@@ -336,7 +336,7 @@ The query resolver has been created successfully.
 A **DataManagerRequestInput** class is a GraphQL input type that represents all the parameters the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) sends to the backend when requesting data. This class acts as a container for filtering, sorting, searching, paging, and other data operation parameters.
 
 **Purpose**
-When the DataGrid performs operations like pagination, sorting, filtering, or searching, it packages all these parameters into a `DataManagerRequestInput` object and sends it to the GraphQL backend. The backend then uses these parameters to fetch and return only the data the grid needs.
+When the Blazor DataGrid performs operations like pagination, sorting, filtering, or searching, it packages all these parameters into a `DataManagerRequestInput` object and sends it to the GraphQL backend. The backend then uses these parameters to fetch and return only the data the Blazor Grid needs.
 
 **Instructions**:
 
@@ -488,7 +488,7 @@ public class WhereFilter
 
 **Understanding the DataManagerRequestInput Class**
 
-**Example Scenario:** A sequence of operations is performed on the DataGrid as follows:
+**Example Scenario:** A sequence of operations is performed on the Blazor DataGrid as follows:
 
 - Searches for **"Finance"** in the Department column.
 - Filters for amounts greater than 1000.
@@ -570,13 +570,13 @@ namespace Grid_GraphQLAdaptor.Models
 {
     /// <summary>
     /// GraphQL Mutation class that handles all write operations (Create, Update, Delete).
-    /// Each method is a resolver that processes data modification requests from the DataGrid.
+    /// Each method is a resolver that processes data modification requests from the Blazor DataGrid.
     /// </summary>
     public class GraphQLMutation
     {
         /// <summary>
         /// Mutation resolver for creating a new expense record.
-        /// Called when a user clicks the "Add" button in the DataGrid and submits a new record.
+        /// Called when a user clicks the "Add" button in the Blazor DataGrid and submits a new record.
         /// </summary>
         public ExpenseRecord CreateExpense(
             ExpenseRecord record,
@@ -622,7 +622,7 @@ namespace Grid_GraphQLAdaptor.Models
 
 A mutation resolver is a C# method decorated with GraphQL attributes that:
 
-- **Receives input parameters** from the DataGrid (record data, primary keys, etc.).
+- **Receives input parameters** from the Blazor DataGrid (record data, primary keys, etc.).
 - **Processes the operation** (validation, calculation, data modification).
 - **Persists changes** to the data source (database, file, memory).
 - **Returns results** to the client (modified record or success/failure status).
@@ -635,7 +635,7 @@ The GraphQL Mutation class has been successfully created and is ready to handle 
 
 ### Step 1: Install and Configure Blazor DataGrid Components with GraphQL
 
-Syncfusion is a library that provides pre-built UI components like DataGrid, which is used to display data in a table format.
+Syncfusion is a library that provides pre-built UI components like Blazor DataGrid, which is used to display data in a table format.
 
 **Instructions:**
 
@@ -664,7 +664,7 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 ```
 For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Blazor components are now configured and ready to use. For additional guidance, refer to the Grid component’s [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
+Blazor components are now configured and ready to use. For additional guidance, refer to the Blazor Grid component’s [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
 ### Step 2: Update the Blazor DataGrid
 
@@ -673,7 +673,7 @@ The `Home.razor` component will display the expense data in a Blazor DataGrid wi
 **Instructions:**
 
 1. Open the file named `Home.razor` in the `Components/Pages` folder.
-2. Add the following code to create a basic DataGrid:
+2. Add the following code to create a basic Blazor DataGrid:
 
 ```cshtml
 @page "/"
@@ -710,13 +710,13 @@ The `Home.razor` component will display the expense data in a Blazor DataGrid wi
 **Component Explanation:**
 
 - **`@rendermode InteractiveServer`**: Enables interactive server-side rendering for the component.
-- **`<SfGrid>`**: The DataGrid component that displays data in rows and columns.
-- **`<GridColumns>`**: Defines individual columns in the DataGrid.
+- **`<SfGrid>`**: The Blazor DataGrid component that displays data in rows and columns.
+- **`<GridColumns>`**: Defines individual columns in the Blazor DataGrid.
 - **`<GridPageSettings>`**: Configures pagination with 10 records per page.
-- **`<GridEditSettings>`**: Enable editing functionality directly within the Grid by setting the AllowEditing, AllowAdding, and AllowDeleting properties within the GridEditSettings to **true**.
+- **`<GridEditSettings>`**: Enable editing functionality directly within the Blazor Grid by setting the AllowEditing, AllowAdding, and AllowDeleting properties within the GridEditSettings to **true**.
 - **`<Template>`**:  Allows customization of the default dialog editing behavior by defining custom editors for grid rows within a dialog..
 
-The `SfDataManager` component connects the DataGrid to the GraphQL backend using the adaptor options configured below:
+The `SfDataManager` component connects the Blazor DataGrid to the GraphQL backend using the adaptor options configured below:
 
 ```cshtml
 <SfDataManager Url="http://localhost:5272/graphql" 
@@ -743,20 +743,20 @@ The `SfDataManager` component connects the DataGrid to the GraphQL backend using
 
 ### Step 3: Configure GraphQL Adaptor and Data Binding
 
-The GraphQL adaptor is a bridge that connects the Blazor DataGrid with the GraphQL backend. The adaptor translates DataGrid operations (filtering, sorting, paging, searching) into GraphQL queries and mutations. When the user interacts with the grid, the adaptor automatically sends the appropriate GraphQL request to the backend, receives the response, and updates the grid display.
+The GraphQL adaptor is a bridge that connects the Blazor DataGrid with the GraphQL backend. The adaptor translates Blazor DataGrid operations (filtering, sorting, paging, searching) into GraphQL queries and mutations. When the user interacts with the Blazor DataTable, the adaptor automatically sends the appropriate GraphQL request to the backend, receives the response, and updates the Blazor Grid display.
 
 **What is a GraphQL Adaptor?**
 
 An adaptor is a translator between two different systems. The GraphQL adaptor specifically:
 
-- Receives interaction events generated by the DataGrid, including Add, Edit, Delete actions, as well as sorting and filtering operations.
+- Receives interaction events generated by the Blazor DataGrid, including Add, Edit, Delete actions, as well as sorting and filtering operations.
 - Converts these actions into GraphQL query or mutation syntax.
 - Sends the **GraphQL request** to the backend **GraphQL endpoint**.
 - Receives the response data from the backend.
-- Formats the response back into a structure the DataGrid understands.
-- Updates the grid display with the new data.
+- Formats the response back into a structure the Blazor DataGrid understands.
+- Updates the Blazor Grid display with the new data.
 
-The adaptor enables bidirectional communication between the frontend (DataGrid) and backend (GraphQL server).
+The adaptor enables bidirectional communication between the frontend (Blazor DataGrid) and backend (GraphQL server).
 
 ---
 
@@ -777,7 +777,7 @@ The `@code` block in `Home.razor` contains C# code that configures how the adapt
 ```csharp
 @code {
     /// <summary>
-    /// GraphQLAdaptorOptions configures how the DataGrid communicates with the GraphQL backend.
+    /// GraphQLAdaptorOptions configures how the Blazor DataGrid communicates with the GraphQL backend.
     /// This object contains the query, mutation operations, and endpoint URL.
     /// </summary>
     private GraphQLAdaptorOptions adaptorOptions = new GraphQLAdaptorOptions
@@ -877,7 +877,7 @@ result {
 ```
 - `count` - Returns total number of records (used for pagination)
   - Example: If 500 total expense records exist, count = 500
-  - DataGrid uses this to calculate how many pages exist
+  - Blazor DataGrid uses this to calculate how many pages exist
 - `result` - Contains the array of expense records
   - `{ ... }` - List of fields to return for each record
   - Each field must exist in the ExpenseRecord class
@@ -966,7 +966,7 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
         Toolbar="@ToolbarItems">
     <SfDataManager Url="http://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
     
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -1024,7 +1024,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
         AllowPaging="true">
     <SfDataManager Url="http://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
     <GridPageSettings PageSize="10"></GridPageSettings>
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -1080,7 +1080,7 @@ public static List<ExpenseRecord> GetAllRecords()
 
 **How Paging Variables are Passed:**
 
-When the grid requests a specific page, it automatically sends:
+When the Blazor Grid requests a specific page, it automatically sends:
 ```json
 {
   "dataManager": {
@@ -1109,7 +1109,7 @@ Searching provides the capability to find specific records by entering keywords 
         Toolbar="@ToolbarItems">
     <SfDataManager Url="http://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
     <GridPageSettings PageSize="10"></GridPageSettings>
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -1158,7 +1158,7 @@ public class GraphQLQuery
 
 **How Search Variables are Passed:**
 
-When search text is entered, the DataGrid automatically sends:
+When search text is entered, the Blazor DataGrid automatically sends:
 ```json
 {
   "dataManager": {
@@ -1196,7 +1196,7 @@ Sorting enables organizing records by selecting column headers, arranging the da
         Toolbar="@ToolbarItems">
     <SfDataManager Url="http://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
     <GridPageSettings PageSize="10"></GridPageSettings>
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -1247,7 +1247,7 @@ public class GraphQLQuery
 
 **How Sort Variables are Passed:**
 
-When a column header is selected for sorting, the DataGrid automatically sends:
+When a column header is selected for sorting, the Blazor DataGrid automatically sends:
 ```json
 {
   "dataManager": {
@@ -1284,7 +1284,7 @@ The backend resolver receives this and processes the sort specification in the `
      <SfDataManager Url="http://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
      <GridFilterSettings Type="FilterType.Excel"></GridFilterSettings>
      <GridPageSettings PageSize="10"></GridPageSettings>
-     <!-- Grid columns configuration -->
+     <!-- Blazor Grid columns configuration -->
  </SfGrid>
  ```
 
@@ -1424,7 +1424,7 @@ The backend resolver receives this and processes the sort specification in the `
 
  **How Filter Variables are Passed:**
 
- When filter conditions are applied, the DataGrid automatically sends:
+ When filter conditions are applied, the Blazor DataGrid automatically sends:
  ```json
   {
    "dataManager": {
@@ -1494,13 +1494,13 @@ Grouping enables organizing and displaying records based on column values. This 
         </CaptionTemplate>
     </GridGroupSettings>
     <GridPageSettings PageSize="10"></GridPageSettings>
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
 **Group Caption Customization:**
 
-The `<CaptionTemplate>` in the grid allows customization of group header text. Access group metadata using `CaptionTemplateContext`:
+The `<CaptionTemplate>` in the Blazor Grid allows customization of group header text. Access group metadata using `CaptionTemplateContext`:
 
 | Property | Purpose | Example |
 |----------|---------|---------|
@@ -1565,7 +1565,7 @@ public class GraphQLQuery
 
 **How Group Variables are Passed:**
 
-When a column header is dragged into the grouping area, the DataGrid automatically sends:
+When a column header is dragged into the grouping area, the Blazor DataGrid automatically sends:
 ```json
 {
   "dataManager": {
@@ -1592,15 +1592,15 @@ When multiple data operations are combined with grouping:
 
 This sequence ensures optimal performance and predictable results.
 
-The backend resolver receives the group specifications in the `GetExpenseRecordData` method and sorts the data accordingly, enabling the DataGrid to display properly grouped records. Grouping feature is now active.
+The backend resolver receives the group specifications in the `GetExpenseRecordData` method and sorts the data accordingly, enabling the Blazor DataGrid to display properly grouped records. Grouping feature is now active.
 
 ---
 
 ### Perform CRUD Operations
  
- CRUD operations (Create, Read, Update, Delete) provide complete data‑management capabilities within the DataGrid. The DataGrid offers built‑in dialogs and action buttons to perform these operations, while backend resolvers execute the corresponding data modifications.
+ CRUD operations (Create, Read, Update, Delete) provide complete data‑management capabilities within the Blazor DataGrid. The Blazor DataGrid offers built‑in dialogs and action buttons to perform these operations, while backend resolvers execute the corresponding data modifications.
 
- Add the Grid `GridEditSettings` and `Toolbar` configuration to enable create, read, update, and delete (CRUD) operations.
+ Add the Blazor Grid `GridEditSettings` and `Toolbar` configuration to enable create, read, update, and delete (CRUD) operations.
  
  ```cshtml
  <SfGrid TValue="ExpenseRecord"
@@ -1610,7 +1610,7 @@ The backend resolver receives the group specifications in the `GetExpenseRecordD
      <SfDataManager Url="http://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
      <GridPageSettings PageSize="10"></GridPageSettings>
      <GridEditSettings AllowAdding="true" Mode="EditMode.Dialog"></GridEditSettings>
-     <!-- Grid columns configuration -->
+     <!-- Blazor Grid columns configuration -->
  </SfGrid>
  ```
  
@@ -1626,7 +1626,7 @@ Add the toolbar items list in the `@code` block:
 
 **Insert**
  
- The Insert operation enables adding new expense records to the system. When the Add button in the toolbar is selected, the DataGrid displays a dialog containing the required input fields. After the data is entered and submitted, a GraphQL mutation transmits the new record to the backend for creation.
+ The Insert operation enables adding new expense records to the system. When the Add button in the toolbar is selected, the Blazor DataGrid displays a dialog containing the required input fields. After the data is entered and submitted, a GraphQL mutation transmits the new record to the backend for creation.
  
  **Instructions:**
  
@@ -1795,7 +1795,7 @@ Add the toolbar items list in the `@code` block:
  | `record` | `ExpenseRecord` | The new expense record object with all field values | Expense data filled in the dialog |
  | `index` | `int` | The position where the new record should be inserted (0 = top) | `0` for insert at beginning, `-1` or higher than count for append |
  | `action` | `string` | Type of action being performed (usually "add" for insert) | `"add"` |
- | `additionalParameters` | `Any` | Extra context or custom parameters from the DataGrid | Empty object `{}` or additional metadata |
+ | `additionalParameters` | `Any` | Extra context or custom parameters from the Blazor DataGrid | Empty object `{}` or additional metadata |
 
  **Backend Response:**
 
@@ -1830,7 +1830,7 @@ Add the toolbar items list in the `@code` block:
  ```
 
 **Update**
-The Update operation enables modifying existing expense records. When the Edit action is selected from the toolbar and a row is chosen, the DataGrid displays a dialog populated with the current record values. After the data is updated and the form is submitted, a GraphQL mutation transmits the modified record to the backend for processing.
+The Update operation enables modifying existing expense records. When the Edit action is selected from the toolbar and a row is chosen, the Blazor DataGrid displays a dialog populated with the current record values. After the data is updated and the form is submitted, a GraphQL mutation transmits the modified record to the backend for processing.
 
 **Instructions:**
 
@@ -1984,7 +1984,7 @@ mutation update($record: ExpenseRecordInput!, $action: String!, $primaryColumnNa
 | `action` | `string` | Type of action being performed (usually "save" for update) | `"save"` |
 | `primaryColumnName` | `string` | Name of the primary key column used to identify the record | `"ExpenseId"` |
 | `primaryColumnValue` | `string` | Value of the primary key to locate which record to update | `"EXP1001"` |
-| `additionalParameters` | `Any` | Extra context or custom parameters from the DataGrid | Empty object `{}` or additional metadata |
+| `additionalParameters` | `Any` | Extra context or custom parameters from the Blazor DataGrid | Empty object `{}` or additional metadata |
 
 **Backend Response:**
 
@@ -2100,7 +2100,7 @@ mutation delete($primaryColumnValue: String!, $additionalParameters: Any) {
 | Parameter | Type | Purpose | Example |
 |-----------|------|---------|---------|
 | `primaryColumnValue` | `string` | Value of the primary key identifying which record to delete | `"EXP1001"` |
-| `additionalParameters` | `Any` | Extra context or custom parameters from the DataGrid | Empty object `{}` or additional metadata |
+| `additionalParameters` | `Any` | Extra context or custom parameters from the Blazor DataGrid | Empty object `{}` or additional metadata |
 
 **Backend Response:**
 
@@ -2362,6 +2362,6 @@ This guide demonstrates how to:
 6. Create the DataManagerRequestInput input type to carry grid operations. [🔗](#step-6-create-the-datamanagerrequestinput-class)
 7. Define GraphQL mutation resolvers for Create, Update, and Delete. [🔗](#step-7-define-graphql-mutation-resolvers)
 8. Integrate Blazor DataGrid and configure the GraphQL adaptor. [🔗](#step-3-configure-graphql-adaptor-and-data-binding)
-9. Perform CRUD operations from the grid using GraphQL mutations. [🔗](#perform-crud-operations)
+9. Perform CRUD operations from the Blazor Grid using GraphQL mutations. [🔗](#perform-crud-operations)
 
 The application now provides a complete solution for managing expenses with a modern [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) integrated with a Hot Chocolate GraphQL backend.

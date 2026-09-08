@@ -9,7 +9,7 @@ documentation: ug
 
 # Aggregate Customization in Blazor Data Grid
 
-Aggregates are displayed as summary rows in the DataGrid footer, providing a consolidated view of totals, averages, or counts. These rows can be styled using CSS to match the layout and design of the grid. Styling options are available for:
+Aggregates are displayed as summary rows in the Blazor DataGrid footer, providing a consolidated view of totals, averages, or counts. These rows can be styled using CSS to match the layout and design of the grid. Styling options are available for:
 
 - **Aggregate root container:** The outer wrapper of the footer row.
 - **Aggregate summary row and cells:** The row that shows summary values, and the cells that display each result.

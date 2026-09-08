@@ -88,7 +88,7 @@ The toolbar can be configured with built-in toolbar items or custom items using 
 
 Enable or disable toolbar items dynamically to control which actions are available based on application logic or user interactions.
 
-Toolbar items in the Blazor DataGrid can be enabled or disabled dynamically using the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method. This provides programmatic control over the availability of specific items by their IDs. For built-in toolbar items specified with strings, the Grid generates IDs (for example, **Grid_Add, Grid_Edit**). For custom items created with ItemModel, set the Id property explicitly and use it when enabling or disabling items.
+Toolbar items in the Blazor DataGrid can be enabled or disabled dynamically using the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method. This provides programmatic control over the availability of specific items by their IDs. For built-in toolbar items specified with strings, the Blazor Grid generates IDs (for example, **Grid_Add, Grid_Edit**). For custom items created with ItemModel, set the Id property explicitly and use it when enabling or disabling items.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

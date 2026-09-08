@@ -29,7 +29,7 @@ The Microsoft.EntityFrameworkCore.SqlServer package is the provider that connect
 
 **What is UrlAdaptor?**
 
-UrlAdaptor is a DataManager adaptor that communicates with REST API endpoints for all grid operations. The DataGrid sends read, insert, update, delete, and batch requests to controller actions, which use Entity Framework core to access SQL Server.
+UrlAdaptor is a DataManager adaptor that communicates with REST API endpoints for all grid operations. The Blazor DataGrid sends read, insert, update, delete, and batch requests to controller actions, which use Entity Framework core to access SQL Server.
 
 ## Prerequisites
 
@@ -40,8 +40,8 @@ Ensure the following software and packages are installed before proceeding:
 | Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
 | .NET SDK | net10.0 or compatible | Runtime and build tools |
 | SQL Server | 2019 or later | Database server |
-| Syncfusion.Blazor.Grid | {{site.blazorversion}} | DataGrid and UI components |
-| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for DataGrid components |
+| Syncfusion.Blazor.Grid | {{site.blazorversion}} | Blazor DataGrid and UI components |
+| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for Blazor DataGrid components |
 | Microsoft.EntityFrameworkCore | 10.0.2 | Core framework for database operations |
 | Microsoft.EntityFrameworkCore.SqlServer | 10.0.2 | SQL Server provider for Entity Framework Core |
 
@@ -233,7 +233,7 @@ A connection string contains the information needed to connect the application t
 The database connection string has been configured successfully.
 
 
-### Step 6: Create the Grid API Controller
+### Step 6: Create the Blazor Grid API Controller
 
 A controller exposes REST API endpoints for the grid to read data. This step adds minimal `POST` endpoint that return empty results. Additional CRUD and batch endpoints will be added later when configuring UrlAdaptor.
 
@@ -338,7 +338,7 @@ app.Run();
 
 ### Step 1: Install and Configure Blazor DataGrid Components
 
-Syncfusion is a library that provides pre-built UI components like DataGrid, which is used to display data in a table format.
+Syncfusion is a library that provides pre-built UI components like Blazor DataGrid, which is used to display data in a table format.
 
 **Instructions:**
 
@@ -364,7 +364,7 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 
 For this project, the **fluent** theme is used. A different theme can be selected or customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Blazor components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
+Blazor components are now configured and ready to use. For additional guidance, refer to the Blazor Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
 ### Step 2: Update the Blazor DataGrid
 
@@ -429,7 +429,7 @@ The `Home.razor` component will display the order data in a Blazor DataGrid with
 
 **Component Explanation:**
 
-- **`<SfGrid>`**: The DataGrid component that displays order data in rows and columns.
+- **`<SfGrid>`**: The Blazor DataGrid component that displays order data in rows and columns.
 - **`<SfDataManager>`**: Manages data communication with REST API endpoints using UrlAdaptor. The `Url` property points to the read endpoint, while `InsertUrl`, `UpdateUrl`, `RemoveUrl`, and `BatchUrl` point to CRUD endpoints.
 - **`AllowPaging="true"`**: Enables pagination to display records in pages of 10 records each.
 - **`AllowFiltering="true"`**: Enables column filtering with menu-based filters.
@@ -442,7 +442,7 @@ The `Home.razor` component will display the order data in a Blazor DataGrid with
 - **`Toolbar`**: "Add", "Edit", "Delete", "Update", "Cancel", "Search" for CRUD and search operations.
 - **`<GridAggregates>`**: Displays summary calculations (Sum, Count, Average, Min, Max) in footer rows. The `<GroupFooterTemplate>` shows aggregates for each group, while `<FooterTemplate>` displays aggregates for the entire grid at the bottom.
 
-> In **URL Adaptor**, the DataGrid component handles grouping and aggregation operations automatically.
+> In **URL Adaptor**, the Blazor DataGrid component handles grouping and aggregation operations automatically.
 
 ### Step 3: Implement the Endpoints for UrlAdaptor
 
@@ -588,9 +588,9 @@ The application will start, and the console will display the local URL (typicall
 
 1. Open a web browser.
 2. Navigate to the URL displayed in the console.
-3. The DataGrid application is now running and ready to use.
+3. The Blazor DataGrid application is now running and ready to use.
 
-![Basic DataGrid displaying orders from the SQL Server database](../images/blazor-datagrid-ef-url.webp)
+![Basic Blazor DataGrid displaying orders from the SQL Server database](../images/blazor-datagrid-ef-url.webp)
 
 
 ### Step 5: Implement Paging Feature
@@ -702,10 +702,10 @@ public object Post([FromBody] DataManagerRequest dataManagerRequest)
 
 **How Searching Works:**
 
-- When the user enters text in the search box and presses Enter, the DataGrid sends a search request to the REST API.
+- When the user enters text in the search box and presses Enter, the Blazor DataGrid sends a search request to the REST API.
 - The `Post` method receives the search criteria in `dataManagerRequest.Search`.
 - The `DataOperations.PerformSearching()` method filters the data based on the search term across all columns.
-- Results are returned and displayed in the DataGrid with pagination applied.
+- Results are returned and displayed in the Blazor DataGrid with pagination applied.
 
 Searching feature is now active.
 
@@ -783,7 +783,7 @@ public object Post([FromBody] DataManagerRequest dataManagerRequest)
 - Click the "Filter" button to apply the filter.
 - The `Post` method receives the filter criteria in `dataManagerRequest.Where`.
 - The `DataOperations.PerformFiltering()` method applies the filter conditions to the data.
-- Results are filtered accordingly and displayed in the DataGrid.
+- Results are filtered accordingly and displayed in the Blazor DataGrid.
 
 Filtering feature is now active.
 
@@ -867,7 +867,7 @@ public object Post([FromBody] DataManagerRequest dataManagerRequest)
 - Click again to sort in descending order.
 - The `Post` method receives the sort criteria in `dataManagerRequest.Sorted`.
 - The `DataOperations.PerformSorting()` method sorts the data based on the specified column and direction.
-- Records are sorted accordingly and displayed in the DataGrid.
+- Records are sorted accordingly and displayed in the Blazor DataGrid.
 
 Sorting feature is now active.
 
@@ -875,7 +875,7 @@ Sorting feature is now active.
 
 ### Step 9: Perform CRUD Operations
 
-CRUD operations (Create, Read, Update, Delete) enable users to manage data directly from the DataGrid. The REST API endpoints in the controller handle all database operations using Entity Framework Core.
+CRUD operations (Create, Read, Update, Delete) enable users to manage data directly from the Blazor DataGrid. The REST API endpoints in the controller handle all database operations using Entity Framework Core.
 
 **Instructions:**
 
@@ -907,7 +907,7 @@ CRUD operations (Create, Read, Update, Delete) enable users to manage data direc
 
 **Insert (Create)**
 
-Record insertion allows new orders to be added directly through the DataGrid component. The `Insert` endpoint processes the insertion request and saves the newly created record to the SQL Server database.
+Record insertion allows new orders to be added directly through the Blazor DataGrid component. The `Insert` endpoint processes the insertion request and saves the newly created record to the SQL Server database.
 
 In **Controllers/GridController.cs**, the insert method is implemented as:
 
@@ -934,15 +934,15 @@ public void Insert([FromBody] CRUDModel<Order> value)
 **What happens behind the scenes:**
 
 1. The user clicks the "Add" button and fills in the form.
-2. The DataGrid sends a POST request to `http://localhost:5175/api/Grid/Insert`.
+2. The Blazor DataGrid sends a POST request to `http://localhost:5175/api/Grid/Insert`.
 3. The `Insert` method receives the new order data in `value.Value`.
 4. Entity Framework Core adds the record to the `_context.Orders` collection.
 5. `SaveChanges()` persists the record to the SQL Server database.
-6. The DataGrid automatically refreshes to display the new order.
+6. The Blazor DataGrid automatically refreshes to display the new order.
 
 **Update (Edit)**
 
-Record modification allows order details to be updated directly within the DataGrid. The `Update` endpoint processes the edited row and applies the changes to the SQL Server database.
+Record modification allows order details to be updated directly within the Blazor DataGrid. The `Update` endpoint processes the edited row and applies the changes to the SQL Server database.
 
 In **Controllers/GridController.cs**, the update method is implemented as:
 
@@ -973,16 +973,16 @@ public void Update([FromBody] CRUDModel<Order> value)
 **What happens behind the scenes:**
 
 1. The user clicks the "Edit" button and modifies the record.
-2. The DataGrid sends a POST request to `http://localhost:5175/api/Grid/Update`.
+2. The Blazor DataGrid sends a POST request to `http://localhost:5175/api/Grid/Update`.
 3. The `Update` method receives the modified order data in `value.Value`.
 4. The existing order is retrieved from the database by its ID.
 5. The properties are updated with the new values using `SetValues()`.
 6. `SaveChanges()` persists the changes to the SQL Server database.
-7. The DataGrid refreshes to display the updated order.
+7. The Blazor DataGrid refreshes to display the updated order.
 
 **Delete (Remove)**
 
-Record deletion allows orders to be removed directly from the DataGrid. The `Delete` endpoint executes the corresponding SQL Server DELETE operation and updates both the database and the grid.
+Record deletion allows orders to be removed directly from the Blazor DataGrid. The `Delete` endpoint executes the corresponding SQL Server DELETE operation and updates both the database and the grid.
 
 In **Controllers/GridController.cs**, the delete method is implemented as:
 
@@ -1014,13 +1014,13 @@ public void Delete([FromBody] CRUDModel<Order> value)
 **What happens behind the scenes:**
 
 1. The user selects an order and clicks "Delete".
-2. A confirmation dialog appears (built into the DataGrid).
-3. If confirmed, the DataGrid sends a POST request to `http://localhost:5175/api/Grid/Delete`.
+2. A confirmation dialog appears (built into the Blazor DataGrid).
+3. If confirmed, the Blazor DataGrid sends a POST request to `http://localhost:5175/api/Grid/Delete`.
 4. The `Delete` method extracts the order ID from `value.Key`.
 5. The order is located in the database by its ID.
 6. The order is removed from the `_context.Orders` collection.
 7. `SaveChanges()` executes the DELETE statement in SQL Server.
-8. The DataGrid refreshes to remove the deleted order from the UI.
+8. The Blazor DataGrid refreshes to remove the deleted order from the UI.
 
 **Batch Operations (Multiple CRUD in one request)**
 
@@ -1074,13 +1074,13 @@ public void Batch([FromBody] CRUDModel<Order> value)
 
 **What happens behind the scenes:**
 
-- The DataGrid collects all added, edited, and deleted records.
+- The Blazor DataGrid collects all added, edited, and deleted records.
 - All changes are sent in a single POST request to `http://localhost:5175/api/Grid/BatchUpdate`.
 - The `Batch` method processes changed records using `UpdateRange()`.
 - The `Batch` method processes added records using `AddRange()`.
 - The `Batch` method processes deleted records using `Remove()`.
 - All operations are saved to the database in a single `SaveChanges()` call for transactional consistency.
-- The DataGrid refreshes to display all changes.
+- The Blazor DataGrid refreshes to display all changes.
 
 All CRUD operations are now fully implemented, enabling comprehensive data management capabilities within the Blazor DataGrid.
 

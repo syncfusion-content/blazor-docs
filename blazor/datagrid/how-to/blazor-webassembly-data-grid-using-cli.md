@@ -220,7 +220,7 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
-After the app starts, navigate to `http://localhost:<port-number>` in the browser to view the Grid.
+After the app starts, navigate to `http://localhost:<port-number>` in the browser to view the Blazor Grid.
 
 ![Blazor DataGrid running in a WebAssembly app](../images/blazor-datagrid-component.webp)
 
@@ -298,7 +298,7 @@ public class OrderData
 
 Columns are automatically generated when the column declaration is empty or undefined during initialization of the Blazor DataGrid.
 
-The Grid also supports explicitly defining columns using [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html). In `GridColumn`, several properties are available to customize column behavior.
+The Blazor Grid also supports explicitly defining columns using [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html). In `GridColumn`, several properties are available to customize column behavior.
 
 Key properties in the example below:
 
@@ -690,8 +690,8 @@ public class OrderData
 
 ## See also
 
-* [Getting Started with DataGrid in Blazor WebAssembly using Visual Studio 2022](./blazor-webassembly-datagrid-using-visual-studio)
+* [Getting Started with Blazor DataGrid in Blazor WebAssembly using Visual Studio 2022](./blazor-webassembly-datagrid-using-visual-studio)
 
-* [Getting Started with DataGrid in Blazor Server using Visual Studio 2022](../getting-started-with-server-app.md)
+* [Getting Started with Blazor DataGrid in Blazor Server using Visual Studio 2022](../getting-started-with-server-app.md)
 
-* [Getting Started with DataGrid in Blazor Server using .NET Core CLI](./server-side-using-cli)
+* [Getting Started with Blazor DataGrid in Blazor Server using .NET Core CLI](./server-side-using-cli)

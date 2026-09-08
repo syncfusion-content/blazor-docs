@@ -16,7 +16,7 @@ The appearance of selection elements in the [Blazor DataGrid](https://www.syncfu
 
 ## Customize row selection background
 
-The **.e-selectionbackground** class styles the background of selected rows in the DataGrid. Use CSS to modify its appearance:
+The **.e-selectionbackground** class styles the background of selected rows in the Blazor DataGrid. Use CSS to modify its appearance:
 
 ```css
 .e-grid td.e-selectionbackground {
@@ -108,7 +108,7 @@ internal sealed class OrderData
 
 ## Customize cell selection background
 
-The **.e-cellselectionbackground** class styles the background of selected cells in the DataGrid. Apply CSS to customize its appearance:
+The **.e-cellselectionbackground** class styles the background of selected cells in the Blazor DataGrid. Apply CSS to customize its appearance:
 
 ```css
 .e-grid td.e-cellselectionbackground {

@@ -36,8 +36,8 @@ Ensure the following software and packages are installed before proceeding:
 | Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
 | .NET SDK | net8.0 or compatible | Runtime and build tools |
 | SQL Server | 2019 or later | Database server |
-| Syncfusion.Blazor.Grid | {{site.blazorversion}} | DataGrid and UI components |
-| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for DataGrid components |
+| Syncfusion.Blazor.Grid | {{site.blazorversion}} | Blazor DataGrid and UI components |
+| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for Blazor DataGrid components |
 | Microsoft.EntityFrameworkCore | 9.0.0 or later | Core framework for database operations |
 | Microsoft.EntityFrameworkCore.Tools | 9.0.0 or later | Tools for managing database migrations |
 | Microsoft.EntityFrameworkCore.SqlServer | 9.0.0 or later | SQL Server provider for Entity Framework Core |
@@ -577,7 +577,7 @@ The service registration has been completed successfully.
 
 ### Step 1: Install and Configure Blazor DataGrid Components
 
-Syncfusion is a library that provides pre-built UI components like DataGrid, which is used to display data in a table format.
+Syncfusion is a library that provides pre-built UI components like Blazor DataGrid, which is used to display data in a table format.
 
 **Instructions:**
 
@@ -603,7 +603,7 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 ```
 For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Blazor components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
+Blazor components are now configured and ready to use. For additional guidance, refer to the Blazor Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
 ### Step 2: Update the Blazor DataGrid
 
@@ -612,7 +612,7 @@ The `Home.razor` component will display the ticket data in a Blazor DataGrid wit
 **Instructions:**
 
 1. Open the file named `Home.razor` in the `Components/Pages` folder.
-2. Add the following code to create a basic DataGrid:
+2. Add the following code to create a basic Blazor DataGrid:
 
 ```cshtml
 @page "/"
@@ -648,11 +648,11 @@ The `Home.razor` component will display the ticket data in a Blazor DataGrid wit
 
 - **`@rendermode InteractiveServer`**: Enables interactive server-side rendering for the component.
 - **`@inject TicketRepository`**: Injects the repository to access database methods.
-- **`<SfGrid>`**: The DataGrid component that displays data in rows and columns.
-- **`<GridColumns>`**: Defines individual columns in the DataGrid.
+- **`<SfGrid>`**: The Blazor DataGrid component that displays data in rows and columns.
+- **`<GridColumns>`**: Defines individual columns in the Blazor DataGrid.
 - **`<GridPageSettings>`**: Configures pagination with 10 records per page.
 
-The Home component has been updated successfully with DataGrid.
+The Home component has been updated successfully with Blazor DataGrid.
 
 ---
 
@@ -660,7 +660,7 @@ The Home component has been updated successfully with DataGrid.
 
 The Blazor DataGrid can bind data from a **SQL Server** database using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) for scenarios that require full control over data operations.
 
-The `CustomAdaptor` is a bridge between the DataGrid and the database. It handles all data operations including reading, searching, filtering, sorting, paging, and CRUD operations. Each operation in the CustomAdaptor's `ReadAsync` method handles specific grid functionality. The Blazor DataGrid sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
+The `CustomAdaptor` is a bridge between the Blazor DataGrid and the database. It handles all data operations including reading, searching, filtering, sorting, paging, and CRUD operations. Each operation in the CustomAdaptor's `ReadAsync` method handles specific grid functionality. The Blazor DataGrid sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
 
 **Instructions:**
 
@@ -679,8 +679,8 @@ The `CustomAdaptor` is a bridge between the DataGrid and the database. It handle
     }
 
     /// <summary>
-    /// CustomAdaptor class bridges DataGrid interactions with database operations.
-    /// This adaptor handles all data retrieval and manipulation for the DataGrid.
+    /// CustomAdaptor class bridges Blazor DataGrid interactions with database operations.
+    /// This adaptor handles all data retrieval and manipulation for the Blazor DataGrid.
     /// </summary>
     public class CustomAdaptor : DataAdaptor
     {
@@ -694,7 +694,7 @@ The `CustomAdaptor` is a bridge between the DataGrid and the database. It handle
 
         /// <summary>
         /// ReadAsync retrieves records from the database and applies data operations.
-        /// This method executes when the grid initializes and when filtering, searching, sorting, or paging occurs.
+        /// This method executes when the Blazor Grid initializes and when filtering, searching, sorting, or paging occurs.
         /// </summary>
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
@@ -792,7 +792,7 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
         Toolbar="@ToolbarItems">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -847,7 +847,7 @@ dotnet run
 2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
 3. The Network Support Ticket System is now running and ready to use.
 
-![Basic DataGrid displaying tickets from the SQL Server database](../images/blazor-datagrid-sql.webp)
+![Basic Blazor DataGrid displaying tickets from the SQL Server database](../images/blazor-datagrid-sql.webp)
 
 ### Step 6: Implement Paging Feature
 
@@ -865,7 +865,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridPageSettings PageSize="10"></GridPageSettings>
     
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -935,7 +935,7 @@ public async Task<List<Tickets>> GetTicketsDataAsync()
 
 **How Paging Works:**
 
-- The DataGrid displays 10 records per page (as set in `GridPageSettings`).
+- The Blazor DataGrid displays 10 records per page (as set in `GridPageSettings`).
 - Navigation buttons allow the user to move between pages.
 - When a page is requested, the `ReadAsync` method receives skip and take values.
 - The `DataOperations.PerformSkip()` and `DataOperations.PerformTake()` methods handle pagination.
@@ -959,7 +959,7 @@ Searching allows the user to find records by entering keywords in the search box
         Toolbar="@ToolbarItems">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridPageSettings PageSize="10"></GridPageSettings>
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -1009,10 +1009,10 @@ Searching allows the user to find records by entering keywords in the search box
 
 **How Searching Works:**
 
-- When the user enters text in the search box and presses Enter, the DataGrid sends a search request to the CustomAdaptor.
+- When the user enters text in the search box and presses Enter, the Blazor DataGrid sends a search request to the CustomAdaptor.
 - The `ReadAsync` method receives the search criteria in `dataManagerRequest.Search`.
 - The `DataOperations.PerformSearching()` method filters the data based on the search term across all columns.
-- Results are returned and displayed in the DataGrid.
+- Results are returned and displayed in the Blazor DataGrid.
 
 Searching feature is now active.
 
@@ -1036,7 +1036,7 @@ Filtering allows the user to restrict data based on column values using a menu i
     
     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
     
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -1097,7 +1097,7 @@ Filtering allows the user to restrict data based on column values using a menu i
 - Click the "Filter" button to apply the filter.
 - The `ReadAsync` method receives the filter criteria in `dataManagerRequest.Where`.
 - The `DataOperations.PerformFiltering()` method applies the filter conditions to the data.
-- Results are filtered accordingly and displayed in the DataGrid.
+- Results are filtered accordingly and displayed in the Blazor DataGrid.
 
 Filtering feature is now active.
 
@@ -1123,7 +1123,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
      <GridPageSettings PageSize="10"></GridPageSettings>
      <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
     
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -1184,7 +1184,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
 - Click again to sort in descending order.
 - The `ReadAsync` method receives the sort criteria in `dataManagerRequest.Sorted`.
 - The `DataOperations.PerformSorting()` method sorts the data based on the specified column and direction.
-- Records are sorted accordingly and displayed in the DataGrid.
+- Records are sorted accordingly and displayed in the Blazor DataGrid.
 
 Sorting feature is now active.
 
@@ -1209,7 +1209,7 @@ Grouping organizes records into hierarchical groups based on column values.
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
      <GridPageSettings PageSize="10"></GridPageSettings>
      <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
-    <!-- Grid columns  -->
+    <!-- Blazor Grid columns  -->
 </SfGrid>
 ```
 
@@ -1288,9 +1288,9 @@ Grouping feature is now active.
 
 ### Step 11: Perform CRUD operations
 
-CustomAdaptor methods enable users to create, read, update, and delete records directly from the DataGrid. Each operation calls corresponding data layer methods in **TicketRepository.cs** to execute SQL Server commands.
+CustomAdaptor methods enable users to create, read, update, and delete records directly from the Blazor DataGrid. Each operation calls corresponding data layer methods in **TicketRepository.cs** to execute SQL Server commands.
 
-Add the Grid **EditSettings** and **Toolbar** configuration to enable create, read, update, and delete (CRUD) operations.
+Add the Blazor Grid **EditSettings** and **Toolbar** configuration to enable create, read, update, and delete (CRUD) operations.
 
 ```cshtml
 <SfGrid TValue="Tickets" 
@@ -1303,7 +1303,7 @@ Add the Grid **EditSettings** and **Toolbar** configuration to enable create, re
      <GridPageSettings PageSize="10"></GridPageSettings>
      <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
      <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" Mode="EditMode.Batch"></GridEditSettings>
-    <!-- Grid columns  -->
+    <!-- Blazor Grid columns  -->
 </SfGrid>
 ```
 
@@ -1319,7 +1319,7 @@ Add the toolbar items list in the `@code` block:
 
 **Insert**
 
-Record insertion allows new tickets to be added directly through the DataGrid component. The adaptor processes the insertion request, performs any required business‑logic validation, and saves the newly created record to the SQL Server database.
+Record insertion allows new tickets to be added directly through the Blazor DataGrid component. The adaptor processes the insertion request, performs any required business‑logic validation, and saves the newly created record to the SQL Server database.
 
 In **Home.razor**, implement the `InsertAsync` method within the `CustomAdaptor` class:
 
@@ -1411,13 +1411,13 @@ private async Task<string> GeneratePublicTicketIdAsync()
 2. The `TicketRepository.AddTicketAsync()` method is called.
 3. The new record is added to the `_context.Tickets` collection.
 4. `SaveChangesAsync()` persists the record to the SQL Server database.
-5. The DataGrid automatically refreshes to display the new record.
+5. The Blazor DataGrid automatically refreshes to display the new record.
 
-Now the new ticket is persisted to the database and reflected in the grid.
+Now the new ticket is persisted to the database and reflected in the Blazor Grid.
 
 **Update**
 
-Record modification allows ticket details to be updated directly within the DataGrid. The adaptor processes the edited row, validates the updated values, and applies the changes to the **SQL Server database** while ensuring data integrity is preserved.
+Record modification allows ticket details to be updated directly within the Blazor DataGrid. The adaptor processes the edited row, validates the updated values, and applies the changes to the **SQL Server database** while ensuring data integrity is preserved.
 
 In **Home.razor**, implement the `UpdateAsync` method within the `CustomAdaptor` class:
 
@@ -1494,13 +1494,13 @@ public async Task UpdateTicketAsync(Tickets? value)
 4. The existing record is retrieved from the database by ID.
 5. All properties are updated with the new values.
 6. `SaveChangesAsync()` persists the changes to the SQL Server database.
-7. The DataGrid refreshes to display the updated record.
+7. The Blazor DataGrid refreshes to display the updated record.
 
-Now modifications are synchronized to the database and reflected in the grid UI.
+Now modifications are synchronized to the database and reflected in the Blazor Grid UI.
 
 **Delete**
 
-Record deletion allows tickets to be removed directly from the DataGrid. The adaptor captures the delete request, executes the corresponding **SQL Server DELETE** operation, and updates both the database and the grid to reflect the removal.
+Record deletion allows tickets to be removed directly from the Blazor DataGrid. The adaptor captures the delete request, executes the corresponding **SQL Server DELETE** operation, and updates both the database and the Blazor Grid to reflect the removal.
 
 In **Home.razor**, implement the `RemoveAsync` method within the `CustomAdaptor` class:
 
@@ -1566,15 +1566,15 @@ public async Task RemoveTicketAsync(int? key)
 **What happens behind the scenes:**
 
 1. The user selects a record and clicks "Delete".
-2. A confirmation dialog appears (built into the DataGrid).
+2. A confirmation dialog appears (built into the Blazor DataGrid).
 3. If confirmed, the CustomAdaptor's `RemoveAsync()` method is called.
 4. The `TicketRepository.RemoveTicketAsync()` method is called.
 5. The record is located in the database by its ID.
 6. The record is removed from the `_context.Tickets` collection.
 7. `SaveChangesAsync()` executes the DELETE statement in SQL Server.
-8. The DataGrid refreshes to remove the deleted record from the UI.
+8. The Blazor DataGrid refreshes to remove the deleted record from the UI.
 
-Now tickets are removed from the database and the grid UI reflects the changes immediately.
+Now tickets are removed from the database and the Blazor Grid UI reflects the changes immediately.
 
 **Batch update**
 
@@ -1618,17 +1618,17 @@ public class CustomAdaptor : DataAdaptor
 }
 ```
 
-> This method is triggered when the DataGrid is operating in [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) Edit mode.
+> This method is triggered when the Blazor DataGrid is operating in [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) Edit mode.
 
 **What happens behind the scenes:**
 
-- The DataGrid collects all added, edited, and deleted records in Batch Edit mode.
+- The Blazor DataGrid collects all added, edited, and deleted records in Batch Edit mode.
 - The combined batch request is passed to the CustomAdaptor's `BatchUpdateAsync()` method.
 - Each modified record is processed using `TicketRepository.UpdateTicketAsync()`.
 - Each newly added record is saved using `TicketRepository.AddTicketAsync()`.
 - Each deleted record is removed using `TicketRepository.RemoveTicketAsync()`.
 - All repository operations persist changes to the SQL Server database.
-- The DataGrid refreshes to display the updated, added, and removed records in a single response.
+- The Blazor DataGrid refreshes to display the updated, added, and removed records in a single response.
 
 Now the adaptor supports bulk modifications with atomic database synchronization. All CRUD operations are now fully implemented, enabling comprehensive data management capabilities within the Blazor DataGrid.
 
@@ -1854,7 +1854,7 @@ Here is the complete and final `Home.razor` component with all features integrat
         /// Removes a data item from the data collection.
         /// </summary>
         /// <param name="dataManager">The DataManager is a data management component used for performing data operations in application.</param>
-        /// <param name="value">The Value specifies the primary column value which is needs to be removed from the grid record.</param>
+        /// <param name="value">The Value specifies the primary column value which is needs to be removed from the Blazor Grid record.</param>
         /// <param name="keyField">The KeyField specifies the field name of the primary column.</param>
         /// <param name="key">An optional parameter that can be used to perform additional data operations.</param>
         /// <returns>Returns the removed data item.</returns>
@@ -1869,9 +1869,9 @@ Here is the complete and final `Home.razor` component with all features integrat
         /// Batchupdate (Insert, Update, Delete) a collection of data items from the data collection.
         /// </summary>
         /// <param name="dataManager">The DataManager is a data management component used for performing data operations in application.</param>
-        /// <param name="changed">The Changed specifies the collection of record updated in batch mode which needs to be updated from the grid record.</param>
-        /// <param name="added">The Added specifies the collection of record inserted in batch mode which needs to be inserted from the grid record.</param>
-        /// <param name="deleted">The Deleted specifies the collection of record deleted in batch mode which needs to be removed from the grid record.</param>
+        /// <param name="changed">The Changed specifies the collection of record updated in batch mode which needs to be updated from the Blazor Grid record.</param>
+        /// <param name="added">The Added specifies the collection of record inserted in batch mode which needs to be inserted from the Blazor Grid record.</param>
+        /// <param name="deleted">The Deleted specifies the collection of record deleted in batch mode which needs to be removed from the Blazor Grid record.</param>
         /// <param name="keyField">The KeyField specifies the field name of the primary column.</param>
         /// <param name="key">An optional parameter that can be used to perform additional data operations.</param>
         /// <param name="dropIndex">An optional parameter that can be used to perform row drag and drop operation.</param>
@@ -1904,7 +1904,7 @@ Here is the complete and final `Home.razor` component with all features integrat
     }
 
     /// <summary>
-    /// Provides a list of status options used as the data source for the Status dropdown editor in the grid.
+    /// Provides a list of status options used as the data source for the Status dropdown editor in the Blazor Grid.
     /// </summary>
     private static List<Tickets> StatusCustomData = new List<Tickets> {
             new Tickets() { Status= "Open" },
@@ -1924,7 +1924,7 @@ Here is the complete and final `Home.razor` component with all features integrat
     };
 
     /// <summary>
-    /// Provides a list of priority options used as the data source for the Priority dropdown editor in the grid.
+    /// Provides a list of priority options used as the data source for the Priority dropdown editor in the Blazor Grid.
     /// </summary>
     private static List<Tickets> PriorityCustomData = new List<Tickets> {
             new Tickets() { Priority= "Critical" },
@@ -1942,7 +1942,7 @@ Here is the complete and final `Home.razor` component with all features integrat
     };
 
     /// <summary>
-    /// Provides a list of category options used as the data source for the Category dropdown editor in the grid.
+    /// Provides a list of category options used as the data source for the Category dropdown editor in the Blazor Grid.
     /// </summary>
     private static List<Tickets> CategoryCustomData = new List<Tickets> {
             new Tickets() { Category= "Network Issue" },
@@ -1970,7 +1970,7 @@ Here is the complete and final `Home.razor` component with all features integrat
     };
 
     /// <summary>
-    /// Provides a list of department options used as the data source for the Department dropdown editor in the grid.
+    /// Provides a list of department options used as the data source for the Department dropdown editor in the Blazor Grid.
     /// </summary>
     private static List<Tickets> DepartmentCustomData = new List<Tickets> {
             new Tickets() { Department= "IT Support" },
@@ -1992,7 +1992,7 @@ Here is the complete and final `Home.razor` component with all features integrat
     };
 
     /// <summary>
-    /// Provides a list of requester names used as the data source for the Requested By dropdown editor in the grid.
+    /// Provides a list of requester names used as the data source for the Requested By dropdown editor in the Blazor Grid.
     /// </summary>
     private static List<Tickets> CreatedByCustomData = new List<Tickets> {
             new Tickets() { CreatedBy= "Alice Smith" },
@@ -2020,7 +2020,7 @@ Here is the complete and final `Home.razor` component with all features integrat
     };
 
     /// <summary>
-    /// Provides a list of agent names used as the data source for the Agent dropdown editor in the grid.
+    /// Provides a list of agent names used as the data source for the Agent dropdown editor in the Blazor Grid.
     /// </summary>
     private static List<Tickets> AssigneeCustomData = new List<Tickets> {
             new Tickets() { Assignee= "John Doe" },
@@ -2164,7 +2164,7 @@ This guide demonstrates how to:
 3. Create data models and DbContext for database communication. [🔗](#step-3-create-the-data-model)
 4. Configure connection strings and register services. [🔗](#step-5-configure-the-connection-string)
 5. Implement the repository pattern for data access. [🔗](#step-6-create-the-repository-class)
-6. Create a Blazor component with a DataGrid that supports searching, filtering, sorting, paging, and CRUD operations. [🔗](#step-1-install-and-configure-blazor-datagrid-components)
+6. Create a Blazor component with a Blazor DataGrid that supports searching, filtering, sorting, paging, and CRUD operations. [🔗](#step-1-install-and-configure-blazor-datagrid-components)
 7. Handle bulk operations and batch updates. [🔗](#step-10-perform-crud-operations)
 
 The application now provides a complete solution for managing network support tickets with a modern, user-friendly interface integrated with SQL Server.

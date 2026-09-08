@@ -12,7 +12,7 @@ documentation: ug
 
 The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) supports custom adaptors, enabling you to perform manual operations on the data. This feature is useful for implementing custom data binding and editing operations in the Blazor DataGrid.
 
-To implement custom data binding in the Grid, the **DataAdaptor** class is used. This abstract class serves as a base class for the custom adaptor.
+To implement custom data binding in the Blazor Grid, the **DataAdaptor** class is used. This abstract class serves as a base class for the custom adaptor.
 
 The **DataAdaptor** abstract class includes both synchronous and asynchronous method signatures, which can be overridden in the custom adaptor. The following are the method signatures available in this class:
 
@@ -70,13 +70,13 @@ public abstract class DataAdaptor
 }
 ```
 
-To learn more about **Custom Binding** in the Grid, watch this video:
+To learn more about **Custom Binding** in the Blazor Grid, watch this video:
 
 {% youtube "youtube:https://www.youtube.com/watch?v=LmdUGJBUJqE" %}
 
 ## Data Binding
 
-Custom data binding can be performed in the Blazor DataGrid by providing a custom adaptor class and overriding the **Read** or **ReadAsync** method of the **DataAdaptor** abstract class.
+Custom data binding can be performed in the Blazor DataTable by providing a custom adaptor class and overriding the **Read** or **ReadAsync** method of the **DataAdaptor** abstract class.
 
 The following sample code demonstrates how to implement custom data binding using a custom adaptor:
 
@@ -178,7 +178,7 @@ The following sample code demonstrates how to implement custom data binding usin
 
 > If the **DataManagerRequest.RequiresCounts** value is **true**, the `Read/ReadAsync` return value must be of type **DataResult** with properties **Result** (a collection of records) and **Count** (the total number of records). If the **DataManagerRequest.RequiresCounts** is **false**, simply return the collection of records.
 
-The following image shows the custom-bound data displayed in the Grid:
+The following image shows the custom-bound data displayed in the Blazor Grid:
 
 ![Custom Binding in Grid](../images/blazor-datagrid-custom-binding.webp)
 
@@ -469,7 +469,7 @@ You can find the complete code in the [Github](https://github.com/SyncfusionExam
 
 ## Handling searching operation
 
-When using a custom adaptor, the searching operation must be handled by overriding the `Read` or `ReadAsync` method of the `DataAdaptor` abstract class. The `DataManagerRequest` class provides Grid action details, including search criteria.
+When using a custom adaptor, the searching operation must be handled by overriding the `Read` or `ReadAsync` method of the `DataAdaptor` abstract class. The `DataManagerRequest` class provides Blazor Grid action details, including search criteria.
 
 ![Handling Searching in Custom Adaptor](../images/blazor-datagrid-searching-in-custom-adaptor.webp)
 
@@ -541,9 +541,9 @@ When using a custom adaptor, the filtering operation must be handled by overridi
 
 ![Handling Filtering in Custom Adaptor](../images/blazor-datagrid-filtering-in-custom-adaptor.webp)
 
-Based on these Grid action details, a custom data source can be filtered using the built-in `PerformFiltering` method of the `DataOperations` class.
+Based on these Blazor Grid action details, a custom data source can be filtered using the built-in `PerformFiltering` method of the `DataOperations` class.
 
-> You can also use your own method to perform the filtering operation and bind the resultant data to the Grid.
+> You can also use your own method to perform the filtering operation and bind the resultant data to the Blazor Grid.
 
 The following sample code demonstrates how to implement the filtering operation for custom-bound data:
 
@@ -609,13 +609,13 @@ The following sample code demonstrates how to implement the filtering operation 
 
 ## Handling sorting operation
 
-When using a custom adaptor, the sorting operation must be handled by overriding the `Read` or `ReadAsync` method of the `DataAdaptor` abstract class. The `DataManagerRequest` class provides Grid action details, as shown in the image below:
+When using a custom adaptor, the sorting operation must be handled by overriding the `Read` or `ReadAsync` method of the `DataAdaptor` abstract class. The `DataManagerRequest` class provides Blazor Grid action details, as shown in the image below:
 
 ![Handling Sorting in Custom Adaptor](../images/blazor-datagrid-sorting-in-custom-adaptor.webp)
 
-Based on these Grid action details, a custom data source can be sorted using the built-in `PerformSorting` method of the `DataOperations` class.
+Based on these Blazor Grid action details, a custom data source can be sorted using the built-in `PerformSorting` method of the `DataOperations` class.
 
-N> Alternatively, you can use your own method to perform the sorting operation and bind the resultant data to the Grid.
+N> Alternatively, you can use your own method to perform the sorting operation and bind the resultant data to the Blazor Grid.
 
 The following sample code demonstrates how to implement the sorting operation for custom-bound data:
 
@@ -681,7 +681,7 @@ The following sample code demonstrates how to implement the sorting operation fo
 
 ## Handling paging operation
 
-When using a custom adaptor, the paging operation must be handled by overriding the `Read` or `ReadAsync` method of the `DataAdaptor` abstract class. The `DataManagerRequest` class provides Grid action details, including skip and take values for paging.
+When using a custom adaptor, the paging operation must be handled by overriding the `Read` or `ReadAsync` method of the `DataAdaptor` abstract class. The `DataManagerRequest` class provides Blazor Grid action details, including skip and take values for paging.
 
 ![Handling Paging in Custom Adaptor](../images/blazor-datagrid-paging-in-custom-adaptor.webp)
 
@@ -957,14 +957,14 @@ You can find the complete code in the [Github](https://github.com/SyncfusionExam
 
 ## Handling CRUD operations
 
-The CRUD operations for custom-bound data in the Blazor DataGrid can be implemented by overriding the following CRUD methods of the **DataAdaptor** abstract class:
+The CRUD operations for custom-bound data in the Blazor Data Table can be implemented by overriding the following CRUD methods of the **DataAdaptor** abstract class:
 
 * **Insert/InsertAsync**
 * **Remove/RemoveAsync**
 * **Update/UpdateAsync**
 * **BatchUpdate/BatchUpdateAsync**
 
-N> When using batch editing in the Grid, use the BatchUpdate/BatchUpdateAsync method to handle the corresponding CRUD operation.
+N> When using batch editing in the Blazor Grid, use the BatchUpdate/BatchUpdateAsync method to handle the corresponding CRUD operation.
 
 The following sample code demonstrates how to implement CRUD operations for custom-bound data:
 
@@ -1098,9 +1098,9 @@ The following sample code demonstrates how to implement CRUD operations for cust
 }
 ```
 
-The following GIF demonstrates the CRUD operations on custom-bound data in the Grid:
+The following GIF demonstrates the CRUD operations on custom-bound data in the Blazor Grid:
 
-![Editing Custom Data in Grid](../images/blazor-datagrid-editing-custom-data.webp)
+![Editing Custom Data in Blazor Grid](../images/blazor-datagrid-editing-custom-data.webp)
 
 You can find the complete code in the [Github](https://github.com/SyncfusionExamples/Binding-data-from-remote-service-to-blazor-data-grid/tree/master/CustomAdaptor).
 
@@ -1110,11 +1110,11 @@ You can find the complete code in the [Github](https://github.com/SyncfusionExam
 
 The Blazor DataGrid allows you to send custom parameters with each data request. This is particularly useful when you need to pass additional information (e.g., user role, token, or filters) to the server for enhanced processing logic.
 
-You can achieve this by using the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property of the grid along with the `AddParams` method of the `Query` class.
+You can achieve this by using the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property of the Blazor Grid along with the `AddParams` method of the `Query` class.
 
-To enable custom parameters in data requests for the Grid, follow these steps:
+To enable custom parameters in data requests for the Blazor Grid, follow these steps:
 
-1. **Bind the Query Object to the Grid:**  
+1. **Bind the Query Object to the Blazor Grid:**  
     Assign the initialized `Query` object to the DataGrid’s `Query` property.
 2. **Initialize the Query Object:**  
     Create a new instance of the `Query` class and use the `AddParams` method to add your custom parameters.

@@ -86,11 +86,11 @@ To provide a search box in the UI, add the Search item to the toolbar using the 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZVRZmtdBCeQZiQx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> The clear icon appears in the grid search box when focused or after typing a character. Selecting the clear icon removes the text and resets the search results.
+> The clear icon appears in the Blazor Grid search box when focused or after typing a character. Selecting the clear icon removes the text and resets the search results.
 
 ## Initial search
 
-By default, search is performed after the grid renders and a search action is triggered. To apply a search on initial render, configure the [GridSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html) with the following properties:
+By default, search is performed after the Blazor Grid renders and a search action is triggered. To apply a search on initial render, configure the [GridSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html) with the following properties:
 
 | Property     | Description                                                                                                                                                                                                         |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -174,7 +174,7 @@ By default, search is performed after the grid renders and a search action is tr
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNVxZwjxhWRqTDIV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> By default, the grid searches all visible columns. To limit search to specific fields, set the `Fields` property of `GridSearchSettings`.
+> By default, the Blazor Grid searches all visible columns. To limit search to specific fields, set the `Fields` property of `GridSearchSettings`.
 
 ## Search operators
 
@@ -290,13 +290,13 @@ Search operators define how the search key is compared to data values. Configure
 
 ## Search by external button
 
-The Blazor DataGrid supports programmatic search, enabling custom search triggers such as external buttons. Use the grid’s [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) method and pass the search text.
+The Blazor Grid supports programmatic search, enabling custom search triggers such as external buttons. Use the Blazor Grid’s [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) method and pass the search text.
 
 Steps:
 
-1. Render a [Button](https://blazor.syncfusion.com/documentation/button/getting-started-with-web-app) outside the grid UI.
+1. Render a [Button](https://blazor.syncfusion.com/documentation/button/getting-started-with-web-app) outside the Blazor Grid UI.
 2. Handle the button’s [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick) event.
-3. Access the grid reference.
+3. Access the Blazor Grid reference.
 4. Call `SearchAsync` with the search key.
 
 {% tabs %}
@@ -462,7 +462,7 @@ By default, the search scans all visible columns. To restrict the search to spec
 
 ## Disable search for particular column
 
-By default, the Blazor DataGrid searches across all visible columns. To exclude a column, set the column’s [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching) property to false.
+By default, the Blazor Blazor DataTable searches across all visible columns. To exclude a column, set the column’s [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching) property to false.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -538,7 +538,7 @@ N> For a broader overview, see the Blazor DataGrid feature tour and the [Blazor 
 
 ## Ignore accents in search
 
-By default, the DataGrid’s search does not treat accented and unaccented characters as equivalent. To support accent-insensitive search, set [GridSearchSettings.IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreAccent) to **true**. This improves usability when data contains diacritic characters.
+By default, the Blazor DataGrid’s search does not treat accented and unaccented characters as equivalent. To support accent-insensitive search, set [GridSearchSettings.IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreAccent) to **true**. This improves usability when data contains diacritic characters.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -720,7 +720,7 @@ The search-on-keystroke approach enables real-time results while typing in the s
 
 ## Perform search operation in Grid using multiple keywords
 
-The DataGrid can also be searched using multiple criteria. Build compound predicates with the grid’s [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property and Data query helpers (**WhereFilter**, **And/Or**) to combine conditions. This approach is particularly useful for remote data scenarios where the server executes filtering.
+The DataGrid can also be searched using multiple criteria. Build compound predicates with the Blazor Grid’s [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property and Data query helpers (**WhereFilter**, **And/Or**) to combine conditions. This approach is particularly useful for remote data scenarios where the server executes filtering.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

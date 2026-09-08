@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Blazor Grid Reactive Aggregates | Syncfusion
+title: Blazor Grid Reactive Aggregates | Syncfusion
 description: Learn how reactive aggregates in Blazor Data Grid automatically update footer, group footer, and caption summaries during batch editing.
 platform: Blazor
 control: DataGrid
@@ -13,7 +13,7 @@ The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagr
 
 ## Auto-update aggregate values in batch editing
 
-When the DataGrid is in batch editing mode, aggregate values in the footer, group footer, and group caption are refreshed each time a cell edit is saved. This ensures that summaries reflect the most recent edits.
+When the Blazor DataGrid is in batch editing mode, aggregate values in the footer, group footer, and group caption are refreshed each time a cell edit is saved. This ensures that summaries reflect the most recent edits.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -56,7 +56,7 @@ When the DataGrid is in batch editing mode, aggregate values in the footer, grou
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Coutry" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
         <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>

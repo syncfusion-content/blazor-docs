@@ -9,10 +9,10 @@ documentation: ug
 
 # Resize in Various Dimensions in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) fills its parent container. Therefore, changing the parent’s dimensions adjusts the Grid size automatically. This example shows how to resize the Grid externally using inputs and a button to modify the parent container’s width and height.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) fills its parent container. Therefore, changing the parent’s dimensions adjusts the Blazor Grid size automatically. This example shows how to resize the Blazor Grid externally using inputs and a button to modify the parent container’s width and height.
 
-> - When using `Height="100%"` for the Grid, ensure the parent container has an explicit height (pixels or a resolved flex height).
-> - Setting `Width="100%"` on the Grid ensures it follows the parent width exactly.
+> - When using `Height="100%"` for the Blazor Grid, ensure the parent container has an explicit height (pixels or a resolved flex height).
+> - Setting `Width="100%"` on the Blazor Grid ensures it follows the parent width exactly.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

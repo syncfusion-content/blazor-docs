@@ -375,7 +375,7 @@ public object GetOrderData()
 {% endhighlight %}
 {% endtabs %}
 
-> This example demonstrates a custom way of handling the `$filter` query sent by the Grid. You can also handle it using your own logic based on the query string format or use dynamic expression evaluation libraries for a more generic approach..
+> This example demonstrates a custom way of handling the `$filter` query sent by the Blazor Grid. You can also handle it using your own logic based on the query string format or use dynamic expression evaluation libraries for a more generic approach..
 
 ## Handling filtering operation
 
@@ -649,15 +649,15 @@ public object GetOrderData()
 {% endhighlight %}
 {% endtabs %}
 
->  Always calculate the total record count before applying paging. This ensures that the Grid can display the correct total number of records for pagination.
+>  Always calculate the total record count before applying paging. This ensures that the Blazor Grid can display the correct total number of records for pagination.
 
 N> If you want to handle filtering, sorting, and paging operations using Dynamic LINQ Expressions, you can refer to this [GitHub repository](https://github.com/SyncfusionExamples/blazor-datagrid-data-operations-in-wep-api-service) for an example of how to implement it dynamically.
 
 ## Handling CRUD operations
 
-To manage CRUD (Create, Read, Update, and Delete) operations using the WebApiAdaptor in Blazor DataGrid, follow the provided guide for configuring the Grid for [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) and utilize the sample implementation of the `GridController` in your server application. This controller handles HTTP requests for CRUD operations such as **GET, POST, PUT,** and **DELETE**.
+To manage CRUD (Create, Read, Update, and Delete) operations using the WebApiAdaptor in Blazor DataGrid, follow the provided guide for configuring the Blazor Grid for [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) and utilize the sample implementation of the `GridController` in your server application. This controller handles HTTP requests for CRUD operations such as **GET, POST, PUT,** and **DELETE**.
 
-To enable CRUD operations in the Grid, follow the steps below:
+To enable CRUD operations in the Blazor Grid, follow the steps below:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -680,11 +680,11 @@ To enable CRUD operations in the Grid, follow the steps below:
 {% endhighlight %}
 {% endtabs %}
 
-> Normal/Inline editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Grid. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
+> Normal/Inline editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Blazor Grid. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific Blazor Grid column, ensuring that its value is unique.
 
 **Insert operation:**
 
-To insert a new record into your Grid, you can utilize the `HttpPost` method in your server application. The details of the newly added record are passed to the **newRecord** parameter. Below is a sample implementation of inserting a record using the **GridController**: 
+To insert a new record into your Blazor Grid, you can utilize the `HttpPost` method in your server application. The details of the newly added record are passed to the **newRecord** parameter. Below is a sample implementation of inserting a record using the **GridController**: 
 
 ![Insert Record](../images/web-api-adaptor-insert.webp)
 
@@ -707,7 +707,7 @@ public void Post([FromBody] OrdersDetails newRecord)
 
 **Update operation:**
 
-Updating a record in the Grid can be achieved by utilizing the `HttpPut` method in your controller. The details of the updated record are passed to the **updatedRecord** parameter. Here's a sample implementation of updating a record:
+Updating a record in the Blazor Grid can be achieved by utilizing the `HttpPut` method in your controller. The details of the updated record are passed to the **updatedRecord** parameter. Here's a sample implementation of updating a record:
 
 ![Update Record](../images/web-api-adaptor-update.webp)
 
@@ -739,7 +739,7 @@ public void Put([FromBody] OrdersDetails updatedRecord)
 
 **Delete operation:**
 
-To delete a record from your Grid, you can use the `HttpDelete` method in your controller. The primary key value of the deleted record is passed to the **deletedRecord** parameter.Below is a sample implementation:
+To delete a record from your Blazor Grid, you can use the `HttpDelete` method in your controller. The primary key value of the deleted record is passed to the **deletedRecord** parameter.Below is a sample implementation:
 
 ![Delete Record](../images/web-api-adaptor-delete.webp)
 
