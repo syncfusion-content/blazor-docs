@@ -1,6 +1,6 @@
 @using Syncfusion.Blazor.DropDowns
 
-<SfMention TItem="int?" DataSource="@data" MentionChar="@MentionChar">
+<SfMention TItem="int?" DataSource="@data" MentionChar="@CurrencyChar">
     <TargetComponent>
         <div id="commentsMention" placeholder="Type @@ and tag amount" ></div>
     </TargetComponent>
@@ -23,7 +23,7 @@
 
 @code {
 
-    private char MentionChar { get; set; } = '$';
+    private char CurrencyChar { get; set; } = '$';
 
     List<int?> data = new List<int?>() {1000, 1500, 3000, 3250, 5000 };
 }
