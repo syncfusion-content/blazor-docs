@@ -89,7 +89,7 @@ Group findings by file, then by section/heading within each file. For each findi
 
 ### Step 4: Preview Findings and Await User Approval
 
-Before posting anything to GitHub, present all findings to the user in Code Studio for review and approval.
+Before posting anything to GitHub, present all findings to the user in CodeStudio for review and approval.
 
 Display the complete findings report in the chat using the format below, then present a **comment approval table** listing every proposed inline comment:
 
@@ -517,7 +517,7 @@ Step 2: Get file diffs to find line numbers
 → mcp_github_pull_request_read(method='get_diff', owner='syncfusion-content', repo='blazor-docs', pullNumber=123)
 → Parse diff to identify: blazor/datagrid/getting-started.md line 45 has issue, blazor/scheduler/events.md line 78 has issue
 
-Step 3: Present findings + approval table to user in Code Studio
+Step 3: Present findings + approval table to user in CodeStudio
 → Display full findings report in chat
 → Show approval table:
 
@@ -586,7 +586,7 @@ ANALYSIS PHASE (runs automatically — no GitHub calls yet)
 │
 ├─ Collect all findings and proposed inline comments
 ├─ Determine initial review action based on findings
-└─ Present findings + approval table to user in Code Studio
+└─ Present findings + approval table to user in CodeStudio
    └─ ⏸️  WAIT for user reply before any GitHub API call
 
 USER APPROVAL PHASE
@@ -672,7 +672,7 @@ A successful PR review will:
 6. Maintain a constructive and educational tone
 7. Help maintain a professional and objective tone focused on issues
 8. Help maintain documentation quality and consistency
-9. **Present all proposed inline comments to the user in Code Studio for approval before posting to GitHub**
+9. **Present all proposed inline comments to the user in CodeStudio for approval before posting to GitHub**
 10. **Post only the comments the user approved; skip comments the user rejected or marked as not needed**
 11. **Recalculate the review action (APPROVE/REQUEST_CHANGES/COMMENT) based on the approved comments only**
 12. Do NOT include any positive comments or commendations in the review

@@ -75,7 +75,7 @@ Create a configuration file in your project folder to install the server for you
 }
 
 {% endhighlight %}
-{% highlight bash tabtitle="Code Studio" %}
+{% highlight bash tabtitle="CodeStudio" %}
 
 // Create a `.codestudio/mcp.json` file in your workspace:
 

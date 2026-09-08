@@ -107,7 +107,7 @@ Create a `.cursor/mcp.json` file in your workspace with the MCP server configura
 }
 
 {% endhighlight %}
-{% highlight bash tabtitle="Code Studio" %}
+{% highlight bash tabtitle="CodeStudio" %}
 
 // Create a `.codestudio/mcp.json` file in your workspace with the MCP server configuration:
 
