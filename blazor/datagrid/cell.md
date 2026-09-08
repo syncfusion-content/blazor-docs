@@ -1128,7 +1128,7 @@ public class OrderData
 
 ## Grid lines
 
-The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property in the Blazor Data GridView defines the visibility of **horizontal** and **vertical** lines between cells to improve readability.
+The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property in the Blazor DataGrid defines the visibility of **horizontal** and **vertical** lines between cells to improve readability.
 
 Set the `GridLines` property to one of the following values:
 

@@ -481,7 +481,7 @@ To use only the **DataAnnotationsValidator** component and disable the internal 
 
 The Blazor DataGrid supports form validation for fields that are not defined as columns. The [Validator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Validator) property can be used to display a validation message for such fields within the [dialog template](https://blazor.syncfusion.com/documentation/datagrid/template-editing#dialog-template-editing).
 
-In this configuration, the validation message for **ShipAddress** is displayed in the dialog template, although the **ShipAddress** field is not defined as a Blazor Data GridView column.
+In this configuration, the validation message for **ShipAddress** is displayed in the dialog template, although the **ShipAddress** field is not defined as a Blazor Data Grid column.
 
 > Validation messages for fields not defined in the Blazor Grid columns will appear as a validation summary at the top of the dialog edit form.
 

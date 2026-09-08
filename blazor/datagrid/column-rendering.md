@@ -92,7 +92,7 @@ To define columns manually in Blazor DataGrid, use [GridColumn](https://help.syn
 
 ## Auto generated columns
 
-The Blazor Grid automatically generates columns when the `Columns` collection is not defined during Grid initialization. All properties in the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) are rendered as Blazor Blazor Grid columns.
+The Blazor DataGrid automatically generates columns when the `Columns` collection is not defined during the Blazor Grid initialization. All properties in the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) are rendered as Blazor Grid columns.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

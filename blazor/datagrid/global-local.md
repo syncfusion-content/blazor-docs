@@ -9,7 +9,7 @@ documentation: ug
 
 # Localization and Globalization in Blazor Data Grid
 
-The [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports globalization to make applications accessible across regions and languages. Content can be displayed in the preferred culture with localized texts and culture-aware formats for a better user experience.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports globalization to make applications accessible across regions and languages. Content can be displayed in the preferred culture with localized texts and culture-aware formats for a better user experience.
 
 ## Localization
 
@@ -18,7 +18,7 @@ The Blazor DataGrid supports localization of static text elements, such as **gro
 - Apply localization to replace default UI text with culture-specific translations.
 - Configure localization by referring to the [Blazor Localization Documentation](https://blazor.syncfusion.com/documentation/common/localization).
 
-A subset of localizable strings used by the Blazor DataGrid is listed for reference.
+A subset of localizable strings used by the Blazor Grid is listed for reference.
 
 **Data Rendering**
 

@@ -96,7 +96,7 @@ public class OrderData
 
 ## Disable column menu for specific column
 
-The Blazor Grid provides the ability to prevent the column menu from appearing for specific columns. This is useful when certain columns should not be customizable through the column menu.
+The Blazor DataGrid provides the ability to prevent the column menu from appearing for specific columns. This is useful when certain columns should not be customizable through the column menu.
 
 To disable the column menu for a specific column, set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Excel Export Options in Blazor Data Grid
 
-The [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) allows customization of Excel and CSV export functionality. This flexibility enables precise control over the exported content and layout to meet specific requirements.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) allows customization of Excel and CSV export functionality. This flexibility enables precise control over the exported content and layout to meet specific requirements.
 
 The export behavior can be customized using the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) property. This property supports various options, including:
 
@@ -1647,7 +1647,7 @@ public class OrderData
 
 ## Exporting Grid Data as Stream
 
-The Blazor DataGrid supports exporting Blazor Grid data as a memory stream, enabling programmatic handling before saving or processing. This includes exporting Blazor Grid data as a memory stream, merging multiple memory streams, and converting the memory stream to a file stream for download.
+The Blazor DataGrid supports exporting Blazor DataGrid data as a memory stream, enabling programmatic handling before saving or processing. This includes exporting Blazor Grid data as a memory stream, merging multiple memory streams, and converting the memory stream to a file stream for download.
 
 ### Exporting Grid Data as Memory Stream
 

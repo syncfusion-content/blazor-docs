@@ -9,7 +9,7 @@ documentation: ug
 
 # Columns in Blazor Data Grid
 
-Columns are the core structural elements in the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid).
+Columns are the core structural elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid).
 Each column defines:
 
 * The data field to display.

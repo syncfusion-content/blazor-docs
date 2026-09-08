@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Data Grid Accessibility | Syncfusion
+title: Blazor Grid Accessibility | Syncfusion
 description: Learn how Blazor Data Grid supports accessibility with WCAG 2.2 compliance, Section 508 support, ARIA attributes, keyboard navigation, and screen readers.
 platform: Blazor
 control: DataGrid
@@ -109,8 +109,8 @@ The supported keyboard shortcuts are listed below.
 |-----------------------------------|---------------------------------------------|------------------------------------------------------------|
 | <kbd>Home</kbd>                   | <kbd>Fn</kbd> + <kbd>←</kbd>                | Move focus to the first cell of the focused row.           |
 | <kbd>End</kbd>                    | <kbd>Fn</kbd> + <kbd>→</kbd>                | Move focus to the last cell of the focused row.            |
-| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>←</kbd> | Move focus to the first cell of the first row in the Blazor Data Grid. |
-| <kbd>Ctrl</kbd> + <kbd>End</kbd>  | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>→</kbd> | Move focus to the last cell of the last row in the Blazor Data Grid.   |
+| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>←</kbd> | Move focus to the first cell of the first row in the Blazor DataTable. |
+| <kbd>Ctrl</kbd> + <kbd>End</kbd>  | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>→</kbd> | Move focus to the last cell of the last row in the Blazor DataTable.   |
 | <kbd>↑</kbd>                      | <kbd>↑</kbd>                                | Move the cell focus up from the focused cell.              |
 | <kbd>↓</kbd>                      | <kbd>↓</kbd>                                | Move the cell focus down from the focused cell.            |
 | <kbd>→</kbd>                      | <kbd>→</kbd>                                | Move the cell focus right from the focused cell.           |
@@ -203,7 +203,7 @@ For example:
 
 ## Ensuring accessibility
 
-The Blazor Data Grid is validated for accessibility using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) integrated with Playwright tests.
+The Blazor DataGrid is validated for accessibility using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) integrated with Playwright tests.
 Accessibility compliance can be evaluated using the interactive [sample](https://blazor.syncfusion.com/accessibility/datagrid), which demonstrates the Blazor Data Grid's behavior with accessibility tools and validation steps.
 
 ## See also

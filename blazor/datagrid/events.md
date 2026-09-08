@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Data Grid
 
-This section lists the events available in the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and when they are triggered for various Blazor Grid actions.
+This section lists the events available in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and when they are triggered for various Blazor Grid actions.
 
 Events are assigned to the Blazor DataGrid by using a single **GridEvents** component. When configuring Blazor Grid events, specify the generic type via the **TValue** parameter to match the Grid’s data model.
 

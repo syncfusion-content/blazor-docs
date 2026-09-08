@@ -501,15 +501,15 @@ Please find the sample in this [GitHub location](https://github.com/SyncfusionEx
 
 > When binding the Grid DataSource dynamically as a list of IEnumerable collections, call the [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Refresh_System_Boolean_) method of the Grid to reflect changes externally. This avoids tracking changes made externally to IEnumerable items for performance considerations.
 
-### DataGrid binding
+### DataTable binding
 
-The Blazor DataGrid supports binding data from a `System.Data.DataGrid` using a custom adaptor, enabling dynamic generation of rows and columns based on backend data. This approach is useful for scenarios where data is retrieved or processed in a DataGrid format, and it provides full support for built-in data operations like paging, filtering, sorting, and searching. 
+The Blazor DataGrid supports binding data from a `System.Data.DataTable` using a custom adaptor, enabling dynamic generation of rows and columns based on backend data. This approach is useful for scenarios where data is retrieved or processed in a DataTable format, and it provides full support for built-in data operations like paging, filtering, sorting, and searching. 
 
-To bind a **DataGrid** to Grid, set `TValue` to **ExpandoObject**, convert it into an **IQueryable&lt;ExpandoObject&gt;** collection, and supply it through a custom adaptor that extends DataAdaptor.
+To bind a **DataTable** to Grid, set `TValue` to **ExpandoObject**, convert it into an **IQueryable&lt;ExpandoObject&gt;** collection, and supply it through a custom adaptor that extends DataAdaptor.
 
-**Steps to bind DataGrid to Grid:**
+**Steps to bind DataTable to Grid:**
 
-* Create a **DataGrid** and populate it with data.
+* Create a **DataTable** and populate it with data.
 
 * Convert it to a list of **ExpandoObject** using a helper method.
 
@@ -517,9 +517,9 @@ To bind a **DataGrid** to Grid, set `TValue` to **ExpandoObject**, convert it in
 
 * Override the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) method to handle data fetching and operations.
 
-In the example, the **DataGrid** is passed to the **ToQueryableCollection** method, which converts the **DataGrid** data source into an **IQueryable** collection data source.
+In the example, the **DataTable** is passed to the **ToQueryableCollection** method, which converts the **DataTable** data source into an **IQueryable** collection data source.
 
-Perform data operations like searching, sorting, and filtering using the **PerformDataOperation** method. This method takes a **DataGrid** and a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object as parameters, processes the data operations, and returns an **IQueryable** data source.
+Perform data operations like searching, sorting, and filtering using the **PerformDataOperation** method. This method takes a **DataTable** and a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object as parameters, processes the data operations, and returns an **IQueryable** data source.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -543,7 +543,7 @@ Perform data operations like searching, sorting, and filtering using the **Perfo
 
 @code {
 
-    private static DataGrid? ordersTable;
+    private static DataTable? ordersTable;
     private static IQueryable? dataSource;
 
     protected override void OnInitialized()
@@ -552,9 +552,9 @@ Perform data operations like searching, sorting, and filtering using the **Perfo
         dataSource = ToQueryableCollection(ordersTable);
     }
 
-    private static DataGrid GetData()
+    private static DataTable GetData()
     {
-        var table = new DataGrid();
+        var table = new DataTable();
         table.Columns.AddRange(new DataColumn[]
         {
             new DataColumn("OrderID", typeof(long)),
@@ -580,7 +580,7 @@ Perform data operations like searching, sorting, and filtering using the **Perfo
         return table;
     }
 
-    private static IQueryable ToQueryableCollection(DataGrid table)
+    private static IQueryable ToQueryableCollection(DataTable table)
     {
         var expandoList = new List<ExpandoObject>();
 
@@ -599,7 +599,7 @@ Perform data operations like searching, sorting, and filtering using the **Perfo
         return expandoList.AsQueryable();
     }
 
-    private static IQueryable PerformDataOperation(DataGrid table, DataManagerRequest request)
+    private static IQueryable PerformDataOperation(DataTable table, DataManagerRequest request)
     {
         dataSource = ToQueryableCollection(table);
 
@@ -646,9 +646,9 @@ Perform data operations like searching, sorting, and filtering using the **Perfo
 {% endhighlight %}
 {% endtabs %}
 
-**Grouping and Aggregates with DataGrid:**
+**Grouping and Aggregates with DataTable:**
 
-The Blazor DataGrid supports dynamic **grouping** and **aggregates** even when bound to a `DataGrid` via a custom adaptor. This allows grouping of rows by one or more columns and application of aggregate functions (such as **Sum**, **Average**, **Count**, etc.) on those groups or entire datasets.
+The Blazor DataGrid supports dynamic **grouping** and **aggregates** even when bound to a `DataTable` via a custom adaptor. This allows grouping of rows by one or more columns and application of aggregate functions (such as **Sum**, **Average**, **Count**, etc.) on those groups or entire datasets.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -690,7 +690,7 @@ The Blazor DataGrid supports dynamic **grouping** and **aggregates** even when b
 </SfGrid>
 
 @code {
-    private static DataGrid? ordersTable;
+    private static DataTable? ordersTable;
     private static IQueryable? dataSource;
 
     protected override void OnInitialized()
@@ -699,9 +699,9 @@ The Blazor DataGrid supports dynamic **grouping** and **aggregates** even when b
         dataSource = ToQueryableCollection(ordersTable);
     }
 
-    private static DataGrid GetData()
+    private static DataTable GetData()
     {
-        var table = new DataGrid();
+        var table = new DataTable();
         table.Columns.AddRange(new DataColumn[]
         {
             new DataColumn("OrderID", typeof(long)),
@@ -728,7 +728,7 @@ The Blazor DataGrid supports dynamic **grouping** and **aggregates** even when b
         return table;
     }
 
-    private static IQueryable ToQueryableCollection(DataGrid table)
+    private static IQueryable ToQueryableCollection(DataTable table)
     {
         var expandoList = new List<ExpandoObject>();
 
@@ -793,17 +793,17 @@ The Blazor DataGrid supports dynamic **grouping** and **aggregates** even when b
 {% endhighlight %}
 {% endtabs %}
 
-**DataGrid with CRUD operations**
+**DataTable with CRUD operations**
 
-The Blazor DataGrid supports CRUD (Create, Read, Update, and Delete) operations with a DataGrid using a custom adaptor. Enable editing in the Grid and override specific methods of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) base class to update **DataGrid** in memory.
+The Blazor DataGrid supports CRUD (Create, Read, Update, and Delete) operations with a DataTable using a custom adaptor. Enable editing in the Grid and override specific methods of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) base class to update **DataTable** in memory.
 
 **The supported methods are:**
 
-* [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Insert_Syncfusion_Blazor_DataManager_System_Object_System_String_) / [InsertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_) – Adds a new record to the **DataGrid**.
+* [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Insert_Syncfusion_Blazor_DataManager_System_Object_System_String_) / [InsertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_) – Adds a new record to the **DataTable**.
 
 * [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Update_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) / [UpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) – Updates an existing record.
 
-* [Remove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Remove_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) / [RemoveAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) – Removes a record from the **DataGrid**.
+* [Remove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Remove_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) / [RemoveAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) – Removes a record from the **DataTable**.
 
 * [BatchUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdate_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) / [BatchUpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) – Handles batch operations like add, update, and delete in a single transaction (used for Batch Editing).
 
@@ -835,7 +835,7 @@ When using batch editing in the Grid, use the `BatchUpdate`/`BatchUpdateAsync` m
 </SfGrid>
 
 @code {
-    private static DataGrid? ordersTable;
+    private static DataTable? ordersTable;
     private static IQueryable? dataSource;
 
     protected override void OnInitialized()
@@ -844,7 +844,7 @@ When using batch editing in the Grid, use the `BatchUpdate`/`BatchUpdateAsync` m
         dataSource = ToQueryableCollection(ordersTable);
     }
 
-    private static IQueryable ToQueryableCollection(DataGrid table)
+    private static IQueryable ToQueryableCollection(DataTable table)
     {
         var expandoList = new List<ExpandoObject>();
 
@@ -863,9 +863,9 @@ When using batch editing in the Grid, use the `BatchUpdate`/`BatchUpdateAsync` m
         return expandoList.AsQueryable();
     }
 
-    private static DataGrid GetData()
+    private static DataTable GetData()
     {
-        var table = new DataGrid();
+        var table = new DataTable();
         table.Columns.AddRange(new DataColumn[]
         {
             new DataColumn("OrderID", typeof(long)),
@@ -1020,7 +1020,7 @@ When using batch editing in the Grid, use the `BatchUpdate`/`BatchUpdateAsync` m
 {% endhighlight %}
 {% endtabs %}
 
-Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/DataGrid).
+Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/DataTable).
 
 ## Managing spinner visibility during data loading
 
@@ -1487,7 +1487,7 @@ To import Excel data into Grid:
     private string[]? columns;
     private List<ExpandoObject> customerList = new();
     private string dialogContent = string.Empty;
-    private DataGrid table = new();
+    private DataTable table = new();
 
     [Inject] private IWebHostEnvironment? HostEnvironment { get; set; }
 
@@ -1509,7 +1509,7 @@ To import Excel data into Grid:
 
                 var workbook = application.Workbooks.Open(fileStream);
                 var worksheet = workbook.Worksheets[0];
-                table = worksheet.ExportDataGrid(worksheet.UsedRange, ExcelExportDataGridOptions.ColumnNames);
+                table = worksheet.ExportDataTable(worksheet.UsedRange, ExcelExportDataTableOptions.ColumnNames);
 
                 await GenerateListFromTable(table);
             }
@@ -1533,7 +1533,7 @@ To import Excel data into Grid:
         return Path.Combine(HostEnvironment!.WebRootPath, filename);
     }
 
-    private async Task GenerateListFromTable(DataGrid input)
+    private async Task GenerateListFromTable(DataTable input)
     {
         bool hasData = input.Rows.Cast<DataRow>()
             .Any(row => row.ItemArray.Any(cell => cell != null && !string.IsNullOrWhiteSpace(cell.ToString())));

@@ -15,7 +15,7 @@ For customized rendering, use aggregate templates and access values via Aggregat
 
 **Displaying aggregate values**
 
-By default, aggregate values can be shown in the footer, group footer, and group caption cells of the Blazor DataGrid. Control where and how the values are displayed using these properties:
+By default, aggregate values can be shown in the footer, group footer, and group caption cells. Control where and how the values are displayed using these properties:
 
 * [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate): Display and format the aggregate value in the footer cell with a custom template.
 * [GroupFooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupFooterTemplate): Display and format the aggregate value in the group footer cell with a custom template.

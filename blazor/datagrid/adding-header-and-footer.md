@@ -169,7 +169,7 @@ public class OrderData
 
 ## Draw a line in header and footer
 
-The Blazor Data Grid supports drawing lines in header and footer regions when exporting to PDF. **Lines** are commonly used to visually separate these regions from the main content.
+The Blazor DataGrid supports drawing lines in header and footer regions when exporting to PDF. **Lines** are commonly used to visually separate these regions from the main content.
 
 **Supported Line Styles**
 
