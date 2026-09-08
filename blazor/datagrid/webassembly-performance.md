@@ -15,14 +15,14 @@ N> Refer to Getting Started for configuration details: [Blazor Server DataGrid](
 
 ## Avoid unnecessary component renders
 
-During the Blazor diffing process, each DataGrid cell and child component is evaluated for re-rendering. `Event callbacks` can trigger additional renders across the component tree. Fine-grained control over DataGrid rendering helps avoid unnecessary work.
+During the Blazor diffing process, each Blazor DataGrid cell and child component is evaluated for re-rendering. `Event callbacks` can trigger additional renders across the component tree. Fine-grained control over Blazor DataGrid rendering helps avoid unnecessary work.
 
-Use [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PreventRender_System_Boolean_) on the DataGrid instance to skip participation in the next render cycle. This method internally affects the DataGrid’s [ShouldRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShouldRender) behavior.
+Use [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PreventRender_System_Boolean_) on the Blazor DataGrid instance to skip participation in the next render cycle. This method internally affects the DataGrid’s [ShouldRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShouldRender) behavior.
 
 In the following example:
 
 - PreventRender is called in a click callback.
-- The DataGrid is excluded from the render cycle caused by the click, and only currentCount updates.
+- The Blazor DataGrid is excluded from the render cycle caused by the click, and only currentCount updates.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -110,16 +110,16 @@ public class OrderData
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtrntmNHrYKBrMhu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > - `PreventRender` accepts a Boolean argument to disable (**true**) or enable (**false**) participation in rendering.
-> - Call `PreventRender` only after the DataGrid completes its initial render; calling during initial render has no effect.
+> - Call `PreventRender` only after the Blazor DataGrid completes its initial render; calling during initial render has no effect.
 
 ## Avoid unnecessary component renders after Blazor DataGrid events
 
-When callback methods are assigned to DataGrid events, the parent component re-renders once the event completes. To prevent re-rendering of the DataGrid in that cycle, set the [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowSelectEventArgs-1.html#Syncfusion_Blazor_Grids_RowSelectEventArgs_1_PreventRender) property on the corresponding event args to true (when available).
+When callback methods are assigned to Blazor DataGrid events, the parent component re-renders once the event completes. To prevent re-rendering of the Blazor DataGrid in that cycle, set the [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowSelectEventArgs-1.html#Syncfusion_Blazor_Grids_RowSelectEventArgs_1_PreventRender) property on the corresponding event args to true (when available).
 
 In the following example:
 
 - [RowSelected](https://blazor.syncfusion.com/documentation/datagrid/events#rowselected) invokes a callback that would normally trigger `StateHasChanged` in the parent.
-- Setting `RowSelectEventArgs<Order>.PreventRender` to **true** prevents the DataGrid from participating in that re-render.
+- Setting `RowSelectEventArgs<Order>.PreventRender` to **true** prevents the Blazor DataGrid from participating in that re-render.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -154,7 +154,7 @@ In the following example:
 
     private void OnRowSelected(RowSelectEventArgs<OrderData> args)
     {
-        args.PreventRender = true; //Without this, you may see noticeable delay in selection with rows in Grid.
+        args.PreventRender = true; //Without this, you may see noticeable delay in selection with rows in Blazor Grid.
         SelectedOrder = args.Data;
     }
 }
@@ -206,10 +206,10 @@ public class OrderData
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLRDGNxBEqcogXh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > - `args.PreventRender` affects rendering only for the event-triggered cycle and does not change component state beyond that cycle.
-> - Prefer setting `PreventRender` to **true** for user-interactive events (for example, [RowSelected](https://blazor.syncfusion.com/documentation/datagrid/events#rowselected), [RowSelecting](https://blazor.syncfusion.com/documentation/datagrid/events#rowselecting)) to reduce UI latency. For events without args (for example, [DataBound](https://blazor.syncfusion.com/documentation/datagrid/events#databound)), call the grid’s `PreventRender` method.
+> - Prefer setting `PreventRender` to **true** for user-interactive events (for example, [RowSelected](https://blazor.syncfusion.com/documentation/datagrid/events#rowselected), [RowSelecting](https://blazor.syncfusion.com/documentation/datagrid/events#rowselecting)) to reduce UI latency. For events without args (for example, [DataBound](https://blazor.syncfusion.com/documentation/datagrid/events#databound)), call the Blazor Grid’s `PreventRender` method.
 
 ## Use paging or virtualization to load only visible rows
 
-The DataGrid renders each row and cell as a component. Rendering a large number of elements can impact memory and CPU. Load only what is visible using [Paging](./paging) or [Virtualization](./virtualization). Keep page sizes reasonable to avoid reintroducing performance bottlenecks even with these features enabled.
+The Blazor DataGrid renders each row and cell as a component. Rendering a large number of elements can impact memory and CPU. Load only what is visible using [Paging](./paging) or [Virtualization](./virtualization). Keep page sizes reasonable to avoid reintroducing performance bottlenecks even with these features enabled.
 
 N> Even with paging or virtualization, very large page sizes can still cause performance issues. Choose sizes that balance usability and responsiveness.

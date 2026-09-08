@@ -9,11 +9,11 @@ documentation: ug
 
 # Selection in Blazor Data Grid
 
-Selection in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables interactive selection of specific cells and rows. Selection can be performed using mouse clicks, arrow keys (up, down, left, right), or touch gestures. This feature is useful for highlighting, manipulating, or executing actions on targeted Grid elements.
+Selection in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables interactive selection of specific cells and rows. Selection can be performed using mouse clicks, arrow keys (up, down, left, right), or touch gestures. This feature is useful for highlighting, manipulating, or executing actions on targeted Blazor Grid elements.
 
 To disable selection, set the  [AllowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSelection) property to **false**.
 
-The Grid supports two types of selection, configurable via the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property:
+The Blazor Grid supports two types of selection, configurable via the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property:
 
 * **Single** - Allows selection of a single row or cell(default).
 * **Multiple** - Allows selection of multiple rows or cells.
@@ -116,8 +116,8 @@ public class OrderDetails
 
 ## Selection mode
 
-The selection mode feature in the Blazor DataGrid enables configuration of how rows, cells, or both are selected within the Grid. This functionality is useful for highlighting and manipulating specific Grid elements based on application requirements.
-To configure selection mode, set the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property. The Grid supports the following selection modes:
+The selection mode feature in the Blazor DataGrid enables configuration of how rows, cells, or both are selected within the Blazor Grid. This functionality is useful for highlighting and manipulating specific Blazor Grid elements based on application requirements.
+To configure selection mode, set the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property. The Blazor Grid supports the following selection modes:
 
 * **Row** - Enables selection of rows only. (Default)
 * **Cell** - Enables selection of cells only.
@@ -544,7 +544,7 @@ public class OrderDetails
 
 The Blazor DataGrid provides a method to programmatically clear selected rows or cells. This feature is useful when resetting selection states based on user actions or custom logic.
 
-To clear selection in the Grid, use the [ClearSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSelectionAsync) method.
+To clear selection in the Blazor Grid, use the [ClearSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSelectionAsync) method.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -635,11 +635,11 @@ public class OrderDetails
 
 ## Persist selection
 
-The Blazor DataGrid supports persist selection, allowing selected rows to remain selected even after data operations or Grid refreshes. This feature is useful for maintaining selection state across various interactions.
+The Blazor DataGrid supports persist selection, allowing selected rows to remain selected even after data operations or Blazor Grid refreshes. This feature is useful for maintaining selection state across various interactions.
 
 To enable persist selection, set the [GridSelectionSettings.PersistSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_PersistSelection) property to **true**.
 
-> * When using persist selection, ensure that at least one column in the Grid is configured as a primary key. This allows the Grid to correctly identify and retain selected items.
+> * When using persist selection, ensure that at least one column in the Blazor DataGrid is configured as a primary key. This allows the Blazor Grid to correctly identify and retain selected items.
 > * The `PersistSelection` feature is not supported for cell selections.
 > * `PersistSelection` is only applicable when the selection Type is set to `Multiple`.
 

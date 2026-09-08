@@ -34,8 +34,8 @@ Ensure the following software and packages are installed before proceeding:
 | Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
 | .NET SDK | net9.0 or later | Runtime and build tools |
 | Microsoft.AspNetCore.SignalR.Client | 9.0.0 or later | SignalR client library for Blazor |
-| Syncfusion.Blazor.Grid | {{site.blazorversion}} | DataGrid component |
-| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for DataGrid |
+| Syncfusion.Blazor.Grid | {{site.blazorversion}} | Blazor DataGrid component |
+| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for Blazor DataGrid |
 
 ## Setting Up SignalR with Real-Time Data
 
@@ -247,7 +247,7 @@ public class StockDataService
 
 **Explanation:**
 - `InitializeStocks()`: Populates the in-memory collection with diversified stock data from multiple sectors.
-- `GetAllStocks()`: Returns all stocks sorted by symbol for consistent ordering in the DataGrid.
+- `GetAllStocks()`: Returns all stocks sorted by symbol for consistent ordering in the Blazor DataGrid.
 - `UpdateStockPrices()`: Simulates real-time market changes with random price fluctuations between -2% and +2%.
 
 The data service is now ready to provide real-time stock data.
@@ -456,7 +456,7 @@ builder.Services.AddSyncfusionBlazor();
 // StockDataService: Manages in-memory stock data (Singleton for shared state)
 builder.Services.AddSingleton<StockDataService>();
 
-// StockAdaptor: Custom adaptor for DataGrid operations (Scoped per request)
+// StockAdaptor: Custom adaptor for Blazor DataGrid operations (Scoped per request)
 builder.Services.AddScoped<StockAdaptor>();
 
 // Add SignalR for real-time communication
@@ -508,7 +508,7 @@ Service registration is now complete.
 
 ### Step 1: Install and Configure Blazor DataGrid Components
 
-Syncfusion is a library that provides pre-built UI components like DataGrid, which is used to display data in a table format.
+Syncfusion is a library that provides pre-built UI components like Blazor DataGrid, which is used to display data in a table format.
 
 **Instructions:**
 
@@ -534,11 +534,11 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 
 For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Blazor components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
+Blazor components are now configured and ready to use. For additional guidance, refer to the Blazor Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
 ### Step 2: Update the Blazor DataGrid
 
-The `Home.razor` component displays the stock market data in a DataGrid and establishes a SignalR connection for real-time updates.
+The `Home.razor` component displays the stock market data in a Blazor DataGrid and establishes a SignalR connection for real-time updates.
 
 **Instructions:**
 
@@ -583,13 +583,13 @@ The `Home.razor` component displays the stock market data in a DataGrid and esta
 - **`@implements IAsyncDisposable`**: Implements the async disposal pattern to clean up resources.
 - **`HubConnection`**: Manages the SignalR connection to the server.
 - **Connection Status Indicator**: Displays the current connection state (Connected, Connecting, Disconnected).
-- **DataGrid Integration**: Uses the `StockAdaptor` to retrieve and display data.
-- **Real-Time Updates**: Receives "ReceiveStockUpdate" messages from the server and refreshes the grid.
+- **Blazor DataGrid Integration**: Uses the `StockAdaptor` to retrieve and display data.
+- **Real-Time Updates**: Receives "ReceiveStockUpdate" messages from the server and refreshes the Blazor Grid.
 - **Automatic Reconnection**: Implements exponential back off retry logic for network resilience.
 
 ### Step 3: Create the CustomAdaptor for SignalR
 
-The CustomAdaptor bridges the DataGrid with SignalR by implementing the DataAdaptor interface. It handles data retrieval, searching, filtering, and sorting operations required by the DataGrid.
+The CustomAdaptor bridges the Blazor DataGrid with SignalR by implementing the DataAdaptor interface. It handles data retrieval, searching, filtering, and sorting operations required by the Blazor Grid.
 
 **Instructions:**
 
@@ -605,7 +605,7 @@ using Syncfusion.Blazor.Data;
 namespace Grid_SignalR.Services;
 
 /// <summary>
-/// Custom adaptor for DataGrid that handles data operations for real-time stock data.
+/// Custom adaptor for Blazor DataGrid that handles data operations for real-time stock data.
 /// Implements reading, searching, filtering, and sorting operations.
 /// </summary>
 public class StockAdaptor : DataAdaptor
@@ -618,7 +618,7 @@ public class StockAdaptor : DataAdaptor
     }
 
     /// <summary>
-    /// Handles data retrieval and processing for the DataGrid.
+    /// Handles data retrieval and processing for the Blazor DataGrid.
     /// This method applies search, filter, sort, and paging operations.
     /// </summary>
     /// <param name="dataManagerRequest">Contains information about requested operations (search, filter, sort, page).</param>
@@ -673,14 +673,14 @@ public class StockAdaptor : DataAdaptor
 ```
 
 **Explanation:**
-- **ReadAsync**: Core method called by the DataGrid to retrieve and process data.
+- **ReadAsync**: Core method called by the Blazor DataGrid to retrieve and process data.
 - **Data Operations**: Uses `DataOperations` static methods to apply transformations:
   - `PerformSearching`: Filters data based on search keywords across all searchable columns.
   - `PerformFiltering`: Applies column-based filter conditions.
   - `PerformSorting`: Sorts data by specified columns and directions.
   - `PerformSkip/Take`: Handles pagination by skipping and taking records.
 
-The adaptor is now ready to provide data operations for the DataGrid.
+The adaptor is now ready to provide data operations for the Blazor DataGrid.
 
 ### Step 4: Establish SignalR Connection
 
@@ -781,9 +781,9 @@ code {
 **Explanation:**
 - **`hubConnection.On<List<Stock>>()`**: Registers a handler for a specific message type from the server.
 - **`"ReceiveStockUpdate"`**: The server sends this message periodically (every 1 second from `StockUpdateBackgroundService`) to broadcast updated stock data to all connected clients.
-  - When received, `RefreshGrid()` is called to update the DataGrid with the latest prices.
+  - When received, `RefreshGrid()` is called to update the Blazor DataGrid with the latest prices.
 - **`"InitializeStocks"`**: The server sends this message when a client first connects (from `OnConnectedAsync()` in `StockHub`) and when a client subscribes (from `SubscribeToStocks()` in `StockHub`).
-  - When received, the DataGrid is initialized with the current stock data.
+  - When received, the Blazor DataGrid is initialized with the current stock data.
 
 **Why two handlers?**
 - `InitializeStocks`: Used for initial data load and manual refresh operations.
@@ -793,9 +793,9 @@ code {
 ```
 Timeline:
 t=0ms:   Client connects → Server calls OnConnectedAsync() → Sends "InitializeStocks" message
-t=10ms:  Client receives "InitializeStocks" → Calls RefreshGrid() → Grid displays initial data
+t=10ms:  Client receives "InitializeStocks" → Calls RefreshGrid() → Blazor Grid displays initial data
 t=1000ms: Background service updates prices → Sends "ReceiveStockUpdate" to all clients
-t=1005ms: Client receives "ReceiveStockUpdate" → Calls RefreshGrid() → Grid displays updated prices
+t=1005ms: Client receives "ReceiveStockUpdate" → Calls RefreshGrid() → Blazor Grid displays updated prices
 t=2000ms: Background service updates prices again → Sends "ReceiveStockUpdate" to all clients
 ... (repeats every second)
 ```
@@ -961,7 +961,7 @@ Here's the complete lifecycle of SignalR communication from component initializa
 ├─────────────────────────────────────────────────────────────────────┤
 │   - Client receives InitializeStocks message                        │
 │   - Handler calls RefreshGrid()                                     │
-│   - Grid displays initial stock data                                │
+│   - Blazor Grid displays initial stock data                                │
 └─────────────────────────────────────────────────────────────────────┘
                                    ↓
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -971,7 +971,7 @@ Here's the complete lifecycle of SignalR communication from component initializa
 │   - Service sends ReceiveStockUpdate to "StockTraders" group        │
 │   - All connected clients receive ReceiveStockUpdate message        │
 │   - Each client's handler calls RefreshGrid()                       │
-│   - Grid refreshes with latest prices                               │
+│   - Blazor Grid refreshes with latest prices                               │
 │   - Visual indicators (green/red) show price changes                │
 └─────────────────────────────────────────────────────────────────────┘
                                    ↓
@@ -1093,7 +1093,7 @@ Styling is now applied for enhanced visual feedback.
 ├─────────────────────────────────────────────────────────────┤
 │  1. Receives "ReceiveStockUpdate" message                   │
 │  2. Calls RefreshGrid()                                     │
-│  3. Grid refreshes via StockAdaptor.ReadAsync()             │
+│  3. Blazor Grid refreshes via StockAdaptor.ReadAsync()             │
 │  4. New data displayed with updated prices                  │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -1104,7 +1104,7 @@ Styling is now applied for enhanced visual feedback.
 1. Background service updates stock prices every 1 second
 2. Calls `hubContext.Clients.Group("StockTraders").SendAsync("ReceiveStockUpdate", stocks)`
 3. All connected clients receive the update message
-4. DataGrid automatically refreshes with new data
+4. Blazor DataGrid automatically refreshes with new data
 
 **Client-to-Server (Subscription):**
 1. Client establishes connection: `await hubConnection.StartAsync()`
@@ -1304,8 +1304,8 @@ This strategy prevents overwhelming the server during network issues.
     }
 
     /// <summary>
-    /// Refreshes the DataGrid by calling its Refresh method.
-    /// This forces the DataGrid to re-fetch data and re-render.
+    /// Refreshes the Blazor DataGrid by calling its Refresh method.
+    /// This forces the Blazor DataGrid to re-fetch data and re-render.
     /// </summary>
     private async Task RefreshGrid()
     {
@@ -1361,7 +1361,7 @@ info: Grid_SignalR.Services.StockUpdateBackgroundService[0]
 1. Open a web browser.
 2. Navigate to `https://localhost:7018` (or the port shown in the terminal).
 3. The application will show:
-   - A DataGrid with stock data
+   - A Blazor DataGrid with stock data
    - Prices updating every second in real-time
 
 ---
@@ -1393,7 +1393,7 @@ This guide demonstrates how to:
 2. Implement a data service to manage in-memory stock data. [🔗](#step-3-create-the-data-service)
 3. Build a SignalR Hub for server-client communication. [🔗](#step-4-create-the-signalr-hub)
 4. Create a background service for continuous updates. [🔗](#step-5-create-the-background-service)
-5. Develop a CustomAdaptor for DataGrid operations. [🔗](#step-3-create-the-customadaptor-for-signalr)
+5. Develop a CustomAdaptor for Blazor DataGrid operations. [🔗](#step-3-create-the-customadaptor-for-signalr)
 6. Register services in the application configuration. [🔗](#step-6-register-services-in-programcs)
 7. Build a Blazor component with real-time data binding. [🔗](#step-2-create-the-blazor-component-with-signalr-integration)
 8. Implement bidirectional SignalR communication. [🔗](#how-signalr-real-time-updates-work)

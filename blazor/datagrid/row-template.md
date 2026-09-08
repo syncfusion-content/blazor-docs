@@ -11,13 +11,13 @@ documentation: ug
 
 The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_RowTemplate) feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables complete control over the appearance and layout of each row. It is useful for displaying rich, composite content—such as images, buttons, and interactive controls—instead of plain text.
 
-To enable and configure the `RowTemplate` feature in the Grid, follow these steps:
+To enable and configure the `RowTemplate` feature in the Blazor Grid, follow these steps:
 
 1. **Set up the row template:** Define a custom row layout using the `RowTemplate`.
-2. **Define row layout using the GridTemplates component:** Wrap the `RowTemplate` content inside [GridTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates). Each row template must contain the same number of `<td>` elements as the Grid’s column count to ensure alignment.
+2. **Define row layout using the GridTemplates component:** Wrap the `RowTemplate` content inside [GridTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates). Each row template must contain the same number of `<td>` elements as the Blazor Grid’s column count to ensure alignment.
 3. **Template configuration:** For more guidance on configuring templates, see the [templates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates) documentation.
 
-For an overview of `row templates` in the Grid, watch the following video.
+For an overview of `row templates` in the Blazor Grid, watch the following video.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=Dft0kerEGUQ" %}
 

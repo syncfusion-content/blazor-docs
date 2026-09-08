@@ -15,7 +15,7 @@ The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagr
 * [Caption Template](https://blazor.syncfusion.com/documentation/datagrid/caption-template): Group caption rows with customized display elements.
 * [Detail Template](https://blazor.syncfusion.com/documentation/datagrid/detail-template): Expanded row content that can include nested data or custom layouts.
 
-These templates are preserved during export, allowing the resulting Excel file to reflect the visual and structural formatting defined in the Grid.
+These templates are preserved during export, allowing the resulting Excel file to reflect the visual and structural formatting defined in the Blazor Grid.
 
 ## Exporting with column template
 
@@ -54,7 +54,7 @@ The **FirstName** and **EmailID** columns are rendered using templates and expor
                 @{
                     var employee = (context as EmployeeData);
                 }
-                <a href="mailto:@employee.EmailID">@employee.EmailID</a>
+                <a href="mailto:@employee.EmailID" aria-label="Send email to @employee.EmailID">@employee.EmailID</a>
             </Template>
         </GridColumn>
         <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="180"></GridColumn>
@@ -73,7 +73,7 @@ The **FirstName** and **EmailID** columns are rendered using templates and expor
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_excelexport")  // Id is the combination of Grid's ID and item name.
+        if (args.Item.Id == "Grid_excelexport")  // Id is the combination of Blazor Grid's ID and item name.
         {
             ExcelExportProperties ExportProperties = new ExcelExportProperties();
             ExportProperties.IncludeTemplateColumn = true;
@@ -90,7 +90,7 @@ The **FirstName** and **EmailID** columns are rendered using templates and expor
         else if (args.Column.Field == "EmailID")
        {
            var email = args.Data.EmailID;
-           args.Cell.Value = $"<a href='mailto:{email}'>{email}</a>";
+           args.Cell.Value = $"<a href='mailto:{email}' aria-label="Send email to {email}">{email}</a>";
        }
     }
 }
@@ -150,7 +150,7 @@ The Blazor DataGrid supports exporting grouped data along with a custom caption 
 To customize group caption text in the exported Excel document:
 
 1. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event to trigger the export.
-2. Use the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method to export the Grid.
+2. Use the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method to export the Blazor Grid.
 3. Handle the [ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) event to customize the group caption text.
 4. Use the **args.Cell.Value** property to define the caption using values like group key, record count, and header text.
 
@@ -191,7 +191,7 @@ To customize group caption text in the exported Excel document:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_excelexport")  // Id is the combination of Grid's ID and item name.
+        if (args.Item.Id == "Grid_excelexport")  // Id is the combination of Blazor Grid's ID and item name.
         {
             if (args.Item.Id == "Grid_excelexport")
             {
@@ -424,7 +424,7 @@ public class ProductInfo
 
 The Blazor DataGrid supports exporting both parent and child (detail) records including nested data to an Excel document.
 
-By default, the Grid exports only the parent rows along with expanded detail rows. To customize this behavior, configure the [ExcelDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_ExcelDetailRowMode) property of [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) inside the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event, and pass it to the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
+By default, the Blazor Grid exports only the parent rows along with expanded detail rows. To customize this behavior, configure the [ExcelDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_ExcelDetailRowMode) property of [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) inside the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event, and pass it to the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
 
 **Available Modes**
 
@@ -471,7 +471,7 @@ To format and customize the detail rows in the exported Excel document:
                             </td>
                             <td>
                                 <span class="link">
-                                    Contact: <a href="mailto:${@employee.Contact}">@employee.Contact</a>
+                                    Contact: <a href="mailto:${@employee.Contact}" aria-label="Send email to @employee.Contact">@employee.Contact</a>
                                 </span>
                             </td>
                         </tr>
@@ -764,7 +764,7 @@ The Blazor DataGrid supports exporting hierarchical data to Excel using the deta
 
 To export hierarchical Grid data to an Excel document:
 
-1. Define a [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) in the Grid to render child content under each parent row.
+1. Define a [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) in the Blazor Grid to render child content under each parent row.
 2. In the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick)  event, create an instance of [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) and set the [ExcelExportProperties.ExcelDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailRowMode.html) property to **Expand**.
 3. Handle the [ExcelDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelDetailTemplateExporting) event to format the detail rows using the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Headers) and [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Rows)properties.
 4. If nested child levels are present, use the [ChildRowInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRow.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRow_ChildRowInfo) property.
@@ -834,7 +834,7 @@ To export hierarchical Grid data to an Excel document:
     // Handles toolbar click event (for Excel export).
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        // Id is the combination of Grid's ID and item name.
+        // Id is the combination of Blazor Grid's ID and item name.
         if (args.Item.Id == "Grid_excelexport")
         {
             ExcelExportProperties ExportProperties = new ExcelExportProperties();

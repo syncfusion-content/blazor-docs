@@ -9,7 +9,7 @@ documentation: ug
 
 # Row Drag and Drop in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports built-in row drag-and-drop functionality. Rows can be reordered within the grid, moved between grids, or dropped into custom components.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports built-in row drag-and-drop functionality. Rows can be reordered within the Blazor Grid, moved between grids, or dropped into custom components.
 
 Enable row drag and drop by setting [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowRowDragAndDrop) to true. Configure the drop target using the [TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html#Syncfusion_Blazor_Grids_GridRowDropSettings_TargetID) property in [RowDropSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html).
 
@@ -201,7 +201,7 @@ The Blazor DataGrid supports dragging rows from one grid and dropping them into 
 
 ## Drag and drop in empty area
 
-The Blazor DataGrid supports dropping rows in empty content areas. By default, the `AllowEmptyAreaDrop` setting is enabled, allowing rows to be dropped anywhere within the grid content. Rows dropped in an empty area are appended to the end of the data. This applies to both within-grid and between-grid scenarios.
+The Blazor DataGrid supports dropping rows in empty content areas. By default, the `AllowEmptyAreaDrop` setting is enabled, allowing rows to be dropped anywhere within the Blazor DataTable content. Rows dropped in an empty area are appended to the end of the data. This applies to both within-grid and between-grid scenarios.
 
 To display the drop indicator only when hovering over rows, disable the AllowEmptyAreaDrop property in the RowDropSettings configuration.
 
@@ -791,4 +791,4 @@ public class OrderData
 - A single row can be dragged and dropped within the same grid even if multiple selection is not enabled.
 - Row drag and drop does not have built-in support when combined with sorting, filtering, hierarchy grid, or row template features.
 - Row drag and drop with grouping does not support lazy-load grouping.
-- Dragging and dropping within the same group key is not supported. The grid does not allow drag-and-drop for multiple rows that belong to different grouped collections.
+- Dragging and dropping within the same group key is not supported. the Blazor Grid does not allow drag-and-drop for multiple rows that belong to different grouped collections.

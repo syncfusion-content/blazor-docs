@@ -38,8 +38,8 @@ Ensure the following software, accounts, and packages are in place before procee
 | Firebase Account | Active account | Cloud project hosting and Firestore database |
 | Google Cloud Project | Active project | Required for Firebase services and API credentials |
 | Google.Cloud.Firestore | 3.7.0 or later | Official .NET client library for Firestore |
-| Syncfusion.Blazor.Grid | {{site.blazorversion}} | DataGrid and UI components |
-| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for DataGrid components |
+| Syncfusion.Blazor.Grid | {{site.blazorversion}} | Blazor DataGrid and UI components |
+| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for Blazor DataGrid components |
 
 ## Setting Up the Firebase Firestore Environment
 
@@ -152,7 +152,7 @@ Required APIs are now enabled for the application.
 Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template.
 This template automatically generates essential starter files—such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
 
-For this guide, a Blazor application named **Grid_Firebase_Firestore** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the Blazor application. These packages enable Firebase Firestore integration and DataGrid components.
+For this guide, a Blazor application named **Grid_Firebase_Firestore** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the Blazor application. These packages enable Firebase Firestore integration and Blazor DataGrid components.
 
 **Method 1: Using Package Manager Console**
 
@@ -709,7 +709,7 @@ Update the `Components/Pages/Home.razor` file to include bulk import functionali
             if (success)
             {
                 ImportCompleted = true;
-                // Refresh the grid
+                // Refresh the Blazor Grid
                 if (_grid != null)
                 {
                     await _grid.Refresh();
@@ -888,7 +888,7 @@ The service registration has been completed successfully in `Program.cs`.
 
 ### Step 1: Install and Configure Blazor DataGrid Components
 
-Syncfusion is a library that provides pre-built UI components like DataGrid, which is used to display data in a table format.
+Syncfusion is a library that provides pre-built UI components like Blazor DataGrid, which is used to display data in a table format.
 
 **Instructions:**
 
@@ -916,7 +916,7 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 
 > For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-> Blazor components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
+> Blazor components are now configured and ready to use. For additional guidance, refer to the Blazor Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
 ---
 
@@ -927,7 +927,7 @@ The `Home.razor` component displays the book data in a Blazor DataGrid with sear
 **Instructions:**
 
 1. Open the file named `Home.razor` in the `Components/Pages` folder.
-2. Replace the entire file content with the following code to create a DataGrid with bulk import functionality:
+2. Replace the entire file content with the following code to create a Blazor DataGrid with bulk import functionality:
 
 ```cshtml
 @page "/"
@@ -938,7 +938,7 @@ The `Home.razor` component displays the book data in a Blazor DataGrid with sear
 
 <PageTitle>Library Management</PageTitle>
 
-<!-- Grid Section -->
+<!-- Blazor Grid Section -->
 <div class="row">
    <div class="col-md-12">
       <div class="card shadow-sm">
@@ -965,13 +965,13 @@ The `Home.razor` component displays the book data in a Blazor DataGrid with sear
 
 - **`@rendermode InteractiveServer`**: Enables interactive server-side rendering for real-time updates
 - **`@inject FirebaseService`**: Injects the FirebaseService to access database methods
-- **`<SfGrid>`**: The DataGrid component that displays books in rows and columns
+- **`<SfGrid>`**: The Blazor DataGrid component that displays books in rows and columns
 - **`<GridColumns>`**: Defines individual columns with field mappings, types, and formatting
 - **`AllowPaging`, `AllowSorting`, `AllowFiltering`, `AllowGrouping`**: Enable grid features
 - **`<GridEditSettings>`**: Configures add, edit, and delete operations
 - **`Toolbar`**: Provides buttons for CRUD and search operations
 
-The Home component has been successfully updated with the DataGrid and CustomAdaptor.
+The Home component has been successfully updated with the Blazor DataGrid and CustomAdaptor.
 
 ---
 
@@ -979,7 +979,7 @@ The Home component has been successfully updated with the DataGrid and CustomAda
 
 The Blazor DataGrid can bind data from a **Firebase Firestore** database using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to `CustomAdaptor` for scenarios that require full control over data operations.
 
-The `CustomAdaptor` is a bridge between the DataGrid and the database. It handles all data operations including reading, searching, filtering, sorting, paging, and CRUD operations. Each operation in the CustomAdaptor's `ReadAsync` method handles specific grid functionality. The Blazor DataGrid sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
+The `CustomAdaptor` is a bridge between the Blazor DataGrid and the database. It handles all data operations including reading, searching, filtering, sorting, paging, and CRUD operations. Each operation in the CustomAdaptor's `ReadAsync` method handles specific grid functionality. The Blazor DataGrid sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
 
 **Instructions:**
 
@@ -992,8 +992,8 @@ The `CustomAdaptor` is a bridge between the DataGrid and the database. It handle
    public static FirebaseService? _firebaseService { get; set; }
 
    /// <summary>
-   /// CustomAdaptor class bridges DataGrid interactions with database operations.
-   /// This adaptor handles all data retrieval and manipulation for the DataGrid.
+   /// CustomAdaptor class bridges Blazor DataGrid interactions with database operations.
+   /// This adaptor handles all data retrieval and manipulation for the Blazor DataGrid.
    /// </summary>
    public class CustomAdaptor : DataAdaptor
    {
@@ -1099,7 +1099,7 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
         Toolbar="@ToolbarItems">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -1154,7 +1154,7 @@ dotnet run
 2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
 3. The library management application is now running and ready to use.
 
-![Basic DataGrid displaying books from the Firebase Firestore](../images/blazor-datagrid-firestoredb.webp)
+![Basic Blazor DataGrid displaying books from the Firebase Firestore](../images/blazor-datagrid-firestoredb.webp)
 
 ---
 
@@ -1174,7 +1174,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridPageSettings PageSize="10"></GridPageSettings>
     
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -1256,7 +1256,7 @@ public async Task<List<Book>> GetBooksAsync()
 
 **How Paging Works:**
 
-- The DataGrid displays 10 records per page (as set in `GridPageSettings`).
+- The Blazor DataGrid displays 10 records per page (as set in `GridPageSettings`).
 - Navigation buttons allow the user to move between pages.
 - When a page is requested, the `ReadAsync` method receives skip and take values.
 - The `DataOperations.PerformSkip()` and `DataOperations.PerformTake()` methods handle pagination.
@@ -1281,7 +1281,7 @@ Searching allows the user to find records by entering keywords in the search box
         Toolbar="@ToolbarItems">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridPageSettings PageSize="10"></GridPageSettings>
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -1337,10 +1337,10 @@ Searching allows the user to find records by entering keywords in the search box
 
 **How Searching Works:**
 
-- When the user enters text in the search box and presses Enter, the DataGrid sends a search request to the CustomAdaptor.
+- When the user enters text in the search box and presses Enter, the Blazor DataGrid sends a search request to the CustomAdaptor.
 - The `ReadAsync` method receives the search criteria in `dataManagerRequest.Search`.
 - The `DataOperations.PerformSearching()` method filters the data based on the search term.
-- Results are returned and displayed in the DataGrid.
+- Results are returned and displayed in the Blazor DataGrid.
 
 Searching feature is now active.
 
@@ -1364,7 +1364,7 @@ Filtering allows the user to restrict data based on column values using a menu i
     
     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
     
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -1427,7 +1427,7 @@ public class CustomAdaptor : DataAdaptor
 - Select filtering criteria (equals, contains, greater than, less than, etc.).
 - Click the "Filter" button to apply the filter.
 - The `ReadAsync` method receives the filter criteria in `dataManagerRequest.Where`.
-- Results are filtered accordingly and displayed in the DataGrid.
+- Results are filtered accordingly and displayed in the Blazor DataGrid.
 
 Filtering feature is now active.
 
@@ -1453,7 +1453,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
      <GridPageSettings PageSize="10"></GridPageSettings>
      <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
     
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -1521,7 +1521,7 @@ public class CustomAdaptor : DataAdaptor
 - Click on the column header to sort in ascending order.
 - Click again to sort in descending order.
 - The `ReadAsync` method receives the sort criteria in `dataManagerRequest.Sorted`.
-- Records are sorted accordingly and displayed in the DataGrid.
+- Records are sorted accordingly and displayed in the Blazor DataGrid.
 
 Sorting feature is now active.
 
@@ -1546,7 +1546,7 @@ Grouping organizes records into hierarchical groups based on column values.
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
      <GridPageSettings PageSize="10"></GridPageSettings>
      <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
-    <!-- Grid columns  -->
+    <!-- Blazor Grid columns  -->
 </SfGrid>
 ```
 
@@ -1633,9 +1633,9 @@ Grouping feature is now active.
 
 ### Step 11: Perform CRUD Operations
 
-CustomAdaptor methods enable users to create, read, update, and delete records directly from the DataGrid. Each operation calls corresponding data layer methods in **FirebaseService.cs** to execute Firestore commands.
+CustomAdaptor methods enable users to create, read, update, and delete records directly from the Blazor DataGrid. Each operation calls corresponding data layer methods in **FirebaseService.cs** to execute Firestore commands.
 
-Add the Grid **EditSettings** and **Toolbar** configuration to enable create, read, update, and delete (CRUD) operations.
+Add the Blazor Grid **EditSettings** and **Toolbar** configuration to enable create, read, update, and delete (CRUD) operations.
 
 ```cshtml
 <SfGrid TValue="Book" 
@@ -1648,7 +1648,7 @@ Add the Grid **EditSettings** and **Toolbar** configuration to enable create, re
      <GridPageSettings PageSize="10"></GridPageSettings>
      <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
      <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
-    <!-- Grid columns  -->
+    <!-- Blazor Grid columns  -->
 </SfGrid>
 ```
 
@@ -1664,7 +1664,7 @@ Add the toolbar items list in the `@code` block:
 
 **Insert**
 
-Record insertion allows new books to be added directly through the DataGrid component. The adaptor processes the insertion request, performs any required business‑logic validation, and saves the newly created record to the Firebase Firestore database.
+Record insertion allows new books to be added directly through the Blazor DataGrid component. The adaptor processes the insertion request, performs any required business‑logic validation, and saves the newly created record to the Firebase Firestore database.
 
 In **Home.razor**, implement the `InsertAsync` method to handle record insertion within the `CustomAdaptor` class:
 
@@ -1757,13 +1757,13 @@ private async Task<string> GenerateBookIdAsync()
 3. A unique BookId is auto-generated if not provided.
 4. The LastUpdated is set to the current UTC time.
 5. `SetAsync()` adds the document to the Firestore collection.
-6. The DataGrid automatically refreshes to display the new record.
+6. The Blazor DataGrid automatically refreshes to display the new record.
 
-Now the new book is persisted to the database and reflected in the grid.
+Now the new book is persisted to the database and reflected in the Blazor Grid.
 
 **Update**
 
-Record modification allows book details to be updated directly within the DataGrid. The adaptor processes the edited row, validates the updated values, and applies the changes to the **Firebase Firestore** database while ensuring data integrity is preserved.
+Record modification allows book details to be updated directly within the Blazor DataGrid. The adaptor processes the edited row, validates the updated values, and applies the changes to the **Firebase Firestore** database while ensuring data integrity is preserved.
 
 In **Home.razor**, implement the `UpdateAsync` method to handle record updates within the `CustomAdaptor` class:
 
@@ -1826,13 +1826,13 @@ public async Task<bool> UpdateBookAsync(string bookId, Book book)
 4. The document ID is used to identify the book in Firestore.
 5. `SetAsync()` with `MergeAll` option updates only the specified fields.
 6. The method returns true if the document was modified successfully.
-7. The DataGrid refreshes to display the updated record.
+7. The Blazor DataGrid refreshes to display the updated record.
 
-Now modifications are synchronized to the database and reflected in the grid UI.
+Now modifications are synchronized to the database and reflected in the Blazor Grid UI.
 
 **Delete**
 
-Record deletion allows books to be removed directly from the DataGrid. The adaptor captures the delete request, executes the corresponding **Firestore DELETE** operation, and updates both the database and the grid to reflect the removal.
+Record deletion allows books to be removed directly from the Blazor DataGrid. The adaptor captures the delete request, executes the corresponding **Firestore DELETE** operation, and updates both the database and the Blazor Grid to reflect the removal.
 
 In **Home.razor**, implement the `RemoveAsync` method to handle record deletion within the `CustomAdaptor` class:
 
@@ -1882,15 +1882,15 @@ public async Task<bool> DeleteBookAsync(string? bookId)
 **What happens behind the scenes:**
 
 1. The user selects a record and clicks "Delete".
-2. A confirmation dialog appears (built into the DataGrid).
+2. A confirmation dialog appears (built into the Blazor DataGrid).
 3. If confirmed, the CustomAdaptor's `RemoveAsync()` method is called.
 4. The `FirebaseService.DeleteBookAsync()` method is called.
 5. The document ID is used to identify the book in Firestore.
 6. `DeleteAsync()` removes the document from the Firestore collection.
 7. The method returns true if the document was deleted successfully.
-8. The DataGrid refreshes to remove the deleted record from the UI.
+8. The Blazor DataGrid refreshes to remove the deleted record from the UI.
 
-Now books are removed from the database and the grid UI reflects the changes immediately.
+Now books are removed from the database and the Blazor Grid UI reflects the changes immediately.
 
 **Batch Update**
 
@@ -1938,17 +1938,17 @@ public class CustomAdaptor : DataAdaptor
 }
 ```
 
-> This method is triggered when the DataGrid is operating in [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) Edit mode.
+> This method is triggered when the Blazor DataGrid is operating in [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) Edit mode.
 
 **What happens behind the scenes:**
 
-- The DataGrid collects all added, edited, and deleted records in Batch Edit mode.
+- The Blazor DataGrid collects all added, edited, and deleted records in Batch Edit mode.
 - The combined batch request is passed to the CustomAdaptor's `BatchUpdateAsync()` method.
 - Each modified record is processed using `FirebaseService.UpdateBookAsync()`.
 - Each newly added record is saved using `FirebaseService.InsertBookAsync()`.
 - Each deleted record is removed using `FirebaseService.DeleteBookAsync()`.
 - All service operations persist changes to the Firebase Firestore database.
-- The DataGrid refreshes to display the updated, added, and removed records in a single response.
+- The Blazor DataGrid refreshes to display the updated, added, and removed records in a single response.
 
 Now the adaptor supports bulk modifications with atomic database synchronization. All CRUD operations are now fully implemented, enabling comprehensive data management capabilities within the Blazor DataGrid.
 
@@ -1995,7 +1995,7 @@ Here is the complete and final `Home.razor` component with all features integrat
         </div>
     </div>
 
-    <!-- Grid Section -->
+    <!-- Blazor Grid Section -->
     <div class="row">
         <div class="col-md-12">
             <div class="card shadow-sm">
@@ -2342,7 +2342,7 @@ Here is the complete and final `Home.razor` component with all features integrat
             if (success)
             {
                 ImportCompleted = true;
-                // Refresh the grid
+                // Refresh the Blazor Grid
                 if (_grid != null)
                 {
                     await _grid.Refresh();

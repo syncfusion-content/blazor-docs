@@ -130,7 +130,7 @@ Apply styles to rows using CSS selectors. Each row element exposes class names t
 
 **Customize alternate rows**
 
-Alternate rows can be styled to enhance readability. The Grid applies the CSS class `.e-altrow` to alternate rows. Override this class to apply custom styles.
+Alternate rows can be styled to enhance readability. The Blazor Grid applies the CSS class `.e-altrow` to alternate rows. Override this class to apply custom styles.
 
 To change the background color of alternate rows, add the following CSS:
 
@@ -311,7 +311,7 @@ public class OrderData
 
 ## Row height
 
-The Blazor DataGrid supports customizing row height to display more or less content as needed. Use the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property to change the height of all rows in the Grid.
+The Blazor DataGrid supports customizing row height to display more or less content as needed. Use the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property to change the height of all rows in the Blazor DataTable.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -351,7 +351,7 @@ The Blazor DataGrid supports customizing row height to display more or less cont
     private void ChangeRowHeight(int height)
     {
         RowHeightValue = height;
-        Grid.Refresh(); // Refresh the Grid to apply the new row height.
+        Grid.Refresh(); // Refresh the Blazor Grid to apply the new row height.
     }
 }
 
@@ -611,7 +611,7 @@ The Blazor DataGrid provides an option to freeze rows, keeping them visible whil
 
 {% youtube "youtube:https://www.youtube.com/watch?v=L2NvKyBomhM"%}
 
-In the following example, the [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) property is set to `2`. The top two rows remain fixed while the rest of the Grid scrolls vertically:
+In the following example, the [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) property is set to `2`. The top two rows remain fixed while the rest of the Blazor Grid scrolls vertically:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -717,7 +717,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjhxXQjHLNGLEGXW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> Frozen rows should remain within the Grid viewport.
+> Frozen rows should remain within the Blazor Grid viewport.
 > Frozen Grid supports row virtualization to improve performance with large datasets.
 > The frozen feature applies to rows visible in the current view.
 > [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) and [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) can be used together in the same Grid.
@@ -882,7 +882,7 @@ The `AddRecordAsync` method takes two parameters:
                 ShipName = GenerateShipName()
             };
 
-        // Add the new record to the Grid.
+        // Add the new record to the Blazor Grid.
         await Grid.AddRecordAsync(newRecord, 0);
     }
 

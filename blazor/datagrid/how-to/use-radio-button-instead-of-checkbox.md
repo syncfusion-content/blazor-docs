@@ -14,7 +14,7 @@ By default, the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/b
 Steps to configure row selection using radio buttons:
 
 * When a radio button is selected, the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html#Syncfusion_Blazor_Buttons_SfRadioButton_1_ValueChange) event is triggered.
-* In the `ValueChange` event, retrieve the row index using [GetRowIndexByPrimaryKeyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetRowIndexByPrimaryKeyAsync_System_Object_) based on the selected unique value. Ensure the unique value corresponds to the Grid’s primary key column.
+* In the `ValueChange` event, retrieve the row index using [GetRowIndexByPrimaryKeyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetRowIndexByPrimaryKeyAsync_System_Object_) based on the selected unique value. Ensure the unique value corresponds to the Blazor Data Grid’s primary key column.
 * Select the corresponding row using [SelectRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowAsync_System_Double_) (or the appropriate selection method).
 * To prevent selection by clicking on the row itself, enable the [CheckboxOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CheckboxOnly) property. This ensures selection occurs only through the radio button interaction.
 
@@ -61,7 +61,7 @@ Steps to configure row selection using radio buttons:
         if (GridInstance != null)
         {
             var index = await GridInstance.GetRowIndexByPrimaryKeyAsync(args.Value); // Fetch the row index based on the unique value of RadioButton.
-            await GridInstance.SelectRowAsync(index); // Select the corresponding Grid row.
+            await GridInstance.SelectRowAsync(index); // Select the corresponding Data Grid row.
         }
     }
     public class Order

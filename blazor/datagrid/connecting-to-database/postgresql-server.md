@@ -37,8 +37,8 @@ Ensure the following software and packages are installed before proceeding:
 | .NET SDK | net10.0 or compatible | Runtime and build tools |
 | PostgreSQL Server | 12 or later | Database server |
 | pgAdmin 4 | Latest | PostgreSQL GUI management tool |
-| Syncfusion.Blazor.Grid | {{site.blazorversion}} | DataGrid and UI components |
-| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for DataGrid components |
+| Syncfusion.Blazor.Grid | {{site.blazorversion}} | Blazor DataGrid and UI components |
+| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for Blazor DataGrid components |
 | Microsoft.EntityFrameworkCore | 10.0.2 or later | Core framework for database operations |
 | Npgsql.EntityFrameworkCore.PostgreSQL | 10.0.0 or later | PostgreSQL provider for Entity Framework Core |
 
@@ -676,7 +676,7 @@ app.Run();
 
 **Explanation:**
 
-- **`AddSyncfusionBlazor()`**: Registers Blazor components (DataGrid, themes, etc.).
+- **`AddSyncfusionBlazor()`**: Registers Blazor components (Blazor DataGrid, themes, etc.).
 - **`AddDbContext<PurchaseOrderDbContext>`**: Registers the DbContext with PostgreSQL as the database provider using `UseNpgsql()`.
 - **Connection String Validation**: Ensures the connection string is configured before attempting to connect.
 - **`EnableSensitiveDataLogging()`**: Enabled in development to log detailed information about database operations (useful for debugging).
@@ -692,7 +692,7 @@ The service registration has been completed successfully.
 
 ### Step 1: Install and Configure Blazor DataGrid Components
 
-Syncfusion is a library that provides pre-built UI components like DataGrid, which is used to display data in a table format.
+Syncfusion is a library that provides pre-built UI components like Blazor DataGrid, which is used to display data in a table format.
 
 **Instructions:**
 
@@ -718,7 +718,7 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 ```
 For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Blazor components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting-started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
+Blazor components are now configured and ready to use. For additional guidance, refer to the Blazor Grid component's [getting-started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
 ### Step 2: Update the Blazor DataGrid
 
@@ -727,7 +727,7 @@ The `Home.razor` component will display the purchase order data in a Blazor Data
 **Instructions:**
 
 1. Open the file named `Home.razor` in the `Components/Pages` folder.
-2. Add the following code to create a DataGrid:
+2. Add the following code to create a Blazor DataGrid:
 
 ```cshtml
 @page "/"
@@ -761,11 +761,11 @@ The `Home.razor` component will display the purchase order data in a Blazor Data
 **Component Explanation:**
 
 - **`@inject PurchaseOrderRepository`**: Injects the repository to access database methods.
-- **`<SfGrid>`**: The DataGrid component that displays data in rows and columns.
-- **`<GridColumns>`**: Defines individual columns in the DataGrid.
+- **`<SfGrid>`**: The Blazor DataGrid component that displays data in rows and columns.
+- **`<GridColumns>`**: Defines individual columns in the Blazor DataGrid.
 - **`<GridPageSettings>`**: Configures pagination with 10 records per page.
 
-The Home component has been updated successfully with DataGrid.
+The Home component has been updated successfully with Blazor DataGrid.
 
 ---
 
@@ -773,7 +773,7 @@ The Home component has been updated successfully with DataGrid.
 
 The Blazor DataGrid can bind data from a **PostgreSQL** database using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) for scenarios that require full control over data operations.
 
-The `CustomAdaptor` is a bridge between the DataGrid and the PostgreSQL database. It handles all data operations including reading, searching, filtering, sorting, paging, and CRUD operations. Each operation in the CustomAdaptor's `ReadAsync` method handles specific grid functionality. The Blazor DataGrid sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
+The `CustomAdaptor` is a bridge between the Blazor DataGrid and the PostgreSQL database. It handles all data operations including reading, searching, filtering, sorting, paging, and CRUD operations. Each operation in the CustomAdaptor's `ReadAsync` method handles specific grid functionality. The Blazor DataGrid sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
 
 **Instructions:**
 
@@ -792,8 +792,8 @@ The `CustomAdaptor` is a bridge between the DataGrid and the PostgreSQL database
     }
 
     /// <summary>
-    /// CustomAdaptor class bridges DataGrid interactions with database operations.
-    /// This adaptor handles all data retrieval and manipulation for the DataGrid.
+    /// CustomAdaptor class bridges Blazor DataGrid interactions with database operations.
+    /// This adaptor handles all data retrieval and manipulation for the Blazor DataGrid.
     /// </summary>
     public class CustomAdaptor : DataAdaptor
     {
@@ -807,7 +807,7 @@ The `CustomAdaptor` is a bridge between the DataGrid and the PostgreSQL database
 
         /// <summary>
         /// ReadAsync retrieves records from the database and applies data operations.
-        /// This method executes when the grid initializes and when filtering, searching, sorting, or paging occurs.
+        /// This method executes when the Blazor Grid initializes and when filtering, searching, sorting, or paging occurs.
         /// </summary>
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
@@ -895,7 +895,7 @@ The toolbar provides buttons for adding, editing, deleting records, and searchin
         Toolbar="@ToolbarItems">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -950,7 +950,7 @@ dotnet run
 2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
 3. The Purchase Order Management System is now running and ready to use.
 
-![Basic DataGrid displaying purchase orders from the PostgreSQL Server database](../images/blazor-datagrid-postgresql.webp)
+![Basic Blazor DataGrid displaying purchase orders from the PostgreSQL Server database](../images/blazor-datagrid-postgresql.webp)
 
 ---
 
@@ -970,7 +970,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridPageSettings PageSize="10"></GridPageSettings>
     
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -1018,7 +1018,7 @@ Fetches purchase orders by calling the `GetPurchaseOrdersDataAsync` method imple
 
 **How Paging Works:**
 
-- The DataGrid displays 10 records per page (as set in `GridPageSettings`).
+- The Blazor DataGrid displays 10 records per page (as set in `GridPageSettings`).
 - Navigation buttons allow the user to move between pages.
 - When a page is requested, the `ReadAsync` method receives skip and take values.
 - The `DataOperations.PerformSkip()` and `DataOperations.PerformTake()` methods handle pagination.
@@ -1042,7 +1042,7 @@ Searching allows the user to find purchase order records by entering keywords in
         Toolbar="@ToolbarItems">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridPageSettings PageSize="10"></GridPageSettings>
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -1092,10 +1092,10 @@ Searching allows the user to find purchase order records by entering keywords in
 
 **How Searching Works:**
 
-- When the user enters text in the search box and presses Enter, the DataGrid sends a search request to the CustomAdaptor.
+- When the user enters text in the search box and presses Enter, the Blazor DataGrid sends a search request to the CustomAdaptor.
 - The `ReadAsync` method receives the search criteria in `dataManagerRequest.Search`.
 - The `DataOperations.PerformSearching()` method filters the data based on the search term across all columns (PoNumber, ItemName, Status, VendorID, etc.).
-- Results are returned and displayed in the DataGrid.
+- Results are returned and displayed in the Blazor DataGrid.
 
 Searching feature is now active.
 
@@ -1119,7 +1119,7 @@ Filtering allows the user to restrict purchase order data based on column values
     
     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
     
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -1180,7 +1180,7 @@ Filtering allows the user to restrict purchase order data based on column values
 - Click the "Filter" button to apply the filter.
 - The `ReadAsync` method receives the filter criteria in `dataManagerRequest.Where`.
 - The `DataOperations.PerformFiltering()` method applies the filter conditions to the data.
-- Results are filtered accordingly and displayed in the DataGrid.
+- Results are filtered accordingly and displayed in the Blazor DataGrid.
 - Common filter use cases: Filter by Status (Pending, Approved, Ordered, etc.), VendorID, ItemCategory, or OrderDate range.
 
 Filtering feature is now active.
@@ -1207,7 +1207,7 @@ Sorting enables the user to arrange purchase order records in ascending or desce
      <GridPageSettings PageSize="10"></GridPageSettings>
      <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
     
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -1268,7 +1268,7 @@ Sorting enables the user to arrange purchase order records in ascending or desce
 - Click again to sort in descending order.
 - The `ReadAsync` method receives the sort criteria in `dataManagerRequest.Sorted`.
 - The `DataOperations.PerformSorting()` method sorts the data based on the specified column and direction.
-- Records are sorted accordingly and displayed in the DataGrid.
+- Records are sorted accordingly and displayed in the Blazor DataGrid.
 - Sorting can be applied to all columns: PoNumber, ItemName, Status, OrderDate, TotalAmount, etc.
 
 Sorting feature is now active.
@@ -1294,7 +1294,7 @@ Grouping organizes purchase order records into hierarchical groups based on colu
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
      <GridPageSettings PageSize="10"></GridPageSettings>
      <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
-    <!-- Grid columns  -->
+    <!-- Blazor Grid columns  -->
 </SfGrid>
 ```
 
@@ -1370,9 +1370,9 @@ Grouping feature is now active.
 
 ### Step 11: Perform CRUD operations
 
-CustomAdaptor methods enable users to create, read, update, and delete purchase order records directly from the DataGrid. Each operation calls corresponding data layer methods in **PurchaseOrderRepository.cs** to execute PostgreSQL commands.
+CustomAdaptor methods enable users to create, read, update, and delete purchase order records directly from the Blazor DataGrid. Each operation calls corresponding data layer methods in **PurchaseOrderRepository.cs** to execute PostgreSQL commands.
 
-Add the Grid **EditSettings** and **Toolbar** configuration to enable create, read, update, and delete (CRUD) operations.
+Add the Blazor Grid **EditSettings** and **Toolbar** configuration to enable create, read, update, and delete (CRUD) operations.
 
 ```cshtml
 <SfGrid TValue="PurchaseOrder" 
@@ -1385,7 +1385,7 @@ Add the Grid **EditSettings** and **Toolbar** configuration to enable create, re
      <GridPageSettings PageSize="10"></GridPageSettings>
      <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
      <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" Mode="EditMode.Batch"></GridEditSettings>
-    <!-- Grid columns  -->
+    <!-- Blazor Grid columns  -->
 </SfGrid>
 ```
 
@@ -1401,7 +1401,7 @@ Add the toolbar items list in the `@code` block:
 
 **Insert**
 
-Record insertion allows new purchase orders to be added directly through the DataGrid component. The adaptor processes the insertion request, performs any required business‑logic validation, and saves the newly created record to the PostgreSQL database.
+Record insertion allows new purchase orders to be added directly through the Blazor DataGrid component. The adaptor processes the insertion request, performs any required business‑logic validation, and saves the newly created record to the PostgreSQL database.
 
 In **Home.razor**, implement the `InsertAsync` method within the `CustomAdaptor` class:
 
@@ -1505,13 +1505,13 @@ In **Data/PurchaseOrderRepository.cs**, the insert method is implemented as:
 4. Default values are set for timestamps and status.
 5. The new record is added to the `_context.PurchaseOrders` collection.
 6. `SaveChangesAsync()` persists the record to the PostgreSQL database.
-7. The DataGrid automatically refreshes to display the new record.
+7. The Blazor DataGrid automatically refreshes to display the new record.
 
-Now the new purchase order is persisted to the database and reflected in the grid.
+Now the new purchase order is persisted to the database and reflected in the Blazor Grid.
 
 **Update**
 
-Record modification allows purchase order details to be updated directly within the DataGrid. The adaptor processes the edited row, validates the updated values, and applies the changes to the **PostgreSQL database** while ensuring data integrity is preserved.
+Record modification allows purchase order details to be updated directly within the Blazor DataGrid. The adaptor processes the edited row, validates the updated values, and applies the changes to the **PostgreSQL database** while ensuring data integrity is preserved.
 
 In **Home.razor**, implement the `UpdateAsync` method within the `CustomAdaptor` class:
 
@@ -1590,13 +1590,13 @@ public async Task UpdatePurchaseOrderAsync(PurchaseOrder value)
 5. All properties are updated with the new values.
 6. The `UpdatedOn` timestamp is automatically set to the current time.
 7. `SaveChangesAsync()` persists the changes to the PostgreSQL database.
-8. The DataGrid refreshes to display the updated record.
+8. The Blazor DataGrid refreshes to display the updated record.
 
-Now modifications are synchronized to the database and reflected in the grid UI.
+Now modifications are synchronized to the database and reflected in the Blazor Grid UI.
 
 **Delete**
 
-Record deletion allows purchase orders to be removed directly from the DataGrid. The adaptor captures the delete request, executes the corresponding **PostgreSQL DELETE** operation, and updates both the database and the grid to reflect the removal.
+Record deletion allows purchase orders to be removed directly from the Blazor DataGrid. The adaptor captures the delete request, executes the corresponding **PostgreSQL DELETE** operation, and updates both the database and the Blazor Grid to reflect the removal.
 
 In **Home.razor**, implement the `RemoveAsync` method within the `CustomAdaptor` class:
 
@@ -1662,15 +1662,15 @@ public async Task RemovePurchaseOrderAsync(int? key)
 **What happens behind the scenes:**
 
 1. The user selects a record and clicks "Delete".
-2. A confirmation dialog appears (built into the DataGrid).
+2. A confirmation dialog appears (built into the Blazor DataGrid).
 3. If confirmed, the CustomAdaptor's `RemoveAsync()` method is called.
 4. The `PurchaseOrderRepository.RemovePurchaseOrderAsync()` method is called.
 5. The record is located in the database by its ID.
 6. The record is removed from the `_context.PurchaseOrders` collection.
 7. `SaveChangesAsync()` executes the DELETE statement in PostgreSQL.
-8. The DataGrid refreshes to remove the deleted record from the UI.
+8. The Blazor DataGrid refreshes to remove the deleted record from the UI.
 
-Now purchase orders are removed from the database and the grid UI reflects the changes immediately.
+Now purchase orders are removed from the database and the Blazor Grid UI reflects the changes immediately.
 
 **Batch update**
 
@@ -1714,7 +1714,7 @@ public class CustomAdaptor : DataAdaptor
 }
 ```
 
-> This method is triggered when the DataGrid is operating in [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) Edit mode.
+> This method is triggered when the Blazor DataGrid is operating in [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) Edit mode.
 
 ---
 
@@ -1779,8 +1779,8 @@ Now that all the CustomAdaptor methods are implemented for CRUD operations, the 
     }
 
     /// <summary>
-    /// CustomAdaptor class bridges DataGrid interactions with database operations.
-    /// This adaptor handles all data retrieval and manipulation for the DataGrid,
+    /// CustomAdaptor class bridges Blazor DataGrid interactions with database operations.
+    /// This adaptor handles all data retrieval and manipulation for the Blazor DataGrid,
     /// including Search, Filter, Sort, Group, Paging, and CRUD operations.
     /// </summary>
     public class CustomAdaptor : DataAdaptor
@@ -1795,7 +1795,7 @@ Now that all the CustomAdaptor methods are implemented for CRUD operations, the 
 
         /// <summary>
         /// ReadAsync retrieves records from the database and applies data operations.
-        /// This method executes when the grid initializes and when filtering, searching, sorting, or paging occurs.
+        /// This method executes when the Blazor Grid initializes and when filtering, searching, sorting, or paging occurs.
         /// </summary>
         public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string? key = null)
         {
@@ -1965,7 +1965,7 @@ This guide demonstrates how to:
 3. Create data models and DbContext for database communication with PostgreSQL-specific configuration. [🔗](#step-3-create-the-data-model)
 4. Configure connection strings and register services. [🔗](#step-5-configure-the-connection-string)
 5. Implement the repository pattern for data access with helper methods. [🔗](#step-6-create-the-repository-class)
-6. Create a Blazor component with a DataGrid that supports searching, filtering, sorting, paging, and CRUD operations. [🔗](#step-1-install-and-configure-blazor-datagrid-components)
+6. Create a Blazor component with a Blazor DataGrid that supports searching, filtering, sorting, paging, and CRUD operations. [🔗](#step-1-install-and-configure-blazor-datagrid-components)
 7. Handle bulk operations and batch updates. [🔗](#step-10-perform-crud-operations)
 
 The application now provides a complete solution for managing purchase orders with a modern, user-friendly interface integrated with PostgreSQL.

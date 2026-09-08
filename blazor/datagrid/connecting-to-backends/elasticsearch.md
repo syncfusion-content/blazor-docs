@@ -40,8 +40,8 @@ Ensure the following software and packages are installed before proceeding:
 | Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
 | .NET SDK | 10.0 or compatible | Runtime and build tools |
 | Elasticsearch | 9.3.0 or later | Search and analytics engine |
-| Syncfusion.Blazor.Grid | {{site.blazorversion}} | DataGrid and UI components |
-| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for DataGrid components |
+| Syncfusion.Blazor.Grid | {{site.blazorversion}} | Blazor DataGrid and UI components |
+| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for Blazor DataGrid components |
 | Elastic.Clients.Elasticsearch | 9.3.0 or later | Official C# client for Elasticsearch |
 
 ## Setting Up Elasticsearch
@@ -754,7 +754,7 @@ The service registration has been completed successfully.
 
 ### Step 1: Install and Configure Blazor DataGrid Components
 
-Syncfusion is a library that provides pre-built UI components like DataGrid for displaying data in table format.
+Syncfusion is a library that provides pre-built UI components like Blazor DataGrid for displaying data in table format.
 
 **Instructions:**
 
@@ -790,7 +790,7 @@ The `Home.razor` component displays inventory data in a Blazor DataGrid with sea
 **Instructions:**
 
 1. Open the file named `Home.razor` in the `Components/Pages` folder.
-2. Add the following code to create a basic DataGrid:
+2. Add the following code to create a basic Blazor DataGrid:
 
 ```cshtml
 @page "/"
@@ -824,13 +824,13 @@ The `Home.razor` component displays inventory data in a Blazor DataGrid with sea
 
 - **`@rendermode InteractiveServer`**: Enables interactive server-side rendering for the component.
 - **`@inject InventoryRepository`**: Injects the repository to access Elasticsearch methods.
-- **`<SfGrid>`**: The DataGrid component that displays data in rows and columns.
-- **`<SfDataManager>`**: Connects the DataGrid to the CustomAdaptor for data retrieval and CRUD operations.
-- **`<GridColumns>`**: Defines individual columns in the DataGrid.
+- **`<SfGrid>`**: The Blazor DataGrid component that displays data in rows and columns.
+- **`<SfDataManager>`**: Connects the Blazor DataGrid to the CustomAdaptor for data retrieval and CRUD operations.
+- **`<GridColumns>`**: Defines individual columns in the Blazor DataGrid.
 - **`<GridPageSettings>`**: Configures pagination with 10 records per page.
 - **`Toolbar`**: Update the `<SfGrid>` component to include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property with CRUD and search options which provides buttons for adding, editing, deleting records, and searching the data.
 
-The Home component has been updated successfully with a basic DataGrid.
+The Home component has been updated successfully with a basic Blazor DataGrid.
 
 ---
 
@@ -838,7 +838,7 @@ The Home component has been updated successfully with a basic DataGrid.
 
 The Blazor DataGrid can bind data from **Elasticsearch** using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) for scenarios that require full control over data operations.
 
-The `CustomAdaptor` is a bridge between the DataGrid and Elasticsearch. It handles all data operations including reading, searching, filtering, sorting, paging, and CRUD operations.
+The `CustomAdaptor` is a bridge between the Blazor DataGrid and Elasticsearch. It handles all data operations including reading, searching, filtering, sorting, paging, and CRUD operations.
 
 **Instructions:**
 
@@ -937,7 +937,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
         AllowPaging="true">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridPageSettings PageSize="10"></GridPageSettings>
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -958,7 +958,7 @@ public async Task<DataResult> SearchAndFilterAsync(DataManagerRequest dm)
 
 **How Paging Works:**
 
-- The DataGrid displays 10 records per page (as set in `GridPageSettings`).
+- The Blazor DataGrid displays 10 records per page (as set in `GridPageSettings`).
 - Navigation buttons allow movement between pages.
 - The `ReadAsync` method receives skip and take values in the `DataManagerRequest`.
 - The `From(dm.Skip)` method skips the specified number of records.
@@ -981,7 +981,7 @@ Searching allows the user to find records by entering keywords in the search box
 <SfGrid TValue="InventoryStock" AllowPaging="true" Toolbar="@ToolbarItems">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridPageSettings PageSize="10"></GridPageSettings>
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 @code {
     private List<string> ToolbarItems = new List<string> { "Search"};
@@ -1191,12 +1191,12 @@ private static Query BuildLeafQuery(string field, string? op, object? value, boo
 
 **How Searching Works:**
 
-- When the user enters text in the search box and presses Enter, the DataGrid sends a search request.
+- When the user enters text in the search box and presses Enter, the Blazor DataGrid sends a search request.
 - The `ReadAsync` method receives the search criteria in `dataManagerRequest.Search`.
 - The repository's `SearchAndFilterAsync` method processes search through `BuildEsQueryFromDm` method.
 - `BuildEsQueryFromDm` calls `BuildLeafQuery` for each search field to create specific query objects.
 - The search term is converted into Elasticsearch queries appropriate to each field type.
-- Results are returned and displayed in the DataGrid.
+- Results are returned and displayed in the Blazor DataGrid.
 
 Searching feature is now active.
 
@@ -1218,7 +1218,7 @@ Filtering allows the user to restrict data based on column values using a filter
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridPageSettings PageSize="10"></GridPageSettings>
     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -1261,7 +1261,7 @@ private static QueryDescriptor<InventoryStock> BuildEsQueryFromDm(QueryDescripto
 
 **Explanation of `BuildEsQueryFromDm` Filtering Logic:**
 
-- **`dm.Where`**: Contains all filter criteria specified by the user through the DataGrid filter menu.
+- **`dm.Where`**: Contains all filter criteria specified by the user through the Blazor DataGrid filter menu.
 - **`BuildWhereQuery`**: Converts the list of `WhereFilter` objects into an Elasticsearch Bool query.
 - **`must` List**: Accumulates filters with AND logic. All filters must be satisfied for a document to match.
 - **BoolQuery**: Creates an Elasticsearch Bool query with all filters combined using `Must` clause.
@@ -1312,10 +1312,10 @@ private static Query? BuildWhereNode(WhereFilter node)
 
 **Explanation of `BuildWhereQuery` Method:**
 
-**Purpose**: Converts a list of filter criteria from the DataGrid into an Elasticsearch Bool query with AND logic (all filters must be satisfied).
+**Purpose**: Converts a list of filter criteria from the Blazor DataGrid into an Elasticsearch Bool query with AND logic (all filters must be satisfied).
 
 **Parameters**:
-- **`nodes`**: List of `WhereFilter` objects representing individual or grouped filter criteria from the DataGrid filter menu
+- **`nodes`**: List of `WhereFilter` objects representing individual or grouped filter criteria from the Blazor DataGrid filter menu
 
 **Process**:
 1. Validates that the nodes list exists and contains filter criteria
@@ -1354,7 +1354,7 @@ private static Query? BuildWhereNode(WhereFilter node)
 **How Filtering works**:
 
 1. User opens filter menu and selects conditions (e.g., Category = "Electronics" AND UnitPrice > 100)
-2. DataGrid sends filter criteria via `dataManagerRequest.Where`
+2. Blazor DataGrid sends filter criteria via `dataManagerRequest.Where`
 3. `SearchAndFilterAsync` calls `BuildEsQueryFromDm` with the DataManagerRequest
 4. `BuildEsQueryFromDm` checks `dm.Where` and calls `BuildWhereQuery` to process filters
 5. `BuildWhereQuery` iterates through filter list and calls `BuildWhereNode` for each filter
@@ -1381,7 +1381,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridPageSettings PageSize="10"></GridPageSettings>
     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -1442,10 +1442,10 @@ private static List<SortOptions> BuildEsSorts(List<Sort>? sorted)
 
 **Explanation of `BuildEsSorts` Method:**
 
-**Purpose**: Converts DataGrid sort criteria into Elasticsearch sort options that specify field names and sort direction (ascending/descending).
+**Purpose**: Converts Blazor DataGrid sort criteria into Elasticsearch sort options that specify field names and sort direction (ascending/descending).
 
 **Parameters**:
-- **`sorted`**: List of `Sort` objects from DataGrid containing column name and sort direction (e.g., "Ascending" or "Descending")
+- **`sorted`**: List of `Sort` objects from Blazor DataGrid containing column name and sort direction (e.g., "Ascending" or "Descending")
 
 **Process**:
 
@@ -1458,7 +1458,7 @@ private static List<SortOptions> BuildEsSorts(List<Sort>? sorted)
 3. **Reverse Iteration** (`for (int i = sorted.Count() - 1; i >= 0; i--)`):
    - Iterates through sort list in reverse order
    - Maintains multi-level sort priority (last sort becomes highest priority in Elasticsearch)
-   - This matches DataGrid's sort priority convention
+   - This matches Blazor DataGrid's sort priority convention
 
 4. **Field Mapping** (`MapToKeywordOrSelf`):
    - Text fields map to `.keyword` subfield for exact sorting (e.g., `itemName.keyword`)
@@ -1479,7 +1479,7 @@ private static List<SortOptions> BuildEsSorts(List<Sort>? sorted)
 **How Sorting Works:**
 
 - User clicks on a column header to sort by that column
-- DataGrid sends sort criteria via `dataManagerRequest.Sorted` containing column name and direction
+- Blazor DataGrid sends sort criteria via `dataManagerRequest.Sorted` containing column name and direction
 - `SearchAndFilterAsync` calls `BuildEsSorts(dm.Sorted)` to convert sort criteria
 - `BuildEsSorts` processes each sort criterion:
   - Maps field name to appropriate Elasticsearch field (with keyword subfield if needed)
@@ -1487,7 +1487,7 @@ private static List<SortOptions> BuildEsSorts(List<Sort>? sorted)
   - Creates `SortOptions` for each sort criterion
 - All sort options are added to the Elasticsearch search query via `Sort`method
 - Elasticsearch returns results sorted by the specified fields in the specified order
-- Results are displayed in the DataGrid in sorted order
+- Results are displayed in the Blazor DataGrid in sorted order
 
 Sorting feature is now active.
 
@@ -1495,13 +1495,13 @@ Sorting feature is now active.
 
 ### Step 9: Implement Aggregations Feature
 
-Aggregations allow the display of calculated values (sum, average, count, etc.) for columns in the DataGrid footer.
+Aggregations allow the display of calculated values (sum, average, count, etc.) for columns in the Blazor DataGrid footer.
 
 **Instructions:**
 
-* Aggregations are configured in the `<GridAggregates>` section of the DataGrid component.
+* Aggregations are configured in the `<GridAggregates>` section of the Blazor DataGrid component.
 
-**DataGrid Configuration with Aggregations:**
+**Blazor DataGrid Configuration with Aggregations:**
 
 ```cshtml
 <SfGrid TValue="InventoryStock" AllowPaging="true" AllowFiltering="true" AllowSorting="true">
@@ -1522,7 +1522,7 @@ Aggregations allow the display of calculated values (sum, average, count, etc.) 
             </GridAggregateColumns>
         </GridAggregate>
     </GridAggregates>
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 ```
 
@@ -1647,11 +1647,11 @@ private static IDictionary<string, object> ExtractAggregatesFromResponse(IReadOn
 
 **Explanation of `BuildEsAggregations` Method:**
 
-**Purpose**: Converts DataGrid aggregation requests into Elasticsearch aggregation queries that calculate statistics (sum, average, count, etc.) on specified fields.
+**Purpose**: Converts Blazor DataGrid aggregation requests into Elasticsearch aggregation queries that calculate statistics (sum, average, count, etc.) on specified fields.
 
 **Parameters**:
 - **`aggregations`**: Elasticsearch fluent aggregation builder object to accumulate aggregation clauses
-- **`aggregates`**: List of `Aggregate` objects from DataGrid containing field name and aggregation type
+- **`aggregates`**: List of `Aggregate` objects from Blazor DataGrid containing field name and aggregation type
 
 **Process**:
 
@@ -1675,7 +1675,7 @@ private static IDictionary<string, object> ExtractAggregatesFromResponse(IReadOn
 
 **Explanation of `ExtractAggregatesFromResponse` Method:**
 
-**Purpose**: Extracts numeric results from Elasticsearch aggregation responses and converts them to format expected by DataGrid footer display.
+**Purpose**: Extracts numeric results from Elasticsearch aggregation responses and converts them to format expected by Blazor DataGrid footer display.
 
 **Parameters**:
 - **`esAggregations`**: Read-only dictionary of aggregation results from Elasticsearch response containing aggregation names and their computed values
@@ -1715,8 +1715,8 @@ private static IDictionary<string, object> ExtractAggregatesFromResponse(IReadOn
 
 **How Aggregations Work:**
 
-1. User configures aggregations in DataGrid footer via `<GridAggregateColumn>`
-2. DataGrid sends aggregation requests via `dataManagerRequest.Aggregates`
+1. User configures aggregations in Blazor DataGrid footer via `<GridAggregateColumn>`
+2. Blazor DataGrid sends aggregation requests via `dataManagerRequest.Aggregates`
 3. `SearchAndFilterAsync` calls `BuildEsAggregations` to create Elasticsearch aggregation clauses
 4. `BuildEsAggregations` adds appropriate aggregation based on type:
    - Maps field name using `GetJsonPropertyName`
@@ -1728,7 +1728,7 @@ private static IDictionary<string, object> ExtractAggregatesFromResponse(IReadOn
    - Extracts numeric value from appropriate property
    - Builds dictionary with aggregation names and values
 7. Results returned in `DataResult.Aggregates` property
-8. DataGrid displays aggregated values in footer row
+8. Blazor DataGrid displays aggregated values in footer row
 
 Aggregations feature is now active.
 
@@ -1736,14 +1736,14 @@ Aggregations feature is now active.
 
 ### Step 10: Perform CRUD Operations
 
-CustomAdaptor methods enable users to create, read, update, and delete records directly from the DataGrid. Each operation calls corresponding methods in **InventoryRepository.cs** to execute Elasticsearch operations.
+CustomAdaptor methods enable users to create, read, update, and delete records directly from the Blazor DataGrid. Each operation calls corresponding methods in **InventoryRepository.cs** to execute Elasticsearch operations.
 
 **Add Toolbar Configuration:**
 
 ```cshtml
 <SfGrid TValue="InventoryStock" AllowPaging="true" Toolbar="@ToolbarItems">
     <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
-    <!-- Grid columns configuration -->
+    <!-- Blazor Grid columns configuration -->
 </SfGrid>
 
 @code {
@@ -1753,7 +1753,7 @@ CustomAdaptor methods enable users to create, read, update, and delete records d
 
 **Insert**
 
-Record insertion allows new inventory items to be added directly through the DataGrid.
+Record insertion allows new inventory items to be added directly through the Blazor DataGrid.
 
 In **Home.razor**, implement the `InsertAsync` method within the `CustomAdaptor` class:
 
@@ -1815,18 +1815,18 @@ private async Task<int> GetNextItemIdAsync()
 
 **How Insert Works:**
 
-- User clicks "Add" button in DataGrid toolbar
+- User clicks "Add" button in Blazor DataGrid toolbar
 - New empty row appears for data entry
 - User fills in inventory details and clicks "Update"
 - `InsertAsync` method is triggered with the new item data
 - `AddInventoryItemAsync` generates next ID using `GetNextItemIdAsync`
 - Item is indexed in Elasticsearch using `IndexAsync`
 - Index is refreshed to make the new item immediately searchable
-- New item appears in DataGrid
+- New item appears in Blazor DataGrid
 
 **Update**
 
-Record modification allows inventory item details to be updated directly within the DataGrid.
+Record modification allows inventory item details to be updated directly within the Blazor DataGrid.
 
 In **Home.razor**, implement the `UpdateAsync` method within the `CustomAdaptor` class:
 
@@ -1858,17 +1858,17 @@ public async Task UpdateInventoryItemAsync(InventoryStock item)
 
 **How Update Works:**
 
-- User selects a record and clicks "Edit" button in DataGrid
+- User selects a record and clicks "Edit" button in Blazor DataGrid
 - Row enters edit mode allowing data modification
 - User updates the inventory details and clicks "Update"
 - `UpdateAsync` method is triggered with the modified item data
 - `UpdateInventoryItemAsync` re-indexes the item in Elasticsearch using the same ItemId
 - Index is refreshed to make updated data immediately searchable
-- Updated item reflects changes in DataGrid
+- Updated item reflects changes in Blazor DataGrid
 
 **Delete**
 
-Record deletion allows inventory items to be removed directly from the DataGrid and Elasticsearch.
+Record deletion allows inventory items to be removed directly from the Blazor DataGrid and Elasticsearch.
 
 In **Home.razor**, implement the `RemoveAsync` method within the `CustomAdaptor` class:
 
@@ -1904,13 +1904,13 @@ public async Task RemoveInventoryItemAsync(int? itemId)
 
 **How Delete Works:**
 
-- User selects one or more records and clicks "Delete" button in DataGrid
+- User selects one or more records and clicks "Delete" button in Blazor DataGrid
 - Confirmation prompt appears to verify deletion
 - User confirms the deletion action
 - `RemoveAsync` method is triggered with the selected item's ItemId
 - `RemoveInventoryItemAsync` deletes the document from Elasticsearch using the ItemId
 - Index is refreshed to reflect the deletion immediately
-- Deleted item is removed from DataGrid
+- Deleted item is removed from Blazor DataGrid
 
 **Batch Update**
 
@@ -1954,16 +1954,16 @@ public class CustomAdaptor : DataAdaptor
 }
 ```
 
-> This method is triggered when the DataGrid is operating in [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) Edit mode.
+> This method is triggered when the Blazor DataGrid is operating in [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) Edit mode.
 
 **What happens behind the scenes:**
 
-- The DataGrid collects all added, edited, and deleted records in Batch Edit mode.
+- The Blazor DataGrid collects all added, edited, and deleted records in Batch Edit mode.
 - The combined batch request is passed to the CustomAdaptor's `BatchUpdateAsync()` method.
 - Each modified record is processed using `InventoryRepository.UpdateInventoryItemAsync()` with `IndexAsync` (re-index with same ID).
 - Each newly added record is saved using `InventoryRepository.AddInventoryItemAsync()` with ID generation.
 - Each deleted record is removed using `InventoryRepository.RemoveInventoryItemAsync()` with `DeleteAsync`.
-- The DataGrid refreshes to display the updated, added, and removed records in a single response.
+- The Blazor DataGrid refreshes to display the updated, added, and removed records in a single response.
 
 Now the adaptor supports bulk modifications with efficient Elasticsearch synchronization. All CRUD operations are now fully implemented, enabling comprehensive data management capabilities within the Blazor DataGrid.
 
@@ -1987,6 +1987,6 @@ This guide demonstrates how to:
 6. Implement aggregations for calculated values such as sum, average, count, min, max, and cardinality. [🔗](#step-9-implement-aggregations-feature)
 7. Handle batch operations and bulk updates for efficient data synchronization. [🔗](#step-10-perform-crud-operations)
 
-The application now provides a complete solution for managing inventory stock with a modern, user-friendly interface integrated with Elasticsearch. The CustomAdaptor pattern provides a clean separation between the DataGrid UI and the Elasticsearch data layer, making the application maintainable and scalable.
+The application now provides a complete solution for managing inventory stock with a modern, user-friendly interface integrated with Elasticsearch. The CustomAdaptor pattern provides a clean separation between the Blazor DataGrid UI and the Elasticsearch data layer, making the application maintainable and scalable.
 
 ---

@@ -10,15 +10,15 @@ documentation: ug
 
 # Creating a Reusable Custom Blazor Data Grid Component
 
-Creating a reusable custom Blazor DataGrid by wrapping the `SfGrid` inside a Razor component helps standardize configuration and improve maintainability across applications. This approach is particularly useful in modern web applications where multiple Grid instances are used across different pages or modules.
+Creating a reusable custom Blazor DataGrid by wrapping the `SfGrid` inside a Razor component helps standardize configuration and improve maintainability across applications. This approach is particularly useful in modern web applications where multiple Blazor Grid instances are used across different pages or modules.
 
-In such scenarios, manually configuring features such as paging, sorting, filtering, and layout for each Grid can result in duplicated code and inconsistent behavior. Over time, this repetitive setup increases development effort and makes updates more difficult. By introducing a wrapper component, common configurations can be centralized and reused efficiently, ensuring uniform behavior throughout the application.
+In such scenarios, manually configuring features such as paging, sorting, filtering, and layout for each Blazor Grid can result in duplicated code and inconsistent behavior. Over time, this repetitive setup increases development effort and makes updates more difficult. By introducing a wrapper component, common configurations can be centralized and reused efficiently, ensuring uniform behavior throughout the application.
 
 ## Why create a custom Blazor DataGrid component
 
-A custom DataGrid component simplifies development by reducing repetitive configuration. Instead of defining the same settings for each Grid instance, properties such as paging, sorting, and layout can be configured once and reused across the application.
+A custom Blazor DataGrid component simplifies development by reducing repetitive configuration. Instead of defining the same settings for each Blazor Grid instance, properties such as paging, sorting, and layout can be configured once and reused across the application.
 
-This approach is especially beneficial in team environments where multiple developers contribute to different modules. It ensures that all Grid implementations follow consistent design patterns and behavior. Centralizing configurations also reduces the chances of errors or inconsistencies caused by manual setup.
+This approach is especially beneficial in team environments where multiple developers contribute to different modules. It ensures that all Blazor Grid implementations follow consistent design patterns and behavior. Centralizing configurations also reduces the chances of errors or inconsistencies caused by manual setup.
 
 Another advantage is improved maintainability. When updates are required, such as modifying page size or enabling additional features, changes can be applied in a single location without affecting multiple files. This significantly reduces maintenance overhead and improves development efficiency.
 
@@ -30,7 +30,7 @@ The custom component internally renders the `SfGrid` and applies predefined sett
 
 * Generic type support **TItem** enables strongly typed data binding, improving type safety and providing compile-time validation.
 
-* Child content projection using **ChildContent** allows dynamic column definitions, templates, and other elements to be passed into the Grid.
+* Child content projection using **ChildContent** allows dynamic column definitions, templates, and other elements to be passed into the Blazor Grid.
 
 * Attribute forwarding ensures that additional parameters, properties, or events passed to the custom component are automatically applied to the underlying `SfGrid`.
 
@@ -38,13 +38,13 @@ This design approach provides a balance between reusable and flexibility. Develo
 
 ## When to use a custom Blazor DataGrid
 
-Using a custom DataGrid component is recommended in scenarios where consistency, scalability, and maintainability are key requirements.
+Using a custom Blazor DataGrid component is recommended in scenarios where consistency, scalability, and maintainability are key requirements.
 
 Common use cases include:
 
-* Applications with multiple Grid instances across various pages
+* Applications with multiple Blazor Grid instances across various pages
 * Requirements for consistent paging, sorting, or layout behavior
-* Projects where Grid configurations are frequently updated
+* Projects where Blazor Grid configurations are frequently updated
 * Large-scale applications that demand reusable and structured components
 
 Adopting this pattern helps enforce development standards, reduces duplication, and improves overall code quality.
@@ -114,7 +114,7 @@ namespace SF_Grid_Inheritance.Shared
 
 Once the custom component is defined, it can be reused across different pages by supplying the required data source and defining column structures. The predefined settings are automatically applied, which reduces setup time and ensures consistent behavior.
 
-This approach allows developers to focus more on application logic rather than repetitive Grid configuration. It also ensures a consistent user experience across all parts of the application and simplifies long-term maintenance as the project evolves.
+This approach allows developers to focus more on application logic rather than repetitive Blazor Grid configuration. It also ensures a consistent user experience across all parts of the application and simplifies long-term maintenance as the project evolves.
 
 **Index.razor:**
 

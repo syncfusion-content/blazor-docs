@@ -142,7 +142,7 @@ The **Material 3** theme applies scalable CSS custom properties to maintain cons
 
 | Name | Purpose |
 |------|---------|
-| `--e-font-name` | Specifies the default font family applied across the DataGrid |
+| `--e-font-name` | Specifies the default font family applied across the Blazor DataGrid |
 | `--color-sf-surface` | Controls base surface styling for UI elements |
 | `--color-sf-on-surface` | Defines text appearance on surface elements |
 | `--color-sf-primary-container` | Applies background styling for active or highlighted row states |
@@ -154,9 +154,9 @@ The **Bootstrap 5.3** theme extends Bootstrap's framework with CSS custom proper
 
 | Name | Purpose |
 |------|---------|
-| `--e-font-name` | Specifies the default font family used across the DataGrid |
-| `--color-sf-content-bg-color-alt1` | Controls the background of the DataGrid header |
-| `--color-sf-content-bg-color` | Controls the background of the DataGrid content |
+| `--e-font-name` | Specifies the default font family used across the Blazor DataGrid |
+| `--color-sf-content-bg-color-alt1` | Controls the background of the Blazor DataGrid header |
+| `--color-sf-content-bg-color` | Controls the background of the Blazor DataGrid content |
 | `--color-sf-table-bg-color-hover` | Defines the background styling for selected rows during hover interaction |
 | `--color-sf-content-bg-color-hover` | Defines background behavior when primary elements are hovered |
 | `--color-sf-primary` | Defines the main theme styling used across components |
@@ -182,13 +182,13 @@ The **Fluent 2** theme leverages modern CSS custom properties to provide a clean
 
 | Name | Purpose |
 |------|---------|
-| `--e-font-name` | Specifies the default font family used across the DataGrid |
-| `--color-sf-content-bg-color-alt1` | Controls the main background of the DataGrid |
+| `--e-font-name` | Specifies the default font family used across the Blazor DataGrid |
+| `--color-sf-content-bg-color-alt1` | Controls the main background of the Blazor DataGrid |
 | `--color-sf-table-bg-color-hover` | Defines the background styling for selected rows during hover interaction |
 | `--color-sf-content-bg-color-hover` | Defines background behavior when primary elements are hovered |
 | `--color-sf-primary` | Defines the main theme styling used across components |
 | `--color-sf-border-light` | Specifies styling for light borders and separators |
-| `--color-sf-border-alt` | Defines alternate border styling for DataGrid elements |
+| `--color-sf-border-alt` | Defines alternate border styling for Blazor DataGrid elements |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

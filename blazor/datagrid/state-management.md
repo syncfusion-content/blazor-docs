@@ -11,7 +11,7 @@ documentation: ug
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports state management to preserve grid configuration across browser reloads and page navigation within the same session. Persisted settings include **paging**, **sorting**, **filtering**, **grouping**, **column visibility**, and similar configurations. State persistence applies only to grid settings; the underlying data must be reloaded when the page refreshes.
 
-Enable state persistence by setting the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence) property to **true**. When enabled, the grid stores its state in the browser’s [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), retaining settings until cleared.
+Enable state persistence by setting the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence) property to **true**. When enabled, the Blazor Grid stores its state in the browser’s [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), retaining settings until cleared.
 
 ```cs
 
@@ -19,9 +19,9 @@ Enable state persistence by setting the [EnablePersistence](https://help.syncfus
 
 ```
 
-> The Grid stores its state using a key that combines the **component name** and its assigned **ID**. For example, if the component name is **Grid** and the ID is **OrderDetails**, the state key will be **gridOrderDetails**.
+> The Blazor Data Grid stores its state using a key that combines the **component name** and its assigned **ID**. For example, if the component name is **Blazor Grid** and the ID is **OrderDetails**, the state key will be **gridOrderDetails**.
 
-When state persistence is enabled, the Grid saves the following settings in local storage:
+When state persistence is enabled, the Blazor Grid saves the following settings in local storage:
 
 | **Feature**         | **Persisted Properties**                                                                                     | **Ignored Properties**                     |
 |----------------------|-------------------------------------------------------------------------------------------------------------|--------------------------------------------|
@@ -37,7 +37,7 @@ When state persistence is enabled, the Grid saves the following settings in loca
 
 > When a row is initially selected using the `SelectedRowIndex` property, only that configured value is persisted. Changes made through UI interactions are not retained after a reload.
 
-N> State persistence relies on the `ID` property. Explicitly set the `ID` value for the grid to ensure consistent behavior.
+N> State persistence relies on the `ID` property. Explicitly set the `ID` value for the Blazor Grid to ensure consistent behavior.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -129,15 +129,15 @@ The Blazor DataGrid includes an option to revert to its original configuration b
 
 1. **Using ResetPersistDataAsync Method**
 
-    Clears the persisted state from local storage and restores the grid to its original property values.
+    Clears the persisted state from local storage and restores the Blazor Grid to its original property values.
 
 2. **Clearing Local Storage**
 
-    Removes the stored state directly from the browser’s local storage and reloads the grid with its initial configuration.
+    Removes the stored state directly from the browser’s local storage and reloads the Blazor Grid with its initial configuration.
 
 ### Using ResetPersistDataAsync Method
 
-The [ResetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ResetPersistDataAsync) method clears all persisted state data when persistence is enabled and restores the Grid to its original property values.
+The [ResetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ResetPersistDataAsync) method clears all persisted state data when persistence is enabled and restores the Blazor Grid to its original property values.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -219,7 +219,7 @@ public class OrderData
 
 ### Clearing local storage
 
-Clear the **local storage** entry used for state persistence to remove all stored configuration and reload the Grid with the initial settings.
+Clear the **local storage** entry used for state persistence to remove all stored configuration and reload the Blazor Grid with the initial settings.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -309,16 +309,16 @@ The Blazor DataGrid supports state persistence, enabling saving and restoring gr
 Each version represents a unique grid configuration. When a version button is clicked:
 
 1. The current grid state is saved to localStorage under the active version key.
-2. The grid switches to the selected version.
-3. If persisted data exists for the selected version, it is applied to the grid.
-4. If no data exists, a new state will be stored when the grid is modified.
+2. the Blazor Grid switches to the selected version.
+3. If persisted data exists for the selected version, it is applied to the Blazor Grid.
+4. If no data exists, a new state will be stored when the Blazor Grid is modified.
 
 To implement version-based persistence, set the [PersistenceKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PersistenceKey) dynamically based on the selected version (for example, **gridOrderDetails_v1**). This ensures each version maintains a distinct state in **localStorage**.
 
 The core logic for switching versions is handled in the ChangeVersion method:
 
-The method saves the current grid state using [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync) before switching versions. This method returns the grid’s current state as a string suitable for storage or transmission.
-It then attempts to load the state associated with the selected version using [SetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetPersistDataAsync_System_String_). If a persisted state exists, it is applied to the grid. Otherwise, a message indicates that no saved state exists and a new state will be stored going forward.
+The method saves the current grid state using [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync) before switching versions. This method returns the Blazor Grid’s current state as a string suitable for storage or transmission.
+It then attempts to load the state associated with the selected version using [SetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetPersistDataAsync_System_String_). If a persisted state exists, it is applied to the Blazor Grid. Otherwise, a message indicates that no saved state exists and a new state will be stored going forward.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -437,9 +437,9 @@ The Blazor DataGrid supports saving and restoring the current state using local 
 
 **How It Works**
 
-* The [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync) method retrieves the current state of the Grid as a string. This string can be stored in local storage or transmitted to a server.
-* The [SetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetPersistDataAsync_System_String_) method applies a previously saved state to the Grid.
-* If no saved state exists, the Grid remains in the current configuration.
+* The [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync) method retrieves the current state of the Blazor Grid as a string. This string can be stored in local storage or transmitted to a server.
+* The [SetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetPersistDataAsync_System_String_) method applies a previously saved state to the Blazor Grid.
+* If no saved state exists, the Blazor Grid remains in the current configuration.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -650,7 +650,7 @@ public sealed class OrderDetails
 
 When the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence) property is **true**, the Blazor DataGrid saves its configuration in **window.localStorage**. This includes settings such as **paging**, **filtering**, **sorting**, and **column visibility**. The stored state can be retrieved or updated using JavaScript interop.
 
-To retrieve the grid model from local storage:
+To retrieve the Blazor Grid model from local storage:
 
 ```cs
 
@@ -661,7 +661,7 @@ string modelJson = await JS.InvokeAsync<string>("localStorage.getItem", localSto
 var modelObject = JsonSerializer.Deserialize<object>(modelJson);
 ```
 
-Update the grid state in local storage:
+Update the Blazor Grid state in local storage:
 
 ```cs
 await JS.InvokeVoidAsync("localStorage.setItem", localStorageKey, modelJson);

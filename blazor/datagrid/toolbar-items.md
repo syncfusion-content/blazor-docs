@@ -9,7 +9,7 @@ documentation: ug
 
 # Toolbar Items in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) offers a flexible toolbar that enables the addition of custom toolbar items or modification of existing ones. The toolbar appears above the DataGrid, providing convenient access to common actions and custom functionality.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) offers a flexible toolbar that enables the addition of custom toolbar items or modification of existing ones. The toolbar appears above the Blazor Grid, providing convenient access to common actions and custom functionality.
 
 ## Built-in Toolbar item
 
@@ -19,19 +19,19 @@ Add them by defining the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfus
 
 | Built-in Toolbar Items | Actions |
 |------------------------|---------|
-| Add | Adds a new row to the DataGrid. |
+| Add | Adds a new row to the Blazor DataGrid. |
 | Edit | Puts the selected row into edit mode. |
 | Update | Saves changes made during edit mode. |
 | Delete | Deletes the selected record. |
 | Cancel | Discards changes made during edit mode. |
 | Search | Displays a search box to filter the records. |
-| Print | Prints the DataGrid content. |
+| Print | Prints the Blazor DataGrid content. |
 | ColumnChooser | Opens the Column Chooser to toggle column visibility. |
-| PdfExport | Exports DataGrid data to a PDF file. |
-| ExcelExport | Exports DataGrid data to an Excel file. |
-| CsvExport | Exports DataGrid data to a CSV file. |
+| PdfExport | Exports Blazor DataGrid data to a PDF file. |
+| ExcelExport | Exports Blazor DataGrid data to an Excel file. |
+| CsvExport | Exports Blazor DataGrid data to a CSV file. |
 
-N> Built-in item IDs are typically prefixed with the grid ID (for example, Grid_add). Use these IDs in event handlers for robust detection.
+N> Built-in item IDs are typically prefixed with the Blazor Grid ID (for example, Grid_add). Use these IDs in event handlers for robust detection.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -569,7 +569,7 @@ By default, custom toolbar items are aligned on the left. Modify the position by
 
 ## Customize the text name of custom Toolbar Items with same as default Toolbar Items
 
-When creating custom toolbar items using the same text as default items (such as Add, Edit, or Delete), the DataGrid may treat them as default items. This can lead to unexpected behavior—for example, the buttons may be disabled in certain states.
+When creating custom toolbar items using the same text as default items (such as Add, Edit, or Delete), the Blazor DataGrid may treat them as default items. This can lead to unexpected behavior—for example, the buttons may be disabled in certain states.
 
 To avoid this behavior and ensure proper functionality:
 
@@ -680,14 +680,14 @@ Customize a toolbar item’s tooltip text by adding items externally and setting
 
     public List<OrderData> Orders { get; set; }
     private List<object> ToolbarItems = new List<object>() {
-        new ItemModel() { Text = "Excel",TooltipText="Export to Excel", PrefixIcon = "e-excelexport", Id = "Grid_excelexport"}, //Here Grid is SfGrid ID.
+        new ItemModel() { Text = "Excel",TooltipText="Export to Excel", PrefixIcon = "e-excelexport", Id = "Grid_excelexport"}, //Here Blazor Grid is SfGrid ID.
         new ItemModel(){ Text = "Pdf",TooltipText="Export to PDF", PrefixIcon= "e-pdfexport", Id="Grid_pdfexport"},
         new ItemModel(){ Text = "CSV",TooltipText="Export to CSV", PrefixIcon= "e-csvexport", Id="Grid_csvexport"},
     };
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Blazor Grid's ID and itemname.
         {
             await this.Grid.ExportToPdfAsync();
         }
