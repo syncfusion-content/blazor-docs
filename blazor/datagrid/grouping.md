@@ -9,7 +9,7 @@ documentation: ug
 
 # Grouping in Blazor Data Grid
 
-The grouping feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) organizes rows into groups, enabling users to expand or collapse related records. Columns can be grouped by dragging the column header into the group drop area. Enable grouping by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to **true**. Configure behavior using [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings).
+The grouping feature in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) organizes rows into groups, enabling users to expand or collapse related records. Columns can be grouped by dragging the column header into the group drop area. Enable grouping by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to **true**. Configure behavior using [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -87,9 +87,9 @@ public class OrderData
 > - Group and ungroup columns programmatically using [GroupColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupColumnAsync_System_String_) and [UngroupColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UngroupColumnAsync_System_String_).
 > - To prevent grouping for a specific column, set [GridColumn.AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowGrouping) to **false**.
 
-## Initial group
+## Initial grouping
 
-Configure initial grouping in the Blazor DataGrid by setting the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_Columns) property of [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) to an array of field names. This pre-groups the specified columns on initial render to accelerate data analysis.
+Configure initial grouping in the Blazor Data Grid by setting the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_Columns) property of [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) to an array of field names. This pre-groups the specified columns on initial render to accelerate data analysis.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -169,7 +169,117 @@ public class OrderData
 
 > Group multiple columns by listing their field names in the `Columns` property of `GridGroupSettings`.
 
-## Prevent grouping for particular column
+## Single and multiple column grouping
+
+The Data Grid supports grouping by one or more columns to organize data into hierarchical sections. In single-column grouping, records are grouped based on the values of a single column. In multiple-column grouping, records are grouped by multiple columns in sequence, creating nested groups that provide a more structured view of the data.
+
+The following example demonstrates switching between single-column and multiple-column grouping using a button click.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+
+<SfButton Content="@buttonContent" OnClick="PerformGrouping"></SfButton>
+
+<SfGrid @ref="Grid" DataSource="@GridData" AllowGrouping="true" Height="400px">
+    <GridGroupSettings Columns="@initialGroupColumn"></GridGroupSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code 
+{
+    public SfGrid<OrderData> Grid;
+    public List<OrderData> GridData { get; set; }
+    private string buttonContent { get; set; } = "Single group";
+    private string[] initialGroupColumn { get; set; } = { "CustomerID" };
+    private bool isMultipleGrouping { get; set; }
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+
+    private async Task PerformGrouping()
+    {
+        isMultipleGrouping = !isMultipleGrouping;
+        buttonContent = isMultipleGrouping ? "Multiple group" : "Single group";
+
+        if (buttonContent.Equals("Single group"))
+        {
+            await Grid.ClearGroupingAsync();
+            await Grid.GroupColumnAsync("CustomerID");
+        } 
+        else
+        {
+            await Grid.ClearGroupingAsync();
+
+            string[] groupColumns = (new string[] { "CustomerID", "ShipCity" });
+            foreach (var column in groupColumns)
+            {
+                await Grid.GroupColumnAsync(column);
+            }
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();   
+    public OrderData(){}
+
+    public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
+    {
+        this.OrderID = OrderID;    
+        this.CustomerID = CustomerID;
+        this.ShipCity = ShipCity;
+        this.ShipName = ShipName;             
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+                Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+                Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+                Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLdDaZlTCdOBjja?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+## Prevent grouping for a particular column
 
 To prevent grouping for a specific column, set [GridColumn.AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowGrouping) to **false**. This disables the drag-to-group feature for that column, while allowing grouping for other columns.
 
@@ -245,11 +355,9 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDhdjwjUKVKiZXsy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Hide drop area
+## Hide the group drop area
 
-By default, the Blazor DataGrid displays a drop area for grouping columns. In scenarios where further grouping or ungrouping should be restricted after initial grouping, hide the drop area.
-
-To hide the drop area, set the [ShowDropArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_ShowDropArea) property of `GridGroupSettings` to `false`.
+By default, the Blazor Data Grid displays a drop area for grouping columns. To restrict further grouping or ungrouping after initial grouping, set the [ShowDropArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_ShowDropArea) property of `GridGroupSettings` to `false`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -353,7 +461,7 @@ public class OrderData
 
 ## Show the grouped column
 
-By default, grouped columns are hidden to keep the view focused. To display grouped columns, set [ShowGroupedColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_ShowGroupedColumn) to **true** in `GridGroupSettings`.
+By default, grouped columns are hidden to keep the Grid view focused. To display grouped columns, set [ShowGroupedColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_ShowGroupedColumn) to **true** in `GridGroupSettings`.
 
 
 {% tabs %}
@@ -368,7 +476,7 @@ By default, grouped columns are hidden to keep the view focused. To display grou
 </div>
 
 <SfGrid @ref="Grid" DataSource="@GridData" AllowGrouping="true" Height="315px">
-    <GridGroupSettings Columns="@Initial" ShowGroupedColumn=@IsShow></GridGroupSettings>
+    <GridGroupSettings Columns="@Initial" ShowGroupedColumn="@IsShow"></GridGroupSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
@@ -380,9 +488,8 @@ By default, grouped columns are hidden to keep the view focused. To display grou
 @code {
     public List<OrderData> GridData { get; set; }
     SfGrid<OrderData> Grid;
-
-    public bool IsShow { get; set; } = true;
-
+    private bool? isChecked = null;
+    public bool IsShow { get; set; } = false;
     public string[] Initial = (new string[] { "CustomerID", "ShipCity" });
 
     protected override void OnInitialized()
@@ -390,19 +497,16 @@ By default, grouped columns are hidden to keep the view focused. To display grou
         GridData = OrderData.GetAllRecords();
     }
 
-    private bool? isChecked = null;
-
-
     private async Task Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool?> args)
     {
         if (args.Checked == true)
         {
-            IsShow = false;
+            IsShow = true;
             await Grid.Refresh();
         }
         else
         {
-            IsShow = true;
+            IsShow = false;
             await Grid.Refresh();
         }
     }
@@ -456,11 +560,11 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLdDmXqqVJrpZAz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLRDbifzxeqdhUS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Persist grouped row expand or collapse state
+## Persist the expand or collapse state of grouped rows
  
-The Blazor DataGrid can persist the expand or collapse state of grouped rows across operations such as paging, sorting, filtering, and editing. By default, these operations reset grouped rows to their initial state. To retain the current state and ensure a consistent user experience, set [GridGroupSettings.PersistGroupState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_PersistGroupState) to **true**. This also applies when using external methods like [ExpandAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandAllGroupAsync) and [CollapseAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CollapseAllGroupAsync).
+The Blazor Data Grid can persist the expand or collapse state of grouped rows across operations such as paging, sorting, filtering, and editing. By default, these operations reset grouped rows to their initial state. To retain the current state and ensure a consistent user experience, set [GridGroupSettings.PersistGroupState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_PersistGroupState) to **true**. This setting also affects the behavior of the [ExpandAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandAllGroupAsync) and [CollapseAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CollapseAllGroupAsync) methods.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -470,7 +574,7 @@ The Blazor DataGrid can persist the expand or collapse state of grouped rows acr
 
 <div style="display:flex;gap: 5px;">
     <label> Enable or disable grouped row state persistence</label>
-    <SfSwitch @bind-checked="IsGroupStatePersistent " OffLabel="OFF" OnLabel="ON" ValueChange="Change" TChecked="bool"></SfSwitch>
+    <SfSwitch @bind-Checked="IsGroupStatePersistent" OffLabel="OFF" OnLabel="ON" ValueChange="Change" TChecked="bool"></SfSwitch>
 </div>
 
 <SfGrid DataSource="@GridData" AllowGrouping="true" Height="190px" AllowSorting="true" AllowFiltering="true" AllowPaging="true">
@@ -558,7 +662,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZhnjGZqzYIKunOa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Sort grouped columns in descending order during initial grouping
+## Sort groups in descending order
 
 By default, grouped columns are sorted in ascending order. To sort in descending order during initial grouping, set the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Field) and [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Direction) in `GridSortSettings.Columns`.
 
@@ -649,7 +753,7 @@ public class OrderData
 
 ## Group by format
 
-By default, grouping is performed based on the raw values. Alternatively, numeric or datetime columns can be grouped based on a specified display format by setting [EnableGroupByFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EnableGroupByFormat) on the corresponding column.
+By default, grouping uses the raw column values. Alternatively, numeric or datetime columns can be grouped based on a specified display format by setting [EnableGroupByFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EnableGroupByFormat) on the corresponding column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -660,7 +764,7 @@ By default, grouping is performed based on the raw values. Alternatively, numeri
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="yyyy/MMM" Type="ColumnType.Date" EnableGroupByFormat="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="yyyy/MMM" Type="ColumnType.Date" EnableGroupByFormat="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" EnableGroupByFormat="true" Width="80"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -687,7 +791,7 @@ public class OrderData
     {
         
     }
-    public OrderData(int? OrderID,string CustomerID, DateTime? OrderDate, double? Freight)
+    public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
     {
         this.OrderID = OrderID;    
         this.CustomerID = CustomerID;
@@ -730,107 +834,9 @@ public class OrderData
 
 > Numeric columns can be grouped based on formats such as currency or percentage, and datetime columns can be grouped based on date or time formats.
 
-## Collapse all grouped rows at initial rendering
+## Group or ungroup column externally
 
-The Blazor DataGrid can expand or collapse grouped rows to control the visibility of grouped data. This is useful for summarizing large datasets by initially hiding details.
-
-To collapse all grouped rows at initial rendering, use the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event with the [CollapseAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CollapseAllGroupAsync) method.
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@GridData" @ref="Grid" AllowGrouping="true" Height="267px">
-    <GridGroupSettings Columns="@groupOptions"></GridGroupSettings>
-    <GridEvents DataBound="DataBoundHandler" TValue="OrderData"></GridEvents>
-    <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="110"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code {
-    public List<OrderData> GridData { get; set; }
-
-    SfGrid<OrderData> Grid;
-
-    public bool initial = true;
-
-    public string[] groupOptions = (new string[] { "ShipCity" });
-
-    protected override void OnInitialized()
-    {
-        GridData = OrderData.GetAllRecords();
-    }
-
-    public async Task DataBoundHandler()
-    {
-        if(initial == true)
-        {
-            await Grid.CollapseAllGroupAsync();
-            initial = false;
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="OrderData.cs" %}
-
-public class OrderData
-{
-    public static List<OrderData> Orders = new List<OrderData>();
-        
-    public OrderData() {}
-    public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
-    {
-        this.OrderID = OrderID;    
-        this.CustomerID = CustomerID;
-        this.ShipCity = ShipCity;
-        this.ShipName = ShipName;             
-    }
-
-    public static List<OrderData> GetAllRecords()
-    {
-        if (Orders.Count() == 0)
-        {
-            int code = 10;
-            for (int i = 1; i < 2; i++)
-            {
-                Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
-                Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
-                Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-                Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
-                Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
-                Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
-                Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
-                Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
-                Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
-                code += 5;
-            }
-        }
-        return Orders;
-    }
-
-    public int? OrderID { get; set; }
-    public string CustomerID { get; set; }
-    public string ShipCity { get; set; }
-    public string ShipName { get; set; }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhxNQNAJOxQpgHl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
-
-> Collapsing every grouped record can take time on large datasets. For large data, use [lazy-load grouping](https://blazor.syncfusion.com/documentation/datagrid/lazy-load-grouping). The same consideration applies to [ExpandAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandAllGroupAsync).
-
-## Group or Ungroup column externally
-
-The Blazor DataGrid supports interaction-based grouping by dragging headers to the grouping area. It also supports programmatic grouping and ungrouping via [GroupColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupColumnAsync_System_String_) and [UngroupColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UngroupColumnAsync_System_String_).
+The Blazor Data Grid supports interaction-based grouping by dragging headers to the grouping area. It also supports programmatic grouping and ungrouping via [GroupColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupColumnAsync_System_String_) and [UngroupColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UngroupColumnAsync_System_String_).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -949,11 +955,109 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjLnNcZqfkcNAIdz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Expand or collapse externally
 
-The Blazor DataGrid can expand or collapse grouped rows programmatically to control the visibility of grouped data.
+## Collapse all groups on initial load
 
-### Expand or collapse all grouped rows
+The Blazor Data Grid can expand or collapse grouped rows to control the visibility of grouped data. This helps summarize large datasets by initially hiding row details.
+
+To collapse all grouped rows at initial rendering, use the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event with the [CollapseAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CollapseAllGroupAsync) method.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@GridData" @ref="Grid" AllowGrouping="true" Height="267px">
+    <GridGroupSettings Columns="@groupOptions"></GridGroupSettings>
+    <GridEvents DataBound="DataBoundHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="110"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderData> GridData { get; set; }
+
+    SfGrid<OrderData> Grid;
+
+    public bool initial = true;
+
+    public string[] groupOptions = (new string[] { "ShipCity" });
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+
+    public async Task DataBoundHandler()
+    {
+        if(initial == true)
+        {
+            await Grid.CollapseAllGroupAsync();
+            initial = false;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+        
+    public OrderData() {}
+    public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
+    {
+        this.OrderID = OrderID;    
+        this.CustomerID = CustomerID;
+        this.ShipCity = ShipCity;
+        this.ShipName = ShipName;             
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+                Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+                Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+                Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhxNQNAJOxQpgHl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+> Collapsing every grouped record can take time on large datasets. For large data, use [lazy-load grouping](https://blazor.syncfusion.com/documentation/datagrid/lazy-load-grouping). The same consideration applies to [ExpandAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandAllGroupAsync).
+
+
+## Expand or collapse all grouped rows externally
+
+The Blazor Data Grid can expand or collapse grouped rows programmatically to control the visibility of grouped data.
 
 Use [ExpandAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandAllGroupAsync) and [CollapseAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CollapseAllGroupAsync) to expand or collapse all grouped rows.
 
@@ -982,8 +1086,6 @@ Use [ExpandAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     public List<OrderData> GridData { get; set; }
     SfGrid<OrderData>? Grid { get; set; }
     public string[] columns = (new string[] { "CustomerID", "ShipCity" });
-    public bool IsShow { get; set; } = true;
-
 
     protected override void OnInitialized()
     {
@@ -994,11 +1096,11 @@ Use [ExpandAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     {
         if (args.Checked == true)
         {
-            await Grid.CollapseAllGroupAsync();
+            await Grid.ExpandAllGroupAsync();
         }
         else
         {
-           await Grid.ExpandAllGroupAsync();
+            await Grid.CollapseAllGroupAsync();
         }
     }
 }
@@ -1052,11 +1154,9 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhxZGtUpEGJBriu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVHNPMJSLRrMRSC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Clear grouping 
-
-The clear grouping feature in the Blazor DataGrid removes all grouped columns from the Grid, providing a quick way to reset grouping.
+## Clear grouping
 
 To clear all grouped columns, call the [ClearGroupingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearGroupingAsync) method.
 
@@ -1146,11 +1246,13 @@ public class OrderData
 
 ## Grouping events
 
-The Blazor DataGrid provides two events for the group action: [Grouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouping) and [Grouped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouped). `Grouping` is triggered before the action starts, and `Grouped` is triggered after completion. These events support custom logic based on grouping.
+The Blazor Data Grid provides two events for the group action: [Grouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouping) and [Grouped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouped). `Grouping` is triggered before the action starts, and `Grouped` is triggered after completion. These events enable custom logic during grouping operations.
 
-1. **Grouping Event**: Triggered before the grouping or ungrouping action is performed in the Grid. Use this to perform operations or cancel the action. The event parameters include the current grouping column name and the action.
 
-2. **Grouped Event**: Triggered after the grouping or ungrouping action is performed in the Grid. Use this to run post-action logic. The event parameters include the current grouping column name and the action.
+| **Event Name**       | **Description**                                                                 |
+|----------------------|---------------------------------------------------------------------------------|
+|  **Grouping**      | Triggered before the grouping or ungrouping action is performed in the Grid. Use this to perform operations or cancel the action. The event parameters include the current grouping column name and the action.                                      |
+| **Grouped**     | Triggered after the grouping or ungrouping action is performed in the Grid. Use this to run post-action logic. The event parameters include the current grouping column name and the action.      |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1165,7 +1267,7 @@ The Blazor DataGrid provides two events for the group action: [Grouping](https:/
     <br />
 }
 
-<SfGrid @ref="Grid" DataSource="@GridData"  AllowGrouping="true" Height="260px">
+<SfGrid DataSource="@GridData"  AllowGrouping="true" Height="260px">
     <GridEvents Grouping="GroupingHandler" Grouped="GroupedHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
@@ -1175,29 +1277,26 @@ The Blazor DataGrid provides two events for the group action: [Grouping](https:/
     </GridColumns>
 </SfGrid>
 
-
 @code {
     public List<OrderData> GridData { get; set; }
-    SfGrid<OrderData>? Grid { get; set; }
     public bool show { get; set; } = false;
-
     public string columnName { get; set; }
-    public string requesttype { get; set; }
 
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
     }
 
-    public async Task GroupingHandler(GroupingEventArgs args)
+    public void GroupingHandler(GroupingEventArgs args)
     {
         if (args.ColumnName == "OrderID")
         {
+            // Prevents the grouping action
             args.Cancel = true;
         }
     }
 
-    public async Task GroupedHandler(GroupedEventArgs args)
+    public void GroupedHandler(GroupedEventArgs args)
     {
         columnName = args.ColumnName;
         show = true;
@@ -1254,9 +1353,12 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjVxDwZqfYuzxYmK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-
 ## See Also
 
 - [Exporting grouped records](https://blazor.syncfusion.com/documentation/datagrid/excel-exporting#exporting-grouped-records)
+- [Lazy load grouping](https://blazor.syncfusion.com/documentation/datagrid/lazy-load-grouping)
+- [Grouping customization](https://blazor.syncfusion.com/documentation/datagrid/style-and-appearance/grouping)
+- [Group and caption aggregates](https://blazor.syncfusion.com/documentation/datagrid/group-and-caption-aggregate)
+- [Caption template](https://blazor.syncfusion.com/documentation/datagrid/caption-template)
 
-> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for an overview of capabilities. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to learn how to present and manipulate data.
+> Refer to the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for an overview of capabilities. Explore the [Blazor Data Grid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to learn how to present and manipulate data.
