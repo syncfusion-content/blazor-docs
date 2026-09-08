@@ -11,7 +11,7 @@ Each row represents a single record from a data source and displays values for t
 
 ## Customize row styles
 
-Customizing row styles helps emphasize important data, align with application themes, and improve readability. The Blazor Grid supports styling through CSS, properties, methods, and events.
+Customizing row styles helps emphasize important data, align with application themes, and improve readability. The Blazor DataGrid supports styling through CSS, properties, methods, and events.
 
 ### Using event
 
@@ -607,7 +607,7 @@ By default, `EnableHover` is **true**. Set it to **false** to disable row hover.
 
 ## Row pinning (Frozen)
 
-The Blazor Data Table provides an option to freeze rows, keeping them visible while scrolling vertically through large datasets. This feature helps maintain important information in view for better readability.
+The Blazor DataGrid provides an option to freeze rows, keeping them visible while scrolling vertically through large datasets. This feature helps maintain important information in view for better readability.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=L2NvKyBomhM"%}
 
@@ -724,7 +724,7 @@ public class OrderData
 
 ### Change default frozen rows line color
 
-The frozen row background color in the Blazor Data DataGrid can be customized by applying CSS styles, allowing alignment with the application's theme.
+The frozen row background color in the Blazor DataGrid can be customized by applying CSS styles, allowing alignment with the application's theme.
 
 Apply the following CSS to change the default line color:
 

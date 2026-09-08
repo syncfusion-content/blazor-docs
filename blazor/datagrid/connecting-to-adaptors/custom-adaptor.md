@@ -76,7 +76,7 @@ To learn more about **Custom Binding** in the Blazor Grid, watch this video:
 
 ## Data Binding
 
-Custom data binding can be performed in the Blazor DataTable by providing a custom adaptor class and overriding the **Read** or **ReadAsync** method of the **DataAdaptor** abstract class.
+Custom data binding can be performed in the Blazor DataGrid by providing a custom adaptor class and overriding the **Read** or **ReadAsync** method of the **DataAdaptor** abstract class.
 
 The following sample code demonstrates how to implement custom data binding using a custom adaptor:
 
@@ -957,7 +957,7 @@ You can find the complete code in the [Github](https://github.com/SyncfusionExam
 
 ## Handling CRUD operations
 
-The CRUD operations for custom-bound data in the Blazor Data Table can be implemented by overriding the following CRUD methods of the **DataAdaptor** abstract class:
+The CRUD operations for custom-bound data in the Blazor DataTable can be implemented by overriding the following CRUD methods of the **DataAdaptor** abstract class:
 
 * **Insert/InsertAsync**
 * **Remove/RemoveAsync**

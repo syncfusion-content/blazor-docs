@@ -54,7 +54,7 @@ The **FirstName** and **EmailID** columns are rendered using templates and expor
                 @{
                     var employee = (context as EmployeeData);
                 }
-                <a href="mailto:@employee.EmailID">@employee.EmailID</a>
+                <a href="mailto:@employee.EmailID" aria-label="Send email to @employee.EmailID">@employee.EmailID</a>
             </Template>
         </GridColumn>
         <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="180"></GridColumn>
@@ -90,7 +90,7 @@ The **FirstName** and **EmailID** columns are rendered using templates and expor
         else if (args.Column.Field == "EmailID")
        {
            var email = args.Data.EmailID;
-           args.Cell.Value = $"<a href='mailto:{email}'>{email}</a>";
+           args.Cell.Value = $"<a href='mailto:{email}' aria-label="Send email to {email}">{email}</a>";
        }
     }
 }
@@ -471,7 +471,7 @@ To format and customize the detail rows in the exported Excel document:
                             </td>
                             <td>
                                 <span class="link">
-                                    Contact: <a href="mailto:${@employee.Contact}">@employee.Contact</a>
+                                    Contact: <a href="mailto:${@employee.Contact}" aria-label="Send email to @employee.Contact">@employee.Contact</a>
                                 </span>
                             </td>
                         </tr>

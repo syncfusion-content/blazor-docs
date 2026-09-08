@@ -377,7 +377,7 @@ public class EmployeeData
 
 ## Render Blazor component in row template
 
-The Blazor DataTable can render Blazor components inside row templates, enabling interactive UI elements within rows.
+The Blazor DataGrid can render Blazor components inside row templates, enabling interactive UI elements within rows.
 
 To render a Blazor component in a row template, set the `RowTemplate` property and provide the custom HTML that defines the row layout.
 

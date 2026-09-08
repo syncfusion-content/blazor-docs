@@ -589,7 +589,7 @@ The `Home.razor` component displays the stock market data in a Blazor DataGrid a
 
 ### Step 3: Create the CustomAdaptor for SignalR
 
-The CustomAdaptor bridges the Blazor DataGrid with SignalR by implementing the DataAdaptor interface. It handles data retrieval, searching, filtering, and sorting operations required by the Blazor DataGrid.
+The CustomAdaptor bridges the Blazor DataGrid with SignalR by implementing the DataAdaptor interface. It handles data retrieval, searching, filtering, and sorting operations required by the Blazor Grid.
 
 **Instructions:**
 

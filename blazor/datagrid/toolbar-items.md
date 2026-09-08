@@ -9,7 +9,7 @@ documentation: ug
 
 # Toolbar Items in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) offers a flexible toolbar that enables the addition of custom toolbar items or modification of existing ones. The toolbar appears above the Blazor DataGrid, providing convenient access to common actions and custom functionality.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) offers a flexible toolbar that enables the addition of custom toolbar items or modification of existing ones. The toolbar appears above the Blazor Grid, providing convenient access to common actions and custom functionality.
 
 ## Built-in Toolbar item
 

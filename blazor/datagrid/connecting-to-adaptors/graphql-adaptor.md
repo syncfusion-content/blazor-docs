@@ -1598,7 +1598,7 @@ The backend resolver receives the group specifications in the `GetExpenseRecordD
 
 ### Perform CRUD Operations
  
- CRUD operations (Create, Read, Update, Delete) provide complete data‑management capabilities within the Blazor DataGrid. The Blazor DataGrid offers built‑in dialogs and action buttons to perform these operations, while backend resolvers execute the corresponding data modifications.
+ CRUD operations (Create, Read, Update, Delete) provide complete data‑management capabilities within the Blazor DataGrid. The Blazor Grid offers built‑in dialogs and action buttons to perform these operations, while backend resolvers execute the corresponding data modifications.
 
  Add the Blazor Grid `GridEditSettings` and `Toolbar` configuration to enable create, read, update, and delete (CRUD) operations.
  

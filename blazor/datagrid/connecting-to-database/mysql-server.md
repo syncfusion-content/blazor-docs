@@ -1497,7 +1497,7 @@ public class CustomAdaptor : DataAdaptor
 - All repository operations persist changes to the MySQL Server database.
 - The Blazor DataGrid refreshes to display the updated, added, and removed records in a single response.
 
-Now the adaptor supports bulk modifications with atomic database synchronization. All CRUD operations are now fully implemented, enabling comprehensive data management capabilities within the Blazor Blazor DataGrid.
+Now the adaptor supports bulk modifications with atomic database synchronization. All CRUD operations are now fully implemented, enabling comprehensive data management capabilities within the Blazor DataGrid.
 
 **Reference links**
 - [InsertAsync(DataManager, object)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_) - Create new records in MySQL Server

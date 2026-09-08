@@ -54,7 +54,7 @@ To export template columns to a PDF document:
                 @{
                     var employee = (context as EmployeeData);
                 }
-                <a href="mailto:@employee.EmailID">@employee.EmailID</a>
+                <a href="mailto:@employee.EmailID" aria-label="Send email to @employee.EmailID">@employee.EmailID</a>
             </Template>
         </GridColumn>
         <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="180"></GridColumn>
@@ -311,7 +311,7 @@ To format and customize the detail rows in the exported PDF document:
                             </td>
                             <td>
                                 <span class="link">
-                                    Contact: <a href="mailto:${@employee.Contact}">@employee.Contact</a>
+                                    Contact: <a href="mailto:${@employee.Contact}" aria-label="Send email to @employee.Contact">@employee.Contact</a>
                                 </span>
                             </td>
                         </tr>

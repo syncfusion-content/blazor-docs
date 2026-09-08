@@ -639,7 +639,7 @@ The Blazor DataGrid supports persist selection, allowing selected rows to remain
 
 To enable persist selection, set the [GridSelectionSettings.PersistSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_PersistSelection) property to **true**.
 
-> * When using persist selection, ensure that at least one column in the Blazor Grid is configured as a primary key. This allows the Blazor Grid to correctly identify and retain selected items.
+> * When using persist selection, ensure that at least one column in the Blazor DataGrid is configured as a primary key. This allows the Blazor Grid to correctly identify and retain selected items.
 > * The `PersistSelection` feature is not supported for cell selections.
 > * `PersistSelection` is only applicable when the selection Type is set to `Multiple`.
 

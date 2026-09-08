@@ -1097,7 +1097,7 @@ Filtering allows the user to restrict data based on column values using a menu i
 - Click the "Filter" button to apply the filter.
 - The `ReadAsync` method receives the filter criteria in `dataManagerRequest.Where`.
 - The `DataOperations.PerformFiltering()` method applies the filter conditions to the data.
-- Results are filtered accordingly and displayed in the Blazor DataGrid.
+- Results are filtered accordingly and displayed in the Blazor Data Table.
 
 Filtering feature is now active.
 
@@ -1184,7 +1184,7 @@ Sorting enables the user to arrange records in ascending or descending order bas
 - Click again to sort in descending order.
 - The `ReadAsync` method receives the sort criteria in `dataManagerRequest.Sorted`.
 - The `DataOperations.PerformSorting()` method sorts the data based on the specified column and direction.
-- Records are sorted accordingly and displayed in the Blazor DataGrid.
+- Records are sorted accordingly and displayed in the Blazor Data Table.
 
 Sorting feature is now active.
 

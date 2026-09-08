@@ -9,7 +9,7 @@ documentation: ug
 
 # Scrolling in Blazor Data Grid
 
-The scrolling feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables navigation through content that extends beyond the visible area of the Blazor Data Table. Scrollbars appear automatically when content exceeds the specified **Width** or **Height** of the Blazor Grid element. This is useful for large datasets or when the Blazor Data DataGrid must fit within a constrained layout. The vertical and horizontal scrollbars are displayed based on the following criteria:
+The scrolling feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables navigation through content that extends beyond the visible area of the Blazor Data Table. Scrollbars appear automatically when content exceeds the specified **Width** or **Height** of the Blazor Grid element. This is useful for large datasets or when the Blazor DataGrid must fit within a constrained layout. The vertical and horizontal scrollbars are displayed based on the following criteria:
 
 * The vertical scrollbar appears when the total height of rows exceeds the Blazor Grid element’s height.
 * The horizontal scrollbar appears when the total width of columns exceeds the Blazor Grid element’s width.
@@ -168,7 +168,7 @@ public class LazyLoadDetails
 
 The Blazor DataGrid can keep column headers visible while scrolling. Enable this by setting [EnableStickyHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableStickyHeader) to **true**. Sticky headers depend on a scrollable container with an explicit height.
 
-In the demo below, Blazor Data Table headers remain sticky while scrolling within the Blazor Grid’s parent div element.
+In the demo below, Blazor Grid headers remain sticky while scrolling within the Blazor Grid’s parent div element.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

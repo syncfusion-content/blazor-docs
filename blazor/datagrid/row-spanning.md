@@ -24,7 +24,7 @@ Row spanning is part of the broader **AutoSpanMode** enumeration, which provides
 
 ## Enable row spanning
 
-Horizontal cell merging in the Blazor Data Table is enabled by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoSpan) property of the [Blazor SfGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **AutoSpanMode.Row**. In this mode, adjacent cells across columns within the same row are automatically merged when they contain identical values. This reduces redundancy and provides a cleaner, more compact presentation of repeated data.
+Horizontal cell merging in the Blazor DataGrid is enabled by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoSpan) property of the [Blazor SfGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **AutoSpanMode.Row**. In this mode, adjacent cells across columns within the same row are automatically merged when they contain identical values. This reduces redundancy and provides a cleaner, more compact presentation of repeated data.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

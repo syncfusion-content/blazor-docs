@@ -19,7 +19,7 @@ Enable state persistence by setting the [EnablePersistence](https://help.syncfus
 
 ```
 
-> The Blazor Grid stores its state using a key that combines the **component name** and its assigned **ID**. For example, if the component name is **Blazor Grid** and the ID is **OrderDetails**, the state key will be **gridOrderDetails**.
+> The Blazor Data Grid stores its state using a key that combines the **component name** and its assigned **ID**. For example, if the component name is **Blazor Grid** and the ID is **OrderDetails**, the state key will be **gridOrderDetails**.
 
 When state persistence is enabled, the Blazor Grid saves the following settings in local storage:
 

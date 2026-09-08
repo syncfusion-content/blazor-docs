@@ -462,7 +462,7 @@ By default, the search scans all visible columns. To restrict the search to spec
 
 ## Disable search for particular column
 
-By default, the Blazor Blazor DataTable searches across all visible columns. To exclude a column, set the column’s [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching) property to false.
+By default, the Blazor DataGrid searches across all visible columns. To exclude a column, set the column’s [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching) property to false.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
