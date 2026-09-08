@@ -837,4 +837,4 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BthHZcLqLCzqjHom?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> The **ShowFilterBarOperator** feature is applicable only when the Grid uses the default **FilterType.FilterBar**. 
+> The **ShowFilterBarOperator** feature is applicable only when the Blazor Data Grid uses the default **FilterType.FilterBar**. 
