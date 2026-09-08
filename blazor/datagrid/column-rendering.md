@@ -326,7 +326,7 @@ Column options such as [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 ## Dynamic column generation
 
-The Blazor DataTable supports generating columns dynamically at runtime based on the data structure. This approach is useful when the column set changes depending on the data source or when working with flexible models. Columns can be created using reflection or dynamic objects in scenarios where the schema is not fixed.
+The Blazor DataGrid supports generating columns dynamically at runtime based on the data structure. This approach is useful when the column set changes depending on the data source or when working with flexible models. Columns can be created using reflection or dynamic objects in scenarios where the schema is not fixed.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -456,7 +456,7 @@ Columns can be generated dynamically at runtime by binding data as a list of [Ex
 
 ## Complex data generation
 
-The Blazor Data Table supports complex data binding using the **dot (.)** operator in the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property. This feature is useful for displaying nested or hierarchical data structures.
+The Blazor DataGrid supports complex data binding using the **dot (.)** operator in the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property. This feature is useful for displaying nested or hierarchical data structures.
 
 ### Using local data
 

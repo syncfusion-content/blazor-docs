@@ -13,7 +13,7 @@ Data annotations define validation and display rules for model classes or proper
 
 When the Blazor DataGrid is bound to a model, data annotations automatically map to corresponding [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) settings. This enables built-in validation and metadata display during CRUD operations.
 
-To enable data annotation in the Blazor DataTable:
+To enable data annotation in the Blazor DataGrid:
 
 1. Add the **System.ComponentModel.DataAnnotations** namespace in the Blazor application.
 2. Bind the Blazor DataGrid to a model using `TValue` and [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource).
@@ -25,11 +25,11 @@ The tables categorize supported attributes by display, formatting, metadata, and
 
 ### Display Attributes
 
-Use **Display** attributes to control how column headers, ordering, and metadata appear in the grid interface.
+Use **Display** attributes to control how column headers, ordering, and metadata appear in the Blazor Data Grid interface.
 
 | Attribute Name | Properties | Functionality |
 |----------------|------------|---------------|
-| Display | Name | Sets the header text for the Blazor DataGrid column |
+| Display | Name | Sets the header text for the Blazor DataTable column |
 | Display | ShortName | Sets a shorter version of the header text |
 | Display | AutoGenerateField | Prevents the column from being auto-generated |
 | Display | AutoGenerateFilter | Disables filtering for the column |
@@ -60,7 +60,7 @@ Use these attributes to manage column visibility, editing behavior, and key defi
 
 ### Validation Attributes
 
-Add validation attributes to enforce rules that display inline Blazor Data Table validation messages during CRUD operations.
+Add validation attributes to enforce rules that display inline Blazor DataGrid validation messages during CRUD operations.
 
 - RequiredAttribute
 - StringLengthAttribute

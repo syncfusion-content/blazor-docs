@@ -89,7 +89,7 @@ public class OrderData
 
 ## Initial group
 
-Configure initial grouping in the Blazor DataTable by setting the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_Columns) property of [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) to an array of field names. This pre-groups the specified columns on initial render to accelerate data analysis.
+Configure initial grouping in the Blazor DataGrid by setting the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_Columns) property of [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) to an array of field names. This pre-groups the specified columns on initial render to accelerate data analysis.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -247,7 +247,7 @@ public class OrderData
 
 ## Hide drop area
 
-By default, the Blazor Data Table displays a drop area for grouping columns. In scenarios where further grouping or ungrouping should be restricted after initial grouping, hide the drop area.
+By default, the Blazor DataGrid displays a drop area for grouping columns. In scenarios where further grouping or ungrouping should be restricted after initial grouping, hide the drop area.
 
 To hide the drop area, set the [ShowDropArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_ShowDropArea) property of `GridGroupSettings` to `false`.
 
@@ -1056,7 +1056,7 @@ public class OrderData
 
 ## Clear grouping 
 
-The clear grouping feature in the Blazor DataGrid removes all grouped columns from the Grid, providing a quick way to reset grouping.
+The clear grouping feature in the Blazor DataGrid removes all grouped columns from the Blazor Data Grid, providing a quick way to reset grouping.
 
 To clear all grouped columns, call the [ClearGroupingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearGroupingAsync) method.
 

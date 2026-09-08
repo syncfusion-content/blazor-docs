@@ -138,7 +138,7 @@ public class OrderData
 
 ## Custom context menu items
 
-The Blazor DataTable supports adding custom context menu items along with default options.
+The Blazor DataGrid supports adding custom context menu items along with default options.
 
 To configure custom context menu items:
 
@@ -234,7 +234,7 @@ public class EmployeeData
 
 ## Built-in and Custom context menu items
 
-The Blazor Data Table supports using both built-in and custom context menu items together. This is helpful when extending default actions such as **Copy**, **Delete**, or **Edit** with application-specific commands like **Copy with headers** or **Export row**.
+The Blazor DataGrid supports using both built-in and custom context menu items together. This is helpful when extending default actions such as **Copy**, **Delete**, or **Edit** with application-specific commands like **Copy with headers** or **Export row**.
 
 To configure **built-in** and **custom** context menu items:
 

@@ -11,9 +11,9 @@ documentation: ug
 
 The custom aggregate feature in the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables calculating summary values with a user-defined function when built-in aggregate types do not meet specific requirements. Configure a custom aggregate by setting the aggregate type and providing a delegate that computes the value.
 
-To use the Blazor DataTable custom aggregate option:
+To use the Blazor DataGrid custom aggregate option:
 * Set the `AggregateType` as Custom in the `GridAggregateColumn` component.
-* Provide a custom aggregate function using the `CustomAggregate` property on the GridAggregateColumn in the Blazor Data Table.
+* Provide a custom aggregate function using the `CustomAggregate` property on the GridAggregateColumn in the Blazor DataGrid.
 
 The custom aggregate function is invoked differently based on the context:
 - **Total Aggregation:** The function receives the entire dataset and the current aggregate column object.

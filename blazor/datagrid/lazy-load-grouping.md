@@ -118,7 +118,7 @@ Lazy load grouping with infinite scrolling is useful when presenting grouped dat
 
 **How lazy load grouping with infinite scrolling works**
 
-1. When enabled, the Blazor Data Table initially renders only the top-level group caption rows in a collapsed state.
+1. When enabled, the Blazor DataGrid initially renders only the top-level group caption rows in a collapsed state.
 
 2. Child rows for a group are fetched and rendered only when the corresponding caption row is expanded.
 
@@ -228,7 +228,7 @@ public class OrderData
 
 ## Lazy load grouping with virtual scrolling
 
-The lazy load grouping with virtual scrolling feature in the Blazor DataTable efficiently presents large grouped datasets by reducing initial load time and providing smooth scrolling.
+The lazy load grouping with virtual scrolling feature in the Blazor DataGrid efficiently presents large grouped datasets by reducing initial load time and providing smooth scrolling.
 
 **How lazy load grouping with virtual scrolling works**
 

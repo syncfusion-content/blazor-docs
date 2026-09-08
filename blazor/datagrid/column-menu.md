@@ -169,7 +169,7 @@ public class OrderData
 
 ## Add custom column menu item
 
-The Blazor DataTable supports adding custom items to the column menu using the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) property. This property accepts a collection of [ColumnMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuItemModel.html) objects.
+The Blazor DataGrid supports adding custom items to the column menu using the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) property. This property accepts a collection of [ColumnMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuItemModel.html) objects.
 
 Custom actions for these items can be defined in the [ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked) event.
 
@@ -266,7 +266,7 @@ public class OrderData
 
 ## Customize menu items for specific columns
 
-The Blazor Data Table allows customizing the visibility of column menu items for specific columns. This is useful when certain actions, such as filtering or grouping, should not be available for specific columns.
+The Blazor DataGrid allows customizing the visibility of column menu items for specific columns. This is useful when certain actions, such as filtering or grouping, should not be available for specific columns.
 
 To hide a menu item for a specific column, set the [MenuItem.Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property to **true** in the [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnColumnMenuOpen) event.
 

@@ -98,7 +98,7 @@ public class OrderDetails
 
 ## Custom command column
 
-The Blazor DataTable supports adding custom command buttons in a column to perform specific actions on individual rows. This feature is suitable for implementing customized functionality such as editing, deleting, or executing other operations.
+The Blazor DataGrid supports adding custom command buttons in a column to perform specific actions on individual rows. This feature is suitable for implementing customized functionality such as editing, deleting, or executing other operations.
 
 To add custom command buttons, configure the [GridColumn.Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Commands) property. Define the actions for these buttons using the [CommandClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CommandClicked) event.
 
@@ -201,7 +201,7 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZVHDwDBiEFgGUVy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> The Blazor Data Table does not support **adding new records** using the command column. This limitation exists because the command column and its buttons are rendered only after a record is created. Therefore, the command column supports only **edit**, **delete**, **cancel**, and **update** operations.
+> The Blazor DataGrid does not support **adding new records** using the command column. This limitation exists because the command column and its buttons are rendered only after a record is created. Therefore, the command column supports only **edit**, **delete**, **cancel**, and **update** operations.
 
 ## Hide command column button in specific records
 

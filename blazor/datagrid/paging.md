@@ -19,11 +19,11 @@ Paging options can be configured through the [GridPageSettings](https://help.syn
 
 ## Customize the pager options
 
-Customizing pager options in  Blazor DataTable helps adjust pagination to specific needs. The **PageCount** property sets the number of numeric buttons. The **CurrentPage** property defines the active page. The **PageSize** property specifies the number of records displayed per page. The **PageSizes** property provides a dropdown for selecting different page sizes.
+Customizing pager options in  Blazor DataGrid helps adjust pagination to specific needs. The **PageCount** property sets the number of numeric buttons. The **CurrentPage** property defines the active page. The **PageSize** property specifies the number of records displayed per page. The **PageSizes** property provides a dropdown for selecting different page sizes.
 
 ### Change the page size
 
-The Blazor Data Table allows control over the number of records displayed per page. Use the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) property in [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) to specify the initial page size. By default, **PageSize is 12**.
+The Blazor DataGrid allows control over the number of records displayed per page. Use the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) property in [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) to specify the initial page size. By default, **PageSize is 12**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -803,7 +803,7 @@ It is possible to dynamically calculate the page size of a Blazor Grid by consid
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhdNwZqyhuqpZAJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Render pager at the top of the Grid
+## Render pager at the top of the Blazor DataGrid
 
 By default, the pager is rendered at the bottom of the Blazor Grid when [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) is enabled. Using [Pager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html) component, it is possible to render a pager at the top of the Blazor Grid. This is achieved by keeping the Grid’s internal pager disabled (`AllowPaging` set to **false**) and rendering `Pager` externally. Paging actions are synchronized with the Blazor Grid by manually applying Skip and Take based on the pager events.
 

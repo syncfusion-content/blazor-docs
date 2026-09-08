@@ -94,7 +94,7 @@ public class OrderDetails
 
 ## Show spinner while exporting
 
-The Blazor DataTable supports displaying a spinner during PDF export to indicate that the operation is in progress. This improves the experience by providing visual feedback while the export is being processed.
+The Blazor DataGrid supports displaying a spinner during PDF export to indicate that the operation is in progress. This improves the experience by providing visual feedback while the export is being processed.
 
 To show and hide the spinner:
 
@@ -188,7 +188,7 @@ public class OrderDetails
 
 ## Binding custom data source while exporting
 
-The Blazor Data Table supports exporting to PDF using a custom data source. This feature allows exporting data that is not currently bound to the grid and can be generated dynamically based on application logic.
+The Blazor DataGrid supports exporting to PDF using a custom data source. This feature allows exporting data that is not currently bound to the grid and can be generated dynamically based on application logic.
 
 To use a custom data source during export:
 

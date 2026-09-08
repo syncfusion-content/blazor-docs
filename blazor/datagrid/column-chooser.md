@@ -162,7 +162,7 @@ public class OrderData
 
 ## Open column chooser via programmatically
 
-The Blazor DataTable allows opening the column chooser dialog programmatically using an external button. Use the [OpenColumnChooserAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_OpenColumnChooserAsync_System_Nullable_System_Double__System_Nullable_System_Double__) method to display the dialog at a specific position on the page.
+The Blazor DataGrid allows opening the column chooser dialog programmatically using an external button. Use the [OpenColumnChooserAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_OpenColumnChooserAsync_System_Nullable_System_Double__System_Nullable_System_Double__) method to display the dialog at a specific position on the page.
 
 | Parameter | Type     | Description                                                                 |
 |-----------|----------|-----------------------------------------------------------------------------|
@@ -244,7 +244,7 @@ public class OrderData
 
 ## Customize column chooser dialog size
 
-The Blazor Data Table displays the column chooser dialog with a default size. To adjust its dimensions, apply custom CSS styles to override the default height and width.
+The Blazor DataGrid displays the column chooser dialog with a default size. To adjust its dimensions, apply custom CSS styles to override the default height and width.
 
 ```csharp
 <style> 

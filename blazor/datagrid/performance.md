@@ -13,7 +13,7 @@ The [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) 
 
 ## How to improve loading performance by binding large dataset
 
-Rendering large collections in the Blazor DataTable can impact performance because each cell is treated as an individual Blazor component. To maintain responsiveness and reduce rendering overhead, apply the following optimization techniques:
+Rendering large collections in the Blazor DataGrid can impact performance because each cell is treated as an individual Blazor component. To maintain responsiveness and reduce rendering overhead, apply the following optimization techniques:
 
 **Key performance optimization techniques**
 
@@ -40,7 +40,7 @@ For detailed implementation, refer to the paging [documentation](https://blazor.
 
 ### Optimizing performance with row virtualization or infinite scrolling
 
-Rendering large collections in a single view can significantly impact performance. The Blazor Data Table supports techniques that load data on demand, reducing rendering overhead:
+Rendering large collections in a single view can significantly impact performance. The Blazor DataGrid supports techniques that load data on demand, reducing rendering overhead:
 
 **1. Row virtualization**
 

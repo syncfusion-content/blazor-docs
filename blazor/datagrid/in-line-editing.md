@@ -83,7 +83,7 @@ public class OrderDetails
 
 ## Automatically update a specific column based on another column edited value
 
-Blazor DataTable supports automatic updates to a column value based on changes made to another related column during in-line editing. This behavior is enabled using the Cell Edit Template feature.
+Blazor DataGrid supports automatic updates to a column value based on changes made to another related column during in-line editing. This behavior is enabled using the Cell Edit Template feature.
 
 To configure this functionality in normal edit mode, use the [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) and [RowEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEdited) events, along with the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) property of the Blazor Grid.
 
@@ -197,7 +197,7 @@ public class ProductDetails
 
 ## Cancel edit based on condition
 
-The Blazor Data Table canceling edit operations for specific rows or cells based on defined conditions. This functionality provides control over whether editing is permitted or restricted for particular rows or cells within the Blazor Data GridView.
+The Blazor DataGrid canceling edit operations for specific rows or cells based on defined conditions. This functionality provides control over whether editing is permitted or restricted for particular rows or cells within the Blazor Data GridView.
 
 To cancel an edit operation based on a specific condition, handle the following Blazor Grid events. These events are triggered during CRUD (Create, Read, Update, and Delete) operations in the Blazor Grid:
 

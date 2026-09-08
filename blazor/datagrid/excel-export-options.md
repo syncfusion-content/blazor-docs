@@ -26,7 +26,7 @@ The export behavior can be customized using the [ExcelExportProperties](https://
 
 ## Export current page records
 
-Exporting the current page records from the Blazor DataTable enables generating Excel or CSV documents that reflect only the data currently visible in the Blazor Grid. This approach is suitable when the intent is to capture a snapshot of the paginated view rather than the entire dataset.
+Exporting the current page records from the Blazor DataGrid enables generating Excel or CSV documents that reflect only the data currently visible in the Blazor Grid. This approach is suitable when the intent is to capture a snapshot of the paginated view rather than the entire dataset.
 
 To configure this behavior, handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and invoke the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method with the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_ExportType)  property set in the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) object. The available options include:
 
@@ -139,7 +139,7 @@ public class EmployeeData
 
 ## Export the selected records 
 
-Exporting selected records from the Blazor Data Table enables generating Excel or CSV documents that include only specific data. This approach supports focused exports based on selection.
+Exporting selected records from the Blazor DataGrid enables generating Excel or CSV documents that include only specific data. This approach supports focused exports based on selection.
 
 To export selected records:
 
@@ -1413,7 +1413,7 @@ To include header and footer content:
 
 3. Assign the header and footer content using a collection of [ExcelRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelRow.html) and [ExcelCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelCell.html) objects.
 
-4. Invoke [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) to export the Grid with the configured header and footer.
+4. Invoke [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) to export the Blazor Data Grid with the configured header and footer.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

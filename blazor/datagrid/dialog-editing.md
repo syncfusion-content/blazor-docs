@@ -79,7 +79,7 @@ public class OrderDetails
 
 ## Customize the edit dialog
 
-The edit dialog in the Blazor DataTable supports customization of its appearance and behavior based on the action being performed, such as editing or adding a record. Properties such as header text, close icon visibility, and dialog height can be modified to align with specific application requirements.
+The edit dialog in the Blazor DataGrid supports customization of its appearance and behavior based on the action being performed, such as editing or adding a record. Properties such as header text, close icon visibility, and dialog height can be modified to align with specific application requirements.
 
 To customize the edit dialog, use the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_HeaderTemplate) and [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_FooterTemplate) properties of [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
 
@@ -176,7 +176,7 @@ public class OrderDetails
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLdZwtrBgOCWMim?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * The Blazor DataGrid add or edit dialog element includes a max-height property, which is calculated based on the available window height. In a standard window size of **1920×1080** pixels, the dialog height can be set up to **658px**.
-> * Refer to the Blazor Data Table feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.
+> * Refer to the Blazor DataGrid feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) to understand data presentation and manipulation.
 
 ## Show or hide columns in dialog editing
 

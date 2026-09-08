@@ -160,7 +160,7 @@ public class OrderDetails
 
 ## Change default frozen line color
 
-The Blazor DataTable allows customizing the border color of frozen columns using CSS. This includes styling for **left**, **right**, and **fixed** frozen columns to match application design requirements.
+The Blazor DataGrid allows customizing the border color of frozen columns using CSS. This includes styling for **left**, **right**, and **fixed** frozen columns to match application design requirements.
 
 To change the default frozen line color, apply styles using these class selectors:
 
@@ -296,7 +296,7 @@ To change the default frozen line color, apply styles using these class selector
 
 ## Detail template with frozen columns
 
-The Blazor Data Table supports frozen columns in combination with a [DetailTemplate](https://blazor.syncfusion.com/documentation/datagrid/detail-template). The detail template displays additional information for a row when expanded, without affecting the frozen column layout.
+The Blazor DataGrid supports frozen columns in combination with a [DetailTemplate](https://blazor.syncfusion.com/documentation/datagrid/detail-template). The detail template displays additional information for a row when expanded, without affecting the frozen column layout.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

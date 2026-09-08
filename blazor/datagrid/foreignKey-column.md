@@ -14,12 +14,12 @@ The [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) 
 A foreign key column can be configured using the following properties of the [GridForeignColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridForeignColumn-1.html) directive:
 
 * [ForeignDataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridForeignColumn-1.html#Syncfusion_Blazor_Grids_GridForeignColumn_1_ForeignDataSource) – Specifies the data source that contains the related data.
-* [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) – Maps the column in the Grid to the field in the foreign data source that represents the foreign key.
-* [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) – Specifies the field from the foreign data source that should be displayed in the Grid.
+* [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) – Maps the column in the Blazor Data Grid to the field in the foreign data source that represents the foreign key.
+* [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) – Specifies the field from the foreign data source that should be displayed in the Blazor DataTable.
 
 ## Binding local data
 
-The Blazor DataTable supports binding local data to a foreign key column. This allows related data from a local data source to be displayed within the Grid.
+The Blazor DataGrid supports binding local data to a foreign key column. This allows related data from a local data source to be displayed within the Blazor Data Table.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -115,7 +115,7 @@ public class EmployeeDetails
 
 ## Binding remote data
 
-The Blazor Data Table supports binding remote data to a foreign key column using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). This approach is useful when retrieving data from services such as **OData**, **Web API**, or other remote endpoints.
+The Blazor DataGrid supports binding remote data to a foreign key column using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). This approach is useful when retrieving data from services such as **OData**, **Web API**, or other remote endpoints.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -862,7 +862,7 @@ To configure this feature, define a column using the [Template](https://help.syn
 
 ## Enable multiple foreign key columns
 
-The Blazor DataGrid supports configuring multiple foreign key columns with editing options. This feature allows displaying related data from different foreign data sources in the Grid.
+The Blazor DataGrid supports configuring multiple foreign key columns with editing options. This feature allows displaying related data from different foreign data sources in the Blazor Data Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1001,7 +1001,7 @@ The Blazor DataGrid supports customizing the edit template for foreign key colum
 
 **Key steps**
 
-1. Configure [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) in the Grid for remote **CRUD** operations using [UrlAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_UrlAdaptor).
+1. Configure [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) in the Blazor Data Grid for remote **CRUD** operations using [UrlAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_UrlAdaptor).
 2. Render `SfDataManager` inside the foreign key column for remote foreign data.
 3. Use `EditTemplate` to render a custom component like [SfAutoComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html), bind the foreign key field using [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value), and configure [AutoCompleteFieldSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html) with [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html#Syncfusion_Blazor_DropDowns_AutoCompleteFieldSettings_Text) and [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html#Syncfusion_Blazor_DropDowns_AutoCompleteFieldSettings_Value).
 

@@ -115,7 +115,7 @@ This is implemented by using the `Template` property, which provides extensive c
 
 ## Render image with text in custom Toolbar
 
-Rendering an image with text in the custom toolbar of the Blazor DataTable helps provide context and improves visual clarity for actions.
+Rendering an image with text in the custom toolbar of the Blazor DataGrid helps provide context and improves visual clarity for actions.
 
 To render an image with text in the custom toolbar, use the `Template` in [SfToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfToolbar.html).
 
@@ -220,7 +220,7 @@ To render an image with text in the custom toolbar, use the `Template` in [SfToo
 
 ## Render SfDropDownList in Custom Toolbar
 
-Rendering an [SfDropdownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) in the custom toolbar of the Blazor Data Table extends toolbar functionality and enables actions based on user selection.
+Rendering an [SfDropdownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) in the custom toolbar of the Blazor DataGrid extends toolbar functionality and enables actions based on user selection.
 
 This is achieved by using the `Template`. The example below shows how to render the `SfDropDownList` in the custom toolbar, where the toolbar template binds the [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ValueChanged) event to the **OnChange** method.
 

@@ -195,7 +195,7 @@ internal sealed class OrderData
 
 ## AutoFill
 
-The AutoFill feature in the Blazor DataTable allows quick data entry by copying values from selected cells and filling them into adjacent cells using a drag handle.
+The AutoFill feature in the Blazor DataGrid allows quick data entry by copying values from selected cells and filling them into adjacent cells using a drag handle.
 
 **Steps to use AutoFill feature**
 
@@ -294,7 +294,7 @@ internal sealed class OrderData
 
 ## Paste
 
-The Paste feature in the Blazor Data Table allows copying content from selected cells and pasting it into another range using <kbd>Ctrl + C</kbd> and <kbd>Ctrl + V</kbd>.
+The Paste feature in the Blazor DataGrid allows copying content from selected cells and pasting it into another range using <kbd>Ctrl + C</kbd> and <kbd>Ctrl + V</kbd>.
 
 **To paste data within the grid:**
 

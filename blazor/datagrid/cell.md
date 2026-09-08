@@ -27,7 +27,7 @@ To configure:
 - Insert HTML tags such as `<img>`, `<a>`, or `<table>` directly into the cell content.
 - Use a [Blazor Toggle Switch](https://www.syncfusion.com/blazor-components/blazor-toggle-switch-button)  to dynamically control the encoding behavior.
 - Handle the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event to update the column setting.
-- Call the [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Refresh) method to apply the changes and re-render the Grid.
+- Call the [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Refresh) method to apply the changes and re-render the Blazor Data Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -117,9 +117,9 @@ To configure:
 > * When set to **true**, HTML tags are encoded and displayed as plain text.
 > * Disabling HTML encoding introduces potential security vulnerabilities. Enable this feature only when using fully trusted and sanitized data sources.
 
-## Autowrap the Grid content
+## Autowrap the Blazor Data Grid content
 
-The auto wrap feature in the Blazor DataTable enables cell content to wrap to the next line when it exceeds the defined column width. Wrapping occurs at whitespace boundaries between words, ensuring readability without horizontal scrolling. To support auto wrap, define an appropriate width for each column. The column width acts as the maximum boundary for wrapping content.
+The auto wrap feature in the Blazor DataGrid enables cell content to wrap to the next line when it exceeds the defined column width. Wrapping occurs at whitespace boundaries between words, ensuring readability without horizontal scrolling. To support auto wrap, define an appropriate width for each column. The column width acts as the maximum boundary for wrapping content.
 
 Enable auto wrap by setting the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowTextWrap) property to **true**. Configure the wrapping behavior using the [TextWrapSettings.WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTextWrapSettings.html#Syncfusion_Blazor_Grids_GridTextWrapSettings_WrapMode) property.
 
@@ -234,7 +234,7 @@ public class OrderData
 
 ## Customize cell styles
 
-Customizing cell styles in the Blazor Data Table enables modification of cell appearance to match specific design requirements. Styles such as **font**, **background color**, and **borders** can be applied to enhance visual presentation.
+Customizing cell styles in the Blazor DataGrid enables modification of cell appearance to match specific design requirements. Styles such as **font**, **background color**, and **borders** can be applied to enhance visual presentation.
 
 Cell customization can be achieved through these approaches:
 
@@ -459,7 +459,7 @@ In this setup, the column is checked to confirm if it corresponds to the **Freig
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLdZGNCKmDdAaVR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> * The [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event is triggered for every cell in the Blazor DataGrid.
+> * The [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event is triggered for every cell in the Blazor Data Table.
 > * Frequent use of this event to modify a large number of cells significantly impacts Blazor Grid performance.
 > * Use this event selectively and optimize logic to avoid unnecessary rendering overhead.
 
@@ -1128,7 +1128,7 @@ public class OrderData
 
 ## Grid lines
 
-The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property in the Blazor DataGrid defines the visibility of **horizontal** and **vertical** lines between cells to improve readability.
+The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property in the Blazor Data GridView defines the visibility of **horizontal** and **vertical** lines between cells to improve readability.
 
 Set the `GridLines` property to one of the following values:
 

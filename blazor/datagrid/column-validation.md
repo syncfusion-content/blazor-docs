@@ -88,7 +88,7 @@ public class OrderDetails
 
 ## Data annotation
 
-Data annotation validation attributes are used to validate fields in the Blazor DataTable. These attributes define validation rules that are applied during CRUD operations to ensure data integrity.
+Data annotation validation attributes are used to validate fields in the Blazor DataGrid. These attributes define validation rules that are applied during CRUD operations to ensure data integrity.
 
 | Attribute Name | Functionality |
 |---------------|--------------|
@@ -442,7 +442,7 @@ protected void HandleValidation(FieldIdentifier identifier)
 
 ## Disable in-built validator component
 
-The [Validator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Validator) property of the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component can be used to disable the built-in `Validator` component in the Blazor Data Table.
+The [Validator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Validator) property of the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component can be used to disable the built-in `Validator` component in the Blazor DataGrid.
 
 By default, the Blazor Grid uses two validator components:
 

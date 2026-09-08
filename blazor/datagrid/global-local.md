@@ -13,7 +13,7 @@ The [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) 
 
 ## Localization
 
-The Blazor DataTable supports localization of static text elements, such as **group drop area text** and **pager information**, can be localized to cultures like **Arabic**, **Deutsch**, **French**, and others.
+The Blazor DataGrid supports localization of static text elements, such as **group drop area text** and **pager information**, can be localized to cultures like **Arabic**, **Deutsch**, **French**, and others.
 
 - Apply localization to replace default UI text with culture-specific translations.
 - Configure localization by referring to the [Blazor Localization Documentation](https://blazor.syncfusion.com/documentation/common/localization).
@@ -159,7 +159,7 @@ Grid_DeleteRecord | Delete Record | ![Locale delete record](images/globalization
 
 ### Switch the different localization
 
-- The Blazor Data Table allows switching the localization from one culture to another at runtime. This is useful when the culture needs to be changed based on user preference or application context. For more details, see [Dynamically set the culture](https://blazor.syncfusion.com/documentation/common/localization#dynamically-set-the-culture).
+- The Blazor DataGrid allows switching the localization from one culture to another at runtime. This is useful when the culture needs to be changed based on user preference or application context. For more details, see [Dynamically set the culture](https://blazor.syncfusion.com/documentation/common/localization#dynamically-set-the-culture).
 
 - To configure localization in a Blazor DataGrid and switch to a different culture (e.g., French, German, Arabic), follow these steps:
 

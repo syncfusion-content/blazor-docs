@@ -115,7 +115,7 @@ public class OrderData
 
 ## Filter bar modes
 
-The Blazor DataTable provides two distinct operational modes for the filter bar. These modes determine how and when filtering is executed:
+The Blazor DataGrid provides two distinct operational modes for the filter bar. These modes determine how and when filtering is executed:
 
 * **OnEnter Mode**: Filters are applied only after pressing the **Enter** key, allowing multiple changes before execution
 * **Immediate Mode**: Filters are applied automatically as values are entered, providing real-time results
@@ -235,7 +235,7 @@ public class OrderData
 
 ### Display filter text in pager
 
-The Blazor Data Table can display active filter information within the pager section. This visibility enhancement allows clear tracking of currently applied filters and their criteria.
+The Blazor DataGrid can display active filter information within the pager section. This visibility enhancement allows clear tracking of currently applied filters and their criteria.
 
 Enable this functionality by setting the [ShowFilterBarStatus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_ShowFilterBarStatus) property to **true** within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) configuration.
 
@@ -837,4 +837,4 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BthHZcLqLCzqjHom?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> The **ShowFilterBarOperator** feature is applicable only when the Grid uses the default **FilterType.FilterBar**. 
+> The **ShowFilterBarOperator** feature is applicable only when the Blazor Data Grid uses the default **FilterType.FilterBar**. 

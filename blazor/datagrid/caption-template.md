@@ -100,7 +100,7 @@ public class OrderData
 
 ## Adding custom text in group caption
 
-The Blazor DataTable supports adding custom text to group captions for clearer context. Use the [CaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_CaptionTemplate) property to output any text or markup, combined with values from [CaptionTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.CaptionTemplateContext.html) such as **Key**, **Count**, and **HeaderText**.
+The Blazor DataGrid supports adding custom text to group captions for clearer context. Use the [CaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_CaptionTemplate) property to output any text or markup, combined with values from [CaptionTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.CaptionTemplateContext.html) such as **Key**, **Count**, and **HeaderText**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -184,7 +184,7 @@ public class OrderData
 
 ## Customize group caption text using locale
 
-The Blazor Data Table supports customization of group caption text based on locale settings. This feature enables the display of localized or translated content in group captions, allowing the Blazor DataGrid to adapt to different languages and regional formats.
+The Blazor DataGrid supports customization of group caption text based on locale settings. This feature enables the display of localized or translated content in group captions, allowing the Blazor Data Table to adapt to different languages and regional formats.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

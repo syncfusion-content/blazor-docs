@@ -92,7 +92,7 @@ public class OrderData
 
 ## Initial filter
 
-To apply an initial filter in the Blazor DataTable, define the filter criteria using the **Predicate** object within the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings). The **Predicate** object represents the filtering condition and includes properties such as **Field**, **Operator**, and **Value**.
+To apply an initial filter in the Blazor DataGrid, define the filter criteria using the **Predicate** object within the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings). The **Predicate** object represents the filtering condition and includes properties such as **Field**, **Operator**, and **Value**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -177,7 +177,7 @@ public class OrderData
 
 ### Initial filter with multiple values for same column
 
-In the Blazor Data Table, an initial filter can be configured to include multiple values for a specific column. This approach enables predefined filtering conditions to be applied immediately upon Blazor Grid initialization, allowing filtered records to be displayed as soon as the Blazor Grid loads.
+In the Blazor DataGrid, an initial filter can be configured to include multiple values for a specific column. This approach enables predefined filtering conditions to be applied immediately upon Blazor Grid initialization, allowing filtered records to be displayed as soon as the Blazor Grid loads.
 
 To apply an initial filter with multiple values for the same column, define the filter [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterColumn.html#Syncfusion_Blazor_Grids_GridFilterColumn_Predicate) object within the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
 

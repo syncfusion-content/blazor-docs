@@ -115,7 +115,7 @@ To display an image in a Blazor DataGrid column, define the [Template](https://h
 
 ### Render hyperlink in a column
 
-The Blazor DataTable supports rendering hyperlinks in columns using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful for displaying data that links to another page or external resource.
+The Blazor DataGrid supports rendering hyperlinks in columns using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful for displaying data that links to another page or external resource.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -293,7 +293,7 @@ public class EmployeeDetails
 
 ### Render DropDownList in a column
 
-The Blazor Data Table allows rendering a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is commonly used to provide inline selection of predefined values directly within the grid, such as choosing from predefined options for a field.
+The Blazor DataGrid allows rendering a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is commonly used to provide inline selection of predefined values directly within the blazor grid, such as choosing from predefined options for a field.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -383,7 +383,7 @@ public class OrderDetails
 
 ### Render Chip in a column
 
-The Blazor DataGrid supports rendering [Chips](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful for displaying data as visually distinct elements, such as tags or labels, within the grid.
+The Blazor DataGrid supports rendering [Chips](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful for displaying data as visually distinct elements, such as tags or labels, within the blazor grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -538,7 +538,7 @@ public class OrderDetails
 
 ### Render RadioButton in a column
 
-The Blazor Grid supports rendering a [RadioButton](https://blazor.syncfusion.com/documentation/radio-button/getting-started-webapp) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful for scenarios where a single option must be selected from multiple choices within the grid.
+The Blazor Grid supports rendering a [RadioButton](https://blazor.syncfusion.com/documentation/radio-button/getting-started-webapp) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful for scenarios where a single option must be selected from multiple choices within the blazor grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -934,9 +934,9 @@ public class OrderDetails
 
 ## Dynamically adding template column
 
-The Blazor DataGrid supports dynamically adding template columns at runtime. This feature is useful when the grid structure needs to change based on interactions or dynamic conditions.
+The Blazor DataGrid supports dynamically adding template columns at runtime. This feature is useful when the blazor Grid structure needs to change based on interactions or dynamic conditions.
 
-Template columns can be created and inserted after the grid has been initialized, allowing custom elements such as dropdowns, buttons, or icons to be rendered dynamically. This approach provides flexibility for scenarios like adding interactive controls or displaying conditional content without modifying the initial grid configuration.
+Template columns can be created and inserted after the blazor Grid has been initialized, allowing custom elements such as dropdowns, buttons, or icons to be rendered dynamically. This approach provides flexibility for scenarios like adding interactive controls or displaying conditional content without modifying the initial blazor Grid configuration.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1149,4 +1149,4 @@ The following GIF represents template routing in Blazor Grid
 
 ## See also
 
-* [FileUpload in Grid Column Template](https://www.syncfusion.com/forums/151021/fileupload-in-grid-column-template)
+* [FileUpload in Blazor Data Grid Column Template](https://www.syncfusion.com/forums/151021/fileupload-in-grid-column-template)

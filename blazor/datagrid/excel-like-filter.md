@@ -15,7 +15,7 @@ Excel-like filtering proves especially valuable when working with large datasets
 
 ## Getting Started with Excel-like Filter
 
-To enable Excel-like filtering in a Blazor DataTable, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true**  and configure [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) with **FilterType.Excel**. 
+To enable Excel-like filtering in a Blazor DataGrid, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true**  and configure [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) with **FilterType.Excel**. 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -838,7 +838,7 @@ public class OrderData
 
 By default, when a filter is applied multiple times to the same column, the new filter replaces the previous selection. Previously applied filters can be retained by using the **Add current selection to filter** option. This checkbox appears in the filter search bar when searching for values in the CheckBox or Excel filter dialog.
 
-![Add current selection to filter in Blazor Data Table.](images/blazor-datagrid-add-current-selection-to-filter.webp)
+![Add current selection to filter in Blazor DataGrid.](images/blazor-datagrid-add-current-selection-to-filter.webp)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDrRXGZVTwebipHI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 

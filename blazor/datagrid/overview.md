@@ -11,11 +11,11 @@ documentation: ug
 
 ## Introduction to Syncfusion Blazor Grid
 
-The Blazor DataTable is a powerful and feature-rich UI component designed for displaying and managing tabular data with high performance and flexibility. It offers a comprehensive set of enterprise-grade capabilities, including advanced data operations, seamless integration with multiple data sources, and extensive customization options. Built for scalability, it enables developers to create responsive, data-intensive applications with ease.
+The Blazor DataGrid is a powerful and feature-rich UI component designed for displaying and managing tabular data with high performance and flexibility. It offers a comprehensive set of enterprise-grade capabilities, including advanced data operations, seamless integration with multiple data sources, and extensive customization options. Built for scalability, it enables developers to create responsive, data-intensive applications with ease.
 
 ## Common use cases
 
-The Blazor Data Table is ideal for a wide range of business scenarios:
+The Blazor DataGrid is ideal for a wide range of business scenarios:
 
 | Use Case | Description | Key Features |
 |----------|-------------|--------------|

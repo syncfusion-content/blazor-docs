@@ -19,7 +19,7 @@ The [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) 
 
 ## Export current page records
 
-Exporting the current page records from the Blazor DataTable generates a PDF document that includes only the rows currently visible in the grid. This approach is useful for capturing a snapshot of the paginated view rather than exporting the entire dataset.
+Exporting the current page records from the Blazor DataGrid generates a PDF document that includes only the rows currently visible in the grid. This approach is useful for capturing a snapshot of the paginated view rather than exporting the entire dataset.
 
 To configure this behavior:
 
@@ -132,7 +132,7 @@ public class EmployeeData
 
 ## Export selected records
 
-Exporting selected records from the Blazor Data Table enables generating a PDF document that includes only specific rows. This approach supports focused exports based on selection.
+Exporting selected records from the Blazor DataGrid enables generating a PDF document that includes only specific rows. This approach supports focused exports based on selection.
 
 To export selected records:
 
@@ -167,7 +167,7 @@ To export selected records:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport") // ID is a combination of the Grid ID and item name.
+        if (args.Item.Id == "Grid_pdfexport") // ID is a combination of the Blazor Data Grid ID and item name.
         {
             var selectedRecords = await Grid.GetSelectedRecordsAsync();
             PdfExportProperties exportProperties = new PdfExportProperties
@@ -263,7 +263,7 @@ To export filtered records:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport") // ID is a combination of the Grid ID and item name.
+        if (args.Item.Id == "Grid_pdfexport") // ID is a combination of the Blazor Data Grid ID and item name.
         {
             var filteredRecords = (IEnumerable<OrderData>)await Grid.GetFilteredRecordsAsync();
             PdfExportProperties exportProperties = new PdfExportProperties
@@ -331,7 +331,7 @@ To include hidden columns during export:
 2. Set the [IncludeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_IncludeHiddenColumn) property to **true** in the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) object.
 3. Invoke the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method.
 
-In this configuration, the **ShipCity** column is hidden in the Grid and included in the exported PDF file when` PdfExportProperties.IncludeHiddenColumn` is enabled.
+In this configuration, the **ShipCity** column is hidden in the Blazor Data Table and included in the exported PDF file when` PdfExportProperties.IncludeHiddenColumn` is enabled.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1742,7 +1742,7 @@ Include the script reference in the application:
 
 **Step 3: Invoke the JavaScript function to perform the browser download using the memory stream**
 
-In the **Index.razor** file, configure the Grid, trigger the export operation, and call the **saveAsFile** function:
+In the **Index.razor** file, configure the Blazor Data Grid, trigger the export operation, and call the **saveAsFile** function:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
