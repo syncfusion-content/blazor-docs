@@ -15,7 +15,7 @@ Excel-like filtering proves especially valuable when working with large datasets
 
 ## Getting Started with Excel-like Filter
 
-To enable Excel-like filtering in a Blazor DataGrid, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true**  and configure [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) with **FilterType.Excel**. 
+To enable Excel-like filtering in a Blazor Data Grid, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true**  and configure [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) with **FilterType.Excel**. 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -309,7 +309,7 @@ public class OrderData
 
 ## Display Custom Text in Filter Options
 
-The DataGrid supports customization of text displayed in filter checkbox lists. Custom, user-friendly labels can replace raw data values.
+The Blazor DataGrid supports customization of text displayed in filter checkbox lists. Custom, user-friendly labels can replace raw data values.
 
 ### Using Custom Filter Item Templates
 
@@ -751,7 +751,7 @@ public class OrderData
 
 ### Styling the filtered column icon
 
-When a filter is applied to a column, the DataGrid displays an icon in that column's header. The **.e-grid .e-filtered::before** CSS class enables modification of the icon appearance.
+When a filter is applied to a column, the Blazor DataGrid displays an icon in that column's header. The **.e-grid .e-filtered::before** CSS class enables modification of the icon appearance.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -844,7 +844,7 @@ By default, when a filter is applied multiple times to the same column, the new 
 
 ## See Also
 
-Comprehensive information about the Blazor DataGrid and its features is available through the following resources:
+Comprehensive information about the Blazor Grid and its features is available through the following resources:
 
 * **Feature Overview:** The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour provides a complete overview of available capabilities.
 * **Interactive Examples:** The [Blazor DataGrid examples](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2) provide practical demonstrations of data presentation and manipulation.
