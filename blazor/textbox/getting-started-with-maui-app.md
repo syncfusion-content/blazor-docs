@@ -230,7 +230,7 @@ To run the Blazor TextBox in your Blazor MAUI app on an Android emulator, follow
 
 N> If you face any issues with the Android emulator, check the [Troubleshooting Android Emulator guide](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting) for solutions.
 
-![Blazor TextBox Component](./images/blazor-textbox.webp)
+![Blazor TextBox Component](./images/blazor-textbox-maui-android.webp)
 
 ## Adding icons to the Blazor TextBox
 

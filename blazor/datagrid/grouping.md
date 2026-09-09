@@ -1056,7 +1056,7 @@ public class OrderData
 
 ## Clear grouping 
 
-The clear grouping feature in the Blazor DataGrid removes all grouped columns from the Grid, providing a quick way to reset grouping.
+The clear grouping feature in the Blazor DataGrid removes all grouped columns from the Blazor Data Grid, providing a quick way to reset grouping.
 
 To clear all grouped columns, call the [ClearGroupingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearGroupingAsync) method.
 
@@ -1148,9 +1148,9 @@ public class OrderData
 
 The Blazor DataGrid provides two events for the group action: [Grouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouping) and [Grouped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouped). `Grouping` is triggered before the action starts, and `Grouped` is triggered after completion. These events support custom logic based on grouping.
 
-1. **Grouping Event**: Triggered before the grouping or ungrouping action is performed in the Grid. Use this to perform operations or cancel the action. The event parameters include the current grouping column name and the action.
+1. **Grouping Event**: Triggered before the grouping or ungrouping action is performed in the Blazor Grid. Use this to perform operations or cancel the action. The event parameters include the current grouping column name and the action.
 
-2. **Grouped Event**: Triggered after the grouping or ungrouping action is performed in the Grid. Use this to run post-action logic. The event parameters include the current grouping column name and the action.
+2. **Grouped Event**: Triggered after the grouping or ungrouping action is performed in the Blazor Grid. Use this to run post-action logic. The event parameters include the current grouping column name and the action.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

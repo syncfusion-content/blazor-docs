@@ -16,13 +16,13 @@ Each column defines:
 * Formatting and style information.
 * Interactive features such as editing, filtering, and sorting.
 
-Effective column configuration ensures data is presented clearly, remains accessible, and supports all required Grid interactions.
+Effective column configuration ensures data is presented clearly, remains accessible, and supports all required Blazor Grid interactions.
 
 ## Column Types
 
 The Blazor DataGrid utilizes columns to organize and display diverse data. Each column can be assigned a specific data type using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. This property accepts values from the [ColumnType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html) enumeration, which is crucial for determining how data is displayed and formatted (e.g., numeric, date, or string).
 
-The DataGrid supports the following column types:
+The Blazor DataGrid supports the following column types:
 
 | Column Type | Description |
 |---|---|
@@ -119,14 +119,14 @@ The DataGrid supports the following column types:
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjrRZwZWfOALhmec?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > *  When the `Type` property is not defined, the column's data type is inferred from the first record present in the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource).
-> *  If the first record of the `DataSource` contains a `null` or empty `value` for a specific column, explicitly defining the `Type` for that column is necessary. This ensures the Grid accurately determines the appropriate filter dialog to display.
+> *  If the first record of the `DataSource` contains a `null` or empty `value` for a specific column, explicitly defining the `Type` for that column is necessary. This ensures the Blazor Grid accurately determines the appropriate filter dialog to display.
 
 ### Difference Between Boolean and CheckBox Column Types
 
 The Blazor DataGrid provides two distinct column types for handling boolean values and row selection:
 
 * [Boolean](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_Boolean): Binds to boolean data fields and supports editing of boolean property values.
-* [Checkbox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_CheckBox): Enables row selection and deselection. When a column is set to `ColumnType.CheckBox`, the Grid uses **multiple** selection mode by default.
+* [Checkbox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_CheckBox): Enables row selection and deselection. When a column is set to `ColumnType.CheckBox`, the Blazor Grid uses **multiple** selection mode by default.
 
 If multiple CheckBox columns are defined, selecting a checkbox in one column automatically selects the corresponding checkboxes in other CheckBox columns.
 
@@ -136,19 +136,19 @@ The Blazor DataGrid allows adjustment of column width using the [Width](https://
 
 **Key behaviors**
 
-1. Column width is determined by the sum of all column widths. For example, a Grid with four columns and a total width of 800 pixels will allocate 200 pixels to each column by default.
+1. Column width is determined by the sum of all column widths. For example, a Blazor Grid with four columns and a total width of 800 pixels will allocate 200 pixels to each column by default.
 
 2. If some columns have specified widths and others do not, any remaining width is distributed equally among columns without explicit width definitions.
 
-3. Percentage widths are responsive and adjust based on the Grid container's size.
+3. Percentage widths are responsive and adjust based on the Blazor Grid container's size.
 
 4. When columns are resized manually, a **minimum width** is enforced to maintain readability. By default, this minimum width is 10 pixels.
 
-5. If the total width of all columns exceeds the Grid container's width, a horizontal scrollbar appears.
+5. If the total width of all columns exceeds the Blazor Grid container's width, a horizontal scrollbar appears.
 
 6. When columns are hidden using the column chooser, their width is removed, and the remaining visible columns expand to fill the available space.
 
-7. If the parent element has a fixed width, the Grid inherits it; otherwise, the Grid adjusts dynamically.
+7. If the parent element has a fixed width, the Blazor Grid inherits it; otherwise, the Blazor Grid adjusts dynamically.
 
 8. When `AllowResizing` is enabled, columns without a specified width default to 200 pixels.
 
@@ -166,7 +166,7 @@ The column width is automatically calculated based on the content within its cel
 
 **2. Percentage**
 
-The column width is specified as a **percentage** of the Grid container's total width. For example, `25%` occupies 25% of the Grid `Width`.
+The column width is specified as a **percentage** of the Blazor Grid container's total width. For example, `25%` occupies 25% of the Blazor Grid `Width`.
 
 ```cshtml
  <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="25%"></GridColumn>
@@ -174,7 +174,7 @@ The column width is specified as a **percentage** of the Grid container's total 
 
 **3. Pixel**
 
-The column width is specified as an absolute **pixel** value. For example, a column width of `100px` will have a fixed width of 100 pixels, regardless of the Grid container's size.
+The column width is specified as an absolute **pixel** value. For example, a column width of `100px` will have a fixed width of 100 pixels, regardless of the Blazor Grid container's size.
 
 ```cshtml
  <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
@@ -248,7 +248,7 @@ public class OrderData
 
 ## Column Formatting
 
-Column formatting is a powerful feature in the Blazor DataGrid that allows customization of data display within Grid columns. Various formatting options are available to meet specific requirements, such as displaying numbers with particular formats, formatting dates according to a specific locale, and using templates to format column values.
+Column formatting is a powerful feature in the Blazor DataGrid that allows customization of data display within Blazor Data GridView columns. Various formatting options are available to meet specific requirements, such as displaying numbers with particular formats, formatting dates according to a specific locale, and using templates to format column values.
 
 The [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property can be used to specify the format for column values.
 
@@ -862,7 +862,7 @@ The Blazor DataGrid allows aligning header text using the [HeaderTextAlign](http
         new ColumnAlignmentOption() { Text= "Center" },
     };
 
-    // Reference to the Grid
+    // Reference to the Blazor Data Grid
     private SfGrid<OrderData> grid;
     public void OnValueChange(ChangeEventArgs<string, ColumnAlignmentOption> args)
     {
@@ -1733,7 +1733,7 @@ Columns can be dynamically shown or hidden based on their [HeaderText](https://h
 
 **1. Show or hide a single column**
 
-To show or hide a single column in the Grid by its `HeaderText` property, use [ShowColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnAsync_System_String_System_String_) or [HideColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideColumnAsync_System_String_System_String_) method.
+To show or hide a single column in the Blazor Data Grid by its `HeaderText` property, use [ShowColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnAsync_System_String_System_String_) or [HideColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideColumnAsync_System_String_System_String_) method.
 
 | Parameter Name | Type    | Description                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -1742,7 +1742,7 @@ To show or hide a single column in the Grid by its `HeaderText` property, use [S
 
 **2. Show or Hide Multiple Columns**
 
-To show or hide one or more columns in the Grid by their `HeaderText` property, use [ShowColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnsAsync_System_String___System_String_) or [HideColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideColumnsAsync_System_String___System_String_) method.
+To show or hide one or more columns in the Blazor Data Grid by their `HeaderText` property, use [ShowColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnsAsync_System_String___System_String_) or [HideColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideColumnsAsync_System_String___System_String_) method.
 
 | Parameter Name | Type       | Description                                                                 |
 |---------------|-----------|-----------------------------------------------------------------------------|
@@ -1838,7 +1838,7 @@ Columns can be dynamically shown or hidden based on their [Field](https://help.s
 
 **1. Show or hide a single column**
 
-To show or hide a single column in the Grid by its `Field` property, use [ShowColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnAsync_System_String_System_String_) or [HideColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideColumnAsync_System_String_System_String_) method.
+To show or hide a single column in the Blazor Data Grid by its `Field` property, use [ShowColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnAsync_System_String_System_String_) or [HideColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideColumnAsync_System_String_System_String_) method.
 
 | Parameter Name | Type    | Description                                                             |
 |---------------|--------|-------------------------------------------------------------------------|
@@ -1848,7 +1848,7 @@ To show or hide a single column in the Grid by its `Field` property, use [ShowCo
 
 **2. Show or Hide Multiple Columns**
 
-To show or hide one or more columns in the Grid by their `Field` property, use [ShowColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnsAsync_System_String___System_String_) or [HideColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideColumnsAsync_System_String___System_String_) method.
+To show or hide one or more columns in the Blazor Data Grid by their `Field` property, use [ShowColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnsAsync_System_String___System_String_) or [HideColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideColumnsAsync_System_String___System_String_) method.
 
 | Parameter Name | Type       | Description                                                             |
 |---------------|-----------|-------------------------------------------------------------------------|
@@ -1943,7 +1943,7 @@ public class OrderData
 
 The Blazor DataGrid optimizes the DOM by removing hidden columns from the rendered HTML. This reduces unnecessary elements in the DOM and improves performance, especially when working with large datasets.
 
-To enable this behavior, set the [ShouldRenderHiddenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShouldRenderHiddenColumns) property to **false** in the Grid.
+To enable this behavior, set the [ShouldRenderHiddenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShouldRenderHiddenColumns) property to **false** in the Blazor Data Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -2133,7 +2133,7 @@ To access columns in the Blazor DataGrid, use the following methods:
 
 **1. Get All Columns**
 
-The [GetColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetColumnsAsync_System_Nullable_System_Boolean__) method retrieves all columns defined in the DataGrid.
+The [GetColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetColumnsAsync_System_Nullable_System_Boolean__) method retrieves all columns defined in the Blazor Data Table.
 
 | Parameter Name | Type   | Description                                      |
 |---------------|--------|--------------------------------------------------|
@@ -2161,7 +2161,7 @@ The [GetVisibleColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 
 **5. Get Foreign Key Columns**
-The [GetForeignKeyColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetForeignKeyColumnsAsync) method retrieves all foreign key columns in the DataGrid.
+The [GetForeignKeyColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetForeignKeyColumnsAsync) method retrieves all foreign key columns in the Blazor DataGrid.
 
 **6. Get Column Field Names**
 
@@ -2171,11 +2171,11 @@ The [GetColumnFieldNamesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ### Adding or Removing Columns
 
-The Blazor DataGrid allows dynamically adding or removing columns using the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property, which is accessible through the DataGrid instance.
+The Blazor DataGrid allows dynamically adding or removing columns using the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property, which is accessible through the Blazor DataGrid instance.
 
 - Use the **Add** method to insert a new column object into the Columns collection.
 - Use the **RemoveAt** method to remove a column by its index from the Columns collection.
-- After adding or removing columns, call [RefreshColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RefreshColumnsAsync) to update the Grid.
+- After adding or removing columns, call [RefreshColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RefreshColumnsAsync) to update the Blazor Data Table.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

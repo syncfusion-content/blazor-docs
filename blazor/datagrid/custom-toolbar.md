@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Custom Toolbar Items in Blazor Data Grid
 
-The custom toolbar in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables a distinctive toolbar layout, style, and behavior tailored to application requirements, delivering a personalized Grid experience.
+The custom toolbar in the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables a distinctive toolbar layout, style, and behavior tailored to application requirements, delivering a personalized Grid experience.
 
 This is implemented by using the `Template` property, which provides extensive customization options for the toolbar. Define a custom template for the toolbar and handle toolbar item actions in the **OnClick** event.
 
@@ -224,7 +224,7 @@ Rendering an [SfDropdownList](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 This is achieved by using the `Template`. The example below shows how to render the `SfDropDownList` in the custom toolbar, where the toolbar template binds the [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ValueChanged) event to the **OnChange** method.
 
-In the **OnChange** method, the selected item text determines the action. For example, if **Update** is chosen, the [EndEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EndEditAsync) method exits edit mode. If **Edit** is selected, the selected record is passed to [StartEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_StartEditAsync) to start editing dynamically. Similarly, if **Delete** is chosen, the selected record is passed to [DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DeleteRecordAsync) to remove it from the Grid.
+In the **OnChange** method, the selected item text determines the action. For example, if **Update** is chosen, the [EndEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EndEditAsync) method exits edit mode. If **Edit** is selected, the selected record is passed to [StartEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_StartEditAsync) to start editing dynamically. Similarly, if **Delete** is chosen, the selected record is passed to [DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DeleteRecordAsync) to remove it from the Blazor Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -353,7 +353,7 @@ In the **OnChange** method, the selected item text determines the action. For ex
 
 Rendering the [SfAutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started-with-web-app) in the custom toolbar of the Blazor DataGrid enhances usability by enabling dynamic search based on user input.
 
-This is implemented by using the `Template` property of the [Toolbar](https://blazor.syncfusion.com/documentation/toolbar/getting-started-webapp). The example below renders the `SfAutoComplete` within the custom toolbar. The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_ValueChange) event of `SfAutoComplete` is bound to the **OnSearch** method, which searches the Grid based on the selected input.
+This is implemented by using the `Template` property of the [Toolbar](https://blazor.syncfusion.com/documentation/toolbar/getting-started-webapp). The example below renders the `SfAutoComplete` within the custom toolbar. The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_ValueChange) event of `SfAutoComplete` is bound to the **OnSearch** method, which searches the Blazor Grid based on the selected input.
 
 In the **OnSearch** method, the selected value from `SfAutoComplete` is used as the search keyword. The Grid’s [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) method filters records that match the keyword across all searchable columns.
 
@@ -470,7 +470,7 @@ In the **OnSearch** method, the selected value from `SfAutoComplete` is used as 
 
 Rendering a component or element by using the toolbar template in the Blazor DataGrid extends the toolbar with custom components such as buttons, dropdowns, input fields, icons, or other UI elements. Event handlers can be bound within the template to enable actions for the added components.
 
-To render custom components within the toolbar, use the `Template` directive. For example, include an [SfButton](https://help.syncfusion.com/cr/blazor/syncfusion.blazor.buttons.sfbutton.html) and perform specific Grid actions based on button clicks. When the **ExcelExport** button is clicked, [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) exports the Grid to Excel. When the **PdfExport** button is clicked, [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) exports the Grid to PDF. Likewise, when the Print button is clicked, [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) is triggered to print the Grid.
+To render custom components within the toolbar, use the `Template` directive. For example, include an [SfButton](https://help.syncfusion.com/cr/blazor/syncfusion.blazor.buttons.sfbutton.html) and perform specific Blazor Grid actions based on button clicks. When the **ExcelExport** button is clicked, [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) exports the Blazor Grid to Excel. When the **PdfExport** button is clicked, [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) exports the Blazor Grid to PDF. Likewise, when the Print button is clicked, [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) is triggered to print the Blazor Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
