@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Smart Paste Button | Syncfusion
+title: Getting Started with Smart Paste Button in Server App | Syncfusion
 description: Checkout and learn about getting started with Blazor Smart Paste Button component in Blazor Server App.
 platform: Blazor
 control: Smart Paste Button
 documentation: ug
 ---
 
-# Getting Started with Smart Paste Button Component
+# Getting Started with Smart Paste Button Component in Blazor Server App
 
 This section briefly explains about how to include [Blazor Smart Paste Button](https://www.syncfusion.com/blazor-components/blazor-smart-paste-button) component in your Blazor Server App using Visual Studio.
 
