@@ -9,31 +9,36 @@ documentation: ug
 
 # Row Template in Blazor Data Grid
 
-The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_RowTemplate) feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables complete control over the appearance and layout of each row. It is useful for displaying rich, composite content—such as images, buttons, and interactive controls—instead of plain text.
+The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_RowTemplate) feature in the [Blazor Data Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides complete control over the appearance and layout of each row. Row templates support rich, composite content such as images, buttons, and interactive controls instead of plain text.
 
-To enable and configure the `RowTemplate` feature in the Grid, follow these steps:
+Configure the `RowTemplate` feature in the Data Grid with these steps:
 
-1. **Set up the row template:** Define a custom row layout using the `RowTemplate`.
-2. **Define row layout using the GridTemplates component:** Wrap the `RowTemplate` content inside [GridTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates). Each row template must contain the same number of `<td>` elements as the Grid’s column count to ensure alignment.
+1. **Set up the row template:** Add the [GridTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html) component inside `SfGrid` and define a custom row layout using the `RowTemplate` property.
+2. **Define row layout structure:** Wrap the `RowTemplate` content inside [GridTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates). Each row template must contain the same number of `<td>` elements as the Grid's column count to ensure alignment.
+
 3. **Template configuration:** For more guidance on configuring templates, see the [templates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates) documentation.
 
-For an overview of `row templates` in the Grid, watch the following video.
+Watch the row-template overview video:
 
 {% youtube "youtube:https://www.youtube.com/watch?v=Dft0kerEGUQ" %}
+
+## Basic Row Template
+
+A basic row template can display rich content, including images and custom HTML:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@Employees" AllowSelection="true" Height="315px">
+<SfGrid @ref="Grid" DataSource="@Employees" Height="315px">
     <GridTemplates>
         <RowTemplate Context="emp">
             @{
                 var employee = (emp as EmployeeData);
 
                 <td class="photo">
-                    <img src="@($" Scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
+                    <img src="@($"Scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
                 </td>
                 <td class="details">
                     <table class="CardTable" cellpadding="3" cellspacing="2">
@@ -124,14 +129,13 @@ For an overview of `row templates` in the Grid, watch the following video.
 </style>
 
 @code {
-    private SfGrid<EmployeeData> Grid;
-    public List<EmployeeData> Employees { get; set; }
+    private SfGrid<EmployeeData>? Grid;
+    public List<EmployeeData> Employees { get; set; } = new();
 
     protected override void OnInitialized()
     {
         Employees = EmployeeData.GetAllRecords();
     }
-
 }
 
 {% endhighlight %}
@@ -187,27 +191,29 @@ public class EmployeeData
 {% endhighlight %}
 {% endtabs %}
 
-![Rows in Blazor DataGrid](./images/blazor-datagrid-rows.webp)
+![Rows in Blazor Data Grid](./images/blazor-datagrid-rows.webp)
 
-## Row template with formatting
+## Row Template with Formatting
 
-Typically, the Blazor DataGrid columns are formatted using [Columns.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format). When using row templates, values rendered inside the template are not affected by `Columns.Format`.
+Typically, the Blazor DataGrid columns are formatted using [Columns.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format). `Columns.Format` applies only to standard column rendering. Row templates override the default rendering, so `Columns.Format` does not apply inside a row template.
 
-To format values inside a row template, apply .NET formatting in the template (for example, using `ToString` with a format string) or invoke a helper method to produce the desired output such as dates, currency, or custom text.
+To format values inside a row template, apply .NET formatting in the template or invoke a helper method to produce the desired output such as dates, currency, or custom text.
+
+The `ToString("MM/dd/yyyy")` output uses the current culture. Use `CultureInfo.InvariantCulture` when a consistent format is required across cultures.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@Employees" AllowSelection="true" Height="315px">
+<SfGrid @ref="Grid" DataSource="@Employees" Height="315px">
     <GridTemplates>
         <RowTemplate Context="emp">
             @{
                 var employee = (emp as EmployeeData);
 
                 <td class="photo">
-                    <img src="@($" Scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
+                    <img src="@($"Scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
                 </td>
                 <td class="details">
                     <table class="CardTable" cellpadding="3" cellspacing="2">
@@ -373,15 +379,15 @@ public class EmployeeData
 {% endhighlight %}
 {% endtabs %}
 
-![Row Formatting in Blazor DataGrid](./images/blazor-datagrid-row-format.webp)
+![Row Formatting in Blazor Data Grid](./images/blazor-datagrid-row-format.webp)
 
-## Render Blazor component in row template
+## Render Blazor Components in Row Templates
 
-The Blazor DataGrid can render Blazor components inside row templates, enabling interactive UI elements within rows.
+The Blazor Data Grid can render Blazor components inside row templates, enabling interactive UI elements such as inputs, date pickers, and dropdowns within rows.
 
-To render a Blazor component in a row template, set the `RowTemplate` property and provide the custom HTML that defines the row layout.
+To render a Blazor component in a row template, define the `<RowTemplate>` child tag inside `<GridTemplates>` and provide the custom HTML that defines the row layout.
 
-The following example renders a [Chip](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) for `OrderID`, a [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) for `Quantity`, a [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started) for `OrderDate`, and a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) for `OrderStatus` in a row template:
+The row template renders a [Chip](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) for `OrderID`, a [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) for `Quantity`, a [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started) for `OrderDate`, and a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) for `OrderStatus`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -400,7 +406,7 @@ The following example renders a [Chip](https://blazor.syncfusion.com/documentati
             }
 
             <td class="rows">
-                <SfChip Width="50">
+                <SfChip Width="50px">
                     <ChipItems>
                         <ChipItem Text="@data.OrderID.ToString()"></ChipItem>
                     </ChipItems>
@@ -417,7 +423,6 @@ The following example renders a [Chip](https://blazor.syncfusion.com/documentati
             </td>
             <td class="rows">
                 <SfDropDownList TValue="string" TItem="string" DataSource="@DropData" @bind-Value="data.OrderStatus" Placeholder="Select Status" Width="150">
-                    <DropDownListFieldSettings Value="Text" Text="Text"></DropDownListFieldSettings>
                 </SfDropDownList>
             </td>
         </RowTemplate>
@@ -438,8 +443,8 @@ The following example renders a [Chip](https://blazor.syncfusion.com/documentati
 </style>
 
 @code {
-    private SfGrid<OrderData> Grid;
-    public List<OrderData> Orders { get; set; }
+    private SfGrid<OrderData>? Grid;
+    public List<OrderData> Orders { get; set; } = new();
     public List<string> DropData { get; set; } = new List<string> { "Order Placed", "Processing", "Delivered" };
 
     protected override void OnInitialized()
@@ -475,7 +480,6 @@ public class OrderData
     {
         if (Orders.Count == 0)
         {
-            int code = 10;
             for (int i = 1; i < 2; i++)
             {
                 Orders.Add(new OrderData(10248, "Nancy", 32.14, "Sales Representative", "Order Placed", 5, DateTime.Now.AddDays(-10), "123 Main St, City A"));
@@ -487,39 +491,37 @@ public class OrderData
                 Orders.Add(new OrderData(10254, "Robert", 78.99, "Vice President, Sales", "Delivered", 25, DateTime.Now.AddDays(1), "404 Cedar St, City G"));
                 Orders.Add(new OrderData(10255, "Anne", 46.66, "Inside Sales Coordinator", "Order Placed", 30, DateTime.Now.AddDays(2), "505 Walnut St, City H"));
                 Orders.Add(new OrderData(10256, "Laura", 98.76, "Sales Manager", "Delivered", 18, DateTime.Now.AddDays(3), "606 Ash Blvd, City I"));
-                code += 5;
             }
         }
         return Orders;
     }
 
     public int? OrderID { get; set; }
-    public string CustomerID { get; set; }
-    public double Freight { get; set; }
-    public string Title { get; set; }
-    public string OrderStatus { get; set; }
+    public string? CustomerID { get; set; }
+    public double? Freight { get; set; }
+    public string? Title { get; set; }
+    public string? OrderStatus { get; set; }
     public int Quantity { get; set; }
     public DateTime OrderDate { get; set; }
-    public string ShipAddress { get; set; }
+    public string? ShipAddress { get; set; }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVRDcZdikVPoDDp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVnjlVCnhaKHVOU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Render Chart in row template
+## Embed Data Visualization Components in Row Templates
 
-The Blazor DataGrid supports embedding other Blazor components, such as Charts, in row templates to visualize data directly within rows.
+Charts are data visualization components rather than input or editor components. The Blazor Data Grid supports chart components in row templates for visualizing row-specific data directly within rows.
 
 To render a Blazor Chart in a row template, use the [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_RowTemplate) property to define the row layout and include the chart markup within the template.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
-@page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Charts
-<SfGrid @ref="Grid" DataSource="@Orders" AllowSelection="true" Height="400px">
+<SfGrid @ref="Grid" DataSource="@Orders" Height="400px">
     <GridTemplates>
         <RowTemplate Context="emp">
             @{
@@ -580,15 +582,16 @@ To render a Blazor Chart in a row template, use the [RowTemplate](https://help.s
     }
 </style>
 @code {
-    public List<Order> Orders { get; set; }
-    SfGrid<Order> Grid;
+    public List<Order> Orders { get; set; } = new();
+    private SfGrid<Order>? Grid;
+    private static Random random = new Random();
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 5).Select(x => new Order()
         {
             OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[random.Next(5)],
             Freight = 2.1 * x,
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
@@ -596,25 +599,26 @@ To render a Blazor Chart in a row template, use the [RowTemplate](https://help.s
     public class Order
     {
         public int OrderID { get; set; }
-        public string CustomerID { get; set; }
+        public string? CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
     }
     public class ChartData
     {
-        public string Category { get; set; }
+        public string? Category { get; set; }
         public double Value { get; set; }
     }
 
     private List<ChartData> GetChartData(int orderId)
     {
-        // Simulated data per row (can vary by orderId if needed).
+        // Generate order-specific chart data by using the orderId to produce unique values.
+        // Production applications can query a database or API by orderId.
         return new List<ChartData>
         {
-            new ChartData { Category = "Q1", Value = orderId % 10 + 10 },
-            new ChartData { Category = "Q2", Value = orderId % 5 + 15 },
-            new ChartData { Category = "Q3", Value = orderId % 7 + 5 },
-            new ChartData { Category = "Q4", Value = orderId % 9 + 20 },
+            new ChartData { Category = "Q1", Value = (orderId % 10) + 10 },
+            new ChartData { Category = "Q2", Value = (orderId % 5) + 15 },
+            new ChartData { Category = "Q3", Value = (orderId % 7) + 5 },
+            new ChartData { Category = "Q4", Value = (orderId % 9) + 20 },
         };
     }
 }
@@ -622,31 +626,32 @@ To render a Blazor Chart in a row template, use the [RowTemplate](https://help.s
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVHjmtnMETVsmNm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBxZlVsHUpWfjQL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Limitations
 
-The row template feature is not compatible with all Grid features and has limited interoperability. The features that are incompatible with row templates are listed below.
+The row template feature is not compatible with all Data Grid features and has limited interoperability. The features that are incompatible with row templates are listed below.
 
-- Filtering
-- Paging
-- Sorting
-- Searching
-- Rtl
-- Export
-- Context Menu
-- State Persistence
-- Selection
-- Grouping
-- Editing
-- Frozen rows & columns
-- Virtual & Infinite scrolling
-- Column chooser
-- Column menu
-- Detail Row
-- Foreign key column
-- Resizing
-- Reordering
+- Adaptive view
 - Aggregates
 - Clipboard
-- Adaptive view
+- Column chooser
+- Column menu
+- Context Menu
+- Detail Row
+- Editing
+- Export
+- Filtering
+- Foreign key column
+- Frozen rows & columns
+- Grouping
+- Infinite scrolling
+- Paging
+- Reordering
+- Resizing
+- Rtl
+- Searching
+- Selection
+- Sorting
+- State Persistence
+- Virtual & Infinite scrolling
