@@ -183,7 +183,7 @@ Open a Razor file located in the **~/Pages/Home.razor** and add the [Blazor Data
     </GridColumns>
 </SfGrid>
 
-@code 
+@code
 {
     public List<OrderDetails> OrderData { get; set; }
     protected override void OnInitialized()
@@ -201,7 +201,7 @@ public class OrderDetails
         this.OrderID = OrderID;
         this.CustomerID = CustomerId;
         this.Freight = Freight;
-        this.ShipCountry = ShipCountry;    
+        this.ShipCountry = ShipCountry;
     }
     public static List<OrderDetails> GetAllRecords()
     {

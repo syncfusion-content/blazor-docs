@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Smart TextArea | Syncfusion
+title: Getting Started with Smart TextArea in Server App | Syncfusion
 description: Checkout and learn here all about Getting started with Blazor Smart TextArea component in Blazor Server App and more.
 platform: Blazor
 control: Smart TextArea
 documentation: ug
 ---
 
-# Getting Started with Smart TextArea Component
+# Getting Started with Smart TextArea Component in Blazor Server App
 
 This section briefly explains about how to include [Blazor Smart TextArea](https://www.syncfusion.com/blazor-components/blazor-smart-textarea) component in your Blazor Server App using Visual Studio.
 
@@ -240,10 +240,10 @@ N> From version 28.2.33 to 30.2.6, the Azure.AI.OpenAI package has been removed 
 
 To use Ollama for running self-hosted models:
 
-1. **Download and install Ollama**  
+1. **Download and install Ollama**
    Visit [Ollama's official website](https://ollama.com) and install the application appropriate for your operating system.
 
-2. **Install the desired model from the Ollama library**  
+2. **Install the desired model from the Ollama library**
    You can browse and install models from the [Ollama Library](https://ollama.com/library) (e.g., `llama2:13b`, `mistral:7b`, etc.).
 
 3. **Configure your application**

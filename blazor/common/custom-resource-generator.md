@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Resource Generator
 
-Syncfusion provides the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) web tool to generate component-specific interop scripts and styles for Blazor. Using CRG reduces bundle size and improves load performance by including only the required resources instead of the full library.
+Syncfusion provides the [Custom Resource Generator](https://blazor.syncfusion.com/crg/) (CRG) web tool to generate component-specific interop scripts and styles for Blazor. Using CRG reduces bundle size and improves load performance by including only the required resources instead of the full library.
 
 ![CRG preview showing component and theme selection](images/custom-resource-generator-preview.webp)
 
@@ -19,7 +19,7 @@ Select the required Blazor components in CRG to generate a specific set of resou
 
 Follow these steps to choose components in CRG:
 
-1. Open the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) app.
+1. Open the [Custom Resource Generator](https://blazor.syncfusion.com/crg/) (CRG) app.
 2. Type the component name in the search box, then select its checkbox. CRG automatically resolves dependencies; manual selection of dependent components is not required.
 ![CRG search with component selection](images/search-non-injectable.webp)
 3. Select one or more built-in themes from **Select Themes**.

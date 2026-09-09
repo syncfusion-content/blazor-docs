@@ -87,7 +87,7 @@ The [PopupOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Multi
 
 ### PopupOpened Event
 
-The [PopupOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupOpened) event triggers after the popup has opened. 
+The [PopupOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupOpened) event triggers after the popup has opened.
 
 ### PopupClosing Event
 
@@ -137,7 +137,7 @@ Adjust the popup height dynamically based on available viewport space by handlin
         if (popupEle) {
             popupEle.style.maxHeight = (window.innerHeight - topVal-50) + "px";
             popupEle.style.height = (window.innerHeight - topVal-50) + "px";
-            
+
         }
     })
 </script>
