@@ -84,7 +84,7 @@ To enable this feature, set the [ShowColumnChooser](https://help.syncfusion.com/
 
 ## Hide column in column chooser dialog
 
-The Blazor DataGrid allows hiding specific columns from the column chooser dialog. This is useful when working with a large number of columns or when limiting the columns available for selection. 
+The Blazor Grid allows hiding specific columns from the column chooser dialog. This is useful when working with a large number of columns or when limiting the columns available for selection. 
 
 To enable this, set the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowInColumnChooser) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
 
@@ -158,7 +158,7 @@ public class OrderData
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZBxNGXCzCeFriuA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * The `ShowInColumnChooser` property is applied to each column individually. By setting it to **false**, specific columns can be excluded from the column chooser dialog.
-> * At least one column must remain visible in the Grid to ensure proper rendering and interaction.
+> * At least one column must remain visible in the Blazor Data GridView to ensure proper rendering and interaction.
 
 ## Open column chooser via programmatically
 

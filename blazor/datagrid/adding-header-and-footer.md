@@ -27,7 +27,7 @@ The Blazor DataGrid supports adding custom text to header and footer regions in 
 
 To add text in the header and footer of the exported PDF:
 
-1. Access `[PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html).
+1. Access [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html).
 2. Assign [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Footer) using [PdfHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeader.html) and [PdfFooter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfFooter.html) objects.
 3. Add one or more [PdfHeaderFooterContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterContent.html) items to the `Contents` collection for each region.
 4. Call [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) to export with the configured header and footer.
@@ -587,7 +587,7 @@ To insert an image:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-       if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
+    if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Blazor Grid's ID and itemname.
         {
             var exportProps = new PdfExportProperties
             {
@@ -697,10 +697,10 @@ To enable this feature:
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-       if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
+    if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Blazor Data Grid's ID and itemname.
         {
             PdfExportProperties ExportProperties = new PdfExportProperties();
-            ExportProperties.IsRepeatHeader = true; // Repeats the Grid's header on every page in the PDF document.
+            ExportProperties.IsRepeatHeader = true; // Repeats the Blazor Data Grid's header on every page in the PDF document.
             await this.DefaultGrid.ExportToPdfAsync(ExportProperties);
         }
     }
