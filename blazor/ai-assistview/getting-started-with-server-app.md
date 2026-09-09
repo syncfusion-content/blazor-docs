@@ -184,7 +184,7 @@ N> If the interactivity location is set to `Per page/component`, define a render
     </SfAIAssistView>
 </div>
 
-@code 
+@code
 {
     List<string> promptSuggestions = new List<string>
     {

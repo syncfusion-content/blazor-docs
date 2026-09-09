@@ -255,7 +255,7 @@ padding-top: 20px;
 .sf-icon-spinner:before {
     content: "\e749";
 }
-.sf-icon-signature:before { 
+.sf-icon-signature:before {
     content: "\e750";
 }
 .sf-icon-carousel:before {
@@ -384,7 +384,7 @@ padding-top: 20px;
 }
 .sf-icon-stepper:before {
     content: "\e90b";
-} 
+}
 .sf-icon-data_form:before {
     content: "\e90c";
 }
