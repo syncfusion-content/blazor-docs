@@ -9,7 +9,7 @@ documentation: ug
 
 # Aggregates in Blazor Data Grid
 
-The aggregates feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) displays summary values in the footer, group footer, and group caption. It enables computing summary information for specific columns and presenting it at key locations in the DataGrid. Configure aggregates with the GridAggregates component. For each aggregate column, specify at least the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Field) and [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) properties.
+The aggregates feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) displays summary values in the footer, group footer, and group caption. It enables computing summary information for specific columns and presenting it at key locations in the Blazor Grid. Configure aggregates with the GridAggregates component. For each aggregate column, specify at least the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Field) and [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) properties.
 
 For customized rendering, use aggregate templates and access values via AggregateTemplateContext (for example, **Sum, Average, Min, Max, Count, TrueCount**, and **FalseCount**). See: [AggregateTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateTemplateContext.html) and [AggregateType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateType.html).
 
@@ -299,5 +299,5 @@ The available built-in aggregate types are :
 * [Handling aggregates in custom adaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor#handling-aggregates-operation)
 * [AggregateTemplateContext API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateTemplateContext.html)
 * [AggregateType enumeration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.AggregateType.html)
-* [Grouping in DataGrid](https://blazor.syncfusion.com/documentation/datagrid/grouping)
+* [Grouping in Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/grouping)
 * [Column templates](https://blazor.syncfusion.com/documentation/datagrid/column-template)

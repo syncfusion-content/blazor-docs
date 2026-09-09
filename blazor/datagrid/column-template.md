@@ -22,7 +22,7 @@ The Blazor DataGrid allows rendering HTML elements inside a column using the [Te
 
 ### Render image in a column
 
-To display an image in a DataGrid column, define the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property for the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `Template` property allows rendering custom HTML or Blazor components instead of the default field value.
+To display an image in a Blazor DataGrid column, define the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property for the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `Template` property allows rendering custom HTML or Blazor components instead of the default field value.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -130,7 +130,7 @@ The Blazor DataGrid supports rendering hyperlinks in columns using the [Template
                 @{
                     var Data = (context as EmployeeDetails);
                     <div>
-                        <a href="https://www.google.com/search?q=@Data.FirstName" target="_blank">@Data.FirstName</a>
+                        <a href="https://www.google.com/search?q=@Data.FirstName" target="_blank" aria-label="Search Google for @Data.FirstName" >@Data.FirstName</a>
                     </div>
                 }
             </Template>
@@ -293,7 +293,7 @@ public class EmployeeDetails
 
 ### Render DropDownList in a column
 
-The Blazor DataGrid allows rendering a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is commonly used to provide inline selection of predefined values directly within the grid, such as choosing from predefined options for a field.
+The Blazor DataGrid allows rendering a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is commonly used to provide inline selection of predefined values directly within the Blazor Grid, such as choosing from predefined options for a field.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -383,7 +383,7 @@ public class OrderDetails
 
 ### Render Chip in a column
 
-The Blazor DataGrid supports rendering [Chips](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful for displaying data as visually distinct elements, such as tags or labels, within the grid.
+The Blazor DataGrid supports rendering [Chips](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful for displaying data as visually distinct elements, such as tags or labels, within the Blazor Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -538,7 +538,7 @@ public class OrderDetails
 
 ### Render RadioButton in a column
 
-The Blazor DataGrid supports rendering a [RadioButton](https://blazor.syncfusion.com/documentation/radio-button/getting-started-webapp) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful for scenarios where a single option must be selected from multiple choices within the grid.
+The Blazor Grid supports rendering a [RadioButton](https://blazor.syncfusion.com/documentation/radio-button/getting-started-webapp) inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful for scenarios where a single option must be selected from multiple choices within the Blazor Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -934,9 +934,9 @@ public class OrderDetails
 
 ## Dynamically adding template column
 
-The Blazor DataGrid supports dynamically adding template columns at runtime. This feature is useful when the grid structure needs to change based on interactions or dynamic conditions.
+The Blazor DataGrid supports dynamically adding template columns at runtime. This feature is useful when the Blazor Grid structure needs to change based on interactions or dynamic conditions.
 
-Template columns can be created and inserted after the grid has been initialized, allowing custom elements such as dropdowns, buttons, or icons to be rendered dynamically. This approach provides flexibility for scenarios like adding interactive controls or displaying conditional content without modifying the initial grid configuration.
+Template columns can be created and inserted after the Blazor Data Grid has been initialized, allowing custom elements such as dropdowns, buttons, or icons to be rendered dynamically. This approach provides flexibility for scenarios like adding interactive controls or displaying conditional content without modifying the initial Blazor Grid configuration.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1051,7 +1051,7 @@ Routing can be implemented by defining an **anchor tag** or clickable element in
             <Template>
                 @{
                     var Employee = (context as OrderData);
-                    <div><a href="#" @onclick="@(() => Navigate(Employee))">View</a></div>
+                    <div><a href="#" @onclick="@(() => Navigate(Employee))" aria-label="Profile View" >View</a></div>
                 }
             </Template>
         </GridColumn>
@@ -1118,7 +1118,7 @@ Routing can be implemented by defining an **anchor tag** or clickable element in
 {% endhighlight %}
 {% endtabs %}
 
-In this configuration, the navigation URL is defined in the **Link** field of the Grid data. When the link is clicked, the page is routed to the specified URL.
+In this configuration, the navigation URL is defined in the **Link** field of the Blazor Grid data. When the link is clicked, the page is routed to the specified URL.
 
 Next, create a new Razor page with the appropriate routing URL and include any required route parameters. Initialize the page with the necessary details.
 
@@ -1144,9 +1144,9 @@ Next, create a new Razor page with the appropriate routing URL and include any r
 {% endhighlight %}
 {% endtabs %}
 
-The following GIF represents template routing in Grid
+The following GIF represents template routing in Blazor Grid
 ![Blazor DataGrid with routing template.](./images/blazor-datagrid-template-routing.webp)
 
 ## See also
 
-* [FileUpload in Grid Column Template](https://www.syncfusion.com/forums/151021/fileupload-in-grid-column-template)
+* [FileUpload in Blazor Data Grid Column Template](https://www.syncfusion.com/forums/151021/fileupload-in-grid-column-template)
