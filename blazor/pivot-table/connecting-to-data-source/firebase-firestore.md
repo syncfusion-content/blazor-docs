@@ -20,7 +20,7 @@ The following table lists the tools and libraries required to build and run the 
 | Component | Version | Purpose |
 |-----------|---------|---------|
 | .NET SDK | 10.0 | Builds and runs the Blazor Web App targeting `net10.0`. |
-| Visual Studio 2026 or Code Studio | 18.0+ / latest | Development environment with the ASP.NET and web workloads installed. |
+| Visual Studio 2026 or CodeStudio | 18.0+ / latest | Development environment with the ASP.NET and web workloads installed. |
 | Firebase Account | Active Google account | Used to create a Firebase project and a Firestore database. |
 | Firebase Firestore Database | Provisioned instance | Cloud-hosted NoSQL document store that holds the `Orders` collection. |
 | Google.Cloud.Firestore | 4.3.0 | Official Google Cloud Firestore client library for .NET. Requires .NET 8 or later; verified with .NET 10. |
@@ -139,7 +139,7 @@ The file shown below is a dummy service account key used only for demonstration:
 
 Create a new Blazor Web App named `PivotTableFirestore` that hosts the Pivot Table page and the ASP.NET Core API controller.
 
-1. In Visual Studio or Code Studio, create a new **Blazor Web App**.
+1. In Visual Studio or CodeStudio, create a new **Blazor Web App**.
 2. Set the project name to:
 
    ```text

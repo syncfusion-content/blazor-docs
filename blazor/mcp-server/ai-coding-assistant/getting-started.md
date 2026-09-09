@@ -17,7 +17,7 @@ The **AI Coding Assistant** is designed to streamline the development workflow f
 Before you begin, ensure you have:
 
 * Required [Node.js](https://nodejs.org/en/) version >= 18
-* A **compatible MCP client** (VS Code, Visual Studio, Code Studio, Cursor, etc.)
+* A **compatible MCP client** (VS Code, Visual Studio, CodeStudio, Cursor, etc.)
 * Active [API key](https://www.syncfusion.com/account/api-key)
 * Blazor application (existing or new); see [Quick Start](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 * Active license (any of the following):  
@@ -107,7 +107,7 @@ Create a `.cursor/mcp.json` file in your workspace with the MCP server configura
 }
 
 {% endhighlight %}
-{% highlight bash tabtitle="Code Studio" %}
+{% highlight bash tabtitle="CodeStudio" %}
 
 // Create a `.codestudio/mcp.json` file in your workspace with the MCP server configuration:
 
