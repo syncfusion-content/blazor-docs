@@ -237,7 +237,7 @@ public class OrderDetails
         this.OrderID = OrderID;
         this.CustomerID = CustomerId;
         this.Freight = Freight;
-        this.ShipCountry = ShipCountry;    
+        this.ShipCountry = ShipCountry;
     }
     public static List<OrderDetails> GetAllRecords()
     {

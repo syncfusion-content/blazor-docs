@@ -118,7 +118,7 @@ After the packages are installed, open the **~/Components/_Imports.razor** file 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
-@using Syncfusion.Blazor 
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 
 {% endhighlight %}
@@ -184,7 +184,7 @@ Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **
     </GridColumns>
 </SfGrid>
 
-@code 
+@code
 {
     public List<OrderDetails> OrderData { get; set; }
     protected override void OnInitialized()
@@ -202,7 +202,7 @@ public class OrderDetails
         this.OrderID = OrderID;
         this.CustomerID = CustomerId;
         this.Freight = Freight;
-        this.ShipCountry = ShipCountry;    
+        this.ShipCountry = ShipCountry;
     }
     public static List<OrderDetails> GetAllRecords()
     {

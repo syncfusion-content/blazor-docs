@@ -187,7 +187,7 @@ N> If the interactivity location is set to `Per page/component`, define a render
     </GridColumns>
 </SfGrid>
 
-@code 
+@code
 {
     public List<OrderDetails> OrderData { get; set; }
     protected override void OnInitialized()
@@ -205,7 +205,7 @@ public class OrderDetails
         this.OrderID = OrderID;
         this.CustomerID = CustomerId;
         this.Freight = Freight;
-        this.ShipCountry = ShipCountry;    
+        this.ShipCountry = ShipCountry;
     }
     public static List<OrderDetails> GetAllRecords()
     {

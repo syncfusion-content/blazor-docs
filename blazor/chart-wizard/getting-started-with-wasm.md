@@ -273,7 +273,7 @@ The default series type is Line. Use the `SeriesType` property to change the ser
     </SfChartWizard>
 </div>
 
-@code 
+@code
 {
     private readonly List<string> chartSeries = new() { "Gold", "Silver", "Bronze" };
     private readonly List<string> categories = new() { "Country", "CountryCode" };
@@ -339,7 +339,7 @@ The `Theme` property is used to specify the visual theme applied to the chart.
     </SfChartWizard>
 </div>
 
-@code 
+@code
 {
     private readonly List<string> chartSeries = new() { "Gold", "Silver", "Bronze" };
     private readonly List<string> categories = new() { "Country", "CountryCode" };
