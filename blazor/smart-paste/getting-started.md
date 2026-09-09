@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Smart Paste Button in Blazor Server App | Syncfusion
+title: Getting Started with Smart Paste Button in Server App | Syncfusion
 description: Checkout and learn about getting started with Blazor Smart Paste Button component in Blazor Server App.
 platform: Blazor
 control: Smart Paste Button
@@ -240,10 +240,10 @@ N> From version 28.2.33 to 30.2.6, the Azure.AI.OpenAI package has been removed 
 
 To use Ollama for running self-hosted models:
 
-1. **Download and install Ollama**  
+1. **Download and install Ollama**
    Visit [Ollama's official website](https://ollama.com) and install the application appropriate for your operating system.
 
-2. **Install the desired model from the Ollama library**  
+2. **Install the desired model from the Ollama library**
    You can browse and install models from the [Ollama Library](https://ollama.com/library) (e.g., `llama2:13b`, `mistral:7b`, etc.).
 
 3. **Configure your application**
@@ -258,7 +258,7 @@ To use Ollama for running self-hosted models:
 {% highlight c# tabtitle="Package Manager" %}
 
 Install-Package Microsoft.Extensions.AI
-Install-Package OllamaSharp 
+Install-Package OllamaSharp
 
 {% endhighlight %}
 
