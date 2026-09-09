@@ -181,7 +181,7 @@ In the following example, images are added under the `images` folder in the `www
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI Blazor App with added image](images\maui\maui-image.webp)
+![MAUI Blazor App with added image](images/maui/maui-image.webp)
 
 ## Troubleshooting
 

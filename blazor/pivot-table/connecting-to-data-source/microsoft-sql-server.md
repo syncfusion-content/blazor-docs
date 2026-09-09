@@ -131,13 +131,13 @@ dotnet user-secrets set "ConnectionStrings:SQLServer" "Server=localhost;Database
 Common local alternatives are:
 
 ```text
-# LocalDB
+// LocalDB
 Server=(localdb)\MSSQLLocalDB;Database=OrderDB;Integrated Security=True;TrustServerCertificate=True;
 
-# SQL Server Express
+// SQL Server Express
 Server=.\SQLEXPRESS;Database=OrderDB;Integrated Security=True;TrustServerCertificate=True;
 
-# SQL Server authentication
+// SQL Server authentication
 Server=localhost;Database=OrderDB;User Id=YOUR_USER;Password=YOUR_PASSWORD;TrustServerCertificate=True;
 ```
 
