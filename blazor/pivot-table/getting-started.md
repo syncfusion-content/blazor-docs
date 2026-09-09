@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Pivot Table | Syncfusion
+title: Getting Started with Blazor Pivot Table in WASM App | Syncfusion
 description: Check out and learn about getting started with Blazor Pivot Table component in Blazor WebAssembly Application.
 platform: Blazor
 control: Pivot Table
@@ -12,11 +12,11 @@ documentation: ug
 <!-- markdownlint-disable MD029 -->
 <!-- markdownlint-disable MD009 -->
 
-# Getting Started with Blazor Pivot Table
+# Getting Started with Blazor Pivot Table in Blazor WASM App
 
 This guide briefly explains how to include the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/). Follow these steps to set up and configure the component for your project.
 
-> **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, CodeStudio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview).
+> **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Code Studio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview).
 
 ## Using .NET CLI Templates
 
