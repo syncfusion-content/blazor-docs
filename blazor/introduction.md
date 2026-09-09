@@ -11,7 +11,7 @@ documentation: ug
 
 Blazor Components is an enterprise-grade, native UI components library for creating Blazor Web, Blazor WebAssembly and Blazor Server applications. Built specifically for Blazor, the components are lightweight, responsive, and touch-friendly to support modern web applications. The library is engineered for performance, keyboard-first accessibility, and global reach, with rich data visualization and productivity components.
 
-> **Ready to streamline your Blazor development?** Discover the full potential of Blazor components with AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, CodeStudio and more. [Explore AI Coding Assistant](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
+> **Ready to streamline your Blazor development?** Discover the full potential of Blazor components with AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Code Studio and more. [Explore AI Coding Assistant](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
 ## Why teams choose us?
 
