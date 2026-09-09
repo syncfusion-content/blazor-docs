@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Agent Skills for AI Assistants
 
-This guide introduces **Blazor Skills**, a knowledge package that enables AI assistants (VS Code, Cursor, CodeStudio, etc.) to understand and generate accurate Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor code using official APIs, patterns, and theming guidelines.
+This guide introduces **Blazor Skills**, a knowledge package that enables AI assistants (VS Code, Cursor, Code Studio, etc.) to understand and generate accurate Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor code using official APIs, patterns, and theming guidelines.
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Skills eliminate common issues with generic AI suggestions by grounding the assistant in accurate Syncfusion<sup style="font-size:70%">&reg;</sup> component usage patterns, API structures, supported features, and project‑specific configuration.
 
@@ -19,7 +19,7 @@ Before installing Blazor Agent Skills, ensure the following:
 
 - Required [Node.js](https://nodejs.org/en/) version >= 16
 - Blazor application (existing or new); see [Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-- A supported AI agent or IDE that integrates with the Skills CLI (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio, Cursor, etc.)
+- A supported AI agent or IDE that integrates with the Skills CLI (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, etc.)
 
 ## Installation
 
@@ -105,7 +105,7 @@ Choose your installation scope (project-level or global), then confirm to comple
 {% endhighlight %}
 {% endtabs %}
 
-This registers the Syncfusion<sup style="font-size:70%">&reg;</sup> skill pack so your AI assistant can automatically load it in supported IDEs such as [CodeStudio](https://help.syncfusion.com/code-studio/reference/configure-properties/skills), [Visual Studio Code](https://code.visualstudio.com/docs/agent-customization/agent-skills), and [Cursor](https://cursor.com/docs/skills).
+This registers the Syncfusion<sup style="font-size:70%">&reg;</sup> skill pack so your AI assistant can automatically load it in supported IDEs such as [Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/skills), [Visual Studio Code](https://code.visualstudio.com/docs/agent-customization/agent-skills), and [Cursor](https://cursor.com/docs/skills).
 
 To learn more about the Skills CLI, refer [here](https://www.skills.sh/docs).
 
@@ -195,7 +195,7 @@ npx skills update
 
 **Which agents and IDEs are supported?**
 
-Any Skills compatible agent or IDE that loads local skill files (Visual Studio Code, Cursor, CodeStudio, etc.).
+Any Skills compatible agent or IDE that loads local skill files (Visual Studio Code, Cursor, Code Studio, etc.).
 
 **Are skills loaded automatically?**
 

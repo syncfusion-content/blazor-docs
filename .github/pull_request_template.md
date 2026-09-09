@@ -2,8 +2,8 @@
 Provide a clear description of the documentation change.  
 Explain **what** was updated, added, or removed.
 
-## CodeStudio usage(Mandatory)
-- CodeStudio used in this PR/MR?
+## Code Studio usage(Mandatory)
+- Code Studio used in this PR/MR?
     - [ ] Yes
     - [ ] No
 - If `Yes`: Primary use (choose one)
@@ -27,7 +27,7 @@ Explain **what** was updated, added, or removed.
 - [ ] Other (please describe):
 
 ## Reviewer Checklist (Mandatory)
-- [ ] Reviewed the provided CodeStudio usages related information
+- [ ] Reviewed the provided Code Studio usages related information
 - [ ] Content changes follow UG/Documentation guidelines
 - [ ] All provided information reviewed and verified
 - [ ] Links and previews checked

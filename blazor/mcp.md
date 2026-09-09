@@ -28,7 +28,7 @@ These tools speed up development and reinforce best practices for Syncfusion com
 Before beginning, ensure the following prerequisites are met:
 
 - Microsoft [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later
-- A **compatible MCP client** (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio, Cursor, JetBrains, etc.)
+- A **compatible MCP client** (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, JetBrains, etc.)
 - An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://www.syncfusion.com/account/api-key)
 - A **Blazor application** (existing or new); see [Quick Start](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 - An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
@@ -75,7 +75,7 @@ Create a configuration file in your project folder to install the server for you
 }
 
 {% endhighlight %}
-{% highlight bash tabtitle="CodeStudio" %}
+{% highlight bash tabtitle="Code Studio" %}
 
 // Create a `.codestudio/mcp.json` file in your workspace:
 
