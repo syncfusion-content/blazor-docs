@@ -11,6 +11,8 @@ documentation: ug
 
 The Mention allows you to bind data either from a local source or a remote data service using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. If you want to bind data from a local source, you can simply assign an enumerable list of data items to the `DataSource` property. If you want to bind data from a remote data service, you can use the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) component to fetch and bind the data to the `Mention` component.
 
+The Events section describes the data-fetch lifecycle events (`OnActionBegin`, `OnActionComplete`, and `OnActionFailure`) that fire while remote data is being loaded.
+
 * **TItem** - Specifies the type of the `DataSource` of the Blazor Mention component.
 
 ## Binding local data
@@ -36,7 +38,7 @@ The `DataSource` property of the Blazor Mention component specifies the data tha
 
 The Blazor Mention allows you to bind data to the Blazor Mention component as an array or list of various types, including `string`, `int`, `double` and `bool`. To bind data to the Blazor Mention, you can use the `DataSource` property and specify the data as a `List<T>` or an array of the desired type.
 
-The following code demonstrates array of string values to the Blazor Mention component.
+The following code demonstrates an array of string values to the Blazor Mention component.
 
 {% highlight razor %}
 
@@ -44,9 +46,9 @@ The following code demonstrates array of string values to the Blazor Mention com
 
 {% endhighlight %}
 
-![Blazor Mention with primitive string type](./images/blazor-mention-primitive-type-string.webp)
+![Blazor Mention with Primitive string type](./images/blazor-mention-primitive-type-string.webp)
 
-The following code demonstrates array of integer values to the Blazor Mention component.
+The following code demonstrates binding the [MentionChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_MentionChar) property alongside an array of integer values to the Blazor Mention component.
 
 {% highlight razor %}
 
@@ -54,13 +56,13 @@ The following code demonstrates array of integer values to the Blazor Mention co
 
 {% endhighlight %}
 
-![Blazor Mention with primitive int type](./images/blazor-mention-primitive-type-int.webp)
+![Blazor Mention with Primitive int type](./images/blazor-mention-primitive-type-int.webp)
 
 ### Complex data type
 
 The Blazor Mention component allows you to bind data to the component as an array or list of complex data types, such as objects with multiple properties. To bind complex data to the Mention, you can use the `DataSource` property and specify the data as a `List<T>` or an array of the desired type. You can then use the [MentionFieldSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MentionFieldSettings.html) property to specify which properties of the complex data should be used to generate the suggestion list items.
 
-In the following example, the `CodeFormat.ID` column and `Country.CountryName` column from complex data have been mapped to the [MentionFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MentionFieldSettings.html#Syncfusion_Blazor_DropDowns_MentionFieldSettings_Value) and  [MentionFieldSettings.Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MentionFieldSettings.html#Syncfusion_Blazor_DropDowns_MentionFieldSettings_Text) respectively.
+In the following example, the `CodeFormat.ID` column and `Country.CountryName` column from complex data have been mapped to the [MentionFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MentionFieldSettings.html#Syncfusion_Blazor_DropDowns_MentionFieldSettings_Value) and [MentionFieldSettings.Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MentionFieldSettings.html#Syncfusion_Blazor_DropDowns_MentionFieldSettings_Text) respectively. The popup width is set with the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_PopupWidth) property.
 
 {% highlight razor %}
 
@@ -68,7 +70,7 @@ In the following example, the `CodeFormat.ID` column and `Country.CountryName` c
 
 {% endhighlight %}
 
-![Blazor Mention with array of complex data](./images/blazor-mention-complex-data.webp)
+![Blazor Mention with Complex data type](./images/blazor-mention-complex-data.webp)
 
 ### Expando object binding
 
@@ -76,13 +78,15 @@ The [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.
 
 In the following example, the `ExpandoObject` is bound to the collection of vehicles data.
 
+N> The `@using System.Dynamic;` directive is required to use `ExpandoObject` in the sample. Add it to the Razor file (or to `_Imports.razor` for project-wide access).
+
 {% highlight razor %}
 
 {% include_relative code-snippet/expando-object-binding.razor %}
 
 {% endhighlight %}
 
-![Blazor Mention with expando object binding](./images/blazor-mention-expando-object-binding.webp)
+![Blazor Mention with Expando object binding](./images/blazor-mention-expando-object-binding.webp)
 
 ### Enum data binding
 
@@ -94,7 +98,7 @@ The Mention allows you to bind data from an enumeration (enum) to the component.
 
 {% endhighlight %}
 
-![Blazor Mention with enum data binding](./images/blazor-mention-enum-data-binding.webp)
+![Blazor Mention with Enum data binding](./images/blazor-mention-enum-data-binding.webp)
 
 ## Binding remote data
 
@@ -106,11 +110,13 @@ To use the `DataManager` property with the Blazor Mention component, you can cre
 * [DataManager.Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) - Defines the adaptor option. By default, the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) is used for remote binding. The adaptor is responsible for processing responses and requests from or to the service endpoint. 
 * [Syncfusion.Blazor.Data](https://www.nuget.org/packages/Syncfusion.Blazor.Data/) package provides some predefined adaptors that are designed to interact with particular service endpoints.
 
+N> `CrossDomain="true"` enables cross-origin requests. Ensure the remote service is configured to allow cross-origin access from your app's origin.
+
 ### OData v4 adaptor - Binding OData v4 service
 
 The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) is an improved version of OData protocols, and the `DataManager` can also retrieve and consume OData v4 services.
 
-The following sample displays the first 6 contacts from `Customers` table of the `Northwind` Data Service.
+The following sample displays the first 6 contacts from the `Customers` table of the `Northwind` Data Service, using the `PopupWidth` and [SuggestionCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_SuggestionCount) members of `SfMention` to size and limit the suggestion list.
 
 {% highlight razor %}
 
@@ -118,11 +124,15 @@ The following sample displays the first 6 contacts from `Customers` table of the
 
 {% endhighlight %}
 
-![Blazor Mention with OData v4 adaptor](./images/blazor-mention-ODatav4-adaptor.webp)
+![Blazor Mention with OData v4 Adaptor](./images/blazor-mention-ODatav4-adaptor.webp)
+
+N> This sample uses `https://services.odata.org`, a public third-party OData v4 endpoint. Public endpoints can be retired, rate-limited, or moved without notice. For production use, replace the URL with your own service endpoint.
 
 ### Web API adaptor
 
-The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) is used to interact with Web API created under OData standards. The `WebApiAdaptor` is extended from the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor). Hence to use the `WebApiAdaptor`, the endpoint should understand the OData formatted queries sent along with the request. 
+The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) is used to interact with Web API created under OData standards. The `WebApiAdaptor` is extended from the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor). Hence to use the `WebApiAdaptor`, the endpoint should understand the OData formatted queries sent along with the request.
+
+The following sample uses `PopupWidth` and `SuggestionCount` to control the popup width and the number of records shown per fetch from Syncfusion's public Employees Web API.
 
 {% highlight razor %}
 
@@ -130,13 +140,13 @@ The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#
 
 {% endhighlight %}
 
-![Blazor Mention with web API adaptor](./images/blazor-mention-web-api-adaptor.webp)
+![Blazor Mention with Web API Adaptor](./images/blazor-mention-web-api-adaptor.webp)
 
 ### Offline mode
 
-The `Offline` property of `DataManager` allows you to specify whether the data should be loaded from the server or from the local cache. If `Offline` is set to `true`, the `DataManager` will try to load data from the local cache first, and if that is not possible, it will try to load it from the server. This can be useful in situations where you want to minimize the number of requests to the server and improve its performance.
+The [`Offline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Offline) property of `DataManager` allows you to specify whether the data should be loaded from the server or from a local cache. When `Offline` is set to `true`, `DataManager` fetches the entire dataset once during initialization and stores it in an in-memory cache for the lifetime of the component. All subsequent filtering happens client-side against this cache without sending additional server requests, which reduces the number of network calls and improves performance.
 
-The following example is for remote data binding and enabled `Offline` mode.
+The following example is for remote data binding with `SuggestionCount` and the `Offline` mode enabled.
 
 {% highlight razor %}
 
@@ -150,7 +160,7 @@ The following example is for remote data binding and enabled `Offline` mode.
 
 ### OnActionBegin event
 
-The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_OnActionBegin) event is triggers whenever the Blazor Mention component starts to fetch data from a remote server using the `DataSource` or `DataManager` properties. The event is passed a `ActionBeginEventArgs` object as a parameter, which contains information about the data fetch process.
+The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_OnActionBegin) event is triggered whenever the Blazor Mention component starts to fetch data from a remote server using the `DataSource` or `DataManager` properties. The event handler receives an [ActionBeginEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ActionBeginEventArgs.html) object, which contains information about the data fetch process and can be used to cancel the request before it is sent.
 
 {% highlight razor %}
 
@@ -160,7 +170,7 @@ The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
 
 ### OnActionComplete event
 
-The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_OnActionComplete) event is a built-in event of the Blazor Mention component that is triggered after data has been successfully fetched from a remote server. This event can be used to perform additional processing or take other action after the data fetch process has completed. The event is passed a `ActionCompleteEventArgs` object as a parameter, which contains information about the data that was fetched.
+The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_OnActionComplete) event is a built-in event of the Blazor Mention component that is triggered after data has been successfully fetched from a remote server. This event can be used to perform additional processing or take other action after the data fetch process has completed. The event handler receives an [ActionCompleteEventArgs&lt;TItem&gt;](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ActionCompleteEventArgs-1.html) object, which exposes the fetched `Result` collection, the `Count`, and the originating `EventName`.
 
 {% highlight razor %}
 
@@ -170,9 +180,9 @@ The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
 
 ### OnActionFailure event
 
-The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_OnActionFailure) event is a built-in event of Blazor Mention component that is triggered when an error occurs while fetching data from a remote server. This event can be used to handle errors that may occur during the data fetch process and take appropriate action, such as displaying an error message or retrying the request.
+The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_OnActionFailure) event is a built-in event of Blazor Mention component that is triggered when an error occurs while fetching data from a remote server. This event can be used to handle errors that may occur during the data fetch process and take appropriate action, such as displaying an error message or retrying the request. The event handler receives an [Exception](https://learn.microsoft.com/en-us/dotnet/api/system.exception) instance that describes the failure.
 
-In the following example, the `Url` is set to an incorrect value, So the server is unable to fulfill the data fetch request, and it will triggers the `OnActionFailure` event.
+In the following example, the `Url` is set to an incorrect value, so the server is unable to fulfill the data fetch request and the `OnActionFailure` event is triggered.
 
 {% highlight razor %}
 
