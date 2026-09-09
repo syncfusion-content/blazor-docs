@@ -29,7 +29,7 @@ In the following example, the popup is moved upward and to the left using negati
 
 <style>
     .custom.e-dropdown-popup {
-        margin: -135px -27px;
+        margin: -155px -27px;
     }
 </style>
 

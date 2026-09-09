@@ -54,8 +54,8 @@ In the following example, render [DropDownList](https://help.syncfusion.com/cr/b
 
     public class GameFields
     {
-        public string ID { get; set; }
-        public string Text { get; set; }
+        public string? ID { get; set; }
+        public string? Text { get; set; }
     }
     private List<GameFields> Games = new List<GameFields>() {
         new GameFields(){ ID= "Game1", Text= "American Football" },
@@ -73,9 +73,6 @@ In the following example, render [DropDownList](https://help.syncfusion.com/cr/b
     }
 </style>
 
-
 ```
-
-
 
 ![Creating DropDown List in Popup of Blazor DropDownMenu](./../images/blazor-dropdownmenu-create-dropdownlist.webp)

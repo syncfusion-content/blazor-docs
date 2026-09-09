@@ -35,10 +35,10 @@ In the following example, the ListView is provided as PopupContent for the Dropd
 
     public class ListData
     {
-        public string Text { get; set; }
-        public string Id { get; set; }
-        public string Class { get; set; }
-        public string Category { get; set; }
+        public string? Text { get; set; }
+        public string? Id { get; set; }
+        public string? Class { get; set; }
+        public string? Category { get; set; }
     }
 }
 
@@ -49,7 +49,5 @@ In the following example, the ListView is provided as PopupContent for the Dropd
 </style>
 
 ```
-
-
 
 ![Grouped ListView items inside the Blazor Dropdown Menu popup](./../images/blazor-dropdownmenu-grouping-popup-item.webp)

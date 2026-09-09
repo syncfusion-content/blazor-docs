@@ -17,7 +17,6 @@ In the following example, Dialog will open while selecting `Other Folder...` ite
 
 @using Syncfusion.Blazor.SplitButtons
 @using Syncfusion.Blazor.Popups
-@using Syncfusion.Blazor.Buttons
 
 <SfDropDownButton Content="Settings" IconCss="e-icons e-setting-icon" CssClass="e-vertical" IconPosition="SplitButtonIconPosition.Top">
     <DropDownButtonEvents ItemSelected="select"></DropDownButtonEvents>
@@ -27,29 +26,29 @@ In the following example, Dialog will open while selecting `Other Folder...` ite
         <DropDownMenuItem Text="Update"></DropDownMenuItem>
     </DropDownMenuItems>
 </SfDropDownButton>
-<SfDialog Content="@Content" Header="@Header" Width="250px" Height="150px" Visible="false" @ref="DialogObj" >
+<SfDialog Content="@Content" Header="@Header" Width="250px" Height="150px" Visible="false" @ref="DialogObj">
     <DialogPositionData X="300" Y="200"></DialogPositionData>
     <DialogButtons>
-       <DialogButton Content="OK" IsPrimary="true" OnClick="@click"></DialogButton>
-       <DialogButton Content="Cancel" OnClick="@click"></DialogButton>
+        <DialogButton Content="OK" IsPrimary="true" OnClick="@click"></DialogButton>
+        <DialogButton Content="Cancel" OnClick="@click"></DialogButton>
     </DialogButtons>
 </SfDialog>
 
-@code  {
-    SfDialog DialogObj;
+@code {
+    SfDialog? DialogObj;
     public string Content = "Are you sure want to update?";
     public string Header = "Software Update";
 
-    private void click(object args)
+    private async Task click ( object args )
     {
-        DialogObj.Hide();
+        await DialogObj!.HideAsync();
     }
 
-    private void select(MenuEventArgs args)
+    private async Task select ( MenuEventArgs args )
     {
         if (args.Item.Text == "Update")
         {
-            DialogObj.Show();
+            await DialogObj!.ShowAsync();
         }
     }
 }
