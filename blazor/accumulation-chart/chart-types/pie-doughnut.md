@@ -1,10 +1,11 @@
 ---
 layout: post
 title: Blazor Pie and Doughnut Chart Examples | Syncfusion®
-description: Learn how to create Pie and Doughnut Charts in Syncfusion Blazor Accumulation Chart to display proportional data and percentage distribution.
+description: Learn how to create Pie and Doughnut Charts, multiple donuts, and nested views in Syncfusion Blazor Accumulation Chart with code examples.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
+keywords: Blazor Pie Chart, Blazor Doughnut Chart, Blazor Accumulation Chart, Syncfusion Blazor Charts, Pie Chart Blazor, Doughnut Chart Blazor, Multiple Donuts Blazor, Nested Pie Chart Blazor
 ---
 
 # Pie and Doughnut Chart in Blazor
@@ -211,6 +212,75 @@ The doughnut chart can be created by setting the [InnerRadius](https://help.sync
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXBHXwsohMbHLoWg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Doughnut Chart](../images/pie-dough-nut/blazor-doughnut-chart.webp)" %}
+
+## Multiple donuts
+
+You can create multiple donuts within a single chart by adding multiple series with different [InnerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_InnerRadius) and [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Radius) values. This lets you compare multiple data sets within the same categories. Each series can carry its own data, colors, and customizations. The `MappingKey` property in [AccumulationChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html) groups legend items by a specified field from the data source, so points with matching `MappingKey` values appear as a single legend entry instead of one entry per series.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfAccumulationChart Title="Product Sales vs Profit Analysis" EnableBorderOnMouseMove="false" >
+
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@TotalSalesData" XName="@nameof(ProductData.X)" YName="@nameof(ProductData.Y)" Name="Total Sales" Type="@AccumulationType.Pie" Radius="90%" InnerRadius="60%" TooltipMappingName="@nameof(ProductData.X)">
+
+            <AccumulationDataLabelSettings Visible="true" Name="@nameof(ProductData.Text)" Position="@AccumulationLabelPosition.Outside">
+                <AccumulationChartConnector Type="@ConnectorType.Curve" Color="black" Width="2" DashArray="2,1" Length="5" />
+            </AccumulationDataLabelSettings>
+
+            <AccumulationChartAnimation Enable="false" />
+        </AccumulationChartSeries>
+
+        <AccumulationChartSeries DataSource="@TotalProfitData" XName="@nameof(ProductData.X)" YName="@nameof(ProductData.Y)" Name="Total Profit" Type="@AccumulationType.Pie" Radius="50%" InnerRadius="50%" TooltipMappingName="@nameof(ProductData.X)">
+
+            <AccumulationDataLabelSettings Visible="true" Name="@nameof(ProductData.Text)" Position="@AccumulationLabelPosition.Inside">
+                <AccumulationChartConnector Type="@ConnectorType.Curve" Color="black" Width="2" DashArray="2,1" Length="5" />
+            </AccumulationDataLabelSettings>
+            <AccumulationChartAnimation Enable="false" />
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+
+    <AccumulationChartTooltipSettings Enable="true" Format="<b>${point.x}</b><br/>Value: <b>$${point.y}</b><br/>Percentage: <b>${point.percentage}%</b>" />
+
+    <AccumulationChartLegendSettings Visible="true" MappingKey="@nameof(ProductData.X)" />
+
+    <AccumulationChartBorder Color="#333" Width="2" />
+</SfAccumulationChart>
+
+@code {
+    private List<ProductData> TotalSalesData { get; set; } =
+    {
+        new() { X = "Electronics",  Y = 45000, Text = "45K" },
+        new() { X = "Fashion",      Y = 32000, Text = "32K" },
+        new() { X = "Home & Garden", Y = 18000, Text = "18K" },
+        new() { X = "Sports",       Y = 15000, Text = "15K" },
+        new() { X = "Books",        Y = 8000,  Text = "8K" }
+    };
+
+    private List<ProductData> TotalProfitData { get; set; } =
+    {
+        new() { X = "Electronics",  Y = 18000, Text = "18K",   Profit = "40%" },
+        new() { X = "Fashion",      Y = 12800, Text = "12.8K", Profit = "40%" },
+        new() { X = "Home & Garden", Y = 6300, Text = "6.3K",  Profit = "35%" },
+        new() { X = "Sports",       Y = 4500,  Text = "4.5K",  Profit = "30%" },
+        new() { X = "Books",        Y = 2400,  Text = "2.4K",  Profit = "30%" }
+    };
+
+    public class ProductData
+    {
+        public string X { get; set; } = string.Empty;
+        public double Y { get; set; }
+        public string Text { get; set; } = string.Empty;
+        public string Profit { get; set; } = string.Empty;
+    }
+}
+
+```
+
+<!-- TODO:Add preview sample after the release -->
+![Blazor Chart with Multiple Donuts](../images/pie-dough-nut/blazor-nested-doughnut-chart.webp)
 
 ## Start and end angles
 
