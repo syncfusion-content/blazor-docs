@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion® Agentic Blazor UI Builder Skill for AI Assistants
 
-**Syncfusion® Agentic Blazor UI Builder** is an AI-powered skill and companion agent that accelerates Blazor application development by transforming natural-language UI requirements into production-ready components using Blazor UI libraries. 
+**Syncfusion® Agentic Blazor UI Builder** is an AI-powered skill and companion agent that accelerates Blazor application development by transforming natural-language UI requirements into production-ready components using Blazor UI libraries.
 
 Integrated with your AI-powered IDE, it leverages deep knowledge of **Blazor components** to deliver accurate and ready-to-use code.
 By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, Blazor UI Builder helps you rapidly build scalable dashboards and user interfaces without leaving your development workflow.
@@ -25,7 +25,7 @@ Before installing Blazor UI Builder, ensure the following:
 | **Node.js version 18 or later** | npm package manager installed |
 | **Agent Package Manager (APM)** | Agent Package Manager installed. [Installation Guidelines](https://microsoft.github.io/apm/quickstart/#1-install-apm) |
 | **Syncfusion License** | [Commercial](https://www.syncfusion.com/sales/pricing?category=ui-components), [Free Community](https://www.syncfusion.com/products/communitylicense), or [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials) |
-| **Supported AI Agent / IDE** | A supported AI agent or IDE that integrates with Skills (VS Code, Cursor, Syncfusion® CodeStudio, etc.) 
+| **Supported AI Agent / IDE** | A supported AI agent or IDE that integrates with Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.)
 
 ## Key Benefits
 
@@ -74,7 +74,7 @@ Use the APM CLI to install the Blazor UI Builder skill for your preferred enviro
 
 apm install syncfusion/blazor-ui-builder -t copilot
 
-{% endhighlight %} 
+{% endhighlight %}
 
 {% highlight bash tabtitle="Cursor" %}
 
@@ -102,14 +102,14 @@ After installation, the following artifacts are added to your project for the Gi
 
 Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targets/#detection-signals) for details about supported deployment targets.
 
-> For Syncfusion® CodeStudio, use the Copilot command above to install the Blazor UI Builder.
+> For Syncfusion® Code Studio, use the Copilot command above to install the Blazor UI Builder.
 
 ## How the Syncfusion® Agentic Blazor UI Builder Skill Works
 
 1. **Intent Analysis** - Parse the user's prompt to identify component types and high-level layout intent.
 2. **Project Detection** - Automatically detects project framework, package manager, and existing themes.
 3. **Component Mapping** - Map intent to Syncfusion® components and required feature modules.
-4. **Theming & Design System**  
+4. **Theming & Design System**
    Load required theming guidelines and confirm key design choices:
    - CSS framework (Tailwind, Bootstrap, Material, or Greenfield(custom theme)). If no themes detected in the existing project, Greenfield and Tailwind3 theme are shown as the default option-proceed with this or change the theme as preferred.
    - theme (Tailwind3, Bootstrap5, Material3, fluent2)
@@ -178,9 +178,9 @@ Follow these guidelines to get the most out of UI Builder and ensure high-qualit
 ## FAQ
 
 **Which agents/IDEs are supported?**
-Any Skills-compatible agent that reads local skill files (CodeStudio, VS Code, Cursor, etc.).
+Any Skills-compatible agent that reads local skill files (Code Studio, VS Code, Cursor, etc.).
 
-**Are skills loaded automatically?**  
+**Are skills loaded automatically?**
 Yes. Supported agents automatically load relevant skills based on your query.
 
 **Can I customize the generated styles?**

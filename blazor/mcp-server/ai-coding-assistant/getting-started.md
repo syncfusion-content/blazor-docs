@@ -17,12 +17,12 @@ The **AI Coding Assistant** is designed to streamline the development workflow f
 Before you begin, ensure you have:
 
 * Required [Node.js](https://nodejs.org/en/) version >= 18
-* A **compatible MCP client** (VS Code, Visual Studio, CodeStudio, Cursor, etc.)
+* A **compatible MCP client** (VS Code, Visual Studio, Code Studio, Cursor, etc.)
 * Active [API key](https://www.syncfusion.com/account/api-key)
 * Blazor application (existing or new); see [Quick Start](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-* Active license (any of the following):  
-  - [Commercial License](https://www.syncfusion.com/sales/pricing?category=ui-components)  
-  - [Free Community License](https://www.syncfusion.com/products/communitylicense)  
+* Active license (any of the following):
+  - [Commercial License](https://www.syncfusion.com/sales/pricing?category=ui-components)
+  - [Free Community License](https://www.syncfusion.com/products/communitylicense)
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
 
 ## Installation
@@ -107,7 +107,7 @@ Create a `.cursor/mcp.json` file in your workspace with the MCP server configura
 }
 
 {% endhighlight %}
-{% highlight bash tabtitle="CodeStudio" %}
+{% highlight bash tabtitle="Code Studio" %}
 
 // Create a `.codestudio/mcp.json` file in your workspace with the MCP server configuration:
 
@@ -176,8 +176,8 @@ Activate the AI Coding Assistant in your IDE by using the `#sf_blazor_assistant`
 
 ### Best Practices
 
-1. **Be Specific**: Include platform and component (e.g., "Create a Blazor Grid with paging and filtering").  
-2. **Provide Context**: Share versions, desired behavior, and constraints.  
+1. **Be Specific**: Include platform and component (e.g., "Create a Blazor Grid with paging and filtering").
+2. **Provide Context**: Share versions, desired behavior, and constraints.
 3. **Use Descriptive Queries**: Avoid vague questions.
 4. **Troubleshooting**: Use AI suggestions for common issues; consult official [documentation](https://blazor.syncfusion.com/documentation/introduction) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
 5. **Start Fresh**: Begin a new chat for new topics to maintain clean context.
@@ -194,8 +194,8 @@ If you encounter issues during installation or while using the MCP server, refer
 | **Server failed to start** | Update to Node.js 18+, verify JSON syntax in config file, and restart your IDE |
 | **Invalid API key** | Verify your key is active at [Account Page](https://www.syncfusion.com/account/api-key) |
 | **Incorrect API key config** | For the file path: Verify file location and content. For inline key: Check key is properly updated |
-| **Wrong config file location** | VS Code: `.vscode/mcp.json` <br/> CodeStudio: `.codestudio/mcp.json` <br/> Cursor: `.cursor/mcp.json` in the workspace root |
-| **Check IDE logs** | VS Code/CodeStudio: Output panel → "MCP" • Cursor: Developer Console for MCP errors |
+| **Wrong config file location** | VS Code: `.vscode/mcp.json` <br/> Code Studio: `.codestudio/mcp.json` <br/> Cursor: `.cursor/mcp.json` in the workspace root |
+| **Check IDE logs** | VS Code/Code Studio: Output panel → "MCP" • Cursor: Developer Console for MCP errors |
 
 ## What's Next
 

@@ -14,9 +14,9 @@ keywords: chart wizard, blazor, chart
 
 This section briefly explains how to include the [Blazor Chart Wizard](https://www.syncfusion.com/blazor-components/blazor-chart-wizard) component in your Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-> **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, CodeStudio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
+> **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Code Studio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
-## Create a new Blazor Server App 
+## Create a new Blazor Server App
 
 {% tabcontents %}
 
@@ -278,7 +278,7 @@ The default series type is Line. Use the `SeriesType` property to change the ser
     </SfChartWizard>
 </div>
 
-@code 
+@code
 {
     private readonly List<string> chartSeries = new() { "Gold", "Silver", "Bronze" };
     private readonly List<string> categories = new() { "Country", "CountryCode" };
@@ -344,7 +344,7 @@ The `Theme` property is used to specify the visual theme applied to the chart.
     </SfChartWizard>
 </div>
 
-@code 
+@code
 {
     private readonly List<string> chartSeries = new() { "Gold", "Silver", "Bronze" };
     private readonly List<string> categories = new() { "Country", "CountryCode" };

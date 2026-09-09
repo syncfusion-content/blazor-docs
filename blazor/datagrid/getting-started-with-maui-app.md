@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains the step-by-step process of integrating the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component in your Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-> **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, CodeStudio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
+> **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Code Studio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
 ## Create a new MAUI Blazor Hybrid App in Visual Studio
 
@@ -118,7 +118,7 @@ After the packages are installed, open the **~/Components/_Imports.razor** file 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
-@using Syncfusion.Blazor 
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 
 {% endhighlight %}
@@ -184,7 +184,7 @@ Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **
     </GridColumns>
 </SfGrid>
 
-@code 
+@code
 {
     public List<OrderDetails> OrderData { get; set; }
     protected override void OnInitialized()
@@ -202,7 +202,7 @@ public class OrderDetails
         this.OrderID = OrderID;
         this.CustomerID = CustomerId;
         this.Freight = Freight;
-        this.ShipCountry = ShipCountry;    
+        this.ShipCountry = ShipCountry;
     }
     public static List<OrderDetails> GetAllRecords()
     {
