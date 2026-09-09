@@ -166,4 +166,4 @@ AI assistance is an application integration pattern rather than a built-in Pivot
 * [Getting started](./getting-started)
 * [Live Pivot Table demos](https://blazor.syncfusion.com/demos/pivot-table/overview?theme=fluent2)
 * [Pivot Table API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.html)
-* [Release notes](https://blazor.syncfusion.com/documentation/release-notes/)
+* [Release notes](https://blazor.syncfusion.com/documentation/release-notes)
