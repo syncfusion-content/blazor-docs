@@ -105,7 +105,7 @@ To check for redundant packages, inspect your project's `.csproj` file for dupli
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
-//Remove the comprehensive package if it is present
+// Remove the comprehensive package if it is present
 dotnet remove package Syncfusion.Blazor
 
 // Restore packages after cleanup
