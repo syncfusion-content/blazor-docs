@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Smart TextArea in Blazor Server App | Syncfusion
+title: Getting Started with Smart TextArea in Server App | Syncfusion
 description: Checkout and learn here all about Getting started with Blazor Smart TextArea component in Blazor Server App and more.
 platform: Blazor
 control: Smart TextArea

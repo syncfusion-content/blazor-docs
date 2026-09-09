@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with MultiSelect Dropdown in Blazor WASM App | Syncfusion
+title: Getting Started with MultiSelect Dropdown in WASM App | Syncfusion
 description: Learn how to get started with the Syncfusion Blazor MultiSelect Dropdown in a Blazor WebAssembly app with installation and setup steps.
 platform: Blazor
 control: MultiSelect Dropdown

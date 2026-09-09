@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with MultiColumn ComboBox in Blazor Web App | Syncfusion
+title: Getting Started with MultiColumn ComboBox in Web App | Syncfusion
 description: Learn how to get started with the Syncfusion Blazor MultiColumn ComboBox in a Blazor Web App with installation and setup steps.
 platform: Blazor
 control: MultiColumn ComboBox
