@@ -862,7 +862,7 @@ public void ActionBeginHandler(ActionEventArgs<Book> Args)
 {
     if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Delete))
     {
-        // Remove the record from your database
+        //Remove the record from your database
         LibraryService.DeleteBook(Args.Data.Id);
     }
 }
@@ -874,7 +874,7 @@ public async void ActionBeginHandler ( ActionEventArgs<Book> Args )
 {
     if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Delete))
     {
-        // Remove the record from your database
+        //Remove the record from your database
         await clientlibrary.RemoveBook(Args.Data.Id);
     }
 }
