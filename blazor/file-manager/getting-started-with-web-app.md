@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with AI AssistView in Blazor Web App | Syncfusion®
-description: Learn how to get started with the Syncfusion Blazor AI AssistView. Explore setup, features, examples, and customization options.
+title: Getting Started with File Manager in Blazor Web App | Syncfusion
+description: Checkout and learn about how to get started with the Blazor File Manager Component in Blazor Web App.
+component: File Manager
 platform: Blazor
-control: AI AssistView
 documentation: ug
 ---
 
-# Getting Started with Blazor AI AssistView in Blazor Web App
+# Getting Started with Blazor File Manager in Blazor Web App
 
-This section briefly explains how to include the [Blazor AI AssistView](https://www.syncfusion.com/blazor-components/blazor-ai-assistview) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 > **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into preferred AI-powered IDEs like VS Code, Cursor, Code Studio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
@@ -105,23 +105,23 @@ Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microso
 
 N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-### Install the required Blazor packages 
+### Install the required Blazor packages
 
-Install the [Syncfusion.Blazor.InteractiveChat](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project.
+Install the [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project.
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet packages (`Syncfusion.Blazor.InteractiveChat` and `Syncfusion.Blazor.Themes`) and install them.
+2. Search the required NuGet packages (`Syncfusion.Blazor.FileManager` and `Syncfusion.Blazor.Themes`) and install them.
 
 Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager Console" %}
 
-Install-Package Syncfusion.Blazor.InteractiveChat -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.FileManager -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
@@ -136,7 +136,7 @@ Open the terminal and run the following commands.
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
-dotnet add package Syncfusion.Blazor.InteractiveChat -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.FileManager -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
@@ -148,13 +148,13 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 ### Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.InteractiveChat` namespaces.
+After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.FileManager` namespaces.
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+{% highlight C# tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
-@using Syncfusion.Blazor.InteractiveChat
+@using Syncfusion.Blazor.FileManager
 
 {% endhighlight %}
 {% endtabs %}
@@ -183,7 +183,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **App.razor** file to enable AI AssistView functionality.
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **App.razor** file to enable File Manager functionality.
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
@@ -193,63 +193,24 @@ Include the required [script references](https://blazor.syncfusion.com/documenta
 {% endhighlight %}
 {% endtabs %}
 
-### Add Blazor AI AssistView component
+### Add Blazor File Manager component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor AI AssistView](https://www.syncfusion.com/blazor-components/blazor-ai-assistview) component inside the `.Client` project razor file.
+Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component inside the `.Client` project Razor file.
 
-N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly`, or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
+N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the Razor file (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveAuto
 
-@using Syncfusion.Blazor.InteractiveChat
-
-<div class="aiassist-container" style="height: 350px; width: 650px;">
-    <SfAIAssistView PromptSuggestions="@promptSuggestions" PromptRequested="@PromptRequest"></SfAIAssistView>
-</div>
-
-@code
-{
-List<string> promptSuggestions = new List<string>
-{
-"How do I prioritize my tasks?",
-"How can I improve my time management skills?"
-};
-
-public class AssistModel
-{
-    public string Prompt { get; set; }
-    public string Response { get; set; }
-}
-
-private List<AssistModel> prompts = new List<AssistModel>()
-{
-    new AssistModel()
-    {
-        Prompt = "How do I prioritize my tasks?",
-        Response = "Prioritize tasks by urgency and impact: tackle high-impact tasks first, delegate when possible, and break large tasks into smaller steps. For more assistance, feel free to ask—I'm here to help!"
-    },
-    new AssistModel()
-    {
-        Prompt = "How can I improve my time management skills?",
-        Response = "To improve time management skills, try setting clear goals, using a planner or digital tools, prioritizing tasks, breaking tasks into smaller steps, and minimizing distractions. Regularly review and adjust your approach for better efficiency."
-    }
-};
-
-private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
-{
-    await Task.Delay(3000);
-
-    var isPromptFound = prompts.Any(prompt => prompt.Prompt == args.Prompt);
-    var promptData = prompts.FirstOrDefault(prompt => prompt.Prompt == args.Prompt);
-
-    var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
-
-    args.Response = isPromptFound ? promptData.Response : defaultResponse;
-}
-}
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+</SfFileManager>
 
 {% endhighlight %}
 {% endtabs %}
@@ -260,7 +221,7 @@ private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The [Blazor AI AssistView](https://www.syncfusion.com/blazor-components/blazor-ai-assistview) component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component will render in your default web browser.
 
 {% endtabcontent %}
 
@@ -282,9 +243,8 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLxtdiCLtIETHWk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AI AssistView default prompt](./images/default-prompt.webp)" %}
+## See also
 
-> **Note:** Starting from version 33.1x, when a user submits a prompt to the AI AssistView, the component automatically scrolls and focuses on the latest prompt and response. This behavior eliminates the need for users to manually scroll down to see the new response, ensuring they always view the most recent AI response without interruption. Prior to version 33.1x, the previous responses remained visible when new responses were added.
-
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/AIAssistView).
-
+1. [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor File Manager Data Binding](https://blazor.syncfusion.com/documentation/file-manager/data-binding)

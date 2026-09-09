@@ -147,10 +147,10 @@ From the solution root directory, run the following commands to create a new tes
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
-# Create the NUnit test project
+// Create the NUnit test project
 dotnet new nunit -o tests/E2E.Tests
 
-# Move into the test project directory
+// Move into the test project directory
 cd tests/E2E.Tests
 
 {% endhighlight %}
