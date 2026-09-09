@@ -11,7 +11,7 @@ documentation: ug
 
 The ComboBox provides several options to customize the appearance and content of list items, group headers, the selected value, and the popup’s header and footer elements.
 
-To quickly get started with templates in the Blazor ComboBox component, watch the following video.
+To quickly get started with templates in the Blazor Blazor ComboBox component, watch the following video.
 
 {% youtube "https://www.youtube.com/watch?v=Powq8aAGeAA" %}
 

@@ -73,6 +73,49 @@ Prevent the popup from opening or closing by setting the event argument properti
 
 The following events are used to trigger when opening and closing popup.
 
+## Render popup in a custom container
+
+Use the `AppendTo` property to render the MultiColumn ComboBox popup inside a specific container instead of the default `document.body`. This is useful when the component is placed inside dialogs, side panels, containers with overflow restrictions, or custom stacking contexts.
+
+Specify a valid CSS selector in the `AppendTo` property. When the selector matches an element, the popup is appended to that element. If the selector is null, empty, or no matching element is found, the popup is rendered in the default location.
+
+{% highlight cshtml %}
+
+@using Syncfusion.Blazor.MultiColumnComboBox
+
+<div id="popupHost">
+    <SfMultiColumnComboBox @bind-Value="@Value" AppendTo="@AppendTarget" DataSource="@Products" ValueField="Name" TextField="Name" Placeholder="Select any product"></SfMultiColumnComboBox>
+</div>
+
+@code {
+    private string AppendTarget = "#popupHost";
+    public class Product
+    {
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public string Availability { get; set; }
+        public string Category { get; set; }
+        public double Rating { get; set; }
+    }
+    private List<Product> Products = new List<Product>();
+    private string Value { get; set; } = "Smartphone";
+    protected override Task OnInitializedAsync ()
+    {
+        Products = new List<Product>
+        {
+            new Product { Name = "Laptop", Price = 999.99m, Availability = "In Stock", Category = "Electronics", Rating = 4.5 },
+            new Product { Name = "Smartphone", Price = 599.99m, Availability = "Out of Stock", Category = "Electronics", Rating = 4.3 },
+            new Product { Name = "Tablet", Price = 299.99m, Availability = "In Stock", Category = "Electronics", Rating = 4.2 },
+            new Product { Name = "Headphones", Price = 49.99m, Availability = "In Stock", Category = "Accessories", Rating = 4.0 }
+        };
+        return base.OnInitializedAsync();
+    }
+}
+
+{% endhighlight %}
+
+> The `AppendTo` property accepts a CSS selector such as `#elementId` or `.container`. If the specified element is not found, the popup element will be appended to `document.body`.
+
 ### PopupOpening Event
 
 The [PopupOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupOpening) event triggers just before the popup opens. Cancel this event to keep the popup closed.

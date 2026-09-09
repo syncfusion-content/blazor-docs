@@ -19,7 +19,7 @@ In the following sample, **mediaQuery** has been used for specific resolution to
 
 @using Syncfusion.Blazor.Navigations
 
-<div id="header" style="height:45px;color:white;background-color:midnightblue;font-size:1.2rem;line-height:45px;">
+<div id="header" style="height:45px;color:white;background-color:midnightblue;font-size:1.2rem;line-height:45px;position:relative;z-index:1000;">
     <span style="position:absolute; left:10px; font-size:25px;">&#9776;</span>
     <span style="margin-left:45%;">Header</span>
 </div>

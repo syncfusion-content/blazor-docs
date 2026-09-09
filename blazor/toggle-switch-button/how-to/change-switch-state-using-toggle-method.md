@@ -9,7 +9,7 @@ documentation: ug
 
 # How to change state via toggle method in Blazor Toggle Switch Button
 
-This section explains how to programmatically toggle the state of the Toggle Switch Button by flipping the value bound to the [Checked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfInputBase-1.html#Syncfusion_Blazor_Buttons_SfInputBase_1_Checked) property.
+This section explains how to programmatically toggle the state of the Blazor Toggle Switch Button by flipping the value bound to the [Checked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfInputBase-1.html#Syncfusion_Blazor_Buttons_SfInputBase_1_Checked) property.
 
 ```cshtml
 

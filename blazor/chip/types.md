@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Types in Blazor Chips | Syncfusion®
-description: Choose the Blazor Chip type (Input, Choice, Filter, or Action) to match the chip's role in selection, filtering, or action triggering.
+description: Choose the Blazor Chips type (Input, Choice, Filter, or Action) to match the chip's role in selection, filtering, or action triggering.
 platform: Blazor
 control: Chips
 documentation: ug
@@ -52,7 +52,7 @@ Input chips hold information in a compact form. They are typically used to displ
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVdXRsRfzhKbzVH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chip with Input Items](./images/blazor-chip-input-items.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVdXRsRfzhKbzVH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chips with Input Items](./images/blazor-chip-input-items.webp)" %}
 
 ## Choice Chip
 
@@ -71,7 +71,7 @@ Choice chips allow a single chip to be selected from the set of `ChipItems`. The
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrHtxCHfTrRPhGu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Single Selection in Blazor Chip](./images/blazor-chip-single-selection.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrHtxCHfTrRPhGu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Single Selection in Blazor Chips](./images/blazor-chip-single-selection.webp)" %}
 
 ## Filter Chip
 
@@ -90,7 +90,7 @@ Filter chips allow multiple chips to be selected from the set of `ChipItems`. Th
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBdNRMdffVaXBNI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Multiple Selection in Blazor Chip](./images/blazor-chip-multiple-selection.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBdNRMdffVaXBNI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Multiple Selection in Blazor Chips](./images/blazor-chip-multiple-selection.webp)" %}
 
 ## Action Chip
 

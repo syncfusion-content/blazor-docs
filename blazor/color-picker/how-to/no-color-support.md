@@ -9,7 +9,7 @@ documentation: ug
 
 # How to handle no color support in Blazor Color Picker
 
-The Color Picker supports a no color option. When the No color tile in the palette is selected, the chosen color is cleared (treated as no color/empty).
+The Blazor Color Picker supports a no color option. When the No color tile in the palette is selected, the chosen color is cleared (treated as no color/empty).
 
 ## Default no color
 

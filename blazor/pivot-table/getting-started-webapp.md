@@ -17,7 +17,67 @@ To get started quickly with Blazor Pivot Table in Blazor Web App, watch the foll
 
 {% youtube "youtube:https://www.youtube.com/watch?v=SUTN0oyVwPo" %}
 
-## Create a new Blazor Web App
+## Using .NET CLI Templates
+
+Quickly set up a Blazor application using the preconfigured [Syncfusion Web App Template](https://help.syncfusion.com/extension/syncfusion-blazor-webapp-template-via-nuget/installation).
+
+First, install the template using the .NET CLI.
+
+{% tabs %}
+{% highlight razor tabtitle=".NET CLI" %}
+
+dotnet new install Syncfusion.Blazor.WebApp.Templates
+
+{% endhighlight %}
+{% endtabs %}
+
+Next, create a new project with following command.
+
+{% tabs %}
+{% highlight razor tabtitle="Server" %}
+
+dotnet new syncfusionblazorwebapp --name MyApp --interactivity Server --all-interactive Global
+
+{% endhighlight %}
+{% highlight razor tabtitle="WebAssembly" %}
+
+dotnet new syncfusionblazorwebapp --name MyApp --interactivity WebAssembly --all-interactive Global
+
+{% endhighlight %}
+{% highlight razor tabtitle="Auto" %}
+
+dotnet new syncfusionblazorwebapp --name MyApp --interactivity Auto --all-interactive Global
+
+{% endhighlight %}
+{% endtabs %}
+
+> If you prefer per-page/component interactivity instead of global interactivity, replace `--all-interactive Global` with `--all-interactive PerPage/component` (or omit the `--all-interactive` flag).
+
+After creating the project, navigate to the main project folder (for example, `MyApp`) and run the following command.
+
+{% tabs %}
+{% highlight razor tabtitle="Server" %}
+
+cd MyApp
+dotnet run
+
+{% endhighlight %}
+{% highlight razor tabtitle="WebAssembly" %}
+
+cd MyApp
+dotnet run
+
+{% endhighlight %}
+{% highlight razor tabtitle="Auto" %}
+
+cd MyApp
+cd MyApp
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
+
+## Manually creating a new Blazor Web App
 
 {% tabcontents %}
 
@@ -45,27 +105,11 @@ Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microso
 
 {% endtabcontent %}
 
-{% tabcontent .NET CLI %}
-
-Run the following command to create a new Blazor Web App.
-
-{% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
-
-dotnet new blazor -o BlazorWebApp --interactivity Auto
-cd BlazorWebApp
-cd BlazorWebApp.Client
-
-{% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-
 {% endtabcontents %}
 
 N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-## Install the required Blazor packages
+### Install the required Blazor packages
 
 Install the [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project.
 
@@ -104,24 +148,9 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endtabcontent %}
 
-{% tabcontent .NET CLI %}
-
-Open the command prompt and run the following commands.
-
-{% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
-
-dotnet add package Syncfusion.Blazor.PivotTable -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-
 {% endtabcontents %}
 
-## Add import namespaces
+### Add import namespaces
 
 After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.PivotView` namespaces.
 
@@ -134,7 +163,7 @@ After the packages are installed, open the **~/_Imports.razor** file in the `.Cl
 {% endhighlight %}
 {% endtabs %}
 
-## Register the Blazor service
+### Register the Blazor service
 
 Open the **Program.cs** file in Blazor Web App and register the Blazor service and include the required namespace reference `using Syncfusion.Blazor;` at the top. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
 
@@ -146,7 +175,7 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet and script resources
+### Add stylesheet and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) at the end of the `<head>` section in the **App.razor** file.
 
@@ -168,7 +197,7 @@ Include the required [script references](https://blazor.syncfusion.com/documenta
 {% endhighlight %}
 {% endtabs %}
 
-## Add Blazor Pivot Table component
+### Add Blazor Pivot Table component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component inside the `.Client` project razor file.
 
@@ -234,7 +263,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% endhighlight %}
 {% endtabs %}
 
-## Run the application
+### Run the application
 
 {% tabcontents %}
 
@@ -250,22 +279,6 @@ Open the terminal and navigate to the **BlazorWebApp** project root folder, then
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
-
-cd ..
-cd BlazorWebApp
-dotnet run
-
-{% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-
-{% tabcontent .NET CLI %}
-
-Open the command prompt and navigate to the **BlazorWebApp** project root folder, then run:
-
-{% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
 
 cd ..
 cd BlazorWebApp

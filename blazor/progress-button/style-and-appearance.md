@@ -9,23 +9,23 @@ documentation: ug
 
 # Style and Appearance in Blazor Progress Button
 
-Customize the appearance of the ProgressButton by overriding the built-in CSS selectors of the component. Use scoped styles (for example, by adding a custom class via the CssClass parameter) to limit changes to specific instances. To create a consistent look-and-feel across the application, consider using built-in themes or generating a custom theme with the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+Customize the appearance of the Blazor  Progress Button by overriding the built-in CSS selectors of the component. Use scoped styles (for example, by adding a custom class via the CssClass parameter) to limit changes to specific instances. To create a consistent look-and-feel across the application, consider using built-in themes or generating a custom theme with the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
 | CSS Class | Purpose of Class |
 | ----- | ----- |
-| `.e-progress-btn` | Targets the ProgressButton root element for background, color, border, font, and size customization. |
-| `.e-progress-btn:hover` | Targets the ProgressButton in its hovered state. |
-| `.e-progress-btn:focus` | Targets the ProgressButton when it receives keyboard or programmatic focus. |
-| `.e-progress-btn:active` | Targets the ProgressButton when it is actively pressed. |
-| `.e-progress-btn.e-active` | Targets the ProgressButton during the active progress state. |
-| `.e-progress-btn .e-btn-content` | Targets the text label content inside the ProgressButton. |
+| `.e-progress-btn` | Targets the Blazor  Progress Button root element for background, color, border, font, and size customization. |
+| `.e-progress-btn:hover` | Targets the Blazor  Progress Button in its hovered state. |
+| `.e-progress-btn:focus` | Targets the Blazor  Progress Button when it receives keyboard or programmatic focus. |
+| `.e-progress-btn:active` | Targets the Blazor  Progress Button when it is actively pressed. |
+| `.e-progress-btn.e-active` | Targets the Blazor  Progress Button during the active progress state. |
+| `.e-progress-btn .e-btn-content` | Targets the text label content inside the Blazor  Progress Button. |
 | `.e-progress-btn .e-progress` | Targets the progress fill indicator that animates across the button. |
 | `.e-progress-btn.e-vertical .e-progress` | Targets the progress fill when the vertical progress style is applied. |
-| `.e-progress-btn .e-spinner-pane` | Targets the container of the spinner element inside the ProgressButton. |
+| `.e-progress-btn .e-spinner-pane` | Targets the container of the spinner element inside the Blazor  Progress Button. |
 | `.e-progress-btn .e-spinner-pane .e-spinner-inner svg .e-path-circle` | Targets the circular spinner SVG path for color and stroke customization. |
 
 
-## Change text content and styles of the Blazor ProgressButton
+## Change text content and styles of the Blazor Progress Button
 
 Change the button text and styles during the progress state by updating the Content and the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) parameters in the [OnBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_OnBegin) and [OnEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_OnEnd) event handlers.
 
@@ -57,9 +57,9 @@ Change the button text and styles during the progress state by updating the Cont
 
 ```
 
-![Changing Text Content and Style of Blazor ProgressButton](./images/blazor-progressbutton-change-text.webp)
+![Changing Text Content and Style of Blazor Progress Button](./images/blazor-progressbutton-change-text.webp)
 
-## Customize progress using CssClass in Blazor ProgressButton
+## Customize progress using CssClass in Blazor Progress Button
 
 Customize the progress indicator (filler) by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) property.
 
@@ -85,12 +85,12 @@ Reverse progress can also be shown by adding a custom class through the [CssClas
 
 ```
 
-![Customizing Progress in Blazor ProgressButton](./images/blazor-progressbutton-customization.webp)
+![Customizing Progress in Blazor Progress Button](./images/blazor-progressbutton-customization.webp)
 
 
-## Stop progress indicator in Blazor ProgressButton
+## Stop progress indicator in Blazor Progress Button
 
-Stop the active progress programmatically by calling the [EndProgressAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_EndProgressAsync) method on the ProgressButton instance obtained via @ref. In the following example, clicking the Stop button invokes the handler that awaits EndProgressAsync to halt the current progress.
+Stop the active progress programmatically by calling the [EndProgressAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_EndProgressAsync) method on the Blazor  Progress Button instance obtained via @ref. In the following example, clicking the Stop button invokes the handler that awaits EndProgressAsync to halt the current progress.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -108,11 +108,11 @@ Stop the active progress programmatically by calling the [EndProgressAsync](http
 }
 ```
 
-![Stop Progress Indicator in ProgressButton](./images/blazor-progressbutton-stop-indicator.webp)
+![Stop Progress Indicator in Blazor  Progress Button](./images/blazor-progressbutton-stop-indicator.webp)
 
-## Hide Spinner in Blazor ProgressButton
+## Hide Spinner in Blazor Progress Button
 
-Hide the spinner in the ProgressButton by applying the built-in e-hide-spinner CSS class to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) parameter. This hides only the spinner while keeping the progress fill visible. Multiple CSS classes can be combined in CssClass as needed.
+Hide the spinner in the Blazor  Progress Button by applying the built-in e-hide-spinner CSS class to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) parameter. This hides only the spinner while keeping the progress fill visible. Multiple CSS classes can be combined in CssClass as needed.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -121,11 +121,11 @@ Hide the spinner in the ProgressButton by applying the built-in e-hide-spinner C
 
 ```
 
-![Hide Spinner in Blazor ProgressButton](./images/blazor-progressbutton-hide-spinner.webp)
+![Hide Spinner in Blazor Progress Button](./images/blazor-progressbutton-hide-spinner.webp)
 
-## Customizing the font of the Blazor ProgressButton
+## Customizing the font of the Blazor Progress Button
 
-The font family, font size, font weight, and letter spacing of the ProgressButton label can be customized by targeting the `.e-progress-btn` or `.e-progress-btn .e-btn-content` CSS class. Scoping these rules through a custom class added via the `CssClass` property ensures the changes apply only to the targeted instance.
+The font family, font size, font weight, and letter spacing of the Blazor  Progress Button label can be customized by targeting the `.e-progress-btn` or `.e-progress-btn .e-btn-content` CSS class. Scoping these rules through a custom class added via the `CssClass` property ensures the changes apply only to the targeted instance.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -133,7 +133,7 @@ The font family, font size, font weight, and letter spacing of the ProgressButto
 <SfProgressButton EnableProgress="true" Duration="4000" Content="Upload File" CssClass="e-hide-spinner font-btn"></SfProgressButton>
 
 <style>
-    /* Font customization for the ProgressButton label */
+    /* Font customization for the Blazor  Progress Button label */
     .font-btn.e-progress-btn .e-btn-content {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 15px;
@@ -144,9 +144,9 @@ The font family, font size, font weight, and letter spacing of the ProgressButto
 </style>
 ```
 
-## Customizing the width of the Blazor ProgressButton
+## Customizing the width of the Blazor Progress Button
 
-The width of the ProgressButton is controlled by targeting the `.e-progress-btn` CSS class. Setting a fixed `width` or `min-width` ensures the button maintains a consistent size regardless of its label text length. This is especially useful when the button label changes during progress (for example, switching from "Upload" to "Uploading...").
+The width of the Blazor  Progress Button is controlled by targeting the `.e-progress-btn` CSS class. Setting a fixed `width` or `min-width` ensures the button maintains a consistent size regardless of its label text length. This is especially useful when the button label changes during progress (for example, switching from "Upload" to "Uploading...").
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -154,7 +154,7 @@ The width of the ProgressButton is controlled by targeting the `.e-progress-btn`
 <SfProgressButton EnableProgress="true" Duration="4000" Content="Export" CssClass="e-hide-spinner width-btn"></SfProgressButton>
 
 <style>
-    /* Fixed width for the ProgressButton */
+    /* Fixed width for the Blazor  Progress Button */
     .width-btn.e-progress-btn {
         min-width: 160px;
         text-align: center;
@@ -162,9 +162,9 @@ The width of the ProgressButton is controlled by targeting the `.e-progress-btn`
 </style>
 ```
 
-## Customizing the background and text color of the Blazor ProgressButton
+## Customizing the background and text color of the Blazor Progress Button
 
-The background color and text color of the ProgressButton can be customized by targeting the `.e-progress-btn` class. Separate rules for `:hover` and `.e-active` states provide visual feedback during interaction and while progress is running.
+The background color and text color of the Blazor  Progress Button can be customized by targeting the `.e-progress-btn` class. Separate rules for `:hover` and `.e-active` states provide visual feedback during interaction and while progress is running.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -199,9 +199,9 @@ The background color and text color of the ProgressButton can be customized by t
 </style>
 ```
 
-## Customizing the border and border-radius of the Blazor ProgressButton
+## Customizing the border and border-radius of the Blazor Progress Button
 
-The border style, border width, and border radius of the ProgressButton are set through the `.e-progress-btn` CSS class. Increasing the `border-radius` produces a pill-shaped button, while a value of `0` results in a fully square button.
+The border style, border width, and border radius of the Blazor  Progress Button are set through the `.e-progress-btn` CSS class. Increasing the `border-radius` produces a pill-shaped button, while a value of `0` results in a fully square button.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons

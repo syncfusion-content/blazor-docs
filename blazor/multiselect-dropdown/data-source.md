@@ -341,7 +341,7 @@ Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 ```
 
-![Blazor MultiSelect with ExpandoObject data binding](./images/blazor_multiselect_expando-object.webp)
+![Blazor MultiSelect Dropdown with ExpandoObject data binding](./images/blazor_multiselect_expando-object.webp)
 
 ## Binding DynamicObject
 
@@ -391,7 +391,7 @@ Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 ```
 
-![Blazor MultiSelect with dynamic object data binding](./images/blazor_multiselect_dynamic-object.webp)
+![Blazor MultiSelect Dropdown with dynamic object data binding](./images/blazor_multiselect_dynamic-object.webp)
 
 ## Binding ObservableCollection
 
@@ -434,7 +434,7 @@ Bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.
 
 ```
 
-![Blazor MultiSelect with observable collection data binding](./images/blazor_multiselect_observable-collection.webp)
+![Blazor MultiSelect Dropdown with observable collection data binding](./images/blazor_multiselect_observable-collection.webp)
 
 ## Entity Framework
 

@@ -54,7 +54,7 @@ In the following sample, employees are grouped by city.
 
 {% endhighlight %}
 
-![Blazor MultiSelect with GroupTemplate](./images/template/blazor-multiselect-group-template.webp)
+![Blazor MultiSelect Dropdown with GroupTemplate](./images/template/blazor-multiselect-group-template.webp)
 
 ## Header template
 

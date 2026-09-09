@@ -50,7 +50,7 @@ The Blazor CheckBox component follows the [keyboard interaction](https://www.w3.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
-| <kbd>Space</kbd> | <kbd>Space</kbd> | When the CheckBox has focus, pressing the Space key changes the state of the CheckBox. |
+| <kbd>Space</kbd> | <kbd>Space</kbd> | When the Blazor CheckBox has focus, pressing the Space key changes the state of the Blazor CheckBox. |
 
 ## Ensuring accessibility
 

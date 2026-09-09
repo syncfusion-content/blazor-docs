@@ -13,7 +13,7 @@ The Blazor FileUpload component offers a wide range of properties to configure i
 
 ## ID
 
-The [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_ID) property is used to provide a unique identifier for the FileUpload component. This is useful for referencing the component in JavaScript or CSS, and for ensuring accessibility.
+The [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_ID) property is used to provide a unique identifier for the Blazor File Upload component. This is useful for referencing the component in JavaScript or CSS, and for ensuring accessibility.
 
 ```cshtml
 <SfUploader ID="myFileUploadComponent" name="UploadFiles" />
@@ -97,7 +97,7 @@ The [`DirectoryUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ## Enabled
 
-The [`Enabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_Enabled) property controls whether the FileUpload component is interactive or disabled. This is useful for temporarily preventing file uploads, for example, until certain form conditions are met.
+The [`Enabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_Enabled) property controls whether the Blazor File Upload component is interactive or disabled. This is useful for temporarily preventing file uploads, for example, until certain form conditions are met.
 
 ```cshtml
 <SfUploader Enabled="false" />
@@ -175,7 +175,7 @@ The [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs
 
 ## HtmlAttributes
 
-The [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_HtmlAttributes) property allows you to add custom HTML attributes to the root element of the FileUpload component. This is useful for applying custom styling, data attributes, or other HTML properties not directly exposed as Blazor parameters.
+The [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_HtmlAttributes) property allows you to add custom HTML attributes to the root element of the Blazor File Upload component. This is useful for applying custom styling, data attributes, or other HTML properties not directly exposed as Blazor parameters.
 
 ```cshtml
 <SfUploader HtmlAttributes="@(new Dictionary<string, object>() { { "data-custom-attribute", "fileupload-data" }, { "class", "my-custom-uploader" } })" />
@@ -189,7 +189,7 @@ The [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 ## InputAttributes
 
-The [`InputAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_InputAttributes) property allows you to add custom HTML attributes specifically to the underlying `input type="file"` element within the FileUpload component. This is useful for applying browser-specific input attributes or custom event handlers.
+The [`InputAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_InputAttributes) property allows you to add custom HTML attributes specifically to the underlying `input type="file"` element within the Blazor File Upload component. This is useful for applying browser-specific input attributes or custom event handlers.
 
 ```cshtml
 <SfUploader InputAttributes="@(new Dictionary<string, object>() { { "accept", "image/*" } })" />
@@ -203,7 +203,7 @@ The [`InputAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ## TabIndex
 
-The [`TabIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_TabIndex) property specifies the tab order of the FileUpload component relative to other focusable elements on the page. This is important for keyboard navigation and accessibility.
+The [`TabIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_TabIndex) property specifies the tab order of the Blazor File Upload component relative to other focusable elements on the page. This is important for keyboard navigation and accessibility.
 
 ```cshtml
 <input type="text" TabIndex="1" /><br />
@@ -218,7 +218,7 @@ The [`TabIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.
 
 ## Preloaded files
 
-The FileUpload component supports displaying a list of files that are already available on the server as ["UploaderUploadedFiles"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderUploadedFiles.html#properties) files. This is useful for editing scenarios where users need to see and potentially remove existing files before uploading new ones.
+The Blazor File Upload component supports displaying a list of files that are already available on the server as ["UploaderUploadedFiles"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderUploadedFiles.html#properties) files. This is useful for editing scenarios where users need to see and potentially remove existing files before uploading new ones.
 
 ```cshtml
  <SfUploader>

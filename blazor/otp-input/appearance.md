@@ -9,7 +9,7 @@ documentation: ug
 
 # Appearance in Blazor OTP Input
 
-Customize the appearance of the OTP input component, including input length, disabled state, and visual styles.
+Customize the appearance of the Blazor OTP Input component, including input length, disabled state, and visual styles.
 
 ## Setting input length
 
@@ -27,7 +27,7 @@ Specify the length of the OTP by using the [Length](https://help.syncfusion.com/
 
 ## Setting the disabled state
 
-Disable the OTP Input component by using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Disabled) property. By default, the value is `false`. When disabled, the input fields are non-interactive and display the disabled visual style.
+Disable the Blazor OTP Input component by using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_Disabled) property. By default, the value is `false`. When disabled, the input fields are non-interactive and display the disabled visual style.
 
 ```cshtml
 
@@ -41,9 +41,9 @@ Disable the OTP Input component by using the [Disabled](https://help.syncfusion.
 
 ## Custom styling using CssClass property
 
-Customize the appearance of the OTP Input component by changing colors, fonts, sizes, and other visual aspects by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_CssClass) property.
+Customize the appearance of the Blazor OTP Input component by changing colors, fonts, sizes, and other visual aspects by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_CssClass) property.
 
-The OTP input component supports the following predefined styles that can be applied using the `CssClass` property. Replace the `CssClass` value with one of the following class names to apply the corresponding style.
+The Blazor OTP Input component supports the following predefined styles that can be applied using the `CssClass` property. Replace the `CssClass` value with one of the following class names to apply the corresponding style.
 
 | cssClass | Description |
 | -------- | -------- |
@@ -87,7 +87,7 @@ Control the case transformation of the entered OTP text by using the [TextTransf
 
 ## Style Customization
 
-Customize the OTP Input component with various visual styles by using the `CssClass` property. Below are examples of different style variations and hover effects.
+Customize the Blazor OTP Input component with various visual styles by using the `CssClass` property. Below are examples of different style variations and hover effects.
 
 ### Default (Outline) Style
 

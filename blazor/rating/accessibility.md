@@ -45,7 +45,7 @@ The Blazor Rating component follows the [WAI-ARIA slider pattern](https://www.w3
 | ------------ | ----------------------- |
 | `role=slider` | Defines an input where the user selects a value from within a specified range. |
 | `role=button` | Indicates that the reset control is clickable and resets the rating to its minimum value. |
-| `aria-label` | Provides an accessible name for the Rating component. |
+| `aria-label` | Provides an accessible name for the Blazor Rating component. |
 | `aria-valuemin` | Defines the minimum rating value. |
 | `aria-valuemax` | Defines the maximum rating value. |
 | `aria-valuenow` | Announces the current rating value. |

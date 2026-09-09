@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Style and Appearance in Blazor MultiSelect | Syncfusion
+title: Style and Appearance in Blazor MultiSelect Dropdown | Syncfusion
 description: Customize Blazor MultiSelect Dropdown appearance, including read-only state and CSS classes for styling today.
 platform: Blazor
 control: MultiSelect Dropdown
@@ -55,7 +55,7 @@ Customize the text color of a disabled component by targeting `.e-multiselect.e-
 
 ## Change remove icon color in chip
 
-To change the remove icon color in a chip within the Blazor MultiSelect component, you can use the following CSS style to customize it.
+To change the remove icon color in a chip within the Blazor MultiSelect Dropdown component, you can use the following CSS style to customize it.
 
 {% highlight cshtml %}
 
@@ -77,7 +77,7 @@ Customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearanc
 
 {% endhighlight %}
 
-![Blazor MultiSelect with dropdown icon](./images/style/blazor_Multiselect_dropdown-icon.webp)
+![Blazor MultiSelect Dropdown with dropdown icon](./images/style/blazor_Multiselect_dropdown-icon.webp)
 
 To style only a specific instance, set a custom class via [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_CssClass) and scope the CSS to that class.
 
@@ -101,7 +101,7 @@ Display icons in list items by mapping a field to [IconCss](https://help.syncfus
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhdtcNbAYabGimm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-![Blazor MultiSelect with icons in popup items](./images/style/blazor_Multiselect_adding-icon-popup-items.webp)
+![Blazor MultiSelect Dropdown with icons in popup items](./images/style/blazor_Multiselect_adding-icon-popup-items.webp)
 
 ## Customizing the background color of the container
 

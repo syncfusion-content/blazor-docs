@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize the UI appearance of Blazor Numeric TextBox Component
 
-Change the appearance of the NumericTextBox by adding custom [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_CssClass) to the component and enabling styles.
+Change the appearance of the Blazor Numeric TextBox by adding custom [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_CssClass) to the component and enabling styles.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

@@ -9,9 +9,9 @@ documentation: ug
 
 # Positions in Blazor Speed Dial
 
-The SpeedDial component can be positioned anywhere within the specified [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Target) using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Position) property. If no `Target` is defined, the SpeedDial is positioned relative to the browser viewport.
+The Blazor Speed Dial component can be positioned anywhere within the specified [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Target) using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Position) property. If no `Target` is defined, the Speed Dial is positioned relative to the browser viewport.
 
-The available [FabPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.FabPosition.html) values for the SpeedDial are:
+The available [FabPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.FabPosition.html) values for the Blazor Speed Dial are:
 * TopLeft
 * TopCenter
 * TopRight
@@ -40,7 +40,7 @@ The available [FabPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ## Opens on hover
 
-Open the SpeedDial action items on mouse hover by setting the [OpensOnHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_OpensOnHover) property to `true`.
+Open the Blazor Speed Dial action items on mouse hover by setting the [OpensOnHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_OpensOnHover) property to `true`.
 
 ```cshtml
 
@@ -60,7 +60,7 @@ Open the SpeedDial action items on mouse hover by setting the [OpensOnHover](htt
 
 ## Programmatically show/hide
 
-Open or close the SpeedDial action items programmatically using the [ShowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ShowAsync) and [HideAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_HideAsync) methods. These are asynchronous methods and must be awaited in an async context.
+Open or close the Blazor Speed Dial action items programmatically using the [ShowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ShowAsync) and [HideAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_HideAsync) methods. These are asynchronous methods and must be awaited in an async context.
 
 The following example demonstrates opening and closing the action items on button click.
 
@@ -101,7 +101,7 @@ The following example demonstrates opening and closing the action items on butto
 
 ## Programmatically refresh the position
 
-Refresh the position of the SpeedDial using the [RefreshPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_RefreshPositionAsync) method when the `Target` position changes (for example, after a window resize or layout change). This asynchronous method must be awaited in an async context.
+Refresh the position of the Blazor Speed Dial using the [RefreshPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_RefreshPositionAsync) method when the `Target` position changes (for example, after a window resize or layout change). This asynchronous method must be awaited in an async context.
 
 ```cshtml
 

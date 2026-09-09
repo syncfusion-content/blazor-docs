@@ -9,7 +9,7 @@ documentation: ug
 
 # Native Events in Blazor Button
 
-You can bind native Blazor events to the Button component using the `@on{event}` directive. The event-specific data is available through the event arguments.
+You can bind native Blazor events to the Blazor Button component using the `@on{event}` directive. The event-specific data is available through the event arguments.
 
 The following event argument types are used for each event category:
 
@@ -31,9 +31,9 @@ The following native events are supported by the Blazor Button component. Use th
 | onkeydown | onkeypress | onkeyup | onfocus | onblur |
 | onfocusin | onfocusout | ontouchstart | ontouchend | |
 
-## How to bind click event to Button
+## How to bind click event to Blazor Button
 
-The `onclick` event fires when the user clicks the button with a mouse or activates it via the keyboard (`Space` or `Enter`). It is the most commonly used event for triggering actions such as form submission, navigation, or toggling UI state.
+The `onclick` event fires when the user clicks the Blazor Button with a mouse or activates it via the keyboard (`Space` or `Enter`). It is the most commonly used event for triggering actions such as form submission, navigation, or toggling UI state.
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
@@ -52,9 +52,9 @@ The `onclick` event fires when the user clicks the button with a mouse or activa
 }
 ```
 
-## How to bind double-click event to Button
+## How to bind double-click event to Blazor Button
 
-The `ondblclick` event fires when the user rapidly clicks the button twice in quick succession. It is useful for triggering actions that should only occur on deliberate double-click gestures, such as expanding a panel or confirming a selection.
+The `ondblclick` event fires when the user rapidly clicks the Blazor Button twice in quick succession. It is useful for triggering actions that should only occur on deliberate double-click gestures, such as expanding a panel or confirming a selection.
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
@@ -73,7 +73,7 @@ The `ondblclick` event fires when the user rapidly clicks the button twice in qu
 }
 ```
 
-## How to bind mousedown event to Button
+## How to bind mousedown event to Blazor Button
 
 The `onmousedown` event fires the moment a mouse button is pressed down on the Button element, before the mouse button is released. It is useful for implementing press-and-hold interactions or initiating drag operations.
 
@@ -115,7 +115,7 @@ The `onmouseup` event fires when a mouse button is released after being pressed 
 }
 ```
 
-## How to bind mouseover event to Button
+## How to bind mouseover event to Blazor Button
 
 The `onmouseover` event fires when the mouse pointer enters the Button element or any of its child elements. It is commonly used to show tooltips, highlight elements, or trigger hover-based UI effects.
 
@@ -136,7 +136,7 @@ The `onmouseover` event fires when the mouse pointer enters the Button element o
 }
 ```
 
-## How to bind mouseout event to Button
+## How to bind mouseout event to Blazor Button
 
 The `onmouseout` event fires when the mouse pointer leaves the Button element or one of its child elements. It is typically paired with `onmouseover` to reset styles or hide hover-based UI elements when the pointer moves away.
 
@@ -157,7 +157,7 @@ The `onmouseout` event fires when the mouse pointer leaves the Button element or
 }
 ```
 
-## How to bind mousemove event to Button
+## How to bind mousemove event to Blazor Button
 
 The `onmousemove` event fires continuously as the mouse pointer moves over the Button element. It is useful for tracking cursor position within the button area or creating custom interactive hover effects.
 
@@ -178,7 +178,7 @@ The `onmousemove` event fires continuously as the mouse pointer moves over the B
 }
 ```
 
-## How to bind mouseenter event to Button
+## How to bind mouseenter event to Blazor Button
 
 The `onmouseenter` event fires when the mouse pointer enters the Button element. Unlike `onmouseover`, it does not bubble, meaning it only fires for the button itself and not for any child elements inside it.
 
@@ -220,7 +220,7 @@ The `onmouseleave` event fires when the mouse pointer leaves the Button element.
 }
 ```
 
-## How to bind contextmenu event to Button
+## How to bind contextmenu event to Blazor Button
 
 The `oncontextmenu` event fires when the user right-clicks the Button element, triggering the browser's context menu. It is used to intercept the right-click action and display a custom context menu or perform a specific operation.
 
@@ -241,7 +241,7 @@ The `oncontextmenu` event fires when the user right-clicks the Button element, t
 }
 ```
 
-## How to bind keydown event to Button
+## How to bind keydown event to Blazor Button
 
 The `onkeydown` event fires when any key is pressed down while the Button has focus. It is useful for implementing keyboard shortcuts, preventing default key behavior, or handling navigation within a component.
 
@@ -262,7 +262,7 @@ The `onkeydown` event fires when any key is pressed down while the Button has fo
 }
 ```
 
-## How to bind keypress event to Button
+## How to bind keypress event to Blazor Button
 
 The `onkeypress` event fires when a key that produces a character value is pressed while the Button has focus. Note that this event is deprecated in modern web standards and may not fire for non-printable keys such as `Shift`, `Ctrl`, or arrow keys. Use `onkeydown` for broader key handling.
 
@@ -283,7 +283,7 @@ The `onkeypress` event fires when a key that produces a character value is press
 }
 ```
 
-## How to bind keyup event to Button
+## How to bind keyup event to Blazor Button
 
 The `onkeyup` event fires when a key is released after being pressed while the Button has focus. It is commonly used to detect the completion of a key interaction, such as confirming a value after typing or triggering an action when a specific key is released.
 
@@ -304,7 +304,7 @@ The `onkeyup` event fires when a key is released after being pressed while the B
 }
 ```
 
-## How to bind focus event to Button
+## How to bind focus event to Blazor Button
 
 The `onfocus` event fires when the Button receives focus, either through a mouse click or keyboard navigation (for example, the `Tab` key). It is used to highlight the button, display hints, or trigger focus-related UI changes.
 
@@ -325,7 +325,7 @@ The `onfocus` event fires when the Button receives focus, either through a mouse
 }
 ```
 
-## How to bind blur event to Button
+## How to bind blur event to Blazor Button
 
 The `onblur` event fires when the Button loses focus, typically when the user clicks elsewhere or tabs away. It is useful for validating state, hiding focus indicators, or resetting UI changes applied during focus.
 
@@ -346,7 +346,7 @@ The `onblur` event fires when the Button loses focus, typically when the user cl
 }
 ```
 
-## How to bind focusin event to Button
+## How to bind focusin event to Blazor Button
 
 The `onfocusin` event fires when the Button or any of its child elements receives focus. Unlike `onfocus`, this event bubbles up the DOM tree, making it useful for detecting focus within a container component or handling delegated focus scenarios.
 
@@ -367,7 +367,7 @@ The `onfocusin` event fires when the Button or any of its child elements receive
 }
 ```
 
-## How to bind focusout event to Button
+## How to bind focusout event to Blazor Button
 
 The `onfocusout` event fires when the Button or any of its child elements loses focus. Unlike `onblur`, this event bubbles, making it useful for tracking when focus leaves a group of related elements or a container.
 
@@ -388,7 +388,7 @@ The `onfocusout` event fires when the Button or any of its child elements loses 
 }
 ```
 
-## How to bind touch events to Button
+## How to bind touch events to Blazor Button
 
 The `ontouchstart` and `ontouchend` events fire when the user touches and releases the Button on a touch-enabled device. Use the `TouchEventArgs` type to access touch-specific data such as the list of changed touches.
 

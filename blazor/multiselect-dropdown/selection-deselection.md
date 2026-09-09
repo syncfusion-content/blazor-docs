@@ -29,7 +29,7 @@ Bind the pre-selected value to the MultiSelect component using the [@bind-Value]
 
 {% endhighlight %}
 
-![Blazor MultiSelect with pre-select value](./images/selection/blazor_MultiSelect_preselect-value.webp)
+![Blazor MultiSelect Dropdown with pre-select value](./images/selection/blazor_MultiSelect_preselect-value.webp)
 
 ## Programmatically change the selected value
 
@@ -41,7 +41,7 @@ Change the component's value programmatically by updating the bound property. Us
 
 {% endhighlight %}
 
-![Blazor MultiSelect with pre-select value before](./images/selection/blazor_MultiSelect_changing-selected-value.gif)
+![Blazor MultiSelect Dropdown with pre-select value before](./images/selection/blazor_MultiSelect_changing-selected-value.gif)
 
 ### ValueChange event
 

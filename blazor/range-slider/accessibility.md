@@ -9,9 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Range Slider
 
-The [Blazor Range Slider](https://www.syncfusion.com/blazor-components/blazor-range-slider) is characterized with complete [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/#slider) Accessibility support that helps to access by on-screen readers and other assistive technology devices. This component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
-
-The Blazor Range Slider component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The [Blazor Range Slider](https://www.syncfusion.com/blazor-components/blazor-range-slider) is characterized with complete [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/#slider) Accessibility support that helps to access by on-screen readers and other assistive technology devices. This component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor Range Slider component is outlined below.
 
@@ -41,7 +39,7 @@ The accessibility compliance for the Blazor Range Slider component is outlined b
 
 ## WAI-ARIA attributes
 
-The Blazor Range Slider component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/slider/) pattern to meet accessibility requirements. The following ARIA attributes are used in the Range Slider component:
+The Blazor Range Slider component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/slider/) pattern to meet accessibility requirements. The following ARIA attributes are used in the Blazor Range Slider component:
 
 | **Attributes** | **Purpose** |
 | --- | --- |
@@ -70,7 +68,7 @@ Keyboard interaction of the Blazor Range Slider component is based on the [WAI-A
 
 The Blazor Range Slider component’s accessibility is validated using the [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) tool during automated testing.
 
-The accessibility compliance of the Range Slider component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/slider) in a new window to evaluate the Range Slider component with accessibility tools.
+The accessibility compliance of the Blazor Range Slider component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/slider) in a new window to evaluate the Blazor Range Slider component with accessibility tools.
 
 ## See also
 

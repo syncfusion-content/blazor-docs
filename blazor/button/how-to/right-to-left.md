@@ -11,7 +11,7 @@ documentation: ug
 
 The Blazor Button component has RTL support. This can be achieved by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_EnableRtl) property to `true`. When RTL is enabled, the icon position and content alignment are mirrored automatically.
 
-The following example illustrates how to enable right-to-left support in the Button component.
+The following example illustrates how to enable right-to-left support in the Blazor Button component.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons

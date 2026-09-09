@@ -207,4 +207,4 @@ Group caption aggregates appear in the caption cells at the top of each group an
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrnZctUqCmlLwsy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> The group total summary in Grid is calculated based on the current page records for each group by default.
+> The group total summary in Blazor Grid is calculated based on the current page records for each group by default.

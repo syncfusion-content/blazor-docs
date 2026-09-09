@@ -13,7 +13,7 @@ This demonstrates the creation of a form that includes a Dropdown Tree, allowing
 
 ## Dropdown Tree inside edit form
 
-The Dropdown Tree component can be used inside an EditForm to create a form that includes a list for selecting an option. The `EditForm` component validates all data annotation rules using the `DataAnnotationsValidator` component.
+The Blazor Dropdown Tree component can be used inside an EditForm to create a form that includes a list for selecting an option. The `EditForm` component validates all data annotation rules using the `DataAnnotationsValidator` component.
 
 When the Dropdown Tree input is valid, the form is ready to be submitted. If the input is invalid, an error message will be displayed until a valid value is chosen.
 

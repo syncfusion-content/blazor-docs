@@ -9,11 +9,11 @@ documentation: ug
 
 # Drag and Drop in Blazor File Upload
 
-The File Upload component supports drag-and-drop file selection. Users can drag files from the file explorer and drop them into the drop area. By default, the File Upload component acts as the drop area. The drop area is highlighted when files are dragged over it to indicate that dropping is supported.
+The Blazor File Upload component supports drag-and-drop file selection. Users can drag files from the file explorer and drop them into the drop area. By default, the Blazor File Upload component acts as the drop area. The drop area is highlighted when files are dragged over it to indicate that dropping is supported.
 
 ## Custom DropArea
 
-The File Upload component allows configuring an external target element as the drop area by using the [DropArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_DropArea) property. The element can be specified as an HTML element reference or by using the element’s ID.
+The Blazor File Upload component allows configuring an external target element as the drop area by using the [DropArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_DropArea) property. The element can be specified as an HTML element reference or by using the element’s ID.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -57,11 +57,11 @@ body .e-upload-drag-hover {
 
 ## DropEffect
 
-The File Upload exposes a DropEffect property that controls the cursor feedback and allowed drop operation during drag-and-drop. Set this property to Default, Copy, Move, Link, or None. Default uses the browser’s behavior. Dropped files are added to the selected files list and processed according to component settings (for example, AutoUpload, SaveUrl/RemoveUrl, AllowedExtensions, MinFileSize, and MaxFileSize).
+The Blazor File Upload exposes a DropEffect property that controls the cursor feedback and allowed drop operation during drag-and-drop. Set this property to Default, Copy, Move, Link, or None. Default uses the browser’s behavior. Dropped files are added to the selected files list and processed according to component settings (for example, AutoUpload, SaveUrl/RemoveUrl, AllowedExtensions, MinFileSize, and MaxFileSize).
 
 ### Copy
 
-Shows a copy cursor during drag-and-drop. Dropped files are added to the File Upload’s selection without modifying the originals. File Upload proceeds based on the component configuration.
+Shows a copy cursor during drag-and-drop. Dropped files are added to the Blazor File Upload’s selection without modifying the originals. File Upload proceeds based on the component configuration.
 
 ```cshtml
 
@@ -85,7 +85,7 @@ Shows a copy cursor during drag-and-drop. Dropped files are added to the File Up
 
 ### Move
 
-Shows a move cursor during drag-and-drop. Source files are not moved from their original location; the File Upload only adds them to the selection and uploads according to configuration.
+Shows a move cursor during drag-and-drop. Source files are not moved from their original location; the Blazor File Upload only adds them to the selection and uploads according to configuration.
 
 ```cshtml
 
@@ -133,7 +133,7 @@ Shows a link cursor during drag-and-drop. This changes the cursor feedback only;
 
 ### None
 
-Prevents dropping files on the File Upload or the configured drop area. Use this when disabling drops is required regardless of validation rules.
+Prevents dropping files on the Blazor File Upload or the configured drop area. Use this when disabling drops is required regardless of validation rules.
 
 ```cshtml
 
@@ -157,7 +157,7 @@ Prevents dropping files on the File Upload or the configured drop area. Use this
 
 ## Clipboard Paste
 
-The File Upload component supports file selection through clipboard paste operations. Click on the File Upload element and press Ctrl+V to paste files from the clipboard. The pasted files are added to the selected files list.
+The Blazor File Upload component supports file selection through clipboard paste operations. Click on the Blazor File Upload element and press Ctrl+V to paste files from the clipboard. The pasted files are added to the selected files list.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

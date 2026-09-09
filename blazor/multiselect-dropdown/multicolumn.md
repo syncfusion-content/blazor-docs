@@ -26,7 +26,7 @@ Use the built-in utility classes below to control text alignment within each col
 
 {% endhighlight %}
 
-![Blazor MultiSelect with multicolumn](./images/multicolumn/blazor_multiselect_multicolumn.webp)
+![Blazor MultiSelect Dropdown with multicolumn](./images/multicolumn/blazor_multiselect_multicolumn.webp)
 
 ## How to display the multicolumn item and checkbox inline
 

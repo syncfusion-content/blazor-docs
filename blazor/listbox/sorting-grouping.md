@@ -19,7 +19,7 @@ In the following example, `SortOrder` is set to `Descending`.
 @using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" DataSource="@CountryData" SortOrder="Syncfusion.Blazor.DropDowns.SortOrder.Descending" TItem="CountryCode">
-  <ListBoxFieldSettings Text="Name" Value="Code" />
+    <ListBoxFieldSettings Text="Name" Value="Code" />
 </SfListBox>
 
 @code {
@@ -58,7 +58,7 @@ Watch the video below for a quick introduction to grouping in the Blazor ListBox
 @using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" DataSource="@VegetableData" TItem="VegetableDetail">
-  <ListBoxFieldSettings GroupBy = "Category" Text="Vegetable" Value="Id" />
+    <ListBoxFieldSettings GroupBy="Category" Text="Vegetable" Value="Id" />
 </SfListBox>
 
 @code {

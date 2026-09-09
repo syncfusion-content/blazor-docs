@@ -9,13 +9,13 @@ documentation: ug
 
 # Native Events in Blazor TextBox
 
-The following section explains how to bind native DOM events and pass event data to an event handler in the TextBox component.
+The following section explains how to bind native DOM events and pass event data to an event handler in the Blazor TextBox component.
 
 ## Bind native events to textbox
 
-Native browser events can be handled by adding the @on<event> attribute to the component. The attribute value is an event handler that runs when the corresponding DOM event occurs.
+Native browser events can be handled by adding the @on<event> attribute to the Blazor TextBox component. The attribute value is an event handler that runs when the corresponding DOM event occurs.
 
-In the following example, the `KeyPressed` method is called every time a key is pressed in the TextBox.
+In the following example, the `KeyPressed` method is called every time a key is pressed in the Blazor TextBox.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -49,7 +49,7 @@ Blazor provides strongly typed event argument classes that map to native events.
 * Touch events – TouchEventArgs
 * Pointer events – PointerEventArgs
 
-In the following example, the `KeyPressed` method is invoked on every key press in the TextBox, and a message is written only when the "s" key is pressed.
+In the following example, the `KeyPressed` method is invoked on every key press in the Blazor TextBox, and a message is written only when the "s" key is pressed.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

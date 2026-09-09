@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Data Form Server App Getting Started | Syncfusion®
-description: Learn how to get started with the Syncfusion Blazor Data Form control. Explore setup, features, examples, and customization options.
+description: Learn how to get started with the Syncfusion Blazor Server Data Form control. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: Data Form
 documentation: ug

@@ -13,7 +13,7 @@ The Dropdown Tree has built-in support to filter data items when [AllowFiltering
 
 ## List data
 
-The following code demonstrates the filtering functionality with local data in the Dropdown Tree component.
+The following code demonstrates the filtering functionality with local data in the Blazor Dropdown Tree component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -53,7 +53,7 @@ The following code demonstrates the filtering functionality with local data in t
 
 ## Remote data
 
-The following code demonstrates the filtering functionality with remote data in the Dropdown Tree component.
+The following code demonstrates the filtering functionality with remote data in the Blazor Dropdown Tree component.
 
 ```cshtml
 

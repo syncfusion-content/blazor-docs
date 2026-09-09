@@ -41,7 +41,7 @@ The accessibility compliance for the Blazor File Upload component is outlined be
 
 The Blazor Uploader component includes complete ARIA support for operation with screen readers and other assistive technologies. Focus moves predictably through interactive elements such as the browse button, file list items, and action buttons (remove, retry, and clear). Status updates (for example, upload progress and error messages) are exposed to assistive technologies.
 
-The following are the standard keys that work in the Uploader component:
+The following are the standard keys that work in the Blazor File Upload component:
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
@@ -54,7 +54,7 @@ The following are the standard keys that work in the Uploader component:
 
 The Blazor File Upload component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-The accessibility compliance of the File Upload component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/uploader) in a new window to evaluate the accessibility of the component with accessibility tools.
+The accessibility compliance of the Blazor File Upload component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/uploader) in a new window to evaluate the accessibility of the Blazor File Upload component with accessibility tools.
 
 ## See Also
 

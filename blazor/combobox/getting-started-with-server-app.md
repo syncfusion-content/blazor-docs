@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor ComboBox Server App Getting Started | Syncfusion®
-description: Learn how to get started with the Syncfusion Blazor ComboBox control. Explore setup, features, examples, and customization options.
+description: Learn how to get started with the Syncfusion Blazor ComboBox control in a Blazor Server app. Explore setup, features, examples, and customization options.
 platform: Blazor
 component: ComboBox
 documentation: ug
@@ -220,7 +220,7 @@ dotnet run
 
 ## Binding data source
 
-After initializing, populate the ComboBox with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. Here, an array of string values is passed to the ComboBox component.
+After initializing, populate the Blazor ComboBox with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. Here, an array of string values is passed to the Blazor ComboBox component.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}

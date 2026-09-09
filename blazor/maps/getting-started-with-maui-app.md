@@ -229,7 +229,7 @@ Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/devi
 
 N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-![Blazor Maps with GeoJSON Layer](./images/blazor-map.webp)
+![Blazor Maps with GeoJSON Layer](./images/blazor-maps-maui-android.webp)
 
 ## Bind data source
 

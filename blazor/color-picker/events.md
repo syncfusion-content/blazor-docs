@@ -13,7 +13,7 @@ This section lists the events raised by the Blazor Color Picker component and wh
 
 ## Popup lifecycle events
 
-The Color Picker raises paired events around the popup open and close actions: a *before* event (`OnOpen`, `OnClose`) that you can use to cancel or modify the action, and an *after* event (`Opened`, `Closed`) for post-action tasks. The before events use [`BeforeOpenCloseEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.BeforeOpenCloseEventArgs.html), and the after events use [`OpenEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.OpenEventArgs.html).
+The Blazor Color Picker raises paired events around the popup open and close actions: a *before* event (`OnOpen`, `OnClose`) that you can use to cancel or modify the action, and an *after* event (`Opened`, `Closed`) for post-action tasks. The before events use [`BeforeOpenCloseEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.BeforeOpenCloseEventArgs.html), and the after events use [`OpenEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.OpenEventArgs.html).
 
 ## Opened
 
@@ -107,7 +107,7 @@ The Color Picker raises paired events around the popup open and close actions: a
 
 ## Mode switching events
 
-The Color Picker raises paired events around mode switching: `OnModeSwitch` fires before the mode changes, and `ModeSwitched` fires after. Use the [`ModeSwitchEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.ModeSwitchEventArgs.html) `Current` and `Previous` properties to identify the modes involved.
+The Blazor Color Picker raises paired events around mode switching: `OnModeSwitch` fires before the mode changes, and `ModeSwitched` fires after. Use the [`ModeSwitchEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.ModeSwitchEventArgs.html) `Current` and `Previous` properties to identify the modes involved.
 
 ## OnModeSwitch
 

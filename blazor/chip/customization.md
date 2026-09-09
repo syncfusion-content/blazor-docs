@@ -9,11 +9,11 @@ documentation: ug
 
 # Style and Appearance in Blazor Chips
 
-This section explains how to customize styles, leading icons, avatars, trailing icons, outline chips, and templates in the Chip component.
+This section explains how to customize styles, leading icons, avatars, trailing icons, outline chips, and templates in the Blazor Chips component.
 
 ## Styles
 
-The Chip component exposes the following predefined style classes that can be applied through the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfChip.html#Syncfusion_Blazor_Buttons_SfChip_CssClass) property.
+The Blazor Chips component exposes the following predefined style classes that can be applied through the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfChip.html#Syncfusion_Blazor_Buttons_SfChip_CssClass) property.
 
 | Class | Description |
 | -------- | -------- |
@@ -38,7 +38,7 @@ The Chip component exposes the following predefined style classes that can be ap
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrxXHsHfJJQNpgK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Blazor Chip Styles](./images/blazor-chip-style.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrxXHsHfJJQNpgK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Blazor Chips Styles](./images/blazor-chip-style.webp)" %}
 
 ## Leading icon
 
@@ -75,7 +75,7 @@ The leading icon of a chip is added and customized through the [`LeadingIconCss`
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBnDHsHzfJaUTgJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing LeadingIcon of Blazor Chip](./images/blazor-chip-leading-icon.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBnDHsHzfJaUTgJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing LeadingIcon of Blazor Chips](./images/blazor-chip-leading-icon.gif)" %}
 
 ## Avatar
 
@@ -133,7 +133,7 @@ The leading text of a chip is added and customized through the [`LeadingText`](h
 </SfChip>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrdZRiRTfSbPlBx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Avatar Text of Blazor Chip](./images/blazor-chip-avatar-content.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrdZRiRTfSbPlBx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Avatar Text of Blazor Chips](./images/blazor-chip-avatar-content.gif)" %}
 
 ## Trailing icon
 
@@ -152,7 +152,7 @@ The trailing icon of a chip is added and customized through the [`TrailingIconCs
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhnZdCdzpnLjcSm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Blazor Chip TrailingIcon](./images/blazor-chip-trailing-icon.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhnZdCdzpnLjcSm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Blazor Chips TrailingIcon](./images/blazor-chip-trailing-icon.webp)" %}
 
 ## Outline chip
 
@@ -235,12 +235,12 @@ The following code example demonstrates how the layout and design of chips can b
 
 ```
 
-![Template in Blazor Chip component](./images/blazor-chip-template.webp)
+![Template in Blazor Chips component](./images/blazor-chip-template.webp)
 
 ## See also
 
-* [Getting Started with Blazor Chip](getting-started.md)
-* [Types in Blazor Chip](types.md)
-* [Events in Blazor Chip](events.md)
-* [CSS Structure in Blazor Chip](style.md)
-* [Accessibility in Blazor Chip](accessibility.md)
+* [Getting Started with Blazor Chips](getting-started.md)
+* [Types in Blazor Chips](types.md)
+* [Events in Blazor Chips](events.md)
+* [CSS Structure in Blazor Chips](style.md)
+* [Accessibility in Blazor Chips](accessibility.md)

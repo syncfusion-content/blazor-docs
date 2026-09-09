@@ -9,7 +9,7 @@ documentation: ug
 
 # Style and Appearance in Blazor Data Form
 
-The DataForm component can be customized with CSS styling to create visually appealing forms. This section explains how to apply basic colors, fonts, text styling, and other appearance customizations to the DataForm component and its child elements.
+The Blazor Data Form component can be customized with CSS styling to create visually appealing forms. This section explains how to apply basic colors, fonts, text styling, and other appearance customizations to the Blazor Data Form component and its child elements.
 
 ## Basic Styling
 

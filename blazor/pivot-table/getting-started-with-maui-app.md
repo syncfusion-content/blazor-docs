@@ -289,7 +289,7 @@ To run the Blazor Pivot Table in your Blazor MAUI app on an Android emulator, fo
 
 N> If you face any issues with the Android emulator, check the [Troubleshooting Android Emulator guide](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting) for solutions.
 
-![Blazor Pivot Table with Formatting](images/blazor-pivottable-formatting.webp)
+![Blazor Pivot Table with Formatting](images/blazor-pivottable-maui-android.webp)
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PivotTable)
 

@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in Blazor Input Mask
 
-The [Blazor MaskedTextBox](https://www.syncfusion.com/blazor-components/blazor-input-mask) component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The [Blazor Input Mask](https://www.syncfusion.com/blazor-components/blazor-input-mask) component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Blazor MaskedTextBox component is outlined below.
+The accessibility compliance for the Blazor Input Mask component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -38,25 +38,25 @@ The accessibility compliance for the Blazor MaskedTextBox component is outlined 
 
 ## WAI-ARIA attributes
 
-The Blazor MaskedTextBox includes comprehensive WAI-ARIA support to ensure compatibility with screen readers and other assistive technologies. This component is designed with reference to the WAI-ARIA Authoring Practices.
+The Blazor Input Mask component includes comprehensive WAI-ARIA support to ensure compatibility with screen readers and other assistive technologies. This component is designed with reference to the WAI-ARIA Authoring Practices.
 
-The MaskedTextBox uses the textbox role and the following ARIA properties, based on state and configuration:
+The Blazor Input Mask component uses the textbox role and the following ARIA properties, based on state and configuration:
 
 | **Property** | **Functionality** |
 | --- | --- |
-| aria-label / aria-labelledby | Provides an accessible name for the MaskedTextBox. |
-| aria-describedby | Associates helper or error text with the MaskedTextBox for screen reader announcement. |
+| aria-label / aria-labelledby | Provides an accessible name for the Blazor Input Mask component. |
+| aria-describedby | Associates helper or error text with the Blazor Input Mask component for screen reader announcement. |
 | aria-invalid | Indicates that the current value fails validation. |
 | aria-required | Indicates that input is required. |
-| aria-disabled | Indicates that the MaskedTextBox is disabled. |
+| aria-disabled | Indicates that the Blazor Input Mask component is disabled. |
 | aria-readonly | Indicates that the value cannot be changed by the user. |
-| aria-multiline | Indicates whether the textbox supports multiple lines (typically false for MaskedTextBox). |
+| aria-multiline | Indicates whether the textbox supports multiple lines (typically false for Blazor Input Mask component). |
 
 ## Ensuring accessibility
 
-The Blazor MaskedTextBox component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
+The Blazor Input Mask component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-The accessibility compliance of the MaskedTextBox component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/maskedtextbox) in a new window to evaluate the accessibility of the MaskedTextBox component with accessibility tools.
+The accessibility compliance of the Blazor Input Mask component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/maskedtextbox) in a new window to evaluate the accessibility of the Blazor Input Mask component with accessibility tools.
 
 ## See also
 

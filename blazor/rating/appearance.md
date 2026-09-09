@@ -23,13 +23,13 @@ You can specify the number of rating items using the [ItemsCount](https://help.s
 
 ```
 
-In this example, the rating component displays 8 rating items. The `Value` property specifies how many items appear filled, so 3 of the 8 items are filled.
+In this example, the Blazor Rating component displays 8 rating items. The `Value` property specifies how many items appear filled, so 3 of the 8 items are filled.
 
 ![Blazor Rating Component with ItemsCount](images/blazor-rating-items-count.webp)
 
 ## Disabled
 
-Disable the Blazor Rating component by using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Disabled) property. When the `Disabled` property is set to `true`, the rating component will be disabled and the user will not be able to interact with it and a disabled rating component may have a different visual appearance than an enabled one.
+Disable the Blazor Rating component by using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Disabled) property. When the `Disabled` property is set to `true`, the Blazor Rating component will be disabled and the user will not be able to interact with it and a disabled rating component may have a different visual appearance than an enabled one.
 
 ```cshtml
 
@@ -71,7 +71,7 @@ Use the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Input
 
 ## CssClass
 
-Customize the appearance of the rating component, such as by changing its colors, fonts, sizes, or other visual aspects by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_CssClass) property. 
+Customize the appearance of the Blazor Rating component, such as by changing its colors, fonts, sizes, or other visual aspects by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_CssClass) property. 
 
 ### Changing rating symbol border color
 
@@ -98,7 +98,7 @@ Change the rating icon border color in Blazor Rating component, you can use the 
 
 ### Changing rated/unrated symbol fill color 
 
-Customize the fill colors of rated and unrated icons in the Rating component using the `CssClass` property and the `linear-gradient` color-stops in the `background` CSS property of `.e-rating-icon`. The **first** color-stop defines the rated fill color and the **second** defines the unrated fill color.
+Customize the fill colors of rated and unrated icons in the Blazor Rating component using the `CssClass` property and the `linear-gradient` color-stops in the `background` CSS property of `.e-rating-icon`. The **first** color-stop defines the rated fill color and the **second** defines the unrated fill color.
 
 ```cshtml
 

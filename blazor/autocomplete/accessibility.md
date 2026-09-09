@@ -92,7 +92,7 @@ N> In the following sample, pressing the <kbd>t</kbd> key toggles the disabled s
 
 The Blazor AutoComplete component’s accessibility levels are validated using the [axe-core](https://www.npmjs.com/package/axe-core) tool during automated testing.
 
-The accessibility compliance of the AutoComplete component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/autocomplete) in a new window to evaluate the AutoComplete component with accessibility tools.
+The accessibility compliance of the Blazor AutoComplete component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/autocomplete) in a new window to evaluate the Blazor AutoComplete component with accessibility tools.
 
 ## See also
 

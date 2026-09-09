@@ -9,7 +9,7 @@ documentation: ug
 
 # Styling Modes in Blazor OTP Input
 
-Styling modes specify the visual variants for the input fields in the OTP input component. These modes allow customization of the inputs’ appearance to match application design.
+Styling modes specify the visual variants for the input fields in the Blazor OTP Input component. These modes allow customization of the inputs’ appearance to match application design.
 
 ## Outline mode
 

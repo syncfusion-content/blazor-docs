@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Pinning (Frozen) in Blazor Data Grid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports freezing columns to keep them visible while scrolling through large datasets. This feature ensures that important fields remain accessible regardless of horizontal scroll position.
+The [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports freezing columns to keep them visible while scrolling through large datasets. This feature ensures that important fields remain accessible regardless of horizontal scroll position.
 
 Column pinning can be configured using either grid-level or column-level settings.
 
@@ -429,8 +429,8 @@ public class EmployeeDetails
 
 ## Add or remove frozen columns by dragging the column separator
 
-The Blazor DataGrid allows dynamically modifying frozen columns by dragging and dropping the column separator. This interaction enables adjusting which columns remain frozen, providing flexibility to customize the layout directly through the Grid UI.
-To enable this behavior, set the [AllowFreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFreezeLineMoving) property to **true** in the Grid.
+The Blazor DataGrid allows dynamically modifying frozen columns by dragging and dropping the column separator. This interaction enables adjusting which columns remain frozen, providing flexibility to customize the layout directly through the Blazor Grid UI.
+To enable this behavior, set the [AllowFreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFreezeLineMoving) property to **true** in the Blazor Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -518,7 +518,7 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNrdtQDUhpfoKBMK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-> If no columns are frozen, the frozen column separator appears at the **left** and **right** edges of the Grid. Columns can be dynamically frozen or unfrozen by dragging the separator.
+> If no columns are frozen, the frozen column separator appears at the **left** and **right** edges of the Blazor Grid. Columns can be dynamically frozen or unfrozen by dragging the separator.
 
 ## Limitations of frozen columns and freeze direction  
 

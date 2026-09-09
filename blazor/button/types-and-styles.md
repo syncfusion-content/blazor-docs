@@ -9,9 +9,9 @@ documentation: ug
 
 # Types and Styles in Blazor Button
 
-This section explains the different styles and types of Buttons.
+This section explains the different styles and types of Blazor Buttons.
 
-## Button styles
+## Blazor Button styles
 
 The Blazor Button has the following predefined styles that can be defined using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property.
 
@@ -22,7 +22,7 @@ The Blazor Button has the following predefined styles that can be defined using 
 | e-info |  Used to represent an informative action. |
 | e-warning | Used to represent an action with caution. |
 | e-danger | Used to represent a negative action. |
-| e-link |  Changes the appearance of the Button like a hyperlink. |
+| e-link |  Changes the appearance of the Blazor Button like a hyperlink. |
 
 ```csharp
 
@@ -38,9 +38,9 @@ The Blazor Button has the following predefined styles that can be defined using 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZhxDxMVVgeLgsiF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button Component with different Styles](./images/blazor-button-with-different-style.webp)" %}
 
-N> Predefined Button styles provide only a visual indication; therefore, define the Button content to convey meaning to assistive technology users such as screen readers.
+N> Predefined Blazor Button styles provide only a visual indication; therefore, define the Blazor Button content to convey meaning to assistive technology users such as screen readers.
 
-## Button types
+## Blazor Button types
 
 The types of Blazor Button are as follows:
 
@@ -137,9 +137,9 @@ A Toggle Button allows you to toggle between two states. The Button is active in
 
 ## Icons
 
-### Button with font icons
+### Blazor Button with font icons
 
-The Button can have an icon to provide the visual representation of the action. To place the icon on a Button, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconCss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the Button. You can customize the icon's position by using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconPosition) property.
+The Blazor Button can have an icon to provide the visual representation of the action. To place the icon on a Button, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconCss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the Button. You can customize the icon's position by using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconPosition) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -168,7 +168,7 @@ The [`IconPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.But
 
 ## Button size
 
-The two types of Button sizes are default and small. To change the size of the default Button to a small Button, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property to `e-small`.
+The two types of Blazor Button sizes are default and small. To change the size of the default Button to a small Button, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property to `e-small`.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons

@@ -9,7 +9,7 @@ documentation: ug
 
 # Customizing Templates in Blazor ListView
 
-The ListView component is designed to customize each list items and group title. It uses Blazor `Template engine` to render the elements.
+The Blazor ListView component is designed to customize each list items and group title. It uses Blazor `Template engine` to render the elements.
 
 To customize the Blazor ListView component header, items, and group header using templates, you can check on this video.
 
@@ -18,7 +18,7 @@ To customize the Blazor ListView component header, items, and group header using
 
 ## Header Template
 
-ListView header can be customized with the help of the [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_HeaderTemplate) property. To customize header template in your application, set your customized template string to `HeaderTemplate` property along with [`ShowHeader`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_ShowHeader) property as `true` to display the ListView header.
+Blazor ListView header can be customized with the help of the [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_HeaderTemplate) property. To customize header template in your application, set your customized template string to `HeaderTemplate` property along with [`ShowHeader`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_ShowHeader) property as `true` to display the Blazor ListView header.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -71,7 +71,7 @@ The following built-in CSS classes can be used to customize the list-items.
 
 | CSS class        | Description           |
 | ------------- |-------------|
-| e-list-template, e-list-wrapper | These classes are used to differentiate normal and template rendering, which are mandatory for template rendering. The `e-list-template` class should be added to the root of the ListView element and `e-list-wrapper` class should be added to the template element wrapper.
+| e-list-template, e-list-wrapper | These classes are used to differentiate normal and template rendering, which are mandatory for template rendering. The `e-list-template` class should be added to the root of the Blazor ListView element and `e-list-wrapper` class should be added to the template element wrapper.
 | e-list-content | This class is used to align list content and it should be added to the content element. <br/><br/> `<div class="e-list-wrapper">`<br/><b>`<span class="e-list-content">ListItem</span>`</b> <br/>`</div>`|
 | e-list-avatar | This class is used for avatar customization. It should be added to the template element wrapper. After adding it, we can customize our element with **Avatar** classes <br/><br/> `<div class="e-list-wrapper e-list-avatar">` <br/> <b>`<span class="e-avatar e-avatar-circle">MR</span>`</b><br/>`<span class="e-list-content">ListItem</span>`<br/>`</div>`|
 | e-list-avatar-right | This class is used to align avatar to right side of the list item. It should be added to the template element wrapper. After adding it, customize the element with **Avatar** classes. <br/><br/> `<div class="e-list-wrapper e-list-avatar-right">` <br/> `<span class="e-list-content">ListItem</span>`<br/><b>`<span class="e-avatar e-avatar-circle">MR</span>`</b><br/> `</div>`|

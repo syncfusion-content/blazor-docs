@@ -39,7 +39,7 @@ The accessibility compliance for the Blazor ListView component is outlined below
 
 ## WAI-ARIA attributes
 
-The Blazor ListView component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following ARIA attributes are used in the ListView component:
+The Blazor ListView component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor ListView component:
 
 | Attributes | Purpose |
 | ------------ | ----------------------- |
@@ -48,7 +48,7 @@ The Blazor ListView component followed the [WAI-ARIA](https://www.w3.org/WAI/ARI
 
 ## Keyboard interaction
 
-The Blazor ListView component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the ListView component.
+The Blazor ListView component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor ListView component.
 
 | Windows | Mac | Actions |
 |------------|------ | -------------|
@@ -247,7 +247,7 @@ The Blazor ListView component followed the [keyboard interaction](https://www.w3
 
 The Blazor ListView component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
-The accessibility compliance of the ListView component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/listview) in a new window to evaluate the accessibility of the ListView component with accessibility tools.
+The accessibility compliance of the Blazor ListView component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/listview) in a new window to evaluate the accessibility of the Blazor ListView component with accessibility tools.
 
 ## See also
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # How to open numeric keyboard in Blazor Numeric Textbox
 
-On mobile and touch devices, providing a numeric keyboard improves data entry for number inputs. This topic explains how to hint supported browsers to show a numeric keypad while keeping the Numeric TextBox behavior intact.
+On mobile and touch devices, providing a numeric keyboard improves data entry for number inputs. This topic explains how to hint supported browsers to show a numeric keypad while keeping the Blazor Numeric TextBox behavior intact.
 
 ## Enabling the Numeric Keyboard
 
@@ -25,17 +25,17 @@ Here is an example code snippet using the Blazor Numeric TextBox component:
 </div>
 ```
 
-By setting the `type` attribute to `"tel"`, the Numeric TextBox will trigger the numeric keyboard on supported devices, making it easier for users to enter numeric data.
+By setting the `type` attribute to `"tel"`, the Blazor Numeric TextBox will trigger the numeric keyboard on supported devices, making it easier for users to enter numeric data.
 
 ![Open Numeric Keyboard in Numeric TextBox Component](../images/Open-Numeric-Keyboard-in-Numeric-TextBox-Component.gif)
 
 ## Fallback for Unsupported Browsers
 
-It is important to note that not all browsers honor the `type="tel"` attribute. In cases where a browser does not support it, the Numeric TextBox falls back to a standard text input. This ensures that the functionality remains intact across all browsers, even if the enhanced keyboard experience is not available.
+It is important to note that not all browsers honor the `type="tel"` attribute. In cases where a browser does not support it, the Blazor Numeric TextBox falls back to a standard text input. This ensures that the functionality remains intact across all browsers, even if the enhanced keyboard experience is not available.
 
 ## Live Sample
 
-To see a live example of the Numeric TextBox configured for the numeric keyboard, visit the following link:
+To see a live example of the Blazor Numeric TextBox configured for the numeric keyboard, visit the following link:
 
 [Blazor Playground - Numeric Textbox](https://blazorplayground.syncfusion.com/embed/rDLpjJrOLrHzOprq?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5)
 

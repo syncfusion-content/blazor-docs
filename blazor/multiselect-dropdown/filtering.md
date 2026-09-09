@@ -9,7 +9,7 @@ documentation: ug
 
 # Filtering in Blazor MultiSelect Dropdown
 
-The [**AllowFiltering**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_AllowFiltering) feature in the Blazor MultiSelect component enables real-time search capability within the dropdown popup. Users can filter the list of items dynamically based on their input, supporting both simple text searches and complex filtered queries.
+The [**AllowFiltering**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_AllowFiltering) feature in the Blazor MultiSelect Dropdown component enables real-time search capability within the dropdown popup. Users can filter the list of items dynamically based on their input, supporting both simple text searches and complex filtered queries.
 
 ## Getting Started with AllowFiltering
 

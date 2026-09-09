@@ -230,7 +230,7 @@ Use the [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adapt
 
 ### Custom adaptor
 
-The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing customize data binding and editing operations in the ComboBox component.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing customize data binding and editing operations in the Blazor ComboBox component.
 
 For implementing custom data binding in the ComboBox, the `DataAdaptor` class is used. This abstract class acts as a base class for the custom adaptor.
 
@@ -273,7 +273,7 @@ To avoid a server request for every action, preloaded all data at initialization
 
 ### Entity Framework
 
-Follow these steps to consume data from [Entity Framework](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-orm/entityframework) in the ComboBox component.
+Follow these steps to consume data from [Entity Framework](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-orm/entityframework) in the Blazor ComboBox component.
 
 #### Create DBContext class
 
@@ -385,7 +385,7 @@ namespace EFDropDown.Controllers
 }
 ```
 
-### Configure ComboBox component using Web API adaptor
+### Configure Blazor ComboBox component using Web API adaptor
 
 Configure the ComboBox with [SfDataManager](https://blazor.syncfusion.com/documentation/data/getting-started) to interact with the Web API using the [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor).
 

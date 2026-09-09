@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor Dropdown List
 
-The DropDown List component supports binding data from local collections and remote services. Use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property to bind local data or configure a [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) for remote data operations. Map fields using the component’s FieldSettings to specify which properties supply item text and value.
+The Blazor Dropdown List component supports binding data from local collections and remote services. Use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property to bind local data or configure a [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) for remote data operations. Map fields using the component’s FieldSettings to specify which properties supply item text and value.
 
 * **TItem** - Specifies the type of the data items bound to the component (the model of each item). Use TValue to specify the value type selected by the component. Configure Fields to map Text and Value from the data model.
 
@@ -23,7 +23,7 @@ The DropDown List loads data from local sources through the [DataSource](https:/
 
 {% endhighlight %}
 
-![Blazor DropdownList with local data binding](./images/data-binding/blazor_dropdown_local-binding.webp)
+![Blazor Dropdown List with local data binding](./images/data-binding/blazor_dropdown_local-binding.webp)
 
 ### DataBound event
 
@@ -39,7 +39,7 @@ The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDown
 
 Bind arrays or lists of `string`, `int`, `double`, or `bool` directly. In these cases, Text and Value map to the primitive values.
 
-The following code demonstrates an array of string values bound to the DropDown List component.
+The following code demonstrates an array of string values bound to the Blazor Dropdown List component.
 
 {% highlight cshtml %}
 
@@ -47,9 +47,9 @@ The following code demonstrates an array of string values bound to the DropDown 
 
 {% endhighlight %}
 
-![Blazor DropdownList with Primitive string type](./images/data-binding/blazor_dropdown_primitive-type-string.webp)
+![Blazor Dropdown List with Primitive string type](./images/data-binding/blazor_dropdown_primitive-type-string.webp)
 
-The following code demonstrates an array of integer values bound to the DropDown List component.
+The following code demonstrates an array of integer values bound to the Blazor Dropdown List component.
 
 {% highlight cshtml %}
 
@@ -57,7 +57,7 @@ The following code demonstrates an array of integer values bound to the DropDown
 
 {% endhighlight %}
 
-![Blazor DropdownList with Primitive int type](./images/data-binding/blazor_dropdown_primitive-type-int.webp)
+![Blazor Dropdown List with Primitive int type](./images/data-binding/blazor_dropdown_primitive-type-int.webp)
 
 ### Complex data type
 
@@ -71,11 +71,11 @@ In the following example, `Code.ID` is mapped to [DropDownListFieldSettings.Valu
 
 {% endhighlight %}
 
-![Blazor DropdownList with Complex data type](./images/data-binding/blazor_dropdown_complex-data-type.webp)
+![Blazor Dropdown List with Complex data type](./images/data-binding/blazor_dropdown_complex-data-type.webp)
 
 ### Expando object binding
 
-Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-10.0) data to the DropDown List component. Ensure the dynamic member names match the field mappings configured in FieldSettings.
+Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-10.0) data to the Blazor Dropdown List component. Ensure the dynamic member names match the field mappings configured in FieldSettings.
 
 {% highlight cshtml %}
 
@@ -83,7 +83,7 @@ Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 {% endhighlight %}
 
-![Blazor DropdownList with Expando object binding](./images/data-binding/blazor_dropdown_expando-object-binding.webp)
+![Blazor Dropdown List with Expando object binding](./images/data-binding/blazor_dropdown_expando-object-binding.webp)
 
 ### Observable collection binding
 
@@ -95,11 +95,11 @@ Bind an [ObservableCollection](https://blazor.syncfusion.com/documentation/commo
 
 {% endhighlight %}
 
-![Blazor DropdownList with Observable collection binding](./images/data-binding/blazor_dropdown_observable-collection-binding.webp)
+![Blazor Dropdown List with Observable collection binding](./images/data-binding/blazor_dropdown_observable-collection-binding.webp)
 
 ### Dynamic object binding
 
-Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-10.0) data to the DropDown List component. As with ExpandoObject, ensure member names correspond to the mapped Text and Value fields.
+Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-10.0) data to the Blazor Dropdown List component. As with ExpandoObject, ensure member names correspond to the mapped Text and Value fields.
 
 {% highlight cshtml %}
 
@@ -107,7 +107,7 @@ Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 {% endhighlight %}
 
-![Blazor DropdownList with Dynamic object binding](./images/data-binding/blazor_dropdown_dynamic-data-binding.webp)
+![Blazor Dropdown List with Dynamic object binding](./images/data-binding/blazor_dropdown_dynamic-data-binding.webp)
 
 ### Enum data binding
 
@@ -119,11 +119,11 @@ Bind enum values to the DropDown List. The following example shows how to displa
 
 {% endhighlight %}
 
-![Blazor DropdownList with Enum data binding](./images/data-binding/blazor_dropdown_enum-data-binding.webp)
+![Blazor Dropdown List with Enum data binding](./images/data-binding/blazor_dropdown_enum-data-binding.webp)
 
 ### ValueTuple data binding
 
-Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-10.0) data to the DropDown List component. The following example shows retrieving a string value from enumeration data using a `ValueTuple`.
+Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-10.0) data to the Blazor Dropdown List component. The following example shows retrieving a string value from enumeration data using a `ValueTuple`.
 
 {% highlight cshtml %}
 
@@ -131,7 +131,7 @@ Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple
 
 {% endhighlight %}
 
-![Blazor DropdownList with ValueTuple data binding](./images/data-binding/blazor_dropdown_value-tuple-data-binding.webp)
+![Blazor Dropdown List with ValueTuple data binding](./images/data-binding/blazor_dropdown_value-tuple-data-binding.webp)
 
 ## Binding remote data 
 
@@ -181,7 +181,7 @@ The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors
 
 {% endhighlight %}
 
-![Blazor DropdownList with OData v4 Adaptor](./images/data-binding/blazor_dropdown_odata-v4-services.webp)
+![Blazor Dropdown List with OData v4 Adaptor](./images/data-binding/blazor_dropdown_odata-v4-services.webp)
 
 ### Web API adaptor
 
@@ -193,7 +193,7 @@ The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#
 
 {% endhighlight %}
 
-![Blazor DropdownList with Web API Adaptor](./images/data-binding/blazor_dropdown_web-api-adaptor.webp)
+![Blazor Dropdown List with Web API Adaptor](./images/data-binding/blazor_dropdown_web-api-adaptor.webp)
 
 ### Custom adaptor
 
@@ -236,11 +236,11 @@ To reduce network requests, load all data at initialization and process actions 
 
 {% endhighlight %}
 
-![Blazor DropdownList with Offline mode](./images/data-binding/blazor_dropdown_offline-mode.webp)
+![Blazor Dropdown List with Offline mode](./images/data-binding/blazor_dropdown_offline-mode.webp)
 
 ### Entity Framework
 
-Follow these steps to consume data from the [Entity Framework](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-orm/entityframework) in the DropDown List component.
+Follow these steps to consume data from the [Entity Framework](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-orm/entityframework) in the Blazor Dropdown List component.
 
 #### Create DBContext class
 
@@ -372,13 +372,13 @@ Use [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
 
 {% endhighlight %}
 
-![Blazor DropdownList with adding new Item](./images/data-binding/blazor_dropdown_add-new-item.webp)
+![Blazor Dropdown List with adding new Item](./images/data-binding/blazor_dropdown_add-new-item.webp)
 
 ## Getting datasource of dropdown list
 
 ### Getting datasource using instance
 
-To retrieve the data source from a Blazor DropDownList component, you can access the `DataSource` property of the component instance. An example of how this can be done is by binding the component to a list of objects as its data source and then, in the button click event, calling the `GetDataSource` method which in turn retrieves the data source by accessing the DataSource property of the DropDownList instance.
+To retrieve the data source from a Blazor Dropdown List component, you can access the `DataSource` property of the component instance. An example of how this can be done is by binding the component to a list of objects as its data source and then, in the button click event, calling the `GetDataSource` method which in turn retrieves the data source by accessing the DataSource property of the DropDownList instance.
 
 {% highlight cshtml %}
 
@@ -388,7 +388,7 @@ To retrieve the data source from a Blazor DropDownList component, you can access
 
 ### Getting datasource using variable
 
-To obtain the data source for a Blazor DropDownList using a variable, you can define a variable in your component to hold the data source, and then use this variable to access the data source. In this example, the `GetDataSource` method is triggered when the button is clicked. This method retrieves the data source for the DropDownList by accessing the Countries variable, which holds the list of countries for the DropDownList.
+To obtain the data source for a Blazor Dropdown List using a variable, you can define a variable in your component to hold the data source, and then use this variable to access the data source. In this example, the `GetDataSource` method is triggered when the button is clicked. This method retrieves the data source for the DropDownList by accessing the Countries variable, which holds the list of countries for the DropDownList.
 
 {% highlight cshtml %}
 

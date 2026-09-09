@@ -148,7 +148,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **~wwwroot/index.html** file to enable TextBox functionality.
+%} Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **~wwwroot/index.html** file to enable Blazor TextBox functionality.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -216,7 +216,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## Adding icons to the Blazor TextBox
 
-Add an icon to the TextBox component using the [AddIconAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_AddIconAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__) method. The following example shows how to implement this in a Blazor WebAssembly app.
+Add an icon to the Blazor TextBox component using the [AddIconAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_AddIconAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__) method. The following example shows how to implement this in a Blazor WebAssembly app.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -237,7 +237,7 @@ Add an icon to the TextBox component using the [AddIconAsync](https://help.syncf
     {
         if (TextBoxDropDownObj != null)
         {
-            //Add icon to the TextBox
+            //Add icon to the Blazor TextBox
             await TextBoxDropDownObj.AddIconAsync("append", "e-icons e-date-icon");
 }
     }
@@ -250,7 +250,7 @@ Add an icon to the TextBox component using the [AddIconAsync](https://help.syncf
 
 ## Floating label
 
-The floating label lifts above the input when the TextBox is focused or contains a value. Configure it by setting the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_FloatLabelType) API.
+The floating label lifts above the input when the Blazor TextBox is focused or contains a value. Configure it by setting the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_FloatLabelType) API.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}

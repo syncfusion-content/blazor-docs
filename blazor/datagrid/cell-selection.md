@@ -9,13 +9,13 @@ documentation: ug
 
 # Cell Selection in Blazor Data Grid
 
-Cell selection in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables interactive selection of specific cells or ranges of cells using mouse clicks or keyboard navigation (arrow keys). This feature is useful for highlighting, manipulating, or performing actions on individual cells within the Grid.
+Cell selection in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables interactive selection of specific cells or ranges of cells using mouse clicks or keyboard navigation (arrow keys). This feature is useful for highlighting, manipulating, or performing actions on individual cells within the Blazor Data Grid.
 
-> To enable cell selection, set the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property to either **Cell** or **Both**. This determines the selection mode of the Grid.
+> To enable cell selection, set the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property to either **Cell** or **Both**. This determines the selection mode of the Blazor Data Grid.
 
 ## Single cell selection
 
-Single cell selection allows selecting one cell at a time within the Blazor DataGrid. This is useful for focusing on a specific cell or performing actions on individual cell values.
+Single cell selection allows selecting one cell at a time within the Blazor Grid. This is useful for focusing on a specific cell or performing actions on individual cell values.
 
 To enable single cell selection:
 
@@ -101,7 +101,7 @@ public class OrderDetails
 
 ## Multiple cell selection
 
-Multiple cell selection in the Blazor DataGrid enables selection of multiple cells within the Grid. This feature is beneficial for performing actions on several cells simultaneously or focusing on specific areas of the data.
+Multiple cell selection in the Blazor DataGrid enables selection of multiple cells within the Blazor Data Grid. This feature is beneficial for performing actions on several cells simultaneously or focusing on specific areas of the data.
 
 To enable multiple cell selection:
 
@@ -187,7 +187,7 @@ public class OrderDetails
 
 ## Cell selection mode
 
-The cell selection mode in the Blazor DataGrid enables interactive selection of specific cells or ranges of cells. This feature is particularly useful for performing actions on selected cells or retrieving data from targeted areas within the Grid.
+The cell selection mode in the Blazor DataGrid enables interactive selection of specific cells or ranges of cells. This feature is particularly useful for performing actions on selected cells or retrieving data from targeted areas within the Blazor Data Grid.
 
 The Grid supports three types of cell selection modes, configurable via the [GridSelectionSettings.CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CellSelectionMode) property:
 
@@ -298,7 +298,7 @@ public class OrderDetails
 
 ## Select cells via programmatically
 
-Single cell selection, multiple cell selection, and range-based cell selection can be performed externally in the Blazor DataGrid using built-in methods. These API's allow programmatic interaction with specific cells in the Grid.
+Single cell selection, multiple cell selection, and range-based cell selection can be performed externally in the Blazor DataGrid using built-in methods. These API's allow programmatic interaction with specific cells in the Blazor Data GridView.
 
 ### Single cell selection
 
@@ -397,7 +397,7 @@ public class OrderDetails
 
 ### Multiple cell selection
 
-Multiple cell selection in the Blazor DataGrid enables selection of multiple cells within the Grid. This is useful for performing actions on several cells simultaneously or focusing on specific data regions.
+Multiple cell selection in the Blazor DataGrid enables selection of multiple cells within the Blazor Grid. This is useful for performing actions on several cells simultaneously or focusing on specific data regions.
 
 To perform multiple cell selection programmatically, use the [SelectCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectCellsAsync_System_ValueTuple_System_Int32_System_Int32____) method. This method accepts a collection of row and column index pairs to define the target cells.
 
@@ -806,7 +806,7 @@ public class OrderDetails
 
 ## Cell selection events
 
-The Blazor DataGrid provides multiple events to customize and respond to cell selection behavior. These events allow developers to implement validation, control selection flow, and trigger actions based on user interaction.
+The Blazor DataGrid provides multiple events to customize and respond to the cell selection behavior. These events allow developers to implement validation, control selection flow, and trigger actions based on user interaction.
 
 * [CellSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSelecting): Triggered before a cell is selected. Use this event to implement custom logic or validation to control whether the cell should be selected.
 

@@ -41,7 +41,7 @@ Use the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## Tooltip customization
 
-Use the `CssClass` property on the Rating component and write styles scoped to that class to customize the tooltip. The class is applied to the component's root element, so you can target the nested tooltip elements without affecting other tooltips on the page.
+Use the `CssClass` property on the Blazor Rating component and write styles scoped to that class to customize the tooltip. The class is applied to the component's root element, so you can target the nested tooltip elements without affecting other tooltips on the page.
 
 > For more details on styling options, refer to the [Tooltip styling documentation](https://blazor.syncfusion.com/documentation/tooltip/style). For accessibility, ensure tooltip text is concise, meaningful, and readable; tooltips should supplement visible information rather than replace it.
 

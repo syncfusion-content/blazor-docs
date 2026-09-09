@@ -9,21 +9,21 @@ documentation: ug
 
 # Events in Blazor Chips
 
-This section lists the events triggered by the Chip component and their event arguments.
+This section lists the events triggered by the Blazor Chips component and their event arguments.
 
 | Event | Triggered when | Cancelable |
 | -- | -- | -- |
-| [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_Created) | The Chip component has finished rendering. | No |
+| [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_Created) | The Blazor Chips component has finished rendering. | No |
 | [`OnBeforeClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_OnBeforeClick) | A chip is about to be clicked. | Yes |
 | [`OnClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_OnClick) | A chip is clicked. | No |
 | [`OnDelete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_OnDelete) | A chip is about to be removed. | Yes |
 | [`Deleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_Deleted) | A chip item is removed from the ChipList. | No |
 | [`SelectionChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_SelectionChanged) | The selection of chips changes. | No |
-| [`Destroyed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_Destroyed) | The Chip component is disposed. | No |
+| [`Destroyed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_Destroyed) | The Blazor Chips component is disposed. | No |
 
 ## Created
 
-The [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_Created) event fires after the Chip component finishes rendering.
+The [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_Created) event fires after the Blazor Chips component finishes rendering.
 
 | Event Argument | Type | Description |
 | -- | -- | -- |
@@ -79,7 +79,7 @@ The [`Deleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.
 ```
 ## Destroyed
 
-The [`Destroyed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_Destroyed) event fires when the Chip component is disposed.
+The [`Destroyed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_Destroyed) event fires when the Blazor Chips component is disposed.
 
 | Event Argument | Type | Description |
 | -- | -- | -- |
@@ -108,7 +108,7 @@ The [`Destroyed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Button
 
     private void OnDestroyed(object args)
     {
-        // Destroyed event is triggered when the Chip component is disposed.
+        // Destroyed event is triggered when the Blazor Chips component is disposed.
     }
 
     private void RemoveChip()
@@ -234,9 +234,9 @@ N> The [`OnBeforeClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## See also
 
-* [Getting Started with Blazor Chip](getting-started.md)
-* [Types in Blazor Chip](types.md)
-* [Customization in Blazor Chip](customization.md)
-* [CSS Structure in Blazor Chip](style.md)
-* [Accessibility in Blazor Chip](accessibility.md)
+* [Getting Started with Blazor Chips](getting-started.md)
+* [Types in Blazor Chips](types.md)
+* [Customization in Blazor Chips](customization.md)
+* [CSS Structure in Blazor Chips](style.md)
+* [Accessibility in Blazor Chips](accessibility.md)
 

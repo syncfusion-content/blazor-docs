@@ -15,7 +15,7 @@ The dragging operation is constrained to the boundaries of the target container,
 
 ## Enable Draggable Functionality
 
-To enable dragging capabilities, set the [`AllowDragging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowDragging) property to `true` on the Dialog component. When enabled, users can drag the dialog by clicking and holding the dialog header area.
+To enable dragging capabilities, set the [`AllowDragging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowDragging) property to `true` on the Blazor Dialog component. When enabled, users can drag the dialog by clicking and holding the dialog header area.
 
 To get started quickly with draggable in Blazor Dialog Component, you can check the video below.
 
@@ -70,7 +70,7 @@ To get started quickly with draggable in Blazor Dialog Component, you can check 
 
 ## Draggable Events in Blazor Dialog Component
 
-The Dialog component provides three essential events to monitor and respond to drag interactions. These events enable developers to implement custom logic during different phases of the drag operation, such as validation, logging, or UI updates.
+The Blazor Dialog component provides three essential events to monitor and respond to drag interactions. These events enable developers to implement custom logic during different phases of the drag operation, such as validation, logging, or UI updates.
 
 ### OnDragStart Event
 

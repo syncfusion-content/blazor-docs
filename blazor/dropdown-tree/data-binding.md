@@ -698,7 +698,7 @@ namespace DropDownTreeSample.Data
 
 ### Entity Framework
 
-Follow these steps to consume data from the [Entity Framework](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-orm/entityframework) in the Dropdown Tree component.
+Follow these steps to consume data from the [Entity Framework](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-orm/entityframework) in the Blazor Dropdown Tree component.
 
 #### Create DBContext class
 

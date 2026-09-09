@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Placeholder and Float Label in Blazor MultiSelect | Syncfusion
+title: Blazor MultiSelect Placeholder and Float Label | Syncfusion
 description: Add placeholder hints and floating labels to Blazor MultiSelect Dropdown input fields and form controls.
 platform: Blazor
 control: MultiSelect Dropdown
@@ -19,7 +19,7 @@ Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 {% endhighlight %}
 
-![Blazor MultiSelect with placeholder](./images/placeholder-and-floatlabel/blazor_MultiSelect_placeholder.webp)
+![Blazor MultiSelect Dropdown with placeholder](./images/placeholder-and-floatlabel/blazor_MultiSelect_placeholder.webp)
 
 ## Color of the placeholder text
 

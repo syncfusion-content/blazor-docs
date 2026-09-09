@@ -42,7 +42,7 @@ The Blazor Toggle Switch Button component follows the [WAI-ARIA](https://www.w3.
 
 | Attributes | Purpose |
 | --- | --- |
-| `role` | Indicates the switch role (`role="switch"`) on the Toggle Switch Button component. |
+| `role` | Indicates the switch role (`role="switch"`) on the Blazor Toggle Switch Button component. |
 | `aria-disabled` | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable. |
 
 ## Keyboard interaction
@@ -51,7 +51,7 @@ The Blazor Toggle Switch Button component follows the [keyboard interaction](htt
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
-| <kbd>Space</kbd> | <kbd>space</kbd> | When the Toggle Switch Button has focus, pressing the Space key changes the state of the Toggle Switch Button. |
+| <kbd>Space</kbd> | <kbd>space</kbd> | When the Blazor Toggle Switch Button has focus, pressing the Space key changes the state of the Blazor Toggle Switch Button. |
 
 ## Ensuring accessibility
 

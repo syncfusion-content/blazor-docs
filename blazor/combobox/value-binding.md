@@ -44,7 +44,7 @@ The Index value binding is achieved by using the [@bind-Index](https://help.sync
 
 The ComboBox has support to load array of primitive data such as strings and numbers. Bind the value of primitive data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of the ComboBox.
 
-The following code demonstrates array of string as datasource to the ComboBox component.
+The following code demonstrates array of string as datasource to the Blazor ComboBox component.
 
 {% highlight cshtml %}
 
@@ -54,7 +54,7 @@ The following code demonstrates array of string as datasource to the ComboBox co
 
 ![Blazor ComboBox with Primitive Type as string](./images/value-binding/blazor_combobox_primitive-type-string.webp)
 
-The following code demonstrates an array of int as the data source for the ComboBox component.
+The following code demonstrates an array of int as the data source for the Blazor ComboBox component.
 
 {% highlight cshtml %}
 
@@ -80,7 +80,7 @@ In the following example, the Name column is mapped to the Value field.
 
 ## Enum binding
 
-Bind the enum data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of the ComboBox component. The following code helps you to get a string value from the enumeration data.
+Bind the enum data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of the Blazor ComboBox component. The following code helps you to get a string value from the enumeration data.
 
 {% highlight cshtml %}
 
@@ -110,7 +110,7 @@ The following sample demonstrates using string as TValue. Clearing the value set
 
 The TItem type can be changed dynamically by defining the ComboBox data source type with the `@typeparam` directive. The following example demonstrates changing TItem dynamically with different data sources.
 
-### Creating generic combobox component
+### Creating generic Blazor ComboBox component
 
 First, create a ComboBox.razor file as a parent component in the /Pages folder. Add parameter properties for a List<TItem> and TValue.
 
@@ -140,9 +140,9 @@ First, create a ComboBox.razor file as a parent component in the /Pages folder. 
 
 ### Usage of generic component with different type
 
-Render the generic ComboBox component with the required TValue and TItem in the respective Razor components.
+Render the generic Blazor ComboBox component with the required TValue and TItem in the respective Razor components.
 
-Here, the ComboBox component is rendered with TValue as string in /Index.razor and with TValue as nullable int in /Counter.razor.
+Here, the Blazor ComboBox component is rendered with TValue as string in /Index.razor and with TValue as nullable int in /Counter.razor.
 
 **[Index.razor]**
 

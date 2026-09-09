@@ -9,7 +9,7 @@ documentation: ug
 
 # Native Events in Blazor Radio Button
 
-Attach native DOM events to the RadioButton component using the `@on{event}` attribute (for example, `@onchange`, `@onclick`). The attribute value is an event handler method, and the event-specific data is provided via the event argument parameter.
+Attach native DOM events to the Blazor Radio Button component using the `@on{event}` attribute (for example, `@onchange`, `@onclick`). The attribute value is an event handler method, and the event-specific data is provided via the event argument parameter.
 
 The different event argument types for each event category are:
 
@@ -20,24 +20,24 @@ The different event argument types for each event category are:
 
 ## List of Native Events Supported
 
-The following native event support has been provided to the RadioButton component:
+The following native event support has been provided to the Blazor Radio Button component:
 
 | Event | Description |
 | --- | --- |
 | `onchange` | Raised when the checked state changes. |
 | `oninput` | Raised on every value change while the user interacts with the input. |
-| `onblur` | Raised when the RadioButton loses focus. |
-| `onfocus` | Raised when the RadioButton gains focus. |
-| `onfocusin` | Raised when focus moves into the RadioButton (bubbles). |
-| `onfocusout` | Raised when focus moves out of the RadioButton (bubbles). |
-| `onclick` | Raised when the RadioButton is clicked. |
-| `onkeydown` | Raised when a key is pressed while the RadioButton has focus. |
-| `onkeyup` | Raised when a key is released while the RadioButton has focus. |
+| `onblur` | Raised when the Blazor Radio Button component loses focus. |
+| `onfocus` | Raised when the Blazor Radio Button component gains focus. |
+| `onfocusin` | Raised when focus moves into the Blazor Radio Button component (bubbles). |
+| `onfocusout` | Raised when focus moves out of the Blazor Radio Button component (bubbles). |
+| `onclick` | Raised when the Blazor Radio Button component is clicked. |
+| `onkeydown` | Raised when a key is pressed while the Blazor Radio Button component has focus. |
+| `onkeyup` | Raised when a key is released while the Blazor Radio Button component has focus. |
 | `onkeypress` | Raised when a key that produces a character is pressed. |
 
-## How to Bind `onchange` to the RadioButton
+## How to Bind `onchange` to the Blazor Radio Button
 
-Use the `onchange` attribute to bind the change event for a RadioButton. The following example shows how to access the event arguments in the handler. The `TChecked` generic parameter is set explicitly to `string` so the event handler can read the new value via `args.Value`.
+Use the `onchange` attribute to bind the change event for a Blazor Radio Button. The following example shows how to access the event arguments in the handler. The `TChecked` generic parameter is set explicitly to `string` so the event handler can read the new value via `args.Value`.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -57,7 +57,7 @@ Use the `onchange` attribute to bind the change event for a RadioButton. The fol
 }
 ```
 
-![Blazor RadioButton with Native Event](./images/blazor-radiobutton-native-event.webp)
+![Blazor Radio Button with Native Event](./images/blazor-radiobutton-native-event.webp)
 
 ## How to Bind `onclick` and Keyboard Events
 
@@ -85,4 +85,4 @@ The following example shows how to attach mouse and keyboard native events to ca
 
 ## See Also
 
-* [RadioButton API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html)
+* [Blazor Radio Button API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html)

@@ -9,20 +9,20 @@ documentation: ug
 
 # Style and Appearance in Blazor ListView
 
-Customize the appearance of the ListView by overriding the component's default CSS. The following table lists commonly used CSS selectors and the corresponding UI areas they affect. For consistent theming across applications, consider generating a custom theme with [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+Customize the appearance of the Blazor ListView by overriding the component's default CSS. The following table lists commonly used CSS selectors and the corresponding UI areas they affect. For consistent theming across applications, consider generating a custom theme with [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
 | CSS Class | Purpose of Class |
 | ----- | ----- |
-| .e-listview | Customize the ListView container. |
-| .e-listview .e-list-item | Customize the ListView list item. |
-| .e-listview .e-list-header | Customize the ListView header. |
-| .e-listview .e-list-group-item | Customize the ListView group header item. |
-| .e-listview .e-list-text | Customize the ListView item text. |
-| .e-listview .e-text-content | Customize the ListView text content wrapper. |
-| .e-listview .e-list-item.e-selected | Customize the selected ListView item. |
-| .e-listview .e-list-item.e-hover | Customize the ListView item hover state. |
-| .e-listview .e-list-item.e-focused | Customize the ListView focused item. |
-| .e-listview .e-list-item.e-checklist | Customize the ListView checklist item. |
+| .e-listview | Customize the Blazor ListView container. |
+| .e-listview .e-list-item | Customize the Blazor ListView list item. |
+| .e-listview .e-list-header | Customize the Blazor ListView header. |
+| .e-listview .e-list-group-item | Customize the Blazor ListView group header item. |
+| .e-listview .e-list-text | Customize the Blazor ListView item text. |
+| .e-listview .e-text-content | Customize the Blazor ListView text content wrapper. |
+| .e-listview .e-list-item.e-selected | Customize the selected Blazor ListView item. |
+| .e-listview .e-list-item.e-hover | Customize the Blazor ListView item hover state. |
+| .e-listview .e-list-item.e-focused | Customize the Blazor ListView focused item. |
+| .e-listview .e-list-item.e-checklist | Customize the Blazor ListView checklist item. |
 
 ## ListView Container Customization
 
@@ -84,7 +84,7 @@ The text content inside each list item uses `.e-list-text`. Style the font, colo
 
 ## List Header Customization
 
-The header of the ListView component uses `.e-list-header`. Override its background, border, and padding to customize the header appearance.
+The header of the Blazor ListView component uses `.e-list-header`. Override its background, border, and padding to customize the header appearance.
 
 ```css
 .e-listview .e-list-header {
