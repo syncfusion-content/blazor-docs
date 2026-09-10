@@ -219,7 +219,7 @@ Map the data fields `Month` and `SalesValue` to the series [XName](https://help.
     </ChartSeriesCollection>
 </SfChart>
 
-@code 
+@code
 {
     public class SalesInfo
     {
@@ -244,7 +244,7 @@ Map the data fields `Month` and `SalesValue` to the series [XName](https://help.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjrRZdMVgPGhfPSi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column Chart](images/getting-started/blazor-chart-column.webp)" %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart). 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart).
 
 ## See also
 

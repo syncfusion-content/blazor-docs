@@ -20,9 +20,9 @@ Before you begin, ensure you have:
 * A **compatible MCP client** (VS Code, Visual Studio, Code Studio, Cursor, etc.)
 * Active [API key](https://www.syncfusion.com/account/api-key)
 * Blazor application (existing or new); see [Quick Start](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-* Active license (any of the following):  
-  - [Commercial License](https://www.syncfusion.com/sales/pricing?category=ui-components)  
-  - [Free Community License](https://www.syncfusion.com/products/communitylicense)  
+* Active license (any of the following):
+  - [Commercial License](https://www.syncfusion.com/sales/pricing?category=ui-components)
+  - [Free Community License](https://www.syncfusion.com/products/communitylicense)
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
 
 ## Installation
@@ -176,8 +176,8 @@ Activate the AI Coding Assistant in your IDE by using the `#sf_blazor_assistant`
 
 ### Best Practices
 
-1. **Be Specific**: Include platform and component (e.g., "Create a Blazor Grid with paging and filtering").  
-2. **Provide Context**: Share versions, desired behavior, and constraints.  
+1. **Be Specific**: Include platform and component (e.g., "Create a Blazor Grid with paging and filtering").
+2. **Provide Context**: Share versions, desired behavior, and constraints.
 3. **Use Descriptive Queries**: Avoid vague questions.
 4. **Troubleshooting**: Use AI suggestions for common issues; consult official [documentation](https://blazor.syncfusion.com/documentation/introduction) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
 5. **Start Fresh**: Begin a new chat for new topics to maintain clean context.
