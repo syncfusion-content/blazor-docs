@@ -250,7 +250,7 @@ Map the data fields `Month` and `SalesValue` to the series [XName](https://help.
     </ChartSeriesCollection>
 </SfChart>
 
-@code 
+@code
 {
     public class SalesInfo
     {
