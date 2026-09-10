@@ -270,6 +270,7 @@ The [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pop
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
 <div id="target">
