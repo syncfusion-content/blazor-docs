@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Stock Chart Overview and Features | Syncfusion
-description: Learn how to use Blazor Stock Chart for financial data visualization with candle and hilo series, period selector, range selector, technical indicators, and stock events.
+description: Learn how to use Blazor Stock Chart for financial data visualization with candle and hilo series, period and range selector, technical indicators, and events.
 platform: Blazor
 control: Stock Chart
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Introduction to Syncfusion Blazor Stock Chart
 
-The [Blazor Stock Chart]((https://www.syncfusion.com/blazor-components/blazor-stock-chart)) is a powerful and feature-rich UI component designed for visualizing stock market and financial time-series data with high performance and flexibility. It offers a comprehensive set of enterprise-grade capabilities, including candle, hilo, and OHLC financial series types, a built-in period selector and range selector for quick time-span navigation, technical indicators, and annotation of market-moving events. Built for scalability, it enables developers to create responsive, data-intensive financial dashboards for stock trading, portfolio tracking, and market analysis applications.
+The [Blazor Stock Chart](https://www.syncfusion.com/blazor-components/blazor-stock-chart) is a powerful and feature-rich UI component designed for visualizing stock market and financial time-series data with high performance and flexibility. It offers a comprehensive set of enterprise-grade capabilities, including candle, hilo, and OHLC financial series types, a built-in period selector and range selector for quick time-span navigation, technical indicators, and annotation of market moving events. Built for scalability, it enables developers to create responsive, data-intensive financial dashboards for stock trading, portfolio tracking, and market analysis applications.
 
 ## Common use cases
 

@@ -11,7 +11,7 @@ documentation: ug
 
 ## Introduction to Syncfusion Blazor Maps
 
-The [Blazor Maps]((https://www.syncfusion.com/blazor-components/blazor-maps)) is a powerful and feature-rich UI component designed for visualizing geographical data in an interactive and customizable map view. It offers a comprehensive set of enterprise-grade capabilities, including shape (geometry) rendering from GeoJSON, data-driven color mapping, bubbles, markers, and legends, along with seamless integration of online map providers. Built for scalability, it enables developers to create responsive, location-aware applications for business scenarios such as demographic analysis, sales dashboards, logistics tracking, and weather monitoring.
+The [Blazor Maps](https://www.syncfusion.com/blazor-components/blazor-maps) is a comprehensive and highly customizable UI component designed for visualizing geographical data in an interactive and customizable map view. It offers a wide range of enterprise-grade capabilities, including shape (geometry) rendering from GeoJSON, data-driven color mapping, bubbles, markers, and legends, along with seamless integration of online map providers. Built for scalability, it enables developers to create responsive, location aware applications for business scenarios such as demographic analysis, sales dashboards, logistics tracking, and weather monitoring.
 
 ## Common use cases
 

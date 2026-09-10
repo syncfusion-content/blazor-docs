@@ -11,7 +11,7 @@ documentation: ug
 
 ## Introduction to Syncfusion Blazor TreeGrid
 
-The [Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) is a powerful and feature-rich UI component designed for displaying and manipulating hierarchical (tree-structured) data in a tabular format with high performance and flexibility. It offers a comprehensive set of enterprise-grade capabilities, including self-referential and hierarchical data binding, advanced data operations, and extensive row and column customization options. Built for scalability, it enables developers to create responsive, data-intensive applications for parent-child data scenarios such as organizational charts, task trees, and file-system views.
+The [Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) is a powerful and feature-rich UI component designed for displaying and manipulating hierarchical (tree-structured) data in a tabular format with high performance and flexibility. It offers a comprehensive set of enterprise-grade capabilities, including self-referential and hierarchical data binding, advanced data operations, and extensive row and column customization options. Built for scalability, it enables developers to create responsive, data-intensive applications for parent-child data scenarios such as organizational charts, task trees, and file system views.
 
 ## Common use cases
 
@@ -46,7 +46,7 @@ The Blazor TreeGrid enables multiple data binding approaches for rendering paren
 | Feature | Key Benefit | Best For |
 |---------|---------------|----------|
 | **[SfDataManager with adaptors](./data-binding)** | Automatic remote operation handling | Web services, REST endpoints |
-| **[Custom Binding](./custom-binding)** | Full manual control over data operations | Specialized backends, performance-tuned services |
+| **[Custom Binding](./custom-binding)** | Full manual control over data operations | Specialized backend, performance-tuned services |
 | **[Entity Framework](./editing/entity-frame-work)** | ORM-based editing with child record handling | ASP.NET backend, relational databases |
 
 > To learn about the adaptors supported by the TreeGrid and all remote data binding scenarios, refer to [Data Binding](./data-binding).

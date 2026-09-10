@@ -11,7 +11,7 @@ documentation: ug
 
 ## Introduction to Syncfusion Blazor Charts
 
-The [Blazor Charts]((https://www.syncfusion.com/blazor-components/blazor-charts)) is a powerful and feature-rich UI component designed for visualizing business and analytical data with high performance and flexibility. It offers a comprehensive set of enterprise-grade capabilities, including 50+ chart types ranging from line and area to financial candle and box-and-whisker charts, multiple axis support, data-driven visual elements, and seamless integration with local and remote data sources. Built for scalability, it enables developers to create responsive, data-intensive dashboards and reports with ease.
+The [Blazor Charts]((https://www.syncfusion.com/blazor-components/blazor-charts)) is a powerful and feature-rich UI component designed for visualizing business and analytical data with high performance and flexibility. It offers a comprehensive set of enterprise-grade capabilities, including support for financial and statistical charting, multiple axes, data-driven visual elements, and seamless integration with local and remote data sources. Built for scalability, it enables developers to create responsive, data-intensive dashboards and reports with ease.
 
 ## Common use cases
 
