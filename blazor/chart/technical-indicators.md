@@ -13,9 +13,11 @@ documentation: ug
 
 A technical indicator is a mathematical calculation that forecasts financial market direction using historical price, volume, or open interest data. There are 10 different types of technical indicators that can be used with the chart.
 
+> Technical indicators require a financial series (for example, `ChartSeriesType.Candle`, `Hilo`, or `HiloOpenClose`) that provides Open, High, Low, Close, and Volume (OHLCV) data. Most indicators also require the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Field) property (a `FinancialDataFields` value such as `Close`, `High`, or `Low`) to specify which price component is analyzed.
+
 ## Accumulation Distribution
 
-Accumulation Distribution combines price and volume to show how money may be flowing into or out of stock. To render an Accumulation Distribution Indicator, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html) as [AccumulationDistribution](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html#Syncfusion_Blazor_Charts_TechnicalIndicators_AccumulationDistribution). To calculate the signal line [Volume](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Volume) field is additionally added with [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_DataSource).
+Accumulation Distribution combines price and volume to show how money may be flowing into or out of stock. To render an Accumulation Distribution Indicator, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html) as [AccumulationDistribution](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html#Syncfusion_Blazor_Charts_TechnicalIndicators_AccumulationDistribution). To calculate the signal line, add the [Volume](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Volume) field to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_DataSource).
 
 ```cshtml
 
@@ -131,7 +133,7 @@ Average True Range (ATR) measures the stock volatility by comparing the current 
 
 <SfChart Title="AAPL - 2012-2017">
     <ChartAxes>
-        <ChartAxis Name="secondary" OpposedPosition="true" RowIndex="0" Minimum="-7000000000" Maximum="5000000000" Title="Accumulation Distribution" Interval="6000000000"></ChartAxis>
+        <ChartAxis Name="secondary" OpposedPosition="true" RowIndex="0" Minimum="-7000000000" Maximum="5000000000" Title="Average True Range (ATR)" Interval="6000000000"></ChartAxis>
     </ChartAxes>
 
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" Title="months" IntervalType="IntervalType.Months">
@@ -226,9 +228,11 @@ Average True Range (ATR) measures the stock volatility by comparing the current 
 
 ```
 
+![Average True Range in Blazor Candle Chart](images/technical-indicator/blazor-candle-chart-atr.webp)
+
 ## Bollinger Bands
 
-A chart overlay that shows the upper and lower limits of normal price movements based on the standard deviation of prices. To render Bollinger Bands, set indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) as [BollingerBands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html#Syncfusion_Blazor_Charts_TechnicalIndicators_BollingerBands). Bollinger Bands will be represented by three lines - upper line, lower line, and signal line. In Bollinger Bands, default value of the [Period](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Period) is **14** and the [StandardDeviations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_StandardDeviation) is **2**.
+A chart overlay that shows price volatility as bands placed at a configurable number of standard deviations above and below a moving average. To render Bollinger Bands, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) as [BollingerBands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html#Syncfusion_Blazor_Charts_TechnicalIndicators_BollingerBands). Bollinger Bands are represented by three lines: an upper band, a lower band, and a middle (signal) band. The default value of the [Period](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Period) is **14** and the default [StandardDeviations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_StandardDeviation) is **2**.
 
 ```cshtml
 
@@ -438,7 +442,7 @@ The upper line's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## Exponential Moving Average (EMA)
 
-Moving Average Indicators are used to define the direction of the trend. To render an EMA Indicator, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) as [Ema](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html#Syncfusion_Blazor_Charts_TechnicalIndicators_Ema).
+The Exponential Moving Average (EMA) gives more weight to recent prices, making it more responsive to new information than a Simple Moving Average. To render an EMA Indicator, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) as [Ema](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html#Syncfusion_Blazor_Charts_TechnicalIndicators_Ema).
 
 ```cshtml
 
@@ -447,7 +451,7 @@ Moving Average Indicators are used to define the direction of the trend. To rend
 <SfChart Title="AAPL - 2012-2017">
     <ChartAxes>
         <ChartAxis Name="secondary" OpposedPosition="true" RowIndex="0" Minimum="-7000000000" Maximum="5000000000"
-                   Title="Accumulation Distribution" Interval="6000000000"></ChartAxis>
+                   Title="Exponential Moving Average (EMA)" Interval="6000000000"></ChartAxis>
     </ChartAxes>
 
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" Title="months" IntervalType="IntervalType.Months">
@@ -462,7 +466,7 @@ Moving Average Indicators are used to define the direction of the trend. To rend
     </ChartSeriesCollection>
 
     <ChartIndicators>
-        <ChartIndicator Type="TechnicalIndicators.Ema" Field="FinancialDataFields.Close" SeriesName="Apple Inc" Fill="blue" Period=3>
+        <ChartIndicator Type="TechnicalIndicators.Ema" Field="FinancialDataFields.Close" SeriesName="Apple Inc" YAxisName="secondary" Fill="blue" Period=3>
             <ChartIndicatorUpperLine Color="red"></ChartIndicatorUpperLine>
             <ChartIndicatorLowerLine Color="green"></ChartIndicatorLowerLine>
         </ChartIndicator>
@@ -551,7 +555,7 @@ Moving Average Indicators are used to define the direction of the trend. To rend
 
 ## Momentum
 
-Momentum shows the speed at which the price of the stock is changing. To render a Momentum Indicator, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) as [Momentum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html#Syncfusion_Blazor_Charts_TechnicalIndicators_Momentum). Momentum Indicator will be represented by two lines - upper line and signal line. In momentum indicator, the upper band is always render at the value **100**.
+Momentum shows the speed at which the price of the stock is changing. To render a Momentum Indicator, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) as [Momentum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html#Syncfusion_Blazor_Charts_TechnicalIndicators_Momentum). The Momentum Indicator is represented by a signal line that oscillates around a configurable reference level (typically **100**).
 
 ```cshtml
 
@@ -805,7 +809,7 @@ The upper line's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## Moving Average Convergence Divergence (MACD)
 
-Moving Average Convergence Divergence (MACD) is based on the difference between two EMA's. To render a MACD Indicator, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) as [Macd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html#Syncfusion_Blazor_Charts_TechnicalIndicators_Macd). MACD Indicator will be represented by MACD line, signal line and MACD histogram. MACD histogram is used to differentiate MACD line and signal line.
+Moving Average Convergence Divergence (MACD) is based on the difference between two EMAs. To render a MACD Indicator, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) as [Macd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html#Syncfusion_Blazor_Charts_TechnicalIndicators_Macd). The MACD Indicator is represented by the MACD line, the signal line, and the MACD histogram. The MACD histogram visualizes the difference between the MACD line and the signal line. The [MacdType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_MacdType) property controls which series are rendered: `Line`, `Histogram`, or `Both` (default).
 
 ```cshtml
 
@@ -1058,7 +1062,7 @@ The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
 
 ## Relative Strength Index (RSI)
 
-Relative Strength Index (RSI) shows how strongly a stock is moving in its current direction. To render a RSI Indicator, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) as [Rsi](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html#Syncfusion_Blazor_Charts_TechnicalIndicators_Rsi). An RSI Indicator will be represented by three lines - upper band, lower band and signal line. The upper band and lower band values are customized by [OverBought](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_OverBought) and [OverSold](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_OverSold) properties and the signal line is calculated by RSI formula.
+Relative Strength Index (RSI) shows how strongly a stock is moving in its current direction. To render an RSI Indicator, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) as [Rsi](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html#Syncfusion_Blazor_Charts_TechnicalIndicators_Rsi). An RSI Indicator is represented by three lines: an upper band, a lower band, and a signal line. The upper and lower band values are customized using the [OverBought](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_OverBought) and [OverSold](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_OverSold) properties (defaults are **70** and **30**). The signal line is calculated from the RSI formula.
 
 ```cshtml
 
@@ -1189,7 +1193,9 @@ Relative Strength Index (RSI) shows how strongly a stock is moving in its curren
 
 ## Simple Moving Average (SMA)
 
-Moving Average Indicators are used to define the direction of the trend. To render a SMA Indicator, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) as [Sma](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html#Syncfusion_Blazor_Charts_TechnicalIndicators_Sma).
+The Simple Moving Average (SMA) calculates the arithmetic mean of the closing price over a fixed number of periods to smooth short-term price fluctuations and reveal the underlying trend. To render an SMA Indicator, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) as [Sma](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html#Syncfusion_Blazor_Charts_TechnicalIndicators_Sma).
+
+![Simple Moving Average in Blazor Candle Chart](images/technical-indicator/blazor-candle-chart-sma.webp)
 
 ```cshtml
 
@@ -1294,7 +1300,7 @@ Moving Average Indicators are used to define the direction of the trend. To rend
 
 ## Stochastic
 
-Stochastic Indicator is a momentum indicator that compares the particular closing price of a security to the range of its prices over a certain period of time. To render a Stochastic Indicator, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) as [Stochastic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html#Syncfusion_Blazor_Charts_TechnicalIndicators_Stochastic). Stochastic Indicator will be represented by four lines - upper line, lower line, period line and signal line. In Stochastic Indicator, the upper band value and lower band value is customized by [OverBought](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_OverBought) and [OverSold](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_OverSold) properties and the period line and signal line is render based on stochastic formula.
+The Stochastic Indicator is a momentum indicator that compares the closing price of a security to the range of its prices over a certain period of time. To render a Stochastic Indicator, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) as [Stochastic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html#Syncfusion_Blazor_Charts_TechnicalIndicators_Stochastic). The Stochastic Indicator is represented by four lines: an upper band, a lower band, period line, and the signal line. The upper and lower band values are customized using the [OverBought](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_OverBought) and [OverSold](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_OverSold) properties. The period line and signal lines are calculated using the stochastic formula.
 
 **Customization of Stochastic Indicator**
 
@@ -1432,11 +1438,11 @@ The **Width** and **Color** of upper line, lower line and period line can be cus
 
 ## Triangular Moving Average (TMA)
 
-Triangular Moving Average (TMA) Indicator is used to define the direction of the trend. To render a TMA Indicator, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) as [TMA](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html#Syncfusion_Blazor_Charts_TechnicalIndicators_Tma).
+The Triangular Moving Average (TMA) is a smooth, double-smoothed moving average that reduces market noise and helps traders identify the underlying trend direction. To render a TMA Indicator, set the indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) as [TMA](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html#Syncfusion_Blazor_Charts_TechnicalIndicators_Tma).
 
 **Customization of Triangular Moving Average**
 
-[Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Fill), [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Width) and [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_DashArray) properties are used to customize the **Color**, **Width**, and **Dashes** of the signal line of the indicators. The [Period](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Period) property is used to predict the data forecast calculations. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Field) value is used to the compare the current price with previous price. It is applicable to Bollinger Bands and Moving Averages. The [ShowZones](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_ShowZones) property is used to show or hide the over bought and over sold regions. It is applicable for RSI and Stochastic indicators.
+[Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Fill), [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Width) and [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_DashArray) properties are used to customize the **Color**, **Width**, and **Dashes** of the signal line of the indicators. The [Period](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Period) property is used to predict the data forecast calculations. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Field) value is used to compare the current price with the previous price. It is applicable to Bollinger Bands and Moving Averages. The [ShowZones](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_ShowZones) property is used to show or hide the overbought and oversold regions. It is applicable for RSI and Stochastic indicators.
 
 ```cshtml
 
@@ -1540,7 +1546,7 @@ Triangular Moving Average (TMA) Indicator is used to define the direction of the
 
 **Data Source**
 
-Usually technical indicators are added along with a financial series. The [SeriesName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_SeriesName) identifies the series whose data to be analyzed using indicators.
+Technical indicators are typically added alongside a financial series. The [SeriesName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_SeriesName) property specifies the financial series whose data is used to calculate the indicator. The [ChartIndicatorAnimation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Animation) child element enables animation when the indicator is rendered.
 
 N> Technical indicators can also be added without series using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_DataSource) property of indicator.
 

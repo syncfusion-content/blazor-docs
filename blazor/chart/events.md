@@ -13,7 +13,7 @@ This section provides a list of chart component events that are triggered by cor
 
 The events should be provided to the chart using [ChartEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html) component.
 
-N> From `v18.4.*`, we have added few additional events for the chart component.
+N> From `v18.4.*`, we have added a few additional events for the chart component.
 
 Event Name|
 -----|
@@ -27,7 +27,7 @@ Event Name|
 [OnAxisActualRangeCalculated](events#onaxisactualrangecalculated)|
 [OnAxisMultiLevelLabelRender](events#onaxismultilevellabelrender)|
 
-N> From `v18.4.*`, some event names are different from the previous releases. The following are the event name changes from `v18.3.*` to `v18.4.*`.
+N> From `v18.4.*`, some event names changed in the chart component. The following are the event name changes from `v18.3.*` to `v18.4.*`.
 
 Event Name(`v18.3.*`) |Event Name(`v18.4.*`)
 -----|-----
@@ -43,26 +43,29 @@ LegendClick |[OnLegendClick](events#onlegendclick)
 MultiLevelLabelClick |[OnMultiLevelLabelClick](events#onmultilevellabelclick)
 OnSelectionComplete |[OnSelectionChanged](events#onselectionchanged)
 OnDragComplete |[OnSelectionChanged](events#onselectionchanged)
+OnChartMouseMove |[ChartMouseMove](events#chartmousemove)
+OnChartMouseClick |[ChartMouseClick](events#chartmouseclick)
+OnChartMouseUp |[ChartMouseUp](events#chartmouseup)
+OnChartMouseDown |[ChartMouseDown](events#chartmousedown)
 
-N> From `v18.4.*`, We have removed the following previous release events from chart component.
+N> From `v18.4.*`, the following previous release events have been removed from the chart component.
 
-Event Name|
------|
-OnAnimationComplete|
-OnChartMouseClick|
-OnChartMouseDown|
-OnChartMouseLeave|
-OnChartMouseMove|
-OnChartMouseUp|
-PointMoved|
-BeforeExport|
-Load|
-OnPointDoubleClick|
-PointMoved|
+Event Name|Replacement in v18.4.*
+-----|-----
+OnAnimationComplete|None (use [Loaded](events#loaded) for a similar lifecycle hook)
+OnChartMouseClick|[ChartMouseClick](events#chartmouseclick)
+OnChartMouseDown|[ChartMouseDown](events#chartmousedown)
+OnChartMouseLeave|None
+OnChartMouseMove|[ChartMouseMove](events#chartmousemove)
+OnChartMouseUp|[ChartMouseUp](events#chartmouseup)
+PointMoved|None
+BeforeExport|None
+Load|[Loaded](events#loaded)
+OnPointDoubleClick|None
 
 ## ChartMouseMove
 
-[ChartMouseMove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ChartMouseMove) event triggers when mouse moved over the chart.
+[ChartMouseMove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ChartMouseMove) event triggers when the mouse moves over the chart.
 
 ### Arguments
 
@@ -87,7 +90,7 @@ The following properties are available in the [ChartMouseEventArgs](https://help
     <ChartZoomSettings EnableSelectionZooming="true"></ChartZoomSettings>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -114,7 +117,7 @@ The following properties are available in the [ChartMouseEventArgs](https://help
 ```
 ## ChartMouseClick
 
-[ChartMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ChartMouseClick) event triggers when the chart got clicked. 
+[ChartMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ChartMouseClick) event triggers when the chart is clicked.
 
 ### Arguments
 
@@ -139,7 +142,7 @@ The following properties are available in the [ChartMouseEventArgs](https://help
     <ChartZoomSettings EnableSelectionZooming="true"></ChartZoomSettings>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -193,7 +196,7 @@ The following properties are available in the [ChartMouseEventArgs](https://help
     <ChartZoomSettings EnableSelectionZooming="true"></ChartZoomSettings>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -245,7 +248,7 @@ The following properties are available in the [ChartMouseEventArgs](https://help
     <ChartZoomSettings EnableSelectionZooming="true"></ChartZoomSettings>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -273,7 +276,7 @@ The following properties are available in the [ChartMouseEventArgs](https://help
 
 ## OnZoomStart
 
-After the zoom selection is made, the [OnZoomStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomStart) event is triggered.
+[OnZoomStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomStart) event triggers when the zoom selection starts.
 
 ### Arguments
 
@@ -298,7 +301,7 @@ The following property is available in the [ZoomingEventArgs](https://help.syncf
     <ChartZoomSettings EnableSelectionZooming="true"></ChartZoomSettings>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -326,7 +329,7 @@ The following property is available in the [ZoomingEventArgs](https://help.syncf
 
 ## OnZoomEnd
 
-[OnZoomEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomEnd) event triggers after the zoom selection is completed.
+[OnZoomEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomEnd) event triggers when the zoom selection is completed.
 
 ### Arguments
 
@@ -351,7 +354,7 @@ The following property is available in the [ZoomingEventArgs](https://help.syncf
     <ChartZoomSettings EnableSelectionZooming="true"></ChartZoomSettings>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -379,7 +382,7 @@ The following property is available in the [ZoomingEventArgs](https://help.syncf
 
 ## OnZooming
 
-[OnZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZooming) event triggers after the zoom selection is completed.
+[OnZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZooming) event triggers while the zoom selection is in progress (continuously during the zoom action).
 
 ### Arguments
 
@@ -404,7 +407,7 @@ The following property is available in the [ZoomingEventArgs](https://help.syncf
     <ChartZoomSettings EnableSelectionZooming="true"></ChartZoomSettings>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -460,7 +463,7 @@ The following properties are available in the [LegendRenderEventArgs](https://he
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -518,7 +521,7 @@ The following properties are available in the [TextRenderEventArgs](https://help
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -558,7 +561,7 @@ The following properties are available in the [PointRenderEventArgs](https://hel
 * [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Height) – Specifies the current point's height.
 * [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Shape) – Specifies the marker shape of the point.
 * [Point](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Point) – Specifies the current data point.
-* [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Series) – Specifies the current series of the point.
+* [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Series) – Specifies the series that contains the current point.
 * [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Width) – Specifies the current point's width.
 
 ```cshtml
@@ -578,7 +581,7 @@ The following properties are available in the [PointRenderEventArgs](https://hel
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -631,7 +634,7 @@ The following properties are available in the [AxisLabelRenderEventArgs](https:/
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -688,7 +691,7 @@ The following fields are available in the [AxisLabelClickEventArgs](https://help
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -743,7 +746,7 @@ The following properties are available in the [AxisRangeCalculatedEventArgs](htt
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -771,7 +774,7 @@ The following properties are available in the [AxisRangeCalculatedEventArgs](htt
 
 ## OnAxisMultiLevelLabelRender
 
-[OnAxisMultiLevelLabelRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisMultiLevelLabelRender) event triggers while rendering multilevellabels.
+[OnAxisMultiLevelLabelRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisMultiLevelLabelRender) event triggers while rendering multi-level labels.
 
 ### Arguments
 
@@ -807,7 +810,7 @@ The following properties are available in the [AxisMultiLabelRenderEventArgs](ht
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     
     public class SalesInfo
     {
@@ -860,7 +863,7 @@ The following fields are available in the [ResizeEventArgs](https://help.syncfus
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -896,7 +899,7 @@ The following properties are available in the [ScrollEventArgs](https://help.syn
 
 * [Axis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_Axis) – Specifies the current axis that is scrolled.
 * [CurrentRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_CurrentRange) – Specifies the current range of the axis.
-* [PreviousAxisRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_PreviousAxisRange) – Specifies the current axis.
+* [PreviousAxisRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_PreviousAxisRange) – Specifies the axis range before the scroll action.
 * [PreviousRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_PreviousRange) – Specifies the previous range of the axis.
 * [PreviousZoomFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_PreviousZoomFactor) – Specifies the previous zoom factor value.
 * [PreviousZoomPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_PreviousZoomPosition) – Specifies the previous zoom position value.
@@ -921,7 +924,7 @@ The following properties are available in the [ScrollEventArgs](https://help.syn
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -974,7 +977,7 @@ The following field is available in the [ExportEventArgs](https://help.syncfusio
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     SfChart chart;
     public class SalesInfo
     {
@@ -1007,10 +1010,10 @@ The following field is available in the [ExportEventArgs](https://help.syncfusio
 
 ## OnPrintComplete
 
-[OnPrintComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPrintComplete) event triggers after completion of the print operation.
-This event has no arguments.
+[OnPrintComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPrintComplete) event triggers when the print operation completes.
+The event handler for `OnPrintComplete` does not receive any event arguments.
 
-```
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -1073,7 +1076,7 @@ The following fields are available in the [DataEditingEventArgs](https://help.sy
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -1131,7 +1134,7 @@ The following fields are available in the [DataEditingEventArgs](https://help.sy
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -1151,7 +1154,7 @@ The following fields are available in the [DataEditingEventArgs](https://help.sy
 
     public void DataEditEvent(DataEditingEventArgs arg)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -1166,7 +1169,7 @@ The following fields are available in the [DataEditingEventArgs](https://help.sy
 The following properties are available in the [LegendClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendClickEventArgs.html).
 
 * [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendClickEventArgs.html#Syncfusion_Blazor_Charts_LegendClickEventArgs_LegendShape) – Specifies the shape of the legend item.
-* [LegendText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendClickEventArgs.html#Syncfusion_Blazor_Charts_LegendClickEventArgs_LegendText) – Specifies the shape of the legend item.
+* [LegendText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendClickEventArgs.html#Syncfusion_Blazor_Charts_LegendClickEventArgs_LegendText) – Specifies the text of the legend item.
 * [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendClickEventArgs.html#Syncfusion_Blazor_Charts_LegendClickEventArgs_Series) – Specifies the series.
 
 ```cshtml
@@ -1186,7 +1189,7 @@ The following properties are available in the [LegendClickEventArgs](https://hel
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -1214,7 +1217,7 @@ The following properties are available in the [LegendClickEventArgs](https://hel
 
 ## OnMultiLevelLabelClick
 
-[OnMultiLevelLabelClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnMultiLevelLabelClick) event triggers after clicking on multilevellabelclick.
+[OnMultiLevelLabelClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnMultiLevelLabelClick) event triggers when a multi-level label is clicked.
 
 ### Arguments
 
@@ -1253,7 +1256,7 @@ The following fields are available in the [MultiLevelLabelClickEventArgs](https:
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
 
     public class SalesInfo
     {
@@ -1282,7 +1285,7 @@ The following fields are available in the [MultiLevelLabelClickEventArgs](https:
 
 ## OnSelectionChanged
 
-[OnSelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSelectionChanged) event triggers after the selection is completed.
+[OnSelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSelectionChanged) event triggers when a chart selection is completed.
 
 ### Arguments
 
@@ -1294,7 +1297,7 @@ The following property is available in the  [SelectionCompleteEventArgs](https:/
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart SelectionMode="SelectionMode.Point">
+<SfChart>
     <ChartEvents OnSelectionChanged="SelectionChangedEvent"></ChartEvents>
 	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
@@ -1306,7 +1309,7 @@ The following property is available in the  [SelectionCompleteEventArgs](https:/
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
 
     public class SalesInfo
     {
@@ -1335,7 +1338,7 @@ The following property is available in the  [SelectionCompleteEventArgs](https:/
 
 ## Loaded
 
-[Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_Loaded) event triggers after chart load.
+[Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_Loaded) event triggers after the chart has finished loading.
 
 ```cshtml
 
@@ -1352,7 +1355,7 @@ The following property is available in the  [SelectionCompleteEventArgs](https:/
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -1380,15 +1383,15 @@ The following property is available in the  [SelectionCompleteEventArgs](https:/
 
 ## OnPointClick
 
-[OnPointClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointClick) event triggers on point click.
+[OnPointClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointClick) event triggers when a data point is clicked.
 
 ### Arguments
 
 The following fields are available in the [PointEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html).
 
 * [Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_Chart) – Specifies the current chart instance.
-* [PageX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_PageX) – Specifies the current window page x location.
-* [PageY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_PageY) – Specifies the current window page y location.
+* [PageX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_PageX) – Specifies the current window page X location.
+* [PageY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_PageY) – Specifies the current window page Y location.
 * [Point](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_Point) – Specifies the current point which is clicked.
 * [PointIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_PointIndex) – Specifies the index of the current point.
 * [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_Series) – Specifies the current series.
@@ -1400,18 +1403,18 @@ The following fields are available in the [PointEventArgs](https://help.syncfusi
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart>
+<SfChart SelectionMode="SelectionMode.Point">
     <ChartEvents OnPointClick="PointClickEvent"></ChartEvents>
-	
+
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-	
+
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -1465,7 +1468,7 @@ The following properties are available in the [TooltipRenderEventArgs](https://h
     <ChartTooltipSettings Enable="true"></ChartTooltipSettings>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -1521,7 +1524,7 @@ The following properties are available in the [SharedTooltipRenderEventArgs](htt
     <ChartTooltipSettings Enable="true" Shared="true"></ChartTooltipSettings>
 </SfChart>
 
-@code{
+@code {
     public class SalesInfo
     {
         public string Month { get; set; }
@@ -1547,4 +1550,13 @@ The following properties are available in the [SharedTooltipRenderEventArgs](htt
 
 ```
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+## See also
+
+* [Zooming in Blazor Charts](zooming)
+* [Selection in Blazor Charts](selection)
+* [Data Editing in Blazor Charts](data-editing)
+* [Chart Print](chart-print)
+* [Chart Dimensions](chart-dimensions)
+* [Chart Tooltip](tool-tip)
+* [Chart Legend](legend)
+* [Chart Annotations](chart-annotations)

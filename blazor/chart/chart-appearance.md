@@ -11,7 +11,7 @@ documentation: ug
 
 ## Custom color palette
 
-The default color of series or points can be changed by providing a custom color palette to the [Palettes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Palettes) property.
+Use the [Palettes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Palettes) property to override the default series or data-point colors. When the number of series or data points exceeds the palette length, the colors cycle.
 
 ```cshtml
 
@@ -31,7 +31,7 @@ The default color of series or points can be changed by providing a custom color
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string Country { get; set; }
@@ -52,24 +52,21 @@ The default color of series or points can be changed by providing a custom color
          new ChartData{ Country= "Sweden", Gold=30, Silver=25, Bronze=27 }
     };
 
-    public String[] palettes = new String[] { "#E94649", "#F6B53F", "#6FAAB0" };
+    public string[] palettes = new string[] { "#E94649", "#F6B53F", "#6FAAB0" };
 }
 
 ```
 
 ![Blazor Column Chart with Custom Color Palette](images/appearance/blazor-column-chart-custom-color-palette.webp)
 
-<!-- markdownlint-disable MD036 -->
-
 ## Chart customization
-
-<!-- markdownlint-disable MD036 -->
 
 ### Chart background and border
 
-<!-- markdownlint-disable MD013 -->
+The chart's background color can be customized using the [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Background) property. The border color and width can be customized using the [ChartBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartBorder.html) component, which supports the following properties:
 
-The chart's background color can be customized using the [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Background) property and the border color and width can be customized based on the specified value in [ChartBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartBorder.html).
+* `Color` – sets the border color.
+* `Width` – sets the border width in pixels.
 
 ```cshtml
 
@@ -86,7 +83,7 @@ The chart's background color can be customized using the [Background](https://he
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string Country { get; set; }
@@ -112,7 +109,12 @@ The chart's background color can be customized using the [Background](https://he
 
 ### Chart margin
 
-The chart's margin from its container can be customized using the [ChartMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMargin.html).
+The chart's margin (in pixels) from its container can be customized using the [ChartMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMargin.html) component, which supports the following properties:
+
+* `Left` – left margin in pixels.
+* `Right` – right margin in pixels.
+* `Top` – top margin in pixels.
+* `Bottom` – bottom margin in pixels.
 
 ```cshtml
 
@@ -132,7 +134,7 @@ The chart's margin from its container can be customized using the [ChartMargin](
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string Country { get; set; }
@@ -158,7 +160,7 @@ The chart's margin from its container can be customized using the [ChartMargin](
 
 ### Chart area customization
 
-Using [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Background) and [ChartAreaBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAreaBorder.html) properties, you can change the background color and border of the chart area. Width for the chart area can be customized using [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Width) property.
+Use the [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Background) and [ChartAreaBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAreaBorder.html) properties to change the background color and border of the chart area. The chart area width can be customized using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Width) property.
 
 ```cshtml
 
@@ -176,7 +178,7 @@ Using [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string Country { get; set; }
@@ -198,11 +200,13 @@ Using [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 ```
 
-![Blazor Area Chart with Custom Background and Border](images/appearance/blazor-area-chart-custom-background-and-border.webp)
+![Blazor Column Chart with Custom Background and Border](images/appearance/blazor-column-chart-custom-background-and-border.webp)
 
-## Animation
+### Animation
 
-The [Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Animation) property allows to customize animation for a certain series. The [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCommonAnimation.html#Syncfusion_Blazor_Charts_StockChartCommonAnimation_Enable) property can be used to enable or disable the series animation. The duration of the animation is specified by [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCommonAnimation.html#Syncfusion_Blazor_Charts_StockChartCommonAnimation_Duration) property, and [Delay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCommonAnimation.html#Syncfusion_Blazor_Charts_StockChartCommonAnimation_Delay) property allows to start the animation at a specific moment.
+The [Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Animation) property customizes animation for a series. The following properties are available on [ChartSeriesAnimation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesAnimation.html):
+
+N> The animation example below also applies a red border to the columns through `ChartSeriesBorder`. The `Border` property on a chart series is independent of the animation settings.
 
 ```cshtml
 
@@ -212,14 +216,14 @@ The [Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Width="2" Opacity="1" YName="Gold" Type="ChartSeriesType.Column">
+        <ChartSeries DataSource="@MedalDetails" Name="Gold" XName="Country" YName="Gold" Type="ChartSeriesType.Column">
             <ChartSeriesAnimation Enable="true" Duration="2000" Delay="200"></ChartSeriesAnimation>
             <ChartSeriesBorder Width="3" Color="red"></ChartSeriesBorder>
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string Country { get; set; }
@@ -245,14 +249,14 @@ The [Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 
 ## Chart title
 
-A chart title can be specified using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Title) property to convey information about the displayed data.
+A chart title can be specified using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Title) property to convey information about the displayed data. The title appearance can be customized using [ChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html), which supports properties such as `Size`, `Color`, `FontFamily`, `FontWeight`, and `FontStyle`.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals">
-    <ChartTitleStyle Size="23px" Color="red" FontFamily="Arial" FontWeight="regular" FontStyle="italic"></ChartTitleStyle>
+    <ChartTitleStyle Size="23px" Color="red" FontFamily="Arial" FontWeight="normal" FontStyle="italic"></ChartTitleStyle>
 
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
@@ -263,7 +267,7 @@ A chart title can be specified using the [Title](https://help.syncfusion.com/cr/
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string Country { get; set; }
@@ -291,7 +295,7 @@ A chart title can be specified using the [Title](https://help.syncfusion.com/cr/
 
 The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_Position) property customizes the placement of the chart title. It supports the following options: [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Right), [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Left), [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Bottom), [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Top), and [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Custom), providing flexible title alignment based on layout requirements. By default, the chart title appears at the top of the chart.
 
-N> The subtitle, which appears below the title, will also be positioned along with the title when the `Position` property is set.
+N> The subtitle, which appears below the title by default, moves with the title when the `Position` property is set. The subtitle retains its relative position to the title rather than to the chart area.
 
 ```cshtml 
 
@@ -304,12 +308,12 @@ N> The subtitle, which appears below the title, will also be positioned along wi
     </ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Column">
+        <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="ChartSeriesType.Column">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string Country { get; set; }
@@ -330,9 +334,11 @@ N> The subtitle, which appears below the title, will also be positioned along wi
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVRtnCLTIgzfrSp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Position customization of title in Blazor Chart](images/appearance/blazor-chart-title-position.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVRtnCLTIgzfrSp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column Chart – Custom Title Position](images/appearance/blazor-chart-title-position.webp)" %}
 
-When the `Position` is set to `Custom`, the title can be positioned anywhere on the chart using the [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_X) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_Y) properties in [ChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html). This provides precise control over the title’s location, enabling customization to fit specific design or layout needs. The `X` and `Y` values specify the horizontal and vertical coordinates, respectively.
+When `Position` is set to `Custom`, the title can be positioned anywhere on the chart using the [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_X) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_Y) properties of [ChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html), which specify the horizontal and vertical coordinates in pixels.
+
+N> The `X` and `Y` values are in pixels and are not responsive; on a different chart size the title may need to be repositioned.
 
 ```cshtml 
 
@@ -347,12 +353,12 @@ When the `Position` is set to `Custom`, the title can be positioned anywhere on 
     </ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Column">
+        <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="ChartSeriesType.Column">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string Country { get; set; }
@@ -373,11 +379,11 @@ When the `Position` is set to `Custom`, the title can be positioned anywhere on 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBnXxCLTeKkvACG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Custom position of title in Blazor Chart](images/appearance/blazor-chart-title-position-custom.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBnXxCLTeKkvACG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column Chart – Custom Title Coordinates](images/appearance/blazor-chart-title-position-custom.webp)" %}
 
 ## Chart subtitle
 
-The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SubTitle) property can be used to add a subtitle to the chart in-order to provide additional information about the data displayed.
+The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SubTitle) property can be used to add a subtitle to the chart to provide additional information about the data displayed. The subtitle appearance can be customized using [ChartSubTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSubTitleStyle.html), which supports the same `Size`, `Color`, `FontFamily`, `FontWeight`, and `FontStyle` properties as the title style.
 
 ```cshtml
 
@@ -397,7 +403,7 @@ The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sf
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string Country { get; set; }
@@ -421,9 +427,12 @@ The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sf
 
 ![Blazor Column Chart with Subtitle](images/appearance/blazor-column-chart-with-subtitle.webp)
 
-N> The chart components do not use any CSS style for customization; chart elements like axis labels, datalabel, background, series palette, legend text, and tooltip text can be customized by using the [ChartAxisLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisLabelStyle.html), [ChartDataLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabelFont.html), [BackGround](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Background), [Palettes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Palettes), [ChartLegendTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendTextStyle.html), and [ChartTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipTextStyle.html), respectively. 
+N> The Chart components do not use CSS for customization. Chart elements such as axis labels, data labels, the background, the series palette, legend text, and tooltip text can be customized using [ChartAxisLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisLabelStyle.html), [ChartDataLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabelFont.html), [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Background), [Palettes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Palettes), [ChartLegendTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendTextStyle.html), and [ChartTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipTextStyle.html), respectively. See the linked topics for more details.
 
 ## See also
 
 * [Data Label](./data-labels)
 * [Tooltip](./tool-tip)
+* [Legend](./legend)
+* [Axis Customization](./axis-customization)
+* [Gradient](./gradient)

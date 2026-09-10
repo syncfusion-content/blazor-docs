@@ -9,17 +9,17 @@ documentation: ug
 
 # Blazor Charts Multiple Panes
 
-The chart area can be divided into multiple panes using [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartRow.html) and [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartColumn.html) settings.
+The chart area can be divided into multiple panes using the [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartRow.html) and [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartColumn.html) collections. Use **rows** to stack series vertically (each pane gets its own height and Y axis), and use **columns** to place series side by side horizontally (each pane gets its own width and X axis). When you mix rows and columns, you create a grid of panes.
+
+N> Multiple panes are supported in the [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts) NuGet package starting with Syncfusion Blazor `19.2.0.49`.
 
 ## Rows
 
-Use the chart's [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartRow.html) property to divide the chart area vertically into any number of rows.
+Use the chart's [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartRow.html) collection to divide the chart area vertically into any number of rows.
 
-* The [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartRow.html#Syncfusion_Blazor_Charts_ChartRow_Height) property can be used to allocate space for each row. The value can be expressed either in percentage or pixel.
-
-* To bind a vertical axis to a specific row, set the axis's [RowIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.AxisSet.html#Syncfusion_Blazor_PivotView_AxisSet_RowIndex) property to that row's index.
-
-* The bottom line of each row can be customized by specified in [ChartBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartBorder.html).
+* The [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartRow.html#Syncfusion_Blazor_Charts_ChartRow_Height) property allocates space for each row. The value can be expressed as a percentage or in pixels.
+* To bind a vertical axis to a specific row, set the axis's [RowIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RowIndex) property to that row's index.
+* The bottom line of each row can be customized using the [Border](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartRow.html#Syncfusion_Blazor_Charts_ChartRow_Border) property, as shown in the [Customizing row borders](#customizing-row-borders) section.
 
 ```cshtml
 
@@ -48,7 +48,7 @@ Use the chart's [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string X { get; set; }
@@ -76,7 +76,9 @@ Use the chart's [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjBxNHWLzJlLnsVV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Rows with Multiple Panes in Blazor Chart](images/multiple-panes/blazor-chart-multiple-panes-with-rows.webp)" %}
 
-The [Span](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCommonAxis.html#Syncfusion_Blazor_Charts_StockChartCommonAxis_Span) property of the axis can be used to span the vertical axis across multiple rows.
+### Spanning the primary Y axis across rows
+
+The [Span](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Span) property on the primary axis can stretch the primary Y axis across every row in the chart, so a single axis references all vertically stacked panes.
 
 ```cshtml
 
@@ -105,7 +107,7 @@ The [Span](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string X { get; set; }
@@ -130,19 +132,15 @@ The [Span](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
 	};
 }
 
-
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLdXnWhJflSYgFU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Row spanning with Multiple Panes in Blazor Chart](images/multiple-panes/blazor-chart-multiple-span-with-rows-span.webp)" %}
 
 ## Columns
 
-Use the chart's [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartColumn.html) property to divide the chart area horizontally into any number of columns.
+Use the chart's [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartColumn.html) collection to divide the chart area horizontally into any number of columns.
 
-* The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartColumn.html#Syncfusion_Blazor_Charts_ChartColumn_Width) property can be used to allocate space for each column. The value can be expressed either in percentage or pixel.
-
+* The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartColumn.html#Syncfusion_Blazor_Charts_ChartColumn_Width) property allocates space for each column. The value can be expressed as a percentage or in pixels.
 * To bind a horizontal axis to a specific column, set the axis's [ColumnIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_ColumnIndex) property to that column's index.
-
-* The left line of each column can be customized by specified in [ChartBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartBorder.html).
 
 ```cshtml
 
@@ -152,11 +150,9 @@ Use the chart's [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>    
 
-    <ChartPrimaryYAxis Title="Temperature (Fahrenheit)" LabelFormat="{value}°F" Minimum="0" Maximum="90" Interval="20"/>
-    
     <ChartColumns>
-        <ChartColumn Width="50%"/>        
-        <ChartColumn Width="50%"/>        
+        <ChartColumn Width="50%"/>
+        <ChartColumn Width="50%"/>
     </ChartColumns>
 
     <ChartAxes>
@@ -170,7 +166,7 @@ Use the chart's [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string X { get; set; }
@@ -196,9 +192,11 @@ Use the chart's [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBxXxMLffFEQEIX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Columns with Multiple Panes in Blazor Chart](images/multiple-panes/blazor-chart-multiple-panes-with-column.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLRNFszTJmzqmeF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Columns with Multiple Panes in Blazor Chart](images/multiple-panes/blazor-chart-multiple-panes-with-column.webp)" %}
 
-The [Span](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCommonAxis.html#Syncfusion_Blazor_Charts_StockChartCommonAxis_Span) property of the axis can be used to span the horizontal axis across multiple column.
+### Spanning the primary X axis across columns
+
+The [Span](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Span) property on the primary X axis can stretch the primary X axis across every column in the chart, so a single category axis references all horizontally arranged panes.
 
 ```cshtml
 
@@ -211,8 +209,8 @@ The [Span](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
     <ChartPrimaryYAxis Title="Temperature (Fahrenheit)" LabelFormat="{value}°F" Minimum="0" Maximum="90" Interval="20"/>
     
     <ChartColumns>
-        <ChartColumn Width="50%"/>        
-        <ChartColumn Width="50%"/>        
+        <ChartColumn Width="50%"/>
+        <ChartColumn Width="50%"/>
     </ChartColumns>
 
     <ChartAxes>
@@ -226,7 +224,7 @@ The [Span](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string X { get; set; }
@@ -253,8 +251,6 @@ The [Span](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBntdWBJfEgZHGh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Column Spanning with Multiple Panes in Blazor Chart](images/multiple-panes/blazor-chart-multiple-panes-with-column-span.webp)" %}
-
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 
