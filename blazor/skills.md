@@ -74,7 +74,7 @@ Next, select which AI agent you're using and where to store the skills.
 {% highlight bash tabtitle="CMD" %}
 
 │  ── Additional agents ──
-│  Search:  
+│  Search:
 │  ↑↓ move, space select, enter confirm
 │
 │ ❯ ○ Augment (.augment/skills)

@@ -32,8 +32,8 @@ Before beginning, ensure the following prerequisites are met:
 - An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://www.syncfusion.com/account/api-key)
 - A **Blazor application** (existing or new); see [Quick Start](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 - An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
-  - [Commercial License](https://www.syncfusion.com/sales/pricing?category=ui-components)  
-  - [Free Community License](https://www.syncfusion.com/products/communitylicense)  
+  - [Commercial License](https://www.syncfusion.com/sales/pricing?category=ui-components)
+  - [Free Community License](https://www.syncfusion.com/products/communitylicense)
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
 
 ### Getting Your API Key
