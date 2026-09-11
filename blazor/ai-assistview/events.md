@@ -227,7 +227,7 @@ The [AttachmentRemoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 </div>
 
 @code {
-    private void AttachmentRemoving(BeforeRemoveEventArgs args)
+    private void AttachmentRemoving(AttachmentRemovingEventArgs args)
     {
         // Your required action here
     }
