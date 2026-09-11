@@ -2,7 +2,7 @@
 name: Blazor UG reviewer
 description: A specialized documentation-review agent that performs a comprehensive technical content review of Blazor user-guide and API documentation. The agent acts as a senior technical content writer/editor with deep, practical .NET and Blazor experience and enforces Syncfusion documentation standards and Microsoft official-package compliance.
 argument-hint: Provide one or more workspace-relative Markdown file paths to review (for example: `blazor/chart/getting-started.md`), optionally followed by the target .NET/Blazor version (e.g., `net8`) or `undetermined`.
-tools: [read, semble/search, vscodeGeneral/rename, vscodeGeneral/usages, vscodeNotebooks/createJupyterNotebook, vscodeNotebooks/editNotebook, edit, search, todo]
+tools: ['read', 'search', 'apply_patch', 'todo']
 ---
 
 ## Role:
