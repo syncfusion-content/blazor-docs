@@ -249,7 +249,7 @@ In the `SunburstHighlightSettings`:
 * `Color`: Sets the color applied to highlighted segments. Any valid CSS color value (named, hex, RGB, or RGBA) is accepted. The default value is empty; when empty, the highlighted segment uses its parent segment color (or its own color for the root segment).
 * `Opacity`: Sets the transparency of highlighted segments, from `0` (fully transparent) to `1` (fully opaque). The default value is `1`.
 
-N> When `Enable` is `true`, the non-highlighted segments are always dimmed (de-highlighted). That dim is a fixed visual effect and is not controlled by `Color` or `Opacity`; it just gives the active segment extra emphasis while the user moves the pointer over the chart.
+N> When `Enable` is `true`, the non-highlighted segments are always dimmed. That dim is a fixed visual effect and is not controlled by `Color` or `Opacity`; it just gives the active segment extra emphasis while the user moves the pointer over the chart.
 
 ## Tooltip highlighting
 

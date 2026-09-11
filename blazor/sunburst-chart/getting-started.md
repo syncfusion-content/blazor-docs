@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Sunburst Chart in Server App | Syncfusion®
-description: Learn how to get started with Syncfusion Blazor Sunburst Chart in a Blazor Server App. Explore setup, NuGet packages, registration, and first Sunburst Chart example.
+description: Learn how to get started with Syncfusion Blazor Sunburst Chart in a Blazor Server App. Explore setup, NuGet packages, registration, and first chart example.
 platform: Blazor
 control: Sunburst Chart
 documentation: ug

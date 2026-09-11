@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Sunburst Chart Events | Syncfusion®
-description: Learn how to subscribe to and customize event callbacks on the Blazor Sunburst Chart using SunburstChartEvents, including drill-down, drill-up, and rendering hooks.
+description: Learn how to subscribe to and customize event callbacks on the Blazor Sunburst Chart using SunburstChartEvents, including drill and rendering hooks.
 platform: Blazor
 control: Sunburst Chart
 documentation: ug
@@ -14,7 +14,7 @@ Events let you observe and customize the `Blazor Sunburst Chart` at well-defined
 
 The events of the Blazor Sunburst Chart are configured using the `SunburstChartEvents` child component, placed inside `SfSunburstChart`.
 
-N> **Default behavior:** No event callbacks are subscribed by default. The chart renders and behaves normally until at least one handler is attached to a `SunburstChartEvents` child component. Cancellable events (`Cancel = true`) prevent the default action; the rest are observational.
+N> **Default behavior:** No event callbacks are subscribed by default. The chart renders and behaves normally until at least one handler is attached to a `SunburstChartEvents` child component. Cancelable events (`Cancel = true`) prevent the default action; the rest are observational.
 
 ## DrillDownStarting
 
@@ -901,7 +901,7 @@ The following tables list the events exposed by the `SunburstChartEvents` compon
 
 ### Interaction events
 
-| Event | EventArgs | EventName | Cancellable |
+| Event | EventArgs | EventName | Cancelable |
 |---|---|---|---|
 | `Loaded` | `SunburstLoadedEventArgs` | `Loaded` | No |
 | `PointClicking` | `SunburstPointClickEventArgs` | `PointClicking` | Yes |
@@ -912,7 +912,7 @@ The following tables list the events exposed by the `SunburstChartEvents` compon
 
 ### Rendering events
 
-| Event | EventArgs | EventName | Cancellable |
+| Event | EventArgs | EventName | Cancelable |
 |---|---|---|---|
 | `LegendItemRendering` | `SunburstLegendRenderEventArgs` | `LegendRendering` | Yes |
 | `DatalabelRendering` | `SunburstLabelRenderEventArgs` | `DatalabelRendering` | Yes |
@@ -921,7 +921,7 @@ The following tables list the events exposed by the `SunburstChartEvents` compon
 
 ### Export hooks
 
-| Event | EventArgs | Cancellable |
+| Event | EventArgs | Cancelable |
 |---|---|---|
 | `Exporting` | `ChartExportEventArgs` | Yes (`Cancel`) |
 | `ExportCompleted` | `ExportEventArgs` | No |
@@ -935,5 +935,3 @@ N> `Action` callbacks (`LegendItemRendering`, `DatalabelRendering`, `SegmentRend
 * [Highlight](./highlight)
 * [Data Label](./data-label)
 * [Legend](./legend)
-
-N> You can also check the [Blazor Sunburst Chart Example](https://blazor.syncfusion.com/demos/sunburst/default-functionalities?theme=fluent2) to see the chart in action.

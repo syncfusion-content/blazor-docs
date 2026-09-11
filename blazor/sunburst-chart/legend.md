@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Sunburst Chart Legend | Syncfusion®
-description: Learn how to enable, position, and customize the legend of the Blazor Sunburst Chart using SunburstLegendSettings, SunburstLegendTextStyle, and SunburstLegendBorder.
+description: Learn how to enable, position, and customize the legend of the Blazor Sunburst Chart using SunburstLegendSettings, SunburstLegendTextStyle, and border.
 platform: Blazor
 control: Sunburst Chart
 documentation: ug
@@ -96,7 +96,7 @@ Configure the main legend appearance:
 In the `SunburstLegendSettings`:
 * `Visible`: Enables or disables the display of the legend. Set to `true` to render the legend for the Blazor Sunburst Chart.
 * `Position`: Specifies the position of the legend in the Sunburst chart. Use the `SunburstLegendPosition` enum (`Top`, `Bottom`, `Left`, or `Right`). The default value is `Bottom`.
-* `Background`: Specifies the background color of the legend container. Any valid CSS color value (for example a hex value like `#F5F5F5` or the named value `lightblue`) is accepted.
+* `Background`: Specifies the background color of the legend container. Any valid CSS color value is accepted, for example a hex value like `#F5F5F5`, an RGB value like `rgb(173, 216, 230)`, or a named CSS color such as `cornflowerblue`.
 * `Opacity`: Specifies the transparency of the legend container. The accepted range is `0` to `1`, where `0` is fully transparent and `1` is fully opaque. For example, set `Opacity="0.8"` for 80% opacity.
 * `ShapeWidth`: Specifies the width of the marker drawn beside each legend item, in pixels.
 * `ShapeHeight`: Specifies the height of the marker drawn beside each legend item, in pixels.

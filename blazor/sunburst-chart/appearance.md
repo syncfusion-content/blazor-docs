@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Sunburst Chart Appearance | Syncfusion®
-description: Learn how to customize the appearance of the Blazor Sunburst Chart using Theme, Palette, Background, Border, Margin, Radius, InnerRadius, and StartAngle/EndAngle.
+description: Learn how to customize the appearance of the Blazor Sunburst Chart using Theme, Palette, Background, Border, Margin, Radius, InnerRadius, and angle.
 platform: Blazor
 control: Sunburst Chart
 documentation: ug
