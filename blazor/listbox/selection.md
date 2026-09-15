@@ -34,13 +34,13 @@ To enable single selection, set the [Mode](https://help.syncfusion.com/cr/blazor
         new VehicleData { Text = "SSC Ultimate Aero", Id = "Vehicle-04" },
         new VehicleData { Text = "Koenigsegg CCR", Id = "Vehicle-05" },
         new VehicleData { Text = "McLaren F1", Id = "Vehicle-06" },
-        new VehicleData { Text = "Aston Martin One- 77", Id = "Vehicle-07" },
+        new VehicleData { Text = "Aston Martin One-77", Id = "Vehicle-07" },
         new VehicleData { Text = "Jaguar XJ220", Id = "Vehicle-08" }
     };
 
     public class VehicleData {
-      public string Text  { get; set; }
-      public string Id  { get; set; }
+        public string Text { get; set; }
+        public string Id { get; set; }
     }
 }
 
@@ -70,13 +70,13 @@ N> By default, the selection mode is `Multiple`.
         new VehicleData { Text = "SSC Ultimate Aero", Id = "Vehicle-04" },
         new VehicleData { Text = "Koenigsegg CCR", Id = "Vehicle-05" },
         new VehicleData { Text = "McLaren F1", Id = "Vehicle-06" },
-        new VehicleData { Text = "Aston Martin One- 77", Id = "Vehicle-07" },
+        new VehicleData { Text = "Aston Martin One-77", Id = "Vehicle-07" },
         new VehicleData { Text = "Jaguar XJ220", Id = "Vehicle-08" }
     };
 
     public class VehicleData {
-      public string Text  { get; set; }
-      public string Id  { get; set; }
+        public string Text { get; set; }
+        public string Id { get; set; }
     }
 }
 
@@ -110,14 +110,15 @@ To select all items in the ListBox at once, set the [ShowSelectAll](https://help
         new VehicleData { Text = "SSC Ultimate Aero", Id = "Vehicle-04" },
         new VehicleData { Text = "Koenigsegg CCR", Id = "Vehicle-05" },
         new VehicleData { Text = "McLaren F1", Id = "Vehicle-06" },
-        new VehicleData { Text = "Aston Martin One- 77", Id = "Vehicle-07" },
+        new VehicleData { Text = "Aston Martin One-77", Id = "Vehicle-07" },
         new VehicleData { Text = "Jaguar XJ220", Id = "Vehicle-08" }
     };
-        public class VehicleData {
-        public string Text  { get; set; }
-        public string Id  { get; set; }
-        }
+
+    public class VehicleData {
+        public string Text { get; set; }
+        public string Id { get; set; }
     }
+}
 
 ```
 
@@ -125,9 +126,117 @@ To select all items in the ListBox at once, set the [ShowSelectAll](https://help
 
 ### Maximum Selection Length
 
-The [MaximumSelectionLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_MaximumSelectionLength) property limits the number of items that can be selected at one time. When the limit is reached, additional selection is prevented. Set this based on the size of your data source.
+The [MaximumSelectionLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_MaximumSelectionLength) property limits the number of items that can be selected at one time. Once the limit is reached, additional items cannot be selected. Set this based on the size of your data source.
 
 N> The default value of the `MaximumSelectionLength` property is `500`.
+
+In the following example, the `MaximumSelectionLength` is set to `2`, so the user can select no more than two items at a time.
+
+```cshtml
+
+@using Syncfusion.Blazor.DropDowns
+
+<SfListBox TValue="string[]" DataSource="@Vehicles" TItem="VehicleData" MaximumSelectionLength="2">
+    <ListBoxFieldSettings Text="Text" Value="Id" />
+    <ListBoxSelectionSettings ShowCheckbox="true" ShowSelectAll="true"></ListBoxSelectionSettings>
+</SfListBox>
+
+@code {
+    public List<VehicleData> Vehicles = new List<VehicleData>
+    {
+        new VehicleData { Text = "Hennessey Venom", Id = "Vehicle-01" },
+        new VehicleData { Text = "Bugatti Chiron", Id = "Vehicle-02" },
+        new VehicleData { Text = "Bugatti Veyron Super Sport", Id = "Vehicle-03" },
+        new VehicleData { Text = "SSC Ultimate Aero", Id = "Vehicle-04" },
+        new VehicleData { Text = "Koenigsegg CCR", Id = "Vehicle-05" },
+        new VehicleData { Text = "McLaren F1", Id = "Vehicle-06" },
+        new VehicleData { Text = "Aston Martin One-77", Id = "Vehicle-07" },
+        new VehicleData { Text = "Jaguar XJ220", Id = "Vehicle-08" }
+    };
+
+    public class VehicleData {
+        public string Text { get; set; }
+        public string Id { get; set; }
+    }
+}
+
+```
+
+![Blazor ListBox with Maximum Selection Length](./images/blazor-listbox-maximum-selection-length.webp)
+
+## Selection change event
+
+The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ListBoxEvents_2_ValueChange) event fires whenever the selection changes. It is configured through the [ListBoxEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxEvents-2.html) child component and passes a [ListBoxChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxChangeEventArgs-2.html) argument to the handler that contains the added, removed, and current values.
+
+In the following example, the `ValueChange` event handler updates a label with the display text of the currently selected item whenever the selection changes.
+
+```cshtml
+
+@using Syncfusion.Blazor.DropDowns
+
+<SfListBox TValue="string[]" DataSource="@Vehicles" TItem="VehicleData">
+    <ListBoxEvents TValue="string[]" ValueChange="OnValueChange" TItem="VehicleData"></ListBoxEvents>
+    <ListBoxFieldSettings Text="Text" Value="Id" />
+    <ListBoxSelectionSettings Mode="Syncfusion.Blazor.DropDowns.SelectionMode.Single"></ListBoxSelectionSettings>
+</SfListBox>
+
+<p>Selected item: <strong>@SelectedText</strong></p>
+
+@code {
+    public List<VehicleData> Vehicles = new List<VehicleData>
+    {
+        new VehicleData { Text = "Hennessey Venom", Id = "Vehicle-01" },
+        new VehicleData { Text = "Bugatti Chiron", Id = "Vehicle-02" },
+        new VehicleData { Text = "Bugatti Veyron Super Sport", Id = "Vehicle-03" },
+        new VehicleData { Text = "SSC Ultimate Aero", Id = "Vehicle-04" },
+        new VehicleData { Text = "Koenigsegg CCR", Id = "Vehicle-05" },
+        new VehicleData { Text = "McLaren F1", Id = "Vehicle-06" },
+        new VehicleData { Text = "Aston Martin One-77", Id = "Vehicle-07" },
+        new VehicleData { Text = "Jaguar XJ220", Id = "Vehicle-08" }
+    };
+
+    public string SelectedText { get; set; } = "None";
+
+    public class VehicleData {
+        public string Text { get; set; }
+        public string Id { get; set; }
+    }
+
+    private void OnValueChange(ListBoxChangeEventArgs<string[], VehicleData> args)
+    {
+        if (args.Value != null && args.Value.Length > 0)
+        {
+            var selected = Vehicles.FirstOrDefault(v => v.Id == args.Value[0]);
+            SelectedText = selected?.Text ?? "None";
+        }
+        else
+        {
+            SelectedText = "None";
+        }
+    }
+}
+
+```
+
+![Blazor ListBox with Selection Change Event](./images/blazor-listbox-selection-change-event.webp)
+
+N> As an alternative to the `ValueChange` event, the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_Value) parameter can be two-way bound with `@bind-Value`. The two-way binding keeps the selected values in a single C# property and reflects every change in the ListBox automatically.
+
+## Keyboard navigation
+
+The Blazor ListBox supports keyboard-based selection. The following table summarizes the keyboard shortcuts available for each selection mode.
+
+| Windows | Mac | Selection Mode | Action |
+| --- | --- | --- | --- |
+| <kbd>↑</kbd> / <kbd>↓</kbd> | <kbd>↑</kbd> / <kbd>↓</kbd> | Single, Multiple | Moves focus to the previous or next option. |
+| <kbd>Home</kbd> / <kbd>End</kbd> | <kbd>Home</kbd> / <kbd>End</kbd> | Single, Multiple | Moves focus to the first or last option. |
+| <kbd>Space</kbd> | <kbd>Space</kbd> | Single, Multiple | Toggles the selection state of the focused option. |
+| <kbd>Ctrl</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd> | <kbd>⌘</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd> | Multiple | Moves focus without changing the current selection. |
+| <kbd>Ctrl</kbd> + <kbd>A</kbd> | <kbd>⌘</kbd> + <kbd>A</kbd> | Multiple | Selects all options in the list. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>Home</kbd> | Multiple | Selects the focused option and all options up to the first option. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>End</kbd> | Multiple | Selects the focused option and all options down to the last option. |
+
+N> When checkbox selection is enabled (`ShowCheckbox="true"`), the <kbd>Space</kbd> key toggles the checkbox state of the focused option.
 
 ## See also
 
@@ -135,3 +244,4 @@ N> The default value of the `MaximumSelectionLength` property is `500`.
 * [Get Items in Blazor ListBox](./how-to/get-items.md)
 * [Select Items in Blazor ListBox](./how-to/select-items.md)
 * [Data Binding in Blazor ListBox](./data-binding.md)
+* [Accessibility in Blazor ListBox](./accessibility.md)
