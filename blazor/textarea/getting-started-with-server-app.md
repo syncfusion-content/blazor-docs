@@ -218,22 +218,6 @@ dotnet run
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXLHNGjWgOdtJAfj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TextArea component in Blazor Server](./images/blazor-textarea.webp)" %}
 
-## Floating label
-
-The floating label moves above the input when the Blazor TextArea is focused or contains a value. Create a floating label Blazor TextArea by setting the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_FloatLabelType) API.
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-@rendermode InteractiveServer
-
-<SfTextArea Placeholder='Add your Comments' FloatLabelType='@FloatLabelType.Auto'></SfTextArea>
-
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthdZGtiAuYOoHdl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TextArea with floating label in Blazor Server](./images/blazor-textarea-float-label.webp)" %}
-
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TextArea).
 
 ## See also
