@@ -289,6 +289,8 @@ The application securely signs users in through **Microsoft Entra ID** and manag
 
 This approach provides a secure, enterprise ready foundation for building modern Blazor applications with controlled access to data and UI components.   
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/Blazor%20with%20Microsoft-Entra-ID)
+
 ## See also
 
 - [Secure an ASP.NET Core Blazor WebAssembly Standalone App with Microsoft Accounts](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/webassembly/standalone-with-microsoft-accounts)

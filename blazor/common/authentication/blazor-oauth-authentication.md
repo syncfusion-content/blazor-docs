@@ -446,6 +446,8 @@ After successfully signing in, authenticated users can access protected pages an
 
 ![Blazor DataGrid with GitHub OAuth 2.0](images/oauth-datagrid.webp)
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/Blazor%20with%20OAuth)
+
 ## See also
 
 - [OAuth 2.0 and OIDC authentication in the Microsoft identity platform](https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols)

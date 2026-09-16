@@ -405,6 +405,8 @@ N> By default, the app runs on `https://localhost:7000` (or similar port defined
 
 ![Blazor DataGrid displaying order data after AWS Cognito authentication](./images/aws-cognito.webp)
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/blazor-aws-cognito)
+
 ## See also
 
 * [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)

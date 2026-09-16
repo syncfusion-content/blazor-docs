@@ -548,6 +548,8 @@ dotnet run
 **Output:**
 ![Blazor DataGrid and Charts with ASP.NET Core Identity](./images/asp-net-identity.webp)
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/Blazor%20server%20with%20ASP.NET%20Core%20Identity/BlazorIdentitySyncfusion)
+
 ## See also
 
 * [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)

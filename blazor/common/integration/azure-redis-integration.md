@@ -442,6 +442,8 @@ dotnet run
 
 ![Blazor components with Azure Cache for Redis](./images/azure-redis-cache.webp)
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/Redis-cache-integration)
+
 ## See also
 
 * [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
