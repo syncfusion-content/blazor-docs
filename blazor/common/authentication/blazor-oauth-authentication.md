@@ -214,11 +214,11 @@ Create a new Razor file named `LoginDisplay.razor` under the `Shared` folder ins
 <AuthorizeView>
     <Authorized>
         <div class="d-flex align-items-center">
-            <a class="btn btn-outline-secondary btn-sm" href="/account/logout" aria-label="Logout">Logout</a>
+            <a class="btn btn-outline-secondary btn-sm" href="/account/logout" aria-label="Logout an account">Logout</a>
         </div>
     </Authorized>
     <NotAuthorized>
-        <a class="btn btn-primary btn-sm" href="/account/login?returnUrl=/" aria-label="Login with GitHub">Login with GitHub</a>
+        <a class="btn btn-primary btn-sm" href="/account/login?returnUrl=/" aria-label="Login with GitHub account">Login with GitHub</a>
     </NotAuthorized>
 </AuthorizeView>
 

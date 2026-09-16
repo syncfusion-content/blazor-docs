@@ -222,13 +222,13 @@ Create a protected page that displays the **Blazor DataGrid** only after the use
 			   Click the Login button below to sign in with Microsoft Entra ID.
 			   Once you’re logged in, the Blazor DataGrid will be displayed below.
 			</p>
-			<a class="btn btn-primary" href="/MicrosoftIdentity/Account/SignIn" aria-label="Login with Microsoft">Login with Microsoft</a>
+			<a class="btn btn-primary" href="/MicrosoftIdentity/Account/SignIn" aria-label="Login with Microsoft Id">Login with Microsoft</a>
 		</div>
 	</NotAuthorized>
 	<Authorized>
 		<div class="d-flex justify-content-between align-items-center">
 			<h1>DataGrid</h1>
-			<a class="btn btn-secondary" href="/MicrosoftIdentity/Account/SignOut" aria-label="Logout">Logout</a>
+			<a class="btn btn-secondary" href="/MicrosoftIdentity/Account/SignOut" aria-label="Logout an account">Logout</a>
 		</div>
 
 		<SfGrid DataSource="@Orders">
