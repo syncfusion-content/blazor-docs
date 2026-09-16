@@ -262,10 +262,10 @@ In the project root (next to `Program.cs`), create a `Pages` folder and add a `S
 else
 {
     <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
+        <a class="nav-link text-dark" asp-area="Identity" aria-label="Register" asp-page="/Account/Register">Register</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        <a class="nav-link text-dark" asp-area="Identity" aria-label="Login" asp-page="/Account/Login">Login</a>
     </li>
 }
 </ul>
@@ -305,7 +305,7 @@ Replace the existing `<body>` section in `App.razor` with the following:
                     <NotAuthorized>
                         <p class="mt-3">
                             You are not authorized. Please
-                            <a href="/Identity/Account/Login">log in</a>.
+                            <a href="/Identity/Account/Login" aria-label="log in">log in</a>.
                         </p>
                     </NotAuthorized>
                     <Authorizing>
@@ -353,19 +353,19 @@ N> This example uses Bootstrap classes (`d-flex`, `ms-auto`, `gap-3`). If your p
 
     <main>
         <div class="top-row px-4 d-flex align-items-center">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+            <a href="https://learn.microsoft.com/aspnet/core/" aria-label="About ASP.NET Core documentation" target="_blank">About</a>
 
             <div class="ms-auto d-flex gap-3">
                 <AuthorizeView>
                     <Authorized>
                         <span class="navbar-text">Hello @context.User.Identity?.Name</span>
-                        <a class="nav-link text-dark" href="/Identity/Account/Manage/Index" title="Manage">Manage</a>
-                        <a class="nav-link text-dark" href="/Identity/Account/Logout">Logout</a>
+                        <a class="nav-link text-dark" href="/Identity/Account/Manage/Index" aria-label="Manage" title="Manage">Manage</a>
+                        <a class="nav-link text-dark" href="/Identity/Account/Logout" aria-label="Logout">Logout</a>
                     </Authorized>
 
                     <NotAuthorized>
-                        <a class="nav-link text-dark" href="/Identity/Account/Login">Login</a>
-                        <a class="nav-link text-dark" href="/Identity/Account/Register">Register</a>
+                        <a class="nav-link text-dark" href="/Identity/Account/Login" aria-label="Login">Login</a>
+                        <a class="nav-link text-dark" href="/Identity/Account/Register" aria-label="Register">Register</a>
                     </NotAuthorized>
                 </AuthorizeView>
             </div>

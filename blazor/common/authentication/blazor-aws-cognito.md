@@ -338,7 +338,7 @@ This page demonstrates how to conditionally render the [Blazor DataGrid](https:/
                     </GridColumns>
                 </SfGrid>
             </div>
-            <a href="/signout" class="btn btn-secondary">Sign out</a>
+            <a href="/signout" class="btn btn-secondary" aria-label="Sign out">Sign out</a>
         </Authorized>
         <NotAuthorized>
             <div>
