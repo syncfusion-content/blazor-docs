@@ -35,7 +35,7 @@ cd BlazorWebApp.Client
 {% endhighlight %}
 {% endtabs %}
 
-Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://github.com/microsoft/vscode-dotnettools) extension.
 
 {% endtabcontent %}
 
@@ -172,6 +172,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveAuto
+@using Syncfusion.Blazor.DropDowns
 
 <SfDropDownList TValue="string" TItem="string" Placeholder="Select a game"></SfDropDownList>
 
@@ -231,6 +232,8 @@ After initialization, populate the DropDownList with data using the [DataSource]
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.DropDowns
+
 <SfDropDownList TValue="string" TItem="Games" Placeholder="Select a game" DataSource="@LocalData">
   <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
 </SfDropDownList>
@@ -239,8 +242,8 @@ After initialization, populate the DropDownList with data using the [DataSource]
 {
   public class Games
   {
-    public string ID { get; set; }
-    public string Text { get; set; }
+    public string? ID { get; set; }
+    public string? Text { get; set; }
   }
   List<Games> LocalData = new List<Games> {
     new Games() { ID= "Game1", Text= "American Football" },
@@ -268,6 +271,8 @@ By default, the popup list width adjusts to the Dropdown List input width, and t
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.DropDowns
+
 <SfDropDownList TValue="string" TItem="Games" PopupHeight="350px" PopupWidth="350px" Placeholder="Select a game" DataSource="@LocalData">
   <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
 </SfDropDownList>
@@ -276,8 +281,8 @@ By default, the popup list width adjusts to the Dropdown List input width, and t
 {
   public class Games
   {
-    public string ID { get; set; }
-    public string Text { get; set; }
+    public string? ID { get; set; }
+    public string? Text { get; set; }
   }
   List<Games> LocalData = new List<Games> {
     new Games() { ID= "Game1", Text= "American Football" },
