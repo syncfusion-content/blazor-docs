@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Supported Syncfusion A2UI Components
 
-The Syncfusion A2UI for Blazor package ships a catalog of **64 Syncfusion Blazor Components** in `Syncfusion.Blazor.A2UI.SyncfusionComponents.SyncfusionComponentFactory`. When the 18 A2UI primitives from `Syncfusion.Blazor.A2UI.Catalog.BasicComponentFactory` are included, the catalog exposes **82 schemas in a single** `"syncfusion-a2ui-catalog"` for the agent to pick from.
+The Syncfusion A2UI for Blazor package ships a catalog of **60+ Syncfusion Blazor Components** in `Syncfusion.Blazor.A2UI.SyncfusionComponents.SyncfusionComponentFactory`. When the 18 A2UI primitives from `Syncfusion.Blazor.A2UI.Catalog.BasicComponentFactory` are included, the catalog exposes a single `"syncfusion-a2ui-catalog"` for the agent to pick from.
 
 Every adapter implements the A2UI v0.9 component contract, so an agent can stream any of them as part of a `createSurface` or `updateComponents` message and have it rendered by `<SyncfusionA2UIProvider>` with no extra wiring. The widgets come from the Syncfusion Blazor library (e.g. `Syncfusion.Blazor.Grid`, `Syncfusion.Blazor.Charts`) and inherit the components' built-in theming, accessibility, and event surface.
 
@@ -91,7 +91,7 @@ Selection, rating, and content-capture controls beyond plain text.
 | --- | --- |
 | `SyncfusionColorPicker` | Color selection with palette, RGB / HSL / HEX modes, and opacity (SfColorPicker). |
 | `SyncfusionSlider` | Single-thumb or range slider with tick marks and tooltip (SfSlider). |
-| `SyncfusionOTPInput` | One-time-passcode input with separate boxes per digit (SfOTPInput). |
+| `SyncfusionOTPInput` | One-time-password input with separate boxes per digit (SfOTPInput). |
 | `SyncfusionRating` | Star / symbol rating input with precision and read-only mode (SfRating). |
 | `SyncfusionSignature` | Signature pad with brush and color (SfSignature). |
 | `SyncfusionSpeechToText` | Browser microphone capture that streams recognized text into the DataModel (SfSpeechToText). |
@@ -150,7 +150,7 @@ Rich-content and inline editors for authoring formatted text, blocks, and quick 
 
 ## Selection Controls
 
-Mutually exclusive and toggleable boolean selections that pair with `data/checkbox` bindings.
+Mutually exclusive and binary boolean choices that pair with `data/checkbox` bindings.
 
 | Component | Description |
 | --- | --- |
@@ -187,7 +187,7 @@ Components for composing, viewing, and reviewing full documents and PDFs in the 
 | `SyncfusionDocumentEditorContainer` | Full-featured Word-compatible document editor with ribbon, comments, track changes, and layout (SfDocumentEditor). |
 | `SyncfusionPdfViewer` | PDF viewer with paging, search, zoom, and form filling (SfPdfViewer). |
 
-## A2UI primitives (HTML fallbacks)
+## A2UI primitives (HTML fall backs)
 
 These 18 IDs are registered by the base `BlazorSyncfusionCatalog`. They are not Syncfusion widgets — each is a Blazor-rendered-fragment implementation in `Syncfusion.Blazor.A2UI.Components` — but they ship in the same package and can be referenced from any agent surface, including ones that opted out of Syncfusion widgets via `<UseSyncfusionComponents>false</UseSyncfusionComponents>`.
 
@@ -216,11 +216,13 @@ N>The Syncfusion-prefixed equivalents above (`SyncfusionButton`, `SyncfusionChec
 
 ## Counts at a glance
 
+The exact adapter count grows as new component families land in `SyncfusionComponentFactory`. Use the table below as a guide rather than a fixed number.
+
 | Source | Adapter count | Notes |
 | --- | --- | --- |
-| `SyncfusionComponentFactory.AllSchemas` | **64** | Syncfusion Blazor Components. |
+| `SyncfusionComponentFactory.AllSchemas` | **60+** | Syncfusion Blazor Components. |
 | `BasicComponentFactory.All` | **18** | A2UI v0.9 primitives as HTML render fragments. |
-| Total in a `BlazorSyncfusionCatalog.Combine(...)` registry | **82** | Ready for `MessageProcessor`. |
+| Total in a `BlazorSyncfusionCatalog.Combine(...)` registry | **60+** | Ready for `MessageProcessor`. |
 
 ## See also
 
