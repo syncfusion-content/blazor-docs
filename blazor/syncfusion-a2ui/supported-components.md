@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Supported Syncfusion A2UI Components
 
-The Syncfusion A2UI for Blazor package ships a catalog of **64 Syncfusion EJ2 Blazor adapters** in `Syncfusion.Blazor.A2UI.SyncfusionComponents.SyncfusionComponentFactory`. When the 18 A2UI primitives from `Syncfusion.Blazor.A2UI.Catalog.BasicComponentFactory` are included, the catalog exposes **82 schemas in a single** `"syncfusion-a2ui-catalog"` for the agent to pick from.
+The Syncfusion A2UI for Blazor package ships a catalog of **64 Syncfusion Blazor Components** in `Syncfusion.Blazor.A2UI.SyncfusionComponents.SyncfusionComponentFactory`. When the 18 A2UI primitives from `Syncfusion.Blazor.A2UI.Catalog.BasicComponentFactory` are included, the catalog exposes **82 schemas in a single** `"syncfusion-a2ui-catalog"` for the agent to pick from.
 
-Every adapter implements the A2UI v0.9 component contract, so an agent can stream any of them as part of a `createSurface` or `updateComponents` message and have it rendered by `<SyncfusionA2UIProvider>` with no extra wiring. The widgets come from the Syncfusion EJ2 Blazor library (e.g. `Syncfusion.Blazor.Grid`, `Syncfusion.Blazor.Charts`) and inherit the components' built-in theming, accessibility, and event surface.
+Every adapter implements the A2UI v0.9 component contract, so an agent can stream any of them as part of a `createSurface` or `updateComponents` message and have it rendered by `<SyncfusionA2UIProvider>` with no extra wiring. The widgets come from the Syncfusion Blazor library (e.g. `Syncfusion.Blazor.Grid`, `Syncfusion.Blazor.Charts`) and inherit the components' built-in theming, accessibility, and event surface.
 
 This page is the reference. Use it when you need to know the exact adapter id to put inside an A2UI component payload, or when you want to see the full shape of the catalog at a glance. The tutorial lives on [Getting Started](./getting-started).
 
@@ -218,7 +218,7 @@ N>The Syncfusion-prefixed equivalents above (`SyncfusionButton`, `SyncfusionChec
 
 | Source | Adapter count | Notes |
 | --- | --- | --- |
-| `SyncfusionComponentFactory.AllSchemas` | **64** | Syncfusion EJ2 Blazor adapters. |
+| `SyncfusionComponentFactory.AllSchemas` | **64** | Syncfusion Blazor Components. |
 | `BasicComponentFactory.All` | **18** | A2UI v0.9 primitives as HTML render fragments. |
 | Total in a `BlazorSyncfusionCatalog.Combine(...)` registry | **82** | Ready for `MessageProcessor`. |
 

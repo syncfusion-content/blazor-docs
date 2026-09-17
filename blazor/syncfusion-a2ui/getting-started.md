@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Syncfusion A2UI for Blazor | Syncfusion
-description: Step-by-step guide to install the Syncfusion A2UI for Blazor package and render your first A2UI v0.9 surface as a Syncfusion EJ2 Blazor component.
+description: Step-by-step guide to install the Syncfusion A2UI for Blazor package and render your first A2UI v0.9 surface as a Syncfusion Blazor component.
 control: Getting Started
 platform: Blazor
 documentation: ug
@@ -10,12 +10,12 @@ domainurl: ##DomainURL##
 
 # Getting Started with Syncfusion A2UI for Blazor
 
-This section explains how to include the [Syncfusion A2UI for Blazor](https://a2ui.org/specification/v0.9-a2ui/) component in a Blazor App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/). The Syncfusion A2UI for Blazor package converts streamed [A2UI v0.9](https://a2ui.org/specification/v0.9-a2ui/) messages into a `SurfaceModel` that is rendered as native Syncfusion EJ2 Blazor components — **DataGrid**, **Chart**, **Scheduler**, **Calendar**, **RichTextEditor**, **Diagram**, **Kanban**, **DocumentEditorContainer**, and more.
+This section explains how to include the [Syncfusion A2UI for Blazor](https://a2ui.org/specification/v0.9-a2ui/) component in a Blazor App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/). The Syncfusion A2UI for Blazor package converts streamed [A2UI v0.9](https://a2ui.org/specification/v0.9-a2ui/) messages into a `SurfaceModel` that is rendered as native Syncfusion Blazor components — **DataGrid**, **Chart**, **Scheduler**, **Calendar**, **RichTextEditor**, **Diagram**, **Kanban**, **DocumentEditorContainer**, and more.
 
 The runtime is composed of two NuGet packages:
 
 - `Syncfusion.A2UI.Core` — the framework-agnostic A2UI v0.9 engine.
-- `Syncfusion.Blazor.A2UI` — the Blazor renderer that adds Syncfusion EJ2 Blazor adapters on top of the engine and **transitively brings in every Syncfusion EJ2 Blazor component package it depends on** (`Syncfusion.Blazor.Grid`, `Syncfusion.Blazor.Charts`, `Syncfusion.Blazor.Schedule`, `Syncfusion.Blazor.Themes`, and more).
+- `Syncfusion.Blazor.A2UI` — the Blazor renderer that adds Syncfusion Blazor Components on top of the engine and **transitively brings in every Syncfusion Blazor component package it depends on** (`Syncfusion.Blazor.Grid`, `Syncfusion.Blazor.Charts`, `Syncfusion.Blazor.Schedule`, `Syncfusion.Blazor.Themes`, and more).
 
 <!-- Both packages are at 0.1.0-beta.0 during preview. Update the version once they ship stable. -->
 N> Syncfusion A2UI for Blazor is currently in **preview (beta)** and will be published on NuGet under placeholder package ids (`Syncfusion.A2UI.Core` and `Syncfusion.Blazor.A2UI`, both at `0.1.0-beta.0`). Update the versions in the commands below once the official NuGet packages are released.
@@ -40,7 +40,7 @@ For step-by-step instructions on creating a new Blazor App, see [Getting Started
 
 ## Install the Syncfusion A2UI Blazor package
 
-Install the [Syncfusion.Blazor.A2UI](https://www.nuget.org/packages/Syncfusion.Blazor.A2UI/) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](../nuget-packages) topic for details.
+Install the [Syncfusion.Blazor.A2UI]() NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](../nuget-packages) topic for details.
 
 {% tabcontents %}
 
@@ -79,7 +79,7 @@ dotnet add package Syncfusion.Blazor.A2UI
 
 {% endtabcontents %}
 
-N> The Syncfusion EJ2 Blazor component packages the renderer depends on (`Syncfusion.Blazor.Grid`, `Syncfusion.Blazor.Charts`, `Syncfusion.Blazor.Schedule`, `Syncfusion.Blazor.Themes`, etc.) come in transitively from `Syncfusion.Blazor.A2UI`. No separate `dotnet add package` is needed. See [Supported Components](./supported-components) for the full list of component families the agent can render.
+N> The Syncfusion Blazor component packages the renderer depends on (`Syncfusion.Blazor.Grid`, `Syncfusion.Blazor.Charts`, `Syncfusion.Blazor.Schedule`, `Syncfusion.Blazor.Themes`, etc.) come in transitively from `Syncfusion.Blazor.A2UI`. No separate `dotnet add package` is needed. See [Supported Components](./supported-components) for the full list of component families the agent can render.
 
 ## Add import namespaces
 
@@ -289,7 +289,7 @@ N> In production, replace the embedded JSON with messages streamed from an [A2UI
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Syncfusion EJ2 `DataGrid` will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Syncfusion Blazor `DataGrid` will render in your default web browser.
 
 {% endtabcontent %}
 
@@ -315,7 +315,7 @@ dotnet run
 
 {% endtabcontents %}
 
-The page renders a Syncfusion EJ2 `SfDataGrid` populated with 15 sample `Orders` rows (Order ID, Customer, Freight, Order Date, Ship Country). The grid enables paging, sorting, filtering, reordering, resizing, alt rows, hover, and a single-row selection mode, all driven from a static A2UI v0.9 JSON message list — no agent or backend is involved.
+The page renders a Syncfusion Blazor `SfDataGrid` populated with 15 sample `Orders` rows (Order ID, Customer, Freight, Order Date, Ship Country). The grid enables paging, sorting, filtering, reordering, resizing, alt rows, hover, and a single-row selection mode, all driven from a static A2UI v0.9 JSON message list — no agent or backend is involved.
 
 ## Register the Syncfusion license key
 

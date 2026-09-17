@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 This page shows the production wiring between a Syncfusion A2UI Blazor host and a remote [A2UI v0.9](https://a2ui.org/specification/v0.9-a2ui/) agent that speaks [JSON-RPC 2.0](https://www.jsonrpc.org/specification) over HTTP. The [Getting Started](./getting-started) page showed how to render a Syncfusion surface from a static A2UI v0.9 message list. This page covers the next step: connecting your Blazor app to a remote, A2UI-compatible agent so the agent's responses drive the surface in real time, and the user's interactions inside the surface are forwarded back to the agent.
 
-<!-- Both packages are at 0.1.0-beta.0 during preview. Update the versions once they ship stable. -->
+
 N> Syncfusion A2UI for Blazor is currently in **preview (beta)** and will be published on NuGet. **Syncfusion.A2UI.Core** and **Syncfusion.Blazor.A2UI** are both at `0.1.0-beta.0`. The A2UI v0.9 wire format is stable, but the package API, catalog id, and validation schemas may evolve before the first stable release. See the [Overview](./overview) for the full preview terms.
 
 ## Prerequisites
@@ -170,7 +170,7 @@ Replace the contents of **Pages/Home.razor** with the snippet below. It builds o
     private ISubscription? _actionSubscription;
 
     // TODO: Update this URL to point to your A2UI agent endpoint
-    private const string AgentUrl = "http://localhost:10006";
+    private const string AgentUrl = "http://localhost:10004";
 
     protected override void OnInitialized()
     {
