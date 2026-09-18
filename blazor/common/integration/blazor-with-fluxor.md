@@ -805,6 +805,8 @@ If an operation cannot be completed, an error message is displayed at the top of
 
 ![Blazor DataGrid showing order records loaded from a Fluxor store, with Add, Edit, and Delete command buttons in the Actions column](images/datagrid-with-fluxor.webp)
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/Blazor%20with%20Fluxor/FluxorBlazorDataGrid)
+
 ## See also
 
 * [Getting Started with Blazor DataGrid in Blazor Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
