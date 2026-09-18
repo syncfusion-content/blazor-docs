@@ -340,6 +340,8 @@ N> Before running the tests, ensure the projectPath variable in `BlazorPlaywrigh
 
 This approach ensures reliable validation of [Blazor components](https://www.syncfusion.com/blazor-components) and enables early detection of UI regressions through automated end‑to‑end testing.
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/Blazor%20with%20PlayWright)
+
 ## See also
 
 - [Getting started with Blazor DataGrid in WASM app](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
