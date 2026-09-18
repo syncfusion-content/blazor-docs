@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Query Builder Overview and Features | Syncfusion
-description: Learn how to use Blazor Query Builder to create and manage filters with rules and groups, data binding, templates, import-export, drag and drop, and locked queries.
+description: Learn how to use Blazor Query Builder to create and manage filters with rules and groups, templates, import-export and locked queries.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

@@ -11,7 +11,7 @@ documentation: ug
 
 ## Introduction to Syncfusion Blazor AI AssistView
 
-The [Blazor AI AssistView](https://www.syncfusion.com/blazor-components/blazor-ai-assistview) is a powerful and feature-rich UI component designed for building conversational AI interfaces with high performance and flexibility. It offers a comprehensive set of enterprise-grade capabilities, including prompt response chat views, prompt suggestions, custom views, toolbar items, and file attachments, along with seamless integration with AI services such as Azure OpenAI and Google Gemini. Built for scalability, it enables developers to create responsive, AI-assisted user experiences for chatbots, copilots, and intelligent assistants with ease.
+The [Blazor AI AssistView](https://www.syncfusion.com/blazor-components/blazor-ai-assistview) is a powerful and feature-rich UI component designed for building conversational AI interfaces with high performance and flexibility. It offers a comprehensive set of enterprise-grade capabilities, including prompt response chat views, prompt suggestions, custom views, toolbar items, and file attachments, along with seamless integration with AI services such as Azure OpenAI and Google Gemini. Built for scalability, it enables developers to create responsive, AI-assisted user experiences for chatbot, copilots, and intelligent assistants with ease.
 
 ## Common use cases
 
@@ -19,7 +19,7 @@ The [Blazor AI AssistView](https://www.syncfusion.com/blazor-components/blazor-a
 
 | Use Case | Description | Key Features |
 |----------|-------------|--------------|
-| **Customer Support Chatbots** | Answer customer questions with AI-generated responses and suggested prompts | Prompt Suggestions, Toolbar Items |
+| **Customer Support Chatbot** | Answer customer questions with AI-generated responses and suggested prompts | Prompt Suggestions, Toolbar Items |
 | **In-App Copilots** | Embed AI assistants that help users complete tasks within business apps | Custom Views, Toolbar Items |
 | **Document Q&A Assistants** | Let users attach files and ask questions about their content | File Attachments, Templates |
 | **Content Generation Workflows** | Draft, edit, and regenerate AI-generated text and code | Prompt-Response Collection, Methods |
