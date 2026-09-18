@@ -32,8 +32,6 @@ Before installing Syncfusion A2UI for Blazor, ensure you have:
 - An [A2UI v0.9-compatible agent](https://a2ui.org/specification/v0.9-a2ui/) that emits messages conforming to the four-message lifecycle (`createSurface`, `updateComponents`, `updateDataModel`, `deleteSurface`).
 - A registered Syncfusion license key.
 
-For exact .NET version support, project setup, and step-by-step installation, see [Getting Started](./getting-started).
-
 ## What problem does it solve?
 
 Modern AI agents are expected to do more than return text. A user who asks *"Show me last quarter's sales by region"* expects an interactive chart, not a markdown table. A user who asks *"Schedule a meeting with the design team next Tuesday"* expects a calendar picker, not a confirmation string.
