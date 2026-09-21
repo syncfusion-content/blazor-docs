@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion Blazor Component API Consistency
 
-This document lists common API names that appear across multiple Syncfusion Blazor components. It helps new users recognize familiar property and event patterns when moving between components, so knowledge from one component can be applied to another. Each table groups shared APIs and explains what each API does before you review the individual component documentation.
+This document lists common API names that appear across multiple [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components). It helps new users recognize familiar property and event patterns when moving between components, so knowledge from one component can be applied to another. Each table groups shared APIs and explains what each API does before you review the individual component documentation.
 
 ## 1) Common appearance and layout APIs
 
@@ -21,9 +21,9 @@ These APIs are commonly used to control size, styling, and layout behavior.
 | `Width` | Sets the component width as pixels or a percentage. | Charts, DataGrid, Gantt Chart, Diagram, Sidebar, Kanban, Stock Chart, Pivot Table, Splitter |
 | `Height` | Sets the component height as pixels or a percentage. | Charts, DataGrid, Gantt Chart, Diagram, Sidebar, Kanban, Stock Chart, Pivot Table, Splitter, Tree Grid |
 | `Visible` | Shows or hides the component without destroying its state. | Sidebar, Toolbar, Card, Kanban, Scheduler, Progress Bar, Chips, Floating Action Button, Speed Dial, Rating, chart legends, data labels, and column/item models |
-| `Enabled` | Enables or disables user interaction with the component. | Button, Chips, Calendar, DatePicker, TimePicker, DateTime Picker, DateRangePicker, Dropdown List, MultiSelect Dropdown, AutoComplete, ListBox, ListView, Range Selector (period selector), Rich Text Editor, Splitter, TextBox, File Upload, Dashboard (panel) |
+| `Enabled` | Enables or disables user interaction with the component. | Button, Chips, Calendar, DatePicker, TimePicker, DateTime Picker, DateRangePicker, Dropdown List, MultiSelect Dropdown, AutoComplete, ListBox, ListView, Range Selector, Rich Text Editor, Splitter, TextBox, File Upload, Dashboard |
 | `Theme` | Applies a built-in theme such as Material, Bootstrap5, Fluent, Tailwind, or HighContrast. | Charts, Accumulation Chart, Bullet Chart, Sparkline Charts, TreeMap, Map, Image Editor, Linear Gauge, Circular Gauge, Chart Wizard, Stock Chart, 3D Charts |
-| `EnableRtl` | Enables right-to-left rendering to support Arabic, Hebrew, and other RTL languages. | Charts, Accumulation Chart, 3D Charts, Bullet Chart, Sparkline Charts, TreeMap, Map, Scheduler, Kanban, DataGrid, Gantt Chart, Tree Grid, Pivot Table, ListView, Menu Bar, Toolbar, Sidebar, Splitter, Dashboard, Rich Text Editor, Dialog, Progress Bar, Query Builder, Range Selector, Toast, AI AssistView, Chat UI, Block Editor, Sankey Diagram, Calendar, DatePicker, TimePicker, DateTime Picker, DateRangePicker, AutoComplete, ComboBox, Dropdown List, MultiSelect Dropdown, Image Editor, Data Form |
+| `EnableRtl` | Enables right-to-left rendering to support Arabic, Hebrew, and other RTL languages. | Scheduler, Kanban, DataGrid, Gantt Chart, Tree Grid, Charts, Accumulation Chart, 3D Charts, Bullet Chart, Sparkline Charts, TreeMap, Map, Pivot Table, ListView, Menu Bar, Toolbar, Sidebar, Splitter, Dashboard, Rich Text Editor, Dialog, Progress Bar, Query Builder, Range Selector, Toast, AI AssistView, Chat UI, Block Editor, Sankey Diagram, Calendar, DatePicker, TimePicker, DateTime Picker, DateRangePicker, AutoComplete, ComboBox, Dropdown List, MultiSelect Dropdown, Image Editor, Data Form |
 
 ## 2) Common value and selection APIs
 
@@ -36,8 +36,8 @@ These APIs are widely used in input-style controls and interactive widgets.
 | `AllowMultiSelection` | Enables selecting multiple items or nodes at once. | File Manager, TreeView, Dropdown Tree |
 | `AllowSelection` | Enables or disables item, row, or data-point selection. | DataGrid, Tree Grid, Gantt Chart, Charts, Accumulation Chart, 3D Charts, HeatMap Chart |
 | `AllowFiltering` | Enables the built-in filter UI, such as a filter bar or search box, to narrow down data. | DataGrid, Tree Grid, Gantt Chart, AutoComplete, ComboBox, Dropdown List, MultiSelect Dropdown, ListBox, MultiColumn ComboBox |
-| `ShowCheckBox` | Displays checkboxes in front of items or nodes for multi-item selection. | TreeView, ListView, Tree Grid (column), ListBox (selection settings), Dropdown Tree |
-| `AllowResizing` | Enables resizing of columns, panels, dialogs, or appointments by dragging. | DataGrid, Tree Grid, Gantt Chart, Dashboard, Dialog, Scheduler (appointment resizing), File Manager (details view) |
+| `ShowCheckBox` | Displays checkboxes in front of items or nodes for multi-item selection. | TreeView, ListView, Tree Grid, ListBox, Dropdown Tree |
+| `AllowResizing` | Enables resizing of columns, panels, dialogs, or appointments by dragging. | DataGrid, Tree Grid, Gantt Chart, Dashboard, Dialog, Scheduler |
 | `AllowDragAndDrop` | Enables dragging items, cards, nodes, or appointments between locations. | TreeView, Kanban, Scheduler, File Manager, Query Builder, Pivot Table |
 
 ## 3) Common data and binding APIs
@@ -46,8 +46,8 @@ These APIs help components connect to local collections or remote data sources.
 
 | API name | Purpose | Components that commonly use it |
 | --- | --- | --- |
-| `DataSource` | Binds the component to an `IEnumerable` collection or a `SfDataManager` for remote data. | Charts, Accumulation Chart, DataGrid, Tree Grid, Gantt Chart, Scheduler, Kanban, ListView, TreeView, Menu Bar, Breadcrumb, Map, Stepper, File Manager, 3D Charts |
-| `Query` | Passes extra query options, such as filtering or sorting, to `DataManager`-based sources. | Charts, Accumulation Chart, DataGrid, Tree Grid, Gantt Chart, Kanban, Scheduler, ListView, Range Selector, File Manager, Pivot Table |
+| `DataSource` | Binds the component to an `IEnumerable` collection or a `SfDataManager` for remote data. | Charts, Accumulation Chart, DataGrid, Tree Grid, Gantt Chart, Scheduler, Kanban, ListView, TreeView, Menu Bar, Breadcrumb, Map, Stepper, 3D Charts |
+| `Query` | Passes extra query options, such as filtering or sorting, to `DataManager`-based sources. | Charts, Accumulation Chart, DataGrid, Tree Grid, Gantt Chart, Kanban, Scheduler, ListView, Range Selector, Pivot Table |
 | `Fields` | Configures data field mappings such as ID, text, parent ID, and child fields. | ListView, TreeView, Menu Bar, Breadcrumb, Accordion, AutoComplete, ComboBox, Dropdown List |
 
 ## 4) Common interaction and event APIs
@@ -73,7 +73,7 @@ These APIs often control runtime behavior and user experience.
 | `Readonly` | Makes the component display-only and prevents users from changing the value. | TextBox, Numeric Textbox, DatePicker, ComboBox, Dropdown List, AutoComplete, MultiSelect Dropdown, Range Slider, Rating, Block Editor, Rich Text Editor |
 | `Disabled` | Disables the component or an individual item so it ignores user interaction. | Button, Button Group, Checkbox, Radio Button, Toggle Switch Button, Floating Action Button, Speed Dial, Progress Button, Split Button, Dropdown Menu item, Accordion item, ListView items |
 | `ShowClearButton` | Renders a clear button to reset the component value with one click. | TextBox, Dropdown List, ComboBox, AutoComplete, DatePicker, TimePicker, DateTime Picker, DateRangePicker, MultiSelect Dropdown, Numeric Textbox, Input Mask |
-| `AllowEditing` | Enables editing of records, cells, or annotations. | DataGrid (`GridEditSettings`), Tree Grid, Gantt Chart (`GanttEditSettings`), Kanban, Scheduler, File Manager |
+| `AllowEditing` | Enables editing of records, cells, or annotations. | DataGrid (`GridEditSettings`), Tree Grid, Gantt Chart (`GanttEditSettings`), Kanban |
 | `AllowSorting` | Enables sorting records by clicking column headers. | DataGrid, Tree Grid, Gantt Chart |
 | `AllowGrouping` | Enables drag-and-drop grouping of records by column. | DataGrid, Tree Grid, Gantt Chart |
 | `AllowPaging` | Splits large datasets into pages. | DataGrid, Tree Grid, Gantt Chart, File Manager, 3D Charts (legend paging) |
